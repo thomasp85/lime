@@ -6,7 +6,7 @@
 \title{Create a model explanation function based on training data}
 \usage{
 \method{lime}{data.frame}(x, bin_continuous = TRUE, n_bins = 4,
-  kernel_width = NULL)
+  kernel_width = NULL, ...)
 
 lime(x, ...)
 }

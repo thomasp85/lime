@@ -3,9 +3,9 @@
 #' @param n_bins The number of bins for continuous variables if `bin_continuous = TRUE`
 #' @param kernel_width The width of the kernel used for converting the distances to permutations into weights
 #' @importFrom dplyr bind_rows
-#' @importFrom stats predict
+#' @importFrom stats predict sd
 #' @export
-lime.data.frame <- function(x, bin_continuous = TRUE, n_bins = 4, kernel_width = NULL) {
+lime.data.frame <- function(x, bin_continuous = TRUE, n_bins = 4, kernel_width = NULL, ...) {
   feature_type <- sapply(x, function(f) {
     if (is.numeric(f)) {
       'numeric'

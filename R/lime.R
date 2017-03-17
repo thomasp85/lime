@@ -114,6 +114,7 @@ select_f_fs <- function(x, y, weights, n_features) {
 }
 #' @importFrom glmnet cv.glmnet coef.cv.glmnet
 #' @importFrom stats coef
+#' @importFrom utils head
 select_f_hw <- function(x, y, weights, n_features) {
   fit <- cv.glmnet(x, y, weights = weights, alpha = 0, standardize = FALSE)
   head(order(abs(coef(fit)[-1, 1] * x[1,]), decreasing = TRUE), n_features)
