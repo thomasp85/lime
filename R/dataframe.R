@@ -36,7 +36,6 @@ lime.data.frame <- function(x, bin_continuous = TRUE, n_bins = 4, kernel_width =
     case_res <- predict(model, case_perm, type = 'prob')
     case_ind <- split(seq_len(nrow(case_perm)), rep(seq_len(nrow(cases)), each = n_permutations))
     res <- lapply(seq_along(case_ind), function(ind) {
-      browser()
       i <- case_ind[[ind]]
       perms <- numerify(case_perm[i, ], feature_type)
       dist <- c(0, dist(feature_scale(perms, feature_distribution, feature_type),
