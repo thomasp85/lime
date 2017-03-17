@@ -35,14 +35,16 @@ lime.data.frame <- function(x, bin_continuous = TRUE, n_bins = 4, kernel_width =
     case_perm <- permute_cases(cases, n_permutations, feature_distribution)
     case_res <- predict(model, case_perm, type = 'prob')
     case_ind <- split(seq_len(nrow(case_perm)), rep(seq_len(nrow(cases)), each = n_permutations))
-    res <- lapply(case_ind, function(i) {
+    res <- lapply(seq_along(case_ind), function(ind) {
+      browser()
+      i <- case_ind[[ind]]
       perms <- numerify(case_perm[i, ], feature_type)
       dist <- c(0, dist(feature_scale(perms, feature_distribution, feature_type),
                         method = dist_fun)[seq_len(n_permutations-1)])
-      res <- model_permutations(perms, case_res[i, ], kernel(dist), labels, n_labels, n_features, feature_select)
+      res <- model_permutations(as.matrix(perms), case_res[i, ], kernel(dist), labels, n_labels, n_features, feature_select)
       guess <- which.max(abs(case_res[i[1], ]))
-      res$case <- rownames(cases)[i]
-      res$label_prob <- unname(case_res[i[1], match(res$label, names(case_res))])
+      res$case <- rownames(cases)[ind]
+      res$label_prob <- unname(as.matrix(case_res[i[1], ]))[match(res$label, names(case_res))]
       res$predict_label <- names(case_res)[guess]
       res$predict_prob <- case_res[i[1], guess]
       res

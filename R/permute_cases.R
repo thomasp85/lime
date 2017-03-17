@@ -13,6 +13,7 @@ permute_cases.data.frame <- function(cases, n_permutations, feature_distribution
       factor(x, levels = names(feature_distribution[[i]]))
     }
   }), stringsAsFactors = FALSE)
-  perm[seq.int(1, by = n_permutations, length.out = nrow(cases))] <- cases
+  names(perm) <- names(cases)
+  perm[seq.int(1, by = n_permutations, length.out = nrow(cases)), ] <- cases
   perm
 }

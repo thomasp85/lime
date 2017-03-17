@@ -78,13 +78,13 @@ select_features <- function(method, x, y, weights, n_features) {
   switch(
     method,
     auto = if (n_features <= 6) {
-      select_features('forward_selection', x, y, n_features)
+      select_features('forward_selection', x, y, weights, n_features)
     } else {
-      select_features('highest_weights', x, y, n_features)
+      select_features('highest_weights', x, y, weights, n_features)
     },
     none = seq_len(nrow(x)),
     forward_selection = select_f_fs(x, y, weights, n_features),
-    heighest_weights = select_f_hw(x, y, weights, n_features),
+    highest_weights = select_f_hw(x, y, weights, n_features),
     lasso_path = select_f_lp(x, y, weights, n_features),
     stop('Method not implemented', call. = FALSE)
   )
@@ -97,12 +97,15 @@ select_f_fs <- function(x, y, weights, n_features) {
     best <- 0
     for (j in seq_len(ncol(x))) {
       if (j %in% features) next
+      if (length(features) == 0) {
 
-      fit <- cv.glmnet(x[, c(features, j), drop = FALSE], y, weights = weights, alpha = 0, standardize = FALSE)
-      r2 <- fit$glmnet.fit$dev.ratio[fit$lambda == fit$lambda.1se]
-      if (r2 > max) {
-        max <- r2
-        best <- j
+      } else {
+        fit <- cv.glmnet(x[, c(features, j), drop = FALSE], y, weights = weights, alpha = 0, standardize = FALSE)
+        r2 <- fit$glmnet.fit$dev.ratio[fit$lambda == fit$lambda.1se]
+        if (r2 > max) {
+          max <- r2
+          best <- j
+        }
       }
     }
     features <- c(features, best)
