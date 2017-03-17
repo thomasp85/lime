@@ -2,7 +2,7 @@ Package: lime
 Type: Package
 Title: Local Interpretable Model-Agnostic Explanations
 Version: 0.1.0
-Authors@R: c(person('Thomas Lin', 'Pedersen', role = c('aut', 'cre')))
+Authors@R: c(person('Thomas Lin', 'Pedersen', role = c('aut', 'cre'), email = "thomasp85@gmail.com"))
 Maintainer: Thomas Lin Pedersen <thomasp85@gmail.com>
 Description: When building complex models, it is often difficult to explain why
     the model should be trusted. While global measures such as accuracy are 
@@ -13,3 +13,9 @@ Description: When building complex models, it is often difficult to explain why
 License: MIT
 Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown = TRUE)
+Imports: glmnet,
+    stats,
+    dplyr,
+    tibble
+RoxygenNote: 6.0.1
