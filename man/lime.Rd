@@ -5,18 +5,22 @@
 \alias{lime}
 \title{Create a model explanation function based on training data}
 \usage{
-\method{lime}{data.frame}(x, bin_continuous = TRUE, n_bins = 4,
-  kernel_width = NULL, ...)
+\method{lime}{data.frame}(x, model, bin_continuous = TRUE, n_bins = 4,
+  quantile_bins = TRUE, kernel_width = NULL, ...)
 
-lime(x, ...)
+lime(x, model, ...)
 }
 \arguments{
 \item{x}{The training data used for training the model that should be
 explained.}
 
+\item{model}{The model whose output should be explained}
+
 \item{bin_continuous}{Should continuous variables be binned when making the explanation}
 
 \item{n_bins}{The number of bins for continuous variables if \code{bin_continuous = TRUE}}
+
+\item{quantile_bins}{Should the bins be based on \code{n_bins} quantiles or spread evenly over the range of the training data}
 
 \item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
 
@@ -26,7 +30,6 @@ explained.}
 A function taking the following arguments:
 \itemize{
 \item \code{cases}: Data of the same format as \code{x} that needs to be explained
-\item \code{model}: The model whose output should be explained
 \item \code{labels}: The prediction(s) that needs to be explained
 \item \code{n_labels}: Alternative to \code{labels}, the number of predictions to explain,
 selected by their probability.
@@ -71,3 +74,19 @@ types supported by lime.
 \item \code{data.frame}: Method for explaining tabular data
 }}
 
+\examples{
+# Explaining a model based on tabular data
+if (requireNamespace("caret", quietly = TRUE)) {
+  library(caret)
+  iris_test <- iris[1, 1:4]
+  iris_train <- iris[-1, 1:4]
+  iris_lab <- iris[[5]][-1]
+
+  # Create Random Forest model on iris data
+  model <- train(iris_train, iris_lab, method = 'rf')
+
+  # Create explanation function
+  expl <- lime(iris_train, model)
+  expl(iris_test, n_labels = 1, n_features = 2)
+}
+}

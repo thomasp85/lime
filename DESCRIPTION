@@ -19,3 +19,5 @@ Imports: glmnet,
     dplyr,
     tibble
 RoxygenNote: 6.0.1
+Suggests: caret,
+    e1071

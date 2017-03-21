@@ -1,7 +1,7 @@
 permute_cases <- function(cases, n_permutations, ...) {
   UseMethod('permute_cases')
 }
-#' @importFrom stats rnorm
+#' @importFrom stats rnorm runif
 permute_cases.data.frame <- function(cases, n_permutations, feature_distribution, bin_continuous, bin_cuts) {
   nrows <- nrow(cases) * n_permutations
   perm <- as.data.frame(lapply(seq_along(cases), function(i) {

@@ -4,8 +4,24 @@
 #' @param quantile_bins Should the bins be based on `n_bins` quantiles or spread evenly over the range of the training data
 #' @param kernel_width The width of the kernel used for converting the distances to permutations into weights
 #' @importFrom dplyr bind_rows
-#' @importFrom stats predict sd
+#' @importFrom stats predict sd quantile
 #' @export
+#'
+#' @examples
+#' # Explaining a model based on tabular data
+#' if (requireNamespace("caret", quietly = TRUE)) {
+#'   library(caret)
+#'   iris_test <- iris[1, 1:4]
+#'   iris_train <- iris[-1, 1:4]
+#'   iris_lab <- iris[[5]][-1]
+#'
+#'   # Create Random Forest model on iris data
+#'   model <- train(iris_train, iris_lab, method = 'rf')
+#'
+#'   # Create explanation function
+#'   expl <- lime(iris_train, model)
+#'   expl(iris_test, n_labels = 1, n_features = 2)
+#' }
 lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantile_bins = TRUE, kernel_width = NULL, ...) {
   feature_type <- setNames(sapply(x, function(f) {
     if (is.numeric(f)) {
