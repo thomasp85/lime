@@ -61,7 +61,10 @@ model <- train(iris_train, iris_lab, method = 'rf')
 explain <- lime(iris_train, model)
 
 # Explain new observation
-explain(iris_test, n_labels = 1, n_features = 2)
+explanation <- explain(iris_test, n_labels = 1, n_features = 2)
+
+# The output is provided in a nice tidy format
+tibble::glimpse(explanation)
 ```
 
 ## Installation

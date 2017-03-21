@@ -34,22 +34,23 @@ model <- train(iris_train, iris_lab, method = 'rf')
 explain <- lime(iris_train, model)
 
 # Explain new observation
-explain(iris_test, n_labels = 1, n_features = 2)
-#> # A tibble: 10 × 11
-#>     case  label label_prob  model_r2 model_intercept      feature
-#>    <chr>  <chr>      <dbl>     <dbl>           <dbl>        <chr>
-#> 1      1 setosa          1 0.7201131      0.10770287 Petal.Length
-#> 2      1 setosa          1 0.7201131      0.10770287  Petal.Width
-#> 3      2 setosa          1 0.7385668      0.09752498 Petal.Length
-#> 4      2 setosa          1 0.7385668      0.09752498  Petal.Width
-#> 5      3 setosa          1 0.7212672      0.09894034 Petal.Length
-#> 6      3 setosa          1 0.7212672      0.09894034  Petal.Width
-#> 7      4 setosa          1 0.7325818      0.10247722 Petal.Length
-#> 8      4 setosa          1 0.7325818      0.10247722  Petal.Width
-#> 9      5 setosa          1 0.7358051      0.10044829 Petal.Length
-#> 10     5 setosa          1 0.7358051      0.10044829  Petal.Width
-#> # ... with 5 more variables: feature_value <dbl>, feature_weight <dbl>,
-#> #   feature_desc <chr>, data <list>, prediction <list>
+explanation <- explain(iris_test, n_labels = 1, n_features = 2)
+
+# The output is provided in a nice tidy format
+tibble::glimpse(explanation)
+#> Observations: 10
+#> Variables: 11
+#> $ case            <chr> "1", "1", "2", "2", "3", "3", "4", "4", "5", "5"
+#> $ label           <chr> "setosa", "setosa", "setosa", "setosa", "setos...
+#> $ label_prob      <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+#> $ model_r2        <dbl> 0.7275272, 0.7275272, 0.7191298, 0.7191298, 0....
+#> $ model_intercept <dbl> 0.1073369, 0.1073369, 0.1058268, 0.1058268, 0....
+#> $ feature         <chr> "Petal.Width", "Petal.Length", "Petal.Width", ...
+#> $ feature_value   <dbl> 0.2, 1.4, 0.2, 1.4, 0.2, 1.3, 0.2, 1.5, 0.2, 1.4
+#> $ feature_weight  <dbl> 0.4623986, 0.4158801, 0.4585103, 0.4132934, 0....
+#> $ feature_desc    <chr> "Petal.Width <=  0.4", "Petal.Length <=  1.6",...
+#> $ data            <list> [[5.1, 3.5, 1.4, 0.2], [5.1, 3.5, 1.4, 0.2], ...
+#> $ prediction      <list> [[1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 0, 0], ...
 ```
 
 Installation
