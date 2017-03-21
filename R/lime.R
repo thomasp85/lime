@@ -8,12 +8,13 @@
 #' @param x The training data used for training the model that should be
 #' explained.
 #'
+#' @param model The model whose output should be explained
+#'
 #' @param ... Arguments passed on to methods
 #'
 #' @return A function taking the following arguments:
 #'
 #' * `cases`: Data of the same format as `x` that needs to be explained
-#' * `model`: The model whose output should be explained
 #' * `labels`: The prediction(s) that needs to be explained
 #' * `n_labels`: Alternative to `labels`, the number of predictions to explain,
 #'   selected by their probability.
@@ -44,7 +45,7 @@
 #' * `model_intercept`: The intercept of the model used for the explanation
 #'
 #' @export
-lime <- function(x, ...) {
+lime <- function(x, model, ...) {
   UseMethod('lime')
 }
 
@@ -60,12 +61,14 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
   }
   res <- lapply(labels, function(label) {
     features <- select_features(feature_method, x, y[[label]], weights, n_features)
-    fit <- cv.glmnet(x[, features], y[[label]], weights = weights, alpha = 0, standardize = TRUE)
-    r2 <- fit$glmnet.fit$dev.ratio[fit$lambda == fit$lambda.1se]
+    # This approach need verification
+    if (length(features) == 1) features <- rep(features, 2)
+    fit <- glmnet(x[, features], y[[label]], weights = weights, alpha = 0, standardize = FALSE, lambda = 0)
+    r2 <- fit$dev.ratio
     coefs <- coef(fit)
     intercept <- coefs[1, 1]
     coefs <- coefs[-1, 1]
-    tibble(label = label, feature = names(coefs), weight = unname(abs(coefs)), model_r2 = r2, model_intercept = intercept)
+    tibble(label = label, feature = names(coefs), feature_weight = unname(abs(coefs)), model_r2 = r2, model_intercept = intercept)
   })
   bind_rows(res)
 }
@@ -92,20 +95,18 @@ select_features <- function(method, x, y, weights, n_features) {
 #' @importFrom glmnet cv.glmnet
 select_f_fs <- function(x, y, weights, n_features) {
   features <- c()
-  for (i in seq_along(n_features)) {
+  for (i in seq_len(n_features)) {
     max <- -100000
     best <- 0
     for (j in seq_len(ncol(x))) {
       if (j %in% features) next
-      if (length(features) == 0) {
-
-      } else {
-        fit <- cv.glmnet(x[, c(features, j), drop = FALSE], y, weights = weights, alpha = 0, standardize = FALSE)
-        r2 <- fit$glmnet.fit$dev.ratio[fit$lambda == fit$lambda.1se]
-        if (r2 > max) {
-          max <- r2
-          best <- j
-        }
+      #                                          is this ok?
+      try_features <- if (length(features) == 0) c(j, j) else c(features, j)
+      fit <- glmnet(x[, try_features, drop = FALSE], y, weights = weights, alpha = 0, standardize = FALSE, lambda = 0)
+      r2 <- fit$dev.ratio
+      if (r2 > max) {
+        max <- r2
+        best <- j
       }
     }
     features <- c(features, best)
@@ -116,7 +117,7 @@ select_f_fs <- function(x, y, weights, n_features) {
 #' @importFrom stats coef
 #' @importFrom utils head
 select_f_hw <- function(x, y, weights, n_features) {
-  fit <- cv.glmnet(x, y, weights = weights, alpha = 0, standardize = FALSE)
+  fit <- glmnet(x, y, weights = weights, alpha = 0, standardize = FALSE, lambda = 0)
   head(order(abs(coef(fit)[-1, 1] * x[1,]), decreasing = TRUE), n_features)
 }
 #' @importFrom glmnet glmnet coef.glmnet
