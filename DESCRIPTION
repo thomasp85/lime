@@ -20,4 +20,5 @@ Imports: glmnet,
     tibble
 RoxygenNote: 6.0.1
 Suggests: caret,
-    e1071
+    e1071,
+    randomForest
