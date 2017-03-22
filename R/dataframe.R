@@ -48,11 +48,11 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
     switch(
       feature_type[i],
       numeric = if (bin_continuous) {
-        table(cut(x[[i]], bin_cuts[[i]], labels = FALSE, include.lowest = TRUE))/nrow(x)
+        table(cut(x[[i]], unique(bin_cuts[[i]]), labels = FALSE, include.lowest = TRUE))/nrow(x)
       } else {
         c(mean = mean(x[[i]], na.rm = TRUE), sd = sd(x[[i]], na.rm = TRUE))
       },
-      character,
+      character = ,
       factor = table(x[[i]])/nrow(x)
     )
   }), names(x))
@@ -121,8 +121,8 @@ describe_feature <- function(feature, case, type, bin_continuous, bin_cuts) {
       cuts <- bin_cuts[[f]]
       cuts[1] <- -Inf
       cuts[length(cuts)] <- Inf
-      bin <- cut(case[[f]], cuts, labels = FALSE, include.lowest = TRUE)
-      cuts <- format(cuts)
+      bin <- cut(case[[f]], unique(cuts), labels = FALSE, include.lowest = TRUE)
+      cuts <- trimws(format(cuts))
       if (bin == 1) {
         paste0(f, ' <= ', cuts[bin + 1])
       } else if (bin == length(cuts) - 1) {

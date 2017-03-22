@@ -63,18 +63,18 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
     features <- select_features(feature_method, x, y[[label]], weights, n_features)
     # This approach need verification
     if (length(features) == 1) features <- rep(features, 2)
-    fit <- glmnet(x[, features], y[[label]], weights = weights, alpha = 0, standardize = FALSE, lambda = 0)
+    fit <- glmnet(x[, features], y[[label]], weights = weights, alpha = 0, lambda = 0.001)
     r2 <- fit$dev.ratio
     coefs <- coef(fit)
     intercept <- coefs[1, 1]
     coefs <- coefs[-1, 1]
-    tibble(label = label, feature = names(coefs), feature_weight = unname(abs(coefs)), model_r2 = r2, model_intercept = intercept)
+    tibble(label = label, feature = names(coefs), feature_weight = unname(coefs), model_r2 = r2, model_intercept = intercept)
   })
   bind_rows(res)
 }
 
 select_features <- function(method, x, y, weights, n_features) {
-  if (n_features > ncol(x)) {
+  if (n_features >= ncol(x)) {
     return(seq_len(ncol(x)))
   }
   method <- match.arg(method, c('auto', 'none', 'forward_selection', 'highest_weights', 'lasso_path'))
@@ -102,7 +102,7 @@ select_f_fs <- function(x, y, weights, n_features) {
       if (j %in% features) next
       #                                          is this ok?
       try_features <- if (length(features) == 0) c(j, j) else c(features, j)
-      fit <- glmnet(x[, try_features, drop = FALSE], y, weights = weights, alpha = 0, standardize = FALSE, lambda = 0)
+      fit <- glmnet(x[, try_features, drop = FALSE], y, weights = weights, alpha = 0, lambda = 0)
       r2 <- fit$dev.ratio
       if (r2 > max) {
         max <- r2
@@ -117,13 +117,13 @@ select_f_fs <- function(x, y, weights, n_features) {
 #' @importFrom stats coef
 #' @importFrom utils head
 select_f_hw <- function(x, y, weights, n_features) {
-  fit <- glmnet(x, y, weights = weights, alpha = 0, standardize = FALSE, lambda = 0)
+  fit <- glmnet(x, y, weights = weights, alpha = 0, lambda = 0)
   head(order(abs(coef(fit)[-1, 1] * x[1,]), decreasing = TRUE), n_features)
 }
 #' @importFrom glmnet glmnet coef.glmnet
 #' @importFrom stats coef
 select_f_lp <- function(x, y, weights, n_features) {
-  fit <- glmnet(x, y, weights = weights, alpha = 1, standardize = FALSE)
+  fit <- glmnet(x, y, weights = weights, alpha = 1)
   has_value <- apply(coef(fit)[-1, ], 2, function(x) x != 0)
   f_count <- apply(has_value, 2, sum)
   which(has_value[, match(n_features, f_count)])

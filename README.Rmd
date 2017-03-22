@@ -8,7 +8,7 @@ output: github_document
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "README-"
+  fig.path = "tools/README-"
 )
 ```
 
@@ -65,6 +65,9 @@ explanation <- explain(iris_test, n_labels = 1, n_features = 2)
 
 # The output is provided in a nice tidy format
 tibble::glimpse(explanation)
+
+# An can be visualised directly
+plot_features(explanation)
 ```
 
 ## Installation
