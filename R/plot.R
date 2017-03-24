@@ -15,20 +15,20 @@
 #' @export
 #'
 #' @examples
-#' if (requireNamespace("caret", quietly = TRUE)) {
-#'   library(caret)
-#'   iris_test <- iris[1, 1:4]
-#'   iris_train <- iris[-1, 1:4]
-#'   iris_lab <- iris[[5]][-1]
+#' \dontrun{
+#' library(caret)
+#' iris_test <- iris[1, 1:4]
+#' iris_train <- iris[-1, 1:4]
+#' iris_lab <- iris[[5]][-1]
 #'
-#'   # Create Random Forest model on iris data
-#'   model <- train(iris_train, iris_lab, method = 'rf')
+#' # Create Random Forest model on iris data
+#' model <- train(iris_train, iris_lab, method = 'rf')
 #'
-#'   # Create explanation function
-#'   expl <- lime(iris_train, model)
-#'   explanation <- expl(iris_test, n_labels = 1, n_features = 2)
+#' # Create explanation function
+#' expl <- lime(iris_train, model)
+#' explanation <- expl(iris_test, n_labels = 1, n_features = 2)
 #'
-#'   plot_features(explanation)
+#' plot_features(explanation)
 #' }
 plot_features <- function(explanation, ncol = 2) {
   type_pal <- c('Supports', 'Contradicts')
@@ -39,7 +39,7 @@ plot_features <- function(explanation, ncol = 2) {
   explanation$description <- factor(description, levels = description[order(abs(explanation$feature_weight))])
   explanation$probability <- explanation$label_prob
   ggplot(explanation) +
-    geom_col(aes(description, feature_weight, fill = type)) +
+    geom_col(aes_(~description, ~feature_weight, fill = ~type)) +
     coord_flip() +
     facet_wrap(~ case + label + probability, labeller = label_both_upper, scales = 'free', ncol = ncol) +
     scale_fill_manual(values = c('forestgreen', 'firebrick'), drop = FALSE) +
