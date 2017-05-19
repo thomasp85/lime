@@ -135,7 +135,11 @@ select_f_hw <- function(x, y, weights, n_features) {
 #' @importFrom glmnet glmnet coef.glmnet
 #' @importFrom stats coef
 select_f_lp <- function(x, y, weights, n_features) {
-  fit <- glmnet(x, y, weights = weights, alpha = 1)
+  fit <- glmnet(x, y, weights = weights, alpha = 1, nlambda=300)
+  # In case that no model with correct n_feature size was found
+  if(all(fit$df != n_features)){
+    stop(sprintf('No model with %i features found with lasso_path. Try a different method.', n_features))
+  }
   has_value <- apply(coef(fit)[-1, ], 2, function(x) x != 0)
   f_count <- apply(has_value, 2, sum)
   which(has_value[, match(n_features, f_count)])
