@@ -61,9 +61,10 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
   if (!is.null(n_labels)) {
     labels <- names(y)[order(y[1,], decreasing = TRUE)[seq_len(n_labels)]]
   }
+  x <- x[, apply(x, 2, var) != 0, drop = FALSE]
   res <- lapply(labels, function(label) {
     features <- select_features(feature_method, x, y[[label]], weights, n_features)
-    
+
     # glmnet does not allow n_features=1
     if(n_features==1){
       x_fit = cbind('(Intercept)' = rep(1, nrow(x)), x[, features, drop=FALSE])
@@ -79,7 +80,7 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
       intercept <- coefs[1, 1]
       coefs <- coefs[-1, 1]
     }
-    
+
     tibble(label = label, feature = names(coefs), feature_weight = unname(coefs), model_r2 = r2, model_intercept = intercept)
   })
   bind_rows(res)
