@@ -37,7 +37,7 @@ plot_features <- function(explanation, ncol = 2) {
   desc_width <- max(nchar(description)) + 1
   description <- paste0(format(description, width = desc_width), explanation$feature_desc)
   explanation$description <- factor(description, levels = description[order(abs(explanation$feature_weight))])
-  explanation$probability <- explanation$label_prob
+  explanation$probability <- format(explanation$label_prob, digits = 2)
   ggplot(explanation) +
     geom_col(aes_(~description, ~feature_weight, fill = ~type)) +
     coord_flip() +
