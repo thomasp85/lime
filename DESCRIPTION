@@ -18,9 +18,12 @@ Imports: glmnet,
     stats,
     dplyr,
     tibble,
-    hrbrthemes,
     ggplot2,
-    tools
+    tools,
+    stringi,
+    Matrix,
+    stringdist,
+    hrbrthemes
 RoxygenNote: 6.0.1
 Suggests: caret,
     e1071,
