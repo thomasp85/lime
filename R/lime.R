@@ -126,5 +126,13 @@ select_f_lp <- function(x, y, weights, n_features) {
   fit <- glmnet(x, y, weights = weights, alpha = 1)
   has_value <- apply(coef(fit)[-1, ], 2, function(x) x != 0)
   f_count <- apply(has_value, 2, sum)
-  which(has_value[, match(n_features, f_count)])
+  row <- which(f_count >= n_features)[1]
+  features <- which(has_value[, row])
+  if (length(features) > n_features) {
+    features <- features[sample(seq_along(features), n_features)]
+  }
+  features
+}
+exp_kernel <- function(width) {
+  function(x) sqrt(exp(-(x^2) / (width^2)))
 }

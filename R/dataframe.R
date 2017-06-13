@@ -59,10 +59,8 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
   if (is.null(kernel_width)) {
     kernel_width <- sqrt(ncol(x)) * 0.75
   }
-  kernel <- function(x) {
-    sqrt(exp(-(x^2) / (kernel_width^2)))
-  }
-  function(cases, labels, n_labels, n_features, n_permutations = 5000, dist_fun = 'euclidean', feature_select = 'auto') {
+  kernel <- exp_kernel(kernel_width)
+  function(cases, labels, n_labels = NULL, n_features, n_permutations = 5000, dist_fun = 'euclidean', feature_select = 'auto') {
     case_perm <- permute_cases(cases, n_permutations, feature_distribution, bin_continuous, bin_cuts)
     case_res <- predict(model, case_perm, type = 'prob')
     case_ind <- split(seq_len(nrow(case_perm)), rep(seq_len(nrow(cases)), each = n_permutations))
@@ -122,7 +120,7 @@ describe_feature <- function(feature, case, type, bin_continuous, bin_cuts) {
       cuts[1] <- -Inf
       cuts[length(cuts)] <- Inf
       bin <- cut(case[[f]], unique(cuts), labels = FALSE, include.lowest = TRUE)
-      cuts <- trimws(format(cuts))
+      cuts <- trimws(format(cuts, digits = 3))
       if (bin == 1) {
         paste0(f, ' <= ', cuts[bin + 1])
       } else if (bin == length(cuts) - 1) {
