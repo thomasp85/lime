@@ -55,19 +55,31 @@ lime <- function(x, model, ...) {
 #' @importFrom tibble tibble
 #' @importFrom dplyr bind_rows
 #' @importFrom stats coef
+#' @importFrom stats glm.fit
+#' @importFrom stats gaussian
 model_permutations <- function(x, y, weights, labels, n_labels, n_features, feature_method) {
   if (!is.null(n_labels)) {
     labels <- names(y)[order(y[1,], decreasing = TRUE)[seq_len(n_labels)]]
   }
   res <- lapply(labels, function(label) {
     features <- select_features(feature_method, x, y[[label]], weights, n_features)
-    # This approach need verification
-    if (length(features) == 1) features <- rep(features, 2)
-    fit <- glmnet(x[, features], y[[label]], weights = weights, alpha = 0, lambda = 0.001)
-    r2 <- fit$dev.ratio
-    coefs <- coef(fit)
-    intercept <- coefs[1, 1]
-    coefs <- coefs[-1, 1]
+    
+    # glmnet does not allow n_features=1
+    if(n_features==1){
+      x_fit = cbind('(Intercept)' = rep(1, nrow(x)), x[, features, drop=FALSE])
+      fit <- glm.fit(x = x_fit, y = y[[label]],  weights = weights, family = gaussian())
+      r2 <- fit$deviance / fit$null.deviance
+      coefs <- coef(fit)
+      intercept <- coefs[1]
+      coefs <- coefs[-1]
+    } else {
+      fit <- glmnet(x[, features], y[[label]], weights = weights, alpha = 0, lambda = 0.001)
+      r2 <- fit$dev.ratio
+      coefs <- coef(fit)
+      intercept <- coefs[1, 1]
+      coefs <- coefs[-1, 1]
+    }
+    
     tibble(label = label, feature = names(coefs), feature_weight = unname(coefs), model_r2 = r2, model_intercept = intercept)
   })
   bind_rows(res)
@@ -123,7 +135,11 @@ select_f_hw <- function(x, y, weights, n_features) {
 #' @importFrom glmnet glmnet coef.glmnet
 #' @importFrom stats coef
 select_f_lp <- function(x, y, weights, n_features) {
-  fit <- glmnet(x, y, weights = weights, alpha = 1)
+  fit <- glmnet(x, y, weights = weights, alpha = 1, nlambda=300)
+  # In case that no model with correct n_feature size was found
+  if(all(fit$df != n_features)){
+    stop(sprintf('No model with %i features found with lasso_path. Try a different method.', n_features))
+  }
   has_value <- apply(coef(fit)[-1, ], 2, function(x) x != 0)
   f_count <- apply(has_value, 2, sum)
   row <- which(f_count >= n_features)[1]

@@ -27,4 +27,5 @@ Imports: glmnet,
 RoxygenNote: 6.0.1
 Suggests: caret,
     e1071,
-    randomForest
+    randomForest,
+    testthat
