@@ -2,7 +2,8 @@ Package: lime
 Type: Package
 Title: Local Interpretable Model-Agnostic Explanations
 Version: 0.2.0
-Authors@R: c(person('Thomas Lin', 'Pedersen', role = c('aut', 'cre'), email = "thomasp85@gmail.com"))
+Authors@R: c(person('Thomas Lin', 'Pedersen', role = c('cre', 'aut'), email = "thomasp85@gmail.com"),
+             person('Michaël', 'Benesty', role = c('aut'), email = "michael@benesty.fr"))
 Maintainer: Thomas Lin Pedersen <thomasp85@gmail.com>
 Description: When building complex models, it is often difficult to explain why
     the model should be trusted. While global measures such as accuracy are 
@@ -23,9 +24,11 @@ Imports: glmnet,
     stringi,
     Matrix,
     stringdist,
-    hrbrthemes
+    hrbrthemes,
+    magrittr,
+    purrr,
+    e1071
 RoxygenNote: 6.0.1
 Suggests: caret,
-    e1071,
     randomForest,
     testthat
