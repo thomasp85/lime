@@ -1,0 +1,25 @@
+### abstract ###
+health care resource allocation is a central moral issue in health policy  and opinions about it have been studied extensively
+allocation situations have typically been described and presented in a positive manner i e   who should receive medical aid
+on the other hand  the negative valence allocation situation i e   who should not receive medical aid has been relatively neglected
+this paper demonstrates how positive versus negative framing of the exact same health care resource allocation situation can affect the perceived fairness of allocation principles
+participants usually perceived non-egalitarian principles i e   need  equity and tenure to be fairer in positively framed situations i e   to deliver health care resources to certain patients than negatively framed situation i e   not to deliver health care resources to other patients
+however  framing did not affect the perceived fairness of the equality principle i e   a random draw
+the paper offers a theoretical explanation for the effect of framing on the perceived fairness of health care resource allocation and discusses implications for both researchers and policy makers
+### introduction ###
+the issue of allocating health care resources to recipients is a central medical and ethical concern  CITATION
+patients in need of medical aid frequently rely on the generosity of their community for survival
+however  a community usually has a finite amount of health care resources  and the question of how these lifesaving but scarce health care resources should be distributed has been studied extensively  CITATION
+as can be expected  the just allocation of social resources occupies many scholars  and different theories advocate different allocation principles
+CITATION  in the normative tradition of miller's theory of justice  CITATION  and the multiprinciple approach  CITATION   three principles have usually been identified as central to the concept of distributive justice  equity  equality and need  CITATION
+these principles involve different rules
+to realize the equity principle  one can allocate resources on the basis of ability  effort or merit  CITATION
+for example  if the decision is to allocate aid to all except claimants who are responsible for their illness  the decision can be viewed as based on a merit principle  because claimants who are not responsible for their illness are considered as more deserving than claimants who are responsible for their illness
+to ensure equal allocation  one can use the simple equality rule  to each the same  or offer equality of opportunities  CITATION
+the principle of need is usually achieved by allocating according to individuals' medical condition  socio-economical status or other relevant needs  CITATION
+the principle of tenure in terms of a waiting list is often used in health care resource allocations
+in the uk  for example  the length of time a patient spends on a waiting list is used as the main criterion for donor liver allocations
+the use of this tenure principle is also quite common in the usa  CITATION
+judgments about allocation of health care resources  as well as actual allocations  are usually complex and dependent on many variables  such as the resource availability  the claimants' need for help  and their deservingness  CITATION
+public opinion on the appropriate allocation of scarce health care resources e g   organ transplantations  new vaccinations or treatments may affect actual outcomes
+people's readiness to donate organs  for example  may be affected by their views concerning the fairness of the system  CITATION

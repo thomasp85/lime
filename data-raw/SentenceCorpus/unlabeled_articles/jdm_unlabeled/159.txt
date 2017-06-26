@@ -1,0 +1,40 @@
+### abstract ###
+people not only seek to avoid losses or secure gains  they also attempt to create opportunities for obtaining positive outcomes
+when distributing money between gambles with equal probabilities  people often invest in turning negative gambles into positive ones  even at a cost of reduced expected value
+results of an experiment revealed that  NUMBER  the preference to turn a negative outcome into a positive outcome exists when people's ability to do so depends on their performance levels rather than merely on their choice   NUMBER  this preference is amplified when the likelihood to turn negative into positive is high rather than low  and  NUMBER  this preference is attenuated when people can lie about their performance levels  allowing them to turn negative into positive not by performing better but rather by lying about how well they performed
+### introduction ###
+losses loom larger than gains  CITATION   and avoiding losses is more desired than securing gains  CITATION   especially when the motivation is in line with the individual's goals  CITATION
+beyond avoiding losses and securing gains  however  people are motivated to create opportunities for securing positive outcomes  CITATION
+people seek to increase the probability to win something  even at the cost of reduced expected value  CITATION
+this tendency can translate into large monetary losses in real life  as people attempt to minimize the number of debts they have rather than focusing on reducing the total amount they owe  CITATION
+specifically  among people holding multiple credit cards amar et al CITATION  found evidence for a debt account aversion  people consistently paid off small debts first  even though the larger debts had higher interest rates
+people's psychological need to turn a negative-to-positive can be costly
+payne and colleagues  CITATION  studied people's tendency to attempt increasing their probability of winning a positive outcome using mixed probability gambles
+participants were asked to imagine that they  own a five-outcome gamble with the following payoffs and probabilities    NUMBER     NUMBER     NUMBER    NUMBER     NUMBER    NUMBER   -  NUMBER    NUMBER   -  NUMBER    NUMBER  now imagine that i tell you that you can change the gamble above in one of two ways
+you can add   NUMBER  to the outcome that pays   NUMBER  or you can add the   NUMBER  to the outcome that pays   NUMBER 
+   CITATION
+although the expected value of the gamble remains constant regardless of the outcome participants chose to add money to as all outcome had the same probability to be chosen   NUMBER  percent  of participants preferred to add money to the outcome that increased their probability of winning a positive outcome e g     NUMBER   increasing the probability of winning a positive outcome from  NUMBER -out-of- NUMBER  to  NUMBER -out-of- NUMBER 
+the remaining  NUMBER  percent  chose to add the money to the alternative outcome that did not increase their likelihood of winning something e g     NUMBER 
+venkatraman  et al CITATION  further found that  NUMBER  percent  of the people who considered the following gamble   NUMBER    NUMBER     NUMBER    NUMBER     NUMBER    NUMBER     NUMBER    NUMBER   -  NUMBER    NUMBER   chose to add their   NUMBER  to the -  NUMBER  outcome rather than the   NUMBER  outcome  allowing them to turn the one negative outcome into a positive outcome  and thus increase their probability of winning something in the gamble from  NUMBER -out-of- NUMBER  to  NUMBER -out-of- NUMBER 
+although people can influence their outcomes by choosing how to allocate funds  CITATION   they are often also able to influence their outcomes by choosing a task and working on it
+for example  observing multiple tasks piling on their desks  such as emails to respond to and exams to grade  people must choose the task they will attend to first
+they may choose the more urgent task of grading exams  or alternatively choose the task that is likely to take the least time to accomplish and reply to not so urgent emails
+in such  people's desire to have less unattended tasks on their table  might lead them to procrastinate on the more urgent tasks they are facing
+the current paper focuses on a situation in which people can influence their outcomes by choosing one of multiple outcomes and adding value to it as a function of their task performance  predicting the outcomes of multiple coin tosses
+specifically  the current work asks whether people choose to invest their efforts in turning a negative outcomes into positive outcomes and thus increase their probability of winning a positive outcome
+additional questions addressed here are whether this tendency is amplified when the likelihood to turn the negative-to-positive is high rather than low  that is  when the performance needed to accomplish turning the negative outcome into a positive outcome is relatively feasible easy to accomplish rather than relatively less feasible difficult to accomplish
+and finally  i ask whether ambiguous settings in which people may over-report their performance levels i e   lie reduce their sensitivity to the objective feasibility to turn negative-to-positive
+to address these questions  i adapted payne's  CITATION  paradigm and asked participants to add points to one of three outcomes  labeled  pot a    pot b  and  pot c   by choosing one of the pots
+participants then predicted the outcomes of  NUMBER  coin tosses  gaining one point per correct prediction
+points were added to the pre-selected pot only
+after participants completed the coin tossing task  one of the pots was randomly selected to determine the participant's final outcome
+points translated to lottery tickets for an alleged lottery with two   x NUMBER ac  NUMBER  prizes
+pot a had a positive initial outcome  NUMBER  points  pot c had a negative initial outcome - NUMBER  points  while pot b had a negative initial value that could potentially turn into a positive outcome  if participants predicted well enough on the coin tossing task
+specifically  i manipulated whether the initial value of pot b made it likely to turn from negative-to-positive initial value   - NUMBER  points or unlikely to turn from negative-to-positive initial value   - NUMBER  points
+as people seek to maximize the probability of winning something  and thus turn negative outcomes into positive ones  they should be sensitive to the likelihood of turning the negative outcome into a positive one
+when the likelihood of successfully turning the negative outcome into a positive outcome is low i e   when accomplishing the task is possible but relatively difficult due to the initial value of the pot  people should be less likely to choose modifying this outcome
+in contrast  when the likelihood of successfully turning the negative outcome into a positive outcome is high i e   when accomplishing the task is possible and also relatively easy due to the initial value of the pot  people should be more likely to choose modifying this outcome
+formally put  relative likelihood to accomplish a task however  matters only  when performance is evaluated objectively  that is  when people are not able to over-report their performance levels to unethically boost their profit
+in contrast  when people have the ability to lie about their performance levels  the difficulty of the task becomes less important  as people can lie rather than perform in order to achieve a positive outcome
+this begs the question of whether situations allowing people to dishonestly over-report their performance levels may lead people to pay less attention to the likelihood of being able to turn a negative-to-positive  CITATION
+in other words  when people can lie to improve their outcomes  will the likelihood of turning a negative-to-positive i e   low vs high initial pot value no longer be relevant

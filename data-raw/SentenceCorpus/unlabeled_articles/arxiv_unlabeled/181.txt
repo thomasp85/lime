@@ -1,0 +1,36 @@
+### abstract ###
+This paper introduces a model based upon games on an evolving network, and develops three clustering algorithms according to it
+In the clustering algorithms, data points for clustering are regarded as players who can make decisions in games
+On the network describing relationships among data points, an edge-removing-and-rewiring (ERR) function is employed to explore in a neighborhood of a data point, which removes edges connecting to neighbors with small payoffs, and creates new edges to neighbors with larger payoffs
+As such, the connections among data points vary over time
+During the evolution of network, some strategies are spread in the network
+As a consequence, clusters are formed automatically, in which data points with the same evolutionarily stable strategy are collected as a cluster, so the number of evolutionarily stable strategies indicates the number of clusters
+Moreover, the experimental results have demonstrated that data points in datasets are clustered reasonably and efficiently, and the comparison with other algorithms also provides an indication of the effectiveness of the proposed algorithms \\ \\  Keywords : Unsupervised learning, data clustering, evolutionary game theory, evolutionarily stable strategy
+### introduction ###
+Cluster analysis is an important branch of Pattern Recognition, which is widely used in many fields such as pattern analysis, data mining, information retrieval and image segmentation
+For the past thirty years, many excellent clustering algorithms have been presented, say,  K -means  CITATION , C4 5~ CITATION , support vector clustering (SVC)  CITATION , spectral clustering~ CITATION , etc , in which the data points for clustering are fixed, and various functions are designed to find separating hyperplanes
+In recent years, however, a significant change has been made
+Some researchers thought about that why not those data points could move by themselves, just like agents or something, and collect together automatically
+Therefore, following their ideas, they created a few exciting algorithms  CITATION , in which data points move in space according to certain simple local rules preset in advance
+Game theory came into being with the book named "Theory of Games and Economic Behavior" by John von Neumann and Oskar Morgenstern  CITATION  in 1940
+In this period, Cooperative Game was widely studied
+Till 1950's, John Nash published two well-known papers to present the theory of non-cooperative game, in which he proposed the concept of Nash equilibrium, and proved the existence of equilibrium in a finite non-cooperative game  CITATION
+Although non-cooperative game was established on the rigorous mathematics, it required that players in a game must be perfect rational or even hyper-rational
+If this assumption could not hold, the Nash equilibrium might not be reached sometimes
+On the other hand, evolutionary game theory  CITATION  stems from the researches in biology which are to analyze the conflict and cooperation between animals or plants
+It differs from classical game theory by focusing on the dynamics of strategy change more than the properties of strategy equilibria, and does not require perfect rational players
+Besides, an important concept, evolutionarily stable strategy  CITATION , in evolutionary game theory was defined and introduced by John Maynard Smith and George R
+Price in 1973, which was often used to explain the evolution of social behavior in animals
+To the best of our knowledge, the problem of data clustering has not been investigated based on evolutionary game theory
+So, if data points in a dataset are considered as players in games, could clusters be formed automatically by playing games among them
+This is the question that we attempt to answer
+In our clustering algorithm, each player hopes to maximize his own payoff, so he constantly adjusts his strategies by observing neighbors' payoffs
+In the course of strategies evolving, some strategies are spread in the network of players
+Finally, some parts will be formed automatically in each of which the same strategy is used
+According to different strategies played, data points in the dataset can be naturally collected as several different clusters
+The remainder of this paper is organized as follows: Section 2 introduces some basic concepts and methods about the evolutionary game theory and evolutionary game on graph
+In Section 3, the model based upon games on evolving network is proposed and described specifically
+Section 4 gives three algorithms based on this model, and the algorithms are elaborated and analyzed in detail
+Section 5 introduces those datasets used in the experiments briefly, and then demonstrates experimental results of the algorithms
+Further, the relationship between the number of clusters and the number of nearest neighbors is discussed, and three edge-removing-and-rewiring (ERR) functions employed in the clustering algorithms are compared
+The conclusion is given in Section 6

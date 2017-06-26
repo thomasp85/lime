@@ -1,0 +1,31 @@
+### abstract ###
+Statistical learning theory chiefly studies restricted hypothesis classes,  particularly those with finite Vapnik-Chervonenkis (VC) dimension
+The fundamental quantity of interest is the sample complexity: the number of samples required to learn to a specified level of accuracy
+Here we consider learning over the set of all computable labeling functions
+Since the VC-dimension is infinite and a priori (uniform) bounds on the number of samples are impossible, we let the learning algorithm decide when it has seen sufficient samples to have learned
+We first show that learning in this setting is indeed possible, and develop a learning algorithm
+We then show, however, that bounding sample complexity independently of the distribution is impossible
+Notably, this impossibility is entirely due to the requirement that the learning algorithm be computable,  and not due to the statistical nature of the problem
+### introduction ###
+Suppose we are trying to learn a difficult classification problem: for example determining whether the given image contains a human face,  or whether the MRI image shows a malignant tumor, etc
+We may first try to train a simple model such as a small neural network
+If that fails, we may move on to other, potentially more complex, methods of classification such as support vector machines with different kernels,  techniques to apply certain transformations to the data first, etc
+Conventional statistical learning theory attempts to bound the number of samples needed to learn to a specified level of accuracy for each of the above models (e g \ neural networks, support vector machines)
+Specifically, it is enough to bound the VC-dimension of the learning model to determine the number of samples to use~ CITATION
+However, if we allow ourselves to change the model, then the VC-dimension of the overall learning algorithm is not finite, and much of statistical learning theory does not directly apply
+Accepting that much of the time the complexity of the model cannot be a priori bounded,  Structural Risk Minimization~ CITATION  explicitly considers a hierarchy of increasingly complex models
+An alternative approach, and one we follow in this paper, is simply to consider a single learning model that includes all possible classification methods
+We consider the unrestricted learning model consisting of all computable classifiers
+Since the VC-dimension is clearly infinite,  there are no uniform bounds (independent of the distribution and the target concept) on the number of samples needed to learn accurately~ CITATION
+Yet we still want to guarantee a desired level of accuracy
+Rather than deciding on the number of samples a priori,  it is natural to allow the learning algorithm to decide when it has seen sufficiently many labeled samples based on the training samples seen up to now and their labels
+Since the above learning model includes any practical classification scheme, we term it universal (PAC-) learning
+We first show that there is a computable learning algorithm in our universal setting
+Then, in order to obtain bounds on the number of training samples that would be needed, we consider measuring sample complexity of the learning algorithm as a function of the unknown correct labeling function (i e \ target concept)
+Although the correct labeling is unknown, this sample complexity measure could be used to compare learning algorithms speculatively: ``if the target labeling were such and such, learning algorithm  SYMBOL  requires fewer samples than learning algorithm  SYMBOL "
+By asking what is the largest sample size needed assuming the target labeling function is in a certain class, we could compare the sample complexity of the universal learner to a learner over the restricted class (e g \ with finite VC-dimension)
+However, we prove that it is impossible to bound the sample complexity of any  computable  universal learning algorithm, even as a function of the target concept
+Depending on the distribution, any such bound will be exceeded with arbitrarily high probability
+The impossibility of a distribution-independent bound is entirely due to the computability requirement
+Indeed we show there is an uncomputable learning procedure for which we bound the number of samples queried as a function of the unknown target concept, independently of the distribution
+Our results imply that computable learning algorithms in the universal setting must ``waste samples" in the sense of requiring more samples than is necessary for statistical reasons alone

@@ -1,0 +1,29 @@
+### abstract ###
+Male Rocky Mountain elk produce loud and high fundamental frequency bugles during the mating season, in contrast to the male European Red Deer who produces loud and low fundamental frequency roaring calls.
+A critical step in understanding vocal communication is to relate sound complexity to anatomy and physiology in a causal manner.
+Experimentation at the sound source, often difficult in vivo in mammals, is simulated here by a finite element model of the larynx and a wave propagation model of the vocal tract, both based on the morphology and biomechanics of the elk.
+The model can produce a wide range of fundamental frequencies.
+Low fundamental frequencies require low vocal fold strain, but large lung pressure and large glottal flow if sound intensity level is to exceed 70 dB at 10 m distance.
+A high-frequency bugle requires both large muscular effort and high lung pressure, but at least 10 dB more intensity level can be achieved.
+Glottal efficiency, the ration of radiated sound power to aerodynamic power at the glottis, is higher in elk, suggesting an advantage of high-pitched signaling.
+This advantage is based on two aspects; first, the lower airflow required for aerodynamic power and, second, an acoustic radiation advantage at higher frequencies.
+Both signal types are used by the respective males during the mating season and probably serve as honest signals.
+The two signal types relate differently to physical qualities of the sender.
+The low-frequency sound relates to overall body size via a strong relationship between acoustic parameters and the size of vocal organs and body size.
+The high-frequency bugle may signal muscular strength and endurance, via a vocalizing at the edge mechanism, for which efficiency is critical.
+### introduction ###
+Contrary to expectation based on body size, some large male mammals use high-pitched vocalization for display.
+The dichotomy between low frequency and high frequency calls for vocal signaling of male characteristics is rarely so dramatic as in two closely related cervid species: European red deer and Rocky Mountain elk.
+During the mating season, one species is recognizable by a low frequency roar, while the other is well-known for its high frequency bugle CITATION, CITATION.
+Acoustic signals in the vocal communication of mammals are generally very complex because various selective pressures shape them CITATION.
+The complexity can be related to natural and sexual selection.
+For example, a signal is considered honest if reliable information about the sender can be extracted, such as body size or physical strength.
+An animal's body size or physical strength has important implications for its physiology, ecology, fecundity, or its aggressive interactions and mating success CITATION.
+The male red deer mating call was selected for low vocal tract resonance characteristics that provide reliable information about body size due to interconnected size-dependent factors involved in sound production CITATION.
+In contrast, it is difficult to make the case that body size is signaled by the high fundamental frequency whistle-like bugle of the elk.
+Elk calls sometimes contain low frequency components, but not consistently.
+The signature is the bugle.
+What provoked the evolution of such calls that would generally be associated with much smaller animals?
+Here we investigate the physiological tradeoffs related with the production of high and low frequency sounds.
+We have simulated red deer and elk calls with a finite-element model of oscillating vocal folds positioned within a laryngeal cartilaginous framework, applying intrinsic laryngeal muscle activations CITATION and a wave propagation model of the vocal tract CITATION with the goal to better understand the physiology of this intriguing system.
+The larynx finite element model was based on the anatomy and biomechanics of Rocky Mountain elk and red deer larynges CITATION, CITATION .

@@ -1,0 +1,8 @@
+### abstract ###
+we evaluate dijksterhuis  bos  van der leij   and  van baaren  CITATION   psychological science  on the benefit of unconscious thinking in predicting the outcomes of soccer matches
+we conclude that the evidence that unconscious thinking helps experts to make better predictions is tenuous both from theoretical and statistical perspectives
+### introduction ###
+the literature on unconscious processing is vast and there is evidence that such processes can influence judgments  memory  and behavior  CITATION
+an intriguing new theory  unconscious thought theory  CITATION  holds that the unconscious is a highly sophisticated  rational system that can make better decisions in complex situations than conscious thought  CITATION
+furthermore  according to a recent publication  experts who think unconsciously can make better use of diagnostic information and arrive at better predictions than non-experts  or experts who think consciously  CITATION
+in the present article  we evaluate this claim and conclude that the hypothesis of superior performance by unconscious thinkers in a predictive judgment task is not conclusively substantiated statistically or theoretically

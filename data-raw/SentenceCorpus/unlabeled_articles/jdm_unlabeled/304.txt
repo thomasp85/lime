@@ -1,0 +1,29 @@
+### abstract ###
+recently it has been observed that different choices can be made about structurally identical risky decisions depending on whether information about outcomes and their probabilities is learned by description or from experience
+current evidence is equivocal with respect to whether this choice  gap  is entirely an artefact of biased samples
+the current experiment investigates whether a representational bias exists at the point of encoding by examining choice in light of decision makers' mental representations of the alternatives  measured with both verbal and nonverbal judgment probes
+we found that  when estimates were gauged by the nonverbal probe  participants presented with information in description format as opposed to experience had a greater tendency to overestimate rare events and underestimate common events
+the choice gap  however  remained even when accounting for this judgment distortion and the effects of sampling bias
+indeed  participants' estimation of the outcome distribution did not mediate their subsequent choice
+it appears that experience-based choices may derive from a process that does not explicitly use probability information
+### introduction ###
+in recent years a quickly growing literature has emerged contrasting two different formats of choice - description and experience - and the correspondence of decisions observed in each  CITATION
+a decision from experience dfe is one where the possible outcomes and estimates of their probabilities are learned through integration of personal observation and feedback from the environment  CITATION
+a typical example might be the decision from where to buy your morning coffee as you make your way to work
+by contrast  a decision from description dfd is one where all possible outcomes and their probabilities are explicitly laid out from the outset  CITATION
+a typical example might be the decision to bring an umbrella to work after hearing the morning weather forecast and the chance of precipitation
+surprisingly  recent evidence has found that the decisions made under these two different formats of choice diverge
+for example  hertwig  barron  weber and erev  CITATION  presented six binary  risky choice problems to participants in either described or experienced format
+in the description format  outcomes and their probabilities were completely specified in the form   choose between a   NUMBER  for certain  or b   NUMBER  with a probability of  NUMBER  percent   otherwise zero 
+participants playing this description-based choice task tended to make decisions consistent with prospect theory's four-fold pattern of choice - risk-aversion for gains and risk-seeking for losses when probabilities were moderate or high  but risk-seeking for gains and risk-aversion for losses when probabilities were small  CITATION
+for example   NUMBER  percent  of participants preferred the certain   NUMBER  in the decision above
+in the experience format  participants were initially unaware of the outcomes and their respective probabilities and had to learn this information by sampling from two unlabelled buttons
+each sample presented a randomly selected outcome taken from an underlying outcome distribution with the same structure as the problems presented in the description format
+participants were free to sample as often and in any order that they liked until they were ready to select one option to play from for real
+strikingly  participants playing this experienced-based choice task tended to make decisions opposite to the four-fold pattern of choice
+for example  only  NUMBER  percent  of participants preferred the certain   NUMBER  in the decision above
+this apparent description-experience  gap  led some to call for the development of separate and distinct theories of risky choice  CITATION
+fox and hadar  CITATION   however  have argued that this conclusion is unwarranted in light of a reanalysis of the hertwig et al data
+specifically  they found that prospect theory could satisfactorily account for the patterns of choice when based on participants' experienced distribution of outcomes  which  due to sampling  errors   was often different to the objective distribution from which the sampled outcomes derived
+the crux of the debate centres on the relative importance of sampling bias
+this issue has led investigators to employ a number of creative designs that have produced conflicting results  CITATION

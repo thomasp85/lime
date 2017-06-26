@@ -1,0 +1,40 @@
+### abstract ###
+We present molecular dynamics simulations of unliganded human hemoglobin A under physiological conditions, starting from the R, R2, and T state.
+The simulations were carried out with protonated and deprotonated HC3 histidines His146, and they sum up to a total length of 5.6 s. We observe spontaneous and reproducible T R quaternary transitions of the Hb tetramer and tertiary transitions of the and subunits, as detected from principal component projections, from an RMSD measure, and from rigid body rotation analysis.
+The simulations reveal a marked asymmetry between the and subunits.
+Using the mutual information as correlation measure, we find that the subunits are substantially more strongly linked to the quaternary transition than the subunits.
+In addition, the tertiary populations of the and subunits differ substantially, with the subunits showing a tendency towards R, and the subunits showing a tendency towards T. Based on the simulation results, we present a transition pathway for coupled quaternary and tertiary transitions between the R and T conformations of Hb.
+### introduction ###
+Conformational transitions of allosteric proteins are fundamental to a variety of biological functions.
+For instance, quaternary transitions in hemoglobin give rise to the cooperativity of ligand binding and have therefore drawn extensive and ongoing scientific interest over many decades CITATION, CITATION.
+The end points of the quaternary transition of Hb are referred to as deoxy T state and oxy R state of Hb, which are characterized by low and high oxygen affinity, respectively CITATION, and the cooperativity of ligand binding originates from the dependence of quaternary population on the number of liganded subunits CITATION.
+The oxygen affinity of Hb decreases with lower pH, a phenomenon that is referred to as alkaline Bohr effect.
+Approximately 40 percent of the Bohr effect has been attributed to the protonation of the terminal His146 residues of the subunits, which are also denoted as HC3 histidines CITATION .
+The stereochemical explanation of Hb cooperativity and the characterization of the transition pathway were originally based on the HbCO and deoxyHb crystal structures, corresponding to the R and T state, respectively.
+According to these structures, the transition can mainly be described by a 12 15 rotation of the 1 1 dimer with respect to the 1 2 dimer CITATION, CITATION.
+Later, a second quaternary structure of liganded Hb, termed R2, was found CITATION, with a 1.1 larger distance between the centers of mass of two subunits as compared to the R structure.
+Differences between R and R2 at the 1 2 interface triggered a still unresolved discussion whether R2 is a stable intermediate on a R-R2-T pathway CITATION CITATION.
+NMR experiments indicate that liganded Hb in solution is in equilibrium between the R and R2 structures CITATION.
+More recently, two additional liganded Hb structures RR2 and R3 were found using the high-salt crystallization conditions of Perutz CITATION, emphasizing that a consensus view on the liganded Hb state in solution is far from being reached.
+RR2 represents an intermediate structure between R and R2, whereas the distance between the COMs of the two subunits is reduced by 3.1 in R3 as compared to the R structure.
+Extensive efforts aimed to identify the transition pathway of Hb in response to ligand dissociation CITATION.
+The kinetics of the R T transition after photodissociation of the CO adduct, HbCO, have been studied using time-resolved spectroscopic techniques including absorption CITATION, Raman CITATION, CITATION, and circular dichroism spectroscopy CITATION, CITATION.
+The picture derived from these experiments suggests a multistep R T pathway via several metastable intermediates, with relaxation rates ranging from tens of nanoseconds to tens of microseconds, and with a time constant of 21 s for the overall R T quaternary transition CITATION.
+The experiments provide extremely valuable insights into the kinetics of Hb, but they also bear limitations.
+They do not directly detect the global quaternary transitions, but mainly measure the formation of hydrogen bonds of aromatic residues, such as the Trp37-Asp94 and the Tyr42-Asp99 H-bonds, which must be interpreted in terms of conformational transitions.
+A full-atomistic picture of the R T transition could so far exclusively be derived for a mollusk dimeric hemoglobin using time-resolved X-ray crystallography CITATION.
+Such experiments provide an ensemble-averaged picture, whereas Hb may follow heterogeneous transition pathways that may not be fully reflected by the spectra.
+Furthermore, in contrast to the well-studied R T transition, little is known about the kinetics of the T R transition because that transition cannot be triggered by photolysis.
+Molecular dynamics simulations can provide a full-atomistic picture of Hb and are therefore well suited to complement experimental efforts.
+Early MD efforts focused on the photodissociation of CO CITATION, or were restricted to the dynamic treatment of a subset of Hb residues CITATION.
+Ramadas and Rifkind considered the response of Hb to the perturbation of the heme on a several 100ps time scale CITATION, and Mouawad and coworkers enforced quaternary transitions within 200ps using a technique called path exploration method CITATION.
+In addition, a set of MD simulation of up to 6ns were carried out with a focus on the mechanism of effectors CITATION.
+Recently, a single 45-ns simulation of Hb was published without observing any conformational transitions CITATION.
+Complementary to the MD studies, a normal mode analysis considered the collective motions intrinsic to the Hb tetramer CITATION, and an elastic network study suggested a T-R2 transition as the preferential quaternary transition pathway CITATION .
+So far, no spontaneous quaternary or tertiary transitions of Hb were observed during MD simulations, presumably since previous simulations were restricted to too short time scales.
+Here, we apply extensive MD simulations to investigate the deoxy R, R2, and T state of human.
+We observe for the first time spontaneous and reproducible quaternary transitions of Hb, as well as tertiary transitions of the and subunits.
+Hence, these simulations allow one to study the transition mechanism in atomistic detail.
+We find the T-R pathway as the primary quaternary transition pathway.
+By analyzing repeated T-R transitions, we find a marked asymmetry between the and subunits.
+Based on the simulation results, we present a schematic mechanism underlying the preferential transition pathway between the R and T states of hemoglobin.

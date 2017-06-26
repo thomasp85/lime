@@ -1,0 +1,24 @@
+### abstract ###
+we designed an experiment to test the robustness of dana  weber  and kuang's dwk   NUMBER  results
+dwk observed that  when participants were given a  costless  way - the click of a button - to ignore the consequences of their actions on others' payoffs  they chose to remain ignorant and fair behavior diminished
+by implementing a double-blind experiment together with a design that controls for alternative explanations for the observed behavior  we confirmed dwk's findings
+### introduction ###
+previous works have indicated that  although individuals often act altruistically  CITATION  they also engage in strategic ignorance and thus avoid situations where altruism might be expected or required of them  CITATION
+in a recent paper  dana  weber  and  kuang  CITATION  - henceforth dwk - presented results of an experiment where participants were given a choice of either remaining uninformed about the effects of their actions on someone else's earnings  or clicking a button on the computer screen to learn about how their decisions could affect another participant's earnings
+despite this  costless  mechanism  half of the participants in their experiment chose strategic ignorance and  subsequently  selfish actions
+in contrast  when participants' did not have a choice to remain ignorant  behavior was mostly altruistic
+based on these data  dwk argue that the generosity observed in many experiments may not be due to a preference for a fair outcome  but may be a result of  people feeling compelled to give due to situational factors  while not really valuing the corresponding outcome  p  NUMBER 
+indeed  dwk observed that  when the one-to-one mapping between actions and outcomes was relaxed  fair behavior diminished
+given the potential significance of these findings in reshaping the discussion of the motives for fair and altruistic behavior and the role that situational factors may play in influencing them  here we check the robustness of dwk's results to an alternative experimental design
+in dwk's experiment  subjects were asked to click on a button on the screen to make the consequences of their actions transparent
+in addition to a preference for strategic ignorance  there are alternative reasons for why subjects in their experiments may have chosen not to click the button remain ignorant and behaved selfishly
+first  subjects may have perceived the click of a button as costly  not costless
+an extra click requires an additional effort the click
+secondly  the click may have been avoided because it generated a delay in consumption
+in dwk's experiment  a participant who chooses to reveal the other's payoffs is forced to wait to learn about the other's earnings before being able to consume her own payoff
+finally  and more importantly  it is possible that omission bias  CITATION  may have caused the curious results
+indeed  one can reasonably expect more generosity in an experimental design where transparency is the default choice and its avoidance the  click  option
+in this paper  by altering the way we ask participants to reveal or not reveal information about others' earnings  we control for decision costs  consumption delay  and with some caveats omission bias
+indeed  in our experiment  to reveal or not reveal information about the other's payoffs required the same amount of effort and time  and both options required an action or commission
+we also implement a double-blind experiment to generate the most reliable environment to test participant's decisions
+interestingly  overall  our results confirm the results of data  weber  and  kuang

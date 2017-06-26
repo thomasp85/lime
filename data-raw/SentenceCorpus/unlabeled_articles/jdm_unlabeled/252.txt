@@ -1,0 +1,35 @@
+### abstract ###
+the duration of ownership has been shown to increase the valuation of items that people currently own as well as items they have owned in the past  a phenomenon termed the  length-of-ownership effect
+  we hypothesize that the duration of exposure to an item will foster increased pre-ownership attachment to an item and increased valuations in a manner similar to duration of actual ownership
+we examine this effect in two experiments  both variations of the classic mug experiment
+to induce different levels of exposure  we varied the amount of time that participants examined the auctioned item i e   coffee mugs prior to participating in real dollar auctions
+in the first study  participants bid in online english open bid auctions
+in the second study  participants bid in first-price sealed bid auctions
+in both cases of duration of physical contact positively influenced valuations i e   bid levels
+### introduction ###
+ownership of an item has been shown to increase the owner's valuation  a phenomenon termed the  endowment effect
+  the most widely-held explanation of the endowment effect is that it is a manifestation of the asymmetry of value that kahneman and tversky  CITATION  call loss aversion  based on the observation that loss has a greater subjective effect than does an equivalent gain
+extant literature suggests that endowment affects monetary valuations from the moment an individual gains factual ownership of an item
+for this reason  kahneman  knetsch  and thaler  CITATION  used the term  instant  endowment effect
+strahilevitz and loewenstein  CITATION  extended this notion  suggesting that  although adaptation of ownership begins immediately following endowment  complete adaptation to ownership is likely to take time
+strahilevitz and loewenstein suggested that adaptation of ownership need not be all-or-nothing  because individuals may not adapt instantaneously and fully to either the acquisition or loss of an item
+in a series of experiments  they demonstrate that the duration of ownership increases the valuations of items that people currently own as well as items they have owned in the past
+however  several recent studies suggested that the endowment effect may affect valuations even sooner  i e   before actual ownership takes place  CITATION
+for example  casey  CITATION  discovered a gap between participants' compensation demanded and their willingness to pay for lottery tickets even in the absence of actual ownership
+likewise  sen and johnson  CITATION  found that merely possessing a coupon for a product increased a consumer's preference for that product in a manner similar to ownership
+carmon et al CITATION  showed that simply thinking about an option created a sense of pre-factual ownership of the option and an increased sense of loss after choosing an alternative option
+these findings are consistent with earlier work by dhar and simonson  CITATION   who observed that that making an option the focus of a comparison enhanced its perceived attractiveness and the probability that it would be selected
+hoch and loewenstein  CITATION  suggested that a change in an individual's reference point accompanies partial ownership of a good
+they note that after partially adapting to the possession of a good  consumers may feel deprived if they are subsequently unable to fully acquire the item
+as a result  hoch and loewenstein suggested that a consumer who partially adapts to ownership of a good may have increased motivation to acquire the item
+if these conjectures are true  then we should expect partial adaptation to ownership to begin immediately following the initiation of physical contact with the item and to intensify with the duration of the contact
+this article investigates the effect of duration of exposure i e   the duration of the physical contact on valuations in two separate experiments and makes several contributions to the growing literature on the endowment effect
+related experimental work  CITATION  has found that the duration of auction participation operationalized in terms of the number of rounds in which a bidder was allowed to participate can affect a bidder's valuation of the auctioned item
+however  our work is the first to investigate the effect of duration of exposure to an item on valuations where  exposure  is operationalized as the amount of time that participants tactilely examine an item before bidding
+to accomplish this  we performed two variations of the classic mug experiment
+to induce different levels of exposure  we varied the amount of time that participants examined the mugs before placing their bids
+in the first study  participants bid in first-price sealed bid auctions
+in the second study  participants bid in online english open bid auctions
+data from both studies suggest that duration of exposure affects valuations in a manner similar to duration of ownership  that is  examining an item for longer periods of time resulted in greater attachment to the item and thus higher valuations
+we therefore show that the effects observed in strahilevitz and loewenstein's  CITATION  study do not appear to rely on factual ownership per se  but were the result of increased subjective feeling of ownership pseudo-endowment induced by increased duration of physical possession of an object
+our findings also suggest that subjective feelings of ownership may affect valuations much more quickly than prior researchers have envisioned

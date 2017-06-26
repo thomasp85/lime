@@ -1,0 +1,98 @@
+### abstract ###
+the group-diffusion effect is the tendency for people to judge themselves to be less likely to experience a negative outcome as the total number of people exposed to the threat increases - even when the probability of the outcome is explicitly presented  CITATION
+in experiment  NUMBER  we replicated this effect for two health threat scenarios using a variant of yamaguchi's original experimental paradigm
+in experiment  NUMBER   we showed that people also judge themselves to be less likely to be selected in a lottery as the number of people playing the lottery increases
+in experiment  NUMBER   we showed that explicitly presenting the number of people expected to be selected eliminates the group-diffusion effect  and in experiment  NUMBER  we showed that presenting the number expected to be affected by a health threat without presenting the total number exposed to the threat produces a reverse effect
+we propose  therefore  that the group-diffusion effect is related to the ratio bias
+both effects occur when people make risk or likelihood judgments based on information presented as a ratio
+the difference is that the group-diffusion effect occurs when the denominator of the relevant ratio is more salient than the numerator  while the ratio bias occurs when the numerator is more salient than the denominator
+### introduction ###
+in many situations  there is  safety in numbers
+  a person in a group is less susceptible to a wide variety of threats than a person who is alone
+consider  for example  a traveler who is walking in a strange city at night
+if this person is in a group  he or she is probably less likely to get lost  less likely to be mugged  and more likely to receive help in the event that he or she twists an ankle
+however  there are many other kinds of threats for which being part of a group makes no difference
+imagine  for example  a traveler who eats at a local restaurant
+if the food in the restaurant were found to be contaminated with e
+coli  then the person would be just as likely to get sick after dining in a group as after dining alone
+there is evidence  however  that people tend to confuse the latter type of situation with the former
+that is  people sometimes perceive an illusory safety in numbers
+in the first demonstration of this effect  yamaguchi  CITATION  presented college students with one of six scenarios in which they were exposed to a threat e g   a carcinogen  a financial risk and asked them to judge the probability that they would experience an associated negative outcome
+one of his scenarios  for example  read as follows
+an infectious disease is prevalent in a foreign city
+the disease comprises a fever and temperatures of over  NUMBER  degrees for more than a week together with severe diarrhea
+although the death rate is not high  the disease has after-effects such as total hair loss
+the city authorities are afraid of losing tourists from abroad and have kept the matter confidential
+a group of  NUMBER  japanese tourists including yourself has arrived in the city and plan to stay for one week
+how likely do you think it is that you will catch the disease if you stay as planned for one week
+for each scenario  there was an alone condition in which the participant was exposed to the threat alone  you have arrived in the city    a small-group condition in which the participant was one of  NUMBER  people exposed  and a large-group condition in which anywhere from  NUMBER  to  NUMBER  million people were exposed  depending on the scenario
+across all the scenarios  there was a strong tendency for participants to give lower probability judgments as the number of people exposed to the threat increased
+furthermore  the function relating group size to perceived risk was roughly logarithmic
+there was a large drop in perceived risk from the alone to the small-group condition  with a smaller drop from the small-group to the large-group condition
+yamaguchi  CITATION  referred to this as the group-diffusion effect and he proposed that it occurs because people use an interdependence heuristic
+they apply the general rule that  i am safer in a larger group  even when group size is irrelevant
+according to yamaguchi  the interdependence heuristic could have evolved as the cognitive concomitant of the motivational mechanisms that lead humans - and many other animals - to form and maintain social groups
+of course  these mechanisms evolved because there often is safety in numbers
+individuals in groups are better able to fend off attacks  find mates  find or create shelter  and forage successfully
+but the group-diffusion effect is the result of over-applying this generally useful rule
+our purpose in conducting the present research on the group-diffusion effect was twofold
+first  we wanted to replicate it  because there have been only two published studies on it since yamaguchi's  CITATION   which was conducted in japan
+one replicated the basic effect in hong kong  CITATION
+the other was only partially successful in replicating the effect in the united states  CITATION   with the group-diffusion effect being observed for only two of the six scenarios tested
+these results leave open the possibility - as yamaguchi himself pointed out - that culture might play a role in the group-diffusion effect
+because both japan and hong kong are culturally more collectivist than the united states  CITATION   participants in those countries might be more attentive to the number of people exposed to a threat or be more likely to apply the interdependence heuristic  perhaps because of their greater sense of collective control as opposed to individual control  CITATION
+it is important  therefore  to replicate the group-diffusion effect in an individualistic culture such as that of the united states
+our second purpose in conducting this research was to consider an alternative explanation of the group-diffusion effect
+specifically  we thought it might be the result of people's attending to and weighting the number of people exposed to the risk more heavily than other information in making their likelihood judgments
+consider two scenarios
+in one   NUMBER  person is expected to be taken ill out of  NUMBER  people exposed to a virus
+in the other   NUMBER  people are expected to be taken ill out of  NUMBER  people exposed
+the probability that any individual will be taken ill is given by the ratio of the number of people expected to be affected to the number of people exposed  and of course the two probabilities in this example are the same  NUMBER   NUMBER     NUMBER   NUMBER     NUMBER  percent 
+however  if people attend to and weight the number of people exposed the denominator of the fraction more than the number expected to be affected the numerator  then they would perceive lower risk when the number of people exposed is  NUMBER  than when it is  NUMBER 
+note that there is no motivational component to our theory
+people do not attend to and weight the denominator more than the numerator because it makes them feel safe
+they attend to and weight it more because it is more attentionally salient
+a potential problem with this idea is that there is considerable research on a phenomenon called the ratio bias that seems to show just the opposite
+when reasoning about likelihoods based on ratios  people attend to and weight numerators more than denominators
+for example  denes-raj and epstein  CITATION  asked people to choose between two gambles
+in one  they would win if they selected a red jelly bean from a bin containing  NUMBER  jelly beans  where one of them was red
+in the other  they would win if they selected a red jelly bean from a bin containing  NUMBER  jelly beans  where between  NUMBER  and  NUMBER  of them were red
+surprisingly  many people preferred to select from the second bin  implying that they were focusing on the greater number of red jelly beans in that bin  CITATION
+yamagishi  CITATION  has shown something similar in the domain of risk perception
+his participants judged the riskiness of various causes of death when the death rates were presented as ratios  and they appeared to attend to and weight the numerators more than the denominators
+for example  they judged the risk of dying of cancer to be greater when told that it kills  NUMBER   NUMBER  people out of  NUMBER   NUMBER  than when told that it kills  NUMBER   NUMBER  people out of  NUMBER 
+the ratio bias has also been shown to influence the elicitation of health-state utilities  CITATION  and the perceived guilt of a defendant based on dna evidence  CITATION
+our proposal  however  is that  although people attend to and weight the numerator more than the denominator in many situations  they do the opposite in others
+furthermore  this is mainly a consequence of the relative salience of the numerator and denominator
+in terms of the classic jelly bean scenario that has been used to demonstrate the ratio bias  people might exhibit a group-diffusion effect - judging the likelihood of selecting a red jelly bean to be lower when there are  NUMBER  jelly beans in the bin than when there are  NUMBER  - if their attention is drawn primarily to the total number of jelly beans rather than the number of red ones
+one way to do this might be to present the number of red jelly beans implicitly rather than explicitly by giving the total number of jelly beans along with the probability of selecting a red one  NUMBER  percent 
+consider the analogous situation described in the following letter to a popular media columnist who answers people's mathematical  scientific  and technical questions  CITATION
+family and friends have ganged up on me  but we agree to believe what you say
+i say the odds of winning a six-number lottery in which you choose the numbers are the same whether  NUMBER  or  NUMBER   NUMBER  tickets are sold
+they say the chances are better if only  NUMBER  are sold
+who's right
+although the chances of winning are the same regardless of how many tickets are sold  the letter writer's family and friends appear to be influenced by that number - perhaps because it is the most salient one presented explicitly in the scenario
+the scenarios used by yamaguchi  CITATION  are similar to our hypothetical jelly bean example and the lottery example above in that they seem to draw attention to the denominator of the relevant ratio - the number of people exposed to the threat
+while all six of yamaguchi's scenarios prominently featured the number of people exposed to the threat  none of them explicitly presented the number of people expected to be affected
+in one of his scenarios  CITATION   the probability of the negative outcome was presented e g   a  NUMBER  percent  chance of developing cancer  but  given the difficulty that people have in understanding single-event probabilities  CITATION   it seems likely that the number exposed to the threat remained a highly salient piece of information - certainly more salient than the non-presented or implicitly presented number of people expected to be affected
+similar ideas have been explored by other researchers  although not in connection with the group-diffusion effect
+for example  stone et al CITATION  speculated that the greater impact of certain graphical risk communication methods occurs because these graphical methods emphasize the number of people expected to be affected more than the number exposed
+for example  a bar graph that compared the gum-disease risk associated with two brands of toothpaste in terms of the number of people expected to be affected produced relatively large differences in what people were willing to pay for the two products  CITATION
+however  stone et al CITATION  found that a stacked bar graph that shows both the number expected to be affected and the total number who use each toothpaste produced much smaller differences on par with the differences produced by presenting the risks in terms of probabilities
+bonner and newell  CITATION   however  found no effect of a conceptually similar manipulation
+they presented people with information about various causes of death in terms of the number of people who die per day from that cause or the number who die per year
+for example  the frequency of death from cancer in australia was presented as  NUMBER  deaths per day or as  NUMBER   NUMBER  deaths per year
+in essence  these are ratios in which the number of deaths is the numerator and the time period is the denominator
+these researchers also included a condition in which the number of deaths the numerator was made more salient e g     NUMBER  people in australia die every day from cancer
+  and a condition in which the time frame the denominator was made more salient  every day in australia  NUMBER  people die from cancer
+ 
+consistent with research on the ratio bias  they found that most people rated the causes of death riskier in the per-year condition than in the per-day condition - with a minority showing the opposite effect
+the salience manipulation  however  had no effect
+we began our research by replicating the group-diffusion effect on college students in the united states with two health scenarios to be sure that it occurs with participants from a more individualistic culture
+we continued by replicating it again in experiment  NUMBER   but in a new context
+instead of health-threat scenarios  we used lottery scenarios in which participants had a chance to lose or win money
+our rationale was that if participants exhibited a group-diffusion effect for a positive outcome i e   winning money  then it is unlikely that the effect is the result of an interdependence heuristic that is applied in response to a threat
+such a result would be consistent  however  with the idea that people simply attend to and weight the denominator of the relevant ratio more than the numerator
+in experiment  NUMBER   we show that the group-diffusion effect is eliminated when we change the scenarios slightly to include an explicit presentation of the numerator of the relevant ratio as well as the denominator
+finally  in experiment  NUMBER   we show that explicitly presenting the numerator but not the denominator produces an effect in the opposite direction - a ratio bias
+all of these results are consistent with our proposal that the group-diffusion effect is a result of people's attending to and weighting the denominator of the relevant ratio more than the numerator

@@ -1,0 +1,64 @@
+### abstract ###
+We present a novel approach to semi-supervised learning  which is based on statistical physics
+Most of the former work in the field of semi-supervised learning classifies the points by minimizing a certain energy function, which corresponds to a minimal k-way cut solution
+In contrast to these methods, we estimate the  distribution  of classifications, instead of the sole minimal k-way cut, which yields more accurate and robust results
+Our approach may be applied to all energy functions used for semi-supervised learning
+The method is based on sampling using a Multicanonical Markov chain Monte-Carlo algorithm, and has a straightforward probabilistic interpretation, which allows for soft assignments of points to classes, and also to cope with yet unseen class types
+The  suggested approach is  demonstrated on a toy data set and on two real-life data sets of  gene expression
+### introduction ###
+Situations in which  many unlabelled points are available  and  only few labelled points are provided call for semi-supervised learning methods
+The goal of semi-supervised learning is to classify the unlabelled points, on the basis of their distribution and the provided labelled points
+Such problems occur in many fields, in which obtaining data is cheap but labelling is expensive
+In such scenarios supervised methods are impractical, but the presence of the few labelled points can significantly improve the performance of unsupervised methods
+The basic assumption of unsupervised learning, i e clustering, is that points which belong to the same cluster actually originate from the same class
+Clustering methods which are based on estimating the density of data points define a cluster as a `mode' in the distribution, i e a relatively dense region surrounded by  relatively lower density
+Hence each mode is assumed to originate from a single class, although a certain class may be dispersed over several modes
+In case the modes are well separated  they can be easily identified by unsupervised techniques, and there is no need for semi-supervised methods
+However, consider the case of two close  modes which belong to two different classes, but the  density of points between them  is not significantly lower than the density within each mode
+In this case density based unsupervised methods may encounter difficulties in distinguishing between  the modes (classes), while semi-supervised methods can be of help
+Even if a few points are labelled in each class, semi-supervised algorithms, which cannot cluster together points of different labels, are  forced  to place a border between the modes
+Most probably the border will pass in between the modes, where  the density of points is lower
+Hence, the forced border `amplifies' the otherwise less noticed differences between the modes
+For example, consider the image in Fig ~a
+Each pixel corresponds to a data point and the similarity score between adjacent pixels is of value unity
+The green and red pixels are labelled while the rest of the blue pixels are unlabelled
+The desired classification into red and green classes appears in Fig ~b
+It is unlikely that any unsupervised method would partition the data correctly (see eg Fig ~c) since the two classes   form  one uniform cluster
+However, using a few labelled points semi-supervised methods which must place a border between the red and green classes may become useful
+In recent years various types of semi-supervised learning algorithms have been proposed, however almost all of these methods share a common basic approach
+They define a certain cost function, i e energy , over the possible classifications, try to minimize this energy, and output the minimal energy classification as their solution
+Different methods vary by the specific energy function and by their minimization procedures; for example the work on graph cuts~ CITATION , minimizes the cost of a cut in the graph, while others  choose to  minimize the normalized cut cost~ CITATION , or a quadratic cost~ CITATION
+As stated recently by~ CITATION , searching for a minimal energy has a  basic disadvantage, common to all former methods: it ignores the robustness of the found solution
+Blum et al mention the case of  several minima with equal energy, where  one arbitrarily chooses one solution, instead of considering them all
+Put differently, imagine the energy landscape in the space of  solutions; it may contain many equal energy minima as considered Blum et al , but also other phenomena may harm the robustness of the global minimum as an optimal  solution
+First,  it may happen that the difference in energy between the global minimum, and close by solutions is minuscule, thus picking the minimum as the sole solution may be incorrect or arbitrary
+Secondly, in many  cases there are too few data points (both labelled and unlabelled) which may cause the empirical density to locally deviate from the true density
+Such fluctuations in the density may drive the minimal energy solution far from the correct one
+For example, due to fluctuations a low density ``crack" may be formed inside a high density region, which may erroneously split  a single  cluster in two
+Another type of fluctuation may generate  a ``filament" of high density points in  a low density region, which may unite two clusters of different classes
+In both cases, the minimal energy solution is erroneously `guided' by the fluctuations, and fails to find the correct classification
+An example of the latter case appears in Fig ~a;   the classifications provided by three semi-supervised methods appear in Fig ~d--f, fail to recover the desired classification, due to a `filament' which connects the  classes *}  Searching for  the minimal energy solution is equivalent to seeking the most probable joint classification (MAP)
+A possible remedy to the difficulties in this approach may then be to consider the probability distribution of all possible classifications
+Blum et al provided a first step in this direction using a randomized min-cut  algorithm
+In this work we provide a different solution  based on   statistical physics
+Basically each solution in our method  is weighed by its energy  SYMBOL , also known as the Boltzmann weight, and its probability is given by:  SYMBOL } where the ``temperature''  SYMBOL  serves as a free parameter, and the energy  SYMBOL  takes into account both  unlabelled and labelled points
+Classification is then performed by marginalizing (), thus estimating the probability that a point  SYMBOL  belongs to a class  SYMBOL
+This formalism is often referred to  as a Markov random field (MRF), which has been applied in numerous works, including in the context of semi-supervised learning by~ CITATION
+However,  they seek  the MAP solution (which corresponds to  SYMBOL ), while we estimate the distribution itself (at  SYMBOL )
+Using the framework of statistical physics has several advantages in the context of semi-supervised learning: First, classification  has a simple probabilistic interpretation
+It yields a fuzzy assignment of points to class types, which may also  serve as a confidence level in the classification
+Secondly, since exactly estimating the marginal probabilities is, in most cases,  intractable, statistical physics has developed elegant Markov chain Monte-Carlo (MCMC) methods which are suitable for estimating semi-supervised systems
+Due to the inherent complexity of semi-supervised problems, `standard' MCMC methods, such as the Metropolis~ CITATION  and Swendsen-Wang~ CITATION  methods  provide poor results, and one needs to apply more sophisticated algorithms, as discussed in section~
+Thirdly, using statistical physics allows us to gain an intuition  regarding  the nature of a semi-supervised problem, i e , it allows for a detailed analysis of the effect of adding labelled points to an unlabelled data set
+In addition, our method also has two practical advantages: (i) while most semi-supervised learning methods consider only the case of two class types, our method is naturally extended  to  the multi-class scenario (ii) Another unique feature of our method is its ability to suggest the existence of a new class type, which did  not appear in the labelled set
+Our main objective in this paper is to present a framework, which can later be applied in  different directions
+For example, the energy function in () can be any of the functions used in other semi-supervised  methods
+In this paper we chose to use the min-cut cost function
+We do not claim that using this cost function is optimal, and indeed we observed that it is suboptimal in some cases
+However, we aim to convince the reader that applying our method, to any energy function, would always yield equal or better results than merely minimizing the same energy function
+Our work is closely related to the typical cut criterion for unsupervised learning, first introduced by~ CITATION  in the framework of statistical physics and later in a graph theoretic context   by~ CITATION
+The method introduced in this work can be viewed as  an extension of these clustering algorithms to the semi-supervised case
+The paper is organized as follows: Section~ presents the model, and Section~ discusses the issue of estimating  marginal probabilities
+Section~ presents the qualitative effect of adding labelled points
+Our semi-supervised algorithm is outlined in Section~
+Section~ demonstrates the performance of our algorithm on a toy data set  and on two real-life examples  of  gene expression data

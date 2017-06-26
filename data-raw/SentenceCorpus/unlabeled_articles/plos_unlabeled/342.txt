@@ -1,0 +1,60 @@
+### abstract ###
+The role that mechanistic mathematical modeling and systems biology will play in molecular medicine and clinical development remains uncertain.
+In this study, mathematical modeling and sensitivity analysis were used to explore the working hypothesis that mechanistic models of human cascades, despite model uncertainty, can be computationally screened for points of fragility, and that these sensitive mechanisms could serve as therapeutic targets.
+We tested our working hypothesis by screening a model of the well-studied coagulation cascade, developed and validated from literature.
+The predicted sensitive mechanisms were then compared with the treatment literature.
+The model, composed of 92 proteins and 148 protein protein interactions, was validated using 21 published datasets generated from two different quiescent in vitro coagulation models.
+Simulated platelet activation and thrombin generation profiles in the presence and absence of natural anticoagulants were consistent with measured values, with a mean correlation of 0.87 across all trials.
+Overall state sensitivity coefficients, which measure the robustness or fragility of a given mechanism, were calculated using a Monte Carlo strategy.
+In the absence of anticoagulants, fluid and surface phase factor X/activated factor X activity and thrombin-mediated platelet activation were found to be fragile, while fIX/FIXa and fVIII/FVIIIa activation and activity were robust.
+Both anti-fX/FXa and direct thrombin inhibitors are important classes of anticoagulants; for example, anti-fX/FXa inhibitors have FDA approval for the prevention of venous thromboembolism following surgical intervention and as an initial treatment for deep venous thrombosis and pulmonary embolism.
+Both in vitro and in vivo experimental evidence is reviewed supporting the prediction that fIX/FIXa activity is robust.
+When taken together, these results support our working hypothesis that computationally derived points of fragility of human relevant cascades could be used as a rational basis for target selection despite model uncertainty.
+### introduction ###
+The role that mechanistic mathematical modeling and systems biology will play in molecular medicine and clinical development remains uncertain.
+Kitano suggested that understanding of critical questions in biology required the integration of experimental and computational research CITATION.
+Assmus et al. and others maintained that analysis of the dynamics of human relevant networks using predictive computer models and high-throughput data generation would play an increasingly important role in medical research and the elucidation of disease mechanisms CITATION, CITATION.
+However, parametric and structural uncertainty remains an open challenge to mechanistic modeling in medicine.
+Strategies that integrate experimental and computational techniques have had success at elucidating network structures.
+Arm and Arkin reviewed experimental and computational techniques to uncover molecular interaction networks CITATION.
+The central experimental advancements in the area of protein protein network identification have been the yeast two-hybrid system CITATION, CITATION and quantitative mass spectrometry proteomic techniques to determine protein complexes CITATION, CITATION.
+Young and coworkers explored protein DNA interactions using the chromatin immunoprecipitation technique CITATION where likely transcription factor binding sites were determined using a combination of chromatin immunoprecipitation chips and DNA microarrays.
+Time-lagged correlation matrices CITATION, CITATION, genetic programming techniques CITATION, and network decomposition strategies have also been used with time-series concentration measurements to estimate reaction network structures CITATION .
+Sensitivity analysis has been used to integrate model identification and discrimination with optimal experimental design and knowledge discovery.
+Cho et al. used sensitivity analysis to study TNF- mediated NF B signalling where parametric uncertainty was addressed using Monte Carlo sensitivity analysis; using the best-guess parameter set, a family of random parameter sets was generated where sensitivity coefficients were calculated for each member of the random family CITATION.
+Cho et al. went on to develop a unifying framework, building upon the earlier work of Kholodenko et al. and Sontag et al. to unravel the functional interactions in biomolecular networks using a stimulus response strategy and metabolic control analysis CITATION CITATION.
+Kremling et al. investigated the benchmark problem of growth of a microorganism in a continuous bioreactor subject to feed shifts using sensitivity-based model identification and discrimination strategies; they determined optimal experimental design and perturbation strategies to identify and discriminate between rival model formulations CITATION.
+Gadkar et al. identified signal transduction models from time-course measurements using a nonlinear scheme to estimate missing protein measurements from measured values CITATION.
+They went further and proposed strategies to calculate D-optimal experimental designs that maximized the experimental information used to identify signal transduction models as well as an iterative strategy to explore model structure CITATION, CITATION.
+Sensitivity analysis has also been used to explore the robustness and fragility of metabolic and signaling networks.
+Robustness, the ability to maintain system performance in the face of perturbation and uncertainty, is a desirable feature in both biological as well as man-made networks, machines, and systems CITATION.
+Conversely, fragility, i.e., extreme sensitivity to small perturbations, is a very undesirable trait that could lead to catastrophic system failure following seemingly innocuous perturbations, e.g., a Boeing 777 crashing because of minor software failures or microscopic alterations in a few integrated chips CITATION.
+Stelling et al. reviewed several examples of robustness in biological networks CITATION, while Leibler first computationally predicted and later experimentally verified robust features of chemotaxis control networks CITATION, CITATION.
+Bullinger and coworkers explored the robustness of models of programmed cell death or apoptosis CITATION, while Stelling et al. computationally identified points of robustness and fragility, using Monte Carlo sensitivity analysis and overall state sensitivity coefficients, in models of circadian rhythm CITATION .
+In this study, we use tools from systems biology, namely mathematical modeling and sensitivity analysis, to explore the working hypothesis that mechanistic models of human relevant cascades, despite model uncertainty, can be computationally screened for points of fragility, i.e., sensitive mechanisms, and that these mechanisms could serve as a rational basis for therapeutic target selection.
+We test our working hypothesis by computationally screening a mechanistic model of the well-studied coagulation cascade developed and validated from literature sources.
+After model validation, using 21 published datasets generated from two different quiescent in vitro coagulation models, we use Monte Carlo sensitivity analysis to computationally screen the model for sensitive mechanisms in the presence and absence of natural anticoagulants.
+We then contrast the predicted fragile mechanisms with literature to determine if they are consistent with experimental investigation, thereby proving or disproving our working hypothesis.
+While the current development is restricted to coagulation, the broader strategy is general and could be applied to an arbitrary network.
+Coagulation, mediated by a family of serine proteases and a key group of blood cells, both of which are normally inactive in the circulation, is directly relevant to human health and has been suggested by Somogyi and Greller to be an ideal candidate for in silico drug discovery CITATION.
+Insufficient coagulation is manifested in disorders such as haemophilia A, haemophilia B, or von Willebrand disease CITATION, CITATION.
+Conversely, unwanted clotting can be a serious complication following surgical intervention and is directly involved in coronary artery diseases, which collectively account for 38 percent of all deaths in North America CITATION .
+The salient features of the coagulation cascade included in our model, shown schematically in Figure 1 and presented in detail in Table 1, are reviewed here.
+Several extensive reviews of the underlying biochemistry and cell biology of coagulation can be found elsewhere CITATION CITATION.
+There are two pathways that lead to activation of the master protease thrombin and eventually to a clot the intrinsic and extrinsic cascades.
+It is generally believed that the extrinsic cascade is the main mechanism of thrombinogenesis in the blood CITATION CITATION.
+Upstream coagulation factors are activated by materials exposed because of vessel injury chief among these tissue factors CITATION ; TF and activated factor VIIa present in the blood form a complex that activates factor X and fIX.
+FXa activates downstream factors, including fV, fVIII, and fIX.
+FXa can also, along with FVa, form a complex on the surface of activated platelets that converts prothrombin to thrombin.
+TF FVIIa is not the only mechanism to activate fX; FIXa and FVIIIa can complex on the surface of activated platelets and catalyze the formation of FXa.
+Platelet localization at the wound site occurs through specific interactions between the platelet and the subendothelium, primarily through recognition of exposed materials such as collagen, fibronectin, and von Willebrand factor.
+Localized platelets are activated by external signals such as adenosine diphosphate and thrombin.
+Thrombin irreversibly activates platelets through a family of transmembrane receptors on the platelet surface called protease-activated receptors CITATION, CITATION.
+Thrombin, in addition to playing a key role in platelet activation, catalyzes the conversion of fibrinogen to fibrin.
+Fibrin, with the help of FVIIIa, forms a cross-linked mesh inside the platelet plug that stops blood flow.
+Thrombin also activates upstream coagulation factors, thereby forming a strong positive feedback that ensures rapid activation.
+Three control points that inhibit thrombin formation are considered in the model.
+TF pathway inhibitor downregulates FXa formation and activity by sequestering free FXa and TF FVIIa in an FXa-dependent manner.
+Antithrombin III neutralizes all serine proteases generated during the coagulation response, making it perhaps the most powerful control element in the cascade.
+Thrombin itself plays an inadvertent role in its own inhibition by binding the surface protein thrombomodulin, expressed on normal vasculature CITATION.
+The FIIa TM complex catalyzes the conversion of protein C to activated PC ; APC attenuates the coagulation response by the proteolytic cleavage of fV/FVa and fVIII/FVIIIa CITATION .

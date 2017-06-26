@@ -1,0 +1,50 @@
+### abstract ###
+according to siegrist  earle and gutscher's  CITATION  model of risk communication  the effect of advice about risk on an agent's behavior depends on the agent's trust in the competence of the advisor and on their trust in the motives of the advisor
+trust in competence depends on how good the advice received from the source has been in the past
+trust in motives depends on how similar the agent assesses the advisor's values to be to their own
+we show that past quality of advice and degree of similarity between advisors' and judges' values have separate non-interacting effects on two types of agent behavior  the degree of trust expressed in a source stated trust and the weight given to the source's advice revealed trust
+these findings support siegrist et al 's model
+we also found that revealed trust was affected more than stated trust by differences in advisor quality
+it is not clear how this finding should be accommodated within siegrist et al 's  CITATION  model
+### introduction ###
+throughout the social sciences  trust is recognized as an important factor that mediates many aspects of human behavior  CITATION
+definitions of trust vary but a widely accepted one is that it is  a psychological state comprising the intention to accept vulnerability based upon positive expectations of the intentions or behavior of another   CITATION
+thus  a person the trustor who depends on someone else the trustee expects to reduce the likelihood or size of a negative outcome in some situation  when that dependence is misplaced  the expected value of the outcome is lower
+experimental work on trust has been carried out in various contexts  including behavioral game theory  CITATION   on-line commerce  CITATION   and risk communication
+the work that we report here falls into the last of these three domains
+risk communication provides information that is fallible  it gives people advice about levels of risk associated with hazards
+reliance on advisors signals an acceptance of vulnerability based on expectations that those advisors are competent and well-meaning when  in fact  they may not be
+such reliance provides evidence of trust in the sense encapsulated by the above definition
+when people rely more on certain advisors  we can say that their behavior reveals that they have more trust in those advisors  CITATION
+recent research into trust indicates that it is determined by a number of factors  CITATION
+these factors can be broadly categorized into two groups
+the first concerns the competence of the trustee ability  competence  expertise  knowledge
+the second concerns the motives of the trustee benevolence  integrity  honesty  fairness
+on the basis of findings such as these  siegrist  earle and gutscher  CITATION  and siegrist  gutscher and earle  CITATION  developed their trust-confidence-cooperation tcc model
+a simplified version of it is shown in figure  NUMBER 
+according to this model  two different types of trust determine the degree to which people cooperate with their advisors
+the first is trust in motives also known simply as  trust  or  social trust  and the second is trust in competence known as  confidence 
+the cooperative intention produced by these two types of trust results in cooperative behaviors of various types
+for example  people may express trust in their advisors  they may use advice from them to form their own judgments  or they may act on the basis of their advice
+trust in competence is determined by past history of the quality of advice produced by the source
+this type of information has already been shown to affect advice-taking  people place greater weight on information received from sources who have been more accurate in the past  CITATION
+trust in motives is determined by how similar the judge assesses the advisor's values to be to their own
+siegrist et al 's  CITATION  model predicts that people will take more advice from advisors whose values they judge to be more similar to their own
+to date  this prediction of their two-route model has not been tested
+our aim here is to provide such a test
+in the past  researchers into advice-taking have measured trust in advice by using behavioral measures
+for example  given two different pieces of advice for the value of a numerical variable e g   a risk level  a judgment closer to the first than to the second indicates greater influence of the first
+hence  relative proximity of judgments to advice from different sources provides a behavioral means of assessing the relative influence of those sources of advice
+in contrast  researchers into trust have required people to make verbal or numerical estimates of their trust in different sources of information - typically by using rating scales
+however  o'neill  CITATION  has argued that behavioral and verbal measures of trust may not always coincide
+for example  people may state that they do not trust an agent when their behavior reveals that they do
+they may do this because the behavioral placement of trust relies on implicit intuitive  nonconscious processes that are not easily accessed by the explicit processes required for the verbal expression of trust
+indeed  there is some evidence that stated and revealed trust do dissociate under certain conditions  CITATION
+given these results  we shall measure trust in both ways in the present study
+siegrist et al 's  CITATION  model predicts that similarity of values  intentions and goals will increase trust in motives and thereby increase the influence of an advisor on a judge
+however  it does not make any prediction about the effects of physical similarity of the advisor and the judge
+nevertheless there is good reason to expect that people will be more influenced by advisors who are the same sex as they are or who are approximately the same age as they are
+this is because there is persuasive evidence that attitudes and values  particularly those relating to risk and technology  are more likely to be similar in people of the same sex and similar age  CITATION
+as a result  physical i e   age  sex similarity may imply a degree of value similarity
+if it does  advisors who are physically similar to judges are likely to be trusted more
+also advisors who are similar to judges in both respects are likely to be trusted more than those who are similar to them in just one respect

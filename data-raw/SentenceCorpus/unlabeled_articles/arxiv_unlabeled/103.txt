@@ -1,0 +1,45 @@
+### abstract ###
+It is hard to exaggerate the role of economic aggregators --- functions that summarize numerous and / or heterogeneous data --- in economic models  since the early XX SYMBOL  century
+In many cases, as witnessed by the pioneering works of Cobb and Douglas, these functions were information quantities tailored to economic theories, ie they were built to fit economic phenomena
+In this paper, we look at these functions from the complementary side: information
+We use a recent toolbox built on top of a vast class of distortions coined by Bregman, whose application field rivals metrics' in various subfields of mathematics
+This toolbox makes it possible to find  the quality of an aggregator (for consumptions, prices, labor, capital, wages, etc ), from the standpoint  of the information it carries
+We prove a rather striking result
+From the informational standpoint, well-known economic aggregators do belong to the  optimal  set
+As common economic assumptions enter the analysis, this large set shrinks, and it essentially ends up  exactly fitting  either CES, or Cobb-Douglas, or both
+To summarize, in the relevant economic contexts, one could not have crafted better some aggregator from the information standpoint
+We also discuss global economic behaviors of optimal information aggregators in general, and present a brief panorama of  the links between economic and information aggregators \\  Keywords  : Economic Aggregators, CES, Cobb-Douglas, Bregman divergences
+### introduction ###
+Since the end of the XIX SYMBOL  century and the birth of the ``neo-classical'' school,  mathematics have played a growing role in economics
+With the works of L\'eon Walras,  the question of aggregation of the behavior of many individuals has risen and become  central in the economic theory
+In order to represent as well as possible the evolution  of these aggregate variables, some mathematical functions have been proposed and become  very famous in the economic literature
+One of the most famous neo-classical function is the Cobb-Douglas  CITATION
+This  function is of particular interest, since it allows for perfect substitutability between the  different inputs it depends on
+Another well-known ``linear'' function was later formulated  by Leontief  CITATION , in which inputs are conversely complementary
+The choice of such a function  to describe the production process has very strong implications at the macroeconomic level, as  illustrated by many results found by Keynesians economics in the literature on growth theory
+But beyond these different aggregate functions, one of the most recently built and well-known one is  the constant elasticity of substitution (CES) function elaborated by Arrow et al CITATION
+Indeed, in the Cobb-Douglas production function, the elasticity of substitution of capital for  labor is fixed to unity
+This implies that a one percent increase in the capital stock implies an  equal one percent fall in labor inputs in order to maintain a constant production level, given the  structure of relative prices
+On the contrary, the CES function allows this elasticity to lie between  zero and infinity, but to stay fixed at that number along and across the isoquants, whatever the  quantities of inputs that are used in the production process
+The main advantage exhibited by the  CES function is that it encompasses the Cobb-Douglas, the Leontief and the Linear production  functions, which are in fact limit and thus particular cases of it
+Nevertheless, one of the  reasons economists have kept on using simpler functions such as the Cobb-Douglas one is the  heavy calculus to which the CES function often leads, especially at the point where models have to be closed
+In a seminal work, Douglas in  CITATION  highlights the importance of the progresses in the field of statistical  information in the genesis of his essay
+Pioneering works of Cobb and Douglas  CITATION , and Arrow  et al CITATION , underline the inductive nature of the inception of their respective functions, as the purpose was to fit as best as possible information quantities (aggregators) to observed economic phenomena
+In this paper, we take a deductive route paved with a rigorous information material, to derive these fundamental quantities based on two assumptions:   an aggregator should always be as informative as possible with respect to the data it summarizes (prices,  consumptions, wages, capital, labor, etc );  an aggregator might be require to satisfy standard economic assumptions, relying on aggregator dualities (prices / consumptions, wages / labor, etc ), elasticities, marginal rates of substitutions, returns to scale, etc
+The starting point of our work is a class of distortions coined in the sixties by Bregman  CITATION , in the context of convex programming
+Though they were born four decades ago, it was only much later that  these distortions literally spread out to other fields, including statistics, signal processing and  classification  CITATION , fields where they had to become undeniably central
+It was even later  that was discovered their broad applicability, with an  axiomatization that makes it possible to relate them to metrics and their spawns  CITATION
+Very roughly,  Bregman divergences  are non-negative functions that meet the same identity of indiscernibles condition as metrics, and rely on a third assumption about the existence of a particular aggregator which minimizes the total distortion to a set
+This last condition, which can be rephrased as a maximum likelihood condition, makes this aggregator the  most informative   quantity about the data, and we call it a  Low Distortion Aggregator  (LDA)
+In this paper, our contribution is threefold
+First, we make a clear partition of economic aggregators with respect to information, as we show that some  are  LDAs (CES, Cobb-Douglas), some are limit cases of LDAs (Leontief), and some are neither (Mitscherlich-Spillman-von Th{\"u}nen)
+Without more assumptions, the set of all LDAs is huge, yet we show that global trends of economic relevance can be easily shown for all, such as on marginal rates of substitution, and the set can be quite  easily drilled down for aggregators with general behaviors, such as concavity or convexity
+This, in fact, is our last contribution
+Our main contribution is to show that, when we plug in various standard economic assumptions (see above), the set of all LDAs reduces to a particular subset which  precisely  matches CES, Cobb-Douglas, or both sets
+This novel advocacy for the use of these popular aggregators brings a very strong information-theoretic rationale to their ``economic'' existence
+The remaining of the paper is structured as follows
+Section 2 presents LDAs and their main properties
+In Section 3, we relate common economic aggregators to LDAs
+Section 4 discusses additional properties of LDAs
+A last section concludes the paper, with avenues for future research
+In order not to laden the paper's body, all proofs have been postponed to an appendix

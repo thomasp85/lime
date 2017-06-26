@@ -1,0 +1,85 @@
+### abstract ###
+Understanding of the intracellular molecular machinery that is responsible for the complex collective behavior of multicellular populations is an exigent problem of modern biology.
+Quorum sensing, which allows bacteria to activate genetic programs cooperatively, provides an instructive and tractable example illuminating the causal relationships between the molecular organization of gene networks and the complex phenotypes they control.
+In this work we to our knowledge for the first time present a detailed model of the population-wide transition to quorum sensing using the example of Agrobacterium tumefaciens.
+We construct a model describing the Ti plasmid quorum-sensing gene network and demonstrate that it behaves as an on off gene expression switch that is robust to molecular noise and that activates the plasmid conjugation program in response to the increase in autoinducer concentration.
+This intracellular model is then incorporated into an agent-based stochastic population model that also describes bacterial motion, cell division, and chemical communication.
+Simulating the transition to quorum sensing in a liquid medium and biofilm, we explain the experimentally observed gradual manifestation of the quorum-sensing phenotype by showing that the transition of individual model cells into the on state is spread stochastically over a broad range of autoinducer concentrations.
+At the same time, the population-averaged values of critical autoinducer concentration and the threshold population density are shown to be robust to variability between individual cells, predictable and specific to particular growth conditions.
+Our modeling approach connects intracellular and population scales of the quorum-sensing phenomenon and provides plausible answers to the long-standing questions regarding the ecological and evolutionary significance of the phenomenon.
+Thus, we demonstrate that the transition to quorum sensing requires a much higher threshold cell density in liquid medium than in biofilm, and on this basis we hypothesize that in Agrobacterium quorum sensing serves as the detector of biofilm formation.
+### introduction ###
+Molecular networks, which integrate signal transduction and gene expression into the unified decision circuitry, are ultimately responsible for the realization of all life activities of biological cells including internal developmental programs and responses to environmental factors.
+One of the main challenges of systems biology is to uncover and understand the relationships between the properties of these molecular circuits and the macroscopic cellular phenotypes that are controlled by them CITATION.
+Particularly important are the phenotypes involving interaction and cooperative action of multiple cells.
+The mapping of networks onto phenotypes is still difficult to accomplish in multicellular eukaryotic organisms owing to their staggering complexity.
+Less complex and more experimentally accessible prokaryotic organisms became the systems of choice for dissecting social behavior at the genetic level CITATION.
+The phenomenon of bacterial quorum sensing gives us a particularly unique opportunity to follow the causal relationships from molecular circuitry to cooperative population dynamics.
+QS refers to the ability of bacterial populations to collectively activate certain gene expression programs, e.g., toxin release or antibiotic production, once some critical population density has been reached.
+QS is found in a vast variety of bacterial species and has been extensively studied experimentally CITATION CITATION.
+In Gram-negative bacteria, the QS phenomenon is usually controlled by a small gene expression network that functions as an environmentally activated on off gene expression switch CITATION, CITATION whose operation is analogous to that of radar.
+At the low cell density that normally corresponds to the off switch state, a key transcription factor required for the expression of proteins responsible for the phenotype is suppressed.
+At the same time, the cell steadily produces a small amount of the QS signaling molecule, termed the autoinducer, that can freely diffuse in and out of the cell.
+While the population density is low, most of the autoinducer molecules are washed out and dispersed in the environment by diffusion.
+As the cell density grows, more molecules of autoinducer enter the bacterium from outside.
+Once certain cell quorum is reached, the inbound autoinducer signal triggers the transition of the QS network to the on state, resulting in the production of the transcription factor and the expression of the target genes.
+This transition on both intracellular and population-wide scales is the focus of our study.
+We investigate the phenomenon of QS in the soil-dwelling plant pathogen Agrobacterium tumefaciens, the causative agent of crown gall disease CITATION.
+Bacteria of this species often harbor Ti plasmids that endow their hosts with the unique ability to genetically modify susceptible plants through a cross-kingdom DNA transfer.
+Like many other soil bacteria, Agrobacterium is chemotactic to exudates released by plant wounds and is capable of catabolizing various nutrients that leave injured plant roots.
+Once bacteria form physical contact with the surface of the wound, Ti plasmids offer their hosts an extraordinary advantage over their plasmidless competitors.
+A fragment of the plasmid, termed the vir region, is injected into the plant cell in the form of a virion-like complex and is stably incorporated into the plant genome CITATION.
+One of the imported genes is responsible for the synthesis of opines, a class of low-molecular-weight nitrogen-rich metabolites, that can be utilized as a nutrient only by the bacteria that harbor the Ti plasmid.
+Other transferred genes cause a vigorous proliferation of infected plant cells that eventually results in the formation of a characteristic gall tumor.
+Once productive infection is established, Ti plasmids attempt to propagate themselves into the plasmidless bacteria of the same or related species by means of genetic conjugation.
+It has been shown that the conjugal transfer of Ti plasmids requires the QS phenomenon CITATION .
+Functional significance of QS for the control of Ti plasmid conjugation remains an ecological and evolutionary puzzle.
+It is widely believed CITATION, CITATION that QS controls processes, such as production of toxins and antibiotics, that are either inefficient or devoid of adaptive value if not performed on a population scale.
+Thus, the fact that the establishment of QS is upstream of the initiation of conjugation seems to imply that plasmids await the critical density of donors to collectively begin transfer to recipients.
+Since multiple donors cannot cooperate in DNA transfer, the necessity for collective action does not seem to be relevant in our case.
+Instead, to increase the probability of successful conjugation it would appear beneficial to exceed a certain number of recipients per donor.
+However the density of plasmidless recipients cannot be estimated using QS since they do not produce the autoinducer.
+This seemingly paradoxical situation may imply that our understanding of the biological function of QS is not yet complete.
+Indeed, an alternative function for QS as a sensor of the volume enclosing the bacteria has also been proposed CITATION.
+To answer what bacteria really measure using QS in each particular situation, it is necessary to consider the ecologically relevant conditions of bacterial growth CITATION .
+An experimental approach to this problem is often complicated by the technical difficulty of work in real ecosystems.
+On the other hand, mathematical modeling can significantly aid and complement experimental methods in answering biological questions that involve spatial and temporal scales of the QS phenomenon.
+Some aspects of either intracellular CITATION CITATION or population CITATION CITATION dynamics have been mathematically modeled to gain insight into the QS phenomenon in Pseudomonas aeruginosa and Vibrio fischeri.
+However, because of the lack of detailed molecular information, experimentally testable conclusions on the connections between intracellular and population dynamics have rarely been made.
+Here we develop a multi-level modeling approach that describes both the intracellular and the population-wide dynamics and allows us to follow the connections between them explicitly.
+Although much has been learned about the molecular details of the Agrobacterium QS network, it is not always clear what functions they perform.
+Here we construct a detailed model of the QS network in Agrobacterium and analyze it both quantitatively and qualitatively.
+We demonstrate that the network possesses properties of the on off gene expression switch robust to molecular noise.
+We further develop a population-scale model that incorporates bacterial motion, cell division, and chemical communication while explicitly considering the individual intracellular dynamics of each cell.
+This allows us to describe the transition to QS on both cellular and population scales and quantitatively predict the values of critical autoinducer concentration and threshold cell density as functions of various intracellular and environmental parameters.
+Finally, comparing feasibility of the transition to QS in homogeneous medium and biofilm, we present a hypothesis explaining the ecological and evolutionary roles of QS in regulation of Ti plasmid conjugal transfer.
+All genes that are thought to constitute the QS network are located on the Ti plasmid itself CITATION.
+The entire QS network is controlled upstream by the availability of the plant-produced opines to ensure that energetically expensive conjugation machinery is activated only after the establishment of a successful plant wound infection.
+Based on the chemical nature of the encoded opines, Ti plasmids are divided into two major types CITATION, of which we consider only the octopine type.
+We reconstructed the layout of the QS network for the octopine-type Ti plasmids from the published experimental data.
+In this plasmid class, octopine molecules that are imported through the cell wall eventually cause activation of transcription from the operon occ CITATION.
+In the model, we assume that octopine is constitutively available at the saturating concentration that results in the maximal rate of occ transcription.
+The last open reading frame of this operon codes for the QS transcription activator TraR.
+Binding of TraR to its cognate autoinducer is thought to occur only within a narrow window of time during traR mRNA translation when the newly formed protein chain tightly winds around a single molecule of Agrobacterium autoinducer CITATION CITATION.
+This total engulfment of AAI molecule makes formation of the TraR AAI complex practically irreversible.
+Furthermore, TraR protein translated in the absence of AAI is misfolded, insoluble, and unable to bind AAI CITATION, CITATION.
+This has an important consequence in that the rate of production of TraR depends on the concentrations of traR mRNA and AAI and does not depend on the accumulation of misfolded TraR protein, as explicitly shown in Figure 1.
+Once formed, TraR quickly dimerizes to form a stable transcriptionally active TraR dimer with a relatively short half-life of 35 min CITATION.
+TraRd is capable of activating a number of operons that encode proteins necessary for conjugation.
+The first open reading frame of the trb operon codes for the acyl-homoserine lactone synthetase TraI, which utilizes two metabolites abundant in the bacterial cell to create AAI CITATION.
+Since our model considers transition to QS in the mostly nutrient-rich, stress-free conditions of an optimized growth medium, we assume that the substrates of TraI are present in excess and their concentrations do not limit the rate of AAI production.
+Both traR and traI were shown to be expressed at some low constitutive rate even in the absence of octopine CITATION.
+The TraR TraI couple constitutes the classic QS positive feedback loop found in many Gram-negative bacteria.
+Additional feedback loops that also involve other components of the QS network are specific for Agrobacterium.
+Thus, negative control of QS is provided by the antiactivator traM, whose transcription is directly activated by TraRd CITATION.
+TraM effectively sequesters TraRd through the formation of a very stable complex in which TraRd is unable to bind DNA CITATION, CITATION.
+Recently, a number of authors reported that, like TraR, TraM also forms a dimer CITATION CITATION.
+The stoichiometry of the reaction between TraR and TraM, however, remains controversial CITATION CITATION.
+In our model we follow the original hypothesis of Swiderska et al. CITATION, which assumes that the complex consists of one TraRd and one monomer of TraM.
+This hypothesis is partially supported by Chen et al. CITATION, who showed that the TraM dimer must dissociate to form a complex with TraR.
+Under these assumptions we disregard dimerization of TraM as not affecting the network behavior.
+An additional positive feedback loop arises because TraRd activates transcription of the msh operon, which is a suboperon of occ that contains traR itself.
+Several lines of evidence suggest that active transporters facilitate traffic of the QS signaling molecules through the cell wall in a number of bacterial species including Agrobacterium CITATION CITATION.
+In our model, we explore the hypothesis that AAI is imported from the environment by an active pump that is also under the transcriptional control of TraRd.
+Indeed, the msh operon contains five open reading frames that encode a putative ABC-type importer whose function is not completely understood but that has been hypothesized to be an active transporter of AAI into the cell CITATION.
+Taking into consideration this uncertainty, the putative AAI importer in the model is denoted simply as Imp.

@@ -1,0 +1,44 @@
+### abstract ###
+Ryanodine receptors are ion channels that regulate muscle contraction by releasing calcium ions from intracellular stores into the cytoplasm.
+Mutations in skeletal muscle RyR give rise to congenital diseases such as central core disease.
+The absence of high-resolution structures of RyR1 has limited our understanding of channel function and disease mechanisms at the molecular level.
+Here, we report a structural model of the pore-forming region of RyR1.
+Molecular dynamics simulations show high ion binding to putative pore residues D4899, E4900, D4938, and D4945, which are experimentally known to be critical for channel conductance and selectivity.
+We also observe preferential localization of Ca 2 over K in the selectivity filter of RyR1.
+Simulations of RyR1-D4899Q mutant show a loss of preference to Ca 2 in the selectivity filter as seen experimentally.
+Electrophysiological experiments on a central core disease mutant, RyR1-G4898R, show constitutively open channels that conduct K but not Ca 2.
+Our simulations with G4898R likewise show a decrease in the preference of Ca 2 over K in the selectivity filter.
+Together, the computational and experimental results shed light on ion conductance and selectivity of RyR1 at an atomistic level.
+### introduction ###
+Muscle contraction upon excitation by nerve impulse is initiated by a rapid rise in cytoplasmic Ca 2.
+In skeletal muscle, the rise in cytoplasmic Ca 2 is brought about by the opening of the ryanodine receptor, which releases Ca 2 from intracellular stores CITATION, CITATION.
+RyRs are large tetrameric ion channels present in the membranes of endoplasmic/sarcoplasmic reticulum.
+They have high conductance for monovalent and divalent cations, while being selective for divalent cations CITATION.
+RyRs are important mediators of excitation-contraction coupling and congenital mutations of RyRs result in neuromuscular diseases such as malignant hypothermia and central core disease CITATION .
+Although RyRs are physiologically important, the molecular basis of their function is poorly understood.
+RyRs have unique properties such as their modes of selectivity and permeation not seen in other ion channels with known structures.
+Next to the putative selectivity filter, there are two negatively charged residues in RyR1 that are essential for normal selectivity and conductance CITATION.
+K channels have an analogous selectivity filter, but in contrast to RyR1, have only one adjacent negative residue that is not even conserved while other Ca 2 channels have only one conserved negative residue in the equivalent position CITATION.
+In the selectivity filter, mutations result in non-functional channels CITATION leading to CCD.
+A structural model of the pore region that would reveal the location and function of these residues will be useful in understanding the role of these residues in channel function.
+An early model of RyR ion permeation postulated potential barriers within the pore corresponding to three putative binding sites CITATION.
+Without any knowledge of the structure of the pore, the model was able to quantitatively reproduce conductance data of various ions.
+A PNP-DFT model CITATION accurately modeled the role of residues D4899 and E4900 in RyR1 in generating the high ion conductances of RyRs established by mutagenesis CITATION, CITATION.
+Selectivity was attributed to charge-space competition, as Ca 2 could accommodate the most charge in least space compared to K. However, since the channel model used in these simulations relied on a fixed structure, it could not predict changes due to mutations that potentially alter the structure of the channel.
+Additionally, there are two homology models of the RyR pore region CITATION, CITATION based on KcsA, a bacterial K channel whose solution structure is known CITATION.
+Shah et al. CITATION used bioinformatics approaches to construct models for RyR and the related inositol triphosphate channel.
+The luminal loop in their RyR model begins at 4890G resulting in the selectivity filter being 4890GVRAGG.
+However, mutagenesis has shown that residues I4897, G4898, D4899 and E4900 are important for channel conductance and selectivity, which suggests that they are part of the conduction pathway of RyR1 resulting in the predicted selectivity filter being 4894GGGIGDE.
+Welch et al. also constructed a homology model for the cardiac ryanodine receptor using the structure of the KcsA channel CITATION and performed simulations to identify residues important for channel function.
+Their simulations failed to identify D4899 as an important residue for ion permeation contrary to what has been shown experimentally CITATION.
+Furthermore, cryo-electron microscopy of RyR1 revealed significant differences between the pore region of KcsA and RyR1 CITATION .
+Experimental structure determinations of the RyRs have been mainly performed by cryo-EM CITATION CITATION.
+These studies revealed conformational changes that accompany channel opening CITATION and the binding sites of various effectors of RyRs CITATION CITATION.
+Cryo-EM has a resolution of 10 25 and thus is able to provide only limited structural information regarding the pore structure.
+Samso et al. CITATION manually docked the KcsA pore structure into the transmembrane region of their cryoEM map of the intact closed RyR1.
+Furthermore, they predicted the presence of at least 6 transmembrane helices from simple volumetric constraints.
+Ludtke et al. CITATION identified several secondary structure elements in their 10 resolution cryo-EM map of the closed RyR1.
+The pore-forming region as visualized by Ludtke et al. consists of a long inner helix made up of 31 residues and a pore helix made up of 15 residues that are presumably connected by a long luminal loop made up of 24 residues.
+Since the structure is derived from cryo-EM, the positions of pore residues' side chains and the structure of loops connecting the helices are unknown.
+We build a molecular model of the pore region of RyR1 based on their cryo-EM study by adding the luminal loop and the missing side chains of residues forming the helices of the pore.
+Furthermore, in our molecular dynamics simulations we examine the interactions of the pore region with mono- and divalent cations known to permeate the channel .

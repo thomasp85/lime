@@ -1,0 +1,15 @@
+### abstract ###
+The remarkable results of Foster and Vohra was a starting point for a series of papers which show that any sequence of outcomes can be learned (with no prior knowledge) using some universal randomized forecasting algorithm and forecast-dependent checking rules
+We show that for the class of all computationally efficient outcome-forecast-based checking rules, this property is violated
+Moreover, we present a probabilistic algorithm generating with probability close to one a sequence with a subsequence which simultaneously miscalibrates all partially weakly computable randomized forecasting algorithms
+According to the Dawid's prequential framework we consider partial recursive randomized algorithms
+### introduction ###
+Let a binary sequence  SYMBOL  of outcomes is observed by a forecaster whose task is to give a probability  SYMBOL  of a future event  SYMBOL
+The evaluation of probability forecasts is based on a method called  calibration : informally, following Dawid~ CITATION  forecaster is said to be well-calibrated if for any  SYMBOL  the event  SYMBOL  holds in  SYMBOL  of moments of time as he choose  SYMBOL  (see also~ CITATION )
+Let us give some notations
+Let  SYMBOL  be the set of all infinite binary sequences,  SYMBOL  be the set of all finite binary sequences and  SYMBOL  be the empty sequence
+For any finite or an infinite sequence  SYMBOL , we write  SYMBOL  (we put  SYMBOL )
+Also,  SYMBOL  denotes the length of the sequence  SYMBOL
+If  SYMBOL  is a finite sequence and  SYMBOL  is a finite or infinite sequence then  SYMBOL  denotes the concatenation of these sequences,  SYMBOL  means that  SYMBOL  for some  SYMBOL
+In the measure-theoretic framework we expect that the forecaster has a method for assigning probabilities  SYMBOL  of a future event  SYMBOL  for all possible finite sequences  SYMBOL
+In other words, all conditional probabilities  SYMBOL  SYMBOL SYMBOL \omega_1,\omega_2,,\omega_{n-1} SYMBOL p_n SYMBOL SYMBOL p_n SYMBOL f:\Xi[0,1] SYMBOL f SYMBOL \omega_1,,\omega_{n-1},SYMBOL f SYMBOL \omega=\omega_1\omega_2SYMBOL p_i=f(\omega_1\dots\omega_{i-1}) SYMBOL i=1,2,SYMBOL f(\alpha;x) SYMBOL \Omega_x SYMBOL Pr_x SYMBOL x\inSYMBOL SYMBOL SYMBOL Pr_{\omega^{i-1}} SYMBOL Pr SYMBOL \Omega_{\omega^{i-1}} SYMBOL i=1,2,SYMBOL \Delta>0 SYMBOL f SYMBOL \omega=\omega_1\omega_2SYMBOL Pr SYMBOL n\toSYMBOL p_i=f(\omega^{n-1}) SYMBOL I(p) SYMBOL [0,1] SYMBOL c(\omega^{i-1},p)=\delta(\omega^{i-1})I(p) SYMBOL \delta:\Xi\to\{0,1\} SYMBOL I(p) SYMBOL [0,1] SYMBOL p_i=f(\alpha;\omega^{i-1},p^{i-1}) SYMBOL p^{i-1}=p_1,,p_{i-1} SYMBOL k=1,2,SYMBOL \{\delta_k\} SYMBOL \{I_k\} SYMBOL [0,1] SYMBOL \{\delta_k I_k\} SYMBOL k=1,2,SYMBOL \Delta>0 SYMBOL \omega=\omega_1\omega_2SYMBOL n\toSYMBOL p_i=f(\omega^{n-1},p^{i-1}) SYMBOL I(p_i) SYMBOL \delta_k(\omega^{i-1})I_k(p_i) SYMBOL k=1,2,SYMBOL \{\delta_k\} SYMBOL p_i=f(\alpha;\omega^{i-1}) SYMBOL SYMBOL p_i=f(\alpha;\omega^{i-1}) SYMBOL SYMBOL SYMBOL I SYMBOL f$

@@ -1,0 +1,38 @@
+### abstract ###
+Drug molecules not only interact with specific targets, but also alter the state and function of the associated biological network.
+How to design drugs and evaluate their functions at the systems level becomes a key issue in highly efficient and low side-effect drug design.
+The arachidonic acid metabolic network is the network that produces inflammatory mediators, in which several enzymes, including cyclooxygenase-2, have been used as targets for anti-inflammatory drugs.
+However, neither the century-old nonsteriodal anti-inflammatory drugs nor the recently revocatory Vioxx have provided completely successful anti-inflammatory treatment.
+To gain more insights into the anti-inflammatory drug design, the authors have studied the dynamic properties of arachidonic acid metabolic network in human polymorphous leukocytes.
+Metabolic flux, exogenous AA effects, and drug efficacy have been analyzed using ordinary differential equations.
+The flux balance in the AA network was found to be important for efficient and safe drug design.
+When only the 5-lipoxygenase inhibitor was used, the flux of the COX-2 pathway was increased significantly, showing that a single functional inhibitor cannot effectively control the production of inflammatory mediators.
+When both COX-2 and 5-LOX were blocked, the production of inflammatory mediators could be completely shut off.
+The authors have also investigated the differences between a dual-functional COX-2 and 5-LOX inhibitor and a mixture of these two types of inhibitors.
+Their work provides an example for the integration of systems biology and drug discovery.
+### introduction ###
+Nonsteriodal anti-inflammatory drugs are widely used for the treatment of musculoskeletal pain and other conditions.
+In the US, more than 1 percent of the population uses NSAIDs daily CITATION, and the market for NSAIDs now amounts to more than $6 billion annually worldwide CITATION.
+Although NSAIDs do alleviate the aches and pains, these drugs have undesirable side effects on the gastrointestinal tract and the central nervous system in addition to the potential exacerbation of conditions such as asthma CITATION.
+The findings that cyclooxygenase-2 plays a major role in inflammation, and that inhibition of COX-1 causes gastrointestinal toxicity and mild bleeding diathesis CITATION, had suggested that selective COX-2 inhibitor would be an effective anti-inflammatory drug with low gastrointestinal side effects CITATION.
+Ironically, the unexpected cardiovascular side effects of selective COX-2 inhibitors have surfaced CITATION, CITATION.
+Thus, on September 30, 2004, Merck Company announced a voluntary withdrawal of the company's COX-2 inhibitor, VIOXX CITATION.
+Other FDA-approved COX-2 inhibitors, such as celecoxib and valdecoxib, are being re-evaluated CITATION CITATION.
+Despite years of studies, safe anti-inflammatory drug design remains a great challenge.
+Failures in anti-inflammatory drug design illustrate the limitations of the current drug discovery paradigm.
+A steady waning in the productivity of the pharmaceutical industry in the past decade has been observed.
+This decline coincides with the introduction of target-based drug discovery CITATION.
+Recently, medicinal chemists have started to think about drug discovery from a systems biology perspective CITATION, CITATION.
+Studying the cross-talks between biological responses rather than one by one may provide a better understanding of disease development and achieve accurate evaluation on drug efficacy and toxicity CITATION, CITATION.
+This new approach has been applied to safe drug design CITATION, CITATION.
+For example, the former SmithKline Beecham focused on the blood coagulation cascade biochemical network CITATION, CITATION.
+Armed with a good understanding of the disease from the regulatory network level, the company used model predictions to develop a fully humanized anti Factor IX antibody that has entered clinical trials.
+Rajasethupathy et al. have recently reviewed advances in the practical applications of systems biology to drug discovery CITATION.
+These researchers promote the development of network-based drug design, which devises drug-treatment strategies from the level of the disease system using computational models and high-throughput experiments.
+In this paper, we study the dynamic properties of the arachidonic acid metabolic network in human polymorphonuclear leukocytes in the hope of gaining more insights into anti-inflammatory drug design.
+An ordinary differential equation model of the AA metabolic network was developed.
+Flux analysis and simulation on the addition of exogenous AA were performed to study the network balance.
+The therapeutic effects of anti-inflammatory inhibitors were simulated, and the difference between dual functional COX-2 and 5-lipoxygenase inhibitors and the mixture of these two types of inhibitors was studied.
+Corresponding experiments on the introduction of exogenous AA, COX-2, and 5-LOX inhibitors were performed and were found to be consistent with model predictions.
+Our work shows that flux balance is important for the efficacy and safety of the drugs.
+Compared with traditional single-target drugs, drugs against multiple targets can control the network balance and lead to safer treatment.

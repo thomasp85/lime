@@ -1,0 +1,20 @@
+### abstract ###
+using five variants of the asian disease problem  we dissected the risky-choice framing effect by requiring each participant to provide preference ratings for the full decision problem and also to provide attractiveness ratings for each of the component parts  i e   the sure-thing option and the risky option
+consistent with previous research  more risky choices were made by respondents receiving negatively framed versions of the decision problems than by those receiving positively framed versions
+however  different processes were evident for those scoring high and low on numeracy
+whereas the choices of the less numerate showed a large effect of frame above and beyond any influence of their evaluations of the separate options  the choices of the highly numerate were almost completely accounted for by their attractiveness ratings of the separate options
+these results are consistent with an increased tendency of the highly numerate to integrate complex numeric information in the construction of their preferences and a tendency for the less numerate to respond more superficially to non-numeric sources of information
+### introduction ###
+tversky and kahneman's  CITATION  introduction of the asian disease problem was among the earliest examples of the malleability of human decision making
+at the heart of this problem is the choice between a riskless option and a risky option of equal expected value
+because the current study will dissect the components of the prototypical risky-choice paradigm as exemplified by the asian disease problem  we now describe these components
+the sure-thing option offers a fixed riskless outcome
+in the positive framing condition it is  save  NUMBER  out of  NUMBER  lives  whereas in the negative condition it is   NUMBER  will die
+  the risky option offers a  one-third chance of saving all the lives and a two-thirds chance of saving no lives  in the positive condition and a  one-third chance that no one will die and a two-thirds chance that all will die  in the negative condition
+in response to this choice problem  the majority of decision makers choose the riskless or  sure-thing  option over the risky option when potential outcomes are framed as gains lives saved but choose the risky option over the sure-thing option when the exact same objective outcomes are framed as losses deaths
+later attempts to replicate this phenomenon and extend it to other domains such as money gained or lost rather than lives did not always duplicate the literal preference reversal  but a general preference shift of more risky choices to avoid losses than to achieve gains is one of the most solid findings in judgment and decision making research  CITATION
+later research uncovered task characteristics and individual difference factors that moderated the reliability and magnitude of the risky-choice framing effect  CITATION
+the present study focuses on one such individual-difference factor
+the aim of the current study is to dissect the risky-choice framing effect into its component parts and to examine the moderating effect of an important individual-difference variable  numeracy  defined as the ability to understand probabilistic and mathematical concepts
+we asked participants in each framing condition to judge the full scenario and also to separately judge both the sure-thing component and the risky component
+in that way  we can assess the extent to which the full scenario framing effect is driven by framing of the separate components  and we can compare this for individuals differing on a variable known to be associated with more superficial vs more complex processing of numeric information in decisions

@@ -1,0 +1,26 @@
+### abstract ###
+MISC	The tradeoff between the need to suppress drug-resistant viruses and the problem of treatment toxicity has led to the development of various drug-sparing HIV-1 treatment strategies.
+AIMX	Here we use a stochastic simulation model for viral dynamics to investigate how the timing and duration of the induction phase of induction maintenance therapies might be optimized.
+OWNX	Our model suggests that under a variety of biologically plausible conditions, 6 10 mo of induction therapy are needed to achieve durable suppression and maximize the probability of eradicating viruses resistant to the maintenance regimen.
+OWNX	For induction regimens of more limited duration, a delayed-induction or -intensification period initiated sometime after the start of maintenance therapy appears to be optimal.
+OWNX	The optimal delay length depends on the fitness of resistant viruses and the rate at which target-cell populations recover after therapy is initiated.
+OWNX	These observations have implications for both the timing and the kinds of drugs selected for induction maintenance and therapy-intensification strategies.
+### introduction ###
+MISC	The failure of antiretroviral therapies to completely suppress viral replication in some patients represents a major difficulty in the management of HIV infection.
+MISC	In therapy-naive patients without clinically apparent resistance mutations, triple-drug therapy with two nucleoside analog reverse transcriptase inhibitors and a protease inhibitor or a non-nucleoside reverse transcriptase inhibitor is standard CITATION.
+MISC	In these patients, treatment success rates, defined as viral load 50 copies/ml at 48 wk, range from 70 percent to 80 percent 85 percent.
+MISC	However, in patients with previous regimen failure requiring salvage therapy, response rates are usually considerably lower CITATION CITATION, and it is frequently not possible to assemble a three-drug regimen with uncompromised activity against all viral strains present.
+MISC	In these individuals, treatment failure often occurs after an initial period of response to a new regimen, and is usually associated with the appearance of multiply drug-resistant viral strains.
+MISC	This has led to attempts to treat highly experienced patients with various deep salvage regimens consisting of four, five, or six individual drugs CITATION CITATION.
+MISC	These patients are particularly vulnerable to the many drug interactions CITATION and adverse metabolic, hematologic, neurologic, cardiovascular, and gastrointestinal side effects that complicate HIV therapy and seriously undermine the success of clinical management CITATION CITATION .
+MISC	The need to minimize drug resistance while reducing treatment-related toxicities has engendered an interest in induction maintenance strategies, in which a period of intensified antiretroviral therapy is followed by a simplified long-term regimen CITATION CITATION.
+CONT	Most such trials have yielded higher failure rates in the treatment group than in controls receiving conventional therapy.
+CONT	Failure typically occurs during maintenance therapy, and has been attributed to poor regimen adherence CITATION and recrudescence of resistance mutations present before institution of induction therapy CITATION.
+CONT	One weakness of existing studies has been that induction therapy consisted of standard three-drug antiretroviral therapy regimens in common clinical use at the time of the study, under conditions now recognized to permit subclinical viral replication CITATION, CITATION.
+CONT	Moreover, in these early studies, the induction phase only lasted between 3 to 6 mo, which may be insufficient.
+MISC	However, two recent studies have shown the apparent effectiveness of induction therapy for 48 wk followed by maintenance therapy with atazanavir CITATION or lopinvir/ritonavir CITATION, CITATION, and this has led to new optimism concerning IM approaches.
+OWNX	We have hypothesized that a longer period of a highly suppressive induction therapy that is appropriately timed relative to the start of maintenance therapy may allow minority resistant variants to decay below a stochastic extinction threshold, allowing for successful long-term treatment with simpler and better-tolerated regimens.
+OWNX	To explore this hypothesis quantitatively, we constructed a detailed computer simulation model of the dynamics of sensitive and resistant viruses during a hypothetical IM regimen.
+OWNX	We show that the timing and duration of induction therapy relative to maintenance therapy can affect the probability that viruses resistant to the maintenance regimen will be eradicated in ways that are somewhat counterintuitive.
+OWNX	Under biologically plausible conditions, we find that 6 10 mo of induction therapy are required to maximize the probability of eradicating these resistant viruses.
+OWNX	For shorter induction periods, we find that it is optimal to use a delayed-induction regimen administered several days to weeks after the start of the intended long-term maintenance therapy.

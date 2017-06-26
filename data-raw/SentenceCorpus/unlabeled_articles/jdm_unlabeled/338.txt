@@ -1,0 +1,17 @@
+### abstract ###
+the advantage of models that do not use flexible parameters is that one can precisely show to what degree they predict behavior  and in what situations
+in three issues of this journal  the recognition heuristic has been examined carefully from many points of view
+we comment here on four themes  the use of optimization models to understand the rationality of heuristics  the generalization of the recognition input beyond a binary judgment  new conditions for less-is-more effects  and the importance of specifying boundary conditions for cognitive heuristics
+### introduction ###
+galileo formalized the movement of objects in his law of falling bodies  s s stevens  CITATION  described sensation as stimulus intensity raised to a power  and the behaviorists  CITATION  formulated laws of learning with equations no more complex than those encountered in high school physics
+simple models  from physics to psychology  have driven much of progress in science
+yet no model  simple or complex  can explain all behavior
+the beauty of simple models is that one can easily discover their limits  that is  their boundary conditions  which in turn fosters clarity and progress
+the law of falling bodies does not hold generally  it works for situations in which the object starts in rest  there is no air resistance  and the gravitational force g does not change over the distance of the fall
+similarly  the laws of learning do not hold in every situation  as illustrated by the concept of  biological preparedness   the fact that certain cs-ucs conditional stimulus - unconditional stimulus associations are learned rapidly but not others  CITATION
+evolved organisms work with multiple tools  not one general principle
+the concept of an adaptive toolbox assumes that an individual  culture  or species can be characterized by a set of heuristics for surviving in an uncertain world
+these heuristics exploit evolved and learned core capacities  and are simple in order to be robust  fast  and efficient
+the recognition heuristic is one of these tools in the adaptive toolbox of humans and other animal species and exploits recognition memory
+this journal has devoted three special issues to elaborating  generalizing  and testing the model we proposed a decade ago  CITATION
+we have reviewed the progress made in the first decade before  CITATION   here we would like to comment on some of the theoretical insights put forward by the contributions to these issues

@@ -1,0 +1,28 @@
+### abstract ###
+One of the most critical problems we face in the study of biological systems is building accurate statistical descriptions of them.
+This problem has been particularly challenging because biological systems typically contain large numbers of interacting elements, which precludes the use of standard brute force approaches.
+Recently, though, several groups have reported that there may be an alternate strategy.
+The reports show that reliable statistical models can be built without knowledge of all the interactions in a system; instead, pairwise interactions can suffice.
+These findings, however, are based on the analysis of small subsystems.
+Here, we ask whether the observations will generalize to systems of realistic size, that is, whether pairwise models will provide reliable descriptions of true biological systems.
+Our results show that, in most cases, they will not.
+The reason is that there is a crossover in the predictive power of pairwise models: If the size of the subsystem is below the crossover point, then the results have no predictive power for large systems.
+If the size is above the crossover point, then the results may have predictive power.
+This work thus provides a general framework for determining the extent to which pairwise models can be used to predict the behavior of large biological systems.
+Applied to neural data, the size of most systems studied so far is below the crossover point.
+### introduction ###
+Many fundamental questions in biology are naturally treated in a probabilistic setting.
+For instance, deciphering the neural code requires knowledge of the probability of observing patterns of activity in response to stimuli CITATION ; determining which features of a protein are important for correct folding requires knowledge of the probability that a particular sequence of amino acids folds naturally CITATION, CITATION ; and determining the patterns of foraging of animals and their social and individual behavior requires knowledge of the distribution of food and species over both space and time CITATION CITATION .
+Constructing these probability distributions is, however, hard.
+There are several reasons for this: biological systems are composed of large numbers of elements, and so can exhibit a huge number of configurations in fact, an exponentially large number, ii the elements typically interact with each other, making it impossible to view the system as a collection of independent entities, and iii because of technological considerations, the descriptions of biological systems have to be built from very little data.
+For example, with current technology in neuroscience, we can record simultaneously from only about 100 neurons out of approximately 100 billion in the human brain.
+So, not only are we faced with the problem of estimating probability distributions in high dimensional spaces, we must do this based on a small fraction of the neurons in the network.
+Despite these apparent difficulties, recent work has suggested that the situation may be less bleak than it seems, and that an accurate statistical description of systems can be achieved without having to examine all possible configurations CITATION, CITATION, CITATION CITATION.
+One merely has to measure the probability distribution over pairs of elements and use those to build the full distribution.
+These pairwise models potentially offer a fundamental simplification, as the number of pairs is quadratic in the number of elements, not exponential.
+However, support for the efficacy of pairwise models has, necessarily, come from relatively small subsystems small enough that the true probability distribution could be measured experimentally CITATION CITATION, CITATION.
+While these studies have provided a key first step, a critical question remains: will the results from the analysis of these small subsystems extrapolate to large ones?
+That is, if a pairwise model predicts the probability distribution for a subset of the elements in a system, will it also predict the probability distribution for the whole system?
+Here we find that, for a biologically relevant class of systems, this question can be answered quantitatively and, importantly, generically independent of many of the details of the biological system under consideration.
+And the answer is, generally, no.
+In this paper, we explain, both analytically and with simulations, why this is the case.

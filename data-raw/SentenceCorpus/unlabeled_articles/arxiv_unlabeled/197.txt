@@ -1,0 +1,40 @@
+### abstract ###
+We consider multi-label prediction problems with large output spaces under the assumption of  output sparsity  -- that the target (label) vectors have small support
+We develop a general theory for a variant of the popular error correcting output code scheme, using ideas from compressed sensing for exploiting this sparsity
+The method can be regarded as a simple reduction from multi-label regression problems to binary regression problems
+We show that the number of subproblems need only be logarithmic in the total number of possible labels, making this approach radically more efficient than others
+We also state and prove robustness guarantees for this method in the form of regret transform bounds (in general), and also provide a more detailed analysis for the linear prediction setting
+### introduction ###
+Suppose we have a large database of images, and we want to learn to predict who or what is in any given one
+A standard approach to this task is to collect a sample of these images  SYMBOL  along with corresponding labels  SYMBOL , where  SYMBOL  if and only if person or object  SYMBOL  is depicted in image  SYMBOL , and then feed the labeled sample to a multi-label learning algorithm
+Here,  SYMBOL  is the total number of entities depicted in the entire database
+When  SYMBOL  is very large ( eg ~ SYMBOL ,  SYMBOL ), the simple one-against-all approach of learning a single predictor for each entity can become prohibitively expensive, both at training and testing time
+Our motivation for the present work comes from the observation that although the output (label) space may be very high dimensional, the actual labels are often sparse
+That is, in each image, only a small number of entities may be present and there may only be a small amount of ambiguity in who or what they are
+In this work, we consider how this sparsity in the output space, or  output sparsity , eases the burden of large-scale multi-label learning {Exploiting output sparsity } A subtle but critical point that distinguishes output sparsity from more common notions of sparsity (say, in feature or weight vectors) is that we are interested in the sparsity of  SYMBOL  rather than  SYMBOL
+In general,  SYMBOL  may be sparse while the actual outcome  SYMBOL  may not ( eg ~if there is much unbiased noise); and, vice versa,  SYMBOL  may be sparse with probability one but  SYMBOL  may have large support ( eg ~if there is little distinction between several labels)
+Conventional linear algebra suggests that we must predict  SYMBOL  parameters in order to find the value of the  SYMBOL -dimensional vector  SYMBOL  for each  SYMBOL
+A crucial observation -- central to the area of compressed sensing  CITATION  -- is that methods exist to recover  SYMBOL  from just  SYMBOL  measurements when  SYMBOL  is  SYMBOL -sparse
+This is the basis of our approach {Our contributions } We show how to apply algorithms for compressed sensing to the output coding approach  CITATION
+At a high level, the output coding approach creates a collection of subproblems of the form ``Is the label in this subset or its complement
+'', solves these problems, and then uses their solution to predict the final label
+The role of compressed sensing in our application is distinct from its more conventional uses in data compression
+Although we do employ a sensing matrix to compress training data, we ultimately are not interested in recovering data explicitly compressed this way
+Rather, we  learn to predict compressed label vectors , and then use sparse reconstruction algorithms to  recover uncompressed labels from these predictions
+Thus we are interested in reconstruction accuracy of predictions, averaged over the data distribution
+The main contributions of this work are:   A formal application of compressed sensing to prediction problems with output sparsity
+An efficient output coding method, in which the number of required predictions is only logarithmic in the number of labels  SYMBOL , making it applicable to very large-scale problems
+Robustness guarantees, in the form of regret transform bounds (in general) and a further detailed analysis for the linear prediction setting {Prior work } The ubiquity of multi-label prediction problems in domains ranging from multiple object recognition in computer vision to automatic keyword tagging for content databases has spurred the development of numerous general methods for the task
+Perhaps the most straightforward approach is the well-known one-against-all reduction~ CITATION , but this can be too expensive when the number of possible labels is large (especially if applied to the power set of the label space  CITATION )
+When structure can be imposed on the label space ( eg ~class hierarchy), efficient learning and prediction methods are often possible~ CITATION
+Here, we focus on a different type of structure, namely output sparsity, which is not addressed in previous work
+Moreover, our method is general enough to take advantage of structured notions of sparsity ( eg ~group sparsity) when available~ CITATION
+Recently, heuristics have been proposed for discovering structure in large output spaces that empirically offer some degree of efficiency~ CITATION
+As previously mentioned, our work is most closely related to the class of output coding method for multi-class prediction, which was first introduced and shown to be useful experimentally in  CITATION
+Relative to this work, we expand the scope of the approach to multi-label prediction and provide bounds on regret and error which guide the design of codes
+The loss based decoding approach~ CITATION  suggests decoding so as to minimize loss
+However, it does not provide significant guidance in the choice of encoding method, or the feedback between encoding and decoding which we analyze here
+The output coding approach is inconsistent when classifiers are used and the underlying problems being encoded are noisy
+This is proved and analyzed in  CITATION , where it is also shown that using a Hadamard code creates a robust consistent predictor when reduced to binary regression
+Compared to this method, our approach achieves the same robustness guarantees up to a constant factor, but requires training and evaluating exponentially (in  SYMBOL ) fewer predictors
+Our algorithms rely on several methods from compressed sensing, which we detail where used

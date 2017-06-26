@@ -1,0 +1,35 @@
+### abstract ###
+diener and colleagues  CITATION  illustrated that individuals rely heavily on endings to evaluate the quality of a life
+two studies investigated the potential for posthumous events to affect rated life quality  calling into question the intuitive  ending  of a life at death
+undergraduates read a series of short life narratives to assess the consequences of posthumous reversals of fortune on judgments of the goodness and happiness of the life
+in a  NUMBER x NUMBER  within-subjects design  lives positive and negative in valence were displayed twice  once from birth to death and once each life was followed by a posthumous event of opposite valence
+results demonstrated that posthumous reversals of fortune shift judgments of the goodness and happiness of the life in the direction of the valence of the posthumous event
+these effects were not related to an individual's religiosity or the degree to which the life made an engaging story
+we suggest that the posthumous happy effect may be a case of a more general process  which we call retroactive re-evaluation
+### introduction ###
+evaluative judgments of events are heavily influenced by the terminal event  a feature that kahneman and his colleagues encompass within what they call the peak-end effect  CITATION
+when the sequence of events in question happens to be a life history  the sad reality is that death appears to be the end of the sequence
+hence  lives by their nature have a negative ending
+as well  because of the aging process  the positive peak in a life is usually well before the end  and the later years are often associated with a decline in competences  power  and influence
+these existential realities should bias life-evaluative judgments in a negative direction
+in this study  we explore this situation  and examine the degree to which this negative bias is minimized by incorporating lives into a larger framework that includes posthumous events
+in the last decade  there has been a growing interest in understanding well-being  as evidenced by recent books  CITATION   and the development of appropriate measurement tools  CITATION
+the positive psychology movement  CITATION   directed at optimizing the quality of life  has stimulated much of this work
+quality of life lifetime subjective well being is a retrospective measure  as such  it suffers from distortions produced by memories of actual experiences  and in particular  a disproportionately high influence of the end state  CITATION
+judgments of the quality of complete lives must be determined by the self  near or at the end of life  or by third parties based on experiences of the life of another or narrative life descriptions
+in a study asking participants to rate the goodness of lives based on brief life narratives  diener  wirtz and oishi  CITATION  showed that judgments of the quality of a life were heavily influenced by endings
+the ending of a life is typically considered to be at death  however some aspects of a life  particularly those having to do with the life's meaning  can be affected by events that occur after a life is over
+in this regard  we note that most of the work on the end-effect has manipulated hedonic rather than meaningful events
+we believe that posthumous events act much like traditional end-events  shifting life judgments in the direction of the valence of the posthumous event
+one can understand that the quality of a life judgments might include posthumous events  but it seems unlikely that judged happiness of a life would be affected by posthumous events
+nonetheless  in this study  we included life happiness ratings as well as quality of life ratings
+studies of end effects  particularly work by kahneman and his colleagues  typically involve a  hedonic  as opposed to  meaning  manipulation
+it is reasonable to believe that changes in meaning are more likely to reflect significantly upon prior events
+the religiosity of the participants was measured to examine whether shifts in judgments of life quality and perhaps happiness due to posthumous events are influenced by the strength of religious beliefs
+many religions define a good life by the total number of a person's good works  which is not necessarily bounded by death
+similarly  meaning in life  which is stressed by religions  over hedonism  can sometimes only be realized after the life is over
+furthermore  to the extent that a person believes in an after-life  associated with many religions  the person might be able to  appreciate  the posthumous events
+the present study involved judgments by american college students of the goodness of lives and the amount of happiness and unhappiness in these lives
+we used a within-subject design  in which the participants rated eighteen different life paragraphs
+four lives  embedded within the other life stories  were designed to evaluate the effect of posthumous reversals of fortune
+the life histories were presented in narratives  each a short paragraph  some of which included posthumous events that reversed the valence of the life ending

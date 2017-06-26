@@ -1,0 +1,48 @@
+### abstract ###
+We consider semi-supervised classification when part of the available data is unlabeled
+These unlabeled data can be useful for the classification problem when we make an assumption relating the behavior of the regression function to that of the marginal distribution
+Seeger  CITATION  proposed the well-known  cluster assumption  as a reasonable one
+We propose a mathematical formulation of this assumption and a method based on density level sets estimation that takes advantage of it to achieve fast rates of convergence both in the number of unlabeled examples and the number of labeled examples
+### introduction ###
+\setcounter{equation}{0} Semi-supervised classification has been of growing interest over the past few years and many methods have been proposed
+The methods try to give an answer to the question: ``How to improve classification accuracy using unlabeled data together with the labeled data
+''
+Unlabeled data can be used in different ways depending on the assumptions on the model
+There are two types of assumptions
+The first one consists in assuming that we have a set of potential classifiers and we want to aggregate them
+In that case, unlabeled data is used to measure the  compatibility  between the classifiers and reduces the complexity of the resulting classifier (see, eg ,  CITATION ,  CITATION )
+The second approach is the one that we use  here
+It assumes that the data contains clusters that have homogeneous labels and the unlabeled observations are used to identify these clusters
+This is the so-called  cluster assumption
+This idea can be put in practice in several ways giving rise to various methods
+The simplest is the one presented here: estimate the clusters, then label each cluster uniformly
+Most of these methods use Hartigan's  CITATION  definition of clusters, namely the connected components of the density level sets
+However, they use a parametric (usually mixture) model to estimate the underlying density which can be far from reality
+Moreover, no generalization error bounds are available for such methods
+In the same spirit,   CITATION  and  CITATION  propose methods that learn a distance using unlabeled data in order to have intra-cluster distances smaller than inter-clusters distances
+The whole family of graph-based methods aims also at using unlabeled data to learn the distances between points
+The edges of the graphs reflect the proximity between points
+For a detailed survey on graph methods we refer to  CITATION
+Finally, we mention kernel methods, where unlabeled data are used to build the kernel
+Recalling that the kernel measures proximity between points, such methods can also be viewed as learning a distance using unlabeled data (see  CITATION ,  CITATION ,  CITATION )
+The cluster assumption can be interpreted in another way, i e , as the requirement that the decision boundary has to lie in low density regions
+This interpretation has been widely used in learning since it can be used in the design of standard algorithms such as Boosting  CITATION ,  CITATION  or SVM  CITATION ,  CITATION , which are closely related to kernel methods mentioned above
+In these algorithms, a greater penalization is given to decision boundaries that cross a cluster
+For more details, see, eg ,  CITATION ,  CITATION ,  CITATION
+Although most methods make, sometimes implicitly, the cluster assumption, no formulation in probabilistic terms has been provided so far
+The formulation that we propose in this paper remains very close to its original text formulation and allows to derive generalization error bounds
+We also discuss what can and cannot be done using unlabeled data
+One of the conclusions is that considering the whole excess-risk is too ambitious and we need to concentrate on a smaller part of it to observe the improvement of semi-supervised classification over standard classification
+Outline of the paper
+After describing the model, we formulate the cluster assumption and discuss why and how it can improve classification performance in the next section
+In Section~, we study the population case when the marginal density  SYMBOL  is known, to get an idea of our target
+Indeed, such a population case corresponds  in some way to the case when the amount of unlabeled data is infinite
+Section~ contains the main result: we propose an algorithm for which we derive rates of convergence for the  SYMBOL -thresholded excess-risk as a measure of performance
+An exemple of consistent density level set estimators is given in Section~
+Section~ is devoted to discussion on the choice of  SYMBOL   and possible improvements
+Proofs of the results are gathered in Section~
+Notation
+Throughout the paper, we denote by  SYMBOL  positive constants
+We write  SYMBOL  for the complement of the set  SYMBOL
+For two sequences  SYMBOL  and  SYMBOL  (in that paper,  SYMBOL  will be  SYMBOL  or  SYMBOL ), we write  SYMBOL  if there exists a constant  SYMBOL  such that  SYMBOL  and we write  SYMBOL  if  SYMBOL  for some constants  SYMBOL
+Thus, if  SYMBOL , we have  SYMBOL , for any  SYMBOL

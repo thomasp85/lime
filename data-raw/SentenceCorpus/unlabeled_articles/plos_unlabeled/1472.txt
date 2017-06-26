@@ -1,0 +1,45 @@
+### abstract ###
+Cytokines such as TNF and FASL can trigger death or survival depending on cell lines and cellular conditions.
+The mechanistic details of how a cell chooses among these cell fates are still unclear.
+The understanding of these processes is important since they are altered in many diseases, including cancer and AIDS.
+Using a discrete modelling formalism, we present a mathematical model of cell fate decision recapitulating and integrating the most consistent facts extracted from the literature.
+This model provides a generic high-level view of the interplays between NF B pro-survival pathway, RIP1-dependent necrosis, and the apoptosis pathway in response to death receptor-mediated signals.
+Wild type simulations demonstrate robust segregation of cellular responses to receptor engagement.
+Model simulations recapitulate documented phenotypes of protein knockdowns and enable the prediction of the effects of novel knockdowns.
+In silico experiments simulate the outcomes following ligand removal at different stages, and suggest experimental approaches to further validate and specialise the model for particular cell types.
+We also propose a reduced conceptual model implementing the logic of the decision process.
+This analysis gives specific predictions regarding cross-talks between the three pathways, as well as the transient role of RIP1 protein in necrosis, and confirms the phenotypes of novel perturbations.
+Our wild type and mutant simulations provide novel insights to restore apoptosis in defective cells.
+The model analysis expands our understanding of how cell fate decision is made.
+Moreover, our current model can be used to assess contradictory or controversial data from the literature.
+Ultimately, it constitutes a valuable reasoning tool to delineate novel experiments.
+### introduction ###
+Engagement of TNF or FAS receptors can trigger cell death by apoptosis or necrosis, or yet lead to the activation of pro-survival signalling pathway, such as NF B. Apoptosis represents a tightly controlled mechanism of cell death that is triggered by internal or external death signals or stresses.
+This mechanism involves a sequence of biochemical and morphological changes resulting in the vacuolisation of cellular content, followed by its phagocyte-mediated elimination.
+This physiological process regulates cell homeostasis, development, and clearance of damaged, virus-infected or cancer cells.
+In contrast, pathological necrosis results in plasma membrane disruption and release of intracellular content that can trigger inflammation in the neighbouring tissues.
+Long seen as an accidental cell death, necrosis also appears regulated and possibly involved in the clearance of virus-infected or cancer cells that escaped apoptosis CITATION .
+Dynamical modelling of the regulatory network controlling apoptosis, non-apoptotic cell death and survival pathways could help identify how and under which conditions the cell chooses between different types of cellular deaths or survival.
+Moreover, modelling could suggest ways to re-establish the apoptotic death when it is altered, or yet to trigger necrosis in apoptosis-resistant cells.
+The decision process involves several signalling pathways, as well as multiple positive and negative regulatory circuits.
+Mathematical modelling provides a rigorous integrative approach to understand and analyse the dynamical behaviours of such complex systems.
+Published models of cell death control usually focus on one death pathway only, such as the apoptotic extrinsic or intrinsic pathways CITATION, CITATION, CITATION.
+A few studies integrate both pathways CITATION, some show that the concentration of specific components contribute to the decision between death and survival CITATION, CITATION while other studies investigate the balance between proliferation, survival or apoptosis in specific cell types along with the role of key components in these pathways CITATION, but no mathematical models including necrosis are available yet.
+Moreover, we still lack models properly demonstrating how cellular conditions determine the choice between necrosis, apoptosis and survival, and how and to what extent conversions are allowed between these fates.
+Our study aims at identifying determinants of this cell fate decision process.
+The three main phenotypes considered are apoptosis, non-apoptotic cell death and survival.
+Although the pathways leading to these three phenotypes are highly intertwined, we first describe them separately hereafter, concentrating on the players we chose to include in each pathway.
+Summarised in Figure 1A, this description does not intend to be exhaustive, but rather aims at covering the most established processes participating in cell fate decision.
+Only the apoptotic caspase-dependent pathway downstream of FAS and TNF receptors is considered here.
+Upon engagement by their ligands and in the presence of FADD, a specific Death Inducible Signalling Complex forms and recruits pro-caspase-8.
+This leads to the cleavage and activation of caspase-8.
+In the so-called type II cells, CASP8 triggers the intrinsic or mitochondria-dependent apoptotic pathway, which also responds to DNA damage directly through the p53-mediated chain of events.
+CASP8 cleaves the BH3-only protein BID, which can then translocate to the mitochondria outer membrane.
+There, BID competes with anti-apoptotic BH3 family members such as BCL2 for interaction with the proteins BAX or BAK.
+Consequently, oligomerisation of BAX results in mitochondrial outer membrane permeabilisation and the release of pro-apoptotic factors.
+Once released to the cytosol, cytochrome c interacts with APAF1, recruiting pro-caspase-9.
+In presence of dATP, this enables the assembly of the apoptosome complex, responsible for caspase-9 activation, followed by the proteolytic activation of pro-caspase-3 CITATION.
+By cleavage of specific targets, the executioner caspases are responsible for major biochemical and morphological changes characteristic of apoptosis.
+SMAC/DIABLO is released during MOMP to the cytosol, where it is able to inactivate the caspase inhibitor XIAP CITATION.
+CASP3 also participates in a positive circuit by inducing the activation of CASP8 CITATION, CITATION.
+In type I cells, CASP8 directly cleaves and activates executioner caspases such as CASP3 .

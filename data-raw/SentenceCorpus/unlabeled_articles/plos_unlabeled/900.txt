@@ -1,0 +1,44 @@
+### abstract ###
+Cells in the wing blade of Drosophila melanogaster exhibit an in-plane polarization causing distal orientation of hairs.
+Establishment of the Planar Cell Polarity involves intercellular interactions as well as a global orienting signal.
+Many of the genetic and molecular components underlying this process have been experimentally identified and a recently advanced system-level model has suggested that the observed mutant phenotypes can be understood in terms of intercellular interactions involving asymmetric localization of membrane bound proteins.
+Among key open questions in understanding the emergence of ordered polarization is the effect of stochasticity and the role of the global orienting signal.
+These issues relate closely to our understanding of ferromagnetism in physical systems.
+Here we pursue this analogy to understand the emergence of PCP order.
+To this end we develop a semi-phenomenological representation of the underlying molecular processes and define a phase diagram of the model which provides a global view of the dependence of the phenotype on parameters.
+We show that the dynamics of PCP has two regimes: rapid growth in the amplitude of local polarization followed by a slower process of alignment which progresses from small to large scales.
+We discuss the response of the tissue to various types of orienting signals and show that global PCP order can be achieved with a weak orienting signal provided that it acts during the early phase of the process.
+Finally we define and discuss some of the experimental predictions of the model.
+### introduction ###
+Epithelia in diverse tissues, in addition to their apico-basal polarization, acquire a polarization within the two-dimensional layer of cells a phenomenon called planar cell polarity CITATION CITATION.
+In the developing wing of Drosophila, PCP determines the growth direction of small hairs that extend radially from cell boundaries.
+In a wild-type wing, where cells are approximately hexagonal and form a regular honeycomb lattice, all of these hairs point to the distal direction.
+A series of recent experiments show that several key proteins CITATION, including the transmembrane proteins Frizzled and Van-Gogh and the cytosolic proteins Dishevelled and Prickled, localize asymmetrically on cell boundaries CITATION CITATION - defining a direction in the plane within each cell and forming a characteristic zig-zag pattern of protein localization on the lattice .
+Other experiments show that local PCP orientation depends on inter-cellular signaling.
+First, mutant clones in which fz or Vang activity is suppressed or amplified, cause characteristic and reproducible inversion of polarity in large patches of cells that are proximal or distal to the clone CITATION.
+These observations are summarized in Figs.
+1 C,D. Second, in fat mutant clones CITATION, CITATION hairs do not all point correctly in the distal direction, yet, their orientation is strongly correlated between nearby cells and varies gradually across the tissue creating a characteristic swirling pattern.
+Thus the experimental evidence suggests that an interaction between neighboring cells tends to locally align their polarity CITATION, CITATION, CITATION.
+This local polarity need not point distally unless, in addition, there is a global orienting signal that picks out the distal direction throughout the wing.
+Yet, aside from a clear involvement of protocadherin fat CITATION, CITATION the molecular details of this pathway remains for now unknown.
+The swirling patterns in fat mutants CITATION and recent evidence CITATION, CITATION, suggest that the orienting field is related to the presence of a gradient in the fat, four-jointed, and dachs pathway.
+These observations evoke an analogy between PCP and the behavior of ferromagnets, extensively studied in physics and well understood in terms of statistical mechanics of relatively simple models CITATION.
+In these models each atomic site is assigned a magnetic dipole spin which can assume a different orientation.
+The salient properties of ferromagnets arise from the opposing influence of an interaction between neighboring spins, which tends to co-align their orientation, and the influence of thermal fluctuations, which tend to randomize the spin direction.
+Ferromagnets typically exhibit two phases of behavior: a high temperature phase, where spins are disordered and a low temperature ferromagnetic phase, where the interactions dominate over thermal fluctuations leading to a spontaneous polarization in an arbitrary direction.
+In this state even a small external magnetic field has a big effect on magnetic polarization as the spontaneous polarization aligns itself with the external field, yet the dynamics leading to global alignment can be quite slow.
+An essential lesson from statistical mechanics is that the ordered and disordered states exist in a broad class of models and can be discussed in a general context, focusing on a classification of the different regimes as a function of a few parameters.
+We follow this lesson by focusing the study on the competition between the intercellular interaction and the disordering influence of the fluctuations introduced by the noisy molecular interactions.
+As in statistical mechanics we define a phase diagram which identifies different regimes of behavior in the space of the most relevant parameters.
+We then address the role of the global directional signal in the dynamics of global alignment.
+A molecular model for PCP formation was recently proposed in Ref.
+CITATION, and was shown to reproduce a number of experimental findings.
+This model involves 38 parameters that were adjusted to successfully reproduce a set of wild-type and mutant phenotypes.
+Here we pursue an alternative approach and instead of moving on to more and more complex models develop a model with a smaller number of degrees of freedom and a smaller number of parameters.
+Instead of fixing a particular set of parameters by fitting the data we explore the generic behavior of the model as a function of parameters defining quantitative features characteristic of the different phases.
+In formulating the model we identify several essential ingredients, required to obtain the characteristic zig-zag pattern and the non-autonomy of fz and Vang mutant clones.
+We expect our simplified model to capture important properties of PCP, although it does not incorporate all the molecular details.
+After discussing the essential ingredients of the model, we obtain a phase diagram describing its steady state properties.
+We then consider the dynamics of local polarization strength and orientation in the absence and in the presence of a global orienting signal.
+We show that global alignment can be achieved with a weak global orienting signal provided it is present throughout the tissue at the earliest stage of PCP dynamics.
+Finally we discuss the experimental predictions coming out of the model and the tools required to test these predictions.

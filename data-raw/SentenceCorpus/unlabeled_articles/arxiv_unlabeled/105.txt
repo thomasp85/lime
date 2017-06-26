@@ -1,0 +1,27 @@
+### abstract ###
+In this paper we propose a novel algorithm, factored value iteration (FVI), for the approximate solution of factored Markov decision processes (fMDPs)
+The traditional approximate value iteration algorithm is modified in two ways
+For one, the least-squares projection operator is modified so that it does not increase max-norm, and thus preserves convergence
+The other modification is that we uniformly sample polynomially many samples from the (exponentially large) state space
+This way, the complexity of our algorithm becomes polynomial in the size of the fMDP description length
+We prove that the algorithm is convergent
+We also derive an upper bound on the difference between our approximate solution and the optimal one, and also on the error introduced by sampling
+We analyze various projection operators with respect to their computation complexity and their convergence when combined with approximate value iteration \keywords{factored Markov decision process, value iteration, reinforcement learning}
+### introduction ###
+Markov decision processes (MDPs) are extremely useful for formalizing and solving sequential decision problems, with a wide repertoire of algorithms to choose from  CITATION
+Unfortunately, MDPs are subject to the `curse of dimensionality'  CITATION : for a problem with  SYMBOL  state variables, the size of the MDP grows exponentially with  SYMBOL , even though many practical problems have polynomial-size descriptions
+Factored MDPs (fMDPs) may rescue us from this explosion, because they offer a more compact representation  CITATION
+In the fMDP framework, one assumes that dependencies can be factored to several easy-to-handle components
+For MDPs with known parameters, there are three basic solution methods (and, naturally, countless variants of them): value iteration, policy iteration and linear programming (see the books of Sutton \& Barto  CITATION  or Bertsekas \& Tsitsiklis  CITATION  for an excellent overview)
+Out of these methods, linear programming is generally considered less effective than the others
+So, it comes as a surprise that all effective fMDPs algorithms, to our best knowledge, use linear programming in one way or another
+Furthermore, the classic value iteration algorithm is known to be divergent when function approximation is used  CITATION , which includes the case of fMDPs, too
+In this paper we propose a variant of the approximate value iteration algorithm for solving fMDPs
+The algorithm is a direct extension of the traditional value iteration algorithm
+Furthermore, it avoids computationally expensive manipulations like linear programming or the construction of decision trees
+We prove that the algorithm always converges to a fixed point, and that it requires polynomial time to reach a fixed accuracy
+A bound to the distance from the optimal solution is also given
+In Section  we review the basic concepts of Markov decision processes, including the classical value iteration algorithm and its combination with linear function approximation
+We also give a sufficient condition for the convergence of approximate value iteration, and list several examples of interest
+In Section  we extend the results of the previous section to fMDPs and review related works in Section~
+Conclusions are drawn in Section

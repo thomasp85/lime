@@ -1,0 +1,49 @@
+### abstract ###
+In this paper, we propose the MIML ( Multi-Instance Multi-Label learning ) framework where an example is described by multiple instances and associated with multiple class labels
+Compared to traditional learning frameworks, the MIML framework is more convenient and natural for representing complicated objects which have multiple semantic meanings
+To learn from MIML examples, we propose the \textsc{MimlBoost} and \textsc{MimlSvm} algorithms based on a simple degeneration strategy, and experiments show that solving problems involving complicated objects with multiple semantic meanings in the MIML framework can lead to good performance
+Considering that the degeneration process may lose information, we propose the \textsc{D-MimlSvm} algorithm which tackles MIML problems directly in a regularization framework
+Moreover, we show that even when we do not have access to the real objects and thus cannot capture more information from real objects by using the MIML representation, MIML is still useful
+We propose the \textsc{InsDif} and \textsc{SubCod} algorithms \textsc{InsDif} works by transforming single-instances into the MIML representation for learning, while \textsc{SubCod} works by transforming single-label examples into the MIML representation for learning
+Experiments show that in some tasks they are able to achieve better performance than learning the single-instances or single-label examples directly
+### introduction ###
+In  traditional supervised learning , an object is represented by an instance, i e , a feature vector, and associated with a class label
+Formally, let  SYMBOL  denote the instance space (or feature space) and  SYMBOL  the set of class labels
+The task is to learn a function  SYMBOL  from a given data set  SYMBOL , where  SYMBOL  is an instance and  SYMBOL  is the known label of  SYMBOL
+Although this formalization is prevailing and successful, there are many real-world problems which do not fit in this framework well
+In particular, each object in this framework belongs to only one concept and therefore the corresponding instance is associated with a single class label
+However, many real-world objects are complicated, which may belong to multiple concepts simultaneously
+For example, an image can belong to several classes simultaneously, eg ,  grasslands ,  lions ,  Africa , etc ; a text document can be classified to several categories if it is viewed from different aspects, eg ,  scientific novel ,  Jules Verne's writing  or even  books on traveling ; a web page can be recognized as  news page ,  sports page ,  soccer page , etc
+In a specific real task, maybe only one of the multiple concepts is the right semantic meaning
+For example, in image retrieval when a user is interested in an image with lions, s/he may be only interested in the concept  lions  instead of the other concepts  grasslands  and  Africa  associated with that image
+The difficulty here is caused by those objects that involve multiple concepts
+To choose the right semantic meaning for such objects for a specific scenario is the fundamental difficulty of many tasks
+In contrast to starting from a large universe of all possible concepts involved in the task, it may be helpful to get the subset of concepts associated with the concerned object at first, and then make a choice in the small subset later
+However, getting the subset of concepts, that is, assigning proper class labels to such objects, is still a challenging task
+We notice that as an alternative to representing an object by a single instance, in many cases it is possible to represent a complicated object using a set of instances
+For example, multiple patches can be extracted from an image where each patch is described by an instance, and thus the image can be represented by a set of instances; multiple sections can be extracted from a document where each section is described by an instance, and thus the document can be represented by a set of instances; multiple links can be extracted from a web page where each link is described by an instance, and thus the web page can be represented by a set of instances
+Using multiple instances to represent those complicated objects may be helpful because some inherent patterns which are closely related to some labels may become explicit and clearer
+In this paper, we propose the MIML ( Multi-Instance Multi-Label learning ) framework, where an example is described by multiple instances and associated with multiple class labels
+Compared to traditional learning frameworks, the MIML framework is more convenient and natural for representing complicated objects
+To exploit the advantages of the MIML representation, new learning algorithms are needed
+We propose the \textsc{MimlBoost} algorithm and the \textsc{MimlSvm} algorithm based on a simple degeneration strategy, and experiments show that solving problems involving complicated objects with multiple semantic meanings under the MIML framework can lead to good performance
+Considering that the degeneration process may lose information, we also propose the \textsc{D-MimlSvm} (i e , Direct \textsc{MimlSvm}) algorithm which tackles MIML problems directly in a regularization framework
+Experiments show that this ``direct'' algorithm outperforms the ``indirect'' \textsc{MimlSvm} algorithm
+In some practical tasks we do not have access to the real objects themselves such as the real images and the real web pages; instead, we are given observational data where each real object has already been represented by a single instance
+Thus, in such cases we cannot capture more information from the real objects using the MIML representation
+Even in this situation, however, MIML is still useful
+We propose the \textsc{InsDif} (i e , INStance DIFferentiation) algorithm which transforms single-instances into MIML examples for learning
+This algorithm is able to achieve a better performance than learning the single-instances directly in some tasks
+This is not strange because for an object associated with multiple class labels, if it is described by only a single instance, the information corresponding to these labels are mixed and thus difficult for learning; if we can transform the single-instance into a set of instances in some proper ways, the mixed information might be detached to some extent and thus less difficult for learning
+MIML can also be helpful for learning single-label objects
+We propose the \textsc{SubCod} (i e , SUB-COncept Discovery) algorithm which works by discovering sub-concepts of the target concept at first and then transforming the data into MIML examples for learning
+This algorithm is able to achieve a better performance than learning the single-label examples directly in some tasks
+This is also not strange because for a label corresponding to a high-level complicated concept, it may be quite difficult to learn this concept directly since many different lower-level concepts are mixed; if we can transform the single-label into a set of labels corresponding to some sub-concepts, which are relatively clearer and easier for learning, we can learn these labels at first and then derive the high-level complicated label based on them with a less difficulty
+The rest of this paper is organized as follows
+In Section~, we review some related work
+In Section~, we propose the MIML framework
+In Section~ we propose the \textsc{MimlBoost} and \textsc{MimlSvm} algorithms, and apply them to tasks where the objects are represented as MIML examples
+In Section~ we present the \textsc{D-MimlSvm} algorithm and compare it with the ``indirect'' \textsc{MimlSvm} algorithm
+In Sections~ and , we study the usefulness of MIML when we do not have access to real objects
+Concretely, in Section~, we propose the \textsc{InsDif} algorithm and show that using MIML can be better than learning single-instances directly; in Section~ we propose the \textsc{SubCod} algorithm and show that using MIML can be better than learning single-label examples directly
+Finally, we conclude the paper in Section~

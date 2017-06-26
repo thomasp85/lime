@@ -1,0 +1,28 @@
+### abstract ###
+Catalysis of ADP-ATP exchange by nucleotide exchange factors is central to the activity of Hsp70 molecular chaperones.
+Yet, the mechanism of interaction of this family of chaperones with NEFs is not well understood in the context of the sequence evolution and structural dynamics of Hsp70 ATPase domains.
+We studied the interactions of Hsp70 ATPase domains with four different NEFs on the basis of the evolutionary trace and co-evolution of the ATPase domain sequence, combined with elastic network modeling of the collective dynamics of the complexes.
+Our study reveals a subtle balance between the intrinsic and specific mechanisms shared by the four complexes.
+Two classes of key residues are distinguished in the Hsp70 ATPase domain: highly conserved residues, involved in nucleotide binding, which mediate, via a global hinge-bending, the ATPase domain opening irrespective of NEF binding, and not-conserved but co-evolved and highly mobile residues, engaged in specific interactions with NEFs.
+The observed interplay between these respective intrinsic and specific interactions provides us with insights into the allosteric dynamics and functional evolution of the modular Hsp70 ATPase domain.
+### introduction ###
+Many proteins are molecular machines.
+They function because their three-dimensional structure allows them to undergo cooperative changes in conformation that maintain the native fold while enabling their biological functions.
+The changes have been pointed out to be structure-encoded, intrinsically accessible to proteins, as can be deduced from simple physics-based approaches CITATION.
+Yet, amino acid specificity is another important property that selectively mediates the interactions with specific partners and ligands CITATION.
+Overall, a subtle balance exists between structure-encoded mechanical properties and sequence-encoded specific properties, and this balance must be evolutionarily optimized to achieve precise functioning.
+The interplay between these two effects becomes particularly important in the case of a number of proteins or domains that play a modular role in a variety of biomolecular interactions.
+The ATPase domain of the Hsp70 family of proteins is a typical example.
+This domain plays a critical role in regulating the activities of these molecular chaperones, which, in turn, promote accurate folding, and prevent unwanted aggregation by either unfolding and refolding misfolded proteins or regulating their intracellular trafficking to the protein degradation machinery CITATION CITATION .
+Chaperones of the Hsp70 family contain two domains: the N-terminal ATPase domain and the C-terminal substrate-binding domain, which regulate each other's activity via allosteric effects.
+ATP hydrolysis at the ATPase domain increases the substrate-binding affinity of the SBD, thus lowering the substrate exchange rate; on the other hand, the dissociation of the ADP produced upon ATP hydrolysis and its replacement by a new ATP trigger the release of substrate by the SBD, and therefore enhance the substrate exchange rate CITATION.
+Regulation of substrate-binding affinity by the ATPase domain forms the basis of the chaperone activity of Hsp70s CITATION, CITATION .
+The precise functioning of the Hsp70 ATPase domain involves an interaction with two families of co-factors, also called co-chaperones: the J-domain proteins that catalyze ATP hydrolysis CITATION, and the nucleotide exchange factors that assist in the replacement of ADP with ATP, by significantly increasing the ADP dissociation rate CITATION.
+A molecular understanding of Hsp70 function requires a systemic analysis of the structural basis and mechanism of interaction with these co-chaperones.
+Here we focus on the interaction of their ATPase domain with NEFs.
+The Hsp70 ATPase domain is composed of four subdomains: IA and IB in lobe I, and, IIA and IIB in lobe II.
+ATP binds the central cleft between the two lobes at the interface between subdomains IIA and IIB such that the geometric and energetic effects of its binding and hydrolysis are efficiently transmitted throughout the ATPase domain.
+To date, four classes of NEFs have been identified: GrpE in prokaryotes CITATION, and BAG-1 CITATION, HspBP1 CITATION and Hsp110 CITATION in eukaryotes.
+Their diverse three-dimensional structures exhibit a variety of binding geometries and interfacial interactions with the Hsp70 ATPase domain.
+In the present study, we examine these interactions, using sequence-, structure- and dynamics-based computations and identify their shared features.
+Our analysis provides insights into the generic and specific aspects of ATPase domain-NEF interactions, as well as the molecular machinery and sequence design principles of this highly versatile module, the Hsp70 ATPase domain, thus reconciling robust structure-encoded cooperative dynamics properties and highly correlated amino acid changes that enable specific recognition.

@@ -1,0 +1,43 @@
+### abstract ###
+This paper uses the notion of algorithmic stability to derive novel generalization bounds for several families of transductive regression algorithms, both by using convexity and closed-form solutions
+Our analysis helps compare the stability of these algorithms \ignore{It suggests that several existing algorithms might not be stable but prescribes a technique to make them stable }  It also shows that a number of widely used transductive regression algorithms are in fact unstable
+Finally, it reports the results of experiments with local transductive regression demonstrating the benefit of our stability bounds for model selection, for one of the algorithms, in particular for determining the radius of the local neighborhood used by the algorithm
+### introduction ###
+The problem of  transductive inference  was originally introduced by  CITATION
+Many learning problems in information extraction, computational biology, natural language processing and other domains can be formulated as a transductive inference problem
+In the transductive setting, the learning algorithm receives both a labeled training set, as in the standard induction setting, and a set of unlabeled test points
+The objective is to predict the labels of the test points
+No other test points will ever be considered
+This setting arises in a variety of applications
+Often, there are orders of magnitude more unlabeled points than labeled ones and they have not been assigned a label due to the prohibitive cost of labeling
+This motivates the use of transductive algorithms which leverage the unlabeled data during training to improve learning performance
+This paper deals with transductive regression, which arises in problems such as predicting the real-valued labels of the nodes of a fixed (known) graph in computational biology, or the scores associated with known documents in information extraction or search engine tasks
+Several algorithms have been devised for the specific setting of transductive regression  CITATION
+Several other algorithms introduced for transductive classification can be viewed in fact as transductive regression ones as their objective function is based on the square loss, for example, in  CITATION
+CITATION  gave explicit VC-dimension generalization bounds for transductive regression that hold for all bounded loss functions and coincide with the tight classification bounds of  CITATION  when applied to classification
+We present novel algorithm-dependent generalization bounds for transductive regression
+Since they are algorithm-specific, these bounds can often be tighter than bounds based on general complexity measures such as the VC-dimension
+Our analysis is based on the notion of algorithmic stability and our learning bounds generalize to the transduction scenario the stability bounds given by  CITATION  for the inductive setting and extend to regression the stability-based transductive classification bounds of  CITATION
+In Section~ we give a formal definition of the transductive inference learning set-up, including a precise description and discussion of two related transductive settings
+We also introduce the notions of cost and score stability used in the following sections
+Standard concentration bounds such as McDiarmid's bound  CITATION  cannot be readily applied to the transductive regression setting since the points are not drawn independently but uniformly without replacement from a finite set
+Instead, Section~ proves a concentration bound generalizing McDiarmid's bound to the case of random variables sampled without replacement
+This bound is slightly stronger than that of  CITATION  and the proof much simpler and more concise
+This concentration bound is used to derive a general transductive regression stability bound in Section~
+Figure~ shows the outline of the paper
+Section~ introduces and examines a very general family of tranductive algorithms, that of local transductive regression (\LTR) algorithms, a generalization of the algorithm of  CITATION
+It gives general bounds for the stability coefficients of \LTR\ algorithms and uses them to derive stability-based learning bounds for these algorithms
+The stability analysis in this section is based on the notion of cost stability and based on convexity arguments
+In Section~, we analyze a general class of unconstrained optimization algorithms that includes a number of recent algorithms  CITATION
+The optimization problems for these algorithms admit a closed-form solution
+We use that to give a score-based stability analysis of these algorithms
+Our analysis shows that in general these algorithms may not be stable
+In fact, in Section~ we prove a lower bound on the stability coefficient of these algorithms under some assumptions
+Section~ examines a class of constrained regularization optimization algorithms for graphs that enjoy better stability properties than the unconstrained ones just mentioned
+This includes the graph Laplacian algorithm of  CITATION
+In Section~, we give a score stability analysis with novel generalization bounds for this algorithm, simpler and more general than those given by  CITATION
+Section~ shows that algorithms based on constrained graph regularizations are in fact special instances of the \LTR\ algorithms by showing that the regularization term can be written in terms of a norm in a reproducing kernel Hilbert space
+This is used to derive a cost stability analysis and novel learning bounds for the graph Laplacian algorithm of  CITATION  in terms of the second smallest eigenvalue of the Laplacian and the diameter of the graph
+Much of the results of these sections generalize to other constrained regularization optimization algorithms
+These generalizations are briefly discussed in Section~ where it is indicated, in particular, how similar constraints can be imposed to the algorithms of  CITATION  to derive new and stable versions of these algorithms
+Finally, Section~ shows the results of experiments with local transductive regression demonstrating the benefit of our stability bounds for model selection, in particular for determining the radius of the local neighborhood used by the algorithm, which provides a partial validation of our bounds and analysis

@@ -1,0 +1,40 @@
+### abstract ###
+professional judges in traffic courts sentence many hundreds of offenders per year
+using  NUMBER  case files from archives  we compared the matching heuristic mh to compensatory  weighing algorithms wm
+we modeled and cross validated the models on different subsets of the data  and took several other methodological precautions such as allowing each model to select the optimal number of variables and ordering and weighing the variables in accordance to different logics
+we did not reproduce the finding by dhami  CITATION   who found the mh to be superior to a compensatory algorithm in modeling bail-granting decisions
+these simulations brought out the inner logic of the two family of models  showing what combination of parameters works best
+it remains remarkable that using only a fraction of the variables and combining them non-compensatorily  mh obtained nearly as good a fit as the weighing method
+### introduction ###
+this paper compares compensatory and non-conpensatory models as descriptions of how decisions are made in real-life settings by experienced practitioners
+the study concerns traffic judges  and the punishment they mete out to alleged offenders brought in their court
+judges in traffic courts are professional decision makers
+their decisions are  for them  routine  and they handle dozens of cases every month
+for the defendants appearing in court  the decisions are significant  involving sometimes hefty fines  driving license suspension or even prison
+we asked how many elements traffic judges consider and how complex their decision patterns are
+such a study  relying on actual cases of professional decision-making  contributes to the debate about the plausibilitiy of the fast and frugal heuristics as psychological models of cognition  CITATION
+there is an extensive literature on how decision makers proceed when they have to rely on multiple cues to come to a decision
+many researchers maintain that decisions makers do not rely on all the information available  or combine it in any sophisticated way
+instead  it is claimed  they rely on simple heuristics that sometimes turn out to be surprisingly efficient and as valid as the more complex approaches favored by a rational analysis  CITATION
+this paper analyzes and attempts to model decisions made in real life by experienced traffic judges
+how simple or how complex are the judgments meted out
+do traffic judges consider all the elements of the case
+to what extent do they integrate all the information available to them
+there are at least two causes for the superficial treatment of available information
+the first is cognitive limitation
+people do not use an optimal approach because the proper integration of all the information available is beyond their mental powers
+all humans have limited cognitive abilities  CITATION   and this fundamental difficulty is exacerbated by the conditions under which traffic court judges have to work
+their workload is high  with only a few minutes available for a case  each characterized by some twenty parameters
+strategy selection is contingent on task demands  CITATION
+time pressure  and specifically the time available per variable has been shown to affect decision making  CITATION  resulting in fewer variables being considered and the replacement of complex cognitive strategies by simpler ones  CITATION  processing hundreds of cases month after month  traffic court judges acquire a vast experience
+there is therefore reason to expect their decisions to settle into some pattern
+however  and this is the second factor  they do not have the benefit of feedback  and this has important consequences
+feedback on the appropriateness of one's decisions has been shown to be essential to developing good strategies  CITATION
+in particular  while interactions are often ignored in multivariable decisions  CITATION  this is not the case when decision makers have habitual access to feedback on their decisions and care greatly about the outcome  CITATION
+even if the judges knew what happened to the offenders they sentenced  they lack a clear criterion by which to evaluate the quality of their decision
+judges have little incentive to develop complex decision rules
+yet they surely do not render random judgments
+instead of accuracy  they may strive for an adequate judgment  one that they consider appropriate to the circumstances and expresses their attitudes about each case
+yet even if this criterion of adequacy replaces accuracy  it is unlikely that the judges attempt to reach the best possible decision in every case
+since their task is routine and each case must be quickly dispatched lest the backlog increase  it is plausible they do not invest as much care as judges in higher courts  where stakes arehigher and acquaintance with the offender protracted
+they may also use methods that are less well thought out than if resources were unlimited  motivation high and information complete

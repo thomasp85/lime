@@ -1,0 +1,28 @@
+### abstract ###
+The identification and classification of genes and pseudogenes in duplicated regions still constitutes a challenge for standard automated genome annotation procedures.
+Using an integrated homology and orthology analysis independent of current gene annotation, we have identified 9,484 and 9,017 gene duplicates in human and mouse, respectively.
+On the basis of the integrity of their coding regions, we have classified them into functional and inactive duplicates, allowing us to define the first consistent and comprehensive collection of 1,811 human and 1,581 mouse unprocessed pseudogenes.
+Furthermore, of the total of 14,172 human and mouse duplicates predicted to be functional genes, as many as 420 are not included in current reference gene databases and therefore correspond to likely novel mammalian genes.
+Some of these correspond to partial duplicates with less than half of the length of the original source genes, yet they are conserved and syntenic among different mammalian lineages.
+The genes and unprocessed pseudogenes obtained here will enable further studies on the mechanisms involved in gene duplication as well as of the fate of duplicated genes.
+### introduction ###
+Gene duplication is the major source of biological innovation and diversity as it provides the necessary conditions for the appearance of new or more specialized protein functions CITATION.
+In eukaryotic genomes, there are two major mechanisms through which coding gene regions duplicate: retrotransposition and non-homologous recombination.
+Whereas retrotransposition can lead in rare occasions to a functional mRNA copy CITATION, it usually results in processed pseudogenes.
+The present study focuses on gene copies that, on the other hand, arose through non-homologous recombination, which produces intact genes copies.
+It is generally agreed that after such gene duplications, there is a period of functional redundancy and, consequently, a partial relaxation of their associated selective constraints.
+This allows each copy to accept a higher level of sequence modification and, therefore, explore new or more specialized roles as long as the basic ancestral function is not compromised.
+Although this situation can eventually lead to the formation of novel genes, it is generally believed that it normally ends with the silencing of one of the copies by the accumulation of lethal mutations, and the preservation of the other with the same basic ancestral function CITATION.
+Non-functional paralogs are then expected to accumulate mutations at a neutral rate and degenerate as unprocessed pseudogenes.
+Similarly, apart from duplicated exons that lead to alternatively spliced isoforms CITATION, incomplete duplications of genes that can neither be transcribed nor translated into complete and functional proteins are also expected to undergo neutral degeneration right after their formation, as occurs with the vast majority of processed pseudogenes.
+Currently the silencing of genes after duplication is poorly understood.
+Its frequency has been indirectly inferred either through theoretical approaches CITATION, CITATION or from the study of functional genes exclusively CITATION, without taking into account the population of dead gene copies, probably due to the lack of consistent annotation for these regions in public databases.
+Not only the identification of unprocessed pseudogenes, but also the overall identification and classification of independent gene copies within regions that underwent several rounds of tandem duplications, are not completely solved, as exemplified in a detailed analysis of a particular region of human Chromosome 2 CITATION.
+Previous global analyses of dead gene copies in mammals have focused mainly on retrotransposed pseudogenes CITATION CITATION, which appear to be far more abundant and easier to detect than unprocessed pseudogenes.
+We have already attempted to define collections of unprocessed pseudogenes in the context of a genome-wide identification of intergenic pseudogenes from several sequenced genomes CITATION, CITATION CITATION.
+The estimated number of these regions fluctuated significantly within mammals: between 3,000 and 4,500 per genome.
+However, on the basis of our recent and more detailed analysis of the finished human Chromosomes 2 and 4 CITATION, we estimate that the human genome might actually contain no more than 2,000 unprocessed pseudogenes, because previous sets were somewhat inflated by misclassified retrotranscribed pseudogenes.
+In addition to these large-scale approximations, several hundred unprocessed pseudogenes also have been identified during the annotation of single human chromosomes and from detailed studies focused on particular gene families or genomic regions.
+Despite all these efforts, a considerable fraction of human and mouse unprocessed pseudogenes is likely to be unannotated or incorrectly classified owing to the difficulties in analyzing complex regions with multiple copies of genes.
+Using filtering procedures performed on the available assemblies of the human and mouse genomes, we have carried out a consistent and comprehensive search for gene duplicates independent of previous gene annotations.
+We have distinguished the potentially active from the non-functional copies in order to construct the first reliable set of unprocessed pseudogenes.

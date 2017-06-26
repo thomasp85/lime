@@ -1,0 +1,30 @@
+### abstract ###
+the deliberation without attention dwa effect refers to apparent improvements in decision-making following a period of distraction
+it has been presented as evidence for beneficial unconscious cognitive processes
+we identify two major concerns with this claim  first  as these demonstrations typically involve subjective preferences  the effects of distraction cannot be objectively assessed as beneficial  second  there is no direct evidence that the dwa manipulation promotes unconscious decision processes
+we describe two tasks based on the dwa paradigm in which we found no evidence that the distraction manipulation led to decision processes that are subjectively unconscious  nor that it reduced the influence of presentation order upon performance
+crucially  we found that a lack of awareness of decision process was associated with poorer performance  both in terms of subjective preference measures used in traditional dwa paradigm and in an equivalent task where performance can be objectively assessed
+therefore  we argue that reliance on conscious memory itself can explain the data
+thus the dwa paradigm is not an adequate method of assessing beneficial unconscious thought
+### introduction ###
+decision theorists have long distinguished between analytical and intuitive decision making  CITATION   often attributing them with different processing modes  CITATION
+despite the flourishing theoretical literature supporting this dichotomous view  the number of empirical attempts to contrast the effects of intuition and deliberation is limited
+one reason for this lack of research is the difficulty of assessing the goodness of any particular decision  CITATION
+another reason could originate from the traditional assumption that reasoning and analysis always lead to better outcomes  CITATION
+nevertheless  some of the theories subscribing to this dichotomous view assume that under certain circumstances intuitive decisions can bring more optimal results than rational thinking
+a number of empirical studies have given support to this notion  suggesting that for some tasks we are really better off without conscious thinking  CITATION
+these results were often explained by the hypothesis that reasoning can lead people to use non-optimal criteria and consequently to make worse decisions  CITATION   or that intuitive decisions can benefit from the use of  smart heuristics   CITATION
+dijksterhuis and his colleagues  however  propose an alternative explanation for superior performance when analytic strategies are not used
+according to unconscious thought theory  CITATION  intuitive decisions may benefit from unconscious thought  a high capacity process which can weight numerous pieces of information and integrate them into decisions automatically and via distributed  bottom-up processing
+they argue that this  smart  unconscious process is more capable in complex  information-dense decision situations than conscious thought  which is limited by working memory capacity
+empirical support for utt comes primarily from the deliberation-without-attention dwa paradigm  CITATION  in which participants are presented with a list of positive and negative attributes describing a variety of possible choices within a particular category e g   apartments
+the opportunity for thinking before choosing is manipulated across three conditions  participants in the immediate decision condition make their decision at once  those in the conscious thought condition have four minutes to think  those in the unconscious thought condition make a choice after four minutes performance on an irrelevant task
+according to utt  the best choices will be made by participants in the unconscious thought condition  because the irrelevant task interval provides an opportunity for unconscious processing of information
+by contrast  the conscious thought condition is assumed to promote choices based on limited-capacity  conscious processing
+as has been noted previously  CITATION   it is also possible that a forced delay between evaluation which may be completed early in the four minute interval and response in the conscious thought condition may somehow e g   by self-generated interference reduce performance  the immediate decision condition acts as a baseline  providing control for this counterintuitive effect of forced delay
+initial studies using this paradigm provided many illustrations of this  dwa effect   supporting for utt  CITATION
+however  several recent papers have challenged this interpretation and questioned the degree of support the original paradigm offers for utt
+a series of studies has reported a failure to replicate the original results  CITATION
+others have found that the effect may only occur under specific circumstances  CITATION
+acker  CITATION  used a meta-analysis to determine that the benefit for choices following unconscious thought in the first  NUMBER  studies published was modest mean effect size g     NUMBER 
+a more recent meta-analysis of  NUMBER  studies strick et al   n d reported a similar effect size g    NUMBER   which the authors propose as evidence for important moderators of the effect in the different designs of the task

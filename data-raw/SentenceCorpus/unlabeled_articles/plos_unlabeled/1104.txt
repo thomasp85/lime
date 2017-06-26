@@ -1,0 +1,52 @@
+### abstract ###
+Simultaneous spike-counts of neural populations are typically modeled by a Gaussian distribution.
+On short time scales, however, this distribution is too restrictive to describe and analyze multivariate distributions of discrete spike-counts.
+We present an alternative that is based on copulas and can account for arbitrary marginal distributions, including Poisson and negative binomial distributions as well as second and higher-order interactions.
+We describe maximum likelihood-based procedures for fitting copula-based models to spike-count data, and we derive a so-called flashlight transformation which makes it possible to move the tail dependence of an arbitrary copula into an arbitrary orthant of the multivariate probability distribution.
+Mixtures of copulas that combine different dependence structures and thereby model different driving processes simultaneously are also introduced.
+First, we apply copula-based models to populations of integrate-and-fire neurons receiving partially correlated input and show that the best fitting copulas provide information about the functional connectivity of coupled neurons which can be extracted using the flashlight transformation.
+We then apply the new method to data which were recorded from macaque prefrontal cortex using a multi-tetrode array.
+We find that copula-based distributions with negative binomial marginals provide an appropriate stochastic model for the multivariate spike-count distributions rather than the multivariate Poisson latent variables distribution and the often used multivariate normal distribution.
+The dependence structure of these distributions provides evidence for common inhibitory input to all recorded stimulus encoding neurons.
+Finally, we show that copula-based models can be successfully used to evaluate neural codes, e.g., to characterize stimulus-dependent spike-count distributions with information measures.
+This demonstrates that copula-based models are not only a versatile class of models for multivariate distributions of spike-counts, but that those models can be exploited to understand functional dependencies.
+### introduction ###
+So far, it is still unknown which statistics are crucial for analysis in order to understand the neural code.
+One approach is to analyze simultaneous spike-counts of neural populations.
+Responses from populations of sensory neurons vary even when the same stimulus is presented repeatedly, and the variations between the simultaneous spike-counts are usually correlated at least for neighboring neurons.
+These noise correlations have been subject of a substantial number of studies.
+For computational reasons, however, these studies typically assume Gaussian noise.
+Thus, correlated spike rates are generally modeled by multivariate normal distributions with a specific covariance matrix that describes all pairwise linear correlations.
+For long time intervals or high firing rates, the average number of spikes is sufficiently large for the central limit theorem to apply and the normal distribution is a good approximation for the spike-count distributions.
+Several experimental findings, however, suggest that processing of sensory information can take place on shorter time scales, involving only tens to hundreds of milliseconds CITATION, CITATION.
+In this regime the normal distribution is no longer a valid approximation:
+Its marginals are continuous with a symmetric shape, whereas empirical distributions of real spike-counts tend to have a positive skew .
+The normal distribution has to be heuristically modified in order to avoid positive probabilities for negative values which are not meaningful for spike-counts.
+This is a major issue for low rates for which the probability of negative values would be high.
+The dependence structure of a multivariate normal distribution is always elliptical, whereas spike-count data often show a so-called tail-dependence with probability mass concentrated on one of the corners .
+The multivariate normal distribution assumes second order correlations only.
+Although it was shown that pairwise interactions are sufficient for describing the spike-count distributions of retinal ganglion cells and cortex cells in vitro CITATION, there is evidence for significant higher order interactions of spike-counts recorded from cortical areas in vivo CITATION .
+Though not widespread for modeling spike-counts, alternative models have been proposed in previous studies that have Poisson distributed marginals and separate parameters for higher order correlations, e.g. the multiple interaction process model CITATION and the compound Poisson model CITATION.
+Both models are point processes.
+In terms of their induced spike-count distributions these models are special cases of the multivariate Poisson latent variables distribution first introduced by Kawamura CITATION and presented in a compact matrix notation by Karlis and Meligkotsidou CITATION.
+Similar to the multivariate normal distribution this model has also a couple of shortcomings for spike-count modeling: Only Poisson-marginals can be modeled.
+Negative correlations cannot be represented.
+The dependence structure is inflexible: features like tail dependence cannot be modeled.
+We use and extend a versatile class of models for multivariate discrete distributions that overcome the shortcomings of the afore-mentioned models CITATION, CITATION.
+These models are based on the concept of copulas CITATION, which allow to combine arbitrary marginal distributions using a rich set of dependence structures.
+In neuroscience they were also applied to model the distribution of continuous first-spike-latencies CITATION .
+Figure 1 illustrates the copula concept using spike-count data from two real neurons.
+Figure 1A shows the bivariate empirical distribution and its two marginals.
+The distribution of the counts depends on the length of the time bin that is used to count the spikes, here FORMULA.
+In the case considered, the correlation at low counts is higher than at high counts.
+This is called lower tail dependence CITATION.
+Figure 1B shows the discretized and rectified multivariate normal distribution.
+On the other hand, the spike-count probabilities for a copula-based distribution correspond well to the empirical distribution in Figure 1A.
+The paper is organized as follows.
+The next Section Materials and Methods contains a description of methodological details regarding the multivariate normal distribution, the multivariate Poisson latent variables distribution, the copula approach for spike-counts and the model fitting procedures.
+In this section we will also introduce a novel transformation for copula families.
+The method is innovative and yields a novel result.
+We will then describe the computational model used to generate synthetic data and the experimental recording and analysis procedures.
+In the Section Results copula-based models will be applied to artificial data generated by integrate-and-fire models of coupled neural populations and to data recorded from macaque prefrontal cortex during a visual memory task.
+The appropriateness of the models is also investigated.
+The paper concludes with a discussion of the strengths and weaknesses of the copula approach for spike-counts.

@@ -1,0 +1,35 @@
+### abstract ###
+people overestimate their affective reactions to future events and decisions - a phenomenon that has been termed  impact bias
+  evidence suggests that completing a diary detailing events contemporaneous with the focal one de-biases judgments of affect
+it is generally assumed that this is because diary completion helps people to realize that they will be distracted from the focal event
+however  there is another possibility  de-biasing may occur because diary completion interferes with the processing responsible for the bias
+in a first experiment  we showed that diary completion also lowers affect associated with past decisions
+in a second experiment  we showed that solving anagrams has the same effect
+a third experiment demonstrates that this is not because affect judgments are influenced by mood changes brought about by solving anagrams
+indeed  monitoring moods lowered affect in the same way as diary completion
+it appears that cognitive tasks of any sort interfere with the processing required by judgments of affect
+### introduction ###
+recent evidence suggests that people estimate that their affective reactions to future events will be more intense than they actually are  CITATION
+these misjudgments have been termed  impact bias   CITATION
+wilson et al CITATION  suggested that the psychological mechanism that underlies this phenomenon is what they termed  focalism 
+in wilson et al 's words  when people generate predictions about how they will be feeling after a future event  people focus too much on the event in question and not enough on the consequences of other future events   CITATION
+focalism has also been found to influence people's judgments of their affective reactions to past events  CITATION
+for example  mitchell et al CITATION  found that people's retrospective judgments of enjoyable events  such as bicycle trips and vacations  were more positive than their judgments that were contemporaneous with these events
+it has been suggested that retrospective focalism arises for the same reason as prospective focalism  people pay too much attention to the focal event and not enough to the consequences of other events that occur at the same time as the focal event  CITATION
+wilson et al CITATION  demonstrated that asking people to complete a diary of activities in which they expected to be engaged around the time of the focal event reduced the intensity of the emotions associated with that event
+they argued that the diary manipulation had its effect by reducing focalism  specifically  they suggested that the effect of diary completion is to reduce the extent to which people expect to be thinking about the focal event after it has occurred
+they suggested that this effect could be brought about in one of two ways
+first  asking people to complete a diary may make them realize that other events would occupy their thoughts and thereby distract them from thinking about the target event
+as a result  they would ensure that they moderated their affective forecasts
+second  people may focus their attention on the affective consequences of the other events rather than on the likelihood of being distracted by those events
+in other words  they may believe that the affective consequences of the focal event will be diluted or cancelled out by the affective consequences of the other events occurring around the same time
+as a result  they attenuate their affective forecasts of the focal event
+in fact  wilson et al CITATION  found that the affective valence of events in participants' diaries had no effect on the level of affect that was forecast for the focal event
+consequently  these researchers concluded that the affective competition hypothesis was not viable  the distraction hypothesis provided the more plausible account of their diary manipulation
+here we have two aims
+first  we aim to investigate whether diary completion attenuates retrospective judgment of post-decisional affect i e   regret  disappointment as well as prospective judgments of affect
+second  we aim to investigate the adequacy of the distraction account as an account of defocusing of both retrospective and prospective judgments
+in particular  we shall contrast it with a task interference account
+according to this alternative view  defocusing occurs because processing subserving affect assessment is impaired by costs associated with task-switching
+more specifically  judgments of affect associated with a particular event are likely to involve cognitive processes that operate on the contents of working memory
+requiring people to perform an additional task diary completion disrupts these processes because it makes its own demands on working memory

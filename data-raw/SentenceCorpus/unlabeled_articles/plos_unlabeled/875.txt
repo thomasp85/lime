@@ -1,0 +1,30 @@
+### abstract ###
+This genome-scale study analysed the various parameters influencing protein levels in cells.
+To achieve this goal, the model bacterium Lactococcus lactis was grown at steady state in continuous cultures at different growth rates, and proteomic and transcriptomic data were thoroughly compared.
+Ratios of mRNA to protein were highly variable among proteins but also, for a given gene, between the different growth conditions.
+The modeling of cellular processes combined with a data fitting modeling approach allowed both translation efficiencies and degradation rates to be estimated for each protein in each growth condition.
+Estimated translational efficiencies and degradation rates strongly differed between proteins and were tested for their biological significance through statistical correlations with relevant parameters such as codon or amino acid bias.
+These efficiencies and degradation rates were not constant in all growth conditions and were inversely proportional to the growth rate, indicating a more efficient translation at low growth rate but an antagonistic higher rate of protein degradation.
+Estimated protein median half-lives ranged from 23 to 224 min, underlying the importance of protein degradation notably at low growth rates.
+The regulation of intracellular protein level was analysed through regulatory coefficient calculations, revealing a complex control depending on protein and growth conditions.
+The modeling approach enabled translational efficiencies and protein degradation rates to be estimated, two biological parameters extremely difficult to determine experimentally and generally lacking in bacteria.
+This method is generic and can now be extended to other environments and/or other micro-organisms.
+### introduction ###
+In the era of omics, systems biology has emerged with the availability of genome-wide data from different levels, i.e. genome, transcriptome, proteome, metabolome CITATION, CITATION.
+This approach aims at integrating omics data, mainly through computational and mathematical models CITATION, CITATION so as to decipher biological systems as a whole CITATION.
+The integration of transcriptomic and proteomic results is a huge challenge by itself.
+The literature usually exploits these two approaches as complementary tools and does not often provide a correct confrontation of the two datasets.
+Until now, only a few researchers, mainly interested in yeast physiology CITATION, CITATION, have been working on this aspect and the results typically revealed modest correlations between those two datasets CITATION CITATION.
+These weak correlations between transcript and protein levels can be the consequence of the involvement of post-transcriptional regulations CITATION, such as translation control and protein degradation as evidenced by Brockmann et al. CITATION.
+Translation regulations are believed to be involved in protein level control but are generally studied at the level of controlling specific molecular mechanisms and not at the genome scale CITATION CITATION.
+Although polysome profile analysis allows translation efficiencies to be experimentally determined for the various transcripts simultaneously, this technique has been only rarely used and almost exclusively for S. cerevisiae CITATION.
+Protein stability can also influence intracellular protein level and the correlation between transcript and protein CITATION, CITATION, CITATION.
+However protein stability is rarely studied at the genome scale and data are only available for S. cerevisiae CITATION, CITATION.
+Finally, the rate of protein disappearance due to protein dilution by cellular growth is also potentially involved in protein level modifications but this physical phenomenon is generally neglected.
+More generally, even if translation efficiency, protein degradation and dilution rate can all influence protein levels, these parameters are not usually studied simultaneously.
+The role of each parameter in a whole cellular adaptation process has not been elucidated and it is not clearly known today which parameter is preponderant and if the control is constant or not when environmental conditions are modified.
+The aim of this study was to analyse the control of intracellular protein level taking into account all the parameters of this control, in a prokaryotic organism, the model of lactic acid bacteria, Lactococcus lactis.
+To achieve this purpose, transcriptomic and proteomic analyses were performed with cells from the same culture.
+Transcriptomic data were already available CITATION and the corresponding proteome measurement was performed.
+The whole protein related processes including translation, dilution rate and protein degradation were modelled, and, since biological data were obtained at steady state, equations describing the protein levels equilibrium were solved.
+This modeling approach allowed translation efficiency and protein degradation to be estimated and the relative involvement of all the various parameters of protein control to be analysed.

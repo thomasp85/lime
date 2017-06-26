@@ -1,0 +1,27 @@
+### abstract ###
+Many cellular systems rely on the ability to interpret spatial heterogeneities in chemoattractant concentration to direct cell migration.
+The accuracy of this process is limited by stochastic fluctuations in the concentration of the external signal and in the internal signaling components.
+Here we use information theory to determine the optimal scheme to detect the location of an external chemoattractant source in the presence of noise.
+We compute the minimum amount of mutual information needed between the chemoattractant gradient and the internal signal to achieve a prespecified chemotactic accuracy.
+We show that more accurate chemotaxis requires greater mutual information.
+We also demonstrate that a priori information can improve chemotaxis efficiency.
+We compare the optimal signaling schemes with existing experimental measurements and models of eukaryotic gradient sensing.
+Remarkably, there is good quantitative agreement between the optimal response when no a priori assumption is made about the location of the existing source, and the observed experimental response of unpolarized Dictyostelium discoideum cells.
+In contrast, the measured response of polarized D. discoideum cells matches closely the optimal scheme, assuming prior knowledge of the external gradient for example, through prolonged chemotaxis in a given direction.
+Our results demonstrate that different observed classes of responses in cells are optimal under varying information assumptions.
+### introduction ###
+Recently, there has been considerable research demonstrating the critical role played by random fluctuations in cellular signaling systems CITATION CITATION.
+Stochastic variations are found in the external signaling molecules CITATION as well as in the intracellular components CITATION.
+They arise because of the small number of molecules involved in signaling and play significant roles in gene regulatory networks CITATION CITATION as well as in prokaryotic CITATION, CITATION and eukaryotic signal transduction pathways CITATION, CITATION, CITATION .
+The proper functioning of cellular signaling networks requires mechanisms that can tolerate the effects of noise CITATION.
+However, questions remain as to how to evaluate the performance and efficiency of these cellular decision-making systems.
+How well does the signaling network of a cell make decisions based on the signaling cues available?
+Can improvements be made by altering the parameters or structure of the network?
+How efficiently are resources used?
+Here we argue that rate distortion theory CITATION, a branch of information theory, can be used to evaluate the effectiveness of such systems.
+The application of information theory to the study of biology has been under way for some time CITATION CITATION and has received considerable attention in the fields of neuroscience CITATION and genetics CITATION CITATION.
+However, the full breadth of this utility for biological signaling systems, in general, has not been realized, primarily because of the difficulty of defining information in general biological systems.
+Here we use rate distortion theory as a tool to study performance cost tradeoffs in general spatial gradient sensing mechanisms, similar to those found in many eukaryotic cells, including neutrophils and amoebae.
+Rate distortion theory provides bounds on the rate at which information must be transmitted through a system to achieve a given performance criterion.
+Our results demonstrate that, depending on the prior knowledge that a cell has about its chemoattractant environment, different optimal chemotaxis strategies exist.
+Furthermore, we show that differences in the observed behaviors of unpolarized and polarized chemotactic cells correspond to these various optimally efficient decision-making processes.

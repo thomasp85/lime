@@ -1,0 +1,55 @@
+### abstract ###
+This article considers constrained  SYMBOL  minimization methods for the recovery of high dimensional sparse signals in three settings: noiseless, bounded error and Gaussian noise
+A unified and elementary treatment is given in these noise settings for two  SYMBOL  minimization methods: the Dantzig selector and  SYMBOL  minimization with an  SYMBOL  constraint
+The results of this paper improve the existing results in the literature by weakening the conditions and tightening the error bounds
+The improvement on the conditions shows that signals with larger support can be recovered accurately
+This paper also establishes connections between restricted isometry property and the mutual incoherence property
+Some results of Candes, Romberg and Tao (2006) and Donoho, Elad, and Temlyakov (2006) are extended
+### introduction ###
+The problem of recovering a high-dimensional sparse signal based on a small number of measurements, possibly corrupted by noise, has attracted much recent attention
+This problem arises in many different settings, including model selection in linear regression, constructive approximation,  inverse problems, and compressive sensing
+Suppose we have  SYMBOL  observations of the form  y = F+ z where the matrix  SYMBOL  with  SYMBOL  is given and  SYMBOL  is a vector of measurement errors
+The goal is to reconstruct the unknown vector  SYMBOL
+Depending on settings, the error vector  SYMBOL  can either be zero (in the noiseless case), bounded, or Gaussian where  SYMBOL
+It is now well understood that  SYMBOL  minimization provides an effective way for reconstructing a sparse signal in all three settings
+A special case of particular interest is when no noise is present in () and  SYMBOL
+This is an underdetermined system of linear equations with more variables than the number of equations
+It is clear that the problem is ill-posed and there are generally infinite many solutions
+However, in many applications the vector  SYMBOL  is known to be sparse or nearly sparse in the sense that it contains only a small number of nonzero entries
+This sparsity assumption fundamentally changes the problem, making unique solution possible
+Indeed in many cases the unique sparse solution can be found exactly through  SYMBOL  minimization: (P) \min\|\|_1 \mbox{subject to} F= y
+This  SYMBOL  minimization problem has been studied, for example, in Fuchs  CITATION , Candes and Tao  CITATION  and Donoho  CITATION
+Understanding the noiseless case is not only of significant interest on its own right, it also provides deep insight into the problem of reconstructing sparse signals in the noisy case
+See, for example, Candes and Tao  CITATION  and Donoho  CITATION
+When  noise is present, there are two well known  SYMBOL  minimization methods
+One is  SYMBOL  minimization under the  SYMBOL  constraint on the residuals: (P_1) \min\|\|_1 \mbox{subject to} \|y-F\gamma\|_2\epsilon
+Writing in terms of the Lagrangian function of ( SYMBOL ), this is closely related to finding the solution to the  SYMBOL  regularized least squares:  \min_\left\{\|y-F\gamma\|_2^2 + \rho\|\|_1\right\}
+The latter is often called the Lasso in the statistics literature (Tibshirani  CITATION )
+Tropp  CITATION  gave a detailed treatment of the  SYMBOL  regularized least squares problem
+Another method, called the Dantzig selector, is recently proposed by Candes and Tao  CITATION
+The Dantzig selector solves the sparse recovery problem through  SYMBOL -minimization with a constraint on the correlation between the residuals and the column vectors of  SYMBOL :  SYMBOL } Candes and Tao  CITATION  showed that the Dantzig selector can be computed by solving a linear program and it mimics the performance of an oracle procedure up to a logarithmic factor  SYMBOL
+It is clear that regularity conditions are needed in order for these problems to be well behaved
+Over the last few years, many interesting results for recovering sparse signals have been obtained in the framework of the  Restricted Isometry Property  (RIP)
+In their seminal work  CITATION , Candes and Tao considered sparse recovery problems in the RIP framework
+They provided beautiful solutions to the problem under some conditions on the restricted isometry constant  and restricted orthogonality constant (defined in Section )
+Several different conditions have been imposed in various settings
+In this paper, we consider  SYMBOL  minimization methods for the sparse recovery problem in three cases: noiseless, bounded error and Gaussian noise
+Both the Dantzig selector (DS) and  SYMBOL  minimization under the  SYMBOL  constraint  SYMBOL  are considered
+We give a unified and elementary treatment for the two methods under the three noise settings
+Our results improve on the existing results in  CITATION  by weakening the conditions and tightening the error bounds
+In all cases we solve the problems under the weaker condition  SYMBOL  where  SYMBOL  is the sparsity index and  SYMBOL  and  SYMBOL  are respectively the restricted isometry constant and restricted orthogonality constant defined in Section
+The improvement on the condition shows that signals with larger support can be recovered
+Although our main interest is on recovering sparse signals, we state the results in the general setting of reconstructing an arbitrary signal
+Another widely used condition for sparse recovery is the so called  Mutual Incoherence  Property  (MIP) which requires the pairwise correlations among the column vectors of  SYMBOL  to be small
+See  CITATION
+We establish connections between the concepts of RIP and MIP
+As an application, we present an improvement to a recent result of Donoho, Elad, and Temlyakov   CITATION
+The paper is organized as follows
+In Section , after basic notation and definitions are reviewed, two elementary inequalities, which allow us to make finer analysis of the sparse recovery problem, are introduced
+We begin the analysis of  SYMBOL  minimization methods for sparse recovery by considering the exact recovery in the noiseless case in Section
+Our result improves the main result in Candes and Tao  CITATION  by using weaker conditions and providing tighter error bounds
+The analysis of the noiseless case provides insight to the case when the observations are contaminated by noise
+We then consider the case of bounded error in Section
+The connections between the RIP and MIP are also explored
+The case of Gaussian noise is treated in Section
+The Appendix contains the proofs of some technical results

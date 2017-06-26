@@ -1,0 +1,59 @@
+### abstract ###
+evidence  anecdotal and scientific  suggests that people treat or are affected by products of prestigious sources differently than those of less prestigious  or of anonymous  sources
+the  products  which are the focus of the present study are poems  and the  sources  are the poets
+we explore the manner in which the poet's name affects the experience of reading a poem
+study  NUMBER  establishes the effect we wish to address  a poet's reputation enhances the evaluation of a poem
+study  NUMBER  asks whether it is only the reported evaluation of the poem that is enhanced by the poet's name as was the case for the emperor's new clothes or the enhancement is genuine and unaware
+finding for the latter  study  NUMBER  explores whether the poet's name changes the reader's experience of it  so that in a sense one is reading a  different  poem
+we conclude that it is not so much that the attributed poem really differs from the unattributed poem  as that it is just ineffably better
+the name of a highly regarded poet seems to prime quality  and the poem becomes somehow better
+this is a more subtle bias than the deliberate one rejected in study  NUMBER   but it is a bias nonetheless
+ethical implications of this kind of effect are discussed
+### introduction ###
+hearing a star soprano  or attending an exhibition by a famous painter  are expected to be exceptional experiences
+and so they should be-their reputation was acquired precisely by their ability to provide such exceptional experiences
+reputation seems capable of enhancing an experience even in retrospect  as when we only discover the next day that we had just heard a diva or visited the season's hottest exhibition
+but hindsight can affect the remembered experience  it cannot affect the past experience itself  CITATION
+can the actual experience of a poem rather than the expected or remembered experience be affected by expectations in real time
+and if so-how does it happen
+when the experience of a product is changed by its label  the change does not occur in the product
+it would be undetected by an audio recording or a photograph
+this is the intuition underlying juliet's famous   that which we call a rose by any other name would smell as sweet
+  however  experience is not determined by bottom-up processes alone
+distal stimuli are only experienced through the proximal stimuli to which they give rise  and total experience takes place  in the eyes of the beholder -or even  ultimately  in the mind of the beholder
+hence  for cognitive psychologists  it is obvious that expectations can alter experience  CITATION
+social psychologists and cynics  however  will be quick to point out that one cannot rely on people's reports of their experiences to decide the matter  because reports are not always sincere or unbiased
+a glowing evaluation can be a form of cognitive  snobbery   it's supposed to be excellent  so i will say it is excellent   or of social desirability
+this caveat notwithstanding  in studies of consumer behavior  expectations are typically manipulated through brand name  price  or other marketing actions  and evaluations are solicited via expressed judgments or revealed preferences  CITATION
+allison  and  uhl  CITATION  were among the first to study these variables
+they found that people could not identify their favorite brand of beer in blind tasting
+later results were more startling  such as that blind tasters cannot distinguish dog food from pate  CITATION  or that experienced violinists cannot distinguish stradivari violins from new violins  CITATION
+on the other hand  judges purport to distinguish among identical stimuli  when these are labeled differently  CITATION  or even just framed differently  CITATION
+when comparing informed evaluations to blind evaluations  or ratings for differently labeled but identical products  some researchers automatically assume that a real change occurred in the experience e g   makens   NUMBER   p  NUMBER    a well-known brand positively affected the taste  italics ours  which ss experienced for samples of turkey meat   while others assume that it will not  CITATION
+in fact  however  we should acknowledge that it is certainly possible  psychologically speaking  that the actual experience is genuinely different for blind and for informed consumers  as it is possible that the actual experience is just the same for blind and for informed consumers
+the question is clearly an empirical one  and  moreover  its answer could well differ from context to context  or from individual to individual
+yet few studies have tackled this problem
+lee et al    CITATION   when reviewing the literature  stated that   it remains unclear whether  manipulating the participant's  knowledge also changes the experience itself   just as it remains unclear in most taste-test studies whether brand identity is just another input to overall evaluation  or whether it modifies the actual gustatory experience  p  NUMBER 
+their own study is an exception  and will be described in study  NUMBER  below
+the present paper is another exception
+few studies on expectation effects used cultural products
+yet cultural products are of particular interest  both because of our intrinsic interest in them  and because the question of how expectations affect cultural experiences  and how to distinguish between sincere effects and cynical or hypocritical ones  is particularly vexing with regard to ineffable or ambiguous experiences  such as artistic ones
+whereas wines  energy drinks and pain-killers affect the consumer's physiology  lending credence to the term  marketing placebos   CITATION   cultural products such as paintings or music are consumed primarily for their effect on the mind
+it is harder to test whether a mental experience is altered than whether a physiological one is
+this conundrum has itself been the focus of various cultural products e g   yasmina reza's play art
+the present paper will focus on such an ineffable product-poetry
+study  NUMBER  sets the stage by establishing the effect we will later study in depth
+it consists of  NUMBER  experiments
+experiment  NUMBER  shows that readers of poetry are influenced by the poet's name
+experiment  NUMBER  incidentally adds that without the cue to quality imparted by the name of a reputable poet  readers cannot reliably distinguish good poetry from bad
+taken together  study  NUMBER  shows that poems' ratings are sensitive to the poet's reputation  but not to the poem's quality
+that raises the sad possibility that the effect may be wholly due to pretension or to social desirability  as many outside critics of modern and contemporary art suspect
+study  NUMBER  sets out to explore this question
+it tests one particular model that we call the emperor's new clothes effect enc  for short  honoring anderson's famous parable
+according to this model  the reading of the poem is the same with or without the poet's name  giving rise to the same aesthetic experience  the enhanced rating is solely due to a deliberate and conscious adding of points when the poem is attributed to a famous poet  motivated perhaps by a desire to appear discriminating and cultivated
+study  NUMBER  tests an alternative model  which posits that the inclusion of the poet's name alters the very experience of the poem  so that once the poem's author is known  the poem is no longer  the same 
+in other words  the poem-unchanged on the written page-is somehow changed in the reader's mind
+this we study by looking at judgments of many specific poem attributes
+we regard the main  and novel  contribution of this paper not in showing what happens  even in this previously unstudied context of poetry appreciation  but rather in attempting to understand the mental process whereby it happens
+in particular  we offer experimental paradigms that allow one to infer whether the enhanced evaluation of a poem or any object  when labeled in an expectation-raising manner  is driven by deliberate social considerations a system  NUMBER  product  or happens out of awareness a system  NUMBER  product
+is it an unfortunate social bias  or an inevitable cognitive bias

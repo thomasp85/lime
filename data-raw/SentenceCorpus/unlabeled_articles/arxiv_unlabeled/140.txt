@@ -1,0 +1,85 @@
+### abstract ###
+We present a novel graphical framework for modeling non-negative sequential data with hierarchical structure
+Our model corresponds to a network of coupled non-negative matrix factorization (NMF) modules, which we refer to as a positive factor network (PFN)
+The data model is linear, subject to non-negativity constraints, so that observation data consisting of an additive combination of individually representable observations is also representable by the network
+This is a desirable property for modeling problems in computational auditory scene analysis, since distinct sound sources in the environment are often well-modeled as combining additively in the corresponding magnitude spectrogram
+We propose inference and learning algorithms that leverage existing NMF algorithms and that are straightforward to implement
+We present a target tracking example and provide results for synthetic observation data which serve to illustrate the interesting properties of PFNs and motivate their potential usefulness in applications such as music transcription, source separation, and speech recognition
+We show how a target process characterized by a hierarchical state transition model can be represented as a PFN
+Our results illustrate that a PFN which is defined in terms of a single target observation can then be used to effectively track the states of multiple simultaneous targets
+Our results show that the quality of the inferred target states degrades gradually as the observation noise is increased
+We also present results for an example in which meaningful hierarchical features are extracted from a spectrogram
+Such a hierarchical representation could be useful for music transcription and source separation applications
+We also propose a network for language modeling
+### introduction ###
+We present a graphical hidden variable framework for modeling non-negative sequential data with hierarchical structure
+Our framework is intended for applications where the observed data is non-negative and is well-modeled as a non-negative linear combination of underlying non-negative components
+Provided that we are able to adequately model these underlying components individually, the full model will then be capable of representing any observed additive mixture of the components due to the linearity property
+This leads to an economical modeling representation, since a compact parameterization can explain any number of components that combine additively
+Thus, in our approach, we do not need to be concerned with explicitly modeling the maximum number of observed components nor their relative weights in the mixture signal
+To motivate the approach, consider the problem of computational auditory scene analysis (CASA), which involves identifying auditory ``objects'' such as musical instrument sounds, human voice, various environmental noises, etc, from an audio recording
+Speech recognition and music transcription are specific examples of CASA problems
+When analyzing audio, it is common to first transform the audio signal into a time-frequency image, such as the spectrogram (i e , magnitude of the short-time Fourier transform (STFT))
+We empirically observe that the spectrogram of a mixture of auditory sources is often well-modeled as a linear combination of the spectrograms of the individual audio sources, due to the sparseness of the time-frequency representation for typical audio sources
+For example, consider a recording of musical piece performed by a band
+We empirically observe that the spectrogram of the recording tends to be well-approximated as the sum of the spectrograms of the individual instrument notes played in isolation
+If one could construct a model using our framework that is capable of representing any individual instrument note played in isolation, the model would then automatically be capable of representing observed data corresponding to arbitrary non-negative linear combinations of the individual notes
+Likewise, if one could construct a model under our framework capable of representing a recording of a single human speaker (possibly including a language model), such a model would then be capable of representing an audio recording of multiple people speaking simultaneously
+Such a model would have obvious applications to speaker source separation and simultaneous multiple-speaker speech recognition
+We do not attempt to construct such complex models in this paper, however
+Rather, our primary objective here will be to construct models that are simple enough to illustrate the interesting properties of our approach, yet complex enough to show that our approach is noise-robust, capable of learning from training data, and at least somewhat scalable
+We hope that the results presented here will provide sufficient motivation for others to extend our ideas and begin experimenting with more sophisticated PFNs, perhaps applying them to the above-mentioned CASA problems
+An existing area of research that is related to our approach is non-negative matrix factorization (NMF) and its extensions
+NMF is a data modeling and analysis tool for approximating a non-negative matrix  SYMBOL  as the product of two non-negative matrices  SYMBOL  and  SYMBOL  so that the reconstruction error between  SYMBOL  and   SYMBOL  is minimized under a suitable cost function
+NMF was originally proposed by Paatero as  positive matrix factorization   CITATION
+Lee and Seung later developed robust and simple to implement multiplicative update rules for iteratively performing the factorization  CITATION
+Various sparse versions of NMF have also been recently proposed  CITATION ,  CITATION ,  CITATION
+NMF has recently been applied to many applications where a representation of non-negative data as an additive combination of non-negative basis vectors seems reasonable
+Such applications include object modeling in computer vision, magnitude spectra modeling of audio signals  CITATION , and various source separation applications  CITATION
+The non-negative basis decomposition provided by NMF is, by itself, not capable of representing complex model structure
+For this reason, extensions have been proposed to make NMF more expressive
+Smaragdis extended NMF in  CITATION  to model the temporal dependencies in successive spectrogram time slices
+His NMF extension, which he termed  Convolutive NMF , also appears to be a special case of one of our example models in Section~
+We are unaware of any existing work in the literature that allow for the general graphical representation of complex hidden variable models, particularly sequential data models, that is provided by our approach, however
+A second existing area of research that is related to our approach is probabilistic graphical models  CITATION  and in particular, dynamic Bayesian networks (DBNs)  CITATION ,  CITATION , which are probabilistic graphical models for sequential data
+We note that the Hidden Markov Model (HMM) is a special case of a DBN
+DBNs are widely used for speech recognition and other sequential data modeling applications
+Probabilistic graphical models are appealing because they they can represent complex model structure using an intuitive and modular graphical modeling representation
+A drawback is that the corresponding exact and/or approximate inference and learning algorithms can be complex and difficult to implement, and overcoming tractability issues can be a challenge
+Our objective in this paper is to present a framework for modeling non-negative data that retains the non-negative linear representation of NMF, while also supporting more structured hidden variable data models with a graphical means for representing variable interdependencies analogously to that of the probabilistic graphical models framework
+We will be particularly interested in developing models for sequential data consisting of the spectrograms of audio recordings
+Our framework is essentially a modular extension of NMF in which the full graphical model corresponds to several coupled NMF sub-models
+The overall model then corresponds to a system of coupled vector or matrix factorization equations
+Throughout this paper, we will refer to a particular system of factorizations and the corresponding graphical model as a  positive factor network (PFN)
+We will refer to the dynamical extension of a PFN as a  dynamic positive factor network (DPFN)
+Given an observed subset of the PFN model variables, we define inference as solving for the values of the hidden subset of variables and learning as solving for the model parameters in the system of factorization equations
+Note that our definition of inference is distinct from the probabilistic notion of inference
+In a PFN, inference corresponds to solving for actual values of the hidden variables, whereas in a probabilistic model inference corresponds to solving for probability distributions over the hidden variables given the values of the observed variables
+Performing inference in a PFN is therefore more analogous to computing the MAP estimates for the hidden variables in a probabilistic model
+One could obtain an analogous probabilistic model from a PFN by considering the model variables to be non-negative continuous-valued random vectors and defining suitable conditional probability distributions that are consistent with the non-negative linear variable model
+Let us call this class of models  probabilistic PFNs
+Exact inference is generally intractable in such a model since the hidden variables are continuous-valued and the model is not linear-Gaussian
+However, one could consider deriving algorithms for performing approximate inference and developing a corresponding EM-based learning algorithm
+We are unaware of any existing algorithms for performing tractable approximate inference in a probabilistic PFN
+It is possible that our PFN inference algorithm may also have a probabilistic interpretation, but exploring the idea further is outside the scope of this paper
+Rather, in this paper our objective is to to develop and motivate the inference and learning algorithms by taking a modular approach in which existing NMF algorithms are used and coupled in a way that seems to be intuitively reasonable
+We will be primarily interested in empirically characterizing the performance of the proposed inference and learning algorithms on various example PFNs and test data sets in order to get a sense of the utility of this approach to interesting real-world applications
+We propose general joint inference and learning algorithms for PFNs which correspond to performing NMF update steps independently (and therefore potentially also in parallel) on the various factorization equations while simultaneously enforcing coupling constraints so that variables that appear in multiple factorization equations are constrained to have identical values
+Our empirical results show that the proposed inference and learning algorithms are fairly robust to additive noise and have good convergence properties
+By leveraging existing NMF multiplicative update algorithms, the PFN inference and learning algorithms have the advantage of being straightforward to implement, even for relatively large networks
+Sparsity constraints can also be added to a module in a PFN model by leveraging existing sparse NMF algorithms
+We note that the algorithms for performing inference and learning in PFNs should be understandable by anyone with a knowledge of elementary linear algebra and basic graph theory, and do not require a background in probability theory
+Similar to existing NMF algorithms, our algorithms are highly parallel and can be optimized to take advantage of parallel hardware such as multi-core CPUs and potentially also stream processing hardware such as GPUs
+More research will be needed to determine how well our approach will scale to very large or complex networks
+The remainder of this paper has the following structure
+In Section~, we present the basic PFN model
+In Section~, we present an example of how a DPFN can be used to represent a transition model and present empirical results
+In Section~, we present an example of using a PFN to model sequential data with hierarchical structure and present empirical results for a regular expression example
+In Section~, we present a target tracking example and provide results for synthetic observation data which serve to illustrate the interesting properties of PFNs and motivate their potential usefulness in applications such as music transcription, source separation, and speech recognition
+We show how a target process characterized by a hierarchical state transition model can be represented by a PFN
+Our results illustrate that a PFN which is defined in terms of a single target observation can then be used to effectively track the states of multiple simultaneous targets in the observed data
+In Section~ we present results for an example in which meaningful hierarchical features are extracted from a spectrogram
+Such a hierarchical representation could be useful for music transcription and source separation applications
+In Section~, we propose a DPFN for modeling the sequence of words or characters in a text document as an additive factored transition model of word features
+We also propose slightly modified versions Lee and Seung's update rules to avoid numerical stability issues
+The resulting modified update rules are presented in Appendix~

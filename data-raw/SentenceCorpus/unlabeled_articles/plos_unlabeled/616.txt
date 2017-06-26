@@ -1,0 +1,30 @@
+### abstract ###
+Progress in understanding the brain mechanisms underlying vision requires the construction of computational models that not only emulate the brain's anatomy and physiology, but ultimately match its performance on visual tasks.
+In recent years, natural images have become popular in the study of vision and have been used to show apparently impressive progress in building such models.
+Here, we challenge the use of uncontrolled natural images in guiding that progress.
+In particular, we show that a simple V1-like model a neuroscientist's null model, which should perform poorly at real-world visual object recognition tasks outperforms state-of-the-art object recognition systems on a standard, ostensibly natural image recognition test.
+As a counterpoint, we designed a simpler recognition test to better span the real-world variation in object pose, position, and scale, and we show that this test correctly exposes the inadequacy of the V1-like model.
+Taken together, these results demonstrate that tests based on uncontrolled natural images can be seriously misleading, potentially guiding progress in the wrong direction.
+Instead, we reexamine what it means for images to be natural and argue for a renewed focus on the core problem of object recognition real-world image variation.
+### introduction ###
+Visual object recognition is an extremely difficult computational problem.
+The core problem is that each object in the world can cast an infinite number of different 2-D images onto the retina as the object's position, pose, lighting, and background vary relative to the viewer.
+Yet the brain solves this problem effortlessly.
+Progress in understanding the brain's solution to object recognition requires the construction of artificial recognition systems that ultimately aim to emulate our own visual abilities, often with biological inspiration.
+Such computational approaches are critically important because they can provide experimentally testable hypotheses, and because instantiation of a working recognition system represents a particularly effective measure of success in understanding object recognition.
+However, a major challenge is assessing the recognition performance of such models.
+Ideally, artificial systems should be able to do what our own visual systems can, but it is unclear how to evaluate progress toward this goal.
+In practice, this amounts to choosing an image set against which to test performance.
+Although controversial, a popular recent approach in the study of vision is the use of natural images CITATION, CITATION CITATION, in part because they ostensibly capture the essence of problems encountered in the real world.
+For example, in computational vision, the Caltech101 image set has emerged as a gold standard for testing natural object recognition performance CITATION.
+The set consists of a large number of images divided into 101 object categories plus an additional background category.
+While a number of specific concerns have been raised with this set, its images are still currently widely used by neuroscientists, both in theoretical and experimental contexts.
+The logic of Caltech101 is that the sheer number of categories and the diversity of those images place a high bar for object recognition systems and require them to solve the computational crux of object recognition.
+Because there are 102 object categories, chance performance is less than 1 percent correct.
+In recent years, several object recognition models have shown what appears to be impressively high performance on this test better than 60 percent correct CITATION, CITATION CITATION, suggesting that these approaches, while still well below human performance, are at least heading in the right direction.
+However, we argue here for caution, as it is not clear to what extent such natural image tests actually engage the core problem of object recognition.
+Specifically, while the Caltech101 set certainly contains a large number of images, variations in object view, position, size, etc., between and within object category are poorly defined and are not varied systematically.
+Furthermore, image backgrounds strongly covary with object category.
+The majority of images are also composed photographs, in that a human decided how the shot should be framed, and thus the placement of objects within the image is not random and the set may not properly reflect the variation found in the real world.
+Furthermore, if the Caltech101 object recognition task is hard, it is not easy to know what makes it hard different kinds of variation are all inextricably mixed together.
+Such problems are not unique to the Caltech101 set, but also apply to other uncontrolled natural image sets .

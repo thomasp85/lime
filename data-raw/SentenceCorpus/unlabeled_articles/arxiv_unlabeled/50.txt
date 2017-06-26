@@ -1,0 +1,76 @@
+### abstract ###
+Sequential decision theory formally solves the problem of rational agents in uncertain worlds if the true environmental prior probability distribution is known
+Solomonoff's theory of universal induction formally solves the problem of sequence prediction for unknown prior distribution
+We combine both ideas and get a parameter-free theory of universal Artificial Intelligence
+We give strong arguments that the resulting AIXI model is the most intelligent unbiased agent possible
+We outline how the AIXI model can formally solve a number of problem classes, including sequence prediction, strategic games, function minimization, reinforcement and supervised learning
+The major drawback of the AIXI model is that it is uncomputable
+To overcome this problem, we construct a modified algorithm AIXI SYMBOL  that is still effectively more intelligent than any other time  SYMBOL  and length  SYMBOL  bounded agent
+The computation time of AIXI SYMBOL  is of the order  SYMBOL
+The discussion includes formal definitions of intelligence order relations, the horizon problem and relations of the AIXI theory to other AI approaches
+### introduction ###
+This chapter article gives an introduction to a mathematical theory for intelligence
+We present the AIXI model, a parameter-free optimal reinforcement learning agent embedded in an arbitrary unknown environment
+The science of Artificial Intelligence (AI) may be defined as the construction of intelligent systems and their analysis
+A natural definition of a  system  is anything that has an input and an output stream
+Intelligence is more complicated
+It can have many faces like creativity, solving problems, pattern recognition, classification, learning, induction, deduction, building analogies, optimization, surviving in an environment, language processing, knowledge and many more
+A formal definition incorporating every aspect of intelligence, however, seems difficult
+Most, if not all known facets of intelligence can be formulated as goal-driven or, more precisely, as maximizing some utility function
+It is, therefore, sufficient to study goal-driven AI; eg \ the (biological) goal of animals and humans is to survive and spread
+The goal of AI systems should be to be useful to humans
+The problem is that, except for special cases, we know neither the utility function nor the environment in which the agent will operate in advance
+The mathematical theory, coined AIXI, is supposed to solve these problems
+Assume the availability of unlimited computational resources
+The first important observation is that this does not make the AI problem trivial
+Playing chess optimally or solving NP-complete problems become trivial, but driving a car or surviving in nature don't
+This is because it is a challenge itself to well-define the latter problems, not to mention presenting an algorithm
+In other words: The AI problem has not yet been well defined
+One may view AIXI as a suggestion for such a mathematical definition of AI
+AIXI is a universal theory of sequential decision making akin to Solomonoff's celebrated universal theory of induction
+Solomonoff derived an optimal way of predicting future data, given previous perceptions, provided the data is sampled from a computable probability distribution
+AIXI extends this approach to an optimal decision making agent embedded in an unknown environment
+The  main idea  is to replace the unknown environmental distribution  SYMBOL  in the Bellman equations by a suitably generalized universal Solomonoff distribution  SYMBOL
+The state space is the space of complete histories
+AIXI is a universal theory without adjustable parameters, making no assumptions about the environment except that it is sampled from a computable distribution
+From an algorithmic complexity perspective, the AIXI model generalizes optimal passive universal induction to the case of active agents
+From a decision-theoretic perspective, AIXI is a suggestion of a new (implicit) ``learning'' algorithm, which may overcome all (except computational) problems of previous reinforcement learning algorithms
+There are strong arguments that AIXI is the most intelligent unbiased agent possible
+We outline for a number of problem classes, including sequence prediction, strategic games, function minimization, reinforcement and supervised learning, how the AIXI model can formally solve them
+The major drawback of the AIXI model is that it is incomputable
+To overcome this problem, we construct a modified algorithm AIXI SYMBOL  that is still effectively more intelligent than any other time  SYMBOL  and length  SYMBOL  bounded agent
+The computation time of AIXI SYMBOL  is of the order  SYMBOL
+Other discussed topics are a formal definition of an intelligence order relation, the horizon problem and relations of the AIXI theory to other AI approaches
+The article is meant to be a gentle introduction to and discussion of the AIXI model
+For a mathematically rigorous treatment, many subtleties, and proofs see the references to the author's works in the annotated bibliography section at the end of this chapterarticle\fi, and in particular the book  CITATION
+This section also provides references to introductory textbooks and original publications on algorithmic information theory and sequential decision theory
+presents the theory of sequential decisions in a very general form (called AI SYMBOL  model) in which actions and perceptions may depend on arbitrary past events
+We clarify the connection to the Bellman equations and discuss minor parameters including (the size of) the I/O spaces and the lifetime of the agent and their universal choice which we have in mind
+Optimality of AI SYMBOL  is obvious by construction
+How and in which sense induction is possible at all has been subject to long philosophical controversies
+Highlights are Epicurus' principle of multiple explanations, Occam's razor, and probability theory
+Solomonoff elegantly unified all these aspects into one formal theory of inductive inference based on a universal probability distribution  SYMBOL , which is closely related to Kolmogorov complexity  SYMBOL , the length of the shortest program computing  SYMBOL
+Rapid convergence of  SYMBOL  to the unknown true environmental distribution  SYMBOL  and tight loss bounds for arbitrary bounded loss functions and finite alphabet can be shown
+Pareto optimality of  SYMBOL  in the sense that there is no other predictor that performs better or equal in all environments and strictly better in at least one can also be shown
+In view of these results it is fair to say that the problem of sequence prediction possesses a universally optimal solution
+In the active case, reinforcement learning algorithms are usually used if  SYMBOL  is unknown
+They can succeed if the state space is either small or has effectively been made small by generalization techniques
+The algorithms work only in restricted (e g \ Markovian) domains, have problems with optimally trading off exploration versus exploitation, have nonoptimal learning rate, are prone to diverge, or are otherwise ad hoc
+The formal solution proposed here is to generalize Solomonoff's universal prior  SYMBOL  to include action conditions and replace  SYMBOL  by  SYMBOL  in the AI SYMBOL  model, resulting in the AI SYMBOL AIXI model, which we claim to be universally optimal
+We investigate what we can expect from a universally optimal agent and clarify the meanings of  universal ,  optimal , etc
+Other discussed topics are formal definitions of an intelligence order relation, the horizon problem, and Pareto optimality of AIXI
+We show how a number of AI problem classes fit into the general AIXI model
+They include sequence prediction, strategic games, function minimization, and supervised learning
+We first formulate each problem class in its natural way (for known  SYMBOL ) and then construct a formulation within the AI SYMBOL  model and show their equivalence
+We then consider the consequences of replacing  SYMBOL  by  SYMBOL
+The main goal is to understand in which sense the problems are solved by AIXI
+The major drawback of AIXI is that it is incomputable, or more precisely, only asymptotically computable, which makes an implementation impossible
+To overcome this problem, we construct a modified model AIXI SYMBOL , which is still superior to any other time  SYMBOL  and length  SYMBOL  bounded algorithm
+The computation time of AIXI SYMBOL  is of the order  SYMBOL
+The solution requires an implementation of first-order logic, the definition of a universal Turing machine within it and a proof theory system
+Finally we discuss and remark on some otherwise unmentioned topics of general interest
+We remark on various topics, including concurrent actions and perceptions, the choice of the I/O spaces, treatment of encrypted information, and peculiarities of mortal embodies agents
+We continue with an outlook on further research, including optimality, down-scaling, implementation, approximation, elegance, extra knowledge, and training of/for AIXI( SYMBOL )
+We also include some (personal) remarks on non-computable physics, the number of wisdom  SYMBOL , and consciousness
+An annotated bibliography concludes this chapter
+An annotated bibliography and other references conclude this work

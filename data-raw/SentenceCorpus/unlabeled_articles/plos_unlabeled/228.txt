@@ -1,0 +1,40 @@
+### abstract ###
+In Arabidopsis, tandemly arrayed genes comprise 10 percent of the genes in the genome.
+These duplicated genes represent a rich template for genetic innovation, but little is known of the evolutionary forces governing their generation and maintenance.
+Here we compare the organization and evolution of TAGs between Arabidopsis and rice, two plant genomes that diverged ~150 million years ago.
+TAGs from the two genomes are similar in a number of respects, including the proportion of genes that are tandemly arrayed, the number of genes within an array, the number of tandem arrays, and the dearth of TAGs relative to single copy genes in centromeric regions.
+Analysis of recombination rates along rice chromosomes confirms a positive correlation between the occurrence of TAGs and recombination rate, as found in Arabidopsis.
+TAGs are also biased functionally relative to duplicated, nontandemly arrayed genes.
+In both genomes, TAGs are enriched for genes that encode membrane proteins and function in abiotic and biotic stress but underrepresented for genes involved in transcription and DNA or RNA binding functions.
+We speculate that these observations reflect an evolutionary trend in which successful tandem duplication involves genes either at the end of biochemical pathways or in flexible steps in a pathway, for which fluctuation in copy number is unlikely to affect downstream genes.
+Despite differences in the age distribution of tandem arrays, the striking similarities between rice and Arabidopsis indicate similar mechanisms of TAG generation and maintenance.
+### introduction ###
+The genomes of Arabidopsis thaliana and Oryza sativa contain substantial proportions of duplicated chromosomal segments, presumably reflecting ancient polyploidy events.
+In Arabidopsis, for example, there have been at least three paleopolyploid events CITATION, with the most recent occurring ~25 million years ago CITATION.
+The duplicated chromosomal regions retain ~25 percent of their genes as duplicates CITATION, with the remaining duplicate pairs having lost one copy to deletion or pseudogenization.
+Surprisingly, the process of gene loss is nonrandom with respect to function, because genes that are retained as duplicates are enriched for functions related to transcription, signal transduction, and development CITATION, CITATION.
+Like Arabidopsis, rice also has a history of extensive duplication CITATION, with up to ~60 percent of the genome apparently duplicated by paleopolyploid events CITATION and up to ~50 percent of genes retained as duplicates on duplicated chromosomal segments CITATION .
+Although there have been numerous studies to identify genes duplicated via paleopolyploidy, one important source of duplication in plant genomes has not been studied in great detail: tandemly arrayed genes.
+TAGs are gene family members that are tightly clustered on a chromosome, and they are frequent in plant genomes.
+In A. thaliana, TAGs comprise almost as many genes as those duplicated by paleopolyploid events CITATION.
+They also represent a broad functional component of the genome, ranging from genes that encode secondary metabolites CITATION, to disease resistance genes CITATION, to regulatory genes CITATION .
+The evolution and organization of TAGs have been studied in Arabidopsis.
+TAGs are underrepresented in centromeric regions relative to non-TAG genes, and their prevalence relative to non-TAG genes is positively correlated with recombination rates along chromosomes CITATION.
+The evolutionary processes contributing to this correlation are unclear.
+The correlation could reflect the generation of TAGs via recombination-mediated processes such as unequal crossing-over, or it could be produced indirectly by interplay among selection, recombination, gene gain, and gene loss.
+It is also unclear whether the TAG organization in Arabidopsis is representative of other plant genomes.
+TAGs are also likely to differ from dispersed gene families in their process of divergence.
+The close physical proximity of TAGs facilitates gene conversion, as recently demonstrated in both yeast CITATION and Arabidopsis CITATION.
+One practical ramification is that the synonymous distance between TAGs cannot be easily used as a proxy for the time of the duplication event that gave rise to the two genes CITATION.
+Instead, Ks provides insight into either the age of the duplication event or the age of homogenizing gene conversion events CITATION.
+Nonetheless, careful study of Ks values among clustered genes could uncover clues to TAG maintenance and diversification.
+The completion of the rice genome sequence provides the first opportunity to compare the structure and evolution of TAGs between two plant genomes, Arabidopsis and rice.
+The two species diverged ~150 million years ago CITATION but are similar in that they have relatively small genomes and reproduce predominantly by selfing.
+Genomic analyses of the rice sequence have already revealed some properties of TAGs i.e., that TAGs compose between 16 percent CITATION and 29 percent of rice genes CITATION and that the preponderance of tandemly duplicated genes are differentiated by relatively low Ks values CITATION.
+Nonetheless, TAGs in rice have not been studied in a comparative context nor in the context of genomic features such as chromosomal location and recombination.
+In this paper, we address several basic questions about the organization, evolution, and function of TAGs.
+First, does the number and distribution of TAGs differ substantially between rice and Arabidopsis?
+Second, are TAGs more frequent in high recombination regions in rice, as they are in Arabidopsis?
+Third, do the two species exhibit clear similarities or differences in the distribution of Ks among TAGs?
+Fourth, do genes in TAGs represent functional biases relative to non-TAG genes?
+Finally, can we infer any general mechanisms that contribute to similarities and differences between the distribution of TAGs in the Arabidopsis and rice genomes?

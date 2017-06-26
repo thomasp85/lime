@@ -1,0 +1,77 @@
+### abstract ###
+It has become clear that noncoding RNAs play important roles in cells, and emerging studies indicate that there might be a large number of unknown ncRNAs in mammalian genomes.
+There exist computational methods that can be used to search for ncRNAs by comparing sequences from different genomes.
+One main problem with these methods is their computational complexity, and heuristics are therefore employed.
+Two heuristics are currently very popular: pre-folding and pre-aligning.
+However, these heuristics are not ideal, as pre-aligning is dependent on sequence similarity that may not be present and pre-folding ignores the comparative information.
+Here, pruning of the dynamical programming matrix is presented as an alternative novel heuristic constraint.
+All subalignments that do not exceed a length-dependent minimum score are discarded as the matrix is filled out, thus giving the advantage of providing the constraints dynamically.
+This has been included in a new implementation of the FOLDALIGN algorithm for pairwise local or global structural alignment of RNA sequences.
+It is shown that time and memory requirements are dramatically lowered while overall performance is maintained.
+Furthermore, a new divide and conquer method is introduced to limit the memory requirement during global alignment and backtrack of local alignment.
+All branch points in the computed RNA structure are found and used to divide the structure into smaller unbranched segments.
+Each segment is then realigned and backtracked in a normal fashion.
+Finally, the FOLDALIGN algorithm has also been updated with a better memory implementation and an improved energy model.
+With these improvements in the algorithm, the FOLDALIGN software package provides the molecular biologist with an efficient and user-friendly tool for searching for new ncRNAs.
+The software package is available for download at LINK.
+### introduction ###
+Noncoding RNA genes and regulatory structures have been shown to be both highly abundant and highly diverse parts of the genome CITATION, CITATION.
+One theory is that many of these ncRNAs are part of RNA-based regulatory systems CITATION.
+Recently, several papers about large-scale searches for vertebrate RNA genes or motifs using comparative genomics have been published CITATION CITATION.
+These large-scale searches indicate that there are potentially many unknown structures still hidden in the genomes.
+It has been shown that alignment of ncRNAs requires information about secondary structure when the sequence similarity is below 60 percent CITATION.
+The reason for this is that compensating mutations change the primary sequence without changing the structure of the molecule.
+The Sankoff algorithm for simultaneously folding and aligning of RNA sequences can in principle be applied to cope with this CITATION.
+However, the resource requirements of the algorithm are too high even for a few short sequences.
+For two sequences of length L, the time complexity is O and the memory complexity is O. Heuristics are therefore needed before the algorithms for folding and aligning RNA sequences become fast enough to be useful.
+FOLDALIGN 1.0 was the first simplified implementation of the Sankoff algorithm CITATION.
+It contained a simple scoring scheme with separate substitution matrices for base-paired and single-stranded nucleotides.
+It had three constraints: the length of the final alignment could not be longer than nucleotides; the maximum length difference between two subsequences being aligned was limited to nucleotides, and it could only align stem-loop structures.
+The second version of the algorithm uses a combination of substitutions and a lightweight energy model to align two sequences CITATION.
+FOLDALIGN 2.0 also uses the and constraints, but it can align branched structures.
+This algorithm was used in one of the large-scale searches for vertebrate ncRNAs CITATION .
+Variants of two types of heuristics are currently very popular, namely pre-aligning and pre-folding.
+The pre-aligning methods use sequence similarity to limit the search space by requiring that the final alignment must contain the pre-aligned nucleotides.
+The length of the pre-aligned subsequences varies from short stretches called anchors CITATION to full sequences CITATION CITATION.
+Methods that require the sequences to be fully aligned before the structure is predicted are not strictly Sankoff-based methods, as they separate the alignment and folding steps completely.
+Pre-folding uses single-sequence folding to limit the structures that can be found by the comparative algorithms.
+A popular method of pre-folding is to use base-pairing probabilities found by the single-sequence folding to limit which base pairs can be included in the conserved structure CITATION, CITATION.
+As for align-then-fold methods, methods using pre-folding can be taken to the extreme where the folding and alignment steps are completely separated.
+One example of this is the combination of the RNAcast and the RNAforester methods CITATION, CITATION.
+Some methods can use both pre-aligning and pre-folding heuristics CITATION CITATION .
+The currently implemented Sankoff-based methods, for pairwise alignment and secondary-structure prediction of RNA sequences, can be split into two groups: the energy-based methods and the probabilistic methods.
+The energy-based methods, FOLDALIGN, Dynalign CITATION, locaRNA CITATION, and SCARNA CITATION, are based on minimization of the free energy CITATION.
+Free-energy minimization is based on a physical model of how the different elements of an RNA structure contribute to the free energy.
+The parameters are partly found experimentally and partly estimated from multiple alignments.
+The probabilistic models are usually based on Stochastic Context Free Grammars ; see CITATION for an introduction.
+These methods include Consan CITATION and Stemloc CITATION.
+The Stochastic Context Free Grammars parameters are estimated from multiple alignments.
+Each of these methods uses different kinds of heuristics.
+The previous version of FOLDALIGN CITATION uses banding, limits the alignment length for local alignments, and limits the number of ways a bifurcation can be calculated.
+Dynalign CITATION uses banding based on pre-alignment using a hidden Markov model.
+LocaRNA CITATION limits the number of potential base pairs by only using base pairs with a single-sequence base-pair probability above a given cutoff.
+SCARNA CITATION uses a similar strategy, but further decouples the left and right sides of the base pairs.
+Consan CITATION uses short stretches of normal sequence alignments to constrain the folding.
+Stemloc CITATION uses the N 1 best single-sequence predicted structures and the N 2 best normal-sequence alignments to limit the final combined alignment and structure prediction.
+In this paper, dynamical pruning of the dynamic programming matrix is introduced as a new heuristic in the FOLDALIGN algorithm CITATION.
+In all its simplicity, the dynamic pruning discards any subalignment that does not have a score above a length-dependent threshold.
+This is similar to one of the heuristics used in BLAST CITATION.
+The advantage of the pruning method compared with the pre-aligning methods is that it can be used when there is not enough sequence similarity to make the necessary alignments.
+The advantage compared with the pre-folding methods is that none of the comparative information is lost in a single-sequence folding step.
+It is shown empirically that the pruning leads to a huge speed increase while the algorithm retains its good performance.
+The speed increase makes studies like CITATION much more feasible.
+The method of dynamical pruning is simple and general.
+It should therefore be possible to use it in many of the other methods available for folding and aligning RNA sequences.
+As pruning is a feature of the dynamic programming method, it may be used in any algorithm using dynamic programming.
+In addition to the dynamical pruning, the FOLDALIGN software package has been significantly updated.
+The constraint, which speeds up the algorithm by limiting the calculation of branch points, is now also used to lower the memory requirement during the local-alignment stage.
+During the backtrack stage of the algorithm, more information is needed.
+To try to limit the memory consumption during this stage, an extra pre-backtrack step is used.
+The pre-backtrack step locates all branch points in the conserved structure, and these are then used to divide the structure into unbranched segments.
+The unbranched structures are then realigned and backtracked separately.
+As the unbranched structures usually are shorter than the full branched structure, the memory consumption is reduced.
+The use of the divide and conquer method increases the run time of the algorithm, but not by much since the realignments of the segments are unbranched.
+In addition to the algorithmic improvements, the energy model has been improved as well.
+External single-strand nucleotides are scored in a consistent way.
+Also, more insert base pairs are allowed.
+These improvements lead to better structure predictions.

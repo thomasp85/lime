@@ -1,0 +1,17 @@
+### abstract ###
+i describe and discuss the sometimes heated controversy surrounding the recognition heuristic rh as a model of inferential decision making
+after briefly recapitulating the history of the rh up to its current version  i critically evaluate several specific assumptions and predictions of the rh and its surrounding framework  recognition as a memory-based process  the rh as a cognitive process model  proper conditions of testing the rh  measures of using the rh  reasons for not using the rh  the rh as a non-compensatory strategy  evidence for a less-is-more effect lime  and the rh as part of the toolbox
+the collection of these controversial issues may help to better understand the debate  to further sharpen the rh theory  and to develop ideas for future research
+### introduction ###
+as one of the simplest heuristics in the  adaptive toolbox   CITATION   the recognition heuristic rh exploits recognition and may reach a high level of accuracy in inferential decisions
+for example  if asked which of two cities is larger  a or b  and given one recognizes a  but not b  one may simply follow the recognition cue and infer that a is the larger city
+in domains in which the probability of recognizing an object is substantially related to its criterion value here the city's size  such a simple strategy will lead to many correct answers  far above chance
+goldstein and gigerenzer  CITATION  formulated this strategy as the recognition heuristic and defined it as using only one piece of evidence  namely recognition of the two objects yes no
+no other knowledge about the objects enters the inference process and could possibly overturn the decision based on recognition
+the rh thus represents a case of a non-compensatory  one-reason decision-making strategy
+especially this claim has raised some controversy in the past decade and has led to a multitude of new empirical findings
+in other words  besides providing a precisely formulated and thus testable model  one merit of the rh certainly is that it challenged quite a number of researchers  and-as a consequence-extended our knowledge of how inferential decision making may proceed
+a new and exciting set of such studies are included in jdms special issue on  recognition processes in inferential decision making   CITATION
+in the following section section  NUMBER   i recapitulate the basic features of the rh and its underlying assumptions  looking at its precursors and its fully laid-out version
+in the main part of the paper section  NUMBER   i then discuss in detail the main points of the controversy surrounding the rh and its framework
+note that i do not try to provide a complete review of all theoretical arguments exchanged so far  CITATION

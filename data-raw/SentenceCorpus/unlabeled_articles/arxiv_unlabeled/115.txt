@@ -1,0 +1,45 @@
+### abstract ###
+Learning problems form an important category of computational tasks that generalizes many of the computations researchers apply to large real-life data sets
+We ask: what concept classes can be learned privately, namely, by an algorithm whose output does not depend too heavily on any one input or specific training example
+More precisely, we investigate  learning algorithms that satisfy  differential privacy , a notion that provides strong confidentiality guarantees in contexts where aggregate information is released about a database containing sensitive information about individuals \ifnum\full=0 We present several basic results that demonstrate general feasibility of private learning and relate several models previously studied separately in the contexts of privacy and standard learning
+Our goal is a broad understanding of the resources required for private learning in terms of samples, computation time, and interaction
+We demonstrate that, ignoring computational constraints, it is possible to privately agnostically learn any concept class using a sample size approximately logarithmic in the cardinality of the concept class
+Therefore, almost anything learnable is learnable privately: specifically, if a concept class is learnable by a (non-private) algorithm with polynomial sample complexity and output size, then it can be learned privately using a polynomial number of samples
+We also present a computationally efficient private PAC learner for the class of  parity  functions
+This result dispels the similarity between learning with noise and private learning (both must be robust to small changes in inputs), since parity is thought to be very hard to learn given random classification noise
+Local  (or  randomized response ) algorithms are a practical class of private algorithms that have received extensive investigation
+We provide a precise characterization of local private learning algorithms
+We show that a concept class is learnable by a local algorithm if and only if it is learnable in the  statistical query  (SQ) model
+Therefore, for local private learning algorithms, the similarity to learning with noise is stronger: local learning is equivalent to SQ learning, and SQ algorithms include most known noise-tolerant learning algorithms
+Finally, we present a separation between the power of  interactive  and  noninteractive  local learning algorithms
+Because of the equivalence to SQ learning, this result also separates  adaptive  and  nonadaptive  SQ learning
+### introduction ###
+The data privacy problem in modern databases is similar to that faced by  statistical agencies and medical researchers: to learn and publish global analyses of a population while maintaining the confidentiality of the participants in a survey
+There is a vast body of work on this problem in statistics and computer science
+However, until recently, most schemes proposed in the literature lacked rigorous analysis of privacy and utility
+A recent line of work% \ifnum\full=1 ~ CITATION  , initiated by Dinur and Nissim~ CITATION  and called  private data analysis , seeks to place data privacy on firmer theoretical foundations and has been  successful at formulating a strong, yet attainable privacy definition
+The notion of  differential privacy ~ CITATION  that emerged from this line of work provides rigorous guarantees even in the presence of a malicious adversary with access to  arbitrary auxiliary information
+It requires that whether an individual supplies her actual or fake information has almost no effect on the outcome of the analysis
+Given this definition, it is natural to ask: what computational tasks can be performed while maintaining privacy
+Research on data privacy, to the extent that it formalizes precise goals,  has mostly focused on  function evaluation  (``what is the value of  SYMBOL
+''), namely, how much privacy is possible if one wishes to release (an approximation to) a particular function  SYMBOL , evaluated on the database  SYMBOL  (A notable exception is the recent work of McSherry and Talwar, using differential privacy in the design of auction mechanisms~ CITATION )
+Our goal is to expand the utility of private protocols by examining which other computational tasks can be performed in a privacy-preserving manner \paragraph{Private Learning } \ifnum\full=1 Learning problems form an important category of computational tasks that generalizes many of the computations researchers apply to large real-life data sets
+In this work, we ask what can be learned  privately , namely, by an algorithm whose output does not depend too heavily on any one input or specific training example
+Our goal is a broad understanding of the resources required for private learning in terms of samples, computation time, and interaction
+We examine two basic notions from \ifnum\full=1 computational learning theory: learning: Valiant's probabilistically approximately correct (PAC) learning~ CITATION  model and Kearns' statistical query (SQ) model~ CITATION
+Informally, a concept is a function from examples to labels, and a class of concepts is learnable if for any distribution  SYMBOL  on examples, one can, given limited access to examples sampled from  SYMBOL  labeled according to some target concept  SYMBOL , find a small circuit (hypothesis) which predicts  SYMBOL 's labels with high probability over future examples taken from the same distribution
+In the PAC model, a learning algorithm can access a polynomial number of labeled examples
+In the SQ model, instead of accessing examples directly, the learner can specify some properties (i e , predicates) on the examples, for which he is given an estimate, up to an additive polynomially small error, of the probability that a random example chosen from  SYMBOL  satisfies the property
+PAC learning is strictly stronger than the SQ learning ~ CITATION
+We model a statistical database as a vector  SYMBOL , where each entry has been contributed by an individual
+When analyzing how well a private algorithm learns a concept class, we assume that entries  SYMBOL  of the database are random examples generated  iid  \ from the underlying distribution  SYMBOL  and labeled by a target concept  SYMBOL
+This is exactly how (not necessarily private) learners are analyzed
+For instance, an example might consist of an individual's gender, age, and blood pressure history, and the label, whether this individual has had a heart attack
+The algorithm has to learn to predict whether an individual has had a heart attack, based on gender, age, and blood pressure history, generated according to  SYMBOL
+We require a private algorithm to keep entire examples (not only the labels) confidential
+In the scenario above, it translates to not revealing each participant's gender, age, blood pressure history, and heart attack incidence
+More precisely, the output of a private learner should not be significantly affected if a particular example  SYMBOL  is replaced with arbitrary  SYMBOL , for all  SYMBOL  and  SYMBOL
+In contrast to correctness or utility, which is analyzed with respect to distribution  SYMBOL , differential privacy is a worst-case notion
+Hence, when we analyze the privacy of our learners we do not make any assumptions on the underlying distribution
+Such assumptions are fragile and, in particular, would fall apart in the presence of auxiliary knowledge \ifnum\full=1 (also called background knowledge or side information) that the adversary might have: conditioned on the adversary's auxiliary knowledge, the distribution over examples might look very different from  SYMBOL
+%shiva-explain this point in the full version

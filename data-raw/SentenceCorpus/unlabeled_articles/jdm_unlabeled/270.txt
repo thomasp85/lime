@@ -1,0 +1,20 @@
+### abstract ###
+this paper explores the psychology of conflict of interest by investigating how conflicting interests affect both public statements and private judgments
+the results suggest that judgments are easily influenced by affiliation with interested partisans  and that this influence extends to judgments made with clear incentives for objectivity
+the consistency we observe between public and private judgments indicates that participants believed their biased assessments
+our results suggest that the psychology of conflict of interest is at odds with the way economists and policy makers routinely think about the problem
+we conclude by exploring implications of this finding for professional conduct and public policy
+### introduction ###
+in many situations  professionals are called upon to play dual roles that require different perspectives
+for example  attorneys embroiled in pretrial negotiations may exaggerate their chances of winning in court to extract concessions from the other side
+but when it comes time to advise the client on whether to accept a settlement offer  the client needs objective advice
+professors  likewise  have to evaluate the performance of graduate students and provide them with both encouragement and criticism
+but public criticism is less helpful when faculty serve as their students' advocates in the job market
+and  although auditors have a legal responsibility to judge the accuracy of their clients' financial accounting  the way to win a client's business is not by stressing one's legal obligation to independence  but by emphasizing the helpfulness and accommodation one can provide
+traditional economic models of rationality would assume that people can perform optimally in such situations  making unbiased judgments when it is in their interest to do so  but taking a partisan stand when this is called for strategically
+this paper asks whether these dual roles are psychologically feasible  that is  can one person successfully play different roles that require different  and often competing  perspectives
+in our attempt to answer this question  we explore the psychology of conflict of interest by comparing alternative explanations for their effects
+after reviewing research on whether and when people are able to play dual roles  we present findings from three studies
+these studies examine a fairly typical business situation - a situation in which an advocate must provide a deliberately partisan valuation of a company and then is asked to provide an impartial valuation of the same company
+we ask whether these advocates can successfully make impartial  unbiased judgments in situations characterized by such dual roles
+we conclude by speculating about the implications of this psychological finding to issues of professional conduct  public policy  governmental regulation  and organizational design

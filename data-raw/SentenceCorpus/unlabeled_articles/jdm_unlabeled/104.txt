@@ -1,0 +1,15 @@
+### abstract ###
+participants drank either regular root beer or sugar-free diet root beer  before working on a probability-learning task in which they tried to predict which of two events  would occur on each of  NUMBER  trials
+one event e NUMBER  randomly occurred on  NUMBER  trials   the other e NUMBER  on  NUMBER 
+in each of the last two blocks of  NUMBER  trials  the regular group matched prediction and event frequencies
+in contrast  the diet group predicted e NUMBER  more often in  each of these blocks
+after the task  participants were asked to write down rules they used for  responding
+blind ratings of rule complexity were  inversely related to e NUMBER  predictions in the final  NUMBER  trials
+participants also took longer to advance after incorrect predictions and before predicting e NUMBER   reflecting time for revising and consulting rules
+these results support the hypothesis that an effortful controlled process of  normative rule-generation produces matching in probability-learning experiments   and that this process is a function of glucose availability
+### introduction ###
+in two-choice probability learning pl experiments  one event e NUMBER  has a better chance of occurring than the other e NUMBER   and event likelihoods are independent of responses
+a participant's task is to predict which event will occur on each trial
+although participants could maximize hits by exclusively predicting e NUMBER   they tend to approximately match prediction frequencies with outcome probabilities for many trials  CITATION
+for example  if e NUMBER  occurs on  NUMBER  percent  of trials and e NUMBER  occurs on the other  NUMBER  percent  of trials  people usually predict e NUMBER  on about  NUMBER  percent  of their choices for hundreds of trials  CITATION
+this probability-matching pm behavior is suboptimal because it produces hits on only  NUMBER  percent  of trials   NUMBER  x  NUMBER    NUMBER  x  NUMBER  instead of the maximal  NUMBER  percent  hit rate from always predicting e NUMBER 

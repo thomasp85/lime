@@ -1,0 +1,12 @@
+### abstract ###
+This paper addresses the problem of distributed learning under communication constraints, motivated by distributed signal processing in wireless sensor networks and data mining with distributed databases
+After formalizing a general model for distributed learning, an algorithm for collaboratively training regularized kernel least-squares regression estimators is derived
+Noting that the algorithm can be viewed as an application of successive orthogonal projection algorithms, its convergence properties are investigated and the statistical behavior of the estimator is discussed in a simplified theoretical setting
+### introduction ###
+In this paper, we address the problem of  distributed learning under communication constraints , motivated primarily by distributed signal processing in wireless sensor networks (WSNs) and data mining with distributed databases
+WSNs  are  a fortiori  designed to make inferences from the environments they are sensing; however they are typically characterized by constraints on energy and bandwidth, which limit the sensors' ability to share data with each other or with a centralized fusion center
+In data mining with distributed databases, multiple agents (e g , corporations) have access to possibly overlapping databases, and wish to collaborate to make optimal inferences; privacy or security concerns, however, may preclude them from fully sharing information
+Nonparametric methods studied within machine learning have demonstrated widespread empirical success in many centralized (i e , communication  unconstrained ) signal processing applications
+Thus, in both the aforementioned applications, a natural question arises: can the power of machine learning methods be tapped for nonparametric inference in distributed learning under communication constraints
+In this paper, we address this question by formalizing a general model for distributed learning, and then deriving a distributed algorithm for collaborative training in regularized kernel least-squares regression
+The algorithm can be viewed as an instantiation of successive orthogonal projection algorithms, and thus, insight into the statistical behavior of these algorithms can be gleaned from standard analyses in mathematical programming

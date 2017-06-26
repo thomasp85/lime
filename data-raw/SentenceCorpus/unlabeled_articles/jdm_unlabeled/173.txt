@@ -1,0 +1,47 @@
+### abstract ###
+the mere exposure  or familiarity  effect is the tendency for people to feel more positive about stimuli to which they have previously been exposed
+the eurovision song contest is a two-stage event  in which some contestants in the final will be more familiar to viewers than others
+thus  viewers' voting is likely to be influenced by this effect
+previous work attempting to demonstrate this effect in this context has been unable to control for contestant quality
+the current study  which used a novel procedure to analyse the way in which contestant countries distributed their points a function of how viewers voted in those countries between  NUMBER  and  NUMBER   showed that contestants did better if they previously appeared in a semifinal that was seen by voters
+this is evidence that the mere exposure effect  alongside previously studied factors such as cultural and geographical closeness  influences the way viewers vote in the eurovision
+### introduction ###
+the mere-exposure effect is the tendency for people to like something more as a result of repeated exposure to it  the greater the degree of prior exposure  the more potent the effect
+mere exposure has been most famously studied by robert zajonc and  since his initial studies  has been found to be a tremendously robust effect-one that has been demonstrated in a huge array of different contexts
+for example  zajonc  CITATION  demonstrated that repeated exposure to nonsense words  chinese ideographs  or photographs was enough to induce positive evaluations of the objects
+subsequent studies have found that familiarity effects also influence liking for sounds  shapes  people  and names  CITATION
+amongst other things  mere exposure has been shown to affect food preference in infants  CITATION   ratings of journals by academics  CITATION   gambling  CITATION   and voting behaviour in elections  CITATION
+it has often been observed in studies of interpersonal attraction  where repeatedly encountering an individual increases ratings of how attractive and likable they are  CITATION
+mere exposure appears to be effective even when the stimuli are presented subliminally  CITATION
+as already mentioned  the mere-exposure effect has been shown to affect voting behaviour  CITATION
+olivola and todorov found that both familiarity and perceptions of competency were associated with the share of votes achieved by political candidates in senate elections in the usa
+verhulst et al re-examined this analysis and gave greater primacy to familiarity
+they concluded that perceptions of competency were a mediator of familiarity and suggested that greater familiarity may result in candidates being perceived as more competent
+as judgements of familiarity happen in part at a preconscious level  CITATION   verhulst et al proposed that perceptions of competency in this context may be a rationalisation of preconscious perceptions of familiarity
+most studies of familiarity and the mere-exposure effect happen within a laboratory setting
+even studies that have looked at voting behaviour  where it seems that data should be available at a population level  have mostly limited themselves to working in the laboratory
+this may be due to the difficulty of measuring exactly how familiar candidates are to voters prior to elections  as well as the myriad uncontrollable extraneous variables that influence the way in which individuals vote
+for example  those who are more likely to win elections receive more press coverage  making them more familiar to voters  CITATION
+however  prior familiarity with candidates can be well estimated in the eurovision song contest
+the eurovision is a yearly extravaganza in which european countries and some geographically close countries with strong links to europe are represented by a musical act from that country
+the contest is televised and takes place over the course of an evening  during which time viewers can vote for the act which they thought the best
+votes within a country are collated after which each country distributes its points  NUMBER - NUMBER    NUMBER    NUMBER  to the various acts countries cannot vote for their own act
+since  NUMBER   the eurovision has used a two-stage voting system
+from  NUMBER  to  NUMBER  there was a single semifinal  during the first stage semifinal  voters were equally unfamiliar with all contestants
+in the second stage final  voters had already seen those acts that had to go through the semifinal  while they were unfamiliar with finalists who got to bypass the semifinal
+since  NUMBER   there have been two semifinals in which all contestant countries bar the host and the four main financial contributors compete to determine who will appear in the final-half in semifinal  NUMBER   half in semifinal  NUMBER 
+viewer figures consistently show that people are more likely to watch the semifinal in which their own country competes  CITATION
+this phenomenon means that voters will be more familiar with finalists who appeared in the same semifinal as their own countries
+both formats  CITATION  allow estimates of familiarity of candidates contestants  estimates that would be very hard to achieve in most studies of real-world voting
+abakoumkin  CITATION  looked at data from  NUMBER - NUMBER  and found that those countries that appeared in a semifinal achieved higher marks than those that had not
+although he concluded that this was due to familiarity  it is likely that finalists that had to compete to qualify were of a higher standard than those that did not as weaker entrants would have been weeded out
+as a result  it is difficult to say with any certainty whether the familiarity effect is actually at work in this context
+voting in the eurovision has been the subject of much debate  and a number of studies have been conducted looking at the way in which countries tend to vote within blocs determined by cultural closeness  CITATION
+doosje and haslam  CITATION  identified reciprocal voting patterns  particularly in countries that are more collectivist and economically weaker
+in addition  spierdijk and vellekoop  CITATION  found that geographic proximity  religious  linguistic  and cultural congruence  and the presence of a substantial immigrant population from a contestant country can all influence the way in which countries distribute their points
+some commentators have argued that factors such as these  which go beyond the  quality  of the songs and performances  undermine the purity of the contest  though others have countered that it is natural for voters to prefer songs from countries with which they share cultural connections  including  presumably  an overlap in musical tastes  CITATION
+other studies of the eurovision have found that expert judging panels are less affected by these kinds of factors than televoters  CITATION  and that acts that appear later in the final tend to receive more points  CITATION
+the current study examines whether the mere-exposure effect also influences voting behaviour
+although this has been researched previously  CITATION   an inability to account for the quality of competitors means that it is still an open question
+rather than simply comparing competitors that were in a semifinal with those that were not  this study looks only at participants who qualified via a semifinal
+it is assumed that voters will be more familiar with those countries that appeared in the same semifinal as their own and that  consequently  they will be more likely to vote for them

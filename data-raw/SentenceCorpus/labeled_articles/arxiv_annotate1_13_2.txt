@@ -1,0 +1,36 @@
+### abstract ###
+MISC	although the internet as level topology has been extensively studied over the past few years  little is known about the details of the as taxonomy
+MISC	an as  node  can represent a wide variety of organizations  e g   large isp  or small private business  university  with vastly different network characteristics  external connectivity patterns  network growth tendencies  and other properties that we can hardly neglect while working on veracious internet representations in simulation environments
+AIMX	in this paper  we introduce a radically new approach based on machine learning techniques to map all the ases in the internet into a natural as taxonomy
+OWNX	we successfully classify  NUMBER   NUMBER  percent  of ases with expected accuracy of  NUMBER   NUMBER  percent 
+OWNX	we release to the community the as level topology dataset augmented with   NUMBER   the as taxonomy information and  NUMBER   the set of as attributes we used to classify ases
+OWNX	we believe that this dataset will serve as an invaluable addition to further understanding of the structure and evolution of the internet
+### introduction ###
+MISC	the rapid expansion of the internet in the last two decades has produced a large scale system of thousands of diverse  independently managed networks that collectively provide global connectivity across a wide spectrum of geopolitical environments
+MISC	from  NUMBER  to  NUMBER  the number of globally routable as identifiers has increased from less than  NUMBER   NUMBER  to more than  NUMBER   NUMBER   exerting significant pressure on interdomain routing as well as other functional and structural parts of the internet
+MISC	this impressive growth has resulted in a heterogenous and highly complex system that challenges accurate and realistic modeling of the internet infrastructure
+MISC	in particular  the as level topology is an intermix of networks owned and operated by many different organizations  e g   backbone providers  regional providers  access providers  universities and private companies
+MISC	statistical information that faithfully characterizes different as types is on the critical path toward understanding the structure of the internet  as well as for modeling its topology and growth
+MISC	in topology modeling  knowledge of as types is mandatory for augmenting synthetically constructed or measured as topologies with realistic intra as and inter as router level topologies
+MISC	for example  we expect the network of a dual homed university to be drastically different from that of a dual homed small company
+MISC	the university will likely contain dozens of internal routers  thousands of hosts  and many other network elements  switches  servers  firewalls 
+MISC	on the other hand  the small company will most probably have a single router and a simple network topology
+MISC	since there is such a diversity among different network types  we cannot accurately augment the as level topology with appropriate router level topologies if we cannot characterize the composing ases
+MISC	moreover  annotating the ases in the as topology with their types is a prerequisite for modeling the evolution of the internet  since different types of ases exhibit different growth patterns
+MISC	for example  internet service providers  isp  grow by attracting new customers and by engaging in business agreements with other isps
+MISC	on the other hand  small companies that connect to the internet through one or few isps do not grow significantly over time
+MISC	thus  categorizing different types of ases in the internet is necessary to identify network evolution patterns and develop accurate evolution models
+MISC	an as taxonomy is also necessary for mapping ip addresses to different types of users
+MISC	for example  in traffic analysis studies its often required to distinguish between packets that come from home and business users
+MISC	given an as taxonomy  its possible to realize this goal by checking the type of as that originates the prefix in which an ip address lies
+AIMX	in this work  we introduce a radically new approach based on machine learning to construct a representative as taxonomy
+AIMX	we develop an algorithm to classify ases based on empirically observed differences between as characteristics
+OWNX	we use a large set of data from the internet routing registries  irr   CITATION  and from routeviews  CITATION  to identify intrinsic differences between ases of different types
+OWNX	then  we employ a novel machine learning technique to build a classification algorithm that exploits these differences to classify ases into six representative classes that reflect ases with different network properties and infrastructures
+OWNX	we derive macroscopic statistics on the different types of ases in the internet and validate our results using a sample of  NUMBER  manually identified as types
+OWNX	our validation demonstrates that our classification algorithm achieves high accuracy   NUMBER   NUMBER  percent  of the examined classifications were correct
+OWNX	finally  we make our results and our classifier publicly available to promote further research and understanding of the internet s structure and evolution
+BASE	in section  we start with a brief discussion of related work
+OWNX	section  describes the data we used  and in section  we specify the set of as classes we use in our experiments
+OWNX	section  introduces our classification approach and results
+OWNX	we validate them in section  and conclude in section 

@@ -1,0 +1,20 @@
+### abstract ###
+The paper proposes a new message passing algorithm for cycle-free factor graphs
+The proposed "entropy message passing" ( EMP ) algorithm may be viewed as sum-product message passing over the entropy semiring, which has previously appeared in automata theory
+The primary use of  EMP  is to compute the entropy of a model
+However,  EMP  can also be used to compute expressions that appear in expectation maximization and in gradient descent algorithms
+### introduction ###
+The efficient marginalization of a multivariate function is important in many areas including signal processing, artificial intelligence, and digital communications
+When a cycle-free factor graph representation of the function is available, then exact marginals can be computed by sum-product message passing in the factor graph  CITATION - CITATION
+In fact, a number of well-known algorithms are special cases of sum-product message passing
+The "sum" and the "product" in sum-product message passing may belong to an arbitrary commutative semiring  CITATION , CITATION
+In this paper, we propose to use it with the entropy semiring and the resulting algorithm will be called "entropy message passing" ( EMP )
+The entropy semiring was introduced by Cortes et al CITATION  to compute the relative entropy between probabilistic automata
+In this paper, we translate the ideas of  CITATION  into the language of factor graphs and message passing algorithms
+The primary use of  EMP  is to compute the entropy of a model with a cycle-free factor graph for fixed observations
+The main prior work on this subject is by Hernando et al CITATION ; again, a main point of the present paper is to clarify and to generalize this prior work by reformulating it in terms of sum-product message passing
+However,  EMP  can also be used to compute expressions that appear in expectation maximization and in gradient ascent algorithms  CITATION - CITATION ; this connection appears to be new
+The paper is structured as follows
+In Section II, we review sum-product message passing over a commutative semiring
+In Section III, we introduce the entropy semiring
+The  EMP  algorithm is described in Section IV and the mentioned applications are described in Section V

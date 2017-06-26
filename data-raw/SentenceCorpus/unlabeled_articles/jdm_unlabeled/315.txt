@@ -1,0 +1,23 @@
+### abstract ###
+hierarchical bayesian methods offer a principled and comprehensive way to relate psychological models to data
+here we use them to model the patterns of information search  stopping and deciding in a simulated binary comparison judgment task
+the simulation involves  NUMBER  subjects making  NUMBER  forced choice comparisons about the relative magnitudes of two objects which of two german cities has more inhabitants
+two worked-examples show how hierarchical models can be developed to account for and explain the diversity of both search and stopping rules seen across the simulated individuals
+we discuss how the results provide insight into current debates in the literature on heuristic decision making and argue that they demonstrate the power and flexibility of hierarchical bayesian methods in modeling human decision-making
+### introduction ###
+to the cognitive scientist individual differences in behavior can be both intriguing and annoying
+we are all familiar with the subjects in our experiments who  don't do what they are supposed to do
+  sometimes these different patterns of behavior are simply noise the subject was on a cell phone during the experiment  but often they are due to legitimate responses that our theories and models failed to anticipate or cannot explain
+the field of judgment and decision making is no exception to the challenge of individual differences
+as brighton and gigerenzer  CITATION  mention in passing  even a theory as important and influential as prospect theory  CITATION  typically predicts only  NUMBER  percent - NUMBER  percent  of decisions in two-alternative choice tasks  and many models do much worse
+how should we  as a field  treat these individual differences and the challenges they present for our models and theories
+one emerging approach for tackling these issues is to use hierarchical bayesian methods to extend existing models  and apply them in principled ways to experimental and observational data  CITATION
+this approach not only provide tools for interpreting individual differences  but also facilitates theory building by providing a model-based account of why individual differences might arise
+we think it is an especially interesting  important  and promising approach  because it deals with fully developed models of cognition  without constraints on the theoretical assumptions used to develop the models
+taking existing successful models of cognition and embedding them within a hierarchical bayesian framework opens a vista of potential extensions and improvements to current modeling  because it provides a capability to model the rich structure of cognition in complicated settings
+to demonstrate the application of hierarchical bayesian methods to the modeling of heuristic decision-making  we use a standard experimental setup that requires subjects to make judgments about the relative magnitudes of two objects size  distance  fame  profitability  and so on
+to perform these judgments it is often assumed that subjects search their memory  or external sources of information  for cues to help differentiate objects
+for example  an inference about the relative size of two cities might be facilitated by cues indicating which of the two cities is a capital  has an airport  a university  and so on  CITATION
+judgments are then determined by rules that use the presence or absence of cues to provide estimates of the desired criterion i e   number of inhabitants
+such tasks  although apparently simple  incorporate several important features that need specification in theories and models that wish to describe how subjects perform them
+in this paper  we present two simple case studies  the first focuses on information search  and the second focuses on stopping rules

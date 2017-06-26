@@ -1,0 +1,19 @@
+### abstract ###
+while risk research focuses on actions that put people at risk  this paper introduces the concept of  passive risk -risk brought on or magnified by inaction
+we developed a scale measuring personal tendency for passive risk taking prt  validated it using a  NUMBER  undergraduate student sample  and obtained three factors indicating separate domains of passive risk taking  risk involving resources  medical risks and ethical risks
+the scale has criterion validity  as it is correlated with reported passive risk taking in everyday life  and also has high test-retest reliability
+while correlated with the dospert scale  the prt shows divergent validity from classic risk taking constructs like sensation seeking  and convergent validity with tendencies previously not linked to risk taking  such as procrastination and avoidance
+the results indicate that passive risk is a separate and unique domain of risk taking  which merits further research to understand the cognitive and motivational mechanism perpetuating it
+### introduction ###
+the simple term  risk taking  suggests that an action is involved when accepting risk
+the reseach on risk taking behavior focuses mainly on issues like drug and alcohol abuse  promiscuous sexual activity  smoking  reckless driving  gambling  participating in dangerous sports  CITATION   or taking part in crime  CITATION
+but in many real life situations risk is also embodied in abstaining from taking action rather than in taking it
+consider the following examples  only  NUMBER  percent  of us adults age  NUMBER  and older underwent colon cancer screening within the previous  NUMBER  years  or used a relevant home test kit within the preceding year-which is partly why less than  NUMBER  percent  of colorectal cancers are detected early
+in us states where drivers cannot be pulled over by police solely for not using a seatbelt  NUMBER  percent  chose not to wear one  CITATION
+only  NUMBER   NUMBER  percent  of americans age  NUMBER - NUMBER  working full time participate in some kind of retirement plan
+people who don't undergo the recommended cancer screenings  don't wear seatbelts or don't save for retirement are all taking risks due to their inactions
+the risk taking literature so far has focused predominantly on actions people take that put them at risk  and less attention has been paid to those risks brought on  or greatly magnified  by inaction
+even though grave passive risk choices like not getting cancer screenings  CITATION  or not saving for retirement  CITATION  have been at the focus of academic research  they have not been regarded as  risk taking   and have not been analyzed under this theoretical framework
+the current research aims to validate the concept of  passive risk  and to show that it is a separate domain of risk taking behavior
+the concept of  risk  has been extensively studied in the last decades
+there are different definitions for risk  but most distinguish between certain and probable outcomes  marking the  riskier choice  as the one with the greater outcome variance  CITATION

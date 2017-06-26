@@ -1,0 +1,22 @@
+### abstract ###
+knowing what event precipitated a client's abnormal behaviors makes the client appear more normal than if the event is not known  CITATION
+does such knowledge also influence judgments of the need for psychological treatment  and if so  does it matter whether the precipitating event was inside or outside the client's control
+we presented undergraduates with cases of hypothetical clients exhibiting abnormal behaviors and manipulated whether they were also told of a precipitating event explaining those behaviors
+knowing the precipitant significantly reduced perceptions of clients' need for treatment  but only when the precipitating event was outside the client's control
+these findings call into question the notion that it need always be beneficial for an outside reasoner to uncover the root cause of a client's psychological problems  particularly when the root cause is still unknown to the client
+the rationality of the effect and additional implications for decision-making are discussed
+### introduction ###
+how do lay people make judgments about another person's need for psychological treatment
+given that recent estimates suggest that approximately one out of every four americans in any given year have a diagnosable mental disorder  CITATION   it is likely that a great many lay individuals have the opportunity to observe and assess others' behavioral pathology in their daily lives and to influence others' treatment-seeking decisions
+evidence suggests that the treatment-seeking strategies of people suffering from disorders are strongly influenced by lay social networks  CITATION
+indeed  a prospective client is most likely to first decide  with input from peers  whether treatment might be needed  and to only then make an appointment to talk with a mental health clinician
+it may therefore be of critical importance to examine factors influencing lay judgments of others' need for treatment
+in particular  we are interested in whether understanding a person's behaviors influences judgments of that person's need for treatment
+for instance  suppose that  joe   a well-adjusted first-year college student  has a roommate   ted   who has been exhibiting some strange behaviors
+joe notices that ted has frequent memory lapses
+these lapses lead ted to repeat his thoughts to himself  which in turn causes difficulty interacting with others
+worried by ted's odd behaviors  joe is on the verge of suggesting that ted seek out professional psychological treatment
+suppose  though  that joe then hears through the grapevine that ted's problems all started when his girlfriend cheated on him
+ted was so upset by this event that he started having frequent memory lapses for his usual daily events which  in turn  launched his other problems
+will knowing the initial precipitant of ted's problems now lead joe to perceive ted as being more or less in need of psychological treatment
+or  will joe treat this new information as irrelevant to his judgment of ted's need for treatment

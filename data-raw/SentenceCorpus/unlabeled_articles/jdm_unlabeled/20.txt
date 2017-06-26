@@ -1,0 +1,17 @@
+### abstract ###
+in this paper  i trace the evolution of the aircraft cockpit as an example of the transformation of a probabilistic environment into an ecological hybrid  that is  an environment characterized by both probabilistic and deterministic features and elements
+in the hybrid ecology  the relationships among correspondence and coherence strategies and goals and cognitive tactics on the continuum from intuition to analysis become critically important
+intuitive tactics used to achieve correspondence in the physical world do not work in the electronic world
+rather  i make the case that judgment and decision making in a hybrid ecology requires coherence as the primary strategy to achieve correspondence  and that this process requires a shift in tactics from intuition toward analysis
+### introduction ###
+we live in a correspondence-driven world  in which the actual state of the world imposes constraints on interactions within it  CITATION
+in correspondence-driven domains  judgments - how far away and how high is that obstacle
+what is the correct diagnosis given these symptoms
+where is the enemy force likely to attack
+- are guided by multiple probabilistic and fallible indicators in the physical world
+survival depends on the correspondence or accuracy of our judgment  that is  how well it corresponds to objective reality
+the increasing availability of sophisticated technological systems  however  has profoundly altered the character of many correspondence-driven environments  such as aviation  medicine  military operations  or nuclear power  as well as the processes of judgments and decision making within them
+in this paper  i trace the evolution of the aircraft cockpit as an example of the transformation of a probabilistic environment into an ecological hybrid  that is  an environment characterized by both probabilistic and deterministic features and elements
+as technology has changed the nature of cues and information available to the pilot  it has also changed the strategies and tactics pilots must use to make judgments successfully
+i make the case that judgment and decision making in a hybrid ecology requires coherence as the primary strategy to achieve correspondence  and that this process requires a shift in tactics from intuition toward analysis
+the recognition of these changes carries implications for research models in high-technology environments  as well as for the design of systems and decision aids

@@ -1,0 +1,28 @@
+### abstract ###
+We address the problem of autonomously learning controllers for vision-capable mobile robots
+We extend McCallum's (1995) Nearest-Sequence Memory algorithm to allow for general metrics over state-action trajectories
+We demonstrate the feasibility of our approach by successfully running our algorithm on a real mobile robot
+The algorithm is novel and unique in that it (a) explores the environment and learns directly on a mobile robot without using a hand-made computer model as an intermediate step, (b) does not require manual discretization of the sensor input space, (c) works in piecewise continuous perceptual spaces, and (d) copes with partial observability
+Together this allows learning from much less experience compared to previous methods
+### introduction ###
+The realization of fully autonomous robots will require algorithms that can learn from direct experience obtained from visual input
+Vision systems provide a rich source of information, but, the piecewise-continuous (PWC) structure of the perceptual space (e g video images) implied by typical mobile robot environments is not compatible with most current, on-line reinforcement learning approaches
+These environments are characterized by regions of smooth continuity separated by discontinuities that represent the boundaries of physical objects or the sudden appearance or disappearance of objects in the visual field
+There are two broad approaches that are used to adapt existing algorithms to real world environments: (1) discretizing the state space with fixed~ CITATION  or adaptive~ CITATION  grids, and (2) using a function approximator such as a neural-network~ CITATION , radial basis functions (RBFs)~ CITATION , CMAC~ CITATION , or instance-based memory~ CITATION
+Fixed discrete grids introduce artificial discontinuities, while adaptive ones scale exponentially with state space dimensionality
+Neural networks implement relatively smooth global functions that are not capable of approximating discontinuities, and RBFs and CMACs, like fixed grid methods, require knowledge of the appropriate local scale
+Instance-based methods use a  neighborhood  of explicitly stored experiences to generalize to new experiences
+These methods are more suitable for our purposes because they implement local models that in principle can approximate PWC functions, but typically fall short because, by using a fixed neighborhood radius, they assume a uniform sampling density on the state space
+A fixed radius prevents the approximator from clearly identifying discontinuities because points on both sides of the discontinuity can be averaged together, thereby blurring its location
+If instead we use a fixed number  SYMBOL  of neighbors (in effect using a variable radius) the approximator has arbitrary resolution near important state space boundaries where it is most needed to accurately model the local dynamics
+To use such an approach,  an appropriate metric is needed to determine which stored instances provide the most relevant information for deciding what to do in a given situation~ CITATION
+Apart from the PWC structure of the perceptual space, a robot learning algorithm must also cope with the fact that instantaneous sensory readings alone rarely provide sufficient information for the robot to determine where it is (localization problem) and what action it is best to take
+Some form of short-term memory is needed to integrate successive inputs and identify the underlying environment states that are otherwise only  partially observable
+In this paper, we present an algorithm called Piecewise Continuous Nearest Sequence Memory (PC-NSM) that extends McCallum's instance-based algorithm for discrete, partially observable state spaces, Nearest Sequence Memory (NSM;~ CITATION ), to the more general PWC case
+Like NSM, PC-NSM stores all the data it collects from the environment, but uses a continuous metric on the history that allows it to be used in real robot environments without prior discretization of the perceptual space
+An important priority in this work is minimizing the amount of  a priori  knowledge about the structure of the environment that is available to the learner
+Typically, artificial learning is conducted in simulation, and then the resulting policy is transfered to the real robot
+Building an accurate model of a real environment is human-resource intensive and only really achievable when simple  sensors are used (unlike full-scale vision), while overly simplified models make policy transfer difficult~ CITATION
+For this reason, we stipulate that the robot must learn directly from the real world
+Furthermore, since gathering data in the real world is costly, the algorithm should be capable of efficient autonomous exploration in the robot perceptual state space without knowing the amount of exploration required in different parts of the state space (as is normally the case in even the most advanced approaches to exploration in discrete~ CITATION , and even in metric~ CITATION  state spaces)
+The next section introduces PC-NSM, section~ presents our experiments in robot navigation, and section~ discusses our results and future directions for our research

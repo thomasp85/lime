@@ -1,0 +1,41 @@
+### abstract ###
+The goal of human genome re-sequencing is obtaining an accurate assembly of an individual's genome.
+Recently, there has been great excitement in the development of many technologies for this, with even more expected to appear.
+The costs and sensitivities of these technologies differ considerably from each other.
+As an important goal of personal genomics is to reduce the cost of re-sequencing to an affordable point, it is worthwhile to consider optimally integrating technologies.
+Here, we build a simulation toolbox that will help us optimally combine different technologies for genome re-sequencing, especially in reconstructing large structural variants.
+SV reconstruction is considered the most challenging step in human genome re-sequencing.
+To this end, we formulate canonical problems that are representative of issues in reconstruction and are of small enough scale to be computationally tractable and simulatable.
+Using semi-realistic simulations, we show how we can combine different technologies to optimally solve the assembly at low cost.
+With mapability maps, our simulations efficiently handle the inhomogeneous repeat-containing structure of the human genome and the computational complexity of practical assembly algorithms.
+They quantitatively show how combining different read lengths is more cost-effective than using one length, how an optimal mixed sequencing strategy for reconstructing large novel SVs usually also gives accurate detection of SNPs/indels, how paired-end reads can improve reconstruction efficiency, and how adding in arrays is more efficient than just sequencing for disentangling some complex SVs.
+Our strategy should facilitate the sequencing of human genomes at maximum accuracy and low cost.
+### introduction ###
+The human genome is comprised of approximately 6 billion nucleotides on two pairs of 23 chromosomes.
+Variations between individuals are comprised of 6 million single nucleotide polymorphisms and 1000 relatively large structural variants of 3 kb or larger and many more smaller SVs are responsible for the phenotypic variation among individuals CITATION, CITATION.
+Most of these large SVs are due to genomic rearrangements, and a few others contain novel sequences that are not present in the reference genome CITATION.
+The goal of personal genomics is to determine all these genetic differences between individuals and to understand how these contribute to phenotypic differences in individuals.
+Making personal genomics almost a reality over the past decade, the development of high throughput sequencing technologies has enabled the sequencing of individual genomes CITATION, CITATION.
+In 2007, Levy et al. reported the sequencing of an individual's genome based on Sanger CITATION whole-genome shotgun sequencing, followed by de novo assembly strategies.
+Wheeler et al. in 2008 presented another individual's genome sequence constructed from 454 sequencing reads CITATION and comparative genome assembly methods.
+In the mean time, other new sequencing technologies such as Solexa/Illumina sequencing CITATION have become available for individual genome sequencing with corresponding, specially-designed sequence assembly algorithm designed CITATION CITATION .
+These projects and algorithms, however, mostly relied on a single sequencing technology to perform individual re-sequencing and thus did not take full advantage of all the existing experimental technologies.
+Table 1 gives a summary of the characteristics of several technologies in comparative individual genome sequencing.
+At one extreme, performing long Sanger sequencing with a very deep coverage will lead to excellent results at high cost.
+In another, performing only the inexpensive and short Illumina sequencing may generate good and cost-efficient results in SNP detection, but will not be able to either unambiguously locate some of the SVs in repetitive genomic regions or fully reconstruct many of the large SVs.
+Moreover, array technologies such as the SNP array CITATION and the CGH array at different resolutions CITATION CITATION can also be utilized to identify the SVs: the SNP arrays can detect SNPs directly, and the CGH array is able to detect kilobase- to megabase- sized copy number variants CITATION, which can be integrated into the sequencing-based SV analysis.
+It is thus advantageous to consider optimally combining all these experimental techniques into the individual genome re-sequencing framework and to design experiment protocols and computational algorithms accordingly.
+Due to the existence of reference genome assemblies CITATION, CITATION and the high similarity between an individual's genome and the reference CITATION, the identification of small SVs is relatively straightforward in comparative re-sequencing with the analysis of single split-reads covering small SVs.
+Meanwhile, although there exist algorithms to detect large SVs with paired-end reads CITATION, the complete reconstruction of a large SV requires the integration of reads spanning a wide region, often involving misleading reads from other locations of the genome.
+If there were no repeats or duplications in the human genome, the reconstruction of such large SVs would be trivially accomplished by the de novo assembly with a high coverage of inexpensive short reads around these regions.
+With the existence of repeats and duplications in the human genome, however, a set of longer reads will be required to accurately locate some of these SVs in repetitive regions, and a hybrid re-sequencing strategy with both comparative and de novo approaches will be necessary to identify genomic rearrangement events such as deletions and translocations, and also to reconstruct large novel insertions in individuals.
+Such steps are thus much harder than the others, and will be the main focus of this paper.
+Here we present a toolbox and some representative case studies on how to optimally combine the different experimental technologies in the individual genome re-sequencing project, especially in reconstructing large SVs, so as to achieve accurate and economical sequencing.
+An optimal experimental design should be an intelligent combination of the long, medium, and short sequencing technologies and also some array technologies such as CGH.
+Some of the previous genome sequencing projects CITATION, CITATION have already incorporated such hybrid approaches using both long and medium reads, although the general problem of optimal experimental design has not yet been systematically studied.
+While it is obvious that combining technologies is advantageous, we want to quantitatively show the potential savings based on different integration strategies.
+Also, since the technologies are constantly developing, it will be useful to have a general and flexible approach to predict the outcome of integrating different technologies, including the new ones coming in the future.
+In the following sections, we will first briefly describe a schematic comparative genome re-sequencing framework, focusing on the intrinsically most challenging steps of reconstructing large SVs, and then use a set of semi-realistic simulations of these representative steps to optimize the integrated experimental design.
+Since full simulations are computationally intractable for such steps in the large parameter space of combinations of different technologies, the simulations are carried out in a framework that can combine the real genomic data with analytical approximations of the sequencing and assembly process.
+Also, this simulation framework is capable of incorporating new technologies as well as adjusting the parameters for existing ones, and can provide informative guidelines to optimal re-sequencing strategies as the characteristics and cost-structures of such technologies evolve, when combining them becomes a more important concern.
+The simulation framework is downloadable as a general toolbox to guide optimal re-sequencing as technology constantly advances.

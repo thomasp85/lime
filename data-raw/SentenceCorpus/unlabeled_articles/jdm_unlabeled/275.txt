@@ -1,0 +1,33 @@
+### abstract ###
+using a stochastic dominance approach in an international dataset of about  NUMBER   NUMBER  catholic subjects  we show that incentives based on absolute belief play a crucial role in religious practice church attendance and prayer
+furthermore  we find that when both positive heaven and negative hell incentives are available  the former have a much stronger effect than the latter
+the results are confirmed using kolmogorov-smirnov tests
+### introduction ###
+many studies have examined the role of incentives and their effect on the behavior of individuals  CITATION
+in this study  the interest falls on the effect of incentives on religious behavior in the sense that they increase decrease individual religious performance
+religious practice can be encouraged by two types of incentives  earthly ones and afterlife ones
+this paper addresses the second group
+previous studies have analyzed the effects of  afterlife incentives  on religious behavior
+azzi and ehrenberg  CITATION  were the first to propose and test a theoretical model of afterlife religious capital
+they analyzed the determinants of participation in religious activities using a utility-maximizing model
+among other results  they found afterlife beliefs to be a major determinant of church attendance
+using several surveys carried out in the united states  they provided empirical support for their theory
+blomberg et al CITATION  developed a model where financial religious contributions are motivated by both current consumption and afterlife considerations
+they show that afterlife considerations play an important role in explaining financial religious contributions
+pyne  CITATION  studied the relationship between religiosity and the fear of death
+he found that individuals who place a higher probability on the existence of an afterlife invest more in religious capital
+recently  bra  xf NUMBER  as-garza et al CITATION  estimated the role of afterlife beliefs in the production of religious commodities  concretely  church attendance and prayer
+using ordered logit regressions  they found that afterlife beliefs are crucial determinants but  more importantly  that beliefs in heaven are much more relevant than beliefs in hell  positive incentives are stronger than negative ones
+however  this regression approach does not allow us to study the joint effect of positive and negative incentives
+when the logit model contains interactions among variables two problems appear  i the computation of partial effects becomes problematic  ii the interpretation of these estimate effects is not straightforward
+as showed in norton et al CITATION  the estimated coefficients of the interaction terms do not reflect the interaction effect  moreover their statistical significance cannot be tested through a simple t-test
+even more problematic is the interpretation given that the estimated interaction effect is also conditional on the current value of the other independent variables
+hence  we cannot properly study the meaning of different interactions in a logit regression model
+this paper presents a different statistical tool - the stochastic dominance approach  CITATION  - that allows the use and the straightforward interpretation of the joint effect of positive and negative incentives
+our analyses confirm the main results showed in bra  xf NUMBER  as-garza et al CITATION  and revises the interactive effects among positive and negative incentives
+in an easy and graphical way we show that afterlife incentives play a crucial role in religious performance  comparing not only and positive or negative incentives but combination of both are compared
+the study was carried out on catholic people
+in the catholic religion  church attendance and prayer are strategies that lead to heaven and prevent hell
+church attendance and prayer are two dimensions of religiosity that reflect public religious activities versus private intimate prayer activities
+while church attendance also has non-religious motives such as networking and the building of social ties  private prayer activity has more pure religious motives
+using a stochastic dominance approach  we ask whether absolute beliefs in eternal bliss heaven and in eternal damnation hell increase individual's religious investment as reflected in church attendance and prayer  and whether absolute belief in eternal damnation hell is a more or less powerful incentive than eternal bliss heaven for intensified religious effort

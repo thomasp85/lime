@@ -1,0 +1,51 @@
+### abstract ###
+Autoregulation of transcription factors and cross-antagonism between lineage-specific transcription factors are a recurrent theme in cell differentiation.
+An equally prevalent event that is frequently overlooked in lineage commitment models is the upregulation of lineage-specific receptors, often through lineage-specific transcription factors.
+Here, we use a minimal model that combines cell-extrinsic and cell-intrinsic elements of regulation in order to understand how both instructive and stochastic events can inform cell commitment decisions in hematopoiesis.
+Our results suggest that cytokine-mediated positive receptor feedback can induce a switch-like response to external stimuli during multilineage differentiation by providing robustness to both bipotent and committed states while protecting progenitors from noise-induced differentiation or decommitment.
+Our model provides support to both the instructive and stochastic theories of commitment: cell fates are ultimately driven by lineage-specific transcription factors, but cytokine signaling can strongly bias lineage commitment by regulating these inherently noisy cell-fate decisions with complex, pertinent behaviors such as ligand-mediated ultrasensitivity and robust multistability.
+The simulations further suggest that the kinetics of differentiation to a mature cell state can depend on the starting progenitor state as well as on the route of commitment that is chosen.
+Lastly, our model shows good agreement with lineage-specific receptor expression kinetics from microarray experiments and provides a computational framework that can integrate both classical and alternative commitment paths in hematopoiesis that have been observed experimentally.
+### introduction ###
+Multipotent stem cells have the ability to both self-renew and differentiate, thus sustaining the stem cell pool and giving rise to mature, specialized cells, respectively.
+The hematopoietic stem cell, located in the adult bone marrow, is well characterized and has served as a popular model system for understanding self-renewal, lineage commitment, and differentiation CITATION.
+HSCs are responsible for producing the entire repertoire of blood cells through the process of hematopoiesis.
+During hematopoiesis, HSCs lose the capacity to self-renew and differentiate into common myeloid progenitors and common lymphoid progenitors CITATION, CITATION.
+Multipotent progenitors undergo further lineage-restricted differentiation to give rise to mature cells via bipotent progenitors.
+In addition to this classical commitment paradigm in hematopoiesis, alternative pathways are emerging.
+For example, it has also been observed that HSCs and multipotent progenitors can bypass canonical intermediate states during commitment CITATION, CITATION, CITATION.
+The exact molecular events that direct lineage commitment at the stem cell stage or at the multipotent progenitor level remain elusive, but it is well appreciated that lineage-specific transcription factors and cytokine receptors play critical roles.
+Lineage-specific transcription factors have been identified as master regulators of commitment and differentiation.
+They drive the expression of pertinent lineage-specific genes, thereby initiating the phenotypic change in the progenitor cell down a specific differentiation path CITATION, CITATION.
+Developmental potency of a multipotent progenitor is reflected by the co-expression of multiple lineage-specific transcription factors at low levels, a phenomenon known as transcriptional priming CITATION.
+This promiscuous gene expression pattern in the progenitor cell necessitates that, during cell differentiation, a specific transcription factor is upregulated, chiefly by positive autoregulation CITATION, CITATION, and other lineage transcription factors are downregulated, primarily through cross-antagonism CITATION CITATION .
+In addition to lineage-specific transcription factors, cell differentiation is also believed to be tightly regulated by cytokines.
+Cytokines signal via their cognate receptors whose cytoplasmic domains activate various pathways involved in survival, proliferation, and differentiation CITATION CITATION.
+It has been extensively debated whether cell fate during differentiation is a stochastic or an instructive process.
+The stochastic theory claims that the differential expression of lineage-specific transcription factors due to intrinsic noise in progenitor cells dictates the commitment decision CITATION CITATION, whereas the instructive theory argues that the absolute dependence on lineage-specific cytokine receptor signals during differentiation shows that cell-fate decisions are regulated by extrinsic growth factor cues CITATION, CITATION, CITATION, CITATION.
+An underlying question evoked by both of these theories is whether cytokines provide instructive cues or select lineage-committed progenitors by providing permissive survival and proliferation signals.
+The instructive model does not account for the occurrence of certain mature cell types even when their lineage-specific receptors are knocked out CITATION, CITATION.
+The predetermined distribution of the heterogeneous progenitor population into mature cells, as suggested by the stochastic model fails to explain how specific cell types can be enriched during stress or how homeostasis is restored after infections or therapy CITATION.
+A recent landmark study utilizing bioimaging techniques at the single-cell level suggests that there is validity to both of these theories CITATION.
+These authors showed that lineage-specific cytokines can strongly instruct lineage choice, although differentiation was still possible in the absence of lineage-specific cytokines.
+A more comprehensive understanding of lineage commitment may emerge by analyzing the biochemical associations that coordinate cell-extrinsic and cell-intrinsic events.
+The promiscuous gene expression pattern during differentiation is observed not only in lineage-specific transcription factors, but also in lineage-specific receptors.
+A critical commitment signal during differentiation is the upregulation of the transcription factor, which aids in expressing the lineage-specific genes; however, the need to upregulate the lineage-specific receptor, an event also integral to commitment, is still unclear.
+This is particularly confounding since the low number of lineage-specific receptors present in a progenitor cell is sufficient for providing permissive survival cues.
+During lineage commitment, the expression of the cytokine receptor mirrors the expression of the transcription factor, often due to the presence of transcription factor binding domains in the promoter region of the receptor gene CITATION CITATION.
+The advantage of regulating the lineage-specific receptor expression through the lineage-specific transcription factor is not apparent.
+Recent biochemical evidence also suggests that cytokines can provide signals to functionally activate lineage-specific transcription factors through post-translational modifications CITATION and can also regulate the expression of transcription factors during cell differentiation CITATION .
+Cell differentiation is believed to be an all-or-none switch-like event rather than a gradual transition of a precursor cell to a stable, mature cell.
+Mathematical modeling and analysis have been successfully used to provide insights into the biological networks that give rise to such switch-like behaviors CITATION.
+Typically, the networks involved in lineage specification seem to engender cellular memory through nonintuitive behaviors, such as bistable response profiles.
+The components that generate bistability, the toggling of the system between two stable steady states, include nonlinear feedback loops CITATION, CITATION, external noise CITATION, and multi-site covalent modifications CITATION.
+Previous lineage commitment models have suggested that transcriptionally primed multipotent progenitors are capable of exhibiting bistability purely via cell intrinsic events of autoregulation and cross-antagonism CITATION, CITATION, CITATION, but these models have assumed the existence of cooperative positive feedback loops to achieve bistability and do not consider the role of extracellular cues.
+While cooperativity is a widely recognized biological mechanism that may play an important role in lineage commitment, alternative mechanisms can generate similar switch-like behavior in networks where cooperativity has not been observed.
+For example, we have previously shown that cytokine-regulated, positive feedback of receptor can generate robust bistability to stimulus without cooperativity in a deterministic model for unilineage commitment CITATION.
+Furthermore, even in networks with cooperativity, receptor-mediated feedback may provide additional robustness to the system behavior and, perhaps more importantly, offer an external mode of regulation of cell-fates.
+Here, we present a minimal model that integrates the bidirectional regulation between lineage-specific cytokines and transcription factors with previously explored autofeedback loops and cross-antagonism to understand the interplay between cell-extrinsic and cell-intrinsic factors in fate decisions of hematopoietic progenitors.
+Our model shows that the strength of cross-antagonism can be a critical determinant in achieving multistability.
+The analyzed network exhibits a bilayer of memory with respect to external stimuli to provide robustness to both the bipotent and committed states.
+The model suggests that noise in the network can enable stochastic switching between the stable states; however, the distribution of the uncommitted population among the various states during differentiation can still be strongly biased by external cues.
+Furthermore, this modeling framework captures both classical and alternative modes of lineage commitment seen in hematopoiesis.
+Although discrete cell fates are likely to represent high-dimensional attractors CITATION, CITATION, our minimal model may provide an initial step towards understanding how extrinsic factors integrate with intrinsic factors and may elucidate new mechanisms that underlie cell-fate decisions.

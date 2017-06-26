@@ -1,0 +1,33 @@
+### abstract ###
+In this paper we apply computer learning methods to diagnosing ovarian cancer using the level of the standard biomarker CA125 in conjunction with information provided by mass-spectrometry
+We are working with a new data set collected over a period of 7 years
+Using the level of CA125 and mass-spectrometry peaks, our algorithm gives probability predictions for the disease
+To estimate classification accuracy we convert probability predictions into strict predictions
+Our algorithm makes fewer errors than almost any linear combination of the CA125 level and one peak's intensity (taken on the log scale)
+To check the power of our algorithm we use it to test the hypothesis that CA125 and the peaks do not contain useful information for the prediction of the disease at a particular time before the diagnosis
+Our algorithm produces  SYMBOL -values that are better than those produced by the algorithm that has been previously applied to this data set
+Our conclusion is that the proposed algorithm is more reliable for prediction on new data \keywords{Online prediction, aggregating algorithm, ovarian cancer, mass-spectrometry, proteomics}
+### introduction ###
+Early detection of ovarian cancer is important since clinical symptoms sometimes do not appear until the late stage of the disease
+This leads to difficulties in treatment of the patient
+Using the antigen CA125 significantly improves the quality of diagnosis
+However, CA125 becomes less reliable at early stages and sometimes elevates too late to make use of it
+Our goal is to investigate whether existing methods of online prediction can improve the quality of the detection of the disease and to demonstrate that the information contained in mass spectra is useful for ovarian cancer diagnosis in the early stages of the disease
+We refer to the  combination  of CA125 and peak intensity meaning the decision rule in the form  SYMBOL *} where  SYMBOL  is the level of CA125,  SYMBOL  is the intensity of the  SYMBOL -th peak, and  SYMBOL  are taken from the sets described below
+We consider prediction in  triplets : each case sample is accompanied by two samples from healthy individuals,  matched controls , which are chosen to be as close as possible to the case sample with respect to attributes such as age, storage conditions, and serum processing
+In the given triplet of samples of different individuals we detect one sample which we predict as cancer
+This framework was first described in  CITATION
+The authors analyze an ovarian cancer data set and show that the information contained in mass-spectrometry peaks can help to provide more precise and reliable predictions of the diseased patient than the CA125 criteria by itself some months before the moment of the diagnosis
+In this paper we use the same framework and set of decision rules (CA125 combined with peak intensity) to derive an algorithm which performs better in some sense than any of these rules
+For our research we use a different more recent ovarian cancer data set  CITATION  processed by the authors of  CITATION  with a larger number of items than in  CITATION
+We combine decision rules proposed in  CITATION  by using an online prediction algorithm\footnote[1]{A survey of online prediction can be found in  CITATION  } and thus get our own decision rule
+In this paper we use a combining algorithm described in  CITATION , because it allows us to output a probability measure on a given triplet and has the best theoretical guarantees for this type of prediction
+In order to estimate classification accuracy, we convert probability predictions into strict predictions by the  maximum rule : we assign weight 1 to the labels with maximum predicted probability, weight 0 to the labels of other samples, and then normalize the assigned weights
+We show that our algorithm gives more reliable predictions than the vast majority of particular combinations (in fact, more thorough experiments, not described here, show that it outperforms all particular combinations)
+It performs well on different stages of disease
+And when testing the hypothesis that CA125 and peaks do not contain useful information for the prediction of the disease at its early stages, our algorithm gives better  SYMBOL -values in comparison to the algorithm which chooses the best combination; in addition, our algorithm requires fewer adjustments
+Our paper is organized as follows
+In Section~ we describe methods we use to give predictions
+Section~ gives a short description of the data set on which we work
+We show our experiments and results in Section~, separated into description of the probability prediction algorithm in Subsection~ and detection at different stages before diagnosis in Subsection~
+Section~ concludes our paper

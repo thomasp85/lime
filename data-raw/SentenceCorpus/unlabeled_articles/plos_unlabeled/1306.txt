@@ -1,0 +1,54 @@
+### abstract ###
+Synchronization of 30 80 Hz oscillatory activity of the principle neurons in the olfactory bulb is believed to be important for odor discrimination.
+Previous theoretical studies of these fast rhythms in other brain areas have proposed that principle neuron synchrony can be mediated by short-latency, rapidly decaying inhibition.
+This phasic inhibition provides a narrow time window for the principle neurons to fire, thus promoting synchrony.
+However, in the olfactory bulb, the inhibitory granule cells produce long lasting, small amplitude, asynchronous and aperiodic inhibitory input and thus the narrow time window that is required to synchronize spiking does not exist.
+Instead, it has been suggested that correlated output of the granule cells could serve to synchronize uncoupled mitral cells through a mechanism called stochastic synchronization, wherein the synchronization arises through correlation of inputs to two neural oscillators.
+Almost all work on synchrony due to correlations presumes that the correlation is imposed and fixed.
+Building on theory and experiments that we and others have developed, we show that increased synchrony in the mitral cells could produce an increase in granule cell activity for those granule cells that share a synchronous group of mitral cells.
+Common granule cell input increases the input correlation to the mitral cells and hence their synchrony by providing a positive feedback loop in correlation.
+Thus we demonstrate the emergence and temporal evolution of input correlation in recurrent networks with feedback.
+We explore several theoretical models of this idea, ranging from spiking models to an analytically tractable model.
+### introduction ###
+Synchronization of neural activity has been suggested to facilitate coding CITATION CITATION and propagation of activity CITATION CITATION.
+Synchronous stimulus-induced oscillatory activity has long been known to occur in the olfactory system of mammals CITATION CITATION.
+Synchronous, rhythmic activity has been proposed to play a role in odor discrimination tasks CITATION.
+In insects, disruption of synchronous oscillations can impair discrimination of chemically similar odorants CITATION.
+In mice, enhancement of synchronous oscillations in the olfactory bulb using genetic modifications improves performance in fine discrimination tasks CITATION.
+In the mammalian olfactory system, mitral cell synchrony contributes to the generation of the gamma oscillations in the local field potential; for example, in the cat olfactory system, increases in the synchrony between mitral cells are accompanied by a concomitant increase in the power of the gamma band in the local field potential CITATION.
+Mitral cells have been shown to undergo synchronization during odor-evoked responses CITATION or during olfactory nerve stimulation CITATION.
+Although, previous experimental and modeling studies have highlighted the role of granule cells CITATION and lateral inhibition CITATION in the production of gamma oscillations in the olfactory bulb, the exact mechanism by which such mitral cell synchronization occurs in the mitral-granule cell network connected by reciprocal recurrent and lateral connections remains largely unknown.
+A possible mechanism of synchronization of mitral cells in the olfactory bulb is suggested by recent experimental evidence.
+In paired recordings from mitral cells, activation of a mitral cell elicits fast unitary inhibitory post-synaptic potentials in a second mitral cell CITATION, CITATION, CITATION.
+These IPSC's are due to the synaptic activation of the shared granule cells via the mitral-granule cell dendrodendritic synapses.
+Although the individual IPSC's are fast, they arrive randomly, i.e. the output of the granule cells is not time locked to the stimulus.
+The temporally prolonged barrage of these unitary IPSC's produced in response to the spiking in the first mitral cell results in a slow rising and long lasting hyperpolarization in the second mitral cell CITATION CITATION.
+There is a variable delay between the evoked IPSC's in the second mitral cell and the spike times in the first mitral cell CITATION.
+Thus, the evoked IPSC's occur asynchronously CITATION CITATION, aperiodically CITATION and the kinetics of hyperpolarization in an ensemble average of the evoked IPSC's show a slow rise time and a slow decay constant CITATION CITATION.
+In addition, the peak amplitudes of the ensemble average are small, CITATION.
+The prolonged, asynchronous barrages of IPSC's have been shown to be a result of long latency, asynchronous and long lasting mitral cell recruitment of granule cells CITATION.
+Furthermore, recent experimental studies into the origin of synchrony between mitral cells suggests that recovery from shared IPSC inputs from common granule cells is the primary driving mechanism for mitral cell synchrony CITATION, CITATION.
+These physiologically measured properties of mitral-granule cell interactions suggest a novel mechanism of synchronization of mitral cells in the olfactory bulb.
+Previous studies have proposed that noise can synchronize oscillators CITATION.
+For neurons to undergo such noise-induced synchronization they should be periodically firing and should have some shared fast fluctuations in their inputs.
+Recent studies on the mechanism of generation of synchronized oscillatory activity by long lasting asynchronous, aperiodic inhibition in the olfactory bulb have revealed exactly such a novel role for noise CITATION.
+It was shown that two mitral cells firing in the gamma frequency range can undergo synchronization upon receiving common inhibitory input from granule cells.
+The degree of synchronization was shown to depend on the degree of correlation in the noisy input shared by the two neurons.
+Although spiking was synchronized, the shared noise itself was aperiodic.
+In all of the experimental and theoretical studies of stochastic synchronization to date, the degree of correlation is imposed and held fixed.
+In our study the degree of input correlation emerges intrinsically from within the network and is amplified over time due to the dynamics of the network.
+In addition, our study utilizes theoretically derived probability distribution of phase difference for uncoupled oscillators receiving shared noise to investigate the conditions necessary for the existence of bistability in the magnitude of input correlation.
+Here we consider the case in which correlated fluctuations from granule cells arise naturally from granule cells that connect to many mitral cells.
+The input correlation to any pair of mitral cells could increase if the shared pool of presynaptic granule cells increased their stochastic firing rate thus providing a greater amount of common noise.
+In the olfactory bulb, synapses between mitral and granule cells are dendrodendritic, and almost always reciprocal CITATION.
+Thus, if a granule cell synapses on a pair of mitral cells, those mitral cells also synapse on that granule cell.
+We hypothesize that, since a pair of mitral cells with correlated input is more likely to fire synchronously, this pair is also more likely to provide correlated input to their common granule cell.
+In turn the common granule cell could then increases its release of transmitter increasing the correlation to the mitral cells.
+The result of this is that the feedback provides an amplification of correlation.
+The goal of this paper is to use computational and analytic techniques to show that such feedback will increase correlation and as a consequence, synchrony between oscillating mitral cells.
+We describe three models for feedback induced correlation and stochastic sychronization.
+We first study one pair of mitral cells and one common granule cell.
+The mitral cells are modeled as simple phase oscillators which are perturbed through their phase-resetting curves.
+The granule cell is modeled as a noisy leaky integrate and fire neuron receiving synaptic input from the mitral cell oscillators.
+The second model replaces each phase oscillator with the conductance-based Morris-Lecar oscillator.
+Finally, to allow for analytic approaches, we reduce the first two models to a discrete time map which we study using an averaging technique.

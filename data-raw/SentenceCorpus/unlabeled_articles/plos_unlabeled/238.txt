@@ -1,0 +1,26 @@
+### abstract ###
+Text-mining algorithms make mistakes in extracting facts from natural-language texts.
+In biomedical applications, which rely on use of text-mined data, it is critical to assess the quality of individual facts to resolve data conflicts and inconsistencies.
+Using a large set of almost 100,000 manually produced evaluations, we implemented and tested a collection of algorithms that mimic human evaluation of facts provided by an automated information-extraction system.
+The performance of our best automated classifiers closely approached that of our human evaluators.
+Our hypothesis is that, were we to use a larger number of human experts to evaluate any given sentence, we could implement an artificial-intelligence curator that would perform the classification job at least as accurately as an average individual human evaluator.
+We illustrated our analysis by visualizing the predicted accuracy of the text-mined relations involving the term cocaine.
+### introduction ###
+Information extraction uses computer-aided methods to recover and structure meaning that is locked in natural-language texts.
+The assertions uncovered in this way are amenable to computational processing that approximates human reasoning.
+In the special case of biomedical applications, the texts are represented by books and research articles, and the extracted meaning comprises diverse classes of facts, such as relations between molecules, cells, anatomical structures, and maladies.
+Unfortunately, the current tools of information extraction produce imperfect, noisy results.
+Although even imperfect results are useful, it is highly desirable for most applications to have the ability to rank the text-derived facts by the confidence in the quality of their extraction.
+We focus on automatically extracted statements about molecular interactions, such as small molecule A binds protein B, protein B activates gene C, or protein D phosphorylates small molecule E.
+Several earlier studies have examined aspects of evaluating the quality of text-mined facts.
+For example, Sekimizu et al. and Ono et al. attempted to attribute different confidence values to different verbs that are associated with extracted relations, such as activate, regulate, and inhibit CITATION, CITATION.
+Thomas et al. proposed to attach a quality value to each extracted statement about molecular interactions CITATION, although the researchers did not implement the suggested scoring system in practice.
+In an independent study CITATION, Blaschke and Valencia used word-distances between biological terms in a given sentence as an indicator of the precision of extracted facts.
+In our present analysis we applied several machine-learning techniques to a large training set of 98,679 manually evaluated examples to design a tool that mimics the work of a human curator who manually cleans the output of an information-extraction program.
+Our goal is to design a tool that can be used with any information-extraction system developed for molecular biology.
+In this study, our training data came from the GeneWays project, and thus our approach is biased toward relationships that are captured by that specific system.
+We believe that the spectrum of relationships represented in the GeneWays ontology is sufficiently broad that our results will prove useful for other information-extraction projects.
+Our approach followed the path of supervised machine-learning.
+First, we generated a large training set of facts that were originally gathered by our information-extraction system, and then manually labeled as correct or incorrect by a team of human curators.
+Second, we used a battery of machine-learning tools to imitate computationally the work of the human evaluators.
+Third, we split the training set into ten parts, so that we could evaluate the significance of performance differences among the several competing machine-learning approaches.

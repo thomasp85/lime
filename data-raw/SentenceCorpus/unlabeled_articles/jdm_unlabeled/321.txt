@@ -1,0 +1,41 @@
+### abstract ###
+it is a long known problem that the preferential publication of statistically significant results publication bias may lead to incorrect estimates of the true effects being investigated
+even though other research areas e g   medicine  biology are aware of the problem  and have identified strong publication biases  researchers in judgment and decision making jdm largely ignore it
+we reanalyzed two current meta-analyses in this area
+both showed evidence of publication biases that may have led to a substantial overestimation of the true effects they investigated
+a review of additional jdm meta-analyses shows that most meta-analyses conducted no or insufficient analyses of publication bias
+however  given our results and the rareness of non-significant effects in the literature  we suspect that biases occur quite often
+these findings suggest that a conclusions based on meta-analyses without reported tests of publication bias should be interpreted with caution and b publication policies and standard research practices should be revised to overcome the problem
+### introduction ###
+in comparison to statistically non-significant results  a larger proportion of significant results overestimate the underlying population effect
+it is a long known and repeatedly discussed problem  CITATION  that a preferential publication of significant studies will therefore lead to a literature that provides a false impression regarding the robustness and size of the effect in question
+when non-significant results are largely or completely excluded from publication  even non-existing effects may appear substantial  CITATION
+strong  direct evidence of an overrepresentation of significant results in scientific literature originates primarily from the area of medicine  where several representative samples of all studies investigating a specific research question have become available
+these samples consist of studies that are registered with drug licensing agencies  funding agencies and institutional review boards
+several surveys compared the results of these registered studies with the data that were eventually published
+a recent and particularly impressive example is the survey by turner et al CITATION
+the data base of this survey consists of  NUMBER  clinical trials on the effect of antidepressant agents that were registered with the food and drug administration fda in the united states
+according to the fda   NUMBER  studies reported statistically significant primary results
+thirty-seven of these studies were eventually published
+in contrast  of the  NUMBER  studies reporting non-significant main results   NUMBER  remained unpublished
+an additional  NUMBER  of these studies appeared in scientific journals but reported-in contradiction to the fda records-significant main outcomes in these studies  the dependent variables considered to be the most relevant were exchanged
+the combined effect size of the registered studies was g   NUMBER 
+in the published literature  however  this combined effect size was inflated to g   NUMBER 
+in the field of psychology  surveys of this nature are rare  as individual studies and their results  in particular  are seldom documented in a systematic fashion
+however  one survey did employ a similar procedure to assess publication biases  CITATION
+the data base consisted of all studies that were approved by the department of psychology human subjects committee at a u s university between  NUMBER  and  NUMBER 
+approximately  NUMBER  percent  of the studies reporting significant results were published
+of the studies with non-significant outcomes  however  only  NUMBER  percent  were submitted for publication
+thus  there is strong evidence supporting the conclusion that publication biases affect scientific literature in several disciplines  CITATION  including psychology
+even though the omnipresence of null hypothesis significance tests may be less pronounced in the area of jdm than elsewhere in psychology  it is still a widely used procedure
+this and the rarity of non-significant results give good reason to assume that publication biases do occur
+thus  the main question we pursue in this article is whether there is evidence for inflated estimates of effect sizes in the jdm literature that are caused by such biases
+generally  publication biases pose a threat to the validity of the body of scientific knowledge represented in the literature
+however  in the absence of registered studies that may serve as a standard of comparison  the problem may only become apparent when study results are collected for a systematic  quantitative review
+any summary or review of extant literature  including meta-analyses  will inevitably produce an incorrect estimate of the true effect  if the available information represents a selective sample of the relevant research area
+at the same time  meta-analyses provide the opportunity to gauge the extent of the problem
+several methods have been developed that aim to assess whether a collection of effect sizes is affected by publication bias
+in the areas of human medicine and biology  several examples of serious publication biases have been identified by using these methods to reanalyze published data  CITATION
+however  in jdm and psychology as a whole this problem has been largely ignored
+in the following  we will first provide a brief overview of methods for the detection of publication biases
+then  we will use these methods to reanalyze in some detail one meta-analysis from the area of jdm

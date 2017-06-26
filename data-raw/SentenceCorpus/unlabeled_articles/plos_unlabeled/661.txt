@@ -1,0 +1,41 @@
+### abstract ###
+Functional brain networks detected in task-free functional magnetic resonance imaging have a small-world architecture that reflects a robust functional organization of the brain.
+Here, we examined whether this functional organization is disrupted in Alzheimer's disease.
+Task-free fMRI data from 21 AD subjects and 18 age-matched controls were obtained.
+Wavelet analysis was applied to the fMRI data to compute frequency-dependent correlation matrices.
+Correlation matrices were thresholded to create 90-node undirected-graphs of functional brain networks.
+Small-world metrics were computed using graph analytical methods.
+In the low frequency interval 0.01 to 0.05 Hz, functional brain networks in controls showed small-world organization of brain activity, characterized by a high clustering coefficient and a low characteristic path length.
+In contrast, functional brain networks in AD showed loss of small-world properties, characterized by a significantly lower clustering coefficient, indicative of disrupted local connectivity.
+Clustering coefficients for the left and right hippocampus were significantly lower in the AD group compared to the control group.
+Furthermore, the clustering coefficient distinguished AD participants from the controls with a sensitivity of 72 percent and specificity of 78 percent.
+Our study provides new evidence that there is disrupted organization of functional brain networks in AD.
+Small-world metrics can characterize the functional organization of the brain in AD, and our findings further suggest that these network measures may be useful as an imaging-based biomarker to distinguish AD from healthy aging.
+### introduction ###
+Alzheimer's disease is a neurodegenerative disorder characterized by progressive impairment of episodic memory and other cognitive domains resulting in dementia and, ultimately, death.
+Imaging studies in AD have begun a shift from studies of brain structure CITATION, CITATION to more recent studies highlighting focal regions of abnormal brain function CITATION CITATION.
+Most recently, fMRI studies have moved beyond focal activation abnormalities to dysfunctional brain connectivity.
+Functional connectivity is defined as temporal correlations between spatially distinct brain regions CITATION.
+PET studies, restricted to across-subject connectivity measures, have shown that AD patients have decreased hippocampus connectivity with prefrontal cortex CITATION and posterior cingulate cortex CITATION during memory tasks.
+Using fMRI, we demonstrated that AD patients performing a simple motor task had reduced intra-subject functional connectivity within a network of brain regions termed the default-mode network that includes posterior cingulate cortex, temporoparietal junction, and hippocampus CITATION.
+Bokde et al. reported abnormalities in fusiform gyrus connectivity during a face-matching task in subjects with mild cognitive impairment frequently a precursor to AD CITATION.
+Three recent studies have reported reduced default-mode network deactivation in MCI and/or AD patients during encoding tasks CITATION, CITATION and during a semantic classification task CITATION.
+Celone et al also reported increased default-mode network deactivation in a subset of less impaired MCI patients.
+In addition to analyzing functional connectivity during task performance, functional connectivity has also been investigated during task-free conditions.
+Task-free functional connectivity MRI detects interregional correlations in spontaneous blood oxygen level-dependent signal fluctuations CITATION.
+Using this approach, Wang et al. found disrupted functional connectivity between hippocampus and several neocortical regions in AD CITATION.
+Similarly, Li et al. reported reduced intrahippocampal connectivity during task-free conditions CITATION.
+Most recently Sorg et al. CITATION reported reduced resting-state functional connectivity in the default-mode network of MCI patients.
+Although evidence is accumulating that AD disrupts functional connections between brain regions CITATION, it is not clear whether AD disrupts global functional brain organization.
+Graph metrics the clustering coefficient and the characteristic path length are useful measures of global organization of large-scale networks CITATION.
+Graphs are data structures which have nodes and edges between the nodes.
+The clustering coefficient is a measure of local network connectivity.
+A network with a high average clustering coefficient is characterized by densely connected local clusters.
+The characteristic path length is a measure of how well connected a network is. A network with a low characteristic path length is characterized by short distances between any two nodes.
+Small-world network is characterized by a high clustering coefficient and a low characteristic path length CITATION, CITATION.
+In a graphical representation of a brain network, a node corresponds to a brain region while an edge corresponds to the functional interaction between two brain regions.
+Functional connectivity networks of the human brain derived from electroencephalograms, magnetoencephalograms and task-free fMRI data exhibit small-world characteristics CITATION CITATION.
+In a recent EEG study, Stam et al. reported that small-world architecture in functional networks in the brain is disrupted in AD CITATION .
+Here we examined the global functional organization of the brain in AD by creating whole-brain functional connectivity networks from task-free fMRI data, characterizing the organization of these networks using small-world metrics, and comparing these characteristics between AD patients and age-matched controls.
+We hypothesized that global functional brain organization would be abnormal in AD.
+Further, given the need for a reliable, non-invasive clinical test for AD CITATION, we sought to determine whether a small-world metric obtained from task-free fMRI data might provide a sensitive and specific biomarker in AD.

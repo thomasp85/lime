@@ -1,0 +1,19 @@
+### abstract ###
+We start from a simple asymptotic result for the problem of on-line regression with the quadratic loss function: the class of continuous limited-memory prediction strategies admits a ``leading prediction strategy'', which not only asymptotically performs at least as well as any continuous limited-memory strategy but also satisfies the property that the excess loss of any continuous limited-memory strategy is determined by how closely it imitates the leading strategy
+More specifically, for any class of prediction strategies constituting a reproducing kernel Hilbert space we construct a leading strategy, in the sense that the loss of any prediction strategy whose norm is not too large is determined by how closely it imitates the leading strategy
+This result is extended to the loss functions given by Bregman divergences and by strictly proper scoring rules
+### introduction ###
+Suppose  SYMBOL  is a normed function class of prediction strategies (the ``benchmark class'')
+It is well known that, under some restrictions on  SYMBOL , there exists a ``master prediction strategy'' (sometimes also called a ``universal strategy'') that performs almost as well as the best strategies in  SYMBOL  whose norm is not too large (see, eg ,  CITATION )
+The ``leading prediction strategies'' constructed in this paper satisfy a stronger property: the loss of any prediction strategy in  SYMBOL  whose norm is not too large exceeds the loss of a leading strategy by the divergence between the predictions output by the two prediction strategies
+Therefore, the leading strategy implicitly serves as a standard for prediction strategies  SYMBOL  in  SYMBOL  whose norm is not too large: such a prediction strategy  SYMBOL  suffers a small loss to the degree that its predictions resemble the leading strategy's predictions, and the only way to compete with the leading strategy is to imitate it \ifFULLFrom the practical point of view, master strategies are much more interesting than leading strategies, although the existence of leading strategies is a very curious fact \blueend We start the formal exposition with a simple asymptotic result (Proposition  in \S) asserting the existence of leading strategies in the problem of on-line regression with the quadratic loss function for the class of continuous limited-memory prediction strategies
+To state a non-asymptotic version of this result (Proposition ) we introduce several general definitions that are used throughout the paper
+In the following two sections Proposition  is generalized in two directions, to the loss functions given by Bregman divergences (\S) and by strictly proper scoring rules (\S)
+Competitive on-line prediction typically avoids making any stochastic assumptions about the way the observations are generated, but in we consider, mostly for comparison purposes, the case where observations are generated stochastically
+That section contains most of the references to the related literature, although there are bibliographical remarks scattered throughout the paper
+Some proofs and proof sketches are given in \S, and the rest can be found in the full version of this paper,  CITATION
+The proofs are gathered in \S
+The final section, \S, discusses % the general picture and  possible directions of further research
+There are many techniques for constructing master strategies, such as gradient descent, strong and weak aggregating algorithms, following the perturbed leader, defensive forecasting, to mention just a few
+In this paper we will use defensive forecasting (proposed in  CITATION  and based on  CITATION  and much earlier work by Levin, Foster, and Vohra)
+The master strategies constructed using defensive forecasting automatically satisfy the stronger properties required of leading strategies; on the other hand, it is not clear whether leading strategies can be constructed using other techniques

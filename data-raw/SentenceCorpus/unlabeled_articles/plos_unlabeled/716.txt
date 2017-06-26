@@ -1,0 +1,37 @@
+### abstract ###
+Neural networks consisting of globally coupled excitatory and inhibitory nonidentical neurons may exhibit a complex dynamic behavior including synchronization, multiclustered solutions in phase space, and oscillator death.
+We investigate the conditions under which these behaviors occur in a multidimensional parametric space defined by the connectivity strengths and dispersion of the neuronal membrane excitability.
+Using mode decomposition techniques, we further derive analytically a low dimensional description of the neural population dynamics and show that the various dynamic behaviors of the entire network can be well reproduced by this reduced system.
+Examples of networks of FitzHugh-Nagumo and Hindmarsh-Rose neurons are discussed in detail.
+### introduction ###
+Information processing associated with higher brain functions is believed to be carried out by large scale neural networks CITATION CITATION.
+Significant theoretical and computational efforts have been devoted over the years to understand the dynamical behavior of such networks.
+While any modeling attempt aspires to preserve the most relevant physical and dynamical characteristics of these networks, certain simplifying hypothesis are usually employed in order to decrease the overwhelming complexity of the problem.
+In particular, computational models of large scale networks make use of the implicit assumption of neurocomputational unit.
+Such a unit designates a population of thousands of neurons which exhibit a similar behavior.
+A large scale network is then defined by these units and their interconnections.
+In order to describe the dynamics of the unit, further assumptions are employed.
+For instance, the neurons may be regarded as identical entities, the nature and strength of their connections may be neglected and the temporal details of their spiking activity considered irrelevant for the dynamics of the large network.
+Consequently, a small neural network with these properties will show a very well synchronized dynamics which can be easily captured by a conventional neural mass model .
+A remarkable amount of scientific work has been devoted to the understanding of the behavior of neural networks when some of these assumptions are dismissed.
+Many of these studies consider either the inhomogeneities in the network connectivity, or heterogeneous inputs and give a special attention to the synchronized state of the network.
+Among the first attempts, one may consider the studies on coupled oscillators by Kuramoto CITATION who introduced an order parameter capturing the degree of synchronization as a function of the coupling strength or frequency distribution.
+More generally, Pecora et al. CITATION have derived the master stability equation, serving as a stability condition for the synchronized state of an arbitrary network.
+Recently, Hennig et al. CITATION derive similar conditions considering the connectivity as well as heterogeneous inputs.
+Another direction for describing the dynamical behavior of such networks involves the derivation of the equations for the synchronized state along with the equations describing the deviations from synchrony CITATION, CITATION.
+These approaches are suitable only when the deviation from the synchronized state is not very strong.
+On the other hand, there exists another class of approaches based on mean field theory.
+The traditional mean field approaches are incapable of addressing synchronized neural activity, since their basic assumption is that the incoming spike-train to a given neuron in the network is Poissonian and hence uncorrelated.
+Other dynamical behaviors far from synchrony, such as multi-clustering in the phase for instance, also require expansions of the current approaches.
+First attempts to do so include the consideration of higher orders in the mean field expansion CITATION or mode decompositions of the network dynamics in the phase space CITATION.
+The latter approach by Assisi et al. CITATION successfully identified network modes of characteristic behavior, but has been limited to biologically unrealistic situations such as purely excitatory or inhibitory networks and simplistic neuron models.
+While it is true that strong reductionist assumptions are common in large-scale network modeling CITATION CITATION, these assumptions on the network node's dynamics are usually made adhoc and limit the network dynamics to a small range.
+Evidently a reduced small scale network model is desirable to serve as a node in a large scale network simulation whereby displaying a sufficiently rich dynamic repertoire.
+Here it is of less importance to find a quantitatively precise reduced description of a neural population; rather more importantly, we seek a computationally inexpensive population model which is able to display the major qualitative dynamic behaviors for realistic parameter ranges as observed in the total population of neurons.
+Here it is also desirable to include biologically more realistic neuron dynamics such as bursting behavior, since novel phenomena on the small scale network level may occur, which need to be captured by the reduced population model.
+In this paper we extend the approach by Assisi et al. CITATION towards biologically more realistic network architectures including mixed excitatory and inhibitory networks, as well as more realistic neuron models capable of displaying spiking and bursting behavior.
+Our reduced neural population models not only account for a correct reproduction of the mean field amplitude of the original networks but also capture the most important temporal features of its dynamics.
+In this way, complex dynamical phenomena such as multi-clustered oscillations, multi-time scale synchronization and oscillation death become available for simulations of large scale neural networks at a low computational cost.
+We start by investigating first, the main features of the dynamic behavior of a globally coupled heterogeneous neural population comprising both excitatory and inhibitory connections.
+Then, using mode decomposition techniques, we derive analytically a low dimensional representation of the network dynamics and we show that the main features of the neural population's collective behavior can be captured well by the dynamics of a few modes.
+Two different neuronal models, a network of FitzHugh-Nagumo neurons and a network of Hindmarsh-Rose neurons are discussed in detail.

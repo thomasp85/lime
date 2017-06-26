@@ -1,0 +1,43 @@
+### abstract ###
+Many protein functions can be directly linked to conformational changes.
+Inside cells, the equilibria and transition rates between different conformations may be affected by macromolecular crowding.
+We have recently developed a new approach for modeling crowding effects, which enables an atomistic representation of test proteins.
+Here this approach is applied to study how crowding affects the equilibria and transition rates between open and closed conformations of seven proteins: yeast protein disulfide isomerase, adenylate kinase, orotidine phosphate decarboxylase, Trp repressor, hemoglobin, DNA -glucosyltransferase, and Ap 4A hydrolase.
+For each protein, molecular dynamics simulations of the open and closed states are separately run.
+Representative open and closed conformations are then used to calculate the crowding-induced changes in chemical potential for the two states.
+The difference in chemical-potential change between the two states finally predicts the effects of crowding on the population ratio of the two states.
+Crowding is found to reduce the open population to various extents.
+In the presence of crowders with a 15 radius and occupying 35 percent of volume, the open-to-closed population ratios of yPDI, AdK, ODCase and TrpR are reduced by 79 percent, 78 percent, 62 percent and 55 percent, respectively.
+The reductions for the remaining three proteins are 20 44 percent.
+As expected, the four proteins experiencing the stronger crowding effects are those with larger conformational changes between open and closed states.
+Larger proteins also tend to experience stronger crowding effects than smaller ones e.g., comparing yPDI and TrpR.
+The potentials of mean force along the open-closed reaction coordinate of apo and ligand-bound ODCase are altered by crowding, suggesting that transition rates are also affected.
+These quantitative results and qualitative trends will serve as valuable guides for expected crowding effects on protein conformation changes inside cells.
+### introduction ###
+It is increasingly recognized that protein dynamics serves the critical link between structure and function CITATION CITATION.
+An important manifestation of protein dynamics is the sampling of alternative conformations.
+These conformational changes can be triggered by substrate binding CITATION and post-translational modifications such as phosphorylation CITATION.
+Increasingly, structures of the same proteins at different functional states are becoming available.
+These structures provide atomistic details of conformational changes.
+For example, adenylate kinase, an enzyme that catalyzes the phosphoryl transfer from ATP to AMP, undergoes a significant conformational transition, from an open conformation in the apo form and to a closed conformation in the ligand-bound form CITATION CITATION.
+The main differences between these two conformations occur in the ATP- and AMP-binding domains, with the CORE domain relatively rigid.
+Other examples with well-characterized conformational transitions include proteins responsible for signal transduction across cell membranes CITATION CITATION and ion channels CITATION .
+Biophysical characterizations of protein conformational changes have mostly been carried out under dilute conditions.
+However, the environments where proteins perform their biological functions, i.e., extracellular space, cell membrane, and cytoplasm, are crowded with macromolecules.
+For example, the cytoplasm of Escherichia coli contains about 300 400 g/l of macromolecules CITATION, which are estimated to occupy over 30 percent of the total volume.
+In cell membranes, membrane proteins occupy a similar level of the total surface area CITATION.
+How the crowded cellular environments affect the equilibria and transition rates between different conformations of proteins is still poorly understood.
+Qualitatively, one expects that macromolecular crowding will significantly modify the energy landscapes of conformational changes, favoring more compact structures over more open ones CITATION.
+Such effects of crowding have been scrutinized experimentally.
+Molecular dynamics simulations have also been carried out to investigate the energy landscapes of a number of proteins under crowding, in the context of either conformational change CITATION or folding-unfolding transition CITATION CITATION.
+To speed up conformational sampling, the proteins in these studies were represented at a coarse-grained level.
+Recently we have developed an approach CITATION, CITATION, referred to as postprocessing, which opens the door to atomistic modeling of proteins under crowding.
+In this approach, the motions of a test protein are simulated in the absence of crowders.
+Conformations from this simulation are then used to calculate the change in chemical potential if they are transferred to a crowded solution.
+The dependence of the change in chemical potential on reaction coordinates then captures the influence of crowding on the energy landscape.
+The postprocessing approach has been applied to study effects of crowding on protein folding and binding stability CITATION, CITATION, CITATION and on the open-closed equilibrium of the HIV-1 protease dimer CITATION.
+In the latter application it has been shown that the postprocessing approach yields results identical to those obtained from direct simulations of the protein in the presence of crowders CITATION, CITATION .
+Here we apply the postprocessing approach to investigate the impact of macromolecular crowding on the open-closed equilibria of seven proteins: AdK CITATION, CITATION, yeast protein disulfide isomerase CITATION, CITATION, orotidine phosphate decarboxylase CITATION, Trp repressor CITATION, hemoglobin CITATION, DNA -glucosyltransferase CITATION, and Ap 4A hydrolase CITATION, CITATION.
+The biological functions and subcellular locations of these proteins are listed in Table 1.
+We find crowding to reduce the open-to-closed population ratios to various extents; the potentials of mean force along the open-closed reaction coordinate of apo and ligand-bound ODCase, and hence the transition rates, are similarly affected.
+The biological implications of these results are discussed below.

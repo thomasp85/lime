@@ -1,0 +1,27 @@
+### abstract ###
+Previous model-based analysis of the metabolic network of Geobacter sulfurreducens suggested the existence of several redundant pathways.
+Here, we identified eight sets of redundant pathways that included redundancy for the assimilation of acetate, and for the conversion of pyruvate into acetyl-CoA.
+These equivalent pathways and two other sub-optimal pathways were studied using 5 single-gene deletion mutants in those pathways for the evaluation of the predictive capacity of the model.
+The growth phenotypes of these mutants were studied under 12 different conditions of electron donor and acceptor availability.
+The comparison of the model predictions with the resulting experimental phenotypes indicated that pyruvate ferredoxin oxidoreductase is the only activity able to convert pyruvate into acetyl-CoA.
+However, the results and the modeling showed that the two acetate activation pathways present are not only active, but needed due to the additional role of the acetyl-CoA transferase in the TCA cycle, probably reflecting the adaptation of these bacteria to acetate utilization.
+In other cases, the data reconciliation suggested additional capacity constraints that were confirmed with biochemical assays.
+The results demonstrate the need to experimentally verify the activity of key enzymes when developing in silico models of microbial physiology based on sequence-based reconstruction of metabolic networks.
+### introduction ###
+Geobacter species are of interest because of their natural role in carbon and mineral cycling, their ability to remediate organic and metal contaminants in the subsurface, and their capacity to harvest electricity from waste organic matter CITATION CITATION.
+Geobacter sulfurreducens CITATION is the most commonly investigated species of this genus because a genetic system CITATION, the complete genome sequence CITATION, whole genome microarrays CITATION and genome-scale proteomics CITATION are available.
+Furthermore, functional genomics studies have provided insight into the mechanisms of extracellular electron transport onto important electron acceptors such as Fe oxides and electrodes CITATION CITATION .
+G.
+sulfurreducens can use either acetate or hydrogen as the sole electron donors for Fe reduction, and fumarate or malate can also be used as terminal electron acceptors CITATION.
+An understanding of acetate metabolism in Geobacter species is required because acetate, secreted by fermenting organisms, is the dominant electron donor for Geobacteraceae in soils and sediments CITATION, and because recent studies have shown that the addition of acetate to uranium-contaminated aquifers can stimulate in situ bioremediation of uranium contamination by Geobacter species CITATION, CITATION.
+Previous studies have demonstrated that Geobacter species, and the closely related Desulfuromonas acetoxidans, oxidize acetate via the TCA cycle CITATION CITATION.
+However, many other aspects of acetate metabolism, and central metabolism in general, are still poorly understood.
+To better understand the physiology of G. sulfurreducens, a constraint-based genome-scale metabolic model was constructed and used to investigate the unique physiology associated with the reduction of extracellular electron acceptors, such as Fe CITATION.
+The genome-scale model enabled the assessment of the impact of global proton balance during Fe reduction on biomass and energy yields, and successfully predicted the lower biomass yields observed during the growth of a mutant in which the fumarate reductase had been deleted CITATION .
+Furthermore, the network reconstruction revealed the existence of a number of redundant or alternate pathways in the central metabolism of G. sulfurreducens CITATION.
+Recent genetic and in silico studies have shown that the presence of such redundant metabolic pathways, as well as isozymes, can enable metabolic networks to withstand genetic perturbations CITATION CITATION.
+Experimental evidence for alternate optimal pathways have been observed in E. coli, where four metabolic gene deletion mutants had significantly different metabolic flux distributions, but similar overall growth rates CITATION.
+Hence, the systematic investigation of the role of redundant pathways using in silico models can provide key insights into the properties of the metabolic networks.
+Here we report on a coupled computational and experimental evaluation of potential redundant pathways during acetate metabolism in G. sulfurreducens.
+We demonstrate the need for redundancy in the acetate assimilation pathways, due to a coupling between the TCA cycle and acetate activation to acetyl-CoA, and also the inactivity of some of the predicted alternatives for pyruvate oxidation to acetyl-CoA.
+We also show that by using this information to constrain the model, its predictive capacity can be improved.

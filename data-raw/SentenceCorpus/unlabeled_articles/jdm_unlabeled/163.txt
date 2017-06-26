@@ -1,0 +1,17 @@
+### abstract ###
+studying group decision-making is challenging for multiple reasons
+an important logistic difficulty is studying a sufficiently large number of groups  each with multiple participants
+assembling groups online could make this process easier and also provide access to group members more representative of real-world work groups than the sample of college students that typically comprise lab face-to-face ftf groups
+the main goal of this paper is to compare the decisions of online groups to those of ftf groups
+we did so in a study that manipulated gain loss framing of a risky decision between groups and examined the decisions of both individual group members and groups
+all of these dependent measures are compared for an online and an ftf sample
+our results suggest that web-conferencing can be a substitute for ftf interaction in group decision-making research  as we found no moderation effects of communication medium on individual or group decision outcome variables
+the effects of medium that were found suggest that the use of online groups may be the preferred method for group research
+to wit  discussions among the online groups were shorter  but generated a greater number of thought units  i e   they made more efficient use of time
+### introduction ###
+studying group decision making is more challenging than studying individual decision making for multiple reasons
+it requires more complex data analysis methods due to an increase in the number of levels of analysis and relevant variables
+it also requires increased sample sizes for sufficient statistical power to test hypotheses  as groups rather than individuals are the unit of analysis
+groups consist of members that in themselves constitute sources of variance  and this is further complicated by variation in the social interactions of group members between groups
+all this increases between-group variability  which increases the required sample size to detect the effects of experimental manipulations
+another challenge is the practical requirement of needing group members present at the same time and location  where single no-shows can lead to cancelled experimental sessions

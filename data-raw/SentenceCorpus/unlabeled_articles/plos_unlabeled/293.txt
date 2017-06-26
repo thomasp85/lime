@@ -1,0 +1,68 @@
+### abstract ###
+In the presence of exogenous mortality risks, future reproduction by an individual is worth less than present reproduction to its fitness.
+Senescent aging thus results inevitably from transferring net fertility into younger ages.
+Some long-lived organisms appear to defy theory, however, presenting negligible senescence and extended lifespans.
+Here, we investigate the possibility that the onset of vitality loss can be delayed indefinitely, even accepting the abundant evidence that reproduction is intrinsically costly to survival.
+For an environment with constant hazard, we establish that natural selection itself contributes to increasing density-dependent recruitment losses.
+We then develop a generalized model of accelerating vitality loss for analyzing fitness optima as a tradeoff between compression and spread in the age profile of net fertility.
+Across a realistic spectrum of senescent age profiles, density regulation of recruitment can trigger runaway selection for ever-reducing senescence.
+This novel prediction applies without requirement for special life-history characteristics such as indeterminate somatic growth or increasing fecundity with age.
+The evolution of nonsenescence from senescence is robust to the presence of exogenous adult mortality, which tends instead to increase the age-independent component of vitality loss.
+We simulate examples of runaway selection leading to negligible senescence and even intrinsic immortality.
+### introduction ###
+Senescence, usually treated as synonymous with aging, refers to a deterioration in physiological condition with age, manifest as an increase in mortality and a decline in fertility.
+Since this phenomenon is detrimental to reproductive success, natural selection might be expected to cause its postponement or elimination from the life history of organisms.
+Its apparent ubiquity in the natural world, therefore, has been treated as a challenge for evolutionary theory CITATION.
+There is a general acceptance that this challenge has, in principle, been met, and modern understanding of the widespread occurrence of senescence in nature has been hailed as one of the great triumphs of evolutionary thinking CITATION .
+Discussions of the evolution of senescence broadly follow one of two paradigms, based either in classical population genetics or in physiological ecology CITATION.
+The first emphasizes the accumulation of late-acting deleterious mutations on hypothesized genes with age-specific expression CITATION, CITATION.
+More generally, this paradigm hypothesizes an antagonistic pleiotropy of age-specific genes in which mutations confer a fitness benefit early in life at the cost of some deleterious effect later CITATION CITATION.
+The key insight of this perspective is that the force of selection on the additive component of genetic variance necessarily declines with age, so that an early-age cost is more strongly selected against than an equivalent late-age cost, and, a fortiori, an early-age benefit more than compensates for a late-age cost CITATION.
+Hamilton concludes: ...for organisms that reproduce repeatedly, senescence is to be expected as an inevitable consequence of the working of natural selection CITATION .
+This population genetic analysis has been challenged recently both theoretically and empirically.
+First, a declining force of selection is only guaranteed for mutations with additive effects, and it has been suggested that mutations with proportional effects for which the force of selection need not decline with age may be more relevant CITATION.
+Second, Hamilton himself concedes: To what extent and in exactly what way life schedules will be moulded by natural selection depends on what sort of genetical variation is available CITATION.
+Thus, the more such genes there are, the more evolutionary pressure there will be toward compressed life histories.
+However, despite much empirical work over several decades, evidence for the availability of genes with the necessary age-specific effects appears to be thin .
+In contrast to the classical population genetic approach, the disposable soma theory CITATION, CITATION CITATION is based firmly within physiological ecology.
+Thus, it is claimed that birth and death schedules are the result of the action of integrated physiological processes concerned with the optimal partitioning of available resources between reproduction and somatic maintenance or growth.
+In particular, there is an inherent cost of reproduction in which an early-age reproductive benefit incurs a late-age cost in decreased survival, possibly in the form of latent damage that is only unmasked later in life CITATION.
+Relevant genetic mutations must have effects that are manifest at this physiological level.
+This is potentially a much more constraining paradigm, though apparently more strongly supported by current evidence CITATION, CITATION.
+Nevertheless, given this tradeoff between early fecundity and longevity, it has again generally been concluded that senescence is inevitable CITATION.
+In particular, immortality has long been considered theoretically impossible because of the inevitability of senescent aging CITATION CITATION .
+Yet this understanding of the evolution of senescence fails to account for organisms showing negligible or even negative senescence CITATION, CITATION.
+These are species such as the freshwater Hydra vulgaris CITATION with period survival that remains constant or increases with adult age.
+They include some organisms with apparently indefinite lifespans such as the Great Basin Bristlecone Pine Pinus longaeva CITATION, CITATION, which continues producing viable cones at well over 4,000 y old, the Quaking Aspen Populus tremuloides CITATION, and the Creosote Bush Larrea tridentata CITATION, both of which have clonal clusters at least 10,000 y old.
+These and other examples CITATION have recently led to a reversal of the traditional perspective in which the problem was to explain the evolution of senescence from nonsenescence.
+On the contrary, given the ubiquity of senescence in nature, and the abundance of explanations for its presence, it seems very unlikely that the majority of today's organisms are descended from nonsenescent ancestors.
+Rather, an important issue now is to provide an evolutionary account for those organisms that appear to exhibit little or no senescence, but which almost certainly have evolved from ancestors that did exhibit senescence.
+Rising to this challenge, a theoretical analysis of the costs of senescent aging CITATION has shown that, although senescence is often favored by a high and sustained early vitality, nonsenescing strategies are locally optimal if vitality loss in the presence of senescence would otherwise be sufficiently fast.
+Similarly, an optimization model CITATION has shown how negative senescence can evolve for species that grow in body size throughout their lives, if this growth carries proportionate benefits in increasing reproductive output and decreasing mortality.
+Both these analyses are concerned with the optimal tradeoff between fecundity and mortality, and so lie within the disposable soma paradigm.
+These analyses have not modeled density dependence, except implicitly as a limiting case in which population growth is set to zero.
+In this paper, we construct explicit models, within the disposable soma paradigm, for a very general class of organisms including those without indefinite somatic growth.
+These reveal density dependence in recruitment as a sufficient driver for the evolution of nonsenescent life histories from senescent ancestors.
+Density-limited recruitment sets up a balance of opposing selective forces that underpins the direction of evolution toward either compressed or spread reproductive life.
+Thus, on the one hand, future reproduction is worth less than present reproduction to an individual's fitness, given a future extrinsic mortality risk CITATION.
+On the other hand, future reproduction by an individual's mature offspring may be worth more to its inclusive fitness than its own present reproduction, if otherwise viable offspring face an extrinsic mortality risk before recruitment.
+The crucial advance that we make is prefigured by Abrams CITATION, who showed that faster senescence is favored by positive or zero density-independent growth, and also by density-dependent adult mortality, whereas slower senescence requires density-dependent fecundity.
+Our advance on his analysis is to show how the slower senescence can take the form of a runaway selection to negligible senescence, and even intrinsic immortality.
+Indeed, density-dependent recruitment reflects the widely prevailing ecological condition of bottom-up regulation in crowded habitats.
+We show that it is unwise either to ignore it, or to represent it only implicitly as zero population growth, because of its ubiquity in nature and its significant consequences for the evolution of senescence.
+Here, we perform an optimization analysis of vitality evolution as a fitness tradeoff between compression into earlier life and spread into later life in the context of density-dependent recruitment, which accords with the abundant evidence that reproduction is intrinsically costly to survival CITATION, CITATION, CITATION, CITATION CITATION.
+For populations at recruitment-regulated equilibrium, we demonstrate generic conditions under which natural selection itself increases the extrinsic recruitment losses, by successive genomic invasions increasing the level of crowding within the population.
+Stronger density dependence means fewer recruitment opportunities into the adult population and, therefore, a natural selection that is weighted toward maximizing generation length over early-age vitality.
+This positive feedback leads to the novel result that density regulation can trigger selection for ever-reducing senescence.
+We develop a model that shows the potential for runaway selection of reduced senescence to arise across a wide range of age-specific vitality profiles, including accelerating loss from an early or late onset, and constant aging.
+We find that natural selection can favor evolution of nonsenescence, and even immortality, from senescence in the presence of exogenous mortality, without a requirement for special life-history characteristics such as increasing intrinsic fecundity with age.
+Simulations of this process are given for various scenarios, including stochastic environments.
+The first four Results sections develop our analytical framework.
+Section 1 outlines the assumptions we make about the action of density-dependent recruitment.
+Section 2 specifies precisely the relation between the concepts that we use of vitality and senescent and nonsenescent aging.
+Our approach is to define these concepts in terms of instantaneous rates, rather than on the rate of change of age-specific reproductive value.
+The section Model: Invasion of Mutations outlines our assumptions concerning the effects of mutations on the key life-history parameter controlling the rate of senescence, and states our main result concerning the possibility of evolution from a highly compressed life history to a highly spread life history.
+The section Example describes a specific example of evolution from positive senescence to non- senescence.
+Finally, the section Simulations outlines stochastic simulations of the model.
+Supporting material is provided in the Methods section and in Text S1.
+We conclude with a discussion of the model predictions for life-history conditions and biotic environments that favor negligible senescence.

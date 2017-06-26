@@ -1,0 +1,36 @@
+### abstract ###
+Collecting large labeled data sets is a laborious and expensive task, whose scaling up requires division of the labeling workload between many teachers
+When the number of classes is large, miscorrespondences between the labels given by the different teachers are likely to occur, which, in the extreme case, may reach total inconsistency
+In this study we describe how globally consistent labels can be obtained, despite the absence of teacher coordination, and discuss the possible efficiency of this process in terms of human labor
+We define a notion of label efficiency, measuring the ratio between the number of globally consistent labels obtained and the number of labels provided by distributed teachers
+We show that the efficiency depends critically on the ratio  SYMBOL  between the number of data instances seen by a single teacher, and the number of classes
+We suggest several algorithms for the distributed labeling problem, and analyze their efficiency as a function of  SYMBOL
+In addition, we provide an upper bound on label efficiency for the case of completely uncoordinated teachers, and show that efficiency approaches  SYMBOL  as the ratio between the number of labels each teacher provides and the number of classes drops (i e SYMBOL )
+### introduction ###
+As applications of machine learning mature, larger training sets are required both in terms of the number of training instances and the number of classes considered
+In recent years we have witnessed this trend for example in vision related tasks such as object class recognition or detection  CITATION
+Specifically for object class recognition, current data sets such as the Caltech-256  CITATION  include tens of thousands of images from hundreds of classes
+Collecting consistent data sets of this size is an intensive and expensive task
+Scaling up naturally leads to a distributed labeling scenario, in which labels are provided by a large number of weakly coordinated teachers
+For example, in the Label-me system  CITATION  the labels are contributed by dozens of researchers, while in the ESP game  CITATION  labels are supplied by thousands of uncoordinated players
+As we turn toward distributed labeling, several practical considerations emerge which may disrupt the data integrity
+In general, while it is reasonable to believe that a single teacher is relatively self-consistent (though not completely error-free), this is not the case with multiple uncoordinated teachers
+Different teachers may have differences in their labeling systems due to several causes
+First, different teachers may use different words to describe the same item class
+For example, one teacher may use the word ``truck'' while the other uses ``lorry'' to describe the same class
+Conversely, the same word may be used by two teachers to describe two totally different classes, hence one teacher may use ``greyhound'' to describe the breed of dog while the other uses it to describe the C-2 navy aircraft
+Similar problems occur when different teachers label the data with different abstraction levels, so one generalizes over all dogs, while the other discriminates between a poodle, a Labrador and etc
+Finally, teachers often do not agree on the exact demarcation of concepts, so a chair carved in stone may be labeled as a ``chair'' by one teacher, while the other describes it as ``a rock''
+All these phenomena become increasingly pronounced as the number of classes is increased, thus their neglect essentially leads to a severe decrease in label purity and consequently in learning performance
+In this paper we study the cost of obtaining globally consistent labels, while focusing on a specific distributed labeling scenario, in which only some of the difficulties described above are present
+To enforce the distributed nature of the problem, we assume that a large data set with  SYMBOL  examples is to be labeled by a set of uncoordinated teachers, where each teacher agrees to label at most  SYMBOL  data points
+While there is a one-to-one correspondence between the classes used by the different teachers, we assume that their labeling systems are entirely uncoordinated, so a class labeled as ``duck'' by one teacher may be labeled as a ``goat'' by another
+In later stages of this paper, we relax this assumption, and consider a case in which partial consistency exists between the different teachers
+Both scenarios are realistic in various problem domains
+Consider for example a security system for which we have to label a large set of face images, including thousands of different people
+Since teachers are not familiar with the persons to be labeled, the names they give to classes are entirely un-coordinated
+The case of a partial consistency is exemplified in distributed labeling of flower images: the layman can easily distinguish between many different kinds of flowers but can name only a few
+The difficulties of ``one-to-many'' label correspondence between teachers and concept demarcation disagreements are not met by our current analysis, which focuses on the preliminary difficulties of distributed labeling
+Another related scenario, to which our analysis can be extended relatively easily, is the case in which the initial data is labeled by uncoordinated teachers right from the start
+Consider for example, the task of unifying images labeled in a site like Flickr%  into a meaningful large training data set
+Our suggested algorithms and analysis apply to this case with minor modifications

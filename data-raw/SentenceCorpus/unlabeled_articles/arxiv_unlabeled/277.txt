@@ -1,0 +1,39 @@
+### abstract ###
+Given  SYMBOL  points in a  SYMBOL  dimensional Euclidean space, the Minimum Enclosing Ball (MEB) problem is to find the ball with the smallest radius which contains all  SYMBOL  points
+We give a  SYMBOL  approximation algorithm for producing an enclosing ball whose radius is at most  SYMBOL  away from the optimum (where  SYMBOL  is an upper bound on the norm of the points)
+This improves existing results using  coresets , which yield a  SYMBOL  greedy algorithm
+Finding the Minimum Enclosing Convex Polytope (MECP) is a related problem wherein a convex polytope of a fixed shape is given and the aim is to find the smallest magnification of the polytope which encloses the given points
+For this problem we present a  SYMBOL  approximation algorithm, where  SYMBOL  is the number of faces of the polytope
+Our algorithms borrow heavily from convex duality and recently developed techniques in non-smooth optimization, and are in contrast with existing methods which rely on geometric arguments
+In particular, we specialize the excessive gap framework of  CITATION  to obtain our results
+### introduction ###
+Given a set  SYMBOL  of  SYMBOL  points in  SYMBOL , the minimum enclosing ball (MEB) is the ball with the smallest radius which contains all the points in  SYMBOL
+The problem of finding a MEB arises in application areas as diverse as data mining, learning, statistics, computer graphics, and computational geometry  CITATION
+Therefore efficient algorithms for this problem are not only of theoretical interest, but also have wide practical applicability
+Exact algorithms for finding the MEB typically have an exponential dependence on  SYMBOL   CITATION
+For example, the  CITATION  algorithm runs in  SYMBOL  time which makes it inadmissible for many practical applications; in the case of linear SVMs data may have a million or more dimensions
+Therefore, there has been a significant interest in finding approximation algorithms for this problem
+State of the art approximation algorithms for the MEB problem extensively use the concept of coresets  CITATION
+Given an  SYMBOL , an  SYMBOL -coreset  SYMBOL  has the property that if the smallest enclosing ball containing  SYMBOL  is expanded by a factor of  SYMBOL , then the resulting ball also contains  SYMBOL
+Therefore, locating an  SYMBOL -coreset is equivalent to finding an  SYMBOL  approximation algorithm to the MEB problem
+The approximation guarantees of such algorithms are  multiplicative
+Briefly, a coreset is built incrementally in a greedy fashion  CITATION
+At every iteration, the MEB of the current candidate coreset is built
+If every point in  SYMBOL  lies in an  SYMBOL  ball of the current solution then the algorithm stops, otherwise the most  violated  point, that is, the point which is furthest away from the current MEB is included in the candidate coreset and the iterations continue
+The best known algorithms in this family have a running time of  SYMBOL   CITATION
+In contrast, we present a new algorithm which is derived by casting the problem of finding the MEB as a convex but non-smooth optimization problem
+By specializing a general framework of  CITATION , our algorithm is able to achieve a running time of  SYMBOL  where  SYMBOL  is an upper bound on the norm of the points
+Also, the approximation guarantees of our algorithm are  additive , that is, given a tolerance  SYMBOL  and denoting the optimal radius by  SYMBOL , our algorithm produces a function whose value lies between  SYMBOL  and  SYMBOL
+Although these two types of approximation guarantees seem different, by a simple argument in section , we show that our algorithm also yields a traditional scale-invariant  SYMBOL  multiplicative approximation with  SYMBOL  effort
+We extend our analysis to the closely related minimum enclosing convex polytope (MECP) problem, and present a new algorithm
+As before, given a set  SYMBOL  of  SYMBOL  points in  SYMBOL , the task here is to find the smallest polytope of a given fixed shape which encloses these points
+In our setting translations and magnifications are allowed but rotations are not allowed
+We present a  SYMBOL  approximation algorithm, where  SYMBOL  denotes the number of faces of the polytope
+We apply our algorithms to two problems of interest in machine learning namely finding the maximum margin hyperplane and computing the distance of a polytope from the origin
+A coreset algorithm for the first problem was proposed by  CITATION  while the second one was studied by  CITATION
+In both cases our algorithms require fewer number of iterations and yield better computational complexity bounds
+Our paper is structured as follows: In Section  we introduce notation, briefly review some results from convex duality, and present the general framework of  CITATION
+In Section  we address the MEB problem and in Section  the MECP problem, and present our algorithms and their analysis
+We discuss some applications of our results to machine learning problems in Section
+The paper then concludes with a discussion and outlook for the future in Section
+Technical proofs can be found in Appendix  and , while preliminary experimental evaluation can be found in Appendix~

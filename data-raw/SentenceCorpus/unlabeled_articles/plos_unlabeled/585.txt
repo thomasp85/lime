@@ -1,0 +1,34 @@
+### abstract ###
+Numerous studies have noted that the evolution of new enzymatic specificities is accompanied by loss of the protein's thermodynamic stability, thus suggesting a tradeoff between the acquisition of new enzymatic functions and stability.
+However, since most mutations are destabilizing, one should ask how destabilizing mutations that confer new or altered enzymatic functions relative to all other mutations are.
+We applied G computations by FoldX to analyze the effects of 548 mutations that arose from the directed evolution of 22 different enzymes.
+The stability effects, location, and type of function-altering mutations were compared to G changes arising from all possible point mutations in the same enzymes.
+We found that mutations that modulate enzymatic functions are mostly destabilizing, and are almost as destabilizing as the average mutation in these enzymes.
+Although their stability effects are not as dramatic as in key catalytic residues, mutations that modify the substrate binding pockets, and thus mediate new enzymatic specificities, place a larger stability burden than surface mutations that underline neutral, non-adaptive evolutionary changes.
+How are the destabilizing effects of functional mutations balanced to enable adaptation?
+Our analysis also indicated that many mutations that appear in directed evolution variants with no obvious role in the new function exert stabilizing effects that may compensate for the destabilizing effects of the crucial function-altering mutations.
+Thus, the evolution of new enzymatic activities, both in nature and in the laboratory, is dependent on the compensatory, stabilizing effect of apparently silent mutations in regions of the protein that are irrelevant to its function.
+### introduction ###
+With the exception of unstructured protein domains, the integrity of a protein's structure and function is largely dependent on its thermodynamic stability.
+Evolutionary processes, be they neutral, or adaptive, involve the acquisition of mutations that may affect protein function and/or stability.
+For example, a mutation that endows a desirable new function, but severely undermines stability, will not become fixed.
+The relationship between mutational effects, function and stability is therefore crucial to our understanding not only of the evolutionary dynamics of proteins CITATION CITATION, but also in engineering, designing, and evolving, novel enzymes in the laboratory CITATION CITATION .
+Stability-function tradeoffs became originally evident in enzymes, particularly in the structural tension created by the arrangement of catalytic residues in active sites.
+From the point of view of overall protein stability, active site organization is inherently unfavorable for a number of reasons.
+Functional residues, which are generally polar or charged, are embedded in hydrophobic clefts CITATION, sometimes with proximal like charges.
+Key catalytic residues often possess unfavorable backbone angles CITATION, CITATION.
+Consequently, the substitution of an enzyme's key catalytic side chains can dramatically increase stability whilst obviously sacrificing activity CITATION CITATION .
+Such observations led to the generally accepted principle of stability-function tradeoffs CITATION, CITATION that was later extended to tradeoffs between new functions and stability CITATION.
+However, as discussed below, we surmise that there exists a fundamental difference between mutations in key catalytic residues that relate to the well established stability-function tradeoff, and mutations that mediate the evolutionary divergence of new functions.
+Enzymes evolve new functions via mutations that alter substrate specificity, typically by increasing the affinity and rates for weak promiscuous substrates.
+These changes involve mutational adjustments of the active site, its periphery, or even the second and third shell of residues that surround it, while maintaining the key catalytic residues intact.
+As shown below, in oppose to mutations in key catalytic residues that typically involve an exchange into alanine of a charged/polar residue within a hydrophobic surroundings, the type and location of new function mutations is far more diverse.
+As initially observed by Wang et al. CITATION, CITATION, most mutations that confer new functions have been proven to be destabilizing.
+However, the generality of stability-function tradeoffs with regard to new functions should be addressed in view of the fact that, regardless of their relevance to function, most mutations are destabilizing CITATION, CITATION CITATION.
+Indeed, derivation of the G distributions of all possible mutations in a series of globular proteins using the experimentally validated FoldX algorithm CITATION, CITATION indicated that about 70 percent of mutations are destabilizing, and 20 percent are significantly destabilizing CITATION.
+On the other hand, mutations that characterize neutral, non-adaptive changes occur primarily on the surface, certainly at the first steps of sequence divergence CITATION, and this subgroup of mutations is much less destabilizing average G 0.6 kcal/mol CITATION.
+Thus, better understanding of how the emergence of new functions trades-off with protein stability requires a comparison of mutations that confer new protein functions to all other possible mutations in a protein, as well as to mutations that characterize neutral, non-adaptive changes.
+With this in mind, we investigated a large set of mutations that were found in enzymes that acquired new substrate specificities in directed evolution experiments and clinical isolates.
+We applied FoldX to compute the G values of these mutations, and compared the type, location, and G values of these mutations with all possible point mutations in the same proteins.
+While realizing that the FoldX values are a prediction of limited accuracy, they do enable the examination the distributions of G values for a large set of proteins and mutations, and on the whole, these predictions show reasonable correlation with experimental data CITATION.
+Thus, whilst the values for individual mutations can considerably deviate from the experimental values, the trends we observed are likely to be relevant CITATION .

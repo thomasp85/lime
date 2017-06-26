@@ -1,0 +1,44 @@
+### abstract ###
+The problem of multi--agent learning and adaptation has attracted a great deal of attention in recent years
+It has been suggested that the dynamics of multi agent learning can be studied using replicator equations from population biology
+Most existing studies so far have been limited to discrete strategy spaces with a small number of available actions
+In many cases, however, the choices available to agents are better characterized by continuous spectra
+This paper suggests a generalization of the replicator framework that allows to study the adaptive dynamics of  SYMBOL --learning agents with continuous strategy spaces
+Instead of probability vectors, agents' strategies are now characterized by probability measures over  continuous variables
+As a result, the ordinary differential equations for the discrete case are replaced by a system of coupled integral--differential replicator equations that describe the mutual evolution of individual agent strategies
+We derive a set of functional equations describing  the steady state  of the replicator dynamics, examine their solutions for several two--player games, and confirm our analytical results using simulations
+### introduction ###
+The notion of autonomous agents that learn by interacting with the environment, and possibly with other agents, is a central concept in modern distributed AI~ CITATION
+Of particular interests are systems where multiple agents learn concurrently and independently by interacting with each other
+This multi--agent learning problem has attracted a great deal of attention due to a number of important applications
+Among existing approaches,  multi--agent reinforcement learning (MARL) algorithms have become increasingly popular due to their generality~ CITATION
+Although MARL does not hold the same convergence guarantees as in single--agent case,  it has been shown to work well in practice (for a  recent survey, see~ CITATION )
+From the analysis standpoint, MARL represents a complex  dynamical system, where the learning trajectories of individual agents are coupled with each other via  a collective reward  mechanism
+Thus, it is desirable to know what are the possible long--term behaviors of those trajectories
+Specifically, one is usually interested whether, for a particular game structure, those trajectories converge to a    desirable steady state (called fixed points),    or oscillate indefinitely between many (possibly infinite) meta--stable states
+While answering this question has proven to be very difficult in the most general settings, there has been some limited progress  for specific scenarios
+In particular, it has been established that for  simple, stateless Q--learning with a finite number of actions, the learning dynamics can be examined using the so called  replicator equations  from population biology~ CITATION
+Namely, if one associates a particular biological trait with each pure strategy, then the adaptive learning of (possibly mixed) strategies in multi--agent settings is analogous to   competitive dynamics of mixed population, where the species evolve according to their relative fitness in the population
+This framework has been used successfully to study various interesting features of adaptive dynamics of learning agents~ CITATION
+With a few exceptions (e g , see ~ CITATION ), most existing studies so far have focused on discrete action spaces, which has limited the full analysis of the learning dynamics to games with very few actions
+On the other hand, in many practical scenarios, strategic interactions between agents are better characterized by continuous spectra of possible choices
+For instance, modeling an agent's bid in an auction with a continuous rather than discrete variable is more natural
+In such situations, agents' strategies are represented as  probability density functions defined over a continuous set of actions
+Of course, in reality all  the decisions are made over a discretized subset
+However, the rationale for using the continuous approximation is that it makes the dynamics more amenable to mathematical analysis
+In this paper we consider simple  SYMBOL --learning agents  that play repeated continuous--strategy games
+The agents use Boltzmann action--selection mechanism that controls the exploration/exploitation tradeoff through a single temperature--like parameter
+The reward functions for the agents are assumed to be functions of continuous variables instead of tensors, and the agent strategies are represented as probability distribution over those variables
+In contrast to the finite strategy spaces where the learning dynamics is captured by a set of coupled ordinary differential equations, the replicator dynamics for  the continuous--strategy games are described by functional--differential equations for each agent, with coupling across different agents/equations
+The long--term behavior of those equations define the steady state, or equilibrium, profiles of the agent strategies
+It is shown that, in general, the steady state strategy profiles of the replicator dynamics  do not correspond to the Nash equilibria of the  game
+This discrepancy can be attributed to the limited rationality of the agents due to exploration
+In particular, for the Boltzmann action-selection mechanism studied here, exploration results in adding an entropic term to the agents' payoff function, with a coefficient  governed by the exploration rate (temperature)
+Thus, when one  decreases the exploration rate, the relative importance of this term diminishes and one is able to gradually recover the correspondence with the Nash equilibria
+Furthermore, for games that allow  uniformly  mixed Nash equilibrium, the steady state solution of the replicator equation  is identical with this uniform Nash equilibrium for any  exploration rate
+This is because the uniform distribution already maximizes the entropic  term
+And example of such a game if provided in Section~
+The rest of this paper is organized as follows: In the next section we provide a brief overview of relevant literature
+In Section~ we introduce our model,  derive the replicator equations for the continuous strategy spaces, and a set of coupled non--linear functional equations that describe the steady state strategy profile
+In Section~ we illustrate the framework on several examples of two--agent games, and  provide some detailed results for  general bi--linear and quadratic payoffs
+Finally, we conclude the paper with a discussion of our results and possible future directions in Section~

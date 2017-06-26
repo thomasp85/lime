@@ -1,0 +1,115 @@
+### abstract ###
+The Lipschitz multi-armed bandit (MAB) problem generalizes the classical multi-armed bandit problem by assuming one is given side information consisting of a priori upper bounds on the difference in expected payoff between certain pairs of strategies
+Classical results of Lai-Robbins~ CITATION  and Auer et al ~ CITATION  imply a logarithmic regret bound for the Lipschitz MAB problem on finite metric spaces
+Recent results on continuum-armed bandit problems and their generalizations imply lower bounds of  SYMBOL , or stronger, for many infinite metric spaces such as the unit interval
+Is this dichotomy universal
+We prove that the answer is yes: for every metric space, the optimal regret of a Lipschitz MAB algorithm is either bounded above by any  SYMBOL , or bounded below by any  SYMBOL
+Perhaps surprisingly, this dichotomy does not coincide with the distinction between finite and infinite metric spaces; instead it depends on whether the completion of the metric space is compact and countable
+Our proof connects upper and lower bound techniques in online learning with classical topological notions  such as perfect sets and the Cantor-Bendixson theorem
+We also consider the  full-feedback  (a k a ,  best-expert ) version of Lipschitz MAB problem, termed the  Lipschitz experts problem , and show that this problem exhibits a similar dichotomy
+We proceed to give nearly matching upper and lower bounds on regret in the Lipschitz experts problem on uncountable metric spaces
+These bounds are of the form  SYMBOL , where the exponent  SYMBOL  depends on the metric space
+To characterize this dependence, we introduce a novel dimensionality notion tailored to the experts problem
+Finally, we show that both Lipschitz bandits and Lipschitz experts problems become completely intractable (in the sense that no algorithm has regret  SYMBOL ) if and only if the completion of the metric space is non-compact
+### introduction ###
+Multi-armed bandit (henceforth, MAB) problems have been studied for more than fifty years as a clean abstract setting for analyzing the exploration-exploitation tradeoffs that are common in sequential decision making
+In the  stochastic MAB problem , an algorithm must repeatedly choose from a fixed set of strategies (a k a ``arms"), each time receiving a random payoff whose distribution depends on the strategy selected
+The performance of MAB algorithms is commonly evaluated in terms of  regret : the difference in expected payoff between the algorithm's choices and always playing one fixed strategy
+In addition to their many applications --- which range from experimental design to online auctions and web advertising --- another appealing feature of multi-armed bandit algorithms is that they are surprisingly efficient in terms of the growth rate of regret: for finite-armed bandit problems, algorithms whose regret at time  SYMBOL  scales as  SYMBOL  have been known for more than two decades, beginning with the seminal work of Lai and Robbins~ CITATION  and extended in subsequent work such as~ CITATION
+Many of the applications of MAB problems --- especially the computer science applications such as online auctions, web advertising, or adaptive routing --- require considering strategy sets which are very large or even infinite
+For infinite strategy sets the  SYMBOL  bound does not apply, while for very large finite sets the  SYMBOL  notation masks a prohibitively large constant
+Indeed, without making any assumptions about the strategies and their payoffs, bandit problems with large strategy sets allow for no non-trivial solutions --- any MAB algorithm performs as badly, on some inputs, as random guessing
+This motivates the study of bandit problems in which the strategy set is large but one is given  side information  constraining the form of the payoffs
+Such problems have  become the subject of quite intensive study in recent years, eg ~ CITATION
+The  Lipschitz MAB problem  is a version of the stochastic MAB problem in which the side information consists of  a priori  upper bounds on the difference in expected payoff between certain pairs of strategies
+This models situations where the decision maker has access to some similarity information about strategies which ensures that similar strategies obtain similar payoffs
+Abstractly, the similarity information may be modeled as defining a  metric space  structure on the strategy set, and the side constraints imply that the expected payoff function  SYMBOL  is a Lipschitz function (with Lipschitz constant  SYMBOL ) on this metric space
+%, with Lipschitz constant  SYMBOL
+The Lipschitz MAB problem was introduced by Kleinberg et al ~ CITATION
+Preceding work~ CITATION  has studied the problem  in a few specific metric spaces such as a one-dimensional real interval
+The prior work considered regret  SYMBOL  as a function of time  SYMBOL , and focused on the asymptotic dependence of  SYMBOL  on, loosely speaking, the dimensionality of the metric space
+Various upper and lower bounds of the form  SYMBOL  were proved, where the exponent  SYMBOL  depends on the metric space
+In particular, if the metric space is the interval  SYMBOL  with the standard metric  SYMBOL , then there exists an algorithm with regret  SYMBOL , and this bound is tight up to polylog factors~ CITATION
+More generally, for an arbitrary infinite metric space  SYMBOL  one can define an isometry invariant  SYMBOL  such that there exists an algorithm with regret  SYMBOL , which is tight up to polylog factors if  SYMBOL ; see~ CITATION
+The following picture emerges
+Although algorithms with regret  SYMBOL  are known for most metric spaces, existing work unfortunately provides no examples of infinite metric spaces admitting bandit algorithms satisfying the Lai-Robbins regret bound  SYMBOL , although this bound holds for all finite metrics
+In fact, for most metric spaces that have been studied (such as the unit interval) this possibility is  excluded  by known lower bounds of the form  SYMBOL  where  SYMBOL  Therefore it is natural to ask,    Is    SYMBOL  regret the best possible for an infinite metric space
+Alternatively, are there infinite metric spaces for which one can achieve regret  SYMBOL
+Is there any metric space for which the best possible regret is  between   SYMBOL  and  SYMBOL
+% for any metric space \xhdr{Our contributions } To make the above issue more concrete, let us put forward the following definition
+We settle the questions listed above by proving the following dichotomy
+It is worth mentioning that the regret bound  SYMBOL  is the best possible, even for two-armed bandit problems, by a lower bound of Lai and Robbins~ CITATION
+Thus our upper bound for Lipschitz MAB problems in compact, countable metric spaces is nearly the best possible bound for such spaces, modulo the gap between `` SYMBOL " and `` SYMBOL "
+Furthermore, we show that this gap is inevitable for infinite metric spaces:    We turn our attention to the  full-feedback  version of the Lipschitz MAB problem
+For any MAB problem there exists a corresponding  full-feedback  problem in which after each round, the payoffs from all strategies are revealed
+Such settings have been extensively studied in the online learning literature under the name  best experts problems ~ CITATION
+In particular, for a finite set of strategies one can achieve a  constant  regret~ CITATION  when payoffs are  iid 
+over time
+In addition to the full feedback, one could also consider a version in which the payoffs are revealed for some but not all strategies
+Specifically, we define the  double feedback , where in each round the algorithm selects two strategies: the ``bet" for which it receives the payoff, and the ``free peek"
+After the round, the payoffs are revealed for both strategies
+By abuse of notation, we will treat the bandit setting as a special case of the experts setting
+The experts version of the Lipschitz MAB problem, called the  Lipschitz experts problem , is defined in the obvious way: a problem instance is specified by a triple  SYMBOL , where  SYMBOL  is a metric space and  SYMBOL  is a Borel probability measure on the set  SYMBOL  of payoff functions on  SYMBOL  (with the Borel  SYMBOL -algebra induced by the product topology on  SYMBOL ) such that the expected payoff function  SYMBOL  is a Lipschitz function on  SYMBOL
+In each round an algorithm is presented with an  iid 
+sample from  SYMBOL
+The metric structure of  SYMBOL  is known to the algorithm, the measure  SYMBOL  is not
+We show that the Lipschitz experts problem exhibits a dichotomy similar to the one in Theorem~
+We formulate the upper bound for the double feedback, and the lower bound for the full feedback, thus avoiding the issue of what it means for an algorithm to receive feedback for infinitely many strategies
+Theorems~ and~ assert a dichotomy between metric spaces on which the Lipschitz MAB/experts problem is very tractable, and those on which it is somewhat tractable
+Let us consider the opposite end of the ``tractability spectrum" and ask for which metric spaces the problem becomes completely intractable
+We obtain a precise characterization: the problem is completely intractable if and only if the metric space is not pre-compact
+Moreover, our upper bound is for the bandit setting, whereas the lower bound is for full feedback
+Consider the \FFproblem
+In view of the  SYMBOL  lower bound from Theorems~, we are interested in matching upper bounds
+Gupta et al ~ CITATION  observed that such bounds hold for every metric space  SYMBOL  of finite covering dimension: namely, the Lipschitz experts problem on  SYMBOL  is  SYMBOL -tractable (Their algorithm is a version of the ``naive algorithm'' from~ CITATION ) Therefore it is natural to ask whether there exist metric spaces for which the optimal regret in the Lipschitz experts problem is  between   SYMBOL  and  SYMBOL
+We settle this question by proving a characterization with nearly matching upper and lower bounds in terms of a novel dimensionality notion tailored to the experts problem
+The lower bound in Theorem~ holds for a restricted version of \FFproblem\ in which a problem instance  SYMBOL  satisfies a further property that each function  SYMBOL  is itself a Lipschitz function on  SYMBOL
+We term this version the   (with full feedback)
+In fact, for this version we obtain a matching upper bound \OMIT{ %%%%%% To this end, we consider ``very high-dimensional" metric spaces such as exponentially branching edge-weighted trees and the space of all probability distributions on  SYMBOL  under the Earthmover distance
+We introduce a novel dimensionality notion which better captures the complexity of such spaces and characterizes the regret of the ``naive" experts algorithm from~ CITATION  (Interestingly, the \ULproblem{} allows for a very non-trivial improvement in the analysis ) } %%%%%%  \OMIT{ %%%%%%% For any metric space  SYMBOL , there exist an isometry-invariant parameters  SYMBOL  and  SYMBOL  such that the \FFproblem\ on  SYMBOL  is  SYMBOL -tractable for any  SYMBOL , and not  SYMBOL -tractable for any  SYMBOL
+Depending on the metric space,  SYMBOL  can take any value in  SYMBOL
+There exist metric spaces for which  SYMBOL  } %%%%%%%%%  \OMIT{For any metric space  SYMBOL , there exists an isometry invariant  SYMBOL  such that the full-feedback Lipschitz experts problem on  SYMBOL  is  SYMBOL -tractable for any  SYMBOL , and not  SYMBOL -tractable for any  SYMBOL  }   \OMIT{%%%%%  } %%%%%%%%%   \OMIT{%%%%%% We introduce several new techniques, the most important of which appear in the (joint) proof of the two main results -- Theorem~ and Theorem~ } %%%%%%%  \xhdr{Connection to point-set topology } The main technical contribution of this paper is an interplay of online learning and point-set topology, which requires novel algorithmic and lower-bounding techniques
+In particular, the connection to topology is essential in the (joint) proof of the two main results (Theorem~ and Theorem~)
+There, we identify a simple topological property ( well-orderability ) which entails the algorithmic result, and another topological property ( perfectness ) which entails the lower bound
+Perfect spaces are a classical notion in point-set topology
+Topological well-orderings are implicit in the work of Cantor~ CITATION , but the particular definition given here is new, to the best of our knowledge
+The proof of Theorems~ and~ (for compact metric spaces) consists of three parts: the algorithmic result for a compact well-orderable metric space, the lower bound for a metric space with a perfect subspace, and the following lemma that ties together the two topological properties
+Lemma~ follows from classical theorems of Cantor-Bendixson~ CITATION  and Mazurkiewicz-Sierpinski~ CITATION
+We provide a proof in Appendix~ for the sake of making our exposition self-contained
+To reduce the Lipschitz MAB problem to complete metric spaces we show that the problem is  SYMBOL -tractable on a given metric space if and only if it is  SYMBOL -tractable on the completion thereof
+Same is true for the double-feedback Lipschitz experts problem, and the ``only if" direction holds for the \FFproblem
+Then the main dichotomy results follow from the lower bound in Theorem~ \xhdr{Accessing the metric space } We define a bandit algorithm as a (possibly randomized) Borel measurable function that maps a history of past observations  SYMBOL  to a strategy  SYMBOL  to be played in the current period
+An experts algorithm is similarly defined as a (possibly randomized) Borel measurable function mapping the observation history to a strategy  SYMBOL  to be played in the current period (Or, in the case of the double feedback model, a pair of strategies representing the ``bet'' and ``free peek'' ) The observation history is either a sequence of elements of  SYMBOL  in the full feedback model, or a sequence of quadruples  SYMBOL  in the double feedback model
+These definitions abstract away a potentially thorny issue of representing and accessing an infinite metric space
+For our algorithmic results, we handle this issue as follows: the metric space is accessed via well-defined calls to a suitable  oracle
+Moreover, the main algorithmic result in Theorems~ and~ requires an oracle which represents the well-ordering
+We also provide an extension in Section~: an  SYMBOL -tractability result for a wide family of metric spaces -- including, for example, compact metric spaces with a finite number of limit points -- for which a more intuitive oracle access suffices
+These are the metric spaces with a finite  Cantor-Bendixson rank , a classic notion from point-set topology \xhdr{Related work and discussion } Algorithms for the stochastic MAB problem admit regret guarantees of the form  SYMBOL , which are of two types --  instance-specific  and  instance-independent  -- depending on whether the constant in  SYMBOL  is allowed to depend on the problem instance
+For instance, {ucb1}~ CITATION  admits an instance-specific guarantee  SYMBOL , whereas the best-known instance-independent guarantee for this algorithm is only  SYMBOL , where  SYMBOL  is the number of arms
+Accordingly, a lower bound for the instance-independent version has to show that for any algorithm and a given time  SYMBOL , there exists a problem instance whose regret is large at this time, whereas for the instance-specific version one needs a much more ambitious argument: for any algorithm there exists a problem instance whose regret is large  infinitely often
+In this paper, we focus on instance-specific guarantees \OMIT{ %%%%%%%% Apart from the stochastic MAB problem considered in this paper, several other  formulations have been studied in the literature on multi-armed bandits, which spans Operations Research, Economics and Computer Science (see~ CITATION  for background) } %%%%%%%%%  Apart from the stochastic MAB problem considered in this paper, several other MAB formulations have been studied in the literature (see~ CITATION  for background)
+Early work~ CITATION  has focused on Bayesian formulations in which Bayesian priors on payoffs are known, and goal is to maximize the payoff in expectation over these priors
+In these formulations, an MAB instance is a  Markov Decision Process  (MDP) in which each arm is represented by a Markov Chain with rewards on states, and the transition happens whenever the arm is played
+In the more ``difficult"  restless bandits   CITATION  formulations, the state also changes when the arm is passive, according to another transition matrix
+In the theoretical computer science literature, recent work in this vein includes~ CITATION
+Interestingly, these Bayesian formulations have an offline flavor: given the MDP, one needs to efficiently compute a (nearly) optimal mapping from states to actions
+Contrasting the Bayesian formulations in which the probabilistic model is fully specified, the  adversarial MAB problem ~ CITATION  makes no stochastic assumptions whatsoever
+Instead, it makes a very pessimistic assumption that payoffs are chosen by an adversary that has access to the algorithm's code but not to its random seed
+As in the stochastic MAB problem, the goal is to minimize regret
+For any fixed (finite) number of arms, the best possible regret in this setting is  SYMBOL ~ CITATION
+For infinite strategy sets, one often considers the  linear MAB problem  in which strategies lie in a convex subset of  SYMBOL , and in each round the payoffs form a linear function~ CITATION  \OMIT{, or more generally, a convex function~ CITATION }  It is an open question whether the ideas from the Lipschitz MAB problem extend to the above formulations
+The adversarial version of the Lipschitz MAB problem is well-defined, but to the best of our knowledge, the only known result is the ``naive" algorithm from~ CITATION
+One could define the stochastic version of the linear MAB problem (in which the expected payoffs form a fixed time-invariant linear function), which can be viewed as a special case of the Lipschitz MAB problem
+However, this view is not likely to be fruitful because in the Lipschitz MAB problem measuring a payoff of one arm is useless for estimating the payoffs of distant arms, whereas in prior work on the linear MAB problem inferences about distant arms are crucial
+For Bayesian MAB problems with limited similarity information, it is not clear how to model this information, mainly because in the Bayesian setting similarity between arms is naturally represented via correlated priors rather than a metric space \OMIT{An  oblivious adversary  must fix all payoffs in advance before the first round; an  adaptive adversary  sees the choices made by the algorithm in all previous rounds }  \xhdr{Organization of the paper } Preliminaries are in Section~
+We present a joint proof for the two main results (Theorems~ and~)
+The lower bound is proved in Section~ and the algorithmic results are in Section~
+Coupled with the topological equivalence (Lemma~), this gives the proof for compact metric spaces
+A complementary  SYMBOL -intractability result for infinite metric spaces (Theorem~) is in Section~
+The  SYMBOL -tractability result via simpler oracle access (for metric spaces of finite Cantor-Bendixson rank) is in Section~
+The boundary-of-tractability result  (Theorems~) is in Section~
+The \FFproblem\ in a (very) high dimension (including Theorems~ and~) is discussed in Sections~ and~
+Some of the proofs are moved to appendices
+In Appendix~ we reduce the problem to that on complete metric spaces
+All KL-divergence arguments (which underlie our lower bounds) are gathered in Appendix~
+We provide a self-contained proof of the topological lemma  (Lemma~) in Appendix~

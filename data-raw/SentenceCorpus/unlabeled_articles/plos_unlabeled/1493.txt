@@ -1,0 +1,59 @@
+### abstract ###
+Combinatorial regulation of gene expression is ubiquitous in eukaryotes with multiple inputs converging on regulatory control elements.
+The dynamic properties of these elements determine the functionality of genetic networks regulating differentiation and development.
+Here we propose a method to quantitatively characterize the regulatory output of distant enhancers with a biophysical approach that recursively determines free energies of protein-protein and protein-DNA interactions from experimental analysis of transcriptional reporter libraries.
+We apply this method to model the Scl-Gata2-Fli1 triad a network module important for cell fate specification of hematopoietic stem cells.
+We show that this triad module is inherently bistable with irreversible transitions in response to physiologically relevant signals such as Notch, Bmp4 and Gata1 and we use the model to predict the sensitivity of the network to mutations.
+We also show that the triad acts as a low-pass filter by switching between steady states only in response to signals that persist for longer than a minimum duration threshold.
+We have found that the auto-regulation loops connecting the slow-degrading Scl to Gata2 and Fli1 are crucial for this low-pass filtering property.
+Taken together our analysis not only reveals new insights into hematopoietic stem cell regulatory network functionality but also provides a novel and widely applicable strategy to incorporate experimental measurements into dynamical network models.
+### introduction ###
+Appropriate spatiotemporal control of gene expression is central to metazoan development.
+CITATION.
+Combinatorial interactions of regulatory proteins with regulatory regions of DNA and the basal transcriptional machinery form the building blocks of complex gene regulatory networks.
+The availability of whole genome sequences as well as advanced bioinformatics and high-throughput experimental techniques have vastly accelerated the identification of candidate regulatory sequences.
+However, experiments that can uncover and/or validate the underlying connectivity of GRNs remain both costly and time consuming.
+Consequently, our understanding of the functionality of GRNs even for the most studied model organisms remains superficial.
+Moreover, simply cataloguing ever increasing numbers of interactions between GRN components is not sufficient to deduce the underlying network architecture or function of individual modules.
+Unraveling the dynamical properties of GRNs will be the key to understanding their functionality.
+Throughout development, cells progress through a succession of differentiation steps from stem cells via immature progenitors to fully differentiated mature cells, and each of these subtypes is associated with a unique regulatory state of the GRN CITATION.
+It is therefore essential to understand dynamical properties of the various regulatory states of GRNs, transitions between them and their interplay with intercellular signaling.
+It is unlikely that this goal can be achieved solely using experimental approaches.
+However, the development of dynamical models of GRNs offers great potential to interpret existing experimental data in order to gain new mechanistic insights.
+Various computational approaches have been used for regulatory network analysis in the past.
+Boolean models provide qualitative information about network behavior such as the existence of steady states and network robustness and are most useful for large networks or when experimental information is scarce CITATION, CITATION.
+However to examine dynamical aspects, continuous ordinary differential equation models are more appropriate.
+These models can be constructed with phenomenological descriptions of gene regulation in the form of Hill functions or based on more detailed biophysical mechanisms and derived using a statistical thermodynamics approach.
+Phenomenological models are useful for understanding the general dynamics of network topology.
+They are most effective for small to medium sized networks and can also be predictive of cellular behavior CITATION.
+Models based on thermodynamics have the advantage of including an hypothesis about the biophysics of the system CITATION, CITATION, CITATION.
+Most parameters in these models have a direct biochemical interpretation.
+Unfortunately the lack of knowledge about specific biochemical parameters usually makes it difficult to relate results from these models to experimental information about gene expression.
+Nevertheless this modeling approach has been shown to be useful in understanding certain bacterial gene regulation modules CITATION and studying the effects of nucleosome dynamics in eukaryotic gene regulation CITATION .
+The hematopoietic system has long served as a powerful model to study the specification and subsequent differentiation of stem cells CITATION.
+Sophisticated cell purification protocols coupled with powerful functional assays have allowed a very detailed reconstruction of the differentiation pathways leading from early mesoderm via hemangioblasts and hematopoietic stem cells to the multiple mature hematopoietic lineages.
+Transcriptional regulators have long been recognized as key hematopoietic regulators but the wider networks within which they operate remain ill defined CITATION.
+Detailed molecular characterization of regulatory elements active during the early stages of HSC development has identified specific connections between major regulators CITATION, CITATION, CITATION, CITATION and has led to the definition of combinatorial regulatory codes specific for HSC enhancers CITATION, CITATION, CITATION.
+Moreover, these studies identified a substantial degree of cross-talk and positive feedback in the connectivity of major HSC TRs CITATION.
+In particular, a triad of HSC TRs forms a regulatory module that appears to lie at the core of the HSC GRN CITATION.
+This module consists of the three transcription factor proteins as well as three regulatory elements through which they are connected via cross-regulatory and autoregulatory interactions CITATION, CITATION.
+The details of regulatory interactions in this triad are shown in Figure 1B; only significant binding sites in the enhancers are shown for simplicity.
+Gata2-3 and Fli1 12 enhancers contain multiple Gata2, Fli1 and Scl binding motifs.
+The Scl 19 enhancer contains ETS and GATA binding motifs.
+Scl, Gata2 and Fli1 are all essential for normal hematopoiesis in mice CITATION suggesting that the triad is an important sub-circuit or kernel of the GRN that governs hematopoiesis.
+The triad architecture is very dense in regulatory connections and possesses multiple direct and indirect positive feedback loops.
+Such network topologies are rare in prokaryotes CITATION but have been identified in other stem cell systems such as the Nanog-Oct4-Sox2 triad in the embryonic stem cell GRN CITATION, CITATION.
+These observations suggest that the triad design may be associated with stem cell behavior.
+This idea prompted further investigation of combinatorial control by the triad TRs CITATION.
+Generation of an enhancer library with wild type and mutant enhancers allowed the construction of different combinations of binding motifs in each enhancer.
+Wild type and mutant enhancers were sub-cloned into a SV minimal promoter and lacZ reporter vector and tested using stable transfection of hematopoietic progenitor cell lines CITATION.
+This analysis produced results such as those schematically illustrated in Figure 1C.
+It has been suggested that the dense connectivity and positive feedback loops within stem cell GRN modules play important roles in stabilizing the stem cell phenotype CITATION.
+However, the dynamical nature as to how this self-enforcing circuit may be initiated or indeed exited remains unclear.
+In this paper we construct a mathematical model of the Scl-Gata2-Fli1 triad module and characterize its dynamical properties using continuous ODE modeling approaches.
+We first propose a thermodynamic method of estimating free energies of different configurations of the enhancer regions from the measurements of the transcriptional reporter libraries.
+This method together with a proposed biochemical mechanism of distant transcriptional enhancement significantly reduces dimensionality of the network parameter space.
+Measurements of protein lifetimes provide experimentally informed timescales to model transient behavior of the network.
+We analyze the network response to physiologically relevant signals such as Notch, Bmp4 and Gata1 and show that the network behaves as an irreversible bistable switch in response to these signals.
+Our model also predicts the results of various mutations in the enhancer sequences and shows that the triad module can ignore transient differentiation signals shorter than threshold duration.
+The combination of a bistable switch with short signal filtering not only provides new mechanistic insights as to how the Scl-Gata2-Fli1 triad may function to control HSC specification and differentiation but also suggests a possibly more general role for this network architecture in the development of other major organ systems.

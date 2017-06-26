@@ -1,0 +1,52 @@
+### abstract ###
+We address the problem of reinforcement learning in which observations may exhibit an arbitrary form of stochastic dependence on past observations and actions
+The task for an agent is to attain the  best possible asymptotic reward where the true generating environment is unknown but belongs to a known countable family of environments
+We find some sufficient conditions on the class of  environments under which an agent exists which attains the best asymptotic reward for any environment in the class
+We analyze how tight these conditions are and how they relate to different probabilistic assumptions known in reinforcement learning and related fields, such as Markov Decision Processes and mixing conditions
+### introduction ###
+Many real-world ``learning'' problems (like learning to drive a car or playing a game) can be modelled as an agent  SYMBOL  that interacts with an environment  SYMBOL  and is (occasionally) rewarded for its behavior
+We are interested in agents which perform well in the sense of having high long-term reward, also called the value  SYMBOL  of agent  SYMBOL  in environment  SYMBOL
+If  SYMBOL  is known, it is a pure (non-learning) computational problem to determine the optimal agent  SYMBOL
+It is far less clear what an ``optimal'' agent means, if  SYMBOL  is unknown
+A reasonable objective is to have a single policy  SYMBOL  with high value simultaneously in many environments
+We will formalize and call this criterion  self-optimizing  later
+Reinforcement learning, sequential decision theory,  adaptive control theory, and active expert advice, are theories dealing with this problem
+They overlap but have different core focus: Reinforcement learning algorithms  CITATION  are developed to learn  SYMBOL  or directly its value
+Temporal difference learning is computationally very efficient, but has slow asymptotic guarantees (only) in (effectively) small observable MDPs
+Others have faster guarantee in finite state MDPs  CITATION
+There are algorithms   CITATION   which are optimal for any finite connected POMDP, and this is apparently the largest class of environments considered
+In sequential decision theory, a Bayes-optimal agent  SYMBOL  that maximizes  SYMBOL  is considered, where  SYMBOL  is a mixture of environments  SYMBOL  and  SYMBOL  is a class of environments that contains the true environment  SYMBOL   CITATION
+Policy  SYMBOL  is self-optimizing in an arbitrary class  SYMBOL , provided  SYMBOL  allows for self-optimizingness  CITATION
+Adaptive control theory  CITATION  considers very simple (from an AI perspective) or special systems (e g \ linear with quadratic loss function), which sometimes allow computationally and data efficient solutions
+Action with expert advice  CITATION  constructs an agent (called master) that performs nearly as well as the best agent (best expert in hindsight) from some class of experts, in  any  environment  SYMBOL
+The important special case of passive sequence prediction in arbitrary unknown environments, where the actions=predictions do not affect the environment is comparably easy  CITATION
+The difficulty in active learning problems can be identified (at least, for countable classes) with  traps  in the environments
+Initially the agent does not know  SYMBOL , so has asymptotically to be forgiven in taking initial ``wrong'' actions
+A well-studied such class are ergodic MDPs which guarantee that, from any action history, every state can be (re)visited  CITATION
+The aim of this paper is to characterize as general as possible classes  SYMBOL  in which self-optimizing behaviour is possible, more general than POMDPs
+To do this we need to characterize classes of environments that forgive
+For instance, exact state recovery is unnecessarily strong; it is sufficient being able to recover high rewards, from whatever states
+Further, in many real world problems there is no information available about the ``states'' of the environment (e g \ in POMDPs) or the environment may exhibit long history dependencies
+Rather than trying to model an environment (e g by MDP) we try to identify the conditions sufficient for learning
+Towards this aim, we propose to consider only environments in which, after any arbitrary finite sequence of actions, the best value is still achievable
+The performance criterion here is asymptotic average reward
+Thus we consider such environments for which there exists a policy whose asymptotic average reward exists and upper-bounds asymptotic average reward of any other policy
+Moreover, the same property should hold after any finite sequence of actions has been taken (no traps)
+Yet this property in itself is not sufficient for identifying optimal behavior
+We require further that, from any sequence of  SYMBOL  actions, it is possible to return to the optimal level of reward in  SYMBOL  steps (The above conditions will be formulated in a probabilistic form ) Environments which possess this property are called  (strongly) value-stable
+We show that for any countable class of value-stable environments there exists a policy which achieves best possible value in any of the environments from the class (i e is  self-optimizing  for this class)
+We also show that strong value-stability is in a certain sense necessary
+We also consider examples of environments which possess strong value-stability
+In particular, any ergodic MDP can be easily shown to have this property
+A  mixing-type condition which implies value-stability is also demonstrated
+Finally, we provide a construction allowing to build  examples of  value-stable environments which are not isomorphic to a finite POMDP, thus demonstrating that the class of value-stable environments is quite general
+It is important in our argument that the class of environments for which we seek a self-optimizing policy is countable, although the class of all value-stable environments is uncountable
+To find a set of  conditions necessary and sufficient for learning which do not rely on countability of the class is yet an open problem
+However, from a computational perspective countable classes are sufficiently large (e g \ the class of all computable probability measures is countable)
+The paper is organized as follows
+Section~ introduces necessary notation of the agent framework
+In Section~ we define and explain the notion of value-stability, which is central in the paper
+Section~ presents the theorem about self-optimizing policies for classes of value-stable environments, and illustrates the  applicability of the theorem by providing examples of strongly value-stable environments
+In Section~ we discuss necessity of the conditions of the main theorem
+Section~ provides some discussion of the results and an outlook to future research
+The formal proof of the main theorem is given in the appendix, while Section~ contains only intuitive explanations

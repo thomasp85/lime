@@ -1,0 +1,36 @@
+### abstract ###
+% This paper proposes a method to construct an adaptive agent that is universal with respect to a given class of experts, where each expert is an agent that has been designed specifically for a particular environment
+This adaptive control problem is formalized as the problem of minimizing the relative entropy of the adaptive agent from the expert that is most suitable for the unknown environment
+If the agent is a passive observer, then the optimal solution is the well-known Bayesian predictor
+However, if the agent is active, then its past actions need to be treated as causal interventions on the I/O stream rather than normal probability conditions
+Here it is shown that the solution to this new variational problem is given by a stochastic controller called the Bayesian control rule, which implements adaptive behavior as a mixture of experts
+Furthermore, it is shown that under mild assumptions, the Bayesian control rule converges to the control law of the most suitable expert
+### introduction ###
+When the behavior of an environment under any control signal is fully known, then the designer can choose an agent that produces the desired dynamics
+Instances of this problem include hitting a target with a cannon under known weather conditions, solving a maze having its map and controlling a robotic arm in a manufacturing plant
+However, when the behavior of the plant is unknown, then the designer faces the problem of  adaptive control
+For example, shooting the cannon lacking the appropriate measurement equipment, finding the way out of an unknown maze and designing an autonomous robot for Martian exploration
+Adaptive control turns out to be far more difficult than its non-adaptive counterpart
+This is because any good policy has to carefully trade off explorative versus exploitative actions, i e actions for the identification of the environment's dynamics versus actions to control it in a desired way
+Even when the environment's dynamics are known to belong to a particular class for which optimal agents are available, constructing the corresponding optimal adaptive agent is in general computationally intractable even for simple toy problems  CITATION
+Thus, finding tractable approximations has been a major focus of research
+Recently, it has been proposed to reformulate the problem statement for some classes of control problems based on the minimization of a relative entropy criterion
+For example, a large class of optimal control problems can be solved very efficiently if the problem statement is reformulated as the minimization of the deviation of the dynamics of a controlled system from the uncontrolled system  CITATION
+In this work, a similar approach is introduced
+If a class of agents is given, where each agent solves a different environment, then adaptive controllers can be derived from a minimum relative entropy principle
+In particular, one can construct an adaptive agent that is universal with respect to this class by minimizing the average relative entropy from the environment-specific agent
+However, this extension is not straightforward
+There is a syntactical difference between actions and observations that has to be taken into account when formulating the variational problem
+More specifically, actions have to be treated as interventions obeying the rules of causality  CITATION
+If this distinction is made, the variational problem has a unique solution given by a stochastic control rule called the Bayesian control rule
+This control rule is particularly interesting because it translates the adaptive control problem into an on-line inference problem that can be applied forward in time
+Furthermore, this work shows that under mild assumptions, the adaptive agent converges to the environment-specific agent
+The paper is organized as follows
+Section~ introduces notation and sets up the adaptive control problem
+Section~ formulates adaptive control as a minimum relative entropy problem
+After an initial, na\"{\i}ve approach, the need for causal considerations is motivated
+Then, the Bayesian control rule is derived from a revised relative entropy criterion
+In Section~, the conditions for convergence are examined and a proof is given
+Section~ illustrates the usage of the Bayesian control rule for the multi-armed bandit problem and the undiscounted Markov decision problem
+Section~ discusses properties of the Bayesian control rule and relates it to previous work in the literature
+Section~ concludes

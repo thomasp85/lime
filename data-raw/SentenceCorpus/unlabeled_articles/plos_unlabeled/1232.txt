@@ -1,0 +1,29 @@
+### abstract ###
+G-protein coupled receptors, the largest family of proteins in the human genome, are involved in many complex signal transduction pathways, typically activated by orthosteric ligand binding and subject to allosteric modulation.
+Dopaminergic receptors, belonging to the class A family of G-protein coupled receptors, are known to be modulated by sodium ions from an allosteric binding site, although the details of sodium effects on the receptor have not yet been described.
+In an effort to understand these effects, we performed microsecond scale all-atom molecular dynamics simulations on the dopaminergic D 2 receptor, finding that sodium ions enter the receptor from the extracellular side and bind at a deep allosteric site.
+Remarkably, the presence of a sodium ion at this allosteric site induces a conformational change of the rotamer toggle switch Trp6.48 which locks in a conformation identical to the one found in the partially inactive state of the crystallized human 2 adrenergic receptor.
+This study provides detailed quantitative information about binding of sodium ions in the D 2 receptor and reports a possibly important sodium-induced conformational change for modulation of D 2 receptor function.
+### introduction ###
+G-protein coupled receptors are highly sophisticated signal transduction machines able to respond to extracellular stimulus by activating diverse intracellular signaling pathways.
+Recent research in this field is unveiling the complexity of the mechanisms involved, which are far from being understood in detail.
+Among these mechanisms, allosteric modulation plays a central role in the fine-tuning of signaling.
+Unfortunately, the experimental study of allosteric regulatory processes in GPCRs is difficult because contemporary techniques are unable to provide structural information of sufficient spatial resolution and time scales for describing specific atomic-level aspects of allosteric interactions.
+In this scenario, computational methods like molecular dynamics simulation can be used to provide unique insight into some elusive aspects of the problem, by meeting the aforementioned requirements in terms of both spatial resolution and time scale needed.
+The present work describes the application of long MD simulations for exploring the effect of sodium ions in class A GPCRs and the mechanism involved in their role as allosteric modulators.
+Dopaminergic receptors are GPCRs, belonging to the class A family, which have been used as drug targets for the treatment of diverse central nervous system disorders.
+Allosteric modulation of dopaminergic GPCR by sodium ions has been extensively studied experimentally CITATION CITATION and confirmed for the receptor subtypes in D 2 and D 4.
+It has been proposed that sodium ions bind in an allosteric site of the transmembrane region located below the orthosteric binding site.
+The high conservation of Asp2.50 among GPCRs suggests its structural importance for the GPCR function.
+Presumably, the negatively charged carboxylic group of Asp2.50 interacts via electrostatic interaction with the positively charged sodium ion.
+Indeed, the introduction of uncharged residues in position 2.50 produces sodium insensitivity in D 2 and D 4 CITATION, CITATION, demonstrating that the presence of a negative charge in the allosteric site is essential for maintaining sodium sensitivity.
+Neve et al. CITATION proposed that the sodium binding site is a pyramidal hydrogen-bonding network formed by Asp2.50, Ser3.39, Asn7.45, and Ser7.46, with a sodium ion occupying the centre.
+However, and in spite of the experimental information available, the molecular mechanism of the allosterically sodium-induced modulation on GPCR activation remains unknown.
+In an effort to elucidate the mechanism of the sodium-induced effect, we have computationally investigated the mobility of sodium ions in the sodium-sensitive D 2 receptor.
+All-atom molecular dynamics simulations of the D 2 receptor were performed to analyze more than 6 s of simulation data.
+This analysis comprises a single 1.1 s long simulation, one hundred 50 ns simulations and biased metadynamics simulations to compute accurate two-dimensional free energy profiles CITATION, CITATION .
+The simulation of the sodium ion's trajectory into the D 2 receptor reveals a sodium ion entrance from the extracellular side of the receptor, which is followed by its threading into a pyramidal hydrogen-bonding network CITATION near the allosteric binding site deep inside the receptor.
+Most remarkably, the analysis of all these trajectories showed a correlation between the position of the sodium and the conformation of the Trp6.48 side chain.
+This residue is part of the so called rotamer switch, a set of residues which are known to undergo major conformational change upon GPCR activation CITATION, CITATION, CITATION.
+Kobilka and co-workers propose based on experimental data that the conformational state of the rotamer switch Trp6.48 is affected by ligands in the orthosteric binding site and is linked to a particular receptor response CITATION, CITATION.
+Our study shows that, for dopaminergic receptors, the conformational state of the rotamer switch Trp6.48 can also be modulated from an allosteric site by sodium ions locking Trp6.48 in a conformational state identical to the partially inactive structure of the experimentally derived 2 adrenergic receptor CITATION .

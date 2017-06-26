@@ -1,0 +1,34 @@
+### abstract ###
+Feature Markov Decision Processes ( SYMBOL MDPs)  CITATION  are well-suited for learning agents in general environments
+Nevertheless, unstructured ( SYMBOL )MDPs are limited to relatively simple environments
+Structured MDPs like Dynamic Bayesian Networks (DBNs) are used for large-scale real-world problems
+In this article I extend  SYMBOL MDP to  SYMBOL DBN
+The primary contribution is to derive a cost criterion that allows to automatically extract the most relevant features from the environment, leading to the ``best'' DBN representation
+I discuss all building blocks required for a complete general learning algorithm
+Keywords:  Reinforcement learning; dynamic Bayesian network; structure learning; feature learning; global vs local reward; explore-exploit
+### introduction ###
+The agent-environment setup in which an  Agent  interacts with an  Environment  is a very general and prevalent framework for studying intelligent learning systems  CITATION
+In cycles  SYMBOL , the environment provides a (regular)  observation   SYMBOL  (e g \ a camera image) to the agent; then the agent chooses an  action   SYMBOL  (e g \ a limb movement); finally the environment provides a real-valued  reward   SYMBOL  to the agent
+The reward may be very scarce, eg \ just +1 (-1) for winning (losing) a chess game, and 0 at all other times  CITATION
+Then the next cycle  SYMBOL  starts
+The agent's objective is to maximize his reward
+For example,  sequence prediction  is concerned with environments that do not react to the agents actions (e g \ a weather-forecasting ``action'')  CITATION ,  planning  deals with the case where the environmental function is known  CITATION ,  classification  and  regression  is for conditionally independent observations  CITATION ,  Markov Decision Processes  (MDPs) assume that  SYMBOL  and  SYMBOL  only depend on  SYMBOL  and  SYMBOL   CITATION , POMDPs deal with  Partially Observable MDPs   CITATION , and  Dynamic Bayesian Networks  (DBNs) with structured MDPs  CITATION
+Concrete real-world problems can often be  modeled  as MDPs
+For this purpose, a  designer  extracts relevant features from the history (e g \ position and velocity of all objects), i e \ the  history   SYMBOL  is summarized by a  feature  vector  SYMBOL
+The feature vectors are regarded as  states  of an MDP and are assumed to be (approximately) Markov
+Artificial General Intelligence (AGI)  CITATION  is concerned with designing  agents that perform well in a very large range of environments   CITATION , including all of the mentioned ones above and more
+In this general situation, it is not a priori clear what the useful features are
+Indeed, any observation in the (far) past may be relevant in the future
+A solution suggested in  CITATION  is to learn  SYMBOL  itself
+If  SYMBOL  keeps too much of the history (e g \  SYMBOL ), the resulting MDP is too large (infinite) and cannot be learned
+If  SYMBOL  keeps too little, the resulting state sequence is not Markov
+The  Cost  criterion I develop formalizes this tradeoff and is minimized for the ``best''  SYMBOL
+At any time  SYMBOL , the best  SYMBOL  is the one that minimizes the Markov code length of  SYMBOL  and  SYMBOL
+This reminds but is actually quite different from MDL, which minimizes model+data code length  CITATION
+The use of ``unstructured'' MDPs  CITATION , even our  SYMBOL -optimal ones, is clearly limited to relatively simple tasks
+Real-world problems are structured and can often be represented by dynamic Bayesian networks (DBNs) with a reasonable number of nodes  CITATION
+Bayesian networks in general and DBNs in particular are powerful tools for modeling and solving complex real-world problems
+Advances in theory and increase in computation power constantly broaden their range of applicability  CITATION
+The primary contribution of this work is to extend the   SYMBOL  selection principle  developed in  CITATION  for MDPs to the conceptually much more demanding DBN case
+The major extra complications are approximating, learning and coding the rewards, the dependence of the Cost criterion on the DBN structure, learning the DBN structure, and how to store and find the optimal value function and policy
+Although this article is self-contained, it is recommended to read  CITATION  first

@@ -1,0 +1,27 @@
+### abstract ###
+binary sequences are characterized by various features
+two of these characteristics-alternation rate and run length-have repeatedly been shown to influence judgments of randomness
+the two characteristics  however  have usually been investigated separately  without controlling for the other feature
+because the two features are correlated but not identical  it seems critical to analyze their unique impact  as well as their interaction  so as to understand more clearly what influences judgments of randomness
+to this end  two experiments on the perception of binary sequences orthogonally manipulated alternation rate and maximum run length i e   length of the longest run within the sequence
+results show that alternation rate consistently exerts a unique effect on judgments of randomness  but that the effect of alternation rate is contingent on the length of the longest run within the sequence
+the effect of maximum run length was found to be small and less consistent
+together  these findings extend prior randomness research by integrating literature from the realms of perception  categorization  and prediction  as well as by showing the unique and joint effects of alternation rate and maximum run length on judgments of randomness
+### introduction ###
+in everyday life  individuals often encounter binary sequences of outcomes  such as tossing of coins  gains and losses in gambles  black and red outcomes on roulette wheels  birth orders in families  or ups and downs in the stock market  CITATION
+whether such sequences are perceived as either random or lawful and patterned has important implications  both on the level of cognitive processes e g   categorizations  inferences and on the level of behavioral manifestations e g   following up on a  streak 
+understanding how individuals form judgments of randomness is therefore critical
+the present manuscript contributes to this goal by investigating the effects of two critical features of binary sequences-the length of the longest run and the alternation rate-on judgments of randomness
+imagine a coin being tossed five times
+first  the coin comes up heads
+then  heads again
+the same is true for the third  fourth  and fifth toss  resulting in a sequence of five heads hhhhh
+most individuals who perceive this sequence would judge it as non-random  because they evaluate randomness not based on the generating mechanism-a coin toss-but on the resulting sequence of outcomes  such as hhhhh or hthth  CITATION
+to understand how judgments of randomness are formed  it is therefore important to analyze the features of outcome sequences
+two characteristics of binary sequences of outcomes  alternation rate and run length  have repeatedly been identified as determining judgments of randomness
+usually  however  these two characteristics have been investigated in separate lines of research  without controlling for the other
+specifically  research on the perception and categorization of randomness primarily has focused on alternation rate  CITATION   while neglecting run length
+in contrast  research on the prediction of randomness has primarily focused on run length  CITATION   while neglecting alternation rate
+because the two features are correlated but not identical  we argue that it is critical to isolate the separate effects of the two characteristics so as to understand more clearly what influences judgments of randomness
+here we offer evidence that the two characteristics may not only have unique effects  but that the effect of one may be contingent on the other
+in particular  we argue that the effect of alternation rate is contingent on run length

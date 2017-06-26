@@ -1,0 +1,44 @@
+### abstract ###
+Circulation is an important delivery method for both natural and synthetic molecules, but microenvironment interactions, regulated by endothelial cells and critical to the molecule's fate, are difficult to interpret using traditional approaches.
+In this work, we analyzed and predicted growth factor capture under flow using computer modeling and a three-dimensional experimental approach that includes pertinent circulation characteristics such as pulsatile flow, competing binding interactions, and limited bioavailability.
+An understanding of the controlling features of this process was desired.
+The experimental module consisted of a bioreactor with synthetic endothelial-lined hollow fibers under flow.
+The physical design of the system was incorporated into the model parameters.
+The heparin-binding growth factor fibroblast growth factor-2 was used for both the experiments and simulations.
+Our computational model was composed of three parts: media flow equations, mass transport equations and cell surface reaction equations.
+The model is based on the flow and reactions within a single hollow fiber and was scaled linearly by the total number of fibers for comparison with experimental results.
+Our model predicted, and experiments confirmed, that removal of heparan sulfate from the system would result in a dramatic loss of binding by heparin-binding proteins, but not by proteins that do not bind heparin.
+The model further predicted a significant loss of bound protein at flow rates only slightly higher than average capillary flow rates, corroborated experimentally, suggesting that the probability of capture in a single pass at high flow rates is extremely low.
+Several other key parameters were investigated with the coupling between receptors and proteoglycans shown to have a critical impact on successful capture.
+The combined system offers opportunities to examine circulation capture in a straightforward quantitative manner that should prove advantageous for biologicals or drug delivery investigations.
+### introduction ###
+The bioavailability of molecules as they circulate through the bloodstream is a crucial factor in their signaling capability.
+Half-life in circulation can determine the effectiveness of a drug simply by regulating the opportunities a molecule has to interact with the vessel wall.
+Although in vivo measurements are routinely made by researchers to monitor serum levels of molecules and to determine half-lives, interactions in the microenvironment are not easily measured or observed.
+While some molecules may have a long circulation life, many may have only a single opportunity to interact with the blood vessel walls before being filtered through the liver or kidneys.
+In addition, even molecules with a long circulation life may still face impediments to direct interaction with the endothelium.
+This, for example, is the case with vascular endothelial growth factor when bound to bevacizumab, a monoclonal antibody to VEGF CITATION, CITATION.
+Bevacizumab has been shown to increase the circulating concentration of VEGF in cancer patients when compared to patients not undergoing therapy because of the increased half-life of the growth factor-antibody complex; however the complex is unable to bind to VEGF receptors CITATION making delivery of the VEGF questionable.
+In order to better understand the vessel microenvironment and to accurately monitor drug interactions in the context of that microenvironment, better tools are needed to provide meaningful measurements that can predict the fate of molecules in circulation.
+Many important measurements have and continue to be made using in vitro mammalian tissue culture methods but there are obvious limitations to the traditional two-dimensional culture approach.
+In circulation, the influence of flow on whether a molecule remains in the fluid phase or binds to the vessel wall can be a dominant factor.
+This influence cannot be ascertained in static tissue culture studies.
+For example, the velocity of blood in the aorta is 400 mm/sec while at the capillary level it is less than 1 mm/sec CITATION.
+This reduction in velocity allows the exchange processes at the capillary level to take place more efficiently CITATION and it likely also affects the activity of molecules in circulation that rely on cell surface binding in order to fulfill their roles.
+While direct measurement of this binding process is difficult, our model makes use of a commercial bioreactor with endothelial-lined hollow tubes operating under pulsatile flow to mimic the vascular environment architecture and to directly measure the loss of molecules as they pass through these hollow fibers.
+We have used a single pass method to allow better assessment of the effect of flow in either retaining molecules in the circulation or permitting their interaction with vessels.
+Our approach also makes use of a bolus administration, since this is a typical way in which drugs would be delivered in a clinical setting.
+The binding of fibroblast growth factor-2 to its cell surface receptor and the role of heparan sulfate proteoglycans in regulating the process have been of research interest for many years because of their role in angiogenesis, the growth of new blood vessels from existing vessels.
+Knowledge of how these processes work could aid in the development of new therapeutics to control tumor growth and assist clinically in the treatment of chronic wounds.
+In order to understand the mechanism of FGF-2-mediated cell proliferation, a multitude of experimental studies have been undertaken CITATION and, in the past two decades, several computational models of FGF-2 binding to its receptor FGFR and HSPG have been proposed CITATION CITATION.
+Insight can be gained through experiment-coupled modeling that could not otherwise be readily obtained.
+Nugent and Edelman CITATION were among the earliest researchers to develop a simple model that includes three species, FGF-2, FGFR and HSPG.
+They measured kinetic binding rate constants experimentally and used their model to analyze the data thereby providing a foundation for investigating the complexity of FGF-2 binding.
+A similar approach was used by Ibrahimi et al CITATION to investigate stepwise assembly of a ternary FGF-2-FGFR-HSPG complex in conjunction with their surface plasmon resonance measurements.
+We introduced more complexity into the FGF-2 binding model with the inclusion of heparin binding CITATION, receptor dimerization CITATION, and formation of alternative HSPG-FGFR species CITATION.
+Recent models have moved towards including intracellular signaling CITATION.
+With the exception of work by Filion and Popel CITATION, CITATION, which included diffusive transport, previous simulation work has been based on a static tissue culture environment that may be quite different from the dynamic in vivo environment of blood vessels.
+We introduced a computational model based on a flow environment in which the competitive binding of FGF-2, FGFR, and HSPG in a pulsatile flow environment was addressed to mimic blood vessel-like hollow fibers CITATION, CITATION.
+In this paper we use an updated version of that model to explore how specific parameters such as flow rate impact FGF-2 capture and receptor binding, and compare our results with experimental studies.
+Insights with regard to the importance of surface coupling and ligand depletion zones within the fluid phase were found.
+The described simulation package provides a new and valuable way to investigate growth factor capture and can be easily extended to other biologically relevant molecules and drugs.

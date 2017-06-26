@@ -1,0 +1,44 @@
+### abstract ###
+we study whether probability weighting is observed when individuals are presented with a series of choices between lotteries consisting of real non-monetary adverse outcomes  electric shocks
+our estimation of the parameters of the probability weighting function proposed by tversky and kahneman CITATION are similar to those obtained in previous studies of lottery choice for negative monetary payoffs and negative hypothetical payoffs
+in addition  common ratio violations in choice behavior are widespread
+our results provide evidence that probability weighting is a general phenomenon  independent of the source of disutility
+### introduction ###
+expected utility theory eut is the standard theoretical model of choice under risk used in economic analysis
+eut posits that the utility assigned to a lottery or prospect is linear in the probability of each possible outcome of the lottery
+while eut is an appealing formulation for economic modeling  a number of experiments have called it into question as a descriptive model of choice under risk see starmer  CITATION  for a review of the literature
+on the other hand  specifications allowing probabilities to be weighted by a function pip  where pip has an inverted s-shape  provide a good empirical fit to the available experimental data  CITATION
+the inverted s-shape corresponds to an overweighting of low probabilities and an underweighting of high probabilities
+in recognition of this empirical support  probability weighting is incorporated as a key assumption of several theories of choice under risk  including prospect theory  CITATION   rank dependent expected utility theory  CITATION   and cumulative prospect theory  CITATION
+a particularly striking phenomenon that can arise as a consequence of probability weighting is the common ratio violation
+consider two lotteries and an individual with a utility function ux
+the first yields a payoff of x  not-equals   NUMBER  with probability p and a zero payoff with probability  NUMBERp the second lottery yields x  not-equals   NUMBER  with probability p and zero otherwise
+the linearity assumption of expected utility theory implies that an individual who chooses the first lottery over the second one must also choose a lottery that delivers x with probability q p over a lottery that yields x with probability q p
+clearly  if pux  is greater than or equal to   pux  then q pux  is greater than or equal to  q pux
+as originally conjectured by allais  CITATION   common ratio violations which result in indifference curves in the probability triangle explained later that fan out or fan in  have been found to be widespread in the domain of positive payoffs for lotteries involving monetary outcomes  CITATION
+the empirical support underlying probability weighting and common ratio violations comes primarily from experimental studies in which all outcomes involve non-negative monetary payments  CITATION
+however  many economic decisions involve the possibility of losses
+examples include a decision to invest in a stock  to choose among alternative medical procedures  or to trust another person or institution in a business or personal transaction
+a few studies have explored decisions in the domain of losses  and they have used one of two techniques to induce negative payoffs
+in some studies  researchers use hypothetical payoffs  examples include kahneman and tversky  CITATION  and abdellaoui  CITATION
+in other studies  participants are given a real cash endowment at the beginning of the experiment and real losses are deducted from this initial balance  examples include holt and laury  CITATION  and mason et al CITATION
+however  many real life decisions involve negative outcomes that are not monetary
+consider a cancer patient who is asked to make a choice between two uncomfortable medical treatments that involve tradeoffs between probabilities and utilities of different prospective states of health e g   radiation therapy versus extensive surgery
+another example is the decision of a defendant in a criminal case to accept or reject a plea bargain for a reduced sentence in prison
+the defendant faces a choice between lotteries over the time of incarceration
+however  a methodological challenge exists when studying decisions over non-monetary adverse outcomes  how do we induce real outcomes of this type in the laboratory
+some authors have used aversive stimuli to investigate other principles of decision making
+for example  ariely et al CITATION  used annoying sounds as well as having subjects place their fingers inside a tightening vice to study the effects of anchoring on preferences
+coursey et al CITATION  required individuals to drink sucrose octa-acetate  an unpleasant tasting liquid  to study willingness-to-pay and willingness-to-accept decisions for a  bad   that is  a good with negative value
+in this paper  we use painful electric shocks to induce negative payoffs
+pain is a good measure of disutility as almost everyone would rather avoid it
+in addition  as a means of inducing disutility  the use of electric shocks satisfies smith's  CITATION  precepts pertaining to the appropriateness of a reward medium for an experiment   monotonicity and dominance
+we can presume that a larger shock in either magnitude or duration is worse than a smaller one
+for a fixed duration  the disutility of a shock is monotonic in the current  and therefore it is monotonic in its voltage
+furthermore  for our simple decision task  which is described below  and given the voltage levels applied in our experiment  it is quite reasonable to presume that the differences between voltage levels from the alternative choices are large enough to dominate the costs of deciding between alternatives
+physical pain  unlike cash payments  also has other advantages in inducing individual incentives  in that the recipient consumes it instantly and cannot transfer it to other individuals
+in this paper  we consider whether the phenomenon of probability weighting  and in particular the inverted s-shaped pattern of probability distortion  is observed when people face lotteries that involve painful shocks  and whether common ratio violations  which have been observed for lotteries involving positive monetary payments  also appear in our setting
+in addition  although probability weighting can predict a complex pattern of fanning in and fanning out inside the probability triangle  for the particular gambles that we consider  we expect to see more risk aversion when gambles get better i e   when there is a lower overall chance of a shock  which means that indifference curves would tend to fan-out
+we find that both probability weighting and common ratio violations are prominent features of our data
+the median probability weighting parameter we estimate is very similar to those observed in decisions over negative hypothetical monetary payoffs  CITATION
+the results suggest that a similar process of probability weighting characterizes lottery choice for both monetary and non-monetary outcomes when payoffs are negative

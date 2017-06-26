@@ -1,0 +1,45 @@
+### abstract ###
+Evolution is shaping the world around us.
+At the core of every evolutionary process is a population of reproducing individuals.
+The outcome of an evolutionary process depends on population structure.
+Here we provide a general formula for calculating evolutionary dynamics in a wide class of structured populations.
+This class includes the recently introduced games in phenotype space and evolutionary set theory.
+There can be local interactions for determining the relative fitness of individuals, but we require global updating, which means all individuals compete uniformly for reproduction.
+We study the competition of two strategies in the context of an evolutionary game and determine which strategy is favored in the limit of weak selection.
+We derive an intuitive formula for the structure coefficient,, and provide a method for efficient numerical calculation.
+### introduction ###
+Constant selection implies that the fitness of individuals does not depend on the composition of the population.
+In general, however, the success of individuals is affected by what others are doing.
+Then we are in the realm of game theory CITATION CITATION or evolutionary game theory CITATION CITATION.
+The latter is the study of frequency dependent selection; the fitness of individuals is typically assumed to be a linear function of the frequencies of strategies in the population.
+The population is trying to adapt on a dynamic fitness landscape; the changes in the fitness landscape are caused by the population that moves over it CITATION.
+There is also a close relationship between evolutionary game theory and ecology CITATION : the success of a species in an ecosystem depends on its own abundance and the abundance of other species.
+The classical approach to evolutionary game dynamics is based on deterministic differential equations describing infinitely large, well-mixed populations CITATION, CITATION.
+In a well-mixed population any two individuals interact equally likely.
+Some recent approaches consider stochastic evolutionary dynamics in populations of finite size CITATION, CITATION.
+Evolutionary game dynamics are also affected by population structure CITATION CITATION.
+For example, a well-mixed population typically opposes evolution of cooperation, while a structured population can promote it.
+There is also a long standing tradition of studying spatial models in ecology CITATION CITATION, population genetics CITATION, CITATION and inclusive fitness theory CITATION CITATION .
+Evolutionary graph theory is an extension of spatial games, which are normally studied on regular lattices, to general graphs CITATION CITATION.
+The graph determines who meets whom and reflects physical structure or social networks.
+The payoff of individuals is derived from local interactions with their neighbors on the graph.
+Moreover, individuals compete locally with their neighbors for reproduction.
+These two processes can also be described by separate graphs CITATION .
+Games in phenotype space CITATION represent another type of spatial model for evolutionary dynamics, which is motivated by the idea of tag based cooperation CITATION CITATION.
+In addition to behavioral strategies, individuals express other phenotypic features which serve as markers of identification.
+In one version of the model, individuals interact only with those who carry the same phenotypic marker.
+This approach can lead to a clustering in phenotype space, which can promote evolution of cooperation CITATION .
+Evolutionary set theory represents another type of spatial model CITATION.
+Each individual can belong to several sets.
+At a particular time, some sets have many members, while others are empty.
+Individuals interact with others in the same set and thereby derive a payoff.
+Individuals update their set memberships and strategies by global comparison with others.
+Successful strategies spawn imitators, and successful sets attract more members.
+Therefore, the population structure is described by an ever changing, dynamical graph.
+Evolutionary dynamics in set structured populations can favor cooperators over defectors.
+In all three frameworks evolutionary graph theory, games in phenotype space and evolutionary set theory the fitness of individuals is a consequence of local interactions.
+In evolutionary graph theory there is also a local update rule: individuals learn from their neighbors on the graph or compete with nearby individuals for placing offspring.
+For evolutionary set theory, however, CITATION assumes global updating: individuals can learn from all others in the population and adopt their strategies and set memberships.
+Global updating is also a feature of the model for games in phenotype space CITATION.
+The approach that is presented in this paper requires global updating.
+Therefore, our result holds for evolutionary set theory and for games in phenotype space, but does not apply to evolutionary graph theory.

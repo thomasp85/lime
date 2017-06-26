@@ -1,0 +1,19 @@
+### abstract ###
+While in general trading off exploration and exploitation in reinforcement learning is hard, under some formulations relatively simple solutions exist
+Optimal decision thresholds for the multi-armed bandit problem, one for the infinite horizon discounted reward case and one for the finite horizon undiscounted reward case are derived, which make the link between the reward horizon, uncertainty and the need for exploration explicit
+From this result follow two practical approximate algorithms, which are illustrated experimentally
+### introduction ###
+In reinforcement learning, the dilemma between selecting actions to maximise the expected return according to the current world model and to improve the world model such as to  potentially  be able to achieve a higher expected return is referred to as the  exploration-exploitation trade-off
+This has been the subject of much interest before, one of the earliest developments being the theory of sequential sampling in statistics, as developed by  CITATION
+This dealt mostly with making sequential decisions for accepting one among a set of particular hypothesis, with a view towards applying it to jointly decide the termination of an experiment and the acceptance of a hypothesis
+A more general overview of sequential decision problems from a Bayesian viewpoint is offered in  CITATION
+The optimal, but intractable, Bayesian solution for bandit problems was given in~ CITATION , while recently tight bounds on the sample complexity of exploration have been found  CITATION
+An approximation to the full Bayesian case for the general reinforcement learning problem is given in  CITATION , while an alternative technique based on eliminating actions which are confidently estimated as low-value is given in  CITATION
+The following section formulates the intuitive concept of trading exploration and exploitation as a natural consequence of the  definition  of the problem of reinforcement learning
+After the problem definitions which correspond to either extreme are identified, Sec
+derives a threshold for switching from exploratory to greedy behaviour in bandit problems
+This threshold is found to depend on the effective reward horizon of the optimal policy and on our current belief distribution of the expected rewards of each action
+A sketch of the extension to MDPs is presented in Sec ~
+Section~ uses an upper bound on the value of exploration to derive practical algorithms, which are then illustrated experimentally in Sec
+
+We conclude with a discussion on the relations with other methods

@@ -1,0 +1,55 @@
+### abstract ###
+this article presents several studies that replicate and extend previous research on maximizing
+a modified scale for measuring individual maximizing tendency is introduced
+the scale has adequate psychometric properties and reflects maximizers' aspirations for high standards and their preference for extensive alternative search  but not the decision difficulty aspect included in several previous studies
+based on this scale  maximizing is positively correlated with optimism  need for cognition  desire for consistency  risk aversion  intrinsic motivation  self-efficacy and perceived workload  whereas the association with regret is inconsistent
+analysis of correlates of the difficulty dimension suggests that decision difficulty should be conceptualized as a separate dimension rather than as a sub-dimension of maximizing
+opportunities for future research are suggested
+### introduction ###
+the distinction between maximizing and satisficing approaches to decision making has long been considered important in the decision making literature  CITATION
+when maximizing  decision makers hope to find the best possible solution by systematically comparing available alternatives based on well-defined preferences
+when satisficing  in contrast  decision makers aspire to find a solution that meets important minimum requirements and aspirations  i e   an option that is  good enough  rather than  the best 
+schwartz et al CITATION  attracted considerable attention and interest when proposing that individuals differ in their global disposition to maximize versus satisfice in decision making
+a new maximizing scale that was claimed to adequately measure individual maximizing tendency was presented
+based on analysis of correlates of this scale  maximizers seemed to be less happy with life  to be less optimistic and to possess lower self-esteem
+maximizers also appeared to be more prone to depression  perfectionism and regret as well as more inclined to engage in upward social comparison than satisficers
+accordingly  schwartz  CITATION  argued that maximizing represents a recipe for unhappiness due to overly high expectations and self-fulfilling fears of regret
+increased opportunities for choice were also claimed to represent a particular burden for maximizers  who would feel compelled to explore all possible opportunities and find it increasingly difficult to make a choice
+this line of reasoning corresponds to schwartz's  CITATION  previous research on problems related to increased choice and the possible tyranny of freedom  and schwartz  CITATION  recommended that decision makers should make efforts to learn to accept  good enough  rather than searching for the elusive  best  as well as stop worrying about what they are missing
+subsequent research has replicated several of the key results from schwartz et al 's  CITATION  studies and identified other negative correlates
+for example  findings by parker  bruine de bruin and fischoff  CITATION  suggest that maximizing is associated with worse life outcomes  less behavioral coping  greater dependence on others and more decision avoidance
+parker et al CITATION  argued that  if these relationships are causal  then it is of importance to teach normative decision making skills as well as to stress the benefits of satisficing in order to obtain better outcomes
+inspired by the research opportunities associated with schwartz et al 's  CITATION  maximizing scale as well as the prospects of offering practical advice to decision makers  the scale was introduced to several groups of graduate students in business administration in norway
+some groups responded to the original english version of the scale while other groups rated items on a pilot version in norwegian based on preliminary translations of items
+surprisingly  hardly any of the subjects seemed to be maximizers based on their scores on the original maximizing scale  regardless of whether the scale was presented in the original english version or in the pilot-version in norwegian
+all but very few subjects reported satisficing approaches to most of the tasks depicted in the items on the scale
+yet  based on discussions of schwartz et al 's  CITATION  theoretical underpinnings  many subjects reported that they indeed considered themselves maximizers
+however  many of the items on the scale were seen as too commonplace or too inconsequential to set off maximizing efforts
+subjects also argued that many items referred to situations that were irrelevant to them
+this feedback indicated that many items on the scale are not sufficiently general in terms of item content and simultaneously not sufficiently relevant to measure differences in individual maximizing tendency across samples  settings and cultures
+these limitations in the construct validity of the scale have also been stressed by diab  gillespie and highhouse  CITATION   among others
+diab et al CITATION  argued that uni-dimensionality and internal consistency are important characteristics of the maximization attribute  and that all thirteen items of the scale should load onto one factor
+however  schwartz et al 's  CITATION  scale comprises three distinct sub-dimensions and several items produce relatively weak or inconsistent factor loadings
+accordingly  there has been a debate in the literature concerning the validity of the construct  the factor structure and reliability of the scale as well as the proposed correlates indicating that maximizers are less happy than satisficers
+diab et al CITATION  asserted that the findings indicating that maximizers are less happy than satisficers need to be interpreted in light of inadequate definition and measurement of the core construct
+based on the definition of individual maximizing tendency as the  general tendency to pursue the identification of the optimal alternative  diab et al CITATION  presented several alternative measures
+as hypothesized  schwartz et al 's  CITATION  maximizing scale produced significantly higher correlations with maladaptive personality traits and dysfunctional decision making behaviors such as regret  indecisiveness  avoidance  neuroticism  and life-satisfaction than several of diab et al 's  CITATION  alternative measures  including their nine-item scale
+nenkov  morrin  ward  schwartz and hulland  CITATION  also addressed the factor structure  reliability and validity of schwartz et al 's  CITATION  maximizing scale  and several short forms of the scale were tested using datasets from different populations
+results replicated the three-factor solution from schwartz et al CITATION
+nenkov et al CITATION  interpreted the first dimension to reflect preference for extensive alternative search  i e   the desire to continue seeking for even better options
+the second dimension was interpreted to reflect decision difficulty  i e   decision makers' perceived difficulty in choosing and making decisions
+the third dimension was taken to represent decision makers' tendency to hold high standards for themselves and their surroundings
+nenkov et al CITATION  argued along the same lines as diab et al CITATION   stressing the need for uni-dimensionality and internal consistency in measurements of the maximizing construct
+however  although several short versions of schwartz et al 's  CITATION  scale appeared equally useful when analyzing correlates  the three sub-dimensions varied in their correlation with other variables
+nenkov et al CITATION  therefore argued that the three dimensions should be examined separately in future research and that there is a need to resolve whether all or perhaps only one or two of the three sub-dimensions represent inherent components of the maximizing construct
+the research reported by diab et al CITATION  and nenkov et al CITATION  suggests that the measurement of individual maximizing tendency is associated with several  fundamental  methodological problems that need to be resolved in order to advance research in this area
+in view of the interest in schwartz et al 's  CITATION  seminal article  relatively few studies report empirical findings based on the original scale or refined versions of the scale so far
+important exceptions include carrillat  edmondson and ladik's  CITATION  study of customer loyalty  iyengar  wells and schwartz's  CITATION  investigation of job search strategies  bruine de bruin  parker and fischoff's  CITATION  investigation of individual differences in decision making competence  parker  bruine de bruin and fischoff's  CITATION  exploration of decision making styles  competence  and outcomes  chowdhury  ratneshwar and mohanty's  CITATION  investigation of maximizing versus satisficing consumers  and lewer  gerlich and gretz'  CITATION  analysis of determinants of maximizing in consumer purchase
+the ambition of the studies reported here was threefold
+the first purpose  which derives from the lack of success when introducing schwartz et al 's  CITATION  scale to a new population  was to contribute to improving the measurement scale by testing original and new items across several new and large samples
+the second purpose was to replicate and extend previous studies of correlates of individual maximizing tendency
+improved insight into correlates may shed better light on maximizers' personality traits and the driving forces behind efforts to maximize in decision making
+instrument development and testing across subjects and settings is important for practical as well as theoretical and methodological reasons
+a reliable scale with adequate factor structure and discriminate validity would facilitate future research on maximizing  CITATION
+efforts to develop an adequate scale may also improve our understanding of the core construct and aid in the development of a clearer definition and a better nomological net
+the attention attracted to schwartz et al 's  CITATION  research also demonstrates that a reliable scale is of high interest and has high potential value for decision makers who wish to reflect on and improve their decision making

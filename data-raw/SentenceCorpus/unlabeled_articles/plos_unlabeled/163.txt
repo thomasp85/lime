@@ -1,0 +1,22 @@
+### abstract ###
+We have developed a software program that weights and integrates specific properties on the genes in a pathogen so that they may be ranked as drug targets.
+We applied this software to produce three prioritized drug target lists for Mycobacterium tuberculosis, the causative agent of tuberculosis, a disease for which a new drug is desperately needed.
+Each list is based on an individual criterion.
+The first list prioritizes metabolic drug targets by the uniqueness of their roles in the M. tuberculosis metabolome and their similarity to known druggable protein classes.
+The second list prioritizes targets that would specifically impair M. tuberculosis, by weighting heavily those that are closely conserved within the Actinobacteria class but lack close homology to the host and gut flora.
+M. tuberculosis can survive asymptomatically in its host for many years by adapting to a dormant state referred to as persistence.
+The final list aims to prioritize potential targets involved in maintaining persistence in M. tuberculosis.
+The rankings of current, candidate, and proposed drug targets are highlighted with respect to these lists.
+Some features were found to be more accurate than others in prioritizing studied targets.
+It can also be shown that targets can be prioritized by using evolutionary programming to optimize the weights of each desired property.
+We demonstrate this approach in prioritizing persistence targets.
+### introduction ###
+The cost of research and development in the pharmaceutical industry has been rising steeply and steadily in the last decade, but the amount of time required to bring a new product to market remains around ten to fifteen years CITATION.
+This problem has been labeled an innovation gap, and it necessitates investment in inexpensive technologies that shorten the length of time spent in drug discovery.
+The target identification stage is the first step in the drug discovery process CITATION and as such can provide the foundation for years of dedicated research in the pharmaceutical industry.
+As with all the other steps in drug discovery, this stage is complicated by the fact that the identified drug target must satisfy a variety of criteria to permit progression to the next stage.
+Important factors in this context include homology between target and host ; activity of the target in the diseased state CITATION, CITATION ; and the essentiality of the target to the pathogen's growth and survival CITATION CITATION .
+The values of some of these selection criteria can be found easily by querying publicly available bioinformatics resources, including metabolic pathway databases such as KEGG CITATION, protein classification sets such as COGs CITATION, and databases of druggable proteins CITATION, CITATION, CITATION .
+Traditional prioritization approaches such as literature searches and mental integration of multiple criteria can quickly become overwhelming for the researcher.
+A more effective alternative is computational integration over different criteria to create a ranking function.
+In this article, we describe such an application AssessDrugTarget that ranks the genes in a genome according to a given set of weighted criteria.

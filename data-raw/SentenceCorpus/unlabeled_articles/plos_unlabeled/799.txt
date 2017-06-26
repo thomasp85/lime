@@ -1,0 +1,40 @@
+### abstract ###
+One selection pressure shaping sequence evolution is the requirement that a protein fold with sufficient stability to perform its biological functions.
+We present a conceptual framework that explains how this requirement causes the probability that a particular amino acid mutation is fixed during evolution to depend on its effect on protein stability.
+We mathematically formalize this framework to develop a Bayesian approach for inferring the stability effects of individual mutations from homologous protein sequences of known phylogeny.
+This approach is able to predict published experimentally measured mutational stability effects with an accuracy that exceeds both a state-of-the-art physicochemical modeling program and the sequence-based consensus approach.
+As a further test, we use our phylogenetic inference approach to predict stabilizing mutations to influenza hemagglutinin.
+We introduce these mutations into a temperature-sensitive influenza virus with a defect in its hemagglutinin gene and experimentally demonstrate that some of the mutations allow the virus to grow at higher temperatures.
+Our work therefore describes a powerful new approach for predicting stabilizing mutations that can be successfully applied even to large, complex proteins such as hemagglutinin.
+This approach also makes a mathematical link between phylogenetics and experimentally measurable protein properties, potentially paving the way for more accurate analyses of molecular evolution.
+### introduction ###
+Knowledge of the impact of individual amino acid mutations on a protein's stability is valuable both for understanding the protein's natural evolution and for altering its properties for engineering purposes.
+Experimentally measuring the effects of mutations on protein stability is a laborious process, so a variety of methods have been devised to predict these effects computationally.
+Most existing methods rely on some type of physicochemical modeling of the mutation in the context of the protein's three-dimensional structure, often augmented by information gleaned from statistical analyses of protein sequences and structures.
+These types of methods are moderately accurate at predicting the effects of mutations on the stabilities of small soluble proteins CITATION CITATION.
+There is little or no published data evaluating their performance on the larger and more complex proteins that are frequently of greatest biological interest, although it might be expected to be worse given the greater difficulty of modeling larger structures.
+An alternative approach to predicting the effects of mutations on protein stability utilizes the information contained in alignments of evolutionarily related sequences.
+This approach, which was originally introduced by Steipe and coworkers CITATION, envisions an alignment of related sequences as representing a random sample of all possible sequences that fold into a given protein structure.
+Based on a loose analogy with statistical physics, the frequency of a given residue in the sequence alignment is assumed to be an exponential function of its contribution to the protein's stability.
+This is often called the consensus approach, since it always predicts that the most stabilizing mutation will be to the most commonly occurring residue.
+The consensus approach has proven to be surprisingly successful, with a wide range of studies supporting the basic notion that stabilizing residues tend to appear more frequently in sequence alignments of homologous proteins CITATION CITATION .
+But although it is often effective, the consensus approach suffers from an obvious conceptual flaw: alignments of natural proteins do not represent random samples of all possible sequences encoding a given structure, but instead are highly biased by evolutionary relationships.
+A particular residue might occur frequently because it has arisen repeatedly through independent amino acid substitutions, or it might occur frequently simply because it occurred in the common ancestor of many related sequences in the alignment.
+The sequence evolution of even distantly related protein homologs is non-ergodic, and so this problem will plague all natural sequence alignments.
+Therefore, it would clearly be desirable to extract information about protein stability from sequence alignments using a method that accounts for evolutionary relationships.
+In fact, there are already highly developed mathematical descriptions of the divergence of evolving protein sequences.
+The widely used likelihood-based methods for inferring protein phylogenies employ explicit models of amino acid substitution to assess the likelihood of phylogenetic trees CITATION.
+However, these methods make no effort to determine how selection for protein stability might manifest itself in the ultimate frequencies of amino acids in an alignment of evolved sequences.
+Instead, in their simplest form, these phylogenetic methods simply assume that there is a universal average tendency for one particular amino acid to be substituted with another.
+More advanced phylogenetic methods sometimes allow for different average substitution tendencies for different classes of protein residues CITATION CITATION.
+Still other methods use simulations or other structure-based methods to derive site-specific substitution matrices for different positions in a protein CITATION CITATION.
+However, none of these methods relate the substitution probabilities to the effects of mutations on experimentally measurable properties such as protein stability, nor do they provide a method for predicting the effects of the mutations from the protein phylogenies.
+Here we present an approach for using protein phylogenies to infer the effects of amino acid mutations on protein stability.
+We begin by describing a conceptual framework that quantitatively links a mutation's effect on protein stability to the probability that it will be fixed by evolution.
+We then show how this framework can be used to calculate the likelihood of specific phylogenetic relationships given the stability effects of all possible amino acid mutations to a protein.
+Our actual goal is to do the reverse, and infer the stability effects given a known protein phylogeny.
+To robustly accomplish this, we use Bayesian inference with informative priors derived from an established physicochemical modeling program.
+We compare the inferred stability effects to published experimental values for several proteins, and show that our method outperforms both the physicochemical modeling program and the consensus approach.
+Finally, we use our method to predict mutations that increase the temperature-stability of influenza hemagglutinin, a complex multimeric membrane-bound glycoprotein for which stabilizing mutations have never previously been successfully predicted by any approach.
+We introduce the predicted stabilizing mutations into hemagglutinin, and experimentally demonstrate that several of them increase the temperature-stability of the protein in the context of live influenza virus.
+Overall, our work presents a unified framework for incorporating protein stability into phylogenetic analyses, as well as demonstrating a powerful new approach for predicting stabilizing mutations.

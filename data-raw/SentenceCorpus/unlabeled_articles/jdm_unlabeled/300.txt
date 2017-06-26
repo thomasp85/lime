@@ -1,0 +1,30 @@
+### abstract ###
+we investigated how frequency and amount of punishment affect the decision making of iranian subjects
+in our first experiment  performing a computer-based persian version of the iowa gambling task igt  our subjects scored remarkably lower than their western counterparts
+moreover  our subjects chose more frequently and more rapidly from decks that had less frequent but larger amounts of punishments in comparison to decks that had more frequent punishments with smaller amounts
+in our second experiment  subjects did not differentiate between decks with the same frequency of punishment but with different punishment amounts
+however  among decks with the same amount but different frequency of punishment  a significant preference was apparent towards decks with less frequency of punishment
+our results differ from previous studies  indicating a different strategy in risky decision making among healthy adult iranian subjects  as they show low attention to the amount of punishment and are more concerned with the frequency of punishment
+### introduction ###
+risky decision making rdm is defined as a cognitive process in which an individual chooses from available options according to her assessment of the value of reward and or punishment associated with choices
+this assessment is based on the individual's previous experiences and obtained information about the possible outcomes of options
+factors such as the amount and frequency of reward and punishment  the probability of their occurrence and the delay in their presentation  influence the more favorable choice for the subject  CITATION
+various studies have shown that decision making is also affected by the emotional valence assigned to each option based on previous experiences  CITATION
+when making a choice  a decision maker recognizes the current situation as analogous to some previous experience and draws inferences from her previous choices  CITATION
+options with a history of yielding larger  more frequent and more probable rewards have more favorable effect on our reward and emotional processing systems and therefore are more likely to be chosen
+in fact  our subjective intuitions may bias us to make decisions not necessarily rational but emotionally favorable
+research on decision making  and in general psychology  can suffer greatly from focusing solely on subject populations from the same culture
+due to the need to move from single population based models  CITATION  and also because of the rapid globalization of commerce  the influence of culture on decision making has become a topic of interest for both psychologists and economists
+the influence of culture on probability judgments  risk perception and risk preference have been extensively explored by researchers in different fields  CITATION
+hsee and weber  CITATION  report that subjects from collectivist cultures  such as east asian cultures  are more risk-seeking because they have a larger social cushion to fall back on in case of losses
+in addition  they have found that these differences are not due to differences in attitudes towards risk  rather it is something about how risk is perceived and construed
+social and cultural causes are known to leave traces and are reflected by a variety of cultural products  such as the proverbs in that cultural  CITATION
+an iranian proverb  providing advice when choosing between short term and long term benefits  reads   a cash slap in the face is worth more than credit for halva
+  this proverb recommends people to prefer an instant gratification even if it is a slap in the face  over a sweeter payoff paid sometime in the future
+cultural products created over generations  responsible for storing and transmitting cultural wisdom  CITATION   as well as the current economic or political status of a nation affect different aspects of people's judgment and decision making
+we believe the halva proverb  and many others with similar messages  highlight the influence of social-economic causes  such years of war and instability in the social-political atmosphere  on the iranian culture
+there have not been rigorous cross-cultural experiments focusing on decision making in middle-eastern cultures
+in this paper  we report on cross cultural differences in rdm by comparing the results of iranian subjects to the results of the same rdm assessment test performed in western cultures
+due to factors such as religious restrictions for gambling  multiple regime changes and years of war  we expect iranians to perform somewhat differently from their western counterparts
+moreover  we investigate the effect of frequency in contrast to amount of reward and or punishment in rdm among iranians
+we close with a discussion about some potential reasons for some of these differences

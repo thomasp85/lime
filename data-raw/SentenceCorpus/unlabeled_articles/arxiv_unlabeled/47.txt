@@ -1,0 +1,46 @@
+### abstract ###
+Kohonen self-organisation maps are a well know classification tool, commonly used  in a wide variety of problems, but with limited applications in time series  forecasting context
+In this paper, we propose a forecasting method specifically  designed for multi-dimensional long-term trends prediction, with a double application  of the Kohonen algorithm
+Practical applications of the method are also presented
+### introduction ###
+Time series forecasting is a problem encountered in many fields of applications,  as finance (returns, stock markets), hydrology (river floods), engineering (electrical  consumption), etc
+Many methods designed for time series forecasting perform well  (depending on the complexity of the problem) on a rather short-term horizon but are rather poor on a longer-term one
+This is due to the fact that these methods are  usually designed to optimize the performance at short term, their use at longer  term being not optimized
+Furthermore, they generally carry out the prediction of a single value while the real problem sometimes requires predicting a vector of  future values in one step
+For example, in the case of some a priori known periodicity,  it could be interesting to predict all values for a period as a whole
+But forecasting  a vector requires either more complex models (with potential loss of performance for some of the vector components) or many distinct single value predicting models  (with potential loss of the correlation information between the various values)
+Methods able to forecast a whole vector with the same precision for each of its  components are thus of great interest
+While enlarging the prediction horizon is of course of primary interest for  practitioners, there is of course some limit to the accuracy that can be expected  for a long-term forecast
+The limitation is due to the availability of the information  itself, and not to possible limitations of the forecasting methods
+Indeed, there is no  doubt that, whatever forecasting method is used, predicting at long term (i e many time  steps in advance) is more difficult that predicting at short term, because of the missing  information in the unknown future time steps (those between the last known value and  the one to predict)
+At some term, all prediction methods will thus fail
+The purpose  of the method presented in this paper is not to enlarge the time horizon for which  accurate predictions could be expected, but rather to enlarge the horizon for which  we can have insights about the future evolution of the series
+By insights, we mean  some information of interest to the practitioner, even if it does not mean accurate  predictions
+For example, are there bounds on the future values
+What can we  expect in average
+Are confidence intervals on future values large or narrow
+Predicting many steps in advance could be realized in a straightforward way, by subsampling the known sequence, then using any short-term prediction method
+However, in this case, the loss of information (used for the forecast) is obviously even higher, due to the lower  resolution of the known sequence
+Furthermore, such solution does not allow in a general  way to introduce a stochastic aspect to the method, which is a key issue in the proposed  method
+Indeed, to get insights about the future evolution of a series through some  statistics (expected mean, variance, confidence intervals, quartiles, etc ), several predictions should be made in order to extract such statistics
+The predictions should  differ; a stochastic prediction method is able to generate several forecasts by repeated  Monte-Carlo runs
+In the method presented in this paper, the stochastic character of the  method results from the use of random draws on a probability law
+Another attractive aspect of the method presented in this paper is that it can be used  to predict scalar values or vectors, with the same expected precision for each component  in the case of vector prediction
+Having at disposal a time series of values  SYMBOL  with   SYMBOL , the prediction of a vector can be defined as follows :  SYMBOL } where  SYMBOL  is the size of the vector to be predicted,  SYMBOL  is the data generating process,   SYMBOL  is the number of past values that influence the future values and  SYMBOL   is a centred noise vector
+The past values are gathered in a  SYMBOL -dimensional vector called  regressor
+The knowledge of  SYMBOL  values of the time series (with  SYMBOL  and  SYMBOL ) means that  relation () is known for many ( SYMBOL ) time steps in the past
+The  modeling problem then becomes to estimate a function  SYMBOL  that models correctly the time series for the whole set of past regressors
+The idea of the method is to segment the space of  SYMBOL -dimensional regressors
+This segmentation can be seen as a way to make possible a local modeling in each segment
+This part of the method is achieved using the Self-Organizing Map (SOM)  CITATION
+The prototypes obtained for each class model locally the regressors of the corresponding  class
+Furthermore, in order to take into account temporal dependences in the series,  deformation regressors are built
+Those vectors are constructed as the differences between  two consecutive regressors
+The set of regressor deformations can also be segmented using  the SOM
+Once those two spaces are segmented and their dependences characterized, simulations  can be performed
+Using a kind of Monte-Carlo procedure to repeat the simulations, it is  then possible to estimate the distribution of these simulations and to forecast global trends of the time series at long term
+Though we could have chosen some other classical vector quantization (VQ) method as only  the clustering property is of interest here, the choice of the SOM tool to perform  the segmentation  of the two spaces is justified by the fact that SOM are efficient  and fast compared to other VQ methods with a limited complexity  CITATION  and  that they provide an intuitive and helpful graphical representation
+In the following of this paper, we first recall some basic concepts about the SOM  classification tool
+Then we introduce the proposed forecasting method, the double  vector quantization, for scalar time series and then for vector ones
+Next we present  some experimental results for both scalar and vector forecastings
+A proof of the method  stability is given in appendix

@@ -1,0 +1,17 @@
+### abstract ###
+research endeavors to determine the effectiveness of patient decision aids ptdas have yielded mixed results
+the conflicting evaluations are largely due to the different metrics used to assess the validity of judgments made using ptdas
+the different approaches can be characterized by hammond's  CITATION  two frameworks for evaluating judgments  correspondence and coherence
+this paper reviews the literature on the effectiveness of ptdas and recasts this argument as a renewed debate between these two meta-theories of judgment
+evaluation by correspondence criteria involves measuring the impact of patient decision aids on metrics for which there are objective  external  and empirically justifiable values
+evaluation on coherence criteria involves assessing the degree to which decisions follow the logical implications of internal  possibly subjective  value systems preferences
+coherence can exist absent of correspondence and vice versa
+therefore  many of the seemingly conflicting results regarding the effectiveness of ptdas can be reconciled by considering that the two meta-theories contribute unique perspectives
+we argue that one approach cannot substitute for the other  and researchers should not deny the value of either approach
+furthermore  we suggest that future research evaluating ptdas include both correspondence and coherence criteria
+### introduction ###
+in  NUMBER   kenneth hammond argued that the field of judgment and decision making has taken two distinct paths  describing those two paths as meta-theories used in the evaluation of judgments
+in the correspondence meta-theory  judgments are compared to objective facts with the explicit goal of evaluating the empirical accuracy of the judgments
+in contrast  the coherence meta-theory assesses the logical consistency of judgments
+in this framework  judgments are evaluated by the degree to which they are similar to solutions given by logical  mathematical  or statistical theories
+judgments are not compared to an external  true  value  instead judgments are compared to a normative rule  often mathematical in nature

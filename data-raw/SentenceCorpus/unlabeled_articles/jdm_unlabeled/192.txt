@@ -1,0 +1,46 @@
+### abstract ###
+we perform an experimental investigation using a dictator game in which individuals must make a moral decision - to give or not to give an amount of money to poor people in the third world
+a questionnaire in which the subjects are asked about the reasons for their decision shows that  at least in this case  moral motivations carry a heavy weight in the decision  the majority of dictators give the money for reasons of a consequentialist nature
+based on the results presented here and of other analogous experiments  we conclude that dicator behavior can be understood in terms of moral distance rather than social distance and that it systematically deviates from the egoism assumption in economic models and game theory
+### introduction ###
+in standard dictator game dg experiments  one of the players  the dictator  is given a fixed amount of money and a set of instructions
+the instructions explain that the money has been assigned to two players - the dictator and the recipient - but that only the dictator is entitled to decide how much money to keep and how much money to give to the recipient
+in this simple situation  there are at least three sources of information relevant to the decision  i information related to the dictator herself  i e   whether or not the decision is observed by others  ii information the dictator receives about the recipient  and iii information derived from the game framing and the language used in the instructions
+previous papers have shown that the outcome of a dg changes considerably depending on the type of information provided by the experimenters
+for instance  when the dictator makes the decision under conditions of absolute privacy and anonymity and has no information about the recipient  nearly no one donates anything
+donations tend to be very low  around  NUMBER  percent  of the pie on average  CITATION
+however  when the dictator receives reliable information regarding the recipient  even while keeping anonymity constant  donations increase
+when no information is available about the recipient  the dictator may have doubts as to the recipient's existence and therefore have no reason to share the money
+in contrast  when dictators were shown pictures of the recipients in a particular experiment  up to  NUMBER  percent  of the subjects gave as much as half of the total amount  although  NUMBER  percent  of them kept all the money for themselves  CITATION
+in another experiment  the dictators were told that their donation would be given to the red cross  CITATION
+thirty-one percent of the dictators in this experiment gave part of the money  NUMBER  percent  gave half of the amount  while  NUMBER  percent  gave the full amount
+offers also increased when the dictators were told the recipient's surname  CITATION   when they received proof of the actual existence of recipients  or when they were told that the recipient was a fellow classmate  CITATION
+these experiments have shown that if conditions of anonymity are relaxed  e g   dictator's behavior or relevant information about the recipients are revealed  donations will be higher  although the full amount of money will never be donated - with the exception of the red cross experiment
+the language used in the instructions is yet another factor that may determine the outcome of the experiment
+for example  the fact that subjects are told that they are participating in an experiment may make them lose interest in their partner  or may cause subjects to feel that they are playing a game - that it is a competition and they must therefore win  that is  keep all or part of the money for themselves  CITATION
+the nature of the payments  the presence or absence of the experimenters  the possibility of taking part in future experiments - and thus winning more money - may also determine the outcome  CITATION
+the aim of these experiments is to measure the prosocial conduct or other-regarding preferences revealed by the subjects  thus challenging the assumption of self-interested behavior
+the supposition that individuals will attempt to maximize their own benefits  a standard assumption in economics  could lead to the conclusion that no one will give anything in the dg since giving nothing is the behavior that maximizes the dictator material's payoff
+however  as we have seen  subjects often deviate from this prediction in the laboratory setting
+in light of these experimental results  several hypotheses have been developed to explain these deviations
+hoffman et al CITATION  show that as anonymity is relaxed  donations increase
+in the opinion of these authors  this is due to the fact that anonymity generates  social distance   which they define as  the degree of reciprocity that subjects believe exists within a social interaction   CITATION
+the social isolation or lack of sense of community produced by anonymity leads to the predominance of self-interested behavior
+nonetheless  the hypothesis of social distance has been widely criticized
+the concept of reciprocity  for example  is employed in a very broad sense since in reality the dg does not pose so much a problem of reciprocity - in that the recipient can do nothing- as one of subject identifiability
+indeed  it is identifiability that determines behavior  CITATION
+many experiments have shown that it is not so much the degree of dictator anonymity that determines donations  but rather the information that the dictator has about the recipient
+thus  for example  in an extensive article in which several hypotheses are reviewed to explain donations in dictator games and others are proposed  bolton et al CITATION  argue that  if i know nothing about the other person and if i give her the money  i can err in her favor  but i prefer to err in my favor because i am not a saint the  i'm-no-saint hypothesis 
+according to these authors  however  the hypotheses that explain dg donations are unclear when the dictator has information about the recipient
+it should be noted that bolton et al CITATION  do not find evidence for what they call the  kindness hypothesis   according to which  dictators might be motivated to give a gift for one or more of many reasons  e g   a sense of moral obligation  pleasure derived from giving  to demonstrate kindness   NUMBER 
+this hypothesis  however  encompasses very distinct motivations that must be analyzed separately
+although the pleasures of giving or demonstrating kindness are greatly affected by anonymity - in that the recipient not knowing if the dictator gives or not takes away the pleasure of giving and does not allow the dictator to demonstrate that she is kind - moral obligation is not affected by anonymity but rather by the lack of information about the recipient's actual situation
+in the classic hoffman et al CITATION  experiment  and in most experiments along these lines  the complete lack of information about the recipient removes the necessary conditions to donate out of a sense of moral obligation if  as eckel  and  grossman have shown  altruistic behavior requires an appropriate context  which is inexistent in most experiments  what would happen if the dictator makes a decision in an easily recognizable moral context  a context in which dictators have information  for example  about their partner's poverty or illness
+in eckel  and  grossman's experiment  in which the partner is the red cross  donations increase  but not in a spectacular way
+donations increase much more when the money that the dictator can distribute is the result of the joint effort of both the dictator and the partner  given that  in this case   social pressures  moral imperatives  and the warm glow of giving are likely to magnify the reward to skillful or deserving recipients   CITATION
+as ruffle points out  the results of this experiment contradict hoffman et al 's claim that other-regarding preferences have to do with  an expectations phenomenon  and not with  an autonomous private preference for equity   CITATION
+moral preferences  the sense of moral obligation  moral imperatives or equity appear repeatedly in discussions on the outcomes of a diverse range of dg experiments
+yet  in spite of the fact that donations occur in these experiments  we cannot speak with any certainty about dictators' reasons for giving  as the only thing we know for sure is the preference that has been revealed in the decision  that is  whether the dictator gave or did not give
+indeed  aside from the theoretical speculations of experimenters  we do not know why dictators give
+with a view to bridging this gap  in the following section we present two experiments a hypothetical one and a real-payoffs one in which the moral context is easily recognizable and in which dictators are expressly asked about the reasons for their action
+we can then determine if the  kindness hypothesis  is to some degree certain  either because the dictators take pleasure in giving  give to demonstrate kindness  or give out of a sense of moral obligation

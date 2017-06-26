@@ -1,0 +1,27 @@
+### abstract ###
+Massive amounts of data are being generated in an effort to represent for the brain the expression of all genes at cellular resolution.
+Critical to exploiting this effort is the ability to place these data into a common frame of reference.
+Here we have developed a computational method for annotating gene expression patterns in the context of a digital atlas to facilitate custom user queries and comparisons of this type of data.
+This procedure has been applied to 200 genes in the postnatal mouse brain.
+As an illustration of utility, we identify candidate genes that may be related to Parkinson disease by using the expression of a dopamine transporter in the substantia nigra as a search query pattern.
+In addition, we discover that transcription factor Rorb is down-regulated in the barrelless mutant relative to control mice by quantitative comparison of expression patterns in layer IV somatosensory cortex.
+The semi-automated annotation method developed here is applicable to a broad spectrum of complex tissues and data modalities.
+### introduction ###
+High-resolution maps of gene expression provide important information about how genes regulate biological processes at cellular and molecular levels.
+Therefore, a multitude of efforts are in progress to depict gene expression at single cell resolution in specimens ranging from organs to embryos.
+Common to these genome-scale projects is that they generate vast numbers of images of expression patterns that reveal the presence of transcripts or proteins in a particular cell or group of cells within a natural context.
+However, large collections of images are of limited usefulness per se without efficient means to mine these images and to characterize and compare gene or protein expression patterns.
+In analogy to the requirements for mining genomic sequence information, meaningful retrieval of expression patterns requires suitable annotation.
+By annotation, we mean associating sites and strengths of expression with a digital representation of the anatomy of a specimen.
+The annotation approach taken by the Gene Expression Database CITATION is to hand-curate published gene expression patterns using an extensive dictionary of anatomical terms.
+This annotation is facilitated by the Edinburgh Mouse Atlas Project, which provides anatomical ontology relationships using a hierarchical tree CITATION.
+Visualization is achieved by associating these terms with locations in a volumetric model CITATION.
+The Edinburgh Mouse Atlas Project also provides tools to map in situ hybridization images directly into a three-dimensional atlas CITATION.
+Although hand curation is an effective method for annotation, it is not an efficient means for handling the large-scale datasets systematically collected by robotic ISH CITATION.
+In addition, if future changes are made to anatomical designations, updating the annotation may require a laborious review of previously annotated data.
+Here we present a completely novel approach that uses a geometric modeling technique to create a digital atlas of the postnatal day 7 mouse brain.
+This deformable atlas can then be adjusted to match the major anatomical structures present in P7 mouse brain tissue sections, accurately define the boundaries between structures, and provide a smooth multi-resolution coordinate representation of small structures.
+When combining this technique with a method for detecting strength of gene expression, one can efficiently and automatically annotate a large number of gene expression patterns in a way that subsequently allows queries and comparisons of expression patterns in user-defined regions of interest.
+P7 mouse brain was selected as the specimen because at this developmental stage, many complex brain functions begin to be established yet the existing information on underlying molecular mechanisms is still relatively limited.
+We describe here the creation of a prototype 200-gene dataset generated using robotic ISH, and the application of our deformable atlas-based annotation method to this dataset.
+We then demonstrate the utility of the approach with two examples: searching for genes expressed in the substantia nigra, and identifying genes potentially involved in functional regionalization of the cortex.

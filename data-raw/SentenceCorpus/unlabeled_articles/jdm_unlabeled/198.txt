@@ -1,0 +1,51 @@
+### abstract ###
+theoretical equivalence exists among various auction mechanisms  specifically the second-price-auction spa  a competitive environment  and the bdm mechanism  a non-competitive environment
+yet  empirical studies suggest that behavior in these mechanisms may diverge
+our experimental study examines the wtp and the wta of individuals by analyzing buying and selling bidding patterns both for a physical product mugs and for two types of lotteries regular lotteries and extreme lotteries in these two auctions mechanism  spa and bdm
+we found that the wtp in the spa is higher than the wtp in the bdm for mugs and for regular lotteries  while the mechanisms do not differ significantly for extreme lotteries
+in addition  the wta in the spa is lower than in the bdm for regular lotteries only
+these results indicate that the wtp and wta  as well as the wta-wtp gap  tend to differ in the spa and in the bdm as a result of the interaction between the competitiveness effect and other psychological effects on bidding patterns for riskless and risky assets
+in addition  the current study suggests that the competitiveness effect depends not only on the type of mechanism spa  but also on the type of item physical assets or lotteries and the type of lottery
+in addition  the influence of the competitiveness effect may vary between buying and selling positions
+### introduction ###
+several studies have compared the bidding patterns of subjects in different auction mechanisms
+despite the theoretical equivalence among various auction mechanisms  such as the bdm mechanism  CITATION  and the second-price-auction henceforth  spa  CITATION   empirical studies suggest that behavior in these mechanisms may diverge  CITATION
+in auctions based on the bdm mechanism  individuals buying an asset declare their maximum buying price  known as willingness-to-pay wtp
+if the bidding price is higher than a drawn number  the individual pays the drawn number and buys the asset
+when selling an asset  individuals declare their minimum selling price  known as willingness-to-accept wta
+if the bidding price is lower than a drawn number  the individual receives the amount of the drawn number and sells the asset
+in auctions based on spa  the highest bidder in a buying auction wins the final prize and pays the second highest bid
+the lowest bidder in a selling auction wins the final prize and pays the second lowest bid
+the spa is more competitive than the bdm mechanism  since each participant competes with others
+shogren et al CITATION  suggested that in the spa   people may submit bids to win for the sake of winning
+they may bid wtp-up and wta-down in order to walk out of the experiment as the 'top-dog' among their peers  p  NUMBER 
+the top-dog effect is said to exist if bidders submit bids in excess of their true valuation with the intention of deriving utility by winning the auction
+previous evidence on the existence of a top-dog effect has been mixed
+shogren and hayes  CITATION  report that nearly  NUMBER  percent  of participants in an induced-value auction market submitted bids that were less than or equal to their assigned value
+the authors concluded that these results are not consistent with the existence of a top-dog effect
+in contrast  kagel's review  CITATION  of the induced-value spa literature indicates that the mean bid in such auctions is generally greater than predicted by theory
+corrigan and rousu  CITATION  provided evidence of spa overbidding in repeated trial auctions  interpreting the results as the top-dog effect
+in addition  shavit et al CITATION  show that competitiveness affects bidding patterns in the spa
+the current study examines the impact of the top-dog effect  or the competitiveness effect  in the spa on bidding patterns for different goods riskless and risky assets and in different positions buyer or seller
+in particular  the study examined the wtp and the wta by analyzing buying and selling bidding patterns both for mugs and for lotteries in two separate auctions mechanism  the spa  a competitive environment  and the bdm mechanism  a non-competitive environment
+we consider two types of lotteries  regular lotteries and extreme lotteries
+extreme lotteries involve very high outcome associated with small probability  and low  or zero  outcome associated with high probability
+previous studies did not distinguish between biddings on regular and extreme lotteries for the two mechanisms
+in this study  we examine these two types of lotteries  since we expected to find differences between them on bidding patterns in the spa and in the bdm
+for extreme lotteries  we expect no impact of the competitiveness effect in the buying position of the spa  since the chances for loss are very high and such a lottery will not be attractive to buy
+in addition  we expect that the competitiveness effect in the selling position of the spa will be canceled out since the seller of an extreme lottery  who focuses on the very high winning outcome  will avoid selling it
+to evaluate the wtp and wta of an item  we considered several psychological effects that influence the bidding patterns of individuals
+the effects are the impact of each of these effects  and the sum of all of them  on the wtp and the wta is expected to vary among goods and mechanisms
+the literature does not discuss the possible interaction between these psychological effects and the competitiveness environment effect
+our study fills this void and compares the interaction of these effects on bidding for mugs and for lotteries
+psychological effects  such as loss aversion and the endowment effect  have been used to explain the wta-wtp disparity  CITATION
+yet  recent studies have questioned the existence and interpretation of a possible gap between wtp and wta  CITATION
+shogren and hayes  CITATION  and shogern et al CITATION  argued that the wta-wtp disparity in the first trial for market goods candy bars and university mugs in both auctions bdm and spa disappeared quickly for repeated trials in the spa  though it persisted in the bdm mechanism
+shogern et al CITATION  suggested that the wta-wtp disparity may depend on the auction mechanism
+for lotteries  schmidt and traub  CITATION  argued that an asymmetric effect  in which the buyer focuses on the potential disappointment of the lowest outcome and the seller focuses on the potential regret of losing the highest outcome  may cause the disparity between wta and wtp
+in the current study we use not only mugs  but also regular and extreme lotteries that enable us to examine more rigorously this asymmetry between buyers and sellers
+in sum  the current study examines the wta and wtp for riskless goods mugs and two types of risky assets regular and extreme lotteries in competitive versus non-competitive mechanisms and compares the wta-wtp gap for these items in the two mechanisms
+the study also discusses the influence of the interaction between the competitive effect and other psychological effects on subjects' bidding patterns
+the results should shed some light on the impact of the competitiveness effect in the spa on the bidding pattern for different assets and different positions  in comparison to the bdm
+the rest of the paper is organized as follows
+section  NUMBER  outlines the main hypotheses  section  NUMBER  presents the experimental method  and section  NUMBER  presents the results

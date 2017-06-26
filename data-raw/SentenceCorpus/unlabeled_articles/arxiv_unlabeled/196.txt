@@ -1,0 +1,37 @@
+### abstract ###
+Recently, different works proposed a new way to mine patterns in databases with pathological size
+For example, experiments in genome biology usually provide databases with thousands of attributes (genes) but only tens of objects (experiments)
+In this case, mining the ``transposed'' database runs through a smaller search space, and the Galois connection allows to infer the closed patterns of the original database
+We focus here on constrained pattern mining for those unusual databases and give a theoretical framework for database and constraint transposition
+We discuss the properties of constraint transposition and look into classical constraints
+We then address the problem of generating the closed patterns of the original database satisfying the constraint, starting from those mined in the ``transposed'' database
+Finally, we show how to generate all the patterns satisfying the constraint from the closed ones
+### introduction ###
+Frequent pattern mining is now well mastered, but these patterns, like association rules, reveal to be too numerous for the experts and very expensive to compute
+They have to be filtered or constrained
+However, mining and constraining have to be done jointly (pushing the constraint) in order to avoid combinatorial explosion~ CITATION
+Mining under complex constraint has become today a hot topic and the subject of numerous works (e g ,~ CITATION )
+Moreover, new domains are interested in our applications, and data schemes vary consequently
+In genome biology, biological experiments are very expensive and time consuming
+Therefore, only a small number of these experiments can be processed
+However, thanks to new devices (such as biochips), experiments can provide the measurements of the activity of thousands of genes
+This leads to databases with lots of columns (the genes) and few rows (the experiments)
+Numerous works present efficient algorithms which mine the patterns satisfying a user defined constraint in large databases
+This constraint can combine minimum and maximum frequency threshold together with other syntactical constraints
+These algorithms are designed for databases with up to several millions of rows
+However, their complexity is exponential in the number of columns and thus they are not suited for databases with too many columns, like those encountered in genome biology
+Recently, two propositions were done to solve this problem: instead of mining the original database, these algorithms work on the ``transposed'' database, i e , columns of the original database become rows in the ``transposed'' database and rows becomes columns (this is indeed the same database but with a different representation)
+Therefore the ``transposed'' database has significantly less columns than the original one
+The CARPENTER algorithm  CITATION  is specifically designed for mining the frequent closed patterns, and our proposition  CITATION  uses a classical algorithm for mining closed patterns with a monotonic (or anti-monotonic) constraint
+Both approaches use the transposition principle, however the problem of mining under constraints is not fully studied, specially for complex constraints (i e , conjunction and disjunction of simple constraints)
+In this paper, we study this problem from a theoretical point of view
+Our aim is to use classical algorithms (constrained pattern mining algorithms or closed patterns mining algorithms) in the ``transposed'' database and to use their output to regenerate patterns of the original database instead of directly mining in the original database
+There are several interesting questions which we will therefore try to answer:   What kind of information can be gathered in the ``transposed'' database on the patterns of the original database
+Is it possible to ``transpose'' the constraints  I e , given a database and a constraint, is it possible to find a ``transposed'' constraint such that  mining the ``transposed'' database with the ``transposed'' constraint gives information about the patterns which satisfy the original constraint in the original database
+How can we regenerate the closed patterns in the original database from the patterns extracted in the ``transposed'' database
+How can we generate  all  the itemsets satisfying a constraint using  the extracted closed patterns
+These questions will be addressed respectively in Sec ~,  , ~and~
+The organization of the paper is as follows: we start Sec ~ by recalling some usual definitions related to pattern mining and Galois connection
+Then we show in Sec ~ how to transpose usual and complex constraints
+Section~ is a complete discussion about mining constrained closed patterns using the ``transposed'' database and in Sec ~ we show how to use this to compute all (i e , not only closed) the patterns satisfying a constraint
+Finally Sec ~ is a short conclusion

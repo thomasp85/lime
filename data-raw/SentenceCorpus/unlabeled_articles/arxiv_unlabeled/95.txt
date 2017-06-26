@@ -1,0 +1,31 @@
+### abstract ###
+%\baselineskip=18pt Recent spectral clustering methods are a propular and powerful technique for data clustering
+These methods need to solve the eigenproblem whose computational complexity is  SYMBOL , where  SYMBOL  is the number of data samples
+In this paper, a non-eigenproblem based clustering method is proposed to deal with the clustering problem
+Its performance is comparable to the spectral clustering algorithms but it is more efficient with computational complexity  SYMBOL
+We show that with a transitive distance and an observed property, called K-means duality, our algorithm can be used to handle data sets with complex cluster shapes, multi-scale clusters, and noise
+Moreover, no parameters except the number of clusters need to be set in our algorithm
+### introduction ###
+Data clustering is an important technique in many applications such as data mining, image processing, pattern recognition, and computer vision
+Much effort has been devoted to this research~ CITATION ,  CITATION ,  CITATION ,  CITATION ,  CITATION ,  CITATION ,  CITATION ,  CITATION
+A basic principle (assumption) that guides the design of a clustering algorithm is:    Consistency :  Data within the same cluster are closed to  each other, while data belonging to different clusters are relatively far away
+According to this principle, the hierarchy approach  CITATION  begins with a trivial clustering scheme where every sample is a cluster, and then iteratively finds the closest (most similar) pairs of clusters and merges them into larger clusters
+This technique totally depends on local structure of data, without optimizing a global function
+An easily observed disadvantage of this approach is that it often fails when a data set consists of multi-scale clusters  CITATION
+Besides the above consistency assumption, methods like the K-means and EM also assume that a data set has some kind of underlying structures (hyperellipsoid-shaped or Gaussian distribution) and thus any two clusters can be separated by hyperplanes
+In this case, the commonly-used Euclidean distance is suitable for the clustering purpose
+With the introduction of kernels, many recent methods like spectral clustering  CITATION ,  CITATION  consider that clusters in a data set may have more complex shapes other than compact sample clouds
+In this general case, kernel-based techniques are used to achieve a reasonable distance measure among the samples
+In  CITATION , the eigenvectors of the distance matrix play a key role in clustering
+To overcome the problems such as multi-scale clusters in  CITATION , Zelnik-manor and Perona proposed self-tuning spectral clustering, in which the local scale of the data and the structure of the eigenvectors of the distance matrix are considered~ CITATION
+Impressive results have been demonstrated by spectral clustering and it is regarded as the most promising clustering technique  CITATION
+However, most of the current kernel related clustering methods, including spectral clustering that is unified to the kernel K-means framework in  CITATION , need to solve the eigenproblem, suffering from high computational cost when the data set is large
+In this paper, we tackle the clustering problem where the clusters can be of complex shapes
+By using a transitive distance measure and an observed property, called K-means duality, we show that if the consistency condition is satisfied, the clusters of arbitrary shapes can be mapped to a new space where the clusters are more compact and easier to be clustered by the K-means algorithm
+With comparable performance to the spectral algorithms, our algorithm does not need to solve the eigenproblem and is more efficient with computational complexity  SYMBOL  than the spectral algorithms whose complexities are  SYMBOL , where  SYMBOL  is the number of samples in a data set
+The rest of this paper is structured as follows
+In Section~, we discuss the transitive distance measure through a graph model of a data set
+In Section~, the duality of the K-means algorithm is proposed and its application to our clustering algorithm is explained
+Section~ describes our algorithm and presents a scheme to reduce the computational complexity
+Section~ shows experimental results on some synthetic data sets and benchmark data sets, together with comparisons to the K-means algorithm and the spectral algorithms in  CITATION  and  CITATION
+The conclusions are given in Section~

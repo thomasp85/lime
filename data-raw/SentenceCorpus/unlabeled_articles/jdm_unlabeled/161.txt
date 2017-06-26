@@ -1,0 +1,77 @@
+### abstract ###
+runs of gains and losses are particularly salient to decision makers because of their perceived departure from randomness  as well as their immediate impact on the financial status of the decision makers
+past research has focused on decision making biases that relate to faulty conceptions of chance and luck  such as the gambler's fallacy and the hot hand effect
+participants in the current study bet on the outcomes of a long sequence of simulated coin tosses
+risk preferences were found to change as a function of run valence i e   losses vs gains  run length  and financial status
+individuals were found to differ in the effect of all of these factors  in their responses to runs of gains and losses in sequential risky choice
+### introduction ###
+many decisions are repeated over time  and accordingly  the results of past decisions can have a substantial impact on future decisions
+financial analysts make repeated decisions involving gains and losses  and the charting of financial data is a common method used to summarize the past performance of companies and markets
+runs of consecutive gains or losses are frequently depicted in these charts  and are generally some of their more noticeable characteristics
+behavioral finance researchers believe these run patterns are so prominent that runs can affect future predictions made by analysts
+this influence is troubling because runs  as highlighted in shefrin's quote  often occur naturally without any special underlying cause
+shefrin  CITATION  emphasized the folly of basing financial predictions solely on run patterns  and he provided case studies of financial experts to illustrate these poor decisions
+one example involved a prediction in  NUMBER  by a senior investment adviser for merrill lynch
+after an exceptionally long period with high returns from equities  the analyst incorrectly forecast that below average returns were inevitable after such a long run of gains
+unfortunately for the analyst  there was a  NUMBER   NUMBER  percent increase in the dow jones index by the close of trading that year
+this analyst committed the classic gambler's fallacy  believing that long runs of outcomes have a low frequency of occurrence  and  therefore  runs are more likely to end the longer they continue
+but can we assume that any investors who decreased their investment in equities at this time were doing so because of the gambler's fallacy
+there is no doubt that humans are susceptible to biased probabilistic reasoning when judging and predicting runs of random or near random binary events  CITATION
+but runs of losses and gains are not like other binary events  because the consequences of these events can also have a financial impact on the decision maker
+a run of losses will result in a depletion of financial resources  just as a run of gains will result in an increase in financial resources
+but most real-world and laboratory-based studies of the impact of runs of gains and losses on risk preferences have focused solely on biased reasoning explanations and disregarded explanations based on the financial impacts of runs
+for example  sundali and croson  CITATION  examined the prevalence of the gambler's fallacy and the hot hand with gamblers playing roulette in a casino
+the hot hand is another decision bias that can result from betting on random events
+decision makers who follow a hot hand heuristic behave as if runs of gains or losses are likely to continue  possibly because winning creates an illusion of control
+as a result  these decision makers risk more after a run of gains and risk less after a run of losses
+sundali and croson  CITATION  tested for the hot hand effect by looking at the number of bets gamblers made after a win or after a loss
+the researchers assumed that a hot hand bias would cause gamblers to make more bets after a win than after a loss  and they found many gamblers who produced such betting behaviors
+however  these researchers also admitted that the same pattern of risk preferences could result from the concurrent changes in financial state that occur during runs of gains and losses
+they suggested that gamblers could also place more bets after a win because they feel richer
+however  sundali and croson  CITATION  had no way of recording the financial status of the gamblers in their study
+laboratory studies allow the researcher to examine how runs of gains and losses influence risk preferences whilst controlling for the financial status of the decision maker
+most previous studies of gains and losses in laboratory settings have not implemented such control
+for example  johnson  tellis  and macinnis  CITATION  examined the effects of runs of losses and gains on a single simulated investment decision
+the investment decision was based on stock reports that highlighted a run of gains or losses immediately prior to this investment decision
+the length of the run was manipulated by the researchers
+the majority of participants varied their choice on the basis of the prior runs  and the researchers explained these choices in terms of a hot hand or gambler's fallacy
+although this research has important implications for one-off investment decisions  the experimental design fails to capture the dynamic nature of sequential risky choice
+the prior run of gains or losses had no direct effect on the financial status of the participants  and subsequently  no effect on the choices made by participants
+not surprisingly  the reasons provided by the participants in this experiment appeared to indicate biased probabilistic reasoning
+one laboratory study that did attempt to capture the dynamic  and more complex  aspects of sequential risky choices was conducted by leopard  CITATION
+in this study  participants were provided with a long sequence of binary gambles where the riskiness of the gambles was manipulated by changing the variance in the amount to be lost or gained
+although this experimental manipulation does not change the actual risk of the gamble i e   expected value remains the same for each choice  previous research has shown that participants perceive gambles with larger variance as riskier choices
+for example  winning or losing   NUMBER   NUMBER  is perceived as riskier than winning or losing   NUMBER   NUMBER 
+leopard allowed runs of gains and losses to occur naturally during these long sequences of random events  and the participants were requested to play until they had lost their starting bank of   NUMBER   NUMBER  or until they had played  NUMBER  gambles
+leopard recorded the run valence loss vs gain and run length before each choice was made  and also recorded the current bank of the participant each time a gamble was played
+leopard tested for run effects by conducting a kruskal wallis non-parametric equivalent of anova analysis of gamble risk for each run length
+runs of losses were coded with a negative run value and runs of gains were coded with a positive run value
+a significant run effect was found for  NUMBER  percent  of her participants  and each of these participant's data are summarized in figure  NUMBER 
+leopard then grouped participants on the basis of a visual inspection of the graphs displayed in figure  NUMBER 
+she inferred that eight participants had followed the gambler's fallacy figure  NUMBER a and three participants had shown the hot hand effect figure  NUMBER b
+she also found two participants who provided non-linear risk preferences  and she labeled these participants as incurable optimists figure  NUMBER c
+she believed that these participants increased their risk  because they perceived long runs of any type to signal that a positive outcome is imminent
+leopard's conclusions raise several questions
+leopard admitted that  outcome and financial state are inherently confounded to some degree for at least some of the subjects  p  NUMBER 
+many of the participants in leopard's study provided significant relationships between risk preference and financial state  including all but three of the participants displayed in figure  NUMBER 
+in addition  her classification of participants relied solely on visual inspection of the data graphed in figure  NUMBER 
+however  it is unclear whether the linear and non-linear patterns required for these classifications were actually statistically significant
+in addition  consistent trends were not always evident for both types of runs gains and losses or across the full range of run lengths
+many of the participants in figures  NUMBER a and  NUMBER b showed stronger non-linear trends as run length increased or as run valence changed
+non-linear trends could reflect a change in risk strategy during these times
+finally  the outcomes of each participant's gambles were random  and therefore the participant's financial state at the times when runs occurred could have varied dramatically within and between participants
+leopard does not provide any information about how many participants failed to complete the  NUMBER  trials or what the financial state of each participant was at the end of each experimental session
+it is not out of the question that a participant may have experienced runs only when down from their initial bank  or alternatively  experienced runs only when up from their initial bank
+the difficulty with using random event sequences is that there is no control over when runs will occur  what type of run will occur  and how long each run will be
+the goal of the current study is to improve on the leopard  CITATION  study by controlling the type of runs  the length of runs  and when these runs occur with respect to the participant's financial state
+a more thorough statistical analysis of the data collected will also provide better justification for the speculated causes of risk preference patterns during runs of gains and losses
+i hypothesize that financial status will affect risk preferences  but runs of gains and losses will still influence risk preferences independently of the effects of status
+the latter hypothesis is based on the evidence that decision makers are highly predisposed to faulty probabilistic reasoning involving repeated random binary events  CITATION
+consequently  linear patterns of risk preferences that follow the gambler's fallacy negative slope and the hot hand positive slope are still expected
+however  other participants may show significant non-linear relationships between run variables and risk preference  and there are two possible explanations for these non-linear patterns
+prior research has found that the perceptions of runs may not be linearly related to length
+carlson and schu  CITATION  recently reported that an incremental reaction to a sequence of repeated outcomes often peaks at three consecutive outcomes and plateaus after this third event
+a second explanation for non-linear effects is that the participant follows different strategies for runs of different lengths and or valence
+for example  the self-perception of being a  lucky winner  after a couple of wins in a row will compete with the growing misperception that this streak must end if it continues to grow
+eventually  the latter perception may win out  and a change in risk preference occurs  leading to a non-linear pattern of risk preferences
+i hypothesize that the use of risk strategies during runs of gains and losses is much more dynamic and transient than suggested by previous research

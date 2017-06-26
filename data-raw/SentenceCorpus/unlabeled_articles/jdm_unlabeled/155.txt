@@ -1,0 +1,74 @@
+### abstract ###
+the endowment effect has been debated for over  NUMBER  years
+recent research suggests that differential focus of attention might play a role in shaping preferences
+in two studies we investigated the role of biased attention in the emergence of endowment effects
+we thereby derive predictions from an extended version of evidence accumulation models by additionally assuming a bias in attentional allocation based on one's endowment status
+we test these predictions against an alternative account in which the endowment effect is the result of initial anchoring and adjustment differences  CITATION
+in both studies we add deliberation time constraints to a standard willingness-to-accept willingness-to-pay paradigm and consistently find that the endowment effect grows as deliberation time increases
+in study  NUMBER  we additionally use eye tracking and find that buyers focus more on value decreasing attributes than sellers and vice versa for value increasing attributes
+this shift in attention plays a pivotal role in the construction of value and partially mediates the endowment effect
+### introduction ###
+one of the major goals of behavioral decision making research is to improve our understanding of the processes underlying judgments and decisions
+in what is now considered classic work  fundamental biases in judgment and choice  and systematic deviations from rational behavior have been demonstrated  CITATION
+in recent research the focus has shifted towards investigations of the underlying cognitive processes driving such effects  CITATION
+the way information is attended to and used to construct preferences and values has increasingly become of primary interest  CITATION
+one effect that has been studied in great detail across a variety of domains is the endowment effect  which violates one of the cornerstones of economic theory
+the basic assumption of the coase theorem  CITATION  is that a persons' willingness-to-pay wtp and willingness-to-accept wta for a good should be nearly equivalent under the assumption of zero transaction costs
+nevertheless  it has repeatedly been shown that wta for a good is considerably higher than wtp for the same good  leading to reduced trading
+this effect appears to be related to aspects of losing an endowment and has thus been coined the endowment effect  CITATION
+the endowment effect is a robust  although culturally influenced  CITATION   phenomenon  CITATION  that has been observed using various methodological approaches including non-incentivized price estimations  CITATION  and also incentive-compatible preference elicitation mechanisms  CITATION
+it has been found to occur with both tangible goods such as mugs and pens  CITATION  and goods with uncertain values such as lottery tickets  CITATION
+although there is no dearth of research on the endowment effect  more work is needed to understand the underlying processes  which are still under heavy debate  CITATION
+several theories have been put forward to provide an explanation for the endowment effect  CITATION
+the classic explanation is based on prospect theory  CITATION  and assumes that loss aversion leads to an increased valuation of the good in the selling perspective as compared to the buying perspective   because removing a good from the endowment creates a loss while adding the same good to an endowment without it generates a gain   CITATION
+research has expanded the loss-aversion explanation  CITATION  indicating that mechanisms such as differences in attentional focus  CITATION   the level of personal attachment  CITATION   and self-association with the good in question  CITATION  can also explain parts of the effect  CITATION
+cognitive mechanisms have often been suggested as alternative or supplementary explanations to the classic loss-aversion account
+carmon and ariely  CITATION   for example  argue that the endowment effect is caused by a stronger focus on the forgone  which differs between buyers i e   money and sellers i e   the good
+query theory qt  CITATION  suggests a different process behind the effect in transactional situations in which information has to be retrieved from memory
+individuals start with a memory query for aspects that support the status quo e g   for keeping the good vs the money which are weighted heavier than later queries and also act to inhibit subsequent queries for information which speaks against the status quo
+in several experiments johnson and colleagues  CITATION  showed that the order of queries into a good's worth were influenced by perspective and could explain endowment effects
+furthermore  by manipulating the query order they found that the endowment effect was attenuated to non-significance  suggesting a strong role for information search and uptake in the endowment effect
+in line with the qt account  nayakankuppam and mishra  CITATION  showed that   sellers appear to have a better representation of positive features and a worse representation of negative features  of the traded good   compared to buyers
+  p  NUMBER   and that both groups spontaneously list more features in favor of their position  CITATION
+nevertheless  because of its reliance on memory retrieval and inhibition processes qt does not make direct predictions in decision tasks in which relevant information about the good in question e g   the attributes  probabilities and outcomes  that make up a gamble is provided during the valuation and construction phase
+based on the findings by nayakankuppam and mishra  CITATION   however  one might predict that for such description-based-decisions there should be a similar imbalance in attention as well
+in the following  we will refer to the application of concepts from qt to such tasks as description-based query theory dbqt
+one class of process models that can explain the emergence of endowment effects in both kinds of tasks i e   decisions-from-descriptions and from memory are evidence accumulation approaches
+in particular the sequential value matching model  CITATION -which is an extension of decision field theory  CITATION -has been developed to model the process of constructing monetary valuations for objects that can be understood as gambles e g   lottery tickets  and  risky prospects
+conceptually  the svm model assumes that persons compare the gamble against a set of possible prices in a dynamic stochastic process
+first  persons pick one possible price  which can be anywhere between the maximum and the minimum outcome of the gamble
+if the gamble is worth more than the currently considered price  the price is increased by a small amount
+if the gamble is worth less  the price is decreased by a small amount
+this updating process is repeated until indifference is reached
+the starting point of the search process differs for different price elicitation methods and context conditions
+specifically  sellers start with a high price  whereas buyers start with a low price
+over time both prices are adjusted towards a price in the middle of the price range
+this adjustment to the middle is insufficient  however  which results in the well-established disparity between wta and wtp
+the svm model has been shown to explain several specific phenomena related to the disparity between wta and wtp
+most notably  it can account for observed preference reversals  CITATION   which the classic loss aversion explanation cannot accommodate  CITATION
+furthermore  the svm model has been shown to be able to qualitatively and quantitatively predict choices observed in previous studies as well as decision times and process tracing data  CITATION
+the svm model can readily account for endowment effects without the assumption of biased attention by assuming differential starting points e g   anchoring within the feasible price range for buyers and sellers  with sellers starting higher in the range than buyersrecent studies  however  indicate that in decisions-from-descriptions attention both reflects and modulates preferences  CITATION
+this suggests that in place or on top of the mechanisms suggested by the svm model there are likely shifts in attention to the positive value increasing vs negative value decreasing aspects of an option based on one's perspective leading to overweighting of these aspects and resulting in pricing differences as found in the endowment effect
+adding this assumption of a biased shift in attention based on one's perspective we formulate a set of related hypotheses  the biased evidence accumulation bea hypotheses
+if biased sampling based on perspective i e   bea is a contributing factor to endowment effects  the difference between wta-wtp should increase over time  because a constant or heavily weighted earlier bias in sampling increases the absolute difference between the sum of pro and con arguments for the considered good
+this should be the case at least in the early stage of the decision process  while prices are still being adjusted and price search has not yet been completed
+this forms our first specific bea hypothesis h NUMBER  growing endowment effect hypothesis
+due to a bias in accumulating evidence the disparity between wta and wtp will increase with increases in deliberation time
+if  in contrast  endowment effects are driven solely by differential anchoring and adjustment  as suggested by svm  CITATION   increased deliberation time should instead lead to decreases in the size of endowment effects  as pricing adjustments presumably will on average go down for sellers and up for buyers
+this hypothesis provides us with our alternative prediction in study  NUMBER 
+using eye-tracking methodologies in study  NUMBER  we test directly whether attentional focus is influenced by perspective and whether this affects valuations as our second and third bea-hypotheses
+h NUMBER  biased sampling hypothesis
+sampling of evidence will differ based on perspective such that buyers will focus more on value decreasing attributes than sellers
+h NUMBER  attentional impact hypothesis
+sampling of evidence biased towards either the value increasing decreasing attribute will lead to corresponding increases decreases in valuations
+additionally  we explore whether the allocation of attention is dependent on probabilities of outcomes as predicted by the evidence accumulation mechanism in general that is also central to the svm model  CITATION   as our fourth bea-hypothesis
+h NUMBER  probability based sampling hypothesis
+sampling of outcomes will be in part dependent on the stated probability of those outcomes occurring
+furthermore  although qt is a memory based account we abstract it to dbqt and apply two of its underlying information processing concepts i e   query direction switches as deliberations continue  and early queries have a greater impact than later queries to online information queries via attention  which we test as two further bea-hypotheses in study  NUMBER 
+we do so based on the finding that visual attention has been found to reflect internal processing of online information as well as memories  CITATION
+h NUMBER  shift in focus hypothesis
+buyers will begin to accumulate more value decreasing and sellers more value increasing evidence  but there will be an increased focus on the opposite kind of information over time
+h NUMBER  early weighting hypothesis
+earlier accumulated evidence will have a greater impact on subsequent valuations than will later evidence
+in the following we present and discuss results from two studies
+in study  NUMBER  we find that the wta wtp disparity grows with increasing deliberation time  as predicted by our first specific bea-hypothesis  but counter to the prediction of the svm model

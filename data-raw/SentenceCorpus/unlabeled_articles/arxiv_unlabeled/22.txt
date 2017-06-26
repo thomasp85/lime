@@ -1,0 +1,32 @@
+### abstract ###
+Prediction is a complex notion, and different predictors (such as people, computer programs, and probabilistic theories) can pursue very different goals
+In this paper I will review some popular kinds of prediction and argue that the theory of competitive on-line learning can benefit from the kinds of prediction that are now foreign to it
+The standard goal for predictor in learning theory is to incur a small loss for a given loss function measuring the discrepancy between the predictions and the actual outcomes
+Competitive on-line learning concentrates on a ``relative'' version of this goal: the predictor is to perform almost as well as the best strategies in a given benchmark class of prediction strategies
+Such predictions can be interpreted as decisions made by a ``small'' decision maker (i e , one whose decisions do not affect the future outcomes)
+Predictions, or  probability forecasts , considered in the foundations of probability are statements rather than decisions; the loss function is replaced by a procedure for testing the forecasts
+The two main approaches to the foundations of probability are measure-theoretic (as formulated by Kolmogorov) and game-theoretic (as developed by von Mises and Ville); the former is now dominant in mathematical probability theory, but the latter appears to be better adapted for uses in learning theory discussed in this paper
+An important achievement of Kolmogorov's school of the foundations of probability was construction of a universal testing procedure and realization (Levin, 1976) that there exists a forecasting strategy that produces ideal forecasts
+Levin's ideal forecasting strategy, however, is not computable
+Its more practical versions can be obtained from the results of game-theoretic probability theory
+For a wide class of forecasting protocols, it can be shown that for any computable game-theoretic law of probability there exists a computable forecasting strategy that produces ideal forecasts, as far as this law of probability is concerned
+Choosing suitable laws of probability we can ensure that the forecasts agree with reality in requisite ways
+Probability forecasts that are known to agree with reality can be used for making good decisions: the most straightforward procedure is to select decisions that are optimal under the forecasts (the principle of minimum expected loss)
+This gives,  inter alia , a powerful tool for competitive on-line learning; I will describe its use for designing prediction algorithms that satisfy the property of universal consistency and its more practical versions
+In conclusion of the paper I will discuss some limitations of competitive on-line learning and possible directions of further research \thispagestyle{empty} \ifFULLThe changes I made to the abstract as compared to  CITATION : ``talk'' is replaced by ``paper'' throughout
+This abstract still refers to ``outcomes'' (rather than the ``observations'' and ``data'' of the main part of the paper) \blueend
+### introduction ###
+This paper is based on my invited talk at the 19th Annual Conference on Learning Theory (Pittsburgh, PA, June 24, 2006)
+In recent years COLT invited talks have tended to aim at establishing connections between the traditional concerns of the learning community and the work done by other communities (such as game theory, statistics, information theory, and optimization)
+Following this tradition, I will argue that some ideas from the foundations of probability can be fruitfully applied in competitive on-line learning
+In this paper I will use the following informal taxonomy of predictions (reminiscent of Shafer's  CITATION , Figure 2, taxonomy of probabilities):  [D-predictions] are mere Decisions
+They can never be true or false but can be good or bad
+Their quality is typically evaluated with a loss function [S-predictions] are Statements about reality
+They can be tested and, if found inadequate, rejected as false [F-predictions] (or Frequentist predictions) are intermediate between D-pre\-dic\-tions and S-predictions
+They are successful if they match the fre\-quen\-cies of various observed events
+Traditionally, learning theory in general and competitive on-line learning in particular consider D-predictions
+I will start, in Section , from a simple asymptotic result about D-predictions: there exists a universally consistent on-line prediction algorithm (randomized if the loss function is not required to be convex in the prediction)
+Section  is devoted to S-prediction and Section  to F-prediction
+We will see that S-prediction is more fundamental than, and can serve as a tool for, F-prediction
+Section  explains how F-prediction (and so, indirectly, S-prediction) is relevant for D-prediction
+In Section  I will prove the result of Section  about universal consistency, as well as its non-asymptotic version

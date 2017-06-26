@@ -1,0 +1,56 @@
+### abstract ###
+research has shown that framing messages in terms of benefits or detriments can have a substantial influence on intended behavior
+for prevention behaviors  positively framed messages have been found to elicit stronger behavioral intentions than negatively framed messages
+research also seems to indicate that certain contextual features contribute to the persuasiveness of a message
+in the present research we test how message framing  contextually presented affect and the number of argument factors interact and contribute to the persuasiveness of a health related message
+consistent with our hypothesis  we found that  in our prevention focused task  increasing the number of arguments increased behavioral intentions bi for positively framed messages when subjects were cued  via negative affect  to be attentive to the message
+this resulted in a significant framing effect for messages with the maximum number of arguments and a negative background picture
+an account of contextual influence in persuasive health messages is discussed
+### introduction ###
+persuading people to adjust their behavior so that it is more consonant with a healthy lifestyle is no easy matter
+health care organizations are replete with attempts at influencing people to live a more healthy life
+designers of health-persuasive messages can attempt to either encourage a more healthy way of life or discourage an unhealthy one
+determining how the presentational frame of the message influences individuals is of particular importance in health care since the effectiveness of the intended message can have direct bearing on human health and quality of life
+the foundations for understanding how a problems frame may affect decision choice were laid by kahneman  and  tversky's  CITATION  prospect theory
+a central aspect of this work is that people will respond differently depending upon how the decision problem is presented
+specifically  decisions may be presented in such a manner as to accentuate either the positive gains or negative losses aspects of the task
+the effect that positive and negative presentation has on decision choice is referred to as the framing effect
+because of the vast applicability of decision framing  distinct areas of investigation have emerged
+levin  schneider and gaeth  CITATION  lsg have distinguished between three types of framing  risky-choice  attribute and goal framing
+because most research on health-related choices involves persuasion  CITATION   many health messages can be categorized as goal framing
+goal framing refers to messages that contain arguments describing either the benefits of adopting gains positive or costs of not adopting losses negative a behavior
+a distinguishing feature of goal framing is that it attempts to persuade decision makers to adopt a specific behavior which remains the same across frames
+consider the classic example provided by detweiler  bedell  salovey pronin and rothman  CITATION   in which beachgoers were given a message regarding sunscreen use that varied only in its gain or loss frame
+both the gain and loss framed messages promoted the same behavior and were similar in length and structure
+one gain framed argument was  using sunscreen increases your chances of maintaining healthy  young-looking skin
+  the corresponding loss framed argument stated  not using sunscreen decreases your chances of maintaining healthy  young-looking skin
+  subjects reported their behavioral intentions to use sunscreen via a questionnaire  and actual behavior was measured by noting the number of people in each condition who later redeemed a coupon for sunscreen
+consistent with their previous research  gain framed messages proved to elicit greater levels of behavioral intention and actual behavior
+in regard to health related messages  gain-framed messages have been found to elicit greater behavioral intention bi for prevention behaviors while loss-framed messages have been found to elicit greater bi for detection behaviors  CITATION
+prevention behaviors refer to those behaviors which are health-promoting and for which little risk is perceived
+conversely  detection behaviors are those behaviors which are health-detecting and infer some amount of risk in their performance
+previously investigated prevention behaviors include sunscreen use  condom use and smoking cessation
+thus  the relative advantage for gain framed messages in regard to prevention behaviors has been well established
+while the analysis provided by levin  schneider  and  gaeth provides structure for varying types of framing  it does not address the potential interactions that may exist with certain psychological variables
+as they point out  goal frames are more complicated than other frames
+they also add that the complication lies in how goal framing manipulates several linguistic and contextual variations within the same task
+in the present paper we set out to examine two variables that we identified as being of particular importance for this type of persuasion task  contextually influenced affect and the number of arguments presented
+an extensive body of research has examined how affect and emotions can influence decision making  CITATION
+although many different accounts depict how affect influences information processing and subsequent decision choices  one explanation is the  affect as information  account proposed by schwarz and colleagues  CITATION
+according to this view  negative affect acts as a signal to inform people that they may not be achieving their desired state or goal for a given task
+consequently  this draws their attention to the task at hand and people become more involved and attentive to the task
+on the other hand  positive affect informs people that all is well and they do not need to seek out any additional information
+as a result  people are less attentive and tend not to seek out additional information from the task when experiencing positive affect
+one way of inducing either positive or negative affect involves presentation of affect laden stimuli in the background image
+supporting the affect as information view  this research has shown that negative images elicit a greater attention and stronger response than either positive or neutral stimuli  CITATION
+prior research investigating persuasive health messages has found that gain framing elicits greater behavioral intentions for tasks that are focused on the prevention of health related issues  CITATION   such as the task we use here
+further  part of the persuasiveness of a message may rest in the number of the arguments presented
+in general  persuasiveness should increase as the number of arguments increases
+however  the magnitude of this effect should be determined by both attentiveness and the framing of the task
+that is  if participants are not attentive to the task because of positive affect cues  then neither the frame nor argument number should be particularly influential
+accordingly  we predict that behavioral intentions should not differ as a function of the number of arguments when a positive background picture is present
+on the other hand  when the context contains negative affect cues  the decision maker should be more attentive to the task
+in our prevention task  we predict that  for gain framed messages  persuasiveness should increase as the number of arguments increases
+however  because negatively framed messages are less effective for encouraging prevention behaviors  this suggests that decision makers will be less involved in the task when it is framed negatively
+consequently  we predict that the number of arguments will be less influential when the problem is negatively framed
+in sum  we expect that increasing numbers of arguments should be most influential when a negative affect cue is present and the messages are framed as gains

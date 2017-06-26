@@ -1,0 +1,17 @@
+### abstract ###
+The repeatability and efficiency of a corner detector determines how likely it is to be useful in a real-world application
+The repeatability is importand because the same scene viewed from different positions should yield features which correspond to the same real-world 3D locations~ CITATION
+The efficiency is important because this determines whether the detector combined with further processing can operate at frame rate
+Three advances are described in this paper
+First, we present a new heuristic for feature detection, and using machine learning we derive a feature detector from this which can fully process live PAL video using  less than 5\%  of the available processing time
+By comparison, most other detectors cannot even operate at frame rate (Harris detector 115\%, SIFT 195\%)
+Second, we generalize the detector, allowing it to be optimized for repeatability, with little loss of efficiency
+Third, we carry out a rigorous comparison of corner detectors based on the above repeatability criterion applied to 3D scenes
+We show that despite being principally constructed for speed, on these stringent tests, our heuristic detector significantly outperforms existing feature detectors
+Finally, the comparison demonstrates that using machine learning produces significant improvements in repeatability, yielding a detector that is both very fast and very high quality
+### introduction ###
+\PARstart{C}{orner} detection is used as the first step of many vision tasks such as tracking, localisation, SLAM (simultaneous localisation and mapping), image matching and recognition
+This need has driven the development of a large number of corner detectors
+However, despite the massive  increase in computing power since the inception of corner detectors, it is still true that when processing live video streams at full frame rate, existing feature detectors leave little if any time for further processing
+In the applications described above, corners are typically detected and matched into a database, thus it is important that the same real-world points are detected repeatably from multiple views  CITATION
+The amount of variation in viewpoint under which this condition should hold depends on the application

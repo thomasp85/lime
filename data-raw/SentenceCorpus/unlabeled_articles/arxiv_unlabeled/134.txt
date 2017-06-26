@@ -1,0 +1,36 @@
+### abstract ###
+Many applications in machine learning and data mining require computing  pairwise  SYMBOL  distances in a data matrix  SYMBOL
+For massive high-dimensional data, computing all pairwise distances of  SYMBOL  can be infeasible
+In fact, even  storing  SYMBOL  or all pairwise distances of  SYMBOL  in the memory may be also infeasible
+For  SYMBOL , efficient small space algorithms exist, for example, based on the method of  stable random projections , which unfortunately is not directly applicable to  SYMBOL  This paper proposes a simple method for  SYMBOL ,  SYMBOL ,  SYMBOL ,
+
+
+We first decompose the  SYMBOL  (where  SYMBOL  is even) distances into a sum of 2 marginal norms and  SYMBOL  ``inner products'' at different orders
+Then we apply normal or sub-Gaussian random projections to approximate the resultant ``inner products,'' assuming that the marginal norms can be computed exactly by a linear scan
+We propose two strategies for applying random projections
+The basic projection strategy requires only one projection matrix but it is more difficult to analyze, while the alternative projection strategy requires  SYMBOL  projection matrices but its theoretical analysis  is much easier
+In terms of the accuracy, at least for  SYMBOL , the basic strategy is always more accurate than the alternative strategy if the data are non-negative, which is common in reality
+### introduction ###
+This study proposes a simple method for efficiently computing the  SYMBOL  distances in a massive data matrix  SYMBOL  for  SYMBOL  (where  SYMBOL  is even), using  random projections  CITATION
+While many previous work on random projections focused on approximating the  SYMBOL  distances (and inner products), the  method of  symmetric stable random projections  CITATION  is applicable to approximating the  SYMBOL  distances for all  SYMBOL
+This work proposes using random projections for  SYMBOL , a least for some special cases
+Machine learning algorithms often operate on the  SYMBOL  distances of  SYMBOL  instead of the original data
+A straightforward application would be searching for the nearest neighbors using  SYMBOL  distance
+The  SYMBOL  distance is also a basic loss functions for quality measure
+The widely used ``kernel trick,'' (e g , for support vector machines (SVM)), is often constructed on top of the  SYMBOL   distances CITATION
+Here we can treat  SYMBOL  as a  tuning  parameter
+It is common to take  SYMBOL  ( Euclidian  distance), or  SYMBOL  ( infinity distance ),  SYMBOL  ( Manhattan  distance),  or  SYMBOL  ( Hamming  distance); but in principle any  SYMBOL  values are possible
+In fact, if there is an efficient mechanism to compute the  SYMBOL  distances, then it becomes affordable to tune  learning algorithms for many values of  SYMBOL  for the best performance
+In modern data mining and learning applications, the ubiquitous phenomenon of ``massive data'' imposes challenges
+For example, pre-computing and storing all pairwise  SYMBOL  distances in  memory at the cost  SYMBOL  can be infeasible when  SYMBOL  (or even just  SYMBOL ) CITATION
+For ultra high-dimensional data, even just storing the whole data matrix can be infeasible
+In the meanwhile, modern  applications can routinely involve millions of observations; and developing scalable  learning and data mining algorithms has  been an active research direction
+One commonly used strategy in current practice is   to compute the distances  on the fly  CITATION , in stead of storing all pairwise  SYMBOL  distances
+Data reduction algorithms such as  sampling or sketching methods are also popular
+While there have been extensive studies on approximating the  SYMBOL  distances for  SYMBOL ,  SYMBOL  can be useful too
+For example, because the normal distribution is completely determined by its first two moments (mean and variance), we can identify the non-normal components of the data by analyzing  higher moments, in particular, the fourth moments (i e ,  kurtosis )
+Thus, the fourth moments are critical, for example, in the field of  Independent Component Analysis (ICA)  CITATION
+Therefore, it is viable to use the  SYMBOL  distance for  SYMBOL  when  lower order distances can not efficiently differentiate data
+It is unfortunate that the family of  stable distributions  CITATION  is limited to  SYMBOL  and hence we can not directly using  stable distributions  for approximating the  SYMBOL  distances
+In the theoretical CS community, there have been many studies on approximating the  SYMBOL  norms and distances CITATION , some of which also applicable to the  SYMBOL  distances (e g , comparing two long vectors)
+Those papers proved that small space ( SYMBOL ) algorithms exist only for  SYMBOL

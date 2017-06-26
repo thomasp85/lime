@@ -1,0 +1,29 @@
+### abstract ###
+whereas much literature exists on  choice overload   less is known about effects of numbers of alternatives in donation decisions
+we hypothesize that donations increase with the number of recipients  albeit at a decreasing rate  and reflect donors' knowledge of the recipients
+donations involve different concepts of fairness-equity and equality-and these can interact with numbers of alternatives
+in two experiments  respondents indicated how they would donate lottery winnings of  NUMBER  euros
+results showed  first  that more was donated to non-governmental organizations and campaigns that respondents knew better
+second  total donations increased with the number of recipients albeit at a decreasing rate
+third  when limited to giving to only one of multiple alternatives  donors gave less than when this restriction did not apply
+fourth  variability of donations can both increase and decrease with the number of potential recipients
+we comment on theoretical and practical implications as well as suggesting issues for future research
+### introduction ###
+recently  much literature has highlighted the importance of numbers of alternatives in choice
+this can be considered from two perspectives
+in one  investigators have reported effects when people make unique selections from different numbers of alternatives  CITATION
+for example  studies have documented differential satisfaction with choice for decisions involving pens  CITATION   pension plans  CITATION   gift boxes  CITATION   and wines  CITATION
+moreover  a recent meta-analysis suggests that the magnitude of effects depends on preconditions  choice moderators and the contexts in which decisions are made  CITATION
+the focus in the second perspective is on what happens when people allocate resources across different numbers of alternatives  CITATION
+this is the topic of the present paper
+specifically  we consider this issue in the context of charitable donations and investigate the effects of numbers of alternatives on the amount of total donations as well as their distribution across charitable organizations ngos  non-governmental organizations and specific campaigns
+both of these issues are important from theoretical and practical viewpoints
+for example  when attempting to maximize donations  ngos might consider whether donors perceive them as belonging to small or large subsets of potential recipients
+at the same time  ngos often seek funds for different campaigns and it is important to know how the number and presentation of campaigns affect total donations
+we report two experiments
+in the first  we explore effects when donors allocate funds across different numbers of ngos
+in the second  we investigate what happens when a single ngo solicits contributions for different numbers of campaigns
+in short  we find two effects of increasing the number of alternatives  total contributions increase albeit at a decreasing rate  and distributions of donations are affected
+specifically  these tend to become less egalitarian in the case of ngos but more so in the case of campaigns
+in the second experiment  we also investigate the use of  drop down  menus in donation interfaces for soliciting donations to specific campaigns
+when  as in current practice  choice is limited to one of several alternatives  contributions are lower than when this restriction does not apply

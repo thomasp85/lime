@@ -1,0 +1,30 @@
+### abstract ###
+ambiguity aversion has been widely observed in individuals' judgments
+using scenarios that are typical in decision analysis  we investigate ambiguity aversion for pairs of individuals
+we examine risky and cautious shifts from individuals' original judgments to their judgments when they are paired up in dyads
+in our experiment the participants were first asked to specify individually their willingness-to-pay for six monetary gambles
+they were then paired at random into dyads  and were asked to specify their willingness-to-pay amount for the same gambles
+the dyad's willingness-to-pay amount was to be shared equally by the two individuals
+of the six gambles in our experiment  one involved no ambiguity and the remaining five involved different degrees of ambiguity
+we found that dyads exhibited risk aversion as well as ambiguity aversion
+the majority of the dyads exhibited a cautious shift in the face of ambiguity  stating a smaller willingness-to-pay than the two individuals' average
+our study thus confirms the persistence of ambiguity aversion in a group setting and demonstrates the predominance of cautious shifts for dyads
+### introduction ###
+much theoretical and experimental research in decision analysis has examined how individuals do and should make choices and set prices they are willing to pay for risky and ambiguous options
+but  not as much focus has been placed on decisions made by groups  though group decisions are common
+it would be helpful to understand the relationship between individual decisions and group decisions by first examining the simplest setting of pricing a lottery
+as a start in this direction  the primary question we address here via an experiment is  when decision makers act in a two-person group called a  dyad'  do they exhibit more or less ambiguity aversion than observed in individual settings
+ we note that in some situations such as forecasting e g   the delphi technique two heads are indeed better than one
+in the context of monetary policy  blinder and morgan CITATION find that groups make better decisions than individuals
+it is therefore natural to examine how decisions under ambiguity differ when made individually versus when these are made by dyads
+many real world decisions are entrusted to groups in the hope that the collective wisdom will prevail
+will individuals in our scenarios share their knowledge and see the light that the probability of winning is due to the construction of our scenarios at least  NUMBER   NUMBER  and therefore become less ambiguity averse
+risk aversion is consistent with rational decision making and has been observed in a variety of settings
+the evidence on ambiguity aversion has been mixed
+raiffa CITATION argued that a rational decision maker should not be ambiguity averse
+fox and tversky CITATION found that ambiguity aversion disappears when individuals evaluate a single gamble in a non-comparative setting  and chow and sarin CITATION found that ambiguity aversion is reduced when making separate evaluations
+sarin and weber CITATION found that  in market settings  ambiguity aversion is reduced in independent auctions but not in simultaneous auctions
+we have at least two reasons to expect less ambiguity aversion and thus higher prices in dyads
+first  two people  in face-to-face discussion  may more fully understand the ambiguous setting they are facing
+because our subjects know  in our scenarios  that they can choose either side of the bet  a discussion between two subjects may lead to a realization that the probability of winning is at least  NUMBER   NUMBER 
+second  individual blame or regret should be moderated in a group setting

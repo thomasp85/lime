@@ -1,0 +1,52 @@
+### abstract ###
+In this paper, spectrum access in cognitive radio networks is modeled as a repeated auction game subject to monitoring and entry costs
+For secondary users, sensing costs are incurred as the result of primary users' activity
+Furthermore, each secondary user pays the cost of transmissions upon successful bidding for a channel
+Knowledge regarding other secondary users' activity is limited due to the distributed nature of the network
+The resulting formulation is thus a dynamic game with incomplete information
+In this paper, an efficient bidding learning algorithm is proposed based on the outcome of past transactions
+As demonstrated through extensive simulations, the proposed distributed scheme outperforms a myopic one-stage algorithm, and can achieve a good balance between efficiency and fairness
+### introduction ###
+Recent studies have shown that despite claims of spectral scarcity, the actual licensed spectrum remains unoccupied for long periods of time~ CITATION
+Thus, cognitive radio (CR) systems have been proposed~ CITATION  in order to efficiently exploit these spectral holes
+CRs or secondary users (SUs) are wireless devices that can intelligently monitor and adapt to their environment, hence, they are able to share the spectrum with the licensed primary users (PUs), operating whenever the PUs are idle
+Three key design challenges are active topics of research in cognitive radio networks, namely, distributed implementation, spectral efficiency, and the tradeoff between sensing and spectrum access
+Previous studies have tackled various aspects of spectrum sensing and spectrum access
+In  CITATION , the performance of spectrum sensing, in terms of throughput, is investigated when the SUs share their instantaneous knowledge of the channel
+The work in  CITATION  studies the performance of different detectors for spectrum sensing, while in  CITATION  spatial diversity methods are proposed for improving the probability of detecting the PU by the SUs
+Other aspects of spectrum sensing are discussed in  CITATION  and  CITATION
+Furthermore, spectrum access has also received increased attention, eg ,  CITATION
+In  CITATION , a dynamic programming approach is proposed to allow the SUs to maximize their channel access time while taking into account a penalty factor from any collision with the PU
+The work in  CITATION  (and the references therein) establish that, in practice, the sensing time of CR networks is large and affects the access performance of the SUs
+In  CITATION , the authors model the spectrum access problem as a non-cooperative game, and propose learning algorithms to find the correlated equilibria of the game
+Non-cooperative solutions for dynamic spectrum access are also proposed in  CITATION  while taking into account changes in the SUs' environment such as the arrival of new PUs, among others
+%In  CITATION ,  When multiple SUs compete for spectral opportunities, the issues of fairness and efficiency arise
+On one hand, it is desirable for an SU to access a channel with high availability
+On the other hand, the effective achievable rate of an SU decreases when contending with many SUs over the most available channel
+Consequently, efficiency of spectrum utilization in the system reduces
+Therefore, an SU should explore transmission opportunities in other channels if available and refrain from transmission in the same channel all the time
+Intuitively, diversifying spectrum access in both frequency (exploring more channels) and time (refraining from continuous transmission attempts) would be beneficial to achieving fairness among multiple SUs, in that SUs experiencing poorer channel conditions are not starved in the long run
+The objective of this paper is to design a mechanism that enables fair and efficient sharing of spectral resources among SUs
+We model spectrum access in cognitive radio networks as a repeated auction game with entry and monitoring costs
+Auctioning the spectral opportunities is carried out repeatedly
+At the beginning of each period, each SU that wishes to participate in the spectrum access submits a bid to a coordinator based on its view of the channel and past auction history
+Knowledge regarding other secondary users' activities is limited due to the distributed nature of the network
+The resulting formulation is thus a dynamic game with incomplete information
+The bidder with the highest bid gains spectrum access
+Entry fees are charged for all bidders who participate in the auction irrespective of the outcome of the auction
+An SU can also choose to stay out (SO) of the current round, in which case no entry fee is incurred
+At the end of each auction period, information regarding bidding and allocation are made available to all SUs, and in turn a monitoring fee is incurred
+To achieve efficient bidding, a learning algorithm is proposed based on the outcome of past transactions
+Each SU decides on local actions with the objective of increasing its long-term cost effectiveness
+As demonstrated through extensive simulations, the proposed distributed scheme outperforms a myopic one-stage algorithm where an SU always participates in the spectrum access game in both single channel and multi-channel networks
+A comment is in order on the feasibility of such an auction-based approach to spectrum access in practice
+Due to commercial and industrial exploitation and different stake holders' interests, the functional architectures and cognitive signaling schemes are currently under discussion within standardization forums, including IEEE SCC 41 and ETSI TC RRS (Reconfigurable Radio Systems)
+Cognitive pilot channel (CPC) has gained attention as a potential enabler of data-aided mitigation techniques between secondary and primary communication systems as well as a  mechanism to support optimized radio resource and data management across heterogeneous networks
+In CPC, a common control channel is used to provide the information corresponding to the operators, Radio Access Technology and frequencies allocated in a given area
+We can thus leverage the intelligence of the CPC coordinator and the control channel to solicit bidding and broadcast the outcome of auctions
+The main contributions of this paper are:   We have formulated the spectrum access problem in cognitive radio networks as a repeated auction game
+A distributed learning algorithm is proposed for single-channel networks, and a non-regret learning algorithm is investigated for multi-channel networks
+The rest of the paper is organized as follows
+In Section~, the system model and terminology are introduced
+Mechanism design of the repeated auction with learning is presented in Section~
+Simulation results are given in Section~ followed by conclusions and a discussion of future work in Section~

@@ -1,0 +1,20 @@
+### abstract ###
+we report an experiment exploring sequential context effects on strategy choices in one-shot prisoner's dilemma pd game
+rapoport and chammah CITATION have shown that some pds are cooperative and lead to high cooperation rate  whereas others are uncooperative
+participants played very cooperative and very uncooperative games  against anonymous partners
+the order in which these games were played affected their cooperation rate by producing perceptual contrast  which appeared only between the trials  but not between two separate sequences of games
+these findings suggest that people may not have stable perceptions of absolute cooperativeness
+instead  they judge the cooperativeness of each fresh game only in relation to the previous game
+the observed effects suggest that the principles underlying judgments about highly abstract magnitudes such as cooperativeness may be similar to principles governing the perception of sensory magnitudes
+### introduction ###
+most applications of standard normative models  whether of individual or strategic decision making  make the basic assumption that each risky prospect or game is considered separately and the resulting choice should be based only on the attributes of the particular prospect or game CITATION
+the validity of this  and related  independence assumptions has been challenged extensively in the past especially in the context of individual decision making under risk
+thus  allais CITATION first demonstrated behavior violating the independence axiom of expected utility theory here the independence is between mutually exclusive possible outcomes
+later on  regret theory CITATION showed how regret can modify the utility of an outcome that results from a particular choice depending on the outcomes that would have resulted from other choices in the choice set
+recent psychological theories of individual decision making have also been developed  in which prospects are judged in relation to one another  such as the stochastic difference model CITATION   multialternative decision field theory CITATION   the componential-context model CITATION and decision-by-sampling CITATION
+these theories all have in common the idea the mere presence of an option in a choice set may change the way another option is judged  or  more broadly  that preferences are constructed afresh in the light of the salient options in each situation or the recent past
+thus  preference is constructed rather than revealed CITATION
+in an attempt to ground this constructivist idea onto some fundamental properties of the perceptual system  stewart  chater  stott  and reimers CITATION describe a phenomenon called prospect relativity  that the perceived value of a risky prospect e g    p chance of x  is relative to other prospects with which it is presented
+similar effects were also found in financial saving and investment decision making under risk CITATION
+these prospect relativity effects are counter to expected utility theory  the basic normative principle for individual choice  which assumes that the perceived value of each prospect should be dependent only on its own attributes
+stewart et al CITATION suggested that this phenomenon arises because of way in which the magnitudes that define the prospects are defined  and that the phenomenon has a common origin with similar psychophysical effects on perception of sensory magnitudes like brightness and loudness CITATION

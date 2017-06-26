@@ -1,0 +1,51 @@
+### abstract ###
+The on-line shortest path problem is considered under various models of partial monitoring
+Given a weighted directed acyclic graph whose edge weights can change in an arbitrary (adversarial) way, a decision maker has to choose in each round of a game a path between two distinguished vertices such that the loss of the chosen path (defined as the sum of the weights of its composing edges) be as small as possible
+In a setting generalizing the multi-armed bandit problem, after choosing a path, the decision maker learns only the weights of those edges that belong to the chosen path
+For this problem, an algorithm is given whose average cumulative loss in  SYMBOL  rounds exceeds that of the best path, matched off-line to the entire sequence of the edge weights, by a quantity that is proportional to  SYMBOL  and depends only polynomially on the number of edges of the graph
+The algorithm can be implemented with linear complexity in the number of rounds  SYMBOL  and in the number of edges
+An extension to the so-called label efficient setting is also given, in which the decision maker is informed about the weights of the edges corresponding to the chosen path at a total of  SYMBOL  time instances
+Another extension is shown where the decision maker competes against a time-varying path, a generalization of the problem of tracking the best expert
+A version of the multi-armed bandit setting for shortest path is also discussed where the decision maker learns only the total weight of the chosen path but not the weights of the individual edges on the path
+Applications to routing in packet switched networks along with simulation results are also presented
+### introduction ###
+In a sequential decision problem, a decision maker (or forecaster) performs a sequence of actions
+After each action the decision maker suffers some loss, depending on the response (or state) of the environment, and its goal is to minimize its cumulative loss over a certain period of time
+In the setting considered here, no probabilistic assumption is made on how the losses corresponding to different actions are generated
+In particular, the losses may depend on the previous actions of the decision maker, whose goal is to perform well relative to a set of reference forecasters (the so-called ``experts'') for any possible behavior of the environment
+More precisely, the aim of the decision maker is to achieve asymptotically the same average (per round) loss as the best expert
+Research into this problem started in the 1950s (see, for example,  Blackwell  CITATION  and Hannan  CITATION  for some of the basic results) and gained new life in the 1990s following the work of Vovk  CITATION , Littlestone and Warmuth  CITATION , and Cesa-Bianchi  et al SYMBOL    CITATION
+These results show that for any bounded loss function, if the decision maker has access to the past losses of all experts, then it is possible to construct on-line algorithms that perform, for any possible behavior of the environment, almost as well as the best of  SYMBOL  experts
+More precisely, the per round cumulative loss of these algorithms is at most as large as that of the best expert plus a quantity proportional to  SYMBOL  for any bounded loss function, where  SYMBOL  is the number of rounds in the decision game
+The logarithmic dependence on the number of experts makes it possible to obtain meaningful bounds even if the pool of experts is very large
+In certain situations the decision maker has only limited knowledge about the losses of all possible actions
+For example, it is often natural to assume that the decision maker gets to know only the loss corresponding to the action it has made, and has no information about the loss it would have suffered had it made a different decision
+This setup is referred to as the  multi-armed bandit problem , and was considered, in the adversarial setting, by Auer  et al SYMBOL     CITATION  who gave an algorithm whose normalized regret (the difference of the algorithm's average loss  and that of the best expert) is upper bounded by a quantity  which is  proportional to  SYMBOL
+Note that, compared to the  full information   case  described above where the losses of all possible actions are revealed to the decision maker, there is an extra  SYMBOL  factor  in the performance bound, which seriously limits the usefulness of the bound if the number of experts is large
+Another interesting example for the limited information case is the so-called  label efficient decision problem  (see Helmbold and Panizza  CITATION ) in which it is too costly to observe the state of the environment, and so the decision maker can query the losses of all possible actions for only a limited number of times
+A recent result of Cesa-Bianchi, Lugosi, and Stoltz  CITATION  shows that in this case, if the decision maker can query the losses  SYMBOL  times during a period of length  SYMBOL , then it can achieve  SYMBOL  average excess loss relative to the best expert
+In many applications the set of experts has a certain structure that may be exploited to construct efficient on-line decision algorithms
+The construction of such algorithms has been of great interest in computational learning theory
+A partial list of works dealing with this problem includes Herbster and Warmuth~ CITATION , Vovk~ CITATION , Bousquet and Warmuth~ CITATION , Helmbold and Schapire~ CITATION , Takimoto and Warmuth~ CITATION ,  Kalai and Vempala~ CITATION , Gy\"orgy  at al SYMBOL  ~ CITATION
+For a more complete survey, we refer to Cesa-Bianchi and Lugosi  CITATION
+In this paper we study the on-line shortest path problem, a representative example of structured expert classes that has received attention in the literature for its many applications, including, among others, routing in communication networks; see, eg , Takimoto and Warmuth  CITATION ,  Awerbuch  et al \  CITATION , or Gy\"orgy and Ottucs\'ak  CITATION , and adaptive quantizer design in zero-delay lossy source coding; see, Gy\"orgy  et al SYMBOL  ~ CITATION
+In this problem, a weighted directed (acyclic) graph is given whose edge weights can change in an arbitrary manner, and the decision maker has to pick in each round a path between two given vertices, such that the weight of this path (the sum of the weights of its composing edges) be as small as possible
+Efficient solutions, with time and space complexity proportional to the number of edges rather than to the number of paths (the latter typically being exponential in the number of edges), have been given in the full information case, where in each round the weights of all the edges are revealed after a path has been chosen; see, for example, Mohri  CITATION , Takimoto and Warmuth  CITATION , Kalai and Vempala  CITATION , and Gy\"orgy  et al SYMBOL  ~ CITATION
+In the bandit setting only the weights of the edges or just the sum of the weights of the edges composing the chosen path are revealed to the decision maker
+If one applies the general bandit algorithm of Auer  et al  \  CITATION , the resulting bound will be too large to be of practical use because of its square-root-type dependence on the number  of paths  SYMBOL
+On the other hand, using the special graph structure in the problem, Awerbuch and Kleinberg  CITATION  and McMahan and Blum  CITATION  managed to get rid of the exponential dependence on the number of edges in the performance bound
+They achieved this by extending the exponentially weighted average predictor and the  follow-the-perturbed-leader algorithm of Hannan  CITATION  to the generalization of the multi-armed bandit setting for shortest paths, when only the sum of the weights of the edges is available for the algorithm
+However, the dependence of the bounds obtained in  CITATION  and  CITATION  on the number of rounds  SYMBOL  is significantly worse than the  SYMBOL  bound of Auer  et al  \  CITATION
+Awerbuch and Kleinberg  CITATION  consider the model of ``non-oblivious'' adversaries for shortest path (i e , the losses assigned to the edges can depend on the previous actions of the forecaster) and prove an  SYMBOL  bound for the expected per-round regret
+McMahan and Blum  CITATION  give a simpler algorithm than in  CITATION  however obtain a bound of the order of  SYMBOL  for the expected regret
+In this paper we provide an extension of the bandit algorithm of Auer  et al  \   CITATION  unifying the advantages of the above approaches, with a performance bound that is polynomial in the number of edges, and converges to zero at the right  SYMBOL  rate as the number of rounds increases
+We achieve this bound in a model which assumes that the losses of all edges on the path chosen by the forecaster are available separately after making the decision
+We also discuss the case (considered by  CITATION  and  CITATION ) in which only the total loss (i e , the sum of the losses on the chosen path) is known to the decision maker
+We exhibit a simple algorithm which achieves an  SYMBOL  per-round regret  with high probability  against ``non-oblivious'' adversary
+In this case it remains an open problem to find an algorithm whose cumulative loss is polynomial in the number of edges of the graph and decreases as  SYMBOL  with the number of rounds
+In Section~ we formally  define the on-line shortest path problem, which is extended to the multi-armed bandit setting in Section~
+Our new algorithm for the shortest path problem in the bandit setting is given in Section~ together with its performance analysis
+The algorithm is extended to solve the shortest path problem in a combined label efficient multi-armed bandit setting in Section~
+Another extension, when the algorithm competes against a time-varying path is studied in Section
+An algorithm for the ``restricted'' multi-armed bandit setting (when only the sums of the losses of the edges are available) is given in Section~
+Simulation results are presented in Section~

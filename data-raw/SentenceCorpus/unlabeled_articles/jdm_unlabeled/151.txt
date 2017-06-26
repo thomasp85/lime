@@ -1,0 +1,56 @@
+### abstract ###
+slowing climate change will almost certainly require a reduction in greenhouse gas emissions  but agreement on who should reduce emissions by how much is difficult  in part because of the self-serving bias-the tendency to believe that what is beneficial to oneself is also fair
+conducting surveys among college students in the united states and china  we show that each of these groups displays a nationalistic self-serving bias in judgments of a fair distribution of economic burdens resulting from mitigation
+yet  we also show  by disguising the problem and the identity of the parties  that it is possible to elicit perceptions of fairness that are not influenced by national interests
+our research reveals that the self-serving bias plays a major role in the difficulty of obtaining agreement on how to implement emissions reductions
+that is  the disagreement over what constitutes fair climate policy does not appear to be due to cross-national differences in what constitutes a fair distribution of burdens
+interventions to mitigate the self-serving bias may facilitate agreement
+### introduction ###
+although debate continues about technical and scientific issues surrounding climate change  the human dimensions of the problem pose significant impediments to developing and implementing solutions to mitigate its impact
+slowing climate change will almost certainly require a reduction in greenhouse gas emissions  but agreeing upon who should reduce emissions by how much has thus far proven an intractable problem
+despite longstanding agreement that combating anthropogenic climate change is a serious issue that necessitates international cooperation  CITATION   failures such as occurred in copenhagen in  CITATION  show that nations are unable to agree on what constitutes a fair sharing of the emissions reduction burden  CITATION
+in this paper we show that the difficulty of reaching agreement is  in part  due to the self-serving bias-the pervasive tendency to believe that what is beneficial to oneself is also fair
+the self-serving bias  and not intrinsic cross-cultural differences in what is judged a fair distribution of sacrifices  may represent the primary obstacle standing in the way of agreement
+alternatively  one might consider the social dilemma structure of the problem  CITATION  or other strategic concerns  CITATION  to be the largest obstacles in combating climate change
+this paper takes these structural issues as givens and implicitly assumes that they are the reason formal agreements are needed in the first place
+in particular  a pre-condition for getting parties to agree to self-sacrifice in pursuit of a collective solution is to reach an agreement regarding the fair distribution of burdens
+this paper focuses on the role that the self-serving bias  as opposed to differing fundamental beliefs about fairness  plays in impeding such agreement
+the countries that take part in climate change negotiations differ on myriad dimensions of potential relevance to a fair assignment of burdens  including their levels of past and projected emissions  the costs of mitigation  and the benefits obtained by successfully addressing the problem
+research on the self-serving bias  CITATION  shows that asymmetries between parties on dimensions relevant to a negotiation contribute to the bias  because people place greater weight on dimensions that support a settlement that is more beneficial to themselves  CITATION
+the self-serving bias has been documented and shown to play a central role in negotiation impasse both in laboratory studies  CITATION  and field studies  CITATION
+moreover  because negotiators are averse to accepting settlements that are even slightly below what they perceive to be fair  CITATION   and because the self-serving bias leads to incongruous perceptions of fairness  there is often no settlement upon which all parties will agree  even when large joint gains are available from agreement
+the large number of nations involved in climate change negotiations makes the problem even worse  not only by increasing complexity over and above that which would exist with only two parties but also by multiplying the number of possible self-serving arguments
+to illustrate the self-serving selection of fairness norms  consider the following study by van avermaet  CITATION
+subjects filled out questionnaires and were then given money which was to pay themselves as well as another person in the study for their work
+if told that the other person was given half the amount of time to work and completed half as many questionnaires  subjects kept on average two-thirds of the money  an allocation proportional to both the time spent and work done
+but if the other person was given twice as long and completed twice the number of questionnaires  subjects instead chose the norm of equal division and kept half the money for themselves
+and finally  subjects tended to keep more than half the money in both the case where the other person was given twice as much time and filled out half as many questionnaires and the opposite case half the time and twice the questionnaires
+this indicates that subjects chose time spent or work completed as the fair payment criterion depending on which was in their own favor
+in the context of climate change  the difference in fairness norms is evidenced by the focus of some policy proposals on equal entitlement equal per capita emission allotment and of others on relative needs and burdens of developing versus developed nations  CITATION
+as for which parties prefer which policies  lange et al CITATION  show that selections of fairness criteria by agents involved in international climate policy tend to correspond to their material self-interest
+furthermore  agents are more likely to believe that self-interest influenced other parties' selections of fairness criteria than to believe they themselves were so influenced
+though this evidence is consistent with self-serving bias or conscious self-serving arguments  as lange et al CITATION  propose  lange et al 's  study cannot rule out the possibility that there are legitimate cross-cultural differences in perceptions of what is fair  and that these differences lead to disagreement independent of the role of material self-interest
+indeed  comparisons of fairness judgments between americans and chinese provide evidence of subtle dissimilarities
+while members of the two cultures have similar judgments of fairness in health and safety risk scenarios  chinese subjects tend to give other goals besides fairness more weight and are less likely to consider the fair option to be the best option overall  CITATION
+in the domain of price fairness  chinese consumers consider their own price more unfair if a friend was given a better price than if a stranger was given a better price  while americans are less sensitive to this distinction  CITATION
+gao  NUMBER  found that chinese were more tolerant of the use of market power than european cultures
+one general pattern is that chinese judgments of fairness tend to be more context dependent than those of americans
+to the extent that fairness judgments influence negotiation positions  disentangling the role of self-serving bias may give hints as to the sort of interventions that can most effectively facilitate agreement
+in particular  given the importance of agreement on a suitable plan to mitigate climate change  establishing whether disagreement is driven by self-serving bias  or by fundamental cross-cultural differences in what is perceived as fair  is of great significance
+by using a controlled experiment  we attempt to establish the role of self-serving bias
+because we cannot randomly assign individuals to nationality and assess the effect that this has on their fairness judgments  we employ an approach that draws on the concept of the veil of ignorance first proposed by john harsanyi and named by john rawls  CITATION
+the veil of ignorance is a judgment of social justice fairness made by people who do not know their own interests because they do not know what role they will be assigned
+a classic application of the veil of ignorance is an indictment of slavery based on the observation that few would endorse the institution if they were unaware of whether they were the ones who would be enslaved
+we explore how judgments of the fairness of allocations of economic sacrifices resulting from reductions in greenhouse gas emissions are influenced by placing individuals in situations in which they are aware of their own national interests or not
+we presented subjects with graphs that displayed current and projected per capita gdp or income of two countries or farmers  in one scenario
+the different possible divisions could be altered dynamically with a slider that was controlled by the subject figure  NUMBER   which led to shifts in per capita income over time for both parties
+subjects could move the slider between one extreme that placed all burdens on one party and the other extreme that placed all burdens on the other party  until they found the division of sacrifice that they deemed most fair
+we randomly assigned students from the united states and china to one of three scenarios that varied the degree to which they were aware of their own national interests-i e   were behind the veil of ignorance
+one scenario  designed to show the impact of the self-serving bias  made the domain climate change explicit as well as the two countries involved china and the united states
+a second scenario disguised the countries using the generic labels  country a  and  country b   and also altered the nature of the environmental problem so subjects would be unlikely to realize that it was about climate change
+a third scenario disguised the problem even further  casting it as a negotiation between two neighboring farmers
+although the scenarios differed on multiple dimensions  the relative economic consequences of shifting burdens between the parties were identical in all three
+our goal in this research is not to suggest implementing a veil of ignorance in real climate negotiations as a policy recommendation though if doing so were possible  we would support it
+our contribution is to demonstrate a simple experimental procedure that can isolate the effect of self-serving bias from the possible effects of cultural differences in perceptions of fairness
+doing so helps us clearly establish that self-serving bias plays a role in the inability of parties to reach agreement
+our findings also suggest that interventions that eliminate the self-serving bias in international climate policy negotiations may be of tremendous value

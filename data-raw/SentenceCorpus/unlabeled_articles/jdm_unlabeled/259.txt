@@ -1,0 +1,20 @@
+### abstract ###
+although theories from economics and evolutionary biology predict that one's age  health  and survival probability should be associated with one's subjective discount rate sdr  few studies have empirically tested for these links
+our study analyzes in detail how the sdr is related to age  health  and survival probability  by surveying a sample of individuals in townships around durban  south africa
+in contrast to previous studies  we find that age is not significantly related to the sdr  but both physical health and survival expectations have a u-shaped relationship with the sdr
+individuals in very poor health have high discount rates  and those in very good health also have high discount rates
+similarly  those with expected survival probability on the extremes have high discount rates
+therefore  health and survival probability  and not age  seem to be predictors of one's sdr in an area of the world with high morbidity and mortality
+### introduction ###
+people generally prefer to receive a reward sooner rather than later
+the present value of a future reward is often discounted when there is a delay to receiving the reward
+many terms are used to describe this phenomenon  such as time preference  positive rate of intertemporal substitution  impatience  and impulsivity
+ delay discounting  will be used in this paper to refer to the phenomenon that an individual discounts the value of a reward to be received in the future relative to receiving the reward immediately  and the degree to which an individual discounts the future reward will be measured as the subjective discount rate or sdr which we define formally below
+although delay discounting is a common assumption in models of intertemporal choice  the literature is relatively incomplete when it comes to why people discount the future in general and why some people discount more than others
+among the various factors associated with delay discounting proposed in the literature which we review in detail in the next section on theory and background  age has emerged as one key factor
+although existing theoretical models of delay discounting often explicitly specify mortality risk which reduces opportunity for consumption in the future and morbidity risk which reduces utility from consumption in the future as determinants of delay discounting  most existing empirical tests of the theoretical models rely mostly on age as a proxy for those risks
+the distinction between age and mortality morbidity may be important
+if the determinants of sdr are known and if such determinants can be changed  many potentially bad outcomes related to impatience could in theory be prevented  if the willingness to wait for some future reward could be enhanced
+while one's age is not changeable  one's mortality and morbidity risks can be changed  either through investment in one's own health capital or through public health interventions
+if mortality and morbidity risks are causally related to one's sdr  changes in these risks can potentially lead to changes in one's sdr
+our study complements the existing literature by adding health and survival probability - in addition to age - to empirical specifications

@@ -1,0 +1,31 @@
+### abstract ###
+Most mammalian genes are able to express several splice variants in a phenomenon known as alternative splicing.
+Serious alterations of alternative splicing occur in cancer tissues, leading to expression of multiple aberrant splice forms.
+Most studies of alternative splicing defects have focused on the identification of cancer-specific splice variants as potential therapeutic targets.
+Here, we examine instead the bulk of non-specific transcript isoforms and analyze their level of disorder using a measure of uncertainty called Shannon's entropy.
+We compare isoform expression entropy in normal and cancer tissues from the same anatomical site for different classes of transcript variations: alternative splicing, polyadenylation, and transcription initiation.
+Whereas alternative initiation and polyadenylation show no significant gain or loss of entropy between normal and cancer tissues, alternative splicing shows highly significant entropy gains for 13 of the 27 cancers studied.
+This entropy gain is characterized by a flattening in the expression profile of normal isoforms and is correlated to the level of estimated cellular proliferation in the cancer tissue.
+Interestingly, the genes that present the highest entropy gain are enriched in splicing factors.
+We provide here the first quantitative estimate of splicing disruption in cancer.
+The expression of normal splice variants is widely and significantly disrupted in at least half of the cancers studied.
+We postulate that such splicing disorders may develop in part from splicing alteration in key splice factors, which in turn significantly impact multiple target genes.
+### introduction ###
+The majority of mammalian genes produce alternative transcripts as part of their normal expression program CITATION CITATION.
+Alternative transcripts include splicing, polyadenylation and transcription initiation variants which can be expressed differentially in different tissues CITATION CITATION providing the fine tuning of gene expression required for cell differentiation and tissue-specific functions.
+Disruptions in the balance of alternative transcripts, especially at the splicing level, are known to affect angiogenesis CITATION, cell differentiation CITATION and invasion CITATION.
+A large body of evidence has established connections between alternative splicing defects and cancer, so that the identification of transcript isoforms is now considered an important avenue in cancer diagnosis and therapy CITATION, CITATION .
+The disruption of splicing isoform expression in cancer may result from very different underlying genetic events.
+On one hand, mutations in cis-regulatory sequences lead to the abnormal expression of specific isoforms, as observed for example in the BRCA1 gene in breast and ovarian cancer CITATION.
+Another class of event includes alterations of the mRNA processing machinery or its signalling pathway.
+These may affect the splicing of specific genes such as CD44 CITATION CITATION, but may also cause wider perturbations of isoform expression as the processing of multiple genes can be simultaneously affected CITATION CITATION.
+Evidence for wider changes in alternative transcription linked with cancer are present for instance in EST databases, where a large fraction of splice variant are actually tumor-specific CITATION.
+However, while most studies of splicing and cancer attempt to isolate signature splice variants with significant over-expression in disease cells, no published work to date has focused on the bulk of splicing disruption that potentially arises when the splicing machinery is impaired.
+The aim of the present study is to evaluate the extent and modalities of non-specific alternative transcript disruptions in cancer.
+Instead of seeking interesting signature isoforms, we analyzed the distribution of all isoforms from a single gene in a given tissue.
+We postulated that, in a tissue where the splicing machinery is impaired, the distribution of isoforms may be more disordered than in a control tissue.
+To measure the level of disorder in cDNA and cDNA tag libraries, we borrowed the notion of entropy from information theory.
+We applied this measure to all three types of alternative transcription, comparing isoform distributions in pairs of disease and normal tissues.
+Our results show that neither alternative polyadenylation nor alternative transcription initiation are associated with a disordered isoform expression.
+However, in half of the cancers studied, alternative splicing showed a highly significant entropy gain relative to the corresponding normal tissues.
+We analyze this entropy gain and discuss its possible causes.

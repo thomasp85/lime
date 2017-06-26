@@ -1,0 +1,35 @@
+### abstract ###
+Counting  is a fundamental operation
+For example,  counting the  SYMBOL th frequency moment,   SYMBOL , of a streaming signal  SYMBOL  (where  SYMBOL  denotes time), has been an active area of research, in theoretical computer science, databases, and data mining
+When  SYMBOL , the task (i e , counting the sum) can be accomplished using a  counter
+When  SYMBOL , however, it becomes non-trivial to design a small space (i e , low memory) counting system
+Compressed Counting (CC)  is proposed for efficiently  computing the  SYMBOL th frequency moment of a data stream   SYMBOL , where  SYMBOL
+CC is applicable if the streaming data follow the  Turnstile  model, with the restriction that at the time  SYMBOL  for the evaluation,  SYMBOL , which includes the  strict Turnstile  model as a special case
+For  data streams  in practice, this restriction is  minor
+The underlying technique is   skewed stable random projections , which  captures the intuition that, when  SYMBOL  a simple counter suffices, and when  SYMBOL  with small  SYMBOL , the sample complexity  should be low (continuously as a function of  SYMBOL )
+We show the sample complexity (number of projections) {SYMBOL }, where {SYMBOL } as  {SYMBOL }
+In other words, for small  SYMBOL ,  SYMBOL  instead of  SYMBOL
+The case  SYMBOL  is practically very important
+It is now well-understood that one can obtain good approximations to the entropies of data streams using the  SYMBOL th moments with  SYMBOL  and very small  SYMBOL
+For statistical inference using the  method of moments , it is sometimes reasonable use the  SYMBOL th moments with  SYMBOL  very close to 1
+As another example,  SYMBOL  might be the ``decay rate'' or ``interest rate,'' which is usually small
+Thus,  Compressed Counting  will be an ideal tool, for estimating the total value in the future, taking in account the effect of decaying or interest accruement
+Finally, our another contribution is an algorithm for approximating the logarithmic norm, {SYMBOL }, and the logarithmic distance, {SYMBOL }
+The logarithmic norm arises in  statistical estimations
+The logarithmic distance is  useful in machine learning practice with heavy-tailed data
+### introduction ###
+This paper % } focuses on  counting , which is among the most fundamental operations in almost every field of science and engineering
+Computing the sum {SYMBOL } is the simplest counting ( SYMBOL  denotes time)
+Counting the {SYMBOL th moment  SYMBOL } is more general
+When {SYMBOL ,  SYMBOL } counts the total number of non-zeros in  SYMBOL
+When {SYMBOL ,  SYMBOL } counts the ``energy'' or  ``power'' of the signal  SYMBOL
+If   SYMBOL  actually outputs the power of an underlying signal  SYMBOL , counting the sum {SYMBOL } is equivalent to computing {SYMBOL }
+Here,  SYMBOL  denotes a time-varying signal, for example,   data streams  CITATION
+In the literature, the  SYMBOL th frequency moment of a data stream  SYMBOL  is defined as {}  Counting  SYMBOL  for massive data streams is practically important, among many  challenging issues in data stream computations
+In fact, the general theme of ``scaling up for high dimensional data and high speed data streams'' is among the  ``ten challenging problems in data mining research
+''%}  Because the elements,  SYMBOL , are time-varying,  a na\'ive counting mechanism requires a system of  SYMBOL  counters to compute  SYMBOL  exactly
+This is not always realistic when  SYMBOL  is large and we only need an approximate answer
+For example,  SYMBOL  may be   SYMBOL  if  SYMBOL  records the arrivals of IP addresses
+Or,  SYMBOL  can be the total number of checking/savings accounts
+Compressed Counting (CC)  is a new scheme for approximating the  SYMBOL th frequency moments of data streams (where  SYMBOL ) using low memory
+The underlying technique is based on what we call  skewed stable random projections

@@ -1,0 +1,54 @@
+### abstract ###
+%   <- trailing '%' for backward compatibility of
+sty file The Sample Compression Conjecture of Littlestone \& Warmuth has remained unsolved for over two decades
+While maximum classes (concept classes meeting Sauer's Lemma with equality) can be compressed, the compression of general concept classes reduces to compressing maximal classes (classes that cannot be expanded without increasing VC-dimension)
+Two promising ways forward are: embedding maximal classes into maximum classes with at most a polynomial increase to VC dimension, and compression via operating on geometric representations
+This paper presents positive results on the latter approach and a first negative result on the former, through a systematic investigation of finite maximum classes
+Simple arrangements of hyperplanes in Hyperbolic space are shown to represent maximum classes, generalizing the corresponding Euclidean result
+We show that  sweeping a generic hyperplane across such arrangements forms an unlabeled compression scheme of size VC dimension and corresponds to a special case of peeling the one-inclusion graph, resolving a recent conjecture of Kuzmin \& Warmuth
+A bijection between finite maximum classes and certain arrangements of Piecewise-Linear (PL) hyperplanes in either a ball or Euclidean space is established
+Finally we show that  SYMBOL -maximum  classes corresponding to PL hyperplane arrangements in  SYMBOL  have cubical complexes homeomorphic to a  SYMBOL -ball, or equivalently complexes that are manifolds with boundary
+A main result is that PL arrangements can be swept by a moving hyperplane to unlabeled  SYMBOL -compress  any  finite maximum class, forming a peeling scheme as conjectured by Kuzmin \& Warmuth
+A corollary is that some  SYMBOL -maximal classes cannot be embedded into any maximum class of VC dimension  SYMBOL , for any constant  SYMBOL
+The construction of the PL sweeping involves  Pachner moves  on the one-inclusion graph, corresponding to moves of a hyperplane across the intersection of  SYMBOL  other hyperplanes
+This extends the well known Pachner moves for triangulations to cubical complexes
+### introduction ###
+\term{Maximum} concept classes have the largest cardinality possible for their given VC dimension
+Such classes are of particular interest as their special recursive structure underlies all general sample compression schemes known to-date~ CITATION
+It is this structure that admits many elegant geometric and algebraic topological representations upon which this paper focuses
+CITATION  introduced the study of \term{sample compression schemes}, defined as a pair of mappings for given concept class  SYMBOL : a \term{compression function} mapping a  SYMBOL -labeled  SYMBOL -sample to a subsequence of labeled examples and a \term{reconstruction} \term{function} mapping the subsequence to a concept consistent with the entire  SYMBOL -sample
+A compression scheme of bounded size---the maximum cardinality of the subsequence image---was shown to imply learnability
+The converse---that classes of VC dimension  SYMBOL  admit compression schemes of size  SYMBOL ---has become one of the oldest unsolved problems actively pursued within learning theory~ CITATION
+Interest in the  conjecture has been motivated by its interpretation as the converse to the existence of compression bounds for PAC learnable classes~ CITATION , the basis of practical machine learning methods on compression schemes~ CITATION , and the conjecture's connection to a deeper understanding of the combinatorial properties of concept classes~ CITATION
+Recently~ CITATION  achieved compression of maximum classes without the use of labels
+They also conjectured that their elegant Min-Peeling Algorithm constitutes such an unlabeled  SYMBOL -compression scheme for  SYMBOL -maximum classes
+As discussed in our previous work~ CITATION , maximum classes can be  fruitfully viewed as \term{cubical complexes}
+These are also topological spaces, with each cube equipped with a natural topology of open sets from its standard embedding into Euclidean space
+We proved that  SYMBOL -maximum classes correspond to \term{ SYMBOL -contractible complexes}---topological spaces with an identity map homotopic to a constant map---extending the result that  SYMBOL -maximum classes have trees for one-inclusion graphs
+Peeling can be viewed as a special form of contractibility for maximum classes
+However, there are many  non-maximum contractible cubical complexes that cannot be peeled, which demonstrates that peelability reflects more detailed structure of maximum classes than given by contractibility alone
+In this paper we approach peeling from the direction of simple hyperplane arrangement representations of maximum classes
+CITATION  predicted that  SYMBOL -maximum classes corresponding to simple linear hyperplane arrangements could be unlabeled  SYMBOL -compressed by sweeping a generic hyperplane across the arrangement, and that concepts are min-peeled as their corresponding cell is swept away
+We positively resolve the first part of the conjecture and show that sweeping such arrangements corresponds to a new form of \term{corner-peeling}, which we prove is distinct from min-peeling
+While \term{min-peeling} removes minimum degree concepts from a one-inclusion graph, corner-peeling peels vertices that are contained in unique cubes of maximum dimension
+We explore simple hyperplane arrangements in Hyperbolic geometry, which we show correspond to a set of maximum classes, properly containing those represented by simple linear Euclidean arrangements
+These classes can again be corner-peeled by sweeping
+Citing the proof of existence of maximum unlabeled compression schemes due to~ CITATION ,  CITATION  ask whether unlabeled compression schemes for infinite classes such as positive half spaces can be constructed explicitly
+We present constructions for illustrative but simpler classes, suggesting that there are many interesting infinite maximum classes admitting explicit compression schemes, and under appropriate conditions, sweeping infinite Euclidean, Hyperbolic or PL arrangements corresponds to compression by  corner-peeling
+Next we prove that all maximum classes in  SYMBOL  are represented as simple arrangements of Piecewise-Linear (PL) hyperplanes in the  SYMBOL -ball
+This extends previous work by~ CITATION  on viewing simple PL hyperplane arrangements as maximum classes
+The close relationship between such arrangements and their Hyperbolic versions suggests that they could be equivalent
+Resolving the main problem left open in the preliminary version of this paper,~ CITATION , we show that sweeping of  SYMBOL -contractible PL arrangements does compress all finite  maximum classes by corner-peeling, completing~ CITATION
+We show that a one-inclusion graph  SYMBOL  can be represented by a  SYMBOL -contractible PL hyperplane arrangement if and only if  SYMBOL  is a strongly contractible cubical complex
+This motivates the nomenclature of  SYMBOL -contractible for the class of arrangements of PL hyperplanes
+Note then that these one-inclusion graphs admit a corner-peeling scheme of the same  size  SYMBOL  as the largest dimension of a cube in  SYMBOL
+Moreover if such a graph  SYMBOL  admits a corner-peeling scheme, then it is a contractible cubical complex
+We give a simple example to show that there are one-inclusion graphs which admit corner-peeling schemes but are not strongly contractible and so are not represented by a  SYMBOL -contractible PL hyperplane arrangement
+Compressing \term{maximal classes}---classes which cannot be grown without an increase to their VC dimension---is sufficient for compressing all classes, as embedded classes trivially inherit compression schemes of their super-classes
+This reasoning motivates the attempt to embed  SYMBOL -maximal classes into  SYMBOL -maximum classes~ CITATION
+We present non-embeddability results following from our earlier counter-examples to Kuzmin \& Warmuth's minimum  degree conjecture~ CITATION , and our new results on corner-peeling
+We explore with examples, maximal classes that can be compressed but not peeled, and classes that are not strongly contractible but can be compressed
+Finally, we investigate algebraic topological properties of maximum classes
+Most notably we characterize  SYMBOL -maximum classes, corresponding to simple linear Euclidean arrangements, as cubical complexes homeomorphic to the  SYMBOL -ball
+The result that such classes' boundaries are homeomorphic to the  SYMBOL -sphere begins the study of the boundaries of maximum classes, which are closely related to peeling
+We conclude with several open problems

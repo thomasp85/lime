@@ -1,0 +1,41 @@
+### abstract ###
+Numerous studies are currently underway to characterize the microbial communities inhabiting our world.
+These studies aim to dramatically expand our understanding of the microbial biosphere and, more importantly, hope to reveal the secrets of the complex symbiotic relationship between us and our commensal bacterial microflora.
+An important prerequisite for such discoveries are computational tools that are able to rapidly and accurately compare large datasets generated from complex bacterial communities to identify features that distinguish them.
+We present a statistical method for comparing clinical metagenomic samples from two treatment populations on the basis of count data to detect differentially abundant features.
+Our method, Metastats, employs the false discovery rate to improve specificity in high-complexity environments, and separately handles sparsely-sampled features using Fisher's exact test.
+Under a variety of simulations, we show that Metastats performs well compared to previously used methods, and significantly outperforms other methods for features with sparse counts.
+We demonstrate the utility of our method on several datasets including a 16S rRNA survey of obese and lean human gut microbiomes, COG functional profiles of infant and mature gut microbiomes, and bacterial and viral metabolic subsystem data inferred from random sequencing of 85 metagenomes.
+The application of our method to the obesity dataset reveals differences between obese and lean subjects not reported in the original study.
+For the COG and subsystem datasets, we provide the first statistically rigorous assessment of the differences between these populations.
+The methods described in this paper are the first to address clinical metagenomic datasets comprising samples from multiple subjects.
+Our methods are robust across datasets of varied complexity and sampling level.
+While designed for metagenomic applications, our software can also be applied to digital gene expression studies.
+A web server implementation of our methods and freely available source code can be found at LINK.
+### introduction ###
+The increasing availability of high-throughput, inexpensive sequencing technologies has led to the birth of a new scientific field, metagenomics, encompassing large-scale analyses of microbial communities.
+Broad sequencing of bacterial populations allows us a first glimpse at the many microbes that cannot be analyzed through traditional means.
+Studies of environmental samples initially focused on targeted sequencing of individual genes, in particular the 16S subunit of ribosomal RNA CITATION CITATION, though more recent studies take advantage of high-throughput shotgun sequencing methods to assess not only the taxonomic composition, but also the functional capacity of a microbial community CITATION CITATION .
+Several software tools have been developed in recent years for comparing different environments on the basis of sequence data.
+DOTUR CITATION, Libshuff CITATION, -libshuff CITATION, SONs CITATION, MEGAN CITATION, UniFrac CITATION, and TreeClimber CITATION all focus on different aspects of such an analysis.
+DOTUR clusters sequences into operational taxonomic units and provides estimates of the diversity of a microbial population thereby providing a coarse measure for comparing different communities.
+SONs extends DOTUR with a statistic for estimating the similarity between two environments, specifically, the fraction of OTUs shared between two communities.
+Libshuff and -libshuff provide a hypothesis test for deciding whether two communities are different, and TreeClimber and UniFrac frame this question in a phylogenetic context.
+Note that these methods aim to assess whether, rather than how two communities differ.
+The latter question is particularly important as we begin to analyze the contribution of the microbiome to human health.
+Metagenomic analysis in clinical trials will require information at individual taxonomic levels to guide future experiments and treatments.
+For example, we would like to identify bacteria whose presence or absence contributes to human disease and develop antibiotic or probiotic treatments.
+This question was first addressed by Rodriguez-Brito et al. CITATION, who use bootstrapping to estimate the p-value associated with differences between the abundance of biological subsytems.
+More recently, the software MEGAN of Huson et al. CITATION provides a graphical interface that allows users to compare the taxonomic composition of different environments.
+Note that MEGAN is the only one among the programs mentioned above that can be applied to data other than that obtained from 16S rRNA surveys.
+These tools share one common limitation they are all designed for comparing exactly two samples therefore have limited applicability in a clinical setting where the goal is to compare two treatment populations each comprising multiple samples.
+In this paper, we describe a rigorous statistical approach for detecting differentially abundant features between clinical metagenomic datasets.
+This method is applicable to both high-throughput metagenomic data and to 16S rRNA surveys.
+Our approach extends statistical methods originally developed for microarray analysis.
+Specifically, we adapt these methods to discrete count data and correct for sparse counts.
+Our research was motivated by the increasing focus of metagenomic projects on clinical applications .
+Note that a similar problem has been addressed in the context of digital gene expression studies.
+Lu et al. CITATION employ an overdispersed log-linear model and Robinson and Smyth CITATION use a negative binomial distribution in the analysis of multiple SAGE libraries.
+Both approaches can be applied to metagenomic datasets.
+We compare our tool to these prior methodologies through comprehensive simulations, and demonstrate the performance of our approach by analyzing publicly available datasets, including 16S surveys of human gut microbiota and random sequencing-based functional surveys of infant and mature gut microbiomes and microbial and viral metagenomes.
+The methods described in this paper have been implemented as a web server and are also available as free source-code from LINK.

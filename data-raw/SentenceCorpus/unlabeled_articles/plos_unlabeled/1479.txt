@@ -1,0 +1,35 @@
+### abstract ###
+Exposure to environmental chemicals and drugs may have a negative effect on human health.
+A better understanding of the molecular mechanism of such compounds is needed to determine the risk.
+We present a high confidence human protein-protein association network built upon the integration of chemical toxicology and systems biology.
+This computational systems chemical biology model reveals uncharacterized connections between compounds and diseases, thus predicting which compounds may be risk factors for human health.
+Additionally, the network can be used to identify unexpected potential associations between chemicals and proteins.
+Examples are shown for chemicals associated with breast cancer, lung cancer and necrosis, and potential protein targets for di-ethylhexyl-phthalate, 2,3,7,8-tetrachlorodibenzo-p-dioxin, pirinixic acid and permethrine.
+The chemical-protein associations are supported through recent published studies, which illustrate the power of our approach that integrates toxicogenomics data with other data types.
+### introduction ###
+Humans are daily exposed to diverse hazardous chemicals via skincare products, plastic cups, computers and pesticides to mention but a few sources.
+The potential effect of these environmental compounds on human health is a major concern CITATION CITATION.
+For example chemicals such as phthalate plasticizers have been widely linked to allergies, reproductive disorders and neurological defects.
+Humans are intentionally exposed to drugs used for treatment and cure of diseases.
+Many drugs affect multiple targets and may interact or affect the same proteins as environmental chemicals CITATION CITATION.
+The mechanism of action of these small molecules is often not completely understood and can be associated to adverse and toxic effects through for example drug-drug interactions CITATION.
+There is thus a need to improve our understanding of the underlying mechanism of action of chemicals and the biological pathways they perturb to fully evaluate the impact of small molecules on human health.
+An essential step towards deciphering the effect of chemicals on human health is to identify all possible molecular targets of a given chemical.
+Various network-oriented chemical pharmacology approaches have been published recently to identify novel protein candidates for drugs, using structural chemical similarity CITATION CITATION.
+For example Keiser et al. CITATION applied network analysis to drugs and their targets.
+The authors identified unexpected molecular targets such as muscarinic acetylcholine receptor M 3, alpha-2 adrenergic receptor and neurokinin NK2 receptor for methadone, emetine and loperamide, respectively.
+Additionally, recent studies have demonstrated that chemicals could be classified based upon their effect on mRNA expression detected by microarrays CITATION CITATION.
+Lamb et al. showed that genomic signatures could be used to recognize drugs with common mechanism of action allowing discovery of unknown modes of action.
+Despite the explosion of chemical-biological networks, the chemical toxicity remains a major issue in human health.
+Analysis of environmental chemicals with similar gene expression profiles is still lacking.
+With the recent advances in toxicogenomics, information on gene/protein activity in response to small molecule exposures becomes more available.
+This provide necessary data to develop computational systems biology models to predict both high level associations and more detailed associations
+In this paper we present a method that can associate chemicals to disease and identify potential molecular targets based on the integration of toxicogenomics data, chemical structures, protein-protein interaction data, disease information and functional annotation.
+The core of our procedure is derived from the target hopping concept defined previously CITATION.
+But instead of considering only binding activity, we extended the concept to gene expression.
+If two proteins are affected with two chemicals, then both proteins are deemed associating in chemical space.
+Our approach is not only a statistical model but mimics the true biological system by constructing a network of associations between human proteins defined as Protein-Protein Association Network.
+We have validated our network by comparison with two high confidence protein-protein interaction networks, and by assessing the functional enrichment of clusters in the network generated.
+The P-PAN revealed both known as well as many novel surprising connections between chemicals and diseases or proteins.
+We provide literature support for some of the unexpected associations, such as the connection between diethylhexylphthalate and gamma-aminobutyric acid A receptor beta target CITATION, as well as between apocarotenal, a chemical found in spinach, and necrosis.
+This illustrates the usefulness of an approach that integrates toxicogenomics data with other diverse data types.

@@ -1,0 +1,57 @@
+### abstract ###
+very small but cumulated decreases in food intake may be sufficient to erase obesity over a period of years
+we examine the effect of slight changes in the accessibility of different foods in a pay-by-weight-of-food salad bar in a cafeteria serving adults for the lunch period
+making a food slightly more difficult to reach by varying its proximity by about  NUMBER  inches or changing the serving utensil spoon or tongs modestly but reliably reduces intake  in the range of  NUMBER - NUMBER  percent 
+given this effect  it is possible that making calorie-dense foods less accessible and low-calorie foods more accessible over an extended period of time would result in significant weight loss
+### introduction ###
+obesity is detrimental to health  and its prevalence has been growing steadily in the united states and elsewhere over recent decades
+the national health and nutrition examination surveys nhanes estimate that the percentage of obese adults between the ages of  NUMBER  and  NUMBER  in america increased from  NUMBER   NUMBER  in  CITATION  to  NUMBER   NUMBER  in  NUMBER   CITATION
+obesity is the second-leading cause of preventable deaths and increases risk of coronary heart disease  type ii diabetes  and other serious medical conditions  CITATION
+although there is no doubt that obesity represents a serious health hazard  the framing of the problem as an  obesity epidemic  is misleading
+obesity does not have two of the critical properties of epidemics   NUMBER  it is not contagious  and  NUMBER  its growth over time years or decades is not rapid and in an  s  shaped curve  but instead is very slow and steady
+the most common medical treatment for obesity is dieting
+yet most studies assessing this treatment find that it is ineffective
+even when dieters lose weight  these losses are rarely maintained  CITATION
+one review even concludes that it is  only the rate of weight regain  not the fact of weight regain  that is in question   CITATION
+according to gallup polls  the percentage of americans  seriously trying to lose weight  increased between  CITATION  and  NUMBER   but americans got heavier nevertheless  CITATION
+a promising alternative approach to the obesity problem is not to focus on or blame the obese individual  but rather to focus on the environment as a principal and  treatable  cause
+in recent years  a group of researchers have independently advocated a focus on the environment to control the national waistline
+originally proposed by hill and peters  CITATION   the approach has been endorsed  in one form or another  by brownell  CITATION   levitsky  CITATION   rolls  CITATION   rozin et al    NUMBER   wansink  CITATION   and young and nestle  CITATION
+estimates of the increase in body weight per year of americans have been computed  and they vary depending on the time period measured and racial and age properties of the sample
+based on the nhanes and cardia data bases  annual weight gain estimates in american adults vary from  NUMBER   NUMBER  pounds  NUMBER   NUMBER  kg to  NUMBER   NUMBER  pounds  NUMBER   NUMBER  kg per year  CITATION
+the creeping increase in obesity could be halted or  in retrospect  could have been prevented by a very modest reduction in calories in the range of  NUMBER  to  NUMBER  kilocalories day  depending on many factors including assumptions about the efficiency of extracting energy from ingested foods  CITATION
+thus  a reduction in food intake starting twenty years ago of  NUMBER  to  NUMBER  apples per week  or  NUMBER  to  NUMBER   NUMBER  oz cokes per week  all else equal  would have completely eliminated the growth in obesity in the united states
+the environmental alternative  in its most common and probably most practical form  involves interventions that have modest but cumulative effects on food intake  corresponding to the modest annual gains in weight
+a number of environmental interventions have been shown to decrease food intake in a meal
+the best-documented environmental influence is portion size
+experiments in both laboratory and real world settings have established that increasing portion size increases consumption  CITATION
+portion size has also been linked to bmi differences in field studies
+the french-who consume more total fat and have slimmer figures than their american counterparts-have systematically and substantially smaller portion sizes in restaurants  food purchased in individual portion sizes  and cookbooks  CITATION
+the slimmer status of the french strongly suggests that they eat fewer calories than americans  probably in part because they consume smaller portion sizes
+the focus of the present studies is not on portion size  but on the influence of accessibility meaning the ease with which a food item can be accessed on food choice and intake
+a number of existing studies implicate accessibility as a determinant of consumption
+most of these operationalize ease of access in terms of proximity i e   spatial location  which translates into effort
+early work manipulating effort was motivated by schachter's  CITATION  theory of obesity  which predicted that obese individuals would reduce intake more than normal weight individuals as effort to obtain food increased
+in general  the manipulations used in these studies involved substantial differences in effort
+nisbett  CITATION  showed that obese individuals ate fewer sandwiches if they had to walk to a refrigerator to get them while normals were unaffected
+similarly  schachter and friedman  CITATION  showed that obese individuals consumed less of shelled than unshelled almonds  but there was no effect for normals
+schachter  friedman  and handler  NUMBER  showed that  of the caucasian patrons eating at a chinese restaurant  obese patrons were less likely to use chopsticks which  presumably  require more effort than normal weight patrons
+another study supporting the schachter view was a demonstration that obese individuals eat fewer cashews when they are individually wrapped and normals do not  but the study also found no reduction in either group for wrapped versus unwrapped chocolates  CITATION
+other studies testing the schachter hypothesis show no differences in environmental influence on obese versus normal subjects
+levitz  CITATION  and meyers  stunkard  and coll  CITATION  showed a reduction in low-calorie dessert consumption when they were placed at the back in a four row deep dessert display as opposed to the front  in a cafeteria setting
+neither study reported a difference between obese and normal weight persons
+levitz  CITATION  also reported that when the lid was on an ice cream cooler in a cafeteria setting  it reduced ice cream intake substantially in both obese and normal weight individuals
+studies done outside the schachter framework also show effects of effort accessibility
+meiselman et al CITATION  reported large decreases in intake of potato chips and candy in a cafeteria setting  when they were made quite inaccessible  by locating them some distance from the main serving line
+engell et al CITATION  found that individuals drink more water while eating if the water pitcher is on the table versus  NUMBER  or  NUMBER  feet away
+more recently  wansink  painter  and lee  CITATION  demonstrated that secretaries consume more candy when the bowl is on their desk as opposed to at another location in the room
+access can potentially be operationalized in subtler ways  examples include changing proximity by a matter of inches i e   changing the ease with which a food can be reached and how much and in what direction one must stretch to reach it  and changing ease of transfer i e   how easy it is to move a food from the serving location to the plate or mouth
+the work by levitz  CITATION  and meyers  stunkard  and coll  CITATION  referred to above suggests that modest changes in positioning of foods can influence food intake
+all of the successful manipulations in accessibility referred to here were shown to be effective in single meals
+we do not know whether people would compensate for the reduction in intake subsequently  by increased food intake  decreased exercise  or changes in efficiency of utilization of energy
+this is addressed in the discussion
+the present studies explore the effects of small  usually unnoticed environmental changes
+these changes are called nudges  CITATION  because they subtly encourage consumption of less calorie-dense food without altering the choice set
+hence our title  nudge to nobesity i
+a companion paper  nudge to nobesity ii  CITATION  instantiates nudges by manipulating order of presentation of items on a menu in a real world setting  and reports increased intake of items presented at the top or bottom of a food category list  as opposed to middle positions
+we operationalize accessibility as proximity i e   requiring a longer or shorter reach in three studies  and in a fourth study we operationalize it as ease of transfer i e   how easy it is to move a food from one location to another

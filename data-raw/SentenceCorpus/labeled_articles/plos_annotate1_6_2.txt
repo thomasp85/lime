@@ -1,0 +1,25 @@
+### abstract ###
+MISC	Expansion of polyglutamine tracts in proteins results in protein aggregation and is associated with cell death in at least nine neurodegenerative diseases.
+MISC	Disease age of onset is correlated with the polyQ insert length above a critical value of 35 40 glutamines.
+MISC	The aggregation kinetics of isolated polyQ peptides in vitro also shows a similar critical-length dependence.
+MISC	While recent experimental work has provided considerable insights into polyQ aggregation, the molecular mechanism of aggregation is not well understood.
+AIMX	Here, using computer simulations of isolated polyQ peptides, we show that a mechanism of aggregation is the conformational transition in a single polyQ peptide chain from random coil to a parallel -helix.
+OWNX	This transition occurs selectively in peptides longer than 37 glutamines.
+OWNX	In the -helices observed in simulations, all residues adopt -strand backbone dihedral angles, and the polypeptide chain coils around a central helical axis with 18.5 2 residues per turn.
+OWNX	We also find that mutant polyQ peptides with proline-glycine inserts show formation of antiparallel -hairpins in their ground state, in agreement with experiments.
+OWNX	The lower stability of mutant -helices explains their lower aggregation rates compared to wild type.
+OWNX	Our results provide a molecular mechanism for polyQ-mediated aggregation.
+### introduction ###
+MISC	The appearance of polyglutamine -containing aggregates CITATION CITATION is a hallmark of disease progression in all diseases in which CAG-expansions occur in genes CITATION.
+MISC	Intranuclear inclusion bodies containing polyQ aggregates have been found in vitro CITATION, CITATION, in cell cultures, animal models, and affected patients CITATION, CITATION.
+MISC	The aggregates are known to have a characteristic amyloid topology CITATION.
+MISC	The inhibition of oligomerization by the azo-dye Congo red, or by the Hsp70/Hsp40 chaperone system, exerts marked protective effects in vivo and in vitro CITATION, CITATION.
+MISC	Aggregation and disease are observed if the number of glutamines in the expansion, n, exceeds a critical value, n C CITATION.
+MISC	The nearly universal existence of this criticality in all polyQ-related diseases suggests that when the polyQ insert length exceeds a critical value, a pathological change, largely independent of the host protein, occurs in the polyQ insert itself.
+MISC	Therefore, isolated polyQ peptides have been used as model systems for studying polyQ aggregation CITATION, CITATION, CITATION, and it is known that: The nuclear uptake of polyQ peptide aggregates prepared in vitro is cytotoxic in cell cultures CITATION, isolated polyQ peptides have in vitro aggregation properties similar to the corresponding full-length proteins containing the polyQ insert CITATION, CITATION, peptide aggregation follows a nucleated mechanism showing characteristic lag and growth phases CITATION, CITATION, and the glutamine tract-length dependence of the lag-time interval correlates well with the age of onset of disease CITATION.
+MISC	Peptides of subcritical lengths have long lag times of aggregation and a corresponding age of onset later than the typical life span of a person.
+MISC	Longer peptides have progressively smaller lag times of aggregation, and a correspondingly early age of onset of the disease CITATION .
+MISC	Unaggregated polyQ peptides form random coil structures, whereas aggregates are composed of amyloid-like -strands CITATION.
+MISC	The conversion of random coil to -strand occurs in an individual polyQ chain CITATION, and fibril formation occurs by addition of other polyQ chains to these monomeric -strand nuclei.
+MISC	Therefore, the conformational dynamics of an individual polyQ chain determines both its aggregation mechanism and the structure of the final aggregates.
+MISC	The details of the conformational dynamics of polyQ and the length dependence of the dynamics are not well understood CITATION .

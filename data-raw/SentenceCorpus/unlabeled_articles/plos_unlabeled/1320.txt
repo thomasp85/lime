@@ -1,0 +1,52 @@
+### abstract ###
+Kinetically stable proteins, those whose stability is derived from their slow unfolding kinetics and not thermodynamics, are examples of evolution's best attempts at suppressing unfolding.
+Especially in highly proteolytic environments, both partially and fully unfolded proteins face potential inactivation through degradation and/or aggregation, hence, slowing unfolding can greatly extend a protein's functional lifetime.
+The prokaryotic serine protease -lytic protease has done just that, as its unfolding is both very slow and so cooperative that partial unfolding is negligible, providing a functional advantage over its thermodynamically stable homologs, such as trypsin.
+Previous studies have identified regions of the domain interface as critical to LP unfolding, though a complete description of the unfolding pathway is missing.
+In order to identify the LP unfolding pathway and the mechanism for its extreme cooperativity, we performed high temperature molecular dynamics unfolding simulations of both LP and trypsin.
+The simulated LP unfolding pathway produces a robust transition state ensemble consistent with prior biochemical experiments and clearly shows that unfolding proceeds through a preferential disruption of the domain interface.
+Through a novel method of calculating unfolding cooperativity, we show that LP unfolds extremely cooperatively while trypsin unfolds gradually.
+Finally, by examining the behavior of both domain interfaces, we propose a model for the differential unfolding cooperativity of LP and trypsin involving three key regions that differ between the kinetically stable and thermodynamically stable classes of serine proteases.
+### introduction ###
+-lytic protease, a prokaryotic serine protease of the chymotrypsin family, has evolved an unusual energetic landscape, providing it a functional advantage over its metazoan homologs.
+Unlike most proteins, LP's active state is not stabilized by thermodynamics, but by a large kinetic barrier to unfolding, with an unfolding t 1/2 of 1 year.
+CITATION While thermodynamically stable homologs like trypsin have similar unfolding rates, they are degraded at rates up to 100x faster than LP under highly proteolytic conditions.
+CITATION, CITATION In addition, the rates of LP unfolding and degradation are nearly identical, indicating that partial unfolding leading to proteolysis is negligible.
+Therefore, LP's functional advantage is derived from not only its very slow unfolding, which it shares with trypsin, but also its suppression of local unfolding events that would render it protease-accessible.
+Thus, it appears that the evolution of LP has generated such extreme cooperativity in unfolding in order to maximize its functional lifetime under harsh conditions.
+The cost of maximizing resistance to unfolding comes in the form of extremely slow folding and the consequent loss of thermodynamic stability of the active state relative to the unfolded state.
+CITATION, CITATION However, LP also evolved a large Pro-region folding catalyst, which speeds folding by nine orders of magnitude and is then degraded by the mature protease, decoupling the folding and unfolding landscapes so that unfolding resistance can be maximized.
+CITATION, CITATION, CITATION
+Given LP's unusual energetic landscape and its reliance on kinetic stability, much effort has focused on elucidating its unfolding mechanism in detail.
+Native-state hydrogen-deuterium exchange showed over half of its 194 backbone amides are well-protected from exchange, and 31 have protection factors greater than 10 9.
+CITATION This extreme rigidity is spread throughout both domains and is indicative of LP's high unfolding cooperativity.
+Thermodynamic decomposition of the unfolding energetics into entropic and enthalpic contributions suggested a prominent role for the extensive domain interface in unfolding, with the critical step involving solvation of the domain interface while the individual domains remain relatively intact.
+CITATION Mutational studies on LP inspired by the acid-resistant homolog NAPase were consistent with this hypothesis.
+The distribution of salt-bridges in NAPase and LP differ markedly; replacement of a salt-bridge at LP's domain interface with an intra-domain salt-bridge resulted in significant increases in LP's resistance to low pH unfolding.
+CITATION A major component of the domain interface, the Domain Bridge, is the only covalent linkage between the two domains.
+This structure exists only in prokaryotic proteases and varies considerably among LP and its homologs.
+The area buried by the domain bridge is inversely correlated with the high-temperature unfolding rate for four kinetically stable proteases, indicating both its relevance and that it is weakened early in unfolding.
+CITATION Another domain interface component is a -hairpin in the C-terminal domain, unique to kinetically stable proteases, that forms part of the active site.
+Substitution of a more stable -turn was consistent with an unfolding pathway where C H loses its domain interface contacts early in unfolding.
+CITATION Despite much progress, we still lack a global picture of LP unfolding, especially at high resolution.
+For higher-resolution views of protein folding/unfolding, researchers have often turned to -value analysis.
+CITATION CITATION These studies involve large-scale protein engineering experiments which investigate the molecule's folding and unfolding kinetics after making perturbing mutations, normally hydrophobic deletions.
+By analyzing sufficiently large numbers of perturbations, structure in the transition state ensemble can be inferred and a folding/unfolding mechanism can be proposed.
+Unfortunately, the extremely slow folding and unfolding rates for LP make large-scale -value analysis on LP impractical.
+As an alternative, we decided to investigate the LP unfolding pathway computationally in order to explain previous experiments and guide new ones.
+High-temperature molecular dynamics unfolding simulations offer the highest structural and temporal resolution for studying protein unfolding, but their results must be validated experimentally.
+Since unfolding rates for proteins are typically very slow under physiological conditions, very high temperatures are required to accelerate the unfolding into the ns range required for computational analysis.
+As a consequence, initially there was significant concern as to the relevance of the high temperature TSEs to real proteins under physiological conditions.
+Daggett and co-workers have been pioneers in this field, using Chymotrypsin Inhibitor 2 as a model system and have shown that the simulated unfolding calculations agree remarkably well with experimental -values and were even able to predict faster folding mutants.
+CITATION CITATION Further work on other proteins by multiple groups has established MD unfolding simulations as a useful tool in examining protein unfolding at atomic resolution while correlating well with experiments.
+CITATION CITATION
+A critical step in analyzing unfolding simulations is accurately pinpointing the TSE from the multitude of conformations generated.
+Because the TSE is experimentally accessible through a molecule's folding and unfolding kinetics, its identification computationally can be used for both explanatory and predictive purposes.
+Various methods for identifying the TSE have been used in the past, breaking down into conformational clustering and landscape methods.
+CITATION, CITATION, CITATION, CITATION, CITATION CITATION Conformational clustering relies on all-versus-all comparisons of conformations, often by C RMSD, while landscapes separating native from unfolded structures can be generated using properties of the conformations, such as the fraction of native contacts or secondary structure.
+Here, we report the results of multiple MD simulations carried out at high temperature in order to probe the mechanism of LP's extremely cooperative unfolding.
+Due to the robustness and cooperativity of LP unfolding, the same TSE is obtained using either conformational clustering or landscape methods.
+The simulated unfolding pathway for LP matches well with previously described experiments and provides atomic resolution to previous models for LP unfolding which highlight the role of the domain interface.
+In addition, we have performed similar simulations on trypsin with the goal of understanding the observed experimental differences in unfolding cooperativity.
+Through a novel method for calculating cooperativity in MD simulations, we show LP unfolds significantly more cooperatively than trypsin, mirroring the experimental results.
+Finally, by analyzing the domain interfaces of both proteins during unfolding, we propose a mechanism for how this differential cooperativity is achieved.

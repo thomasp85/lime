@@ -1,0 +1,38 @@
+### abstract ###
+Allosteric proteins bind an effector molecule at one site resulting in a functional change at a second site.
+We hypothesize that allosteric communication in proteins relies upon networks of quaternary and tertiary motions.
+We argue that cyclic topology of these networks is necessary for allosteric communication.
+An automated algorithm identifies rigid bodies from the displacement between the inactive and the active structures and constructs quaternary networks from these rigid bodies and the substrate and effector ligands.
+We then integrate quaternary networks with a coarse-grained representation of contact rearrangements to form global communication networks.
+The GCN reveals allosteric communication among all substrate and effector sites in 15 of 18 multidomain and multimeric proteins, while tertiary and quaternary networks exhibit such communication in only 4 and 3 of these proteins, respectively.
+Furthermore, in 7 of the 15 proteins connected by the GCN, 50 percent or more of the substrate-effector paths via the GCN are interdependent paths that do not exist via either the tertiary or the quaternary network.
+Substrate-effector pathways typically are not linear but rather consist of polycyclic networks of rigid bodies and clusters of rearranging residue contacts.
+These results argue for broad applicability of allosteric communication based on structural changes and demonstrate the utility of the GCN.
+Global communication networks may inform a variety of experiments on allosteric proteins as well as the design of allostery into non-allosteric proteins.
+### introduction ###
+The modern concept of allostery began with the models of Monod et al. CITATION and Koshland et al. CITATION, which sought to account for allostery based upon gross properties of the transition between two well-defined end-states.
+More recent thermodynamic models of allostery characterize population shifts in conformational ensembles in more detail CITATION CITATION, and there is experimental evidence that alternate allosteric states are simultaneously populated in solution CITATION, CITATION.
+Nonetheless, mechanical and chemical transitions in individual molecules underlie the thermodynamic properties of allosteric proteins.
+That is, in individual molecules, energetic pathways of spatially contiguous, physically coupled structural changes and/or dynamic fluctuations must link substrate and effector sites CITATION CITATION .
+Crystal structures have revealed that most allosteric proteins are complex systems with both tertiary and quaternary structural changes CITATION.
+Previously, we quantified allosteric communication through tertiary structure from graphs of residue-residue contacts that form, break, or rearrange in the transition between inactive and active state structures CITATION.
+In such network representations of protein structure, putative paths between residues distant in three-dimensional space can be readily identified.
+These tertiary networks or contact rearrangement networks identified substrate-effector paths in 6 of 15 proteins tested, which indicated that tertiary changes play a significant but incomplete role in allosteric communication.
+In this work, we broaden the CRN approach toward more completely quantifying allosteric coupling mechanisms from structure.
+Specifically, we develop a network representation of quaternary structural changes and integrate this representation with the CRN.
+We seek to infer information about the allosteric coupling mechanism from gross properties of the differences between inactive and active structures.
+In this, our work resembles the MWC CITATION and KNF CITATION approaches but differs from investigations of the kinetic mechanism, that is, the order of events in the transition between inactive and active structural regimes CITATION CITATION.
+Most current computational approaches to large-scale protein dynamics predict motions and/or associated energetics by applying to the structure theoretical models like the elastic network CITATION and potential functions.
+While these predictions address important problems, most of these approaches do not predict allosteric pathways.
+By contrast to these problems, we will argue that allosteric pathway identification is facilitated by a network representation of a protein structural transition.
+Network representations of protein structures have previously been used to illuminate dynamic and/or allosteric properties.
+For example, large-scale fluctuations predicted from normal mode analysis of the elastic network correlate with known conformational changes CITATION, CITATION, CITATION.
+In addition, rigid and flexible regions of protein structures have been predicted from the network of contact and hydrogen bond constraints in a single protein structure CITATION, CITATION.
+Furthermore, residues important for maintaining short paths in a contact network are experimentally known to mediate signaling in proteins CITATION.
+However, allosteric communication pathways have not previously been derived from a network representation of the quaternary structural transition.
+In this paper, we develop a hypothesis for allosteric coupling via networks of quaternary motions.
+We elucidate rigid bodies from the differences between inactive and active crystal structures with an automatic algorithm, and we form a quaternary network from the rigid bodies based on contacts between them.
+Toward a broader representation of allosteric communication mechanisms, we assess how communication through these networks relates to that through contact rearrangement networks in tertiary structure.
+We then integrate quaternary networks with a coarse-grained representation of CRNs to form global communication networks.
+We describe the range of topologies of GCNs in several representative proteins from the allosteric benchmark set CITATION, and then we assess substrate-effector communication via CRNs, the quaternary network, and the GCN in 18 DNA-binding proteins and enzymes and classify each protein based on the respective tertiary and quaternary contributions to connectivity.
+GCN analysis provides the opportunity to advance the theory of mechanical allosteric coupling in proteins and may guide drug design and allosteric experiments and simulations.

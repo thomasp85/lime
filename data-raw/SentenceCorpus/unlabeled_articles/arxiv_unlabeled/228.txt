@@ -1,0 +1,30 @@
+### abstract ###
+Experimental verification has been the method of choice for verifying the stability of a multi-agent reinforcement learning (MARL) algorithm as the number of agents grows and theoretical analysis becomes prohibitively complex
+For cooperative  agents, where the ultimate goal is to optimize some global metric, the stability is usually verified by observing the evolution of the global performance metric over time
+If the global metric improves and eventually stabilizes, it is considered a reasonable verification of the system's stability
+The main contribution of this note is establishing the need for better experimental frameworks and measures to assess the stability of large-scale adaptive cooperative systems
+We show an experimental case study where the stability of the global performance metric can be rather deceiving, hiding an underlying instability in the system that later leads to a significant drop in performance
+We then propose an alternative metric that relies on  agents' local policies and show, experimentally, that our proposed metric is more effective (than the traditional global performance metric) in exposing the instability of MARL algorithms
+### introduction ###
+The term  convergence , in reinforcement learning context, refers to the stability of the learning process (and the underlying model) over time
+Similar to single agent reinforcement learning algorithms (such as Q-learning  CITATION ), the convergence of a multi-agent reinforcement learning (MARL) algorithm is an important property that received considerable attention  CITATION
+However, proving the convergence of a MARL algorithm via theoretical analysis is significantly more challenging than proving the convergence in the single agent case
+The presence of other agents that are also learning deem the environment non-stationary, therefore violating a foundational assumption in single agent learning
+In fact, proving the convergence of MARL algorithm even in 2-player-2-action single-stage games (arguably the simplest class of multi-agent systems domains) has been challenging  CITATION
+As a consequence, experimental verification is usually the method of choice as the number of agents grows and theoretical analysis becomes prohibitively complex
+For cooperative agents, researchers typically verified  the stability of a MARL algorithm by observing the evolution of some global performance metric overtime  CITATION
+This is not surprising since the ultimate goal of a cooperative system is to optimize some global metric
+Examples of global performance metrics include the percentage of total number of delivered packets in routing problems  CITATION , the average turn around time of tasks in task allocation problems   CITATION , or the average reward (received by agents) in general  CITATION
+If the global metric improves over time and eventually  appears  to stabilize, it is usually considered a reasonable verification of convergence  CITATION
+Even if the underlying agent policies are not stable, one could argue that at the end, global performance is all that matters in a cooperative system
+This paper challenges the above (widely-used) practice and establishes the need for better experimental frameworks and measures for assessing the stability of large-scale cooperative systems
+We show an experimental case study where the stability of the global performance metric can hide an underlying instability in the system
+This hidden instability later leads to a significant drop in the global performance metric itself
+We propose an alternative measure that relies on agents' local policies: the policy entropy
+We experimentally show that the proposed metric is more effective than the traditional global performance metric in exposing the instability of MARL algorithms in large-scale multi-agent systems
+The paper is organized as follows
+Section  describes the case study we will be using throughout the paper
+Section  reviews MARL algorithms (with particular focus on WPL and GIGA-WoLF, the two algorithms we use in our experimental evaluation)
+Section  presents our initial experimental results, where the global performance metric leads to a (misleading) conclusion that a MARL algorithm converges
+Section  presents our proposed measure and illustrates how it is used to expose the hidden instability of a MARL algorithm
+We conclude in Section

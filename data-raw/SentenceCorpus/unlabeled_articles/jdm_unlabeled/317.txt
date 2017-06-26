@@ -1,0 +1,20 @@
+### abstract ###
+how many judgment and decision making jdm researchers have not claimed to be building on herbert simon's work
+we identify two of simon's goals for jdm research  he sought to understand people's decision processes-the descriptive goal-and studied whether the same processes lead to good decisions-the prescriptive goal
+to investigate how recent jdm research relates to these goals  we analyzed the articles published in the journal of behavioral decision making and in judgment and decision making from  NUMBER  to  NUMBER 
+out of  NUMBER  articles   NUMBER  cite simon or we judged them as directly relating to his goals
+we asked whether these articles are integrative  in the following sense  for a descriptive article we asked if it contributes to building a theory that reconciles different conceptualizations of cognition such as neural networks and heuristics
+for a prescriptive article we asked if it contributes to building a method that combines ideas of other methods such as heuristics and optimization models
+based on our subjective judgments we found that the proportion of integrative articles was  NUMBER  percent  of the prescriptive and  NUMBER  percent  of the descriptive articles
+we offer suggestions for achieving more integration of jdm theories
+the article concludes with the thesis that although jdm researchers work under simon's spell  no one really knows what that spell is
+### introduction ###
+after receiving his nobel prize in economics  daniel kahneman wrote that he and amos tversky  explored a territory herbert simon had defined and named-the psychology of bounded rationality  CITATION
+gerd gigerenzer and another nobel laureate in economics  reinhard selten  claimed that by bounded rationality simon did not mean irrationality as in tversky and kahneman's heuristics-and-biases program or thaler's behavioral economics but instead  models that  use fast and frugal stopping rules for search  CITATION
+some judgment and decision making jdm researchers side with one of these two seemingly contradictory interpretations of bounded rationality  others attempt to show that they are not really contradictory  and yet others suggest moving beyond trying to define bounded rationality
+one way or another  we researchers in jdm work under simon's spell
+this article aims at initiating an informed and constructive discussion about the relation between simon's work and jdm research and how it can be used to push jdm research forward
+in the next section we analyze writings of simon and other researchers about his work and identify two of his main goals for jdm
+in section  NUMBER   in order to investigate how recent jdm research relates to these two goals  we analyze the  NUMBER  articles published in the journal of behavioral decision making and judgment and decision making from  NUMBER  to  NUMBER 
+we argue that simon's goals are not pursued in an integrated way and speculate on why is this the case and how we can achieve more integration of jdm theories
+in section  NUMBER  we return to simon's spell and claim that jdm researchers do not really know what it is

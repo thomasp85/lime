@@ -1,0 +1,39 @@
+### abstract ###
+We present a new approach to the handling and interrogating of large flow cytometry data where cell status and function can be described, at the population level, by global descriptors such as distribution mean or co-efficient of variation experimental data.
+Here we link the real data to initialise a computer simulation of the cell cycle that mimics the evolution of individual cells within a larger population and simulates the associated changes in fluorescence intensity of functional reporters.
+The model is based on stochastic formulations of cell cycle progression and cell division and uses evolutionary algorithms, allied to further experimental data sets, to optimise the system variables.
+At the population level, the in-silico cells provide the same statistical distributions of fluorescence as their real counterparts; in addition the model maintains information at the single cell level.
+The cell model is demonstrated in the analysis of cell cycle perturbation in human osteosarcoma tumour cells, using the topoisomerase II inhibitor, ICRF-193.
+The simulation gives a continuous temporal description of the pharmacodynamics between discrete experimental analysis points with a 24 hour interval; providing quantitative assessment of inter-mitotic time variation, drug interaction time constants and sub-population fractions within normal and polyploid cell cycles.
+Repeated simulations indicate a model accuracy of 5 percent.
+The development of a simulated cell model, initialized and calibrated by reference to experimental data, provides an analysis tool in which biological knowledge can be obtained directly via interrogation of the in-silico cell population.
+It is envisaged that this approach to the study of cell biology by simulating a virtual cell population pertinent to the data available can be applied to generic cell-based outputs including experimental data from imaging platforms.
+### introduction ###
+Multiparameter flow cytometry is widely used to study the cell cycle and its perturbation in the context of both basic research and in routine clinical analysis CITATION CITATION.
+Such analyses may use a wide range of fluorescent reporters that correlate to the expression of key molecular components of the cell cycle, such as cyclins and cyclin dependent kinases, CITATION or quantify DNA content CITATION.
+Regardless of the particular fluorophores used the quantitative methodology and the ensuing synthesis of biological knowledge is based on statistical analyses of the experimental data sets.
+For single variable distributions these may include calculations of moments of increasing orders to provide the mean, variance, skewness etc. or cumulative indices such as the Kolmogorov-Smirnov test CITATION CITATION.
+More complex, multi-variate approaches may involve discriminant function, cluster or principal component analysis in an n-dimensional space CITATION CITATION.
+In all of these approaches there is a common procedural thread: acquisition of data is followed by a statistical parameterisation of the measurement set to which biological form or function can be correlated.
+In this work, we present an alternative, based on computational simulation of the experiment.
+A stochastic simulation of the cell cycle dynamics within a large population is initialised with reference to a flow cytometry data set and then evolved, using evolutionary computer algorithms, with assessment of fitness measures derived from comparisons to subsequent data sets.
+The cell-cycle information is then read directly from the in-silico populations.
+The development of a simulated cell population approach has been driven by a requirement to track the evolution of large numbers of cells over multiple generations through the cell cycle and provide a means to track progression of both the whole cell population and distinct sub-groups CITATION, CITATION.
+This is in the context of mapping the heterogeneity of cell cycle response to perturbation events e.g. effects on cell proliferation of anticancer therapeutics designed to block cell division.
+In this report we present the conceptual basis of this simulated cell cytometry and detail of the methodology adopted.
+To demonstrate the application of the technique and validate its potential we use it to quantify cell cycle perturbation in a tumour cell line by a topoismerase II inhibitor which causes endocycle routing in the late cell cycle.
+The aim of the simulation is to predict the dynamic evolution of a large population of virtual cells through a life cycle corresponding to that prescribed by their real-life counterparts.
+Furthermore, the model seeks to account for perturbations in the cell cycle progression of the virtual population.
+The spatial position of the vcells within the cell cycle is initially determined from a real flow data set.
+From this information, each vcell is assigned a temporal position within the mean inter-mitotic time, allowing cell cycle events such as DNA replication and cell division to be stochastically predicted.
+After the vpopulation has evolved for a given period, they may be compared with a further experimental data set to enable important simulation parameters, governing their evolution, to be optimised and constrained so that correlations between the respective data sets are maximised.
+Standard approaches to studying cell cycle involve statistical analysis of distributions either 1D involving nuclear content reporters CITATION or 2D when further cell cycle molecular reporters are also included CITATION, CITATION.
+Thus these are inherently whole population measures and can only describe cell variability via global parameters such as the standard deviation from the mean.
+Whilst automated analytical approaches have been developed in order to reduce user subjectivity CITATION CITATION the majority of flow analyses still involve user-defined gating of the as-measured data set to identify and segment a sub-population of cells.
+Subsequent mapping of this population onto 2D dot plots of fluorescence provides temporal snapshots and further partitioning of cells to different compartments, G 1, S, G 2/M within normal and polypoid cycles.
+These apparent quantitative assessments become inaccurate and, to varying extent, subjective, as they are based either on user identification of the various components in the dot plot by fitting of Gaussian distributions, representing the G 1, S, G 2/M fractions, to the DNA content histogram CITATION.
+The challenge of the current investigation is to adopt a computational approach, where the analytical and interpretive steps are implemented at the simulated biology stage and not on the raw data outputs.
+No new data is added in this approach and the computer simulations could be viewed as an elaborate form of data analysis.
+However, the methodology does deliver new insight on process, delivering a continuous simulation of the dynamic evolution of the cellular system between fixed sampling points.
+In this respect, it provides a physical validation when applying various hypotheses to interpret the experimental data.
+It also goes some way to visualising the variation between individual cells that gives rise to biological heterogeneity as the stochastic simulation delivers a report on population dynamics in which each and every cell can be tracked.

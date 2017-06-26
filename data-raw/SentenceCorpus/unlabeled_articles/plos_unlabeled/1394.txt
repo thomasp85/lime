@@ -1,0 +1,37 @@
+### abstract ###
+The mechanisms of stress tolerance in sessile animals, such as molluscs, can offer fundamental insights into the adaptation of organisms for a wide range of environmental challenges.
+One of the best studied processes at the molecular level relevant to stress tolerance is the heat shock response in the genus Mytilus.
+We focus on the upstream region of Mytilus galloprovincialis Hsp90 genes and their structural and functional associations, using comparative genomics and network inference.
+Sequence comparison of this region provides novel evidence that the transcription of Hsp90 is regulated via a dense region of transcription factor binding sites, also containing a region with similarity to the Gamera family of LINE-like repetitive sequences and a genus-specific element of unknown function.
+Furthermore, we infer a set of gene networks from tissue-specific expression data, and specifically extract an Hsp class-associated network, with 174 genes and 2,226 associations, exhibiting a complex pattern of expression across multiple tissue types.
+Our results suggest that the heat shock response in the genus Mytilus is regulated by an unexpectedly complex upstream region, and provide new directions for the use of the heat shock process as a biosensor system for environmental monitoring.
+### introduction ###
+The majority of molluscan species go through two principal developmental phases, a larval embryo followed by a clumping structure, when they are permanently attached to an underwater substrate.
+This lifecycle, common amongst marine invertebrates, poses challenges for adaptation and tolerance for a wide range of conditions at the littoral zone, including steep salinity or temperature gradients.
+Key model organisms for molluscan biology include species from the genus Mytilus, in particular M. edulis, M. galloprovincialis and M. californianus.
+Crucially, the latter species is a target organism for a genome sequencing project, whose results are eagerly expected by the community .
+The Mytilus species group provides an ideal model both for fundamental questions of animal adaptation to stress response, as well as biotechnological applications, primarily as a pollution biosensor CITATION.
+Its use extends into biomimetics CITATION, in particular protein-based medical adhesives CITATION, with potential applications in fields such as dentistry CITATION.
+Moreover, its relatively complex developmental structure and higher taxonomic status as an invertebrate, combined with the fact that it can suffer from mussel haemic neoplasia, renders this organism a potential model for human leukemia and an ideal biomarker for pollution-induced disease CITATION.
+In this context, it is important to understand the mechanisms by which mussels tolerate and cope with environmental stress, given that their behavioral options are highly restricted, due to the sessile phase of their lifecycle.
+In the past, comparisons between motility and sessility for higher organisms have been primarily confined to animals versus plants CITATION, with follow-up studies focusing on comparisons between large animals, e.g. humans, versus large plants, e.g. trees, and the trade-offs for the tree body plan CITATION.
+Less attention has been paid to adaptations by sessile animals, in particular intertidal invertebrates CITATION CITATION, and the molecular mechanisms through which they achieve tolerance to stress.
+One exception is represented by heat shock response, a key factor for temperature adaptation that has been studied in this context to a certain extent CITATION, and specifically in Mytilus with regard to the Hsp70 CITATION and Hsp90 CITATION genes.
+Transcriptional regulation can be achieved either by an extensive repertoire of paralogs and transcription factors or a complex structure of promoters.
+Analysis of comprehensive datasets has clearly demonstrated that transcription factors and transcription-associated proteins are not universally distributed but highly taxon-specific and that relative TF gene content increases with the taxonomic scale CITATION CITATION.
+Such comparisons have been later extended by follow-up studies that analyzed TAP complements and their expansion rates in plants CITATION CITATION.
+Thus, it is now known that one way by which plants, sessile organisms par excellence, achieve a finer degree of regulation is by the expansion of TF/TAP complements and a gene content strategy.
+Yet, it is unclear whether similar trends are followed in sessile animals, since entire genome sequences for those are lacking so far, limiting the range of comparative genome-wide studies that can be performed.
+As far as paralogs are concerned, recent studies that have focused on the heat shock response in plants, and in particular Arabidopsis thaliana, have revealed that the process involves up to 21 known TFs and four heat shock protein families CITATION CITATION.
+Despite a cursory resemblance to mammals, in Drosophila thermal sensing is achieved by a unique repertoire of genes CITATION, including thermostat systems not exclusively involving heat shock proteins CITATION.
+In other words, and probably for different reasons, a gene content strategy might prevail in both model organisms for plants and motile invertebrates.
+Thus, it is worth examining what are the mechanisms through which stress response is regulated in sessile marine invertebrates in general, and the Mytilus genus in particular, and which strategy dominates gene expression.
+We focus on the Hsp90 family as a case study for stress response in sessile animals and examine the structure and function of the Hsp90 upstream region in M. galloprovincialis.
+Previously, two distinct Hsp90 genes with the same genomic organization have been isolated from M. galloprovincialis CITATION, herein called Mghsp90 genes.
+Detailed sequence analysis revealed that the two genes contain nine exons and exhibit great similarities in both the 5 non-coding and the coding regions but differ in their 3 non-coding regions, as well as in three introns, due to the presence of repeated sequences CITATION.
+The 5 non-coding region of both genes contains a non-translated exon and multiple binding sites for various transcription factors, highly suggestive of potential interactions of these factors with the Hsp90 promoter and subtle patterns of gene regulation CITATION .
+A comparative analysis of Hsp90 gene content across all taxa with available sequence data has clearly shown that invertebrate genomes contain a relatively small number of Hsp90 genes, compared to those of vertebrates CITATION.
+Thus, it appears that the Mytilus genome might contain a relatively small number of TFs and/or Hsp90 genes, raising the question how the expression of Hsp90 and other heat shock genes is regulated in sessile invertebrates.
+In the present work, we perform a detailed analysis of the Mghsp90 upstream region in terms of structure and expression, and reveal the presence of previously undetected sequence elements of unknown function.
+Based on tissue-specific expression data, we also delineate the potential associations of Mghsp90 with another 174 genes that are involved in a complex pattern of expression across tissues.
+These two discoveries are discussed within the context of existing knowledge and are expected to contribute towards a deeper understanding of the heat shock response in sessile organisms.

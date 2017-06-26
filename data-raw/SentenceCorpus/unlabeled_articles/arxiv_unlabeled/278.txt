@@ -1,0 +1,43 @@
+### abstract ###
+Conditional Random Fields (CRFs) constitute a popular and efficient approach for supervised sequence labelling
+CRFs can cope with large description spaces and can integrate some form of structural dependency between labels
+In this contribution, we address the issue of efficient feature selection for CRFs based on imposing sparsity through an  SYMBOL  penalty
+We first show how sparsity of the parameter set can be exploited to significantly speed up training and labelling
+We then introduce coordinate descent parameter update schemes for CRFs with  SYMBOL  regularization
+We finally provide some empirical comparisons of the proposed approach with state-of-the-art CRF training strategies
+In particular, it is shown that the proposed approach is able to take profit of the sparsity to speed up processing and handle larger dimensional models
+### introduction ###
+Conditional Random Fields (CRFs), originally introduced in  CITATION , constitute a popular and effective approach for supervised structure learning tasks involving the mapping between complex objects such as strings and trees
+An important property of CRFs is their ability to cope with large and redundant feature sets and to integrate some form of structural dependency between output labels
+Directly modeling the conditional probability of the label sequence given the observation stream allows to explicitly integrate complex dependencies that can not directly be accounted for in generative models such as Hidden Markov Models (HMMs)
+Results presented in section~ will illustrate this ability to use large sets of redundant and non-causal features
+Training a CRF amounts to solving a convex optimization problem: the maximization of the penalized conditional log-likelihood function
+For lack of an analytical solution however, the CRF training task requires numerical optimization and implies to  repeatedly perform inference over the entire training set during the computation of the gradient of the objective function
+This is where the modeling of structure takes its toll: for general dependencies, exact inference is intractable and approximations have to be considered
+In the simpler case of linear-chain CRFs, modeling the interaction between pairs of adjacent labels makes the complexity of inference grow quadratically with the size of label set: even in this restricted setting, training a CRF remains a computational burden, especially when the number of output labels is large
+Introducing structure has another, less studied, impact on the number of potential features that can be considered
+It is possible, in a linear-chain CRF, to introduce features that simultaneously test the values of adjacent labels and some property of the observation
+In fact, these features often contain valuable information  CITATION
+However, their number scales quadratically with the number of labels, yielding both a computational (feature functions have to be computed, parameter vectors have to be stored in memory) and an estimation problem
+The estimation problem stems from the need to estimate large parameter vectors based on sparse training data
+Penalizing the objective function with the  SYMBOL  norm of the parameter vector is an effective remedy to overfitting; yet, it does not decrease the number of feature computations that are needed
+In this paper, we consider the use of an alternative penalty function, the  SYMBOL  norm, which yields much sparser parameter vectors  CITATION
+As we will show, inducing a sparse vector not only reduces the number of feature functions that need to be computed, but it can also reduce the time needed to perform parameter estimation and decoding
+The main shortcoming of the  SYMBOL  regularizer is that the objective function is no longer differentiable everywhere, challenging the use of gradient-based optimization algorithms
+Proposals have been made to overcome this difficulty: for instance, the orthant-wise limited-memory quasi-Newton algorithm  CITATION  uses the fact that the  SYMBOL  norm remains differentiable when restricted to regions in which the sign of each coordinate is fixed (an ``orthant'')
+Using this technique,  CITATION  reports test performance that are on par with those obtained with a  SYMBOL  penalty, albeit with more compact models
+Our first contribution is to show that even in this situation (equivalent test performance), the   SYMBOL  regularization may be preferable as sparsity in the parameter set can be exploited to reduce the computational cost associated with parameter training and label inference
+For parameter estimation, we consider an alternative optimization approach, which generalizes to CRFs the proposal of  CITATION  (see also  CITATION )
+In a nutshell, optimization is performed in a coordinate-wise fashion, based on an analytic solution to the unidimensional optimization problem
+In order to tackle realistic problems, we propose an efficient blocking scheme in which the coordinate-wise updates are applied simultaneously to a properly selected group (or block) of parameters
+Our main methodological contributions are thus twofold: (i) a fast implementation of the training and decoding algorithms that uses the sparsity of parameter vectors and (ii) a novel optimization algorithm for using  SYMBOL  penalty with CRFs
+These two ideas combined together offer the opportunity of using very large ``virtual'' feature sets for which only a very small number of features are effectively selected
+As will be seen (in Section~), this situation is frequent in typical natural language processing applications, particularly when the number of possible labels is large
+Finally, the proposed algorithm has been implemented as C code and validated through experiments on artificial and real-world data
+In particular, we provide detailed comparisons, in terms of numerical efficiency, with solutions traditionally used for  SYMBOL  and  SYMBOL  penalized training of CRFs in publicly available software such as CRF++  CITATION ,  CRFsuite  CITATION  and crfsgd  CITATION
+The rest of this paper is organized as follows
+In Section , we introduce our notations and restate more precisely the issues we wish to address, based on the example of a simple natural language processing task
+Section~ discusses the algorithmic gains that are achievable when working with sparse parameter vectors
+We then study, in Section , the training algorithm used to achieve sparsity, which implements a coordinate-wise descent procedure
+Section~ discusses our contributions with respect to related work
+And finally, Section  presents our experimental results, obtained both on simulated data, a phonetization task, and a named entity recognition problem

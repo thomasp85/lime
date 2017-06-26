@@ -1,0 +1,41 @@
+### abstract ###
+The problem of completing a low-rank matrix from a subset of its entries is often encountered in the analysis of incomplete data sets exhibiting an underlying factor model with applications in collaborative filtering, computer vision and control
+Most recent work had been focused on constructing efficient algorithms for exact or approximate recovery of the missing matrix entries and proving lower bounds for the number of known entries that guarantee a successful recovery with high probability
+A related problem from both the mathematical and algorithmic point of view is the distance geometry problem of realizing points in a Euclidean space from a given subset of their pairwise distances
+Rigidity theory answers basic questions regarding the uniqueness of the realization satisfying a given partial set of distances
+We observe that basic ideas and tools of rigidity theory can be adapted to determine uniqueness of low-rank matrix completion, where inner products play the role that distances play in rigidity theory
+This observation leads to an efficient randomized algorithm for testing both local and global unique completion
+Crucial to our analysis is a new matrix, which we call the  completion matrix , that serves as the analogue of the rigidity matrix
+### introduction ###
+Can the missing entries of an incomplete real valued matrix be recovered
+Clearly, a matrix can be completed in an infinite number of ways by replacing the missing entries with arbitrary values
+In order for the completion question to be of any value we must restrict the matrix to belong to a certain class of matrices
+A popular class of matrices are the matrices of limited rank and the problem of completing a low-rank matrix from a subset of its entries has received a great deal of attention lately
+The completion problem comes up naturally in a variety of settings
+One of these is the  Netflix  problem  CITATION , where users submit rankings for only a small subset of movies, and one would like to infer their preference of unrated movies
+The data matrix of all user-ratings may be approximately low-rank because it is believed that only a few factors contribute to an individual's preferences
+The completion problem also arises in computer vision, in the problem of inferring three-dimensional structure from motion  CITATION , as well as in many other data analysis, machine learning  CITATION , control  CITATION  and other problems that are modeled by a factor model
+Numerous completion algorithms have been proposed over the years, see eg ,  CITATION
+Many of the algorithms relax the non-convex rank constraint by the convex set of semidefinite positive matrices and solve a convex optimization problem using semidefinite programming (SDP)  CITATION
+Recently, using techniques from compressed sensing  CITATION , Cand\`es and Recht  CITATION  proved that if the pattern of missing entries is random then the minimization of the convex nuclear norm (the  SYMBOL  norm of the singular values vector) finds (with high probability) the exact completion of most  SYMBOL  matrices of rank  SYMBOL  as long as the number of observed entries  SYMBOL  satisfies  SYMBOL , where  SYMBOL  is some function
+Even more recently, Keshavan, Oh, and Montanari  CITATION  improved the bound to  SYMBOL  and also provided an efficient completion algorithm
+These fascinating recent results do not provide, however, a solution to the more practical case in which the pattern of missing entries is non-random
+Given a specific pattern of missing entries, extremely desirable would be an algorithm that can determine the uniqueness of a rank- SYMBOL  matrix completion
+Prior to running any of the numerous existing completion algorithms such as SDP it is important for the analyst to know if such a completion is indeed unique
+Building on ideas from rigidity theory (see, eg ,  CITATION ) we propose an efficient randomized algorithm that determines whether or not it is possible to uniquely complete an incomplete matrix to a matrix of specified rank  SYMBOL
+Our proposed algorithm does not attempt to complete the matrix but only determines if a unique completion is possible
+We introduce a new matrix, which we call  the completion matrix  that serves as the analogue of the rigidity matrix in rigidity theory
+The rank of the completion matrix determines a property which we call infinitesimal completion
+Whenever the completion matrix is large and sparse its rank can be efficiently determined using iterative methods such as LSQR  CITATION
+As in rigidity theory, we will also make the distinction between  local  completion and  global  completion
+The analogy between rigidity and completion is quite striking, and we believe that many of the results in rigidity theory can be usefully translated to the completion setup
+Our randomized algorithm for testing local completion is based on a similar randomized algorithm for testing local rigidity that was suggested by Hendrickson  CITATION , whereas our randomized algorithm for testing global completion is based on the recent randomized global rigidity testing algorithm of Gortler, Healy, and Thurston  CITATION  who proved a conjecture by Connelly  CITATION  for the characterization of globally rigid frameworks
+Due to the large body of existing work in rigidity theory we postpone some of the translation efforts to the future
+The organization of the paper is as follows
+Section  contains a glossary of definitions and results in rigidity theory on which our algorithms are based
+In Section  we analyze the low-rank completion problem for the particular case of positive semidefinite Gram matrices and present algorithms for testing local and global completion of such matrices
+In Section  the analysis is generalized to the more common completion problem of general low-rank rectangular matrices and corresponding algorithms are provided
+Section  is concerned with the combinatorial characterization of entry patterns that can be either locally completed or globally completed
+In particular, we present a simple combinatorial characterization for rank-1 matrices and comment on the rank-2 and rank- SYMBOL  ( SYMBOL ) cases
+In Section  we detail the results of extensive numerical simulations in which we tested the performance of our algorithms while verifying the theoretical bounds of  CITATION  for matrices with random missing patterns
+Finally, Section  is a summary and discussion

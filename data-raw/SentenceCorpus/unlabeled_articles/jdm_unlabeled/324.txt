@@ -1,0 +1,16 @@
+### abstract ###
+one major statistical and methodological challenge in judgment and decision making research is the reliable identification of individual decision strategies by selection of diagnostic tasks  that is  tasks for which predictions of the strategies differ sufficiently
+the more strategies are considered  and the larger the number of dependent measures simultaneously taken into account in strategy classification  CITATION   the more complex the selection of the most diagnostic tasks becomes
+we suggest the euclidian diagnostic task selection edts method as a standardized solution for the problem
+according to edts  experimental tasks are selected that maximize the average difference between strategy predictions for any multidimensional prediction space
+in a comprehensive model recovery simulation  we evaluate and quantify the influence of diagnostic task selection on identification rates in strategy classification
+strategy classification with edts shows superior performance in comparison to less diagnostic task selection algorithms such as representative sampling
+the advantage of edts is particularly large if only few dependent measures are considered
+we also provide an easy-to-use function in the free software package r that allows generating predictions for the most commonly considered strategies for a specified set of tasks and evaluating the diagnosticity of those tasks via edts  thus  to apply edts  no prior programming knowledge is necessary
+### introduction ###
+the identification of individuals' decision strategies has always challenged behavioral decision research
+there are at least three traditional approaches
+structural modeling applies a regression based approach to identify the relation between the distal criterion variable  proximal cues  and peoples' judgments  CITATION   process tracing methods  for example  record information search  CITATION  or use think aloud protocols  CITATION  to trace the decision process  CITATION   whereas comparative model fitting approaches investigate the fit of data and predictions of different models to determine the model or decision strategy employed  CITATION
+comparative model fitting in particular has gained popularity in recent judgment and decision making jdm research
+in this paper  we discuss the problem of diagnostic task selection when using this strategy classification method
+we suggest the euclidian diagnostic task selection edts method as a standardized solution

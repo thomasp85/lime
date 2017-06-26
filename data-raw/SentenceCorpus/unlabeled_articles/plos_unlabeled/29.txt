@@ -1,0 +1,42 @@
+### abstract ###
+Transposable elements are mobile, repetitive sequences that make up significant fractions of metazoan genomes.
+Despite their near ubiquity and importance in genome and chromosome biology, most efforts to annotate TEs in genome sequences rely on the results of a single computational program, RepeatMasker.
+In contrast, recent advances in gene annotation indicate that high-quality gene models can be produced from combining multiple independent sources of computational evidence.
+To elevate the quality of TE annotations to a level comparable to that of gene models, we have developed a combined evidence-model TE annotation pipeline, analogous to systems used for gene annotation, by integrating results from multiple homology-based and de novo TE identification methods.
+As proof of principle, we have annotated TE models in Drosophila melanogaster Release 4 genomic sequences using the combined computational evidence derived from RepeatMasker, BLASTER, TBLASTX, all-by-all BLASTN, RECON, TE-HMM and the previous Release 3.1 annotation.
+Our system is designed for use with the Apollo genome annotation tool, allowing automatic results to be curated manually to produce reliable annotations.
+The euchromatic TE fraction of D. melanogaster is now estimated at 5.3 percent, and we found a substantially higher number of TEs than previously identified.
+Most of the new TEs derive from small fragments of a few hundred nucleotides long and highly abundant families not previously annotated.
+We also estimated that 518 TE copies are inserted into at least one other TE, forming a nest of elements.
+The pipeline allows rapid and thorough annotation of even the most complex TE models, including highly deleted and/or nested elements such as those often found in heterochromatic sequences.
+Our pipeline can be easily adapted to other genome sequences, such as those of the D. melanogaster heterochromatin or other species in the genus Drosophila.
+### introduction ###
+Transposable elements are mobile, repetitive DNA sequences that constitute a structurally dynamic component of genomes.
+The taxonomic distribution of TEs is virtually ubiquitous: they have been found in nearly all eukaryotic organisms studied, with few exceptions.
+TEs represent quantitatively important components of genome sequences, and there is no doubt that modern genomic DNA has evolved in close association with TEs.
+TEs show high species specificity, and the number and types of TE can differ quite dramatically between even closely related organisms.
+There is abundant circumstantial evidence that TEs may transfer horizontally between species by mechanisms that remain obscure.
+The forces controlling the dynamics of TE spread within a species are also poorly understood, as are the systemic effects of the elements on their host genomes.
+Insertions of individual TEs may lead to genome restructuring, mutations in genes, or changes in gene regulation.
+Some TE insertions may even have become domesticated to play roles in the normal functions of the host.
+Despite their manifold effects, abundance, and ubiquity, we understand very little about most aspects of TE biology.
+One way of furthering our knowledge of TE biology is through the computational analysis of TEs in the growing number of complete genomic sequences.
+By detailed comparison of the abundance and distribution of TEs in entire genomes, we can infer the fundamental biological properties of TEs that are shared or that differ among species.
+However, meaningful inferences about TE biology based on computationally derived TE annotations can only be done if we are confident about the results of these analyses.
+The hallmark of a strong result in computational biology should be its robustness to the particular method used.
+The annotation of TEs, however, typically relies on the results of a single computational program, RepeatMasker, which recent studies indicate may be neither the most efficient nor the most sensitive approach for TE annotation CITATION.
+By contrast, recent advances in the field of gene annotation indicate that high-quality gene models can be produced by combining multiple independent sources of computational evidence CITATION CITATION.
+With the recent development of several new methods for TE and repeat detection CITATION CITATION, it is now possible to apply a similar combined evidence approach to elevate the quality of TE annotations to a level comparable to that of gene models.
+To achieve this aim, we have developed a TE annotation pipeline that integrates results from multiple homology-based and de novo TE identification methods.
+Currently, our pipeline uses the combined computational evidence derived from RepeatMasker, BLASTER CITATION, TBLASTX CITATION, all-by-all BLASTN CITATION, RECON CITATION, TE-HMM CITATION, and previously published TE annotations CITATION.
+We have designed our system to use an evidence-model framework and the Apollo genome annotation tool CITATION, allowing computational evidence to be manually curated in an efficient manner to produce reliable TE models.
+The pipeline allows rapid and thorough annotation of complex TE models, providing key structural details that allow insights into the origin of highly deleted and/or nested elements.
+In contrast to simply masking repeats, our method provides the means to a complete and accurate annotation of TEs, supported by multiple sources of computational evidence, a goal that has important implications for experimental studies of genome and chromosome biology.
+As a test case we have chosen to annotate the euchromatic genomic sequence of the fruit fly, Drosophila melanogaster.
+The 116.8-Mb Release 3 genome sequence of D. melanogaster is among the highest quality genome sequences and is a particularly well suited sequence for genome-wide studies of TEs, since repetitive DNA sequences have been finished to high quality and systematically verified by restriction fingerprint analysis CITATION.
+Moreover, the Release 3.1 annotation of D. melanogaster includes a manually curated set of TE annotations CITATION that can be used as a benchmark for developing and refining TE annotation methodologies.
+Controlled tests performed here on the Release 3 sequence show that a combined-evidence approach has superior performance over individual TE detection methods, and that a substantially larger fraction of the genome is composed of TEs than previously estimated.
+We have applied our pipeline to the new 118.4-Mb Release 4 sequence, which has closed several of the gaps in Release 3 and has extended the sequence of the pericentomeric regions, to produce a systematic re-annotation of TEs in the D. melanogaster genome.
+The euchromatic TE fraction is now estimated at 5.3 percent, and we found a substantially higher number of TEs than previously identified.
+We also estimated that 518 TE copies are inserted into at least one other TE, forming a nest of elements.
+Our pipeline can be easily adapted to other genome sequences, and could markedly increase the efficiency of annotating genomic regions with complex or abundant TE insertions such as heterochromatic sequences.

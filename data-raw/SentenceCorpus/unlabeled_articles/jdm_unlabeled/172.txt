@@ -1,0 +1,18 @@
+### abstract ###
+individual true and error theory assumes that responses by the same person to the same choice problem within a block of trials are based on the same true preferences but may show preference reversals due to random error
+between blocks  a person's true preferences may differ or stay the same
+this theory is illustrated with studies testing two critical properties that distinguish models of risky decision making   NUMBER  restricted branch independence  which is implied by original prospect theory and violated in a specific way by both cumulative prospect theory and the priority heuristic  and  NUMBER  stochastic dominance  which is implied by cumulative prospect theory
+corrected for random error  most individuals systematically violated stochastic dominance  ruling out cumulative prospect theory
+furthermore  most people violated restricted branch independence in the opposite way predicted by that theory and the priority heuristic
+both violations are consistent with the transfer of attention exchange model
+no one was found whose data were compatible with cumulative prospect theory  except for those that were also compatible with expected utility  and no one satisfied the priority heuristic
+### introduction ###
+when offered a choice  different individuals express different preferences
+for example  given a choice between   NUMBER  for sure and a fifty-fifty gamble to win either   NUMBER  or   NUMBER   some people choose the sure cash and others prefer the gamble
+when the same person is presented with the same choice problem on two occasions  that individual may give two different responses
+given these two phenomena between and within-person variability  it is possible that part or all of what are called individual differences may actually be attributable to variability or  instability  of choice behavior
+furthermore  when we test structural properties of theories  apparent violations of a theory may be due to instability of responses rather than to true flaws in a theory
+therefore  to study individual differences  we need to separate true differences between people from differences that might be due to variation within a person
+furthermore  to study behavioral properties of theories  we need to determine whether violations are  real  or might instead be attributed to instability in the response
+this report investigates two critical properties that distinguish models of risky decision making  first order stochastic dominance sd and restricted branch independence rbi
+we apply individual true and error theory itet  which permits separation of random variability from true violations of models of risky decision making

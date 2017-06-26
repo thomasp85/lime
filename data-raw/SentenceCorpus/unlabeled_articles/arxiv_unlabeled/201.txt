@@ -1,0 +1,33 @@
+### abstract ###
+We discuss multi-task online learning when a decision maker has to deal simultaneously with  SYMBOL  tasks
+The tasks are related, which is modeled by imposing that the  SYMBOL --tuple of actions taken by the decision maker needs to satisfy certain constraints
+We give natural examples of such restrictions and then discuss a general class of tractable constraints, for which we introduce computationally efficient ways of selecting actions, essentially by reducing to an on-line shortest path problem
+We briefly discuss ``tracking'' and ``bandit'' versions of the problem and extend the model in various ways, including non-additive global losses and uncountably infinite sets of tasks
+### introduction ###
+Multi-task learning has recently received considerable attention, see  CITATION
+In multi-task learning problems, one simultaneously learns several tasks that are related in some sense
+The relationship of the tasks has been modeled in different ways in the literature
+In our setting, a decision maker chooses an action simultaneously for each of  SYMBOL  given tasks, in a repeated manner (To each of these tasks corresponds a game, and we will use interchangeably the concepts of game and task ) The relatedness is accounted for by putting some hard constraints on these simultaneous actions
+As a motivating example, consider a distance-selling company that designs several commercial offers for its numerous customers, and the customers are ordered (say) by age
+The company has to choose whom to send which offer
+A loss of earnings is suffered whenever a customer does not receive the commercial offer that would have been best for him
+Basic marketing considerations suggest that offers given to customers with similar age should not be very different, so the company selects a batch of offers that satisfy such a constraint
+Additional budget constraint may limit further the set of batches from which the company may select
+After the offers are sent out, the customers' responses are observed (at least partially) and new offers are selected and sent
+We model such situations by playing many repeated games simultaneously with the restriction that the vector of actions that can be selected at a time needs to belong to a previously given set
+This set in determined beforehand by the budget and marketing constraints discussed above
+The goal of the decision maker is to minimize the total accumulated regret (across the many games and through time), that is, perform, on the long run, almost as well as the best constant vector of actions satisfying the constraint
+The problem of playing repeatedly several games simultaneously has been considered by  CITATION  who studies convergence to Nash equilibria but does not address the issue of computational feasibility when a large number of games is played
+On-line multi-task learning problems were also studied by  CITATION  and  CITATION
+As the latter reference, we consider minimizing regret simultaneously in parallel, by enforcing however some hard constraints
+As  CITATION , we measure the total loss as the sum of the losses suffered in each game but assume that all tasks have to be performed at each round (This assumption is, however relaxed in Section , where we consider global losses more general than the sums of losses ) The main additional difficulty we face is the requirement that the decision maker chooses from a restricted subset of vectors of actions
+In previous models restrictions were only considered on the comparison class, but not on the way the decision maker plays
+We formulate the problem in the framework of on-line regret minimization, see  CITATION  for a survey
+The main challenge is to construct a strategy for playing the many games simultaneously with small regret such that the strategy has a manageable computational complexity
+We show that in various natural examples the computational problem may be reduced to an online shortest path problem in an associated graph for which well-known efficient algorithms exist (We however propose a specific scheme for implementation that is slightly more effective )  The results can be extended easily to the ``tracking'' case in which the goal of the decision maker is to perform as well as the best strategy that can change the vector of actions (taken from the restricted set) at a limited number of times
+We also consider the ``bandit'' version of the problem when the decision maker, instead of observing the losses of all actions in all games, only learns the sum of the losses of the chosen actions
+Finally, we also consider cases when there are infinitely many tasks, indexed by real numbers
+In such cases the decision maker chooses a function from a certain restricted class of functions
+We show examples that are natural extensions of the cases we consider for finitely many tasks and discuss the computational issues that are closely related to the theory of exact simulation of continuous-time Markov chains
+We concentrate on exponentially weighted average forecasters because, when compared to its most likely competitors, that is, follow-the-leader-type algorithms, they have better performance guarantees, especially in the case of bandit feedback
+Besides, the two families of forecasters, as pointed out by  CITATION , usually have implementation complexities of the same order

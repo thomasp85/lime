@@ -1,0 +1,51 @@
+### abstract ###
+Understanding the mechanisms of cell function and drug action is a major endeavor in the pharmaceutical industry.
+Drug effects are governed by the intrinsic properties of the drug and the specific signaling transduction network of the host.
+Here, we describe an unbiased, phosphoproteomic-based approach to identify drug effects by monitoring drug-induced topology alterations.
+With our proposed method, drug effects are investigated under diverse stimulations of the signaling network.
+Starting with a generic pathway made of logical gates, we build a cell-type specific map by constraining it to fit 13 key phopshoprotein signals under 55 experimental conditions.
+Fitting is performed via an Integer Linear Program formulation and solution by standard ILP solvers; a procedure that drastically outperforms previous fitting schemes.
+Then, knowing the cell's topology, we monitor the same key phosphoprotein signals under the presence of drug and we re-optimize the specific map to reveal drug-induced topology alterations.
+To prove our case, we make a topology for the hepatocytic cell-line HepG2 and we evaluate the effects of 4 drugs: 3 selective inhibitors for the Epidermal Growth Factor Receptor and a non-selective drug.
+We confirm effects easily predictable from the drugs' main target but we also uncover unanticipated effects due to either drug promiscuity or the cell's specific topology.
+An interesting finding is that the selective EGFR inhibitor Gefitinib inhibits signaling downstream the Interleukin-1alpha pathway; an effect that cannot be extracted from binding affinity-based approaches.
+Our method represents an unbiased approach to identify drug effects on small to medium size pathways which is scalable to larger topologies with any type of signaling interventions.
+The method can reveal drug effects on pathways, the cornerstone for identifying mechanisms of drug's efficacy.
+### introduction ###
+Target-based drug discovery is a predominant focus of the pharmaceutical industry.
+The primary objective is to selectively target protein within diseased cells in order to ameliorate an undesired phenotype, e.g., unrestrained cell proliferation or inflammatory cytokine release.
+Ideally, other pathways within the diseased cells, as well as similar phenotypes in other cell types, should remain unaffected by the therapeutic approach.
+However, despite the plethora of new potential targets emerged from the sequencing of the human genome, rather few have proven effective in the clinic CITATION.
+A major limitation is the inability to understand the mechanisms or drug actions either due to the complex signaling transduction networks of cells or due to the complicated profile of drug potency and selectivity.
+Finding drug's targets is traditionally based on high-throughput in vitro assays using recombinant enzymes or protein fragments CITATION.
+The main goal is to characterize the drug's biochemical activity and depict them in drug-interaction maps CITATION.
+In most cases, once the target is known, the in vivo effect on the signaling pathway is validated by measuring the drug's efficiency to inhibit the activity of the downstream protein.
+However, beyond that measurement, little is know on how the rest of the signaling network is affected.
+In addition, in vivo drug effects can hardly be calculated from in vitro assays for several reasons: most kinase inhibitors are promiscuous CITATION, there is discrepancy between in vivo and in vitro binding affinities of drugs CITATION, and there is an additional discrepancy between in vivo binding affinities and in vivo inhibitor activity for the phosphorylation of downstream signals.
+To address drug effects in more physiological conditions, novel genomic and proteomic tools have recently been developed CITATION.
+In the genomic arena, large-scale mRNA analysis enhanced by computational approaches for drug target deconvolution have been developed.
+Despite the holistic advantages that genomic approaches have to offer, proteomic-based discovery is a step closer to the function of the cell.
+Towards this goal, affinity chromatography offers a viable strategy for in-vivo target identification.
+This approach utilizes a solid support linked to a bait to enrich for cellular binding proteins that are identified by mass spectrometry CITATION.
+However, such experiments usually require large amounts of starting protein, are biased toward more abundant proteins, and result in several hits due to nonspecific interactions CITATION, CITATION.
+In order to circumvent the non-specific interaction problem, another bait-based strategy uses quantitative MS with dirty inhibitors for baits to immobilize the kinome CITATION, CITATION.
+While this approach significantly reduces the non-specific interaction problem, it also limits the target-searching space to those kinases with the highest affinity to the bait.
+More recently, quantitative MS-based proteomics using SILAC technology CITATION extends the search space to all targets that do not bind covalently to the drug.
+However, incorporation of the SILAC's isotopes requires 5 population doublings and thus, excludes the application on primary cells with limited replication capabilities.
+Taken together, all techniques listed above can -in the best case scenario- list the affinities of all targets to the drug but no information is provided whether this binding affinity is capable of inhibiting the transmission of the signal to the downstream protein or how those preferential bindings can collectively affect the signaling network of the cell.
+Here, we describe a significantly different approach to identify drug effects where drugs are evaluated by the alterations they cause on signaling pathways.
+Instead of identifying binding partners, we monitor pathway alterations by following key phosphorylation events under several treatments with cytokines.
+The workflow is presented in Figure 1.
+On the experimental front, using bead-based multiplexed assays CITATION, we measure 13 key phosphorylation events under more than 50 different conditions generated by the combinatorial treatment of stimuli and selective inhibitors.
+Based on the signaling response and an a-priori set of possible reactions, we create a cell-type specific pathway using an efficient optimization formulation known as Integer Linear Programming.
+This approach builds upon the Boolean optimization approach proposed in CITATION.
+The ILP is solved using standard commercial software packages to guaranteed global optimality.
+To evaluate drug effects, we subject the cells with the same stimuli in the presence of drugs and we tract the alterations of the same key phosphorylation events.
+Then, we reapply the ILP formulation without a-priori assumption of the drug target, and we monitor the changes in the pathway topology with and without drug presence.
+To demonstrate our approach, we construct a generic map and optimize it to fit the phosphoproteomic data of the transformed hepatocytic cell lines HepG2.
+Then, we identify the effects of four drugs: the dual EGFR/ErbB-2 inhibitor Lapatinib CITATION, two potent EGFR kinase inhibitors Erlotinib CITATION and Gefitinib CITATION, and the dirty Raf kinase inhibitor Sorafenib CITATION.
+When our method is applied on those 4 drugs we find their main target effect and we also uncover several unknown but equally active off-target effects.
+In the case of Gefitinib, we find a surprising inhibition of cJUN in the IL1 pathway.
+In contrast to previously developed techniques, our method is based on the actual effect on phosphorylation events carefully spread into the signaling network.
+Theoretically, it can be applied on any type of intracellular perturbations such as ATP-based and allosteric kinase inhibitors, RNAi, shRNA etc. On the computational front, our ILP-based approach performs faster and more efficient than current algorithms for pathway optimization CITATION and can identify the main drug effects as well as unknown off-target effects in areas of pathways constrained between the activated receptors and the measured phosphorylated proteins.
+Our fast and unbiased characterization of modes of drug actions can shed a light into the potential mechanisms drug's efficacy and toxicity.

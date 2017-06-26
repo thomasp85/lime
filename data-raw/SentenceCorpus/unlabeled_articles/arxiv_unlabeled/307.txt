@@ -1,0 +1,53 @@
+### abstract ###
+We analyze the convergence behaviour of a recently proposed algorithm for regularized estimation called Dual Augmented Lagrangian (DAL)
+Our analysis is based on a new interpretation of DAL as a proximal minimization algorithm
+We theoretically show under some conditions that DAL converges super-linearly in a non-asymptotic and global sense
+Due to a special modelling of sparse estimation problems in the context of machine learning, the assumptions we make are milder and more natural than those made in conventional analysis of augmented Lagrangian algorithms
+In addition, the new interpretation enables us to generalize DAL to wide varieties of sparse estimation problems
+We  experimentally confirm our analysis in  a large scale  SYMBOL -regularized logistic regression problem and   extensively compare the efficiency of DAL algorithm to previously  proposed algorithms on both synthetic and benchmark datasets
+### introduction ###
+Sparse estimation through convex regularization has become a common practice in many application areas including bioinformatics and natural language processing
+However facing the rapid increase in the size of data-sets that we analyze everyday, clearly needed is the development of optimization algorithms that are tailored for machine learning applications
+Regularization-based sparse estimation methods estimate unknown variables through the minimization of a loss term (or a data-fit term) plus a regularization term
+In this paper, we focus on convex methods; i e , both the loss term and the regularization term are convex functions of unknown variables
+Regularizers may be non-differentiable on some points; the non-differentiability can promote various types of sparsity on the solution
+Although the problem is convex, there are three factors that challenge the straight-forward application of general tools for convex optimization~ CITATION  in  the context of machine learning
+The first factor is the diversity of loss functions
+Arguably the squared loss is most commonly used in the field of signal/image reconstruction, in which many algorithms for sparse estimation have been developed~ CITATION
+However the variety of loss functions is much wider in machine learning, to name a few, logistic loss and other log-linear loss functions
+Note that these functions are not necessarily strongly convex like the squared loss
+See Table~ for a list of loss functions that we consider
+The second factor is the nature of the data matrix, which we call the design matrix in this paper
+For a regression problem, the design matrix is defined by stacking input vectors along rows
+If the input vectors are numerical (e g , gene expression data), the design matrix is dense and has no structure
+In addition, the characteristics of the matrix (e g , the condition number) is unknown until the data is provided
+Therefore, we would like to minimize assumptions about the design matrix, such as, sparse, structured, or well conditioned
+The third factor is the large number of unknown variables (or parameters) compared to observations
+This is a situation regularized estimation methods are commonly applied
+This factor may have been overlooked in the context of signal denoising, in which the number of observations and the number of parameters are equal
+Various methods have been proposed for efficient sparse estimation (see  CITATION , and the references therein)
+Many previous studies focus on the  non-differentiability  of the regularization term
+In contrast, we focus on the  couplings  between variables (or non-separability) caused by the design matrix
+In fact, if the optimization problem can be decomposed into smaller (e g , containing a single variable) problems, optimization is easy
+Recently  CITATION  showed that the so called iterative shrinkage/thresholding (IST) method (see  CITATION ) can be seen  as an iterative  separable approximation  process
+In this paper, we show that a recently proposed dual augmented Lagrangian (DAL) algorithm~ CITATION  can be considered as an  exact  (up to finite tolerance) version of the iterative approximation process discussed in  CITATION
+Our formulation is based on the connection between the proximal minimization~ CITATION  and the augmented Lagrangian (AL) algorithm~ CITATION
+The proximal minimization framework also allows us to rigorously study the convergence behaviour of DAL
+We show that DAL converges super-linearly under some mild conditions,  which means that the number of iterations that we need to obtain an  SYMBOL -accurate solution grows no greater than logarithmically with  SYMBOL
+Due to the generality of the framework, our analysis applies to a wide variety of practically important regularizers
+Our analysis improves the classical result on the convergence of augmented Lagrangian algorithms in  CITATION  by taking special  structures of sparse estimation into account
+In addition, we make no asymptotic arguments as in  CITATION  and  CITATION ; instead our convergence analysis is build on top of the recent result in   CITATION
+Augmented Lagrangian formulations have also been considered in  CITATION  and  CITATION  for sparse signal reconstruction
+What differentiates DAL approach of  CITATION  from those studied earlier is that the AL algorithm is applied to the dual problem (see \Secref{sec:dalreview}), which results in an inner minimization problem that can be solved efficiently exploiting the sparsity of intermediate solutions (see \Secref{sec:dall1})
+Applying AL formulation to the dual problem also plays an important role in the convergence analysis because some loss functions (e g , logistic loss) are not strongly convex in the primal; see \Secref{sec:analysis}
+Recently  CITATION  compared primal and dual augmented Lagrangian algorithms for  SYMBOL -problems and reported that the dual formulation was more efficient
+See also  CITATION  for related discussions
+This paper is organized as follows
+In \Secref{sec:framework}, we  mathematically formulate the sparse estimation problem and we review DAL algorithm
+We derive DAL algorithm from the proximal  minimization framework in  \Secref{sec:proximal_view}, and   discuss special instances of DAL algorithm are discussed in \Secref{sec:instances}
+In \Secref{sec:analysis}, we theoretically analyze the convergence behaviour of DAL algorithm
+We discuss previously proposed algorithms in \Secref{sec:algorithms} and contrast them with DAL
+In \Secref{sec:results} we confirm our analysis in a simulated  SYMBOL -regularized logistic regression problem
+Moreover, we extensively compare recently proposed algorithms for  SYMBOL -regularized logistic regression including DAL in   synthetic and benchmark datasets under a variety of conditions
+Finally we conclude the paper in \Secref{sec:summary}
+Most of the proofs are given in the appendix

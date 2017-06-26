@@ -1,0 +1,16 @@
+### abstract ###
+a four-fold classification of emotions with respect to their functions in decision making is proposed
+it is argued that emotions are not homogenous concerning their role in decision making  but that four distinct functions can be distinguished concerning emotional phenomena
+one function is to provide information about pleasure and pain for preference construction  a second function is to enable rapid choices under time pressure  a third function is to focus attention on relevant aspects of a decision problem  and a fourth function is to generate commitment concerning morally and socially significant decisions
+the pertinent literature on the relationship between emotion and decision making is reviewed  and it is concluded that most approaches fit into the proposed framework
+we argue that a precise conceptualization of emotional phenomena is required to advance our understanding of the complex role of emotions in decision making
+### introduction ###
+in this paper  we address the question of how to conceptualize emotions concerning their role in decision making
+the study of emotions in the context of decision making  beginning more than twenty years ago  CITATION   has received increasing attention over the past decade  CITATION
+there is  however  little consensus in the literature on what is actually meant by emotion or affect
+this paper tries to contribute to a more precise and useful conceptualization of emotion concerning the emotion-decision making relationship
+first  we briefly sketch two approaches with a similar objective  the classification of emotions by loewenstein and lerner  CITATION   and the functional typology proposed by peters  CITATION
+we will then discuss some common assumptions about emotions which we believe have confused the understanding of the role of emotion in decision making
+in particular  we argue that emotions should not be construed as a homogenous category  that the positive-negative valence dimension is not the most important aspect of emotions in decision making  and that emotions do not imply irrationality
+we argue that it is more useful to think of emotional phenomena as implementing specific mechanisms to account for different functions that arise in decision making
+four functions are proposed which are conceptually independent  though empirically correlated

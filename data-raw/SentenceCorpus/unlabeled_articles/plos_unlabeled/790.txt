@@ -1,0 +1,32 @@
+### abstract ###
+When coordinating movements, the nervous system often has to decide how to distribute work across a number of redundant effectors.
+Here, we show that humans solve this problem by trying to minimize both the variability of motor output and the effort involved.
+In previous studies that investigated the temporal shape of movements, these two selective pressures, despite having very different theoretical implications, could not be distinguished; because noise in the motor system increases with the motor commands, minimization of effort or variability leads to very similar predictions.
+When multiple effectors with different noise and effort characteristics have to be combined, however, these two cost terms can be dissociated.
+Here, we measure the importance of variability and effort in coordination by studying how humans share force production between two fingers.
+To capture variability, we identified the coefficient of variation of the index and little fingers.
+For effort, we used the sum of squared forces and the sum of squared forces normalized by the maximum strength of each effector.
+These terms were then used to predict the optimal force distribution for a task in which participants had to produce a target total force of 4 16 N, by pressing onto two isometric transducers using different combinations of fingers.
+By comparing the predicted distribution across fingers to the actual distribution chosen by participants, we were able to estimate the relative importance of variability and effort of 1 7, with the unnormalized effort being most important.
+Our results indicate that the nervous system uses multi-effector redundancy to minimize both the variability of the produced output and effort, although effort costs clearly outweighed variability costs.
+### introduction ###
+The motor system is highly redundant: the same task can always be accomplished by many different sequences of motor commands CITATION.
+Part of this redundancy is caused by the fact that there are often multiple muscles or effectors that can produce the same desired effect.
+Thus, in the case of multi-effector redundancy, the brain has to choose how to distribute a given task across the set of muscles.
+Despite the infinite number of possibilities, the motor system appears to prefer particular solutions.
+For example, when moving the wrist, we combine the action of different forearm muscles in a predictable, cosine-tuning-like fashion CITATION.
+To explain these regularities, we can ask why the brain is coordinating movements this way CITATION, i.e. we can propose a hypothetical cost function that the biological system minimized over the course of learning.
+By determining the form of this cost function, and by assuming that the nervous system had sufficient exploration of the task dynamics to find an optimal solution, we can make testable predictions about how biological movements should be produced under a given task constraint.
+A number of different cost functions for biological movements have been proposed CITATION CITATION.
+Most of these studies have addressed movements for which the redundancy is temporal: here there may be only one muscle with the desired effect, but there are still many different ways of distributing the motor commands over the movement period.
+For example, of all the possible shapes of arm or eye movement, the motor system consistently chooses a bell-shaped velocity profile CITATION .
+Different components of cost functions can generally be divided into two classes: effort and variability costs.
+Effort costs usually take a form of the sum of the squared muscle activations or motor commands CITATION, CITATION.
+Alternatively, both Harris and Wolpert CITATION and Burdet and Milner CITATION proposed that the nervous system chooses the sequence of motor commands that minimizes the variability at the endpoint of a movement.
+Under the assumption of signal-dependent noise, i.e. noise that increases monotonically with the motor command, this model can predict important characteristics of the control of both arm and eye.
+While effort and variability costs have different theoretical implications for the learning mechanism that is involved in the optimization of motor behaviours, they make very similar predictions concerning the temporal shape of the optimal movement.
+Indeed, it can be shown that the requirement to reduce variability under signal dependent noise leads to a term in the cost function that penalizes the sum of the squared motor commands over the movement, identically to the term commonly associated with effort CITATION.
+Thus, for motor behaviours with mainly temporal redundancy, variability and effort costs are hard to dissociate.
+For motor behaviours with multi-effector redundancy, however, the minimization of variability costs and the minimization of effort costs can lead to substantially different predictions concerning the distribution of work across effectors, because the noise and effort characteristics of different effectors can be partly independent.
+Here we study how humans distribute work across different fingers when they have to produce a given target force.
+By measuring the independent noise characteristics and the maximal force of the finger, we can dissociate the influence of variability and effort costs on coordination.

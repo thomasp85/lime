@@ -1,0 +1,36 @@
+### abstract ###
+In this paper, we are interested in optimal decisions in a partially observable universe
+Our approach is to directly approximate an optimal strategic tree depending on the observation
+This approximation is made by means of a parameterized probabilistic law
+A particular family of hidden Markov models, with input  and  output, is considered as a model of policy
+A method for optimizing the parameters of these HMMs is proposed and applied
+This optimization is based on the cross-entropic principle for rare events simulation developed by Rubinstein
+### introduction ###
+There are different degrees of difficulty in planning and control problems
+In most problems, the planner have to start from a given state and terminate in a required final state
+There are several transition rules, which condition the sequence of decision
+For example, a robot may be required to move from room A, starting state, to room B, final state; its decision could be  go forward ,  turn right  or  turn left , and it cannot cross a wall; these are the conditions over the decision
+A first degree in the difficulty is to find at least one solution for the planning
+When the states are only partially known or the resulting actions are not deterministic, the difficulty is quite enhanced: the planner has to take into account the various observations
+Now, the problem becomes much more complex, when this planning is required to be optimal or near-optimal
+For example, find the shortest trajectory which moves the robot from room A to room B
+There are again different degrees in the difficulty, depending on the problem to be deterministic or not, depending on the model of the future observations
+In the particular case of a Markovian problem with the full observation hypothesis, the dynamic programming principle CITATION  could be efficiently applied (Markov Decision Process theory/MDP)
+This solution has been extended to the case of partial observation (Partially Observable Markov Decision Process/POMDP), but this solution is generally not practicable, owing to the huge dimension of the variables CITATION  \\\\ For such reason, different methods for approximating this problem has been introduced
+For example, Reinforcement Learning methods  CITATION  are able to learn an evaluation table of the decision conditionnally to the known universe states and an observation short range
+In this case, the range of observation is indeed limited in time, because of an exponential grow of the table to learn
+Recent works CITATION  are investigating the case of hierarchical RL, in order to go beyond this range limitation
+Whatever, these methods are generally based on an additivity hypothesis about the reward
+Another viewpoint is based on the direct learning of the policy CITATION
+Our approach is of this kind
+It is particularly based on the Cross-Entropy optimisation algorithm developed by Rubinstein CITATION
+This simulation method relies both on a probabilistic modelling of the policies (in this paper, these models are Bayesian Networks) and on an efficient and robust iterative algorithm for optimizing the model parameters
+More precisely, the policy will be modelled by conditional probabilistic law,  i e decisions depending on observations, which are involving memories; typically hidden Markov models are used
+Also are implemented a hierachical modelling of the policies by means of hierarchical hidden Markov models \\\\ The next section introduces some formalism and gives a quick description of the optimal planning in partially observable universes
+It is proposed a near-optimal planning method, based on the direct approximation of the optimal decision tree
+The third section introduces the family of Hierarchical Hidden Markov Models being in use for approximating the decision trees
+The fourth section describes the method for optimizing the parameters of the HHMM, in order to approximate the optimal decision tree for the POMDP problem
+The cross-entropy method is described and applied
+The fifth section gives an example of application
+A comparison with a Reinforcement Learning method, the Q-learning, is made
+The paper is then concluded

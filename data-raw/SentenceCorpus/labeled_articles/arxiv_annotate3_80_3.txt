@@ -1,0 +1,15 @@
+### abstract ###
+MISC Defensive forecasting is a method of transforming laws of probability (stated in game-theoretic terms as strategies for Sceptic) into forecasting algorithms
+MISC There are two known varieties of defensive forecasting: ``continuous'', in which Sceptic's moves are assumed to depend on the forecasts in a (semi)continuous manner and which produces deterministic forecasts, and ``randomized'', in which the dependence of Sceptic's moves on the forecasts is arbitrary and Forecaster's moves are allowed to be randomized
+AIMX This note shows that the randomized variety can be obtained from the continuous variety by smearing Sceptic's moves to make them continuous
+OWNX New as compared to version 1 (17 August 2007) of this report: The assumption of version 1 that the outcome space  SYMBOL  is finite is relaxed, and now it is only assumed to be compact
+OWNX In the case where  SYMBOL  is finite, it is shown that Forecaster can choose his randomized forecasts concentrated on a finite set of cardinality at most  SYMBOL
+### introduction ###
+MISC The continuous variety of defensive forecasting was essentially introduced by Levin  CITATION , but was later rediscovered by Kakade and Foster  CITATION  and Takemura  et al CITATION
+MISC The randomized variety was introduced (in the case of von Mises's version of the game-theoretic approach to probability) by Foster and Vohra  CITATION  and further developed by, among others, Sandroni  et al CITATION ; these papers, however, were only concerned with asymptotic calibration
+MISC Non-asymptotic versions of the randomized variety were proposed by Sandroni  CITATION  (based on standard measure-theoretic probability) and Vovk and Shafer  CITATION  (based on game-theoretic probability)
+BASE Kakade and Foster  CITATION  noticed that some calibration results require very little randomization (this will be an important aspect of our Theorem )
+AIMX This note states two simple results about defensive forecasting, Theorem  about the continuous variety and Theorem  about the randomized variety
+OWNX The proof of Theorem  is obtained from the proof of Theorem  by blurring Sceptic's moves
+OWNX In our informal discussions we will be assuming that the set  SYMBOL  of all possible outcomes is finite, although we will try to make mathematical statements as general as possible
+MISC The reader who is only interested in the main ideas might choose to specialize Theorems  and  and their proofs to the case of finite  SYMBOL

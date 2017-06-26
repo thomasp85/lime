@@ -1,0 +1,30 @@
+### abstract ###
+Models for near-rigid shape matching are typically based on distance-related features, in order to infer matches that are consistent with the isometric assumption
+However, real shapes from image datasets, even when expected to be related by ``almost isometric'' transformations, are actually subject not only to noise but also, to some limited degree, to variations in appearance and scale
+In this paper, we introduce a graphical model that parameterises appearance, distance, and angle features and we learn all of the involved parameters via structured prediction
+The outcome is a model for near-rigid shape matching which is  robust  in the sense that it is able to capture the possibly limited but still important scale and appearance variations
+Our experimental results reveal substantial improvements upon recent successful models, while maintaining similar running times
+### introduction ###
+Matching shapes in images has many applications, including image retrieval, alignment, and registration  CITATION
+Typically, matching is approached by selecting features for a set of landmark points in both images; a correspondence between the two is then chosen such that some distance measure between these features is minimised
+A great deal of attention has been devoted to defining complex features which are robust to changes in rotation, scale etc
+CITATION
+An important class of matching problems is that of  near-isometric  shape matching
+In this setting, it is assumed that shapes are defined up to an isometric transformation (allowing for some noise), and therefore distance features are typically used to encode the shape
+Some traditional methods for related settings focus on optimisation over the space of rigid transformations so as to minimise least-squares criteria  CITATION
+Recently, this class of problems has been approached from a different perspective, as direct optimisation over the space of correspondences  CITATION
+Although apparently more expensive, there it is shown that the rigidity assumption imposes a convenient algebraic structure in the correspondence space so as to allow for efficient algorithms (exact inference in chordal graphical models of small clique size)
+More recently, these methods have been made substantially faster  CITATION
+The  key idea  in these methods is to  explicitly encode rigidity constraints  into a tractable graphical model whose MAP solution corresponds to the best match
+However, the main advantages of correspondence-based optimisation over transformation-based optimisation, namely the flexibility of encoding powerful local features, has not been further explored in this framework
+Other lines of work that optimise directly over the correspondence space are those based on Graph Matching, which explicitly model all pairwise compatibilities and solve for the best match with some  relaxation  (since the Graph Matching problem is NP-hard for general pairwise compatibilities)  CITATION
+Recently, it was shown both in  CITATION  and in  CITATION  that if some form of  structured optimisation  is used to optimise graph matching scores, relaxed quadratic assignment predictors can improve the power of pairwise features
+The  key idea  in these methods is to  learn the compatibility scores  for the graph matching objective function, therefore enriching the representability of features
+A downside of these graph matching methods however is that they do not typically make explicit use of the geometry of the scene in order to improve computational efficiency and/or accuracy
+In this paper, we combine these two lines of work into a single framework
+We produce an exact, efficient model to solve near-isometric shape matching problems using not only isometry-invariant features, but also appearance and scale-invariant features, all encoded in a  tractable graphical model
+By doing so we can  learn via large-margin structured prediction  the relative importances of variations in appearance and scale with regard to variations in shape  per se
+Therefore, even knowing that we are in a near-isometric setting, we will still capture the eventual variations in appearance and scale into our matching criterion in order to produce a  robust  near-isometric matcher
+In terms of learning, we introduce a two-stage structured learning approach to address the speed and memory efficiency of this model
+The remainder of this paper is structured as follows: in section , we give a brief introduction to shape matching (), graphical models (), and discriminative structured learning ()
+In section , we present our model, and experiments follow in section

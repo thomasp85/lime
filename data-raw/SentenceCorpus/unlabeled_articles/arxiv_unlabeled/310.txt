@@ -1,0 +1,28 @@
+### abstract ###
+A dictionary defines words in terms of other words
+Definitions can tell you the meanings of words you don't know, but only if you know the meanings of the defining words
+How many words do you need to know (and which ones) in order to be able to learn all the rest from definitions
+We reduced dictionaries to their ``grounding kernels" (GKs), about 10\% of the dictionary, from which all the other words could be defined
+The GK words turned out to have psycholinguistic correlates: they were learned at an earlier age and more concrete than the rest of the dictionary
+But one can compress still more: the GK turns out to have internal structure, with a strongly connected ``kernel core" (KC) and a surrounding layer, from which a hierarchy of definitional distances can be derived, all the way out to the periphery of the full dictionary
+These definitional distances, too, are correlated with psycholinguistic variables (age of acquisition, concreteness, imageability, oral and written frequency) and hence perhaps with the ``mental lexicon" in each of our heads
+### introduction ###
+A category is a  kind  of thing (object, event, action, trait or state)
+To categorize is to do the right thing (eat, fight, flee, mate, etc ) with the right kind of thing
+All species can acquire categories through trial and error  sensorimotor induction
+We are the only species that can also acquire and transmit categories through  verbal instruction , by naming and defining them
+The words in our dictionaries are almost all the names of categories, followed by their definitions
+In principle, all categories can be acquired through verbal definition, but we cannot acquire all of them that way: we have to know the meanings of some of the defining words already, by some other means
+This is the ``symbol grounding problem"  CITATION  and presumably that other means of acquiring categories is sensorimotor induction
+But how many words -- and which ones -- need to be grounded directly through sensorimotor induction in order to allow all the rest to be acquired through verbal definition
+We have been analyzing dictionaries in order to answer this question
+By eliminating all the words that can be reached from other words through definition alone, we have been able to reduce the dictionary to its ``grounding kernel" (GK) -- a set of words (about  SYMBOL ) -- out of which all the rest of the words can be reached through definition alone  CITATION
+The GK has some striking properties: The words in it are learned at a significantly younger age than the rest of the dictionary and are also more concrete  CITATION , but if the variance correlated with age is removed, the residual GK words are more abstract than the rest of the dictionary
+What is the cause of this polarity shift
+The GK is unique, and sufficient to ground all the rest of the dictionary, but it is not  minimal  -- it is not the smallest set of words from which all the rest can be reached via definition alone
+That would be a ``minimum grounding set" (MGS), which is not in general unique; we have not yet been able to compute a MGS, because this problem (equivalent to finding a ``minimum cardinality feedback vertex set'' for a general graph) is NP-complete (i e too hard to compute in general)
+We hope to be able to compute MGSs for our special cases, but meanwhile the GKs of our dictionaries -- Cambridge International Dictionary of English (CIDE)  CITATION  and Longman Dictionary of Contemporary English (LDOCE)  CITATION  -- already turn out to have more differentiated internal substructure which we begin analyzing further in this article
+In particular two substructures play important roles: the GK itself and a strongly connected subset of the GK that we call the ``Kernel Core" (KC)
+The GK words that are acquired earlier, and are more concrete than the rest of the dictionary, tend to be in the KC, whereas the GK words uncorrelated with age of acquisition tend to be in the outer layer surrounding the KC and are more abstract
+These correlations between the KC and the rest of the GK, and between the GK and the rest of the dictionary as a whole, are binary (0/1), but one can make more graded comparisons by considering definitional chains of increasing lengths
+We have accordingly extracted two hierarchies based on degrees of definitional distance, one based on the GK and one based on strongly connected components, to analyze how definitional distance correlates with age of acquisition, concreteness/abstractness and other psycholinguistic variables

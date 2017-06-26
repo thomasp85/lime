@@ -1,0 +1,71 @@
+### abstract ###
+We study boosting algorithms from a new perspective
+We show that the Lagrange dual problems of  SYMBOL  norm regularized \adaboost, and soft-margin with generalized hinge loss  are all entropy maximization problems
+By looking at the dual problems of these boosting algorithms, we show that the success of boosting algorithms can be understood in terms of maintaining a better margin distribution by maximizing margins and at the same time controlling the margin variance
+We also theoretically prove that, approximately,  SYMBOL  norm regularized  maximizes the average margin, instead of the minimum margin
+The duality formulation also enables us to  develop column generation based optimization algorithms, which are totally corrective
+We show that they exhibit almost identical classification results to that of standard stage-wise additive boosting algorithms but  with much faster convergence rates
+Therefore fewer weak classifiers are needed to build the ensemble using our proposed optimization technique
+### introduction ###
+\IEEEPARstart{B}{oosting}  has attracted a lot of research interests since the first practical boosting algorithm, \adaboost, was introduced by Freund and Schapire  CITATION
+The machine learning community has spent much effort on understanding how the algorithm works  CITATION
+However, up to date there are still questions about the success of boosting that are left unanswered   CITATION
+In boosting,  one is given a set of training examples  SYMBOL , with binary labels  SYMBOL  being either  SYMBOL  or  SYMBOL
+A boosting algorithm finds a convex linear  combination of weak classifiers (base learners, weak hypotheses) that can achieve much better classification accuracy than an individual base classifier
+To do so, there are two unknown variables to be optimized
+The first one is the base classifiers
+An oracle is needed to produce base classifiers
+The second one is the positive weights associated with each base classifier
+is one of the first and the most popular boosting algorithms for classification
+Later, various boosting algorithms have been advocated
+For example,  by Friedman  CITATION  replaces \adaboost's exponential cost function with the function of logistic regression
+MadaBoost  CITATION  instead uses a modified exponential loss
+The authors of  CITATION   consider boosting algorithms with a generalized additive model framework
+Schapire  CITATION  showed  that converges to a large margin solution
+However, recently it is pointed out that  does not converge to the maximum margin solution  CITATION
+Motivated by the success of the margin theory associated with support vector machines (SVMs), was invented by   CITATION  with the intuition of maximizing the minimum margin of all training examples
+The final optimization problem can be formulated as a linear program (LP)
+It is observed that the hard-margin does not perform well in most cases although it usually produces larger minimum margins
+More often has worse generalization performance
+In other words, a higher minimum margin would not necessarily  imply a lower test error
+Breiman  CITATION  also noticed the same phenomenon: his algorithm has a minimum margin that provably converges to the optimal but is inferior in terms of generalization capability
+Experiments on and have put the margin theory into serious doubt
+Until recently, Reyzin and Schapire  CITATION  re-ran Breiman's experiments by controlling weak classifiers' complexity
+They found that  the minimum margin is indeed larger for \arcgv, but the overall margin distribution is typically better for \adaboost
+The conclusion is that the minimum margin is important, but not always at the expense of other factors
+They also conjectured that maximizing the average margin, instead of the minimum margin, may result in better boosting algorithms
+Recent theoretical work  CITATION   has shown the important role of the margin distribution   on bounding the generalization error of combined classifiers such as boosting and bagging
+As the soft-margin SVM usually has a better classification accuracy than the hard-margin SVM,  the soft-margin also performs better by relaxing  the constraints that all training examples must be correctly classified
+Cross-validation is required to determine an optimal value for the soft-margin trade-off parameter
+R\"atsch  CITATION  showed the equivalence between SVMs and boosting-like algorithms
+Comprehensive overviews on boosting are given by  CITATION  and   CITATION
+We show in this work that the Lagrange duals of  SYMBOL  norm regularized \adaboost, and with generalized hinge loss are all   entropy maximization problems
+Previous work like      CITATION  noticed the connection between boosting techniques and entropy maximization based on Bregman distances
+They did not   show that the duals of boosting algorithms are  actually entropy regularized as we show in  \eqref{EQ:dual_ada0},  \eqref{EQ:LPBoost10} and \eqref{EQ:dual_logit1}
+By knowing this duality equivalence,  we derive a general column generation (CG) based optimization framework that can be used to optimize arbitrary convex loss functions
+In other words, we can easily design totally-corrective \adaboost, and boosting  with generalized hinge loss, \etc
+Our major contributions are the following:    We derive the Lagrangian duals of boosting algorithms and show that most of them are entropy maximization problems
+The authors of  CITATION   conjectured that                   ``it may be fruitful to consider boosting algorithms that greedily maximize the average or median margin rather than the minimum one''
+We theoretically prove that, actually,  SYMBOL   norm regularized approximately maximizes the average margin, instead of the minimum margin
+This is an important result in the sense that it provides an alternative theoretical explanation that is consistent with the margins theory and agrees with the empirical observations made by  CITATION
+We propose \adaboost-QP that directly optimizes the asymptotic cost function of \adaboost
+The experiments confirm our theoretical analysis
+Furthermore, based on the duals we derive, we design column generation based optimization techniques for boosting learning
+We show that the new algorithms have almost identical results to that of standard stage-wise additive boosting algorithms but with much faster convergence rates
+Therefore fewer weak classifiers are needed to build the ensemble
+The following notation is used
+Typically, we use bold letters  SYMBOL  to denote vectors, as opposed to scalars  SYMBOL  in lower case letters
+We use capital letters  SYMBOL  to denote matrices
+All vectors are column vectors unless otherwise specified
+The inner product of two column vectors  SYMBOL  and  SYMBOL  are  SYMBOL
+Component-wise inequalities are expressed using  symbols  SYMBOL ; \eg,  SYMBOL  means for all the entries  SYMBOL
+SYMBOL  and  SYMBOL  are column vectors with each entry being  SYMBOL  and  SYMBOL  respectively
+The length will be clear from the context
+The abbreviation  SYMBOL  means ``subject to''
+We denote the domain of a function  SYMBOL  as  SYMBOL
+The paper is organized as follows
+Section  briefly reviews several boosting algorithms for self-completeness
+Their corresponding duals are derived in Section
+Our main results are also presented in Section
+In Section , we then present numerical experiments to illustrate various aspects of our new algorithms obtained in Section
+We conclude the paper in the last section

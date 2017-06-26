@@ -1,0 +1,17 @@
+### abstract ###
+We prove that the optimal assignment kernel, proposed recently as an attempt to embed labeled graphs and more generally tuples of basic data to a Hilbert space, is in fact not always positive definite
+### introduction ###
+Let  SYMBOL  be a set, and  SYMBOL  a symmetric function that satisfies, for any  SYMBOL  and any  SYMBOL  and  SYMBOL :  SYMBOL  SYMBOL SYMBOL SYMBOL k SYMBOL SYMBOL SYMBOL \inpH{\cdot,\cdot}{\Hcal} SYMBOL \Phi:\Xcal\rightarrowSYMBOL x,x'\inSYMBOL SYMBOL SYMBOL k$ through (), because they only access data through inner products, hence through the kernel
+This ``kernel trick'' allows, for example, to perform supervised classification or regression on strings or graphs with state-of-the-art statistical methods as soon as a positive definite kernel for strings or graphs is defined
+Unsurprisingly, this has triggered a lot of activity focused on the design of specific positive definite kernels for specific data, such as strings and graphs for applications in bioinformatics in natural language processing  CITATION
+Motivated by applications in computational chemistry,  CITATION  proposed recently a kernel for labeled graphs, and more generally for structured data that can be decomposed into subparts
+The kernel, called  optimal assignment kernel , measures the similarity between two data points by performing an optimal matching between the subparts of both points
+It translates a natural notion of similarity between graphs, and can be efficiently computed with the Hungarian algorithm
+However, we show below that it is in general not positive definite, which suggests that special care may be needed before using it with kernel methods
+It should be pointed out that not being positive definite is not necessarily a big issue for the use of this kernel in practice
+First, it may in fact be positive definite when restricted to a particular set of data used in a practical experiment
+Second, other non positive definite kernels, such as the sigmoid kernel, have been shown to be very useful and efficient in combination with kernel methods
+Third, practitioners of kernel methods have developed a variety of strategies to limit the possible dysfunction of kernel methods when non positive definite kernels are used, such as projecting the Gram matrix of pairwise kernel values on the set of positive semidefinite matrices before processing it
+The good results reported on several chemoinformatics benchmark in  CITATION  indeed confirm the usefulness of the method
+Hence our message in this note is certainly not to criticize the use of the optimal assignment kernel in the context of kernel methods
+Instead we wish to warn that in some cases, negative eigenvalues may appear in the Gram matrix and specific care may be needed, and simultaneously to contribute to the limitation of error propagation in the scientific litterature

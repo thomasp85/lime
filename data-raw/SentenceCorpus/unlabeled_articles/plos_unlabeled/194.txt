@@ -1,0 +1,31 @@
+### abstract ###
+We describe comparative patch analysis for modeling the structures of multidomain proteins and protein complexes, and apply it to the PSD-95 protein.
+Comparative patch analysis is a hybrid of comparative modeling based on a template complex and protein docking, with a greater applicability than comparative modeling and a higher accuracy than docking.
+It relies on structurally defined interactions of each of the complex components, or their homologs, with any other protein, irrespective of its fold.
+For each component, its known binding modes with other proteins of any fold are collected and expanded by the known binding modes of its homologs.
+These modes are then used to restrain conventional molecular docking, resulting in a set of binary domain complexes that are subsequently ranked by geometric complementarity and a statistical potential.
+The method is evaluated by predicting 20 binary complexes of known structure.
+It is able to correctly identify the binding mode in 70 percent of the benchmark complexes compared with 30 percent for protein docking.
+We applied comparative patch analysis to model the complex of the third PSD-95, DLG, and ZO-1 domain and the SH3-GK domains in the PSD-95 protein, whose structure is unknown.
+In the first predicted configuration of the domains, PDZ interacts with SH3, leaving both the GMP-binding site of guanylate kinase and the C-terminus binding cleft of PDZ accessible, while in the second configuration PDZ interacts with GK, burying both binding sites.
+We suggest that the two alternate configurations correspond to the different functional forms of PSD-95 and provide a possible structural description for the experimentally observed cooperative folding transitions in PSD-95 and its homologs.
+More generally, we expect that comparative patch analysis will provide useful spatial restraints for the structural characterization of an increasing number of binary and higher-order protein complexes.
+### introduction ###
+Protein protein interactions play a key role in many cellular processes CITATION, CITATION.
+An important step towards a mechanistic description of these processes is a structural characterization of the proteins and their complexes CITATION CITATION.
+Currently, there are two computational approaches to predict the structure of a protein complex given the structures of its components, comparative modeling CITATION CITATION and protein protein docking CITATION CITATION .
+In the first approach to modelling a target complex, standard comparative modelling or threading methods build a model using the known structure of a homologous complex as a template CITATION, CITATION.
+The applicability of this approach is limited by the currently sparse structural coverage of binary interactions CITATION.
+In the second approach, an atomic model is predicted by protein protein docking, starting from the structures of the individual subunits without any consideration of homologous interactions CITATION CITATION.
+This docking is usually achieved by maximizing the shape and physicochemical complementarity of two protein structures, through generating and scoring a large set of possible configurations CITATION, CITATION.
+Experimental information, such as that obtained from NMR chemical shift mapping, residual dipolar couplings, and cross-linking, can also be used to guide protein docking CITATION CITATION.
+While docking is applicable to any two subunits whose structures are known or modeled, both the sampling of relevant configurations and the discrimination of native-like configurations from the large number of non-native alternatives remain challenging CITATION .
+Here, we propose a third approach to modeling complexes between two structures.
+The approach, called comparative patch analysis, is a hybrid of protein docking and comparative modeling based on a template complex, with a greater applicability than comparative modeling and a higher accuracy than docking.
+Comparative patch analysis relies on our prior analysis of the location of binding sites within families of homologous domains CITATION.
+This analysis indicated that the locations of the binding sites are often conserved irrespective of the folds of their binding partners.
+The structure of the target complex can thus be modeled by restricting protein docking to only those binding sites that are employed by homologous domains.
+As a result, comparative patch analysis benefits from knowledge of all interactions involving either one of the two partners.
+We find that comparative patch analysis increases the prediction accuracy relative to protein docking.
+It is able to correctly identify the binding mode in 70 percent of 20 benchmark complexes, predicting the overall structure with an average improvement in all-atom RMS error of 13.4, compared with protein docking.
+In contrast, protein docking correctly identifies the binding mode in 30 percent of the complexes.

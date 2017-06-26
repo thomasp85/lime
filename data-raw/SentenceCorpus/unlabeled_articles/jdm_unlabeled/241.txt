@@ -1,0 +1,50 @@
+### abstract ###
+we conducted an analysis of the  NUMBER -item maximization scale  CITATION  with the goal of establishing its factor structure  reliability and validity
+we also investigated the psychometric properties of several proposed refined versions of the scale
+four sets of analyses are reported
+the first analysis confirms the  NUMBER -part factor structure of the scale and assesses its reliability
+the second analysis identifies those items that do not perform well on the basis of internal  external  and judgmental criteria  and develops three shorter versions of the scale
+in the third analysis  the three refined versions of the scale are cross-validated to confirm dimensionality  reliability  and validity
+the fourth analysis uses an experiment in an investment decision making context to assess the reliability and nomological validity of the refined scales
+these analyses lead us to conclude that a shorter   NUMBER -item maximization scale performs best and should be used by future researchers
+it is hoped that clarification of the conceptual underpinnings of the maximization construct and development of a refined scale will enhance its use among researchers across several of the social science disciplines
+### introduction ###
+researchers have long recognized that decision making is an adaptive process  with individuals making tradeoffs between accuracy and effort  CITATION
+however  schwartz et al CITATION  have suggested that the tendency to optimize when making decisions may manifest as a dispositional variable  and they formalized a distinction between maximizers and satisficers as an individual difference
+whereas some people consistently try to choose the  best   others tend to  satisfice  and settle for options that are simply good enough  CITATION
+schwartz  and his colleagues  CITATION  proposed that this difference may represent a general behavioral tendency  and they developed a scale to capture the distinction between decision makers who tend to  maximize  and those who tend to satisfice
+schwartz et al CITATION  validated the maximization scale across a number of survey and experimental studies
+it was administered to over  NUMBER  participants in the u s and canada  ranging in age from  NUMBER  to  NUMBER  and coming from diverse ethnic backgrounds
+the results indicated that maximizers tend to pursue the best option  not simply an option that is good enough  and are constantly asking themselves  is this the best outcome  rather than  is this a good outcome
+  in addition  an examination of the relation between scores on the maximization scale and a range of psychological correlates  including regret  happiness  depression  optimism  self-esteem  perfectionism  neuroticism  and subjective well-being showed that not only do maximizers exhibit a different style of decision-making from satisficers  but they also appear to experience different emotional concomitants of decisions
+they experience higher levels of regret and dissatisfaction than satisficers  and are less happy  more depressed and less optimistic than satisficers  CITATION
+they are also more affected by social comparison  especially upward social comparison  than satisficers
+thus  the maximizing strategy seems not only to be associated with the choice process  but also with experience after the choice has been made  perhaps including satisfaction with life as a whole
+the phenomenon wherein the context of choice affects the context of experience has elsewhere been referred to as  leakage   CITATION
+iyengar and her colleagues  CITATION  subsequently studied college seniors looking for jobs  and found that students possessing maximizing tendencies pursued more job opportunities and obtained starting salaries almost  NUMBER  percent  higher than those offered to satisficers
+despite their relative success  however  maximizers were less satisfied with the outcomes of their job search  and more pessimistic  stressed  overwhelmed  and depressed by the job search process
+in other domains  researchers have examined the impact of maximization on gift giving behavior  CITATION   retirement investing  CITATION  and post-decisional regret  CITATION
+since the maximization scale was first published  it has been employed in numerous studies in different countries  and the maximization construct appears to be of growing interest to researchers in various domains  CITATION
+given this increasing interest  a reexamination of the maximization scale and its measurement properties is warranted
+the current paper examines the reliability  factor structure  and validity of the maximization scale  and also proposes several refined  shorter forms of the scale
+development of shorter forms of the maximization scale is important because  especially when maximization is not the focal interest of research  a short scale will allow researchers to include this construct in large  multivariate studies without making survey instruments excessively long  CITATION
+perhaps more important  the existing maximization scale is a candidate for refinement because both past research employing the scale and the current set of analyses  reported below  suggest that the original  NUMBER -item scale contains several items that tend not to perform well psychometrically and thus should be considered for elimination
+in addition  the original schwartz et al CITATION  study suggested that the scale could be analyzed into three distinct factors - one reflecting choice difficulty  one reflecting difficulty with large numbers of options  and one reflecting high standards
+nothing has been done since to confirm the existence of these three factors
+further analysis is warranted both because these factors suggest different psychological processes and because the original schwartz et al CITATION  results were less than ideal with respect to factor structure
+the analysis below suggests that a shorter   NUMBER -item version of the maximization scale not only performs adequately  but actually performs at a level superior to the original   NUMBER -item scale
+we also define more carefully and examine the three dimensions of maximization reported by schwartz et al CITATION  and conclude that they are differentially predictive of various psychological characteristics of respondents
+therefore future researchers are advised to examine not only peoples' maximization scores but their sub-dimension scores as well
+having a shorter  yet more valid and reliable instrument with which to measure people's tendency to maximize should enhance research efforts that examine how people's tendencies to maximize or satisfice during the choice process affect their decisions and choices  and ultimately their happiness and well-being
+in order to re-examine the original maximization scale  and develop a refined  shorter version that exhibits superior psychometric properties  we conduct four sets of analyses
+analysis  NUMBER  examines the internal consistency and the dimensional purity of the maximization scale using ten pre-existing datasets that included the maximization construct
+analysis  NUMBER  uses the same ten datasets to develop refined  shorter versions of the maximization scale  NUMBER -item   NUMBER -item  and  NUMBER -item versions
+analyses  NUMBER  and  NUMBER  independently establish the reliability and validity of the newly developed scales  as recommended by smith et al CITATION   in analysis  NUMBER  we cross-validate the newly developed refined scales using the ten datasets previously employed  plus two new datasets  and in analysis  NUMBER   we collect additional data to assess and validate further the newly developed refined maximization scales
+bearden and netemeyer  CITATION  summarized the psychometric qualities of a sound measurement instrument  content validity  dimensionality  internal consistency  reliability  and construct validity
+in this paper  we evaluate the maximization scale using all of these criteria and then develop several refined forms of the scale for comparison purposes
+in the process of revising the maximization scale  we followed a set of rules and procedures consistent with past work  CITATION
+in our analyses  we rely on the internal  external  and judgmental criteria proposed by stanton et al CITATION
+internal criteria relate to the internal consistency and dimensionality of a measured construct  external criteria are explicitly concerned with construct validity  and judgmental criteria deal with assessment of content validity and readability  CITATION
+furthermore  we follow the procedure recommended by smith et al CITATION  in order to avoid the common sins of short scale development
+the research presented here is based on an analysis of pre-existing datasets and new data
+there were  NUMBER  pre-existing datasets  representing a total of over  NUMBER   NUMBER  respondents  which were obtained from several authors  across several disciplines  in both the u s and overseas  see table  NUMBER 

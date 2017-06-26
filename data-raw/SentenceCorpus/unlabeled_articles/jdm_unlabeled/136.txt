@@ -1,0 +1,52 @@
+### abstract ###
+this paper examines the effect of information processing styles  CITATION  on adherence to bias judgments  and particularly to reverse biases  i e   when two choice questions that comprise identical normative components are set in different situations and yield seemingly opposite behavioral biases
+we found consistent evidence for a negative correlation between rational score and adherence to reverse biases  as well as overall biases  for all three pairs of reverse biases tested
+further  this effect of rational thinking was more pronounced for high experiential individuals  in that high-rational and high-experiential participants committed fewer biases than all other participants
+these results lend weight to our claim that low-rational individuals  who are more sensitive to the context  are more prone to utilize some attribute of the provided information when it is uncalled for  but at the same time tend to ignore it or give it too little weight when it is a crucial factor in a normative decision process
+### introduction ###
+one of our colleagues recently complained that he finds the jdm field rather confusing
+in his view  each time a new behavioral irregularity is found  jdm researchers classify their findings as a new heuristic
+as a case in point  when people exhibit belief in positive recency  researchers tend to assume they have fallen prey to the hot-hand effect  CITATION
+when individuals exhibit belief in negative recency  they are said to be the victim of the gambler's fallacy  CITATION
+what can be learned from biases which lead in opposite behavioral directions
+do they reflect signal or noise
+behavioral traps or genuine flip sides of the coin in everyday life
+how do individual differences shape the direction of a particular bias
+are different individuals prone to biases in different directions
+this paper addresses this puzzle by examining the effect of information processing style on adherence rate to such reverse biases  which are said to occur when two choice questions that are made up of identical normative components are set in a different situation and yield seemingly opposite behavioral biases
+typically  two imperfectly correlated attributes are involved  such as the number of people affected by a choice option or the proportion of people affected
+each of the two attributes is the normatively relevant one for one judgment
+the two biases involve some attention to the normatively irrelevant attribute in each case
+reverse biases as we define them are thus different from the situation discussed by baron  CITATION  and illustrated by ratio bias in opposite directions  CITATION   the hot-hand vs the gambler's fallacy  CITATION   and action vs omission bias  CITATION
+in these cases  biases in opposite directions can occur in the same task  for example  some people can favor harms caused by omission over lesser harms caused by action  while a few others favor harms of action over lesser harms of omission
+demonstration of such opposite biases requires methods for statistical analysis of individuals  CITATION
+the existence of individual differences in the utilization of heuristic thinking has been demonstrated for a variety of judgmental biases
+these include risk perception  CITATION   risk seeking and avoidance  CITATION   binary guessing  CITATION   and variance in heuristic thinking  CITATION
+however  traditional studies of heuristic thinking and biases mainly use group-level statistics to confirm the hypothesis that the number of participants exhibiting cognitive biases in each group cannot be due to chance
+we suggest that an individual who adheres to one direction of bias is not less prone to exhibit its reverse bias
+specifically  we argue that individual differences in information processing styles  together with contextual factors  play an important role in determining adherence rate to biases in general and will thus affect both directions of the reverse biases
+previous research has shown the relation of several measures of information processing of thinking style to judgments
+for example  shiloh  soltan  and sharabi  CITATION  reported systematic individual differences in participants' normative-statistical vs heuristic responses
+normative-statistical responses were found to be positively correlated with a rational thinking style and negatively with an experiential thinking style
+smith and levin  CITATION  identified need for cognition as a moderator of framing effects i e   the way information is presented
+people who are low in need for cognition were more affected by framing effects
+shiloh  koren and zakay  CITATION  found that compensatory decision-making style and need for closure were correlated with the complexity of the representation of a decision task
+moreover  these individual differences in information processing styles may work in concert with several contextual factors to drive the decision process
+for example  two such factors  according to stanovich and west  CITATION   are performance errors  which reflect momentary and fairly random lapses in ancillary processes such as lack of attention or memory distortions  and alternative task construal  where participants perceive and interpret the task in a way that differs from the one implied by the normative point of view or the experimenter's perspective
+thus  the way people process information is dependent on their individual processing style but also on contextual factors which change the priority assigned to the different types of attributes
+in the same vein  kahneman  and  frederick  CITATION  proposed attribute substitution as a processing information model to explain a variety of biases
+according to this model  in an attempt to simplify the decision process  individuals replace consideration of complex attributes  although it might be crucial for the choice at hand  with considerations of simpler attributes which may be correlated with the more relevant ones
+the implication of this substitution process is that behavioral biases are often the result of focusing on irrelevant attributes and ignoring crucial normative attributes
+for example  when individuals are required to assess the risk level of an investment portfolio  they often tend to ignore crucial normative attributes such as data about the real statistical correlation between funds  and rely instead on irrelevant attributes which comes more readily to mind such as the difference between the funds' names  CITATION
+thus  subtle manipulations of the contextual factors can change the priority given to each attribute and move the judgmental process in a biased direction
+based on these notions  we argue that individual information processing styles are likely to determine which attributes or contextual aspects will be emphasized in the judgmental process and which ones will be used as substitutes
+regarding the rational information processing style  the picture seems rather clear
+based on previous research  individuals who are low in rational thinking are assumed to be more prone to commit different types of judgmental biases
+since these people are also more affected by framing i e   the way information is presented  CITATION  they are more prone to use alternative construal of the tasks
+consequently  they are expected to show seemingly opposite behavioral biases when the identical normative components are set in a different situation
+however  the picture is much less clear when we consider experiential thinking
+while biased  behavior is often considered the result of a low tendency for rational  thinking and a high tendency for experiential thinking that replaces  relevant attributes with irrelevant attributes  CITATION   recent data suggest that in some  situations highly intuitive thinking leads to well adjusted judgments  that take into account the different attributes according to their  importance rather quickly  CITATION
+these more recent studies  may shed light on the interplay between the rational and experiential  systems
+specifically  highly rational participants tend to engage in  active information search which often leads to the selection of more  relevant attributes during the decision process  CITATION
+nevertheless  experiential weighting and integrating  which utilizes the  most relevant attributes via high rational thinking  may bear an added  value which lead to less biased decisions for individuals high in experiential  thinking  CITATION
+thus  another goal of the current paper is to  examine this proposed connection between experiential thinking and  judgment  and to contrast it with the more traditional account which  argues that experiential thinking leads to more biased judgments

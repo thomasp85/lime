@@ -1,0 +1,36 @@
+### abstract ###
+Max-product belief propagation is a local, iterative algorithm to find the mode/MAP estimate of a probability distribution
+While it has been successfully employed in a wide variety of applications, there are relatively few theoretical guarantees of convergence and correctness for general loopy graphs that may have many short cycles
+Of these, even fewer provide exact ``necessary and sufficient'' characterizations
+In this paper we investigate the problem of using max-product to find the maximum weight matching in an arbitrary graph with edge weights
+This is done by first constructing a probability distribution whose mode corresponds to the optimal matching, and then running max-product
+Weighted matching can also be posed as an integer program, for which there is an LP relaxation
+This relaxation is not always tight
+In this paper we show that    If the LP relaxation is tight, then max-product always converges, and that too to the correct answer
+If the LP relaxation is loose, then max-product does not converge
+This provides an exact, data-dependent characterization of max-product performance, and a precise connection to LP relaxation, which is a well-studied optimization technique
+Also, since LP relaxation is known to be tight for bipartite graphs, our results generalize other recent results on using max-product to find weighted matchings in bipartite graphs
+### introduction ###
+Message-passing algorithms, like Belief Propagation and its variants and generalizations, have been shown empirically to be very effective in solving many instances of hard/computationally intensive problems in a wide range of fields
+These algorithms were originally designed for exact inference (i e calculation of marginals/max-marginals) in tree-structured probability distributions
+Their application to general graphs involves replicating their iterative local update rules on the general graph
+In this case however, there are no guarantees of either convergence or correctness in general
+Understanding and characterizing the performance of message-passing algorithms in general graphs remains an active research area
+CITATION  show correctness for graphs with at most one cycle
+CITATION  show that for gaussian problems the sum-product algorithm finds the correct means upon convergence, but does not always find the correct variances
+CITATION  show asymptotic correctness for random graphs associated with decoding
+CITATION  shows that if max-product converges, then it is optimal in a relatively large ``local'' neighborhood
+In this paper we consider the problem of using max-product to find the maximum weight matching in an arbitrary graph with arbitrary edge weights
+This problem can be formulated as an integer program, which has a natural LP relaxation
+In this paper we prove the following   If the LP relaxation is tight, then max-product always converges, and that too to the correct answer
+If the LP relaxation is loose, then max-product does not converge
+Bayati, Shah and Sharma  CITATION  were the first to investigate max-product for the weighted matching problem
+They showed that if the graph is bipartite then max-product always converges to the correct answer
+Recently, this result has been extended to  SYMBOL -matchings on bipartite graphs  CITATION
+Since the LP relaxation is always tight for bipartite graphs, the first part of our results recover their results and can be viewed as the correct generalization to arbitrary graphs, since in this case the tightness is a function of structure as well as weights
+We would like to point out three features of our work:   It provides a  necessary and sufficient  condition for convergnce of max-product in arbitrary problem instances
+There are very few non-trivial classes of problems for which there is such a tight characterization of message-passing performance
+The characterization is  data dependent : it is decided based not only on the graph structure but also on the weights of the particular instance
+Tightness of LP relaxations is well-studied for broad classes of problems, making this chracterization promising in terms of both understanding and development of new algorithms
+Relations, similarities and comparisons between max-product and linear programming have been used/mentioned by several authors  CITATION , and an exact characterization of this relationship in general remains an interesting endeavor
+In particular, it would be interesting to investigate the implications of these results as regards elucidating the relationship between iterative decoding of channel codes and LP decoding  CITATION

@@ -1,0 +1,18 @@
+### abstract ###
+Quantum classification is defined as the task of predicting the associated class of an unknown quantum state drawn from an ensemble of pure states given a finite number of copies of this state
+By recasting the state discrimination problem within the framework of Machine Learning (ML), we can use the notion of learning reduction coming from classical ML to solve different variants of the classification task, such as the weighted binary and the multiclass versions
+### introduction ###
+Suppose that you are given an unknown quantum state drawn from an ensemble of possible pure states where each state is labeled after the class from which it originated
+How well can you predict the class of this unknown state
+This general question is often referred to in the literature as (quantum)  state discrimination ~ CITATION  and has been studied at least as far back as the seminal work of Helstrom in the seventies in the field of  quantum detection and estimation theory ~ CITATION
+Of course, the answer will depend on parameters such as the structure and your knowledge of the ensemble of pure states, the dimension of the Hilbert space in which the quantum states live and the number of copies of the unknown state you received
+In this paper, we take a Machine Learning (ML) view of the problem by recasting it as a learning task called  quantum classification
+Our main goal by doing so is to bring new ideas and insights from ML to help solve this task and some of its variants
+Other motivations include the characterization of these learning tasks in terms of the amount of information needed to complete them (measured for instance by the number of copies of the quantum states) and the development of a framework that can be used to relate and compare these tasks
+This approach of performing learning on quantum states was originally taken and defined in~ CITATION , where it was illustrated by giving an explicit algorithm for the task of  quantum clustering , where the goal is to group in clusters quantum states that are similar (using the fidelity as a similarity measure) while putting states that are dissimilar in different clusters
+The model of learning on quantum states put forward in this paper is complementary to a model proposed by Aaronson~ CITATION , where the training dataset is composed of POVM's ( Positive-Operator Valued Measurement ), and not quantum states
+In Aaronson's model, we receive a finite number of copies of an unknown quantum state and the goal is, by ``training'' this state on a few POVM's, to produce with high probability a hypothesis that can generalize with a reasonable accuracy on unobserved POVM's belonging to this training dataset
+The outline of this paper is as follows
+First, the model of performing learning in a quantum world is introduced in Section~ along with the notion of learning reduction which allows us to relate together different learning tasks
+Afterwards, in Section~, the task of binary classification is described, and the weighted and multiclass versions of this task are defined respectively in Sections~ and~
+Finally, Section~ concludes with a discussion

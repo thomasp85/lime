@@ -1,0 +1,75 @@
+### abstract ###
+The first efficacy trials named STEP of a T cell vaccine against HIV/AIDS began in 2004.
+The unprecedented structure of these trials raised new modeling and statistical challenges.
+Is it plausible that memory T cells, as opposed to antibodies, can actually prevent infection?
+If they fail at prevention, to what extent can they ameliorate disease?
+And how do we estimate efficacy in a vaccine trial with two primary endpoints, one traditional, one entirely novel, and where the latter may be influenced by selection bias due to the former?
+In preparation for the STEP trials, biostatisticians developed novel techniques for estimating a causal effect of a vaccine on viral load, while accounting for post-randomization selection bias.
+But these techniques have not been tested in biologically plausible scenarios.
+We introduce new stochastic models of T cell and HIV kinetics, making use of new estimates of the rate that cytotoxic T lymphocytes CTLs; the so-called killer T cells can kill HIV-infected cells.
+Based on these models, we make the surprising discovery that it is not entirely implausible that HIV-specific CTLs might prevent infection as the designers explicitly acknowledged when they chose the endpoints of the STEP trials.
+By simulating thousands of trials, we demonstrate that the new statistical methods can correctly identify an efficacious vaccine, while protecting against a false conclusion that the vaccine exacerbates disease.
+In addition to uncovering a surprising immunological scenario, our results illustrate the utility of mechanistic modeling in biostatistics.
+### introduction ###
+The first generation of vaccines against the human immunodeficiency virus, designed to prevent HIV acquisition by stimulating neutralizing antibodies, failed to protect in efficacy trials CITATION.
+Second-generation vaccines have been designed to elicit HIV-specific cellular immune responses CITATION.
+These candidates are supported by evidence that so-called killer T cells the cytotoxic T lymphocytes, bearing the CD8 membrane-molecule, that can react to and kill infected target cells play a crucial role in controlling HIV infection CITATION CITATION .
+The first efficacy trial, named STEP, of a T cell directed HIV vaccine began in December 2004; it is being conducted by Merck Research Laboratories in collaboration with the HIV Vaccine Trials Network and the Division of AIDS at the US National Institutes of Health.
+The candidate vaccine consists of three vectors that can ferry HIV proteins into human cells.
+The vaccine elicits broad T cell responses in a majority of vaccinated HIV-uninfected adults CITATION.
+The STEP trial will randomize 3,000 HIV uninfected volunteers to receive MRKAd5 or placebo in a 1:1 ratio and follow participants until 100 HIV infections occur.
+Mehrotra, Li, and Gilbert CITATION provide details of this trial.
+A second STEP trial of MRKAd5 with a nearly identical design will begin in South Africa in 2006.
+The co-primary endpoints of the STEP trials are HIV infection and a clinical measure of disease: setpoint viral load.
+The terminology reflects the typical course of HIV disease, which appears first as a flu-like illness, progresses through a stable, asymptomatic phase, then progresses to AIDS.
+The viral load is typically measured in blood drawn sometime after the primary stage.
+Even without preventing infection, a vaccine that suppresses viral load could confer a benefit to the individual, by slowing progression to AIDS CITATION, CITATION and preventing the need for antiretroviral treatment; and to the community by reducing HIV transmission CITATION, CITATION.
+The second primary analysis of STEP compares viral load setpoints among HIV-infected subjects in the vaccine and placebo groups.
+Besides the unprecedented nature of the trials, the nontraditional design presented a statistical challenge.
+Because the subjects included in the viral-load comparison are determined by a post-randomization event, HIV infection, the analysis is susceptible to selection bias CITATION, CITATION.
+Specifically, a conventional analysis of viral load differences would not uniquely assess a causal effect of the vaccine, but rather a mixture of causal vaccine-effect and the effects of variables correlated with viral load.
+The latter may be unevenly distributed between the infected-vaccinated and infected-placebo groups.
+For example, selection bias would occur if the vaccine protects from HIV infection only vaccinees with a relatively strong immune system, which implies the infected vaccine group would be weaker immunologically than the infected placebo group.
+Consequently, even if the vaccine has no causal effect on viremia, the viral loads in the vaccine group would be expected to be higher than those in the placebo group.
+Failing to account for this selection bias would lead to the incorrect inference that the vaccine harmfully increases viral load.
+In preparation for the analysis of the STEP trials, Gilbert, Bosch, and Hudgens CITATION and other investigators CITATION, CITATION developed statistical techniques for assessing a vaccine effect on viral load that allow for plausible levels of selection bias.
+However, these papers did not consider underlying biological mechanisms that could account for causal vaccine effects.
+Rather, they simulated arbitrary effects and studied the purely statistical operating characteristics of the methodology.
+To evaluate the statistical methods in a more biologically relevant manner, we consider here various mechanistic hypotheses for vaccine effects.
+At their present stage of development, mathematical models of HIV infection and the immune system have made few compelling predictions, primarily because of uncertainty about which are the most important mechanisms and the values of rate-constants.
+Nevertheless, models have attained enough maturity that they can quantitatively reproduce the drop in primary viremia after appearance of HIV-specific CTLs, the lag between peak viremia and peak immune response, the formation of a steady state, and other aspects of HIV infection CITATION CITATION.
+In addition, we can exploit a recent estimate of the rate at which HIV-specific CTLs can kill HIV-infected cells CITATION.
+Building on these developments, we constructed new stochastic models of primary infection and the immune response and made a surprising observation: it does not appear implausible that CTLs might abort an HIV infection.
+By using infection as a co-primary endpoint with setpoint viral load, the designers of the STEP trials explicitly acknowledged this possibility.
+For purposes of discussion, let us distinguish prevention from eradication of infection.
+By prevention we will mean either that no productively infected target cells arise at all, or the pool does not expand beyond some small number of cells; afterward, it is driven to extinction.
+The number of PITs at any time is insufficient to cause disease.
+Such a favorable outcome might be described as a transient infection or as sterilizing immunity, depending on which assays are employed to detect exposure.
+Eradication we restrict, consistent with common usage, to clearing the infection after primary, symptomatic viremia.
+Because CD8 T cells require a priming step and an expansion period before they can clear infected cells, most immunologists regard preventing infection as we have defined it to be unlikely CITATION.
+That vaccines against simian immunodeficiency virus have not prevented infection may be a consequence of the large inoculums used in the experiments CITATION.
+More relevant to HIV is the observation of T cell memory to HIV antigens in frequently exposed but seronegative sex workers in Kenya CITATION.
+One mechanistic interpretation of this finding is that a productive cellular infection was initially established, but was either cleared by CTLs or went extinct due to chance.
+The transient infection left behind a small pool of latently infected, resting CD4 T cells that, due to occasional activation events, continuously expose the immune system to HIV antigens, maintaining CTL memory.
+However, the investigators could not prove that the HIV-specific CTLs actually protected these women.
+But vaccine-derived or adoptively transferred CTLs have prevented infection by other viruses; in particular, Sendai CITATION and Ebola CITATION in mice.
+However we may judge the plausibility of prevention by T cells, as we are interested here in the impact on statistical estimation, we have to incorporate some biological mechanism for it into our simulations.
+We have combined stochastic and deterministic models so as to simulate the impact of T cells both on the probability of infection given exposure and on viral load assuming infection, in vaccinated or unvaccinated subjects.
+Of course, such a concatenation requires more hypotheses, in particular about vaccine action.
+Again, because of the extent of uncertainty about these mechanisms, we do not claim to predict the outcome of vaccine trials.
+Rather, the models provide cases where an influence of selection bias is present or absent, and when present of a magnitude resulting from biological scenarios rather than ad hoc assumptions.
+We can then generate thousands of hypothetical STEP trials, and put the GBH method to the test.
+In the STEP trials, two vaccine efficacy parameters will be assessed; one-minus-relative-risk of HIV infection, and the difference in mean viral load setpoint of HIV-infected subjects, where setpoint viral load is defined as the average of two log10 plasma HIV RNA levels measured at month 2 and 3 visits after diagnosis of HIV infection.
+The data will be analyzed using an adaption of the GBH method, which estimates the causal vaccine effect on viral load while accounting for plausible levels of selection bias.
+This technique was developed from the potential outcomes framework for causal inference CITATION, CITATION.
+In this framework, each trial participant has two potential HIV infection outcomes: one under assignment to vaccine and one under assignment to placebo.
+Following GBH, a causal effect on viral load can be defined for the subpopulation of always-infected subjects who would become HIV-infected regardless of randomization to vaccine or placebo.
+Such an effect is causal because the always-infected subpopulations of the two study arms have identical characteristics except for the vaccine/placebo assignment, and therefore observed differences are directly attributable to vaccination.
+The methods estimate the average causal effect of vaccine on viral load, equal to the difference in mean setpoint viral loads for the always-infected subpopulation.
+The fundamental difficulty in evaluating the ACE is the lack of knowledge about which infected subjects are in the always-infected group knowing this would require data on subjects' HIV infection outcome both under assignment to vaccine and under assignment to placebo, but for each subject only one of these outcomes is observed.
+To address the identifiability problem, GBH made the simplifying assumption that the vaccine does not increase the risk of infection for any subject, and posited a model for whether an infected placebo recipient with setpoint viral load Y would have been infected had they been assigned vaccine.
+This model is indexed by a sensitivity parameter, which is the log odds ratio of infection under assignment to vaccine comparing two infected placebo recipients with setpoint viral loads Y and Y 1.
+A value 0 reflects the case of no selection bias, in which case the naive analysis assesses a causal vaccine effect, and positive values of reflect selection bias such that the odds of infection is higher for larger setpoint viral loads Y. The parameter is fixed by the investigator at each possible value within a plausible range, and for each, GBH provided procedures for estimating ACE with a confidence interval.
+See Materials and Methods for the mathematical details.
+For the first STEP trial, a panel of ten experts proposed a plausible range for of log to log; see Discussion section.
+To be cautious, our analysis will estimate ACE over a somewhat wider range for, namely log to log; i.e., 1,2 .

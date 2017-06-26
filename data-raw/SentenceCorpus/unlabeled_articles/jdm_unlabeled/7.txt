@@ -1,0 +1,50 @@
+### abstract ###
+environmental events such as natural disasters may influence the public's affective reactions and decisions
+shortly after the  NUMBER  tsunami disaster we assessed how affect elicited by thinking about this disaster influenced risk perceptions and future time perspective in swedish undergraduates not directly affected by the disaster
+an experimental manipulation was used to increase the salience of affect associated with the disaster
+in study  NUMBER  we found that participants reminded about the tsunami had a sense that their life was more finite and included fewer opportunities than participants in the control condition not reminded about the tsunami
+in study  NUMBER  we found similar effects for risk perceptions
+in addition  we showed that manipulations of ease-of-thought influenced the extent to which affect influenced these risk perceptions  with greater ease of thoughts being associated with greater perceived risks
+### introduction ###
+major societal events such as natural disasters and terrorist attacks influence our thoughts and feelings
+in the face of a major environmental event  many people tend to react with emotion and emotion-laden decisions  CITATION
+the  NUMBER  east asian tsunami disaster had a profound psychological impact on many countries  not only those that were directly hit by the tsunami waves
+sweden pop  NUMBER  million had an unusually high number of tourists visiting the area at the time of the disaster  resulting in over six hundred swedes being killed or missing
+the tsunami disaster was therefore considered a major national tragedy in sweden  CITATION
+a consequence of this tragedy  and the media attention it received  CITATION   was that many swedes felt deeply involved and saddened  CITATION
+the feelings elicited by such an event may also have an impact on everyday decisions
+previous research in judgment and decision making has shown that preferences are constructed on the basis of various contextual factors  CITATION  and people tend to rely on their affective reactions when making decisions  CITATION
+affect is defined here as the specific quality of goodness or badness experienced as a feeling state with or without awareness and demarcating a positive or negative quality of a stimulus
+reliance on such feelings in judgment and decision making has earlier been described as an affect heuristic  CITATION
+most previous research on affect and decision making has focused on integral affect  CITATION
+however  in many judgments other sources of affect are also present
+a large number of studies shows that affective states that are unrelated to the judgmental target influence judgments and decisions nonetheless  CITATION
+in a famous example  johnson and tversky  CITATION  found that incidental affect i e   a mood state induced by reading a newspaper article influenced subsequent risk judgments
+however  the effect of incidental affect on judgments is not a stable  unchangeable or unavoidable fact  it should rather be seen as a constructive process where the individual tries to determine if their affective reactions to a target are a reliable and relevant source of information  CITATION
+at the core of this argument lies the notion that when asked to make an evaluative judgment  individuals seek information to determine how they should make this judgment
+people tend to use whatever information is available to them at the time of making a decision  CITATION
+in the absence of other relevant or more salient information  people use their affective reactions to the target to evaluate the object  CITATION
+people in positive moods tend to evaluate objects more favorably than participants in a negative mood  CITATION
+one important point here is that people incorrectly attribute their incidental moods as a reaction to the target
+this misattribution can be corrected or changed by introducing information that questions the diagnostic value of the affective reaction for the judgment
+for instance  in schwarz and clore's  CITATION  study participants were given a simple reminder about the cause sunny vs cloudy weather of their moods which resulted in mood no longer influencing judgments of well-being
+importantly though  it was the diagnostic value of the affective reaction for the judgment task  not the affective reaction itself  that was affected by this manipulation  CITATION
+incidental mood is only one of many sources of experiential information that can be used in judgments
+the meta-cognitive experience of the ease or fluency of information processing has been shown to be an important experiential factor informing judgments and decisions  CITATION
+in a study on the effect of fluency on decision making  participants were more likely to defer choice when they generated more reasons for making the choice  CITATION
+studies on perceptual fluency the subjective ease of perceptual processing have found that if the color in which a statement is printed makes it easy to read  this can impact the perceived truthfulness of the statement  CITATION
+thus  as schwarz  CITATION  notes  it seems that  the subjective experiences that accompany our thought processes are informative in their own right
+  consequently  meta-cognitive feelings may further modulate the impact of affect on judgments
+supporting this  a study by lerner and gonzalez  CITATION  showed that fluency manipulations influenced the effect of specific emotions on risk perception
+the conceptual model guiding this research can be described in the following way   NUMBER  we expect that major environmental events such as a natural disaster may influence experienced affect even among individuals not directly affected by the disaster  NUMBER  the experienced affect will  in turn  impact various affective and cognitive judgments  NUMBER  the effects of affect incidental to the judgment task can be diminished by introducing information such as fluency manipulations that questions the diagnostic value of experienced feelings for judgments
+specifically  we tested the prediction that affect elicited by thinking about a recent major natural disaster would influence judgments of well-being  CITATION  and future pessimistic optimistic thinking  CITATION  in a mood-congruent manner  CITATION
+previous research has documented the effects of laboratory-induced mood using standardized mood induction procedures autobiographical recall or affect-inducing scenarios
+we extended this research by inducing affect through a procedure in which participants were asked to think about a recent and relevant major environmental disaster
+our research strategy compared ratings of affect and ratings of future personal and societal events in two groups of participants  one reminded about the tsunami and a control group
+we hypothesized that reminding participants about the tsunami would elicit negative affect associated with the event
+we further anticipated that this affect would spill over to judgments of well-being as well as optimistic pessimistic thinking
+in study  NUMBER   participants in both conditions completed a measure of future pessimism future time perspective ftp scale  lang  and  carstensen   NUMBER  and rated their well-being  CITATION
+the ftp scale was originally developed as an individual difference measure of the perceived time remaining in life  CITATION
+in study  NUMBER   we used the ftp scale as a dependent variable and we expected to find that individuals reminded about the tsunami perceived life as more finite and limited than participants in a control condition
+in study  NUMBER   half of the participants in the tsunami-remind condition were given an additional experimental manipulation  CITATION
+participants then made risk estimates of various future positive and negative events  CITATION

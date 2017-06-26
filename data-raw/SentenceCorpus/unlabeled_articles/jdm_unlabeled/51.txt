@@ -1,0 +1,46 @@
+### abstract ###
+in markets with asymmetric information  only sellers have knowledge about the quality of goods
+sellers may of course make a declaration of the quality  but unless there are sanctions imposed on false declarations or reputations are at stake  such declarations are tantamount to cheap talk
+nonetheless  in an experimental study we find that most people make honest declarations  which is in line with recent findings that lies damaging another party are costly in terms of the liar's utility
+moreover  we find in this experimental market that deceptive sellers offer lower prices than honest sellers  which could possibly be explained by the same wish to limit the damage to the other party
+however  when the recipient of the offer is a social tie we find no evidence for lower prices of deceptive offers  which seems to indicate that the rationale for the lower price in deceptive offers to strangers is in fact profit-seeking by making the deal more attractive rather than moral
+### introduction ###
+a market is said to have asymmetric information if only the sellers know the quality of goods
+george akerlof's  CITATION  famous game-theoretic paper on the  market for lemons  showed that  given certain conditions  good quality would be driven out of markets with information asymmetries
+experimental studies support this basic argument  CITATION
+the core features of the traditional market-for-lemons model are quality and prices of goods
+high quality goods are assumed to be more valuable to sellers and buyers alike  but only sellers know the quality at the time of sale
+in order for any deception to take place  sellers must also be able to make a quality declaration  true or false
+if no reputation-building or other sanctions are possible  such declarations are considered cheap talk and are usually discarded as irrelevant in game theory  CITATION
+in effect  in standard game theory everyone is supposed to lie if they benefit by doing so
+the archetypical example of a market-for-lemons is the market for used cars
+however  uri gneezy  CITATION  points out an empirical departure from the theoretical prediction        he then suggests that buyers often place sufficient trust in private sellers' honesty because many private sellers actually prefer to be honest
+indeed  many experimental studies have found that most subjects usually do not take advantage of a possibility to deceive another party  CITATION
+these studies also identify several moderators of the decision whether to deceive  in particular  gneezy  CITATION  found that deception is less likely to occur the more it damages the other party
+we will think of this as a moral cost of deception
+here we present a novel experimental study of deception and price in a market for lemons
+as far as we know  there has been no previous study of deceptive declarations of quality in such markets
+our first aim is to establish that also in this context  most subjects will tend to be honest
+said differently  we expect most subjects who advertise a  peach  will actually sell a peach and not a lemon
+our second and main aim is to study the relationship between deception and pricing
+in a market where the sellers set the prices  no gain is made from deception unless the seller actually charges more for the good when the buyer believes it to be of high quality
+this pricing aspect has no counterpart in gneezy's study  where subjects only chose whether to be honest or to deceive
+in our experiment   gadget  sellers compete for buyers both with declared quality and price
+at first glance  it may seem unreasonable for honest and deceptive sellers to deviate in the price they offer  since the gadgets are indistinguishable to the buyers at the time of purchase
+however  as we will discuss immediately below  there are several reasons why deceptive sellers might charge less
+in the terminology of wolinsky  CITATION  higher price  signals  higher quality
+hence  our second question is whether sellers in our market employ price signaling
+why would deceptive sellers charge less
+following gneezy  liars that are concerned with the damage their deception causes buyers might want to compensate by offering a lower price  let us call this mechanism moral price signaling
+an alternative mechanism is rational price signaling  profit-maximizing sellers who believe that most buyers prefer to buy lower-priced goods would actually charge less when deceptive than when honest
+the reason is that the possibility of a higher price is relatively less attractive for a seller who does not have to bear the cost of parting with high quality
+it is difficult to distinguish between these two mechanisms within the same market framework
+our approach is to let sellers make offers both to strangers and to friends
+the rationale for this comes from research in sociology and social psychology showing that information asymmetries lead to strong preferences for socially embedded transactions on the part of buyers since friends are more trusted to behave honestly  CITATION
+therefore  a seller who gives an offer to a friend can  regardless of price  be relatively certain that this offer will not be rejected out of distrust
+consequently  rational price signaling would not be expected between friends whereas moral price signaling would  if anything  be more accentuated between friends
+our third question is thus whether price signaling is dependent on whether offers are made to social ties or strangers
+the cross-national experiment outlined in the section to follow was designed to answer these questions
+we collected data on sellers as well as buyers
+these latter data allow us to investigate buyers' preferences over prices and social embeddedness
+in particular we want to ascertain that buyers tend to prefer lower priced offers unless the offer is from a friend

@@ -1,0 +1,40 @@
+### abstract ###
+Trans/cis prolyl isomerisation is involved in several biological processes, including the development of numerous diseases.
+In the HIV-1 capsid protein, such a process takes place in the uncoating and recruitment of the virion and is catalyzed by cyclophilin A. Here, we use metadynamics simulations to investigate the isomerization of CA's model substrate HAGPIA in water and in its target protein CypA.
+Our results allow us to propose a novel mechanistic hypothesis, which is finally consistent with all of the available molecular biology data.
+### introduction ###
+Proline trans/cis isomerization takes part in several fundamental biological processes, including protein folding CITATION CITATION, immune response CITATION, CITATION, ion channel gating CITATION and cellular signalling CITATION, CITATION, CITATION.
+The process, which is also associated to the development of a variety of diseases including HIV-1 infection CITATION, CITATION, carcinogenesis CITATION and Alzheimer's CITATION, is catalyzed by prolyl isomerase enzymes CITATION, CITATION, CITATION .
+The best characterized isomerization in vivo and in vitro occurs in the uncoating and recruitment of the human HIV-1 capsid protein in the virions CITATION, and it is catalyzed by cyclophilin A isomerase.
+At the structural level, CypA features -helices flanking a beta-barrel, while CA is made of several -helices connected by loops.
+In the X-ray structure of the complex CITATION, the targeted proline-containing backbone unit, is accommodated in a hydrophobic pocket of CypA.
+Although the backbone unit is in trans conformation in the X-ray structure CITATION, NMR studies have shown that 45 percent of conformers are cis for CA-CypA R55A in aqueous solution CITATION.
+The rather significant population of cis conformers could arise not only by the replacement of R55 with Ala, but also by crystal packing forces, different temperature conditions, along with different hydration and ionic strength in the two experiments.
+Free energy calculations further support the hypothesis that CypA promotes a significant population of cis conformation CITATION, CITATION.
+Thus, the cis population is likely to increase substantially from water where it is 10 percent CITATION to the complex in aqueous solution.
+In vitro kinetic measurements show that CypA decreases the isomerization free energy barrier of modified substrate fragments in solution by 7 kcal/mol CITATION, CITATION.
+Free energy calculations, based either on classical CITATION or quantum-mechanical/molecular mechanics CITATION, of the 6 aminoacids long substrate fragment point to a similar trend.
+In addition, they suggest that H-bonding between the backbone unit of the targeted glycine-proline peptidyl bond and that of N102@CypA CITATION, CITATION, CITATION, as well as van der Waals interactions between substrate and the CypA hydrophobic pocket stabilize the transition state CITATION, CITATION, CITATION.
+These hypotheses are consistent with the decrease of k cat/K m associated with the polymorphism of cyclophilins in 102 position and in the F60A, F113A and H126Q CypA mutants CITATION, CITATION.
+NMR studies, along with computations, have further suggested that the motions of several CypA residues are linked to the enzymatic activity CITATION, CITATION CITATION.
+Free energy calculations characterized a network of protein vibrations in CypA that are associated with its isomerase activity: flexible loops on the surface are connected to the active site by a network of hydrogen bonds CITATION, CITATION, CITATION .
+In spite of the great progress in describing the catalytic process, key mechanistic issues need to be addressed.
+Kinetic studies CITATION suggested that the overall process involves trans and cis forms in solution and in complex with the protein.
+However, the studies so far consider mostly TS stabilization.
+Most importantly, the current proposed mechanism cannot explain a plethora of molecular biology data.
+These studies show that residues not involved in TS stabilization in the proposed mechanisms are important for the function, as their mutations cause a decrease of k cat/K m. Indeed, k cat/K m passes from 1.6 10 7 M 1 s 1 in the wild type to 1.6 10 4 M 1 s 1 by mutating the fully conserved R55 residue with Ala CITATION.
+Although this mutation was proposed originally to destroy an H-bond stabilizing uniquely the TS CITATION, CITATION, such H-bond was subsequently ruled out in computational works CITATION, CITATION, CITATION and so far no functional role has been ascribed to R55.
+In addition, the H54Q mutation, along with the I57V polymorphism, causes a decrease of k cat/K m, although these residues are not involved in TS stabilization .
+Here we use molecular simulations to address these issues.
+We calculate the free energy associated with the isomerisation of the 6 aminoacids long substrate fragment in water and in complex with CypA.
+The free energy is calculated as a function of the two reaction coordinates and, which have been suggested to describe best the energetics of the process CITATION, as well as other pairs of different coordinates to cross-check our results.
+We use here metadynamics CITATION, which has already been employed to predict the energetics of protein/peptide interactions CITATION.
+The potential used is an effective one.
+This choice allows a very efficient sampling because of its relatively small computational cost.
+In spite of its limitations, CITATION this force field is expected to be relatively accurate to describe equilibrium conformations, which is a key aspect of our problem.
+The accuracy of the force field for minima and transition states is assessed by comparing our results with first principle quantum chemistry calculations.
+Based on this comparison, we find that the force-field biases on the energetics of the minima are negligible, whereas their influence on the barriers is more significant.
+Therefore, here the free energy differences between minima are used to predict the relative populations of the equilibrium conformations, whilst the calculated barriers are only compared at the qualitative level to discriminate the most likely cis/trans isomerisation path.
+The enzyme turns out to dramatically stabilize the populations of one specific cis conformer relative to the trans ones, which instead are by far the most stable in aqueous solution.
+In addition, it lowers the free energy barrier of a specific, one way isomerization from trans to cis.
+These findings allow us to propose a mechanistic hypothesis for the isomerization process that is consistent with all the available experimental data.

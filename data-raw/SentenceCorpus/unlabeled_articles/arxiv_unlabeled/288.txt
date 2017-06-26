@@ -1,0 +1,19 @@
+### abstract ###
+Suppose the signal  SYMBOL  is realized by driving a  SYMBOL -sparse signal  SYMBOL  through an arbitrary unknown stable discrete-linear time invariant system  SYMBOL , namely,  SYMBOL , where  SYMBOL  is the impulse response of the operator  SYMBOL
+These types of processes arise naturally in Reflection Seismology
+In this paper we are interested in several problems: (a) Blind-Deconvolution: Can we recover both the filter  SYMBOL  and the sparse signal  SYMBOL  from noisy measurements (b) Compressive Sensing: Is  SYMBOL  compressible in the conventional sense of compressed sensing
+Namely, can  SYMBOL  be reconstructed from a sparse set of measurements
+We develop novel  SYMBOL  minimization methods to solve both cases and establish sufficient conditions for exact recovery for the case when the unknown system  SYMBOL  is auto-regressive (i e all pole) of a known order
+In the compressed sensing/sampling setting it turns out that both  SYMBOL  and  SYMBOL  can be reconstructed from  SYMBOL  measurements under certain technical conditions on the support structure of  SYMBOL
+Our main idea is to pass  SYMBOL  through a linear time invariant system  SYMBOL  and collect  SYMBOL  sequential measurements
+The filter  SYMBOL  is chosen suitably, namely, its associated Toeplitz matrix satisfies the RIP property
+We develop a novel LP optimization algorithm and show that both the unknown filter  SYMBOL  and the sparse input  SYMBOL  can be reliably estimated
+### introduction ###
+In this paper we focus on blind de-convolution problems for filtered sparse processes
+Specifically, a sparse input  SYMBOL  is filtered by an unknown infinite impulse response (IIR) discrete time stable linear filter  SYMBOL  and the resulting output  SYMBOL  SYMBOL y(t) = x(t) + n(t) SYMBOL t = 0,\,1,\,\ldots,N SYMBOL u(t) SYMBOL H SYMBOL x(t) SYMBOL u(t) SYMBOL H SYMBOL H SYMBOL H SYMBOL H SYMBOL z SYMBOL H SYMBOL \ell_1 SYMBOL H SYMBOL u SYMBOL H SYMBOL u SYMBOL x(t) SYMBOL x(t) SYMBOL u(t) SYMBOL H SYMBOL z SYMBOL O(k\log^3(n)) SYMBOL GH SYMBOL H SYMBOL Hu SYMBOL x SYMBOL 3 SYMBOL \alpha_1=0 9,\,\alpha_2=0 7 SYMBOL \alpha_3=0 2 SYMBOL x SYMBOL u(t)=x(t)-x(t-1) SYMBOL x SYMBOL H SYMBOL u SYMBOL x=Hu SYMBOL H SYMBOL x SYMBOL G SYMBOL g(t) SYMBOL  SYMBOL  SYMBOL g*h SYMBOL  SYMBOL  SYMBOL u = Gu SYMBOL G SYMBOL G SYMBOL u SYMBOL H SYMBOL H SYMBOL H SYMBOL u(t) SYMBOL u(t) SYMBOL u(t) SYMBOL \ell_1 SYMBOL 1\% SYMBOL 10\% SYMBOL \ell_1 SYMBOL u SYMBOL \ell_1 SYMBOL \ell_1 SYMBOL 1\% SYMBOL 10\% SYMBOL H SYMBOL u SYMBOL H SYMBOL H^{\perp} SYMBOL p SYMBOL g * h = h * g SYMBOL \ell_1 SYMBOL u SYMBOL p SYMBOL m SYMBOL O(m+p) SYMBOL O(mp) SYMBOL \ell_1$ minimization  algorithm and the main result of this paper (Theorem ) is stated in this section
+The proof of Theorem  can be found in Section
+To help the reader understand the main idea of the proof we first consider a very simple case and Section  provides the proof for the general case
+Section  addresses the blind-deconvolution problem, which can be regarded as a noisy version of our problem
+We use lasso to solve this problem and the detailed proof is provided in Section
+In Section , we extend the our techniques to two related problem, namely, decoding of ARMA process and decoding of a non-causal AR process
+Finally, simulation results are shown in Section

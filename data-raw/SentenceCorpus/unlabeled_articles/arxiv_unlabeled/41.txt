@@ -1,0 +1,37 @@
+### abstract ###
+In this paper we propose a method that learns to play Pac-Man
+We define a set of high-level observation and action modules
+Actions are temporally extended, and multiple action modules may be in effect concurrently
+A decision of the agent is represented as a rule-based policy
+For learning, we apply the cross-entropy method, a recent global optimization algorithm
+The learned policies reached better score than the hand-crafted policy, and neared the score of average human players
+We argue that learning is successful mainly because (i) the policy space includes the combination of individual actions and thus it is sufficiently rich, (ii) the search is biased towards low-complexity policies and low complexity solutions can be found quickly if they exist
+Based on these principles, we formulate a new theoretical framework, which can be found in the Appendix as supporting material
+### introduction ###
+During the last two decades, reinforcement learning has reached a mature state, and has been laid on solid foundations
+We have a large variety of algorithms, including value-function based, direct policy search and hybrid methods  CITATION
+The basic properties of many such algorithms are relatively well understood (e g conditions for convergence, complexity, effect of various parameters etc ), although it is needless to say that there are still lots of important open questions
+There are also plenty of test problems (like various maze-navigation tasks, pole-balancing, car on the hill etc ) on which the capabilities of RL algorithms have been demonstrated, and the number of successful large-scale RL applications is also growing steadily
+However, there is still a sore need for more successful applications to validate the place of RL as a major branch of artificial intelligence
+We think that games (including the diverse set of classical board games, card games, modern computer games etc ) are ideal test environments for reinforcement learning
+Games are intended to be interesting and challenging for human intelligence and therefore, they are ideal means to explore what artificial intelligence is still missing
+Furthermore, most games fit well into the RL paradigm: they are goal-oriented sequential decision problems, where each decision can have long-term effect
+In many cases, hidden information, random events, unknown environment, known, or unknown players account for (part of) the difficulty of playing the game
+Such circumstances are in the focus of the reinforcement learning idea
+They are also attractive for testing new methods: the decision space is huge in most cases, so finding a good strategy is a challenging task
+There is another great advantage of games as test problems: the rules of the games are fixed, so the danger of `tailoring the task to the algorithm' -- i e , to tweak the rules and/or the environment so that they meet the capabilities of the proposed RL algorithm -- is reduced, compared, eg , to various maze navigation tasks
+RL has been tried in many classical games, including checkers  CITATION , backgammon  CITATION , and chess  CITATION
+On the other hand, modern computer games got into the spotlight only recently, and there are not very many successful attempts to learn them with AI tools
+Notable exceptions are, eg ,  role-playing game  Baldur's Gate   CITATION , real-time strategy game  Wargus   CITATION ), and possibly,  Tetris   CITATION
+These games are also interesting from the point of view of RL, as they catch different aspects of human intelligence: instead of deep and wide logical deduction chains, most modern computer games need short-term strategies, but many observations have to be considered in parallel, and both the observation space and the action space can be huge
+In this spirit, we decided to investigate the arcade game Pac-Man
+The game is interesting on its own, as it is largely unsolved, but also imposes several important questions in RL, which we will overview in Section~
+We will show that a hybrid approach is more successful than either tabula rasa learning or a hand-coded strategy alone
+We will provide hand-coded high-level actions and observations, and the task of RL is to learn how to combine them into a good policy
+We will apply rule-based policies because they are easy to interpret, and it is easy to include human domain-knowledge
+For learning, we will apply the cross-entropy method, a recently developed general optimization algorithm
+In the next section we overview the Pac-Man game and the related literature
+We also investigate the emerging questions upon casting this game as a reinforcement learning task
+In sections  and  we give a short description of rule-based policies and the cross-entropy optimization method, respectively
+In section  we describe the details of the learning experiments, and in section  we present our results
+Finally, in section  we summarize and discuss our approach with an emphasis on its implications for other RL problems

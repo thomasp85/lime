@@ -1,0 +1,42 @@
+### abstract ###
+The cross-entropy method (CE) developed by R
+Rubinstein is an elegant practical principle for simulating rare events
+The method approximates the probability of the rare event by means of a family of probabilistic models
+The method has been extended to optimization, by considering an optimal event as a rare event
+CE works rather good when dealing with deterministic function optimization
+Now, it appears that two conditions are needed for a good convergence of the method
+First, it is necessary to have a family of models sufficiently flexible for discriminating the optimal events
+Indirectly, it appears also that the function to be optimized should be deterministic
+The purpose of this paper is to consider the case of partially discriminating model family, and of stochastic functions
+It will be shown on simple examples that the CE could fail when relaxing these hypotheses
+Alternative improvements of the CE method are investigated and compared on random examples in order to handle this issue
+### introduction ###
+The Cross-Entropy method has been developed by R
+Rubinstein for the simulation of rare events CITATION
+The algorithm iteratively builds a near-optimal importance sampling of the rare event, based on a family of parameterized sampling laws
+The construction of the importance sampling is obtained by iteratively:   tossing samples,  selecting the samples which are approximating the rare events,  relearning the parameters of the sampling law by minimizing its Kulback-Leiber distance (cross-entropy) with the selection,  computing the importance weightings
+By considering the optimal events related to an objective as rare events, the method has been extended to optimization problems \\[5pt] The cross-entropy method has been implemented successfully on many combinatorial problems
+However, attempted proofs of the method make some assumptions as preliminary requests CITATION
+First, the proof has been made in a deterministic context
+Secondly, the closure of the simulation law family should contain the dirac on the optimum (or laws with support on the optimums) \\[5pt] The first condition cannot be fulfilled properly, in case of stochastic problem
+The second condition is an obvious requirement
+But there are some cases, where it is not possible to handle all the solutions precisely by the law family
+Indeed, the solutions may not be countable practically; this is typically the case for some dynamic problems (for example, the strategy tree against a deterministic computer chess player)
+Both difficulties are encountered in optimal planning with partial observation
+The purpose of this paper is to point out on simple examples, that these hypotheses are necessary for the convergence of the classical CE method
+The questions are:    Does the \emph{classical  CE algorithm solve stochastic problems properly } It appears that the quantile selection within the CE may not work properly, without a rather good estimation of the objective functional expectation
+Nevertheless, smoother selection criteria seem to be a possible answer to these difficulties
+Assume that the law family closure does not contain all the deterministic solutions
+The CE algorithm will converge to a stochastic approximation of the optimal solution
+Is this approximation the best possible within the law family
+Our answer to this question is not absolutely negative
+But it appears that some extensions of the CE, quite usually implemented, will fail on this question
+This paper presents some counterexamples to these questions
+In the case of stochastic optimization, tests are done on simple random examples in order to compare the convergence of various CE methods with the global optimum \\[5pt] Next section introduces shortly the principle of the CE method
+Section~ will consider the case, where the optimal solution is not caught properly by the sampling family
+A counterexample is proposed and studied
+In section~, stochastic problems are considered
+Two simple counterexamples are investigated, thus enlightening some typical convergence difficulties
+Different evolutions of the cross-entropy are then compared to the basical method, by generating several random examples
+In particular, a method with smooth sample selection is proposed as a possible alternative for the stochastic problems
+Section~ concludes

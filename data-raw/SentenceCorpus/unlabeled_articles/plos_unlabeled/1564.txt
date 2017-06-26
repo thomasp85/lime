@@ -1,0 +1,26 @@
+### abstract ###
+Protein folding dynamics is often described as diffusion on a free energy surface considered as a function of one or few reaction coordinates.
+However, a growing number of experiments and models show that, when projected onto a reaction coordinate, protein dynamics is sub-diffusive.
+This raises the question as to whether the conventionally used diffusive description of the dynamics is adequate.
+Here, we numerically construct the optimum reaction coordinate for a long equilibrium folding trajectory of a Go model of a FORMULA-repressor protein.
+The trajectory projected onto this coordinate exhibits diffusive dynamics, while the dynamics of the same trajectory projected onto a sub-optimal reaction coordinate is sub-diffusive.
+We show that the higher the free energy profile for the putative reaction coordinate, the more diffusive the dynamics become when projected on this coordinate.
+The results suggest that whether the projected dynamics is diffusive or sub-diffusive depends on the chosen reaction coordinate.
+Protein folding can be described as diffusion on the free energy surface as function of the optimum reaction coordinate.
+And conversely, the conventional reaction coordinates, even though they might be based on physical intuition, are often sub-optimal and, hence, show sub-diffusive dynamics.
+### introduction ###
+A free energy surface projected onto one or a small number of coordinates is often used to describe the equilibrium and kinetic properties of complex systems with a very large number of degrees of freedom.
+Studies of protein folding are an important case where this type of projected surface has been introduced and coordinates such as the number of native contacts and radius of gyration have been used CITATION CITATION.
+Protein folding then is described as diffusion on the projected free energy surface.
+Diffusive dynamics is characterized by means square displacement linearly growing with time, FORMULA, where D is the diffusion coefficient.
+For a single reaction coordinate diffusive dynamics is completely specified by the free energy profile, i.e. the free energy as a function of the coordinate and coordinate-dependent diffusion coefficient, which conveniently can be computed from conventional and cut based free energy profiles CITATION.
+Construction of a good reaction coordinate is challenging.
+In many cases, the standard progress variables are not good reaction coordinates, because they do not preserve the barriers on the FES and thus may mask the inherent complexity of the latter CITATION.
+A number of methods to construct good reaction coordinates have been suggested CITATION, CITATION CITATION .
+Employing the Mori-Zwanzig formalism CITATION, CITATION one can derive generalized Langevin equations, which describe system dynamics projected on the reaction coordinates.
+The generalized Langevin equation contains a memory kernel, which leads to non-Markovian dynamics and subdiffusion.
+Subdiffusion is characterized by the mean square displacement growing slower than that for diffusion, FORMULA with exponent FORMULA.
+To completely specify dynamics in this case one has to compute the memory kernel, which is not trivial, since it requires the solution of a multidimensional partial differential equation CITATION.
+Long-term memory in correlation functions and anomalous diffusion in proteins was observed experimentally and theoretically CITATION CITATION.
+This raises the question whether the folding dynamics of proteins can be described as simple diffusion on the projected free energy surface, as is often done, or if one has to use more sophisticated descriptions, e.g. generalized Langevin equations CITATION, CITATION, fractional Fokker-Plank equations CITATION or multiscale state space networks CITATION.
+Here we show that if the reaction coordinate is properly optimized, then the dynamics projected onto this coordinate is diffusive, while the same dynamics projected onto a sub-optimal coordinate is sub-diffusive.

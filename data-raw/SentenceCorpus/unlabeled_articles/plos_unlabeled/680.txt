@@ -1,0 +1,39 @@
+### abstract ###
+Even in the post-genomic era, the identification of candidate genes within loci associated with human genetic diseases is a very demanding task, because the critical region may typically contain hundreds of positional candidates.
+Since genes implicated in similar phenotypes tend to share very similar expression profiles, high throughput gene expression data may represent a very important resource to identify the best candidates for sequencing.
+However, so far, gene coexpression has not been used very successfully to prioritize positional candidates.
+We show that it is possible to reliably identify disease-relevant relationships among genes from massive microarray datasets by concentrating only on genes sharing similar expression profiles in both human and mouse.
+Moreover, we show systematically that the integration of human-mouse conserved coexpression with a phenotype similarity map allows the efficient identification of disease genes in large genomic regions.
+Finally, using this approach on 850 OMIM loci characterized by an unknown molecular basis, we propose high-probability candidates for 81 genetic diseases.
+Our results demonstrate that conserved coexpression, even at the human-mouse phylogenetic distance, represents a very strong criterion to predict disease-relevant relationships among human genes.
+### introduction ###
+In the last two decades, positional cloning has been remarkably successful in the identification of genes involved in human disorders.
+More recently, our ability to map genetic disease loci has strikingly increased due to the availability of the entire genome sequence.
+Nevertheless, once a disease locus has been mapped, the identification of the mutation responsible for the phenotype still represents a very demanding task, because the mapped region may typically contain hundreds of candidates CITATION.
+Accordingly, many phenotypes mapped on the genome by linkage analysis are not yet associated to any validated disease gene.
+Therefore, the definition of strategies that can pinpoint the most likely targets to be sequenced in patients is of critical importance CITATION.
+Many different strategies have been proposed to prioritize genes located in critical map intervals.
+Some of the methods so far developed rely on the observation that disease genes tend to share common global properties, which can be deduced directly by absolute and comparative sequence analysis CITATION.
+However, most of the available prioritization strategies are based on the widely accepted idea that genes and proteins of living organisms deploy their functions as part of sophisticated functional modules, based on a complex series of physical, metabolic and regulatory interactions CITATION, CITATION.
+Although this principle has been extensively used even in the pre-genome era to identify the critical players of many different biological phenomena, the present availability of genome-scale information on gene function, protein-protein interactions and gene expression in different experimental models allows unprecedented opportunities for approaching the prioritization problem with greater efficiency.
+In theory, the use of functional gene annotations would represent the most straightforward approach for candidate prioritization.
+However, although this strategy may be very useful in selected cases CITATION, CITATION, at the present stage it has clear limitations, either because it overlooks non-annotated genes CITATION, CITATION or because it is not evident how the annotated functions of the candidates relate to the disease phenotype.
+Therefore, computational methods less biased toward already consolidated knowledge, may have strong advantages CITATION .
+In particular, protein-protein interaction maps and gene coexpression data from microarray experiments represent extremely rich sources of potentially relevant information.
+Recently, the direct integration of a very heterogeneous human interactome with a text mining-based map of phenotype similarity has allowed the prediction of high confidence candidates within large disease-associated loci CITATION .
+Although this approach is highly efficient, it is clearly not exhaustive because very close functional relationships between genes and proteins are possible in the absence of direct molecular binding.
+In addition, the protein-protein interaction space is currently under-sampled and many genuine biological interactions have not yet been identified in experiments.
+Conversely, high-throughput experiments are known to result in a large fraction of false positives.
+The consistently low overlap of protein-protein interactions between large-scale experiments, even when the same proteins are considered, is testament to these problems CITATION.
+Finally, many of the known protein-protein interactions have been ascertained through low-throughput experiments and are thus strongly biased towards better-studied proteins CITATION .
+Since genes involved in the same functions tend to show very similar expression profiles, coexpression analysis could be a very powerful approach for inferring functional relationships, which may correlate with similar disease phenotypes.
+Accordingly, global analyses have shown that genes highly coexpressed across microarray experiments display very similar functional annotation CITATION.
+However, with notable exceptions CITATION, so far the coexpression criterion has not been employed very successfully for the prediction of genetic disease candidates and has been used to this purpose only in combination with other independent evidence CITATION, CITATION .
+The noisy nature of high-throughput gene expression datasets may represent one of the possible explanations for this shortcoming.
+Moreover, even when the coexpression of two genes is reproducibly observed under a high number of experimental conditions, this does not necessarily imply that the genes are functionally related.
+For instance, extensive meta analysis of microarray data across different species has revealed that neighboring genes are more likely to be coexpressed than genes encoded in distant genomic regions, even if they are not functionally related in any obvious manner CITATION, CITATION .
+Phylogenetic conservation has been previously proposed as a very strong criterion to identify functionally relevant coexpression links among genes CITATION, CITATION.
+Indeed, significant coexpression of two or more orthologous genes is very likely due to selective advantage, strongly suggesting a functional relation.
+Therefore, conserved coexpression could be a much stronger criterion than single species coexpression to relate genes involved in similar disease phenotypes.
+In this report we show that conserved coexpression and phenome analysis can be effectively integrated to produce accurate predictions of human disease genes.
+Using this approach we were able to select a small number of strong candidates for 81 human diseases, corresponding to a wide spectrum of different phenotypes.

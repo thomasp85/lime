@@ -1,0 +1,29 @@
+### abstract ###
+Spike timing is precise in the auditory system and it has been argued that it conveys information about auditory stimuli, in particular about the location of a sound source.
+However, beyond simple time differences, the way in which neurons might extract this information is unclear and the potential computational advantages are unknown.
+The computational difficulty of this task for an animal is to locate the source of an unexpected sound from two monaural signals that are highly dependent on the unknown source signal.
+In neuron models consisting of spectro-temporal filtering and spiking nonlinearity, we found that the binaural structure induced by spatialized sounds is mapped to synchrony patterns that depend on source location rather than on source signal.
+Location-specific synchrony patterns would then result in the activation of location-specific assemblies of postsynaptic neurons.
+We designed a spiking neuron model which exploited this principle to locate a variety of sound sources in a virtual acoustic environment using measured human head-related transfer functions.
+The model was able to accurately estimate the location of previously unknown sounds in both azimuth and elevation in a known acoustic environment.
+We found that multiple representations of different acoustic environments could coexist as sets of overlapping neural assemblies which could be associated with spatial locations by Hebbian learning.
+The model demonstrates the computational relevance of relative spike timing to extract spatial information about sources independently of the source signal.
+### introduction ###
+Animals must be able to rapidly estimate the location of the source of an unexpected sound, for example to escape a predator.
+This is a challenging task because the acoustic signals at the two ears vary with both the source signal and the acoustic environment, and information about source location must be extracted independently of other causes of variability.
+Psychophysical studies have shown that source localization relies on a variety of acoustic cues such as interaural time and level differences and spectral cues CITATION.
+At a neuronal level, spike timing has been shown to convey information about auditory stimuli CITATION, CITATION, and in particular about source location CITATION, CITATION.
+Although it is well accepted that ITDs can be extracted from phase-locked responses, it is unknown how information beyond this could be extracted from the spike timing of neurons.
+In addition, the potential computational advantages of a spike timing code in this task are unclear.
+The sound S produced by a source propagates to the ears and is transformed by the presence of the head, body and pinnae, and possibly other aspects of the acoustic environment.
+It results in two linearly filtered signals F L S and F R S at the two ears, where the filtering depends on the relative position of the head and source.
+Because the two signals are obtained from the same source signal, the binaural stimulus has a particular structure, which is indicative of source location.
+When these signals are transformed into spike trains, we expect that this structure is transformed into synchrony patterns.
+Therefore, we examined the synchrony patterns induced by spatialized sounds in neuron models consisting of spectro-temporal filtering and a spiking nonlinearity, where binaural signals were obtained using a variety of sound sources filtered through measured human head-related transfer functions.
+We then complemented the model with postsynaptic neurons responding to both sides, so that synchrony patterns induced by binaural structure resulted in the activation of location-specific assemblies of neurons.
+The model was able to precisely encode the source location in the activation of a neural assembly, in a way that was independent of the source signal.
+Several influential models have addressed the mechanisms of sound localization at an abstract level CITATION CITATION.
+Considerable progress has also been realized in understanding the physiological mechanisms of cue extraction, in particular neural mechanisms underlying ITD sensitivity CITATION CITATION.
+These studies mostly used simplified binaural stimuli such as tones or noise bursts with artificially induced ITDs.
+Several purely computational models CITATION CITATION address the full problem of sound localization in a virtual acoustic environment with realistic sounds, although these do not suggest how neurons might perform this task.
+Here we propose a binaural neural model that performs the full localization task in a more realistic situation, based on the idea that synchrony reflects structural properties of stimuli, which in this setting are indicative of source location.

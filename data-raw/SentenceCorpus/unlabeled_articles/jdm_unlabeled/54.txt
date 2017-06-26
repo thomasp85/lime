@@ -1,0 +1,48 @@
+### abstract ###
+we study individual decision making in a lottery-choice task performed by three different populations  gamblers under psychological treatment    NUMBER  ddicts   gamblers' spouses  victims   and people who are neither gamblers or gamblers' spouses  normals 
+we find that addicts are willing to take less risk than normals  but the difference is smaller as a gambler's time under treatment increases
+the large majority of victims report themselves unwilling to take any risk at all
+however  addicts in the first year of treatment react more than other addicts to the different values of the risk-return parameter
+### introduction ###
+since the late  NUMBER s  individual decision making under risk has been one of the most popular issues studied by economists and psychologists
+on one hand  theoretical analysis  initially undertaken mostly by economists  has framed the basic problem as a generic situation in which individuals choose from a number of probability-outcome pairs
+on the other hand  empirical contributions from both disciplines have adopted a variety of methodologies
+these include questionnaires  economic experiments  and real-world data
+the most salient and intriguing result across all these different methodologies is that decisions in a risky environment are very sensitive to the framing of the choice task and to some individual characteristics
+in this paper  we focus on the effects of problem gambling on individual choice under uncertainty  as a natural field for studying interaction between subjects' characteristics and their observed decision making behavior
+since  CITATION   pathological gambling has been included in the diagnostic and statistical manual of mental disorders published by the american psychiatric association  NUMBER 
+patients with spectrum-related disorders show an intense desire to perform a specific behavior preceded by unpleasant feelings and physiological activation  all of which are relieved when the behavior is performed  CITATION
+thus  several authors consider pathological gambling pg as an obsessive-compulsive spectrum disorder  CITATION
+contrary to this view  other authors argue that gambling is essentially egosyntonic for the patients in all phases of the disorder  in contrast to what happens in the obsessive-compulsive spectrum disorders  where the behavior is consistently egodystonic  CITATION
+moreover  compulsive behaviors include increased evasive behavior  anticipatory anxiety and risk aversion  which are not usually observed in the behavior of pathological gamblers pgs
+this lack of agreement among experts on whether gambling is an egosyntonic or egodystonic disorder could even imply that gamblers may be heterogeneous with respect to their attitudes towards their addiction
+therefore  at a first stage  whether gambling is an egosyntonic or egodystonic disorder would influence the way pgs feel about their condition
+at a second stage  this could interfere with the degree to which they feel more attracted than normal subjects by bets involving riskier options
+therefore  studying whether pgs behave differently from normal subjects in risky decision-making tasks would require isolating the first level of pleasure or discomfort due to being a gambler from the second level of pleasure due to betting on riskier options
+a natural way of obtaining a more homogeneous population of gamblers with respect to their attitude towards their addiction is isolating and studying a population of egodystonic gamblers as are those who have voluntarily decided to quit and participate in a gambler anonymous ga therapy group
+several aspects of pgs' behavior have been studied so far
+such studies are either aimed at shedding light on specific methodological issues that should be accounted for when studying decision making by pgs or are directly addressing the question whether pgs suffer form some kind of cognitive bias
+among different kinds of cognitive bias  the most obvious suspect is probability distortion due to attraction to risky bets  which could yield irrational behavior reflected on higher degrees of risk taking as compared to normal subjects
+along this line are the studies by toneatto   CITATION   gaboury and ladouceur CITATION  and  especially  leopard  CITATION   while goodie  CITATION  adopts a slightly different approach to higher levels of risk taking showing that they are the result of overconfidence
+in this paper  we study risky decisions made by subjects whose lives have been directly affected by pathological gambling and have decided to quit by participating in a therapy group of ga
+furthermore  we study the risk taking behavior of people who are indirectly affected by pathological gambling because they are married to a pathological gambler
+we want to know whether the decisions of the aforementioned groups in an abstract lottery-choice task significantly differ from those taken by  normal  subjects and  if so  in what way
+in order to address this question   NUMBER  subjects played a hypothetical version of the lottery-choice task introduced by sabater  and  georgantz   NUMBER  s   CITATION  and further developed and discussed in georgantz   NUMBER  s et al CITATION
+the task is designed to capture two dimensions of decision making under risk
+first  it can be used to distinguish between risk-averse and risk-neutral risk-loving subjects
+it also measures an individual's degree of risk aversion
+second  the task captures a subject's reaction to different risk premia
+our sample consists of three different subsamples
+the first  labeled  addicts  consists of  NUMBER  pgs attending a gambler anonymous ga session at the annual meeting of the cordobesian association for patholical gamblers acojer
+the second subsample  labeled  victims  consists of  NUMBER  spouses of subjects from the first subsample
+the third subsample consists of  NUMBER  subjects which are our control population  labeled  normals
+sabater  and  georgantz   NUMBER  s  CITATION  and georgantz   NUMBER  s et al CITATION  provide us with a much larger data set obtained with normal student-subjects faced with the same task under different payment methods
+however  given the age difference between students and our two focus groups  we have created this new sample of normal subjects for the sake of comparability
+our results show that addicts exhibit a higher degree of risk aversion than normal individuals  although their behavior tends to convergence towards normals' decision making behavior as the time under treatment increases
+interestingly  victims are even more risk-averse
+in fact  a large percentage of them around  NUMBER  percent  refused to take any risk at all
+a second salient result is that addicts in the first year of treatment appear to be more sensitive to risk-rewarding increases in expected rewards than are all other subjects
+in section  NUMBER   we further discuss our objectives and hypothesis
+in section  NUMBER   we explain the experimental design
+section  NUMBER  summarizes the results and section  NUMBER  contains the conclusions
+the appendix presents an english translation of the instructions

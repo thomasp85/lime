@@ -1,0 +1,26 @@
+### abstract ###
+We present a streaming model for large-scale classification (in the context of  SYMBOL -SVM)  by leveraging connections between learning and computational geometry
+The streaming model imposes the constraint that only a single pass over the data is allowed
+The  SYMBOL -SVM is known to have an equivalent formulation in terms of the minimum enclosing ball (MEB) problem, and an efficient algorithm based on the idea of  core sets  exists (CVM)  CITATION
+CVM learns a  SYMBOL -approximate MEB for a set of points and yields an approximate solution to corresponding SVM instance
+However CVM works in batch mode requiring multiple passes over the data
+This paper presents a single-pass SVM which is based on the minimum enclosing ball of streaming data
+We show that the MEB updates for the streaming case can be easily adapted to learn the SVM weight vector in a way similar to using online stochastic gradient updates
+Our algorithm performs polylogarithmic computation at each example, and requires very small and constant storage
+Experimental results show that, even in such restrictive settings, we can learn efficiently in just one pass and get accuracies comparable to other state-of-the-art SVM solvers (batch and online)
+We also give an analysis of the algorithm, and discuss some open issues and possible extensions
+### introduction ###
+Learning in a streaming model poses the restriction that we are constrained both in terms of time, as well as storage
+Such scenarios are quite common, for example, in cases such as analyzing network traffic data, when the data arrives in a streamed fashion at a very high rate
+Streaming model also applies to cases such as disk-resident large datasets which cannot be stored in memory
+Unfortunately, standard learning algorithms do not scale well for such cases
+To address such scenarios, we propose applying the  stream model  of computation  CITATION  to supervised learning problems
+In the stream model, we are allowed only one pass (or a small number of passes) over an ordered data set, and polylogarithmic storage and polylogarithmic computation per element
+In spite of the severe limitations imposed by the streaming framework, streaming algorithms have been successfully employed in many different domains  CITATION
+Many of the problems in geometry can be adapted to the streaming setting and since many learning problems have equivalent geometric formulations, streaming algorithms naturally motivate the development of efficient techniques for solving (or approximating) large-scale batch learning problems
+In this paper, we study the application of the stream model to the problem of maximum-margin classification, in the context of  SYMBOL -SVMs  CITATION
+Since the support vector machine is a widely used classification framework, we believe success here will encourage further research into other frameworks
+SVMs are known to have a natural formulation in terms of the minimum enclosing ball problem in a high dimensional space  CITATION
+This latter problem has been extensively studied in the computational geometry literature and admits natural streaming algorithms  CITATION
+We adapt these algorithms to the classification setting, provide some extensions, and outline some open issues
+Our experiments show that we can learn efficiently in just one pass and get competetive classification accuracies on synthetic and real datasets

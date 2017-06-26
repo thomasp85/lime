@@ -1,0 +1,26 @@
+### abstract ###
+individual differences in cognitive abilities and skills can predict normatively superior and logically consistent judgments and decisions
+the current experiment investigates the processes that mediate individual differences in risky choices
+we assessed working memory span  numeracy  and cognitive impulsivity and conducted a protocol analysis to trace variations in conscious deliberative processes
+people higher in cognitive abilities made more choices consistent with expected values  however  expected-value choices rarely resulted from expected-value calculations
+instead  the cognitive ability and choice relationship was mediated by the number of simple considerations made during decision making - e g   transforming probabilities and considering the relative size of gains
+results imply that  even in simple lotteries  superior risky decisions associated with cognitive abilities and controlled cognition can reflect metacognitive dynamics and elaborative heuristic search processes  rather than normative calculations
+modes of cognitive control e g   dual process dynamics and implications for process models of risky decision-making e g   priority heuristic are discussed
+### introduction ###
+human decision-making is constrained by its bounded rationality and does not always follow normative prescriptions  CITATION
+nevertheless  individual differences in cognitive abilities and skills predict normatively superior judgment and decision-making  CITATION
+a variety of theories  such as dual-process theories  attribute the individual differences to deliberative processes  CITATION   however  the link between decision processes and abilities is largely uninvestigated
+what are the cognitive processes that give rise to the relationship between cognitive abilities and superior decision making under risk
+previous research has examined individual differences in decision making under risk in lotteries with known probabilities
+for low stakes lotteries normative expected utility processes are assumed to be approximated with calculations that multiply probabilities by potential gains losses  i e   expected-value calculations  CITATION
+frederick has demonstrated that expected-value choices are associated with scores on the cognitive reflection test  which is designed to measure one's reliance on more consciously controlled processes rather than automatic first impressions  CITATION
+the three-problem cognitive reflection test  which is known to correlate with other general cognitive ability measures  consists of mathematical problems for which an immediate intuitive response is incorrect
+frederick demonstrated that higher scoring individuals did not exhibit the clear non-normative risk asymmetry for gains and losses predicted by prospect theory  CITATION
+when given a choice between a gain of   NUMBER  versus a  NUMBER  percent  chance of a   NUMBER  gain  prospect theory predicted risk aversion and the selection of the certain   NUMBER 
+however  people with higher cognitive reflection scores more often selected options with the higher expected values i e   the probability multiplied by the potential risky gain -   NUMBER  as compared to lower scoring individuals
+there are several candidate mechanisms that may account for the link between cognitive abilities and superior decision making under risk
+for example  one can make expected-value choices by performing expected-value calculations
+frederick  CITATION  suggests that computation of expected values may play a role  although he notes that it is not likely the only factor
+more generally  stanovich and west  CITATION  suggest that individual differences in normative judgments and decisions often arise from working memory capacity limitations on computation  implying that high ability individuals may make expected-value choices via expected-value calculations
+other research indicates that individual differences in risky decision making may also arise from variations in one's general knowledge and understanding of probabilities - i e   one's numeracy  CITATION
+people high in numeracy  particularly the ability to comprehend and transform probabilities  are less affected by attribute framing because they can readily transform items such as  NUMBER  percent  correct into  NUMBER  percent  incorrect and translate percentages to frequencies and vice versa

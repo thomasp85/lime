@@ -1,0 +1,40 @@
+### abstract ###
+We describe a preliminary investigation into learning a Chess player's style from game records
+The method is based on attempting to learn features of a player's individual evaluation function using the method of temporal differences, with the aid of a conventional Chess engine architecture
+Some encouraging results were obtained in learning the styles of two recent Chess world champions, and we report on our attempt to use the learnt styles to discriminate between the players from game records by trying to detect who was playing white and who was playing black
+We also discuss some limitations of our approach and propose possible directions for future research
+The method we have presented may also be applicable to other strategic games, and may even be generalisable to other domains where sequences of agents' actions are recorded
+### introduction ###
+In Chess, as in other popular strategic board games, players have different styles
+For example, in Chess some players are more ``positional'' and other more ``tactical'', and this difference in style will affect their move choice in any given board position, and more generally their overall plan
+The problem we tackle in this paper is that of applying machine learning to teach a computer to discriminate between players based on their style
+Before we explain our methodology, we briefly review the method of temporal difference learning, which is central to our approach
+Temporal difference learning  CITATION  is a machine learning technique, originating from the seminal work of Samuel  CITATION , in which learning occurs by minimising the differences between predictions and actual outcomes of a temporal sequence of observations
+Samuel  CITATION  used the game of Checkers as a vehicle to study the feasibility of a computer learning from experience
+Although the program written by Samuel did not achieve master strength, it was the precursor of the Checkers program Chinook  CITATION , which was the first computer program to win a match against a human world champion (See  CITATION  for a detailed, but less technical, description of the machine learning in Samuel's Checkers program )  Tesauro  CITATION  demonstrated the power of this technique by showing that temporal difference learning, combined with using a neural network, can enable a program to learn to play Backgammon at an expert level through self-play
+Following this approach, there have been similar efforts in applying this technique to the games of Chess  CITATION , Go  CITATION , Othello  CITATION  and Chinese Chess  CITATION
+Self-play is time consuming, so it is natural to try to make use of existing game records of strong players to train the evaluation function, as in  CITATION  (in which, however, the temporal difference training did not employ minimax lookahead)
+Learning from game records has also been used in the game of Go  CITATION  to extract patterns for move prediction, using methods other than temporal difference learning
+Here our aim is not necessarily to train a computer to be a competent game player, but rather to teach it to play in the style of a particular player, learning this from records of games played by that player (In principle, the system could learn by interacting with the player but, when sufficient game records exist, learning can generally be accomplished faster and more conveniently off-line ) It is important to note that information available during learning should  not  include any meta-features such as the date when the game was played, the name of the opening variation played, or the result of the game
+All the learning module observes is the sequence of moves played in each game
+Looking at it from a different perspective, we can view the problem as one of classification
+Assume that we train the computer to play in the styles of two Chess players, say Kasparov and Kramnik
+The problem can then be reformulated as follows: by inspecting the record of a game played between Kasparov and Kramnik, can the computer detect, with some confidence, which player was playing with the white pieces and which with the black pieces
+At an even higher level, the problem can be recast as a Turing test for Chess  CITATION , where a computer may fool a human that it is a human player
+In some sense this may already be true for the strongest available computer Chess programs  CITATION , as computers have already surpassed humans in their playing strength, mainly due to increased computing power and relying on brute-force calculations
+Moreover, there seems to be a high correlation between the choices made by top human chess Grandmasters and world class chess engines (see  CITATION )
+We will not discuss the Turing test debate further and, from now on, we will concentrate on the classification problem within the domain of Chess
+As far as we know, this is a new problem, and in this paper we suggest tackling it using temporal difference learning
+All previous uses of temporal difference learning in games (some of which are cited above) attempt to learn the weights of an evaluation function in order to improve the play of a computer program
+In our scenario we still attempt to learn the weights of an evaluation function, but the objective is to imitate the style of a given player rather than improve the program's play
+Of course, if the player under consideration is very strong, for example Kasparov or Kramnik, then the resulting program is likely to improve; but the method could also be used to learn the evaluation functions of weaker players
+The learning algorithm described in Section~, based on Sutton's TD(0)  CITATION , corresponds to the simplest rule, which updates only the current predictions
+We note that a more general formulation proposed by Sutton is TD( SYMBOL ); this utilises a decay factor  SYMBOL  between 0 and 1, and forces the algorithm to also take into account earlier predictions
+To accelerate the training, we utilise both an adaptive learning rate and a momentum term  CITATION , as we describe in Subsection~
+In Section~ we present a proof of concept, where we attempt to learn the styles of two recent Chess world champions, Kasparov and Kramnik, and we make use of the learnt feature weights to guess, in a game played between the two players, who was white and who was black
+Despite some encouraging results, there are also some fundamental limitations of our approach for defining a player's ``style''
+In particular, as pointed out to us by Chess Grandmaster Pablo San Segundo  CITATION , our choice of features (described in Subsection~) is probably too low-level, since all strong players seek to optimise the  placement of their pieces and maintain a combination of pieces according to sound tactical and positional criteria
+On a higher level, it is tempting to classify Kasparov as a more ``tactical'' player and Kramnik as a more ``positional'' player
+However, these concepts are difficult to formulate in a precise manner and, moreover, it is not clear how to translate them into an algorithmic framework
+We discuss these and other issues in Subsection~
+In Section~ we give our concluding remarks

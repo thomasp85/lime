@@ -1,0 +1,46 @@
+### abstract ###
+Building rules on top of ontologies is the ultimate goal of the logical layer of the Semantic Web
+To this aim an ad-hoc mark-up language for this layer is currently under discussion
+It is intended to follow the tradition of hybrid knowledge representation and reasoning systems such as  SYMBOL -log that integrates the description logic  SYMBOL  and the function-free Horn clausal language \textsc{Datalog}
+In this paper we consider the problem of automating the acquisition of these rules for the Semantic Web
+We propose a general framework for rule induction that adopts the methodological apparatus of Inductive Logic Programming and relies on the expressive and deductive power of  SYMBOL -log
+The framework is valid whatever the scope of induction (description vs prediction) is
+Yet, for illustrative purposes, we also discuss an instantiation of the framework which aims at description and turns out to be useful in Ontology Refinement
+### introduction ###
+During the last decade increasing attention has been paid on  ontologies  and their role in Knowledge Engineering  CITATION
+In the philosophical sense, we may refer to an ontology as a particular system of categories accounting for a certain vision of the world
+As such, this system does not depend on a particular language: Aristotle's ontology is always the same, independently of the language used to describe it
+On the other hand, in its most prevalent use in Artificial Intelligence, an ontology refers to an engineering artifact (more precisely, produced according to the principles of  Ontological Engineering   CITATION ), constituted by a specific vocabulary used to describe a certain reality, plus a set of explicit assumptions regarding the intended meaning of the vocabulary words
+This set of assumptions has usually the form of a first-order logical theory, where vocabulary words appear as unary or binary predicate names, respectively called concepts and relations
+In the simplest case, an ontology describes a hierarchy of concepts related by subsumption relationships; in more sophisticated cases, suitable axioms are added in order to express other relationships between concepts and to constrain their intended interpretation
+The two readings of ontology described above are indeed related each other, but in order to solve the terminological impasse the word conceptualization is used to refer to the philosophical reading as appear in the following definition, based on  CITATION :  An ontology is a formal explicit specification of a shared conceptualization for a domain of interest
+Among the other things, this definition emphasizes the fact that an ontology has to be specified in a language that comes with a formal semantics
+Only by using such a formal approach ontologies provide the machine interpretable meaning of concepts and relations that is expected when using an ontology-based approach
+Among the formalisms proposed by Ontological Engineering, the most currently used are  Description Logics  (DLs)  CITATION
+Note that DLs are decidable fragments of First Order Logic (FOL) that are incomparable with Horn Clausal Logic (HCL) as regards the expressive power  CITATION  and the semantics  CITATION  } Ontology Engineering, notably its DL-based approach, is playing a relevant role in the definition of the  Semantic Web
+The Semantic Web is the vision of the World Wide Web enriched by machine-processable information which supports the user in his tasks  CITATION
+The architecture of the Semantic Web is shown in Figure
+It consists of several layers, each of which is equipped with an ad-hoc mark-up language
+In particular, the design of the mark-up language for the  ontological layer , OWL}, has been based on the very expressive DL  SYMBOL   CITATION
+Whereas OWL is already undergoing the standardization process at W3C, the debate around a unified language for  rules  is still ongoing
+Proposals like SWRL} extend OWL with constructs inspired to Horn clauses in order to meet the primary requirement of the  logical layer : 'to build rules on top of ontologies'
+SWRL is intended to bridge the notorious gaps between DLs and HCL in a way that is similar in the spirit to hybridization in Knowledge Representation and Reasoning (KR\&R) systems such as  SYMBOL -log  CITATION
+Generally speaking,  hybrid systems  are KR\&R systems which are constituted by two or more subsystems dealing with distinct portions of a single knowledge base by performing specific reasoning procedures  CITATION
+The motivation for investigating and developing such systems is to improve on two basic features of KR\&R formalisms, namely  representational adequacy  and  deductive power , by preserving the other crucial feature, i e decidability
+In particular, combining DLs with HCL can easily yield to undecidability if the interface between them is not reduced  CITATION
+The hybrid system  SYMBOL -log integrates  SYMBOL   CITATION  and \textsc{Datalog}  CITATION  by using  SYMBOL  concept assertions essentially as type constraints on variables
+It has been very recently mentioned as the blueprint for  well-founded  Semantic Web rule mark-up languages because its underlying form of integration (called  safe ) assures semantic and computational advantages that SWRL - though more expressive than  SYMBOL -log - currently can not assure  CITATION
+Defining rules (including the ones for the Semantic Web) has been usually considered as a demanding task from the viewpoint of Knowledge Engineering
+It is often supported by Machine Learning algorithms that can vary in the approaches
+The approach known under the name of Inductive Logic Programming (ILP) seems to be promising for the case at hand due to the common roots with Logic Programming  CITATION
+ILP has been historically concerned with rule induction from examples and background knowledge within the representation framework of HCL and with the aim of prediction  CITATION
+More recently ILP has moved towards either different FOL fragments (e g , DLs) or new learning goals (e g , description)
+In this paper we resort to the methodological apparatus of ILP to define a  general  framework for learning rules on top of ontologies for the Semantic Web within the KR\&R framework of  SYMBOL -log
+The framework proposed is general in the sense that it is valid whatever the scope of induction (description vs prediction) is
+For the sake of illustration we concentrate on an instantiation of the framework for the case of description
+The paper is organized as follows
+Section  introduces the basic notions of  SYMBOL -log
+Section  defines the framework for learning rules in  SYMBOL -log
+Section  illustrates an instantiation of the framework
+Section  concludes the paper with final remarks
+clarifies the links between OWL and DLs

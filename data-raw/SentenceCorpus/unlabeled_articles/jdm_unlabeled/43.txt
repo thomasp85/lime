@@ -1,0 +1,36 @@
+### abstract ###
+individuals are generally reluctant to trade goods-a phenomenon identified as the endowment effect
+this paper focuses on consumers' puzzling reluctance to exchange gambles  and in particular lottery tickets with identical distribution i e   same odds of winning  and identifies the ticket's vividness as an important moderator
+three studies demonstrate that individuals are more willing to exchange less vivid lottery tickets e g   tickets concealed in envelopes  or tickets with an unknown number compared to more vivid tickets e g   tickets not concealed in envelopes  or tickets with a known number when offered an incentive to exchange
+moreover  this effect is mediated by anticipated regret  such that less regret is anticipated when exchanging less vivid tickets  thus increasing individuals' willingness to exchange tickets
+### introduction ###
+throughout our lives we gamble
+some gambles are explicit  like horse races or lottery tickets
+others  like purchasing a house  getting on a plane  or getting married are more implicit
+once we have either chosen or received a gamble  we await the outcome
+would we willingly exchange one gamble for another  or would we rather stick to what we got simply because it is ours  or for fear of  tempting fate 
+imagine  for example  that you have received a lottery ticket in a sealed envelope
+you are then offered a   NUMBER  bonus to exchange your ticket for another ticket  with an identical distribution
+what would you do
+the rational thing is to exchange the tickets  since a ticket-plus-  NUMBER  is more valuable than a ticket
+but  would you
+would your decision to exchange be different if the ticket was not in a sealed envelope
+the endowment effect literature  CITATION  would predict that people would not be willing to exchange due to the loss experienced from giving up a pre-owned object  CITATION
+however  trade between identical goods should not evoke such a loss  and indeed  most people would exchange  for example  one pen for an identical pen  CITATION  or one candy for an identical one  CITATION  when offered a small incentive to do so
+in contrast  people are generally reluctant to exchange lottery tickets with identical distribution  i e   tickets with an equal chance of winning  even when offered an incentive to do so  CITATION
+according to bar-hillel and neter  CITATION  it is the anticipation of ex-post regret from exchanging the ticket and losing the lottery that prevents people from exchanging
+understanding willingness to exchange gambles is important  since many of our everyday choices can be represented as such-purchasing insurance  purchasing new  innovative products  going to an unfamiliar restaurant  or choosing a seat on a plane
+for example  by going to an unfamiliar restaurant  or by ordering an exotic  non-traditional entree  one is gambling the quality of the food and the nature of experience in that restaurant
+once people have chosen a gamble  let it be a restaurant  an entree  or insurance plan  would they be reluctant to trade them  as they would be when offered to trade other goods
+this paper investigates a potential moderator to the reluctance to exchange such gambles  namely  their vividness
+specifically  i propose that more vivid gambles evoke more thoughts about the consequences of playing out that gamble  which in turn induce greater anticipated regret when offered to exchange
+that is  when it is easy to imagine the consequences of the gamble e g   winning a lottery  one is likely to anticipate greater regret from exchanging that gamble and possibly changing the consequences of the gamble e g   losing the lottery as a result of the exchange
+as a result  this greater anticipated regret reduces the likelihood of exchanging gambles
+for example  when deciding among unfamiliar restaurants  being close to the restaurant as opposed to deciding when still at home  increases the vividness of the restaurants  making regret more salient  which in turn reduces likelihood of switching from one gamble  i e   restaurant  to another  even when offered an incentive to switch e g   a promotional offer
+this paper focuses on a specific type of gambles  namely lottery tickets
+it is proposed that less vivid tickets evoke fewer thoughts about the tickets potentially winning the lottery and make it harder imagining the ticket winning
+as a result  these less vivid tickets evoke less anticipated regret from exchanging and thus possibly losing the lottery
+this reduced anticipated  ex-post  regret  leads in turn to increased willingness to exchange the less vivid tickets
+the next section reviews the literature on the endowment effect  regret  and vividness
+then  i present three studies that test the effect of ticket's vividness on amount and nature of winning-related thoughts study  NUMBER  and on willingness to exchange the tickets studies  NUMBER  and  NUMBER   using two types of lotteries and two manipulations of vividness
+study  NUMBER  additionally tests the mediating role of anticipated regret when analyzing the effect of tickets' vividness on willingness to exchange them

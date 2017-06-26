@@ -1,0 +1,25 @@
+### abstract ###
+AIMX	we propose a nonparametric bayesian factor regression model that accounts for uncertainty in the number of factors  and the relationship between factors
+OWNX	to accomplish this  we propose a sparse variant of the indian buffet process and couple this with a hierarchical model over factors  based on kingman s coalescent
+AIMX	we apply this model to two problems  factor analysis and factor regression  in gene expression data analysis
+### introduction ###
+MISC	factor analysis is the task of explaining data by means of a set of  latent factors
+MISC	factor  regression  couples this analysis with a prediction task  where the predictions are made solely on the basis of the factor representation
+MISC	the latent factor representation achieves two fold benefits    NUMBER   discovering the latent  process  underlying the data    NUMBER   simpler predictive modeling through a compact data representation
+MISC	in particular    NUMBER   is motivated by the problem of prediction in the    large p small n    paradigm  CITATION   where the number of features   greatly exceeds the number of examples    potentially resulting in overfitting
+CONT	we address three fundamental shortcomings of standard factor analysis approaches  CITATION     NUMBER   we do not assume a known number of factors    NUMBER   we do not assume factors are independent    NUMBER   we do not assume all features are relevant to the factor analysis
+AIMX	our motivation for this work stems from the task of reconstructing regulatory structure from gene expression data
+MISC	in this context  factors correspond to regulatory pathways
+AIMX	our contributions thus parallel the needs of gene pathway modeling
+OWNX	in addition  we couple predictive modeling  for factor regression  within the factor analysis framework itself  instead of having to model it separately
+OWNX	our factor regression model is fundamentally nonparametric
+OWNX	in particular  we treat the gene to factor relationship nonparametrically by proposing a sparse variant of the indian buffet process  ibp   CITATION   designed to account for the sparsity of relevant genes  features 
+OWNX	we  couple  this ibp with a hierarchical prior over the factors
+OWNX	this prior explains the fact that pathways are fundamentally related  some are involved in transcription  some in signaling  some in synthesis
+OWNX	the nonparametric nature of our sparse ibp requires that the hierarchical prior  also  be nonparametric
+BASE	a natural choice is kingman s coalescent  CITATION   a popular distribution over infinite binary trees
+OWNX	since our motivation is an application in bioinformatics  our notation and terminology will be drawn from that area
+OWNX	in particular   genes  are  features    samples  are  examples   and  pathways  are  factors
+CONT	however  our model is more general
+OWNX	an alternative application might be to a collaborative filtering problem  in which case our genes might correspond to movies  our samples might correspond to users and our pathways might correspond to genres
+OWNX	in this context  all three contributions of our model still make sense  we do not know how many movie genres there are  some genres are closely related  romance to comedy versus to action   many movies may be spurious

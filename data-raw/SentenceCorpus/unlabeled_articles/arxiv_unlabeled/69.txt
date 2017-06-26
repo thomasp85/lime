@@ -1,0 +1,24 @@
+### abstract ###
+Bounds on the risk play a crucial role in statistical learning theory
+They usually involve as capacity measure of the model studied the VC dimension or one of its extensions
+In classification, such ``VC dimensions'' exist for models taking values in  SYMBOL ,  SYMBOL  and  SYMBOL
+We introduce the generalizations appropriate for the missing case, the one of models with values in  SYMBOL
+This provides us with a new guaranteed risk for M-SVMs which appears superior to the existing one
+### introduction ###
+Vapnik's statistical learning theory~ CITATION  deals with three types of problems: pattern recognition, regression estimation and density estimation
+However, the theory of bounds has primarily been developed for the computation of dichotomies only
+Central in this theory is the notion of ``capacity'' of classes of functions
+In the case of binary classifiers, the measure of this capacity is the famous Vapnik-Chervonenkis (VC) dimension
+Extensions have also been proposed for real-valued bi-class models and multi-class models taking theirs values in the set of categories
+Strangely enough, no generalized VC dimension was available so far for  SYMBOL -category classifiers taking their values in  SYMBOL
+This was all the more unsatisfactory as many classifiers exhibit this property, such as the multi-layer perceptrons, or the multi-class support vector machines (M-SVMs)
+In this paper, the scale-sensitive  SYMBOL -dimensions are introduced to fill this gap
+A generalization of Sauer's lemma  CITATION  is given,  which relates the covering numbers appearing in the standard guaranteed risk for large margin multi-category discriminant models to one of these dimensions, the margin Natarajan dimension
+This latter dimension is then bounded from above for the architecture shared by all the M-SVMs proposed so far
+This provides us with a sharper bound on their sample complexity
+The organization of the paper is as follows
+Section~ introduces the basic bound on the risk of large margin multi-category discriminant models
+In Section~, the scale-sensitive  SYMBOL -dimensions are defined, and the generalized Sauer lemma is formulated
+The upper bound on the margin Natarajan dimension of the M-SVMs is then described in Section~
+For lack of space, proofs are omitted
+They can be found in  CITATION

@@ -1,0 +1,53 @@
+### abstract ###
+an intrapersonal externality exists when an individual's decisions affect the outcomes of her future decisions
+it can result in decreasing or increasing average returns to the rate of consumption  as occurs in addiction or exercise
+experimentation using the harvard game  which models intrapersonal externalities  has found differences in decision making between drug users and control subjects  leading to the argument that these externalities influence the course of illicit drug use
+nevertheless  it is unclear how participants who behave optimally conceptualise the problem
+we report two experiments using a simplified harvard game  which tested the differences in contingency knowledge between participants who chose optimally and participants who did not
+those who demonstrated optimal performance exhibited both a pattern of correct responses and systematic errors to questions about the payoff schedules
+the pattern suggested that they learned explicit knowledge of the change in reinforcement on a trail-by-trial basis
+they did not have  or need  a full knowledge of the historical interaction leading to each payoff
+we also found no evidence of choice differences between participants who were given a guaranteed payment and participants who were paid contingent on their performance  but those given a guaranteed payment were able to report more contingency knowledge as the experiment progressed  suggesting that they explored more rather than settling into a routine
+experiment  NUMBER  showed that using a fixed inter-trial interval did not change the results
+### introduction ###
+experiments have long suggested that when humans make decisions they sometimes ignore even major consequences
+in some situations  consequences are systematically ignored
+one such situation is that of intrapersonal externalities  CITATION   where changes to the utility of options available to the future self are not taken into account when making a decision  in the same way that externalities in economics refer to situations in which consequences to others are not taken into account when individuals make decisions
+overlooked intrapersonal externalities lead to an under-investment in activities that exhibit increasing average returns to the rate of consumption for example  exercise becomes increasingly rewarding with increased practice  and also has positive effects on how rewarding other life activities are  and an over-investment in activities that exhibit decreasing average returns to the rate of consumption use of addictive substances becomes decreasingly rewarding with increased use  and also negatively effects the perceived rewards from other life activities
+in an experiment reported by herrnstein and colleagues  CITATION   participants were presented with a repeated binary choice task using payoff schedules similar to those shown in figure  NUMBER 
+the payoff from each choice was determined by the proportion of the previous ten choices that was allocated to each option  where choosing the optimal long-term option would lead to a lower immediate payoff but would slightly increase the payoff from both options over each of the next ten trials  leading to a higher overall payoff
+conversely  choosing the optimal short-term option would lead to a higher immediate payoff but would decrease the payoff over the next ten trials  relative to the optimal option
+consistently choosing the long-term option ultimately leads to the highest payoff  although on any single trial the short-term option would give the greatest number of points
+the authors found that most participants did not learn to optimise their behaviour  choosing instead the option with the greatest short-term payoff
+herrnstein and vaughan  CITATION  suggested that choices are made according to the principle of melioration  in which the global rate of reinforcement is ignored
+it is not new to postulate that addicts do not fully take into account internalities  although past models have generally used hyperbolic time discounting as the theoretical reason for inconsistent preferences  CITATION
+nevertheless  the  ecological validity of intrapersonal externalities was supported by heyman and dunn  CITATION   who found that patients recovering in drug-clinics were more likely to choose sub-optimally than control participants  suggesting that addicts may be worse than others in taking into account the full consequences of their decisions
+further evidence for the link between intrapersonal externalities and addictions has come from neuropsychological research  which found that the level of prefrontal brain activity is associated with performance in the task  CITATION
+this is the same area that is implicated in studies using the iowa gambling task  CITATION   which is related to abuse of various substances  including alcohol and stimulants  CITATION
+this suggests that intervention at this behavioural level could be effective in reducing addictive behaviour if a method were found to improve decisions on tasks involving intrapersonal externalities
+a series of laboratory experiments has tried without success to guide participants to choose optimally
+warry  remington and sonuga-barke  CITATION  attempted to reduce the motivation for participants to choose sub-optimally by reducing the immediate differential between the two options
+they found that this helped  however by the end of their experiment participants were still choosing around chance levels and the authors noted that extrapolation of their data suggested that participants would reach asymptote at a level that was non-optimal
+two experiments have also attempted to guide participants' explicit understanding of the payoff schedules by providing a fairly explicit hint on how participants could maximize their payoffs
+herrnstein and colleagues  CITATION  found that choices were only briefly improved by the hint but soon returned to sub-optimal levels
+kudadjie-gyamfi and rachlin  CITATION  provided a similar hint  but found no corresponding improvement at all
+nevertheless  tunney and shanks  CITATION  showed that participants could overcome sub-optimal behaviour  as long as they were given regular feedback about how their behaviour compared to the optimal outcome  and they were given around  NUMBER   NUMBER  trials to learn the schedules
+this suggests that suboptimal choices in the harvard game are not a stable decision-making bias  but rather due to a failure to fully learn the payoff schedules
+normally in experiments studying intrapersonal externalities participants' choices either affect the number of points gained  CITATION  or the number of choices remaining until the end of the experiment  CITATION
+however stillwell and tunney  CITATION  modified the schedules so that both the number of points gained and the number of choices remaining until the end of the experiment were affected by participants' choices
+this allowed the two outcomes from each decision to be separated so that the immediate effects were visible through the number of points gained on each trial  and the number of choices remaining until the end of the experiment decreased at differing rates depending upon the participant's history of choices
+in other words  choosing myopically led to earning high payoffs through the experiment  but ultimately the experiment ended prematurely and the participant lost the opportunity to earn further payoffs
+separating the consequences from each decision made the outcomes of each decision more easily discernible  and so participants learned to choose optimally much earlier than in previous experiments
+this also hints that suboptimal behaviour in the task is a failure to fully understand the payoff schedules
+in nature the outcomes from choices that are made may not be so easily divided into separate simple categories
+so  if the results from  laboratory intrapersonal externality experiments are to be useful in understanding the suboptimal decision-making that occurs in addictions  the process whereby participants learn to choose optimally in the simpler version needs to be understood
+one process could be the result of conscious insight into the payoff schedules that participants are able to report
+this mirrors research into the iowa gambling task which found that participants were able to explicitly report their understanding of the task  CITATION
+the present experiments attempted to test explicit knowledge of the payoff schedules  to find out what participants who behave optimally are able to report about the payoff schedules
+the experiments tested participants' knowledge by asking a series of questions designed to cover every scenario in the task
+they used a quantitative test of participants' understanding  as these have been shown to be more sensitive than qualitative tests  CITATION
+the experiments also tested whether making participants' payment contingent on the number of points that they gained during the task had an effect on their choices
+particularly in the economics literature it is seen as crucial to incentivize participants in this way  CITATION
+participants in the contingent condition were paid based on the number of points they earned  whereas those in the certain condition were paid a fixed amount
+it is possible that giving points-contingent payments could cause participants to have more motivation and thus gain more points  or that participants would not explore as fully as they would otherwise and so would settle on a suboptimal strategy leading to fewer points  CITATION
+if  however  it is not a motivation failure that leads to poor performance on experiments using intrapersonal externalities  but rather the cognitive failure to understand the payoff schedules  then a difference might not be expected

@@ -1,0 +1,18 @@
+### abstract ###
+individual differences in decision making are a topic of longstanding interest  but often yield inconsistent and contradictory results
+after providing an overview of individual difference measures that have commonly been used in judgment and decision-making jdm research  we suggest that our understanding of individual difference effects in jdm may be improved by amending our approach to studying them
+we propose four recommendations for improving the pursuit of individual differences in jdm research  a more systematic approach  more theory-driven selection of measures  a reduced emphasis on main effects in favor of interactions between individual differences and decision features  situational factors  and other individual differences  and more extensive communication of results whether significant or null  published or unpublished
+as a first step  we offer our database-the decision making individual differences inventory dmidi  html   www
+dmidi
+net  a free  public resource that categorizes and describes the most common individual difference measures used in jdm research
+### introduction ###
+how much of human behavior including judgments and decisions is due to the  person  versus the  situation 
+this question dates back to ancient greece e g   aristotle's tabula rasa vs plato's divinely preformed mind
+today the debate continues amid increasing evidence that the answer is neither one  CITATION  nor the other  CITATION   but rather the two in combination  CITATION
+further evidence against simple  one-or-the-other approaches comes from the emerging field of epigenetics  which documents biochemical mechanisms through which environmental conditions regulate gene expression  CITATION
+nevertheless individual differences continue to be widely used as explanatory variables  in everything from risk aversion in economics  CITATION  to animal personality in biology  CITATION
+we argue that the persistent emphasis on a large range of individual differences as main effects in the field of judgment and decision making jdm is outdated
+thus  we propose four guidelines for the more productive pursuit of individual differences research within jdm  a more systematic approach  a shift toward theoretically relevant measures  a greater emphasis on interactions  and more extensive communication of results
+we offer our decision making individual differences inventory dmidi  http   www
+dmidi
+net  a free online database  as a tool to help accomplish these aims

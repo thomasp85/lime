@@ -1,0 +1,42 @@
+### abstract ###
+the recognition heuristic  CITATION  suggests that  when applicable  probabilistic inferences are based on a noncompensatory examination of whether an object is recognized or not
+the overall findings on the processes that underlie this fast and frugal heuristic are somewhat mixed  and many studies have expressed the need for considering a more compensatory integration of recognition information
+regardless of the mechanism involved  it is clear that recognition has a strong influence on choices  and this finding might be explained by the fact that recognition cues arouse affect and thus receive more attention than cognitive cues
+to test this assumption  we investigated whether recognition results in a direct affective signal by measuring physiological arousal i e   peripheral arterial tone in the established city-size task
+we found that recognition of cities does not directly result in increased physiological arousal
+moreover  the results show that physiological arousal increased with increasing inconsistency between recognition information and additional cue information
+these findings support predictions derived by a compensatory parallel constraint satisfaction model rather than predictions of noncompensatory models
+additional results concerning confidence ratings  response times  and choice proportions further demonstrated that recognition information and other cognitive cues are integrated in a compensatory manner
+### introduction ###
+imagine a business trip to a city you have never visited before
+your meetings end later than you had expected and you decide to spend the night
+you make a few phone calls and find two hotels with vacancies  both at a similar rate
+you know nothing else about these hotels  however  you do recognize the name of one of them
+which hotel would you choose
+according to goldstein and gigerenzer  CITATION   these kinds of probabilistic inferences could be resolved by recognition information alone
+more specifically  according to gigerenzer and colleagues  CITATION   individuals are equipped with several tools i e   fast and frugal heuristics that exploit the structure of the environment  some of which rely solely on one piece of information at a time on the road to reaching a decision
+the recognition heuristic rh  the simplest and one of the most prototypical tools in this toolbox  suggests that probabilistic inferences about a specific criterion e g   which of two cities is more populated  are made on the basis of recognition alone  so that recognized objects e g   the name of the city will be chosen over unrecognized ones
+indeed  it has been shown repeatedly that people actually prefer recognized objects over unrecognized ones  and that such behavior may lead to rather accurate inferences  CITATION
+nevertheless  several studies challenge the claim that recognition information is used in a noncompensatory manner as predicted by the rh  CITATION
+for example  in oppenheimer  CITATION   broder and eichler  CITATION   and richter and spath  CITATION   additional information has been found to affect the proportion of choices that followed recognition
+while it has been argued that several of these studies suffer from methodological limitations  CITATION   their findings nonetheless highlight the need for considering a more compensatory integration of recognition information
+moreover  studies on the rh have focused mainly on choice behavior
+yet  since the choice predictions made by different models often overlap  CITATION   it is difficult to draw clear conclusions concerning the underlying cognitive processes
+several recent studies have attempted to address this problem  for example by testing hypotheses concerning process measures such as decision time  CITATION   and by additionally investigating confidence glockner  and  broder  in press
+yet  additional research is needed to disentangle the role of recognition information in decision making  as well as to examine the cognitive processes underlying its use in inferences and choice behavior
+to achieve these goals  we investigated the nature of the processes underlying the use of recognition information in probabilistic inferences  using physiological arousal  choice proportions  decision times  and confidence as dependent measures
+we derived concurring predictions on the basis of a noncompensatory perspective  and juxtapose these with contradicting predictions derived from a compensatory model
+specifically  we investigate whether recognition leads to increased physiological arousal  which dominates other cognitive information  as suggested by affect-based noncompensatory models  CITATION
+it has been argued that recognition information  like other affective signals  might be generated automatically  CITATION   and that it may override cognitive information  CITATION
+thus  we examined whether recognition information is affectively encoded during the decision process
+we tested the rh against the compensatory parallel constraint satisfaction pcs model for decision making  CITATION
+the pcs model was selected because it has been shown to account well for decision times  CITATION  and confidence glockner  and  broder  in press in recognition tasks  and because it makes specific predictions concerning physiological arousal
+the pcs model assumes that information integration is based on automatic-intuitive processes - akin to perception  CITATION  - by which consistent interpretations of decision tasks are constructed
+available information is taken into account according to its importance  and the advantages of the emerging preferred option are highlighted by systematic information distortions  CITATION
+the formalized pcs model includes four possible steps
+first  when presented with a decision task  related information is activated to form a mental representation of the task
+second  automatic processes of pcs lead to maximization of consistency by automatically highlighting information supporting the favored alternative and at the same time suppressing contradicting information
+as a result  a consistent representation of the available information is formed
+third  the decision maker evaluates the choice alternatives  and if one alternative clearly dominates the other i e   if there is enough information in favor of this alternative  this alternative is chosen
+however  if information consistency fails to reach a certain threshold  the decision maker takes a forth step  in which deliberate construction processes are activated to change the structure of the network e g   changing the pattern of information search  assigning different weights to the different pieces of information
+among other things  the pcs model is supported by research that shows that unconscious modifications of the available information occur during decision processes  CITATION

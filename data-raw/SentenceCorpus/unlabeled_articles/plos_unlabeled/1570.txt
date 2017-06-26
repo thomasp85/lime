@@ -1,0 +1,60 @@
+### abstract ###
+The cerebral cortex is divided into many functionally distinct areas.
+The emergence of these areas during neural development is dependent on the expression patterns of several genes.
+Along the anterior-posterior axis, gradients of Fgf8, Emx2, Pax6, Coup-tfi, and Sp8 play a particularly strong role in specifying areal identity.
+However, our understanding of the regulatory interactions between these genes that lead to their confinement to particular spatial patterns is currently qualitative and incomplete.
+We therefore used a computational model of the interactions between these five genes to determine which interactions, and combinations of interactions, occur in networks that reproduce the anterior-posterior expression patterns observed experimentally.
+The model treats expression levels as Boolean, reflecting the qualitative nature of the expression data currently available.
+We simulated gene expression patterns created by all FORMULA possible networks containing the five genes of interest.
+We found that only FORMULA of these networks were able to reproduce the experimentally observed expression patterns.
+These networks all lacked certain interactions and combinations of interactions including auto-regulation and inductive loops.
+Many higher order combinations of interactions also never appeared in networks that satisfied our criteria for good performance.
+While there was remarkable diversity in the structure of the networks that perform well, an analysis of the probability of each interaction gave an indication of which interactions are most likely to be present in the gene network regulating cortical area development.
+We found that in general, repressive interactions are much more likely than inductive ones, but that mutually repressive loops are not critical for correct network functioning.
+Overall, our model illuminates the design principles of the gene network regulating cortical area development, and makes novel predictions that can be tested experimentally.
+### introduction ###
+The mammalian cerebral cortex is a complex but extremely precise structure.
+In adult, it is divided into several functionally distinct areas characterised by different combinations of gene expression, specialised cytoarchitecture and specific patterns of input and output connections.
+But how does this functional specification arise?
+There is strong evidence that both genetic and activity-dependent mechanisms play a role in the development of these specialised areas, a process also referred to as arealisation.
+A genetic component is implicated by the spatial non-uniformity of expression of some genes prior to thalamocortical innervation, as well as the fact that altering expression of some genes early in development changes area position in adult CITATION CITATION.
+On the other hand, manipulating thalamocortical inputs, and hence activity from the thalamus, can alter area size or respecify area identity CITATION, CITATION, CITATION.
+These results are accommodated in a current working model of cortical arealisation as a multi-stage process where initial broad spatial patterns of gene expression provide a scaffold for differential thalamocortical innervation CITATION.
+Patterned activity on thalamocortical inputs then drives more complex and spatially restricted gene expression which, in turn, regulates further area specific differentiation.
+This paper focuses on the earliest stage of arealisation: how patterns of gene expression form early in cortical development.
+Experiments have identified many genes expressed embryonically that are critical to the positioning of cortical areas in adult.
+Although arealisation occurs in a two-dimensional field, most experiments focus on anterior-posterior patterning and hence, here we concentrate on patterning along this axis.
+From around embryonic day 8 in mouse, the morphogen Fgf8 is expressed at the anterior pole of the developing telencephalon CITATION, CITATION, CITATION, CITATION CITATION.
+Immediately after Fgf8 expression is initiated in mouse, four transcription factors, Emx2, Pax6, Coup-tfi and Sp8 are expressed in gradients across the surface of the cortex CITATION, CITATION, CITATION, CITATION, CITATION.
+These four TFs are an appealing research target because their complementary expression gradients could provide a unique coordinate system for arealisation CITATION, equivalent to positional information CITATION, CITATION.
+Altered expression of each of Fgf8 and the four TFs shifts area positions in late embryonic stages and in adult CITATION CITATION ; CITATION.
+Furthermore, during development, altered expression of each of these genes up- or down-regulates expression of some other genes in the set along the anterior-posterior axis.
+A large cohort of experiments has given rise to a hypothesised network of regulatory interactions between these five genes.
+However, only one of these interactions has been directly demonstrated CITATION and no analysis has been performed at the systems level.
+Interacting TFs are known to be able to form regulatory networks that drive differential spatial development, fulfilling a role for which morphogens are better known CITATION, CITATION.
+Feedback loops are the crucial feature that enable the generation of spatial patterns of expression of the genes in the network.
+Since TFs regulate the expression of other genes, local differences in expression of a set TFs are a powerful method of generating spatial patterns of growth, differentiation and expression of guidance cues, and developing more complex patterns of gene expression.
+The arealisation genes form a regulatory network with many feedback loops which is in principle capable of generating spatial patterns.
+Establishing which interactions are critical for correct arealisation is of great interest to the field, but current experimental approaches are limited in their ability to quickly assay the importance of each particular interaction.
+Computational modelling of gene regulatory networks is necessary because their complex behaviour is difficult to understand intuitively.
+In addition, it offers several other benefits.
+Currently, the many hypothesised interactions between arealisation genes are represented as arrow diagrams like that seen in Figure 2A.
+Because intuition tends to follow simple causal chains, the presence of many feedback loops makes intuition about the overall behaviour of complex systems unreliable CITATION CITATION.
+Consequently, a more formal description than an arrow diagram would test the current conceptual model, and has the potential to give greater understanding and insight, as it has done for many other regulatory networks CITATION CITATION, CITATION CITATION.
+The unambiguous descriptions found in mathematical and computational models offer the added benefit of making assumptions explicit and therefore allowing greater scrutiny CITATION.
+Computational experiments can also be performed quickly and cheaply relative to laboratory experiments and consequently can be useful for conducting thought experiments which can then be tested experimentally CITATION, CITATION.
+In this way, computational modelling and experiments can spur each other on so that both are improved in a synergistic manner CITATION .
+Here, we use the Boolean logical approach to model the arealisation regulatory network.
+In this approach, variables representing genes and proteins can take only two values, zero or one, representing gene and protein activity being below or above some threshold for an effect.
+While continuous models are more realistic, they have many free parameters which are hard to constrain from experimental data, and offer a formidable computational challenge to investigate systematically.
+In contrast, Boolean models can be used when only qualitative expression and interaction data are available, as is the case for arealisation.
+In Boolean models, at each point in time, the state of a variable depends on the state of its regulators at the previous time step.
+A set of logic equations capture the regulatory relationships between variables and dictate how the system evolves in time.
+The Boolean idealisation greatly reduces the number of free parameters while still capturing network dynamics and producing biologically pertinent predictions and insights CITATION, CITATION, CITATION.
+In our model, we use only two spatial compartments, one representing the anterior pole and another representing the posterior pole.
+The anterior and posterior expression levels after Boolean discretisation are shown in Figure 1C.
+More than two expression levels and more than two spatial compartments would be more realistic, but would result in an explosion in the number of parameters currently unconstrained by experimental data.
+Having only two expression levels and only two compartments allows us to systematically screen a large number of networks, which would be impossible in a more complex model.
+In this paper, we simulate the dynamics of all possible networks created by different combinations in interactions between Fgf8, Emx2, Pax6, Coup-tfi and Sp8, and show that only FORMULA of these networks are able to reproduce the expression patterns observed experimentally.
+From this analysis, we identify structural elements common to the best performing networks, as well as elements that never appear in the networks that perform well.
+These results reveal important logical principles underlying the cortical arealisation gene network, and suggest potential directions for future experimental investigations.

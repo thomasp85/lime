@@ -1,0 +1,62 @@
+### abstract ###
+Kolmogorov argued that the concept of information  exists also in problems with no underlying stochastic  model (as Shannon's information representation) for instance,  the information contained in an algorithm or in the genome
+He introduced a combinatorial notion of entropy  and information  SYMBOL   conveyed by a binary string   SYMBOL  about the unknown value of a variable  SYMBOL
+The current paper poses the following questions: what is the relationship between the information conveyed by   SYMBOL  about  SYMBOL  to  the  description complexity of   SYMBOL
+is there a notion of cost of information
+are there limits on how efficient   SYMBOL  conveys information
+To answer these questions Kolmogorov's definition is extended and a new concept  termed  information width  which is similar to  SYMBOL -widths in approximation theory is introduced
+Information of any input  source, eg , sample-based, general side-information or a hybrid of both can be evaluated by a single common formula
+An application to the space of binary functions is considered
+### introduction ###
+Kolmogorov  CITATION  sought for a measure of information of  `finite objects'
+He considered three approaches, the so-called {combinatorial}, {probabilistic} and {algorithmic}
+The probabilistic approach corresponds to the well-established definition of the Shannon entropy which applies to  stochastic settings where an `object' is represented by a random variable
+In this setting,  the entropy of an object and the  information conveyed by one object about another  are well defined
+Here it is necessary to view an object (or a finite binary string) as a realization of a stochastic process
+While this has often been used, for instance, to measure the information of  English texts  CITATION  by assuming some finite-order Markov process, it is not obvious that such modeling of finite objects provides a natural and a universal representation of information as  Kolmogorov states in  CITATION :  What real meaning is there, for example, in asking how much information is contained in (the book) "War and Peace"
+Is it reasonable to
+
+
+postulate some probability distribution for this set
+Or, on the other hand, must we assume that the individual scenes in this book form a random sequence with stochastic relations that damp out quite rapidly over a distance of several pages
+These questions  led Kolmogorov to  introduce an alternate  non-probabilistic and algorithmic notion  of the  information contained in a finite binary string
+He defined  it as the length of the minimal-size program that can compute the string
+This has been later developed into  the  so-called   Kolmogorov Complexity  field    CITATION
+In the combinatorial approach,  Kolmogorov investigated another non stochastic measure of information  for an object  SYMBOL
+Here  SYMBOL  is taken to be any element in  a finite space  SYMBOL  of objects
+In  CITATION  he defines the `entropy' of    SYMBOL   as  SYMBOL  where  SYMBOL  denotes the cardinality of  SYMBOL  and all logarithms henceforth are taken with respect to  SYMBOL
+As he writes, if the value  of   SYMBOL  is known to be  SYMBOL  then this much entropy  is `eliminated' by providing  SYMBOL  bits of `information'
+Let  SYMBOL  be a general finite domain and consider a set   AR that consists of all `allowed' values of pairs  SYMBOL
+The entropy of  SYMBOL  is defined as   SYMBOL  where \( \Pi_\bY(A)  \{y\bY: (x,y)A \text{ for some } x\bX\} \) denotes the projection of   SYMBOL  on  SYMBOL
+Consider the restriction of  SYMBOL  on  SYMBOL  based on  SYMBOL  which is defined as  Y_x =\{y\bY: (x,y) A\}, \; x\in\Pi_\bX(A) then the conditional combinatorial  entropy of  SYMBOL  given  SYMBOL  is defined as  H(\bY|x) = |Y_x|
+Kolmogorov  defines  the  information conveyed by   SYMBOL  about   SYMBOL  by the quantity   I(x:\bY) = H(\bY) - H(\bY|x)
+Alternatively, we may view  SYMBOL  as the information that a set  SYMBOL  conveys about another set  SYMBOL  satisfying  SYMBOL
+In this case we  let the domain be  SYMBOL ,  SYMBOL   is the set of permissible pairs  SYMBOL  and  the information is defined as  I(Y_x: \bY) = \log|\Pi_\bY(A)|^2 - \log(|Y_x| |\Pi_\bY(A)|)
+We will refer to this representation as Kolmogorov's  information between  sets
+Clearly,  SYMBOL
+In many applications,  knowing an input  SYMBOL   only conveys partial information about an unknown value  SYMBOL
+For instance, in  problems  which involve  the analysis of algorithms on discrete classes of structures,  such as sets of binary vectors or functions on a finite domain, an algorithmic search is made for some optimal element in this set based only on partial information
+One such paradigm is the area of  statistical pattern recognition  CITATION   where an unknown target, i e , a pattern classifier, is seeked  based on the information contained in a finite sample and some side-information
+This information is implicit in the particular set of classifiers that form  the possible hypotheses
+For example, let   SYMBOL  be a positive integer and   consider the domain  SYMBOL
+Let  SYMBOL  be the set of all binary functions  SYMBOL
+The power set  SYMBOL  represents  the family of all  sets  SYMBOL
+Repeating this, we have   SYMBOL   as the collection of all properties of sets  SYMBOL , i e , a  property  is a set whose elements are  subsets  SYMBOL  of  SYMBOL
+We  denote by  SYMBOL  a property of a set  SYMBOL  and write  SYMBOL
+Suppose that we seek to know  an unknown target function  SYMBOL
+Any  partial  information about    SYMBOL  which may be expressed by  SYMBOL  can effectively reduce the search space
+It has been a long-standing problem  to try to quantify  the value of general side-information for learning (see  CITATION  and references therein)
+We assert  that Kolmogorov's combinatorial framework may serve as a basis
+We let   SYMBOL  index possible properties  SYMBOL   of  subsets  SYMBOL  and the  object  SYMBOL  represent the unknown  target  SYMBOL   which may be any element of  SYMBOL
+Side information is then represented by knowing certain properties of sets that contain the  target
+The input  SYMBOL  conveys that  SYMBOL  is in some subset  SYMBOL   that has a certain property  SYMBOL
+In principle, Kolmogorov's quantity  SYMBOL   should  serve as the value of information in  SYMBOL  about the unknown value of  SYMBOL
+However,  its current form ()   is not general enough since it requires that the target  SYMBOL  be restricted to a fixed set  SYMBOL  on knowledge of   SYMBOL
+To see this, suppose  SYMBOL  is in a set that satisfies property  SYMBOL
+Consider the collection  SYMBOL  of all subsets  SYMBOL  that have this property
+Clearly,  SYMBOL  hence we may first consider   SYMBOL  but some useful information  implicit in this collection is ignored as we now show: consider two properties  SYMBOL  and  SYMBOL   with corresponding index sets  SYMBOL  and  SYMBOL  such that  SYMBOL
+Suppose that most of the sets  SYMBOL ,  SYMBOL  are small while the sets  SYMBOL ,  SYMBOL  are large
+Clearly, property  SYMBOL  is more informative than  SYMBOL  since starting with  knowledge that   SYMBOL  is in  a set that satisfies it should take (on average)  less additional information (once the particular set  SYMBOL   becomes known) in order to completely specify  SYMBOL
+If, as above, we let  SYMBOL  and  SYMBOL  then we have   SYMBOL  which wrongly implies that both properties are equally informative
+Knowing   SYMBOL  provides implicit information associated with  the collection of possible sets  SYMBOL ,   SYMBOL
+This implicit structural information  cannot be represented in  ()

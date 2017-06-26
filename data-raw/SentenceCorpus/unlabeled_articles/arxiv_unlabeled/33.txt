@@ -1,0 +1,27 @@
+### abstract ###
+Competitive on-line prediction (also known as universal prediction of individual sequences) is a strand of learning theory avoiding making any stochastic assumptions about the way the observations are generated
+The predictor's goal is to compete with a benchmark class of prediction rules, which is often a proper Banach function space \ifFULLAlso popular are various discrete classes, such as the finite-state automata \blueendMetric entropy provides a unifying framework for competitive on-line prediction: the numerous known upper bounds on the metric entropy of various compact sets in function spaces readily imply bounds on the performance of on-line prediction strategies
+This paper discusses strengths and limitations of the direct approach to competitive on-line prediction via metric entropy, including comparisons to other approaches
+### introduction ###
+A typical result of competitive on-line prediction says that, for a given benchmark class of prediction strategies, there is a prediction strategy that performs almost as well as the best prediction strategies in the benchmark class
+For simplicity, in this paper the performance of a prediction strategy will be measured by the cumulative squared distance between its predictions and the true observations, assumed to be real (occasionally complex) numbers
+Different methods of competitive on-line predictions (such as Gradient Descent, following the perturbed leader, strong and weak aggregating algorithms, defensive forecasting, etc )\ tend to have their narrow ``area of expertise'': each works well for benchmark classes of a specific ``size'' but is not readily applicable to classes of a different size
+In this paper we will apply a simple general method based on metric entropy to benchmark classes of a wide range of sizes
+Typically, this method does not give optimal results, but its results are often not much worse than those given by specialized methods, especially for benchmark classes that are not too massive
+Since the method is almost universally applicable, it sheds new light on the known results
+Another disadvantage of the metric entropy method is that it is not clear how to implement it efficiently, whereas many other methods are computationally very efficient
+Therefore, the results obtained by this method are only a first step, and we should be looking for other prediction strategies, both computationally more efficient and having better performance guarantees
+We start, in \S, by stating a simple asymptotic result about the existence of a universal prediction strategy for the class of continuous prediction rules
+The performance of the universal strategy is in the long run as good as the performance of any continuous prediction rule, but we do not attempt to estimate the rate at which the former approaches the latter
+This is the topic of the following section, \S, where we establish general results about performance guarantees based on metric entropy
+For example, in the simplest case where the benchmark class  SYMBOL  is a compact set, the performance guarantees become weaker as the metric entropy of  SYMBOL  becomes larger
+The core of the paper is organized according to the types of metric compacts pointed out by Kolmogorov and Tikhomirov in  CITATION  (\S3)
+Type I compacts have metric entropy of order  SYMBOL ; this case corresponds to the finite-dimensional benchmark classes and is treated in \S
+Type II, with the typical order  SYMBOL , contains various classes of analytic functions and is dealt with in \S
+The key deals with perhaps the most important case of order  SYMBOL ; this includes, eg , Besov classes
+The classes of type IV, considered in \S, have metric entropy that grows even faster
+In \S\S-- the benchmark class is always given
+In we ask the question of how prediction strategies competitive against various benchmark classes compare to each other
+The previous section, \S, prepares the ground for this \ifFULLIn standard methods are used to deduce implications of the results of preceding sections for statistical learning theory \blueendThe concluding section, \S, lists several directions of further research
+There is no real novelty in this paper; I just apply known results about metric entropy to competitive on-line prediction
+I hope it will be useful as a survey

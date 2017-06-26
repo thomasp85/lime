@@ -1,0 +1,13 @@
+### abstract ###
+Let  SYMBOL  be an  SYMBOL  matrix of rank  SYMBOL ,  and assume that a uniformly random subset  SYMBOL   of its entries is observed
+We describe an efficient algorithm that  reconstructs  SYMBOL  from  SYMBOL  observed entries with relative root mean square error   SYMBOL *}  Further, if   SYMBOL  and  SYMBOL  is sufficiently unstructured, then it can be reconstructed   exactly   from  SYMBOL  entries
+This settles (in the case of bounded rank) a question left open by Cand{\`e}s and Recht  and improves over the guarantees for their reconstruction algorithm
+The complexity of our algorithm is  SYMBOL , which opens the way to its use for massive  data sets
+In the process of proving these statements, we obtain a generalization of a celebrated result by Friedman-Kahn-Szemer\'edi and Feige-Ofek on the spectrum of sparse random  matrices
+### introduction ###
+Imagine that each of  SYMBOL  customers watches and rates a subset  of the  SYMBOL  movies available through a movie rental service
+This yields a dataset of customer-movie pairs  SYMBOL  and, for each such pair, a rating  SYMBOL
+The objective of  collaborative filtering  is to predict  the rating for the missing pairs in such a way as to provide targeted  suggestions
+made public such a dataset with  SYMBOL ,  SYMBOL  and  SYMBOL  and challenged the research community to predict the missing ratings with root mean square error below  SYMBOL   CITATION  } The general question we address here is: Under which conditions do the known ratings provide sufficient information to infer the unknown ones
+Can this inference problem be solved efficiently
+The second question is particularly important in view of the  massive size of actual data sets

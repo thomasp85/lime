@@ -1,0 +1,48 @@
+### abstract ###
+Given a sample covariance matrix, we examine the problem of maximizing the variance explained by a linear combination of the input variables while constraining the number of nonzero coefficients in this combination
+This is known as sparse principal component analysis and has a wide array of applications in machine learning and engineering
+We formulate a new semidefinite relaxation to this problem and derive a greedy algorithm that computes a  full set  of good solutions for all target numbers of non zero coefficients, with total complexity  SYMBOL , where  SYMBOL  is the number of variables
+We then use the same relaxation to derive sufficient conditions for global optimality of a solution, which can be tested in  SYMBOL  per pattern
+We discuss applications in subset selection and sparse recovery and show on artificial examples and biological data that our algorithm does provide globally optimal solutions in many cases
+### introduction ###
+Principal component analysis (PCA) is a classic tool for data analysis, visualization or compression and has a wide range of applications throughout science and engineering
+Starting from a multivariate data set, PCA finds linear combinations of the variables called  principal components , corresponding to orthogonal directions maximizing variance in the data
+Numerically, a full PCA involves a singular value decomposition of the data matrix
+One of the key shortcomings of PCA is that the factors are linear combinations of  all  original variables; that is, most of factor coefficients (or loadings) are non-zero
+This means that while PCA facilitates model interpretation and visualization by concentrating the information in a few factors, the factors themselves are still constructed using all variables, hence are often hard to interpret
+In many applications, the coordinate axes involved in the factors have a direct physical interpretation
+In financial or  biological applications, each axis might correspond to a specific asset or gene
+In problems such as these, it is natural to seek a trade-off between the two goals of  statistical fidelity  (explaining most of the variance in the data) and  interpretability  (making sure that the factors involve only a few coordinate axes)
+Solutions that have only a few nonzero coefficients in the principal components are usually easier to interpret
+Moreover, in some applications, nonzero coefficients have a direct cost (\eg, transaction costs in finance) hence there may be a direct trade-off between statistical fidelity and practicality
+Our aim here is to efficiently derive  sparse principal components , i
+e, a set of sparse vectors that explain a maximum amount of  variance
+Our belief is that in many applications, the decrease  in statistical fidelity required to obtain sparse factors is  small and relatively benign
+In what follows, we will focus on the problem of finding sparse factors which explain a maximum amount of variance, which can be written:  \max_{ \| z \|  1 } z^T z - \Card(z) in the variable  SYMBOL , where  SYMBOL  is the (symmetric positive semi-definite) sample covariance matrix,  SYMBOL  is a parameter controlling sparsity, and  SYMBOL  denotes the cardinal (or  SYMBOL  norm) of  SYMBOL , i e the number of non zero coefficients of  SYMBOL
+While PCA is numerically easy, each factor requires computing a leading eigenvector, which can be done in  SYMBOL , sparse PCA is a hard combinatorial problem
+In fact,  CITATION  show that the subset selection problem for ordinary least squares, which is NP-hard~ CITATION , can be reduced to a sparse generalized eigenvalue problem, of which sparse PCA is a particular intance
+Sometimes ad hoc ``rotation'' techniques are used to post-process the results from PCA and find interpretable directions underlying a particular subspace (see  CITATION )
+Another simple solution is to  threshold  the loadings with small absolute value to zero  CITATION
+A more systematic approach to the problem arose in recent years, with various researchers proposing nonconvex algorithms  (e g , SCoTLASS by  CITATION , SLRA by  CITATION  or D C based methods  CITATION  which find modified principal components  with zero loadings
+The SPCA algorithm, which is based on the representation of PCA as a regression-type optimization problem~ CITATION , allows the application of the LASSO  CITATION , a penalization technique based on the  SYMBOL  norm
+With the exception of simple thresholding, all the algorithms above require solving non convex problems
+Recently also,  CITATION  derived an  SYMBOL  based semidefinite relaxation for the sparse PCA problem () with a complexity of  SYMBOL  for a given  SYMBOL
+Finally,  CITATION  used greedy search and branch-and-bound methods to solve small instances of problem () exactly and get good solutions for larger ones
+Each step of this greedy algorithm has complexity  SYMBOL , leading to a total complexity of  SYMBOL  for a full set of solutions
+Our contribution here is twofold
+We first derive a greedy algorithm for computing a  full set  of good solutions (one for each target sparsity between 1 and  SYMBOL ) at a total numerical cost of  SYMBOL  based on the convexity of the of the largest eigenvalue of a symmetric matrix
+We then derive  tractable  sufficient conditions for a vector  SYMBOL  to be a  global  optimum of ()
+This means in practice that, given a vector  SYMBOL  with support  SYMBOL , we can test if  SYMBOL  is a globally optimal solution to problem () by performing a few binary search iterations to solve a one dimensional convex minimization problem
+In fact, we can take any sparsity pattern candidate from any algorithm and test its optimality
+This paper builds on the earlier conference version~ CITATION , providing new and simpler conditions for optimality and describing applications to subset selection and sparse recovery
+While there is certainly a case to be made for  SYMBOL  penalized maximum eigenvalues (\`a la  CITATION ), we strictly focus here on the  SYMBOL  formulation
+However, it was shown recently (see  CITATION ,  CITATION  or  CITATION  among others) that there is in fact a deep connection between  SYMBOL  constrained extremal eigenvalues and LASSO type variable selection algorithms
+Sufficient conditions based on sparse eigenvalues (also called restricted isometry constants in  CITATION ) guarantee consistent variable selection (in the LASSO case) or sparse recovery (in the decoding problem)
+The results we derive here produce upper bounds on sparse extremal eigenvalues and can thus be used to prove consistency in LASSO estimation, prove perfect recovery in sparse recovery problems, or prove that a particular solution of the subset selection problem is optimal
+Of course, our conditions are only sufficient, not necessary (which would contradict the NP-Hardness of subset selection) and the duality bounds we produce on sparse extremal eigenvalues cannot always be tight, but we observe that the duality gap is often small
+The paper is organized as follows
+We begin by formulating the sparse PCA problem in Section
+In Section , we write an efficient algorithm for computing a full set of candidate solutions to problem () with total complexity  SYMBOL
+In \mysec{semidefinite} we then formulate a convex relaxation for the sparse PCA problem, which we use in Section  to derive tractable sufficient conditions for the global optimality of a particular sparsity pattern
+In Section  we detail applications to subset selection, sparse recovery and variable selection
+Finally, in Section , we test the numerical performance of these results

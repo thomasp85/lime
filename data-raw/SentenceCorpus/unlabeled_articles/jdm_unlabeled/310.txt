@@ -1,0 +1,37 @@
+### abstract ###
+impaired decision behavior has been repeatedly observed in schizophrenia patients
+we investigated several cognitive mechanisms that might contribute to the jumping-to-conclusions bias jtc seen in schizophrenia patients  biases in information-gathering  information weighting and integration  and overconfidence  using the process tracing paradigm mouselab
+mouselab allows for an in-depth exploration of various decision-making processes in a structured information environment
+a total of  NUMBER  schizophrenia patients and  NUMBER  healthy controls participated in the experiment
+although showing less focused and systematic information search  schizophrenia patients practically considered all pieces of information and showed no jtc in the sense of collecting less pieces of evidence
+choices of patients and controls both approximated a rational solution quite well  but patients showed more extreme confidence ratings
+both groups mainly used weighted additive decision strategies for information integration and only a small proportion relied on simple heuristics
+under high stress induced by affective valence plus time pressure  however  schizophrenia patients switched to equal weighting strategies  less valid cues and more valid ones were weighted equally
+### introduction ###
+hasty decision-making is a hallmark feature of presently deluded schizophrenia patients
+a look of a stranger  sounds in the telephone line and certain initials on number plates are mistaken as proof of a conspiracy or surveillance
+cognitive studies have asserted that this so-called jumping-to-conclusions bias jtc in paranoid schizophrenia is not confined to idiosyncratic and delusions-related scenarios but extends to neutral situations  CITATION
+while jtc is somewhat aggravated among schizophrenia  CITATION  and sometimes also non-schizophrenia patients with acute persecutory delusions  CITATION   other studies have found this bias also in remitted paranoid schizophrenia patients  CITATION
+recently  jtc has been found to correlate with delusion conviction  CITATION
+a number of researchers ascribe jtc a fundamental role in the pathogenesis of delusions  that is  fixed false beliefs  CITATION
+traditionally  jtc has been investigated with the beads or probabilistic reasoning task  the subject is consecutively presented a sequence of beads drawn either from a jar that predominantly contains beads  for example in green  or a jar that predominantly contains beads in red  CITATION
+the chain of events usually strongly favours one of the jars
+compared to both healthy and psychiatric controls  schizophrenia patients make early  premature and incautious decisions in  NUMBER - NUMBER  percent  of the cases i e   they decide after only one bead has been drawn
+when presented with the entire available information all at once  group differences are abolished
+in addition  probability ratings are usually not discrepant  indicating that patients have a data-gathering bias rather than deficits with probabilistic reasoning
+CITATION our group has confirmed this bias  ruling out deficits in memory and poor motivation as confounding factors  CITATION
+others have found that this bias is not a result of impulsivity  CITATION
+using an experimental variant of the  who wants to be a millionaire  quiz  patients with schizophrenia  irrespective of current delusional ideation  displayed a lowered decision-threshold  that is  they over-interpreted the available amount of evidence  CITATION
+the precise nature of jtc is not entirely understood and under some circumstances enhanced ambiguity and multiple response options the bias may even be diminished or abolished  CITATION
+jtc can be conceptualized in different ways
+the core contribution of this paper is to investigate jtc as a data-gathering bias less information is taken into account for decision-making relative to controls and or overconfidence the predictive value of information is over-interpreted relative to controls and or suboptimal information weighting and integration the validity of cues is not considered appropriately or heuristics are more strongly preferred relative to controls
+our group has recently investigated the second aspect  and we have repeatedly found that patients with schizophrenia are overconfident in erroneous decisions  CITATION   which so far has been mainly investigated in the context of memory tasks  CITATION
+we have also found that patients tend to reach more incautious decisions when asked to deduce the correct title of classical paintings  especially under stress  CITATION  which conforms other studies assigning stress and arousal an aggravating role for cognitive biases in the disorder lincoln  lange  burau  exner   and  moritz  in press
+for the present study  we used a task that assesses the data-gathering  confidence  and the information integration aspect of jtc in a single paradigm
+we were especially interested to investigate cue selection in patients  since a striking feature of schizophrenia is patients' reliance on unreliable sources of information e g   internet fora for conspiracy theories
+jtc may not be a problem if it is rested on the most valid pieces of information  and indeed cognitive research has found that a subgroup of healthy subjects adopt a so-called take the best heuristic  CITATION  and that the application of this heuristic in some environments leads to good decisions  CITATION
+although the beads task remains the gold standard to capture jtc  it does not shed light on this aspect of decision-making  as the sequence of events is pre-determined
+moreover  the beads task estimates jtc on the basis of a single item  reducing its reliability
+a final aim was to investigate the impact of stress exerted by time-pressure and emotionally framed scenarios within-subjects
+on the basis of the available literature we expected that patients with schizophrenia szs collect less h NUMBER  and particularly less valid h NUMBER  information  show a less systematic information search inspecting less valid information first h NUMBER   are over-confident in their judgments h NUMBER   and that these biases might be more pronounced under conditions of stress induced by time-pressure or affective framing of the task h NUMBER  compared to controls cps
+following an exploratory account  we investigated whether there are differences in choice accuracy  whether subjects particularly rely on a take the best strategy and if there is a relation between schizophrenia severity measures i e   panss  see below and the different aspects of jtc biases

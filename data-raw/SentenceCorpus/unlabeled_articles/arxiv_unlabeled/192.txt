@@ -1,0 +1,28 @@
+### abstract ###
+Gaussian belief propagation (GaBP) is an iterative message-passing algorithm for inference in Gaussian graphical models
+It is known that when GaBP converges it converges to the correct MAP estimate of the Gaussian  random vector and simple sufficient conditions for its  convergence have been established
+In this paper we develop a double-loop algorithm for forcing convergence of GaBP
+Our method computes the correct MAP estimate even in cases where standard GaBP would not have converged
+We further extend this construction to compute least-squares solutions of over-constrained linear systems
+We believe that our construction has numerous applications, since the GaBP algorithm is linked to solution of linear systems of equations, which is a fundamental problem in computer science and engineering
+As a case study, we discuss the linear detection problem
+We show that using our new construction, we are able to force convergence of Montanari's linear detection algorithm, in cases where it would originally fail
+As a consequence, we are able to increase significantly the number of users that can transmit concurrently
+### introduction ###
+The Gaussian belief propagation algorithm is an efficient distributed message-passing algorithm for inference over a Gaussian graphical model
+GaBP is also linked to the canonical problem of solving systems of linear equations~ CITATION , one of the fundamental problems in computer science and engineering, which explains the large number of algorithm variants and applications
+For example, the GaBP algorithm is applied for signal processing~ CITATION , multiuser detection~ CITATION , linear programming~ CITATION , ranking in social networks~ CITATION , support vector machines~ CITATION  Furthermore, it was recently shown that some existing algorithms are specific instances of the GaBP algorithm, including Consensus propagation~ CITATION , local probability propagation~ CITATION , multiuser detection~ CITATION , Quadratic Min-Sum algorithm~ CITATION , Turbo decoding with Gaussian densities~ CITATION  and others
+Two general sufficient conditions for convergence of GaBP in loopy graphs are known: diagonal-dominance  CITATION  and walk-summability  CITATION
+See also numerous studies in specific settings~ CITATION
+In this work, we propose a novel construction that fixes the convergence of the GaBP algorithm, for any Gaussian model with positive-definite information matrix (inverse covariance matrix), even when the currently known sufficient convergence conditions do not hold
+We prove that our construction converges to the correct solution
+Furthermore, we consider how this method may be used to solve for the least-squares solution of general linear systems
+As a specific application, we discuss Montanari's multiuser detection algorithm~ CITATION
+By using our construction we are able to show convergence in practical CDMA settings, where the original algorithm did not converge, supporting a significantly higher number of users on each cell
+This paper is organized as follows
+Section  outlines the problem model
+Section  gives a brief introduction to the GaBP algorithm
+Section  describes our novel double-loop construction for positive definite matrices
+Section  extends the construction for computing least-squares solution of general linear systems
+We provide experimental results of deploying our construction in the linear detection context in Section
+We conclude in Section

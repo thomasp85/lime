@@ -1,0 +1,96 @@
+### abstract ###
+people report themselves to be above average on simple tasks and below average on difficult tasks
+this paper proposes an explanation for this effect that is simpler than prior explanations
+the new explanation is that people conflate relative with absolute evaluation  especially on subjective measures
+the paper then presents a series of four studies that test this conflation explanation
+these tests distinguish conflation from other explanations  such as differential weighting and selecting the wrong referent
+the results suggest that conflation occurs at the response stage during which people attempt to disambiguate subjective response scales in order to choose an answer
+this is because conflation has little effect on objective measures  which would be equally affected if the conflation occurred at encoding
+### introduction ###
+there is an inconsistency in research findings on comparative judgment
+both better-than-average bta and worse-than-average wta effects tend to be stronger in direct measures than in indirect measures of comparative judgment
+given the robustness  durability  and profound consequences of biases in comparative judgment  CITATION   this inconsistency deserves investigation
+direct measures of comparison ask people to explicitly compare two thingsusually comparing themselves with others
+for instance  moore and kim  CITATION  had their participants take a  NUMBER -item trivia quiz that was either very easy mean score    NUMBER  percent  correct or very difficult mean score    NUMBER  percent  correct
+a direct comparative measure asked  how do you expect to score relative to others
+  and participants responded on a scale ranging from  NUMBER  well below average to  NUMBER  well above average
+those who took the easy quiz expected that they would score above average  while takers of the difficult quiz expected to score below average
+indirect measures ask people to evaluate the target and the referent to which the target is being compared separately using the same absolute standard
+for instance  moore and kim  CITATION  also asked their participants to estimate their own and others' scores on the trivia quiz
+the indirect measure of comparison is calculated by subtracting estimated performance for self minus others
+those who had taken the easy quiz guessed that their own scores would be higher than those of others  whereas those who had taken the difficult quiz guessed that their own scores would be lower
+the curious fact is that both bta and wta effects are stronger in direct measures of comparison than in indirect measures of comparison  CITATION
+in other words  task difficulty has a bigger effect on indirect than on direct comparative evaluations
+moore and kim's manipulation of task difficulty had significantly larger effect on the direct measure than had on the indirect measure
+to be precise  moore and kim's  CITATION  manipulation of task difficulty accounted for  NUMBER  percent  of the variance in direct measure
+by contrast  the difficulty manipulation accounted for only  NUMBER  percent  of the variance in the indirect measure
+the most popular explanation for this difference is differential weighting
+the differential weighting explanation holds that people weight the target and the referent differently when making comparative judgments
+that is  the self or the target of comparison is weighed more heavily than is the other or the referent
+the referent may be neglected for several reasons  including the fact that information about the self is generally more accessible  more vivid  or more reliable than information about others kruger  windschitl  burrus  fessel   and  chambers  in press
+as a result  when the target's performance is good it is rated above average  and when it is bad it is rated below average
+this theory holds that stronger bta effects on easy tasks and wta effects on hard tasks on direct than on indirect judgments has deep psychological origins
+it is the result of differences in the accessibility  salience  or reliability of knowledge of the target and referent  and is not simply the result of the response scale used to elicit people's beliefs
+what is the evidence for the differential weighting explanation
+a number of studies have presented the results of path analyses  CITATION
+these analyses utilize three variables   NUMBER  absolute evaluation of a target individual   NUMBER  absolute evaluation of the referent group or a representative member of the group  and  NUMBER  a direct comparative judgment of the individual relative to the group
+results typically demonstrate that the direct comparative judgment is highly correlated with the individual's own absolute performance but only weakly often insignificantly negatively correlated with the absolute performance of the reference group-consistent with differential weighting
+figure  NUMBER  shows a path analysis using moore and kim's  CITATION  data
+direct comparative judgments ought to weight the target and the referent equally and oppositely  but the target appears to be weighted more heavily   NUMBER  than is the referent NUMBER 
+differential weighting may be an accurate description of the results of the path analyses
+however  it is not necessarily an accurate description of the underlying psychological processes in comparative judgment
+an important flaw in these path analyses suggests that the result may not be diagnostic of actual differential weighting by the person making the comparison
+if people are making comparisons sensibly then there should be less variance in estimates of the group average than in estimates of individual performance
+after all  if everyone correctly estimated the group average  then there should be no between-person variance in estimates of the group average and it would therefore be non-predictive of comparative judgments in path analyses
+but there is an additional concern regarding the way in which path analyses are often conducted  absolute judgments of target and referent are often measured on subjective verbally-anchored scales
+for example  klar and giliadi  CITATION  had their participants rate photographs using an absolute scale that ran from  NUMBER  very unattractive to  NUMBER  very attractive
+comparative judgments of those same photographs were made using a scale that ran fromNUMBER  much less attractive than the average student to   NUMBER  much more attractive than the average student
+biernat's work on shifting standards has demonstrated that responses on such scales are sensitive to the relevant comparison group  CITATION
+an american woman who measures  NUMBER  feet  NUMBER  inches would be more likely to describe herself as tall than would a man of the same height
+in this case  as in innumerable others  evaluation depends crucially on the context of relevant comparison others
+ratings on subjective response scales are unlikely to be pure measures of either absolute or relative assessment  CITATION
+measures intended to tap absolute performance will  at least in part  be measures of relative performance as well
+imagine a simple test on which everyone does well
+if one person received a score of  NUMBER  percent  and the other  NUMBER  test-takers all scored above  NUMBER  percent   when asked   how well did you do on the test
+  the person who got  NUMBER  percent  is unlikely to rate himself an  NUMBER  on a  NUMBER -point scale if that scale is anchored with verbal labels such as  very poorly  and  very well
+  similarly  when relative performance is measured using subjective response scales  we should expect that judgments may be influenced by absolute performance
+it should be no surprise that the target's rated absolute performance correlates highly with relative performance when they are both measured on subjective response scales
+to some extent  they are measuring the same thing
+this brings us to the second explanation for why bta and wta effects are stronger in direct than in indirect measures of comparative judgment  conflation
+conflation is the error of treating two distinct concepts as if they were one
+people routinely conflate absolute and relative evaluation with each other when making comparative judgments  CITATION
+that is  when people are asked to compare themselves with others  their comparative judgments are contaminated by their absolute judgments of their own performances  CITATION
+subjectively anchored response scales force participants to construe the scale in order to map their own private knowledge onto the response scale
+idiosyncratic construals open these subjective scales to influence or contamination by other considerations  CITATION
+after having done well at a task  people are more likely to rate themselves as being above average  even if it is a simple task on which everyone should be expected to do well
+the new hypothesis tested in this paper is that this effect is not due to some sort of profound differential weighting of self over othersrather  this effect is a mundane conflation caused by vague questions and subjective response scales
+the new part of this explanation is the idea that the way comparative judgment is measured matters
+unlike the differential weighting explanation  which predicts equivalent bta and wta effects across both subjective and objective measures of comparative judgment  the conflation hypothesis predicts that bta and wta effects will shrink or disappear when comparative judgments are measured using unambiguous objective response formats
+the implication would be that people can make more accurate estimates of comparative judgment  but that experimenters often fail to ask the question in ways most likely to elicit an uncontaminated comparative judgment
+this is not an obscure technical issue of measurementit is important for two reasons
+first  subjective verbally-anchored scales are perhaps the single most commonly used measure in psychological research  including work on comparative judgment
+if such measures elicit systematically biased responses  the implications may be profound with respect to both the reinterpretation of prior findings and the optimal design of future studies
+second  it would illuminate the psychological processes at work in comparative judgment
+if people can make accurate comparative judgments when provided with unambiguous response scales it shows that conflation is occurring at the response stage during which people's mental representations are translated into behavioral responses
+if  instead  the conflation of relative and absolute evaluation were occurring during encoding  then it would appear in people's responses to all sorts of comparative judgments  regardless of the response format of the question  because there would be no unconflated evaluation to retrieve
+without a doubt  bta and wta effects are multiply determined
+it is not the goal of this paper to show that conflation is the only cause of these effects  only that conflation is a contributing cause and distinct from other causes
+this simple demonstration has important repercussions
+it suggests that prior research has often overestimated the size of both bta and wta effects through the use of vague measures
+it also suggests a straightforward methodological solution to this problem  clearer objective measures
+the four experiments presented here examine the conflation explanation by testing its specific predictions and by eliminating as many other explanations for bta and wta effects as possible
+i use both subjective response scales and also clearer objective measures
+i find that bta effects on easy tasks and wta effects on difficult tasks weaken with more objective measures
+experiment  NUMBER  replicates the bta and wta effects shown elsewhere  and seeks to eradicate them through experimental manipulations that provide participants with clear and unambiguous information about the performances of themselves and others
+full information about others' performances should rule out explanations based on greater regressiveness in estimates of others  because these  differential information  theories assume errors in people's estimations of others
+however  the conflation explanation predicts the persistence of bta and wta effects  even in the presence of full information  but especially on subjective measures of comparative judgment
+experiments  NUMBER    NUMBER   and  NUMBER  also provide participants with full information about target and referents  but in order to rule out the role of egocentrism  participants are only asked to compare other individuals to each other
+finally  research has shown that bta and wta effects are stronger when the referent is a group rather than an individual  CITATION
+in order to rule out this influence  experiments  NUMBER  and  NUMBER  ask participants to compare two individuals whose performances are known
+the fact that the effect persists  even in this context  but only on subjective direct measures  is explained better by conflation than by other theories
+the research presented in this paper contributes to theory and research on several different dimensions
+first  the four studies i report are the first to put the conflation explanation for bta and wta effects to the test by systematically comparing judgments varying in their subjectivity
+the key prediction  confirmed in all four studies  is that bta effects on easy tasks and wta effects on hard tasks are stronger for subjective than objective direct comparative judgments
+second  the four studies presented here do another thing that prior research has not  present participants with excellent information about performance by target and referent
+this is important for ruling out other explanations for bta and wta effects
+third  experiments  NUMBER    NUMBER   and  NUMBER  take tests of the conflation explanation to their logical extreme by minimizing egocentric motives and having people compare two targets about which they have complete information

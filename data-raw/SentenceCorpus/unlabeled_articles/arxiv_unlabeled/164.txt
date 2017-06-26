@@ -1,0 +1,18 @@
+### abstract ###
+The exploration-exploitation dilemma has been an intriguing and unsolved problem within the framework of reinforcement learning ``Optimism in the face of uncertainty'' and model building play central roles in advanced exploration methods
+Here, we integrate several concepts and obtain a fast and simple algorithm
+We show that the proposed algorithm finds a near-optimal policy in polynomial time, and give experimental evidence that it is robust and efficient compared to its ascendants
+### introduction ###
+Reinforcement learning (RL) is the art of maximizing long-term rewards in a stochastic, unknown environment
+In the construction of RL algorithms, the choice of exploration strategy is of central significance
+We shall examine the problem of exploration in the Markov decision process (MDP) framework
+While simple methods like  SYMBOL -greedy and Boltzmann exploration are commonly used, it is known that their behavior can be extremely poor  CITATION
+Recently, a number of efficient exploration algorithms have been published, and for some of them, formal proofs of efficiency also exist
+We review these methods in Section~
+By combining ideas from several sources, we construct a new algorithm for efficient exploration
+The new algorithm,  optimistic initial model  (\ourmethod), is described in Section~
+In Section~, we show that many of the advanced algorithms, including ours, can be treated in a unified way
+We use this fact to sketch a proof that \ourmethod\ finds a near-optimal policy in polynomial time with high probability
+Section~ provides experimental comparison between \ourmethod\ and a number of other methods on some benchmark problems
+Our results are summarized in Section~
+In the rest of this section, we review the necessary preliminaries, Markov decision processes and the exploration task

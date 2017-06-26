@@ -1,0 +1,35 @@
+### abstract ###
+the food and drug administration fda warned against administering over-the-counter cough and cold medicines to children under  NUMBER 
+this study evaluated whether experienced parents show poorer adherence to the fda warning  as safe experiences are predicted to reduce the impact of warnings  and how adherence can be improved
+participants included  NUMBER  american parents mean age   NUMBER   NUMBER  sd    NUMBER   NUMBER    NUMBER   NUMBER  percent  female with children age  less than or equal to   NUMBER  who were aware of the fda warning
+we compared adherence among experienced n  NUMBER   with other children  greater than  age  NUMBER  and inexperienced parents n  NUMBER   only children  less than or equal to  NUMBER 
+we also evaluated potential moderating variables amount of warning-related information received  prevalence of side effects  trust in the fda  frequency of coughs and colds  trust in drug packaging and quantified the impact of amount of information
+logistic regression assessed the ability of experience alone  and experience combined with amount of information  to predict adherence  NUMBER   NUMBER  percent  of inexperienced but  NUMBER   NUMBER  percent  of experienced parents were adherent p    NUMBER   NUMBER 
+the groups did not differ on potential moderating variables
+adherence was  NUMBER   NUMBER  percent  among experienced parents receiving  a lot of information   but  NUMBER   NUMBER  percent  for those receiving less p    NUMBER   NUMBER   amount of information did not affect adherence in inexperienced parents p    NUMBER   NUMBER  but uniquely predicted adherence compared to a model with experience alone p    NUMBER   NUMBER 
+experienced parents were also less likely to mistrust drug packaging p    NUMBER   NUMBER 
+targeting fda information to experienced parents  particularly via drug packaging  may improve their adherence
+### introduction ###
+in october  NUMBER   following an expert review regarding the safety of over-the-counter cough and cold medication otc-ccm  the food and drug administration fda recommended that  these drugs not be used to treat infants and children under  NUMBER  years of age because serious and potentially life-threatening side effects can occur
+  united states food and drug administration  fda    NUMBER 
+since earlier studies have shown that people ascribe little risk or harm to otc medications  CITATION   it is important to evaluate adherence to the fda warning
+indeed  despite wide publicity  a recent nationally representative survey found that only  NUMBER  percent  of parents with children under  NUMBER  or  NUMBER  percent  of parents who were aware of the fda warning intended to comply with the fda warning national public radio kaiser family foundation harvard school of public health  npr kff hsph    NUMBER 
+the decision-making literature suggests people are ill-equipped to incorporate information about rare side effects into their decisions  CITATION
+when information about a rare event comes externally from a description  as from a warning  people tend to overweigh the rare event in their decisions  CITATION
+in other words  people behave as if the rare event is more likely to occur than its objective probability
+conversely  when people learn from their own experiences  they tend to underweigh rare events  behaving as if the event is less likely to occur than its objective probability  CITATION
+the two tendencies imply that different decisions can result from the same information  depending upon how one learns about the potential consequences of the choices and their probabilities
+a recent literature has focused on the mechanisms underlying this apparent  gap  between description- and experience-based decisions and their relative importance  CITATION
+the mechanisms include  NUMBER  recency - when rare events happen in the distant past and memory is constrained  decisions will rely on a small set of past outcomes   NUMBER  statistical sample bias - as rare events are underrepresented more often than overrepresented due to the skewness of the binomial distribution  and  NUMBER  judgment bias - as people incorrectly estimate an event's likelihood even in an unbiased sample
+in practice  people gain information from both external descriptions and personal experience
+in deciding whether to adhere to a given warning  people who have previously used the risk-causing agent are subject to potentially conflicting influences from the warning and past experience
+others  possessing little or no experience with the risk-causing agent  are presumably more reliant upon the warning
+research has shown that inertia tends to guide the risk-taking behavior of people who have had safe experiences with the risk-causing agent  such that they continue their exposure to the agent despite new information about associated dangers  CITATION
+the fda warning created an opportunity to examine this behavior as applied to a risk-causing agent that affects millions of parents and children  with clear implications for health policy
+by measuring adherence in parents with older children  who presumably have more experience with colds and use of otc-ccm in children under  NUMBER   and those without older children  we were able to test the following hypothesis  behavioral inertia due to safe experience with otc-ccm would reduce adherence to the fda warning
+even if a warning with the appropriate content reaches and is understood by its target audience  recipients may still not know what to believe if communicators are perceived to have a vested interest  CITATION
+in the united kingdom  for example  parents' decisions not to vaccinate against measles  mumps  and rubella mmr - despite assurances and campaigns by the uk government - stemmed largely from lack of trust in messages about the safety of these vaccines  CITATION
+thus  in order to isolate the effect of experience on adherence  we also measured parents' stated trust in the fda as a source of information
+we conducted a survey to explore the hypothesis that experienced parents would exhibit poorer adherence  as well as to examine other factors potentially affecting adherence  amount of relevant information received  prevalence of side effects  trust in the fda  and frequency of child's coughs and colds
+to our knowledge  this is the first study to evaluate the effect of parental experience on adherence to the fda warning
+on the basis of our findings  we propose a tentative strategy for increasing adherence

@@ -1,0 +1,23 @@
+### abstract ###
+an experimental test of the descriptive adequacy of the restated diversification principle is presented
+the principle postulates that risk-averse utility maximizers will pool risks for their mutual benefit  even if information is missing about the probabilities of losses
+it is enough for people to assume that they face equal risks when they pool risks
+the results of the experiment support the principle
+### introduction ###
+in a nutshell  the diversification principle says that  if risk-averse utility maximizers can choose between two assets with identical but random returns  they will prefer to invest half of their endowment in each asset  CITATION
+the principle can be paraphrased in the following means  if two risk-averse utility maximizers with assets of the same value face the same distributions of potential losses  they will gain by sharing the potential losses equally  CITATION
+the restated diversification principle holds for any distribution of outcomes  as long as the distribution is the same for both people
+it does not matter whether the probability of a loss is small or large  in both cases  the people gain by sharing the loss
+this implies that sharing loss is also mutually favorable if information is missing about the probabilities of losses
+it is not even necessary that the distribution of outcomes is the same for both people  it is enough that they both accept that there is no reason to assume that their probabilities of losses differ presumption of equality
+possible differences can therefore be neglected if there is no knowledge about them
+when information about the probabilities of losses is missing  mutual sharing of losses may be superior to insurance since an insurance premium is normally based on technical or actuarial information on the probability of losses
+without such information  the pricing will become arbitrary and the negotiation cost may be large
+insurance under apparent ambiguity  when information about the probabilities of losses is lacking  may not be possible at all  CITATION
+loss-sharing  however  can be undertaken without pricing the potential loss
+the restated diversification principle was first presented by skogh  CITATION  in the case of two identical pool members
+skogh and wu  CITATION  generalized the principle to the case where individuals' losses differ in amount or in probability and to the case where individuals' attitudes toward risks differ
+this paper tests the descriptive adequacy of the restated diversification principle with an experiment
+in particular we test the following two hypotheses      h NUMBER    under apparent ambiguity  people will share potential losses
+h NUMBER    if the distribution of potential losses is different across people but unknown  people will still share potential losses
+the experimental design  results  and discussion are presented in sections  NUMBER    NUMBER   and  NUMBER   respectively

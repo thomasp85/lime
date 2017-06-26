@@ -1,0 +1,30 @@
+### abstract ###
+This paper uncovers and explores the close relationship between Monte Carlo Optimization of a parametrized integral (MCO), Parametric machine-Learning (PL), and `blackbox' or `oracle'-based optimization (BO)
+We make four contributions
+First, we prove that MCO is mathematically identical to a broad class of PL problems
+This identity potentially provides a new application domain for all broadly applicable PL techniques: MCO
+Second, we introduce immediate sampling, a new version of the Probability Collectives (PC) algorithm for blackbox optimization
+Immediate sampling transforms the original BO problem into an MCO problem
+Accordingly, by combining these first two contributions, we can apply all PL techniques to BO
+In our third contribution we validate this way of improving BO by demonstrating that cross-validation and bagging improve immediate sampling
+Finally, conventional MC and MCO procedures ignore the relationship between the sample point locations and the associated values of the integrand; only the values of the integrand at those locations are considered
+We demonstrate that one can exploit the sample location information using PL techniques, for example by forming a fit of the sample locations to the associated values of the integrand
+This provides an additional way to apply PL techniques to improve MCO
+### introduction ###
+This paper uncovers and explores some aspects of the close relationship between Monte Carlo Optimization of a parametrized integral (MCO), Parametric machine Learning (PL), and `blackbox' or `oracle-based' optimization (BO)
+We make four primary contributions
+First, we establish a mathematical identity equating MCO with PL
+This identity potentially provides a new application domain for all broadly-applicable PL techniques, viz , MCO
+Our second contribution is the introduction of immediate sampling
+This is a new version of the Probability Collectives (PC) approach to blackbox optimization
+PC encompasses Estimation of Distribution Algorithms (EDAs) CITATION  and the Cross Entropy (CE) method~ CITATION  as special cases
+However PC is broader and more fully motivated
+This means it uncovers (and overcomes) formal shortcomings in those other approaches
+In the immediate sampling version of PC the original BO problem is transformed into an MCO problem
+In light of our first contribution, this means we can apply PL to immediate sampling
+In this way  SYMBOL  PL techniques --- including cross-validation, bagging, boosting, active learning, stacking, and others --- can be applied to blackbox optimization
+In our third contribution we experimentally explore the power of this identity between MCO and PL
+In these experiments we demonstrate that cross-validation and bagging improve the performance of immediate sampling blackbox optimization
+In particular, in these experiments we show that cross-validation can be used to adaptively set an `annealing schedule' for blackbox optimization using immediate sampling {\it{without any extra calls to the oracle}}
+In some cases, we show that this adaptively formed annealing schedule results in better optimization performance than  any  exponential annealing schedule {}  Finally, conventional MC and MCO procedures ignore the relationship between the sample point locations and the associated values of the integrand (Only the values of the integrand at the sample locations are considered by such algorithms ) We end by exploring ways to use PL techniques to exploit the information in the sample locations, for instance, by Bayesian fitting of a surface from the sample locations to the associated values of the integrand
+This constitutes yet another way of applying PL to MCO in general, and therefore to BO in particular

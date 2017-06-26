@@ -1,0 +1,11 @@
+### abstract ###
+We prove that mutual information is actually negative copula entropy, based on which a method for mutual information estimation is proposed
+### introduction ###
+In information theory, mutual information (MI) is a difference concept with entropy
+CITATION  In this paper, we prove with copula  CITATION  that they are essentially same -- mutual information is also a kind of entropy, called  copula entropy
+Based on this insightful result, We propose a simple method for estimating mutual information
+Copula is a theory on dependence and measurement of association
+CITATION  Sklar  CITATION  proved that joint distribution  SYMBOL  can be represented with copula  SYMBOL  and margins  SYMBOL  in the following form:  SYMBOL *} Derived by separating the margins from joint distribution, copula has all the dependence information of random variables, which is believed that mutual information does as well
+Here gives notation
+SYMBOL  denote copula function and copula density;  SYMBOL  denotes joint distribution and marginal distribution;  SYMBOL  denote entropy, mutual information, and copula entropy respectively
+Finally, bold letters represent vectors while normal letters single variable

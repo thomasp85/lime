@@ -1,0 +1,60 @@
+### abstract ###
+open-ended methods that elicit willingness-to-pay wtp in terms of absolute dollars often result in high rates of questionable and highly skewed responses  insensitivity to changes in health state  and raise an ethical issue related to its association with personal income
+we conducted a  NUMBER x NUMBER  randomized trial over the internet to test  NUMBER  wtp formats   NUMBER  wtp in dollars   NUMBER  wtp as a percentage of financial resources   NUMBER  wtp in terms of monthly payments  and  NUMBER  wtp as a single lump-sum amount
+wtp as a percentage of financial resources generated fewer questionable values  had better distribution properties  greater sensitivity to severity of health states  and was not associated with income
+wtp elicited on a monthly basis also showed promise
+### introduction ###
+many economists elicit people's willingness to pay wtp for healthcare interventions through contingent valuation surveys so that the benefits of those interventions can be valued in monetary terms  CITATION
+this is despite many known biases that occur when attempting to elicit a dollar value from people for a good that is not usually directly available in the market  e g   perfect health  CITATION
+much literature focuses on developing consensus on the most valid method for eliciting wtp  putting aside any philosophical issues that question the validity of eliciting wtp through a single elicitation
+early wtp surveys elicited values using an open-ended question from a self-interest perspective to obtain personal use values  e g  how much would you be willing to pay to be cured
+    CITATION
+these open-ended formats ask for wtp values without presenting a starting point value and without using a search routine to help respondents determine a value
+respondents are simply asked to give a dollar value
+however  researchers have questioned the validity of this format because responses are prone to a high number of non-response or zero values and because responses are heavily skewed toward high values  perhaps  in part  due to strategic bias  CITATION
+in response to these concerns  a u s federal panel in  NUMBER   led by kenneth arrow  concluded that  both experience and logic suggest that responses to open-ended questions will be erratic and biased   CITATION
+since then  researchers have moved away from eliciting wtp using an open-ended format and developed three types of closed-ended formats in an attempt to overcome shortcomings of the open-ended format
+these  close-ended  formats ask respondents to say yes or no to a series of questions or to select a value from a pre-specified list
+all three methods have methodological issues  however
+the bidding game is prone to starting-point bias wtp changes depending on the starting value used to begin the bidding and the payment card method is prone to range bias wtp changes depending on the range of values presented  CITATION
+the single-bounded discrete choice format is statistically inefficient and studies using this approach are very expensive to conduct because  all else being equal  it requires a larger sample size and more sophisticated design and analysis techniques  CITATION
+in addition  this format is prone to several biases including  yea-saying  where respondents have a tendency to agree with the amount presented  CITATION
+a double-bounded choice format was derived to increase statistical efficiency
+however  even responses from people who report a high level of certainty about their willingness to pay exhibit significant anomalies that increase as uncertainty increases  CITATION
+we believe the open-ended format deserves further exploration
+despite the strong statement we quoted earlier against using it  some researchers do not agree with the call to abandon the open-ended format  CITATION
+although different formats produce different responses  it is not clear which format is superior  CITATION
+a recent study comparing alternate elicitation formats concluded   
+
+
+it would seem that the most informative elicitation format in the present context
+
+
+appear s  to be the open-ended format
+
+
+ though this  format is nowadays distinctly unfashionable in health economics  having long since given way to supposedly-superior elicitation formats   CITATION
+advantages of the open-ended format are that it does not introduce range or starting-point biases and it can be highly statistically efficient compared to discrete choice formats
+the open-ended format also has several clear disadvantages  however
+this format may place a heavy cognitive demand on respondents
+in fact  the other formats were developed  in part  to make the elicitation simpler and more realistic for respondents  CITATION
+furthermore  asking for wtp in terms of dollars using an open-ended format requires using an unbounded response scale a scale that starts at zero but with no defined upper end that naturally contributes to the highly variable and skewed responses typically seen with open-ended wtp elicitations  CITATION
+in addition  people may be more likely to give  strategic  values with an unbounded scale  a respondent may believe that the treatment has high intrinsic or social value and thus places a very high value not grounded in the reality of actually paying such a figure in the form of taxes or as an out-of-pocket expense  CITATION
+conversely  a respondent may give an artificially low response in an attempt to influence the actual price eventually charged
+it could be that a more constrained  but still essentially open-ended approach might avoid some of the problems reviewed above
+specifically  eliciting wtp as a percentage of financial resources has two potential advantages
+first  a percentage measure will force the use of a bounded  NUMBERNUMBER  response scale creating a more statistically efficient scale measure  CITATION
+generally  people are unable to map their preference for a health effect using a scale consisting of dollars with that starts at zero but with no clear maximum amount an unbounded scale  CITATION
+second  percentages involve smaller numbers a  NUMBERNUMBER  scale for the percentage formats versus  NUMBER  to an undefined maximum for the dollar formats and people process smaller whole numbers more reliably
+in one study  thompson  read  and liang  CITATION  found that a percentage measure exhibited more significant associations with key independent variables such as the number of symptoms suffered by respondents and medications taken than did wtp expressed in dollars
+the purpose of the current study was to compare wtp values elicited as a percentage of financial resources to values elicited as dollars using open-ended formats
+we predicted that the percentage method would be less prone to inconsistent responses  would be more sensitive to differences in severity across health states  and would show more desirable distributional properties
+we asked for percentages based on  financial resources  rather than income because it is realistic to expect that many people would consider savings  borrowing power  and other financial resources to pay for a cure of a condition they want to avoid
+thinking about paying out amounts on a monthly basis rather than a single lump sum enables respondents to think of smaller quantities and the amounts proposed are likely to be more salient because many people budget their finances on a monthly basis
+advantages of the percentage format could be reduced or eliminated when monthly payments rather than lump sum payments are considered
+thus  we also introduced a second dimension against which to compare elicitation formats  a monthly timeframe versus a single lump sum amount
+the current study extends the studies done by thompson and colleagues the largest study  to date  that has elicited wtp as a percentage in several ways
+first  we introduce a within-subjects measure of sensitivity
+second we compare the effects of using a monthly timeframe to elicit wtp to a single lump-sum amount
+third  we focus specifically on distributional properties of responses to further assess percentage formats as a more efficient measure
+finally  the current study utilizes a larger sample  and surveys the general public instead of patients

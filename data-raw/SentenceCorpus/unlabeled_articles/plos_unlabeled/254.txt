@@ -1,0 +1,71 @@
+### abstract ###
+Position determination in biological systems is often achieved through protein concentration gradients.
+Measuring the local concentration of such a protein with a spatially varying distribution allows the measurement of position within the system.
+For these systems to work effectively, position determination must be robust to noise.
+Here, we calculate fundamental limits to the precision of position determination by concentration gradients due to unavoidable biochemical noise perturbing the gradients.
+We focus on gradient proteins with first-order reaction kinetics.
+Systems of this type have been experimentally characterised in both developmental and cell biology settings.
+For a single gradient we show that, through time-averaging, great precision potentially can be achieved even with very low protein copy numbers.
+As a second example, we investigate the ability of a system with oppositely directed gradients to find its centre.
+With this mechanism, positional precision close to the centre improves more slowly with increasing averaging time, and so longer averaging times or higher copy numbers are required for high precision.
+For both single and double gradients, we demonstrate the existence of optimal length scales for the gradients for which precision is maximized, as well as analyze how precision depends on the size of the concentration-measuring apparatus.
+These results provide fundamental constraints on the positional precision supplied by concentration gradients in various contexts, including both in developmental biology and also within a single cell.
+### introduction ###
+To determine position in a biological system, some component within the system must have a nonuniform spatial distribution.
+Often, this is achieved through the formation of gradients of protein concentration.
+Typically, a gradient forms when a protein is manufactured/injected within a small region and subsequently spreads and decays CITATION.
+By measuring the local concentration, position relative to the source can be determined.
+In developmental biology, where such gradients are used to control patterns of gene expression, gradient proteins are called morphogens.
+However, intracellular concentration gradients are also thought to be important for organisation inside single cells.
+For a gradient mechanism to be biologically viable, position determination must be precise and therefore robust to noise.
+Variability from one copy of the system to another will certainly compromise positional precision.
+Production and degradation rates can vary.
+The physical size of the system will also vary, and this may affect proper positioning.
+Most previous analyses of morphogen gradients have focused on robustness to changes in these extrinsic factors CITATION CITATION between different copies of the system.
+However, there will also be intrinsic noise affecting the gradient within a single copy of the system, for example due to the unavoidably noisy nature of the biochemical reactions involved.
+This dissection of the fluctuations into extrinsic or intrinsic components mirrors that introduced into the analysis of stochastic gene expression CITATION CITATION.
+However, here, intrinsic noise alters not only the overall protein copy numbers, but also crucially the spatiotemporal protein distribution.
+Even if all extrinsic variation could be eliminated, intrinsic biochemical noise would still lead to a fundamental limit to the precision of position determination, in a similar way to limits on the precision of protein concentration measurement CITATION, CITATION.
+In this paper, we therefore address the question of how precisely a concentration gradient can specify positional information, and calculate the limits on positional precision for a simple, but biologically relevant, gradient formation mechanism with first-order reaction kinetics.
+Quantitative measurements, for example on the Bicoid Hunchback system in Drosophila CITATION, have shown that remarkable positional precision can sometimes be obtained.
+For this reason, understanding the fundamental limits to the precision of concentration gradients is clearly an important issue in developmental biology.
+Our results will be equally relevant to gradients that form within single cells, where protein copy numbers of a few thousand CITATION CITATION will lead to large density fluctuations.
+The properties of intracellular protein gradients have been studied by Brown and Kholodenko CITATION.
+Recently, a number of these gradients have been observed experimentally in both prokaryotic and eukaryotic systems.
+The bacterial virulence factor IcsA forms a polar gradient on the cell membrane of Shigella flexneri CITATION.
+MipZ in Caulobacter crescentus forms polar gradients to aid division site selection CITATION.
+In Bacillus subtilis, the MinCD complex also forms polar gradients in order to direct division site selection to the mid-plane of the cell CITATION, CITATION.
+In Escherichia coli, the oscillatory dynamics of the Min proteins creates a time-averaged gradient that directs cell division placement CITATION CITATION.
+Using mechanisms of this sort, division site placement in bacteria can achieve an impressive precision of 1 percent of the cell length CITATION, CITATION.
+Cell division in eukaryotic cells is also believed to be regulated by concentration gradients.
+For example, in fission yeast, the protein Pom1p forms a cortical concentration gradient emanating from a cell tip, thereby restricting the cell division protein Mid1p to the cell centre CITATION, CITATION.
+In eukaryotic cells, gradients of the Ran and HURP proteins aid the formation of the mitotic spindle by biasing microtubule growth toward the chromosomes CITATION CITATION.
+Gradients may also play a role in the localization of Cdc42 activation, thereby permitting a coupling between cell shape and protein activation CITATION, CITATION .
+Suppose that a biological system needs to identify a particular position along its length, such as the mid-plane to ensure symmetrical cell division.
+As concrete examples, MipZ and the MinCD complex act by displacing the essential cell division protein FtsZ from the cell membrane.
+Since the concentrations of MipZ/MinCD are higher near the cell poles, FtsZ accumulates near the cell centre.
+Below some critical threshold of MinCD or MipZ concentration, enough FtsZ will presumably accumulate to form the division apparatus.
+The locations where the concentration gradient crosses these thresholds mark positions within the cell.
+In our analysis, we simply postulate the existence of such well-defined critical thresholds, where the gradient sharply switches a downstream signal from on to off.
+Clearly, any real gradient cannot act as such a sharp switch in reality, a certain amount of smearing is inevitable.
+Furthermore, there will be additional noise in the process of actually measuring the concentration due both to the binding of the gradient proteins to the receptor molecules CITATION, CITATION, and also to the downstream reactions that process this incoming signal CITATION CITATION, CITATION CITATION.
+In general, the noise of the output signal of a processing network can be written as the sum of a contribution from the noise in the input signal plus a contribution from the reactions that constitute the processing network.
+We assume here that the detector and the processing network are ideal and do not add any noise to the gradient input signal.
+As a result, our calculated variation constitutes a lower bound; any real gradient-signalling system will inevitably have a lower precision.
+We first considered a system with a single planar morphogen source and linear degradation, thereby producing an exponentially decaying average concentration profile.
+While this model is very simple, it remains biologically relevant in both developmental and intracellular contexts.
+Gradients of Bicoid in Drosophila and IcsA in Shigella have been quantitatively measured and shown to fit this exponential decay profile on average to high accuracy CITATION, CITATION.
+We then calculated the expected distribution of positions where a noisy gradient crosses a concentration threshold.
+With typical cellular copy numbers of a few thousand proteins, the system would be unable to identify the correct threshold position from a single measurement.
+To achieve reliable position determination, the concentration must be averaged over time.
+We show that by averaging measurements, a biological system is able to achieve precision in position determination of a few percent of the system size even with hundreds of protein copies, a result we verified with computer simulations.
+Furthermore, we find that the precision of position determination is maximised when a particular choice of the gradient decay length is made.
+We also show how the precision depends on the detector size.
+For a 2-D gradient, the precision possible after a certain averaging time depends only very weakly on the detector size.
+We relate all these results to experimental measurements of gradients in Shigella and fission yeast.
+We also considered the ability of gradients from two poles to identify the centre of the system, as in the MipZ and Pom1p gradients discussed above.
+Related designs have also been proposed for the control of hunchback positioning in Drosophila CITATION, CITATION, CITATION.
+As before, we find that the precision of the system can be optimised by a particular choice of the decay length.
+However, if the threshold position is set at the system centre, time-averaging improves precision more slowly than in the single-source model.
+For subcellular gradients, we find that a few thousand copies of the gradient proteins may therefore be required for high precision.
+Our results strongly constrain the possible concentrations of gradient proteins in two gradient systems.

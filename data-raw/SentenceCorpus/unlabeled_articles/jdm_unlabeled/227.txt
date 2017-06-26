@@ -1,0 +1,17 @@
+### abstract ###
+this article presents a theory of reasoning about moral propositions that is based on four fundamental principles
+first  no simple criterion picks out propositions about morality from within the larger set of deontic propositions concerning what is permissible and impermissible in social relations  the law  games  and manners
+second  the mechanisms underlying emotions and deontic evaluations are independent and operate in parallel  and so some scenarios elicit emotions prior to moral evaluations  some elicit moral evaluations prior to emotions  and some elicit them at the same time
+third  deontic evaluations depend on inferences  either unconscious intuitions or conscious reasoning
+fourth  human beliefs about what is  and isn't  moral are neither complete nor consistent
+the article marshals the evidence  which includes new studies  corroborating these principles  and discusses the relations between them and other current theories of moral reasoning
+### introduction ###
+is it morally wrong to take a paper-clip from your office
+is it morally wrong to steal money from your co-worker
+is it morally wrong to stab your employer
+in the absence of mitigating circumstances  most individuals are likely to agree that all three actions are wrong  but that they increase in heinousness
+psychologists have studied moral evaluations and moral inferences for many years  but they have yet to converge on a single comprehensive theory of these processes  CITATION
+our aim in the present article is to propose a new theory of moral reasoning  based on an account of inferences in general about permissible situations  CITATION   on a theory of emotions  CITATION   and on an account of intuitions  CITATION
+we begin with an outline of the principal psychological theories of how individuals make moral evaluations
+we then describe the new theory
+we present the evidence corroborating it  including some new experimental results

@@ -1,0 +1,51 @@
+### abstract ###
+The transcription factor Myc plays a central role in regulating cell-fate decisions, including proliferation, growth, and apoptosis.
+To maintain a normal cell physiology, it is critical that the control of Myc dynamics is precisely orchestrated.
+Recent studies suggest that such control of Myc can be achieved at the post-translational level via protein stability modulation.
+Myc is regulated by two Ras effector pathways: the extracellular signal-regulated kinase and phosphatidylinositol 3-kinase pathways.
+To gain quantitative insight into Myc dynamics, we have developed a mathematical model to analyze post-translational regulation of Myc via sequential phosphorylation by Erk and PI3K.
+Our results suggest that Myc integrates Erk and PI3K signals to result in various cellular responses by differential stability control of Myc protein isoforms.
+Such signal integration confers a flexible dynamic range for the system output, governed by stability change.
+In addition, signal integration may require saturation of the input signals, leading to sensitive signal integration to the temporal features of the input signals, insensitive response to their amplitudes, and resistance to input fluctuations.
+We further propose that these characteristics of the protein stability control module in Myc may be commonly utilized in various cell types and classes of proteins.
+### introduction ###
+The proto-oncogene protein Myc is a transcription factor that regulates numerous signaling pathways involved in cell-fate decisions CITATION CITATION.
+Sufficient accumulation of Myc leads to the activation of Cyclin D and cyclin dependent kinases, which subsequently phosphorylate Rb and release E2F.
+This results in the initiation of DNA replication and cell cycle entry CITATION.
+Excessive accumulation of Myc, however, induces apoptosis CITATION, CITATION when cells are under stress or deprived of growth factors.
+Finally, Myc also drives cell growth by activating genes that encode cellular metabolic activities, including translational factors, ribosomal proteins and RNAs CITATION .
+Given its importance, Myc activity must be properly controlled in response to different environmental cues.
+Past studies have suggested that Myc is regulated at multiple levels, including auto-regulation of Myc transcription CITATION and post-transcriptional regulation CITATION, CITATION.
+More recent discoveries indicate that Myc is also dynamically regulated at the protein level by the Ras effector pathways CITATION CITATION.
+These discoveries suggest that Myc protein undergoes a series of modifications that are sequential and irreversible CITATION CITATION, CITATION, CITATION.
+More specifically, when Myc is newly synthesized, it is highly unstable and quickly undergoes ubiquitination and degradation CITATION.
+It can be substantially stabilized when phosphorylated at serine 62 by Ras-activated Erk activity.
+Subsequent phosphorylation of Myc at threonine 58 by Gsk3, however, initiates a destabilization process in a sequential manner.
+This is achieved by a dephosphorylation mechanism by a prolyl isomerase Pin1 and a protein phosphatase PP2A.
+Once Myc is phosphorylated at Thr58, Pin1 induces it to undergo conformation changes, which are required for PP2A to dephosphorylate the Ser62 residue CITATION.
+To date, this is the only dephosphorylation mechanism identified in the Myc stabilization processes.
+Destabilization of Myc by Gsk3 can be blocked by the Ras-activated PI3K pathway .
+The unique control of Myc dynamics by sequential phosphorylation allows Myc to integrate upstream signals from Erk and PI3K, which play critical roles in controlling diverse cell fates CITATION, CITATION, CITATION.
+Erk often exhibits an early, transient peak of activation upon growth stimulation.
+The peak is followed by varying residual activities, which depend on cell lines and growth factors.
+This residual Erk is critical in downstream signal encoding.
+For example, in PC12 cells, a small residual Erk activity, as a result of epidermal growth factor stimulation, leads to proliferation.
+In contrast, a high residual Erk activity as a result of nerve growth factor stimulation in the same cell line leads to differentiation CITATION, CITATION.
+The residual Erk level has also been observed to be critical in regulating c-Fos level in fibroblasts CITATION .
+The PI3K activation pattern depends on cell lines and stimulants, as detailed in Table S2.
+It is bimodal in various cell lines including WI38, NIH 3T3, or HepG2 when stimulated by platelet-derived growth factors or fetal bovine serum CITATION, CITATION, CITATION.
+In contrast, PI3K appears to have only an early, transient single peak in the U-2OS or PVSM cell lines stimulated with other growth stimulants CITATION, CITATION.
+The bimodal activation of PI3K has been shown to be important for cell cycle regulation CITATION, CITATION, CITATION.
+In particular, the second peak has been found sufficient and critical to drive the G1/S transition during cell cycle CITATION, CITATION .
+The temporal pattern of Myc activation closely correlates with those of Erk and PI3K.
+Myc protein reaches its peak at 2 hours after growth stimulation and decreases to and remains at an intermediate value, or hump, for over 6 hours before reducing to its basal level CITATION, CITATION.
+The peak and the hump of Myc coincide with the Erk peak and the 2 nd PI3K pulse, respectively.
+These observations suggest that Myc may sense and integrate signals from its two regulators .
+To gain insight into this control mechanism, we have constructed a mathematical model to analyze dynamics of Myc accumulation controlled by sequential phosphorylation.
+Using this model, we aimed to investigate how signaling patterns of Erk and PI3K regulate Myc dynamics at the post-translational level.
+Also, how robust is Myc dynamics with respect to network parameters, such as phosphorylation and dephosphorylation rate constants?
+What is unique about this strategy of controlling Myc accumulation by sequentially modulating protein stability?
+Is this a common strategy by which cells achieve reliable temporal control of key regulatory proteins?
+By exploring these questions, our work may provide insights into design features of cell signaling networks and guidance for experimental intervention.
+Conceptually, our model defines a unique module that connects with other models that deal with upstream signaling dynamics leading to the activation of Erk CITATION or PI3K CITATION, CITATION, as well as downstream dynamics leading to mammalian cell fate decisions CITATION CITATION We further propose that post-translation regulation of Myc represents an example of a generic dual-kinase motif.
+With appropriate parameters, this motif will enable precise temporal sensing of input signals.

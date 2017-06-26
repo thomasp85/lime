@@ -1,0 +1,24 @@
+### abstract ###
+the impact of default options on choice is a reliable  well-established behavioral finding
+however  several different effects may lend to choosing defaults in an often indistinguishable manner  including loss aversion  inattention  information leakage  and transaction costs associated with switching
+we introduce the notion of the  default pull  as the effect that even subtle default options have on decision makers' uncertainty about their own preferences
+the default pull shapes what a decision maker prefers by causing her to consider whether she prefers the default
+we demonstrate default pull effects using a simple decision making task that strips away many of the usual reasons that defaults could affect choices  and we show that defaults can have substantial effects on choice  even when the default itself was not chosen
+### introduction ###
+perhaps one of the most well-established behavioral decision making effects is the effect of default options on choice
+people choose options presented as defaults more often than they otherwise would  even for important decisions that would seem to require careful thought  such as choosing health care or retirement plans  CITATION
+but under the umbrella that is  default bias  are several different effects that all point in the direction of choosing the default
+mere inattention could lead some decision makers to retain a default if action is required only when opting out of the default
+loss-averse decision makers may not want to give up the default because it feels like a loss that is more painful than gaining a different option is pleasurable  CITATION
+the fact that someone has set an option as a default can create an  information leakage   CITATION  from which people might infer normative reasons for choosing the default
+finally  people may choose defaults when there are sufficient transaction costs of money or time in choosing an alternative
+we examine an effect of default options on choices that we call the default pull
+the default pull is the effect that default options have on decision makers' uncertainty about their own preferences
+when deciding what one likes  we argue that even subtle defaults can help to shape what a decision maker prefers by causing her to consider whether she prefers the default
+this process provides a link between how defaults influence choices and how anchors influence judgments  CITATION
+in this way  the default pull effect is a kind of constructed preference  CITATION   wherein the manner in which preference is elicited influences what one's preferences are
+unlike many findings that people stick with the default  we show that the default pull sometimes involves choosing the default and sometimes involves choosing something different from what one otherwise would in the presence of a default  but not the default itself
+to study the default pull  we use a motivated experimental choice that strips away many of the common reasons why defaults might work  a modified presentation of a dictator game  CITATION  in which whatever option is on the top of a list of allocations is left selected on a computer interface  ostensibly unintentionally see figure  NUMBER 
+this subtle default option substantially affects players' choices  different defaults can change the average amount given by  NUMBER  percent  of the total endowment
+the design and results of our experiment allow us to rule out inattention  loss aversion  information leakage  and transaction costs as explanations for the effect of the default
+before we describe the specifics of the task  we briefly review the literature on default biases  and then formally define the default pull

@@ -1,0 +1,38 @@
+### abstract ###
+Cellular signaling networks are subject to transcriptional and proteolytic regulation under both physiological and pathological conditions.
+For example, the expression of proteins subject to covalent modification by phosphorylation is known to be altered upon cellular differentiation or during carcinogenesis.
+However, it is unclear how moderate alterations in protein expression can bring about large changes in signal transmission as, for example, observed in the case of haploinsufficiency, where halving the expression of signaling proteins abrogates cellular function.
+By modeling a fundamental motif of signal transduction, the phosphorylation dephosphorylation cycle, we show that minor alterations in the concentration of the protein subject to phosphorylation can affect signal transmission in a highly ultrasensitive fashion.
+This ultrasensitization is strongly favored by substrate sequestration on the catalyzing enzymes, and can be observed with experimentally measured enzymatic rate constants.
+Furthermore, we show that coordinated transcription of multiple proteins within a protein kinase cascade results in even more pronounced all-or-none behavior with respect to signal transmission.
+Finally, we demonstrate that ultrasensitization can account for specificity and modularity in the regulation of cellular signal transduction.
+Ultrasensitization can result in all-or-none cell-fate decisions and in highly specific cellular regulation.
+Additionally, switch-like phenomena such as ultrasensitization are known to contribute to bistability, oscillations, noise reduction, and cellular heterogeneity.
+### introduction ###
+Cellular signal transduction exhibits two layers of regulation: upstream stimuli such as extracellular peptide hormones activate intracellular signaling intermediates, which in turn induce intracellular responses as indicated in Figure 1A.
+This type of regulation, which usually operates on the time scale of minutes, will be termed fast regulation in this paper.
+Fast regulation involves the posttranslational modification of pre-existing protein pools in order to transduce signals to the nucleus.
+Responses induced by fast regulation, such as activated transcription factors, often in turn alter the total abundance of their own activators or that of intermediates in heterologous cascades, e.g., owing to induced mRNA/protein synthesis or to degradation.
+For example, signal transduction pathways in the immune system alter the concentration of their own constituents by transcriptional positive or negative feedback to bring about sensitization CITATION or desensitization CITATION.
+Likewise, cyclic guanosine monophosphate signaling affects the heterologous mitogenic cascades via transcriptional crosstalk by inducing the MKP-1 phosphatase and cyclin-dependent kinase inhibitors CITATION.
+Owing to the long half-lives of most mRNAs CITATION and proteins CITATION, this type of regulation operates on the time scale of hours in most cases and thus will be referred to as slow regulation here.
+Figure 1A shows a simplified view of signal transduction: upstream stimuli such as hormones induce gene expression, which in turn alters cellular signal processing.
+Previous theoretical and experimental studies have mainly analyzed how fast regulation influences slow regulation, while downstream effects, i.e., the impact of slow regulation on fast regulation, are less well investigated.
+However, slow regulation is probably equally important, since the expression of phosphoproteins is altered during a variety of physiological processes such as differentiation CITATION, development CITATION, apoptosis CITATION, long-term potentiation CITATION, the cell cycle CITATION, and the circadian rhythm CITATION.
+Furthermore, the deregulated expression of wild-type phosphoproteins has been shown to be correlated with diseases such as diabetes CITATION and cancer CITATION .
+At a first glance, one may expect that altered expression of Intermediate 1 affects steady-state signal transmission via Intermediate 1 in a linear fashion.
+However, recent research suggests that strong nonlinearity is observed at least in some cases: a variety of tumor-suppressor genes involved in cellular signal transduction do not follow Knudson's two-hit hypothesis, i.e., they do not require a homozygotic loss of both alleles to support tumor progression.
+Instead, loss of a single copy, i.e., halving protein expression, is sufficient to abrogate tumor-suppressor function and this phenomenon has been termed haploinsufficiency CITATION, CITATION.
+This suggests that the expression of signaling proteins affects signal transmission in a highly switch-like fashion.
+As increased signal transmission elicited by transcriptional induction has been referred to as sensitization CITATION, such ultrasensitive regulation will be referred to here as ultrasensitization.
+Available experimental data suggest that ultrasensitization is physiologically advantageous: receptor-tyrosine kinases, which elicit different cellular responses, are known to induce broadly overlapping sets of immediate early genes, although the amplitude of the immediate early gene-induction is receptor-specific CITATION, CITATION.
+Ultrasensitization allows cells to discriminate such minor differences in immediate early gene expression, and thus confers specificity to receptor-tyrosine kinase signaling.
+In addition, even saturating hormone concentrations induce/repress the vast majority of target mRNAs less than 10-fold.
+Thus, the stimulus-response of hormone-induced transcription exhibits significant basal activation, so that mRNA induction is relatively insensitive towards extracellular hormone concentrations CITATION.
+In such cases, ultrasensitization can dramatically increase the cellular effects of extracellular hormone administration and may help to establish all-or-none cell-fate decisions.
+Finally, strong nonlinearities such as ultrasensitization are known to contribute to bistability, oscillations, noise reduction, and cellular heterogeneity .
+Phosphorylation is the most common mode of eukaryotic information transfer, and it has been estimated that one third of all cellular proteins are phosphorylated CITATION.
+As several haploinsufficient tumor suppressors encode phosphoproteins, or phosphatases, we were interested in whether ultrasensitization can occur in a simple phosphorylation dephosphorylation cycle.
+We show here that pronounced ultrasensitization is possible with experimentally measured kinetic constants, particularly in the parameter range where the substrate enzyme ratio is such that the majority of the substrate subject to phosphorylation is sequestered by the catalyzing enzymes.
+Furthermore, we show that coordinated transcription of multiple proteins within a kinase cascade can result in even more pronounced ultrasensitization.
+Finally, we demonstrate that ultrasensitization can account for specificity and modularity in the regulation of cellular signal transduction.

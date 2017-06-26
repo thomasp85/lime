@@ -1,0 +1,49 @@
+### abstract ###
+Given  iid  \ data from an unknown distribution, we consider the problem of predicting future items
+An adaptive way to estimate the probability density is to recursively subdivide the domain to an appropriate data-dependent granularity
+In Bayesian inference one assigns a data-independent prior probability to ``subdivide'', which leads to a prior over infinite(ly many) trees
+We derive an exact, fast, and simple inference algorithm for such a prior, for the data evidence, the predictive distribution, the effective model dimension, moments, and other quantities
+We prove asymptotic convergence and consistency results, and illustrate the behavior of our model on some prototypical functions
+### introduction ###
+We consider the problem of inference from  iid  \ data  SYMBOL , in particular of the unknown distribution  SYMBOL  the data is sampled from
+In case of a continuous domain this means inferring a probability density from data
+Without structural assumption on  SYMBOL , this is hard to impossible, since a finite amount of data is never sufficient to uniquely select a density (model) from an infinite-dimensional space of densities (model class)
+In parametric estimation one assumes that  SYMBOL  belongs to a finite-dimensional family
+The two-dimensional family of Gaussians characterized by mean and variance is prototypical (Figure )
+The maximum likelihood (ML) estimate of  SYMBOL  is the distribution that maximizes the data likelihood
+Maximum likelihood overfits if the family is too large and especially if it is infinite-dimensional
+A remedy is to penalize complex distributions by assigning a prior (2nd order) probability to the densities  SYMBOL
+Maximizing the model posterior (MAP), which is proportional to likelihood times the prior, prevents overfitting
+A full Bayesian procedure keeps the complete posterior for inference
+Typically, summaries like the mean and variance of the posterior are reported }  \paranodot{How to choose the prior } In finite or small compact low-dimensional spaces a uniform prior often works (MAP reduces to ML)
+In the non-parametric case one typically devises a hierarchy of finite-dimensional model classes of increasing dimension
+Selecting the dimension with maximal posterior often works well due to the Bayes factor phenomenon  CITATION : In case the true model is low-dimensional, higher-dimensional (complex) model classes are automatically penalized, since they contain fewer ``good'' models
+In a full Bayesian treatment one would assign a prior probability (e g \  SYMBOL ) to the dimension  SYMBOL   and mix over the dimension
+The probably simplest and oldest model for an interval domain is to divide the interval (uniformly) into bins, assume a constant distribution within each bin, and take a frequency estimate for the probability in each bin (Figure ), or a Dirichlet posterior in Bayesian inference
+There are heuristics for choosing the number of bins as a function of the data size
+The simplicity and easy computability of the bin model is very appealing to practitioners
+Drawbacks are that distributions are discontinuous, its restriction to one dimension (or at most low dimension: curse of dimensionality), the uniform (or more generally fixed) discretization, and the heuristic choice of the number of bins
+We present a full Bayesian solution to these problems, except for the non-continuity problem
+Our model can be regarded as an extension of Polya trees  CITATION
+There are plenty of alternative Bayesian models that overcome some or all of the limitations
+Examples are % continuous Dirichlet process (mixtures)  CITATION , % Bernstein polynomials  CITATION , % Bayesian field theory  CITATION , % randomized Polya trees  CITATION , % Bayesian bins with boundary averaging  CITATION , % Bayesian kernel density estimation % or other mixture models  CITATION , and universal priors  CITATION , % but exact analytical solutions are infeasible
+% Markov Chain Monte Carlo sampling  CITATION , % Expectation Maximization algorithms  CITATION , % variational methods  CITATION , % efficient MAP or M(D)L approximations  CITATION , % or kernel density estimation  CITATION  % can often be used to obtain approximate numerical solutions, but computation time and/or global convergence remain critical issues
+There are of course also plenty of non-Bayesian density estimators; see (references in)  CITATION  in general, and  CITATION  for density tree estimation in particular
+The idea of the model class discussed in this paper is very simple: With some (e g \ equal) probability, we chose  SYMBOL  either uniform or split the domain in two parts (of equal volume), and assign a prior to each part, recursively, i e \ in each part again either uniform or split
+For finitely many splits,  SYMBOL  is a piecewise constant function, for infinitely many splits it is virtually  any  distribution
+While the prior over  SYMBOL  is neutral about uniform versus split, we will see that the posterior favors a split if and only if the data clearly indicates non-uniformity
+The method is a full Bayesian non-heuristic tree approach to adaptive binning for which we present a very simple and fast algorithm for computing all( ) quantities of interest
+Note that we are not arguing that our model performs better in practice than the more advanced models above
+The main distinguishing feature of our model is that it allows for a fast and exact analytical solution
+It's likely use is as a building block in complex problems, where computation time and Bayesian integration are the major issues
+In any case, if/since the Polya tree model deserves attention, also our model should
+In Section  we introduce our model and compare it to Polya trees
+We also discuss some example domains, like intervals, strings, volumes, and classification tasks
+% Section  derives recursions for the posterior and the data evidence
+% Section  proves convergence/consistency
+% In Section  we introduce further quantities of interest, including the effective model dimension, the tree size and height, the cell volume, and moments, and present recursions for them
+% The proper case of infinite trees is discussed in Section , where we analytically solve the infinite recursion at the data separation level
+% Section  collects everything together and presents the algorithm
+% In Section  we numerically illustrate the behavior of our model on some prototypical functions
+% Section  contains a brief summary, conclusions, and outlook, including natural generalizations of our model
+% See  CITATION  for program code

@@ -1,0 +1,24 @@
+### abstract ###
+% This paper describes a methodology for detecting anomalies from sequentially observed and potentially noisy data
+The proposed approach consists of two main elements: (1)  filtering , or assigning a belief or likelihood to each successive measurement based upon our ability to predict it from previous noisy observations, and (2)  hedging , or flagging potential anomalies by comparing the current belief against a time-varying and data-adaptive threshold
+The threshold is adjusted based on the available feedback from an end user
+Our algorithms, which combine universal prediction with recent work on online convex programming, do not require computing posterior distributions given all current observations and involve simple primal-dual parameter updates
+At the heart of the proposed approach lie exponential-family models which can be used in a wide variety of contexts and applications, and which yield methods that achieve sublinear per-round regret against both static and slowly varying product distributions with marginals drawn from the same exponential family
+Moreover, the regret against static distributions coincides with the minimax value of the corresponding online strongly convex game
+We also prove bounds on the number of mistakes made during the hedging step relative to the best offline choice of the threshold with access to all estimated beliefs and feedback signals
+We validate the theory on synthetic data drawn from a time-varying distribution over binary vectors of high dimensionality, as well as on the Enron email dataset \\   {Keywords:} anomaly detection, exponential families, filtering, individual sequences, label-efficient prediction, minimax regret, online convex programming, prediction with limited feedback, sequential probability assignment, universal prediction
+### introduction ###
+\PARstart{I}{n this} paper, we explore the performance of online anomaly detection methods built on sequential probability assignment and dynamic thresholding based on limited feedback
+We assume we sequentially monitor the state of some system of interest
+At each time step, we observe a possibly  noise-corrupted  version  SYMBOL  of the current state  SYMBOL , and need to infer whether  SYMBOL  is  anomalous  relative to the actual sequence  SYMBOL  of the past states
+This inference is encapsulated in a binary decision  SYMBOL , which can be either  SYMBOL  (non-anomalous or nominal behavior) or  SYMBOL  (anomalous behavior)
+After announcing our decision, we may occasionally receive  feedback  on the ``true'' state of affairs and use it to adjust the future behavior of the decision-making mechanism
+Our inference engine should make good use of this feedback, whenever it is available, to improve its future performance
+One reasonable way to do it is as follows
+Having observed  SYMBOL  (but not  SYMBOL ), we can use this observation to assign ``beliefs" or ``likelihoods" to the clean state  SYMBOL
+Let us denote this likelihood assignment as  SYMBOL
+Then, if we actually had access to the clean observation  SYMBOL , we could evaluate  SYMBOL  and declare an anomaly ( SYMBOL ) if  SYMBOL , where  SYMBOL  is some positive threshold; otherwise we would set  SYMBOL  (no anomaly at time  SYMBOL )
+This approach is based on the intuitive idea that a new observation  SYMBOL  should be declared anomalous if it is very unlikely based on our past knowledge (namely,  SYMBOL )
+In other words, observations are considered anomalous if they are in a portion of the observation domain which has very low likelihood according to the best probability model that can be assigned to them on the basis of previously seen observations (In fact, anomaly detection algorithms based on density level sets revolve around precisely this kind of reasoning ) The complication here, however, is that we do not actually observe  SYMBOL , but rather its noise-corrupted version  SYMBOL
+Thus, we settle instead for an  estimate   SYMBOL  of  SYMBOL  based on  SYMBOL  and compare this estimate against  SYMBOL
+If we receive feedback  SYMBOL  at time  SYMBOL  and it differs from our label  SYMBOL , then we adjust the threshold appropriately

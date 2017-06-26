@@ -1,0 +1,38 @@
+### abstract ###
+Mechanical force plays an important role in the physiology of eukaryotic cells whose dominant structural constituent is the actin cytoskeleton composed mainly of actin and actin crosslinking proteins.
+Thus, knowledge of rheological properties of actin networks is crucial for understanding the mechanics and processes of cells.
+We used Brownian dynamics simulations to study the viscoelasticity of crosslinked actin networks.
+Two methods were employed, bulk rheology and segment-tracking rheology, where the former measures the stress in response to an applied shear strain, and the latter analyzes thermal fluctuations of individual actin segments of the network.
+It was demonstrated that the storage shear modulus increases more by the addition of ACPs that form orthogonal crosslinks than by those that form parallel bundles.
+In networks with orthogonal crosslinks, as crosslink density increases, the power law exponent of G as a function of the oscillation frequency decreases from 0.75, which reflects the transverse thermal motion of actin filaments, to near zero at low frequency.
+Under increasing prestrain, the network becomes more elastic, and three regimes of behavior are observed, each dominated by different mechanisms: bending of actin filaments, bending of ACPs, and at the highest prestrain tested, stretching of actin filaments and ACPs.
+In the last case, only a small portion of actin filaments connected via highly stressed ACPs support the strain.
+We thus introduce the concept of a supportive framework, as a subset of the full network, which is responsible for high elasticity.
+Notably, entropic effects due to thermal fluctuations appear to be important only at relatively low prestrains and when the average crosslinking distance is comparable to or greater than the persistence length of the filament.
+Taken together, our results suggest that viscoelasticity of the actin network is attributable to different mechanisms depending on the amount of prestrain.
+### introduction ###
+Actin is the most abundant intracellular protein in eukaryotic cells and plays an important role in a wide range of biological and mechanical phenomena CITATION.
+Monomeric actin self-assembles to a filamentous form, F-actin, which is crosslinked into the actin cytoskeleton by various actin crosslinking proteins.
+It has been known that mechanical force plays a crucial role in the physiology of eukaryotic cells CITATION, and therefore appropriate functions of living cells are attributable to the rigorous control of their rheological properties CITATION.
+Thus, investigating rheological properties of actin networks is indispensable for elucidating the mechanics of cells as well as for understanding a wide variety of cellular processes.
+Experiments have been conducted to probe viscoelastic properties of cells and reconstituted actin gels using a variety of techniques such as microbead rheology, magnetic bead cytometry, and bulk rheology CITATION CITATION.
+In experiments, discrepancies have been observed among measurements using dissimilar methodologies, and many of the observed features are not well understood.
+For example, viscoelastic moduli measured by single-bead passive microbead rheology are much smaller than those determined by 2-point microrheology or bulk rheology CITATION CITATION.
+Also, although distinct power law responses of the storage modulus have often been observed in vivo and in vitro CITATION CITATION, their origin is not yet clearly understood.
+Concurrently, characteristics of semi-flexible polymer networks have been studied theoretically and computationally CITATION CITATION.
+Two- CITATION, CITATION and 3-dimensional computational models CITATION studying affine and nonaffine deformations of semi-flexible networks responding to large shear strain revealed two regimes dominated by bending or stretching of filaments, respectively.
+Recently, using a microstructure-based continuum mechanics approach, Palmer and Boyce reproduced many of the rheological properties of actin networks observed in experiments CITATION.
+The viscoelastic behavior of semi-flexible networks was also investigated using dissipative particle dynamics and the concept of microbead rheology, where scale-free behavior of the bead displacement was observed CITATION, CITATION.
+To date, however, most of these models neither explicitly take into account ACP mechanics nor systematically account for thermal fluctuations, nor have they been used to explore the effects of finite prestress on viscoelasticity, all of which are potentially important factors governing matrix viscoelasticity.
+With the objective of extending these previous works and providing new insights into underlying mechanisms, we develop a Brownian dynamics model of the actin network that includes features such as steric interaction among filaments, the usage of explicit crosslinkers, a more realistic morphology, and the consideration of crosslinker stiffness.
+By measuring stress in response to applied oscillatory shear strain and thermal fluctuations of individual segments in the polymeric chain, we investigate viscoelastic properties of actin-like networks.
+Throughout this paper, for convenience, the term, actin network is used to refer to the network being simulated.
+It should be noted, however, that some of the properties employed in our model, especially for ACPs, were estimated since they are not well-known experimentally.
+Due to simplifications in the model and parameter uncertainty, the results should therefore be viewed as representative of a generic crosslinked network, but lack a quantitatively precise correspondence to actin networks.
+Nevertheless, we found features that semi-quantitatively capture experimentally observed behaviors of actin networks.
+The storage and loss moduli, G and G, followed power laws as functions of the oscillation frequency.
+As the prestrain increased, the network became increasingly elastic.
+Bending and extensional stiffnesses of actin filaments and ACPs played an important role depending on the degree of prestrain.
+We found that the mechanical response of the network is dominated by a percolating supportive framework, while other actin filaments contribute little to the viscoelastic moduli.
+Surprisingly, in typical physiological conditions where the distance between crosslinking points along F-actin is much shorter than the actin persistence length, we found that thermal fluctuation plays little role in viscoelasticity, so that the network consisting of crosslinked F-actins can be viewed essentially as a deterministic overdamped system in a viscous medium.
+In sum, our computational model elucidates how various mechanical responses govern viscoelastic properties of the network under different conditions.

@@ -1,0 +1,32 @@
+### abstract ###
+the st
+petersburg paradox is a famous economic and philosophical puzzle that has generated numerous conflicting explanations
+to shed empirical light on this phenomenon  we examined subjects' bids for one st
+petersburg gamble with a real monetary payment
+we found that bids were typically lower than twice the smallest payoff  and thus much lower than is generally supposed
+we also examined bids offered for several hypothetical variants of the st
+petersburg paradox
+we found that bids were weakly affected by truncating the gamble  were strongly affected by repeats of the gamble  and depended linearly on the initial  seed  value of the gamble
+one explanation  which we call the median heuristic  strongly predicts these data
+subjects following this strategy evaluate a gamble as if they were taking the median rather than the mean of the payoff distribution
+finally  we argue that the distribution of outcomes embodied in the st
+petersburg paradox is so divergent from the gaussian form that the statistical mean is a poor estimator of expected value  so that the expected value of the st
+petersburg gamble is undefined
+these results suggest that this classic paradox has a straightforward explanation rooted in the use of a statistical heuristic
+### introduction ###
+in the st
+petersburg paradox  originally proposed in  NUMBER   the house offers to flip a coin until it comes up heads
+the house pays   NUMBER  if heads appears on the first trial  otherwise the payoff doubles each time tails appears  with this compounding stopping and payment being given at the first heads bernoulli   NUMBER   shown in figure  NUMBER 
+by conventional definitions  the st
+petersburg gamble has an infinite expected value  nonetheless  most people share the intuition that they should not offer more than a few dollars to play
+explaining why people offer such small sums to play a gamble with infinite expected value is an important question in economics and philosophy  CITATION
+the st
+petersburg paradox has attracted explanations from many well-known thinkers  including daniel and niklaus bernoulli  cramer  de morgan  condorcet  euler  poisson  and gibbon  and economists including marschack  cournot  arrow  keynes  stigler  samuelson  von mises  ramsey and aumann  CITATION
+the earliest discussions of the st
+petersburg paradox led to the idea of utility curves  now a central concept in economics  CITATION
+moreover  menger's discussion of the paradox sparked von neumann's interest in utility  which in turn influenced von neumann and morgenstern's foundational book theory of games and economic behavior  CITATION
+despite the importance of the st
+petersburg paradox  there is no widely accepted explanation for the low values most people place on this theoretically priceless gamble  CITATION
+moreover  there is precious little empirical data on the st
+petersburg paradox  CITATION
+in the present study  we review several major classes of explanations  and then provide empirical data designed to test these explanations

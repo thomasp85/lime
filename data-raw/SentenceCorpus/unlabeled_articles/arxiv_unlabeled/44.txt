@@ -1,0 +1,26 @@
+### abstract ###
+We develop a new collaborative filtering (CF) method that combines both previously known users' preferences, ie standard CF, as well as product/user attributes, ie classical function approximation, to predict a given user's interest in a particular product
+Our method is a generalized low rank matrix completion problem, where we learn a function whose inputs are pairs of vectors -- the standard low rank matrix completion problem being a special case where the inputs to the function are the row and column indices of the matrix
+We solve this generalized matrix completion problem using tensor product kernels for which we also formally generalize standard kernel properties
+Benchmark experiments on movie ratings show the advantages of our generalized matrix completion method over the standard matrix completion one with no information about movies or people, as well as over standard multi-task or single task learning methods
+### introduction ###
+Collaborative Filtering (CF) refers to the task of predicting preferences of a given user based on their previously known preferences as well as the preferences of other users
+In a book recommender system, for example, one would like to suggest new books to a customer based on what he and others have recently read or purchased
+This can be formulated as the problem of filling a matrix with customers as rows, objects (e g , books) as columns, and missing entries corresponding to preferences that one would like to infer
+In the simplest case, a preference could be a binary variable (thumbs up/down), or perhaps even a more quantitative assessment (scale of 1 to 5)
+Standard CF assumes that nothing is known about the users or the objects apart from the preferences expressed so far
+In such a setting the most common assumption is that preferences can be decomposed into a small number of factors, both for users and objects, resulting in the search for a low-rank matrix which approximates the partially observed matrix of preferences
+This problem is usually a difficult non-convex problem for which only heuristic algorithms exist~ CITATION
+Alternatively convex formulations have been obtained by relaxing the rank constraint by constraining the trace norm of the matrix~ CITATION
+In many practical applications of CF, however, a description of the users and/or the objects through attributes (e g , gender, age) or measures of similarity is available
+In that case it is tempting to take advantage of both known preferences and descriptions to model the preferences of users
+An important benefit of such a framework over pure CF is that it potentially allows the prediction of preferences for new users and/or new objects
+Seen as learning a preference function from examples, this problem can be solved by virtually any algorithm for supervised classification or regression taking as input a pair (user, object)
+If we suppose for example that a positive definite kernel between pairs can be deduced from the description of the users and object, then learning algorithms like support vector machines or kernel ridge regression can be applied
+These algorithms minimize an empirical risk over a ball of the reproducing kernel Hilbert space (RKHS) defined by the pairwise kernel
+Both the rank constraint and the RKHS norm restriction act as regularization based on prior hypothesis about the nature of the preferences to be inferred
+The rank constraint is based on the hypothesis that preferences can be modelled by a limited number or factors to describe users and objects
+The RKHS norm constraint assumes that preferences vary smoothly between similar users and similar objects, where the similarity is assessed in terms of the kernel for pairs
+The main contribution of this work is to propose a framework which combines both regularizations on the one hand, and which interpolates between the pure CF approach and the pure attribute-based approaches on the other hand
+In particular, the framework encompasses low-rank matrix factorization for collaborative filtering, multi-task learning, and classical regression/classification over product spaces
+We show on a benchmark experiment of movie recommendations that the resulting algorithm can lead to significant improvements over other state-of-the-art methods

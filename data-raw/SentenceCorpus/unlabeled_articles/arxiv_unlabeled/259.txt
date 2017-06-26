@@ -1,0 +1,44 @@
+### abstract ###
+%   <- trailing '%' for backward compatibility of
+sty file   In recent years analysis of complexity of learning Gaussian mixture models from sampled data has received significant attention in computational machine learning and theory communities
+In this paper we present the first result showing that polynomial time learning of multidimensional Gaussian Mixture distributions is possible when the separation between the component means is arbitrarily small
+Specifically, we present an algorithm for learning the parameters of a mixture of  SYMBOL  identical spherical Gaussians in  SYMBOL -dimensional space with an arbitrarily small separation between the components, which is polynomial in dimension, inverse component separation and other input parameters for a  fixed  number of components  SYMBOL
+The algorithm uses a projection to  SYMBOL  dimensions and then a reduction to the  SYMBOL -dimensional case
+It relies on a theoretical analysis showing that two  SYMBOL -dimensional mixtures whose densities are close in  the  SYMBOL  norm must have similar means and mixing coefficients
+To produce the necessary lower bound  for the  SYMBOL  norm in terms of the distances between the corresponding means, we analyze the behavior of the Fourier transform of a mixture of Gaussians  in one dimension around the origin, which turns out to be closely related to the properties of the Vandermonde matrix obtained from the component means
+Analysis of  minors of the Vandermonde matrix  together with basic function approximation results allows us to provide a  lower bound for the norm  of the mixture in the  Fourier domain and hence a bound in the original space
+Additionally, we present a separate argument for reconstructing variance
+### introduction ###
+Mixture models, particularly Gaussian mixture models, are a widely used tool for many problems of statistical inference  CITATION
+The basic problem  is to estimate the parameters of a mixture distribution, such as the mixing coefficients, means and variances within some pre-specified precision from a number of sampled data points
+While the history of Gaussian mixture models goes back to~ CITATION , in recent years the theoretical aspects  of mixture learning have attracted considerable attention  in the theoretical computer science, starting with the pioneering work of~ CITATION , who showed that a mixture of  SYMBOL  spherical Gaussians in  SYMBOL  dimensions can be learned in time polynomial in  SYMBOL , provided certain separation conditions between the component means (separation of order  SYMBOL ) are satisfied
+This work has been refined and extended in a number of recent papers
+The first result from~ CITATION  was later improved to the order of  SYMBOL  in~ CITATION  for spherical Gaussians and in~ CITATION  for general Gaussians
+The separation requirement was further reduced and made independent of  SYMBOL  to the order of  SYMBOL  in  CITATION  for spherical Gaussians and to the order of  SYMBOL  in~ CITATION  for Logconcave distributions
+In a related work~ CITATION  the separation requirement was reduced to  SYMBOL
+An extension of PCA called isotropic PCA  was introduced in  CITATION   to learn mixtures of Gaussians when any pair of Gaussian components is separated by a hyperplane having very small overlap along the hyperplane direction (so-called "pancake layering problem")
+In a slightly different direction the recent work~ CITATION  made an important contribution to the subject by providing a polynomial time algorithm  for PAC-style learning of mixture of Gaussian distributions with arbitrary separation between the means
+The authors used a grid search over the space of parameters to a construct a hypothesis mixture of Gaussians that has density close to the actual mixture generating the data
+We note that the problem analyzed in~ CITATION  can be viewed as density estimation within a certain family of distributions and is different from most other work on the subject, including our paper, which address parameter learning
+We also note several recent papers dealing with the related problems of learning mixture of product distributions and heavy tailed distributions
+See for example,  CITATION
+In the statistics literature,  CITATION  showed that optimal convergence rate of MLE estimator for finite mixture of normal distributions is  SYMBOL , where  SYMBOL  is the sample size, if number of mixing components  SYMBOL  is known in advance and is  SYMBOL  when the number of mixing components is known up to an upper bound
+However, this result does not address the computational aspects, especially in high dimension
+In this paper we develop a polynomial time (for a fixed  SYMBOL ) algorithm to identify the parameters of the  mixture of  SYMBOL  identical spherical Gaussians with potentially unknown variance for an arbitrarily small separation  between the components
+To the best of our knowledge this is the first result of this  kind except for the simultaneous and independent work~ CITATION ,  which analyzes the case of a mixture of  two Gaussians with arbitrary covariance matrices using the method of moments
+We note that the results in~ CITATION   and in our paper are somewhat orthogonal
+Each paper deals with a special case of the  ultimate goal (two arbitrary Gaussians in~ CITATION   and  SYMBOL  identical spherical Gaussians with unknown variance in our case), which is to show polynomial learnability for  a mixture with an arbitrary number of components and arbitrary variance
+All other existing algorithms for parameter estimation require minimum separation between the components to be   an increasing function of at least one of  SYMBOL  or  SYMBOL
+Our result also implies a density estimate bound along the lines of~ CITATION
+We note, however, that we do have to pay  a price as our procedure (similarly to that in~ CITATION ) is super-exponential in  SYMBOL
+Despite these limitations we believe that our paper makes a step towards understanding the fundamental problem of polynomial learnability of Gaussian mixture distributions
+We also think that the technique used  in the paper to obtain the lower bound may be of independent interest
+The main algorithm in our paper involves a grid search over a certain space of parameters, specifically means and mixing coefficients of the mixture (a completely separate argument is given to estimate the variance)
+By giving appropriate lower and upper bounds for the norm of the difference of two mixture distributions in terms of their means, we show that such a grid search is guaranteed to find a mixture with nearly correct values of the parameters
+To prove that, we need to provide a lower and upper bounds on the norm of the mixture
+A key point of our paper is the lower bound showing that two mixtures with different means cannot produce similar density functions
+This bound is obtained by  reducing the problem to a 1-dimensional mixture distribution and  analyzing the behavior of the Fourier transform (closely related to the characteristic function, whose coefficients are moments of a random variable up to multiplication by a power of the imaginary unit  SYMBOL ) of the difference between densities near zero
+We use certain properties of minors of Vandermonde matrices to show that the norm of the mixture in the Fourier domain is bounded from below
+Since the  SYMBOL  norm is invariant under the Fourier transform this provides a lower bound on the norm of the mixture in the original space
+We also note the work~ CITATION , where Vandermonde matrices appear in the analysis of mixture distributions in the context of proving consistency of the method of moments (in fact, we rely on a result from~ CITATION  to  provide an estimate for the variance)
+Finally, our lower bound, together with an upper bound and some results from the non-parametric density estimation and spectral projections of mixture distributions allows us to set up a grid search algorithm over the space of parameters with the desired guarantees

@@ -1,0 +1,40 @@
+### abstract ###
+Many learning machines that have hierarchical structure or hidden variables are now being used in information science, artificial intelligence, and bioinformatics
+However, several learning machines used in such fields are not regular but  singular statistical models,  hence their generalization performance is still left unknown
+To overcome these problems,  in the previous papers, we proved new equations in statistical learning,   by which we can estimate the Bayes generalization loss from the Bayes training loss and the functional variance, on the condition that the true distribution is a singularity contained in a learning machine
+In this paper, we prove that the same equations hold even if a  true distribution is not contained in a parametric model
+Also we prove that, the proposed equations in  a regular case are asymptotically equivalent to the Takeuchi information criterion
+Therefore, the proposed equations are always applicable without any condition  on the unknown true distribution
+### introduction ###
+Nowadays, a lot of learning machines are being used in information science, artificial intelligence, and bioinformatics
+However, several learning machines used in such fields, for example,  three-layer neural networks, hidden Markov models, normal mixtures, binomial mixtures, Boltzmann machines, and reduced rank regressions have hierarchical structure or hidden variables, with the result that the mapping from the parameter to the probability distribution is not one-to-one
+In such learning machines, it was pointed out that  the maximum likelihood estimator is not subject to the normal distribution  CITATION ,  and that the  a posteriori  distribution can not be approximated by any gaussian distribution  CITATION
+Hence the conventional statistical  methods for model selection, hypothesis test, and hyperparameter optimization  are not applicable to such learning machines
+In other words, we have not yet established the theoretical foundation for learning machines which extract hidden structures from random samples
+In statistical learning theory, we study the problem of learning and generalization based on several assumptions
+Let  SYMBOL  be a true probability density function and   SYMBOL  be a learning machine, which is represented by  a probability density function of  SYMBOL  for a parameter  SYMBOL
+In this paper, we examine the following two assumptions \\ (1) The first is the parametrizability condition
+A true distribution  SYMBOL  is said to be  parametrizable  by a learning machine  SYMBOL ,  if there is a parameter  SYMBOL  which satisfies  SYMBOL
+If  otherwise, it is called  nonparametrizable  \\ (2) The second is the regularity condition
+A true distribution  SYMBOL  is said to be  regular  for a learning machine  SYMBOL ,  if the parameter  SYMBOL  that minimizes the log loss function  SYMBOL } is unique and if the Hessian matrix  SYMBOL  is positive definite
+If a true distribution is not regular for a learning machine, then it is said to be   singular
+In study of layered neural networks and normal mixtures,  both conditions are important
+In fact,  if a learning machine is redundant compared to a true distribution, then the true distribution is parametrizable and singular
+Or if a learning machine is too simple to approximate a  true distribution, then the true distribution is nonparametrizable and  regular
+In practical applications, we need a method  to determine the optimal learning machine,  therefore, a general formula is desirable by which the generalization loss can be estimated from the training loss without regard to such conditions
+In the previous papers  CITATION ,  we studied a case when a true distribution is parametrizable and singular,  and proved new formulas which enable us  to estimate the generalization loss from the training loss and the functional variance
+Since the new formulas hold for an arbitrary  set of a true distribution,  a learning machine, and an  a priori  distribution, they are called   equations of states in statistical estimation
+However, it has not been clarified whether they hold or not  in a nonparametrizable case
+In this paper, we study the case when a true distribution is nonparametrizable and regular, and  prove that the same equations of states also hold
+Moreover, we show that, in  a nonparametrizable and regular case, the equations of states are asymptotically  equivalent to the Takeuchi information criterion (TIC)  for the maximum likelihood method
+Here TIC was  derived for the model selection criterion in the case when the true distribution  is not contained in a statistical model  CITATION
+The network information criterion  CITATION  was devised by generalizing it to an arbitrary loss function in the regular case
+If a true distribution is singular for a learning machine,  TIC is ill-defined, whereas the equations of states are well-defined and equal to the average generalization losses
+Therefore, equations of states can be understood as the generalized version of TIC from the maximum likelihood method in a regular case to Bayes method for regular and singular cases
+This paper consists of six sections
+In Section 2, we summarized the framework of Bayes learning and the results of previous papers
+In Section 3,  we show the main results of this paper
+In Section 4, some lemmas are prepared  which are used in the proofs of the main results
+The proofs of lemmas are given in the Appendix
+In Section 5, we prove the main theorems
+In Section 5 and 6, we discuss and conclude this paper

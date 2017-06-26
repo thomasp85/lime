@@ -1,0 +1,29 @@
+### abstract ###
+Identification of single nucleotide polymorphisms and mutations is important for the discovery of genetic predisposition to complex diseases.
+PCR resequencing is the method of choice for de novo SNP discovery.
+However, manual curation of putative SNPs has been a major bottleneck in the application of this method to high-throughput screening.
+Therefore it is critical to develop a more sensitive and accurate computational method for automated SNP detection.
+We developed a software tool, SNPdetector, for automated identification of SNPs and mutations in fluorescence-based resequencing reads.
+SNPdetector was designed to model the process of human visual inspection and has a very low false positive and false negative rate.
+We demonstrate the superior performance of SNPdetector in SNP and mutation analysis by comparing its results with those derived by human inspection, PolyPhred, and independent genotype assays in three large-scale investigations.
+The first study identified and validated inter- and intra-subspecies variations in 4,650 traces of 25 inbred mouse strains that belong to either the Mus musculus species or the M. spretus species.
+Unexpected heterozgyosity in CAST/Ei strain was observed in two out of 1,167 mouse SNPs.
+The second study identified 11,241 candidate SNPs in five ENCODE regions of the human genome covering 2.5 Mb of genomic sequence.
+Approximately 50 percent of the candidate SNPs were selected for experimental genotyping; the validation rate exceeded 95 percent.
+The third study detected ENU-induced mutations in 64,896 traces of 1,236 zebra fish.
+Our analysis of three large and diverse test datasets demonstrated that SNPdetector is an effective tool for genome-scale research and for large-sample clinical studies.
+SNPdetector runs on Unix/Linux platform and is available publicly .
+### introduction ###
+Identification of genetic variations and mutations is important for the discovery of genetic predisposition to complex diseases.
+Although a wide variety of methods are available for de novo single nucleotide polymorphism discovery CITATION, DNA sequencing is the method of choice for high-throughput screening studies.
+DNA sequencing may follow either a random shotgun strategy CITATION CITATION or a directed strategy using PCR amplification of specific target regions of interest CITATION.
+As the high-density haplotype map of the human genome CITATION nears completion, the demand for large-scale SNP surveys seeking genetic mutations linked to or causative of a wide variety of human diseases is expected to greatly increase CITATION .
+Direct sequencing of PCR-amplified genomic fragments from diploid samples results in mixed sequencing templates.
+Therefore, one of the most challenging issues in SNP discovery by this method is to distinguish bona fide heterozygous allelic variations from sequencing artifacts, which can give rise to two overlapping fluorescence peaks similar to true heterozygotes.
+Currently, PolyPhred CITATION is the most widely used SNP discovery software for such an analysis.
+It reports a heterozygous allele only when the site shows a decrease of about 50 percent in peak height compared to the average height for homozygous individuals.
+However, inspection of the computational results by human analysts is often required to ensure a low false positive rate, a labor-intensive process.
+To provide a sensitive and accurate method for SNP detection in fluorescence-based resequencing, we developed a new software tool, SNPdetector, aiming to computerize the manual review process.
+We report SNPdetector's application in three large-scale genetic variation studies and compare its results with those obtained by human inspection, by PolyPhred, and by experimental validation.
+In the first study, resequencing was used to validate mouse SNPs discovered by whole-genome shotgun sequencing.
+The second study identifies novel SNPs in the ENCODE regions of the human genome CITATION, and the third study aims to discover mutations induced by ENU in 1,236 zebra fish.

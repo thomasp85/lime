@@ -1,0 +1,30 @@
+### abstract ###
+Gene regulatory networks consist of direct interactions but also include indirect interactions mediated by metabolites and signaling molecules.
+We describe how these indirect interactions can be derived from a model of the underlying biochemical reaction network, using weak time-scale assumptions in combination with sensitivity criteria from metabolic control analysis.
+We apply this approach to a model of the carbon assimilation network in Escherichia coli.
+Our results show that the derived gene regulatory network is densely connected, contrary to what is usually assumed.
+Moreover, the network is largely sign-determined, meaning that the signs of the indirect interactions are fixed by the flux directions of biochemical reactions, independently of specific parameter values and rate laws.
+An inversion of the fluxes following a change in growth conditions may affect the signs of the indirect interactions though.
+This leads to a feedback structure that is at the same time robust to changes in the kinetic properties of enzymes and that has the flexibility to accommodate radical changes in the environment.
+### introduction ###
+The adaptation of bacteria to changes in their environment involves adjustments in the expression of genes coding for enzymes, regulators, membrane transporters, etc. CITATION CITATION.
+These adjustments are controlled by gene regulatory networks ensuring the coordinated expression of clusters of functionally related genes.
+The interactions in the network may be direct, as in the case of a gene coding for a transcription factor regulating the expression of another gene.
+Most of the time, however, regulatory interactions are indirect, e.g. when a gene encodes an enzyme producing a transcriptional effector CITATION .
+A gene regulatory network can thus not be reduced to its transcriptional regulatory interactions: by ignoring indirect interactions mediated by metabolic and signaling pathways we may miss crucial feedback loops in the system.
+The network controlling carbon uptake in the bacterium Escherichia coli is a good example because it integrates metabolism, signal transduction, and gene expression.
+At the level of gene expression, the network includes intricate feedback loops that arise from indirect interactions between the subsystems.
+Global regulators like Crp control expression of enzymes in carbon metabolism CITATION CITATION, while intermediates of the latter pathways control the expression of global regulators.
+For instance, the phosphorylation of EIIA activates adenylate cyclase to produce cAMP which is required for the activation of Crp CITATION, CITATION .
+The aim of this paper is to develop a method for the systematic derivation of direct and indirect interactions in a gene regulatory network from the underlying biochemical reaction network.
+Due to the complexity of the intermediate metabolic and signaling networks, determining indirect interactions is difficult in general.
+We show that model reduction based on quasi-steady-state approximations expressing weak assumptions on time-scale hierarchies in the system CITATION CITATION, together with sensitivity criteria from metabolic control analysis CITATION, CITATION, are able to uncover such interactions.
+Indeed the MCA formalism uniquely allows to relate systemic sensitivities with the sensitivities of individual reactions to reactants and effectors CITATION, CITATION.
+It therefore provides a proper framework for investigating metabolic effects in gene regulation.
+We apply our approach to a model of the upper part of the carbon assimilation network in E. coli, consisting of the glycolysis and gluconeogenesis pathways and their genetic and metabolic regulation.
+The analysis of the derived gene regulatory network leads to three new insights.
+First, contrary to what is often assumed, the network is densely connected due to numerous feedback loops resulting from indirect interactions.
+This additional complexity is an important issue for the correct interpretation of data from genome-wide transcriptome studies.
+Second, the derived gene regulatory network for carbon assimilation in E. coli is sign-determined, in the sense that the signs of interactions are essentially fixed by weak information on flux directions of biochemical reactions, without explicit specification of kinetic rate laws or parameter values.
+Therefore the feedback structure is robust to changes in kinetic properties of enzymes and other biochemical reactions species.
+Third, a change in environmental conditions may invert fluxes, and thus the signs of indirect interactions, resulting in a dynamic rewiring of the regulatory network.

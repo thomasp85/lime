@@ -1,0 +1,27 @@
+### abstract ###
+We present  multiplicative updates for solving hard  and soft margin support  vector  machines  (SVM)  with non-negative  kernels
+They follow as a natural extension of the updates for non-negative matrix factorization
+No additional parameter  setting, such  as choosing learning,   rate   is   required
+Experiments   demonstrate   rapid convergence to good classifiers
+We analyze the rates of asymptotic convergence of the updates and  establish tight bounds
+We test the performance on  several datasets using  various non-negative kernels and report  equivalent generalization errors  to that of  a standard SVM
+### introduction ###
+Support  vector  machines  (SVM)  are  now  routinely  used  for  many classification problems  in machine learning~ CITATION  due to their  ease of use and  ability to generalize
+In  the basic case, the input data,  corresponding to two groups, is  mapped into a higher dimensional space,  where a  maximum-margin hyperplane is  computed to separate  them
+The  ``kernel  trick''  is used  to  ensure that  the mapping into higher dimensional  space is never explicitly calculated
+This can  be formulated as a non-negative  quadratic programming (NQP) problem    and    there   are    efficient    algorithms   to    solve it~ CITATION
+SVM  can be  trained using  variants  of the  gradient descent  method applied   to  the   NQP
+Although   these  methods   can   be  quite efficient~ CITATION , their drawback  is the requirement of setting  the   learning  rate
+Subset  selection  methods   are  an alternative      approach     to      solving     the      SVM     NQP problem~ CITATION
+At  a  high  level  they  work  by splitting the  arguments of the  quadratic function at  each iteration into two sets: a fixed set, where the arguments are held constant, and a  working  set  of  the  variables being  optimized  in  the  current iteration
+These methods~ CITATION ,  though efficient in space  and time,  still require a  heuristic to  exchange arguments between the working and the fixed sets
+An alternative algorithm for solving  the general NQP problem has been applied   to  SVM   in~ CITATION
+The  algorithm,   called M\textsuperscript{3},  uses   multiplicative  updates  to  iteratively converge to the solution
+It  does not require any heuristics, such as setting the learning rate or choosing how to split the argument set
+In this  paper we reformulate the  dual SVM problem  and demonstrate a connection   to   the    non-negative   matrix   factorization   (NMF) algorithm~ CITATION
+NMF employs multiplicative updates and is  very successful in practice  due to its  independence from the learning rate parameter, low  computational complexity and the ease of implementation
+The   new   formulation   allows   us   to   devise multiplicative updates for solving  SVM with non-negative kernels (the output value of the kernel function is greater or equal to zero)
+The requirement  of a non-negative  kernel is  not very  restrictive since their set includes many  popular kernels, such as Gaussian, polynomial of  even  degree  etc
+The  new  updates possess  all  of  the  good properties   of  the   NMF  algorithm,   such  as   independence  from hyper-parameters,  low  computational   complexity  and  the  ease  of implementation
+Furthermore, the  new algorithm converges faster than the   previous   multiplicative    solution   of   the   SVM   problem from~ CITATION  both asymptotically  (a proof is provided) and in practice
+We also  show how  to solve the  SVM problem  with soft margin using the new algorithm

@@ -1,0 +1,27 @@
+### abstract ###
+this paper develops tests of independence and stationarity in choice data collected with small samples
+the method builds on the approach of smith and batchelder  CITATION
+the technique is intended to distinguish cases where a person is systematically changing  true  preferences from one group of trials to another from cases in which a person is following a random preference mixture model with independently and identically distributed sampling in each trial
+preference reversals are counted between all pairs of repetitions
+the variance of these preference reversals between all pairs of repetitions is then calculated
+the distribution of this statistic is simulated by a monte carlo procedure in which the data are randomly permuted and the statistic is recalculated in each simulated sample
+a second test computes the correlation between the mean number of preference reversals and the difference between replicates  which is also simulated by monte carlo
+data of regenwetter  dana  and davis-stober  CITATION  are reanalyzed by this method
+eight of  NUMBER  subjects showed significant deviations from the independence assumptions by one or both of these tests  which is significantly more than expected by chance
+### introduction ###
+regenwetter  dana  and davis-stober  CITATION  proposed a solution to the problem of testing whether choice data satisfy or violate transitivity of preference
+their probabilistic choice model assumes that on a given trial  a response can be represented as if it were a random sample from a mixture of transitive preferences
+the model was used to analyze a replication of tversky's  CITATION  study that had reported systematic violations of transitivity of preference  CITATION
+reanalysis via this iid mixture model of new data concluded that transitivity can be retained
+birnbaum  CITATION  agreed with much of their paper  including their conclusions that evidence against transitivity is weak  but criticized the method in part because it assumes that responses by the same person to repeated choices are independent and identically distributed iid
+if this assumption is violated  the method of regenwetter et al CITATION  might lead to wrong conclusions regarding the tests of structural properties
+further  the violations of these assumptions can be analyzed by a more detailed analysis of individual responses to choice problems rather than by focusing on averaged binary choice proportions
+in the true and error model  a rival probabilistic representation that can also be used to test structural properties such as transitivity in mixture models  iid will be violated when a person has a mixture of true preferences and changes true preferences during the course of the study
+birnbaum  CITATION  showed how the regenwetter et al method might lead to wrong conclusions when iid is violated in hypothetical data  and described methods for testing between these two rival stochastic models of choice
+these methods allow tests of assumptions of the regenwetter  et al CITATION  approach against violations that would occur if a person were to change preferences during a study
+he described conventional statistical tests that require conventional sized samples
+hypothetical examples illustrated cases in which the method of regenwetter  et al CITATION  might lead to the conclusion that transitivity was satisfied  even when a more detailed analysis showed that the data contained systematic violations of both iid and transitivity
+the methods described by birnbaum  CITATION  to test independence would require large numbers of trials  however  and might be difficult or impractical to implement
+the experiment of tversky  CITATION   which regenwetter et al CITATION  replicated  does not have sufficient data to allow the full analyses proposed by birnbaum  CITATION
+regenwetter  dana  davis-stober  and guo  CITATION  argued that it would be difficult to collect enough data to provide a complete test of all iid assumptions  as proposed by birnbaum  CITATION
+nevertheless  this note shows that by building on the approach of smith and batchelder  CITATION   it is possible to test iid assumptions even in small studies such as that of regenwetter  et al CITATION

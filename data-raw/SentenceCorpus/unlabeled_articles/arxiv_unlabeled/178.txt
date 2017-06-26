@@ -1,0 +1,40 @@
+### abstract ###
+General purpose intelligent learning agents cycle through (complex,non-MDP) sequences of observations, actions, and rewards
+On the other hand, reinforcement learning is well-developed for small finite state Markov Decision Processes (MDPs)
+So far it is an art performed by human designers to extract the right state representation out of the bare observations, ie \ to reduce the agent setup to the MDP framework
+Before we can think of mechanizing this search for suitable MDPs, we need a formal objective criterion
+The main contribution of this article is to develop such a criterion
+I also integrate the various parts into one learning algorithm
+Extensions to more realistic dynamic Bayesian networks are developed in the companion article  CITATION  {Keywords:} evolutionary algorithms, ranking selection, tournament selection, equivalence, efficiency
+### introduction ###
+Artificial General Intelligence (AGI) is concerned with designing agents that perform well in a wide range of environments  CITATION
+Among the well-established ``narrow'' AI approaches, arguably Reinforcement Learning (RL) pursues most directly the same goal
+RL considers the general agent-environment setup in which an agent interacts with an environment (acts and observes in cycles) and receives (occasional) rewards
+The agent's objective is to collect as much reward as possible
+Most if not all AI problems can be formulated in this framework
+The simplest interesting environmental class consists of finite state fully observable Markov Decision Processes (MDPs)  CITATION , which is reasonably well understood
+Extensions to continuous states with (non)linear function approximation  CITATION , partial observability (POMDP)  CITATION , structured MDPs (DBNs)  CITATION , and others have been considered, but the algorithms are much more brittle
+In any case, a lot of work is still left to the designer, namely to extract the right state representation (``features'') out of the bare observations
+Even if  potentially  useful representations have been found, it is usually not clear which one will turn out to be better, except in situations where we already know a perfect model
+Think of a mobile robot equipped with a camera plunged into an unknown environment
+While we can imagine which image features are potentially useful, we cannot know which ones will actually be useful
+Before we can think of mechanically searching for the ``best'' MDP representation, we need a formal objective criterion
+Obviously, at any point in time, if we want the criterion to be effective it can only depend on the agents past experience
+The main contribution of this article is to develop such a criterion
+Reality is a non-ergodic partially observable uncertain unknown environment in which acquiring experience can be expensive
+So we want/need to exploit the data (past experience) at hand optimally, cannot generate virtual samples since the model is not given (need to be learned itself), and there is no reset-option
+In regression and classification, penalized maximum likelihood criteria  CITATION  have successfully been used for semi-parametric model selection
+It is far from obvious how to apply them in RL
+Ultimately we do not care about the observations but the rewards
+The rewards depend on the states, but the states are arbitrary in the sense that they are model-dependent functions of the data
+Indeed, our derived Cost function cannot be interpreted as a usual model+data code length
+As partly detailed later, the suggested  SYMBOL MDP model could be regarded % as a scaled-down practical instantiation of AIXI  CITATION , % as a way to side-step the open problem of learning POMDPs, % as extending the idea of state-aggregation from planning (based on bi-simulation metrics  CITATION ) to RL (based on code length), % as generalizing U-Tree  CITATION  to arbitrary features, % or as an alternative to PSRs  CITATION  for which proper learning algorithms have yet to be developed
+%   Throughout this article,  SYMBOL  denotes the binary logarithm, %  SYMBOL  the empty string, % and  SYMBOL  if  SYMBOL  and  SYMBOL  else is the Kronecker symbol
+% I generally omit separating commas if no confusion arises, in particular in indices
+For any  SYMBOL  of suitable type (string,vector,set), I define string  SYMBOL , % sum  SYMBOL , union  SYMBOL , and vector  SYMBOL , % where  SYMBOL  ranges over the full range  SYMBOL  and  SYMBOL  is the length or dimension or size of  SYMBOL
+%  SYMBOL  denotes an estimate of  SYMBOL
+SYMBOL  denotes a probability over states and rewards or parts thereof
+I do not distinguish between random variables  SYMBOL  and realizations  SYMBOL , and abbreviation  SYMBOL  never leads to confusion
+More specifically,  SYMBOL  denotes the number of states, %  SYMBOL  any state index, %  SYMBOL  the current time, % and  SYMBOL  any time
+% Further, in order not to get distracted at several places I gloss over initial conditions or special cases where inessential
+Also 0 SYMBOL undefined=0 SYMBOL infinity:=0

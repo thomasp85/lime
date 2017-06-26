@@ -1,0 +1,73 @@
+### abstract ###
+we compare experts' judgments of the appropriateness of a treatment interferon treatment for melanoma on the basis of important attributes of this disease thickness  ulceration  lymph node involvement and type of metastases to a decision analytic model in which the probabilities of deterioration are derived from the medical literature and from epidemiological studies
+the comparison is based on what we call the linearity test  which examines whether appropriateness judgments are a linear function of the epidemiological value of p  the probability of deterioration of the patient condition if he would have received the treatment
+this comparison allows for the assessment of the validity of the experts' judgments under the assumption that the decision analytic model is valid  or alternatively  the assessment of the validity of the decision analytic model under the assumption that the experts' judgments are valid
+under the former assumption the results indicate that appropriateness judgments are by and large accurate
+under the latter assumption the results support the idea of a constant treatment effect  the idea that efficacy of a treatment is constant over various levels of severity of the disease
+our results also support the idea that experts' aggregate judgments far exceed individuals' judgments
+### introduction ###
+appropriateness judgments such as  how appropriate it is to perform procedure x on a patient with symptoms y and z   which communicate information of how worthwhile it is to perform a medical procedure  play a major role in clinical guidelines systems  CITATION
+in producing such systems  expert clinicians are given scenarios of a disease e g   melanoma that vary along a number of dimensions e g   size of tumor and number of nodes affected and are asked to judge on the appropriateness of using a certain procedure e g   interferon treatment for each of the cases
+these judgments can later be used by practitioners in deciding whether or not the treatment should be administered to their patients
+in view of the growing importance of such methods for communicating expertise in general and medical expertise in particular  CITATION   this paper examines expert appropriateness judgments within the framework of a normative decision analytic model  evaluates the validity of these judgments  and assesses their usefulness in understanding clinical models of treatment
+our empirical work is based on reanalysis of expert panel judgment that had been used in creating an authoritative guideline on whether to use interferon as an adjunct treatment for melanoma
+there are three perspectives from which the relationship between a decision model and judgments of appropriateness could be understood
+first  if the model is assumed to correctly describe the judgments  it could be used to uncover the implicit rules  or policies  underlying these judgments
+this is a  policy capturing  view of judgment modeling  CITATION   primarily used to assess attribute weights in expert judgment  but also to determine the presence of configural i e   interactive or other nonlinear rules underlying judgment
+second  if our decision analytic model is viewed as a prescriptive model of the appropriateness of a medical treatment  consistency between the model and actual appropriateness judgments could be viewed as supporting the validity of those judgments
+third  if a set of appropriateness judgments are viewed as prescriptively accurate  agreement between the model and the judgments could be viewed as supporting the normative stand of the model and the basic tenets on which it is based
+thus  whereas the second and third perspectives lend prescriptive status either to the model or to the judgment  the first perspective is merely descriptive  lending prescriptive status to neither
+the term  appropriateness  is the common language analogue of the difference between the expected utility of taking an action and the expected utility of not taking that action
+thus  when rating the appropriateness of a treatment as  NUMBER  on a  NUMBER  not appropriate at all to  NUMBER  very appropriate scale  the clinician implies that the expected utility of administering the treatment is slightly higher than the expected utility of not administering it  whereas when rating this appropriateness as  NUMBER   the clinician implies that the expected utility of administering this treatment is much higher than the expected utility of not administering it
+it is important to note that appropriate judgments are intended as a support tool for evaluating the utility of a treatment
+as such  they should serve as a direct i e   linear indicator of utility  and deviations from linearity should be viewed as inappropriate
+to use an example  consider a panel of experts who are asked to judge water temperature by sensing the water
+appropriate temperature judgment in this case should be linearly related to temperature  and the a linearity test could be viewed as a test of their validity
+consider now a clinician's judgment of the appropriateness of a treatment of a condition that has a probability of p  of deteriorating e g   death and  NUMBER -p  of remitting
+assume that the treatment is associated with probability p of deteriorating p   less than  p   and a probability  NUMBER -p  of remitting
+figure  NUMBER  depicts the decision tree facing the clinician
+in our model we assume that the probability of adverse events under treatment equals one
+we denote by u  the utility for remission and u  for deterioration death
+we also assume that the utility for remission under treatment is equal to u-u  where u  is the disutility of the adverse event associated with the treatment
+the expected utility of administering the treatment eu  and the expected utility of not administering it eu  is given by     NUMBER    and    NUMBER    respectively
+thus  the difference between the expected utility of administering the treatment eu  and the expected utility of not administering it eu  is given by     NUMBER    if appropriateness judgment is a linear representation of du eu-eu  this assumption is further discussed below  then it could be expressed as     NUMBER    where app represents the level of appropriateness and a is a positive constant
+denoting p p   k we obtain    NUMBER    the efficacy of a treatment is defined by  p -p  p    NUMBERp  p    NUMBER
+the assumption that p  p k is constant is equivalent to asserting that the efficacy of a treatment is constant over various levels of severity of the disease or that the effect of the treatment in reducing mortality is constant over various levels of severity of the disease
+for example  if treatment reduces the probability of mortality of patient a  whose initial probability of mortality is  NUMBER   NUMBER   by  NUMBER  percent  to  NUMBER   NUMBER  it will also reduce the probability of mortality of patient b  with an initial probability of  NUMBER   NUMBER   by  NUMBER  percent  to  NUMBER   NUMBER 
+the constant treatment effect  although not necessarily universally true  may reasonably describe the effect of treatment in many situations
+this assumption is made in many epidemiological studies
+moreover  it is mandatory in epidemiological studies where the relative risk reduction is estimated by regression
+whereas our decision analytic model represents appropriateness judgments as a function of p  they are usually obtained in response to clinical scenarios indications that include information about the severity  or levels  of various symptoms
+therefore  policy capturing studies usually model appropriateness judgments as a function of the level of symptoms rather than p or any other relevant probabilities  CITATION
+this approach has two disadvantages
+first  it does not allow for relating the descriptive policy capturing model  based on symptoms  to a prescriptive decision analytic model  based on probabilities and utilities
+second  the scales of the symptom levels may not be linear  thus introducing distortion into the interpretation of the results
+in particular  it is not clear whether nonlinear relationships between the symptom and the judgment represent a nonlinear clinical rule or nonlinearity in the scale of the symptoms
+to overcome these difficulties  our study models the judgment in terms of both the  raw  symptom scale and in terms of a transformed symptom scale in which the levels of the symptom are expressed using an epidemiological p yardstick
+for example  if the severity of the symptom is measured on a  NUMBER  low severity to  NUMBER  high severity scale and the probability of mortality within five years is  respectively  q to q  then the levels of the symptoms could be expressed in terms of the probability of mortality associated with each level  rather than the raw scale values
+this process could be viewed as an intervalization of the symptom scale
+whereas the raw  NUMBER  to  NUMBER  scale is not necessarily an interval scale equal changes on the scale are not necessarily equivalent with respect to their impact  e g   a change from  NUMBER  to  NUMBER  may differ from a change from  NUMBER  to  NUMBER   the transformed scale is interval equal changes on the scale could be viewed as equivalent in terms of their impact
+assessment of validity in medical judgments has taken primarily either the approach of comparing methods  CITATION   or examining whether the decision process suffers from biases  CITATION
+a few studies have also examined the validity of appropriateness judgments by comparing them to normative models  CITATION
+in contrast to these approaches  our basic test for the validity of appropriateness judgments is based on a brunswickian approach of comparing the function form in the environment modelthe model that predicts the criterion from the cuesto the function form in the judgment modelthe model that predicts the judgments from the cues  CITATION
+in particular  our test  labeled the linearity test  involves an examination whether  in agreement with the model  appropriateness judgments are a linear function of the epidemiological value of p the probability derived from epidemiological studies
+the linearity test is a test of the validity of appropriateness judgments  since to the extent that our decision analytic model is a correct model of appropriateness  valid judgments should satisfy this test
+thus  a linear relation supports though it does not prove the validity of appropriateness judgments  whereas a nonlinear relation provides some evidence against their validity
+note however that a nonlinear relationship does not necessarily suggest that appropriateness judgments are not valid
+in particular  nonlinearity may be the result of our model being normatively incorrect e g   the assumption of a constant treatment effect is incorrect rather than the appropriateness judgments being incorrect e g   judgments that rely on erroneous assessment of probability or utility  or on a correct integration of the two
+thus  our linearity test could be viewed as a joint test of the validity of our model for appropriateness judgment and the validity of the judgments themselves
+both need to be valid for linearity to occur
+a basic question in medical decision making is whether aggregating the judgments of clinicians result in more valid clinical judgments
+despite the fundamental importance of this question  not much relevant empirical evidence is available  primarily because of problems associated with the establishment of criteria that will allow the evaluation of the utility of the aggregation
+in the context of the current study  a criterion for the evaluation of the utility of the aggregation is availablewhether or not judgments are linear
+thus our empirical test for the utility of aggregation of clinical judgments is whether or not the aggregated judgments conform with the linearity test better than the individual judgments
+our discussion so far has focused on the validation of appropriateness judgments under the assumption that our decision analytic model is a valid model of the appropriateness of a medical treatment
+however  as mentioned earlier  a complementary perspective emphasizes the validation of the model under the assumption that the appropriateness judgments are valid
+in particular  if appropriateness judgments are assumed to be normatively valid and linearity is satisfied  the assumption of a constant treatment effect is supported
+in this study we examine the validity of appropriateness judgments in a specific clinical setting  adjuvant high-dose interferon alfa- NUMBER b in treating melanoma
+malignant melanoma is a common cancer in the western world
+during the last  NUMBER  years  numerous agents have been evaluated in a series of both nonrandomized and randomized adjuvant therapy trials in melanoma
+for patients who are in advanced stages of malignant melanoma  controversy abounds regarding high-dose adjuvant interferon alfa- NUMBER b therapy
+based on randomized clinical trials  it is currently agreed that high-dose interferon therapy is associated with approximately  NUMBER  percent  improvement in relapse-free survival but also with high incidence of serious toxicity  CITATION
+in other words  relapse-free survival is  bought  at the price of increased frequency of serious toxicity
+so the appropriateness judgments must revolve around the perceived tradeoff between harms and benefits

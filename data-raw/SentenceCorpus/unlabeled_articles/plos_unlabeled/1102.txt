@@ -1,0 +1,71 @@
+### abstract ###
+The use of computational modeling and simulation has increased in many biological fields, but despite their potential these techniques are only marginally applied in nutritional sciences.
+Nevertheless, recent applications of modeling have been instrumental in answering important nutritional questions from the cellular up to the physiological levels.
+Capturing the complexity of today's important nutritional research questions poses a challenge for modeling to become truly integrative in the consideration and interpretation of experimental data at widely differing scales of space and time.
+In this review, we discuss a selection of available modeling approaches and applications relevant for nutrition.
+We then put these models into perspective by categorizing them according to their space and time domain.
+Through this categorization process, we identified a dearth of models that consider processes occurring between the microscopic and macroscopic scale.
+We propose a middle-out strategy to develop the required full-scale, multilevel computational models.
+Exhaustive and accurate phenotyping, the use of the virtual patient concept, and the development of biomarkers from -omics signatures are identified as key elements of a successful systems biology modeling approach in nutrition research one that integrates physiological mechanisms and data at multiple space and time scales.
+### introduction ###
+Nutritional science is presently undergoing a data explosion as an increasing number of studies are incorporating methods from genomics, transcriptomics, proteomics, and metabolomics.
+However, it is presently unclear how these high-dimensional datasets can be related to the physiological characterization of phenotype using traditional nutritional research methods such as indirect calorimetry, nutrient balance, body composition assessment, and isotopic tracer methods.
+Thus, a fundamental challenge for nutrition research is to connect these data that are collected at vastly different spatial, temporal, and dimensionality scales.
+Although statistical analysis is still the method of choice to deal with the high dimensionality of -omics datasets, systems biology and computational modeling approaches begin to reveal quantitative mechanistic relationships between these various measurements.
+A large variety of computational modeling approaches have been applied to wide-ranging levels of organization from molecules to humans.
+The processes that are modeled include molecular interactions, signaling pathways, metabolic pathways, cellular growth, anatomical structures, and physiological processes.
+Accordingly, computational approaches differ widely with application.
+In this review, we discuss the relevance of current and future applications of computational modeling in nutrition research.
+To this end, we first introduce important concepts in nutrition and the typical issues for modeling that arise in this field.
+Then, we give a broader review of some representative modeling approaches that have successfully addressed key nutritional questions.
+We then proceed to identify knowledge and technology gaps and suggest how the computational approaches may be integrated and extended to address these gaps and bring nutritional systems biology modeling an important step forward in the near future.
+Nutrition research investigates the processes by which the living organism receives and utilizes the materials necessary for the maintenance of life and health CITATION.
+Traditionally, nutritional research investigates these processes at the level of the whole organism.
+From a thermodynamic viewpoint, all living organisms exist in a state that is far from equilibrium.
+To maintain this state, it is of central importance to harvest sufficient energy from the surroundings.
+This energy comes from the controlled combustion of the macronutrients carbohydrate, fat, and protein.
+The overarching organizing principle expressed in the Dynamic Energy Budget theory CITATION, which considers that energy from food is extracted, stored in reserves, and distributed throughout the body to fuel the processes essential for life.
+These processes include the generation of heat, maintenance of gradients across cell membranes, the production of gametes, the synthesis of structural mass, the establishment of maturity, somatic maintenance, and maturity maintenance.
+This organization effectively decouples the organism's internal energy from the external world, facilitating homeostasis.
+As such this principle has a clear relevance for nutritional physiology.
+In contrast to the dietary macronutrient energy sources, dietary micronutrients, notably mineral elements and vitamins, also play a key role for the overall health of the organism.
+Inadequate amounts of some dietary micronutrients have been demonstrated to cause classic deficiency diseases such as scurvy, beriberi, anemia, goiter, and cretinism.
+As a third class, various essential nutrients exist that can be used for both energy harvesting, synthesis of structural mass, as well as precursors of specific bioactive compounds.
+These nutrients include the essential amino acids and the essential omega-3 and omega-6 fatty acids.
+Many health disorders are not necessarily caused by dietary deficiencies, but more generally from imbalances between intake and utilization of nutrients.
+While there is general consensus that proper nutrition can prevent various chronic diseases, understanding the health effects of specific nutritional compounds is extraordinarily complicated.
+First, delivery of a nutritional perturbation is difficult to control over long time periods and such perturbations often have relatively subtle effects over the time scales typically investigated.
+Second, it is very difficult to unravel the distinctive bioactivity of a nutritional compound of interest when it is supplied in a background diet containing hundreds of other bioactive components.
+Third, it can be difficult to assess the bioavailability of the nutrient of interest, especially at the level of specific target organs or cells.
+The problem of bioavailability at the whole body level has had a long history of mathematical modeling, specifically for trace elements.
+Computational kinetic methods were introduced in nutritional sciences along with the use of stable isotopes where the interpretation of the kinetic data required the development of appropriate mathematical models CITATION CITATION.
+Typically, compartmental modeling approaches are used to describe the absorption, distribution, and elimination of a nutrient.
+Common to most of these models is the high level of aggregation, where the body is adequately described by only a few compartments.
+Together, these models aim to provide a rational basis for the determination of the nutritional requirements of the body, and for the understanding of differences in requirements for different micronutrients.
+While such traditional modeling methods have been very useful, the real challenge for modeling in nutrition is to help understand and rationally manipulate the complex relationship between nutrition and health, which is determined by the integrated multiscale responses to nutrients, ranging from whole body to subcellular levels of organization and over time scales of minutes to years.
+This difficulty is apparent from the problems that arise with current efforts to pinpoint the precise role of nutrition in the metabolic syndrome.
+At the long time scale and whole body level of organization, a prolonged period of consuming more energy than is expended results in the gradual development of obesity and increases one's risk for developing insulin resistance a hallmark of the metabolic syndrome.
+The study of insulin resistance has revealed that the function of this hormone at the level of organs and tissues occurs on the time scale of minutes to hours.
+For example, insulin stimulation of skeletal muscle glucose uptake, inhibition of hepatic glucose output, inhibition of adipose tissue lipolysis, and a host of other physiological effects occur on this time scale.
+Methods developed to unravel and quantify the molecular mechanisms underlying these effects have shown the involvement of complex intracellular signal transduction pathways, changes of gene expression, modification of enzyme kinetics, and intracellular molecular trafficking.
+Furthermore, the production of insulin by pancreatic beta cells occurs in response to glucose and amino acids and can be modulated by fatty acids, all of which can clearly be influenced by diet and nutrition.
+The unique electrophysiological properties of beta cells are influenced by the metabolism of glucose and fatty acids, while the electrical bursting and oscillatory behavior is coupled to insulin secretion on the time scales of seconds to minutes.
+Thus, understanding how nutrition impacts the mechanisms underlying insulin resistance requires a quantitative analysis and description of a multiscale, highly coupled regulatory network that includes thousands of components, ranging over subcellular to whole body levels of organization and spanning time scales from seconds to years.
+Although a conceptual perspective as outlined above can be derived from literature without too much effort, it is extremely difficult to develop an integrated quantitative understanding that spans the entire complexity of the mechanisms involved.
+In principle, mathematical models offer this capability and therefore are required to more fully understand the physiological basis not only of the metabolic syndrome, but of the role of nutrition in health and disease in general.
+Without such a quantitative and integrative approach, it is inevitable that one will get lost in the tangle of bubbles and arrows typical of conceptual models and find oneself unable to weigh the relative importance of each component or interaction in determining the overall physiological phenotype.
+The field of mathematical modeling in nutrition is very diverse and presently no single mathematical formalism allows one to generate the required integrated quantitative understanding of nutrition as formulated above.
+Therefore, in developing our vision of what is needed in the coming years, we now review several representative models that have successfully addressed key nutritional questions and together may help point the way to a more integrative modeling approach.
+First, we review modeling approaches for processes at the cellular level describing the biochemical processes that operate to convert food ingredients into energy and building blocks for the cell as the fundamental unit of life.
+Insight into these processes teaches us how metabolism is regulated at its most basic level.
+Furthermore, modeling at the cellular level provides the entry point to considering the vast quantity and complexity of -omics data.
+Second, we review the use of metabolic flux analysis as a framework for the quantitative analysis of material fluxes within the single cell as well as between different cell populations and organs, up to the whole body level.
+Thus, MFA forms a natural bridge between different levels of organization and different time scales.
+Thirdly, we review compartmental models of lipoprotein metabolism, because lipoproteins are the major mediators of lipid trafficking between organs, and many processes linked with lipids are associated with the metabolic syndrome, which includes cardiovascular diseases, obesity, and insulin resistance, modern plagues in industrialized societies.
+Finally, we review mathematical models of body weight and composition regulation and the complex relationship with macronutrient metabolism at the whole body level.
+Modeling at this whole body physiological level demonstrates the importance of considering long time scales that are characteristic of chronic diseases like obesity and metabolic syndrome.
+Of course, we cannot cover all areas of modeling in the field of nutrition in this review.
+For instance, we will not review models of gut-associated processes of nutrient absorption and bacterial conversion of nondigestible food components into such important compounds as short-chain fatty acids.
+Another important area that we will not review is models of the neuro-hormonal regulation of food intake and metabolism.
+Nevertheless, the collection of models that we chose to review ensures that we cover process occurring on a vast space time spectrum, from nanometer to meter and from microseconds to years.
+Therefore, the four areas of modeling that we discuss provide a sufficiently broad basis for our goal, namely to review the available computational approaches that are key to answering central questions in nutrition and that can serve as a platform for the development of more integrative systems models.

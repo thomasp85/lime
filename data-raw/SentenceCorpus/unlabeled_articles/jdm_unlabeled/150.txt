@@ -1,0 +1,33 @@
+### abstract ###
+recent studies have identified the uncertainty effect ue  whereby risky prospects e g   a binary lottery that offers either a   NUMBER  or   NUMBER  gift certificate are valued less than their worst possible outcome a   NUMBER  certificate
+this effect has been proposed to result from  direct risk-aversion  which posits that the mere uncertainty of a lottery directly decreases its value
+however  this effect may also be driven by the potential disappointment inherent in not receiving the better of the two outcomes disappointment aversion  or the mere fact that the risky prospect is referred to as a  lottery 
+the results of two experiments do not support either of these two alternatives
+specifically  the results of experiment  NUMBER  indicate that the ue is observed even when the values of the two lottery outcomes are similar  or even identical
+experiment  NUMBER  further replicates the ue in a context in which the word  lottery  is never used a company promotional
+these results are consistent with a direct risk-aversion mechanism  CITATION  and suggest that the ue obtains across a number of different contexts
+### introduction ###
+recent studies have identified the following peculiar effect  individuals are willing to pay significantly less for a binary lottery that offers either a   NUMBER  or   NUMBER  gift certificate with equal probability than they are for a   NUMBER  gift certificate alone  CITATION
+this uncertainty effect ue is not only counterintuitive  it also presents an important challenge to current theories of risk-aversion  which arrive at risk-aversion indirectly through the shape of the utility function and predict that risky prospects should be valued no lower than the value of their worst possible outcome  CITATION
+indeed  although the disutility of gambling has been alluded to in the literature  it has generally been avoided in formal models because it implies unpalatable patterns such as the violation of internality  CITATION
+the first paper to demonstrate the ue  CITATION  did so across a number of different contexts both hypothetical and real  suggesting that this effect does not arise from incidental features of a particular paradigm
+specifically  the ue was replicated for non-monetary outcomes e g   the number of minutes one is willing to work on a boring task  studies using choice rather than willingness to pay wtp  e g     NUMBER  for sure vs a  NUMBER   NUMBER  lottery offering either a   NUMBER  or   NUMBER  gift certificate  and in real world situations for actual goods
+by ruling out a number of plausible alternative explanations  the authors interpret the ue as resulting from a  direct risk-aversion  mechanism  which posits that uncertainty per se directly decreases the utility of risky prospects
+in other words  it is the mere uncertainty about which outcome one will receive that makes the lottery less valuable
+in support of the direct risk-aversion mechanism  simonsohn  CITATION  built on the original finding of gneezy et al CITATION  by ruling out two additional alternative explanations for the ue
+first  simonsohn  CITATION  found that the ue was observed even when participants in the certainty condition   NUMBER  for sure were aware of the better outcome   NUMBER   which rules out the possibility that the mere awareness of the better outcome may devalue the worse one
+second  he demonstrated that the majority of participants understood the instructions and that the ue was not caused by the few who did not  which rules out the possibility that this effect is observed simply because participants misunderstand the task  CITATION
+on this basis  simonsohn  CITATION  similarly concluded that aversion to uncertainty per se i e   direct risk-aversion is likely responsible for the ue
+there are  however  at least two remaining alternative explanations for the ue  which have been unaddressed by previous research
+the first involves  disappointment aversion -that is  people may value lotteries less because of the potential disappointment inherent in not receiving the better of the two outcomes  CITATION
+for example  the   NUMBER  won in a lottery may seem worse than   NUMBER  guaranteed  because an individual knows they did not receive   NUMBER 
+thus  the ue may result from the discrepancy in values between the better and worse outcomes  rather than from the uncertainty of the lottery itself
+this alternative explanation can be distinguished experimentally from a  direct risk-aversion  mechanism by manipulating the value of the better outcome
+according to bell's  CITATION  and loomes  and  sugden's  CITATION  models of disappointment  the amount of disappointment should be zero when both outcomes are equivalent  and increase monotonically in their difference
+consequently  if the ue is driven by the anticipated disappointment inherent in not receiving the better of the two outcomes  CITATION   this effect should be eliminated or at least attenuated when the lottery outcomes are equivalent in their perceived value e g   a lottery for one of two bookstore gift certificates  each worth   NUMBER 
+if  however  the ue arises solely from the mere uncertainty about which outcome one will receive  then the effect should persist despite the equivalent values
+this alternative was examined in experiment  NUMBER 
+a second plausible explanation for the ue may be that participants are willing to pay less for the lottery because they just have a general aversion to the term  lottery 
+this might be the case because some people consider such activities immoral and against their beliefs  CITATION
+moreover  lotteries such as the state lotto are typically low-probability gambles with an expected value that is less than the price of entry into the lottery
+as a result  participants may be suspicious of the term  lottery  because  in the real world  such offers typically signal prospects with negative expected value

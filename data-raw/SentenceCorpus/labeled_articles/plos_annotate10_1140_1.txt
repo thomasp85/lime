@@ -1,0 +1,71 @@
+### abstract ###
+AIMX	A new theoretical survey of proteins' resistance to constant speed stretching is performed for a set of 17 134 proteins as described by a structure-based model.
+MISC	The proteins selected have no gaps in their structure determination and consist of no more than 250 amino acids.
+MISC	Our previous studies have dealt with 7510 proteins of no more than 150 amino acids.
+MISC	The proteins are ranked according to the strength of the resistance.
+MISC	Most of the predicted top-strength proteins have not yet been studied experimentally.
+MISC	Architectures and folds which are likely to yield large forces are identified.
+MISC	New types of potent force clamps are discovered.
+MISC	They involve disulphide bridges and, in particular, cysteine slipknots.
+MISC	An effective energy parameter of the model is estimated by comparing the theoretical data on characteristic forces to the corresponding experimental values combined with an extrapolation of the theoretical data to the experimental pulling speeds.
+MISC	These studies provide guidance for future experiments on single molecule manipulation and should lead to selection of proteins for applications.
+MISC	A new class of proteins, involving cystein slipknots, is identified as one that is expected to lead to the strongest force clamps known.
+MISC	This class is characterized through molecular dynamics simulations.
+### introduction ###
+MISC	Atomic force microscopy, optical tweezers, and other tools of nanotechnology have enabled induction and monitoring of large conformational changes in biomolecules.
+MISC	Such studies are performed to assess structure of the biomolecules, their elastic properties, and ability to act as nanomachines in a cell.
+MISC	Stretching studies of proteins CITATION are of a particular current interest and they have been performed for under a hundred of systems.
+MISC	Interpretation of some of these experiments has been helped by all-atom simulations, such as reported in refs. CITATION, CITATION.
+CONT	They are limited by of order 100 ns time scales and thus require using unrealistically large constant pulling speeds.
+MISC	However, they often elucidate the nature of the force clamp the region responsible for the largest force of resistance to pulling, FORMULA.
+MISC	All of the experimental and all-atom simulational studies address merely a tiny fraction of proteins that are stored in the Protein Data Bank CITATION.
+MISC	Thus it appears worthwhile to consider a large set of proteins and determine their FORMULA within an approximate model that allows for fast and yet reasonably accurate calculations.
+MISC	Structure-based models of proteins, as pioneered by Go and his collaborators CITATION and used in several implementations CITATION CITATION, seem to be suited to this task especially well since they are defined in terms of the native structures away from which stretching is imposed.
+MISC	There are many ways, all phenomenological, to construct a structure-based model of a protein.
+MISC	504 of possible variants are enumerated and 62 are studied in details in ref. CITATION.
+MISC	The variants differ by the choice of effective potentials, nature of the local backbone stiffness, energy-related parameters, and of the coarse-grained degrees of freedom.
+MISC	The most crucial choice relates to making a decision about which interactions between amino acids count as native contacts.
+MISC	Comparing FORMULA to the corresponding experimental values in 36 available cases selects several optimal models CITATION.
+MISC	Among them, there is one which is very simple and which describes a protein in terms of its FORMULA atoms, as labeled by the sequential index FORMULA.
+MISC	This model is denoted by FORMULA which stands for, respectively, the Lennard-Jones native contact potentials, local backbone stiffness represented by harmonic terms that favor the native values of local chiralities, the contact map in which there are no FORMULA contacts, and the amplitude of the Lennard-Jones potential, FORMULA, is uniform.
+MISC	The contact map is determined by assigning the van der Waals spheres to the heavy atoms and by checking whether spheres belonging to different amino acids overlap in the native state CITATION, CITATION.
+MISC	If they do, a contact is declared as native.
+MISC	Non-native contacts are considered repulsive.
+MISC	Application of this criterion frequently selects the FORMULA contacts as native.
+MISC	If the contact map includes these contacts the resulting model will be denoted here as FORMULA.
+MISC	On average, it performs worse than FORMULA because the FORMULA contacts usually correspond to the weak van der Waals couplings as can be demonstrated in a sample of proteins by using a software CITATION which analyses atomic configurations from the chemical perspective on molecular bonds.
+MISC	Thus the FORMULA couplings should better be removed from the contact map .
+MISC	The survey to determine FORMULA in 7510 model proteins with the number of amino acids, FORMULA, not exceeding 150 and 239 longer proteins has been accomplished twice.
+MISC	First within the FORMULA model CITATION and soon afterwords within the FORMULA model CITATION.
+MISC	The first survey also comes with many details of the methodology whereas the second just presents the outcomes.
+MISC	The two surveys are compared in more details in refs. CITATION, CITATION.
+MISC	The results differ, particularly when it comes to ranking of the proteins according to the value of FORMULA, but they mutually provide the error bars on the findings.
+MISC	They both agree, however, on predicting that there are many proteins whose strength should be considerably larger than the frequently studied benchmark the sarcomere protein titin.
+MISC	Near the top of the list, there is the scaffoldin protein c7A which has been recently measured to have FORMULA of about 480 pN CITATION.
+MISC	Other findings include establishing correlations with the CATH hierarchical classification scheme CITATION, CITATION, such as that there are no strong FORMULA proteins, and identification of several types of the force clamps.
+MISC	The large forces most commonly originate in parallel FORMULA that are sheared CITATION.
+MISC	However, there are also clamps with antiparallel FORMULA, unstructured strands, and other kinds.
+MISC	The two surveys have been based on the structure download made on July 26, 2005 when the PDB comprised 29 385 entries.
+MISC	Many of them correspond to nucleic acids, complexes with nucleic acids and with other proteins, carbohydrates, or come with incomplete files and hence the much smaller number of proteins that could be used in the molecular dynamics studies.
+MISC	Here, we present results of still another survey which is based on a download of December 18, 2008 which contains 54 807 structure files and leads to 17 134 acceptable structures with FORMULA not exceeding 250.
+MISC	These structures are then analyzed through simulations based on the FORMULA model.
+MISC	The numerical code has been improved to allow for acceleration of calculations by a factor of 2.
+MISC	The 190 structures with the top values of FORMULA in units of FORMULA are shown in Table 1 and Table S1 of the SI, together with the values of titin and ubiquitin to provide a scale.
+MISC	As argued in the Materials and Methods section section, the unit of force, FORMULA, is now estimated to be of order 110 pN.
+MISC	All of the corresponding proteins are predicted to be much stronger than titin and none but two of them have been studied experimentally yet.
+OWNX	In addition to the types of force clamps identified before, we have discovered two new mechanisms of sturdiness.
+OWNX	One of them involves a cysteine slipknot and is found to be operational in all of the 13 top strength proteins.
+OWNX	In this motif, a slip-loop is pulled out of a cysteine knot-loop.
+OWNX	Another involves dragging of a single fragment of the main chain across a cysteine knot-loop.
+OWNX	The two mechanisms are similar in spirit since both involve dragging of the backbone.
+OWNX	However, in the CSK case, two fragments of the backbone are participating.
+AIMX	We make a more systematic identification of the CATH-classified architectures that are linked to mechanical strength and then analyze correlations of the data to the SCOP-based grouping CITATION CITATION.
+OWNX	The previous surveys did not relate to the SCOP scheme.
+OWNX	We identify the CATH-based architectures and SCOP-based folds that are associated with the occurrence of a strong resistance to pulling.
+MISC	A general observation, however, is that each such group of structures may also include examples of proteins that unravel easily.
+MISC	The dynamics of a protein are very sensitive to mechanical details that are largely captured by the contact map and not just by the appearance of a structure.
+MISC	On the other hand, if one were to look for mechanically strong proteins then the architectures and folds identified by us should provide a good starting point.
+OWNX	We also study the dependence of FORMULA on the pulling velocity and characterize the dependence on FORMULA through distributions of the forces.
+MISC	The current third survey has been performed within the same FORMULA model as the second survey CITATION.
+BASE	However, we reuse and extend it here because the editors of Biophysical Journal retracted the second survey CITATION.
+OWNX	All of the values of FORMULA are deposited at the website LINK and can by accessed by through the PDB structure code.

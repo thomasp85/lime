@@ -1,0 +1,56 @@
+### abstract ###
+Detecting outliers which are grossly different from or inconsistent with the remaining dataset is a major challenge in real-world KDD applications
+Existing outlier detection methods are ineffective on scattered real-world datasets due to implicit data patterns and parameter setting issues
+We define a novel  Local Distance-based Outlier Factor  (LDOF) to measure the {outlier-ness} of objects in scattered datasets which addresses these issues
+LDOF uses the relative location of an object to its neighbours to determine the degree to which the object deviates from its neighbourhood
+Properties of LDOF are theoretically analysed including LDOF's lower bound and its false-detection probability, as well as parameter settings
+In order to facilitate parameter settings in real-world applications, we employ a top- SYMBOL  technique in our outlier detection approach, where only the objects with the highest LDOF values are regarded as outliers
+Compared to conventional approaches (such as top- SYMBOL  KNN and top- SYMBOL  LOF), our method top- SYMBOL  LDOF is more effective at detecting outliers in scattered data
+It is also easier to set parameters, since its performance is relatively stable over a large range of parameter values, as illustrated by experimental results on both real-world and synthetic datasets
+### introduction ###
+Of all the data mining techniques that are in vogue, outlier detection comes closest to the metaphor of mining for nuggets of information in real-world data
+It is concerned with discovering the exceptional behavior of certain objects~ CITATION
+Outlier detection techniques have widely been applied in medicine (e g adverse reactions analysis), finance (e g financial fraud detection), security (e g counter-terrorism), information security (e g intrusions detection) and so on
+In the recent decades, many outlier detection approaches have been proposed, which can be broadly classified into several categories: distribution-based~ CITATION , depth-based~ CITATION , distance-based (e g KNN)~ CITATION , cluster-based (e g DBSCAN)~ CITATION  and density-based (e g LOF)~ CITATION  methods
+However, these methods are often unsuitable in real-world applications due to a number of reasons
+Firstly, real-world data usually have a scattered distribution, where objects are loosely distributed in the domain feature space
+That is, from a `local' point of view, these objects cannot represent explicit patterns (e g clusters) to indicate normal data `behavior'
+However, from a `global' point of view, scattered objects constitute several {mini-clusters}, which represent the pattern of a subset of objects
+Only the objects which do not belong to any other object groups are genuine outliers
+Unfortunately, existing outlier definitions depend on the assumption that most objects are crowded in a few main clusters
+They are incapable of dealing with scattered datasets, because {mini-clusters} in the dataset evoke a high false-detection rate (or low precision)
+Secondly, it is difficult in current outlier detection approaches to set accurate parameters for real-world datasets
+Most outlier algorithms must be tuned through {trial-and-error}~ CITATION
+This is impractical, because real-world data usually do not contain labels for anomalous objects
+In addition, it is hard to evaluate detection performance without the confirmation of domain experts
+Therefore, the detection result will be uncontrollable if parameters are not properly chosen
+To alleviate the parameter setting problem, researchers proposed top- SYMBOL  style outlier detection methods
+Instead of a binary outlier indicator, top- SYMBOL  outlier methods provide a ranked list of objects to represent the degree of {`outlier-ness'} for each object
+The users (domain experts) can {re-examine} the selected top- SYMBOL  (where  SYMBOL  is typically far smaller than the cardinality of dataset) anomalous objects to locate real outliers
+Since this detection procedure can provide a good interaction between data mining experts and users, top- SYMBOL  outlier detection methods become popular in real-world applications
+Distance-based, top- SYMBOL  { SYMBOL -Nearest} Neighbour distance~ CITATION  is a typical top- SYMBOL  style outlier detection approach
+In order to distinguish from the original {distance-based} outlier detection method in~ CITATION , we denote { SYMBOL -Nearest} Neighbour distance outlier as {top- SYMBOL  KNN} in this paper
+In {top- SYMBOL  KNN} outlier, the distance from an object to its  SYMBOL  nearest neighbour (denoted as { SYMBOL -distance} for short) indicates {outlier-ness} of the object
+Intuitively, the larger the { SYMBOL -distance} is, the higher {outlier-ness} the object has {Top- SYMBOL  KNN} outlier regards the  SYMBOL  objects with the highest values of { SYMBOL -distance} as outliers~ CITATION
+A {density-based} outlier, Local Outlier Factor (LOF)~ CITATION , was proposed in the same year as top- SYMBOL  KNN
+In LOF, an outlier factor is assigned for each object w r t its surrounding neighbourhood
+The outlier factor depends on how the data object is closely packed in its locally reachable neighbourhood~ CITATION
+Since LOF uses a threshold to differentiate outliers from normal objects~ CITATION , the same problem of parameter setting arises
+A lower {outlier-ness} threshold will produce high false-detection rate, while a high threshold value will result in missing genuine outliers
+In recent real-world applications, researchers have found it more reliable to use LOF in a top- SYMBOL  manner~ CITATION , i e \ only objects with the highest LOF values will be considered outliers
+Hereafter, we call it top- SYMBOL  LOF
+Besides top- SYMBOL  KNN and top- SYMBOL  LOF, researchers have proposed other methods to deal with real-world data, such as the {connectivity-based} (COF)~ CITATION , and Resolution {cluster-based} ({RB-outlier})~ CITATION
+Although the existing top- SYMBOL  style outlier detection techniques alleviate the difficulty of parameter setting, the detection precision of these methods (in this paper, we take {top- SYMBOL  KNN} and top- SYMBOL  LOF as typical examples) is low on scattered data
+In Section~, we will discuss further problems of top- SYMBOL  KNN and top- SYMBOL  LOF
+In this paper we propose a new outlier detection definition, named Local Distance-based Outlier Factor (LDOF), which is sensitive to outliers in scattered datasets
+LDOF uses the relative distance from an object to its neighbours to measure how much objects deviate from their scattered neighbourhood
+The higher the violation degree an object has, the more likely the object is an outlier
+In addition, we theoretically analyse the properties of LDOF, including its lower bound and false-detection probability, and provide guidelines for choosing a suitable neighbourhood size
+In order to simplify parameter setting in real-world applications, the top- SYMBOL  technique is employed in our approach
+To validate LDOF, we perform various experiments on both synthetic and real-world datasets, and compare our outlier detection performance with top- SYMBOL  KNN and top- SYMBOL  LOF
+The experimental results illustrate that our proposed top- SYMBOL  LDOF represents a significant improvement on outlier detection capability for scattered datasets
+The paper is organised as follows: In Section~, we illustrate and discuss the problems of top- SYMBOL  KNN and top- SYMBOL  LOF on a real-world data
+In Section~, we formally introduce the outlier definition of our approach, and mathematically analyse properties of our {outlier-ness} factor in Section~
+In Section~, the top- SYMBOL  LDOF outlier detection algorithm is described, together with an analysis of its complexity
+Experiments are reported in Section~, which show the superiority of our method to previous approaches, at least on the considered datasets
+Finally, conclusions are presented in Section~

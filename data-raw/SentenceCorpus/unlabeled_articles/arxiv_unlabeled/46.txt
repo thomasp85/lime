@@ -1,0 +1,18 @@
+### abstract ###
+Approximation of the optimal two-part MDL code for given data, through successive  monotonically length-decreasing two-part MDL codes, has the following properties: (i) computation of each step may take arbitrarily long; (ii) we may not know when we reach the optimum, or whether we will reach the optimum at all; (iii) the sequence of models generated may not monotonically improve the goodness of fit;  but (iv) the model associated with the optimum has (almost) the best goodness of fit
+To express the practically interesting goodness of fit of individual models for individual data sets we have to rely on Kolmogorov complexity
+### introduction ###
+In machine learning pure applications of MDL are rare, partially because of the difficulties one encounters trying to define an adequate model code and data-to-model code, and partially because of the operational difficulties that are poorly understood
+We analyze aspects of both the power and the perils of  MDL precisely and formally
+Let us first resurrect a familiar problem from our childhood to illustrate some of the issues involved
+The process of solving a jigsaw puzzle involves an  incremental reduction of entropy , and this serves to illustrate the analogous features of the learning problems which are the main issues of this work
+Initially, when the pieces come out of the box they have a completely random ordering
+Gradually we combine pieces, thus reducing the entropy and increasing the order until the puzzle is solved
+In this last stage we have found a maximal ordering
+Suppose that Alice and Bob both start to solve two versions of the same puzzle, but that they follow different strategies
+Initially,  Alice sorts all pieces according to color, and Bob starts by sorting the pieces according to shape (For the sake of argument we assume that the puzzle has no recognizable edge pieces ) The crucial insight, shared by experienced puzzle aficionados, is that Alice's strategy is efficient whereas Bob's strategy is not and is in fact even worse than a random strategy
+Alice's strategy is efficient, since the probability that pieces with about the same color match is much greater than the unconditional probability of a match
+On the other hand the information about the shape of the pieces can only be used in a relatively late stage of the puzzle process
+Bob's effort in the beginning is a waste of time, because he must reorder the pieces before he can proceed to solve the puzzle
+This example shows that if the solution of a problem depends on finding a  maximal  reduction of entropy this does not mean that  every  reduction of entropy brings us closer to the solution
+Consequently reduction of entropy is not in all cases a good strategy

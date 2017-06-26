@@ -1,0 +1,19 @@
+### abstract ###
+We present \bayesum\ (for ``Bayesian summarization''), a model for sentence extraction in query-focused summarization \bayesum\ leverages the common case in which multiple documents are relevant to a single query
+Using these documents as reinforcement for query terms, \bayesum\ is not afflicted by the paucity of information in short queries
+We show that approximate inference in \bayesum\ is possible on large data sets and results in a state-of-the-art summarization system
+Furthermore, we show how \bayesum\ can be understood as a justified query expansion technique in the language modeling for IR framework
+### introduction ###
+We describe \bayesum, an algorithm for performing query-focused summarization in the common case that there are many relevant documents for a given query
+Given a query and a collection of relevant documents, our algorithm functions by asking itself the following question: what is it about these relevant documents that differentiates them from the  non- relevant documents \bayesum\ can be seen as providing a statistical formulation of this exact question
+The key requirement of \bayesum\ is that multiple relevant documents are known for the query in question
+This is not a severe limitation
+In two well-studied problems, it is the de-facto standard
+In standard multidocument summarization (with or without a query), we have access to known relevant documents for some user need
+Similarly, in the case of a web-search application, an underlying IR engine will retrieve multiple (presumably) relevant documents for a given query
+For both of these tasks, \bayesum\ performs well, even when the underlying retrieval model is noisy
+The idea of leveraging known relevant documents is known as query expansion in the information retrieval community, where it has been shown to be successful in ad hoc retrieval tasks
+Viewed from the perspective of IR, our work can be interpreted in two ways
+First, it can be seen as an  application  of query expansion to the summarization task (or, in IR terminology, passage retrieval); see  CITATION
+Second, and more importantly, it can be seen as a method for query expansion in a non-ad-hoc manner
+That is, \bayesum\ is a statistically justified query expansion method in the language modeling for IR framework  CITATION

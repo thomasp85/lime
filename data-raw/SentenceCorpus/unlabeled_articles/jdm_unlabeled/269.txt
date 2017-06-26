@@ -1,0 +1,40 @@
+### abstract ###
+the sunk cost fallacy is the tendency to continue an endeavour once an investment in money  effort  or time has been made
+we studied how people's chronic orientation to cope with failing projects i e   action vs state orientation influences the occurrence of this sunk cost effect
+we found that people with a state orientation  who have a tendency to ruminate about past events and have a hard time to let go of them  were especially prone to fall in the sunk cost trap
+people with an action orientation  who more easily let go of past events  were not susceptible to the sunk cost effect
+we discuss the implications of these results for the sunk cost fallacy literature
+### introduction ###
+it makes no sense to eat a dessert that you dislike  or pay a stock broker knowing that the money will be lost  right
+yet  many people do exactly this  they make investments that will be in vain to prevent wasting earlier investments
+having paid for a dessert  people thus feel they should finish it  even though the dessert is not to their liking  it would be a waste to  pay and not eat 
+in a similar vein  people may be reluctant to sell their losing stocks  because by selling they would have to acknowledge that their prior investments were wasted
+this tendency to honor prior costs by holding on to failing projects is called the sunk cost fallacy  CITATION
+in more general terms  the sunk cost fallacy describes the tendency  to continue an endeavour once an investment in money  effort  or time has been made   CITATION
+people regularly use sunk costs to justify further investments in many decisions  ranging from the decision to eat a dessert one has already paid for  CITATION  to the decision to continue research and development of already outperformed products  CITATION
+this effect is not restricted to consumer behavior or economic decision making  but extends to many other decisions  including policy making
+for instance  one of the important reasons to continue the war in iraq was to prevent acknowledging that soldiers who fell in battle died in vain
+the sunk cost fallacy thus influences many decisions  from very mundane to highly exceptional  and affects all sorts of people ranging from customers in restaurants to the most important and influential leaders
+from the above it is clear that people are likely to become victims of the sunk cost fallacy
+however  one could wonder whether all people are equally likely to fall prey to this effect
+some people seem to dwell more on the past than others
+such differences in coping have been demonstrated in the extensive research on state versus action orientation
+action-oriented people typically get over negative events quickly  and focus on taking action to solve them  while state-oriented people typically find it difficult to overcome a negative event  and keep ruminating about it and how it affects their current state  CITATION
+this distinction seems highly relevant to the question of whether people differ in their susceptibility to the sunk cost fallacy
+although prior investments like paying for a dessert  or buying stocks may not be seen as negative events  they may become negative if they are not compensated by current and future outcomes i e   if the dessert tastes horrible  and the stocks lose their value
+the question then becomes how state and action-oriented people respond to those prospects  and how much they let their decisions be affected by prior investments
+our proposition is that state-oriented people are more affected by prior investments
+we argue that the more state-oriented people are  the more prone they are to see current decisions in the light of previous investments  thereby strengthening the association between the two events
+the more action-oriented people are  the more likely they are to focus on the future and what they can achieve  thereby weakening the association between current decisions and previous investments
+indirect support for this reasoning comes from research showing that the more action-oriented people are  the more they decouple missed opportunities in the past from related decisions they currently face  CITATION
+with respect to the sunk cost fallacy  we expect that  compared to action-oriented people  state-oriented people are more influenced by previous investments when deciding about a current investment and hence that they are more likely to show the sunk cost fallacy
+these predictions are particularly interesting in relation to prior reasoning in the action orientation literature
+there  the assumption is often made that an action-oriented mindset increases the likelihood of finishing a project  CITATION
+moreover  it is argued that it is against the nature of action-oriented people to quit an already started project  CITATION
+at first sight  the present hypothesis seems to be at odds with this reasoning  as it predicts precisely the opposite
+however  we argue that it is in line with these earlier studies in the sense that action-oriented people are expected to be more decisive than state-oriented people  and that they have an urge to take action to solve a failing situation
+thus  in the case of sunk costs  applying this reasoning leads to the counterintuitive prediction that the more action-oriented people are  the more likely they are to quit the project they started investing in
+put differently  we expect state-oriented people to be more likely to continue investing than action-oriented people
+in order to examine this we presented participants a standard sunk cost decision scenario  CITATION  in which the presence or absence of a sunk cost was manipulated
+we related participants' answers to their scores on the chronic action orientation measure that was assessed at an earlier occasion
+we expected to find stronger sunk cost effects for state-oriented people than for action-oriented people

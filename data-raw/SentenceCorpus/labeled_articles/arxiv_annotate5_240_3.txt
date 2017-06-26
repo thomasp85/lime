@@ -1,0 +1,43 @@
+### abstract ###
+OWNX This paper studies quantum annealing (QA) for clustering, which can be seen as an extension of simulated annealing (SA)
+AIMX We derive a QA algorithm for clustering and propose an annealing schedule, which is crucial in practice
+OWNX Experiments show the proposed QA algorithm finds better clustering assignments than SA
+OWNX Furthermore, QA is as easy as SA to implement
+### introduction ###
+MISC Clustering is one of the most popular methods in data mining
+MISC Typically, clustering problems are formulated as optimization problems, which are solved by algorithms, for example the EM algorithm or convex relaxation
+MISC However, clustering is typically NP-hard
+MISC The simulated annealing (SA)  CITATION  is a promising candidate
+MISC CITATION  proved SA was able to find the global optimum with a slow cooling schedule of temperature  SYMBOL
+MISC Although their schedule is in practice too slow for clustering of a large amount of data, it is well known that SA still finds a reasonably good solution even with a faster schedule than what CITATION proposed
+MISC In statistical mechanics, quantum annealing (QA) has been proposed as a novel alternative to SA  CITATION
+MISC QA adds another dimension,  SYMBOL , to SA for annealing, see Fig
+MISC Thus, it can be seen as an extension of SA
+MISC QA has succeeded in specific problems, e g the Ising model in statistical mechanics, and it is still unclear that QA works better than SA in general
+OWNX We do not actually think QA intuitively helps clustering, but we apply QA to clustering just as procedure to derive an algorithm
+MISC A derived QA algorithm depends on the definition of quantum effect  SYMBOL
+AIMX We propose quantum effect  SYMBOL , which leads to a search strategy fit to clustering
+AIMX Our contribution is, 1) to propose a QA-based optimization algorithm for clustering, in particular quantum effect  SYMBOL  for clustering  and a good annealing schedule, which is crucial for applications, 2) and to experimentally show the proposed algorithm optimizes clustering assignments better than SA
+OWNX We also show the proposed algorithm is as easy as SA to implement
+OWNX The algorithm we propose is a Markov chain Monte Carlo (MCMC) sampler, which we call QA-ST sampler
+MISC As we explain later, a naive QA sampler is intractable even with MCMC
+OWNX Thus, we approximate QA by the Suzuki-Trotter (ST) expansion  CITATION  to derive a tractable sampler, which is the QA-ST sampler
+OWNX QA-ST looks like parallel  SYMBOL  SAs with interaction  SYMBOL  (see Fig )
+OWNX At the beginning of the annealing process, QA-ST is almost the same as  SYMBOL  SAs
+OWNX Hence, QA-ST finds  SYMBOL  (local) optima independently
+OWNX As the annealing process continues, interaction  SYMBOL  in Fig becomes stronger to move  SYMBOL  states closer
+OWNX QA-ST at the end picks up the state with the lowest energy in  SYMBOL  states as the final solution
+OWNX QA-ST with the proposed quantum effect  SYMBOL  works well for clustering
+MISC Fig is an example where data points are grouped into four clusters
+MISC SYMBOL and  SYMBOL are locally optimal and  SYMBOL  is globally optimal
+MISC Suppose  SYMBOL  is equal to two and  SYMBOL  and  SYMBOL  in Fig correspond to  SYMBOL  and  SYMBOL  in Fig
+MISC Although  SYMBOL  and  SYMBOL  are local optima, the interaction  SYMBOL  in Fig allows  SYMBOL  and  SYMBOL  to search for a better clustering assignment between  SYMBOL  and  SYMBOL
+MISC Quantum effect  SYMBOL  defines the distance metric of clustering assignments
+MISC In this case, the proposed  SYMBOL  locates  SYMBOL  between  SYMBOL  and  SYMBOL
+MISC Thus, the interaction  SYMBOL  gives good chance to go to  SYMBOL  because  SYMBOL  makes  SYMBOL  and  SYMBOL  closer (see Fig )
+OWNX The proposed algorithm actually finds  SYMBOL  from  SYMBOL  and  SYMBOL
+MISC Fig is just an example
+MISC However, a similar situation often occurs in clustering
+MISC Clustering algorithms in most cases give ``almost'' globally optimal solutions like  SYMBOL  and  SYMBOL , where the majority of data points are well-clustered, but some of them are not
+MISC Thus, a better clustering assignment can be constructed by picking up well-clustered data points from many sub-optimal clustering assignments
+OWNX Note an assignment constructed in such a way is located between the sub-optimal ones by the proposed quantum effect  SYMBOL  so that QA-ST can find a better assignment between sub-optimal ones

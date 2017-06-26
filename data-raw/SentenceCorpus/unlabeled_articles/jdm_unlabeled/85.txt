@@ -1,0 +1,29 @@
+### abstract ###
+oppenheimer and monin  CITATION  recently found that subjectively rare events are taken to indicate a longer preceding sequence of unobserved trials than subjectively common events  an effect which they refer to as the retrospective gambler's fallacy
+the current paper extends this idea to the situation where participants judge the likelihood of streak continuation
+participants were told about a streak produced by a random process coin flips or human performance basketball shots  and either predicted the next outcome or inferred the immediately preceding outcome
+for the coin scenarios  participants tended to expect streak termination - the gambler's fallacy - and this effect was the same for predictions and retrospective inferences
+in the basketball scenarios  no overall bias was found in either prospective or retrospective judgments
+the results support oppenheimer and monin's suggestion that reconstruction of the past entails the same heuristics as prediction of the future  they also support the idea that the nature of the data-generating process is a key determinant of whether people fall into the gambler's fallacy
+it is suggested that the term retrospective gambler's fallacy be used to describe situations where a streak is taken to indicate that the preceding unobserved outcome was of the opposite type  and that the phenomenon discovered by oppenheimer and monin be referred to as retrospective representativeness  or a retrospective belief in the law of small numbers
+### introduction ###
+in a recent article in this journal  oppenheimer and monin  CITATION  raised the possibility that people's judgments about the past history of a random process might display the same biases as their predictions of future outcomes
+oppenheimer and monin focussed on the gambler's fallacy - the belief that a streak of one outcome raises the probability of the other outcome above the base rate  CITATION
+the most common explanation of the gambler's fallacy is that people employ a representativeness heuristic - they believe in the  law of small numbers   CITATION   such that small samples should be representative of the underlying probabilities  a run of one outcome needs to be  balanced out  by the occurrence of the opposite outcome
+oppenheimer and monin  CITATION  suggested that the gambler's fallacy might also operate when people reconstruct the past history of a random process
+rather than having participants predict future outcomes  they asked people to estimate the number of trials that had preceded the occurrence of a particular event
+for example  participants were asked to imagine walking into a room to find a man flipping a coin five times  either producing a streak of five heads or a mix of three heads and two tails
+participants were then asked how many times the man had flipped the coin before they entered the room
+the estimates of participants in the streak condition were much larger than those of participants in the non-streak condition
+this result generalizes  across a wide variety of domains  oppenheimer and monin found that the estimated number of previous trials was greater when the outcome was subjectively unlikely  an effect they refer to as the retrospective gambler's fallacy
+this effect is important because it suggests that the heuristics and biases that shape our predictions of the future also colour our reconstruction of the past  CITATION
+however  it is notable that the focus of oppenheimer and monin's  CITATION  work is not on the gambler's fallacy as traditionally conceived
+rather than examining judgments about the outcomes of previous trials in a manner analogous to the prediction of future outcomes  the authors focussed on estimates of the number of preceding trials
+as oppenheimer and monin note   the most straightforward instantiation of the retrospective gambler's fallacy would be formally identical to the gambler's fallacy  only in the past
+
+
+while this would be a natural extension of the gambler's fallacy  it has  to our knowledge  never been tested  p  NUMBER 
+the current experiment supplements oppenhemier  and  monin's  CITATION  work by providing such a test
+participants were told about a streak of one outcome and asked either to predict the next outcome or to infer the outcome of the trial before the streak
+as an additional manipulation  the data-generating process was varied  for some participants it was a physical process likely to be regarded as random coin flipping whilst for others it was a skill-based action basketball shooting
+the motivation for this was that  although the gambler's fallacy is widespread  some judgment domains produce the opposite bias - the belief that a streak of one outcome increases the probability of that outcome  CITATION

@@ -1,0 +1,35 @@
+### abstract ###
+A standard approach in pattern classification is to estimate the distributions of the label classes, and then to apply the Bayes classifier to the estimates of the distributions in order to classify unlabeled examples
+As one might expect, the better our estimates of the label class distributions, the better the resulting classifier will be
+In this paper we make this observation precise by identifying risk bounds of a classifier in terms of the quality of the estimates of the label class distributions
+We show how PAC learnability relates to estimates of the distributions that have a PAC guarantee on their  SYMBOL  distance from the true distribution, and we bound the increase in negative log likelihood risk in terms of PAC bounds on the KL-divergence
+We give an inefficient but general-purpose smoothing method for converting an estimated distribution that is good under the  SYMBOL  metric into a distribution that is good under the KL-divergence
+### introduction ###
+We consider a general approach to pattern classification in which elements of each class are first used to train a probabilistic model via some unsupervised learning method
+The resulting models for each class are then used to assign discriminant scores to an unlabeled instance, and a label is chosen to be the one associated with the model giving the highest score
+For example~ CITATION  uses this approach to classify protein sequences, via training a well-known probabilistic suffix tree model of Ron et al ~ CITATION  on each sequence class
+Indeed, even where an unsupervised technique is mainly being used to gain insight into the process that generated two or more data sets, it is still sometimes instructive to try out the associated classifier, since the misclassification rate provides a quantitative measure of the accuracy of the estimated distributions
+The work of~ CITATION  has led to further related algorithms for learning classes of probabilistic finite state automata (PDFAs) in which the objective of learning has been formalized as the estimation of a true underlying distribution (over strings output by the  target PDFA ) with a distribution represented by a hypothesis PDFA
+The natural discriminant score to assign to a string, is the probability that the hypothesis would generate that string at random
+As one might expect, the better one's estimates of label class distributions (the class-conditional densities), the better should be the associated classifier
+The contribution of this paper is to make precise that observation
+We give bounds on the risk of the associated Bayes classifier in terms of the quality of the estimated distributions
+These results are partly motivated by our interest in the relative merits of estimating a class-conditional distribution using the variation distance, as opposed to the KL-divergence (defined in the next section)
+In~ CITATION  it has been shown how to learn a class of PDFAs using KL-divergence, in time polynomial in a set of parameters that includes the expected length of strings output by the automaton
+In~ CITATION  we show how to learn this class with respect to variation distance, with a polynomial sample-size bound that is independent of the length of output strings
+Furthermore, it can be shown that it is necessary to switch to the weaker criterion of variation distance, in order to achieve this
+We show here that this leads to a different---but still useful---performance guarantee for the Bayes classifier
+Abe and Warmuth~ CITATION  study the problem of learning probability distributions using the KL-divergence, via classes of probabilistic automata
+Their criterion for learnability is that---for an unrestricted input distribution  SYMBOL ---the hypothesis PDFA should be almost (i e ~within  SYMBOL ) as close as possible to  SYMBOL
+Abe, Takeuchi and Warmuth~ CITATION  study the negative log-likelihood loss function in the context of learning  stochastic rules , i e ~rules that associate an element of the domain  SYMBOL  to a probability distribution over the range  SYMBOL
+We show here that if two or more label class distributions are learnable in the sense of~ CITATION , then the resulting stochastic rule (the conditional distribution over  SYMBOL  given  SYMBOL ) is learnable in the sense of~ CITATION
+We show that if instead the label class distributions are well estimated using the variation distance, then the associated classifier may not have a good negative log likelihood risk, but will have a  misclassification rate  that is close to optimal
+This result is for general  SYMBOL -class classification, where distributions may overlap (i e the optimum misclassification rate may be positive)
+We also incorporate variable misclassification penalties (sometimes one might wish a false positive to cost more than a false negative), and show that this more general loss function is still approximately minimized provided that discriminant likelihood scores are rescaled appropriately
+As a result we show that PAC-learnability and more generally p-concept learnability~ CITATION , follows from the ability to learn class distributions in the setting of Kearns et al ~ CITATION
+Papers such as~ CITATION  study the problem of learning various classes of probability distributions with respect to KL-divergence and variation distance, in this setting
+It is well-known (noted in~ CITATION ) that learnability with respect to KL-divergence is stronger than learnability with respect to variation distance
+Furthermore, the KL-divergence is usually used (for example in~ CITATION ) due to the property that when minimized with respect to an sample, the empirical likelihood of that sample is maximized
+An algorithm that learns with respect to variation distance can sometimes be converted to one that learns with respect to KL-divergence by a smoothing technique~ CITATION , when the domain is  SYMBOL , and  SYMBOL  is a parameter of the learning problem
+In this paper we give a related smoothing rule that applies to the version of the PDFA learning problem where we seem to ``need'' to use the variation distance
+However, the smoothed distribution does not have an efficient representation, and requires the probabilities used in the target PDFA to have limited precision

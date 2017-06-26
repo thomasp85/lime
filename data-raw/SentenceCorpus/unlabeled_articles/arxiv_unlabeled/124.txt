@@ -1,0 +1,37 @@
+### abstract ###
+% %AG_18/04/08 Update to abstract We propose a framework for analyzing and comparing distributions, allowing us to design statistical tests to determine if two samples are drawn from different distributions
+Our test statistic is the largest difference in expectations over functions in the unit ball of a reproducing kernel Hilbert space (RKHS)
+We present two tests based on large deviation bounds for the test statistic, while a third is based on the asymptotic distribution of this statistic
+The test statistic can be computed in quadratic time, although efficient linear time approximations are available
+Several classical metrics on distributions are recovered when the function space used to compute the difference in expectations is allowed to be more general (eg ~a Banach space)
+We apply our two-sample tests  to a variety of problems, including attribute matching for databases using the Hungarian marriage method, where they perform strongly
+Excellent performance is also obtained when comparing distributions over graphs, for which these are the first such tests
+### introduction ###
+We address the problem of comparing samples from two probability distributions, by proposing  statistical tests of the hypothesis that these distributions are different (this is  called  the two-sample or homogeneity problem)
+Such tests have application in a variety of areas
+In bioinformatics, it is of interest to compare microarray data from identical tissue types as measured by different laboratories, to detect whether the data may be analysed jointly, or whether differences in experimental procedure have caused systematic differences in the data distributions
+Equally of interest are comparisons between microarray data from different tissue types, either to determine whether two subtypes of cancer may be treated as statistically indistinguishable from a diagnosis perspective, or to detect differences in healthy and cancerous tissue
+In database attribute matching, it is desirable to merge databases containing multiple fields, where it is not known in advance which fields correspond: the fields are matched by maximising the similarity in the distributions of their entries
+We test whether distributions  SYMBOL  and  SYMBOL  are different on the basis of samples drawn from each of them, by finding a well behaved (e g \ smooth) function which is large on the points drawn from  SYMBOL , and small (as negative as possible) on the points from  SYMBOL
+We use as our test statistic the difference between the mean function values on the two samples; when this is large, the samples are likely from different distributions
+We call this statistic the Maximum Mean Discrepancy (MMD)
+Clearly the quality of the MMD as a statistic  depends on the class  SYMBOL  of smooth functions that define it
+On one hand,  SYMBOL  must be ``rich enough'' so that the population MMD vanishes if and only if  SYMBOL
+On the other hand, for the test to be consistent,  SYMBOL  needs to be ``restrictive'' enough for the empirical estimate of MMD to converge quickly to its expectation as the sample size increases
+We shall use the unit balls in universal reproducing kernel Hilbert spaces  CITATION  as our function classes, since these will be shown to satisfy both of the foregoing properties (we also review classical metrics on distributions, namely the Kolmogorov-Smirnov and Earth-Mover's distances, which are based on different function classes)
+On a more practical note, the MMD has a reasonable computational cost, when compared with other two-sample tests: given  SYMBOL  points sampled from  SYMBOL  and  SYMBOL  from  SYMBOL , the cost is  SYMBOL  time
+We also propose a less statistically efficient algorithm  with a computational cost of  SYMBOL , which can yield superior performance at a given computational cost by looking at a larger volume of data
+We define three non-parametric statistical tests based on the MMD
+The first two, which use distribution-independent uniform convergence bounds, provide finite sample guarantees of test performance, at the expense of being conservative in detecting differences between  SYMBOL  and  SYMBOL
+The third test is based on the asymptotic distribution of the MMD, and is in practice more sensitive to differences in distribution at small sample sizes
+The present work synthesizes and expands on  results of  CITATION ,  CITATION , and  CITATION  who in turn build on the earlier work of  CITATION
+Note that the latter addresses only the third kind of test, and that the  approach of  CITATION  employs a more accurate approximation to the asymptotic distribution of the test statistic
+We begin our presentation in Section  with a formal definition of the MMD, and a  proof that the population MMD is zero if and only if  SYMBOL  when  SYMBOL  is the unit ball of a universal RKHS
+We also review alternative function classes for which the MMD defines a metric on probability distributions
+In Section , we give an overview of hypothesis testing as it applies to the two-sample problem, and review other approaches to this problem
+We present our first two hypothesis tests in Section ,  based on two different bounds on the deviation between the population and empirical  SYMBOL
+We take a different approach in Section , where we use the asymptotic distribution of the empirical  SYMBOL  estimate as the basis for a third test
+When large volumes of data are available, the cost of computing the MMD (quadratic in the sample size) may  be excessive: we therefore propose in Section  a modified version of the MMD statistic that has a linear cost in the number of samples, and an associated asymptotic test
+In Section , we provide an overview of methods related to the MMD in the statistics and machine learning literature
+Finally, in Section , we demonstrate the performance of MMD-based two-sample tests on problems from neuroscience, bioinformatics, and attribute matching using the Hungarian marriage method
+Our approach performs well on high dimensional data with low sample size; in addition, we are able to successfully distinguish distributions on graph data,  for which ours is the first proposed test

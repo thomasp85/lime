@@ -1,0 +1,31 @@
+### abstract ###
+The scientific literature represents a rich source for retrieval of knowledge on associations between biomedical concepts such as genes, diseases and cellular processes.
+A commonly used method to establish relationships between biomedical concepts from literature is co-occurrence.
+Apart from its use in knowledge retrieval, the co-occurrence method is also well-suited to discover new, hidden relationships between biomedical concepts following a simple ABC-principle, in which A and C have no direct relationship, but are connected via shared B-intermediates.
+In this paper we describe CoPub Discovery, a tool that mines the literature for new relationships between biomedical concepts.
+Statistical analysis using ROC curves showed that CoPub Discovery performed well over a wide range of settings and keyword thesauri.
+We subsequently used CoPub Discovery to search for new relationships between genes, drugs, pathways and diseases.
+Several of the newly found relationships were validated using independent literature sources.
+In addition, new predicted relationships between compounds and cell proliferation were validated and confirmed experimentally in an in vitro cell proliferation assay.
+The results show that CoPub Discovery is able to identify novel associations between genes, drugs, pathways and diseases that have a high probability of being biologically valid.
+This makes CoPub Discovery a useful tool to unravel the mechanisms behind disease, to find novel drug targets, or to find novel applications for existing drugs.
+### introduction ###
+A wealth of knowledge concerning the function of genes and their role in biological processes is present in the biomedical literature, embodied in full text articles or the Medline abstract database.
+Various text mining approaches have been developed to extract information on gene function from this body of literature CITATION, CITATION and these have been successfully applied to annotate genes and proteins CITATION CITATION and the interpretation of experimental results CITATION CITATION .
+A common method to establish relationships between biomedical concepts such as genes and pathways is co-occurrence CITATION.
+This method is built on the assumption that biomedical concepts occurring in the same body of text are in some way biologically related.
+Co-occurrence-based methods can also be used to discover new, hidden relationships, assuming that if A and C both are connected with B, A and C might also have a relationship, even if there is no published relationship between A and C. Swanson has provided a classic example in his study in which he found that fish-oil intake is beneficial for patients suffering from Raynaud's disease, a finding that was confirmed experimentally a few years later CITATION, CITATION.
+Hidden literature relationships can be used to confirm a hypothesis about a relationship between A and C in a so called closed discovery process CITATION CITATION.
+In this process the user provides the hypothesis that A is related to C, which is then tested by mining the literature for shared biomedical concepts that support the hypothesis.
+Hidden relationships can also be used to generate novel hypotheses about a relationship between A and C, in a so-called open discovery process CITATION, CITATION, CITATION CITATION.
+In this process the user provides a starting point A and examines the literature for hidden relationships with other biomedical concepts that are bridged by intermediates that share co-occurrences with A and C .
+The tools that are currently available for performing open discovery experiments are often limited to certain biomedical domains, have only limited number of keywords describing the biomedical terms, or retrieve hidden relationships formed by uninformative concepts, such as in vitro or microarray which are biologically less interesting CITATION, CITATION, CITATION.
+Moreover, a bottleneck with all open discovery tools is to identify true, biologically informative, hidden relationships from spurious hits.
+In a previous paper we described CoPub CITATION, a database of co-occurrences of 250.000 keywords in Medline abstracts.
+CoPub is a database in which the statistical relevance of all co-occurrences is pre-computed, which makes it possible to perform statistical analyses of the significance of the retrieved hidden relationships between biomedical concepts.
+In addition, CoPub contains several categories of controlled vocabularies such as genes, drugs, or diseases etc. As such, this database is ideally suited for use in the discovery of hidden relationships.
+In this paper we describe CoPub Discovery, a method that uses the CoPub database for the open and closed discovery of hidden literature relationships.
+Statistical analysis of the results using ROC curves show that with CoPub Discovery true hidden relationships can be distinguished from true negatives.
+Application of this method in open ended retrieval of hidden relations yielded novel hypotheses about gene-disease, drug-disease and drug-biological process relationships which were validated bibliographically.
+Moreover, we used CoPub Discovery to identify two novel compounds that would interact with cell proliferation.
+Experimental validation showed that these compounds dose dependently inhibited T-cell proliferation.

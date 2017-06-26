@@ -1,0 +1,29 @@
+### abstract ###
+research on the processing of recognition information has focused on testing the recognition heuristic rh
+on the aggregate  the noncompensatory use of recognition information postulated by the rh was rejected in several studies  while rh could still account for a considerable proportion of choices
+these results can be explained if either a a part of the subjects used rh or b nobody used it but its choice predictions were accidentally in line with predictions of the strategy used
+in the current study  which exemplifies a new approach to model testing  we determined individuals' decision strategies based on a maximum-likelihood classification method  taking into account choices  response times and confidence ratings simultaneously
+unlike most previous studies of the rh  our study tested the rh under conditions in which we provided information about cue values of unrecognized objects which we argue is fairly common and thus of some interest
+for  NUMBER   NUMBER  percent  of the subjects  overall behavior was best explained by a compensatory parallel constraint satisfaction pcs strategy
+the proportion of subjects using an enhanced rh heuristic rhe was negligible up to  NUMBER   NUMBER  percent    NUMBER  percent  of the subjects seemed to use a take the best strategy ttb
+a more-fine grained analysis of the supplemental behavioral parameters conditional on strategy use supports pcs but calls into question process assumptions for apparent users of rh  rhe  and ttb within our experimental context
+our results are consistent with previous literature highlighting the importance of individual strategy classification as compared to aggregated analyses
+### introduction ###
+imagine you visit a nice conference in southern france
+your presentation was successful and you want to reward yourself with a good wine
+you are offered a chateau teyssier and a chateau margaux
+the waiter presents you both bottles
+you have not tried the wines before but you remember having heard of chateau margaux
+the offered  NUMBER  chateau teyssier is from st
+emilion  and has a grand cru classification
+the chateau margaux is from the medoc  has a premier cru classification and is from  NUMBER 
+how would you predict which wine you will like better
+a simple strategy would be to select the wine you recognize
+alternatively you might compare the bottles on the available cues in a stepwise manner  starting  for instance  with the region and instantly choose the chateau teyssier because you know that wine from the st
+emilion region usually meets your preferences
+or you could weigh all pieces of information against each other  taking into account their importance and also their constellation
+you might quickly come up with a consistent interpretation for all pieces of information  although chateau margaux has an outstanding classification and is well known  it would be suboptimal to drink such a wine so early
+the chateau teyssier is clearly preferable because it comes from an excellent region  has a good classification and has been sufficiently matured
+in this paper we investigate how recognition information is processed and integrated with other available cue information in such decisions
+particularly  we compare whether people apply simple noncompensatory strategies like the two strategies known as recognition heuristic rh  as applied to the situation with known cue values  the take the best heuristic ttb  and an enhanced version of rh which combines them rhe  or whether people alternatively rely on more complex partially automatic processes that generate consistent interpretations  referred to as a parallel constraint satisfaction pcs strategy
+most previous research on processing recognition information has focused on testing for or against the rh

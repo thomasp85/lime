@@ -1,0 +1,56 @@
+### abstract ###
+three experiments demonstrate how the processing of negations is contingent on the evaluation context in which the negative information is presented
+in addition  the strategy used to process the negations induced different affective reactions toward the stimuli  leading to inconsistency of preference
+participants were presented with stimuli described by either stating the presence of positive features explicitly positive alternative or negating the presence of negative features non-negative alternative
+alternatives were presented for either joint je or separate evaluation se
+experiment  NUMBER  showed that the non-negative stimuli were judged less attractive than the positive ones in je but not in se
+experiment  NUMBER  revealed that the non-negative stimuli induced a less clear and less positive feeling when they were paired with explicitly positive stimuli rather than evaluated separately
+non-negative options were also found less easy to judge than the positive ones in je but not in se
+finally  experiment  NUMBER  showed that people process negations using two different models depending on the evaluation mode
+through a memory task  we found that in je people process the non-negative attributes as negations of negative features  whereas in se they directly process the non-negative attributes as positive features
+### introduction ###
+the positive qualities of a stimulus can be described either in a direct or indirect fashion and sometimes the difference between these two perspectives is small and subtle
+for instance  if a person tells you that  a cereal for breakfast is not high in fat  you may either think that it is low in fat or moderately fatty
+therefore  the above sentence leaves room for interpretations  since it explicitly communicated what is not present lot of fats but does not tell how lean those cereals are
+it is possible that the evaluation context in which the cereal is described may affect the way they are judged
+in other words  people may evaluate the same cereal as less attractive if they are told that  cereal from brand a is not high in fat and cereal from brand b is fat-free  than if they are simply told that  cereal from brand a is not high in fat
+  the present paper will show that the specific context in which negations are processed has an effect on people's inferences about the negation meaning  on their affective reactions and  in turn  on their preferences
+we hypothesize that the affective reactions induced by non-negative information e g   a cereal that is not high in fat are contingent on the evaluation context in which the negation is presented
+in particular  we aim to show that the effect of the evaluation context on the affective reactions is induced by the different ways negations are processed  depending on whether an explicitly positive comparison in the form of an affirmative sentence is present or not
+such an inconsistency of preference may have important implications in several domains like  for instance  personnel selection and products advertisement
+numerous studies in the last few decades have shown a strong link between people's affective reactions and their subsequent behaviors
+CITATION  therefore  if the context in which a negation is evaluated may influence individuals' feelings then it may also affect their actual choices
+our hypotheses are supported by previous work on the processing of negations
+there has been a long debate on how negations are actually processed and whether they increase the accessibility of information congruent with the actual state of affairs  the cereal is not high in fat  or the negated state of affairs  the cereal is high in fat   CITATION
+such a debate led to the elaboration of two models that offer completely different accounts of the way negations are processed  CITATION
+the first model is closer to the explanation offered by the propositional theories of language comprehension  CITATION
+this model is called the  schema-plus-tag  model  CITATION
+it states that individuals process a negation by processing the core message the schema  e g   the cereal is high in fat and then complete it with the negation tag
+as stated by mayo et al CITATION   this model entails two important implications
+the first  is that people process the core schema and attach a negation tag to it  therefore allowing for a dissociation between them at a later point in time
+the second implication pertains to the associations that the schema activates  which should be congruent with the negated state of affairs high in fat instead of being consistent with the actual state of affairs not high in fat
+indeed  under the schema-plus-tag model people are supposed to attach the negation to the schema only after the schema-congruent associations have been activated
+as a consequence  they end up understanding the negation and its meaning but at the same time they activate a series of associations that are incongruent with the intended meaning of the negation
+alternatively  the proposers of the experiential-simulation model suggested a second way to process a negation  that is by fusing the negation tag into the core schema
+in this case the sentence  the cereal is not high in fat  should be processed as  the cereal is low in fat 
+the main consequence of using this model is that fusing the negation with the core concept allows people to activate associations that are congruent with the actual state of affairs
+therefore  the fusion model should reinforce the intended meaning of the message and make it more convincing
+macdonald and just  CITATION  proposed a mechanism that accounts for the fusion of the negation tag into the core schema
+they suggested that the negation tag should inhibit the activation of concepts that are congruent with the negated state of affairs
+more recently  kaup et al CITATION  suggested an alternative mechanism which may account for the negation tag-core schema fusion process
+the proposed mechanism entails that the negated state of affairs is simulated in an auxiliary representational system
+in this way the representation of the negated state of affairs is not integrated with the representation of the described world
+instead  people should be able to juxtapose the two representations so that they can take into account the negated information
+in other words  kaup et al suggested that the simulation of the negated state of affairs should be mentally rejected by the fact that it is simulated but not integrated with the representation of the described world
+mayo et al CITATION  suggested that individuals might use either the schema-plus-tag model or the fusion model depending on the inferences allowed by the sentence in which the negation is included
+in particular  mayo and colleagues found that the existence of a schema that accommodates the meaning of the original negation is critical in determining how a negation will be encoded
+in the present study  we aim to show that the use of either one or the other model may be contingent on the context in which the negation is presented
+in a series of three studies we asked participants to judge explicitly positive stimuli characterized by having positive features and non-negative stimuli characterized by not having negative features
+participants were presented with either one or both options  thereby using a joint je versus separate se evaluation paradigm
+previous studies have demonstrated numerous ways in which preferences elicited in je and se are inconsistent  CITATION
+to understand the kind of stimuli used in the present study  consider the example of the cereal that we presented earlier
+both a message saying that a cereal is  not high in fat  and a message saying that a cereal is  fat-free  communicate a similar  non-negative  value i e   in both cases the cereal does not have a lot of fat and this is positive for people's health but in different ways
+throughout the three studies we find that people presented with either one or the other type of description do not necessarily evaluate them as equally good in their quest to be a healthy food
+the positive and non-negative descriptions lead to similar judgments in se
+however  we find that the non-negative description is perceived in a less favorable way than the positive description when they are presented together
+the difference appears to depend on how the negation is processed in joint versus separate evaluation

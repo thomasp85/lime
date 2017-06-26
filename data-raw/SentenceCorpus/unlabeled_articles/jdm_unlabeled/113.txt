@@ -1,0 +1,24 @@
+### abstract ###
+heuristic decision-making models  like take-the-best  rely on environmental regularities
+they conduct a limited search  and ignore available information  by assuming there is structure in the decision-making environment
+take-the-best relies on at least two regularities  diminishing returns  which says that information found earlier in search is more important than information found later  and correlated information  which says that information found early in search is predictive of information found later
+we develop new approaches to determining search orders  and to measuring cue discriminability  that make the reliance of take-the-best on these regularities clear  and open to manipulation
+we then demonstrate  in the well-studied german cities environment  and three new city environments  when and how these regularities support take-the-best
+to do this  we focus not on the accuracy of take-the-best  as most previous studies have  but on a measure of its coherence as a decision-making process
+in particular  we consider whether take-the-best decisions  based on a single piece of information  can be justified because an exhaustive search for information is unlikely to yield a different decision
+using this measure  we show that when the two environmental regularities are present  the decisions made by limited search are unlikely to have changed after exhaustive search  but that both regularities are often necessary
+### introduction ###
+the  NUMBER  olympics was the first time professionals from the us nba league were allowed to play in the men's basketball competition
+the us  dream team   filled with stars like michael jordan  magic johnson  larry bird  charles barkley and patrick ewing  was one of the most dominant teams ever assembled for any sporting competition
+their closest game was a  NUMBER - NUMBER  victory in the final over croatia  and head coach chuck daly never felt the need to call a timeout during the tournament
+making predictions about the outcomes of sporting contests is notoriously difficult  but the dream team made some predictions easy
+imagine trying to predict whether or not the us would beat its first opponent in the tournament  angola  and examining the players in each team  beginning with the starting five  and moving to the bench players
+at some point early in the us list-maybe after jordan  johnson  bird  barkley and ewing-there would be no need to look further
+no matter who else was on the us roster  or the angolan roster  the outcome is already clear
+the dream team also made predictions easy during the course of games
+with about  NUMBER  minutes to play in the first half against angola  the us led  NUMBER  to  NUMBER 
+it was clear the us would win by a large margin  without needing to watch the rest of the game
+both of these decisions about a us victory are non-compensatory  because not all of the available information is used  and so the ignored information cannot compensate for-that is  change the decision based on-the information that is used
+the remaining player rosters are not examined  and the rest of the game is not watched
+yet the decision to forego further information seems sensible in both cases
+it is not a reaction to limited time or cognitive resources  but a recognition of the nature of the environment in which decision-making is taking place

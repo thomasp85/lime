@@ -1,0 +1,37 @@
+### abstract ###
+Amplification, deletion, and loss of heterozygosity of genomic DNA are hallmarks of cancer.
+In recent years a variety of studies have emerged measuring total chromosomal copy number at increasingly high resolution.
+Similarly, loss-of-heterozygosity events have been finely mapped using high-throughput genotyping technologies.
+We have developed a probe-level allele-specific quantitation procedure that extracts both copy number and allelotype information from single nucleotide polymorphism array data to arrive at allele-specific copy number across the genome.
+Our approach applies an expectation-maximization algorithm to a model derived from a novel classification of SNP array probes.
+This method is the first to our knowledge that is able to determine the generalized genotype of aberrant samples at each SNP site, and infer the copy number of each parental chromosome across the genome.
+With this method, we are able to determine not just where amplifications and deletions occur, but also the haplotype of the region being amplified or deleted.
+The merit of our model and general approach is demonstrated by very precise genotyping of normal samples, and our allele-specific copy number inferences are validated using PCR experiments.
+Applying our method to a collection of lung cancer samples, we are able to conclude that amplification is essentially monoallelic, as would be expected under the mechanisms currently believed responsible for gene amplification.
+This suggests that a specific parental chromosome may be targeted for amplification, whether because of germ line or somatic variation.
+An R software package containing the methods described in this paper is freely available at LINK.
+### introduction ###
+Genomic alterations are believed to be the major underlying cause of cancer CITATION CITATION.
+These alterations include various types of mutations, translocations, and copy number alterations.
+The last category involves chromosomal regions with either more than two copies, one copy, or zero copies in the cell.
+Genes contained in amplified regions are natural candidates for cancer-causing oncogenes CITATION, while those in regions of deletion are potential tumor-suppressor genes CITATION.
+Thus, the localization of these alterations in cell lines and tumor samples is a central aim of cancer research.
+In recent years, a variety of array-based technologies have been developed to identify and classify genomic alterations CITATION CITATION.
+Studies using these technologies typically analyze the raw data to produce estimates of total copy number across the genome CITATION CITATION.
+However, these studies ignore the individual contributions to copy number from each chromosome.
+Thus, for example, if a region containing a heterozygous locus undergoes amplification, the question of which allele is being amplified generally remains unanswered.
+The amplified allele is of interest because it may have been selected for amplification because of its oncogenic effect.
+Data from array-based platforms have also been employed to identify loss-of-heterozygosity events CITATION, CITATION.
+In these studies LOH is typically inferred to have occurred where there is an allelic imbalance in a tumor sample at the same site at which the matched normal sample is heterozygous.
+A complicating issue is that the imbalance may be due to the amplification of one of the alleles rather than the deletion of the other, and thus LOH may not in fact be present.
+Copy number analysis and LOH detection can both be improved by combining copy number measurement with allelotype data.
+In this paper, we present a probe-level allele-specific quantitation procedure that infers allele-specific copy numbers from 100K single nucleotide polymorphism array CITATION data.
+Our algorithm yields highly accurate genotypes at the over 100,000 SNP sites.
+We are also able to infer parent-specific copy numbers across the genome, making use of the fact that PSCN is locally constant on each chromosome.
+Our results also allow the distinction to be made between true LOH and apparent LOH due to the amplification of a portion of only one of the chromosomes.
+The PSCNs of 12 lung cancer samples that we initially analyzed reveal almost exclusively monoallelic amplification of genomic DNA, a result that we subsequently confirm in 89 other lung cell lines and tumors.
+Monoallelic amplification has previously been noted in the literature on the single gene level CITATION CITATION, wherein mutant forms of known oncogenes are amplified, while their wild-type counterparts are left unaltered.
+To our knowledge, this phenomenon has not previously been described on a genome-wide scale, though proposed mechanisms of amplification such as unequal sister chromatid exchange CITATION would suggest monoallelic amplification as the expected result.
+In addition, our ASCNs identify the SNP haplotypes being amplified.
+These haplotypes could conceivably serve as markers for deleterious germ line mutations via linkage disequilibrium.
+Indeed, the presence of monoallelic amplification makes such linkage studies statistically tractable .

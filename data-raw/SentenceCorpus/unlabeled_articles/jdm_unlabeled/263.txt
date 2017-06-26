@@ -1,0 +1,22 @@
+### abstract ###
+measuring reaction times to number comparisons is thought to reveal a processing stage in elementary numerical cognition linked to internal  imprecise representations of number magnitudes
+these intuitive representations of the mental number line have been demonstrated across species and human development but have been little explored in decision making
+this paper develops and tests hypotheses about the influence of such evolutionarily ancient  intuitive numbers on human decisions
+we demonstrate that individuals with more precise mental-number-line representations are higher in numeracy number skills consistent with previous research with children
+individuals with more precise representations compared to those with less precise representations also were more likely to choose larger  later amounts over smaller  immediate amounts  particularly with a larger proportional difference between the two monetary outcomes
+in addition  they were more likely to choose an option with a larger proportional but smaller absolute difference compared to those with less precise representations
+these results are consistent with intuitive number representations underlying  a perceived differences between numbers  b the extent to which proportional differences are weighed in decisions  and  ultimately  c the valuation of decision options
+human decision processes involving numbers important to health and financial matters may be rooted in elementary  biological processes shared with other species
+### introduction ###
+intuitive representations of the mental number line are defined as nonverbal representations of numerosity that are spontaneously activated in the presence of numeric information regardless of format  CITATION
+the representations are  inner marks  that allow verbal and nonverbal animals to  think unnamed numbers   CITATION
+trained monkeys  for example  can order objects  NUMBER - NUMBER  by their numerosity  CITATION
+adult humans can perform arithmetic operations quickly on larger arrays of dots using these nonverbal mental magnitudes  CITATION
+the number domain is a prime example where strong evidence points to a biologically determined  domain-specific representation of number and elementary arithmetic operations linked to the inferior parietal cortex  specifically the horizontal intra-parietal sulcus in both adults and children  CITATION
+arabic  spelled-out  and spoken numerals all activate this area so that it is thought to be involved in cross-modal  abstract representation and manipulation of the quantity meaning of numbers  rather than being activated by any specific number notation  CITATION
+numerical-cognition researchers believe that this basic numerical intuition lays the foundation for uniquely human mathematical reasoning  CITATION
+number intuitions  however  are limited in their representational power and do not directly support concepts of fractions  probabilities  or even the precise numbers important to many decisions
+although little research exists  processing these more sophisticated concepts is thought to be based nonetheless on humans' basic  number sense  with brain areas originally developed for other purposes co-opted for nonintuitive  symbolic number processing
+the goal of this paper is to develop and test hypotheses about the influence of such evolutionarily ancient  intuitive numbers on human decisions
+numerical information is ubiquitous in the decisions that guide our lives  and it is generally assumed that if provided appropriate numbers  people will be numerate enough to understand and use them as intended
+less numerate individuals  however  fare less well in important medical and financial decisions involving numeric information  CITATION

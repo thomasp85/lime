@@ -1,0 +1,18 @@
+### abstract ###
+% We show that the Brier game of prediction is mixable and find the optimal learning rate and substitution function for it
+The resulting prediction algorithm is applied to predict results of football and tennis matches
+The theoretical performance guarantee turns out to be rather tight on these data sets, especially in the case of the more extensive tennis data
+### introduction ###
+The paradigm of prediction with expert advice was introduced in the late 1980s (see, eg ,  CITATION ,  CITATION ,  CITATION ) and has been applied to various loss functions; see  CITATION  for a recent book-length review
+An especially important class of loss functions is that of ``mixable'' ones, for which the learner's loss can be made as small as the best expert's loss plus a constant (depending on the number of experts)
+It is known  CITATION  that the optimal additive constant is attained by the ``strong aggregating algorithm'' proposed in  CITATION  (we use the adjective ``strong'' to distinguish it from the ``weak aggregating algorithm'' of  CITATION )
+There are several important loss functions that have been shown to be mixable and for which the optimal additive constant has been found
+The prime examples in the case of binary observations are the log loss function and the square loss function
+The log loss function, whose mixability is obvious, has been explored extensively, along with its important generalizations, the Kullback--Leibler divergence and Cover's loss function
+In this paper we concentrate on the square loss function
+In the binary case, its mixability was demonstrated in  CITATION
+There are two natural directions in which this result could be generalized:  [Regression:] observations are real numbers (square-loss regression is a standard problem in statistics) [Classification:] observations take values in a finite set (this leads to the ``Brier game'', to be defined below, a standard way of measuring the quality of predictions in meteorology and other applied fields: see, eg ,  CITATION )
+The mixability of the square loss function in the case of observations belonging to a bounded interval of real numbers was demonstrated in  CITATION ; Haussler et al 's algorithm was simplified in  CITATION
+Surprisingly, the case of square-loss non-binary classification has never been analysed in the framework of prediction with expert advice
+The purpose of this paper is to fill this gap
+Its short conference version  CITATION  appeared in the ICML 2008 proceedings

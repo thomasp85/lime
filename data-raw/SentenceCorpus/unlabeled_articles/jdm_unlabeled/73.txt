@@ -1,0 +1,64 @@
+### abstract ###
+affective forecasting skills have important implications for decision making
+however  recent research suggests that immune neglect-the tendency to overlook coping strategies that reduce future distress-may lead to affective forecasting problems
+prior evidence for immune neglect has been indirect
+more direct evidence and a deeper understanding of immune neglect are vital to informing the design of future decision-support interventions
+in the current study  young adults n    NUMBER  supplied predicted  actual  and recollected reactions to an emotionally-evocative interpersonal event  valentine's day
+based on participants' qualitative descriptions of the holiday  a team of raters reliably coded the effectiveness of their coping strategies
+supporting the immune neglect hypothesis  participants overlooked the powerful role of coping strategies when predicting their emotional reactions
+immune neglect was present not only for those experiencing the holiday negatively non-daters but also for those experiencing it positively daters  suggesting that the bias may be more robust than originally theorized
+immune neglect was greater for immediate emotional reactions than more enduring reactions
+further  immune neglect was conspicuously absent from recollected emotional reactions
+implications for decision-support interventions are discussed
+### introduction ###
+biases in emotional judgment can disrupt decision making
+affective forecasting  CITATION  is a particular type of emotional judgment that involves predicting how future events will affect one's emotional state
+affective forecasting can significantly influence a range of important life choices  CITATION   including decisions to seek diagnostic medical testing  CITATION   exercise  CITATION   get divorced  CITATION   or file for personal bankruptcy  CITATION
+in an effort to elucidate potential biases in affective forecasting  recent studies have examined how well predicted emotional reactions correspond to actual emotional reactions to life events
+this research shows that affective forecasting is prone to error  and people are often biased toward overpredicting the intensity and duration of emotional reactions to future events  CITATION
+a key reason for biased affective forecasting may be that people overlook coping strategies that attenuate emotional reactions to events
+this phenomenon has been labeled immune neglect-the tendency to overlook coping strategies and other aspects of the  psychological immune system  that can reduce future distress  CITATION
+three studies have provided indirect evidence for immune neglect  but none of these studies directly assessed coping strategies used by participants in the course of managing distressing events
+an initial study showed that people overlook subtle aspects of the situation-particularly its potential influence on coping-when making affective forecasts  CITATION
+in that study  participants predicted how they would feel in the event that they received negative personality feedback  either from expert psychologists purportedly infallible source or a computer purportedly fallible source
+the source of the personality feedback did not influence predicted emotional reactions  but powerfully influenced actual emotional reactions experienced in response to the personality feedback
+that study provided preliminary support for the possibility that  when engaging in affective forecasting  people might overlook coping strategies  such as being able to rationalize information from a fallible source
+a follow-up study examined affective forecasting for college football team losses  CITATION
+in that study  dispositional coping styles were found to be significantly correlated with actual emotional reactions to football losses but were unrelated to predicted reactions  situation-specific coping strategies were not assessed
+finally  a third study examined affective forecasting for the election loss of a favored presidential candidate  CITATION
+cognitive processes  such as working memory  were associated with better emotional functioning after the loss  but had no bearing on predicted reactions
+in these studies  situational factors  dispositional coping styles  and cognitive processes were unrelated to predicted emotional reactions  however  they were related to actual emotional reactions  presumably through an implied-but-unmeasured influence on situation-specific coping strategies that buffered emotional reactions to distressing life events see figure  NUMBER 
+the time is ripe for basic research directly testing the immune neglect hypothesis
+recent reform initiatives by the national institutes of health  CITATION  and institute of medicine  CITATION  have called for an expanded emphasis on the emotional processes underlying decision making
+further  immune neglect has recently been theorized to reduce engagement in proactive health behaviors  CITATION  and to lead consumers to make faulty personal financial decisions  CITATION
+research on decision-support interventions is already targeting immune neglect in an effort to facilitate decision-making processes  CITATION
+arguably  decision-support interventions are most likely to be effective when they are informed by a foundation of sound empirical evidence  CITATION
+direct evidence and a deeper understanding of immune neglect is essential for the development of future evidence-based interventions that will use findings on affective forecasting to improve decision making
+past studies have documented situational influences  dispositional coping styles  and cognitive processes that are associated with actual emotional reactions to life events  but not predicted emotional reactions-leading to biased forecasts
+these three factors are thought to influence actual emotional reactions through their effect on situation-specific coping strategies
+no study to date has assessed situation-specific coping strategies  the presumed proximal mechanism underling forecasting problems  despite implications for decision making and public health
+therefore  the goals of the present investigation were to a examine immune neglect more directly and b increase our overall understanding of immune neglect by identifying key moderators
+in order to examine immune neglect directly  the present study used quantitatively-coded qualitative data on coping strategies used by participants on the day of a stressful life event
+coping strategies can be assessed reliably using qualitative data  CITATION
+furthermore  situation-specific coping strategies may be more robust than indirect or dispositional measures of coping in predicting emotional response to discrete life events  CITATION   suggesting that past studies may actually underestimate immune neglect
+the central hypothesis of the study was that coping strategies would be associated with actual emotional reactions to a stressful life event  but not predicted reactions  thereby demonstrating immune neglect as a source of bias in affective forecasting
+the study was also designed to identify moderators of immune neglect to expand our understanding of the phenomenon
+foremost  the valence of the event-whether the event is pleasant or unpleasant-may influence immune neglect
+it has been suggested that immune neglect may only apply to affective forecasting for unpleasant events  CITATION   as pleasant events presumably do not trigger the need for coping strategies
+however  research on ambivalence indicates that many so-called pleasant events e g   pregnancies  promotions  and major purchases are actually marked by mixed feelings  including distress  which could trigger the use of coping strategies  CITATION
+thus  the role of immune neglect in pleasant life events warrants further consideration
+second  immune neglect may vary across the time course of emotional reactions
+emotional reactions in response to life events attenuate over time  and empirical evidence is mixed as to whether affective forecasting is more difficult for immediate or more enduring emotional reactions to events  CITATION
+thus  the present study examined whether participants were more likely to overlook the immediate or more enduring effects of coping strategies upon their emotions
+finally  immune neglect could dissipate with experience
+several studies have examined predicted  actual  and recollected emotional reactions to life events to determine whether people learn from experience to make emotional judgments more accurately see hoerger  chapman  epstein   and  duberstein  in press
+findings have been mixed as to whether predicted and recollected reactions are similarly problematic  or recollected reactions are less vulnerable to bias
+thus  the present study examined immune neglect in both predicted and recollected reactions
+in identifying moderators of immune neglect  this research can determine situations where immune neglect is most relevant and potentially inform future interventions for improving affective forecasting skills
+the current investigation builds on the prior work of my colleagues and i  examining affective forecasting for valentine's day of  NUMBER   CITATION  and  NUMBER  hoerger  quirk  chapman   and  duberstein  in press
+these studies  and those from other labs  CITATION   demonstrate that young adults are vulnerable to overpredicting the intensity of emotional reactions to events involving relationships  dating  and breakups
+for example  young adults overestimate how happy they will feel in the event of having a date on valentine's day  and overestimate how unhappy they will feel if they do not have a date  CITATION
+the current investigation involves primary analyses of existing qualitative data relevant to coping that was gathered during the second of these studies hoerger  quirk et al   in press
+the present research is distinct from the prior report in addressing fundamentally different constructs  accounting for variation in actual and recollected reactions rather than predicted reactions that are associated with forecasting error  and coding hundreds of archived qualitative responses
+it was hypothesized that coping strategies coded quantitatively from qualitative data collected on valentine's day would be associated with actual emotional reactions  but not predicted reactions  demonstrating immune neglect as a source of affective forecasting problems
+supplemental analyses also examined whether immune neglect varied as a function of the valence of the event a pleasant event for those with a date  and unpleasant for those without a date  timing valentine's day  the day after  and two days after  or the type of emotional judgment predicted ratings versus recollected ratings of emotional reactions to valentine's day

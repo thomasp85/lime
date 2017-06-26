@@ -1,0 +1,25 @@
+### abstract ###
+several scholars have recognized the limitations of theories of moral reasoning in explaining moral behavior
+they have argued that moral behavior may also be influenced by moral identity  or how central morality is to one's sense of self
+this idea has been supported by findings that people who exemplify moral behavior tend to place more importance on moral traits when defining their self-concepts  CITATION
+this paper takes the next step of examining individual variation in a construct highly associated with immoral behavior - psychopathy
+in study  NUMBER   we test the hypothesis that individuals with a greater degree of psychopathic traits have a weaker moral identity
+within a large online sample  we found that individuals who scored higher on a measure of psychopathic traits were less likely to base their self-concepts on moral traits
+in study  NUMBER   we test whether this reduced sense of moral identity can be attributed to differences in moral judgment  which is another factor that could influence immoral behavior
+our results indicated that the reduced sense of moral identity among more psychopathic individuals was independent of variation in moral judgment
+these results suggest that individuals with psychopathic traits may display immoral behavior partially because they do not construe their personal identities in moral terms
+### introduction ###
+the concept of psychopathy stands in sharp contrast to socrates' famous dictum  to know the good is to do the good
+  individuals with psychopathic traits know the difference between right and wrong - at least in straightforward cases such as knowing whether an act is illegal
+nevertheless  they often engage in frequent and flagrant bad behavior  CITATION
+this discrepancy between the judgments people make about what they should do and their actual behavior is not unique to psychopathic individuals
+it is commonly observed in studies of judgment and decision-making and has been described as intrapersonal conflict  CITATION   or the  judgment-action gap   CITATION
+research focusing on the discrepancies between judgment and choice has shed light on a key concept that may help to explain this discrepancy - that compared to judgment  choice elicits a greater degree of self-referent processing  CITATION
+this refers to an evaluation of an option in relation to the individual's self-concept
+individuals are aware that their choices are long-term reflections on their personality and are motivated to make choices that are consistent with their sense of self  CITATION
+within the moral domain  this referencing to one's self-concept is called moral identity  CITATION
+individuals vary in the degree to which they base their self concepts on moral traits e g   being generous  compassionate  and kind compared to non-moral traits e g   being intelligent and funny
+although prior research on moral behavior has primarily emphasized the role of reasoning and deliberation  CITATION   it has been suggested that moral identity is an important source of moral motivation that may help to account for the common disconnect between moral judgment and action  CITATION
+previous studies have shown that moral identity is greater in individuals who are considered moral exemplars people whom others regard as highly moral  presumably partly due to their behavior  although these individuals do not necessarily have greater moral reasoning abilities  CITATION
+however  studies have not explored whether moral identity is weaker in individuals with psychopathic traits
+such weakness may contribute to the immoral behavior observed in psychopathy

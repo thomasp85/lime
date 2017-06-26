@@ -1,0 +1,39 @@
+### abstract ###
+We consider the framework of stochastic multi-armed bandit problems and study the possibilities and limitations of forecasters that perform an on-line exploration of the arms
+These forecasters are assessed in terms of their simple regret, a regret notion that captures the fact that exploration is only constrained by the number of available rounds (not necessarily known in advance), in contrast to the case when the cumulative regret is considered and when exploitation needs to be performed at the same time
+We believe that this performance criterion is suited to situations when the cost of pulling an arm is expressed in terms of resources rather than rewards
+We discuss the links between the simple and the cumulative regret
+One of the main results in the case of a finite number of arms is a general lower bound on the simple regret of a forecaster in terms of its cumulative regret: the smaller the latter, the larger the former
+Keeping this result in mind, we then exhibit upper bounds on the simple regret of some forecasters
+The paper ends with a study devoted to continuous-armed bandit problems; we show that the simple regret can be minimized with respect to a family of probability distributions if and only if the cumulative regret can be minimized for it
+Based on this equivalence, we are able to prove that the separable metric spaces are exactly the metric spaces on which these regrets can be minimized with respect to the family of all probability distributions with continuous mean-payoff functions
+### introduction ###
+Learning processes usually face an exploration versus exploitation dilemma, since they have to get information on the environment (exploration) to be able to take good actions (exploitation)
+A key example is the multi-armed bandit problem  CITATION , a sequential decision problem where, at each stage, the forecaster has to pull one out of  SYMBOL  given stochastic arms and gets a reward drawn at random according to the distribution of the chosen arm
+The usual assessment criterion of a forecaster is given by its cumulative regret, the sum of differences between the expected reward of the best arm and the obtained rewards
+Typical good forecasters, like UCB  CITATION , trade off between exploration and exploitation
+Our setting is as follows
+The forecaster may sample the arms a given number of times  SYMBOL  (not necessarily known in advance) and is then asked to output a recommended arm
+He is evaluated by his simple regret, that is, the difference between the average payoff of the best arm and the average payoff obtained by his recommendation
+The distinguishing feature from the classical multi-armed bandit problem is that the exploration phase and the evaluation phase are separated
+We now illustrate why this is a natural framework for numerous applications
+Historically, the first occurrence of multi-armed bandit problems was given by medical trials
+In the case of a severe disease, ill patients only are included in the trial and the cost of picking the wrong treatment is high (the associated reward would equal a large negative value)
+It is important to minimize the cumulative regret, since the test and cure phases coincide
+However, for cosmetic products, there exists a test phase separated from the commercialization phase, and one aims at minimizing the regret of the commercialized product rather than the cumulative regret in the test phase, which is irrelevant (Here, several formul{\ae} for a cream are considered and some quantitative measurement, like skin moisturization, is performed )  \medskip The pure exploration problem addresses the design of strategies making the best possible use of available numerical resources (e g , as {cpu} time) in order to optimize the performance of some decision-making task
+That is, it occurs in situations with a preliminary exploration phase in which costs are not measured in terms of rewards but rather in terms of resources, that come in limited budget
+A motivating example concerns recent works on computer-go (e g , the MoGo program  CITATION )
+A given time, i e , a given amount of {cpu} times is given to the player to explore the possible outcome of sequences of plays and output a final decision
+An efficient exploration of the search space is obtained by considering a hierarchy of forecasters minimizing some cumulative regret~-- see, for instance, the {uct} strategy  CITATION  and the {bast} strategy  CITATION
+However, the cumulative regret does not seem to be the right way to base the strategies on, since the simulation costs are the same for exploring all options, bad and good ones
+This observation was actually the starting point of the notion of simple regret and of this work
+A final related example is the maximization of some function  SYMBOL , observed with noise, see, eg ,  CITATION
+Whenever evaluating  SYMBOL  at a point is costly (e g , in terms of numerical or financial costs), the issue is to choose as adequately as possible where to query the value of this function in order to have a good approximation to the maximum
+The pure exploration problem considered here addresses exactly the design of adaptive exploration strategies making the best use of available resources in order to make the most precise prediction once all resources are consumed
+As a remark, it also turns out that in all examples considered above, we may impose the further restriction that the forecaster ignores ahead of time the amount of available resources (time, budget, or the number of patients to be included)~-- that is, we seek for anytime performance \medskip The problem of pure exploration presented above was referred to as ``budgeted multi-armed bandit problem'' in the open problem  CITATION  (where, however, another notion of regret than simple regret is considered)
+The pure exploration problem was solved in a minmax sense for the case of two arms only and rewards given by probability distributions over  SYMBOL  in  CITATION
+A related setting is considered in  CITATION  and  CITATION , where forecasters perform exploration during a random number of rounds  SYMBOL  and aim at identifying an  SYMBOL --best arm
+These articles study the possibilities and limitations of policies achieving this goal with overwhelming  SYMBOL  probability and indicate in particular upper and lower bounds on (the expectation of)  SYMBOL
+Another related problem is the identification of the best arm (with high probability)
+However, this binary assessment criterion (the forecaster is either right or wrong in recommending an arm) does not capture the possible closeness in performance of the recommended arm compared to the optimal one, which the simple regret does
+Moreover unlike the latter, this criterion is not suited for a distribution-free analysis

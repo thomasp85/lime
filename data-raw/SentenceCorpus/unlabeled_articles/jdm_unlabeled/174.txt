@@ -1,0 +1,45 @@
+### abstract ###
+the construction of social preferences often requires one to reconcile various social motives  such as concern with unfavorable inequality and maximization of social welfare
+we propose a novel theory whereby people's level of agency influences the relative intensities of their social motives  and thus their social preferences
+agency in this context refers to decision makers' active involvement in the processes that produce social outcomes
+nonagentic decision makers are not involved in creating the outcomes
+therefore  the comparison between self and others is highly informative for them and they shun settings in which their outcome appears to be inferior
+conversely  agentic decision makers  who take action to influence social outcomes  care more about others' outcomes and are more inclined to promote social welfare
+we report five studies testing the agency hypothesis
+participants were presented with realistic scenarios involving outcomes for themselves and another person
+in each scenario  the outcome for oneself was fixed  while the outcome for the other person varied
+the participants' task was to indicate their satisfaction with the other person obtaining either the same outcome as their own or a better one
+we found that participants who were involved in creating the outcomes agentic condition were more satisfied with the other getting the better option than were participants who were not involved nonagentic condition
+even low levels of influence on the outcomes were sufficient for a strong agency effect to occur
+we discuss the agency hypothesis in relation to theories of social preference  the effects of voicing and participation in decision processes  and trade-offs in public policy
+### introduction ###
+imagine the following scenario
+after buying a new camera  you find out that a colleague of yours bought the same camera
+you consider the possibility that she might have bought the camera for less than you  so you ask her how much she paid
+would you rather find out that she paid the same price as you  or less
+two conflicting reactions might surface in your mind
+in particular  you might worry that your outcome would look poorer by comparison and thus you would prefer to find out that she paid the same price  not less
+yet you might hope to find out that she paid less  since this benefits her and does not cost you anything
+people's reactions to such scenarios reflect their social preferences  that is  their satisfaction with social outcomes obtained by themselves and others  CITATION
+decision makers' social preferences in settings like the camera scenario involve a conflict between two social motives-avoidance of inferior social comparisons  and concern about the well-being of others
+we propose that decision makers' resolution of the conflict  and hence their social preferences  depend on their experience of agency in the setting
+thus people's social preferences depend heavily on whether or not they have a role in creating the outcomes
+people tend to be more other-regarding in their preferences to the extent that they have agency in the situation
+the role of agency has been documented in recent studies in which participants were first paid for performing a task in the lab  and were then asked to consider the pay for another matched participant for the same task  CITATION
+participants in one condition were asked to determine the salary for a matched participant  while participants in another condition were asked to indicate how satisfied they would be with various predetermined salaries for the matched participant
+the participants who chose the outcomes were far more generous than the participants who rated their satisfaction with predetermined outcomes
+in particular  they were more likely to favor the option of paying another participant more than they had received themselves
+choshen-hillel and yaniv  CITATION  attributed this shift in social preference to participants' level of agency
+individuals are considered  nonagentic  when they experience social outcomes that were not brought about by their intentional actions
+in contrast  individuals are considered  agentic  when they act purposefully to produce social outcomes  with the outcomes being related to their actions
+how might agency affect social preferences
+the proposed theory draws on the insights of theories of social comparison and social utility
+it has been suggested that individuals are generally sensitive to social comparisons and tend to draw self-inferences based on the differences they observe between themselves and others  CITATION
+people are said to interpret differences in favor of others as negative signals about their own social status  CITATION  and consequently tend to shun settings that evoke uncomfortable comparisons  CITATION
+our suggestion is that  in settings where individuals hold nonagentic roles  their inequality aversion is so strong that it dominates their prosocial motives  CITATION
+for individuals who hold agentic roles  however  the balance between the motives changes
+agentic individuals do not view the comparison as conveying important social information  since it is the consequence of their own deliberate action
+being involved in creating the outcomes for others  they also care more about the welfare of others  an effect consistent with the notions of  warm glow   CITATION  and welfare maximization  CITATION
+thus  agentic individuals compared with nonagentic ones pay less attention to unfavorable inequalities and care more about maximizing social welfare
+our theoretical analysis suggests that people construct their social preferences depending on their level of agency in the setting
+applying this analysis to the camera scenario implies that people should express more other-regarding preferences when they are involved in creating an outcome for the other person than when they are not

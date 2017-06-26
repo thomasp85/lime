@@ -1,0 +1,42 @@
+### abstract ###
+Experimental work has shown that T cells of the immune system rapidly and specifically respond to antigenic molecules presented on the surface of antigen-presenting-cells and are able to discriminate between potential stimuli based on the kinetic parameters of the T cell receptor-antigen bond.
+These antigenic molecules are presented among thousands of chemically similar endogenous peptides, raising the question of how T cells can reliably make a decision to respond to certain antigens but not others within minutes of encountering an antigen presenting cell.
+In this theoretical study, we investigate the role of localized rebinding between a T cell receptor and an antigen.
+We show that by allowing the signaling state of individual receptors to persist during brief unbinding events, T cells are able to discriminate antigens based on both their unbinding and rebinding rates.
+We demonstrate that T cell receptor coreceptors, but not receptor clustering, are important in promoting localized rebinding, and show that requiring rebinding for productive signaling reduces signals from a high concentration of endogenous pMHC.
+In developing our main results, we use a relatively simple model based on kinetic proofreading.
+However, we additionally show that all our results are recapitulated when we use a detailed T cell receptor signaling model.
+We discuss our results in the context of existing models and recent experimental work and propose new experiments to test our findings.
+### introduction ###
+T cells of the adaptive immune system use their T cell receptors to scan the surfaces of antigen-presenting-cells for antigen in the form of specific peptides bound to major-histocompatibility complexes.
+Scanning of APCs by T cells is rapid, with estimates suggesting that an individual T cell spends only 1 5 minutes interacting with a single APC if it lacks specific pMHC CITATION.
+Experiments have demonstrated that T cells are extremely sensitive to specific pMHC, responding to as few as 1 10 pMHC in a sea of thousands of chemically similar self pMHC CITATION, CITATION, CITATION, CITATION.
+It has also been demonstrated that a single amino acid substitution on a presented peptide can dramatically alter the T cell response CITATION.
+Speed, sensitivity, and specificity have been dubbed the S 3 characteristics of antigen detection by T cells CITATION .
+The observation that T cells transiently interact with APCs that do not express specific pMHC suggests that the decision to respond occurs within seconds of an encounter.
+Rapid turnover of T cell-APC contacts in vivo accelerates the search for specific pMHC by allowing numerous unique T cell-APC interactions.
+The decision to respond gives rise to a stop signal CITATION and is commonly followed by the formation of the immune synapse CITATION, a stable adhesion between the T cell and APC that persists for upwards of 30 minutes and facilitates a second, sustained phase of signaling.
+Experiments and mathematical modeling have been extensively used to understand the efficiency of T cell activation.
+During the sustained signaling phase, the serial binding of many TCR by a single pMHC has been postulated to increase T cell sensitivity CITATION.
+Serial binding is expected because the bonds formed between TCR and agonist pMHC are transient, with half-lives in the range of 1 100 s CITATION, CITATION, CITATION.
+On the other hand, T cell specificity has been addressed by the kinetic proofreading model CITATION, CITATION.
+This model postulates that a series of TCR-proximal steps, such as the binding and subsequent phosphorylation of the TCR associated immunoreceptor tyrosine-based activation motifs by signaling molecules, occur upon pMHC binding, and that these signaling events require continued TCR engagement to proceed.
+A productive signal is transduced only after several such transformations have taken place.
+In this model, T cells are able to discriminate between different pMHC by imposing a threshold on the TCR-pMHC dissociation rate constant .
+Combining serial binding and kinetic proofreading reveals that a balance between sensitivity and specificity gives rise to an optimal FORMULA for efficient T cell activation CITATION, CITATION, CITATION, an effect which has been experimentally observed CITATION, CITATION, CITATION.
+The efficiency of T cell activation in these models, and others CITATION, CITATION, is usually quantified by the number of activated TCRs integrated over the whole cell, and after a relatively long period of interaction with an APC.
+Additionally, several studies have reported correlations between the TCR/pMHC bond dissociation constant, but not FORMULA, and the efficiency of T cell activation as measured after FORMULA hour by cytoxicity and/or cytokine assays CITATION, CITATION, CITATION .
+However, T cells have been observed to respond to stimulatory pMHC in less than a minute CITATION and, at least for cytotoxic T cells, a stable contact interface is not required for pMHC detection CITATION.
+Serial binding/kinetic proofreading models do not predict specificity on these short time scales, in part because signals generated by high concentrations of weakly binding self pMHC are found to be comparable to signals generated by low concentrations of high affinity agonist pMHC CITATION, CITATION.
+Moreover, the early T cell response is unlikely to be determined by an equilibrium parameter, such as FORMULA, as it is quite unlikely that the T cell-APC interface attains equilibrium at such short times.
+It is more likely that FORMULA is an important determinant of the efficiency of T cell activation during the sustained phase of signaling, well after the initial decision to respond.
+In this paper we investigate a putative mechanism for antigen discrimination during the early phase of TCR signaling.
+Specifically, we examine the role of TCR/pMHC rebinding in allowing T cells to make rapid and reliable decisions to respond.
+By explicitly accounting for TCR/pMHC rebinding within existing formulations of diffusion-limited membrane reactions, we find that rebinding has very little effect in canonical proofreading models.
+A simple modification that accounts for signal persistence at the TCR allows individual TCR to integrate the duration of multiple rebinding events.
+The consequence of this scheme is that discrimination in this sum-of-binding model is now sensitive to both the association and dissociation rate constants of the TCR-pMHC bond.
+This enhanced sensitivity leads to the finding that a T cell can discriminate between a wider spectrum of antigens than would be predicted by a traditional serial binding/kinetic proofreading model.
+We further show that coreceptors, but not TCR clustering, are important to achieve these rapid rebinding events.
+In addition, we show that signal persistence at the TCR does not allow high concentrations of endogenous pMHC to generate spurious signals.
+Finally, we show that our general conclusions are unchanged when our cartoon kinetic proofreading model is replaced by a detailed model of TCR-proximal signaling.
+We propose that T cells discriminate antigen based on FORMULA and FORMULA via a threshold in the sum-of-binding which allows for rapid and reliable T cell responses to specific pMHC.

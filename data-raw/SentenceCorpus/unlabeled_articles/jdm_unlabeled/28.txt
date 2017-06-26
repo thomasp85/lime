@@ -1,0 +1,61 @@
+### abstract ###
+in a series of recent experiments CITATION   matching subsidies generate significantly higher charity receipts than do theoretically equivalent rebate subsidies
+this paper reports a laboratory experiment conducted to examine whether the higher receipts are attributable to a relative preference for matching subsidies or to an   isolation effect'' CITATION
+some potential policy implications of isolation effects on charitable contributions are also considered
+### introduction ###
+voluntary charitable contributions play a large and ever-increasing role in supporting the social infrastructure of developed economics
+in an effort to find ways to encourage private contributions  experimental economists have  in recent years  devoted considerable attention to the effects of alternative fundraising formats and mechanisms
+CITATION   one branch of this general program regards the effects of different methods for subsidizing contributions
+a series of recent experiments  CITATION  indicate that matching subsidies elicit considerably higher charity receipts than do comparable rebate subsidies
+the design for these experiments consists of one or more modified dictator games  similar to those used by andreoni and vesterlund  CITATION  and andreoni and miller  CITATION   where participants make  pass  and  hold  decisions under different endowment and price of contribution conditions
+however  rather than changing directly the price of contributions  in the subsidy-format experiments subjects make pass hold decisions under various matching subsidy and rebate subsidy conditions that alter the effective price of contributions
+table  NUMBER  illustrates the design used as the control treatment in davis  millner and reilly  CITATION   which is in many ways representative
+subjects are asked to make a series of decisions to hold for themselves  or pass to a charity portions of an endowment in column  NUMBER  under the conditions shown in column  NUMBER 
+the sum of hold and pass entries must sum to the endowment
+after making their choices  one randomly selected decision is implemented
+for that decision  the subject receives as cash the amount they chose to hold supplemented by rebates of passed amounts in the rebate conditions
+the amount passed supplemented by matching amounts in the matching conditions is sent to a designated charity
+in general  a matching subsidy  s  reduces the effective price of contributing   NUMBER  to charity to p    NUMBER   NUMBER  s and a rebate subsidy  s  reduces the effective price of a   NUMBER  contribution to p    NUMBERs
+thus  s and s induce the same effective price when s   s  NUMBER -s
+however  davis  millner and reilly observed substantially higher charity receipts under a matching subsidy than under a comparable rebate subsidy
+for example  charity receipts were roughly twice as high under the  NUMBER  percent  matching subsidy shown as problem  NUMBER  in table  NUMBER  than under the  NUMBER  percent  refund condition  shown as problem  NUMBER 
+this control treatment replicates results previously reported in eckel and grossman  CITATION
+eckel and grossman also report very similar results in alternative laboratory designs where subjects make fewer allocative decisions  CITATION   and in field contexts  CITATION
+in addition to their control treatment  davis  millner and reilly  CITATION  report an  extra information  treatment where subjects received information prompting them about the net consequences of their choices
+extra information only reduced  but did not eliminate significant differences in net charity receipts
+the reason why changing subsidy formats so prominently affects charity receipts remains unclear
+a failure on the part of subjects to understand the task at hand doubtfully drives results
+the instructions are simple  and subjects report very high levels of understanding
+eckel and grossman  CITATION   for example  observe that subjects strongly agreed with the statement that  instructions were clear
+  using a  NUMBER -point likert scale  the mean subject response was  NUMBER   NUMBER 
+one possible explanation for the higher charity receipts collected under a matching subsidy is that people find something psychologically appealing about matching subsidies
+eckel and grossman  CITATION  suggest a sort of framing effect that might support such a preference for matching subsidies  the knowledge that the experimenter also contributes to the charity under a matching subsidy may create in subjects a  cooperation frame  that increases contributions relative to the  rewards frame  created by a rebate subsidy
+at least some economists find this justification persuasive  CITATION
+alternatively  isolation effects  discussed by mccaffery and baron  CITATION  may explain the higher charity receipts generated with matching subsidies
+the notion of isolation effects  which is closely related to  but distinct from the well known concept of mental accounting  CITATION   suggests that when given a multi-dimensional problem  people tend to disaggregate dimensions of the problem and focus on only those components that they control most directly or that affect them most directly
+for example  given the problems shown in table  NUMBER   people may focus on the direct consequences of giving away portions of their endowments  rather than on the indirect consequences for themselves or the charity that the various conditions imply
+harris and joyce  CITATION  observed a similar result when they asked subjects to make a series of  fair  allocations among members in a partnership
+when asked to divide profits  subjects tended to allocate profits equally among partners  despite very unequal profit contributions
+when asked to divide expenditures  subjects again tended to use an equal-division rule  even though this time the rule resulted in a very unequal division of profits
+prompting subjects with information about the indirect consequences of their decisions reduced but did not eliminate the tendency to make equal allocations of the presented amounts
+preferences for matching subsidies and isolation effects carry distinct policy implications for charitable fundraising
+if people simply prefer matching subsidies  governments and fundraising organizations might do well to switch from away from rebate schemes and toward schemes that feature matching contributions
+in particular  replacing tax rebates with a government-sponsored matching contributions program would increase charitable contributions   however  to the extent that isolation effects explain the higher charity receipts generated with matching subsidies  policy-makers may encounter difficulties in implementing such a program  and even if implemented  may not find that such a program increases charity receipts
+both potential difficulties follow from what people may isolate on as direct effects
+for example  attempting to replace tax rebates with a combination of matching contributions and higher taxes might be difficult politically  since people may focus on the direct negative consequences of a personal tax increase rather than on the more indirect positive consequences of increased charitable contributions
+again  a matching subsidies program would increase charity receipts over the current tax refund subsidy policy only if people isolate more on the increased effectiveness of contributions induced by a matching subsidy than on other possible foci of attention  such as the reduction in obligations to a sometimes resented government that a rebated donation implies
+the potential importance of isolation effects in these contexts remains a subject for future investigation
+this paper reports an experiment that focuses on the preliminary task of distinguishing between a preference for matching subsidies and isolation effects as an explanation for subsidy formatting effects
+the idea of the experiment is straightforward
+in addition to a previously-reported control treatment  conducted using the design shown in table  NUMBER   i conduct a maximum possible contribution  mpc   treatment  where the allocation decisions are restructured so that the problem dimension presented most directly to subjects is the maximum amount that the charity may receive  rather than the maximum amount the subject may take home
+although framing contributions in terms of charity receipts has few obvious parallels to natural contexts  it allows a clean distinction between simple preferences for matching subsides and isolation effects  to the extent that subjects simply prefer matching subsidies to rebates  matching subsidies will elicit higher net charity receipts than rebate subsidies in both the mpc and control treatments
+on the other hand  to the extent that subjects isolate on the amount presented to be divided  net charity receipts under a matching subsidy will exceed those under a comparable rebate subsidy only in the control treatment
+in the mpc treatment  charity receipts will increase equally with both rebate and matching subsidies  because subjects will divide maximum possible contributions between themselves and the charity in roughly the same way in all subsidy conditions
+i summarize these observations as the following hypothesis  which i state in alternative form
+hypothesis  isolation effects drive the   previously observed subsidy formatting effects
+shifting the   direct effect of contributions from the amount of an endowment   to donate to the maximum amount charity may receive eliminates   the increased charity receipts elicited with matching subsidies   over rebate subsidies
+by way of overview  experimental results are overwhelmingly consistent with isolation effects
+the remainder of this paper is organized as follows
+section  NUMBER  explains the experimental design and procedures used to evaluate this hypothesis
+section  NUMBER  presents experimental results
+a fourth section discusses some of potential policy implications of isolation effects on charity contributions

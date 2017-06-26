@@ -1,0 +1,53 @@
+### abstract ###
+physicians often encounter diagnostic problems with ambiguous and conflicting features
+what are they likely to do in such situations
+we presented a diagnostic scenario to  NUMBER  family physicians and traced their information gathering  diagnoses and management
+the scenario contained an ambiguous feature  while the other features supported either a cardiac or a musculoskeletal diagnosis
+due to the risk of death  the cardiac diagnosis should be considered and managed appropriately
+forty-seven participants  NUMBER  percent  gave only a musculoskeletal diagnosis and  NUMBER  of them managed the patient inappropriately sent him home with painkillers
+they elicited less information and spent less time on the scenario than those who diagnosed a cardiac cause
+no feedback was provided to participants
+stimulated recall with  NUMBER  of the physicians revealed differences in the way that the same information was interpreted as a function of the final diagnosis
+the musculoskeletal group denigrated important cues  making them coherent with their representation of a pulled muscle  whilst the cardiac group saw them as evidence for a cardiac problem
+most physicians indicated that they were fairly or very certain about their diagnosis
+the observed behaviours can be described as coherence-based reasoning  whereby an emerging judgment influences the evaluation of incoming information  so that confident judgments can be achieved even with ambiguous  uncertain and conflicting information
+the role of coherence-based reasoning in medical diagnosis and diagnostic error needs to be systematically examined
+### introduction ###
+the diagnosis of chest pain in primary care is notoriously difficult
+the cause of the pain is usually not life threatening
+however  conditions such as acute coronary syndrome and pulmonary embolism may be fatal if unrecognised and not promptly treated
+there is evidence that myocardial infarction mi may be missed in primary care  CITATION
+a missed mi is the commonest cause of negligence claims against primary care physicians in the usa and relates to more deaths than other conditions in claims against family physicians in the uk  CITATION
+epidemiological studies have found that atypical presentations as well as patients attributing their symptoms to a non-cardiac cause are significant factors in missed diagnoses of mi  CITATION
+we studied the diagnosis of atypical chest pain using a simulated patient who attributes his pain to a pulled muscle
+the scenario  described in detail later  included conflicting features  i e   some features pointing to a cardiac diagnosis and others pointing to a musculoskeletal diagnosis
+accounts of coherence-based reasoning describe how people deal with such situations and what they do in order to resolve the conflict
+faced with equivocal  i e   non-diagnostic  information about two alternatives  people will spontaneously form a preference for one alternative and will distort information received subsequently so that it favors the preferred alternative  CITATION
+they may even distort information that clearly favors one alternative  in order to preserve an earlier preference for the other alternative  though distortion generally declines as diagnosticity of information increases  CITATION
+if preferences or judgments change as a result of new incoming information  distortion continues to operate  now in favor of the new preference or judgment  CITATION
+it seems that distortion of information is a psychological necessity that helps individuals form and maintain coherent judgments
+parallels with medical diagnosis can be drawn from studies of legal decision making
+simon and colleagues gave participants a legal case with conflicting information  i e   where each position was supported by equal amounts of probabilistic evidence  and asked them to render a verdict and indicate their confidence in it  CITATION
+they pre-disposed participants to either a guilt verdict or an innocence verdict by presenting them with dna evidence that either incriminated or exonerated the defendant odds of  NUMBER  to  NUMBER  million of the dna evidence being wrong
+before seeing the case  participants had been asked to rate the diagnosticity of each piece of evidence  presented to them in unrelated vignettes describing various social situations
+after they read and rendered their verdict on the legal case  participants were asked to rate the diagnosticity of each piece of evidence again  this time presented to them in the context of the case
+these new ratings were consistent with the verdict and significantly differed from the ones made earlier in the unrelated vignettes
+it seems that whilst the evidence was initially perceived as truly equivocal and non-diagnostic  it was subsequently contextualised and became part of the mental model of the legal case
+its perceived diagnosticity thus increased in line with the verdict
+the authors argue that a dna match should bear no relationship to the other pieces of evidence in the case  such as the reliability of an eyewitness' identification
+nevertherless  these are now perceived as related and their evaluation shifts to support the final verdict - what the authors call  coherence shifts
+  this basic experimental procedure has been repeated with several variations in order to test whether different factors affected coherence-based reasoning
+coherence shifts were found even when participants were asked simply to memorise an ambiguous legal case
+when they were unexpectedly asked to render a verdict and rate their agreement with the various arguments in the case  agreement had shifted from baseline  as a function of the final verdict  CITATION
+the largest shifts however were observed between baseline and the interim phase after memorisation but before being asked to render a verdict or indicate a leaning towards a verdict
+these findings suggest that coherence shifts happen pre-decisionally and are not simply the result of decision justification
+processing a complex legal case that contained conflicting arguments  with the intention either to make a decision later or receive further information or memorise it in order to communicate it to someone else  resulted in comparable coherence shifts  CITATION
+this was attributed to an intense attempt to comprehend the complex material and represent it mentally in a coherent way
+pre-decisional distortion of information has been investigated mostly with college students and with tasks that required no prior experience or technical skill
+professionals or people with experience in a specific domain making judgments within their domain of expertise are rarely studied
+in one such study  participants experienced in horse race betting evaluated task-related information chances of horses winning a simulated race in accordance with their final choice  either in anticipation of having to place a bet later or as a consequence of simply processing task information
+they distorted information to a greater extent than participants without experience on betting on horses  CITATION
+we wanted to investigate how physicians deal with difficult diagnostic problems that contain conflicting information  where diagnoses cannot be confirmed or excluded with certainty
+the diagnosis of chest pain in primary care lends itself to this type of enquiry
+the chest pain scenario was one of seven scenarios that we built for a larger study that investigated the relationship between experience  information search and diagnostic accuracy in difficult problems in family medicine  CITATION
+we found that  across scenarios  experience was not related to diagnostic accuracy  which was predicted only by the number of critical cues elicited  i e   cues with diagnostic value for the relevant differential diagnoses

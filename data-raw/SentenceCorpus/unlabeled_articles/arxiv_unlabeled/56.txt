@@ -1,0 +1,19 @@
+### abstract ###
+Reinforcement learning means learning a policy---a mapping of observations into actions---based on feedback from the environment
+The learning can be viewed as browsing a set of policies while evaluating them by trial through interaction with the environment
+We present an application of gradient ascent algorithm for reinforcement learning to a complex domain of packet routing in network communication and compare the performance of this algorithm to other routing methods on a benchmark problem
+### introduction ###
+Successful telecommunication requires efficient resource allocation that can be achieved by developing adaptive control policies
+Reinforcement learning ({rl})~ CITATION  presents a natural framework for the development of such policies by trial and error in the process of interaction with the environment
+In this work we apply the {rl} algorithm to network routing
+Effective network routing means selecting the optimal communication paths
+It can be modeled as a multi-agent {rl} problem
+In a sense, learning the optimal control for network routing could be thought of as learning in some traditional for {rl} episodic task, like maze searching or pole balancing, but repeating trials many times in parallel with interaction among trials
+Under this interpretation, an individual router is an agent which makes its routing decisions according to an individual policy
+The parameters of this policy are adjusted according to some measure of the global performance of the network, while control is determined by local observations
+Nodes do not have any information regarding the topology of network or their position in it
+The initialization of each node, as well as the learning algorithm it follows, are identical to that of every other node and independent of the structure of the network
+There is no notion of orientation in space or other semantics of actions
+Our approach allows us to update the local policies while avoiding the necessity for centralized control or global knowledge of the networks structure
+The only global information required by the learning algorithm is the network utility expressed as a reward signal distributed once in an epoch and dependent on the average routing time
+This learning multi-agent system is biologically plausible and could be thought of as neural network in which each neuron only performs simple computations based on locally available quantities~ CITATION

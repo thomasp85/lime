@@ -1,0 +1,23 @@
+### abstract ###
+Information distance is a parameter-free similarity measure based on compression, used in pattern recognition, data mining, phylogeny, clustering, and classification
+The notion of information distance is extended from pairs to multiples (finite lists)
+We study maximal overlap, metricity, universality,  minimal overlap, additivity, and normalized information distance in multiples
+We use the theoretical notion of Kolmogorov complexity which for practical purposes is approximated by the length of the compressed version of the file involved, using a real-world compression program
+### introduction ###
+In pattern recognition, learning, and data mining one obtains information from objects containing information
+This involves an objective definition of the information in a single object, the information to go from one object to another object in a pair of objects, the information to go from one object to any other object in a multiple of objects, and the shared information between objects,   CITATION
+The classical notion of Kolmogorov complexity  CITATION  is an objective measure  for the information in an  a  single  object, and information distance measures the information  between a  pair  of objects  CITATION
+This last notion has spawned research in the theoretical direction, among others   CITATION
+Research in the practical direction has focused on  the  normalized  information distance, the similarity metric, which arises by normalizing the information distance in a proper manner and  approximating the Kolmogorov complexity through real-world compressors  CITATION , This normalized information distance is a parameter-free, feature-free, and alignment-free similarity measure  that has had great impact in applications
+A variant of this compression distance has been tested on all time sequence databases used in the last decade in the major data mining conferences (sigkdd, sigmod, icdm, icde, ssdb, vldb, pkdd, pakdd)  CITATION
+The conclusion is that the method is competitive with all 51  other methods used and superior in  heterogenous data clustering and anomaly detection
+In  CITATION  it was shown that the method is resistant to noise
+This theory  has found many applications in pattern recognition, phylogeny, clustering, and classification
+For objects that are represented as computer files such applications range from weather forecasting, software, earthquake prediction, music, literature, ocr, bioinformatics, to internet  CITATION
+For objects that are only represented by name,  or objects that are abstract like `red,' `Einstein,'  `three,' the normalized information distance uses background information provided by Google, or any search engine that produces aggregate page  counts
+It discovers the `meaning' of words and phrases in the sense of producing a relative semantics
+Applications run from ontology, semantics, tourism on the web, taxonomy, multilingual questions, to question-answer systems   CITATION
+For more references on either subject see the textbook  CITATION  or Google Scholar for references to  CITATION
+However, in many applications we are interested in  shared information between many objects instead of just a pair of objects
+For example, in customer reviews of gadgets, in blogs about public happenings, in newspaper articles about the same occurrence, we are interested in the most comprehensive one or the most specialized one
+Thus, we want to extend the information distance  measure from pairs to multiples

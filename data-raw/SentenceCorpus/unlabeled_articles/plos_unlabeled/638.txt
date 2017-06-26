@@ -1,0 +1,60 @@
+### abstract ###
+Protein interactions play a vital part in the function of a cell.
+As experimental techniques for detection and validation of protein interactions are time consuming, there is a need for computational methods for this task.
+Protein interactions appear to form a network with a relatively high degree of local clustering.
+In this paper we exploit this clustering by suggesting a score based on triplets of observed protein interactions.
+The score utilises both protein characteristics and network properties.
+Our score based on triplets is shown to complement existing techniques for predicting protein interactions, outperforming them on data sets which display a high degree of clustering.
+The predicted interactions score highly against test measures for accuracy.
+Compared to a similar score derived from pairwise interactions only, the triplet score displays higher sensitivity and specificity.
+By looking at specific examples, we show how an experimental set of interactions can be enriched and validated.
+As part of this work we also examine the effect of different prior databases upon the accuracy of prediction and find that the interactions from the same kingdom give better results than from across kingdoms, suggesting that there may be fundamental differences between the networks.
+These results all emphasize that network structure is important and helps in the accurate prediction of protein interactions.
+The protein interaction data set and the program used in our analysis, and a list of predictions and validations, are available at LINK.
+### introduction ###
+For understanding the complex activities within an organism, a complete and error-free network of protein interactions which occur in the organism would be a significant step forward.
+Experimentally, protein interactions can be detected by a number of techniques, and the data is publicly available from several databases such as DIP, Database of Interacting Proteins CITATION, and MIPS, Munich Information Center for Protein Sequences CITATION.
+Unfortunately, these experimentally detected interactions show high false negative CITATION and high false positive rates CITATION, CITATION.
+In this paper we develop a new computational approach to predict interactions and validate experimental data.
+Computational methods have already been developed for these purposes.
+For interaction validation, these have mainly centered on the use of expression data CITATION, CITATION or the co-functionality or co-localisation of the proteins involved CITATION, CITATION .
+For prediction of protein interactions in contrast, many methods have been suggested.
+The majority of these generate lists of proteins with a functional relationship rather than physical interactions CITATION, CITATION .
+In terms of physical interaction prediction the available methods can be typified by the two approaches of Deng et al. CITATION and Jonsson et al. CITATION .
+In Deng et al.'s method, a domain interaction based approach, a protein interaction is inferred on the basis of domain contacts.
+If a domain pair is frequently found in observed protein interactions, it is likely that other protein pairs containing this domain pair might also interact.
+From the observed protein interaction network, the probabilities of domain-domain interactions are estimated.
+The expectation-maximum algorithm is employed to compute maximum likelihood estimates, assuming that protein interactions occur independently of each other.
+This likelihood is then used to construct a probability score for a protein pair to interact, it is inferred based on the estimated probabilities of domain interactions within the protein pair.
+Deng et al.'s prediction is based on a total of 5,719 interactions from S.cerevisiae.
+However, the limited number of known domains may well not be enough to describe the variety of protein interactions.
+This approach has had further extensions, such as an improved scoring for domain interactions CITATION and the inclusion of other biological information CITATION.
+Liu et al.'s model CITATION is an extension of Deng et al.'s method which integrates multiple organisms.
+In addition to S.cerevisiae, two other organisms, C.elegans, D.melanogaster, are included.
+The second type of approach, as used by Jonsson et al. CITATION, is homology-based.
+It searches for interlogs among protein interactions from other organisms.
+If an interlog of a protein interaction exists in many other organisms, this protein interaction will score highly.
+In addition to searching for orthologous interlogs, Mika and Saeed CITATION, CITATION suggest that paralogous interlogs may provide even more information for inferring interacting protein pairs.
+In principle, statistical clustering algorithms such as CITATION and CITATION which identify cliques in the network could be viewed as a prediction method, predicting that all proteins within a clique interact with each other.
+This interpretation is biologically questionable, and as the focus in the statistical clustering approach is on locating cliques and overlapping modules rather than on predicting individual interactions, we exclude it from our comparisons.
+Neither Deng et al.'s method nor Jonsson et al.'s method make use of network structure beyond pairwise interactions; interactions are considered as isolated pairs.
+However these pairs could and should be considered as a network, where the proteins are nodes and their interactions are links CITATION, CITATION.
+Topological examination of these networks has revealed many interesting properties, including a clustering tendency CITATION, CITATION, see also Supporting Information.
+In our method we exploit the network structure by developing a score which considers triadic patterns of interactions rather than pairs.
+In this paper we thus take the established idea that the characteristics of a protein will affect its interactions alongside the not yet fully explored idea that its network position will also affect its interactions, in order to develop a novel predictive tool.
+Our goal is to predict protein interactions of the type x with y, where both x and y interact with a third protein z. Therefore in our approach we particularly focus on two simple three node network structures, triangles and lines.
+A triangle is a subnet formed by an interacting protein pair with a common neighbour.
+A line, by contrast, is a subnet formed by an non-interacting protein pair with a common neighbour.
+We will show that these network structures and the protein characteristics within them help to predict protein interactions.
+We apply our method to the S.cerevisiae interaction network from the DIP database.
+During the validation we assume that function and structure are known for all proteins and that the protein interaction network is known for all but one interaction.
+With triadic interacting patterns, we predict the interaction status of those protein pairs with at least one common neighbour and compare our results with those from three other published scores.
+We go on to demonstrate that the requirement to have fully annotated proteins can be relaxed to include partially annotated proteins, with a slight drop in the accuracy.
+The prediction is also compared with simulated networks where all proteins are shuffled while the network structure is maintained, in order to examine whether the specific network structure, triangles and lines, keep useful information in forming protein interaction networks.
+To measure the true positive rate in a set of protein pairs, Deane et al CITATION proposed the expression profile index, a measure of the true positive rate in a set of protein pairs based on biological relevance.
+We compare the EPR index to our score, showing that, with a suitable cut-off, our predictions achieve a high true positive rate.
+We also give examples of validated experimental data and predict new interactions.
+Our predictive model uses a prior interaction database and for this we use three prior databases, pooling protein interactions collected from prokaryotes, eukaryotes and all interactions.
+The results from using different prior databases show that the use of interactions from within the same kingdom rather than across kingdoms significantly improves the results, indicating as in CITATION that interaction networks may be significantly different between the kingdoms.
+Comparing our method to three other standard approaches, namely the domain-based approach by Deng et al. and an extension by Liu et al., and a homology-based approach by Jonsson et al., we find that our method outperforms the above approaches on the subset of interactions in the DIP Yeast data set which contains enough annotation and connectivity to be included in our analysis.
+Our method complements the methods by Deng et al. and Liu et al., as their approaches apply to a rather different subset of potential interactions yielded from the DIP Yeast data set.

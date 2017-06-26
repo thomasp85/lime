@@ -1,0 +1,28 @@
+### abstract ###
+We propose a general method called truncated gradient to induce sparsity in the weights of online learning algorithms with convex loss functions
+This method has several essential properties:   The degree of sparsity is continuous---a parameter controls the rate of sparsification from no sparsification to total sparsification
+The approach is theoretically motivated, and an instance of it can be regarded as an online counterpart of the popular  SYMBOL -regularization method in the batch setting
+We prove that small rates of sparsification result in only small additional regret with respect to typical online learning guarantees
+The approach works well empirically
+We apply the approach to several datasets and find that for datasets with large numbers of features, substantial sparsity is discoverable
+### introduction ###
+We are concerned with machine learning over large datasets
+As an example, the largest dataset we use here has over  SYMBOL  sparse examples and  SYMBOL  features using about  SYMBOL  bytes
+In this setting, many common approaches fail, simply because they cannot load the dataset into memory or they are not sufficiently efficient
+There are roughly two approaches which can work:   Parallelize a batch learning algorithm over many machines ( eg ,  CITATION )
+Stream the examples to an online learning algorithm ( eg ,  CITATION ,  CITATION ,  CITATION , and  CITATION )
+This paper focuses on the second approach
+Typical online learning algorithms have at least one weight for every feature, which is too much in some applications for a couple reasons:    Space constraints
+If the state of the online learning algorithm overflows RAM it can not efficiently run
+A similar problem occurs if the state overflows the L2 cache
+Test time constraints on computation
+Substantially reducing the number of features can yield substantial improvements in the computational time required to evaluate a new sample
+This paper addresses the problem of inducing sparsity in learned weights while using an online learning algorithm
+There are several ways to do this wrong for our problem
+For example:    Simply adding  SYMBOL  regularization to the gradient of an online weight update doesn't work because gradients don't induce sparsity
+The essential difficulty is that a gradient update has the form  SYMBOL  where  SYMBOL  and  SYMBOL  are two floats
+Very few float pairs add to  SYMBOL  (or any other default value) so there is little reason to expect a gradient update to accidentally produce sparsity
+Simply rounding weights to  SYMBOL  is problematic because a weight may be small due to being useless or small because it has been updated only once (either at the beginning of training or because the set of features appearing is also sparse)
+Rounding techniques can also play havoc with standard online learning guarantees
+Black-box wrapper approaches which eliminate features and test the impact of the elimination are not efficient enough
+These approaches typically run an algorithm many times which is particularly undesirable with large datasets

@@ -1,0 +1,20 @@
+### abstract ###
+research has identified loss aversion as a strong and robust phenomenon  but has also revealed some moderators affecting the magnitude of its effect on decision making
+in the current article  we draw attention to the fact that even the measurement of loss aversion itself may affect its magnitude by inducing a focus on either losses or gains
+in three studies  we provide empirical evidence for such a measurement-induced focus
+in all studies we used coin-toss gambles-in which there is a  NUMBER   NUMBER  chance to win or to lose-to assess gain loss ratios as a measure of loss aversion
+participants either filled out the loss side or the gain side of this gain loss ratio
+the studies consistently showed that-using within- and between-subject designs and anticipated and real coin-toss gambles-the strength of loss aversion depended on the measurement format fill-in-the-loss versus fill-in-the-gain  filling in the loss side increased loss aversion
+moreover  loss aversion was more affected by the stakes of the gamble in the fill-in-the-loss format than in the fill-in-the-gain format
+### introduction ###
+when making decisions  decision-makers have to consider the potential outcomes  and thus consider the potential losses and gains that may occur
+for example  when speculating on the stock exchange  we have to consider the potential losses should stock go down and the potential gains should stocks go up
+when making such decisions-especially when people directly compare potential losses and gains-people often give more weight to the losses  CITATION
+this larger weight given to negative outcomes is generally referred to as loss aversion  i e    losses loom larger than gains   CITATION
+in addition to stock market decisions  loss aversion has been used to explain many effects observed in the context of decision making such as the sunk cost effect  CITATION   the status quo bias  CITATION   and the endowment effect  CITATION
+although the existence of loss aversion is well-accepted  there is still work to be done developing better accounts of its causes  boundaries and consequences
+for example  researchers generally assume that potential gains need to be approximately twice as large to offset the potential losses  CITATION
+they introduced a loss aversion coefficient-the ratio g l gains losses that makes an even chance to gain g or lose l just acceptable  CITATION
+they observed a gain loss ratio of  NUMBER   NUMBER   NUMBER  in their experiments  showing that gains on average need to be twice as large as the losses to make an even chance to gain g or lose l acceptable
+in the current paper  however  we will argue and show that this loss aversion ratio is not constant  but in fact influenced by how it is measured
+we show that the ratio is approximately  NUMBER  when people focus on gains compared to a loss  but that the ratio increases when people focus on losses compared to a gain

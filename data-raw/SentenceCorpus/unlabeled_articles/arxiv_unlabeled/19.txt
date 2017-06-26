@@ -1,0 +1,40 @@
+### abstract ###
+In a recent breakthrough, [Bshouty et al , 2005] obtained the first passive-lear\-ning algorithm for DNFs under the uniform distribution
+They showed that DNFs are learnable  in the Random Walk and Noise Sensitivity models
+We extend their results in several directions
+We first show that thresholds of parities, a natural class encompassing DNFs, cannot be learned efficiently in the Noise Sensitivity model  using only statistical queries
+In contrast, we show that a cyclic version of the Random Walk model allows to learn efficiently  polynomially weighted thresholds of parities
+We also extend the algorithm of Bshouty et al to the case of Unions of Rectangles, a natural generalization of DNFs to  SYMBOL
+### introduction ###
+Learning Boolean formulae in Disjunctive Normal Form (DNF)  has been a central problem in the computational learning theory literature since Valiant's seminal paper on PAC learning~ CITATION
+In~ CITATION , it was shown that DNFs can be learned  using membership queries, a form of active learning
+Jackson's algorithm, also known as Harmonic Sieve (\hs),  uses a clever combination of two fundamental techniques in learning, Harmonic Analysis and Boosting
+The use of Harmonic Analysis in the study of Boolean functions was introduced in~ CITATION
+It was subsequently used as the basis of a learning algorithm for  SYMBOL  circuits in~ CITATION
+The Harmonic Analysis  used in the \hs\ algorithm is based on a parity-finding algorithm of Goldreich and Levin~ CITATION , which  was first applied to a learning problem by Kushilevitz and Mansour~ CITATION
+Hypothesis boosting, a technique to reduce the classification error of a learning algorithm, was introduced by Schapire~ CITATION
+The boosting algorithm used by \hs\ is actually due to Freund~ CITATION
+In a recent breakthrough, Bshouty et al ~ CITATION  obtained the first passive learning algorithm for DNFs
+Their algorithm is based on a modification of \hs\ which focuses on low-degree Fourier coefficients
+That variant of \hs, called Bounded Sieve (\bs),  was first obtained in~ CITATION
+In~ CITATION , \bs\ was used to learn DNFs under the uniform distribution in two natural passive learning models
+The first one is the Random Walk model, where examples, instead of being  iid  , follow a random walk on the  Boolean cube (see also~ CITATION  for related work)
+The second model is the closely related Noise Sensitivity model, where this time examples come in pairs, the second instance being a noisy version of the first one
+The results of~ CITATION  are interesting in that they give a learning algorithm for DNFs in a case where the observer has no control over the examples provided
+However the problem of learning DNFs under the uniform distribution when examples are  iid 
+still remains open
+It is known that DNFs cannot be learned in the more restrictive Statistical Query model (introduced in~ CITATION ) where one can ask only about statistics over random examples~ CITATION
+Jackson~ CITATION  also showed that \hs\ applies to thresholds of parities (TOP), a class that can express DNFs and decision trees with only polynomial increase in size, and extended his algorithm to the non-Boolean case of unions of rectangles, a generalization of DNFs to  SYMBOL  (where  SYMBOL )
+Whether those classes of functions can be learned in the Random Walk and Noise Sensitivity models was left open by~ CITATION
+Our contribution is threefold
+We first show that TOPs cannot be learned in the Noise Sensitivity model using statistical queries (SQs)
+As far as we know, this is the first example of a negative result for ``second-order'' statistical queries, i e queries on pairs of examples
+This does not rule out the possibility of learning TOPs in the Random Walk model although it provides evidence that the techniques of~ CITATION  cannot be easily extended to that case
+On the other hand, we show that a simple variant of the Random Walk model where the component updates follow a fixed cycle allows to learn TOPs efficiently
+This seems to be the first not-too-contrived passive model in which TOPs are efficiently learnable with respect to the uniform distribution
+Actually, one can perform the Harmonic Sieve in this Cyclic Random Walk model, and we also show that this model is strictly weaker than the active setting under a standard cryptographic assumption
+Finally we extend  the techniques of~ CITATION  and  CITATION  to  the non-Boolean domain  SYMBOL  and use this to learn unions of rectangles in the Noise Sensitivity and Random Walk models
+This last result turns out to be rather straightforward once the proper analogues to the Boolean case are found
+In Section~, we introduce the learning models and give a brief review of Fourier analysis
+The negative result for learning TOPs is derived in Section~
+The learning algorithms for TOPs and Unions of Rectangles are presented in Sections  and  respectively

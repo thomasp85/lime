@@ -1,0 +1,31 @@
+### abstract ###
+MISC	In the constraint satisfaction problem ( SYMBOL ), the aim is to find an assignment of values to a set of variables subject to specified constraints
+MISC	In the minimum cost homomorphism problem ( SYMBOL ), one is additionally given weights  SYMBOL  for every variable  SYMBOL  and value  SYMBOL , and the aim is to find an assignment  SYMBOL  to the variables that minimizes  SYMBOL
+OWNX	Let  SYMBOL  denote the  SYMBOL  problem parameterized by the set of predicates allowed for constraints
+OWNX	SYMBOL  is related to many well-studied combinatorial optimization problems, and concrete applications can be found in, for instance, defence logistics and machine learning
+OWNX	We show that  SYMBOL  can be studied by using algebraic methods similar to those used for CSPs
+OWNX	With the aid of algebraic techniques, we classify the computational complexity of  SYMBOL  for all choices of  SYMBOL
+AIMX	Our result settles a general dichotomy conjecture previously resolved only for certain classes of directed graphs CITATION
+### introduction ###
+MISC	Constraint satisfaction problems ( SYMBOL ) are a natural way of formalizing a large number of computational problems arising in combinatorial optimization, artificial intelligence, and database theory
+MISC	This problem has the following two equivalent formulations: (1) to find an assignment of values to a given set of variables, subject to constraints on the values that can be assigned simultaneously to specified subsets of variables, and (2) to find a homomorphism between two finite relational structures  SYMBOL  and  SYMBOL
+MISC	Applications of  SYMBOL s arise in the propositional logic, database and graph theory, scheduling and many other areas
+MISC	During the past 30 years,  SYMBOL  and its subproblems has been intensively studied by computer scientists and mathematicians
+MISC	Considerable attention has been given to the case where the constraints are restricted to a given finite set of relations  SYMBOL , called a constraint language  CITATION
+MISC	For example, when  SYMBOL  is a constraint language over the boolean set  SYMBOL  with four ternary predicates  SYMBOL ,  SYMBOL ,  SYMBOL ,  SYMBOL  we obtain 3-SAT
+MISC	This direction of research has been mainly concerned with the computational complexity of  SYMBOL  as a function of  SYMBOL
+MISC	It has been shown that the complexity of  SYMBOL  is highly connected with relational clones of universal algebra  CITATION
+MISC	For every constraint language  SYMBOL , it has been conjectured that  SYMBOL  is either in P or NP-complete  CITATION
+MISC	In the minimum cost homomorphism problem ( SYMBOL ), we are given variables subject to constraints and, additionally, costs on variable/value pairs
+MISC	Now, the task is not just to find any satisfying assignment to the variables, but one that minimizes the total cost
+MISC	SYMBOL  was introduced in  CITATION  where it was motivated by a real-world problem in defence logistics
+MISC	The question for which directed graphs  SYMBOL  the problem  SYMBOL  is polynomial-time solvable was considered in  CITATION
+AIMX	In this paper, we approach the problem in its most general form by algebraic methods and give a complete algebraic characterization of tractable constraint languages
+OWNX	From this characterization, we obtain a dichotomy for  SYMBOL , i e , if  SYMBOL  is not polynomial-time solvable, then it is NP-hard
+OWNX	Of course, this dichotomy implies the dichotomy for directed graphs
+OWNX	In Section 2, we present some preliminaries together with results connecting the complexity of  SYMBOL  with conservative algebras
+OWNX	The main dichotomy theorem is stated in Section 3 and its proof is divided into several parts which can be found in Sections 4-8
+OWNX	The NP-hardness results are collected in Section 4 followed by the building blocks for the tractability result: existence of majority polymorphisms (Section 5) and connections with optimization in perfect graphs (Section 6)
+OWNX	Section 7 introduces the concept of  arithmetical deadlocks  which lay the foundation for the final proof in Section 8
+OWNX	In Section 9 we reformulate our main result in terms of relational clones
+OWNX	Finally, in Section 10 we explain the relation of our results to previous research and present directions for future research

@@ -1,0 +1,26 @@
+### abstract ###
+Persistent activity states, observed in several neocortical areas after the removal of a sensory stimulus, are believed to be the neuronal basis of working memory.
+One of the possible mechanisms that can underlie persistent activity is recurrent excitation mediated by intracortical synaptic connections.
+A recent experimental study revealed that connections between pyramidal cells in prefrontal cortex exhibit various degrees of synaptic depression and facilitation.
+Here we analyze the effect of synaptic dynamics on the emergence and persistence of attractor states in interconnected neural networks.
+We show that different combinations of synaptic depression and facilitation result in qualitatively different network dynamics with respect to the emergence of the attractor states.
+This analysis raises the possibility that the framework of attractor neural networks can be extended to represent time-dependent stimuli.
+### introduction ###
+Working memory enables us to hold the trace of a fleeting stimulus for a few seconds after it is gone, thus enabling the manipulation of information over time.
+Recordings from neurons in monkeys performing working memory tasks reveal stimulus-selective spiking activity that persists after the removal of the stimulus.
+These persistent activity states are considered to be the neuronal substrate of working memory CITATION .
+The sustained persistent activity is believed to be achieved by excitatory interpyramidal connections that are either prewired or formed during the learning of the task CITATION.
+In vitro studies of such connections in the cortex revealed pronounced short-term plasticity effects CITATION.
+In the sensory areas of the cortex, the dominant effect is synaptic depression, expressed as a rapid decay of synaptic efficacy following the presynaptic firing CITATION.
+Several theoretical studies investigated the effects of synaptic depression on the existence and stability of attractor states.
+Wang et al. CITATION recently performed experiments to investigate short-term synaptic plasticity in the prefrontal cortex, one of the cortical areas where persistent activity is observed CITATION.
+They found that interpyramidal connections in this area exhibit various degrees of synaptic facilitation, with three different classes of connections identified.
+While synaptic facilitation was recently mentioned as a stabilizing factor for network attractors CITATION, there is as yet no systematic study of its effect on the dynamics of recurrent neural networks undergoing the transition from background to persistent states after the presentation of a stimulus.
+In this contribution, we consider an attractor neural network with connections that have already been formed by learning several stimuli CITATION, CITATION.
+We assume that the network comprises a set of neuronal populations, each responding primarily to a certain stimulus.
+This scheme, via Hebbian learning, can strengthen the synaptic connections within a population and form a stable activity state.
+Drawing on recent experimental results CITATION, we assume that the neurons within each population differ in the dynamic properties of their synapses and thus exhibit different temporal response profiles to the same stimuli.
+This firing can then lead to a further differentiation of synaptic strengths within the population, whereby neurons with similar synaptic dynamics are connected more strongly to one another than to ones with dissimilar synaptic dynamics.
+We thus consider a network comprising several attractor populations, each divided into subpopulations with different synaptic dynamics.
+These populations interact via both excitatory dynamic synapses and inhibition to generate rich dynamics in response to external stimuli.
+Since the synaptic dynamics differ between subpopulations, we expect them to respond differently to different temporal profiles of the input, which could result in a greater computational power for the network.

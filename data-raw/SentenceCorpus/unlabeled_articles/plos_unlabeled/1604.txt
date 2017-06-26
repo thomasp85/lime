@@ -1,0 +1,79 @@
+### abstract ###
+What proteins interacted in a long-extinct ancestor of yeast?
+How have different members of a protein complex assembled together over time?
+Our ability to answer such questions has been limited by the unavailability of ancestral protein-protein interaction networks.
+To overcome this limitation, we propose several novel algorithms to reconstruct the growth history of a present-day network.
+Our likelihood-based method finds a probable previous state of the graph by applying an assumed growth model backwards in time.
+This approach retains node identities so that the history of individual nodes can be tracked.
+Using this methodology, we estimate protein ages in the yeast PPI network that are in good agreement with sequence-based estimates of age and with structural features of protein complexes.
+Further, by comparing the quality of the inferred histories for several different growth models, we provide additional evidence that a duplication-based model captures many features of PPI network growth better than models designed to mimic social network growth.
+From the reconstructed history, we model the arrival time of extant and ancestral interactions and predict that complexes have significantly re-wired over time and that new edges tend to form within existing complexes.
+We also hypothesize a distribution of per-protein duplication rates, track the change of the network's clustering coefficient, and predict paralogous relationships between extant proteins that are likely to be complementary to the relationships inferred using sequence alone.
+Finally, we infer plausible parameters for the model, thereby predicting the relative probability of various evolutionary events.
+The success of these algorithms indicates that parts of the history of the yeast PPI are encoded in its present-day form.
+### introduction ###
+Many biological, social, and technological networks are the product of an evolutionary process that has guided their growth.
+Tracking how networks have changed over time can help us answer questions about why currently observed network structures exist and how they may change in the future CITATION.
+Analyses of network growth dynamics have studied how properties such as node centrality and community structure change over time CITATION CITATION, how structural patterns have been gained and lost CITATION, and how information propagates in a network CITATION .
+However, in many cases only a static snapshot of a network is available without a node-by-node or edge-by-edge history of changes.
+Biology is an archetypical domain where older networks have been lost, as ancestral species have gone extinct or evolved into present-day organisms.
+For example, while we do have a few protein-protein interaction networks from extant organisms, these networks do not form a linear progression and are instead derived from species at the leaves of a phylogenetic tree.
+Such networks are separated by millions of years of evolution and are insufficient to track changes at a fine level of detail.
+For social networks, typically only a single current snapshot is available due to privacy concerns or simply because the network was not closely tracked since its inception.
+This lack of data makes understanding how the network arose difficult.
+Often, although we do not know a network's past, we do know a general principle that governs the network's forward growth.
+Several network growth models have been widely used to explain the emergent features of observed real-world networks CITATION, CITATION CITATION.
+These models provide an iterative procedure for growing random graphs that exhibit similar topological features as a class of real networks.
+For example, preferential attachment has explained many properties of the growing World Wide Web CITATION.
+The duplication-mutation with complementarity model was found by Middendorf et al. CITATION to be the generative model that best fit the D. melanogaster protein interaction network.
+The forest fire model was shown CITATION to produce networks with properties, such as power-law degree distribution, densification, and shrinking diameter, that are similar to the properties of real-world online social networks.
+Although these random graph models by themselves have been useful for understanding global changes in the network, a randomly grown network will generally not isomorphically match a target network.
+This means that the history of a random graph will not correspond to the history of a real network.
+Hence, forward growth of random networks can only explore properties generic to the model and cannot track an individual, observed node's journey through time.
+This problem can be avoided, however, if instead of growing a random graph forward according to an evolutionary model, we decompose the actual observed network backwards in time, as dictated by the model.
+The resulting sequence of networks constitute a model-inferred history of the present-day network.
+Reconstructing ancestral networks has many applications.
+The inferred histories can be used to estimate the age of nodes, to model the evolution of interactions, and to track the emergence of prevalent network clusters and motifs CITATION.
+In addition, proposed growth models can be validated by selecting the corresponding history that best matches the known history or other external information.
+Leskovec et al. CITATION explore this idea by computing the likelihood of a model based on how well the model explains each observed edge in a given complete history of the network.
+This augments judging a model on its ability to reproduce certain global network properties, which by itself can be misleading.
+As an example, Middendorf et al. CITATION found that networks grown forward according to the small-world model CITATION reproduced the small-world property characteristic of the D. melanogaster PPI network, but did not match the empirical PPI network in other aspects.
+Leskovec et al. CITATION made a similar observation for social network models.
+Ancestor reconstruction also can be used to down-sample a network to create a realistic but smaller network that preserves key topological properties and node labels.
+This can be used for faster execution of expensive graph algorithms or for visualization purposes.
+In the biological network setting, network histories can provide a view of evolution that is complementary to that derived from sequence data alone.
+In the social network setting, if a network's owner decides to disclose only a single network, successful network reconstruction would allow us to estimate when a particular node entered the network and reproduce its activity since being a member.
+This could have privacy implications that might warrant the need for additional anonymization or randomization of the network.
+Some attempts have been made to find small seed graphs from which particular models may have started.
+Leskovec et al. CITATION, under the Kronecker model CITATION, and Hormozdiari et al. CITATION, under a duplication-based model, found seed graphs that are likely to produce graphs with specified properties.
+These seed graphs can be thought of as the ancestral graphs at very large timescales, but the techniques to infer them do not generalize to shorter timescales nor do they incorporate node labels.
+Previous studies of time-varying networks solve related network inference problems, but assume different available data.
+For example, the use of exponential random graph models CITATION, CITATION and other approaches CITATION for inferring dynamic networks requires observed node attributes at each time point.
+They are also limited because they use models without a plausible biological mechanism and require the set of nodes to be known at each time point.
+Wiuf et al. CITATION use importance sampling to compute the most likely parameters that gave rise to a PPI network for C. elegans according to a duplication-attachment model, but they do not explicitly reconstruct ancient networks.
+Mithani et al. CITATION only model the loss and gain of edges amongst a fixed set of nodes in metabolic networks.
+There has also been some work on inferring ancestral biological networks using gene trees CITATION CITATION.
+These approaches play the tape of duplication instructions encoded in the gene tree backwards.
+The gene tree provides a sequence-level view of evolutionary history, which should correlate with the network history, but their relationship can also be complementary CITATION.
+Further, gene tree approaches can only capture node arrival and loss, do not account for models of edge evolution, and are constrained to only consider trees built per gene family.
+Network alignment between two extant species has also been used to find conserved network structures, which putatively correspond to ancestral subnetworks CITATION CITATION.
+However, these methods do not model the evolution of interactions, or do so using heuristic measures.
+Finally, the study of ancestral biological sequences has a long history, supported by extensive work in phylogenetics CITATION.
+Sequence reconstructions have been used to associate genes with their function, understand how the environment has affected genomes, and to determine the amino acid composition of ancestral life.
+Answering similar questions in the network setting, however, requires significantly different methodologies.
+Here, we propose a likelihood-based framework for reconstructing predecessor graphs at many timescales for the preferential attachment, duplication-mutation with complementarity, and forest fire network growth models.
+Our efficient greedy heuristic finds high likelihood ancestral graphs using only topological information and preserves the identity of each node, allowing the history of each node and edge to be tracked.
+To gain confidence in the procedure, we show using simulated data that network histories can be inferred for these models even in the presence of some network noise.
+When applied to a protein-protein interaction network for Saccharomyces cerevisiae, the inferred, DMC-based history agrees with many previously predicted features of PPI network evolution.
+It accurately estimates the sequence-derived age of a protein when using the DMC model, and it identifies known functionally related proteins to be the product of duplication events.
+In addition, it predicts older proteins to be more likely to be at the core of protein complexes, confirming a result obtained via other means CITATION .
+By comparing the predicted protein ages using different models, we further confirm DMC as a better mechanism to model the growth of PPI networks CITATION compared to the PA model CITATION or the FF model CITATION, which are designed for web and social networks.
+Conversely, when applied to a social network, the DMC model does not produce as accurate an ancestral network reconstruction as that of PA. The FF model also outperforms DMC in the social network context at the task of identifying users who putatively mediated the network's growth by attracting new members to join the service.
+Thus, models of social network evolution do not transfer well to biological networks, and vice versa a well-studied and expected notion that we confirm through alternative means.
+We also used our reconstructed history of the PPI network to make several novel predictions.
+For example, we estimate the arrival time of extant and ancestral interactions and predict that newly added extant edges often connect proteins within the same complex and that modules have recently gained many peripheral units.
+The history can also be used to track the change of network topological properties over time, such as the clustering coefficient, which we find has been decreasing in recent evolution.
+Analysis of the duplication rates over the inferred history suggests that proteins with fewer extant interactions have been involved in the largest number of duplication events, which is in broad agreement with existing belief that proteins with many interactions evolve more slowly CITATION, CITATION.
+In addition, the reconstruction predicts paralogous relationships between proteins that are strongly implied by network topology and which partially agree with sequence-based estimates.
+Thus, the reconstructed history makes a number of detailed predictions about the relative order of events in the evolution of the yeast PPI, many of which correlate with known biology and many of which are novel.
+The ability of these algorithms to reconstruct significant features of a network's history from topology alone further confirms the utility of models of network evolution, suggests an alternative approach to validate growth models, and ultimately reveals that some of the history of a network is encoded in a single snapshot.

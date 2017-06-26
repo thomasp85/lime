@@ -1,0 +1,27 @@
+### abstract ###
+in this paper we investigate the claim that decisions from experience in which the features of lotteries are learned through a sampling process differ from decisions from description in which features of lotteries are explicitly described
+we find that the experience-description gap is not as robust as has been previously assumed
+we argue that when this gap appears it is driven to a large extent by asymmetries in information concerning which events are possible and which are certain
+first  we find that  when experience-based decision makers sample events without error and then are told what outcomes are associated with each possible event  they are risk seeking for low-probability gains and risk averse for high-probability gains  as in description-based decision making
+second  we find that the experience-description gap for low-probability outcomes appears when rare outcomes are never experienced but disappears when   NUMBER  all distinct outcomes are experienced at least once or  NUMBER  never-experienced outcomes are described as possibilities
+third  we find that the experience-description gap for high-probability outcomes is pronounced when decision makers previously experience lotteries that both offered the possibility of a zero outcome which presumably makes them doubt that an always-experienced outcome is certain  but disappears when they have not previously experienced such lotteries
+### introduction ###
+a major thrust of behavioral decision research has been to identify situations in which people act boldly or timidly in the face of risk and uncertainty
+in studies of decision under risk people choose between chance gambles with known probabilities and outcomes e g   receive   NUMBER  with probability  NUMBER  versus   NUMBER  for sure
+these studies have found that people typically exhibit a fourfold pattern of risk attitudes  seeking risk for low-probability gains and high-probability losses e g   most prefer a  NUMBER  chance of   NUMBER  over   NUMBER  for sure and avoiding risk for high-probability gains and low-probability losses e g   most prefer   NUMBER  for sure over a  NUMBER  chance of   NUMBER   as predicted by prospect theory  CITATION
+in studies of decision under uncertainty participants choose between prospects contingent on natural events e g   receive   NUMBER  if the home team wins versus   NUMBER  for sure
+these studies don't generally lend themselves to analysis of  risk  attitudes because they rely on singular natural events for which there are no  objective  probabilities
+however  when analyzed relative to judged probabilities  several studies reveal a similar pattern of risk-preferences  CITATION
+for many decisions  potential outcomes are not known in advance but must be learned from experience
+for instance  a commuter might choose a preferred route to work only after sampling alternative routes on several occasions
+in an influential paper  hertwig  barron  weber and erev  CITATION  modeled such situations by asking participants to learn about a pair of lotteries e g   a  gain  NUMBER  points with probability  NUMBER  and gain  NUMBER  otherwise  b  gain  NUMBER  points for sure by sampling outcomes with replacement  as many times as they wished  from unlabeled buttons associated with these payoff distributions see table  NUMBER  for a list of all lottery pairs
+after this sampling phase participants chose a lottery to play once for real money
+such experience-based decision making henceforth ebdm appears to reverse the fourfold pattern of risk attitudes of description-based decision making henceforth dbdm  with people avoiding risk for low-probability gains and high-probability losses and seeking risk for high-probability gains and low-probability losses  CITATION
+on the basis of such results these authors have called for  two different theories of risky choice  hbwe  p  NUMBER 
+the generalization that ebdm differs from dbdm is difficult to evaluate because  surprisingly  no one has yet defined  experience-based decision making
+  from our reading of the literature and correspondence with several major contributors we conclude that these authors are referring to a single decision in which   NUMBER  decision makers' knowledge of possible outcomes and or respective probabilities is incomplete  and  NUMBER  this information is derived  at least in part  from a sampling process
+according to this definition ebdm applies to any situation in which there is uncertainty and learning through sampling
+however  most of the data supporting the putative experience-description gap contrast a single dbdm paradigm decision under risk with minor variations of a single ebdm paradigm the hbwe design
+note that decision under risk and the hbwe paradigm vary not only in terms of how information is learned explicit description versus sequential sampling but also what information is available to decision makers i e   information sampled from experience may diverge from information describing the corresponding objective probability distribution over outcomes
+according to the information asymmetry hypothesis  the experience-description gap is driven by differences in information available to decision makers  and will diminish or disappear when such differences are eliminated
+the purpose of this paper is to test the information asymmetry hypothesis and better circumscribe conditions under which decisions from experience differ from decisions from description

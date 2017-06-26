@@ -1,0 +1,21 @@
+### abstract ###
+We describe an approach to domain adaptation that is appropriate exactly in the case when one has enough ``target'' data to do slightly better than just using only ``source'' data
+Our approach is incredibly simple, easy to implement as a preprocessing step (10 lines of Perl ) and outperforms state-of-the-art approaches on a range of datasets
+Moreover, it is trivially extended to a multi-domain adaptation problem, where one has data from a variety of different domains
+### introduction ###
+The task of domain adaptation is to develop learning algorithms that can be easily ported from one domain to another---say, from newswire to biomedical documents
+This problem is particularly interesting in NLP because we are often in the situation that we have a large collection of labeled data in one ``source'' domain (say, newswire) but truly desire a model that performs well in a second ``target'' domain
+The approach we present in this paper is based on the idea of transforming the domain adaptation learning problem into a standard supervised learning problem to which any standard algorithm may be applied (eg , maxent, SVMs, etc )
+Our transformation is incredibly simple: we augment the feature space of both the source and target data and use the result as input to a standard learning algorithm
+There are roughly two varieties of the domain adaptation problem that have been addressed in the literature: the fully supervised case and the semi-supervised case
+The fully supervised case models the following scenario
+We have access to a large, annotated corpus of data from a source domain
+In addition, we spend a little money to annotate a small corpus in the target domain
+We want to leverage both annotated datasets to obtain a model that performs well on the target domain
+The semi-supervised case is similar, but instead of having a small annotated target corpus, we have a large but  unannotated  target corpus
+In this paper, we focus exclusively on the fully supervised case
+One particularly nice property of our approach is that it is incredibly easy to implement: the Appendix provides a  SYMBOL  line,  SYMBOL  character Perl script for performing the complete transformation (available at \url{http://hal3
+name/easyadapt
+pl
+gz})
+In addition to this simplicity, our algorithm performs as well as (or, in some cases, better than) current state of the art techniques

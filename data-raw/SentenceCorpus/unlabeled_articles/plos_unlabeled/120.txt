@@ -1,0 +1,40 @@
+### abstract ###
+One of the major goals of structural genomics projects is to determine the three-dimensional structure of representative members of as many different fold families as possible.
+Comparative modeling is expected to fill the remaining gaps by providing structural models of homologs of the experimentally determined proteins.
+However, for such an approach to be successful it is essential that the quality of the experimentally determined structures is adequate.
+In an attempt to build a homology model for the protein dynein light chain 2A we found two potential templates, both experimentally determined nuclear magnetic resonance structures originating from structural genomics efforts.
+Despite their high sequence identity, the folds of the two structures are markedly different.
+This urged us to perform in-depth analyses of both structure ensembles and the deposited experimental data, the results of which clearly identify one of the two models as largely incorrect.
+Next, we analyzed the quality of a large set of recent NMR-derived structure ensembles originating from both structural genomics projects and individual structure determination groups.
+Unfortunately, a visual inspection of structures exhibiting lower quality scores than DLC2A reveals that the seriously flawed DLC2A structure is not an isolated incident.
+Overall, our results illustrate that the quality of NMR structures cannot be reliably evaluated using only traditional experimental input data and overall quality indicators as a reference and clearly demonstrate the urgent need for a tight integration of more sophisticated structure validation tools in NMR structure determination projects.
+In contrast to common methodologies where structures are typically evaluated as a whole, such tools should preferentially operate on a per-residue basis.
+### introduction ###
+Experimentally determined three-dimensional structures of biomolecules form the foundation of structural bioinformatics, and any structural analysis would be impossible without them.
+Two main techniques are available for biomolecular structure determination: x-ray crystallography and nuclear magnetic resonance spectroscopy.
+It is important to realize that all resulting structure models are derived from their underlying experimental data.
+Unfortunately, any experiment and thus any structure model will have errors associated with it.
+Random errors depend on the precision of the experimental measurements and are propagated to the precision of the final models.
+Systematic errors and mistakes often result from errors in the interpretation of the experimental data and relate directly to the accuracy of the final structure models.
+For example, in NMR spectroscopy errors can be introduced by misassignment of the spectral signals; in x-ray crystallography errors are most likely made when the protein structure is positioned in the electron density CITATION, CITATION .
+Several studies have shown that not all experimentally determined biomolecular structure models are of equally high quality CITATION CITATION.
+Many different types of errors can be identified in protein structures, ranging from too tightly restrained bond lengths and angles, to molecules exhibiting a completely incorrect fold.
+Where the former type of errors often does not have large consequences for the analysis of the structure and typically can be easily remedied by refinement in a proper force field CITATION, CITATION, the latter renders a structure model completely useless for all practical purposes.
+Throughout the years several such errors have been uncovered in the Protein Data Bank CITATION, which often resulted in the replacement of the incorrect models with improved ones.
+A typical example of an incorrectly folded structure model is the first crystal structure of photoactive yellow protein.
+The structure was solved initially in 1989 CITATION and deposited under the now obsolete PDB entry 1PHY.
+An updated model released 6 y later showed that in the original model the electron density had been misinterpreted CITATION.
+Similar chain tracing problems led to an incorrect model for a DD-peptidase CITATION, which was corrected 10 y later when the structure was solved again but now at higher resolution CITATION .
+Also, for structures determined using NMR spectroscopy, cases are known where reevaluation of the experimental data, often prompted by publication of a corresponding structure, has resulted in the replacement of structures in the PDB.
+A well-known example is the original NMR structure of the oligomerization domain of p53 CITATION.
+In this dimer of dimers, a difference in the orientation of the two dimers was observed between the NMR and crystal structure, the latter published shortly after the NMR structure CITATION.
+Reexamination of the nuclear Overhauser enhancement data led to the identification of three misinterpreted peaks in the original p53 NOE assignments and the inclusion of several new NOEs, resulting in a revision of the original PDB entry CITATION.
+A similar low number of misinterpreted NOE signals resulted in a largely incorrect fold for the anti factor AsiA CITATION.
+In this case, it was not until a second solution structure of AsiA was published CITATION that the experimental data of the original AsiA structure were reexamined and the assignment errors were discovered CITATION .
+In this paper, we describe a detailed analysis of two recently released NMR structures of the protein dynein light chain 2A, one from human and one from mouse.
+Both structures originate from large structural genomics initiatives: the structure of human DLC2A was determined by the Northeast Structural Genomics Consortium, and the mouse variant was determined by the Center for Eukaryotic Structural Genomics.
+Despite 96 percent sequence identity, large structural differences are observed between the two ensembles; an unexpected and extremely unlikely result.
+Using the deposited experimental data we show that only the 1Y4O structure ensemble is correct.
+Subsequently, we analyze both ensembles using various structure and data validation methods to show that the erroneous structure ensemble could have been identified prior to deposition.
+Finally, we validate a large set of protein NMR structures that were released from the PDB in the period 2003 to 2005 and show that the DLC2A example does not stand on its own, but that more errors of this magnitude can be found.
+We conclude with some suggestions on how, in the future, such large errors can be identified during the structure determination process using readily available validation software.

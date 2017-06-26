@@ -1,0 +1,97 @@
+### abstract ###
+we propose a constructed-choice model for general decision making
+the model departs from utility theory and prospect theory in its treatment of multiple goals and it suggests several different ways in which context can affect choice
+it is particularly instructive to apply this model to protective decisions  which are often puzzling
+among other anomalies  people insure against non-catastrophic events  underinsure against catastrophic risks  and allow extraneous factors to influence insurance purchases and other protective decisions
+neither expected-utility theory nor prospect theory can explain these anomalies satisfactorily
+to apply this model to the above anomalies  we consider many different insurance-related goals  organized in a taxonomy  and we consider the effects of context on goals  resources  plans and decision rules
+the paper concludes by suggesting some prescriptions for improving individual decision making with respect to protective measures
+### introduction ###
+a concept of goal or aim  motive  purpose  etc
+has been long been taken for granted in many accounts of human behavior
+behavior is attributed to aims or goals in everyday discourse  he wore his best suit in order to make a good first impression   in literature epics  novels  etc
+  and in scientific discourse  for example  in the widely differing accounts in aristotle's ethics circa  NUMBER  b c e
+  william james's principles of psychology  CITATION   and kurt lewin's dynamic theory of personality  CITATION
+despite the obviousness and wide use of goal concepts  the dominant tradition in economics and the decision sciences has emphasized utility or value as a basis for choice
+particular goals are viewed as ways of increasing utility or happiness
+utility can be thought of as a sort of common currency that integrates multiple goals or multiple quantitative attributes of outcomes
+from this standpoint  tradeoffs among goals are attempts to maximize utility
+the view that all goals contribute to a single common currency was clearly enunciated by plato  in the symposium
+he used the metaphor of weighing different pleasures and pains in a balance
+this view is central to plato's thought  underlying his theories of education and government
+studies in mathematics  science  and metaphysics are needed to educate the  skillful weigher   who must integrate across different goals and across near and distant times
+similar views dominated utilitarian thought in the  NUMBER th to  NUMBER th centuries  and included integration of value across individuals in a society as well as different goals and times e g
+  bentham   NUMBER 
+aristotle's ethics  by contrast  partially disagreed  emphasizing multiple goods  and stating that the way in which different goals fit together should vary with the occasion
+aristotle can perhaps be read as advocating situation-dependent integration of multiple goals  an idea that we pursue and elaborate in this paper
+despite this hint from aristotle  plato's concept of a single common currency that serves to integrate value across myriad goals has largely held sway both in general psychology and in decision science
+freud's concept of libido  CITATION   beebe-center's hedonic tone  CITATION   hull's concept of generalized drive  CITATION   work on reward systems in the brain  CITATION   and diener's and seligman's concepts of general happiness  CITATION  all suggest some general quality that is linked to many different goals
+an exception is keeney  CITATION   who advocates that decision analysis focus on separate goals and values as a starting point  rather than on goal tradeoffs as represented by overall utility
+in decision science  the concept of maximization is linked closely to a mapping onto a single dimension of utility
+a bounded set of real numbers has a limiting maximum  but there is no natural total ordering of sets of vectors in two or more dimensions  and therefore no natural concept of maximization
+in fact  total ordering is fundamental to most foundational theories in decision science  CITATION
+the idea that all human goods can be weighed in the same balance is a fascinating scientific hypothesis that has been worth pursuing  to determine the extent of its applicability and the ways in which it fails
+translating many goods into a one-dimensional currency fits well with human thought processes  especially analog mental models  CITATION
+unidimensionality opens the way to the application of powerful mathematical methods for computing or for approximating maxima  CITATION
+in this paper  we pursue a more aristotelian theory of decision making  where preferences are constructed based on the decision context  CITATION   and a decision maker focuses on goals  rather than on maximizing happiness or utility
+we attempt to show that this alternative approach leads to new explanations of how people make choices and raises novel questions with respect to descriptive theories of behavior and prescriptive guidelines for aiding the decision maker and improving choices
+as our title implies  the theory we present is about goals and plans
+many plansgoing out to a movie  embarking on a shopping trip  purchasing insurance  or the invasion of iraq by the united statesare or were selected with a view to achieving several different goals at once
+a shopping trip is paradigmatic  because it often involves several discrete stops  each with one or more goals  but an evening at a movie may simultaneously satisfy the goals of companionship  emotional and visual stimulation  and keeping up with current culture
+insurance plans are often aimed both at financial goals and at emotional goals  peace of mind 
+we will discuss multiple goals of insurance and other protective plans in detail below
+in accord with miller  galanter  and  pribram  CITATION   we regard the plan as a fundamental structural unit in decision theory
+we do not consider each tiny muscle movement or each phoneme in an utterance to be a choice
+rather  decision theory offers explanations only at the behavioral level where someone consciously or unconsciously considers what goals will be accomplished by various possible plans  or what plan can be designed that will be likely to achieve several important goals
+past research on plans can be unearthed from various areas of cognitive science
+the area of motor control is particularly rich in evidence for unconscious higher-level programs governing sequences of skilled movements  CITATION
+interest in movement planning is very explicit in robotics  CITATION
+planning has sporadically been considered in other theories of human and or artificial intelligence
+one of the major virtues of considering goals and plans together is that individual decision making is brought into close analogy with organizational decision making
+in the latter  goals and plans are shared among the individuals or groups that select and implement plans
+for a new railroad bridge  or for an advertising campaign  the goals  the plans  and their perceived relationship are made explicit and often recorded
+for an individual decision  goals  plans  and their perceived relationship are hidden within that person's conscious and unconscious cognitions and emotions  but one can try nonetheless to gather data that provide some information about these processes
+this stance also requires us to distinguish between goals and resources
+plans draw on resources to achieve goals
+some resources  such as money or favors owed  can be accumulated  sometimes  accumulation of a resource may itself become a goal
+we nonetheless continue to distinguish  for example  between money considered as a resource and the same money considered as a goal
+a main concern of our paper is protective decision making
+in much of it  the focus is even narrower  we consider insurance decisions at length
+the theory we offer is much more broadly applicable
+however  we have found the narrower focus to be useful for theory development
+there are many apparent anomalies in insurance decisions by individuals and households
+classical utility theory is supposed to account for decision making under risk  and especially for insurance purchase
+it was not obvious to us initially that a goal plan approach would do better than utility theory  or its popular alternative  prospect theory
+applying a multiple-goal theory in this domain has been both challenging and enlightening  compared to the more obvious examples such as shopping trips and movie excursions
+in discussing insurance choices  we start from the idea that insurance is designed principally as a device to share financial risk  for situations where many are at risk  but relatively few actually suffer a financial loss
+in many cases  it is easy to share financial risk  but difficult  if not impossible  to share other risks
+having one's home burn down  for example  is extremely stressful  even if nobody is hurt
+the stress may persist for a considerable period of time
+stress-induced suffering cannot readily be shared by others not directly affected by the fire  although social practices exist that can ease it
+what can most easily be shared is the financial risk
+each household at risk pays a relatively small amount  the insurance premium  to participate in this risk sharing
+when a participant's home does burn down  the insurer pays the contracted amount to cover some of the cost of rebuilding or purchasing a replacement home
+instead of a few cases where victims suffer catastrophic financial loss  everyone at risk bears a much smaller financial payment
+insurance premiums must be large enough in aggregate to cover not only the total insured financial losses  but also the costs to the insurer of the risk-sharing effort
+thus  premiums unless subsidized usually exceed average losses
+in common-sense terms  and in standard economic theory  people are willing to pay more than the expected loss because they are risk-averse
+paying the premium does not lower overall utility or happiness level significantly  but suffering a large financial loss would result in a very large drop in utility or happiness
+this ratio of utility changes is much greater than the inverse probability of incurring the loss  thus suggesting that individuals purchase insurance so as to maximize their expected utility
+from a financial standpoint  anomalies arise when consumer choices with respect to insurance sometimes appear to be suboptimal given reasonable degrees of risk aversion
+for example  it is common for people to pay added premiums that seem excessive to obtain automobile collision insurance with a low rather than high deductible that requires them to pay for the initial portion of the loss
+to make matters worse  some decide not to file a claim following a small accident whose cost could largely be reimbursed via this low deductible  they fear that a claim would lead to increased premiums in the next and succeeding years and or they prefer to avoid incurring the transaction costs involved in settling the claim with their insurer
+a higher deductible would have saved these individuals money before the accident and avoided the costs associated with deciding whether or not to file a claim
+a rather different example emerged after the passage of the national flood insurance program nfip in  NUMBER 
+insurance coverage against water damage from flooding was offered both to homeowners and to commercial enterprises in high hazard areas at subsidized low rates
+yet there was limited interest in purchasing this coverage despite the subsidy and despite the potential for catastrophic losses  CITATION
+as a third example  many people are prepared to pay considerably more to insure possessions that they find very attractive than to insure possessions toward which they feel neutral or negative  CITATION
+if such a possession is needed  then it must be replaced after loss or damage
+the replacement cost remains the same  independent of one's positive or negative feelings toward the object
+since the insurance offers exactly the claims payment  it is hard to justify financially paying more for insuring the attractive than the less attractive object
+the remainder of the paper is organized in the following manner
+we next section  NUMBER  discuss the types of insurance anomaly illustrated by the preceding three examples  and suggest psychological processes related to goals that might account for each type
+section  NUMBER  presents the elements of a quantitative theory of constructed choice  based on goals  plans  and decision weights  and contrasts this theory with the standard theory of expected utility maximization
+section  NUMBER  presents a taxonomy of insurance-related goals
+section  NUMBER  draws on this taxonomy to explain the insurance anomalies in terms of our constructed-choice theory
+this section also probes the failings of utility theory and prospect theory with respect to characterizing insurance decisions
+the paper concludes section  NUMBER  with a set of prescriptive implications concerning protective activities  based on our theory of decision making

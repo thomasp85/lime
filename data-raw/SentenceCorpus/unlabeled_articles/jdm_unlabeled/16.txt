@@ -1,0 +1,46 @@
+### abstract ###
+contrary to the common belief that more information is always better  gigerenzer et al CITATION  showed that simple decision strategies which rely on little information can be quite successful
+the success of simple strategies depends both on bets about the structure of the environment and on the core capacities of the human mind  such as recognition memory  CITATION
+however  the interplay between the environment and the mind's core capacities has rarely been precisely modeled
+we illustrate how these environment-mind interactions could be formally modeled within the cognitive architecture act-r  CITATION
+act-r is an integrated theory of mind that is tuned to the statistical structure of the environment  and it can account for a variety of phenomena such as learning  problem solving  and decision making
+here  we focus on studying decision strategies and show how the success of theses strategies in particular environments depends on characteristics of core cognitive capacities  such as recognition and short term memory
+### introduction ###
+the six million dollar man was among the most popular television shows in the  NUMBER 's  at least among eight to twelve year old american boys
+the credits open with a spectacular crash of a rocket jet tumbling into a fireball
+a team of surgeons hovers over steve austin  test pilot  working feverishly to replace his injured legs  right arm and eye with superbly engineered  bionic  substitutes
+in the voice over we hear   gentlemen  we can rebuild him
+we have the technology
+we have the capability to make the world's first bionic man
+steve austin will be that man
+better than he was before
+better  stronger  faster
+  we cut next to steve austin  six million dollar man  racing across a field and seeing objects at a distance with his better-than-a-telescope eye
+like steve austin's doctors  most of us believe we would be better off if we were stronger and faster
+similarly  we would be better off  or at least  would have had better college transcripts if we had been blessed with bionic cognitive abilities  such as unfailing memories and the ability to hold complex equations in mind
+another view on the humble cognitive capacities of the human mind is that those limitations - such as forgetting - may serve important functions
+arguably  the most important function of memory is not simply to store all information we encounter  but to provide us with important information in specific situations
+in this view  the human memory system is organized in a way which facilitates the retrieval of information which is recent or frequent  CITATION  and sensitive to the context  CITATION
+in this way  the system retrieves the memories  that is  the information we are most likely to need
+many word processors incorporate a timesaving feature that illustrates this view of forgetting
+when a user goes to open a document file  the program presents a  file buffer   a list of recently opened files from which the user can select
+whenever the desired file is included on the list  the user is spared the effort of searching through the file hierarchy
+for this device to work efficiently  however  the word processor must provide users with the files they actually want
+it does so by  forgetting  files that are considered unlikely to be needed on the basis of the assumption that the time since a file was last opened is negatively correlated with its likelihood of being needed now
+similarly  if you want to remember where you have parked your car  it is quite useful to forget where you have parked before
+there is growing evidence also from other domains such as language acquisition that cognitive limits can be beneficial  CITATION  while too much thinking can even hurt performance  for example for sports experts  CITATION  and in implicit category learning decaro  thomas   and  beilock  in press
+in line with this view of the mind as an adaptation to the environment  the program on fast and frugal heuristics takes the position that humans possess a repertoire of cognitive strategies  or heuristics  which can solve specific problems  CITATION
+gigerenzer et al called this collection of cognitive strategies the adaptive toolbox
+the rationality of these heuristics is not logical but ecological  success is anchored both in the structure of the environment and in the core capacities of the human mind  CITATION
+a cognitive strategy can be simple by exploiting the core capacities such as recognition or recall memory of the human mind that through evolution or learning are highly automatized  requiring little or no effort
+goldstein and gigerenzer  CITATION   consider heuristics to be adaptive strategies that evolved in tandem with fundamental psychological mechanisms  p  NUMBER 
+within the fast and frugal program  this interplay between the environment and the mind has rarely been explored with detailed models of core capacities
+the models of heuristics presupposed specific core capacities of the mind such as recognition memory without embedding the core capacity directly into the model
+in other words  models of heuristics and many other models of decision making are underspecified with regard to how decision making will be affected by the interaction between the mind's core capacities and the structure of the environment
+the goal of this paper is to illustrate how cognitive modeling can capture environment-mind interactions and thereby inform decision making research
+in particular  we employ a formal cognitive architecture such as act-r  CITATION  to explore this issue
+in principle  other cognitive models of memory could be used for the purpose of analyzing the relation between environment  memory  and the performance of inference strategies
+in fact  we believe the main findings regarding memory function and the ecological rationality of inference strategies would remain largely the same as long as a reasonable model of memory was used
+one such model  rem  CITATION   descends from sam  CITATION   but is enriched by a bayesian analysis in the spirit of j r anderson's rational analysis  CITATION
+another good candidate would be minerva-dm  CITATION   which has been shown to account for a wide variety of judgment phenomena  including for example  the availability and the representativeness heuristics
+the relation between act-r and other models will be discussed in more detail in the general discussion  where we will also illustrate how act-r could be extended to topics and tasks beyond those examined here

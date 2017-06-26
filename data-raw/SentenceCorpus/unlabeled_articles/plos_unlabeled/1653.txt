@@ -1,0 +1,41 @@
+### abstract ###
+In this paper we used a general stochastic processes framework to derive from first principles the incidence rate function that characterizes epidemic models.
+We investigate a particular case, the Liu-Hethcote-van den Driessche's incidence rate function, which results from modeling the number of successful transmission encounters as a pure birth process.
+This derivation also takes into account heterogeneity in the population with regard to the per individual transmission probability.
+We adjusted a deterministic SIRS model with both the classical and the LHD incidence rate functions to time series of the number of children infected with syncytial respiratory virus in Banjul, Gambia and Turku, Finland.
+We also adjusted a deterministic SEIR model with both incidence rate functions to the famous measles data sets from the UK cities of London and Birmingham.
+Two lines of evidence supported our conclusion that the model with the LHD incidence rate may very well be a better description of the seasonal epidemic processes studied here.
+First, our model was repeatedly selected as best according to two different information criteria and two different likelihood formulations.
+The second line of evidence is qualitative in nature: contrary to what the SIRS model with classical incidence rate predicts, the solution of the deterministic SIRS model with LHD incidence rate will reach either the disease free equilibrium or the endemic equilibrium depending on the initial conditions.
+These findings along with computer intensive simulations of the models' Poincar map with environmental stochasticity contributed to attain a clear separation of the roles of the environmental forcing and the mechanics of the disease transmission in shaping seasonal epidemics dynamics.
+### introduction ###
+A plethora of deterministic epidemic models involving susceptible FORMULA, infected FORMULA and recovered FORMULA individuals have been proposed CITATION, CITATION, carefully analyzed CITATION CITATION and confronted with data sets in the biomathematics and ecology literatures CITATION CITATION.
+A well defined topic within this mathematical ecology research area is the study of FORMULA-type models with seasonal forcing CITATION CITATION.
+These models have proved to be useful for understanding the observed patterns and the natural processes behind human and non-human epidemics CITATION CITATION.
+Here, we restrict our attention to the FORMULA and FORMULA models in which we introduce seasonal forcing while varying the structural form of the incidence rates.
+Two hypotheses pertaining the RSV and the measles transmission mechanisms were modeled with two simple functional forms of the incidence rates.
+We show that in doing so, we are able to attain a clear separation of the roles of the environmental forcing and the mechanics of the disease transmission in shaping the epidemics dynamics.
+The construction of deterministic incidence rates functions is a critical building block of epidemiological modeling.
+In a seminal paper, Hethcote CITATION showed that because there are many choices for the form of the incidence, demographic structure and the epidemiological-demographic interactions, there really is a plethora of incidence rate functional forms to choose from.
+Not surprisingly, the biomathematics literature abound in qualitative mathematical analyses of many of these functional forms CITATION CITATION.
+However, biological first principles derivations of incidence rate functional forms are not too common.
+As we show in this study, using such first principles derivations greatly enrich the reaches of the practice of confronting models with data while testing biological hypotheses.
+Thus, despite the big amount of available functional incidence rates forms CITATION, we believe that the set of models chosen to be confronted with data should be restricted to those forms derivable from first principles.
+To illustrate this argument, in this study we first show that a simple probabilistic setting wherein infectious encounters are modeled with a pure birth stochastic process leads to a general nonlinear incidence form proposed previously by Liu CITATION and later analyzed by Hethcote and Van Den Driessche CITATION.
+The LHD incidence rate leads to models with qualitatively different dynamics compared with the ones obtained using the classical incidence rate.
+In the SIRS model with either incidence rate and seasonal forcing, FORMULA becomes a periodic function of time and the trajectory FORMULA pursuits a moving target thus giving rise to limit cycles.
+That moving target is the former endemic equilibrium that bounces back and forth between two points.
+In either model, the target switches between that moving point and the disease free equilibrium when FORMULA crosses 1, giving rise to a period doubling bifurcation.
+In the SIRS model with classical incidence rate this mechanism does not depend on the initial conditions.
+In this work we show that the disease free equilibrium is unconditionally an attractor in the SIRS model with LHD incidence rate.
+This leads to a scenario where two regions of attraction can coexist.
+The trajectory FORMULA will either reach the disease free equilibrium or have periodic solutions depending on the initial conditions.
+Furthermore, after carrying a formal model selection we show that the SIRS model with LHD incidence rate leads to a significant fit improvement over the classical SIRS model with the same seasonal forcing.
+Finally, we compared the applicability and generality of the classical and LHD incidence rates functions by fitting them to two measles time series data sets.
+Using the later function leads to a vast improvement of model fit in both cases.
+Since we were fitting a deterministic SEIR model, we chose to use the data from the two largest cities in the measles data set, where the effects of demographic stochasticity are expected to be less influential in the dynamics of the epidemics CITATION .
+Varying the form of the contact rate function while including environmental stochasticity in the SIRS and SEIR models leads to a better understanding of the dynamics of an infectious disease transmission.
+Depending on the model and contact rate, the disease free equilibrium is either a saddle point or an attractor.
+In the first case, if a trajectory located originally in the basin of attraction of the endemic equilibrium basin of attraction is perturbed with environmental noise, it may transiently visit the DFE stable submanifold and then return to the EE basin of attraction.
+If however the DFE and the EE coexist as stable equilibria, a trajectory initially at the EE basin of attraction may end up in the DFE basin of attraction.
+The interaction between stochasticity and the different contact rate models was studied using computer intensive simulations of the Poincar map CITATION .

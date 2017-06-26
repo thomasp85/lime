@@ -1,0 +1,28 @@
+### abstract ###
+genetic screening for brca NUMBER  and brca NUMBER  gives women the opportunity for early detection  surveillance  and intervention
+one key feature of genetic testing and counseling is the provision of personal lifetime risk
+however  little attention has been paid to how women interpret lifetime risk information  despite the fact that they base screening  treatment and family planning decisions on such information
+to study this vital issue  we set out to test the ability of women to choose the most appropriate interpretation of national cancer institute's nci message about lifetime risk of developing cancer for a woman with altered brca NUMBER  and brca NUMBER  genes
+participants included  NUMBER  women who had not undergone genetic testing or had cancer and  NUMBER  women who had undergone genetic testing or had cancer
+over  NUMBER  percent  of the women who had not undergone genetic testing or had cancer and  NUMBER  percent  of those who had undergone genetic testing or had cancer misunderstood nci's information
+furthermore  in line with a growing body of research  we found that high numeracy level objective or subjective is positively associated with a woman's ability to correctly interpret nci's message
+### introduction ###
+genetic screening for brca NUMBER  and brca NUMBER  - gene mutations that are associated with higher risk of developing breast and ovarian cancers - gives women a shot at early detection  surveillance  and intervention  CITATION
+one key feature of the genetic counseling process is the provision of personal lifetime risk - or the risk of developing a specific disease during one's lifetime  CITATION
+indeed  both patients and genetic counselors rate communication of lifetime risk information as a pivotal part of the process  CITATION
+this is not surprising  as women who test positive for brca NUMBER   NUMBER  often rely on lifetime risk estimates to make future family plans  CITATION  and to decide whether to undergo mastectomy despite being cancer free  CITATION
+given the importance of lifetime risk information  researchers have been interested in whether women overestimate or underestimate their lifetime risk of developing cancer  CITATION
+others have investigated the relationship between risk perception and emotional reaction  as well as between risk perception and mammography screening  and whether leaflets  genetic testing  and risk counseling improve women's accuracy in estimating their lifetime risk of developing cancer  CITATION
+although earlier studies examined women's estimation of their lifetime risk  a more fundamental issue is how women interpret lifetime risk information
+after all  if women misunderstand the meaning of lifetime risk  whether they overestimate or underestimate incorrectly interpreted risk would be less important
+indeed  research has shown that people interpret numerical probabilities in multiple  mutually contradictory ways
+researchers  CITATION  have demonstrated that individuals interpret the seemingly unambiguous statement  there is a  NUMBER  percent  chance of rain tomorrow  in different ways   it will rain tomorrow in  NUMBER  percent  of the region    for  NUMBER  percent  of the time   or  on  NUMBER  percent  of the days like tomorrow   CITATION
+since people misconstrue common and mundane probabilistic information  interpreting probabilistic information like lifetime risk of developing cancer proves to be an even greater challenge  given the added emotional impact
+to the authors' knowledge  however  no previous studies have examined how women interpret statements regarding their lifetime risk of developing cancer or what variables e g   numeracy might affect women's ability to correctly interpret such information
+a growing corpus of research has shown that numeracy - the ability to understand basic mathematical concepts - is important to the quality of decisions  CITATION
+accordingly  researchers have long argued that numeracy levels play a key role in a host of medical decision making and might influence the way people perceive and understand risk  CITATION
+a recent review  CITATION  summarized this idea well   low numeracy is pervasive and constrains informed patient choice impairs risk communication  and affects medical outcome   CITATION
+while data strongly indicate the existence of a relationship between numeracy and medical decision making  whether numeracy levels affect women's ability to interpret lifetime risk data is still an unanswered question
+in light of the abovementioned research and the gap in the existing literature  we set out to examine two related hypotheses
+we first predicted that a statement about lifetime risk of developing cancer would give rise to various interpretations  not all of which would be correct
+second  we predicted that participants with higher numeracy levels will have a better understanding of lifetime risk information than their peers with lower numeracy levels

@@ -1,0 +1,35 @@
+### abstract ###
+Pitch is one of the most important features of natural sounds, underlying the perception of melody in music and prosody in speech.
+However, the temporal dynamics of pitch processing are still poorly understood.
+Previous studies suggest that the auditory system uses a wide range of time scales to integrate pitch-related information and that the effective integration time is both task- and stimulus-dependent.
+None of the existing models of pitch processing can account for such task- and stimulus-dependent variations in processing time scales.
+This study presents an idealized neurocomputational model, which provides a unified account of the multiple time scales observed in pitch perception.
+The model is evaluated using a range of perceptual studies, which have not previously been accounted for by a single model, and new results from a neurophysiological experiment.
+In contrast to other approaches, the current model contains a hierarchy of integration stages and uses feedback to adapt the effective time scales of processing at each stage in response to changes in the input stimulus.
+The model has features in common with a hierarchical generative process and suggests a key role for efferent connections from central to sub-cortical areas in controlling the temporal dynamics of pitch processing.
+### introduction ###
+Modelling the neural processing of pitch is essential for understanding the perceptual phenomenology of music and speech.
+Pitch, one of the most important features of auditory perception, is usually associated with periodicities in sounds CITATION.
+Hence, a number of models of pitch perception are based upon a temporal analysis of the neural activity evoked by the stimulus CITATION CITATION.
+Most of these models compute a form of short-term autocorrelation of the simulated auditory nerve activity using an exponentially weighted integration time window CITATION CITATION.
+Autocorrelation models have been able to predict the reported pitches of a wide range of complex stimuli.
+However, choosing an appropriate integration time window has been problematic, and none of the previous models has been able to explain the wide range of time scales encountered in perceptual data in a unified fashion.
+These data show that, in certain conditions, the auditory system is capable of integrating pitch-related information over time scales of several hundred milliseconds CITATION CITATION, while at the same time being able to follow changes in pitch or pitch strength with a resolution of only a few milliseconds CITATION, CITATION, CITATION CITATION.
+Limits on the temporal resolution of pitch perception have also been explored by determining pitch detection and discrimination performance as a function of frequency modulation rate CITATION CITATION, the main conclusion being that the auditory system has a limited ability to process rapid variations in pitch.
+The trade-off between temporal integration and resolution is not exclusive to pitch perception, but is a general characteristic of auditory temporal processing.
+For instance, a long integration time of several hundred milliseconds is required to explain the way in which the detectability and perceived loudness of sounds increases with increasing sound duration CITATION, CITATION.
+In contrast, much shorter integration times are necessary to explain the fact that the auditory system can resolve sound events separated by only a few milliseconds CITATION CITATION.
+Therefore, it appears that the integration time of auditory processing varies with the stimulus and task.
+Previously it was proposed that integration and resolution reflect processing in separate, parallel streams with different stimulus-independent integration times CITATION.
+More recently, in order to reconcile perceptual data pertaining to temporal integration and resolution tasks, it was suggested that the auditory system makes its decisions based on multiple looks at the stimulus CITATION, using relatively short time windows.
+However, to our knowledge no model has yet quantitatively explained the stimulus- and task-dependency of integration time constants.
+Another major challenge for pitch modelling is to relate perceptual phenomena to neurophysiological data.
+Functional brain-imaging studies strongly suggest that pitch is processed in a hierarchical manner CITATION, starting in sub-cortical structures CITATION and continuing up through Heschl's Gyrus on to the planum polare and planum temporale CITATION CITATION.
+Within this processing hierarchy, there is an increasing dispersion in response latency, with lower pitches eliciting longer response latencies than higher pitches CITATION.
+This suggests that the time window over which the auditory system integrates pitch-related information depends on the pitch itself.
+However, no attempt has yet been made to explain this latency dispersion.
+In this study, we present a unified account of the multiple time scales involved in pitch processing.
+We suggest that top-down modulation within a hierarchical processing structure is important for explaining the stimulus-dependency of the effective integration time for extracting pitch information.
+A highly idealized model, formulated in terms of interacting neural ensembles, is presented.
+The model represents a natural extension of previous autocorrelation models of pitch in a form resembling a hierarchical generative process CITATION, CITATION, in which higher levels modulate the responses in lower levels via feedback connections.
+Without modification, the model can account not only for a wide range of perceptual data, but also for novel neurophysiological data on pitch processing.

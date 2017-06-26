@@ -1,0 +1,63 @@
+### abstract ###
+Knowledge of social contact patterns still represents the most critical step for understanding the spread of directly transmitted infections.
+Data on social contact patterns are, however, expensive to obtain.
+A major issue is then whether the simulation of synthetic societies might be helpful to reliably reconstruct such data.
+In this paper, we compute a variety of synthetic age-specific contact matrices through simulation of a simple individual-based model.
+The model is informed by Italian Time Use data and routine socio-demographic data.
+The model is named Little Italy because each artificial agent is a clone of a real person.
+In other words, each agent's daily diary is the one observed in a corresponding real individual sampled in the Italian Time Use Survey.
+We also generated contact matrices from the socio-demographic model underlying the Italian IBM for pandemic prediction.
+These synthetic matrices are then validated against recently collected Italian serological data for Varicella and ParvoVirus.
+Their performance in fitting sero-profiles are compared with other matrices available for Italy, such as the Polymod matrix.
+Synthetic matrices show the same qualitative features of the ones estimated from sample surveys: for example, strong assortativeness and the presence of super- and sub-diagonal stripes related to contacts between parents and children.
+Once validated against serological data, Little Italy matrices fit worse than the Polymod one for VZV, but better than concurrent matrices for B19.
+This is the first occasion where synthetic contact matrices are systematically compared with real ones, and validated against epidemiological data.
+The results suggest that simple, carefully designed, synthetic matrices can provide a fruitful complementary approach to questionnaire-based matrices.
+The paper also supports the idea that, depending on the transmissibility level of the infection, either the number of different contacts, or repeated exposure, may be the key factor for transmission.
+### introduction ###
+A century after the first contributions giving birth to mathematical epidemiology, and after 20 years of fast growth since the first public health oriented contributions CITATION CITATION, infectious diseases modeling has recently received a further dramatic impulse from pandemics threats.
+The Bio-terrorism and SARS first, the fear of a potentially devastating pandemic of avian flu then, and finally the recent pandemic of A/H1N1 influenza, have all fostered the development of more and more detailed predictive tools.
+These range from traditional models to network analysis, to highly detailed, large scale, individual-based models CITATION CITATION.
+IBM are highly flexible tools for policy makers as they allow to define intervention measures at the finest possible levels.
+For the first time, a pandemic model on a continental scale has been proposed CITATION .
+A critical aspect common to all such models, is the parameterization of social contact patterns, i.e. how people socially mix with each other CITATION.
+Social contact patterns are the key factors underlying the transmission dynamics of directly transmitted close-contacts infectious diseases CITATION.
+Different models, independently of their level of complexity or geographical scale, are sensitive to the parameterization of social contact patterns.
+In a relatively simple case, where individuals are stratified by age only, contact patterns are represented in the form of contact matrices whose entries represent the average number of contacts that individuals in age group i have with individuals in age group j, per unit of time.
+Until recently, contact patterns were estimated indirectly by calibrating suitably restricted contact matrices using observed epidemiological data, such as serological or case notifications data.
+The two major examples of this indirect approach are the Who-Acquires-Infection-From-Whom matrix CITATION, and the proportionate/preferred mixing approach CITATION.
+Such approaches have important restrictions: in a population divided in n age groups, a contact matrix contains nxn n 2 unknown entries.
+Therefore, in order to estimate the n 2 parameters from the n data points some simplifying assumptions about the structure of the matrix are needed.
+In addition, indirect approaches can only estimate adequate contacts or transmission rates, i.e. composite parameters given by the product between a contact rate and the corresponding risk of infection per contact.
+Recently, important progress has been made in this area through direct collection of contact data by means of sample surveys CITATION CITATION.
+The direct approach is based on appropriate definitions of an at risk event.
+Survey respondents are then asked to record in a diary relevant characteristics of all the individuals they had contact with during a randomly assigned day, or other factors such as the location where the contact occurred.
+Standardized international survey data on social contact patterns in 8 European countries are currently available CITATION.
+In addition, contact matrices, and time in contact matrices, have been estimated from secondary data sources such as transportation surveys CITATION or time use data CITATION, which are increasingly available.
+In the case of time use data, the underlying hypothesis is that the amount of time people spend doing the same activity in the same place is relevant for the transmission of the disease.
+A drawback of time use data is that they usually do not give direct information about the number of social contacts of respondents, or the time they spent in contacts.
+They only give marginal information on the time individuals allocated to the various daily activities CITATION.
+Therefore, these data need to be augmented with other data and/or assumptions to produce reliable estimates of contact matrices CITATION.
+A way to supplement time use data relies on socio-demographic sources which provide information on the size and distribution of the arenas where contacts take place.
+For example, for school contacts we often know the average class size and the average pupils-teacher ratio for all compulsory grades.
+As for contacts within the household, we have information on household size and composition.
+For most other activities, however, there is little information.
+Assumptions, e.g. independency, are therefore necessary to give some coarse ideas of contact patterns CITATION.
+However, this approach ignores the structure of the social networks where contacts are formed.
+A promising approach is then to reconstruct such networks by the simulation of appropriate artificial social networks.
+A first example is the social network generated by the Portland synthetic population CITATION.
+In that case, contact and time in contact matrices by age are by-products of the social dynamics of the Portland model.
+These matrices have the standard expected features: population contacts cluster around children and adult, children interact most frequently with other children close to their own age, etc. However, such matrices were neither compared with other contact matrices, nor validated against empirical epidemiological data.
+Thus, no actual evaluation of their goodness in explaining transmission of infections is available.
+In this paper, we follow the same line and aim to reconstruct contact and time-in-contacts matrices by simulating a suitable minimalistic socio-demographic individual-based model for Italy.
+The model is parameterized by integrating time use data from the Italian time use survey CITATION and other official socio-demographic data CITATION CITATION.
+In the model, each artificial agent is a clone of a real individual, i.e. there is a one-to-one correspondence between the diary of each artificial agent and the one of a corresponding real survey participant.
+Since the sample is representative of the Italian population, but the size of the model population is comparable to that of a small Italian city, we named the model Little Italy.
+From this point of view, our model resembles the Portland model CITATION, and the Eemnes model CITATION.
+In the Little Italy world, agents physically displace during the day in order to attend their various daily activities in the corresponding location.
+In these locations, agents contact other agents.
+We defined a contact as having shared the same physical environment during a given time slot.
+With our approach we generate three different types of contact matrices, possibly informative of distinct aspects of the biology of transmission: a matrix describing the time spent in contact CITATION, a matrix counting the number of repetition of contact episodes, and a matrix counting contacts as the average number of different persons contacted, i.e. the number of different social partnerships, as in CITATION .
+In addition, we extracted an adequate CITATION contact matrix from the socio-demographic model underlying the Italian IBM for pandemic prediction and mitigation CITATION, that we named Big-Italy.
+The synthetic contact matrices computed by simulation of Little and Big-Italy are tested against recently collected Italian serological data on Varicella and ParvoVirus.
+Their performances are compared with other contact matrices available for Italy, i.e. the Polymod and time use matrices.

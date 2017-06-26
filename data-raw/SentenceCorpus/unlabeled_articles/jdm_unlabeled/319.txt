@@ -1,0 +1,14 @@
+### abstract ###
+currently  a disparity exists between the process-level models decision researchers use to describe and predict decision behavior and the methods implemented and metrics collected to test these models
+the current work seeks to remedy this disparity by combining the advantages of work in decision research mouse-tracing paradigms with contingent information display and cognitive psychology eye-tracking paradigms from reading and scene perception
+in particular  we introduce a new decision moving-window paradigm that presents stimulus information contingent on eye fixations
+we provide data from the first application of this method to risky decision making  and show how it compares to basic eye-tracking and mouse-tracing methods
+we also enumerate the practical  theoretical  and analytic advantages this method offers above and beyond both mouse-tracing with occlusion and basic eye tracking of information without occlusion
+we include the use of new metrics that offer more precision than those typically calculated on mouse-tracing data as well as those not possible or feasible within the mouse-tracing paradigm
+### introduction ###
+decision researchers must often rely on outcome measures i e   choice  preference  etc
+to infer how decisions are made by individuals
+the advent of increased computing power  availability  and usability has allowed decision researchers to develop methods to examine underlying processes attention  information acquisition  deliberation  etc
+rather than relying solely on observable outcomes
+process-tracing paradigms such as information boards and mouse-tracing methods  CITATION   eye-tracking methods  CITATION   and verbal protocols  CITATION  have been utilized in decision research as mechanisms for capturing the decision process
+the need to verify theoretical advances that specify how i e   process in addition to what i e   outcome has produced a great interest in tracing methods  CITATION

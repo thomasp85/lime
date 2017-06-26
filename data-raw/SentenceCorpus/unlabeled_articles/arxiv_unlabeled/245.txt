@@ -1,0 +1,67 @@
+### abstract ###
+General-purpose, intelligent, learning agents cycle through sequences of observations, actions, and rewards that are complex, uncertain, unknown, and non-Markovian
+On the other hand, reinforcement learning is well-developed for small finite state Markov decision processes (MDPs)
+Up to now, extracting the right state representations out of bare observations, that is, reducing the general agent setup to the MDP framework, is an art that involves significant effort by designers
+The primary goal of this work is to automate the reduction process and thereby significantly expand the scope of many existing reinforcement learning algorithms and the agents that employ them
+Before we can think of mechanizing this search for suitable MDPs, we need a formal objective criterion
+The main contribution of this article is to develop such a criterion
+I also integrate the various parts into one learning algorithm
+Extensions to more realistic dynamic Bayesian networks are developed in Part II  CITATION
+The role of POMDPs is also considered there
+### introduction ###
+Artificial General Intelligence (AGI) is concerned with designing agents that perform well in a wide range of environments  CITATION
+Among the well-established ``narrow'' Artificial Intelligence (AI) approaches  CITATION , arguably Reinforcement Learning (RL)  CITATION  pursues most directly the same goal
+RL considers the general agent-environment setup in which an agent interacts with an environment (acts and observes in cycles) and receives (occasional) rewards
+The agent's objective is to collect as much reward as possible
+Most if not all AI problems can be formulated in this framework
+Since the future is generally unknown and uncertain, the agent needs to learn a model of the environment based on past experience, which allows to predict future rewards and use this to maximize expected long-term reward
+The simplest interesting environmental class consists of finite state fully observable Markov Decision Processes (MDPs)  CITATION , which is reasonably well understood
+Extensions to continuous states with (non)linear function approximation  CITATION , partial observability (POMDP)  CITATION , structured MDPs (DBNs)  CITATION , and others have been considered, but the algorithms are much more brittle
+A way to tackle complex real-world problems is to reduce them to finite MDPs which we know how to deal with efficiently
+This approach leaves a lot of work to the designer, namely to extract the right state representation (``features'') out of the bare observations in the initial (formal or informal) problem description
+Even if  potentially  useful representations have been found, it is usually not clear which ones will turn out to be better, except in situations where we already know a perfect model
+Think of a mobile robot equipped with a camera plunged into an unknown environment
+While we can imagine which image features will potentially be useful, we cannot know in advance which ones will actually be useful
+The primary goal of this paper is to develop and investigate a method that  automatically  selects those features that are necessary and sufficient for  reducing  a complex real-world problem to a computationally tractable MDP
+Formally, we consider maps  SYMBOL  from the past observation-reward-action history  SYMBOL  of the agent to an MDP state
+Histories not worth being distinguished are mapped to the same state, i e \  SYMBOL  induces a partition on the set of histories
+We call this model  SYMBOL MDP
+A state may be simply an abstract label of the partition, but more often is itself a structured object like a discrete vector
+Each vector component describes one feature of the history  CITATION
+For example, the state may be a 3-vector containing (shape,color,size) of the object a robot tracks
+For this reason, we call the  reduction ,  Feature RL , although in this Part I only the simpler unstructured case is considered
+SYMBOL  maps the agent's experience over time into a sequence of MDP states
+Rather than informally constructing  SYMBOL  by hand, our goal is to develop a formal objective criterion  SYMBOL  for  evaluating  different reductions  SYMBOL
+Obviously, at any point in time, if we want the criterion to be effective it can only depend on the agent's past experience  SYMBOL  and possibly generic background knowledge
+The ``Cost'' of  SYMBOL  shall be small iff it leads to a ``good'' MDP representation
+The establishment of such a criterion transforms the, in general, ill-defined RL problem to a formal optimization problem (minimizing Cost) for which efficient algorithms need to be developed
+Another important question is which problems  can  profitably be reduced to MDPs  CITATION
+The real world does not conform itself to nice models: Reality is a non-ergodic partially observable uncertain unknown environment in which acquiring experience can be expensive
+So we should exploit the data (past experience) at hand as well as possible, cannot generate virtual samples since the model is not given (need to be learned itself), and there is no reset-option
+No criterion for this general setup exists
+Of course, there is previous work which is in one or another way related to  SYMBOL MDP
+As partly detailed later, the suggested  SYMBOL MDP model has interesting connections to many important ideas and approaches in RL and beyond: \parskip=0ex\parsep=0exsep=0ex   SYMBOL MDP side-steps the open problem of learning POMDPs  CITATION , %  Unlike Bayesian RL algorithms  CITATION ,  SYMBOL MDP avoids learning a (complete stochastic) observation model, %   SYMBOL MDP is a scaled-down practical instantiation of AIXI  CITATION , %   SYMBOL MDP extends the idea of state-aggregation from planning (based on bi-simulation metrics  CITATION ) to RL (based on information), %   SYMBOL MDP generalizes U-Tree  CITATION  to arbitrary features, %   SYMBOL MDP extends model selection criteria to general RL problems  CITATION , %   SYMBOL MDP is an alternative to PSRs  CITATION  for which proper learning algorithms have yet to be developed, %   SYMBOL MDP extends feature selection from supervised learning to RL  CITATION
+Learning in agents via rewards is a much more demanding task than ``classical'' machine learning on independently and identically distributed ( iid  ) data, largely due to the temporal credit assignment and exploration problem
+Nevertheless, RL (and the closely related adaptive control theory in engineering) has been applied (often unrivaled) to a variety of real-world problems, occasionally with stunning success (Backgammon, Checkers,  CITATION , helicopter control  CITATION )
+SYMBOL MDP overcomes several of the limitations of the approaches in the items above and thus broadens the applicability of RL
+SYMBOL MDP owes its general-purpose  learning  and  planning  ability to its  information  and  complexity  theoretical foundations
+The implementation of  SYMBOL MDP is based on (specialized and general)  search  and  optimization  algorithms used for finding good reductions  SYMBOL
+Given that  SYMBOL MDP aims at general AI problems, one may wonder about the role of other aspects traditionally considered in AI  CITATION :  knowledge representation  (KR) and  logic  may be useful for representing complex reductions  SYMBOL
+Agent interface fields like  robotics , computer  vision , and natural  language  processing can speedup learning by pre\&post-processing the raw observations and actions into more structured formats
+These representational and interface aspects will only barely be discussed in this paper
+The following diagram illustrates  SYMBOL MDP in perspective \end{center}   Section  formalizes our  SYMBOL MDP setup, which consists of the agent model with a map  SYMBOL  from observation-reward-action histories to MDP states
+Section  develops our core  SYMBOL  selection principle, which is illustrated in Section  on a tiny example
+Section  discusses general search algorithms for finding (approximations of) the optimal  SYMBOL , concretized for context tree MDPs
+In Section  I find the optimal action for  SYMBOL MDP, and present the overall algorithm
+Section  improves the  SYMBOL  selection criterion by ``integrating'' out the states
+Section  contains a brief discussion of  SYMBOL MDP, including relations to prior work, incremental algorithms, and an outlook to more realistic  structured  MDPs (dynamic Bayesian networks,  SYMBOL DBN) treated in Part II
+Rather than leaving parts of  SYMBOL MDP vague and unspecified, I decided to give at the very least a simplistic concrete algorithm for each building block, which may be assembled to one sound system on which one can build on
+Throughout this article,  SYMBOL  denotes the binary logarithm, %  SYMBOL  the empty string, % and  SYMBOL  if  SYMBOL  and  SYMBOL  else is the Kronecker symbol
+% I generally omit separating commas if no confusion arises, in particular in indices
+For any  SYMBOL  of suitable type (string,vector,set), I define string  SYMBOL , % sum  SYMBOL , union  SYMBOL , and vector  SYMBOL , % where  SYMBOL  ranges over the full range  SYMBOL  and  SYMBOL  is the length or dimension or size of  SYMBOL
+%  SYMBOL  denotes an estimate of  SYMBOL
+%  SYMBOL  denotes a probability over states and rewards or parts thereof
+I do not distinguish between random variables  SYMBOL  and realizations  SYMBOL , and abbreviation  SYMBOL  never leads to confusion
+More specifically,  SYMBOL  denotes the number of states, %  SYMBOL  any state index, %  SYMBOL  the current time, % and  SYMBOL  any time in history
+% Further, in order not to get distracted at several places I gloss over initial conditions or special cases where inessential
+Also 0 SYMBOL undefined=0 SYMBOL infinity:=0

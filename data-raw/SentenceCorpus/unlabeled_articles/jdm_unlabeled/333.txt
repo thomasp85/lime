@@ -1,0 +1,39 @@
+### abstract ###
+the recognition heuristic exploits the basic psychological capacity for recognition in order to make inferences about unknown quantities in the world
+in this article  we review and clarify issues that emerged from our initial work  CITATION   including the distinction between a recognition and an evaluation process
+there is now considerable evidence that i the recognition heuristic predicts the inferences of a substantial proportion of individuals consistently  even in the presence of one or more contradicting cues  ii people are adaptive decision makers in that accordance increases with larger recognition validity and decreases in situations when the validity is low or wholly indeterminable  and iii in the presence of contradicting cues  some individuals appear to select different strategies
+little is known about these individual differences  or how to precisely model the alternative strategies
+although some researchers have attributed judgments inconsistent with the use of the recognition heuristic to compensatory processing  little research on such compensatory models has been reported
+we discuss extensions of the recognition model  open questions  unanticipated results  and the surprising predictive power of recognition in forecasting
+### introduction ###
+with herbert simon's  CITATION  emphasis on recognition memory and limited search as a starting point  it was only a small logical step towards the recognition heuristic  which exploits the potential information in a lack of recognition
+in accordance with simon's emphasis on computational models  the recognition principle as it was first called was formulated as a building block of take-the-best and other heuristics  in order to model inferences from memory  CITATION
+subsequently  it was realized that this initial building block could function as a stand-alone model for the same type of inferences  and it was named the recognition heuristic  CITATION
+in reality  the recognition heuristic was not derived in such a logical manner
+serendipity  the luck of finding something one was not looking for  assisted its birth
+gigerenzer  hoffrage  and kleinbolting  CITATION  had deduced from probabilistic mental models theory a situation in which the  hard-easy  effect would disappear
+in his dissertation  ulrich hoffrage  CITATION  set out to test this prediction  for which he needed two sets of questions  one hard  one easy
+hoffrage chose questions concerning the populations of american cities and german cities  which are respectively hard and easy for german students-or so everyone thought
+surprisingly  the students scored slightly higher when tested on a representative sample of american cities than on german ones
+the result ruined the experiment
+how could people score more correct answers in a domain in which they knew less
+for days  our research group failed to think of a cognitive process that makes more out of less
+finally  anton kuhberger pointed out that the explanation was tucked away in the gigerenzer et al CITATION  article  which mentioned  familiarity  as a probabilistic cue
+if a person has heard of one city but not the other  this lack of recognition can be informative  indicating that the recognized city probably has the larger population
+for the german cities  the participants could not rely on the recognition heuristic-they knew too much
+this serendipitous discovery also revealed a crucial condition for the successful reliance on recognition  a substantial correlation between recognition and population the recognition validity  and a representative  sampling of the cities
+we return to this condition later
+one possible reason why it took us so long to find the answer was our training in classical statistical models
+in a weighted linear model  adding a cue or predictor can never decrease its fit  such as unadjusted r  and the same is true for bayes' rule  CITATION
+this more-is-better principle holds for fitting parameters to known data  but not necessarily for predicting what one does not already know  as the german students had to do
+a good cognitive heuristic  however  should excel in foresight as well as in hindsight
+the possibility that people could sometimes do better with less knowledge has generated much interest and controversy in the social sciences and in the media
+in may  NUMBER   the bbc  intrigued by the idea of less being more  decided to test the effect on their radio  NUMBER   more or less  program
+listeners in new york and london were asked whether detroit or milwaukee has the larger population
+in exploratory studies for his dissertation  one of us  CITATION  had found that about  NUMBER  percent  of american students answered correctly  detroit   compared to  NUMBER  percent  of a corresponding group of german participants
+the bbc is not known for running tightly controlled studies  and so we were somewhat uneasy about whether they could reproduce a less-is-more effect
+but they did
+in new york   NUMBER  percent  of the listeners  got the answer right  whereas in london   NUMBER  percent  did so-as close as one can hope for an informal replication
+our initial work on the recognition heuristic has stimulated dozens of articles comprising theoretical advancements  critique  and above all  progress
+this work has contributed much to understanding the potential and limits of this simple model  but we also believe that its broad reception represents a larger shift in research practice
+this change occurs in three directions  we begin our review of the progress made in the last decade with the two key processes that govern the use of the recognition heuristic  recognition and evaluation  the latter of which corresponds to a judgment of its ecological rationality

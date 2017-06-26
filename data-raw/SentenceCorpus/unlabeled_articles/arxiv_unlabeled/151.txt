@@ -1,0 +1,28 @@
+### abstract ###
+In this paper, we show a connection between a certain online low-congestion routing problem and an online prediction of graph labeling
+More specifically, we prove that if there exists a routing scheme that guarantees a congestion of  SYMBOL  on any edge, there exists an online prediction algorithm with mistake bound  SYMBOL  times the cut size, which is the size of the cut induced by the label partitioning of graph vertices
+With previous known bound of  SYMBOL  for  SYMBOL  for the routing problem on trees with  SYMBOL  vertices, we obtain an improved prediction algorithm for graphs with high effective resistance
+In contrast to previous approaches that move the graph problem into problems in vector space using graph Laplacian and rely on the analysis of the perceptron algorithm, our proof are purely combinatorial
+Further more, our approach directly generalizes to the case where labels are not binary
+### introduction ###
+We are interested in an online prediction problem on graphs
+Given a connected graph  SYMBOL  and a labeling  SYMBOL , unknown to the prediction algorithm, in each round  SYMBOL , for  SYMBOL , an adversary asks for a label of a vertex  SYMBOL , the prediction algorithm provides the answer  SYMBOL , and then receives the correct label  SYMBOL
+The goal is to minimize the number of rounds that the algorithm makes a mistake, i e , rounds  SYMBOL  such that  SYMBOL
+To make our presentation clean, in this work we do not count the mistake made on the first question  SYMBOL
+This problem has been studied with standard online learning tools such as the perceptron algorithm
+Herbster, Pontil, and Wainer~ CITATION , and Herbster and Pontil~ CITATION  use pseudoinverse of graph Laplacian as a kernel and provide a mistake bound that depends on the size of the cut induced by the partition based on the real labeling of vertices and the largest effective resistance between any pair of vertices in the graph
+Recently, Herbster~ CITATION  exploits the cluster structure of the labeling on the graph, and provides an improved mistake bounds
+Pelckmans and Suykens~ CITATION  present a combinatorial algorithm for the problem that predicts a label of a given vertex based on known labels of its neighbors
+They also prove a bound on the number of mistakes when the labels of adjacent vertices are known
+However, their bound is very loose since it does not count every mistakes and their proof is still based on graph Laplacian
+We shall compare the bound that we obtain with previous bounds of Herbster  et
+al ~ CITATION  and of Pelckmans and Suykens~ CITATION  in Section~
+This work follows the initiation of Pelckmans and Suykens
+We show connection between the prediction problem and the following online routing problem, first introduced by Awerbuch and Azar~ CITATION  in their study of online multicast routing
+Given a connected graph  SYMBOL , the algorithm receives a sequence of requests  SYMBOL , where  SYMBOL , and, for each  SYMBOL , where  SYMBOL , has to route one unit of flow from  SYMBOL  to some previous know  SYMBOL  where  SYMBOL
+The algorithm works in an online fashion, i e , it has to return a route for  SYMBOL  before receiving other requests  SYMBOL , where  SYMBOL
+Given a set of routes, we define the  congestion   SYMBOL  incurred on edge  SYMBOL , defined as the number of routes that use  SYMBOL
+The performance of the algorithm is measured by the maximum congestion incurred on any edge
+We prove, in Section~, that if there exists an algorithm  SYMBOL  with a guarantee that the congestion incurred on any edge will be no greater than  SYMBOL , there exists an online prediction algorithm with the mistake bound of   SYMBOL  where  SYMBOL  be the set of edges joining pairs of vertices with different labels, i e ,  SYMBOL
+In Section~, we apply the known congestion bound to show the mistake bound for the graph prediction problem, and compare the bound obtained with the bounds from previous results
+We note that our approach directly generalizes to the case when labels are not binary (i e , when the labeling function  SYMBOL  maps  SYMBOL  to an arbitrary set  SYMBOL  of labels) with the same mistake bound

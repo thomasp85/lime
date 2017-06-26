@@ -1,0 +1,35 @@
+### abstract ###
+an important open problem is how values are compared to make simple choices
+a natural hypothesis is that the brain carries out the computations associated with the value comparisons in a manner consistent with the drift diffusion model ddm  since this model has been able to account for a large amount of data in other domains
+we investigated the ability of four different versions of the ddm to explain the data in a real binary food choice task under conditions of high and low time pressure
+we found that a seven-parameter version of the ddm can account for the choice and reaction time data with high-accuracy  in both the high and low time pressure conditions
+the changes associated with the introduction of time pressure could be traced to changes in two key model parameters  the barrier height and the noise in the slope of the drift process
+### introduction ###
+the drift diffusion model ddm is one of the cornerstones of modern psychology  CITATION  and  increasingly  of behavioral neuroscience  CITATION
+the model has received increased attention over the last years for several reasons
+first  it has provided more accurate descriptions of accuracy and reaction time data than alternative models in a wide range of psychological tasks  including perceptual discrimination and go-no-go tasks  CITATION
+second  the model is a special case of many of its competitors  which is a sign of its generality  CITATION
+finally  the model has been applied to explain neurophysiological data in various perceptual discrimination tasks  CITATION  and has a compelling neuronal interpretation
+an important open problem in behavioral neuroscience is how the brain compares values to make simple choices
+this problem is particularly interesting because there is ample evidence suggesting that the comparison process is not deterministic  and that it does not always choose the best option  CITATION
+the success of the ddm in the realm of perceptual decision making has lead several groups in neuroeconomics to speculate that the same computational model might be used by the brain to make simple value based choices  CITATION
+this type of choice refers to situations in which the brain chooses among several possible stimuli associated with different reward values at consumption e g   alternative food items by assigning a value to every item under consideration and comparing the values to select one of them
+this paper investigates the extent to which the ddm can explain the accuracy and reaction time data in real simple food choices
+subjects made real choices between pairs of appetitive snack foods and had to eat the food that they chose in a randomly selected trial
+this task is conceptually similar to previous experiments on perceptual discrimination  CITATION  in which human subjects had to decide which of two stimuli was brightest
+the key difference with our experiment is that our subjects made choices between stimuli associated with different levels of reward at consumption  which is an instance of value-based choice
+it is interesting to ask whether both types of tasks are described by the same computational model because  given the large degree of specialization in the brain  there is no a priori reason that the same algorithms would be used in the perceptual and reward domains
+we compare four different versions of the ddm that vary in the number of free parameters that they contain  and in whether the barriers are constant or decrease with time to speed up decision making  CITATION
+since the best fitting model is likely to depend on the speed with which the decisions have to be made  we carry out separate model fitting comparisons for the two different time pressure experimental conditions  which allow us to identify which aspects of the ddm are responsible for any changes in performance
+we found that a popular seven-parameter version of the ratcliff ddm model  CITATION  can account for the data with high-accuracy in both the high and low time pressure conditions
+furthermore  we also found that the changes associated with the introduction of time pressure could be traced to changes in two key model parameters  the barrier height and the noise in the slope of the drift process
+understanding the conditions under which the ddm can explain the behavioral data in simple value based choice is important for several reasons
+first  it is a necessary first step in exploring the extent to which this model can account for the underlying neural computations
+second  since the ddm has been shown to provide an accurate description of data in other domains  the finding that the ddm also provides a good computational description of value-based choices provides insight into the nature of some basic algorithms that might be at work in many different psychological processes
+to the best of our knowledge  the performance of the ddm has not been tested before in the realm of value-based choice  although it has been extensively tested on other realms
+in fact  to the best of our knowledge  it has provided an accurate quantitative characterization of the key aspects of the data in every domain to which it has been applied
+for example  the ddm has been tested in human and non-human primates using the newsome-shadlen random dot motion perceptual discrimination task  CITATION
+a few studies have explored the ability of models related to the ddm to explain various common choice patterns
+for example  several studies have explored the ability of decision field theory  which is a variant of the ddm  to account for patterns of choice in multi-attribute settings such as choices among lotteries  but have not provided a full experimental test against the data  CITATION
+other studies have investigated the ability of the competing accumulator model to accomplish similar goals  CITATION
+although these previous studies have shown that relatively simple computational models of decision-making can account for some stylized facts of the behavioral literature  their full properties in the realm of simple value based choice have not been investigated

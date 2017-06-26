@@ -1,0 +1,42 @@
+### abstract ###
+anticipated regret is an important determinant in risky decision making  however only a few studies have explored its role in problem gambling
+this study tested for differences in the anticipation of regret among social and problem gamblers and examined how these differences affect risk preferences in a gambling task
+the extent of problem gambling was assessed using the south oaks gambling screen and participants were randomly assigned to one of two conditions
+in the risky feedback condition  the feeling of regret was avoided by choosing the risky gamble  whereas in the safe feedback condition the safe gamble was the regret-minimizing option
+problem gambling was associated with the choice of the risky gamble in both conditions indicating less sensitivity to anticipated regret
+it was also associated with risk seeking across feedback conditions when the stakes of winning and loosing were higher
+these findings suggest that less regret or the poor anticipation of regret might contribute to excessive gambling and thus need to be addressed in cognitive treatments of problem gambling
+### introduction ###
+cognitive distortions have been identified in the research literature as a key contributing factor to the instigation and maintenance of problem gambling  CITATION
+numerous studies have shown that gamblers hold irrational beliefs and suffer from cognitive biases such as the illusion of control  the gambler's fallacy  and the attribution bias  which lead to inaccurate inferences about outcome probabilities  CITATION
+the resulting overestimation of the chances to win and the underestimation of possible losses propel individuals to place more risky bets and encourage persistent gambling
+besides erroneous beliefs about probabilities  gambling persistence and risk taking may also be affected by the anticipation of emotions associated with gambling outcomes
+the role of anticipated emotions is well documented in the literature on decision making  with anticipated regret receiving particular attention  CITATION
+however  relatively few studies have examined anticipated regret in the context of gambling
+wolfson and briggs  CITATION  investigated the intentions of  NUMBER  lottery players to participate in a newly introduced lottery in the united kingdom and found that  NUMBER  percent  were willing to purchase tickets because they anticipated feeling regret if their numbers came up
+this share increased to  NUMBER  percent  for those who played regularly with the same set of numbers
+in a comprehensive study of the dutch postcode lottery  zeelenberg and pieters  CITATION  showed that the regret people expected to feel if they decided not to play and discovered that their neighbor had won significantly contributed to their intention to participate in the lottery in the near future
+rae and haw  CITATION  assessed the effects of anticipated regret  disappointment  and elation  on the persistence in gambling of  NUMBER  gamblers and found that anticipated emotions did not predict gambling persistence
+although all three studies examine the relationship between anticipated regret and gambling  their results do not allow to draw conclusions about the clinical implications of regret for excessive gambling
+this is due to the fact that none of the studies screened the participants for gambling problems making it impossible to assess how many of them actually met the criteria for problem or pathological gamblers
+the present study examined the role of anticipated regret in problem gambling by focusing on two issues
+first  it estimated the effect of gambling preference on the anticipation of regret
+previous research has suggested that although erroneous beliefs and distorted cognitions are common among all types of gamblers  pathological gamblers seem to suffer more cognitive illusions  CITATION   endorse more irrational beliefs  CITATION  and to be more convinced in their irrational beliefs than social gamblers  CITATION
+in a recent study  tochkov  CITATION  showed that high-frequency gamblers were less able to anticipate regret than low-frequency gamblers indicating that inaccurately anticipated regret is a possible contributing factor to persistent gambling
+participants were asked to choose gambles with fictitious monetary outcomes and imagine how they would feel once they learn the outcome of their decision
+a week later  the same participants were asked to play the same gambles for real with actual monetary wins and losses and rate their regret
+tochkov  CITATION  reported that the difference between anticipated and actual regret was significantly larger for high-frequency gamblers as compared to that of low-frequency gamblers
+these findings suggest that when gamblers do not anticipate the negative feelings of regret they might experience once they learn the outcome of their bet  they are more tempted to continue gambling
+in contrast  the anticipation of regret about gambling outcomes could serve as a natural inhibitor to continuous gambling
+this line of reasoning is supported by evidence from a number of studies which found that the anticipation of regret decreases the intentions of engaging in risky and potentially addictive behaviors  CITATION
+in a recent study  fernandez-duque and landers  CITATION  showed that individuals experienced more regret than they had anticipated  which in turn made them more risk averse in a subsequent gambling task
+the present study explores the relationship between anticipation of regret and gambling preferences by giving gamblers the choice between two gambles  one of which promised to reveal the outcome of the selected option only partial feedback and the other the outcome of both the selected and the rejected options complete feedback
+it was hypothesized that a stronger gambling preference would be adversely associated with regret anticipation and would thus result in the more frequent choice of the gamble with partial feedback
+the second goal of the study was to assess the effect of gambling preferences on risk attitudes
+previous studies have demonstrated that problem gamblers exhibit higher degrees of risk taking than normal subjects because they suffer from cognitive biases that make risky bets more attractive  CITATION  or because they feel overconfident in their skills  CITATION
+accordingly  it was hypothesized that the risk attitude associated with a stronger gambling preference would be skewed towards risk seeking due to lower levels of regret anticipation
+following zeelenberg et al CITATION   two experimental conditions were created  each of which contained a partial and a complete feedback option
+in the risky feedback condition  partial feedback was associated with the risky gamble  whereas in the safe feedback condition the regret-minimizing option was the safe gamble
+i hypothesized that a weaker gambling preference would trigger regret avoidance and thus a preference for the partial feedback which would lead to risk seeking or risk aversion depending on the feedback condition
+in contrast  a stronger gambling preference would be related to risk seeking regardless of the expected feedback
+moreover  i examined risk preferences for gambles with low and high variation in outcome probabilities to test for the robustness of the results with respect to the different stakes involved in winning and losing

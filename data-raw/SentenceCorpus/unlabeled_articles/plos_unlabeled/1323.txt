@@ -1,0 +1,30 @@
+### abstract ###
+Human disease is heterogeneous, with similar disease phenotypes resulting from distinct combinations of genetic and environmental factors.
+Small-molecule profiling can address disease heterogeneity by evaluating the underlying biologic state of individuals through non-invasive interrogation of plasma metabolite levels.
+We analyzed metabolite profiles from an oral glucose tolerance test in 50 individuals, 25 with normal and 25 with impaired glucose tolerance.
+Our focus was to elucidate underlying biologic processes.
+Although we initially found little overlap between changed metabolites and preconceived definitions of metabolic pathways, the use of unbiased network approaches identified significant concerted changes.
+Specifically, we derived a metabolic network with edges drawn between reactant and product nodes in individual reactions and between all substrates of individual enzymes and transporters.
+We searched for active modules regions of the metabolic network enriched for changes in metabolite levels.
+Active modules identified relationships among changed metabolites and highlighted the importance of specific solute carriers in metabolite profiles.
+Furthermore, hierarchical clustering and principal component analysis demonstrated that changed metabolites in OGTT naturally grouped according to the activities of the System A and L amino acid transporters, the osmolyte carrier SLC6A12, and the mitochondrial aspartate-glutamate transporter SLC25A13.
+Comparison between NGT and IGT groups supported blunted glucose- and/or insulin-stimulated activities in the IGT group.
+Using unbiased pathway models, we offer evidence supporting the important role of solute carriers in the physiologic response to glucose challenge and conclude that carrier activities are reflected in individual metabolite profiles of perturbation experiments.
+Given the involvement of transporters in human disease, metabolite profiling may contribute to improved disease classification via the interrogation of specific transporter activities.
+### introduction ###
+Disease heterogeneity has challenged the practice of medicine.
+Individuals with the same apparent disease at our current diagnostic resolution often show remarkable variation in prognosis and treatment responsiveness, presumably because a superficially similar disease state can arise from diverse combinations of genetic and environmental factors CITATION.
+Efforts to resolve the heterogeneity have focused on collecting increasing amounts of quantitative patient information, including genotypic CITATION and mRNA CITATION and protein expression data CITATION with the hope of establishing better clinical classifiers based on aberrant activities of specific, targetable biological pathways.
+Using tumor biopsy samples, oncologists are now exploring the incorporation of genomewide expression profiling into therapy CITATION, CITATION.
+However, for complex human diseases that span multiple organ systems, metabolomics the analysis of a broad array of metabolite levels from biologic fluid samples such as blood or urine represents a minimally-invasive way to obtain quantitative biologic information from patients to uncover disease pathophysiology and aid diagnostic and prognostic classification CITATION .
+Metabolomics data analysis may be facilitated by techniques applied to other high-throughput omic data types.
+For microarray data, the integration of network information from protein-protein interaction data or predefined biologic pathways has greatly assisted elucidation of underlying processes and led to the development of increasingly robust and accurate gene-based classifiers for disease CITATION, CITATION.
+We hypothesize that the characterization of human disease by metabolomic profiling should similarly benefit from interpreting metabolite changes in the context of known metabolic reactions.
+We use data derived from oral glucose tolerance tests in 25 individuals with normal and 25 with impaired glucose tolerance CITATION.
+We first sought significant overlaps between observed metabolite changes and preconceived definitions of metabolic pathways.
+Next we applied an unbiased pathway analysis by mapping the metabolite changes to a recent reconstruction of the human metabolic network CITATION and use a recently developed variant CITATION of previous approaches CITATION derived for mRNA expression analysis to find active metabolic modules connected subnetworks of highly changed metabolites.
+While the biased approach yielded little, the resulting unbiased pathway models highlight the interconnectedness between changed metabolites and propose a role for solute carriers in OGTT metabolite profiles.
+Hierarchical clustering and principal component analysis confirmed the importance of specific transporters by demonstrating that metabolites cluster naturally according to activities of the System A and L amino acid and SLC6A12 osmolyte transporters.
+Furthermore, they suggest an important role for the SLC25A13 mitochondrial aspartate-glutamate transporter in interindividual metabolite profile variability.
+Comparison of NGT and IGT active modules suggest blunted glucose- and/or insulin-stimulated enzyme and transporter activities in the IGT group.
+Given that transporters are implicated in multiple human diseases, the interrogation of transporter activities by perturbation-based metabolic profiling may ultimately contribute to improved disease classification and resolution of disease heterogeneity.

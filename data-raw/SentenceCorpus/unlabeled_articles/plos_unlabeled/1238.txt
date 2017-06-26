@@ -1,0 +1,32 @@
+### abstract ###
+Extracting network-based functional relationships within genomic datasets is an important challenge in the computational analysis of large-scale data.
+Although many methods, both public and commercial, have been developed, the problem of identifying networks of interactions that are most relevant to the given input data still remains an open issue.
+Here, we have leveraged the method of random walks on graphs as a powerful platform for scoring network components based on simultaneous assessment of the experimental data as well as local network connectivity.
+Using this method, NetWalk, we can calculate distribution of Edge Flux values associated with each interaction in the network, which reflects the relevance of interactions based on the experimental data.
+We show that network-based analyses of genomic data are simpler and more accurate using NetWalk than with some of the currently employed methods.
+We also present NetWalk analysis of microarray gene expression data from MCF7 cells exposed to different doses of doxorubicin, which reveals a switch-like pattern in the p53 regulated network in cell cycle arrest and apoptosis.
+Our analyses demonstrate the use of NetWalk as a valuable tool in generating high-confidence hypotheses from high-content genomic data.
+### introduction ###
+An important challenge in the analyses of high throughput datasets is integration of the data with prior knowledge interactions of the measured molecules for the retrieval of most relevant biomolecular networks CITATION CITATION.
+This approach facilitates interpretation of the data within the context of known functional interactions between biological molecules and subsequently leads to high-confidence hypothesis generation.
+Typically, this procedure would entail identification of genes with highest or lowest data values, which is then followed by identification of associated networks.
+However, retrieval of most relevant biological networks/pathways associated with the upper or lower end of the data distribution is not a trivial task, mainly because members of a biological pathway do not usually have similar data values, which necessitates the use of various computational algorithms for finding such networks of genes CITATION, CITATION, CITATION, CITATION, CITATION CITATION.
+One class of methods for finding relevant networks utilize optimization procedures for finding highest-scoring subnetworks/pathways of genes based on the data values of genes CITATION, CITATION.
+Although this approach is likely to result in highly relevant networks, it is computationally expensive and inefficient, and is therefore not suitable for routine analyses of functional genomics data in the lab.
+The most popular of the existing methods of extraction of relevant networks from genomic data, however, usually involve a network building strategy using a pre-defined focus gene set, which is typically a set of genes with most significant data values CITATION, CITATION.
+The network is built by filling in other nodes from the network either based on the enrichment of interactions for the focus set CITATION, or based on the analysis of shortest paths between the focus genes CITATION, CITATION.
+Both methods aim at identifying genes in the network that are most central to connecting the focus genes to each other.
+Problems associated with these methods have been outlined previously CITATION.
+However perhaps most importantly, the central genes identified by these methods may have incoherent data values with the focus genes, as data values of nodes are not accounted for during the network construction process using the seed gene list.
+This may result in uninformative networks that are not representative of the networks most significantly represented in the genomic data.
+In addition, these methods do not account for genes with more subtle data values that collectively may be more important than those with more obvious data values CITATION.
+Although powerful data analysis methods for finding sets of genes with significant, albeit subtle, expression changes have been developed, such an approach has not been incorporated into methods for extracting interaction networks that are most highlighted by the data.
+In order to overcome these problems, we have employed the method of random walks in graphs for scoring the relevance of interactions in the network to the data.
+The method of random walks has been well-established for structural analyses of networks, as it can fully account for local as well as global topological structure within the network CITATION, CITATION and it is very useful for identifying most important/central nodes CITATION CITATION.
+Here, instead of working with a pre-defined set of focus genes, we overlay the entire data distribution onto the network, and bias the random walk probabilities based on the data values associated with nodes.
+This method, NetWalk, generates a distribution of Edge Flux values for each interaction in the network, which then can be used for dynamical network building or further statistical analyses.
+Here, we describe the concept of NetWalk, demonstrate its usefulness in extracting relevant networks compared to Ingenuity Pathway Analysis, and show the use of NetWalk results in comparative analyses of highlighted networks between different conditions.
+We tested NetWalk on experimentally derived genomic data from breast cancer cells treated with different concentrations of doxorubicin, a clinically used chemotherapeutic agent.
+Using NetWalk, we identify several previously unreported network processes involved in doxorubicin-induced cell death.
+From these studies we propose that NetWalk is a valuable network based analysis tool that integrates biological high throughput data with prior knowledge networks to define sub-networks of genes that are modulated in a biologically meaningful way.
+Use of NetWalk will greatly facilitate analysis of genomic data.

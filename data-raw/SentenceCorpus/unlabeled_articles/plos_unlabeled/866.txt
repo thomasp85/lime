@@ -1,0 +1,56 @@
+### abstract ###
+The evolution of cooperation described in terms of simple two-person interactions has received considerable attention in recent years, where several key results were obtained.
+Among those, it is now well established that the web of social interaction networks promotes the emergence of cooperation when modeled in terms of symmetric two-person games.
+Up until now, however, the impacts of the heterogeneity of social interactions into the emergence of cooperation have not been fully explored, as other aspects remain to be investigated.
+Here we carry out a study employing the simplest example of a prisoner's dilemma game in which the benefits collected by the participants may be proportional to the costs expended.
+We show that the heterogeneous nature of the social network naturally induces a symmetry breaking of the game, as contributions made by cooperators may become contingent on the social context in which the individual is embedded.
+A new, numerical, mean-field analysis reveals that prisoner's dilemmas on networks no longer constitute a defector dominance dilemma instead, individuals engage effectively in a general coordination game.
+We find that the symmetry breaking induced by population structure profoundly affects the evolutionary dynamics of cooperation, dramatically enhancing the feasibility of cooperators: cooperation blooms when each cooperator contributes the same cost, equally shared among the plethora of games in which she participates.
+This work provides clear evidence that, while individual rational reasoning may hinder cooperative actions, the intricate nature of social interactions may effectively transform a local dilemma of cooperation into a global coordination problem.
+### introduction ###
+Portuguese is no exception: Like any other language, it has many proverbs and popular sayings.
+One of them states something like: I have already contributed to that charity CITATION, concerning originally situations in which individuals are faced with the decision of offering a contribution to a common venture, the expression above meaning no.
+Interestingly, the amount given is never stated.
+It turns out that, quite often, we are confronted with situations in which the act of giving is more important than the amount given.
+Let us keep with a charity event, in which some celebrities are invited to participate.
+Typically their appearance is given maximal audience, and they are shown contributing a seemingly large amount of money to the charity's cause.
+This offer is aimed at stimulating the contribution of many to the same charity, and indeed this mechanism of celebrity participation in charities is common, and presumably effective.
+But what is the relevance of the amount contributed by the celebrity?
+It is certainly impressive to many, despite being, most likely, a small contribution, both in face of the celebrity's wealth and also in what concerns the overall amount accumulated.
+But it does induce, hopefully, a large number of contributions from anonymous charity participants, who feel compelled to contribute given the fact that their role model contributed.
+In other words, the majority copies the act of giving, but certainly not the amount given.
+Nowadays, web-signed petitions are also examples of collective decisions which, often, benefit from the fact that some well-known people adhere to the petition's cause.
+Besides those who are fully aware and agree with the cause, there are also those who sign the petition simply because they admire someone who has signed the petition, again copying the attitude.
+Many other examples from real life could be provided along similar lines, from trivia, to fads, to stock markets, to Humanitarian causes up to the salvation of planet Earth CITATION CITATION.
+From a theoretical perspective, many of these situations provide beautiful examples of public goods games CITATION, CITATION which are often hard to dissociate from reputation building, social norms and moral principles CITATION CITATION.
+This intricate interplay reflects the many-body nature and multi-level complexity of the interactions among the social atoms CITATION .
+The simplest PGG involves two persons.
+Both have the opportunity to contribute a cost c to a common pool.
+A Cooperator is one who contributes; otherwise she is a Defector.
+The total amount is multiplied by an enhancement factor F and equally shared between the two participants.
+Hence, player i using strategy s i gets a payoff FORMULA from this game, leading to the following payoff matrixFORMULA
+For FORMULA Ds dominate unconditionally.
+For F 2 no strategy is favored in well mixed populations ; yet, for FORMULA, it is better to play C despite the fact that, in a mixed pair, a D collects a higher payoff than a C. For FORMULA the game is an example of the famous symmetric one-shot two-person prisoner's dilemma CITATION, on which many central results have been obtained over the years, in particular in the context of evolutionary game theory CITATION, CITATION : In 1992 CITATION it has been explicitly shown that population structure matters, despite its importance being recognized already by Darwin, albeit in the form of Group selection CITATION, CITATION.
+It clearly makes a difference whether everybody is equally likely to interact with anybody else in the population or not.
+In 2004 we learnt that evolutionary game theory in finite populations may behave very differently from that on infinite populations CITATION, even in the absence of any population structure, Evolutionarily Stable Strategies becoming population size dependent.
+In 2005 we learnt that heterogeneous population structures play an important role in the evolution of cooperation under the prisoner's and other social dilemmas CITATION, CITATION, a result which spawned a number of investigations CITATION CITATION.
+In 2006 a mathematical condition was obtained for Cs to become advantageous on populations structured along the links of homogeneous networks CITATION, subsequently confirmed making use of inclusive fitness methods CITATION for a limited subset of game payoff matrices.
+This result, valid in the limit of weak selection, has also unraveled an important feature of evolutionary game theoretical studies: The outcome of cooperation depends on the evolutionary dynamics adopted, dictating how individual strategy evolves from generation to generation.
+Furthermore, evolutionary game dynamics on populations structured along multiple networks has been explored CITATION, CITATION, as well as the mechanisms which favor cooperation under adaptive population structures have been identified, both for non-repeated CITATION CITATION and repeated games CITATION, CITATION.
+These results consubstantiate and keep stimulating an enormous amount of research work.
+Common to all these studies are the settings underlying the social dilemma: in the conventional view, every C pays a fixed cost c per game, providing the same benefit b to the partner.
+However, if what matters is the act of giving and not the amount given, then there is no reason to assume that everybody contributes the same cost c to each game.
+Depending on the amount of each individual contribution, the overall result of the evolutionary dynamics may change.
+The two person game introduced above provides not only the ideal ground to introduce such a diversity of contributions, but also an intuitive coupling between game dynamics and social embedding: The first individual contributes a cost c 1 if playing C and nothing otherwise.
+Hence, player i now gets the following payoff from this game:FORMULAreflecting the symmetry breaking induced by possibly different contributions from different cooperating individuals.
+This poses a natural question: Who will acquire an evolutionary edge under these conditions?
+Often the amount that each individual contributes is correlated with the social context she is actually embedded in CITATION, CITATION, CITATION.
+Modern communities are grounded in complex social networks of investment and cooperation, in which some individuals play radically different roles and interact more and more often than others.
+Empirical studies have demonstrated that social networks share both small-world properties and heterogeneous distribution of connectivities CITATION CITATION.
+In such heterogeneous communities, where different individuals may be embedded in very different social environments, it is indeed hard to imagine that every C will always provide the same amount in every game interaction, hence reducing the problem to the standard two-person prisoner's dilemma studied so far.
+In the context of N-person games played in prototypical social networks, it has been found that the diversity of contributions greatly favors cooperation CITATION.
+However, and similar to the relation between two-body and many-body interactions in the Physical Sciences, N-person public goods games have an intrinsic complexity which cannot be anticipated from two-person games: In the words of late William Hamilton, The theory of many person games may seem to stand to that of two-person games in the relation of sea-sickness to a headache CITATION .
+Here, and besides the conventional scenario in which every C contributes the same cost c to each game she participates, we shall also explore the limit in which every C contributes the same overall amount c. However, this amount is shared between all games she participates, which are defined by the social network in which the players are embedded.
+For instance, c may be interpreted as the availability or the amount of resources each individual has to dedicate to all her commitments.
+Hence, the contribution to each game will depend now on the social context of each C, and heterogeneity will foster a symmetry breaking of pair-wise interactions, as two individuals may contribute different amounts to the same game.
+In this sense, cooperation will be identified with the act of giving and no longer with the amount given.

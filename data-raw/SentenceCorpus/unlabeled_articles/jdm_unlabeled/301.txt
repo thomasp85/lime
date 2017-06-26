@@ -1,0 +1,33 @@
+### abstract ###
+five studies demonstrated that people selectively use general moral principles to rationalize preferred moral conclusions
+in studies  NUMBER a and  NUMBER b  college students and community respondents were presented with variations on a traditional moral scenario that asked whether it was permissible to sacrifice one innocent man in order to save a greater number of people
+political liberals  but not relatively more conservative participants  were more likely to endorse consequentialism when the victim had a stereotypically white american name than when the victim had a stereotypically black american name
+study  NUMBER  found evidence suggesting participants believe that the moral principles they are endorsing are general in nature  when presented sequentially with both versions of the scenario  liberals again showed a bias in their judgments to the initial scenario  but demonstrated consistency thereafter
+study  NUMBER  found conservatives were more likely to endorse the unintended killing of innocent civilians when iraqis civilians were killed than when americans civilians were killed  while liberals showed no significant effect
+in study  NUMBER   participants primed with patriotism were more likely to endorse consequentialism when iraqi civilians were killed by american forces than were participants primed with multiculturalism
+however  this was not the case when american civilians were killed by iraqi forces
+implications for the role of reason in moral judgment are discussed
+### introduction ###
+most people believe that harming innocent children is wrong  as is cheating on an exam or breaking a promise
+more controversially  some people believe that abortion is wrong  that the death penalty is unjust  or that animals should not be killed and eaten
+these moral judgments are unlike other social judgments in an important way
+not only do we believe that our moral judgments are correct  but we believe that unlike our attitudes toward  say  chocolate ice cream everyone else should agree with us
+this has not only been pointed out by philosophers as a key component of moral beliefs  CITATION   but also confirmed by psychologists as an important feature of lay moral intuition  CITATION
+however  a problem arises when defending moral judgments
+defending a moral judgment by appealing to our subjective preferences e g    abortion is wrong because i don't like it  is unpersuasive  inasmuch it fails to provide a compelling reason why others should agree
+yet  as some philosophers have argued  moral claims seem to lack an obvious set of objective criteria to demonstrate their truth  CITATION
+these features make disagreement in the moral domain a tricky problem  CITATION
+what individuals often do  however  is defend a specific moral judgment by appealing to a general moral principle
+principles are defined as general rules that can guide judgment across a wide variety of situations  making moral judgments appear to be less like ad hoc preferences and more like rational facts
+in moral reasoning  a principle serves as a first step toward drawing a specific conclusion
+once there is agreement about a principle  assessing whether a specific moral claim is an instantiation of the principle is all that remains
+of course  there has been significant debate within moral philosophy as to what principles should be endorsed  CITATION
+one of the central debates in normative ethics has been between advocates of consequentialism and deontology
+consequentialism holds that acts are morally right or wrong to the degree that they maximize good consequences
+many deontologists  on the other hand  while accepting that consequences are important  believe that there are constraints against certain actions independent of their consequences - some acts are wrong in-and-of themselves
+these constraints generally include duties and obligations such as injunctions not to break promises  not to lie  and not to harm innocent others
+the debate between these two camps has generated a number of well-known thought experiments where the two broad principles are pitted against each other in one moral decision  CITATION
+adopting these scenarios for use in the laboratory  psychological research has suggested that lay persons find the distinction between consequentialist and deontological considerations meaningful  CITATION
+indeed  research utilizing these scenarios has demonstrated that certain features of an act e g   whether the harm is direct or indirect can reliably influence moral judgments to be consistent with either a consequentialist or a deontological moral ethic
+what we propose here  however  is that  even when utilizing scenarios that have been shown to reliably elicit consequentialist or deontological intuitions  people's moral judgments are often affected by a set of other motivations  such as the desire to protect their ideological beliefs
+this is consistent with a large body of evidence showing that reasoning processes are heavily influenced by motivational factors  and that people are flexible in the principles they apply to justify their decisions  CITATION

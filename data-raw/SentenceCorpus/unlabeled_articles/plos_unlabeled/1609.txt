@@ -1,0 +1,70 @@
+### abstract ###
+Periplasmic binding proteins are a large family of molecular transporters that play a key role in nutrient uptake and chemotaxis in Gram-negative bacteria.
+All PBPs have characteristic two-domain architecture with a central interdomain ligand-binding cleft.
+Upon binding to their respective ligands, PBPs undergo a large conformational change that effectively closes the binding cleft.
+This conformational change is traditionally viewed as a ligand induced-fit process; however, the intrinsic dynamics of the protein may also be crucial for ligand recognition.
+Recent NMR paramagnetic relaxation enhancement experiments have shown that the maltose binding protein - a prototypical member of the PBP superfamily - exists in a rapidly exchanging mixture comprising an open state, and a minor partially closed state.
+Here we describe accelerated MD simulations that provide a detailed picture of the transition between the open and partially closed states, and confirm the existence of a dynamical equilibrium between these two states in apo MBP.
+We find that a flexible part of the protein called the balancing interface motif is displaced during the transformation.
+Continuum electrostatic calculations indicate that the repacking of non-polar residues near the hinge region plays an important role in driving the conformational change.
+Oscillations between open and partially closed states create variations in the shape and size of the binding site.
+The study provides a detailed description of the conformational space available to ligand-free MBP, and has implications for understanding ligand recognition and allostery in related proteins.
+### introduction ###
+Periplasmic Binding Proteins are major components of the bacterial cell envelope that are involved in nutrient uptake and chemotaxis CITATION, CITATION.
+Gram-negative bacteria use PBPs to transport ligands into the cytosol by association with a membrane-bound ATP-binding cassette transporter CITATION.
+Gram-positive bacteria differ in that they employ a slightly different design, in which the PBPs motif is directly attached to a membrane-anchored receptor.
+In addition, several mammalian receptors contain extracellular ligand binding domains that are homologous to PBPs.
+These include glutamate/glycine-gated ion channels such as the NMDA receptor; G protein-coupled receptors, including metabotropic glutamate, GABA-B, calcium sensing, and pheromone receptors; and atrial natriuretic peptide-guanylate cyclase receptors.
+Many of these receptors are promising drug targets CITATION.
+The structures of PBPs have been called a gold mine for studying the general mechanisms of protein-ligand recognition CITATION, as PBPs have been identified that can transport a large variety of substrates, including: carbohydrates, amino acids, vitamins, peptides, or metal ions CITATION.
+The affinity of PBPs for diverse substrates also make them ideal templates for the design of diverse in vitro and in vivo biosensors with tailored properties CITATION .
+Maltose binding protein is a part of the maltose/maltodextrin system of Escherichia coli, which is responsible for the uptake and efficient catabolism of maltodextrins.
+MBP is the prototypical member of the PBP superfamily.
+It has been the subject of extensive study due to its importance in various biological pathways CITATION, CITATION, and its utility as an affinity tag for protein expression and purification CITATION.
+The protein folds into two domains of roughly equal size: the C terminal domain, and the N terminal domain.
+The two domains are connected via a short helix and a two-stranded -sheet that form an interdomain hinge region.
+Like other PBPs, the binding site of MBP is located on the interdomain cleft between domains.
+X-ray structures of MBP solved in the presence and absence of ligand indicate that the protein undergoes an important conformational change from an open to a closed state in the presence of the ligand, the effect of which is to better stabilize the ligand by reducing the size of the cleft CITATION.
+The conformational change has been dubbed the Venus Fly-Trap Mechanism CITATION due to its resemblance to the traps on the carnivorous plant that closes only when stimulated by prey.
+An induced-fit mechanism CITATION is often invoked to describe the ligand recognition process.
+In this scenario, the ligand participates in remodeling the binding site by interacting directly with the protein.
+Alternatively, it is also possible that the apo protein already exists in a mixture of open and closed conformations.
+In which case, the ligand would play a more passive role shifting the equilibrium toward the closed state, a mechanism traditionally described as conformational selection, or population shift CITATION.
+Computer simulations and NMR studies are often needed to distinguish between the two scenarios, as X-ray structures typically do not provide detailed information about the ensemble of conformations available to the ligand-free protein CITATION .
+Until recently, the bulk of our understanding of the mechanism of substrate recognition in MBP came from crystallographic studies that indicated only two possible conformations, a ligand-free open, and a ligand bound closed structure.
+In 2007, Tang et al. CITATION reported the first NMR paramagnetic relaxation enhancement measurements on apo MBP.
+By attaching a spin label on the NTD and CTD of the apo protein, domain hinge-bending motions could be studied.
+These measurements indicated the existence of a dynamic equilibrium between a major open state, and a minor partially closed state.
+Because experimental PRE rates for MBP could not be explained either by the X-ray crystal structure of the apo-state, nor by the ligand-bound closed-state, it was possible to postulate that a partially closed structure exists.
+The transition between an open, and a partially closed state, was determined to involve a rotation around the hinge region.
+The best agreement between computed and experimental PRE and Residual Dipolar Coupling data, was obtained by considering that substrate-free MBP exists in equilibrium between a major, open state and a minor, semi-closed state, populated 5 percent of the time, which corresponds to a very small energy difference between the two states.
+The time-scale of the exchange between states was estimated to be between 20 ns to 20 s CITATION .
+From a theoretical point of view, it is understood that a pre-existing equilibrium between different PBP conformations could play an important role in facilitating ligand recognition CITATION.
+However, it remains a considerable challenge to access, using fully atomistic MD simulations, a detailed statistical analysis of slow conformational dynamics in proteins mediated by such hinge-bending motions.
+In the past decade, the development of increasingly efficient simulation algorithms has led to a large number of theoretical studies using Molecular Dynamics simulations to probe the intrinsic dynamics of PBPs CITATION, CITATION, CITATION, CITATION, CITATION, CITATION, CITATION, CITATION, CITATION.
+In 2003, Pang et al. CITATION studied the glutamine binding protein using 5 ns MD simulations.
+They observed large vibrations in the apo protein in the direction of a closed structure, and found that the open apo structure was more flexible than the closed structure.
+Subsequently, Pang et al. CITATION confirmed that this is a general result by performing a comparative study of different PBPs, which also showed that different PBPs could display slightly different dynamical properties.
+The authors also observed that the opening and closure rate in the presence of a substrate could be fast, even though they also noted that obtaining converged sampling for the opening and closure events was challenging on the nanosecond time-scale.
+In 2006, Kandt et al. CITATION performed longer MD simulations on BtuF, a protein involved in vitamin B 12 uptake.
+Using 12 simulations of 30 50 ns each, they were able to observe the initiation of opening and closing motions in both apo and holo simulations, with larger motions in the apo simulations.
+This behavior of the protein was interpreted to be compatible to the Venus Fly-trap model.
+The observation of enhanced molecular flexibility in the open state was confirmed by other groups for similar PBPs, such as the iron binding proteins FhuD CITATION, and FitE CITATION, and the heme binding proteins, ShuT, and PhuT CITATION.
+In 2009, Loeffler and Kitao CITATION studied GlnBP in the open liganded form, and reported closing events occurring during the simulations.
+Taken together, these MD studies on PBPs have helped characterize the intrinsic flexibility of ligand-free PBPs on the nanosecond time-scale.
+The consensus of opinion from these calculations is that the ligand recognition proceeds through a Venus flytrap mechanism, and that the apo PBPs structure is very flexible, with a tendency to oscillate along the modes that lead from the open to the closed structure.
+In 2005, a simulation study of the MBP protein was carried out by Stockner et al. CITATION.
+Using 4 MD simulations of 30 ns, started from both open and closed states, with and without substrate, the authors could show that the ligand-free MBP structure naturally evolves toward a closed state in the presence of a substrate.
+Similarly, the closed state was found to evolve toward an open state when the substrate was removed.
+The rapid time-scale of this conformational change was consistent with experimental rate constant for sugar binding 1 2 10 7 M 1 s 1 CITATION, which suggests a rate of closure around 30 50 ns.
+However, the time-scale of the simulations was too short to observe any pre-existing equilibrium in apo MBP between an open and a partially closed conformer.
+This can be explained by the presumed slow exchange rate CITATION between the two conformations of apo MBP.
+In this paper, we have used accelerated Molecular Dynamics simulations CITATION of MBP to show that the apo protein exists in a dynamical equilibrium between an open and a semi-closed conformation.
+A number of methods have been developed to enhance the sampling of slow conformational changes in proteins, including targeted MD CITATION, and conformational flooding CITATION.
+However, within the framework of this study, a key advantage of aMD is that it allows us to study the conformational behavior and dynamics of the protein without using a pre-defined reaction coordinate.
+In previous studies, aMD has been successfully employed to study slow time-scale dynamics in proteins, such as HIV-protease CITATION, ubiquitin CITATION, IKBA CITATION and H-Ras CITATION.
+The enhanced conformational space sampled by aMD has also been shown to significantly improve the theoretical prediction of experimental NMR observables, such as residual dipolar couplings, scalar J-couplings CITATION and chemical shifts CITATION, which are sensitive to dynamic averaging on the micro- to millisecond time-scale.
+In this paper, we show that aMD simulations successfully allow the study of the transition from the open state of apo MBP to the hidden semi-closed conformation.
+This provides the first atomistic view of the transition between open and partially closed states in a PBP.
+NMR parameters computed from the simulations agree well with experiments.
+Free energy calculations, and continuum electrostatics calculations are used to provide new insights into the mechanism and energetics of the exchange between the open and semi-closed states of apo MBP.

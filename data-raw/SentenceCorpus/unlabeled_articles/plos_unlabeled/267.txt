@@ -1,0 +1,37 @@
+### abstract ###
+The primary visual cortex is pre-wired to facilitate the extraction of behaviorally important visual features.
+Collinear edge detectors in V1, for instance, mutually enhance each other to improve the perception of lines against a noisy background.
+The same pre-wiring that facilitates line extraction, however, is detrimental when subjects have to discriminate the brightness of different line segments.
+How is it possible to improve in one task by unsupervised practicing, without getting worse in the other task?
+The classical view of perceptual learning is that practicing modulates the feedforward input stream through synaptic modifications onto or within V1.
+However, any rewiring of V1 would deteriorate other perceptual abilities different from the trained one.
+We propose a general neuronal model showing that perceptual learning can modulate top-down input to V1 in a task-specific way while feedforward and lateral pathways remain intact.
+Consistent with biological data, the model explains how context-dependent brightness discrimination is improved by a top-down recruitment of recurrent inhibition and a top-down induced increase of the neuronal gain within V1.
+Both the top-down modulation of inhibition and of neuronal gain are suggested to be universal features of cortical microcircuits which enable perceptual learning.
+### introduction ###
+Since Plato's Allegory of the Cave and Kant's Critique of Pure Reason, it is often suggested that our perception of objects in the outer world can never tell us what they really are.
+If men had green glasses in place of their eyes, they would perceive the objects as green, and never be able to tell whether this color was intrinsic to the objects or just of our perception.
+In a contemporary neuroscientific version of the empiricist's position, one may argue that the perception of visual objects is always distorted by the nonlinearities in the visual pathway, and in particular by the intrinsic circuitry of primary visual cortex.
+In fact, any visual input is filtered by the neuronal processing in V1 before reaching consciousness.
+For instance, collinear edges are enhanced by the intrinsic V1 circuitry CITATION, and our brightness perception will never match the physical luminance.
+Nevertheless, perceptual training without teacher feedback may still improve our brightness discrimination abilities CITATION, casting certain doubts about the strict empirical view.
+How then is it possible to reach more veridical perceptions by just pure reason, i.e., by intrinsically adapting the cortical dynamics without being told about the mismatch between percept and true physical quality?
+We show in a model that top-down modulation of V1 during unsupervised perceptual learning can suppress intrinsic nonlinearities in V1.
+The top-down suppression leads to a faithful neuronal representation of the sensory input.
+The underlying neuronal mechanisms are elaborated in an example of brightness discrimination.
+In this example, a flanking light bar which is closely aligned in prolongation of a test bar acts as a visual context.
+This flanking bar biases the brightness perception of the test bar.
+In the presence of the flanking bar, the test bar is perceived to be brighter than it actually is. Clearly, this enhanced brightness perception is helpful when extracting collinear line elements against some noisy background CITATION, CITATION.
+However, when the task consists of comparing the brightness of the test bar with a displaced single reference bar, then the collinear flank distorts the brightness comparison CITATION.
+The brightness of the test bar is overestimated because the underlying neuronal population representing the test bar within V1 is recurrently excited by the corresponding population representing the collinear flanking bar CITATION.
+We show that top-down input can remove this contextual bias by activating recurrent inhibition within V1.
+The recurrent inhibition cancels the lateral excitation and linearizes the brightness representation of the test bar, allowing for a faithful perception.
+An additional top-down induced gain increase in V1 further enhances the sensitivity to brightness differences.
+Perceptual learning, i.e., the change of perception following sensory experiences, is typically explained as a modification of either the feed-forward synaptic pathway to V1 CITATION CITATION, or recurrent connections within V1 CITATION CITATION triggered by repeated practicing.
+Because these synaptic modifications would affect any input stream through V1, however, perceptual learning would inevitably deteriorate the information processing in other situations.
+Although negative transfer of learning to other tasks is known to appear, perceptual learning is typically task-specific and does not deteriorate perception in other tasks; see, e.g., the reviews CITATION, CITATION.
+While improving in brightness discrimination between a context-modulated test bar and a displaced reference bar, for instance, the edge detection capability is expected to not suffer.
+In fact, the mutual enhancement of collinear light bars is advantageous for extracting lines in a noisy scene, as required for contour integration in everyday scenes CITATION.
+Hence, models of perceptual learning have to explain how improvement on one task is possible without interference with others.
+An intriguing possibility is that perceptual learning might be based on modifying a task-dependent top-down input to sensory areas, as opposed to a permanent change of the bottom-up input stream CITATION CITATION.
+Taking up this idea we show how top-down signaling from a higher cortical area to V1 could modify the neuronal processing in this lower area, consistent with both electrophysiological recordings in V1 and psychophysical experiments on perceptual learning.

@@ -1,0 +1,35 @@
+### abstract ###
+Perception is fundamentally underconstrained because different combinations of object properties can generate the same sensory information.
+To disambiguate sensory information into estimates of scene properties, our brains incorporate prior knowledge and additional auxiliary sensory information to constrain perceptual interpretations.
+For example, knowing the distance to an object helps in perceiving its size.
+The literature contains few demonstrations of the use of prior knowledge and auxiliary information in combined visual and haptic disambiguation and almost no examination of haptic disambiguation of vision beyond bistable stimuli.
+Previous studies have reported humans integrate multiple unambiguous sensations to perceive single, continuous object properties, like size or position.
+Here we test whether humans use visual and haptic information, individually and jointly, to disambiguate size from distance.
+We presented participants with a ball moving in depth with a changing diameter.
+Because no unambiguous distance information is available under monocular viewing, participants rely on prior assumptions about the ball's distance to disambiguate their -size percept.
+Presenting auxiliary binocular and/or haptic distance information augments participants' prior distance assumptions and improves their size judgment accuracy though binocular cues were trusted more than haptic.
+Our results suggest both visual and haptic distance information disambiguate size perception, and we interpret these results in the context of probabilistic perceptual reasoning.
+### introduction ###
+For well over a century CITATION, CITATION psychologists have considered the question of how the brain uses visual angle sensations to make judgments of an object's size, overcoming the confounding effect of its distance - but the topic remains unsettled.
+Holway and Boring CITATION found that when strong sensations of an object's distance were made available, human size matching performance at different distances was high, but when distance sensations were removed human perception of an object's size was erroneously dominated its visual angle.
+Epstein et al. CITATION surveyed literature regarding the size-distance invariance hypothesis CITATION, which holds that retinal visual angle constrains perception of an object's size and distance such that their ratio holds a constant value, and concluded the size-distance invariance hypothesis was subject to a variety of failures.
+Several studies attributed participants' mistaken size perceptions CITATION, CITATION CITATION to misjudgments of physical distance, while others point out that specific experimental design choices and task demands contribute to reported failures of size constancy CITATION CITATION.
+Recently Combe and Wexler CITATION reported that size constancy is stronger when the relative distance between observer and object varies due to observer motion, than when due to object motion.
+Such findings highlight the unsettled state of current empirical knowledge about human size and distance perception, which is exacerbated by the absence of a unified theoretical account for normative size/distance perception.
+We hypothesize that the brain makes size inferences by incorporating multiple sensations based on knowledge of their generative relationship with physical environment properties, and that failures like inaccuracy and systematic biases are due to poverty, unreliability, and/or mistrust, of observed sensations.
+Our experiments tackle the issue of how the brain incorporates distance information, in particular binocular and haptic, to jointly perceive of how an object's size is changing.
+Size-change perception, which surprisingly has not been studied in the size/distance perception literature, bears close similarity to static size perception because size-change judgments based on retinal image size are ambiguous if information about the object's motion-in-depth is unknown.
+However when auxiliary sensations indicating motion-in-depth are available, an observer may rule out size-change/motion combinations that are inconsistent with the auxiliary sensations, and unambiguously infer whether the object is inflating or deflating.
+We predicted that despite the inherent novelty of the stimuli, participants' abilities to discriminate whether an object inflated or deflated would depend on the availability and quality of information about its motion-in-depth.
+Because binocular and haptic sensations provide information about depth, we predicted that they would each be incorporated for improving size-change judgments.
+Thus our study answers two key questions: Does the brain use distance-change information for size-change perception?
+What are the roles of binocular and haptic distance-change information?
+Our size-change discrimination task presented participants with an object that either inflated or deflated while simultaneously either approaching or receding, and asked them to discriminate whether it inflated or deflated.
+Most static size perception tasks use matching paradigms, and our task was advantageous because it allowed us to present a single stimulus per trial, and avoid issues regarding relative comparison of pairs of stimuli.
+We provided participants with different types of auxiliary motion-in-depth information, binocular CITATION, CITATION, CITATION and haptic CITATION, CITATION, both in isolation and simultaneously, and examined their inflation/deflation judgments to evaluate how auxiliary distance information influenced perceived size-change.
+Evidence for the use of binocular and haptic distance information in size-change perception has not been reported, and previous studies of cue integration CITATION suggest the brain combines haptic and binocular information in proportion to its reliability to jointly improve spatial perception.
+We found that when distance-change information was absent, participants' size-change judgments closely matched object's image size-change.
+However, when we provided participants with auxiliary distance-change sensations, participants incorporated this additional information to form more accurate size percepts that were consistent with both monocular and auxiliary sensations.
+Moreover when both binocular and haptic information was presented, most participants showed greater disambiguation of size than when either was presented in isolation.
+These results suggest size-change perception uses knowledge of how multi-modal size and distance sensations are related to interpret the scene.
+We interpret these findings in the framework of probabilistic perceptual inference, in which available sensations are combined according to their relationship to scene properties and their respective reliabilities CITATION, CITATION .

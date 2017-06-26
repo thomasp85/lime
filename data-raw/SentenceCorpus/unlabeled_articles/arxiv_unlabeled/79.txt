@@ -1,0 +1,45 @@
+### abstract ###
+Solomonoff's central result on induction is that the prediction of a universal semimeasure  SYMBOL  converges rapidly and with probability 1 to the true sequence generating predictor  SYMBOL , if the latter is computable
+Hence,  SYMBOL  is eligible as a universal sequence predictor in case of unknown  SYMBOL
+Despite some nearby results and proofs in the literature, the stronger result of convergence for all (Martin-L{\"o}f) random sequences remained open
+Such a convergence result would be particularly interesting and natural, since randomness can be defined in terms of  SYMBOL  itself
+We show that there are universal semimeasures  SYMBOL  which do not converge to  SYMBOL  on all  SYMBOL -random sequences, ie \ we give a partial negative answer to the open problem
+We also provide a positive answer for some non-universal semimeasures
+We define the incomputable measure  SYMBOL  as a mixture over all computable measures and the enumerable semimeasure  SYMBOL  as a mixture over all enumerable nearly-measures
+We show that  SYMBOL  converges to  SYMBOL  and  SYMBOL  to  SYMBOL  on all random sequences
+The Hellinger distance measuring closeness of two distributions plays a central role
+### introduction ###
+A sequence prediction task is defined as to predict the next symbol  SYMBOL  from an observed sequence  SYMBOL
+The key concept to attack general prediction problems is Occam's razor, and to a less extent Epicurus' principle of multiple explanations
+The former/latter may be interpreted as to keep the simplest/all theories consistent with the observations  SYMBOL  and to use these theories to predict  SYMBOL
+Solomonoff  CITATION  formalized and combined both principles in his universal a priori semimeasure  SYMBOL  which assigns high/low probability to simple/complex environments  SYMBOL , hence implementing Occam and Epicurus
+Formally it can be represented as a mixture of all enumerable semimeasures
+An abstract characterization of  SYMBOL  by Levin  CITATION  is that  SYMBOL  is a universal enumerable semimeasure in the sense that it multiplicatively dominates all enumerable semimeasures
+Solomonoff's  CITATION  central result is that if the probability  SYMBOL  of observing  SYMBOL  at time  SYMBOL , given past observations  SYMBOL  is a computable function, then the universal predictor  SYMBOL  converges (rapidly )  with  SYMBOL -probability 1  (w p 1) for  SYMBOL  to the optimal/true/informed predictor  SYMBOL , hence  SYMBOL  represents a universal predictor in case of unknown ``true'' distribution  SYMBOL
+Convergence of  SYMBOL  to  SYMBOL  w p 1 tells us that  SYMBOL  is close to  SYMBOL  for sufficiently large  SYMBOL  for almost all sequences  SYMBOL
+It says nothing about whether convergence is true for any  particular  sequence (of measure 0)
+Martin-L{\"o}f (M L ) randomness is the standard notion for randomness of individual sequences  CITATION
+A M L -random sequence passes  all  thinkable effective randomness tests, eg \ the law of large numbers, the law of the iterated logarithm, etc
+In particular, the set of all  SYMBOL -random sequences has  SYMBOL -measure 1
+It is natural to ask whether  SYMBOL  converges to  SYMBOL  (in difference or ratio) individually for all M L -random sequences
+Clearly, Solomonoff's result shows that convergence may at most fail for a set of sequences with  SYMBOL -measure zero
+A convergence result for M L -random sequences would be particularly interesting and natural in this context, since M L -randomness can be defined in terms of  SYMBOL  itself  CITATION
+Despite several attempts to solve this problem  CITATION , it remained open  CITATION
+In this paper we construct an M L -random sequence and show the existence of a universal semimeasure which does not converge on this sequence, hence answering the open question negatively for some  SYMBOL
+It remains open whether there exist (other) universal semimeasures, probably with particularly interesting additional structure and properties, for which M L -convergence holds
+The main positive contribution of this work is the construction of a non-universal enumerable semimeasure  SYMBOL  which M L -converges to  SYMBOL  as desired
+As an intermediate step we consider the incomputable measure  SYMBOL , defined as a mixture over all computable measures
+We show M L -convergence of predictor  SYMBOL  to  SYMBOL  and of  SYMBOL  to  SYMBOL
+The Hellinger distance measuring closeness of two predictive distributions plays a central role in this work
+The paper is organized as follows: In Section~ we give basic notation and results (for strings, numbers, sets, functions, asymptotics, computability concepts, prefix Kolmogorov complexity), and define and discuss the concepts of (universal) (enumerable) (semi)measures
+Section~ summarizes Solomonoff's and G\'acs' results on predictive convergence of  SYMBOL  to  SYMBOL  with probability 1
+Both results can be derived from a bound on the expected Hellinger sum
+We present an improved bound on the expected exponentiated Hellinger sum, which implies very strong assertions on the convergence rate
+In Section~ we investigate whether convergence for all Martin-L{\"o}f random sequences hold
+We construct a  SYMBOL -M L -random sequence on which some universal semimeasures  SYMBOL  do not converge to  SYMBOL
+We give a non-constructive and a constructive proof of different virtue
+In Section~ we present our main positive result
+We derive a finite bound on the Hellinger sum between  SYMBOL  and  SYMBOL , which is exponential in the randomness deficiency of the sequence and double exponential in the complexity of  SYMBOL
+This implies that the predictor  SYMBOL  M L -converges to  SYMBOL
+Finally, in Section~ we show that  SYMBOL  is non-universal and asymptotically M L -converges to  SYMBOL , and summarize the computability, measure, and dominance properties of  SYMBOL ,  SYMBOL ,  SYMBOL , and  SYMBOL
+Section~ contains discussion and outlook

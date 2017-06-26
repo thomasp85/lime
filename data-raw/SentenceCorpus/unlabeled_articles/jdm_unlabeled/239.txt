@@ -1,0 +1,47 @@
+### abstract ###
+several decision-making models predict that it should be possible to affect real binary choices by manipulating the relative amount of visual attention that decision-makers pay to the two alternatives
+we present the results of three behavioral experiments testing this prediction
+visual attention is controlled by manipulating the amount of time subjects fixate on the two items
+the manipulation has a differential impact on appetitive and aversive items
+appetitive items are  NUMBER  to  NUMBER  percent  more likely to be chosen in the long fixation condition
+in contrast  aversive items are  NUMBER  percent  less likely to be chosen in the long fixation condition
+the effect is present for primary goods  such as foods  and for higher-order durable goods  such as posters
+### introduction ###
+many behavioral scientists believe that individuals make choices by first assigning values to objects and then selecting the option with the highest value  perhaps with some noise
+this raises several questions  how are the values that guide decisions henceforth called decision values computed
+how are values compared
+what are the properties of those processes
+these questions are receiving increasing amounts of attention in psychology  behavioral neuroscience  and neuroeconomics
+in particular  several models of how the decision values are computed and compared have been proposed  CITATION
+these models are based on a simple idea
+a decision value is a forecast  made prior to consumption  of the actual value that will be derived from consuming an item
+the models assume that decision values are computed by making repeated noisy estimates of the consumption value that are then integrated over time
+interestingly  some of these models have received considerable empirical support in both human behavioral and monkey electrophysiology experiments
+these models make some striking predictions with important behavioral and economic implications
+for example  they predict that the decision value assigned to an item  and thus the willingness-to-pay for it  can depend on the amount of time spent computing it  CITATION
+in a series of experiments testing this prediction  armel and rangel  CITATION  showed that the willingness-to-pay for appetitive items increases significantly with computation time  and that the opposite is true for aversive items
+krajbich  armel  and rangel  CITATION  extended this class of models to investigate the role of visual attention on binary choice
+their model  described in the next section  makes two stark predictions about the impact on choice of exogenous changes of visual attention
+firt  it predicts that it should be possible to increase the probability that an item be chosen by changing the relative amount of time that subjects fixate on the item during the decision-making process
+second  it predicts that the effect should be positive for appetitive items  and negative for aversive items
+this paper describes the results of three behavioral experiments testing these predictions
+to a large extent  the results are consistent with the predictions
+the properties of the value computation and comparison processes should be of interest to behavioral scientists since they determine the extent to which individuals are able to make quality choices  and the circumstances in which they are able to do so
+for example  the results in this paper suggest that incidental variables that affect visual attention  such as displays or lighting conditions  migh affect the choices that are made
+in addition  the properties of these processes could have important implications for the behavioral and welfare effects of practices such as in-store marketing
+our work is related to the literature on the construction of preference in behavioral economics and marketing that has studied the impact of several incidental variables on the computation of decision values  CITATION
+for example  weber and kirsner  CITATION  asked subjects to make choices between pairs of lotteries from a graphical display and compared two conditions  one in which larger payoffs were depicted with larger fonts  and one in which smaller payoffs were depicted with larger fonts
+they found that subjects were more willing to choose the riskier gamble with the potentially larger payoffs in the first condition
+a common interpretation of these results is that outcomes with the larger font size received more attention and that this lead to a relative overweithting of those outcomes
+related to this  tversky and kahneman  CITATION  have argued that the s-shaped probability weighting function of prospect theory is driven by perceptual biases that place excessive relative attention on very low and very high probability events  which as a result are overweighted relative to mid-range probabilities
+in all of these results  what is manipulated is the relative attention received by different dimensions of the choice problem e g   probabilities or gains
+in contrast  in this paper we show that changes in the relative amount of visual attention received by entire items can also affect the likelihood that they be chosen
+thus  our results do not depend on one dimension of choice being overweighted at the expense of another but  as highlighted in the model described in the next section  on the process of relative value comparison favoring one option at the expense of the other
+our work is also related to the literature on the mere exposure effect  CITATION
+a typical experiment shows that the subjects' reports about how much they like seeing an stimulus e g   a chinese ideogram or a foreign language word can be increased through repeated and brief previous exposures to the items  CITATION
+there are two important differences between the mee and the processes studied in this paper
+first  the mee is about how previous exposures affect the actual  consumption experience  of seeing the item  whereas we study how visual attention during the process of decision making affects the choices that are made
+thus  whereas mee is about the impact of repeated exposures on learning across trials  the effect that we investigate is about the impact of exposure time within a single decision trial
+second  whereas the mee is defined to be a  ramping up  of the positive liking ratings that result from consuming the items even if they are aversive  our effect looks more like an  amplification effect  which is positive for appetitive items but negative for aversive ones
+as far as we know  this is the first experimental study of the impact on decisions of exogenously and explicitly manipulated fixation durations during the process of choice
+the closest experiment is the work by shimojo et al CITATION  who study the role of visual attention on judgments about facial attractiveness

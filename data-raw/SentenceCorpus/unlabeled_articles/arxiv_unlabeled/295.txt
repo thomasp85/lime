@@ -1,0 +1,39 @@
+### abstract ###
+Most of the non-asymptotic theoretical work in regression is carried out for the square loss, where estimators can be obtained through closed-form expressions
+In this paper, we use and extend  tools from the convex optimization literature, namely self-concordant functions, to provide simple extensions of theoretical results for the square loss to the logistic loss
+We apply the extension techniques to logistic regression with regularization by the  SYMBOL -norm and regularization by the  SYMBOL -norm, showing that new results for binary classification through logistic regression can be easily derived from corresponding results for least-squares regression
+### introduction ###
+The theoretical analysis of statistical methods is usually greatly simplified when the estimators have   closed-form expressions
+For methods based on the minimization of a certain functional, such as M-estimation methods~ CITATION , this is true when the function to minimize is quadratic, i e , in the context of regression, for the square loss
+When such loss is used, asymptotic and non-asymptotic results may be derived with classical tools from probability theory (see, eg ,~ CITATION )
+When the function which is minimized in M-estimation is not amenable to closed-form solutions, local approximations are then needed for obtaining and analyzing a solution of the optimization problem
+In the asymptotic regime, this has led to interesting developments and extensions of results from the quadratic case, eg , consistency or asymptotic normality (see, eg ,~ CITATION )
+However, the situation is different when one wishes to derive non-asymptotic results, i e , results where all constants of the problem are explicit
+Indeed, in order to prove results as sharp as for the square loss, much notation and many assumptions have to be introduced regarding second and third derivatives; this makes the derived results much more complicated than the ones for closed-form estimators~ CITATION
+A similar situation occurs in convex optimization, for the study of Newton's method for obtaining solutions of unconstrained optimization problems
+It is known to be locally quadratically convergent for convex problems
+However, its classical analysis requires cumbersome notations and assumptions regarding second and third-order derivatives~(see, eg ,~ CITATION )
+This situation was greatly enhanced with the introduction of the notion of  self-concordant functions , i e , functions whose third derivatives are controlled by their second derivatives
+With this tool, the analysis is much more transparent~ CITATION
+While Newton's method is a commonly used algorithm  for logistic regression~(see, eg ,~ CITATION ), leading to iterative least-squares algorithms, we don't focus in the paper on the resolution of the optimization problems, but on the statistical analysis of the associated global minimizers
+In this paper, we aim to borrow tools from convex optimization and self-concordance to analyze the statistical properties of logistic regression
+Since the logistic loss is not itself a self-concordant function, we introduce in \mysec{self} a new type of functions with a different control of the third derivatives
+For these functions, we prove  two types of results: first, we provide lower and upper Taylor expansions, i e , Taylor expansions which are globally upper-bounding or lower-bounding a given function
+Second, we prove results on the behavior of Newton's method which are similar to the ones for self-concordant functions
+We then apply them in Sections~,  and~ to the one-step  Newton iterate from the population solution of the corresponding problem (i e ,  SYMBOL  or  SYMBOL -regularized logistic regression)
+This essentially shows that the analysis of logistic regression can be done  non-asymptotically  using the local quadratic approximation of the logistic loss,  without  complex additional assumptions
+Since this approximation corresponds to a weighted least-squares problem, results from least-squares regression can thus be naturally extended
+In order to consider such extensions and make sure that the new results closely match the corresponding ones for least-squares regression, we derive in Appendix~ new Bernstein-like concentration inequalities for quadratic forms of bounded random variables, obtained from general results on U-statistics~ CITATION
+We first apply in \mysec{L2} the extension technique to regularization by the  SYMBOL -norm, where we consider two settings, a situation  with no assumptions regarding the conditional distribution of the observations, and another one where the model is assumed well-specified and we derive asymptotic expansions of the generalization performance with explicit bounds on remainder terms
+In \mysec{L1}, we consider regularization by the  SYMBOL -norm and extend two known recent results for the square loss, one on model consistency~ CITATION  and one on prediction efficiency~ CITATION
+The main contribution of this paper is to make these extensions as simple as possible, by allowing the use of non-asymptotic second-order Taylor expansions \paragraph{Notation }    For  SYMBOL  and  SYMBOL , we  denote by  SYMBOL  the  SYMBOL -norm of  SYMBOL , defined as  SYMBOL
+We also denote by  SYMBOL  its  SYMBOL -norm
+We   denote by  SYMBOL  and  SYMBOL  the largest and smallest eigenvalue of a symmetric matrix  SYMBOL
+We use the notation  SYMBOL  (resp
+SYMBOL ) for the positive semi-definiteness of the matrix  SYMBOL  (resp
+SYMBOL )
+For    SYMBOL ,  SYMBOL  denotes the sign of  SYMBOL , defined as  SYMBOL  if  SYMBOL ,  SYMBOL  if  SYMBOL , and  SYMBOL  if  SYMBOL
+For a vector  SYMBOL ,  SYMBOL  denotes the   vector of signs of elements of  SYMBOL
+Moreover, given a vector  SYMBOL  and a subset  SYMBOL  of  SYMBOL ,   SYMBOL  denotes the cardinal of the set  SYMBOL ,  SYMBOL  denotes the vector in  SYMBOL  of elements of  SYMBOL  indexed by  SYMBOL
+Similarly, for a matrix  SYMBOL ,  SYMBOL   denotes the submatrix of   SYMBOL  composed of elements of  SYMBOL  whose rows are in  SYMBOL  and columns are in  SYMBOL
+Finally, we let denote  SYMBOL  and  SYMBOL  general probability measures and expectations

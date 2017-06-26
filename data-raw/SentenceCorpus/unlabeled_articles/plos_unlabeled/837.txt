@@ -1,0 +1,53 @@
+### abstract ###
+Microarray comparative genomic hybridisation provides an estimate of the relative abundance of genomic DNA taken from comparator and reference organisms by hybridisation to a microarray containing probes that represent sequences from the reference organism.
+The experimental method is used in a number of biological applications, including the detection of human chromosomal aberrations, and in comparative genomic analysis of bacterial strains, but optimisation of the analysis is desirable in each problem domain.
+We present a method for analysis of bacterial aCGH data that encodes spatial information from the reference genome in a hidden Markov model.
+This technique is the first such method to be validated in comparisons of sequenced bacteria that diverge at the strain and at the genus level: Pectobacterium atrosepticum SCRI1043 and Dickeya dadantii 3937 ; and Lactococcus lactis subsp.
+lactis IL1403 and L. lactis subsp.
+cremoris MG1363.
+In all cases our method is found to outperform common and widely used aCGH analysis methods that do not incorporate spatial information.
+This analysis is applied to comparisons between commercially important plant pathogenic soft-rotting enterobacteria Pba1043, P. atrosepticum SCRI1039, P. carotovorum 193, and Dda3937.
+Our analysis indicates that it should not be assumed that hybridisation strength is a reliable proxy for sequence identity in aCGH experiments, and robustly extends the applicability of aCGH to bacterial comparisons at the genus level.
+Our results in the SRE further provide evidence for a dynamic, plastic accessory genome, revealing major genomic islands encoding gene products that provide insight into, and may play a direct role in determining, variation amongst the SRE in terms of their environmental survival, host range and aetiology, such as phytotoxin synthesis, multidrug resistance, and nitrogen fixation.
+### introduction ###
+Microarray comparative genomic hybridisation provides an estimate of the relative abundance of genomic DNA taken from comparator and reference organisms by hybridisation to a microarray containing probes that represent sequences from the reference organism.
+This method has been used in a number of biological applications, including the detection of human chromosomal aberrations CITATION, CITATION ; comparisons of bacterial human pathogens CITATION CITATION ; bacterial plant pathogens CITATION, CITATION ; industrially-important bacteria CITATION ; and comparative transcriptomics of Xenopus laevis CITATION .
+Numerous algorithms and software packages have been applied to the analysis of this aCGH data in prokaryotes.
+The majority of these partition reference organism sequences into two mutually exclusive classes: sequences that are present and sequences that are absent or divergent in the comparator organism CITATION, CITATION, CITATION, CITATION.
+Observed hybridisation data are, in each case, assumed to be reliable proxies for these classes.
+In this manuscript we describe and apply an improved method for analysis of aCGH data from bacterial genome comparisons.
+This method incorporates spatial information about CDS location on the reference genome in a hidden Markov model.
+This spatial information is expected to capture pertinent biological and evolutionary information, such as operon structure, and regions of lateral gene transfer.
+Our approach differs from previously proposed, and widely-used, methods applied to bacterial aCGH, such as GACK and MPP, that consider hybridisation intensities of each reference probe as measurements that are independent of their genomic location CITATION, CITATION, and is thus more similar to methods such as ArrayLeaRNA CITATION, which incorporates predicted operon structure into interpretations of microarray expression data, for a restricted set of organisms.
+We compare the relative performance of our method to commonly used bacterial aCGH analysis algorithms and software.
+We demonstrate that several assumptions of common bacterial aCGH analysis methods concerning the relationship between observed hybridisation scores and ratios and the presence or absence of a reference CDS in the comparator organism do not always hold strongly, and that this is particularly the case for more distantly-related organisms.
+Our data in particular do not support a distinction between present and absent or divergent classes of sequence, but rather between those sequences in the reference organism that do, and those that do not, have putative orthologues in the comparator genome.
+We find that the HMM is a better predictor of reference sequences that do not have a putative orthologue in the comparator organism than the other methods tested.
+Spatial organisation of sequences on the reference genome has previously been incorporated into methods applied to aCGH analyses of copy number variation in human genomes.
+This has been represented using HMM CITATION and segmentation methods CITATION.
+Simple smoothing methods have also been used to identify breakpoints in this data CITATION.
+However, the problem domain of human copy number aCGH differs from the problem domain of bacterial comparative genomic aCGH.
+To the best of our knowledge, this study describes the first application of a method incorporating such spatial information to aCGH for comparative genomics of unsequenced bacteria, and the first demonstration of the applicability of the technique as a whole across bacterial genera.
+Pectobacterium atrosepticum, Pectobacterium carotovorum, and Dickeya spp.
+are plant pathogenic soft-rotting enterobacteria that share a common ancestor.
+Despite their many similarities, these commercially significant pathogens differ in their host range, geographical distribution, aetiology and environmental persistence CITATION.
+The molecular origins of these differences are not well understood, but this ecological flexibility is likely indicative of a dynamic, plastic genome with core and accessory components.
+There are currently two publicly available annotated genomes for these organisms: Pba strain SCRI1043 CITATION, and Dickeya dadantii strain 3937.
+The availability of these sequences has rapidly advanced our understanding of these organisms, but broader comparisons are expected to deliver greater insight into the evolution and function of the SRE.
+The major common virulence factors of the SRE are plant cell wall degrading enzymes that degrade the plant cell wall to release nutrients in a so-called brute force attack CITATION CITATION.
+Other virulence factors include virulence-associated secretion systems, siderophores, cell-surface polysaccharides and agglutinins CITATION, CITATION .
+By contrast, bacterial plant pathogens such as Pseudomonas spp.
+are associated with a biotrophic stealth interaction with the host.
+These stealth pathogens employ mechanisms such as the type III secretion system to translocate effectors into host cells.
+The effectors modulate the host plant's biochemical responses, implementing a wide array of strategies to circumvent host immunity CITATION CITATION.
+However, Pba1043, Dda3937, and other SREs also encode a functioning T3SS and other gene products associated with this stealth interaction, indicating a more complex relationship with their hosts than simple brute-force necrotrophy CITATION, CITATION CITATION.
+Key factors with a confirmed role in virulence include type IV and type VI secretion systems, and the phytotoxin coronafacic acid, which is synthesised by the cfa gene cluster CITATION, CITATION.
+Other factors associated with persistence in, and adaptation to, the wider environment have been identified, such as genes associated with opine uptake, biofilm formation, antibiotic production, and nitrogen fixation CITATION .
+In many bacteria, such genes associated with pathogenicity, and other phenotypically-distinguishing characters, are frequently associated with islands of horizontal gene transfer.
+This gene complement is often variable between strains and species, and is sometimes termed the accessory genome, in order to distinguish it from the core genome that provides functionality presumed to be essential to all related organisms CITATION, CITATION, CITATION, CITATION CITATION.
+We expect that observed differences between the gene complements of SRE will reflect differences in their phenotypes, and adaptations to their distinct environments, and that these differences will be preferentially located in islands of genes in their genomes.
+We use aCGH and apply our analysis method to identify genomic islands in Pba1043 that do not have putative orthologues in the unsequenced Pba strain SCRI1039 and Pcc strain SCRI193, and in the sequenced Dda3937.
+In this study, coding sequences from Pba1043 that are predicted by aCGH to be absent or divergent in Pba1039, Pcc193 or Dda3937 are of interest because they may potentially contribute to Pba1043-specific phenotypes, including host interactions.
+Pairwise comparisons between Pba1043 and these three organisms span a range of evolutionary distances since their most recent common ancestor with Pba1043, and represent variation at strain, species and genus levels.
+Our results for the SRE support a hypothesis that the genomes of SRE continue to be modified by the acquisition of genomic islands, and the model of an accessory genome of niche-specific functionality that is composed, at least in part, of horizontally-acquired genomic islands.
+We identify major differences in the CDS carried within the accessory genomes of SRE and, while these recapitulate previous observations of major genomic islands made using alternative approaches CITATION, CITATION, we also find a number of unexpected differences that provide insight into, and may play a direct role in determining, variation amongst the SRE in terms of their environmental survival, host range and aetiology.

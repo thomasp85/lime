@@ -1,0 +1,47 @@
+### abstract ###
+Ensemble methods, such as stacking, are designed to boost predictive accuracy by blending the predictions of multiple machine learning models
+Recent work has shown that the use of meta-features, additional inputs describing each example in a dataset, can boost the performance of ensemble methods, but the greatest reported gains have come from nonlinear procedures requiring significant tuning and training time
+Here, we present a linear technique, Feature-Weighted Linear Stacking (FWLS), that incorporates meta-features for improved accuracy while retaining the well-known virtues of linear regression regarding speed, stability, and interpretability
+FWLS combines model predictions linearly using coefficients that are themselves linear functions of meta-features
+This technique was a key facet of the solution of the second place team in the recently concluded Netflix Prize competition
+Significant increases in accuracy over standard linear stacking are demonstrated on the Netflix Prize collaborative filtering dataset
+### introduction ###
+``Stacking'' is a technique in which the predictions of a collection of models are given as inputs to a second-level learning algorithm
+This second-level algorithm is trained to combine the model predictions optimally to form a final set of predictions
+Many machine learning practitioners have had success using stacking and related techniques to boost prediction accuracy beyond the level obtained by any of the individual models
+In some contexts, stacking is also referred to as blending, and we will use the terms interchangeably here
+Since its introduction  CITATION , modellers have employed stacking successfuly on a wide variety of problems, including chemometrics  CITATION , spam filtering  CITATION , and large collections of datasets drawn from the UCI Machine learning repository  CITATION
+One prominent recent example of the power of model blending was the Netflix Prize collaborative filtering competition
+The team  BellKor's Pragmatic Chaos  won the \$1 million prize using a blend of hundreds of different models  CITATION
+Indeed, the winning solution was a blend at multiple levels, i e , a blend of blends
+Intuition suggests that the reliability of a model may vary as a function of the conditions in which it is used
+For instance, in a collaborative filtering context where we wish to predict the preferences of customers for various products, the amount of data collected may vary significantly depending on which customer or which product is under consideration
+Model A may be more reliable than model B for users who have rated many products, but model B may outperform model A for users who have only rated a few products
+In an attempt to capitalize on this intuition, many researchers have developed approaches that attempt to improve the accuracy of stacked regression by adapting the blending on the basis of side information
+Such an additional source of information, like the number of products rated by a user or the number of days since a product was released, is often referred to as a ``meta-feature,'' and we will use that terminology here
+Unsurprisingly, linear regression is the most common learning algorithm used in stacked regression
+The many virtues of linear models are well known to modellers
+The computational cost involved in fitting such models (via the solution of a linear system) is usually modest and always predictable
+They typically require a minimum of tuning
+The transparency of the functional form lends itself naturally to interpretation
+At a minimum, linear models are often an obvious initial attempt against which the performance of more complex models is benchmarked
+Unfortunately, linear models do not (at first glance) appear to be well suited to capitalize on meta-features
+If we simply merge a list of meta-features with a list of models to form one overall list of independent variables to be linearly combined by a blending algorithm, then the resulting functional form does not appear to capture the intuition that the relative emphasis given the predictions of various models should depend on the meta-features, since the coefficient associated with each model is constant and unaffected by the values of the meta-features
+Previous work has indeed suggested that nonlinear, iteratively trained models are needed to make good use of meta-features for blending
+The winning Netflix Prize submission of  BellKor's Pragmatic Chaos  is a complex blend of many sub-blends, and many of the sub-blends use blending techniques which incorporate meta-features
+The number of user and movie ratings, the number of items the user rated on a particular day, the date to be predicted, and various internal parameters extracted from some of the recommendation models were all used within the overall blend
+In almost all cases, the algorithms used for the sub-blends incorporating meta-features were nonlinear and iterative, i e , either a neural network or a gradient-boosted decision tree
+In  CITATION , a system called STREAM (Stacking Recommendation Engines with Additional Meta-Features) which blends recommendation models is presented
+Eight meta-features are tested, but the results showed that most of the benefit came from using the number of user ratings and the number of item ratings, which were also two of the most commonly used meta-features by  BellKor's Pragmatic Chaos
+Linear regression, model trees, and bagged model trees are used as blending algorithms with bagged model trees yielding the best results
+Linear regression was the least successful of the approaches
+Collaborative filtering is not the only application area where the use of meta-features or other dynamic approaches to model blending has been attempted
+In a classification problem context  CITATION , Dzeroski and Zenko attempt to augment a linear regression stacking algorithm by meta-features such as the entropy of the predicted class probabilities, although they found that it yielded limited benefit on a suite of tasks from the UC Irvine machine learning repository
+An approach which does not use meta-features per se but which does employ an adaptive approach to blending is described by Puuronen, Terziyan, and Tsymbal  CITATION
+They present a blending algorithm based on weighted nearest neighbors which changes the weightings assigned to the models depending on estimates of the accuracies of the models within particular subareas of the input space
+Thus, a survey of the pre-existing literature suggests that nonparametric or iterative nonlinear approaches are usually required in order to make good use of meta-features when blending
+The method presented in this paper, however, can capitalize on meta-features while being fit via linear regression techniques
+The method does not simply add meta-features as additional inputs to be regressed against
+It parametrizes the coefficients associated with the models as linear functions of the meta-features
+Thus, the technique has all the familiar speed, stability, and interpretability advantages associated with linear regression while still yielding a significant accuracy boost
+The blending approach was an important part of the solution submitted by  The Ensemble , the team which finished in second place in the Netflix Prize competition

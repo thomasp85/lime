@@ -1,0 +1,42 @@
+### abstract ###
+Intrinsically disordered regions serve as molecular recognition elements, which play an important role in the control of many cellular processes and signaling pathways.
+It is useful to be able to predict positions of disordered regions in protein chains.
+The statistical analysis of disordered residues was done considering 34,464 unique protein chains taken from the PDB database.
+In this database, 4.95 percent of residues are disordered.
+The statistics were obtained separately for the N- and C-termini as well as for the central part of the protein chain.
+It has been shown that frequencies of occurrence of disordered residues of 20 types at the termini of protein chains differ from the ones in the middle part of the protein chain.
+Our systematic analysis of disordered regions in PDB revealed 109 disordered patterns of different lengths.
+Each of them has disordered occurrences in at least five protein chains with identity less than 20 percent.
+The vast majority of all occurrences of each disordered pattern are disordered.
+This allows one to use the library of disordered patterns for predicting the status of a residue of a given protein to be ordered or disordered.
+We analyzed the occurrence of the selected patterns in three eukaryotic and three bacterial proteomes.
+### introduction ###
+Prediction of protein structure and function is one of the general directions in structural genomics.
+Of special interest is prediction of the so-called disordered regions of protein chain.
+Such disordered regions often play an important functional role.
+It should be emphasized that one type of disordered regions are structured only when they bind to other molecules CITATION, , or under changing the conditions of biochemical medium CITATION, CITATION, but the other kinds of disordered regions are always disordered and never become structured.
+Disordered regions of protein chains often cause complications upon expression, purification and crystallization of such proteins.
+At present, more than 500 proteins with disordered regions are described in the Disprot database CITATION.
+These proteins and domains are either entirely unstructured in the native state or have lengthy disordered regions.
+At that functionally important protein regions in such proteins are outside of globular domains, i.e. just in the disordered regions CITATION, CITATION .
+Since disordered regions of the protein chain play an important role in the protein functioning, much attention is being paid to their examination and prediction CITATION, CITATION.
+Indeed it has been shown that disordered proteins have certain properties which distinguish them from proteins with well-defined structures CITATION.
+Abundance of intrinsic disorder in PDB was discussed in a recent study CITATION.
+Typically, disordered regions have a low aromatic content and high net charge as well as low sequence complexity and high flexibility CITATION CITATION .
+Prediction methods aim to identify disordered regions through the analysis of amino acid sequences using mainly the physico-chemical properties of the amino acids CITATION CITATION or evolutionary conservation CITATION CITATION .
+It can be suggested that if one and the same pattern corresponds to disordered regions in the protein structures then it is highly probable that such a pattern will be disordered in other proteins..
+Search for disordered patterns is an important task for prediction of disordered regions and search for the functioning of the considered motifs.
+The identification of essential features within protein domains can greatly facilitate their functional characterization.
+There are well established databases on protein motif or domain information, such as PROSITE, InterPro and Pfam CITATION CITATION .
+Creation of a library of disordered patterns is one of the primary tasks in this respect.
+There is no information about such a library.
+Until now we have known the PEST motif which in most cases is a degradation motif CITATION and the RGD motif which can be found in extracellular matrix proteins such as fibronectin, fibrinogen, prothrombin, tenascin, thrombospondin, vitronectin, and etc. CITATION, CITATION.
+The exposed RGD motif constitutes a major recognition site for integrin binding CITATION .
+In this work we have been interested in stretches of disordered residues.
+As a rule such stretches are short loops inside globular domains and present only one type of disorder, because disordered proteins range from molten globules to chains having no structural preferences whatsoever and from 2 3 residues to several hundreds or even thousands of residues CITATION, CITATION CITATION.
+We have analyzed disordered regions and have created a library of disordered motifs and their positions in protein chains from the entire Protein Databank CITATION.
+Taking into account the consideration of the library of disordered patterns will help in improving accuracies of predictions for residues to be structured or unstructured inside the given region.
+Moreover, our new statistics on the occurrence of unstructured residues will be useful for those who are dealing with prediction of the status of residues to be ordered or disordered.
+Combining the motif discovery and disorder protein segment identification in the PDB is a new and promising approach for further studying and understanding the functional role of the obtained patterns in different proteomes.
+The question about specificity of these patterns is more important for biological functioning.
+We have analyzed the occurrence of the obtained patterns in some eukaryotic proteomes and in some bacterial proteomes .

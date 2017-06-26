@@ -1,0 +1,51 @@
+### abstract ###
+Critical to our many daily choices between larger delayed rewards, and smaller more immediate rewards, are the shape and the steepness of the function that discounts rewards with time.
+Although research in artificial intelligence favors exponential discounting in uncertain environments, studies with humans and animals have consistently shown hyperbolic discounting.
+We investigated how humans perform in a reward decision task with temporal constraints, in which each choice affects the time remaining for later trials, and in which the delays vary at each trial.
+We demonstrated that most of our subjects adopted exponential discounting in this experiment.
+Further, we confirmed analytically that exponential discounting, with a decay rate comparable to that used by our subjects, maximized the total reward gain in our task.
+Our results suggest that the particular shape and steepness of temporal discounting is determined by the task that the subject is facing, and question the notion of hyperbolic reward discounting as a universal principle.
+### introduction ###
+In the limited amount of time available before nighttime, winter, or retirement, we need to make a large number of choices to maximize our total reward gain.
+In particular, when choosing between a larger, but delayed, reward, and a smaller, but more immediate reward, we compare the values associated with each reward, and choose the reward associated with the larger value CITATION.
+Critical to these choices are the shape and the steepness of the reward values, which monotonically decrease as a function of the delay: the rewards are said to be discounted as a function of the delays .
+Two main classes of models that characterize the shape of reward discounting have been proposed: exponential CITATION CITATION and hyperbolic CITATION CITATION.
+Although researchers in artificial intelligence favor exponential discounting in uncertain environments, e.g., CITATION, CITATION, CITATION, all behavioral studies that have directly compared the two types of discounting in animals or humans have concluded that hyperbolic discounting better fits delayed reward choice data than does exponential discounting, e.g., CITATION CITATION, CITATION CITATION .
+In exponential discounting, the reward value V is given by: FORMULAwhere R is the reward magnitude, D the delay, and k 0 the decay rate.
+This equation is equivalently given by: FORMULAwhere is the discount factor, and exp; we note here that a large decay rate corresponds to a small discount factor and vice versa.
+Because of constant decay rate, exponential discounting is rational, as it predicts constant preference.
+Typical human studies are questionnaire-based: subjects are asked to make a number of choices between small immediate rewards and larger rewards weeks, months, or years in the future, after thinking about the consequences of each alternative CITATION.
+In these studies, the hyperbolic discounted reward value is given by: FORMULA
+In animal studies, animals are trained to make repeated reward choices, and experience both delays and rewards.
+Assuming a constant inter-trial interval, if the animal consistently makes a choice that gives the same reward R after the same delay D, the average reward rate is the hyperbolic function of the delay CITATION : FORMULAwhere T is the sum of all times except the delay in each trial, and V the reward value.
+Because of the decreasing decay rate as a function of delay CITATION, hyperbolic discounting has been termed irrational, as it predicts preference reversal and impulsive choice.
+For instance, an individual may prefer one apple today to two apples tomorrow, but at the same time prefer two apples in 51 days to one apple in 50 days CITATION.
+Hyperbolic discounting is often presented as a struggle between oneself and one's alter ego in the future, or similarly, between a myopic doer and a farsighted planner see CITATION, CITATION.
+In what situations is it theoretically advantageous to make delayed reward choices based on exponential or hyperbolic discounting?
+Exponential discounting maximizes total gain in situations of constant probability of reward loss per unit time, and exact estimate of the time of the future reward delivery see CITATION, CITATION.
+Because hyperbolic discounted value, as given by Equation 4, is the reward rate, it maximizes the total gain in situations of constant delays at each trial .
+But does hyperbolic discounting maximize the total gain in foraging-like situations, that is, in situations of repeated forced choices with varying delays to the rewards, constant ITI, and limited total time?
+In these situations, the hyperbolic discounting model maximizes the instantaneous reward rate.
+But, as the trials are not independent from each other, hyperbolic discounting may not maximize the average reward rate, and thus the total gain.
+For instance, in a relatively unfavorable trial with long delays to both rewards, although hyperbolic discounting may favor the large reward, pursuing the small more immediate reward may result in a smaller overall decrease of the average reward rate.
+By choosing the small but less-delayed reward, the subject can quickly move to the next more favorable trials.
+Thus, we hypothesize that, in these situations, a discounting strategy that values rewards with longer delays less than hyperbolic discounting, as exponential discounting does, would maximize total gain.
+The steepness of discounting specifies how far in the future delayed rewards should be considered.
+A large decay rate biases individuals to acquire small and more immediate rewards.
+Individuals with impulse-control disorders, as well as heroin-, alcohol-, cigarette-, and cocaine-addicted individuals, have steeper discounting functions than controls CITATION, CITATION CITATION.
+A small decay rate promotes the acquisition of large and more delayed rewards.
+Yet, individuals must obtain some rewards in time; for instance, an animal must find food before it starves, or before it is exhausted, or before winter arrives.
+Thus, the discount rate should be carefully adjusted to maximize total gain in task situations of repeated forced choices with varying delays to the rewards and limited total time CITATION, CITATION .
+Here, we designed a task that mimics animal foraging to study whether humans could adopt a discounting function whose shape and steepness maximize total gain.
+At each trial, subjects had to choose between a smaller more immediate reward and a larger delayed reward, with varying experienced delays to the rewards, and fixed ITI.
+To avoid subjects trying to compute explicit reward ratios, or other objective measures of reward discounting, we did not provide direct access to the delay.
+Instead, subjects had to select, at each trial, between one of two squares made of 100 small patches.
+The stimulus color coded for the monetary reward amount.
+At each trial, the initial number of black patches in the white stimulus indicated the small delay D S, and the initial number of black patches in the yellow stimulus indicated large delay D L. The subject was then prompted to choose one of the two stimuli: the stimulus that had been selected in the previous step showed more filled patches, and the other stimulus was identical to that of the previous step.
+The stimuli were always displayed for one time step.
+This chain of events was repeated until either square was completely filled.
+Then a display of the acquired reward was shown during ITI 1.5 s .
+In the experiment, total time was limited to five sessions of 210 s each, separated by 15 s to give the subject some rest time.
+Thus, each subject had 700 steps available to maximize the total reward.
+Because the subjects performed a minimum of one training session of equal duration before the experiment, they were highly familiar with the task.
+Subjects were compensated by the total reward earned at the end of the experiment.

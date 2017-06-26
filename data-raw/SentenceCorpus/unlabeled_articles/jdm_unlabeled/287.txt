@@ -1,0 +1,14 @@
+### abstract ###
+some people find it more difficult to delay rewards than others
+in three experiments  we tested a  future self-continuity  hypothesis that individual differences in the perception of one's present self as continuous with a future self would be associated with measures of saving in the laboratory and everyday life
+higher future self-continuity assessed by a novel index predicted reduced discounting of future rewards in a laboratory task  more matches in adjectival descriptions of present and future selves  and greater lifetime accumulation of financial assets even after controlling for age and education
+in addition to demonstrating the reliability and validity of the future self-continuity index  these findings are consistent with the notion that increased future self-continuity might promote saving for the future
+### introduction ###
+self-continuity represents one of the most enduring puzzles of personal identity  pondered by ancient greek and buddhist thinkers alike  CITATION
+if the body changes over time - eventually being replaced by entirely new material - at what point does the old self become an entirely new and distinct being
+self-continuity might vary by individual  with some individuals endorsing greater connection to their future selves than others
+beyond philosophical appeal  individual differences in the experience of self-continuity could have pragmatic consequences for financial well-being
+according to one philosophical account  CITATION   if individuals consider their future selves as different people  they may have no more reason to reward the future self than to give resources to strangers  CITATION
+a continuous variant of this account called the  future self-continuity  hypothesis predicts that people who experience no continuity with a future self should not save for that future self  CITATION
+accordingly  neural indices of future self-continuity predict valuation of future rewards assessed one week later  CITATION
+in three experiments  we further explored this future self-continuity hypothesis by devising an index of individual differences in future self-continuity and examining whether it would correlate with valuation of delayed rewards  both in laboratory tasks and with respect to real-world savings

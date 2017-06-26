@@ -1,0 +1,23 @@
+### abstract ###
+% Explaining adaptive behavior is a central problem in artificial intelligence research
+Here we formalize adaptive agents as mixture distributions over sequences of inputs and outputs (I/O)
+Each distribution of the mixture constitutes a `possible world', but the agent does not know which of the possible worlds it is actually facing
+The problem is to adapt the I/O stream in a way that is compatible with the true world
+A natural measure of adaptation can be obtained by the Kullback-Leibler (KL) divergence between the I/O distribution of the true world and the I/O distribution expected by the agent that is uncertain about possible worlds
+In the case of pure input streams, the Bayesian mixture provides a well-known solution for this problem
+We show, however, that in the case of I/O streams this solution breaks down, because outputs are issued by the agent itself and require a different probabilistic syntax as provided by intervention calculus
+Based on this calculus, we obtain a Bayesian control rule that allows modeling adaptive behavior with mixture distributions over I/O streams
+This rule might allow for a novel approach to adaptive control based on a minimum KL-principle
+### introduction ###
+The ability to adapt to unknown environments is often considered a hallmark of intelligence  CITATION
+Agent and environment can be conceptualized as two systems that exchange symbols in every time step  CITATION : the symbol issued by the agent is an action, whereas the symbol issued by the environment is an observation
+Thus, both agent and environment can be conceptualized as probability distributions over sequences of actions and observations (I/O streams)
+If the environment is perfectly known then the I/O probability distribution of the agent can be tailored to suit this particular environment
+However, if the environment is unknown, but known to belong to a set of possible environments, then the agent faces an adaptation problem
+Consider, for example, a robot that has been endowed with a set of behavioral primitives and now faces the problem of how to act while being ignorant as to which is the correct primitive
+Since we want to model both agent and environment as probability distributions over I/O sequences, a natural way to measure the degree of adaptation would be to measure the `distance' in probability space between the I/O distribution represented by the agent and the I/O distribution conditioned on the true environment
+A suitable measure (in terms of its information-theoretic interpretation) is readily provided by the KL-divergence  CITATION
+In the case of passive prediction, the adaptation problem has a well-known solution
+The distribution that minimizes the KL-divergence is a Bayesian mixture distribution over all possible environments  CITATION
+The aim of this paper is to extend this result for distributions over both inputs and outputs
+The main result of this paper is that this extension is only possible if we consider the special syntax of actions in probability theory as it has been suggested by proponents of causal calculus  CITATION

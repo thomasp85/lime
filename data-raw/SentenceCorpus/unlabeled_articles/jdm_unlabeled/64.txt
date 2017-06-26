@@ -1,0 +1,28 @@
+### abstract ###
+as the study of moral judgments grows  it becomes imperative to compare results across studies in order to create unified theories within the field
+these efforts are potentially undermined  however  by variations in wording used by different researchers
+the current study sought to determine whether  when  and how variations in wording influence moral judgments
+online participants responded to  NUMBER  different moral vignettes e g   the trolley problem using  NUMBER  of  NUMBER  adjectives   wrong    inappropriate    forbidden   or  blameworthy 
+for half of the sample  these adjectives were preceded by the adverb  morally 
+results indicated that people were more apt to judge an act as wrong or inappropriate than forbidden or blameworthy  and that disgusting acts were rated as more acceptable when  morally  was included
+although some wording differences emerged  effects sizes were small and suggest that studies of moral judgment with different wordings can legitimately be compared
+### introduction ###
+more and more psychological and neuroscientific research on moral judgments appears each year
+as fascinating results accumulate  the question arises of whether and how individual studies fit together to form a larger picture
+in order to connect various studies and guide future work in this field  researchers need to determine which studies conflict  which support each other  and which are simply talking past each other
+unfortunately  precise comparisons are hampered by the use of different moral terms across studies
+different researchers ask whether acts are wrong  CITATION   forbidden versus permitted  CITATION   inappropriate  CITATION  or deserve blame  CITATION
+some researchers include the adverb  morally  before these terms  CITATION   whereas others do not  CITATION
+it is unclear whether judgments of what is morally wrong vary in response to the same factors as do judgments of what is forbidden  inappropriate  or blameworthy
+some evidence comes from a meta-analysis on the asymmetry between  forbid  versus  allow  in attitudes research
+this study demonstrated that people are reluctant to forbid but will readily not allow  even though these judgments are conceptually equivalent  CITATION
+this asymmetry suggests that moral judgments  as well  may be influenced by subtle variations in wording
+further evidence from cushman  CITATION  showed that harmless acts were judged as more wrong than blameworthy only when the act was intended and believed to cause harm
+this finding also suggests that people  in some circumstances  will draw fine distinctions between moral terms
+until the effects of wording variations are understood  we cannot tell whether studies on similar moral issues couched in different terms really agree or disagree
+in addition  some wording effects on moral judgments would undermine the search for a moral faculty
+some researchers suggest that moral judgments result from innate psychological mechanisms  or even a moral module that conforms to a universal moral grammar  CITATION
+others propose dual-process models that build emotions or beliefs  desires  and consequences into the processes that form moral judgments  CITATION
+these theories and many more would be challenged if people judge acts in very different ways based on the moral terms used  because psychologically real mechanisms would be unlikely to vary markedly with such fine differences in wording within a particular natural language
+conversely  if certain patterns of moral judgments are robust enough to persist through non-substantial variations in wording  it would help defend the assumption that these studies are investigating distinctive psychological mechanisms
+in order to bring this research together into a coherent field and determine whether there are distinctive psychological mechanisms to be studied in moral psychology  we need to know whether  when  and how much phrasing questions in different terms may lead to different moral judgments

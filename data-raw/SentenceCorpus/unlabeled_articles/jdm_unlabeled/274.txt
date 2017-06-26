@@ -1,0 +1,48 @@
+### abstract ###
+the gambler's fallacy and the hot hand belief have been classified as two exemplars of human misperceptions of random sequential events
+this article examines the times of pattern occurrences where a fair or biased coin is tossed repeatedly
+we demonstrate that  due to different pattern composition  two different statistics mean time and waiting time can arise from the same independent bernoulli trials
+when the coin is fair  the mean time is equal for all patterns of the same length but the waiting time is the longest for streak patterns
+when the coin is biased  both mean time and waiting time change more rapidly with the probability of heads for a streak pattern than for a non-streak pattern
+these facts might provide a new insight for understanding why people view streak patterns as rare and remarkable
+the statistics of waiting time may not justify the prediction by the gambler's fallacy  but paying attention to streaks in the hot hand belief appears to be meaningful in detecting the changes in the underlying process
+### introduction ###
+the gambler's fallacy and the hot hand belief have been classified as two exemplars of human misperceptions of random sequential events and widely studied in multiple disciplines such as psychology  sports  behavioral economics and neuroeconomics  CITATION
+often manifested in more intricate forms  these two phenomena can be demonstrated by independent and identically distributed bernoulli trials
+suppose that a fair coin with equal probabilities of coming up a head  h  and a tail  t  is tossed repeatedly and the first three outcomes produce three heads  h h h
+in predicting the next outcome  one with the gambler's fallacy would predict  h h h t  - a reversal of the streak
+in contrast  one with the hot hand belief would predict  h h h h  - a continuation of the streak
+the fact that people exhibit two opposing expectations upon the same past information - negative recency in the gambler's fallacy and positive recency in the hot hand belief - has been the center of attention in the research on perception of randomness  pattern detection and judgment of uncertainty  CITATION
+among existing theories  a prevailing account is the representativeness heuristic  which attributes both the gambler's fallacy and the hot hand belief to a false belief of the  law of small numbers   CITATION
+by this account  people tend to believe that a local sample should resemble the underlying population and chance is perceived as  a self-correcting process in which a deviation in one direction induces a deviation in the opposite direction to restore the equilibrium   CITATION
+thus  in the gambler's fallacy  a tail is due to reverse a streak of heads
+in the hot hand belief  a streak of successes may indicate the existence of a hot hand by which the streak tends to be prolonged  CITATION
+however  the representativeness account has been criticized for its incompleteness and testability  CITATION
+ayton and fischer  CITATION  suggest that the gambler's fallacy arises from the experience of negative recency in sequences of natural events such as roulette games  but the hot hand belief arises from the experience of positive recency in serial fluctuations in human performance
+similarly  it has been proposed that the hot hand belief can arise when people evaluate the performance of a mutual fund manager rather than the fluctuations of the portfolio  CITATION   or  the gambler's luck rather than the outcomes of a roulette game  CITATION
+moreover  burns and corpus  CITATION  show that subjects assume positive recency for forecasting scenarios they rated as  nonrandom  and negative recency for scenarios they rated as  random 
+burns  CITATION  further argues that the hot hand belief is a fast and frugal heuristic to detect changes in the shooting accuracy of basketball players
+this argument is consistent with the finding of  residual nonstationarity  in sun  CITATION   in which it is suggested that the fluctuations in players' performance can be obscured by real-time adjustments based on the detection of a hot hand
+for example  after making several shots in a row  a player might try a more difficult shot or the opponent players may increase the defense effort
+CITATION compared to the representativeness account  the alternative interpretations distinguish the hot hand belief from the gambler's fallacy by deviations from a random process
+when the underlying process is truly random or statistically impossible to tell apart from independent and stationary bernoulli trials  both beliefs are considered as biases or misperceptions of randomness
+in particular  both beliefs appear to share a common intuition that streak patterns are  rare  and  remarkable  - a streak of heads is unlikely to occur if the coin is fair  or  a basketball player is unlikely to make shots in streaks unless he or she has a hot hand
+however  the independence assumption of bernoulli trials states that  for a fair coin  a streak will occur as often as any other patterns of the same length in its exact order  CITATION
+then  what is so special about streak patterns that people normally tend to avoid them and only expect them when they feel  hot 
+in the present paper  we show that streak patterns do possess a set of properties that set them apart from other patterns  and these properties may provide an alternative explanation for the particular role of streak patterns in people's perception and judgment of randomness
+we exemplify by comparing two patterns  h h h t  and  h h h h
+when a fair coin is tossed repeatedly  both patterns have the same probability of occurrence in any four successive trials
+however  it takes on average  NUMBER  tosses to encounter the first occurrence of  h h h t  but  NUMBER  tosses to encounter the first occurrence of  h h h h
+in other words  streak pattern  h h h h  has been  delayed  for its first occurrence
+the expected number of trials required for the first occurrence of a particular pattern is a statistical property known as  waiting time   which can be different among patterns due to different pattern compositions  CITATION
+while the probability of occurrence or frequency describes how often a pattern occurs  the waiting time describes when a pattern will occur from the time at which monitoring begins
+interestingly  these are different statistical properties and clearly bear different psychological relevance
+for example  for a passenger who is waiting for a bus  when the first bus arrives probably is more relevant than how often the bus arrives
+it is the goal of this paper to demonstrate a plausible link between the statistics of pattern times and people's perception of randomness
+it is important to note that the concept of waiting time has recently received attention in psychology literature  CITATION
+hahn and warren  CITATION  show that  in a global sequence of moderate length  streak patterns such as  h h h h  have higher  probabilities of nonoccurrence  than  h h h t
+base on this result  they argue that  given people's limited exposure to the environment e g   the number of coin tosses is limited  misperceptions of randomness such as the gambler's fallacy might actually emerge as apt reflections of these environmental statistics
+sun  tweney  and wang  CITATION  criticize hahn and warren's interpretation by clarifying the relationship between the probability of nonoccurrence and waiting time
+in particular  sun et al argue that the probability of nonoccurrence is a manifestation of waiting time  which is independent of the length of the global sequence  and neither statistic would justify the prediction of reverting of a streak by the gambler's fallacy  CITATION
+notwithstanding the debate  the argument of treating waiting time as a part of the environmental statistics appears to be quite plausible
+given that different statistics can arise from the same process of coin tossing or basketball shooting  it is likely that they have been actually experienced by people and have different effects on people's perception of randomness

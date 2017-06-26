@@ -1,0 +1,13 @@
+### abstract ###
+when making decisions that involve tradeoffs between the quality and timing of desirable outcomes  people consistently discount the value of future outcomes
+a puzzling finding regarding such decisions is the extremely high rate at which people discount future monetary outcomes
+most economists would argue that decision-makers should turn down only rates of return that are lower than those available to them elsewhere
+yet the vast majority of studies find discount rates that are significantly higher than market interest rates  CITATION
+here we ask whether a lack of knowledge about the normative strategy can explain high discount rates
+in an initial experiment  nearly half of subjects did not spontaneously cite elements of the normative strategy when asked how people should make intertemporal monetary decisions
+in two follow-up experiments  after subjects read a  financial guide  detailing the normative strategy  discount rates declined by up to  NUMBER  percent   but were still higher than market interest rates
+this decline persisted  though attenuated  for at least one month
+in a final experiment  peer-generated advice influenced discount rates in a similar manner to  expert  advice  and arguments focusing on normative considerations were at least as effective as others
+these studies show that part of the explanation for high discount rates is a lack of knowledge regarding the normative strategy  and they quantify how much discount rates are reduced in response to normative arguments
+given the high level of discounting that remains  however  there are other contributing factors to high discount rates that remain to be quantified
+### introduction ###

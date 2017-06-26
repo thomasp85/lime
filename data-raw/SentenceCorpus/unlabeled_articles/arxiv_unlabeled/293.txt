@@ -1,0 +1,68 @@
+### abstract ###
+The learning of appropriate distance metrics is a critical problem in image classification and retrieval
+In this work, we propose a boosting-based technique, termed \BoostMetric, for learning a Mahalanobis distance metric
+One of the primary difficulties in learning such a metric is to ensure that the Mahalanobis matrix remains positive semidefinite
+Semidefinite programming is sometimes used to enforce this constraint, but does not scale well
+is instead based on a key observation that any positive semidefinite matrix can be decomposed into a linear positive combination of trace-one rank-one matrices
+thus uses rank-one positive semidefinite matrices as weak learners within an efficient and scalable boosting-based learning process
+The resulting method is easy to implement, does not require tuning, and can accommodate various types of constraints
+Experiments on various datasets show that the proposed algorithm compares favorably to those state-of-the-art methods in terms of classification accuracy and running time
+### introduction ###
+It has been an extensively sought-after goal to learn an appropriate distance metric in image classification and retrieval problems using  simple and efficient  algorithms  CITATION
+Such distance metrics are essential to the effectiveness of many critical algorithms such as  SYMBOL -nearest neighbor ( SYMBOL NN),  SYMBOL -means clustering, and kernel regression, for example
+We show in this work how a Mahalanobis metric is learned from proximity comparisons among triples of training data
+Mahalanobis distance, \aka~Gaussian quadratic distance, is parameterized by a positive semidefinite (\PSD) matrix
+Therefore, typically methods for learning a Mahalanobis distance result in constrained semidefinite programs
+We discuss the problem setting as well as the difficulties for learning such a matrix
+If we let  SYMBOL  represent a set of points in  SYMBOL , the training data consist of a set of constraints upon the relative distances between these points,  SYMBOL , where  SYMBOL  measures the distance between  SYMBOL  and  SYMBOL
+We are interested in the case that  SYMBOL  computes the Mahalanobis distance
+The  Mahalanobis distance between two vectors takes the form:  SYMBOL  with  SYMBOL , a matrix
+It is equivalent to learn a projection matrix  SYMBOL  and  SYMBOL
+Constraints such as those above often arise when it is known that  SYMBOL  and  SYMBOL  belong to the same class of data points while  SYMBOL  belong to different classes
+In some cases, these comparison constraints are much easier to obtain than either the class labels or distances between data elements
+For example, in video content retrieval, faces extracted from successive frames at close locations can be safely assumed to belong to the same person, without requiring the individual to be identified
+In web search, the results returned by a search engine are ranked according to the relevance, an ordering which allows a natural conversion into a set of constraints
+The requirement of  SYMBOL  being has led to the development of a number of methods for learning a Mahalanobis distance which rely upon constrained semidefinite programing
+This approach has a number of limitations, however, which we now discuss with reference to the problem of learning a matrix from a set of constraints upon pairwise-distance comparisons
+Relevant work on this topic includes  CITATION  amongst others
+Xing  CITATION  firstly proposed to learn a Mahalanobis metric for clustering using convex optimization
+The inputs are two sets: a similarity set and  a dis-similarity set
+The algorithm maximizes the distance between points in the dis-similarity set under the constraint that the distance between points in the similarity set is upper-bounded
+Neighborhood component analysis (NCA)  CITATION  and large margin nearest neighbor (LMNN)  CITATION  learn a metric by maintaining consistency in data's neighborhood and keeping a large margin at the boundaries of different classes
+It has been shown in  CITATION  that LMNN delivers the state-of-the-art performance among most distance metric learning algorithms
+The work of LMNN   CITATION  and PSDBoost  CITATION  has directly inspired our work
+Instead of using hinge loss in LMNN and PSDBoost, we use the exponential loss function in order to derive an AdaBoost-like optimization procedure
+Hence, despite similar purposes, our algorithm differs essentially in the optimization
+While the formulation of LMNN looks more similar to support vector machines (SVM's) and PSDBoost to LPBoost, our algorithm, termed \BoostMetric, largely draws upon AdaBoost  CITATION
+In many cases, it is difficult to find a global optimum in the projection matrix  SYMBOL   CITATION
+Reformulation-linearization is a typical technique in convex optimization to relax and convexify the problem  CITATION
+In metric learning, much existing work instead learns  SYMBOL  for seeking a global optimum, \eg,  CITATION
+The price is heavy computation and poor scalability: it is not trivial to preserve the semidefiniteness of  SYMBOL  during the course of learning
+Standard approaches like interior point Newton methods require the Hessian, which usually requires  SYMBOL  resources (where  SYMBOL  is the input dimension)
+It could be prohibitive for many real-world problems
+Alternative projected (sub-)gradient is adopted in  CITATION
+The disadvantages of this algorithm are: (1) not easy to implement; (2) many parameters involved; (3) slow convergence
+PSDBoost  CITATION  converts the particular semidefinite program in metric learning into a sequence of linear programs (LP's)
+At each iteration of PSDBoost, an LP needs to be solved as in LPBoost, which scales around  SYMBOL  with  SYMBOL  the number of iterations (and therefore variables)
+As  SYMBOL  increases, the scale of the LP becomes larger
+Another problem is that PSDBoost needs to store all the weak learners (the rank-one matrices) during the optimization
+When the input dimension  SYMBOL  is large, the memory required is proportional to  SYMBOL , which can be prohibitively huge at a late iteration  SYMBOL
+Our proposed algorithm solves both of these problems
+Based on the observation from  CITATION  that any positive semidefinite matrix can be decomposed into a linear positive combination of trace-one rank-one matrices, we propose for learning a matrix
+The weak learner of is a rank-one matrix as in PSDBoost
+The proposed algorithm has the following desirable properties: (1) is efficient and scalable
+Unlike most existing methods, no semidefinite programming is required
+At each iteration, only the largest eigenvalue and its corresponding eigenvector are needed (2) can accommodate various types of constraints
+We demonstrate learning a Mahalanobis metric by proximity comparison constraints (3) Like AdaBoost, does not have any parameter to tune
+The user only needs to know when to stop
+In contrast, both LMNN and PSDBoost have parameters to cross validate
+Also like AdaBoost it is easy to implement
+No sophisticated optimization techniques such as LP solvers are involved
+Unlike PSDBoost, we do not need to store all the weak learners
+The efficacy and efficiency of the proposed is demonstrated on various datasets
+Throughout this paper,  a matrix is denoted by a bold upper-case letter ( SYMBOL ); a column vector is denoted by a bold lower-case letter ( SYMBOL )
+The  SYMBOL th row of  SYMBOL  is denoted by  SYMBOL  and the  SYMBOL th column  SYMBOL
+SYMBOL  is the trace of a symmetric matrix and  SYMBOL  calculates the inner product of two matrices
+An element-wise inequality between two vectors like  SYMBOL  means  SYMBOL  for all  SYMBOL
+We use  SYMBOL  to indicate that matrix  SYMBOL  is positive semidefinite
+For a matrix  SYMBOL , the following statements are equivalent: (1)  SYMBOL  ( SYMBOL ); (2) All eigenvalues of  SYMBOL  are nonnegative ( SYMBOL ,  SYMBOL ); and (3)  SYMBOL ,  SYMBOL

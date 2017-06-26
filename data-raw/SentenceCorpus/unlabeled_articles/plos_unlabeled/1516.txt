@@ -1,0 +1,44 @@
+### abstract ###
+It is shown that existing processing schemes of 3D motion perception such as interocular velocity difference, changing disparity over time, as well as joint encoding of motion and disparity, do not offer a general solution to the inverse optics problem of local binocular 3D motion.
+Instead we suggest that local velocity constraints in combination with binocular disparity and other depth cues provide a more flexible framework for the solution of the inverse problem.
+In the context of the aperture problem we derive predictions from two plausible default strategies: the vector normal prefers slow motion in 3D whereas the cyclopean average is based on slow motion in 2D.
+Predicting perceived motion directions for ambiguous line motion provides an opportunity to distinguish between these strategies of 3D motion processing.
+Our theoretical results suggest that velocity constraints and disparity from feature tracking are needed to solve the inverse problem of 3D motion perception.
+It seems plausible that motion and disparity input is processed in parallel and integrated late in the visual processing hierarchy.
+### introduction ###
+The representation of the three-dimensional external world from two-dimensional retinal input is a fundamental problem that the visual system has to solve CITATION CITATION.
+This is true for static scenes in 3D as well as for dynamic events in 3D space.
+For the latter the inverse problem extends to the inference of dynamic events in a 3D world from 2D motion signals projected into the left and right eye.
+In the following we exclude observer movements and only consider passively observed motion.
+Velocity in 3D space is described by motion direction and speed.
+Motion direction can be measured in terms of azimuth and elevation angle, and motion direction together with speed is conveniently expressed as a 3D motion vector in a cartesian coordinate system.
+Estimating such a vector locally is highly desirable for a visual system because the representation of local estimates in a dense vector field provides the basis for the perception of 3D object motion, that is direction and speed of moving objects.
+This information is essential for interpreting events as well as planning and executing actions in a dynamic environment.
+If a single moving point, corner or other unique feature serves as binocular input then intersection of constraint lines or triangulation together with a starting point provides a straightforward and unique geometrical solution to the inverse problem in a binocular viewing geometry.
+If, however, the moving stimulus has spatial extent, such as an edge, contour, or line inside a circular aperture CITATION then local motion direction in corresponding receptive fields of the left and right eye remains ambiguous and additional constraints are needed to solve the aperture and inverse problem in 3D.
+The inverse optics and the aperture problem are well-known problems in computational vision, especially in the context of stereo CITATION, CITATION, structure from motion CITATION, and optic flow CITATION.
+Gradient constraint methods belong to the most widely used techniques of optic-flow computation from image sequences.
+They can be divided into local area-based CITATION and into more global optic flow methods CITATION.
+Both techniques employ brightness constancy and smoothness constraints in the image to estimate velocity in an over-determined equation system.
+It is important to note that optical flow only provides a constraint in the direction of the image gradient, the normal component of the optical flow.
+As a consequence some form of regularization or smoothing is needed.
+Similar techniques in terms of error minimization and regularization have been offered for 3D stereo-motion detection CITATION CITATION.
+Essentially these algorithms extend processing principles of 2D optic flow to 3D scene flow.
+Computational studies on 3D motion algorithms are usually concerned with fast and efficient encoding when tested against ground truth.
+Here we are less concerned with the efficiency or robustness of a particular implementation.
+Instead we want to understand and predict behavioral characteristics of human 3D motion perception.
+2D motion perception has been extensively researched in the context of the 2D aperture problem CITATION CITATION but there is a surprising lack of studies on the aperture problem and 3D motion perception.
+Any physiologically plausible solution to the inverse 3D motion problem has to rely on binocular sampling of local spatio-temporal information.
+There are at least three known cell types in early visual cortex that may be involved in local encoding of 3D motion: simple and complex motion detecting cells CITATION CITATION, binocular disparity detecting cells CITATION sampled over time, and joint motion and disparity detecting cells CITATION CITATION .
+It is therefore not surprising that three approaches to binocular 3D motion perception have emerged in the literature: Interocular velocity difference, changing disparity over time, and joint encoding of motion and disparity .
+These three approaches have generated an extensive body of research but psychophysical results have been inconclusive and the nature of 3D motion processing remains an unresolved issue CITATION, CITATION.
+Despite the wealth of empirical studies on motion in depth there is a lack of studies on true 3D motion stimuli.
+Previous psychophysical and neurophysiological studies typically employ stimulus dots with unambiguous motion direction or fronto-parallel random-dot surfaces moving in depth.
+The aperture problem and local motion encoding however, which features so prominently in 2D motion perception CITATION CITATION has been neglected in the study of 3D motion perception.
+Large and persistent perceptual bias has been found for dot stimuli with unambiguous motion direction CITATION CITATION suggesting processing strategies that are different from the three main processing models CITATION CITATION.
+It seems promising to investigate local motion stimuli with ambiguous motion direction such as a line or contour moving inside a circular aperture CITATION because they relate to local encoding CITATION CITATION and may reveal principles of 3D motion processing CITATION .
+The aim of this paper is to evaluate existing models of 3D motion perception and to gain a better understanding of binocular 3D motion perception.
+First, we show that existing models of 3D motion perception are insufficient to solve the inverse problem of binocular 3D motion.
+Second, we establish velocity constraints in a binocular viewing geometry and demonstrate that additional information is necessary to disambiguate local velocity constraints and to derive a velocity estimate.
+Third, we compare two default strategies of perceived 3D motion when local motion direction is ambiguous.
+It is shown that critical stimulus conditions exist that can help to determine whether 3D motion perception favors slow 3D motion or averaged cyclopean motion.

@@ -1,0 +1,29 @@
+### abstract ###
+Previous studies on multi-instance learning typically treated instances in the  bags  as  independently and identically distributed
+The instances in a bag, however, are rarely independent in real tasks, and a better performance can be expected if the instances are treated in an non- iid 
+way that exploits relations among instances
+In this paper, we propose two simple yet effective methods
+In the first method, we explicitly map every bag to an undirected graph and design a graph kernel for distinguishing the positive and negative bags
+In the second method, we implicitly construct graphs by deriving affinity matrices and propose an efficient graph kernel considering the clique information
+The effectiveness of the proposed methods are validated by experiments
+### introduction ###
+In multi-instance learning  CITATION , each training example is a  bag  of instances
+A bag is positive if it contains at least one positive instance, and negative otherwise
+Although the labels of the training bags are known, however, the labels of the instances in the bags are unknown
+The goal is to construct a learner to classify unseen bags
+Multi-instance learning has been found useful in diverse domains such as image categorization  CITATION , image retrieval  CITATION  , text categorization  CITATION , computer security  CITATION , face detection  CITATION , computer-aided medical diagnosis  CITATION , etc
+A prominent advantage of multi-instance learning mainly lies in the fact that many real objects have inherent structures, and by adopting the multi-instance representation we are able to represent such objects more naturally and capture more information than simply using the flat single-instance representation
+For example, suppose we can partition an image into several parts
+In contrast to representing the whole image as a single-instance, if we represent each part as an instance, then the partition information is captured by the multi-instance representation; and if the partition is meaningful (e g , each part corresponds to a region of saliency), the additional information captured by the multi-instance representation may be helpful to make the learning task easier to deal with
+It is obviously not a good idea to apply multi-instance learning techniques everywhere since if the single-instance representation is sufficient, using multi-instance representation just gilds the lily
+Even on tasks where the objects have inherent structures, we should keep in mind that the power of multi-instance representation exists in its ability of capturing some structure information
+However, as Zhou and Xu  CITATION  indicated, previous studies on multi-instance learning typically treated the instances in the bags as independently and identically distributed; this neglects the fact that the relations among the instances convey important structure information
+Considering the above image task again, treating the different image parts as inter-correlated samples is evidently more meaningful than treating them as unrelated samples
+Actually, the instances in a bag are rarely independent, and a better performance can be expected if the instances are treated in an non- iid 
+way that exploits the relations among instances
+In this paper, we propose two multi-instance learning methods which do not treat the instances as  iid 
+samples
+Our basic idea is to regard each bag as an entity to be processed as a whole, and regard instances as inter-correlated components of the entity
+Experiments show that our proposed methods achieve performances highly competitive with state-of-the-art multi-instance learning methods
+The rest of this paper is organized as follows
+We briefly review related work in Section 2, propose the new methods in Section 3, report on our experiments in Section 4, conclude the paper finally in Section 5
