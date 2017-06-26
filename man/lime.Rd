@@ -43,7 +43,7 @@ TODO : check parameter labels != NULL OR n_labels != NULL}
 
 \item{dist_fun}{function measure distance between original text and the permultation.}
 
-\item{prediction}{function used to perform the prediction. Should have 2 variables, first for the model, second for the character vector. Should return a data.table with the predictions.}
+\item{prediction}{function used to perform the prediction. Should have 2 variables, first for the character vector, second for the model. Should return a data.table with the predictions.}
 
 \item{bin_continuous}{Should continuous variables be binned when making the explanation}
 

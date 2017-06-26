@@ -27,49 +27,50 @@ permute_cases.data.frame <- function(cases, n_permutations, feature_distribution
 #' @importFrom stringdist seq_dist
 #' @importFrom magrittr %>% set_colnames
 permute_cases.character <- function(cases, n_permutations, tokenization, bow, dist_fun) {
-  documents.tokens <- map(cases, tokenization) %>%
-  {d.tokens <- . ;
-  map2(d.tokens, lengths(d.tokens) %>% cumsum() %>% head(., length(.) - 1) %>% c(0, .),
+  documents_tokens <- map(cases, tokenization) %>%
+{d_tokens <- . ;
+  map2(d_tokens, lengths(d_tokens) %>% cumsum() %>% head(., length(.) - 1) %>% c(0, .),
        ~ {if (bow) paste0(.x, "_",  seq_along(.) + .y) else unique(.x)})}
 
-  tokens <- documents.tokens %>%
+  tokens <- documents_tokens %>%
     flatten_chr() %>%
     unique(.) %>%
     sort(decreasing = FALSE) %>%
     set_names(seq(.))
 
-  documents.tokens %<>%
+  documents_tokens %<>%
     map(~ {d <- . ; which(tokens %in% d) %>%
       set_names(d, nm = .)})
 
   dict_size <- length(tokens)
 
   # Perf on this part should be improved
-  word.selections <- documents.tokens %>%
+  word_selections <- documents_tokens %>%
     map(~ names(.) %>% as.integer()) %>%
     map(~ {document <- . ; sample(length(document), as.integer((n_permutations/length(cases)) - 1), replace = T) %>%
       map(~ sample(document, ., replace = F) %>% sort) %>%
       c(list(document), .)})
 
-  word.selections.flatten <- flatten(word.selections)
+  word_selections_flatten <- flatten(word_selections)
 
-  matrix.cols <- seq(dict_size)
+  matrix_cols <- seq(dict_size)
 
-  bow.matrix <- word.selections.flatten %>%
-    map(~ matrix.cols %in% .) %>%
+  bow_matrix <- word_selections_flatten %>%
+    map(~ matrix_cols %in% .) %>%
     flatten_int() %>%
     Matrix(ncol = dict_size, sparse = TRUE, byrow = TRUE) %>%
     set_colnames(tokens)
 
-  permutation.candidates <- word.selections.flatten %>% map(~ tokens[.]) %>% map_chr(~ paste(., collapse = " "))
+  permutation_candidates <- word_selections_flatten %>% map(~ tokens[.]) %>% map_chr(~ paste(., collapse = " "))
 
-  permutation.distances <- map2(word.selections, documents.tokens, ~ seq_dist(.x, names(.y) %>% as.integer(), method = dist_fun)) %>%
+  permutation_distances <- map2(word_selections, documents_tokens,
+                                ~ seq_dist(.x, names(.y) %>% as.integer(), method = dist_fun)) %>%
     flatten_dbl()
 
-  list(tabular = bow.matrix,
-       permutations = permutation.candidates,
-       word.selections = word.selections,
+  list(tabular = bow_matrix,
+       permutations = permutation_candidates,
+       word_selections = word_selections,
        tokens = tokens,
-       permutation.distances = permutation.distances)
+       permutation_distances = permutation_distances)
 }
 

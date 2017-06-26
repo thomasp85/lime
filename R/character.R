@@ -11,7 +11,7 @@
 #' @param labels name of the label to explain (use only when model to explain predictions includes names as data.frame column names, like with caret)
 #' @param n_labels instead of labels, number of labels to explain.
 #' @param dist_fun function measure distance between original text and the permultation.
-#' @param prediction function used to perform the prediction. Should have 2 variables, first for the model, second for the character vector. Should return a data.table with the predictions.
+#' @param prediction function used to perform the prediction. Should have 2 variables, first for the character vector, second for the model. Should return a data.table with the predictions.
 #' @param kernel_width The width of the kernel used for converting the distances to permutations into weights
 #'
 #' TODO : add example
@@ -22,17 +22,19 @@
 lime.character <- function(x, model, preprocess, tokenization = default_tokenization, bow = FALSE, kernel_width = 25,
                            n_permutations = 5000, number_features_explain = 5, feature_selection_method = "auto",
                            labels = NULL, n_labels = NULL,  dist_fun = "cosine", prediction = do_predict) {
-  permutation.cases <- permute_cases.character(x, n_permutations, tokenization, bow, dist_fun)
-  predicted.labels.dt <- preprocess(permutation.cases$permutations) %>% prediction(model, .)
-  model_permutations(x = permutation.cases$tabular, y = predicted.labels.dt,
-                            weights = exp_kernel(kernel_width)(1 - permutation.cases$permutation.distances),
+  permutation_cases <- permute_cases.character(x, n_permutations, tokenization, bow, dist_fun)
+  predicted_labels_dt <- preprocess(permutation_cases$permutations) %>% prediction(model)
+  model_permutations(x = permutation_cases$tabular, y = predicted_labels_dt,
+                            weights = exp_kernel(kernel_width)(1 - permutation_cases$permutation_distances),
                             labels = labels, n_labels = n_labels, n_features = number_features_explain,
                             feature_method = feature_selection_method)
 }
 
+#' @describeIn Used to perform the prediction
+#'
 #' @importFrom purrr set_names
 #' @export
-do_predict <- function(model, data) {
+do_predict <- function(data, model) {
   switch(class(model),
          "xgb.Booster" = predict(model, data, type = "prob", reshape = TRUE) %>% data.frame %>% set_names(seq(ncol(.))),
          predict(model, data, type = "prob")
