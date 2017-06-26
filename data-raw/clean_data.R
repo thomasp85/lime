@@ -7,7 +7,7 @@ library(stringi)
 
 text.files <- list.files(path = "./data-raw/SentenceCorpus/labeled_articles", pattern = "\\.txt", recursive = T, full.names = T)
 
-stop.words <- readLines("./data-raw/SentenceCorpus/word_lists/stopwords.txt")
+stop.words.sentences <- readLines("./data-raw/SentenceCorpus/word_lists/stopwords.txt")
 
 dt.list <- list()
 for (file in text.files) {
@@ -23,11 +23,11 @@ dt <- rbindlist(dt.list)
 
 dt[, .N, class.text]
 
-dt[, label := class.text == "OWNX"]
 test.rows <- sample.int(nrow(dt), 600)
 train.sentences <- dt[-test.rows]
 test.sentences <- dt[test.rows]
 
 # save files
+devtools::use_data(stop.words.sentences, overwrite = TRUE)
 devtools::use_data(train.sentences, overwrite = TRUE)
 devtools::use_data(test.sentences, overwrite = TRUE)
