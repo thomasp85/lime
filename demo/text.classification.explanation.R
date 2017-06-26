@@ -49,17 +49,11 @@ test.sentences[label == T, sum(label == prediction)]
 test.sentences[, sum(label == prediction)/length(label)]
 test.sentences[, mean(label)]
 
-
-require(lime)
-
 get.features.matrix <- . %>%
   get.matrix() %>%
   transform(tfidf) %>%
   add.lsa(lsa.full.text) %>%
   xgb.DMatrix()
-
-
-
 
 lime(test.sentences[label == T][4:6, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 2) %>%
   print

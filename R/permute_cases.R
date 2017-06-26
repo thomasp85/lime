@@ -26,8 +26,8 @@ permute_cases.data.frame <- function(cases, n_permutations, feature_distribution
 #' @importFrom purrr map map2 flatten_chr set_names flatten flatten_int map_chr flatten_dbl
 #' @importFrom stringdist seq_dist
 #' @importFrom magrittr %>% set_colnames
-permute_cases.character <- function(cases, n_permutations, split_by, bow, dist_fun) {
-  documents.tokens <- cases %>% map(~ stri_split_regex(str = ., pattern = split_by, simplify = TRUE) %>% as.character()) %>%
+permute_cases.character <- function(cases, n_permutations, tokenization, bow, dist_fun) {
+  documents.tokens <- map(cases, tokenization) %>%
   {d.tokens <- . ;
   map2(d.tokens, lengths(d.tokens) %>% cumsum() %>% head(., length(.) - 1) %>% c(0, .),
        ~ {if (bow) paste0(.x, "_",  seq_along(.) + .y) else unique(.x)})}
@@ -73,11 +73,3 @@ permute_cases.character <- function(cases, n_permutations, split_by, bow, dist_f
        permutation.distances = permutation.distances)
 }
 
-#' @importFrom purrr set_names
-#' @export
-do_predict <- function(model, data) {
-  switch(class(model),
-         "xgb.Booster" = predict(model, data, type = "prob", reshape = TRUE) %>% data.frame %>% set_names(seq(ncol(.))),
-         predict(model, data, type = "prob")
-  )
-}
