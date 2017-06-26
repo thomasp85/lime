@@ -25,9 +25,9 @@ dt[, .N, class.text]
 
 dt[, label := class.text == "OWNX"]
 test.rows <- sample.int(nrow(dt), 600)
-dt.train <- dt[-test.rows]
-dt.test <- dt[test.rows]
+train.sentences <- dt[-test.rows]
+test.sentences <- dt[test.rows]
 
 # save files
-devtools::use_data(dt.train, overwrite = TRUE)
-devtools::use_data(dt.test, overwrite = TRUE)
+devtools::use_data(train.sentences, overwrite = TRUE)
+devtools::use_data(test.sentences, overwrite = TRUE)
