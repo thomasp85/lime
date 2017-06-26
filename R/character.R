@@ -3,7 +3,7 @@
 #' @param x text data
 #' @param model model to explain
 #' @param preprocess Function to transform character vector to feature provided to the model to explain
-#' @param split_by regex used to tokenized the text
+#' @param tokenization function used to tokenize text
 #' @param bow set to TRUE if you want to keep order of words. Warning: each word is replaced by word_position, this need to be managed by preprocess function
 #' @param n_permutations number of permutations to perform. More gives better explanation until it is not usefull.
 #' @param number_features_explain as the name says
@@ -12,7 +12,6 @@
 #' @param n_labels instead of labels, number of labels to explain.
 #' @param dist_fun function measure distance between original text and the permultation.
 #' @param prediction function used to perform the prediction. Should have 2 variables, first for the character vector, second for the model. Should return a data.table with the predictions.
-#' @param kernel_width The width of the kernel used for converting the distances to permutations into weights
 #'
 #' TODO : add example
 #' TODO : check parameter labels != NULL OR n_labels != NULL

@@ -27,15 +27,14 @@
 #'
 #' [2] S. Teufel. Argumentative zoning: information extraction from scientific
 #' text. PhD thesis, School of Informatics, University of Edinburgh, 1999.
-#' @name train.sentence
-#' @docType data
+#'
 #' @format 2 data frame with 3117 rows and 2 variables:
 #' \describe{
 #'   \item{text}{the sentences as a character vector}
 #'   \item{class.text}{the category of the sentence}
 #' }
 #' @source \url{https://archive.ics.uci.edu/ml/datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=text&sort=nameUp&view=table}
-NULL
+"train_sentences"
 
 #' Sentence corpus - test part
 #'
@@ -66,12 +65,17 @@ NULL
 #'
 #' [2] S. Teufel. Argumentative zoning: information extraction from scientific
 #' text. PhD thesis, School of Informatics, University of Edinburgh, 1999.
-#' @name test.sentence
-#' @docType data
+#'
 #' @format 2 data frame with 3117 rows and 2 variables:
 #' \describe{
 #'   \item{text}{the sentences as a character vector}
 #'   \item{class.text}{the category of the sentence}
 #' }
 #' @source \url{https://archive.ics.uci.edu/ml/datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=text&sort=nameUp&view=table}
-NULL
+"test_sentences"
+
+#' Stop words list
+#'
+#' @format Character vector of stop words
+#' @source \url{https://archive.ics.uci.edu/ml/datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=text&sort=nameUp&view=table}
+"stop_words_sentences"

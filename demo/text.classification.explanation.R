@@ -8,16 +8,16 @@ library(xgboost)
 
 set.seed(2000)
 
-data("train.sentences")
-data("test.sentences")
-data("stop.words.sentences")
+data("train_sentences")
+data("test_sentences")
+data("stop_words_sentences")
 
-train.sentences[, label := class.text == "OWNX"]
-test.sentences[, label := class.text == "OWNX"]
+train_sentences[, label := class.text == "OWNX"]
+test_sentences[, label := class.text == "OWNX"]
 
 get.iterator <- function(data) itoken(data, preprocess_function = tolower, tokenizer = word_tokenizer, progressbar = F)
 
-v <-  create_vocabulary(get.iterator(train.sentences$text), stopwords = stop.words.sentences)
+v <-  create_vocabulary(get.iterator(train_sentences$text), stopwords = stop.words.sentences)
 
 get.matrix <- function(data) {
   i <- get.iterator(data)
@@ -26,8 +26,8 @@ get.matrix <- function(data) {
 
 lsa.full.text <- LSA$new(n_topics = 100)
 tfidf <- TfIdf$new()
-get.matrix(train.sentences$text) %>% fit(tfidf)
-get.matrix(train.sentences$text) %>% transform(tfidf) %>% fit(lsa.full.text)
+get.matrix(train_sentences$text) %>% fit(tfidf)
+get.matrix(train_sentences$text) %>% transform(tfidf) %>% fit(lsa.full.text)
 
 add.lsa <- function(m, lsa) {
   l <- transform(m, lsa)
@@ -35,19 +35,19 @@ add.lsa <- function(m, lsa) {
   cbind2(m, l)
 }
 
-dtrain <- get.matrix(train.sentences$text) %>% transform(tfidf) %>% add.lsa(lsa.full.text) %>% xgb.DMatrix(label = train.sentences$label)
-dtest <-  get.matrix(test.sentences$text) %>% transform(tfidf) %>% add.lsa(lsa.full.text) %>% xgb.DMatrix(label = test.sentences$label)
+dtrain <- get.matrix(train_sentences$text) %>% transform(tfidf) %>% add.lsa(lsa.full.text) %>% xgb.DMatrix(label = train_sentences$label)
+dtest <-  get.matrix(test_sentences$text) %>% transform(tfidf) %>% add.lsa(lsa.full.text) %>% xgb.DMatrix(label = test_sentences$label)
 
 
 watchlist <- list(eval = dtest)
 param <- list(max_depth = 7, eta = 0.1, objective = "binary:logistic", eval_metric = "error")
 bst <- xgb.train(param, dtrain, nrounds = 500, watchlist, early_stopping_rounds = 50)
 
-test.sentences[,prediction := predict(bst, dtest, type = "prob") > 0.5]
-test.sentences[label == T, sum(label != prediction)]
-test.sentences[label == T, sum(label == prediction)]
-test.sentences[, sum(label == prediction)/length(label)]
-test.sentences[, mean(label)]
+test_sentences[,prediction := predict(bst, dtest, type = "prob") > 0.5]
+test_sentences[label == T, sum(label != prediction)]
+test_sentences[label == T, sum(label == prediction)]
+test_sentences[, sum(label == prediction)/length(label)]
+test_sentences[, mean(label)]
 
 get.features.matrix <- . %>%
   get.matrix() %>%
@@ -55,7 +55,7 @@ get.features.matrix <- . %>%
   add.lsa(lsa.full.text) %>%
   xgb.DMatrix()
 
-lime(test.sentences[label == T][4:6, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 2) %>%
+lime(test_sentences[label == T][4:6, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 2) %>%
   print
 
 # m <- xgb.DMatrix(r$tabular, label = predicted.labels, weight = 1 - r$permutation.distances)

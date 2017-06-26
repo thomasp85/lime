@@ -24,12 +24,11 @@ lime(x, model, ...)
 
 \item{preprocess}{Function to transform character vector to feature provided to the model to explain}
 
+\item{tokenization}{function used to tokenize text}
+
 \item{bow}{set to TRUE if you want to keep order of words. Warning: each word is replaced by word_position, this need to be managed by preprocess function}
 
-\item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights
-
-TODO : add example
-TODO : check parameter labels != NULL OR n_labels != NULL}
+\item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
 
 \item{n_permutations}{number of permutations to perform. More gives better explanation until it is not usefull.}
 
@@ -43,7 +42,10 @@ TODO : check parameter labels != NULL OR n_labels != NULL}
 
 \item{dist_fun}{function measure distance between original text and the permultation.}
 
-\item{prediction}{function used to perform the prediction. Should have 2 variables, first for the character vector, second for the model. Should return a data.table with the predictions.}
+\item{prediction}{function used to perform the prediction. Should have 2 variables, first for the character vector, second for the model. Should return a data.table with the predictions.
+
+TODO : add example
+TODO : check parameter labels != NULL OR n_labels != NULL}
 
 \item{bin_continuous}{Should continuous variables be binned when making the explanation}
 
@@ -52,10 +54,6 @@ TODO : check parameter labels != NULL OR n_labels != NULL}
 \item{quantile_bins}{Should the bins be based on \code{n_bins} quantiles or spread evenly over the range of the training data}
 
 \item{...}{Arguments passed on to methods}
-
-\item{split_by}{regex used to tokenized the text}
-
-\item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
 
 \item{x}{The training data used for training the model that should be
 explained.}
