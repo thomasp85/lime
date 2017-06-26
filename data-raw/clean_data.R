@@ -1,5 +1,5 @@
-# from https://archive.ics.uci.edu/ml/datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=text&sort=nameUp&view=table
 # code to reproduce the text data embedded with the package
+
 library(data.table)
 library(magrittr)
 library(purrr)
