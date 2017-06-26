@@ -10,14 +10,14 @@ set.seed(2000)
 
 data("train.sentences")
 data("test.sentences")
+data("stop.words.sentences")
 
 train.sentences[, label := class.text == "OWNX"]
 test.sentences[, label := class.text == "OWNX"]
 
 get.iterator <- function(data) itoken(data, preprocess_function = tolower, tokenizer = word_tokenizer, progressbar = F)
-stop.words <- readLines("./data-raw/SentenceCorpus/word_lists/stopwords.txt")
 
-v <-  create_vocabulary(get.iterator(train.sentences$text), stopwords = stop.words)
+v <-  create_vocabulary(get.iterator(train.sentences$text), stopwords = stop.words.sentences)
 
 get.matrix <- function(data) {
   i <- get.iterator(data)

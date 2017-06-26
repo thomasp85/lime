@@ -5,7 +5,7 @@
 #' @export
 lime.character <- function(x, model, preprocess, split_by = "\\W+", bow = FALSE, kernel_width = 25,
                            n_permutations = 5000, number_features_explain = 5, feature_selection_method = "auto",
-                           labels = NULL, n_labels = NULL,  dist_fun = "cosine", prediction = do.predict, ...) {
+                           labels = NULL, n_labels = NULL,  dist_fun = "cosine", prediction = do_predict, ...) {
   permutation.cases <- permute_cases.character(x, n_permutations, split_by, bow, dist_fun)
   predicted.labels.dt <- preprocess(permutation.cases$permutations) %>% prediction(model, .)
   model_permutations(x = permutation.cases$tabular, y = predicted.labels.dt,
