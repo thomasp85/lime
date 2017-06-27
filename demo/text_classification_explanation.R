@@ -46,7 +46,7 @@ dtest <-  get.matrix(test_sentences$text) %>% transform(tfidf) %>% add.lsa(lsa.f
 
 
 watchlist <- list(eval = dtest)
-param <- list(max_depth = 7, eta = 0.1, objective = "binary:logistic", eval_metric = "error")
+param <- list(max_depth = 7, eta = 0.1, objective = "binary:logistic", eval_metric = "error", nthread = 1)
 bst <- xgb.train(param, dtrain, nrounds = 500, watchlist, early_stopping_rounds = 50)
 
 test_sentences[,prediction := predict(bst, dtest, type = "prob") > 0.5]

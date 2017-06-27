@@ -7,10 +7,10 @@
 default_predict(data, model)
 }
 \arguments{
-\item{data}{data to be explained (character vector)}
+\item{data}{data to be explained (as \code{\link{character}} vector).}
 
 \item{model}{model to be explained}
 }
 \description{
-Takes care of performing the prediction and adapting the format
+Takes care of performing the prediction and adapting the format of the result. To be used with \code{\link{lime.character}}.
 }

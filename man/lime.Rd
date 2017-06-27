@@ -7,7 +7,7 @@
 \title{Create a model explanation function based on training data}
 \usage{
 \method{lime}{character}(x, model, preprocess,
-  tokenization = default_tokenization, bow = FALSE, kernel_width = 25,
+  tokenization = default_tokenize, bow = FALSE, kernel_width = 25,
   n_permutations = 5000, number_features_explain = 5,
   feature_selection_method = "auto", labels = NULL, n_labels = NULL,
   dist_fun = "cosine", prediction = default_predict, ...)
@@ -23,27 +23,27 @@ explained.}
 
 \item{model}{The model whose output should be explained}
 
-\item{preprocess}{Function to transform character vector to feature provided to the model to explain}
+\item{preprocess}{Function to transform \code{\link{character}} vector to feature provided to the model to explain}
 
 \item{tokenization}{function used to tokenize text}
 
-\item{bow}{set to TRUE if you want to keep order of words. Warning: each word is replaced by word_position, this need to be managed by preprocess function}
+\item{bow}{set to \code{\link{TRUE}} if to keep order of words. Warning: each word will be replaced by \code{word_position}, this need to be managed by \code{preprocess} function.}
 
 \item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
 
-\item{n_permutations}{number of permutations to perform. More gives better explanation until it is not usefull.}
+\item{n_permutations}{number of permutations to perform. More gives better explanation up to a point where it is not usefull and takes too much time. (5000)}
 
-\item{number_features_explain}{as the name says}
+\item{number_features_explain}{number of features used in the explanation. (5)}
 
-\item{feature_selection_method}{method to select the best features}
+\item{feature_selection_method}{method to select the best features. ("auto")}
 
-\item{labels}{name of the label to explain (use only when model to explain predictions includes names as data.frame column names, like with caret)}
+\item{labels}{name of the label to explain (use only when model to explain predictions includes names as \code{\link{data.frame}} column names, like with \code{link{caret}}). (\code{\link{NULL}}).}
 
-\item{n_labels}{instead of labels, number of labels to explain.}
+\item{n_labels}{instead of labels, number of labels to explain. (\code{\link{NULL}})}
 
-\item{dist_fun}{function measure distance between original text and the permultation.}
+\item{dist_fun}{function to measure distance between original the datum and its permultations. Used for weighting the permutations in the explanation model. (cosine)}
 
-\item{prediction}{function used to perform the prediction. Should have 2 variables, first for the character vector, second for the model. Should return a data.table with the predictions.
+\item{prediction}{function used to perform the prediction. Should have 2 variables, first for the \code{\link{character}} vector, second for the \code{model}. Should return a \code{\link{data.frame}} with the predictions.
 
 TODO : add example
 TODO : check parameter labels != NULL OR n_labels != NULL}

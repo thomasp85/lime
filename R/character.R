@@ -1,21 +1,21 @@
 #' @describeIn lime Method for explaining text data
-#' @param preprocess Function to transform character vector to feature provided to the model to explain
+#' @param preprocess Function to transform \code{\link{character}} vector to feature provided to the model to explain
 #' @param tokenization function used to tokenize text
-#' @param bow set to TRUE if you want to keep order of words. Warning: each word is replaced by word_position, this need to be managed by preprocess function
-#' @param n_permutations number of permutations to perform. More gives better explanation until it is not usefull.
-#' @param number_features_explain as the name says
-#' @param feature_selection_method method to select the best features
-#' @param labels name of the label to explain (use only when model to explain predictions includes names as data.frame column names, like with caret)
-#' @param n_labels instead of labels, number of labels to explain.
-#' @param dist_fun function measure distance between original text and the permultation.
-#' @param prediction function used to perform the prediction. Should have 2 variables, first for the character vector, second for the model. Should return a data.table with the predictions.
+#' @param bow set to \code{\link{TRUE}} if to keep order of words. Warning: each word will be replaced by \code{word_position}, this need to be managed by \code{preprocess} function.
+#' @param n_permutations number of permutations to perform. More gives better explanation up to a point where it is not usefull and takes too much time. (5000)
+#' @param number_features_explain number of features used in the explanation. (5)
+#' @param feature_selection_method method to select the best features. ("auto")
+#' @param labels name of the label to explain (use only when model to explain predictions includes names as \code{\link{data.frame}} column names, like with \code{link{caret}}). (\code{\link{NULL}}).
+#' @param n_labels instead of labels, number of labels to explain. (\code{\link{NULL}})
+#' @param dist_fun function to measure distance between original the datum and its permultations. Used for weighting the permutations in the explanation model. (cosine)
+#' @param prediction function used to perform the prediction. Should have 2 variables, first for the \code{\link{character}} vector, second for the \code{model}. Should return a \code{\link{data.frame}} with the predictions.
 #'
 #' TODO : add example
 #' TODO : check parameter labels != NULL OR n_labels != NULL
 #' @importFrom stringdist seq_dist
 #' @importFrom magrittr %>%
 #' @export
-lime.character <- function(x, model, preprocess, tokenization = default_tokenization, bow = FALSE, kernel_width = 25,
+lime.character <- function(x, model, preprocess, tokenization = default_tokenize, bow = FALSE, kernel_width = 25,
                            n_permutations = 5000, number_features_explain = 5, feature_selection_method = "auto",
                            labels = NULL, n_labels = NULL,  dist_fun = "cosine", prediction = default_predict, ...) {
   function() {
@@ -30,8 +30,8 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokeniza
 
 #' @title Default function to perform the prediction
 #'
-#' @description Takes care of performing the prediction and adapting the format
-#' @param data data to be explained (character vector)
+#' @description Takes care of performing the prediction and adapting the format of the result. To be used with \code{\link{lime.character}}.
+#' @param data data to be explained (as \code{\link{character}} vector).
 #' @param model model to be explained
 #' @importFrom purrr set_names
 #' @export
@@ -45,12 +45,12 @@ default_predict <- function(data, model) {
 
 #' @title Default function to tokenize
 #'
-#' @description Use simple regex to tokenize a String.
-#' @param text text to tokenize as a character vector
+#' @description Use simple regex to tokenize a \code{\link{character}} vector. To be used with \code{\link{lime.character}}.
+#' @param text text to tokenize as a \code{\link{character}} vector
 #' @importFrom stringi stri_split_regex
 #' @importFrom magrittr %>% set_colnames
 #' @export
-default_tokenization <- function(text) {
+default_tokenize <- function(text) {
   stri_split_regex(str = text, pattern = "\\W+", simplify = TRUE) %>% as.character()
 }
 
