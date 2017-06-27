@@ -153,3 +153,5 @@ select_f_lp <- function(x, y, weights, n_features) {
 exp_kernel <- function(width) {
   function(x) sqrt(exp(-(x^2) / (width^2)))
 }
+
+globalVariables(c("var", "."))

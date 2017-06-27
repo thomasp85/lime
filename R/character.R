@@ -17,10 +17,8 @@
 #' @export
 lime.character <- function(x, model, preprocess, tokenization = default_tokenization, bow = FALSE, kernel_width = 25,
                            n_permutations = 5000, number_features_explain = 5, feature_selection_method = "auto",
-                           labels = NULL, n_labels = NULL,  dist_fun = "cosine", prediction = default_predict) {
-  function(x, model, preprocess, tokenization = default_tokenization, bow, kernel_width,
-           n_permutations, number_features_explain, feature_selection_method,
-           labels, n_labels,  dist_fun, prediction) {
+                           labels = NULL, n_labels = NULL,  dist_fun = "cosine", prediction = default_predict, ...) {
+  function() {
   permutation_cases <- permute_cases.character(x, n_permutations, tokenization, bow, dist_fun)
   predicted_labels_dt <- preprocess(permutation_cases$permutations) %>% prediction(model)
   model_permutations(x = permutation_cases$tabular, y = predicted_labels_dt,
@@ -55,3 +53,5 @@ default_predict <- function(data, model) {
 default_tokenization <- function(text) {
   stri_split_regex(str = text, pattern = "\\W+", simplify = TRUE) %>% as.character()
 }
+
+globalVariables(".")

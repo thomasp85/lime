@@ -38,7 +38,7 @@ permute_cases.character <- function(cases, n_permutations, tokenization, bow, di
     sort(decreasing = FALSE) %>%
     set_names(seq(.))
 
-  documents_tokens %<>%
+  documents_tokens <- documents_tokens %>%
     map(~ {d <- . ; which(tokens %in% d) %>%
       set_names(d, nm = .)})
 
@@ -74,3 +74,4 @@ permute_cases.character <- function(cases, n_permutations, tokenization, bow, di
        permutation_distances = permutation_distances)
 }
 
+globalVariables(".")

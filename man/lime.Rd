@@ -10,7 +10,7 @@
   tokenization = default_tokenization, bow = FALSE, kernel_width = 25,
   n_permutations = 5000, number_features_explain = 5,
   feature_selection_method = "auto", labels = NULL, n_labels = NULL,
-  dist_fun = "cosine", prediction = default_predict)
+  dist_fun = "cosine", prediction = default_predict, ...)
 
 \method{lime}{data.frame}(x, model, bin_continuous = TRUE, n_bins = 4,
   quantile_bins = TRUE, kernel_width = NULL, ...)
@@ -48,13 +48,13 @@ explained.}
 TODO : add example
 TODO : check parameter labels != NULL OR n_labels != NULL}
 
+\item{...}{Arguments passed on to methods}
+
 \item{bin_continuous}{Should continuous variables be binned when making the explanation}
 
 \item{n_bins}{The number of bins for continuous variables if \code{bin_continuous = TRUE}}
 
 \item{quantile_bins}{Should the bins be based on \code{n_bins} quantiles or spread evenly over the range of the training data}
-
-\item{...}{Arguments passed on to methods}
 }
 \value{
 A function taking the following arguments:
