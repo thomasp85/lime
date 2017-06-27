@@ -43,11 +43,7 @@ explained.}
 
 \item{dist_fun}{function to measure distance between original the datum and its permultations. Used for weighting the permutations in the explanation model. (cosine)}
 
-\item{prediction}{function used to perform the prediction. Should have 2 variables, first for the \code{\link{character}} vector, second for the \code{model}. Should return a \code{\link{data.frame}} with the predictions.
-
-TODO : add example
-TODO : check parameter labels != NULL OR n_labels != NULL
-TODO : for keep_word_position, make 2 versions of the text, one with _position and one without for the model to predict}
+\item{prediction}{function used to perform the prediction. Should have 2 variables, first for the \code{\link{character}} vector, second for the \code{model}. Should return a \code{\link{data.frame}} with the predictions.}
 
 \item{...}{Arguments passed on to methods}
 
@@ -58,6 +54,11 @@ TODO : for keep_word_position, make 2 versions of the text, one with _position a
 \item{quantile_bins}{Should the bins be based on \code{n_bins} quantiles or spread evenly over the range of the training data}
 }
 \value{
+Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
+
+TODO : add example
+TODO : for keep_word_position, make 2 versions of the text, one with _position and one without for the model to predict
+
 A function taking the following arguments:
 \itemize{
 \item \code{cases}: Data of the same format as \code{x} that needs to be explained

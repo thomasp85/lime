@@ -44,10 +44,9 @@ add.lsa <- function(m, lsa) {
 dtrain <- get.matrix(train_sentences$text) %>% transform(tfidf) %>% add.lsa(lsa.full.text) %>% xgb.DMatrix(label = train_sentences$label)
 dtest <-  get.matrix(test_sentences$text) %>% transform(tfidf) %>% add.lsa(lsa.full.text) %>% xgb.DMatrix(label = test_sentences$label)
 
-
 watchlist <- list(eval = dtest)
 param <- list(max_depth = 7, eta = 0.1, objective = "binary:logistic", eval_metric = "error", nthread = 1)
-bst <- xgb.train(param, dtrain, nrounds = 500, watchlist, early_stopping_rounds = 50)
+bst <- xgb.train(param, dtrain, nrounds = 500, watchlist, early_stopping_rounds = 100)
 
 test_sentences[,prediction := predict(bst, dtest, type = "prob") > 0.5]
 test_sentences[label == T, sum(label != prediction)]

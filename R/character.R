@@ -9,9 +9,11 @@
 #' @param n_labels instead of labels, number of labels to explain. (\code{\link{NULL}})
 #' @param dist_fun function to measure distance between original the datum and its permultations. Used for weighting the permutations in the explanation model. (cosine)
 #' @param prediction function used to perform the prediction. Should have 2 variables, first for the \code{\link{character}} vector, second for the \code{model}. Should return a \code{\link{data.frame}} with the predictions.
+#' @return Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
 #'
 #' TODO : add example
 #' TODO : for keep_word_position, make 2 versions of the text, one with _position and one without for the model to predict
+#'
 #' @importFrom stringdist seq_dist
 #' @importFrom magrittr %>%
 #' @importFrom testthat expect_is expect_true expect_gte expect_false expect_equal
@@ -33,12 +35,12 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
   expect_gte(kernel_width, 1)
 
   function() {
-  permutation_cases <- permute_cases.character(x, n_permutations, tokenization, keep_word_position, dist_fun)
-  predicted_labels_dt <- preprocess(permutation_cases$permutations) %>% prediction(model)
-  model_permutations(x = permutation_cases$tabular, y = predicted_labels_dt,
-                            weights = exp_kernel(kernel_width)(1 - permutation_cases$permutation_distances),
-                            labels = labels, n_labels = n_labels, n_features = number_features_explain,
-                            feature_method = feature_selection_method)
+    permutation_cases <- permute_cases(x, n_permutations, tokenization, keep_word_position, dist_fun)
+    predicted_labels_dt <- preprocess(permutation_cases$permutations) %>% prediction(model)
+    model_permutations(x = permutation_cases$tabular, y = predicted_labels_dt,
+                       weights = exp_kernel(kernel_width)(1 - permutation_cases$permutation_distances),
+                       labels = labels, n_labels = n_labels, n_features = number_features_explain,
+                       feature_method = feature_selection_method)
   }
 }
 
