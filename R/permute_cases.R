@@ -26,11 +26,11 @@ permute_cases.data.frame <- function(cases, n_permutations, feature_distribution
 #' @importFrom purrr map map2 flatten_chr set_names flatten flatten_int map_chr flatten_dbl
 #' @importFrom stringdist seq_dist
 #' @importFrom magrittr %>% set_colnames
-permute_cases.character <- function(cases, n_permutations, tokenization, bow, dist_fun) {
+permute_cases.character <- function(cases, n_permutations, tokenization, keep_word_position, dist_fun) {
   documents_tokens <- map(cases, tokenization) %>%
 {d_tokens <- . ;
   map2(d_tokens, lengths(d_tokens) %>% cumsum() %>% head(., length(.) - 1) %>% c(0, .),
-       ~ {if (bow) paste0(.x, "_",  seq_along(.) + .y) else unique(.x)})}
+       ~ {if (keep_word_position) paste0(.x, "_",  seq_along(.) + .y) else unique(.x)})}
 
   tokens <- documents_tokens %>%
     flatten_chr() %>%

@@ -1,7 +1,7 @@
 #' @describeIn lime Method for explaining text data
 #' @param preprocess Function to transform \code{\link{character}} vector to feature provided to the model to explain
 #' @param tokenization function used to tokenize text
-#' @param bow set to \code{\link{TRUE}} if to keep order of words. Warning: each word will be replaced by \code{word_position}, this need to be managed by \code{preprocess} function.
+#' @param keep_word_position set to \code{\link{TRUE}} if to keep order of words. Warning: each word will be replaced by \code{word_position}, this need to be managed by \code{preprocess} function.
 #' @param n_permutations number of permutations to perform. More gives better explanation up to a point where it is not usefull and takes too much time. (5000)
 #' @param number_features_explain number of features used in the explanation. (5)
 #' @param feature_selection_method method to select the best features. ("auto")
@@ -12,14 +12,15 @@
 #'
 #' TODO : add example
 #' TODO : check parameter labels != NULL OR n_labels != NULL
+#' TODO : for keep_word_position, make 2 versions of the text, one with _position and one without for the model to predict
 #' @importFrom stringdist seq_dist
 #' @importFrom magrittr %>%
 #' @export
-lime.character <- function(x, model, preprocess, tokenization = default_tokenize, bow = FALSE, kernel_width = 25,
+lime.character <- function(x, model, preprocess, tokenization = default_tokenize, keep_word_position = FALSE, kernel_width = 25,
                            n_permutations = 5000, number_features_explain = 5, feature_selection_method = "auto",
                            labels = NULL, n_labels = NULL,  dist_fun = "cosine", prediction = default_predict, ...) {
   function() {
-  permutation_cases <- permute_cases.character(x, n_permutations, tokenization, bow, dist_fun)
+  permutation_cases <- permute_cases.character(x, n_permutations, tokenization, keep_word_position, dist_fun)
   predicted_labels_dt <- preprocess(permutation_cases$permutations) %>% prediction(model)
   model_permutations(x = permutation_cases$tabular, y = predicted_labels_dt,
                             weights = exp_kernel(kernel_width)(1 - permutation_cases$permutation_distances),

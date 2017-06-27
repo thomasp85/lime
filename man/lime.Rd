@@ -7,8 +7,8 @@
 \title{Create a model explanation function based on training data}
 \usage{
 \method{lime}{character}(x, model, preprocess,
-  tokenization = default_tokenize, bow = FALSE, kernel_width = 25,
-  n_permutations = 5000, number_features_explain = 5,
+  tokenization = default_tokenize, keep_word_position = FALSE,
+  kernel_width = 25, n_permutations = 5000, number_features_explain = 5,
   feature_selection_method = "auto", labels = NULL, n_labels = NULL,
   dist_fun = "cosine", prediction = default_predict, ...)
 
@@ -27,7 +27,7 @@ explained.}
 
 \item{tokenization}{function used to tokenize text}
 
-\item{bow}{set to \code{\link{TRUE}} if to keep order of words. Warning: each word will be replaced by \code{word_position}, this need to be managed by \code{preprocess} function.}
+\item{keep_word_position}{set to \code{\link{TRUE}} if to keep order of words. Warning: each word will be replaced by \code{word_position}, this need to be managed by \code{preprocess} function.}
 
 \item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
 
@@ -46,7 +46,8 @@ explained.}
 \item{prediction}{function used to perform the prediction. Should have 2 variables, first for the \code{\link{character}} vector, second for the \code{model}. Should return a \code{\link{data.frame}} with the predictions.
 
 TODO : add example
-TODO : check parameter labels != NULL OR n_labels != NULL}
+TODO : check parameter labels != NULL OR n_labels != NULL
+TODO : for keep_word_position, make 2 versions of the text, one with _position and one without for the model to predict}
 
 \item{...}{Arguments passed on to methods}
 
