@@ -46,7 +46,7 @@
 #'
 #' @export
 lime <- function(x, model, ...) {
-  UseMethod('lime')
+  UseMethod("lime")
 }
 
 # Helpers -----------------------------------------------------------------
@@ -67,7 +67,7 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
 
     # glmnet does not allow n_features=1
     if(n_features==1){
-      x_fit = cbind('(Intercept)' = rep(1, nrow(x)), x[, features, drop=FALSE])
+      x_fit = cbind("(Intercept)" = rep(1, nrow(x)), x[, features, drop=FALSE])
       fit <- glm.fit(x = x_fit, y = y[[label]],  weights = weights, family = gaussian())
       r2 <- fit$deviance / fit$null.deviance
       coefs <- coef(fit)
@@ -86,23 +86,25 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
   bind_rows(res)
 }
 
+feature_selection_method <- function() c("auto", "none", "forward_selection", "highest_weights", "lasso_path")
+
 select_features <- function(method, x, y, weights, n_features) {
   if (n_features >= ncol(x)) {
     return(seq_len(ncol(x)))
   }
-  method <- match.arg(method, c('auto', 'none', 'forward_selection', 'highest_weights', 'lasso_path'))
+  method <- match.arg(method, feature_selection_method())
   switch(
     method,
     auto = if (n_features <= 6) {
-      select_features('forward_selection', x, y, weights, n_features)
+      select_features("forward_selection", x, y, weights, n_features)
     } else {
-      select_features('highest_weights', x, y, weights, n_features)
+      select_features("highest_weights", x, y, weights, n_features)
     },
     none = seq_len(nrow(x)),
     forward_selection = select_f_fs(x, y, weights, n_features),
     highest_weights = select_f_hw(x, y, weights, n_features),
     lasso_path = select_f_lp(x, y, weights, n_features),
-    stop('Method not implemented', call. = FALSE)
+    stop("Method not implemented", call. = FALSE)
   )
 }
 #' @importFrom glmnet cv.glmnet
@@ -139,7 +141,7 @@ select_f_lp <- function(x, y, weights, n_features) {
   fit <- glmnet(x, y, weights = weights, alpha = 1, nlambda=300)
   # In case that no model with correct n_feature size was found
   if(all(fit$df != n_features)){
-    stop(sprintf('No model with %i features found with lasso_path. Try a different method.', n_features))
+    stop(sprintf("No model with %i features found with lasso_path. Try a different method.", n_features))
   }
   has_value <- apply(coef(fit)[-1, ], 2, function(x) x != 0)
   f_count <- apply(has_value, 2, sum)
