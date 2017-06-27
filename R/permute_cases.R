@@ -25,7 +25,7 @@ permute_cases.data.frame <- function(cases, n_permutations, feature_distribution
 #' @importFrom Matrix Matrix
 #' @importFrom purrr map map2 flatten_chr set_names flatten flatten_int map_chr flatten_dbl
 #' @importFrom stringdist seq_dist
-#' @importFrom magrittr %>% set_colnames %<>%
+#' @importFrom magrittr %>% set_colnames
 permute_cases.character <- function(cases, n_permutations, tokenization, bow, dist_fun) {
   documents_tokens <- map(cases, tokenization) %>%
 {d_tokens <- . ;
