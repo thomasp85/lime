@@ -26,9 +26,10 @@ Imports: glmnet,
     stringdist,
     hrbrthemes,
     magrittr,
-    purrr,
-    e1071
+    purrr
 RoxygenNote: 6.0.1
 Suggests: caret,
     randomForest,
-    testthat
+    testthat,
+    e1071,
+    xgboost

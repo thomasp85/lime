@@ -12,6 +12,6 @@
 stop_words_sentences
 }
 \description{
-Stop words list
+List of words that can be safely removed from sentences.
 }
 \keyword{datasets}

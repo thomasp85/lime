@@ -28,6 +28,6 @@ train_sentences <- dt[-test.rows]
 test_sentences <- dt[test.rows]
 
 # save files
-devtools::use_data(stop_words_sentences, overwrite = TRUE)
-devtools::use_data(train_sentences, overwrite = TRUE)
-devtools::use_data(test_sentences, overwrite = TRUE)
+devtools::use_data(stop_words_sentences, overwrite = TRUE, compress = "gzip")
+devtools::use_data(train_sentences, overwrite = TRUE, compress = "gzip")
+devtools::use_data(test_sentences, overwrite = TRUE, compress = "gzip")

@@ -10,7 +10,7 @@
   tokenization = default_tokenization, bow = FALSE, kernel_width = 25,
   n_permutations = 5000, number_features_explain = 5,
   feature_selection_method = "auto", labels = NULL, n_labels = NULL,
-  dist_fun = "cosine", prediction = do_predict)
+  dist_fun = "cosine", prediction = default_predict)
 
 \method{lime}{data.frame}(x, model, bin_continuous = TRUE, n_bins = 4,
   quantile_bins = TRUE, kernel_width = NULL, ...)
@@ -18,9 +18,10 @@
 lime(x, model, ...)
 }
 \arguments{
-\item{x}{text data}
+\item{x}{The training data used for training the model that should be
+explained.}
 
-\item{model}{model to explain}
+\item{model}{The model whose output should be explained}
 
 \item{preprocess}{Function to transform character vector to feature provided to the model to explain}
 
@@ -54,11 +55,6 @@ TODO : check parameter labels != NULL OR n_labels != NULL}
 \item{quantile_bins}{Should the bins be based on \code{n_bins} quantiles or spread evenly over the range of the training data}
 
 \item{...}{Arguments passed on to methods}
-
-\item{x}{The training data used for training the model that should be
-explained.}
-
-\item{model}{The model whose output should be explained}
 }
 \value{
 A function taking the following arguments:

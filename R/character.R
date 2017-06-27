@@ -1,7 +1,4 @@
 #' @describeIn lime Method for explaining text data
-#'
-#' @param x text data
-#' @param model model to explain
 #' @param preprocess Function to transform character vector to feature provided to the model to explain
 #' @param tokenization function used to tokenize text
 #' @param bow set to TRUE if you want to keep order of words. Warning: each word is replaced by word_position, this need to be managed by preprocess function
@@ -20,30 +17,38 @@
 #' @export
 lime.character <- function(x, model, preprocess, tokenization = default_tokenization, bow = FALSE, kernel_width = 25,
                            n_permutations = 5000, number_features_explain = 5, feature_selection_method = "auto",
-                           labels = NULL, n_labels = NULL,  dist_fun = "cosine", prediction = do_predict) {
+                           labels = NULL, n_labels = NULL,  dist_fun = "cosine", prediction = default_predict) {
+  function(x, model, preprocess, tokenization = default_tokenization, bow, kernel_width,
+           n_permutations, number_features_explain, feature_selection_method,
+           labels, n_labels,  dist_fun, prediction) {
   permutation_cases <- permute_cases.character(x, n_permutations, tokenization, bow, dist_fun)
   predicted_labels_dt <- preprocess(permutation_cases$permutations) %>% prediction(model)
   model_permutations(x = permutation_cases$tabular, y = predicted_labels_dt,
                             weights = exp_kernel(kernel_width)(1 - permutation_cases$permutation_distances),
                             labels = labels, n_labels = n_labels, n_features = number_features_explain,
                             feature_method = feature_selection_method)
+  }
 }
 
-#' @describeIn Used to perform the prediction
+#' @title Default function to perform the prediction
 #'
+#' @description Takes care of performing the prediction and adapting the format
+#' @param data data to be explained (character vector)
+#' @param model model to be explained
 #' @importFrom purrr set_names
 #' @export
-do_predict <- function(data, model) {
+default_predict <- function(data, model) {
   switch(class(model),
-         "xgb.Booster" = predict(model, data, type = "prob", reshape = TRUE) %>% data.frame %>% set_names(seq(ncol(.))),
+         "xgb.Booster" = predict(model, data, type = "prob", reshape = TRUE) %>%
+           data.frame %>% set_names(seq(ncol(.))),
          predict(model, data, type = "prob")
   )
 }
 
-#' @describeIn Default tokenization
+#' @title Default function to tokenize
 #'
-#' Use regex "\\W+" to tokenize a String.
-#'
+#' @description Use simple regex to tokenize a String.
+#' @param text text to tokenize as a character vector
 #' @importFrom stringi stri_split_regex
 #' @importFrom magrittr %>% set_colnames
 #' @export

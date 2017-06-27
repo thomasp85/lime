@@ -2,8 +2,8 @@
 
 S3method(lime,character)
 S3method(lime,data.frame)
+export(default_predict)
 export(default_tokenization)
-export(do_predict)
 export(lime)
 export(plot_features)
 import(ggplot2)

@@ -8,17 +8,23 @@ library(xgboost)
 
 set.seed(2000)
 
+# Data loading
 data("train_sentences")
 data("test_sentences")
 data("stop_words_sentences")
 
-train_sentences[, label := class.text == "OWNX"]
-test_sentences[, label := class.text == "OWNX"]
+label_to_explain <- "OWNX"
+
+# label train set and test set
+train_sentences[, label := class.text == label_to_explain]
+test_sentences[, label := class.text == label_to_explain]
 
 get.iterator <- function(data) itoken(data, preprocess_function = tolower, tokenizer = word_tokenizer, progressbar = F)
 
-v <-  create_vocabulary(get.iterator(train_sentences$text), stopwords = stop.words.sentences)
+# Extract vocabulary
+v <-  create_vocabulary(get.iterator(train_sentences$text), stopwords = stop_words_sentences)
 
+# Function to transform text in matrix
 get.matrix <- function(data) {
   i <- get.iterator(data)
   create_dtm(i, vocab_vectorizer(v))

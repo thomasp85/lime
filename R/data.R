@@ -3,7 +3,7 @@
 #' This corpus contains sentences from
 #' the abstract and introduction of 30 scientific articles that have been
 #' annotated (i.e. labeled or tagged) according to a modified version of the
-#' Argumentative Zones annotation scheme [1].
+#' Argumentative Zones annotation scheme.
 #'
 #' These 30 scientific articles come
 #' from three different domains:
@@ -21,11 +21,11 @@
 #'
 #' ===== References =====
 #'
-#' [1] S. Teufel and M. Moens. Summarizing scientific articles: experiments with
+#' S. Teufel and M. Moens. Summarizing scientific articles: experiments with
 #' relevance and rhetorical status. Computational Linguistics, 28(4):409-445,
 #' 2002.
 #'
-#' [2] S. Teufel. Argumentative zoning: information extraction from scientific
+#' S. Teufel. Argumentative zoning: information extraction from scientific
 #' text. PhD thesis, School of Informatics, University of Edinburgh, 1999.
 #'
 #' @format 2 data frame with 3117 rows and 2 variables:
@@ -41,7 +41,7 @@
 #' This corpus contains sentences from
 #' the abstract and introduction of 30 scientific articles that have been
 #' annotated (i.e. labeled or tagged) according to a modified version of the
-#' Argumentative Zones annotation scheme [1].
+#' Argumentative Zones annotation scheme.
 #'
 #' These 30 scientific articles come
 #' from three different domains:
@@ -59,11 +59,11 @@
 #'
 #' ===== References =====
 #'
-#' [1] S. Teufel and M. Moens. Summarizing scientific articles: experiments with
+#' S. Teufel and M. Moens. Summarizing scientific articles: experiments with
 #' relevance and rhetorical status. Computational Linguistics, 28(4):409-445,
 #' 2002.
 #'
-#' [2] S. Teufel. Argumentative zoning: information extraction from scientific
+#' S. Teufel. Argumentative zoning: information extraction from scientific
 #' text. PhD thesis, School of Informatics, University of Edinburgh, 1999.
 #'
 #' @format 2 data frame with 3117 rows and 2 variables:
@@ -75,6 +75,8 @@
 "test_sentences"
 
 #' Stop words list
+#'
+#' List of words that can be safely removed from sentences.
 #'
 #' @format Character vector of stop words
 #' @source \url{https://archive.ics.uci.edu/ml/datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=text&sort=nameUp&view=table}
