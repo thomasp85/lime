@@ -14,6 +14,7 @@
 #' TODO : add example
 #' TODO : for keep_word_position, make 2 versions of the text, one with _position and one without for the model to predict
 #'
+#' @importFrom purrr is_empty
 #' @importFrom stringdist seq_dist
 #' @importFrom magrittr %>%
 #' @importFrom testthat expect_is expect_true expect_gte expect_false expect_equal
@@ -25,11 +26,12 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
   expect_is(preprocess, "function")
   expect_is(tokenization, "function")
   expect_is(prediction, "function")
+  expect_true(is_scalar_logical(keep_word_position))
   expect_equal(is.null(labels) + is.null(n_labels), 1, info = "You need to choose between both parameters.")
   expect_false(is.null(model))
-  expect_true(length(x) > 0)
+  expect_false(is_empty(x))
   expect_true(feature_selection_method %in% feature_selection_method())
-  expect_true(dist_fun %in% c("osa", "lv", "dl", "hamming", "lcs", "qgram", "cosine", "jaccard", "jw", "soundex"))
+  expect_true(dist_fun %in% c("osa", "lv", "dl", "hamming", "lcs", "qgram", "cosine", "jaccard", "jw", "soundex"), label = "Distance method is unknown.")
   expect_gte(number_features_explain, 1)
   expect_gte(n_permutations, 1)
   expect_gte(kernel_width, 1)
