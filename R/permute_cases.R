@@ -46,7 +46,7 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
 
   # Perf on this part should be improved
   word_selections <- documents_tokens %>%
-    map(~ {document <- . ; sample(length(document), as.integer((n_permutations/length(cases)) - 1), replace = T) %>%
+    map(~ {document <- . ; sample(length(document), ceiling((n_permutations / length(cases)) - 1), replace = T) %>%
       map(~ sample(document, ., replace = F) %>% sort) %>%
       c(list(document), .)})
 
