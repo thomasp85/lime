@@ -1,7 +1,7 @@
 #' @describeIn lime Method for explaining text data
 #' @param preprocess Function to transform \code{\link{character}} vector to feature provided to the model to explain
 #' @param tokenization function used to tokenize text
-#' @param keep_word_position set to \code{\link{TRUE}} if to keep order of words. Warning: each word will be replaced by \code{word_position}, this need to be managed by \code{preprocess} function.
+#' @param keep_word_position set to \code{\link{TRUE}} if to keep order of words. Warning: each word will be replaced by \code{word_position}.
 #' @param n_permutations number of permutations to perform. More gives better explanation up to a point where it is not usefull and takes too much time. (5000)
 #' @param number_features_explain number of features used in the explanation. (5)
 #' @param feature_selection_method method to select the best features. ("auto")
@@ -14,7 +14,7 @@
 #' TODO : add example
 #' TODO : for keep_word_position, make 2 versions of the text, one with _position and one without for the model to predict
 #'
-#' @importFrom purrr is_empty
+#' @importFrom purrr is_empty is_scalar_logical
 #' @importFrom stringdist seq_dist
 #' @importFrom magrittr %>%
 #' @importFrom testthat expect_is expect_true expect_gte expect_false expect_equal

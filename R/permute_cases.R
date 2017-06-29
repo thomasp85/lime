@@ -30,23 +30,22 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
   documents_tokens <- map(cases, tokenization) %>%
 {d_tokens <- . ;
   map2(d_tokens, lengths(d_tokens) %>% cumsum() %>% head(., length(.) - 1) %>% c(0, .),
-       ~ {if (keep_word_position) paste0(.x, "_",  seq_along(.) + .y) else unique(.x)})}
+       ~ {if (keep_word_position) paste0(.x, "_",  seq_along(.) + .y) %>% set_names(.x) else unique(.x) %>% set_names(., .)})}
 
   tokens <- documents_tokens %>%
     flatten_chr() %>%
-    unique(.) %>%
-    sort(decreasing = FALSE) %>%
-    set_names(seq(.))
+    {.[!duplicated(.)]} %>% # unique() would remove names
+    sort(decreasing = FALSE)
+
+  tokens_for_external_model <- names(tokens)
 
   documents_tokens <- documents_tokens %>%
-    map(~ {d <- . ; which(tokens %in% d) %>%
-      set_names(d, nm = .)})
+    map(~ which(tokens %in% .))
 
   dict_size <- length(tokens)
 
   # Perf on this part should be improved
   word_selections <- documents_tokens %>%
-    map(~ names(.) %>% as.integer()) %>%
     map(~ {document <- . ; sample(length(document), as.integer((n_permutations/length(cases)) - 1), replace = T) %>%
       map(~ sample(document, ., replace = F) %>% sort) %>%
       c(list(document), .)})
@@ -61,10 +60,10 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
     Matrix(ncol = dict_size, sparse = TRUE, byrow = TRUE) %>%
     set_colnames(tokens)
 
-  permutation_candidates <- word_selections_flatten %>% map(~ tokens[.]) %>% map_chr(~ paste(., collapse = " "))
+  permutation_candidates <- word_selections_flatten %>% map(~ tokens_for_external_model[.]) %>% map_chr(~ paste(., collapse = " "))
 
   permutation_distances <- map2(word_selections, documents_tokens,
-                                ~ seq_dist(.x, names(.y) %>% as.integer(), method = dist_fun)) %>%
+                                ~ seq_dist(.x, .y, method = dist_fun)) %>%
     flatten_dbl()
 
   list(tabular = bow_matrix,

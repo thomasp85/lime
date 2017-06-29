@@ -27,7 +27,7 @@ explained.}
 
 \item{tokenization}{function used to tokenize text}
 
-\item{keep_word_position}{set to \code{\link{TRUE}} if to keep order of words. Warning: each word will be replaced by \code{word_position}, this need to be managed by \code{preprocess} function.}
+\item{keep_word_position}{set to \code{\link{TRUE}} if to keep order of words. Warning: each word will be replaced by \code{word_position}.}
 
 \item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
 
