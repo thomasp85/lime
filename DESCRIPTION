@@ -27,9 +27,11 @@ Imports: glmnet,
     hrbrthemes,
     magrittr,
     purrr,
-    testthat
+    testthat,
+    Rcpp
 RoxygenNote: 6.0.1
 Suggests: caret,
     randomForest,
     e1071,
     xgboost
+LinkingTo: Rcpp

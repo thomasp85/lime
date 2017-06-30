@@ -44,10 +44,8 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
 
   dict_size <- length(tokens)
 
-  # Perf on this part should be improved
   word_selections <- documents_tokens %>%
-    map(~ {document <- . ; sample(length(document), ceiling((n_permutations / length(cases)) - 1), replace = T) %>%
-      map(~ sample(document, ., replace = F) %>% sort) %>%
+    map(~ {document <- . ; get_index_permutations(document, ceiling(n_permutations / length(cases))) %>%
       c(list(document), .)})
 
   word_selections_flatten <- flatten(word_selections)
@@ -72,5 +70,10 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
        tokens = tokens,
        permutation_distances = permutation_distances)
 }
+
+# For Roxygen (generate some links...)
+#' @useDynLib lime
+#' @importFrom Rcpp sourceCpp
+NULL
 
 globalVariables(".")
