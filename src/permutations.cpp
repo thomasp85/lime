@@ -7,7 +7,6 @@ using namespace Rcpp;
 //' @param original_document Index of words in a text document.
 //' @param number_permutations number of permutation to generate.
 //' @return a list of permutations. The permutation sizes are not all the same.
-//' @export
 // [[Rcpp::export]]
 List get_index_permutations(IntegerVector original_document, int number_permutations) {
   List result(number_permutations);

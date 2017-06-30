@@ -6,7 +6,6 @@
 #' @param original_document Index of words in a text document.
 #' @param number_permutations number of permutation to generate.
 #' @return a list of permutations. The permutation sizes are not all the same.
-#' @export
 get_index_permutations <- function(original_document, number_permutations) {
     .Call('lime_get_index_permutations', PACKAGE = 'lime', original_document, number_permutations)
 }
