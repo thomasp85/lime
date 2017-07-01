@@ -15,7 +15,7 @@ test_that("properties of permutations are as expected", {
   expect_length(permutations, number_permutations)
 
   # First permutation is the original document
-  expect_equal(permutations[[1]], sort(original_document))
+  expect_equal(permutations[[1]], original_document)
 
   # No permutation is larger than the original document
   expect_true(all(lengths(permutations) <= length(original_document)))

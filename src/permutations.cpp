@@ -13,7 +13,6 @@ using namespace Rcpp;
 List get_index_permutations(IntegerVector original_document, int number_permutations) {
   List result(number_permutations);
   IntegerVector nb = sample(original_document.size(), number_permutations, true);
-  std::sort(original_document.begin(), original_document.end());
   // Add original document as the first permutation
   result[0] = original_document;
   for(int i = 1; i < number_permutations - 1; i++){

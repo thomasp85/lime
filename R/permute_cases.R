@@ -34,8 +34,7 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
 
   tokens <- documents_tokens %>%
     flatten_chr() %>%
-    {.[!duplicated(.)]} %>% # unique() would remove names
-    sort(decreasing = FALSE)
+    {.[!duplicated(.)]} # unique() would remove names
 
   tokens_for_external_model <- names(tokens)
 
@@ -58,7 +57,6 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
     set_colnames(tokens)
 
   permutation_candidates <- word_selections_flatten %>% map(~ tokens_for_external_model[.]) %>% map_chr(~ paste(., collapse = " "))
-
   permutation_distances <- map2(word_selections, documents_tokens,
                                 ~ seq_dist(.x, .y, method = dist_fun)) %>%
     flatten_dbl()
