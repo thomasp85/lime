@@ -45,8 +45,7 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
   dict_size <- length(tokens)
 
   word_selections <- documents_tokens %>%
-    map(~ {document <- . ; get_index_permutations(document, n_permutations / length(cases)) %>%
-      c(list(document), .)})
+    map(~ get_index_permutations(., n_permutations / length(cases)))
 
   word_selections_flatten <- flatten(word_selections)
 
