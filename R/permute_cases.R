@@ -41,21 +41,17 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
   documents_tokens <- documents_tokens %>%
     map(~ which(tokens %in% .))
 
-  dict_size <- length(tokens)
-
   word_selections <- documents_tokens %>%
     map(~ get_index_permutations(., n_permutations / length(cases)))
 
   word_selections_flatten <- flatten(word_selections)
-
-  matrix_cols <- seq(dict_size)
 
   bow_matrix <- {
     to_repeat <- lengths(word_selections_flatten)
     rows_index <- seq(word_selections_flatten)
     i <- rep(rows_index, to_repeat)
     j <- flatten_int(word_selections_flatten)
-    sparseMatrix(i, j, x = T)
+    sparseMatrix(i, j, x = TRUE)
   } %>%
     set_colnames(tokens)
 
