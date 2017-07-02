@@ -15,7 +15,7 @@ List get_index_permutations(IntegerVector original_document, int number_permutat
   IntegerVector nb = sample(original_document.size(), number_permutations, true);
   // Add original document as the first permutation
   result[0] = original_document;
-  for(int i = 1; i < number_permutations - 1; i++){
+  for(int i = 1; i < number_permutations; i++){
     IntegerVector v = sample(original_document, nb[i], false);
     std::sort(v.begin(), v.end());
     result[i] = v;

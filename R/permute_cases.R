@@ -22,7 +22,7 @@ permute_cases.data.frame <- function(cases, n_permutations, feature_distribution
   perm
 }
 
-#' @importFrom Matrix Matrix
+#' @importFrom Matrix Matrix sparseMatrix
 #' @importFrom purrr map map2 flatten_chr set_names flatten flatten_int map_chr flatten_dbl
 #' @importFrom stringdist seq_dist
 #' @importFrom magrittr %>% set_colnames
@@ -50,10 +50,13 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
 
   matrix_cols <- seq(dict_size)
 
-  bow_matrix <- word_selections_flatten %>%
-    map(~ matrix_cols %in% .) %>%
-    flatten_int() %>%
-    Matrix(ncol = dict_size, sparse = TRUE, byrow = TRUE) %>%
+  bow_matrix <- {
+    to_repeat <- lengths(word_selections_flatten)
+    rows_index <- seq(word_selections_flatten)
+    i <- rep(rows_index, to_repeat)
+    j <- flatten_int(word_selections_flatten)
+    sparseMatrix(i, j, x = T)
+  } %>%
     set_colnames(tokens)
 
   permutation_candidates <- word_selections_flatten %>% map(~ tokens_for_external_model[.]) %>% map_chr(~ paste(., collapse = " "))

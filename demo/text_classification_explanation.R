@@ -61,7 +61,7 @@ get.features.matrix <- . %>%
   xgb.DMatrix()
 
 # use currying to make the function work in one call
-lime(test_sentences[label == T][4:6, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 4, keep_word_position = FALSE, n_permutations = 100)() %>%
+lime(test_sentences[label == T][4:6, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 2, keep_word_position = FALSE, n_permutations = 1e6)() %>%
   print
 
 # m <- xgb.DMatrix(r$tabular, label = predicted.labels, weight = 1 - r$permutation.distances)
