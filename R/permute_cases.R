@@ -30,7 +30,7 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
   documents_tokens <- map(cases, tokenization) %>%
 {d_tokens <- . ;
   map2(d_tokens, lengths(d_tokens) %>% cumsum() %>% head(., length(.) - 1) %>% c(0, .),
-       ~ {if (keep_word_position) paste0(.x, "_",  seq_along(.) + .y) %>% set_names(.x) else unique(.x) %>% set_names(., .)})}
+       ~ {if (keep_word_position) paste0(.x, "_",  seq_along(.x) + .y) %>% set_names(.x) else unique(.x) %>% set_names(., .)})}
 
   tokens <- documents_tokens %>%
     flatten_chr() %>%
@@ -42,7 +42,7 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
     map(~ which(tokens %in% .))
 
   word_selections <- documents_tokens %>%
-    map(~ get_index_permutations(., n_permutations / length(cases)))
+    map(~ get_index_permutations(.x, n_permutations / length(cases)))
 
   word_selections_flatten <- flatten(word_selections)
 
@@ -55,9 +55,8 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
   } %>%
     set_colnames(tokens)
 
-  permutation_candidates <- word_selections_flatten %>% map(~ tokens_for_external_model[.]) %>% map_chr(~ paste(., collapse = " "))
-  permutation_distances <- map2(word_selections, documents_tokens,
-                                ~ seq_dist(.x, .y, method = dist_fun)) %>%
+  permutation_candidates <- map_chr(word_selections_flatten, ~ paste(tokens_for_external_model[.x], collapse = " "))
+  permutation_distances <- map2(word_selections, documents_tokens, ~ seq_dist(.x, .y, method = dist_fun)) %>%
     flatten_dbl()
 
   list(tabular = bow_matrix,
