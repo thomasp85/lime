@@ -4,7 +4,19 @@
 #' @param keep_word_position set to \code{\link{TRUE}} if to keep order of words. Warning: each word will be replaced by \code{word_position}.
 #' @param n_permutations number of permutations to perform. More gives better explanation up to a point where it is not usefull and takes too much time. (5000)
 #' @param number_features_explain number of features used in the explanation. (5)
-#' @param feature_selection_method method to select the best features. ("auto")
+#' @param feature_selection_method method to select the best features. (\code{"auto"})
+#'
+#' One of:
+#' \itemize{
+#' \item{"auto"}{ : If n_features <= 6 use \code{"forward_selection"} else use \code{"highest_weights"}.}
+#' \item{"none"} {Ignore \code{n_features} and use all features.}
+#' \item{"forward_selection"} {: Add one feature at a time until \code{n_features} is
+#'       reached, based on quality of a ridge regression model.}
+#' \item{"highest_weights"} {: Fit a ridge regression and select the \code{n_features} with
+#'       the highest absolute weight.}
+#' \item{"lasso_path"} {: Fit a lasso model and choose the \code{n_features} whose lars
+#'       path converge to zero the latest.}
+#' }
 #' @param labels name of the label to explain (use only when model to explain predictions includes names as \code{\link{data.frame}} column names, like with \code{link{caret}}). (\code{\link{NULL}}).
 #' @param n_labels instead of labels, number of labels to explain. (\code{\link{NULL}})
 #' @param dist_fun function to measure distance between original the datum and its permultations. Used for weighting the permutations in the explanation model. (cosine)

@@ -2,7 +2,7 @@ library(lime)
 library(magrittr)
 library(purrr)
 
-context("Permutations")
+context("Text permutations")
 
 test_that("properties of permutations are as expected", {
   set.seed(2000)
@@ -22,4 +22,12 @@ test_that("properties of permutations are as expected", {
 
   # Permutations doesn't contain duplicates
   expect_true(permutations %>% map(~ all(!duplicated(.))) %>% flatten_lgl() %>% all)
+})
+
+
+test_that("Cosine computation is correct", {
+  v <- 5:13
+  m <- Matrix::Matrix(1:81, ncol = 9, sparse = TRUE)
+  cos <- function(x) 1 - crossprod(v, x)/sqrt(crossprod(v) * crossprod(x))
+  testthat::expect_equal(lime:::cosine_distance_vector_to_matrix_rows(v, m), apply(m, MARGIN = 1, cos))
 })

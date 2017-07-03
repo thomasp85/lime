@@ -28,10 +28,12 @@ Imports: glmnet,
     magrittr,
     purrr,
     testthat,
-    Rcpp
+    Rcpp,
+    RcppEigen
 RoxygenNote: 6.0.1
 Suggests: caret,
     randomForest,
     e1071,
     xgboost
-LinkingTo: Rcpp
+LinkingTo: Rcpp, 
+    RcppEigen

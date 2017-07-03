@@ -35,7 +35,19 @@ explained.}
 
 \item{number_features_explain}{number of features used in the explanation. (5)}
 
-\item{feature_selection_method}{method to select the best features. ("auto")}
+\item{feature_selection_method}{method to select the best features. (\code{"auto"})
+
+One of:
+\itemize{
+\item{"auto"}{ : If n_features <= 6 use \code{"forward_selection"} else use \code{"highest_weights"}.}
+\item{"none"} {Ignore \code{n_features} and use all features.}
+\item{"forward_selection"} {: Add one feature at a time until \code{n_features} is
+reached, based on quality of a ridge regression model.}
+\item{"highest_weights"} {: Fit a ridge regression and select the \code{n_features} with
+the highest absolute weight.}
+\item{"lasso_path"} {: Fit a lasso model and choose the \code{n_features} whose lars
+path converge to zero the latest.}
+}}
 
 \item{labels}{name of the label to explain (use only when model to explain predictions includes names as \code{\link{data.frame}} column names, like with \code{link{caret}}). (\code{\link{NULL}}).}
 

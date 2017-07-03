@@ -23,7 +23,7 @@ permute_cases.data.frame <- function(cases, n_permutations, feature_distribution
 }
 
 #' @importFrom Matrix Matrix sparseMatrix
-#' @importFrom purrr map map2 flatten_chr set_names flatten flatten_int map_chr flatten_dbl
+#' @importFrom purrr map map2 flatten_chr set_names flatten flatten_int map_chr flatten_dbl accumulate
 #' @importFrom stringdist seq_dist
 #' @importFrom magrittr %>% set_colnames
 permute_cases.character <- function(cases, n_permutations, tokenization, keep_word_position, dist_fun) {
@@ -41,8 +41,9 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
   documents_tokens <- documents_tokens %>%
     map(~ which(tokens %in% .))
 
-  word_selections <- documents_tokens %>%
-    map(~ get_index_permutations(.x, n_permutations / length(cases)))
+  number_permutations_per_document <- as.integer(n_permutations / length(cases))
+
+  word_selections <- map(documents_tokens, ~ get_index_permutations(.x, number_permutations_per_document))
 
   word_selections_flatten <- flatten(word_selections)
 
@@ -51,12 +52,21 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
     rows_index <- seq(word_selections_flatten)
     i <- rep(rows_index, to_repeat)
     j <- flatten_int(word_selections_flatten)
-    sparseMatrix(i, j, x = TRUE)
+    sparseMatrix(i, j, x = 1)
   } %>%
     set_colnames(tokens)
 
   permutation_candidates <- map_chr(word_selections_flatten, ~ paste(tokens_for_external_model[.x], collapse = " "))
-  permutation_distances <- map2(word_selections, documents_tokens, ~ seq_dist(.x, .y, method = dist_fun)) %>%
+
+  #permutation_distances_bis <- map2(word_selections, documents_tokens, ~ seq_dist(.x, .y, method = dist_fun)) %>%
+    #flatten_dbl()
+
+  word_indexes_2_logical_vector <- function(doc) seq(tokens) %in% doc
+
+  bow_indexes_per_document <- length(cases) %>% rep(number_permutations_per_document, .) %>% purrr::accumulate(`+`) %>% map2(c(1, head(., -1) + 1), ., c)
+
+  permutation_distances <- map2(documents_tokens, bow_indexes_per_document,
+                                ~ word_indexes_2_logical_vector(.x) %>% cosine_distance_vector_to_matrix_rows(bow_matrix[.y[1]:.y[2],])) %>%
     flatten_dbl()
 
   list(tabular = bow_matrix,
@@ -66,7 +76,14 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
        permutation_distances = permutation_distances)
 }
 
-# For Roxygen (generate some links...)
+#' Compute distances between a dense vector and a sparse matrix
+#' @param vector dense integer vector
+#' @param sparse_matrix a sparse matrix of permutations
+cosine_distance_vector_to_matrix_rows  <- function(vector, sparse_matrix) {
+  vector <- vector / c(sqrt(crossprod(vector))) # use c() to avoid a warning
+  1 - as.vector(sparse_matrix %*% vector / sqrt(rowSumsSq(sparse_matrix)))
+}
+
 #' @useDynLib lime
 #' @importFrom Rcpp sourceCpp
 NULL
