@@ -5,8 +5,9 @@
 
 using namespace Rcpp;
 
-// https://codereview.stackexchange.com/questions/159396/cosine-similarity-of-one-vector-with-many
-// Modified to manage sparse matrix with Eigen
+//' https://codereview.stackexchange.com/questions/159396/cosine-similarity-of-one-vector-with-many
+//' Modified to manage sparse matrix with Eigen
+//' @param sparse_matrix the matrix to compute distance on.
 // [[Rcpp::export]]
 NumericVector rowSumsSq(MSpMat sparse_matrix) {
   int nrow = sparse_matrix.rows(), ncol = sparse_matrix.cols();

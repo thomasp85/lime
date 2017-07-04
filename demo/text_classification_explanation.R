@@ -69,17 +69,22 @@ system.time(lime(long_document, bst, get.features.matrix, n_labels = 1, number_f
   print)
 
 
-permutation_cases <- lime:::permute_cases.character(long_document, 5e3, tokenization = lime::default_tokenize, keep_word_position= TRUE)
-predicted_labels_dt <- get.features.matrix(permutation_cases$permutations) %>% lime::default_predict(bst)
+permutation_cases <- lime:::permute_cases.character(long_document, 5e3, tokenization = lime::default_tokenize, keep_word_position = TRUE)
+predicted_labels_dt <- get.features.matrix(permutation_cases$permutations) %>% lime::default_predict(model = bst)
 
-# m <- xgb.DMatrix(r$tabular, label = predicted.labels, weight = 1 - r$permutation.distances)
-# bst.bow <- xgb.train(list(max_depth = 3, eta = 1, silent = 1, objective = "binary:logistic"), m, nrounds = 1)
-#
-# bst.bow %>%
-#   xgb.importance(model = .) %>%
-#   .[,word := r$tokens[as.numeric(Feature) + 1]] %>%
-#   print()
-#
-# predicted.labels <- predicted.labels.raw %>%
-#   is_greater_than(0.5)
-#which(predicted.labels == T) %>% permutation.candidates[.]
+learn <- function(depth, rounds) {
+  bst.bow <- xgb.train(list(max_depth = depth, eta = 1, silent = 1, objective = "binary:logistic"), m, nrounds = rounds)
+  if (sum(stri_count_regex(xgb.dump(bst.bow), "yes=(\\d+),no=(\\d+)")) == 0) learn(depth, rounds + 1) else bst.bow
+}
+
+names(predicted_labels_dt) %>% map(~ {
+  column_name <- .
+  m <- xgb.DMatrix(permutation_cases$tabular, label = predicted_labels_dt[[column_name]], weight = permutation_cases$permutation_distances)
+  bst.bow <- learn(2, 1)
+  xgb.importance(model = bst.bow) %>%
+    dplyr::mutate(Feature = permutation_cases$tokens[as.numeric(Feature) + 1],
+           Label = column_name) %>%
+    dplyr::select("Label", dplyr::everything())
+  }) %>%
+  dplyr::bind_rows()
+

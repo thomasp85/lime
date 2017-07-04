@@ -78,7 +78,7 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
 #' @param sparse_matrix a sparse matrix of permutations
 cosine_distance_vector_to_matrix_rows  <- function(vector, sparse_matrix) {
   vector <- vector / c(sqrt(crossprod(vector))) # use c() to avoid a warning
-  1 - as.vector(sparse_matrix %*% vector / sqrt(rowSumsSq(sparse_matrix)))
+  as.vector(sparse_matrix %*% vector / sqrt(rowSumsSq(sparse_matrix)))
 }
 
 # https://stackoverflow.com/questions/42313373/r-cmd-check-note-found-no-calls-to-r-registerroutines-r-usedynamicsymbols
