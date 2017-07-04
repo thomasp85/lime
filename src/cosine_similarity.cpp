@@ -6,17 +6,17 @@
 using namespace Rcpp;
 
 // https://codereview.stackexchange.com/questions/159396/cosine-similarity-of-one-vector-with-many
+// Modified to manage sparse matrix with Eigen
 // [[Rcpp::export]]
-NumericVector rowSumsSq(MSpMat x) {
-  int nrow = x.rows(), ncol = x.cols();
+NumericVector rowSumsSq(MSpMat sparse_matrix) {
+  int nrow = sparse_matrix.rows(), ncol = sparse_matrix.cols();
   NumericVector out(nrow);
 
-  for (int j = 0; j < ncol; ++j) {
-    for (InIterMat i_(x, j); i_; ++i_){
-      out[i_.index()] += std::pow(i_.value(), 2);
+  for (int col_index = 0; col_index < ncol; ++col_index) {
+    for (InIterMat sparse_row_index(sparse_matrix, col_index); sparse_row_index; ++sparse_row_index){
+      out[sparse_row_index.index()] += std::pow(sparse_row_index.value(), 2);
     }
   }
-
   return out;
 }
 

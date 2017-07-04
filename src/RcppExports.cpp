@@ -8,13 +8,13 @@
 using namespace Rcpp;
 
 // rowSumsSq
-NumericVector rowSumsSq(MSpMat x);
-RcppExport SEXP lime_rowSumsSq(SEXP xSEXP) {
+NumericVector rowSumsSq(MSpMat sparse_matrix);
+RcppExport SEXP lime_rowSumsSq(SEXP sparse_matrixSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< MSpMat >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rowSumsSq(x));
+    Rcpp::traits::input_parameter< MSpMat >::type sparse_matrix(sparse_matrixSEXP);
+    rcpp_result_gen = Rcpp::wrap(rowSumsSq(sparse_matrix));
     return rcpp_result_gen;
 END_RCPP
 }
