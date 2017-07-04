@@ -2,7 +2,7 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 rowSumsSq <- function(sparse_matrix) {
-    .Call('lime_rowSumsSq', PACKAGE = 'lime', sparse_matrix)
+    .Call(lime_rowSumsSq, sparse_matrix)
 }
 
 #' Generate permutations of a vector of indexes.
@@ -13,6 +13,6 @@ rowSumsSq <- function(sparse_matrix) {
 #' @param number_permutations number of permutation to generate.
 #' @return a list of permutations. The permutation sizes are not all the same.
 get_index_permutations <- function(original_document, number_permutations) {
-    .Call('lime_get_index_permutations', PACKAGE = 'lime', original_document, number_permutations)
+    .Call(lime_get_index_permutations, original_document, number_permutations)
 }
 

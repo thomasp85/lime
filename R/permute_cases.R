@@ -84,7 +84,9 @@ cosine_distance_vector_to_matrix_rows  <- function(vector, sparse_matrix) {
   1 - as.vector(sparse_matrix %*% vector / sqrt(rowSumsSq(sparse_matrix)))
 }
 
-#' @useDynLib lime
+# https://stackoverflow.com/questions/42313373/r-cmd-check-note-found-no-calls-to-r-registerroutines-r-usedynamicsymbols
+
+#' @useDynLib lime, .registration = TRUE
 #' @importFrom Rcpp sourceCpp
 NULL
 

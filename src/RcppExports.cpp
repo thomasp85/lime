@@ -30,14 +30,3 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-
-static const R_CallMethodDef CallEntries[] = {
-    {"lime_rowSumsSq", (DL_FUNC) &lime_rowSumsSq, 1},
-    {"lime_get_index_permutations", (DL_FUNC) &lime_get_index_permutations, 2},
-    {NULL, NULL, 0}
-};
-
-RcppExport void R_init_lime(DllInfo *dll) {
-    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
-    R_useDynamicSymbols(dll, FALSE);
-}
