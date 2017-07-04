@@ -12,6 +12,8 @@ Description: When building complex models, it is often difficult to explain why
     explaining the outcome of black box models by fitting a local model around
     the point in question an pertubations of this point.
 License: MIT + file LICENSE
+URL: https://github.com/thomasp85/lime
+BugReports: https://github.com/thomasp85/lime/issues
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
