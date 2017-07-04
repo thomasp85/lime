@@ -26,7 +26,7 @@ permute_cases.data.frame <- function(cases, n_permutations, feature_distribution
 #' @importFrom purrr map map2 flatten_chr set_names flatten flatten_int map_chr flatten_dbl accumulate
 #' @importFrom stringdist seq_dist
 #' @importFrom magrittr %>% set_colnames
-permute_cases.character <- function(cases, n_permutations, tokenization, keep_word_position, dist_fun) {
+permute_cases.character <- function(cases, n_permutations, tokenization, keep_word_position) {
   documents_tokens <- map(cases, tokenization) %>%
 {d_tokens <- . ;
   map2(d_tokens, lengths(d_tokens) %>% cumsum() %>% head(., length(.) - 1) %>% c(0, .),
@@ -57,9 +57,6 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
     set_colnames(tokens)
 
   permutation_candidates <- map_chr(word_selections_flatten, ~ paste(tokens_for_external_model[.x], collapse = " "))
-
-  #permutation_distances_bis <- map2(word_selections, documents_tokens, ~ seq_dist(.x, .y, method = dist_fun)) %>%
-    #flatten_dbl()
 
   word_indexes_2_logical_vector <- function(doc) seq(tokens) %in% doc
 

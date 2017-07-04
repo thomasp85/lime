@@ -19,7 +19,6 @@
 #' }
 #' @param labels name of the label to explain (use only when model to explain predictions includes names as \code{\link{data.frame}} column names, like with \code{link{caret}}). (\code{\link{NULL}}).
 #' @param n_labels instead of labels, number of labels to explain. (\code{\link{NULL}})
-#' @param dist_fun function to measure distance between original the datum and its permultations. Used for weighting the permutations in the explanation model. (cosine)
 #' @param prediction function used to perform the prediction. Should have 2 variables, first for the \code{\link{character}} vector, second for the \code{model}. Should return a \code{\link{data.frame}} with the predictions.
 #' @return Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
 #'
@@ -33,7 +32,7 @@
 #' @export
 lime.character <- function(x, model, preprocess, tokenization = default_tokenize, keep_word_position = FALSE, kernel_width = 25,
                            n_permutations = 5000, number_features_explain = 5, feature_selection_method = "auto",
-                           labels = NULL, n_labels = NULL,  dist_fun = "cosine", prediction = default_predict, ...) {
+                           labels = NULL, n_labels = NULL,  prediction = default_predict, ...) {
 
   expect_is(preprocess, "function")
   expect_is(tokenization, "function")
@@ -43,13 +42,12 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
   expect_false(is.null(model))
   expect_false(is_empty(x))
   expect_true(feature_selection_method %in% feature_selection_method())
-  expect_true(dist_fun %in% c("osa", "lv", "dl", "hamming", "lcs", "qgram", "cosine", "jaccard", "jw", "soundex"), label = "Distance method is unknown.")
   expect_gte(number_features_explain, 1)
   expect_gte(n_permutations, 1)
   expect_gte(kernel_width, 1)
 
   function() {
-    permutation_cases <- permute_cases(x, n_permutations, tokenization, keep_word_position, dist_fun)
+    permutation_cases <- permute_cases(x, n_permutations, tokenization, keep_word_position)
     predicted_labels_dt <- preprocess(permutation_cases$permutations) %>% prediction(model)
     model_permutations(x = permutation_cases$tabular, y = predicted_labels_dt,
                        weights = exp_kernel(kernel_width)(1 - permutation_cases$permutation_distances),

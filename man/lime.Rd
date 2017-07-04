@@ -10,7 +10,7 @@
   tokenization = default_tokenize, keep_word_position = FALSE,
   kernel_width = 25, n_permutations = 5000, number_features_explain = 5,
   feature_selection_method = "auto", labels = NULL, n_labels = NULL,
-  dist_fun = "cosine", prediction = default_predict, ...)
+  prediction = default_predict, ...)
 
 \method{lime}{data.frame}(x, model, bin_continuous = TRUE, n_bins = 4,
   quantile_bins = TRUE, kernel_width = NULL, ...)
@@ -52,8 +52,6 @@ path converge to zero the latest.}
 \item{labels}{name of the label to explain (use only when model to explain predictions includes names as \code{\link{data.frame}} column names, like with \code{link{caret}}). (\code{\link{NULL}}).}
 
 \item{n_labels}{instead of labels, number of labels to explain. (\code{\link{NULL}})}
-
-\item{dist_fun}{function to measure distance between original the datum and its permultations. Used for weighting the permutations in the explanation model. (cosine)}
 
 \item{prediction}{function used to perform the prediction. Should have 2 variables, first for the \code{\link{character}} vector, second for the \code{model}. Should return a \code{\link{data.frame}} with the predictions.}
 
