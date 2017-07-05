@@ -29,7 +29,6 @@ Imports: glmnet,
     hrbrthemes,
     magrittr,
     purrr,
-    testthat,
     Rcpp,
     RcppEigen,
     assertthat
@@ -37,6 +36,7 @@ RoxygenNote: 6.0.1
 Suggests: caret,
     randomForest,
     e1071,
-    xgboost
+    xgboost,
+    testthat
 LinkingTo: Rcpp, 
     RcppEigen
