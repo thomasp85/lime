@@ -34,9 +34,9 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
                            n_permutations = 5000, number_features_explain = 5, feature_selection_method = "auto",
                            labels = NULL, n_labels = NULL,  prediction = default_predict, ...) {
 
-  validate_that(class(preprocess) == "function")
-  validate_that(class(tokenization) == "function")
-  validate_that(class(prediction) == "function")
+  validate_that("function" %in% class(preprocess))
+  validate_that("function" %in% class(tokenization))
+  validate_that("function" %in% class(prediction))
   validate_that(is_scalar_logical(keep_word_position))
   validate_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
   validate_that(!is.null(model))
