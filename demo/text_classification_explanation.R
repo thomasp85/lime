@@ -65,7 +65,7 @@ system.time(results <- lime(test_sentences[label == T][4:6, text], bst, get.feat
   print)
 
 long_document <- test_sentences[label == T][5, text] %>% rep(50) %>% paste(collapse = " ")
-system.time(lime(long_document, bst, get.features.matrix, n_labels = 1, number_features_explain = 2, keep_word_position = TRUE, n_permutations = 1e5, feature_selection_method = "highest_weights")() %>%
+system.time(lime(long_document, bst, get.features.matrix, n_labels = 1, number_features_explain = 2, keep_word_position = TRUE, n_permutations = 5e3, feature_selection_method = "highest_weights")() %>%
   print)
 
 

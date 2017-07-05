@@ -28,23 +28,26 @@
 #' @importFrom purrr is_empty is_scalar_logical
 #' @importFrom stringdist seq_dist
 #' @importFrom magrittr %>%
-#' @importFrom testthat expect_is expect_true expect_gte expect_false expect_equal
+#' @importFrom assertthat validate_that not_empty is.scalar
 #' @export
 lime.character <- function(x, model, preprocess, tokenization = default_tokenize, keep_word_position = FALSE, kernel_width = 25,
                            n_permutations = 5000, number_features_explain = 5, feature_selection_method = "auto",
                            labels = NULL, n_labels = NULL,  prediction = default_predict, ...) {
 
-  expect_is(preprocess, "function")
-  expect_is(tokenization, "function")
-  expect_is(prediction, "function")
-  expect_true(is_scalar_logical(keep_word_position))
-  expect_equal(is.null(labels) + is.null(n_labels), 1, info = "You need to choose between both parameters.")
-  expect_false(is.null(model))
-  expect_false(is_empty(x))
-  expect_true(feature_selection_method %in% feature_selection_method())
-  expect_gte(number_features_explain, 1)
-  expect_gte(n_permutations, 1)
-  expect_gte(kernel_width, 1)
+  validate_that(class(preprocess) == "function")
+  validate_that(class(tokenization) == "function")
+  validate_that(class(prediction) == "function")
+  validate_that(is_scalar_logical(keep_word_position))
+  validate_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
+  validate_that(!is.null(model))
+  not_empty(x)
+  validate_that(feature_selection_method %in% feature_selection_method())
+  validate_that(number_features_explain >= 1)
+  is.scalar(number_features_explain)
+  validate_that(n_permutations >= 1)
+  is.scalar(n_permutations)
+  validate_that(kernel_width >= 1)
+  is.scalar(kernel_width)
 
   function() {
     permutation_cases <- permute_cases(x, n_permutations, tokenization, keep_word_position)

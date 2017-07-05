@@ -46,7 +46,7 @@
 #'
 #' @export
 lime <- function(x, model, ...) {
-  UseMethod("lime")
+  UseMethod('lime')
 }
 
 # Helpers -----------------------------------------------------------------

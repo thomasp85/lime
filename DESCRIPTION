@@ -31,7 +31,8 @@ Imports: glmnet,
     purrr,
     testthat,
     Rcpp,
-    RcppEigen
+    RcppEigen,
+    assertthat
 RoxygenNote: 6.0.1
 Suggests: caret,
     randomForest,
