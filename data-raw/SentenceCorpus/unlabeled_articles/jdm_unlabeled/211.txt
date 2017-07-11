@@ -1,0 +1,17 @@
+### abstract ###
+inclusion and exclusion strategies for allocation of scarce goods involve different processes
+the conditions under which one strategy is chosen in favor of the other  however  have not been fully explicated
+in the present study  decision makers chose a single strategy after reading through descriptions of  NUMBER  potential organ recipients  they then narrowed the list of transplant candidates
+most liberals chose to use exclusion under conditions of abundance and inclusion under scarcity
+in contrast  conservatives preferred an inclusion strategy under abundance and exclusion though not significantly under scarcity
+theoretical implications as well as ongoing work in inclusion-exclusion strategy choice  political ideology  and distributive justice are discussed
+### introduction ###
+suppose you were the director of a hospital's organ allocation team
+your job is to determine who among those patients awaiting organ transplants should be given priority for the organs that are currently available
+how would you decide
+one possible strategy might be to decide which candidates are  in the running
+  that is  you would select or  include  the patients who you think should be seriously considered for an immediate organ transplant
+the other strategy might be to decide which candidates are  out of the running
+  in other words  you would eliminate or  exclude  those patients who you think should not be seriously considered for an immediate organ transplant
+previous research suggests that if you use an inclusion rather than exclusion strategy you will end up with a smaller consideration set  i e   more candidates will be screened out  CITATION   and you will expend more effort  CITATION
+research also suggests that  under certain contexts  decision makers may have a natural preference for one strategy over the other  CITATION

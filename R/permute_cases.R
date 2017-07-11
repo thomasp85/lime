@@ -21,38 +21,70 @@ permute_cases.data.frame <- function(cases, n_permutations, feature_distribution
   perm[seq.int(1, by = n_permutations, length.out = nrow(cases)), ] <- cases
   perm
 }
-#' @importFrom stringi stri_split stri_join_list
-#' @importFrom Matrix Matrix
-permute_cases.character <- function(cases, n_permutations, split_by, bow) {
-  tokens <- stri_split(cases, regex = split_by)
-  doc_size <- lengths(tokens)
-  if (bow) {
-    tokens_lower <- split(tolower(unlist(tokens)), rep(seq_along(tokens), doc_size))
-    tokens_lookup <- lapply(tokens_lower, unique)
-    doc_size <- lengths(lapply(tokens_lookup, unique))
-  } else {
-    tokens_lookup <- tokens
-  }
-  perm <- lapply(seq_along(tokens_lookup), function(i) {
-    remove_n <- sample(doc_size[i], n_permutations, replace = FALSE)
-    remove <- lapply(remove_n, sample, x = doc_size[i] - 1)
-    permutations <- lapply(remove, function(ii) tokens_lookup[[i]][-ii])
-    if (bow) {
-      permutations <- lapply(permutations, function(words) tokens[[i]][!tokens_lower[[i]] %in% words])
-      var_names <- tokens_lookup[[i]]
-    } else {
-      var_names <- paste0(seq_along(tokens_lookup[[i]]), '_', tokens_lookup[[i]])
-    }
-    complete <- rep(1, length(tokens_lookup[[i]]))
-    remove <- do.call(rbind, lapply(remove, function(ii) {complete[ii] <- 0; complete}))
-    remove[1, ] <- 1
-    remove <- Matrix(remove, sparse = TRUE)
-    colnames(remove) <- tokens_lookup[[i]]
-    list(permutations, remove)
-  })
-  removes <- lapply(perm, `[[`, 2)
-  perm <- lapply(perm, `[[`, 1)
-  perm <- stri_join_list(unlist(perm, recursive = FALSE), sep = ' ')
-  perm[seq.int(1, by = n_permutations, length.out = length(cases))] <- cases
-  list(permutations = perm, tabular = removes)
+
+#' @importFrom Matrix Matrix sparseMatrix
+#' @importFrom purrr map map2 flatten_chr set_names flatten flatten_int map_chr flatten_dbl accumulate
+#' @importFrom stringdist seq_dist
+#' @importFrom magrittr %>% set_colnames
+permute_cases.character <- function(cases, n_permutations, tokenization, keep_word_position) {
+  documents_tokens <- map(cases, tokenization) %>%
+{d_tokens <- . ;
+  map2(d_tokens, lengths(d_tokens) %>% cumsum() %>% head(., length(.) - 1) %>% c(0, .),
+       ~ {if (keep_word_position) paste0(.x, "_",  seq_along(.x) + .y) %>% set_names(.x) else unique(.x) %>% set_names(., .)})}
+
+  tokens <- documents_tokens %>%
+    flatten_chr() %>%
+    {.[!duplicated(.)]} # unique() would remove names
+
+  tokens_for_external_model <- names(tokens)
+
+  documents_tokens <- documents_tokens %>%
+    map(~ which(tokens %in% .))
+
+  number_permutations_per_document <- as.integer(n_permutations / length(cases))
+
+  word_selections <- map(documents_tokens, ~ get_index_permutations(.x, number_permutations_per_document))
+
+  word_selections_flatten <- flatten(word_selections)
+
+  bow_matrix <- {
+    to_repeat <- lengths(word_selections_flatten)
+    rows_index <- seq(word_selections_flatten)
+    i <- rep(rows_index, to_repeat)
+    j <- flatten_int(word_selections_flatten)
+    sparseMatrix(i, j, x = 1)
+  } %>%
+    set_colnames(tokens)
+
+  permutation_candidates <- map_chr(word_selections_flatten, ~ paste(tokens_for_external_model[.x], collapse = " "))
+
+  word_indexes_2_logical_vector <- function(doc) seq(tokens) %in% doc
+
+  bow_indexes_per_document <- length(cases) %>% rep(number_permutations_per_document, .) %>% purrr::accumulate(`+`) %>% map2(c(1, head(., -1) + 1), ., c)
+
+  permutation_distances <- map2(documents_tokens, bow_indexes_per_document,
+                                ~ word_indexes_2_logical_vector(.x) %>% cosine_distance_vector_to_matrix_rows(bow_matrix[.y[1]:.y[2],])) %>%
+    flatten_dbl()
+
+  list(tabular = bow_matrix,
+       permutations = permutation_candidates,
+       word_selections = word_selections,
+       tokens = tokens,
+       permutation_distances = permutation_distances)
 }
+
+#' Compute distances between a dense vector and a sparse matrix
+#' @param vector dense integer vector
+#' @param sparse_matrix a sparse matrix of permutations
+cosine_distance_vector_to_matrix_rows  <- function(vector, sparse_matrix) {
+  vector <- vector / c(sqrt(crossprod(vector))) # use c() to avoid a warning
+  as.vector(sparse_matrix %*% vector / sqrt(rowSumsSq(sparse_matrix)))
+}
+
+# https://stackoverflow.com/questions/42313373/r-cmd-check-note-found-no-calls-to-r-registerroutines-r-usedynamicsymbols
+
+#' @useDynLib lime, .registration = TRUE
+#' @importFrom Rcpp sourceCpp
+NULL
+
+globalVariables(".")

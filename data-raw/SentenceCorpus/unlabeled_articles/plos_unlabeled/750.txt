@@ -1,0 +1,30 @@
+### abstract ###
+The cellular response elicited by an environmental cue typically varies with the strength of the stimulus.
+For example, in the yeast Saccharomyces cerevisiae, the concentration of mating pheromone determines whether cells undergo vegetative growth, chemotropic growth, or mating.
+This implies that the signaling pathways responsible for detecting the stimulus and initiating a response must transmit quantitative information about the intensity of the signal.
+Our previous experimental results suggest that yeast encode pheromone concentration as the duration of the transmitted signal.
+Here we use mathematical modeling to analyze possible biochemical mechanisms for performing this dose-to-duration conversion.
+We demonstrate that modulation of signal duration increases the range of stimulus concentrations for which dose-dependent responses are possible; this increased dynamic range produces the counterintuitive result of signaling beyond saturation in which dose-dependent responses are still possible after apparent saturation of the receptors.
+We propose a mechanism for dose-to-duration encoding in the yeast pheromone pathway that is consistent with current experimental observations.
+Most previous investigations of information processing by signaling pathways have focused on amplitude encoding without considering temporal aspects of signal transduction.
+Here we demonstrate that dose-to-duration encoding provides cells with an alternative mechanism for processing and transmitting quantitative information about their surrounding environment.
+The ability of signaling pathways to convert stimulus strength into signal duration results directly from the nonlinear nature of these systems and emphasizes the importance of considering the dynamic properties of signaling pathways when characterizing their behavior.
+Understanding how signaling pathways encode and transmit quantitative information about the external environment will not only deepen our understanding of these systems but also provide insight into how to reestablish proper function of pathways that have become dysregulated by disease.
+### introduction ###
+Many substances, such as hormones, neurotransmitters and a variety of pharmaceuticals, affect cellular behavior by binding to membrane receptors and activating intracellular signaling pathways.
+These pathways transmit information from the plasma membrane to selected cellular components to generate an appropriate response to the environmental cue.
+However, signaling networks are not simply passive relay systems, but actively modulate the transmitted signals.
+For example, cross inhibition is used to avoid spurious crosstalk between pathways.
+Similarly, negative feedback allows pathways to adapt or desensitize to persistent stimuli CITATION, CITATION.
+In many cases, the nature of the response depends on the dose of the stimulus.
+Thus, in addition to relaying qualitative information, signaling pathways must also transmit quantitative information about the intensity of the stimulus.
+Many signaling pathways consist of a cell surface receptor, G protein transducer, and a series of protein kinases, including a mitogen activated protein kinase.
+This architecture is widely employed in mammalian cells, but is also found in single-cell eukaryotes such as yeast CITATION.
+The pheromone response pathway of the yeast Saccharomyces cerevisiae provides an instructive example in which the elicited cellular response depends on the concentration of the stimulus.
+At low pheromone levels, cells continue vegetative growth.
+At intermediate concentrations, cells develop an elongated morphology and in the presence of a pheromone gradient the growth is directed to the source of the stimulus, a process known as chemotropic growth CITATION CITATION.
+Finally, at high pheromone concentrations cells initiate a mating program that eventually leads to growth arrest and the development of mating projections.
+Therefore, for yeast to make the correct developmental decision, quantitative information about the pheromone concentration must be reliably transmitted to the appropriate cellular components.
+Here we use mathematical modeling to investigate the different ways this information can be transferred.
+The results of this analysis taken together with our recently published data demonstrate that the pheromone pathway uses a strategy in which the agonist dose is encoded as the duration of the signal.
+Because the yeast pheromone response pathway consists of a G-protein coupled receptor and MAP kinase cascade, the results of our investigations should have direct implications for signal transduction in mammalian cells.

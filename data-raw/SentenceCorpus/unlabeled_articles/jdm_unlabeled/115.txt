@@ -1,0 +1,10 @@
+### abstract ###
+dynamic  connectionist models of decision making  such as decision field theory  CITATION   propose that the effect of context on choice arises from a series of pairwise comparisons between attributes of alternatives across time
+as such  they predict that limiting the amount of time to make a decision should decrease rather than increase the size of contextual effects
+this prediction was tested across four levels of time pressure on both the asymmetric dominance  CITATION  and compromise  CITATION  decoy effects in choice
+overall  results supported this prediction  with both types of decoy effects found to be larger as time pressure decreased
+### introduction ###
+a wide body of research has demonstrated the contextual sensitivity of preference  showing that preferences to some degree depend upon the set of inferior alternatives considered at the time of choice
+decoy effects  such as the asymmetric dominance ad  CITATION  and compromise effects c  CITATION   are common examples of this sensitivity
+in particular  decoy effects are examples of preference reversals  situations in which the preference ordering between two alternatives changes with changes in context
+although much research has focused on demonstrating and explaining decoy effects  little work has been done to explore the effect that time pressure can have on the effect of the decoy

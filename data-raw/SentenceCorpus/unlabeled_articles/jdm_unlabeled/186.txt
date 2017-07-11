@@ -1,0 +1,37 @@
+### abstract ###
+this study employs a discrete choice experiment dce in the health-care sector to test the loss aversion theory that is derived from reference-dependent preferences  the absolute subjective value of a deviation from a reference point is generally greater when the deviation represents a loss than when the same-sized change is perceived as a gain
+as far as is known  this paper is the first to use a dce to test the loss aversion theory
+a dce is a highly suitable tool for such testing because it estimates the marginal valuations of attributes  based on deviations from a reference point a constant scenario
+moreover  loss aversion can be examined for each attribute separately
+another advantage of a dce is that is can be applied to non-traded goods with non-tangible attributes
+a health-care event is used for empirical illustration  the loss aversion theory is tested within the context of preference structures for maternity-ward attributes  estimated using data gathered from  NUMBER  observations made by a sample of  NUMBER  women who had recently given birth
+seven hypotheses are presented and tested
+overall  significant support for behavioral loss aversion theories was found
+### introduction ###
+a person's valuation of the benefit from an outcome of a choice is often determined by the intrinsic  consumption utility  of the outcome itself  combined with its contrast with a reference point
+the most noteworthy manifestation of such reference-dependent preferences is loss aversion  the absolute subjective value of a change in an endowment is generally greater when the deviation from the reference point represents a loss than when the same-sized change is perceived as a gain
+the most systematic general theory of this kind is probably tversky and kahneman's  CITATION  reference-dependence model  which builds on kahneman and tversky's  CITATION  prospect theory
+the significance of loss aversion is highlighted in camerer's  CITATION  review of the practical implications of prospect theory  seven out of the ten examples are derived from the loss aversion hypothesis
+recently  koszegi and rabin  CITATION  presented an extended model of reference-dependent preferences and loss aversion  which is claimed to be more generally applicable
+numerous studies present evidence supporting the loss aversion hypothesis
+they include  hartman et al CITATION   hardie et al CITATION   andreoni  CITATION   benartzi and thaler  CITATION   camerer et al CITATION   myagkov and plott  CITATION   bowman et al CITATION   jullien and salanie  CITATION   genesove and mayer  CITATION
+there are also several studies that are looking at loss aversion in the medical domain
+they include  stalmeier and bezembinder  CITATION   robinson et al CITATION   bleichrodt and pinto  CITATION   van osh et al CITATION
+what is the reference point that is used by the individual to evaluate gains positive deviations versus losses negative deviations
+the majority of the empirical studies examined traded goods  and the reference point was the endowment of the commodity under consideration
+expectations were mentioned by other researchers as candidates for the reference point  shalev  CITATION  used expectations in his game-theoretic model  and koszegi and rabin  CITATION  assumed that a person's reference point is her rational expectations held in the recent past about outcomes
+they specified a rule for the endogenous derivation of this point  within the framework of an equilibrium utility-maximizing model
+van osch et al CITATION  argued that goals aspirations influence the reference point in the health domain
+combining qualitative and quantitative data they provided evidence of the reference point in life-year certainty equivalent ce gambles and explored the psychology behind the reference point
+this empirical study takes a new and different approach to the determination of the reference point and the testing of the loss aversion hypothesis
+discrete choice experiments dces are used for the estimation of a preference structure for a multi-dimensional consumption good or service  by establishing the relative importance of different attributes in the provision of the good service under discussion  vis-a-vis a constant reference bundle
+it follows that the employment of a dce also facilitates the testing of the loss aversion hypothesis for each attribute separately
+the decomposition into attribute-specific components adds richness and insight  it is not obvious that people are loss averse regarding all kinds of attributes and there are most probably different degrees of loss aversion  which can be compared across attributes
+as far as is known  this is the first published study that employs dces to test attribute-specific loss aversion that is derived from reference-dependent preferences
+the empirical illustration presented in this paper relates to a dce that was conducted among  NUMBER  women who had recently given birth
+their preferences for five maternity-ward attributes number of beds in hospital room  attitude of staff toward the patient  medical staff's professionalism  information transfer from staff to patients  and travel time from residence to hospital were estimated and loss aversion was tested for each of the attributes separately
+the main results of the study were that the loss aversion hypothesis was confirmed for four of the five hospital attributes investigated
+the results were less conclusive for  travel time from residence to hospital
+ the following section describes the dce method employed for estimation
+the third section presents the econometric model  followed by the hypotheses derived from the loss aversion theory
+the preference structures used to test the outlined hypotheses are presented in section  NUMBER 

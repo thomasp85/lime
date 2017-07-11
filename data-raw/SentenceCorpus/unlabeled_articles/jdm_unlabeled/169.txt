@@ -1,0 +1,27 @@
+### abstract ###
+we report a preliminary study that compared decisions made in an oxygen depleted environment with those made in a normoxic environment
+participants were presented with a series of choices that involved either losses or gains
+for each choice they were forced to choose between a sure thing and a gamble of the same expected value
+for choices involving losses  participants were more risk seeking in the oxygen depleted environment  for those involving gains  no difference was found
+### introduction ###
+hypoxia is the result of an inadequate oxygen supply to the cells and tissues of the body
+low aerial oxygen concentration is first detected by sensory receptors in the carotid body and then relayed to the hypothalamus  CITATION
+the body responds to the decrease in the oxygen arterial saturation by increasing heart rate  blood pressure  ventilation  and the production of stress hormones  CITATION
+such alterations are driven by the sympathetic nervous system and could reach awareness if oxygen depletion is sufficiently high
+however  mild oxygen depletion is not easily detected by higher-order brain structures  CITATION
+research has investigated the effects of hypoxia on human cognitive functions  CITATION
+most studies focused on basic functions  such as visual perception  memory  attention  and language  CITATION
+the data show that a  NUMBER  percent  reduction in the arterial blood oxygen saturation diminishes individuals' concentration capacity and muscular coordination  which impairs language production and visual perception  CITATION
+a  NUMBER  percent  reduction in the arterial blood oxygen saturation diminishes memory performance and induces emotional lability and major motor impairments
+with the present research we aim to investigate the effect of hypoxia on judgment and decision making
+we believe that such research is worth pursuing for two reasons
+first  people frequently experience mild levels of hypoxia  such as during prolonged physical exercise  underwater diving  high altitude recreational activities e g   mountaineering  paragliding  parachuting or a flight when a defect occurs to the cabin pressurization system
+second  bad judgments and decisions during these activities can be fatal
+although there is no direct research on the impact of hypoxia on judgment and decision making  there is research concerning the impact of its effect stress
+current views on cognitive system architecture nested within dual-process approaches  CITATION  suggest that stressful conditions affect decision-making by broadening the prevalence of intuitive  automatic processes over analytic  deliberative ones
+in stressful situations individuals might rely on simple rules of thumb or heuristics  rather than on analytic processes that aim to maximize subjective utility
+although heuristics in certain contexts are efficient guides for routine but complex tasks  CITATION   in others they can lead to systematic biases
+for example  recent research  CITATION  has shown that acute stress induced by keeping ones hand in freezing water modulates gamble decisions  partially exacerbating a bias known as the reflection effect  people's tendency to avoid risk to secure a certain gain and to seek risk to avoid a certain loss  CITATION
+with the present research we investigated whether oxygen depletion also leads to an exacerbation of the reflection effect
+in a laboratory setting  we compared decisions made in a mildly oxygen-depleted environment with those made in a normoxic environment
+in contrast to previous studies where participants were aware of the stressor used e g   time pressure  cold water  social pressure  participants in the present study were not aware of the mild oxygen depletion

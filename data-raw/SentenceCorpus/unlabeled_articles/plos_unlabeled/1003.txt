@@ -1,0 +1,47 @@
+### abstract ###
+The increasing importance of non-coding RNA in biology and medicine has led to a growing interest in the problem of RNA 3-D structure prediction.
+As is the case for proteins, RNA 3-D structure prediction methods require two key ingredients: an accurate energy function and a conformational sampling procedure.
+Both are only partly solved problems.
+Here, we focus on the problem of conformational sampling.
+The current state of the art solution is based on fragment assembly methods, which construct plausible conformations by stringing together short fragments obtained from experimental structures.
+However, the discrete nature of the fragments necessitates the use of carefully tuned, unphysical energy functions, and their non-probabilistic nature impairs unbiased sampling.
+We offer a solution to the sampling problem that removes these important limitations: a probabilistic model of RNA structure that allows efficient sampling of RNA conformations in continuous space, and with associated probabilities.
+We show that the model captures several key features of RNA structure, such as its rotameric nature and the distribution of the helix lengths.
+Furthermore, the model readily generates native-like 3-D conformations for 9 out of 10 test structures, solely using coarse-grained base-pairing information.
+In conclusion, the method provides a theoretical and practical solution for a major bottleneck on the way to routine prediction and simulation of RNA structure and dynamics in atomic detail.
+### introduction ###
+Non-coding RNA is of crucial importance for the functioning of the living cell, where it plays key catalytic, regulatory and structural roles CITATION, CITATION.
+Understanding the exact mechanisms behind these functions is therefore of great importance for both biology and medicine.
+In many cases, this understanding requires knowledge of RNA structure in atomic detail.
+However, determining the structure of an RNA molecule experimentally is typically a time consuming, expensive and difficult task CITATION.
+Therefore, algorithms for RNA structure prediction have attracted much interest, initially with the main focus on predicting secondary structure.
+Many noticeable advances have been made in the area of secondary structure prediction; most recently the introduction of statistical sampling had an important impact CITATION CITATION .
+In the past years, an increasing number of relevant structures have become available, and much progress has been made in the understanding of the three dimensional structure of RNA.
+The conformational space of RNA has been analyzed using methods inspired by the Ramachandran plot for proteins CITATION, CITATION, the RNA base pair interactions have been accurately classified CITATION, and the conformational space of the RNA backbone has been clustered into discrete recurring conformations CITATION, CITATION CITATION.
+These new insights have led to several useful tools for modeling RNA 3-D structure CITATION, CITATION and significant advances in atomic resolution prediction have recently been reported CITATION, CITATION .
+However, routine prediction of RNA 3-D structure still remains an important open problem, and with the growing gap between the number of known sequences and determined structures, the problem is becoming more and more pronounced.
+The two key ingredients in algorithms for RNA 3-D structure prediction, namely an accurate energy function and a conformational sampling procedure CITATION, are both only partly solved problems.
+Here, we focus on the latter problem.
+The current state of the art in RNA conformational sampling is based on fragment assembly methods, which construct plausible conformations by stringing together short fragments obtained from experimental structures.
+These methods have led to numerous important breakthroughs in the related fields of protein and RNA 3-D structure prediction in the last ten years CITATION CITATION.
+Nonetheless, fragment assembly methods are not a panacea.
+One of the problems associated with these methods is that they inherently discretize the continuous conformational space, and hence do not cover all relevant conformations CITATION.
+This is problematic since the resolution of the conformational search procedure imposes limits on the energy function; the use of fine-grained energy terms requires continuous adjustments to the RNA's dihedral degrees of freedom, which fragment assembly methods cannot provide CITATION.
+In other words, the shortcomings of the conformational sampling method need to be counteracted by tweaking the energy function.
+Furthermore, full conformational detail is of great importance for a complete understanding of RNA catalysis, binding CITATION and dynamics CITATION .
+Another fundamental problem with fragment assembly methods is their non-probabilistic nature, which makes their rigorous use in the framework of statistical physics problematic.
+Particularly, it is currently impossible to ensure unbiased sampling in a Markov chain Monte Carlo framework using fragment assembly as a proposal function CITATION.
+In other words, using a fragment library implies adding an inherently unknown additional term to the energy function CITATION.
+This means that the unbiased simulation of the dynamics of an RNA molecule under the control of an all-atom empirical forcefield using fragment assembly methods is currently impossible.
+For these reasons we have developed a new solution to the conformational sampling problem: a probabilistic model, called BARNACLE, that describes RNA structure in a natural, continuous space.
+BARNACLE makes it possible to efficiently sample 3-D conformations that are RNA-like on a short length scale.
+Such a model can be used purely as a proposal distribution, but also as an energy term enforcing realistic local conformations.
+Imposing favorable long range interactions, such as hydrogen bonding between the bases, lies outside the scope of such a local model and is the task of a global energy function.
+BARNACLE combines a dynamic Bayesian network CITATION, which suits the sequential nature of the RNA molecule, with directional statistics, a branch of statistics that is concerned with the representation of angular data.
+The model is not only computationally attractive, but can also be rigorously interpreted in the language of statistical physics CITATION, CITATION, making it attractive from a theoretical viewpoint as well.
+This approach is conceptually related to the probabilistic models of protein structure recently proposed by our group CITATION, CITATION.
+However, the model presented here is clearly far from a trivial extension, as an RNA molecule has many more degrees of freedom than a protein; in the RNA backbone alone, there are 11 angles per residue CITATION, as opposed to two in proteins.
+These many degrees of freedom combined with the limited number of experimentally determined RNA structures CITATION make this a particularly challenging statistical task for which a very different strategy was required.
+In particular, the approach we used for proteins would in the case of RNA require the use of a probability density function on the 7-dimensional hypertorus, which poses a serious statistical and computational obstacle.
+Below, we describe the probabilistic model in detail, and show that it captures the crucial aspects of local RNA structure.
+We also demonstrate its usefulness in the context of RNA 3-D prediction, and end with an outlook on possible applications.

@@ -1,0 +1,36 @@
+### abstract ###
+We consider the least-square regression problem with regularization by a block  SYMBOL -norm, ie , a sum of  Euclidean norms over spaces of dimensions larger than one
+This problem, referred to as the group Lasso, extends the usual regularization by the  SYMBOL -norm where all spaces have dimension one, where it is commonly referred to as the Lasso
+In this paper, we study the asymptotic model consistency of the group Lasso
+We derive necessary and sufficient conditions for the consistency of group Lasso under practical assumptions, such as model misspecification
+When the linear predictors and  Euclidean norms are replaced by functions and reproducing kernel Hilbert norms, the problem is usually referred to as multiple kernel learning and is commonly used for learning from heterogeneous data sources and for non linear variable selection
+Using tools from functional analysis, and in particular covariance operators,  we extend the consistency results to this infinite dimensional case and also propose an adaptive scheme to obtain a consistent model estimate, even when the necessary  condition required for the non adaptive scheme is not satisfied
+### introduction ###
+Regularization has emerged as a dominant theme in machine  learning and  statistics
+It provides an intuitive and principled tool for learning from high-dimensional data
+Regularization by squared Euclidean norms or squared Hilbertian norms has been thoroughly studied in various settings, from approximation theory to statistics, leading to efficient practical algorithms based on linear algebra and very general theoretical consistency results~ CITATION
+In recent years, regularization by non Hilbertian norms  has generated considerable interest in linear supervised learning, where the goal is to predict a response as a linear function of  covariates;  in particular, regularization by the  SYMBOL -norm (equal to the sum of absolute values), a method commonly referred to as the  Lasso ~ CITATION , allows to perform variable selection
+However,  regularization by non Hilbertian norms cannot be solved empirically by simple linear algebra and instead leads to general convex optimization problems and much of the early effort has been dedicated to algorithms to solve the optimization problem efficiently
+In particular, the  Lars  algorithm of~ CITATION  allows to find the entire regularization path (i e , the set of solutions for all values of the regularization parameters) at the cost of a single matrix inversion
+As the consequence of the optimality conditions,  regularization by the  SYMBOL -norm  leads to  sparse  solutions, i e , loading vectors with many zeros
+Recent works  CITATION  have looked precisely at the model consistency of the Lasso, i e , if we know that the data were generated from a sparse loading vector, does the Lasso actually recover it when the number of observed data points grows
+In the case of a fixed number of covariates, the Lasso does recover the sparsity pattern if and only if a certain simple condition on the generating covariance matrices is verified~ CITATION
+In particular, in low correlation settings, the Lasso is indeed consistent
+However, in presence of strong correlations, the Lasso cannot be consistent, shedding light on potential problems of such procedures for variable selection
+Adaptive versions where data-dependent weights are added to the  SYMBOL -norm  then allow to keep the consistency in all situations~ CITATION
+A related Lasso-type procedure is the  group Lasso , where the covariates are assumed to be clustered in groups, and instead of summing the absolute values of each individual loading, the sum of Euclidean norms of the loadings in each group is used
+Intuitively, this should drive all the weights in one group to zero  together , and thus lead to group selection~ CITATION
+In \mysec{grouplasso}, we extend the consistency results of the Lasso to the group Lasso, showing that similar correlation conditions are necessary and sufficient conditions for consistency
+The passage from groups of size one to groups of larger sizes leads however to a slightly weaker result as we can not get a single necessary and sufficient condition (in \mysec{refined}, we show that the stronger result similar to the Lasso is not true as soon as one group has dimension larger than one)
+Also, in our proofs, we relax the  assumptions usually made for such consistency results, i e , that the model is completely well-specified (conditional expectation of the response which is linear in the covariates and constant conditional variance)
+In the context of  misspecification , which is a common situation when applying methods such as the ones presented in this paper, we simply prove convergence to the best linear predictor (which is assumed to be sparse), both in terms of loading vectors and sparsity patterns
+The group Lasso essentially replaces groups of size one by groups of size larger than one
+It is natural in this context to allow the size of each group to grow unbounded, i e , to replace the sum of Euclidean norms by a sum  of appropriate Hilbertian norms
+When the Hilbert spaces are reproducing kernel Hilbert spaces (RKHS), this procedure turns out to be equivalent to learn the best convex combination  of a set of basis kernels, where each kernel corresponds to one  Hilbertian norm used for regularization~ CITATION
+This framework, referred to as  multiple kernel learning ~ CITATION , has applications in kernel selection, data fusion from heterogeneous data sources and non linear variable selection~ CITATION
+In this latter case,  multiple kernel learning can exactly be seen as variable selection in a  generalized additive model ~ CITATION
+We extend  the consistency results of the group Lasso to this non parametric  case, by using covariance operators and appropriate notions of functional analysis
+These notions allow to carry out the analysis entirely in  ``primal/input''  space, while the algorithm has to work in  ``dual/feature''   space to avoid infinite dimensional optimization
+Throughout the paper, we will always go back and forth between primal and dual formulations, primal formulation for analysis and dual formulation for algorithms
+The paper is organized as follows: in \mysec{grouplasso}, we present the consistency results for the group Lasso, while in \mysec{mklsec}, we extend these to Hilbert spaces
+Finally, we present the adaptive schemes in \mysec{adaptive} and illustrate our set of results with simulations on synthetic examples in \mysec{simulations}

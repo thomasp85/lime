@@ -1,0 +1,27 @@
+### abstract ###
+Individual perception of vaccine safety is an important factor in determining a person's adherence to a vaccination program and its consequences for disease control.
+This perception, or belief, about the safety of a given vaccine is not a static parameter but a variable subject to environmental influence.
+To complicate matters, perception of risk does not correspond to actual risk.
+In this paper we propose a way to include the dynamics of such beliefs into a realistic epidemiological model, yielding a more complete depiction of the mechanisms underlying the unraveling of vaccination campaigns.
+The methodology proposed is based on Bayesian inference and can be extended to model more complex belief systems associated with decision models.
+We found the method is able to produce behaviors which approximate what has been observed in real vaccine and disease scare situations.
+The framework presented comprises a set of useful tools for an adequate quantitative representation of a common yet complex public-health issue.
+These tools include representation of beliefs as Bayesian probabilities, usage of logarithmic pooling to combine probability distributions representing opinions, and usage of natural conjugate priors to efficiently compute the Bayesian posterior.
+This approach allowed a comprehensive treatment of the uncertainty regarding vaccination behavior in a realistic epidemiological model.
+### introduction ###
+Since early vaccination campaigns against smallpox, vaccination policies have been a matter of debate CITATION : mass vaccination versus blocking strategies; compulsory versus voluntary, are some highly debated issues.
+Despite these early controversies - and consequent alternative policies implemented in different countries - high disease scare in the past has led to very high vaccine coverage and consequent successful eradication of smallpox, as well as very low incidence of measles, polio, tetanus, diphtheria, etc, resulting in over 98 percent mortality reduction by vaccine preventable diseases in developed countries CITATION .
+In recent years, after complete or almost complete elimination of these diseases, the debate is shifting towards issues of vaccine safety.
+Increased perception of vaccine risks and lowered perception of disease risks has challenged previous willingness to vaccinate CITATION.
+In this scenario, understanding and predicting individual's willingness to vaccinate is paramount for estimating vaccine coverage and compare strategies to achieve coverage goals.
+Willingness to vaccinate is highly dependent on the perceived risk of acquiring a serious disease CITATION.
+When disease risk is low, however small risk of adverse events from the vaccine become relatively important and may lead to vaccine coverage lower than required to control transmission CITATION.
+When serious disease risk is too high, on the other hand, vaccine coverage may increase above that required to guarantee population protection CITATION.
+We illustrate these behaviors with two examples:
+In the UK, MMR vaccine uptake started to decline after a controversial study linking MMR vaccine to autism CITATION.
+In a decade, vaccine coverage went well below the target herd immunity level of 95 percent.
+Despite the confidence of researchers and most health professionals on the vaccine safety, the confidence of the public was deeply affected.
+In an attempt to find ways to restore this confidence, several studies were carried out to identify factors associated with parent's unwillingness to vaccinate their children.
+They found that Not receiving unbiased and adequate information from health professionals about vaccine safety and media's adverse publicity were the most common reasons influencing uptake CITATION.
+Other important factors were: lack of belief in information from the government sources ; fear of general practitioners promoting the vaccine for personal reasons ; and media scare.
+Note that during this period the risk of acquiring measles was very low due to previously high vaccination coverage.

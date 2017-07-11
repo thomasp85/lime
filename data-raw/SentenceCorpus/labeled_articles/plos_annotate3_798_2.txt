@@ -1,0 +1,40 @@
+### abstract ###
+MISC The influence of lipid molecules on the aggregation of a highly amyloidogenic segment of human islet amyloid polypeptide, hIAPP20 29, and the corresponding sequence from rat has been studied by all-atom replica exchange molecular dynamics simulations with explicit solvent model.
+MISC hIAPP20 29 fragments aggregate into partially ordered -sheet oligomers and then undergo large conformational reorganization and convert into parallel/antiparallel -sheet oligomers in mixed in-register and out-of-register patterns.
+MISC The hydrophobic interaction between lipid tails and residues at positions 23 25 is found to stabilize the ordered -sheet structure, indicating a catalysis role of lipid molecules in hIAPP20 29 self-assembly.
+MISC The rat IAPP variants with three proline residues maintain unstructured micelle-like oligomers, which is consistent with non-amyloidogenic behavior observed in experimental studies.
+AIMX Our study provides the atomic resolution descriptions of the catalytic function of lipid molecules on the aggregation of IAPP peptides.
+### introduction ###
+MISC A range of human diseases including Alzheimer's disease, Parkinson's disease, the spongiform encephalopathy and type 2 diabetes mellitus is associated with amyloid deposits of normally soluble proteins or peptides CITATION CITATION.
+MISC In T2DM, the main protein component of fibrillar protein deposits in the pancreatic islets of langerhans has been identified as a 37-residue hormone referred to as islet amyloid polypeptide or amylin CITATION, which is synthesized in -cells of the pancreas and cosecreted with insulin CITATION, CITATION.
+MISC There are convincing evidences that the toxicity of amyloid related diseases may be caused by the soluble intermediate oligomers instead of mature fibrils CITATION CITATION, and the interaction between lipid bilayer and these soluble oligomer CITATION CITATION.
+MISC For example, channel-like annular structures of oligomers of several amyloidogenic peptides have been observed on the lipid membrane CITATION, CITATION, and have been studied by molecular dynamics simulations as well CITATION, CITATION.
+MISC Moreover, up to 10 percent components in amyloid deposits from patient tissues were lipid molecules, indicating that the lipids can be uptaken from membranes and then wrapped into fibrillar amyloid CITATION CITATION.
+MISC Most studies so far treated the lipid bilayer as a template to exert its influences on the conformation and aggregation properties of peptides CITATION CITATION.
+MISC There is, however, missing information about how individual lipid molecule involving in the peptide aggregation process.
+OWNX It will then be beneficial to understand the molecular details of how single lipid molecule influences the assembly process of amyloidogenic peptides which is the main focus of the current study.
+MISC Besides the external factors, such as lipid bilayer, pH value, the sequences of peptide themselves have great effects on the aggregation behaviors.
+MISC Several other species such as non-human primates CITATION, cats CITATION, raccoons CITATION, and rodent species can produce IAPP, but the primary sequence of IAPP varies slightly among species.
+MISC Importantly, IAPP from rodent species, such as rat/mouse IAPP lose capacities of aggregating into amyloid fibrils CITATION, but transgenic mouse models that express human IAPP develop islet deposits CITATION.
+MISC The rIAPP differs from hIAPP in six amino acids and five of them are clustered in a short decapeptide, which is considered to be strongly amyloidogenic and forms similar unbranched fibrils itself to the full-length hIAPP CITATION, CITATION.
+MISC The three proline substitutions in rIAPP20 29 are believed to be highly responsible for the lacking of the amyloidogenic property of the segment or full-length peptide CITATION.
+MISC Although rIAPP has been intensively applied in experimental research acting as a potential peptide inhibitor for peptide aggregation CITATION, CITATION, the molecular mechanism of its resistance to amyloid is still not crystal clear.
+MISC Here, the aggregation of rIAPP20 29 segments is subjected to the same simulation condition as hIAPP20 29 to explore the non-amyloidogenic properties of the peptide and meanwhile to evaluate the simulation results as a negative control.
+MISC Due to the metastable and short-lived nature of soluble pre-fibril oligomers at the early steps of fibril formation, experimental data are usually difficult to obtain CITATION, CITATION.
+MISC Thus, the computational approaches have been employed to complement experimental investigations to gain the insight into the aggregation mechanisms CITATION CITATION.
+MISC Considering multiple copies of peptides needed due to the self-assembly nature of amyloid formation, various simplified representations of molecular systems using implicit solvent models were preferred rather than all-atom models.
+MISC Santini et al. performed ART-OPEP simulations on trimer of A 16 22 by treating side chains as a bead and solvent implicitly CITATION.
+MISC A novel mechanism for single -strand to surmount unnatural registry without dissociation, referred to as reptation was proposed before experimental characterization CITATION.
+MISC Cheon et al. used ProFASi package to reduce the bonded potential energy to include torsional angles only and treated hydrogen bonds explicitly CITATION.
+MISC They were able to carry out two series of 100 Monte Carlo simulations on 20 copies of two fragments A 16 22 and A 25 35.
+MISC They observed early-stage events and obtained an atomic-detailed description of nucleated conformational conversion CITATION model for amyloid aggregation.
+MISC In these studies, simulations were usually started with randomly oriented, extended or random-coiled peptides which underwent ab initio folding to form -sheet oligomers.
+MISC Albeit simplified models allow studying large-scale systems CITATION or observing more events in limited simulation time CITATION, all-atom explicit solvent models can reproduce amyloid aggregation in aqueous environment more accurately and supply more information on sidechain contacts CITATION.
+MISC Nguyen et al. prolonged a series of conventional MD simulations to 300 ns on A 16 22 of 3 6 oligomer size with explicit solvent CITATION.
+MISC The extensive simulations were able to probe the interpeptide sidechain contacts and large conformational fluctuations upon monomer addition to preformed -sheet oligomers in a dock-lock mechanism.
+OWNX In our studies, an enhanced-sampling method, replica exchange molecular dynamics CITATION was implemented CITATION, and all water and peptide atoms are treated explicitly by applying OPLS-AA force field CITATION.
+OWNX The four copies of amyloidogenic segment hIAPP20 29 and an extra dioleoylphosphatidylcholine lipid molecule were initially set in extended conformation and dispersed in simulation boxes.
+OWNX The formation of -sheet containing tetramers, was observed within 100 ns ab initio REMD folding simulations.
+OWNX The acquirement of abundant intermediate states suggested two possible -sheet transition pathways.
+OWNX Simulation of four hIAPP peptides without lipid molecule was also performed.
+OWNX Nonamyloidogenic rat IAPP segments were studied as a negative control with the aim of understanding the inhibitory effect of three proline substitutions.

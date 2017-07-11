@@ -1,0 +1,31 @@
+### abstract ###
+This paper focuses on the problem of kernelizing an existing supervised Mahalanobis distance learner
+The following features are included in the paper
+Firstly, three popular learners, namely, ``neighborhood component analysis'', ``large margin nearest neighbors'' and ``discriminant neighborhood embedding'', which do not have kernel versions are kernelized in order to improve their classification performances
+Secondly, an alternative kernelization framework called ``KPCA trick'' is presented
+Implementing a learner in the new framework gains several advantages over the standard framework, eg no mathematical formulas and no reprogramming are required for a kernel implementation, the framework avoids troublesome problems such as singularity, etc
+Thirdly, while the truths of representer theorems are just assumptions in previous papers related to ours, here, representer theorems are formally proven
+The proofs validate both the kernel trick and the KPCA trick in the context of Mahalanobis distance learning
+Fourthly, unlike previous works which always apply brute force methods to select a kernel, we investigate two approaches which can be efficiently adopted to construct an appropriate kernel for a given dataset
+Finally, numerical results on various real-world datasets are presented
+### introduction ###
+Recently, many Mahalanobis distance learners are invented \shortcite{Chen:CVPR05,Goldberger:NIPS05,Weinberger:NIPS06,Yang:AAAI06,Sugiyama:ICML06,Yan:PAMI07,Wei:ICML07,Torresani:NIPS07,Xing:NIPS03}
+These recently proposed learners are carefully designed so that they can handle a class of problems where data of one class form multi-modality where classical learners such as principal component analysis (PCA) and Fisher discriminant analysis (FDA) cannot handle
+Therefore, promisingly, the new learners usually outperform the classical learners on experiments reported in recent papers
+Nevertheless, since learning a Mahalanobis distance is equivalent to learning a linear map, the inability to learn a non-linear transformation is one important limitation of all Mahalanobis distance learners
+As the research in Mahalanobis distance learning has just recently begun, several issues are left open such as (1) some efficient learners do not have non-linear extensions, (2) the  kernel trick   CITATION , a standard non-linearization method, is not fully automatic in the sense that new mathematical formulas have to be derived and new programming codes have to be implemented; this is not convenient to non-experts, (3) existing algorithms ``assume'' the truth of the  representer theorem  \shortcite[Chapter 4]{Scholkopf:BOOK01}; however, to our knowledge, there is no formal proof of the theorem in the context of Mahalanobis distance learning, and (4) the problem of how to select an efficient kernel function has been left untouched in previous works; currently, the best kernel is achieved via a brute-force method such as cross validation
+In this paper, we highlight the following key contributions:   SYMBOL  Three popular learners recently proposed in the literatures, namely,  neighborhood component analysis  (NCA) \shortcite{Goldberger:NIPS05},  large margin nearest neighbors  (LMNN) \shortcite{Weinberger:NIPS06} and  discriminant neighborhood embedding  (DNE) \shortcite{Wei:ICML07} are kernelized in order to improve their classification performances with respect to the kNN algorithm
+SYMBOL  A  KPCA trick  framework is presented as an alternative choice to the kernel-trick framework
+In contrast to the kernel trick, the KPCA trick does not require users to derive new mathematical formulas
+Also, whenever an implementation of an original learner is available, users are not required to re-implement the kernel version of the original learner
+Moreover, the new framework avoids problems such as singularity in eigen-decomposition and provides a convenient way to speed up a learner
+SYMBOL  Two representer theorems in the context of Mahalanobis distance learning are proven
+Our theorems justify both the kernel-trick and the KPCA-trick frameworks
+Moreover, the theorems validate kernelized algorithms learning a Mahalanobis distance in any separable Hilbert space and also cover kernelized algorithms performing dimensionality reduction
+SYMBOL  The problem of efficient kernel selection is dealt with
+Firstly, we investigate the  kernel alignment  method proposed in previous works \shortcite{Lanckriet:JMLR04,Zhu:NIPS05} to see whether it is appropriate for a kernelized Mahalanobis distance learner or not
+Secondly, we investigate a simple method which constructs an unweighted combination of base kernels
+A theoretical result is provided to support this simple approach
+Kernel constructions based on our two approaches require much shorter running time when comparing to the standard cross validation approach
+SYMBOL  As kNN is already a non-linear classifier, there are some doubts about the usefulness of kernelizing Mahalanobis distance learners \shortcite[pp 8]{Weinberger:NIPS06}
+We provide an explanation and conduct extensive experiments on real-world datasets to prove the usefulness of the kernelization

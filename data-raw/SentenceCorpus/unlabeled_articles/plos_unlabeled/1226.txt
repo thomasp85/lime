@@ -1,0 +1,52 @@
+### abstract ###
+N-Acetyl-L-Glutamate Kinase is the structural paradigm for examining the catalytic mechanisms and dynamics of amino acid kinase family members.
+Given that the slow conformational dynamics of the NAGK may be rate-limiting, it is of importance to assess the mechanisms of the most cooperative modes of motion intrinsically accessible to this enzyme.
+Here, we present the results from normal mode analysis using an elastic network model representation, which shows that the conformational mechanisms for substrate binding by NAGK strongly correlate with the intrinsic dynamics of the enzyme in the unbound form.
+We further analyzed the potential mechanisms of allosteric signalling within NAGK using a Markov model for network communication.
+Comparative analysis of the dynamics of family members strongly suggests that the low-frequency modes of motion and the associated intramolecular couplings that establish signal transduction are highly conserved among family members, in support of the paradigm sequence structure dynamics function.
+### introduction ###
+Many recent studies, both experimental and computational, point to the inherent ability of proteins to undergo, under native state conditions, large-amplitude conformational changes that are usually linked to their biological function.
+Proteins have access, via such equilibrium fluctuations, to an ensemble of conformers encoded by their 3-dimensional structure; and ligand binding essentially shifts the population of these pre-existing conformers in favour of the ligand-bound form CITATION CITATION.
+With the accessibility of multiple structures resolved for a given protein in different forms, it is now possible to identify the principal changes in structure assumed by a given protein upon binding different ligands, which are observed to conform to those intrinsically accessible to the protein prior to ligand binding CITATION CITATION.
+The observations suggest the dominance of proteins' intrinsic dynamics in defining the modes of interactions with the ligands.
+This is in contrast to the induced-fit model CITATION where the ligand induces the change in conformation.
+Instead, the Monod-Wyman-Changeux CITATION model of allostery where a selection from amongst those conformers already accessible is triggered upon ligand binding.
+Yet, the choice between intrinsic vs induced dynamics, and the correlations between dynamics and function, are still to be established, and presumably depend on the particular systems of study CITATION.
+NMR relaxation experiments provide evidence, for example, for the existence of correlations between the time scales of large-amplitude conformational motions and catalytic turnover CITATION, CITATION ; and collective motions in the low frequency regime appear to be potentially limiting reaction rates.
+On the other hand, other studies point to the different time scales and events that control catalysis and binding events CITATION, CITATION.
+Furthermore, while the intrinsic dynamics in the unbound form is observed to be the dominant mechanism that facilitates protein-protein or protein-ligand complexation, the ligand may also promote structural rearrangements on a local scale at the binding site CITATION, CITATION, CITATION.
+Given that proteins' collective dynamics, and thereby potential functional motions, are encoded by the structure, proteins grouped in families on the basis of their fold similarities would be expected to share relevant dynamical features CITATION CITATION.
+It is of paramount importance, in this respect, to have a clear understanding of collective motions and their relationship to binding or catalytic activities, if any, toward gaining deeper insights into functional mechanisms shared by members of protein families.
+Protein dynamics can be explored by means of all-atom force fields and simulations, or by coarse-grained models and methods.
+All-atom simulations such as Molecular Dynamics describe the conformational fluctuations of the system over a broad range of timescales.
+Except for small proteins, the main limitation of MD is that the timescales computationally attainable do not allow for accurate sampling of slow and large-amplitude motions that are usually of biological interest.
+CG approaches, on the other hand, lack atomic details but provide insights into global movements.
+Among them, Elastic Network Models have found wide use in conjunction with normal mode analyses in the last decade CITATION.
+ENMs describe the protein as a network, the nodes of which are usually identified by the spatial positions of C -atoms.
+Elastic springs of uniform force constant connect the nodes in the simplest ENM, referred to as the anisotropic network model CITATION CITATION.
+Despite the oversimplified description of the protein conveyed by the ENMs, a surge of studies have shown that the predicted low-frequency modes describe well experimentally observed conformational changes and provide insights into potential mechanisms of function and allostery CITATION CITATION, CITATION CITATION, in accord with NMAs performed CITATION, CITATION with more detailed models and force fields.
+Additionally, recent studies by Orozco and co-workers CITATION, and Liu et al CITATION point to the similarities of the conformational space described by the low-frequency modes obtained from MD and that from CG NMA, provided that MD runs are long enough to accurately sample the collective motions.
+The present study focuses on the amino acid kinase family.
+This family comprises the following enzymes on the basis of sequence identity and structural similarities: N-acetyl-L-glutamate kinase, carbamate kinase, glutamate-5-kinase, UMP kinase, aspartokinase and the fosfomycin resistance kinase.
+Rubio and co-workers CITATION have exhaustively studied this family and proposed that the shared fold among the members is likely to give rise to a similar mechanism of substrate binding and catalysis.
+NAGK is the most widely studied member of this family taking into account the large amount of structural information gathered CITATION, CITATION.
+This enzyme indeed serves as a structural paradigm for the AAK family, such that studying its structure-encoded dynamics can shed light on the mechanisms shared by family members to perform their function CITATION .
+NAGK catalyzes the phosphorylation of NAG, which is the controlling step in arginine biosynthesis.
+The hallmark of this biosynthetic route in bacteria is that it proceeds through N-acetylated intermediates, as opposed to mammals that produce non-acetylated intermediates.
+Consequently, NAGK activity may be selectively inhibited and, taking into account that it is the controlling enzyme of arginine biosynthesis, it is a potential target for antibacterial drugs.
+In many organisms, NAGK phosphorylation is the controlling step in arginine biosynthesis.
+In these cases, NAGK is feedback inhibited by the end product arginine, and recent studies shed light on this mechanism of inhibition CITATION, CITATION.
+NAGK from Escherichia Coli, on the other hand, is arginine-insensitive.
+Its mechanism of phosphoryl transfer has been the most thoroughly characterized among the enzymes that catalyze the synthesis of acylphosphates.
+In particular, crystallographic studies by Rubio and coworkers CITATION, CITATION have provided insights into its mechanisms of binding and catalysis.
+EcNAGK is a homodimer of 258 residues, each monomer being folded into an sandwich.
+The N-domain of each subunit/monomer makes intersubunit contacts and hosts the NAG binding site, whereas the C-domain binds the ATP.
+The phosphoryl transfer reaction takes place at the interface between the two domains within each subunit.
+Kinetic studies show no evidence of cooperativity between subunits CITATION, suggesting that the dimeric structure provides thermodynamic stability, only, to the monomeric fold that has been evolutionary selected to perform the catalytic function.
+The diverse crystallographic structures solved for the bound state of this enzyme indicate two types of functional motions CITATION : X-ray structures of EcNAGK complexed with either ADP or with the inert ATP analogue AMPPNP have a too narrow active site to let the substrates bind directly; whereas the unbound structure has a more open active site.
+This suggests that the enzyme undergoes a conformational closure that is likely to be triggered upon nucleotide binding, since all these complexes display a closed structure whether NAG is bound or not.
+The ternary complex with ADP and NAG displays the ability to exchange NAG with a sulphate ion in solution without opening the active site.
+The NAG lid therefore must be able to open and close independently of other structural elements.
+The aim of the present study is two-fold.
+Firstly, given the interest in acquiring deeper knowledge on the enzymatic mechanism of EcNAGK and the potential role of slow dynamics in the pre-disposition of the enzymatic function, we analyze here the low-frequency modes of motion of EcNAGK.
+Secondly, using EcNAGK as the paradigm of AAK family, we assess to what extent the slow modes of motion are shared by other members of the AAK family.

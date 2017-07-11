@@ -1,0 +1,12 @@
+### abstract ###
+We consider a problem of significant practical importance,  namely, the reconstruction of a low-rank data matrix from a small subset of its entries
+This problem appears in many areas such as  collaborative filtering, computer vision and wireless sensor networks
+In this paper, we focus on the matrix completion problem  in the case when the observed samples are corrupted by noise
+We compare the performance of  three state-of-the-art matrix completion algorithms  (OptSpace, ADMiRA and FPCA) on a single simulation platform  and present numerical results
+We show that in practice  these efficient algorithms can be used to reconstruct real data matrices, as well as randomly generated matrices, accurately
+### introduction ###
+We consider the problem of reconstructing an  SYMBOL   low rank matrix  SYMBOL  from a small set of observed entries possibly corrupted by noise
+This problem is of considerable practical interest and has many applications
+One example is collaborative filtering, where users submit rankings  for small subsets of, say, movies, and the goal is  to infer the preference of unrated movies for a recommendation system  CITATION
+It is believed that the movie-rating matrix is approximately low-rank,  since only a few factors contribute to a user's preferences
+Other examples of matrix completion include the problem of inferring  3-dimensional structure from motion  CITATION  and triangulation from incomplete  data of distances between wireless sensors  CITATION

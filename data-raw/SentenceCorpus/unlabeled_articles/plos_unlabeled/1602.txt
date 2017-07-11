@@ -1,0 +1,53 @@
+### abstract ###
+Contemporary theory of spiking neuronal networks is based on the linear response of the integrate-and-fire neuron model derived in the diffusion limit.
+We find that for non-zero synaptic weights, the response to transient inputs differs qualitatively from this approximation.
+The response is instantaneous rather than exhibiting low-pass characteristics, non-linearly dependent on the input amplitude, asymmetric for excitation and inhibition, and is promoted by a characteristic level of synaptic background noise.
+We show that at threshold the probability density of the potential drops to zero within the range of one synaptic weight and explain how this shapes the response.
+The novel mechanism is exhibited on the network level and is a generic property of pulse-coupled networks of threshold units.
+### introduction ###
+Understanding the dynamics of single neurons, recurrent networks of neurons, and spike-timing dependent synaptic plasticity requires the quantification of how a single neuron transfers synaptic input into outgoing spiking activity.
+If the incoming activity has a slowly varying or constant rate, the membrane potential distribution of the neuron is quasi stationary and its steady state properties characterize how the input is mapped to the output rate.
+For fast transients in the input, time-dependent neural dynamics gains importance.
+The integrate-and-fire neuron model CITATION can efficiently be simulated CITATION, CITATION and well approximates the properties of mammalian neurons CITATION CITATION and more detailed models CITATION.
+It captures the gross features of neural dynamics: The membrane potential is driven by synaptic impulses, each of which causes a small deflection that in the absence of further input relaxes back to a resting level.
+If the potential reaches a threshold, the neuron emits an action potential and the membrane potential is reset, mimicking the after-hyperpolarization.
+The analytical treatment of the threshold process is hampered by the pulsed nature of the input.
+A frequently applied approximation treats synaptic inputs in the diffusion limit, in which postsynaptic potentials are vanishingly small while their rate of arrival is high.
+In this limit, the summed input can be replaced by a Gaussian white noise current, which enables the application of Fokker-Planck theory CITATION, CITATION.
+For this approximation the stationary membrane potential distribution and the firing rate are known exactly CITATION, CITATION, CITATION.
+The important effect of synaptic filtering has been studied in this limit as well; modelling synaptic currents as low-pass filtered Gaussian white noise with non-vanishing temporal correlations CITATION CITATION.
+Again, these results are strictly valid only if the synaptic amplitudes tend to zero and their rate of arrival goes to infinity.
+For finite incoming synaptic events which are excitatory only, the steady state solution can still be obtained analytically CITATION, CITATION and also the transient solution can efficiently be obtained by numerical solution of a population equation CITATION.
+A different approach takes into account non-zero synaptic amplitudes to first calculate the free membrane potential distribution and then obtain the firing rate by solving the first passage time problem numerically CITATION.
+This approach may be extendable to conductance based synapses CITATION.
+Exact results for the steady state have so far only been presented for the case of exponentially distributed synaptic amplitudes CITATION .
+The spike threshold renders the model an extremely non-linear unit.
+However, if the synaptic input signal under consideration is small compared to the total synaptic barrage, a linear approximation captures the main characteristics of the evoked response.
+In this scenario all remaining inputs to the neuron are treated as background noise.
+Calculations of the linear response kernel in the diffusion limit suggested that the integrate-and-fire model acts as a low-pass filter CITATION.
+Here spectrum and amplitude of the synaptic background input are decisive for the transient properties of the integrate-and-fire model: in contrast to white noise, low-pass filtered synaptic noise leads to a fast response in the conserved linear term CITATION.
+Linear response theory predicts an optimal level of noise that promotes the response CITATION.
+In the framework of spike-response models, an immediate response depending on the temporal derivative of the postsynaptic potential has been demonstrated in the regime of low background noise CITATION.
+The maximization of the input-output correlation at a finite amplitude of additional noise is called stochastic resonance and has been found experimentally in mechanoreceptors of crayfish CITATION, in the cercal sensory system of crickets CITATION, and in human muscle spindles CITATION.
+The relevance and diversity of stochastic resonance in neurobiology was recently highlighted in a review article CITATION .
+Linear response theory enables the characterization of the recurrent dynamics in random networks by a phase diagram CITATION, CITATION.
+It also yields approximations for the transmission of correlated activity by pairs of neurons in feed-forward networks CITATION, CITATION.
+Furthermore, spike-timing dependent synaptic plasticity is sensitive to correlations between the incoming synaptic spike train and the firing of the neuron, captured up to first order by the linear response kernel CITATION CITATION.
+For neuron models with non-linear membrane potential dynamics, the linear response properties CITATION, CITATION and the time-dependent dynamics can be obtained numerically CITATION.
+Afferent synchronized activity, as it occurs e.g. in primary sensory cortex CITATION, easily drives a neuron beyond the range of validity of the linear response.
+In order to understand transmission of correlated activity, the response of a neuron to fast transients with a multiple of a single synaptic amplitude CITATION hence needs to be quantified.
+In simulations of neuron models with realistic amplitudes for the postsynaptic potentials, we observed a systematic deviation of the output spike rate and the membrane potential distribution from the predictions by the Fokker-Planck theory modeling synaptic currents by Gaussian white noise.
+We excluded any artifacts of the numerics by employing a dedicated high accuracy integration algorithm CITATION, CITATION.
+The novel theory developed here explains these observations and lead us to the discovery of a new early component in the response of the neuron model which linear response theory fails to predict.
+In order to quantify our observations, we extend the existing Fokker-Planck theory CITATION and hereby obtain the mean time at which the membrane potential first reaches the threshold; the mean first-passage time.
+The advantage of the Fokker-Planck approach over alternative techniques has been demonstrated CITATION.
+For non-Gaussian noise, however, the treatment of appropriate boundary conditions for the membrane potential distribution is of utmost importance CITATION.
+In the results section we develop the Fokker-Planck formalism to treat an absorbing boundary in the presence of non-zero jumps.
+For the special case of simulated systems propagated in time steps, an analog theory has recently been published by the same authors CITATION, which allows to assess artifacts introduced by time-discretization.
+Our theory applied to the integrate-and-fire model with small but finite synaptic amplitudes CITATION, introduced in section The leaky integrate-and-fire model, quantitatively explains the deviations of the classical theory for Gaussian white noise input.
+After reviewing the diffusion approximation of a general first order stochastic differential equation we derive a novel boundary condition in section Diffusion with finite increments and absorbing boundary.
+We then demonstrate in section Application to the leaky integrate-and-fire neuron how the steady state properties of the model are influenced: the density just below threshold is increased and the firing rate is reduced, correcting the preexisting mean first-passage time solution CITATION for the case of finite jumps.
+Turning to the dynamic properties, in section Response to fast transients we investigate the consequences for transient responses of the firing rate to a synaptic impulse.
+We find an instantaneous, non-linear response that is not captured by linear perturbation theory in the diffusion limit and that displays marked stochastic resonance.
+On the network level, we demonstrate in section Dominance of the non-linear component on the network level that the non-linear fast response becomes the most important component in case of feed-forward inhibition.
+In the discussion we consider the limitations of our approach, mention possible extensions and speculate about implications for neural processing and learning.

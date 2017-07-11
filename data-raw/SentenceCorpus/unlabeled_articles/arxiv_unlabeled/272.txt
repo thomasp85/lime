@@ -1,0 +1,10 @@
+### abstract ###
+We develop  abc-logitboost , based on the prior work on  abc-boost  CITATION  and  robust logitboost  CITATION
+Our extensive experiments on a variety of datasets demonstrate the considerable  improvement of  abc-logitboost  over  logitboost  and  abc-mart
+### introduction ###
+Boosting algorithms  CITATION  have become very successful in machine learning
+This study revisits  logitboost  CITATION  under the framework of  adaptive base class boost (abc-boost)  in  CITATION , for multi-class classification
+We denote a training dataset by  SYMBOL , where  SYMBOL  is the number of feature vectors (samples),  SYMBOL  is the  SYMBOL th feature vector, and   SYMBOL  is the  SYMBOL th class label, where  SYMBOL  in multi-class classification
+Both  logitboost  CITATION  and  mart  (multiple additive regression trees) CITATION  algorithms can be viewed as generalizations to the  logistic regression model, which assumes the class probabilities  SYMBOL   to be  While traditional logistic regression assumes  SYMBOL ,  logitboost  and  mart  adopt the flexible ``additive model,''  which is a function of  SYMBOL  terms:  where   SYMBOL , the base learner, is typically a regression tree
+The parameters,  SYMBOL  and  SYMBOL , are learned from the data, by maximum likelihood, which is equivalent to minimizing the  negative log-likelihood loss   where  SYMBOL  if  SYMBOL  and  SYMBOL  otherwise
+For identifiability, the ``sum-to-zero'' constraint,  SYMBOL , is usually adopted  CITATION

@@ -1,0 +1,94 @@
+### abstract ###
+The classic algorithms of Needleman Wunsch and Smith Waterman find a maximum a posteriori probability alignment for a pair hidden Markov model.
+To process large genomes that have undergone complex genome rearrangements, almost all existing whole genome alignment methods apply fast heuristics to divide genomes into small pieces that are suitable for Needleman Wunsch alignment.
+In these alignment methods, it is standard practice to fix the parameters and to produce a single alignment for subsequent analysis by biologists.
+As the number of alignment programs applied on a whole genome scale continues to increase, so does the disagreement in their results.
+The alignments produced by different programs vary greatly, especially in non-coding regions of eukaryotic genomes where the biologically correct alignment is hard to find.
+Parametric alignment is one possible remedy.
+This methodology resolves the issue of robustness to changes in parameters by finding all optimal alignments for all possible parameters in a PHMM.
+Our main result is the construction of a whole genome parametric alignment of Drosophila melanogaster and Drosophila pseudoobscura.
+This alignment draws on existing heuristics for dividing whole genomes into small pieces for alignment, and it relies on advances we have made in computing convex polytopes that allow us to parametrically align non-coding regions using biologically realistic models.
+We demonstrate the utility of our parametric alignment for biological inference by showing that cis-regulatory elements are more conserved between Drosophila melanogaster and Drosophila pseudoobscura than previously thought.
+We also show how whole genome parametric alignment can be used to quantitatively assess the dependence of branch length estimates on alignment parameters.
+### introduction ###
+Needleman Wunsch pairwise sequence alignment CITATION is known to be sensitive to parameter choices.
+To illustrate the problem, consider the eighth intron of the Drosophila melanogaster CG9935-RA gene located on chr4:660,462 660,522.
+This intron, which is 61 base pairs long, has a 60 base pair ortholog in Drosophila pseudoobscura.
+The ortholog is located at Contig8094 Contig5509:4,876 4,935 in the August 2003 freeze 1 assembly, as produced by the Baylor Genome Sequencing Center.
+Using the basic 3-parameter scoring scheme, these two orthologous introns have the following optimal alignment when the parameters are set to M 5, X 5, S 5:
+However, if we change the parameters to M 5, X 6, and S 4, then the following alignment is optimal:
+Note that a relatively small change in the parameters produces a very different alignment of the introns.
+This problem is exacerbated with more complex scoring schemes, and is a central issue with whole genome alignments produced by programs such as MAVID CITATION or BLASTZ/MULTIZ CITATION.
+Indeed, although whole genome alignment systems use many heuristics for rapidly identifying alignable regions and subsequently aligning them, they all rely on the Needleman Wunsch algorithm at some level.
+Dependence on parameters becomes an even more crucial issue in the multiple alignment of more than two sequences.
+Parametric alignment was introduced by Waterman, Eggert, and Lander CITATION and further developed by Gusfield et al. CITATION, CITATION and Fernandez-Baca et al. CITATION as an approach for overcoming the difficulties in selecting parameters for Needleman Wunsch alignment.
+See CITATION for a review and CITATION, CITATION for an algebraic perspective.
+Parametric alignment amounts to partitioning the space of parameters into regions.
+Parameters in the same region lead to the same optimal alignments.
+Enumerating all regions is a non-trivial problem of computational geometry.
+We solve this problem on a whole genome scale for up to five free parameters.
+Our approach to parametric alignment rests on the idea that the score of an alignment is specified by a short list of numbers derived from the alignment.
+For instance, given the standard three-parameter scoring scheme, we summarize each alignment by the number m of matches, the number x of mismatches, and the number s of spaces in the alignment.
+The triple is called the alignment summary.
+As an example, consider the above pair of orthologous Drosophila introns.
+The first alignment has the alignment summary while the second alignment has the alignment summary .
+Remarkably, even though the number of all alignments of two sequences is very large, the number of alignment summaries that arise from Needleman Wunsch alignment is very small.
+Specifically, in the example above, where the two sequences have lengths 61 and 60, the total number of alignments is 1,511,912,317,060,120,757,519,610,968,109,962,170,434,175,129 1.5 10 46.
+There are only 13 alignment summaries that have the highest score for some choice of parameters M,X,S. For biologically reasonable choices, i.e., when we require M X and 2S X, only six of the 13 summaries are optimal.
+These six summaries account for a total of 8,362 optimal alignments .
+Note that the basic model discussed above has only d 2 free parameters, because for a pair of sequences of lengths l,l all the summaries satisfy
+This relation holds with l l for the six summaries in Table 1.
+Figure 1 shows the alignment polygon, as defined in the section Alignment polytopes, in the coordinates .
+In general, for two DNA sequences of lengths l and l, the number of optimal alignment summaries is bounded from above by a polynomial in l and l of degree d/, where d is the number of free parameters in the model CITATION, CITATION.
+For d 2, this degree is 0.667, and so the number of optimal alignment summaries has sublinear growth relative to the sequence lengths.
+Even for d 5, the growth exponent d/ is only 3.333.
+This means that all optimal alignment summaries can be computed on a large scale for models with few parameters.
+The growth exponent d/ was derived by Gusfield et al. CITATION for d 2 and by Fernandez-Baca at al. CITATION and Pachter-Sturmfels CITATION for general d. Table 1 can be computed using the software XPARAL CITATION.
+This software works for d 2 and d 3, and it generates a representation of all optimal alignments with respect to all reasonable choices of parameters.
+Although XPARAL has a convenient graphical interface, it seems that this program has not been widely used by biologists, perhaps because it is not designed for high throughput data analysis and the number of free parameters is restricted to d 3.
+In this paper, we demonstrate that parametric sequence alignment can be made practical on the whole-genome scale, and we argue that computing output such as Table 1 can be very useful for comparative genomics applications where reliable alignments are essential.
+To this end, we introduce a mathematical point of view, based on the organizing principle of convexity, which was absent in the earlier studies CITATION, CITATION, CITATION.
+Our advances rely on new algorithms, which are quite different from what is implemented in XPARAL, and which perform well in practice, even if the number d of free parameters is greater than three.
+Convexity is the organizing principle that reveals the needles in the haystack.
+In our example, the haystack consists of more than 10 46 alignments, and the needles are the 8,362 optimal alignments.
+The summaries of the optimal alignments are the vertices of the alignment polytope.
+The alignment polytope is the convex hull of the summaries of all alignments.
+Background on convex hulls and how to compute the alignment polytopes are provided in the section From Genomes to Polytopes.
+Thus, parametric alignment of two DNA sequences relative to some chosen pair hidden Markov model means constructing the alignment polytope of the two sequences.
+The dimension of the alignment polytope is d, the number of free model parameters.
+For d 2, the polytope is a convex polygon, as shown in Figure 1 for the pair of introns above.
+The basic model is insufficient for genomics applications.
+More realistic PHMMs for sequence alignment include gap penalties.
+We consider three such models.
+The symmetries of the scoring matrices for these models are derived from those of the evolutionary models known as Jukes Cantor, Kimura-2, and Kimura-3.
+The models are reviewed in the section Models, alignment summaries, and robustness cones.
+Our contribution is the construction of a whole genome parametric alignment in all four models for D. melanogaster and D. pseudoobscura.
+Our methods and computational results are described in the next section.
+Three biological applications are presented in the section From Polytopes to Biology.
+A discussion follows in the Discussion section.
+Our main computational result is the construction of a whole genome parametric alignment for two Drosophila genomes.
+This result depended on a number of innovations.
+By adapting existing orthology mapping methods, we were able to divide the genomes into 1,999,817 pairs of reliably orthologous segments, and among these we identified 877,982 pairs for which the alignment is uncertain.
+We computed the alignment polytopes of dimensions two, three, and four for each of these 877,982 sequence pairs, and of dimension five for a subset of them.
+The methods are explained in the section Alignment polytopes.
+The vertices of these polytopes represent the optimal alignment summaries and the robustness cones.
+These concepts are introduced in the section Models, alignment summaries, and robustness cones.
+Computational results are presented in the section Computational results.
+The orthology mapping problem for a pair of genomes is to identify all orthologous segments between the two genomes.
+These orthologous segments, if selected so as not to contain genome rearrangements, can then be globally aligned to each other.
+This strategy is frequently used for whole genome alignment CITATION, CITATION, and we adapted it for our parametric alignment computation.
+MERCATOR is an orthology mapping program suitable for multiple genomes that was developed by Dewey et al. CITATION.
+We applied this program to the D. melanogaster and D. pseudoobscura genomes to identify pieces for parametric alignment.
+The MERCATOR strategy for identifying orthologous segments is as follows.
+Exon annotations in each genome are translated into amino acid sequences and then compared with each other using BLAT CITATION.
+The annotations are based on reference gene sets, and on ab initio predictions.
+The resulting exon hits are then used to build a graph whose vertices correspond to exons, and with an edge between two exons if there is a good hit.
+A greedy algorithm is then used to select edges in the graph that correspond to runs of exons that are consistent in order and orientation.
+The MERCATOR orthology map for D. melanogaster and D. pseudoobscura has 2,731 segments.
+However, in order to obtain a map suitable for parametric alignment, further subdivision of the segments was necessary.
+This subdivision was accomplished by the additional step of identifying and fixing exact matches of length at least 10 bp .
+We derived 1,116,792 constraints, which are of four possible types: exact matching non-coding sequences, ungapped high scoring aligned coding sequences, segment pairs between two other constraints where one of the segments has length zero, so the non-trivial segment must be gapped, and single nucleotide mismatches that are squeezed between other constraints.
+We then removed all segments where the sequences contained the letter N. This process resulted in 877,982 pairs of segments for parametric alignment.
+The lengths of the D. melanogaster segments range from one to 80,676 base pairs.
+The median length is 42 bp and the mean length is 99 bp.
+In all, 90.4 percent of the D. melanogaster genome and 88.7 percent of the D. pseudoobscura genome were aligned by our method.

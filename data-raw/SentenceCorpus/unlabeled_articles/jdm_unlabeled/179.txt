@@ -1,0 +1,70 @@
+### abstract ###
+we compare four different risk-taking propensity measures on their ability to describe and to predict actual risky behavior in the domain of health
+the risk-taking propensity measures we compare are   NUMBER  a general measure of risk-taking propensity derived from a one-item survey question  CITATION    NUMBER  a risk aversion index calculated from a set of incentivized monetary gambles  CITATION    NUMBER  a measure of risk taking derived from an incentive compatible behavioral task-the balloon analog risk task  CITATION   and  NUMBER  a composite score of risk-taking likelihood in the health domain from the domain-specific risk taking dospert scale  CITATION
+study participants are  NUMBER  clients of health centers around witbank  south africa
+our findings suggest that the one-item general measure is the best predictor of risky health behavior in our population  predicting two out of four behaviors at the  NUMBER  percent  level and the remaining two behaviors at the  NUMBER  percent  level
+the dospert score in the health domain performs well  predicting one out of four behaviors at the  NUMBER  percent  significance level and two out of four behaviors at the  NUMBER  percent  level  but only if the dospert instrument contains a hypothetical risk-taking item that is similar to the actual risky behavior being predicted
+incentivized monetary gambles and the behavioral task were unrelated to actual health behaviors  they were unable to predict any of the risky health behaviors at the  NUMBER  percent  level
+we provide evidence that this is not because the participants had trouble understanding the monetary trade-off questions or performed poorly in the behavioral task
+we conclude by urging researchers to further test the usefulness of the one-item general measure  both in explaining health related risk-taking behavior and in other contexts
+### introduction ###
+risk taking is part of life  but people differ in their risk-taking propensity
+some people enjoy risky pursuits while others detest such activities
+psychologists and economists have developed various methods to measure an individual's risk-taking propensity
+this paper examines four different types of risk-taking propensity measures and tests how well they predict risk taking in the health domain  for smoking  problem drinking  seat belt non-use  and risky sexual behavior
+the first risk-taking propensity measure  called the dohmen measure in this paper  was developed by dohmen et al CITATION
+it is elicited using one survey question that directly asks about risk-taking propensity   how do you see yourself
+are you generally a person who is fully prepared to take risks or do you try to avoid taking risks
+please tick a box on the scale  where the value  NUMBER  means 'not at all willing to take risks' and the value  NUMBER  means 'very willing to take risks'
+  while straightforward and simple to administer  the dohmen measure has been subject to two concerns
+the first concern relates to domain specificity
+it is generally accepted in psychology that behavior is domain specific and that it is possible for individuals to show different levels of risk-taking propensity depending on the context  CITATION
+thus  the dohmen measure  being a general measure  may not be able to predict risk taking in the health domain  for example
+this concern is greatly mitigated by dohmen et al CITATION   who showed the general dohmen measure to be a robust predictor of behavior in different domains  including smoking behavior in the health domain
+the second concern with the dohmen measure is its lack of incentive compatibility
+this issue derives from a general concern that economists have about incentive-compatible measures  in which respondents are presumed to  work harder  more persistently  and more effectively  when money is aligned with performance  CITATION
+in the case of measuring people's risk-taking propensity  incentive compatibility is usually achieved by giving respondents choices between gambles and paying them for what they choose
+because the dohmen question does not provide incentives to motivate respondents to answer truthfully  respondents may misrepresent their answers
+charness and viceisza  CITATION   for instance  administered the dohmen question in rural senegal and found the resulting distribution of answers to differ significantly from that found by dohmen et al CITATION  in germany
+the authors implied that not having aligned incentives was a reason for the discrepancy between the measures found in senegal and in germany  but the authors also alluded to issues related to translation difficulties  including the lack of an equivalent word for  risk  in wolof  the main national language of senegal
+the second risk-taking propensity measure  called the hl measure in this paper  was developed by holt and laury  CITATION
+hl is the most common measure of an individual's risk-taking propensity in the economics literature
+the participant in hl makes ten separate choices between gambles  where each choice entails choosing between a  risky  gamble where high and low payoffs are r NUMBER  and r NUMBER   respectively  in our study and a  safer  gamble where the high and low payoffs are respectively r NUMBER  and r NUMBER 
+the probability of obtaining a high vs low payoff in the  risky  gamble is the same as the probability of obtaining a high vs low payoff in the  safer  gamble
+this probability ranges from  NUMBER  to  NUMBER   NUMBER   in increments of  NUMBER   NUMBER   for the ten sets of choices
+when the probability of the high payoff is high  such as at  NUMBER   NUMBER   the respondent has a high chance of ending up with r NUMBER  under the  risky  option and r NUMBER  under the  safer  option  in this case  only the very risk averse would choose the  safer  option
+the point at which the respondent switches from the  safer  option to the  risky  option can be used to calculate a risk aversion index
+because one of the choice pairs is randomly selected to be played for real after the respondent has made all  NUMBER  choices and the respondent knows about this before making any choices  the hl measure is incentive-compatible
+because the hl measure is derived using monetary gambles  it is unclear whether a measure derived from a monetary domain is related to risky health behavior
+this question has not been widely studied
+anderson and mellor  CITATION   using a sample of almost  NUMBER   NUMBER  mostly college-educated respondents in the u s   found the hl measure to be associated with smoking  heavy drinking  and seat belt non-use-but only at the  NUMBER  percent  significance level
+lammers  CITATION   using a sample of about  NUMBER  college students in south africa  found the hl measure to be unrelated to condom use
+the third risk-taking propensity measure used in this paper is the bart  CITATION   which is a behavioral risk task performed on a computer
+the task has  NUMBER  trials
+each trial begins with an un-inflated balloon on the screen
+clicking on the computer mouse makes the balloon grow bigger and earns the participant  NUMBER  cents per click
+every balloon has a different pre-set level of inflation before it bursts  and the participant does not know the number of clicks that can be made before any balloon bursts
+at any point during each trial  the participant can stop clicking and bank the money earned for that trial and the computer makes a slot-machine coin-dispensing sound
+if  however  the balloon is over-inflated beyond its pre-set level  the balloon bursts and the money for that trial is gone
+at the end of the task  the participant is paid all the money that is banked
+the bart task  in essence  measures the actual risk-taking propensity of the individual
+because earnings feedback is given after each trial with either a casino sound when the money is banked  or an explosion noise if the balloon bursts  bart decisions are made in a  hot  psychological state  CITATION
+hl decisions  by contrast  are made in a  cold  psychological state  because the actual earnings from the hl task are revealed after all choices have been made
+dislich et al CITATION  use the term  impulsive risk taking  to describe bart and the term  reflective risk taking  to describe a task similar to the hl
+the bart has been shown to be associated with psychological measures of risk taking such as sensation seeking and personality and self-reported behavioral risks including smoking  heavy drinking  drug use  sexual risk taking  gambling  stealing  etc
+CITATION
+however  that bart is a good predictor of health related risk taking is not a consistent finding in the literature
+reynolds et al CITATION  found that the bart was uncorrelated with the study's self-reported personality measures related to risk taking
+gordon  CITATION  found bart to be uncorrelated with attitudes towards risky driving
+dean et al CITATION  found that smokers did not display greater risk taking on the bart than nonsmokers
+klassen  CITATION  found that the bart was unrelated to any of the alcohol consumption measures examined
+our fourth measure uses a modified version of the domain specific risk taking scale dospert  developed by weber et al CITATION
+the dospert asks about one's likelihood to pursue various hypothetical but risky activities in each of five domains financial  ethical  health safety  social  and recreational  and then aggregates the activity-specific risk-taking propensity scores into domain-specific risk-taking propensity scores
+this is in contrast to the dohmen measure  which elicits a single global risk-taking propensity
+the dospert domain scores have been shown to be associated with real-life risk taking in activities within the same domain
+for instance  hanoch et al CITATION  found that smokers had significantly higher risk-taking propensity scores in the health domain than respondents in a comparison group consisting of gym members  athletes  gamblers  and investors
+zuniga and bouzas  CITATION  found that the dospert health safety and recreational risk-taking scores significantly predicted blood alcohol concentrations in mexican high-school students
+in the current study  we examine dohmen  hl  bart  and dospert measures in a population of clients at health clinics in south africa  and test how these measures relate to health risk taking  in terms of smoking  drinking  seat belt non-use  and risky sexual practices
+our study makes a few contributions
+we extend the work of dohmen et al CITATION   by testing how the one-item measure fares in predicting unhealthy behavior other than smoking
+we test the ability of the incentive-based hl and bart tasks in explaining activities in the health domain  using an implementation of the hl task that may be of interest to other researchers as it addresses concerns  CITATION  about respondent understanding of this risk task

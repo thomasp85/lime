@@ -1,0 +1,21 @@
+### abstract ###
+we propose that people weight fluent  or easy to process  information more heavily than disfluent information when making judgments
+cue fluency was manipulated independent of objective cue validity in three studies  the findings from which support our hypothesis
+in experiment  NUMBER   participants weighted a consumer review more heavily when it was written in a clear font than in a less clear font
+in experiment  NUMBER   participants placed more weight on information when it was in focus than when it was blurry
+in experiment  NUMBER   participants placed more weight on financial information from brokerage firms with easy to pronounce names than those with hard to pronounce names
+these studies demonstrate that fluency affects cue weighting independent of objective cue validity
+### introduction ###
+when making judgments and decisions  people have numerous pieces of information i e   cues available to aid in the decision process
+when deciding whether a patient has diabetes  a doctor might examine the patient's symptoms  family health history  or lab results
+a stockbroker might consider companies' profit margins  quarterly projections  and recent activity
+a judge or jurist might consider testimony from several witnesses and various other pieces of evidence
+with so much information available  how do we decide which cues to weight most heavily
+conventional models suggest that decision-makers should weight information based on objective cue validity
+according to normative principles such as the weighted additive CITATION   additive difference CITATION   and weighted averaging models CITATION   people should consider all of the available cues that might inform a particular judgment
+they should then differentially weight each cue based upon how successfully the cue predicts the outcome
+however  this approach cannot perfectly explain how naive decision-makers  who are unaware of cue validities  might make judgments or decisions
+nor can it explain how people's judgments often result from overweighting less valid information CITATION
+given that learning cue validities can be time consuming and inaccurate CITATION   we propose that people might use a cue's fluency  or the ease with which it is processed  as an additional basis for weighting cues
+a fluency-based account of cue weighting does not require decision-makers to know objective cue validities
+instead  this explanation highlights a rather simple tendency  placing more weight on information that feels easy to process

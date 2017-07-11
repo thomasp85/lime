@@ -1,0 +1,46 @@
+### abstract ###
+While statistics focusses on hypothesis testing and on estimating (properties of) the true sampling distribution, in machine learning the performance of learning algorithms on future data is the primary issue
+In this paper we bridge the gap with a general principle (PHI) that identifies hypotheses with best predictive performance
+This includes predictive point and interval estimation, simple and composite hypothesis testing, (mixture) model selection, and others as special cases
+For concrete instantiations we will recover well-known methods, variations thereof, and new ones
+PHI nicely justifies, reconciles, and blends (a reparametrization invariant variation of) MAP, ML, MDL, and moment estimation
+One particular feature of PHI is that it can genuinely deal with nested hypotheses
+### introduction ###
+Consider data  SYMBOL  sampled from some distribution  SYMBOL  with unknown  SYMBOL
+The likelihood function or the posterior contain the complete statistical information of the sample
+Often this information needs to be summarized or simplified for various reasons (comprehensibility, communication, storage, computational efficiency, mathematical tractability, etc )
+Parameter estimation, hypothesis testing, and model (complexity) selection can all be regarded as ways of summarizing this information, albeit in different ways or context
+The posterior might either be summarized by a single point  SYMBOL  (e g \ ML or MAP or mean or stochastic model selection), or by a convex set  SYMBOL  (e g \ confidence or credible interval), or by a finite set of points  SYMBOL  (mixture models) or a sample of points (particle filtering), or by the mean and covariance matrix (Gaussian approximation), or by more general density estimation, or in a few other ways  CITATION
+I have roughly sorted the methods in increasing order of complexity
+This paper concentrates on set estimation, which includes (multiple) point estimation and hypothesis testing as special cases, henceforth jointly referred to as `` hypothesis identification '' (this nomenclature seems uncharged and naturally includes what we will do: estimation and testing of simple and complex hypotheses but not density estimation)
+We will briefly comment on generalizations beyond set estimation at the end
+There are many desirable properties any hypothesis identification principle ideally should satisfy
+It should \parskip=0ex\parsep=0exsep=0ex  lead to good predictions (that's what models are ultimately for),  be broadly applicable,  be analytically and computationally tractable,  be defined and make sense also for non- iid  \ and non-stationary data,  be reparametrization and representation invariant,  work for simple and composite hypotheses,  work for classes containing nested and overlapping hypotheses,  work in the estimation, testing, and model selection regime,  reduce in special cases (approximately) to existing other methods
+Here we concentrate on the first item, and will show that the resulting principle nicely satisfies many of the other items
+We address the problem of identifying hypotheses (parameters/models) with good  predictive performance  head on
+If  SYMBOL  is the true parameter, then  SYMBOL  is obviously the best prediction of the  SYMBOL  future observations  SYMBOL
+If we don't know  SYMBOL  but have prior belief  SYMBOL  about its distribution, the predictive distribution  SYMBOL  based on the past  SYMBOL  observations  SYMBOL  (which averages the likelihood  SYMBOL  over  SYMBOL  with posterior weight  SYMBOL ) is by definition the best Bayesian predictor Often we cannot use full Bayes (for reasons discussed above) but predict with hypothesis  SYMBOL , i e \ use  SYMBOL  as prediction
+The closer  SYMBOL  is to  SYMBOL  or  SYMBOL  the better is  SYMBOL 's prediction (by definition), where we can measure closeness with some distance function  SYMBOL
+Since  SYMBOL  and  SYMBOL  are (assumed to be) unknown, we have to sum or average over them
+Predictive hypothesis identification  (PHI) minimizes the losses w r t \ some  hypothesis class   SYMBOL
+Our formulation is general enough to cover point and interval estimation, simple and composite hypothesis testing, (mixture) model (complexity) selection, and others
+The general idea of inference by maximizing predictive performance is not new  CITATION
+Indeed, in the context of model (complexity) selection it is prevalent in machine learning and implemented primarily by empirical cross validation procedures and variations thereof  CITATION  or by minimizing test and/or train set (generalization) bounds; see  CITATION  and references therein
+There are also a number of statistics papers on predictive inference; see  CITATION  for an overview and older references, and  CITATION  for newer references
+Most of them deal with distribution free methods based on some form of cross-validation discrepancy measure, and often focus on model selection
+A notable exception is MLPD  CITATION , which maximizes the predictive likelihood including future observations
+The full decision-theoretic setup in which a decision based on  SYMBOL  leads to a loss depending on  SYMBOL , and minimizing the expected loss, has been studied extensively  CITATION , but scarcely in the context of hypothesis identification
+On the natural progression of estimation SYMBOL prediction SYMBOL action, approximating the predictive distribution by minimizing \req{LPT} lies between traditional parameter estimation and optimal decision making
+Formulation \req{LPT} is quite natural but I haven't seen it elsewhere
+Indeed, besides ideological similarities the papers above bear no resemblance to this work
+The main purpose of this paper is to investigate the predictive losses above and in particular their minima, i e \ the best predictor in  SYMBOL
+Section  introduces notation, global assumptions, and illustrates PHI on a simple example
+This also shows a shortcoming of MAP and ML esimtation
+Section  formally states PHI, possible distance and loss functions, their minima, In Section , I study exact properties of PHI: invariances, sufficient statistics, and equivalences
+Sections  investigates the limit  SYMBOL  in which PHI can be related to MAP and ML
+Section  derives large sample approximations  SYMBOL  for which PHI reduces to sequential moment fitting (SMF)
+The results are subsequently used for Offline PHI
+Section  contains summary, outlook and conclusions
+Throughout the paper, the Bernoulli example will illustrate the general results \paranodot{The main aim} of this paper is to introduce and motivate PHI, demonstrate how it can deal with the difficult problem of selecting composite and nested hypotheses, and show how PHI reduces to known principles in certain regimes
+The latter provides additional justification and support of previous principles, and clarifies their range of applicability
+In general, the treatment is exemplary, not exhaustive

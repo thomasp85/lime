@@ -1,0 +1,25 @@
+### abstract ###
+AIMX We propose a nonparametric Bayesian factor regression model that accounts for uncertainty in the number of factors, and the relationship between factors
+BASE To accomplish this, we propose a sparse variant of the Indian Buffet Process and couple this with a hierarchical model over factors, based on Kingman's coalescent
+OWNX We apply this model to two problems (factor analysis and factor regression) in gene-expression data analysis
+### introduction ###
+MISC Factor analysis is the task of explaining data by means of a set of  latent factors
+MISC Factor  regression  couples this analysis with a prediction task, where the predictions are made solely on the basis of the factor representation
+MISC The latent factor representation achieves two-fold benefits: (1) discovering the latent  process  underlying the data; (2) simpler predictive modeling through a compact data representation
+MISC In particular, (2) is motivated by the problem of prediction in the  ``large P small N''  paradigm  CITATION , where the number of features  SYMBOL  greatly exceeds the number of examples  SYMBOL , potentially resulting in overfitting
+CONT We address three fundamental shortcomings of standard factor analysis approaches  CITATION : (1) we do not assume a known number of factors; (2) we do not assume factors are independent; (3) we do not assume all features are relevant to the factor analysis
+OWNX Our motivation for this work stems from the task of reconstructing regulatory structure from gene-expression data
+OWNX In this context, factors correspond to regulatory pathways
+OWNX Our contributions thus parallel the needs of gene pathway modeling
+OWNX In addition, we couple predictive modeling (for factor regression) within the factor analysis framework itself, instead of having to model it separately
+OWNX Our factor regression model is fundamentally nonparametric
+OWNX In particular, we treat the gene-to-factor relationship nonparametrically by proposing a sparse variant of the Indian Buffet Process (IBP)  CITATION , designed to account for the sparsity of relevant genes (features)
+OWNX We  couple  this IBP with a hierarchical prior over the factors
+OWNX This prior explains the fact that pathways are fundamentally related: some are involved in transcription, some in signaling, some in synthesis
+OWNX The nonparametric nature of our sparse IBP requires that the hierarchical prior  also  be nonparametric
+MISC A natural choice is Kingman's coalescent  CITATION , a popular distribution over infinite binary trees
+OWNX Since our motivation is an application in bioinformatics, our notation and terminology will be drawn from that area
+OWNX In particular,  genes  are  features ,  samples  are  examples , and  pathways  are  factors
+OWNX However, our model is more general
+OWNX An alternative application might be to a collaborative filtering problem, in which case our genes might correspond to movies, our samples might correspond to users and our pathways might correspond to genres
+OWNX In this context, all three contributions of our model still make sense: we do not know how many movie genres there are; some genres are closely related (romance to comedy versus to action); many movies may be spurious

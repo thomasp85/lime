@@ -1,0 +1,45 @@
+### abstract ###
+decision makers are often ambiguity averse  preferring options with subjectively known probabilities to options with unknown probabilities
+the ellsberg paradox is the best-known example of this phenomenon
+ambiguity has generally been studied in the domain of risky choice  and many theories of ambiguity aversion deal with ambiguity only in this context
+however  ambiguity aversion may occur in other contexts
+in the present experiment  we examine the effects of ambiguity in intertemporal choice
+subjects imagine they are expecting a package and must choose between two delivery options
+some delivery times are exact
+others are ambiguous  with delivery possible over a range of dates
+this problem was structurally identical to the ellsberg paradox
+subjects showed the same pattern of responses as in the traditional ellsberg paradox  with each delivery service preferred when it was the unambiguous option
+ambiguity aversion is not specific to risk  but can also occur in other domains
+### introduction ###
+when faced with a decision  a logical first question is   what will happen if i do this
+will this investment make money
+if i get this treatment  will i get better
+  frequently these are not questions that can be answered with certainty
+thus  the second question concerns probabilities   what are the chances this investment will make money
+if i get this treatment  what is the probability i will get better
+ often these questions cannot be answered with any degree of certainty  either
+while sometimes we can make subjectively good estimates of the probabilities of various outcomes  at other times we must make decisions under ambiguity  decisions for which we feel we lack knowledge that is required for a subjective estimate of the probability
+many real-world decisions are ambiguous
+to apply expected utility theory eut  the normative theory of risky choice  to these ambiguous situations  decision makers must produce a subjective estimate of the absent probabilities regardless of whether they feel that they have sufficient information to do so
+according to expected utility theory  a decision maker should evaluate a gamble by multiplying the probability of each outcome by a numerical measure of the goodness of the outcome  the utility
+the sum of the resulting numbers is the expected utility of the gamble  and the decision maker should choose the gamble for which this value is higher
+because it can be derived from defensible axioms  and because no other system will result in better aggregate outcomes over time  eut is considered to be the normative theory of decision making  CITATION
+initially it was assumed that  in addition to being normative  eut also described actual decisions
+however  challenges soon arose to the suggestion that eut is a descriptive theory of choice
+one of the earliest objections was made by ellsberg  CITATION   who proposed what is now known as the ellsberg paradox according to eut  a decision maker should choose the same outcome in both gamble pairs
+to do otherwise would violate the sure-thing principle  which states that changing an outcome common to two gambles should not change a decision maker's preference between them
+if a decision maker prefers the red gamble to the black gamble in pair one  it implies the decision maker thinks that there are more red balls than black balls
+however  if there are more red balls than black balls  there must be more total red and yellow balls than total black and yellow balls  and the decision maker should prefer the red gamble to the black gamble in pair two as well
+a symmetrical argument demonstrates that decision makers who prefer the black gamble in pair two should prefer the black gamble in pair one
+adding the common outcome of winning   NUMBER  if a yellow ball is drawn should not change whether the decision-maker prefers to bet on the red or the black ball
+however  ellsberg found that decision makers prefer the red gamble in the first pair  but prefer the black gamble in the second pair
+this pattern of choices violates the sure-thing principle and is thus inconsistent with eut
+instead  a decision maker which shows this pattern of choices is displaying ambiguity aversion-in each pair  preferring to gamble on a known number of balls to gambling on an unknown number
+subsequent experiments have confirmed ellsberg's intuition  both about the pattern of choices shown in the ellsberg paradox and about ambiguity aversion more generally  CITATION
+ellsberg discussed ambiguity strictly in terms of risky choice  and subsequent work has generally followed this lead  ambiguity is defined as an unknown probability -that is  a probability for which the decision maker feels that she does not have enough information to make a subjective estimate
+however  it seems possible that ambiguity aversion may be a more general phenomenon  not constrained to risky choice
+specifically  analogous phenomena may occur in the in the realm of intertemporal choice  choices made about outcomes that occur at different times
+a wide variety of real-world decisions can be described as intertemporal choices  including saving investment decisions and preventive health behaviors
+for example  an investor must choose between spending a small amount of money now and saving the money to have a larger amount of money later
+in many cases  the length of time that will pass before receiving the outcome cannot be estimated with any degree of accuracy  the equivalent to ambiguous probabilities in risky choice
+the present experiment examines whether the effects of ambiguity in the domain of delay are similar to the effects of ambiguity on risky choice

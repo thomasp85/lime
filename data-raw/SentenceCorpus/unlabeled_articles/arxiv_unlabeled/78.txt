@@ -1,0 +1,35 @@
+### abstract ###
+We introduce an approach to inferring the causal architecture of stochastic dynamical systems that extends rate distortion theory to use causal shielding---a natural principle of learning
+We study two distinct cases of causal inference: optimal causal filtering and optimal causal estimation
+Filtering corresponds to the ideal case in which the probability distribution of measurement sequences is known, giving a principled method to approximate a system's causal structure at a desired level of representation
+We show that, in the limit in which a model complexity constraint is relaxed, filtering finds the exact causal architecture of a stochastic dynamical system, known as the  causal-state partition
+From this, one can estimate the amount of historical information the process stores
+More generally, causal filtering finds a graded model-complexity hierarchy of approximations to the causal architecture
+Abrupt changes in the hierarchy, as a function of approximation, capture distinct scales of structural organization
+For nonideal cases with finite data, we show how the correct number of underlying causal states can be found by optimal causal estimation
+A previously derived model complexity control term allows us to correct for the effect of statistical fluctuations in probability estimates and thereby avoid over-fitting
+### introduction ###
+Time series modeling has a long and important history in science and engineering
+Advances in dynamical systems over the last half century led to new methods that attempt to account for the inherent nonlinearity in many natural phenomena  CITATION
+As a result, it is now well known that nonlinear systems produce highly correlated time series that are not adequately modeled under the typical statistical assumptions of linearity, independence, and identical distributions
+One consequence, exploited in novel state-space reconstruction methods  CITATION , is that discovering the hidden structure of such processes is key to successful modeling and prediction  CITATION
+In an attempt to unify the alternative nonlinear modeling approaches, computational mechanics  CITATION  introduced a minimal representation---the \eM---for stochastic dynamical systems that is an optimal predictor and from which many system properties can be directly calculated
+Building on the notion of state introduced in Ref
+CITATION , a system's effective states are those variables that  causally shield  a system's past from its future---capturing, in the present, information from the past that predicts the future
+Following these lines, here we investigate the problem of learning predictive models of time series with particular attention paid to discovering hidden variables
+We do this by using the information bottleneck method (IB)  CITATION  together with a complexity control method discussed by Ref
+CITATION , which is necessary for learning from finite data
+Ref
+CITATION  lays out the relationship between computational mechanics and the information bottleneck method
+Here, we make the mathematical connection for times series, introducing a new method
+We adapt IB to time series prediction, resulting in a method we call  optimal causal filtering  (OCF)
+Since OCF, in effect, extends rate-distortion theory  CITATION  to use causal shielding, in general it achieves an optimal balance between model complexity and approximation accuracy
+The implications of these trade-offs for automated theory building are discussed in Ref
+CITATION
+We show that in the important limit in which prediction is paramount and model complexity is not restricted, OCF reconstructs the underlying process's causal architecture, as previously defined within the framework of computational mechanics  CITATION
+This shows that, in effect, OCF captures a source's hidden variables and organization
+The result gives structural meaning to the inferred models
+For example, one can calculate fundamental invariants---such as, symmetries, entropy rate, and stored information---of the original system
+To handle finite-data fluctuations, OCF is extended to  optimal causal estimation  (OCE)
+When probabilities are estimated from finite data, errors due to statistical fluctuations in probability estimates must be taken into account in order to avoid over-fitting
+We demonstrate how OCF and OCI work on a number of example stochastic processes with known, nontrivial correlational structure

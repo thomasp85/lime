@@ -1,0 +1,47 @@
+### abstract ###
+MISC when judging their likelihood of success in competitive tasks, people tend to be overoptimistic for easy tasks and overpessimistic for hard tasks the shared circumstance effect; sce
+MISC previous research has shown that feedback and experience from repeated-play competitions has a limited impact on sces
+AIMX however, in this paper, we suggest that competitive situations, in which the shared difficulty or easiness of the task is more transparent, will be more amenable to debiasing via repeated play
+OWNX pairs of participants competed in, made predictions about, and received feedback on, multiple rounds of a throwing task involving both easy- and hard-to-aim objects
+OWNX participants initially showed robust sces, but they also showed a significant reduction in bias after only one round of feedback
+OWNX these and other results support a more positive view than suggested from past research on the potential for sces to be debiased through outcome feedback
+### introduction ###
+MISC competition abounds in everyday life, where we contend with others for top grades, jobs, trophies, and mates
+MISC when resources are at a premium, it is optimal to enter into competitive environments in which we are certain to fare well and to avoid those in which we are doomed to fail
+MISC however, when people evaluate their likelihood of success in competitions, they are subject to a robust bias: a competitor should consider the strengths and weaknesses of the self and the other competitors  CITATION , but people often give too much weight to evidence related to their own strengths and weaknesses and too little weight to such evidence about the competitor  CITATION
+MISC this egocentrism results in overoptimism when the circumstances of the competition are favorable, such as when competitors in a trivia game learn that the questions will be from an easy category-even though they'll be easy for everyone  CITATION
+MISC egocentrism also results in overpessimism when the circumstances are unfavorable e g , a difficult trivia category
+MISC this phenomenon of being more optimistic when shared competitive circumstances are favorable than when they are not has been dubbed the shared-circumstance effect  CITATION , and it has been replicated across a variety of settings e g , general knowledge tasks, card games, athletic competitions
+MISC in most previous studies on the sce, participants were presented with novel, non-repeated competitive situations
+MISC these situations did not allow people to learn from past experiences or from feedback within the immediate competitive context
+MISC however, in everyday contexts there are often opportunities to learn how a shared circumstance tends to affect the self, others, and outcomes
+MISC for example, when a tennis tournament is played during a string of windy days, players can have several opportunities to observe how the weather affects themselves and their competitors
+MISC to examine whether egocentrism and sces persist in repeated-play contexts, rose and windschitl  CITATION  had pairs of participants compete against each other in multiple rounds of a trivia contest that involved easy and hard categories
+MISC in each round, participants estimated their likelihood of beating their competitor, answered trivia questions, and received feedback about who won
+MISC in initial rounds, there were robust sces; participants were much more optimistic about winning easy categories than hard ones
+MISC if they encountered the same hard and easy categories across rounds, the participants learned from feedback
+MISC that is, the sce shrank-but slowly-across six rounds with the same categories
+MISC the sce was never eliminated, even after six rounds
+MISC also, for a seventh round, participants were told there would be new categories
+MISC the sce for that round dramatically and fully rebounded; it was every bit as large as observed for round 1
+MISC these results provide a bleak view of how well people can learn from feedback and avoid sces
+MISC moreover, results from a study by moore and cain  CITATION , which also used repeated plays with feedback, suggest an even bleaker view
+MISC those researchers also used easy and difficult quizzes as shared-circumstance manipulations, but found virtually no reduction in sces after numerous rounds with feedback
+MISC CITATION are people's abilities to learn to avoid sces-based on feedback-really as bleak as this prior research might suggest
+AIMX we argue that some shared circumstances are more transparently shared than others, and this may affect how readily people learn to avoid the bias that creates sces-and how easily they can transfer this learning to a slightly new set of shared circumstances
+OWNX by transparently shared, we are referring to how obvious it is that a circumstance that is helpful or hindering to the self will affect others in largely the same way
+OWNX in the present study, we examined the influence of repeated feedback on sces
+CONT however, unlike past research, we used a competition in which the difficulty of the shared circumstance relative to competitions, for example, involving easy and hard trivia categories is more transparently shared
+OWNX in a multi-round paradigm, participants competed in object-tossing competitions
+OWNX in each round, two competitors each had 8 throws per object-attempting to land the object inside a target area
+OWNX there was always one easy-to-aim object e g , a beanbag and one hard-to-aim object e g , a paper plate, which constituted our shared-circumstance manipulation
+OWNX full feedback was given during and after each round, and predictions were solicited before each round and also before a final round with novel objects
+OWNX we suspected that a tossing competition, rather than a trivia competition, would produce less bleak results about the debiasing of sces through repeated play
+MISC in the case of trivia, watching one's competitor fail to answer trivia questions doesn't give any insight about why the category is difficult for that person
+MISC also, knowing that one's competitor struggled on a difficult category does not provide obvious information about why he or she might struggle on another difficult category
+MISC however, in the case of throwing, watching a competitor fail when tossing an object probably illuminates the relevance of specific shared, situational circumstances i e , the properties of the specific objects as well as a more general awareness of the relevance that object properties have on throwing success-for anyone
+MISC for example, seeing a paper plate fly unpredictably will likely give an observer a clear impression that the object will fly unpredictably regardless of who is throwing it
+MISC for participants, this enhances the appreciation that one's struggles are not primarily due to personal characteristics but to properties of the tossed objects; this would then be useful in mitigating egocentrism and sces, even when new objects are introduced
+OWNX consequently, we expected that, even though participants might reveal a robust sce at round 1 prior to any feedback or observations regarding their competitor, they would show a pronounced learning effect after the feedback and observations of round 1
+OWNX that is, they would show significantly reduced sces starting immediately after round 1
+OWNX we also expected that this learning would be generally transferable

@@ -1,0 +1,29 @@
+### abstract ###
+We show how models for prediction with expert advice can be defined concisely and clearly using hidden Markov models (HMMs); standard HMM algorithms can then be used to efficiently calculate, among other things, how the expert predictions should be weighted according to the model
+We cast many existing models as HMMs and recover the best known running times in each case
+We also describe two new models: the switch distribution, which was recently developed to improve Bayesian/Minimum Description Length model selection, and a new generalisation of the fixed share algorithm based on run-length coding
+We give loss bounds for all models and shed new light on their relationships
+### introduction ###
+We cannot predict exactly how complicated processes such as the weather, the stock market, social interactions and so on, will develop into the future
+Nevertheless, people do make weather forecasts and buy shares all the time
+Such predictions can be based on formal models, or on human expertise or intuition
+An investment company may even want to choose between portfolios on the basis of a combination of these kinds of predictors
+In such scenarios, predictors typically cannot be considered ``true''
+Thus, we may well end up in a position where we have a whole collection of prediction strategies, or  experts , each of whom has  some  insight into  some  aspects of the process of interest
+We address the question how a given set of experts can be combined into a single predictive strategy that is as good as, or if possible even better than, the best individual expert
+The setup is as follows
+Let  SYMBOL  be a finite set of experts
+Each expert  SYMBOL  issues a distribution  SYMBOL  on the next outcome  SYMBOL  given the previous observations  SYMBOL
+Here, each outcome  SYMBOL  is an element of some countable space  SYMBOL , and random variables are written in bold face
+The probability that an expert assigns to a sequence of outcomes is given by the chain rule:  SYMBOL
+A standard Bayesian approach to combine the expert predictions is to define a prior  SYMBOL  on the experts  SYMBOL  which induces a joint distribution with mass function  SYMBOL
+Inference is then based on this joint distribution
+We can compute, for example: (a) the  marginal probability  of the data  SYMBOL , (b) the  predictive distribution  on the next outcome  SYMBOL , which defines a prediction strategy that combines those of the individual experts, or (c) the  posterior distribution  on the experts  SYMBOL , which tells us how the experts' predictions should be weighted
+This simple probabilistic approach has the advantage that it is computationally easy: predicting   SYMBOL  outcomes using  SYMBOL  experts requires only  SYMBOL  time
+Additionally, this Bayesian strategy guarantees that the overall probability of the data is only a factor  SYMBOL  smaller than the probability of the data according to the best available expert  SYMBOL
+On the flip side, with this strategy we never do any  better  than  SYMBOL  either: we have  SYMBOL , which means that potentially valuable insights from the other experts are not used to our advantage
+More sophisticated combinations of prediction strategies can be found in the literature under various headings, including (Bayesian) statistics, source coding and universal prediction
+In the latter the experts' predictions are not necessarily probabilistic, and scored using an arbitrary loss function
+In this paper we consider only logarithmic loss, although our results can undoubtedly be generalised to the framework described in, eg \  CITATION
+We introduce HMMs as an intuitive graphical language that allows unified description of existing and new models
+Additionally, the running time for evaluation of such models can be read off directly from the size of their representation

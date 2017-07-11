@@ -1,0 +1,36 @@
+### abstract ###
+We present a method for learning max-weight matching predictors in bipartite graphs
+The method consists of performing maximum a posteriori estimation in exponential families with sufficient statistics that encode permutations and data features
+Although inference is in general hard, we show that for one very relevant application--web page ranking--exact inference is efficient
+For general model instances, an appropriate sampler is readily available
+Contrary to existing max-margin matching models, our approach is statistically consistent and, in addition, experiments with increasing sample sizes indicate superior improvement over such models
+We apply the method to graph matching in computer vision as well as to a standard benchmark dataset for learning web page ranking, in which we obtain state-of-the-art results, in particular improving on max-margin variants
+The drawback of this method with respect to max-margin alternatives is its runtime for large graphs, which is comparatively high
+### introduction ###
+The Maximum-Weight Bipartite Matching Problem (henceforth `matching problem') is a fundamental problem in combinatorial optimization  CITATION
+This is the problem of finding the `heaviest' perfect match in a weighted bipartite graph
+An exact optimal solution can be found in cubic time by standard methods such as the Hungarian algorithm
+This problem is of practical interest because it can nicely model real-world applications
+For example, in computer vision the crucial problem of finding a correspondence between sets of image features is often modeled as a matching problem  CITATION
+Ranking algorithms can be based on a matching framework  CITATION , as can clustering algorithms  CITATION
+When modeling a problem as one of matching, one central question is the choice of the weight matrix
+The problem is that in real applications we typically observe edge  feature vectors , not edge weights
+Consider a concrete example in computer vision: it is difficult to tell what the `similarity score' is between two image feature points, but it is straightforward to extract feature vectors (e g ~SIFT) associated with those points
+In this setting, it is natural to ask whether we could parameterize the features, and use  labeled matches  in order to estimate the parameters such that, given graphs with `similar' features, their resulting max-weight matches are also `similar'
+This idea of `parameterizing algorithms' and then optimizing for agreement with data is called  structured estimation   CITATION
+CITATION  and  CITATION  describe max-margin structured estimation formalisms for this problem
+Max-margin structured estimators are appealing in that they  try  to minimize the loss that one really cares about (`structured losses', of which the Hamming loss is an example)
+However structured losses are typically piecewise constant in the parameters, which eliminates any hope of using smooth optimization directly
+Max-margin estimators instead minimize a surrogate loss which is easier to optimize, namely a convex upper bound on the structured loss  CITATION
+In practice the results are often good, but known convex relaxations produce estimators which are statistically inconsistent  CITATION , i e ,~the algorithm in general fails to obtain the best attainable model in the limit of infinite training data
+The inconsistency of multiclass support vector machines is a well-known issue in the literature that has received careful examination recently  CITATION
+Motivated by the inconsistency issues of max-margin structured estimators as well as by the well-known benefits of having a full probabilistic model, in this paper we present a maximum a posteriori (MAP) estimator for the matching problem
+The observed data are the edge feature vectors and the labeled matches provided for training
+We then maximize the conditional posterior likelihood of matches given the observed data
+We build an exponential family model where the sufficient statistics are such that the mode of the distribution (the prediction) is the solution of a max-weight matching problem
+The resulting partition function is  SYMBOL P-complete to compute exactly
+However, we show that for  learning to rank  applications the model instance is tractable
+We then compare the performance of our model instance against a large number of state-of-the-art ranking methods, including DORM  CITATION , an approach that only differs to our model instance by using max-margin instead of a MAP formulation
+We show very competitive results on standard webpage ranking datasets, and in particular we show that our model performs better than or on par with DORM
+For intractable model instances, we show that the problem can be approximately solved using sampling and we provide experiments from the computer vision domain
+However the fastest suitable sampler is still quite slow for large models, in which case max-margin matching estimators like those of  CITATION  and  CITATION  are likely to be preferable even in spite of their potential inferior accuracy

@@ -1,0 +1,57 @@
+### abstract ###
+Acetylcholinesterase rapidly hydrolyzes acetylcholine in the neuromuscular junctions and other cholinergic synapses to terminate the neuronal signal.
+In physiological conditions, AChE exists as tetramers associated with the proline-rich attachment domain of either collagen-like Q subunit or proline-rich membrane-anchoring protein.
+Crystallographic studies have revealed that different tetramer forms may be present, and it is not clear whether one or both are relevant under physiological conditions.
+Recently, the crystal structure of the tryptophan amphiphilic tetramerization domain of AChE associated with PRAD, which mimics the interface between ColQ and AChE tetramer, became available.
+In this study we built a complete tetrameric mouse AChE T 4 ColQ atomic structure model, based on the crystal structure of the WAT 4PRAD complex.
+The structure was optimized using energy minimization.
+Block normal mode analysis was done to investigate the low-frequency motions of the complex and to correlate the structure model with the two known crystal structures of AChE tetramer.
+Significant low-frequency motions among the catalytic domains of the four AChE subunits were observed, while the WAT 4PRAD part held the complex together.
+Normal mode involvement analysis revealed that the two lowest frequency modes were primarily involved in the conformational changes leading to the two crystal structures.
+The first 30 normal modes can account for more than 75 percent of the conformational changes in both cases.
+The evidence further supports the idea of a flexible tetramer model for AChE.
+This model can be used to study the implications of the association of AChE with ColQ.
+### introduction ###
+Acetylcholinesterase rapidly hydrolyzes acetylcholine to terminate neurotransmissions at cholinergic synapses CITATION, CITATION.
+The reaction is very fast, approaching the diffusion limit.
+AChE has three different molecular forms due to an alternate splicing scheme at the C-terminus CITATION.
+The T-subtype with a 40-residue C-terminal t-peptide is the only form expressed in the brain and adult muscles of normal adult mammals CITATION.
+In vertebrate cholinergic synapses, tetramers of AChE T are associated with either collagen-like Q subunit or transmembrane proline-rich membrane-anchoring protein CITATION, CITATION.
+ColQ is a structural protein that anchors AChE T to the synaptic basal lamina CITATION, CITATION, and PRiMA is a membrane protein that anchors AChE T to the membrane of neuronal synapses in the brain CITATION.
+They both contain a proline-rich attachment domain near the N-terminus, which is the site for interacting with the t-peptide of AChE.
+The PRAD has three and five consecutive proline residues, and it has been shown that synthetic polyproline could replace PRAD in its association with AChE T tetramers CITATION.
+In AChE T the t-peptide is absolutely required in its association with PRAD CITATION.
+The sequence of the t-peptide is highly conserved throughout vertebrates, with a cysteine at 4 position from the C-terminus and a series of seven aromatic residues, including four equally spaced tryptophans.
+Because the t-peptide constitutes an autonomous interacting domain, it has been named the tryptophan amphiphilic tetramerization domain.
+In this notation, AChE T is equivalent to AChE WAT CITATION .
+Recently the crystal structure of PRAD/WAT complex was solved at 2.35 resolution CITATION.
+The complex has the expected WAT 4PRAD stoichiometry.
+Four parallel -helical WAT chains wrap around a single antiparallel PRAD helix, which itself has a left-handed polyproline II conformation.
+Each WAT helix assumes a coiled-coil conformation, and all four of them form a left-handed supercoil around the PRAD.
+The WWW motif in the WAT makes repetitive hydrophobic stacking and hydrogen bond interactions with the PRAD.
+The four WAT chains are related by a 4-fold screw axis around the PRAD.
+The strength of PRAD WAT interaction is very tight, with no monomer of WAT detected in the range of 10 10 to 10 12 M CITATION .
+It remains unknown how the four AChE subunits are arranged in the tetramer associated with the PRAD.
+Low-resolution crystallographic studies revealed two distinct three-dimensional structures of AChE tetramer CITATION.
+Both crystal structures show a dimer of dimers, i.e., there is no 4-fold symmetry to relate all four subunits.
+In one structure two AChE dimers are close with all four C-terminal sequences aligning to the same direction, and in the other structure the space between the two dimers is large and the four C-terminal sequences are aligned antiparallel to the middle.
+The crystals were grown from trypsin-digested, collagen-tailed AChE and should both have WAT and PRAD preserved; although electronic densities were seen, it was not possible to resolve them.
+It was suggested that the flexibility of AChE tetramers might be related to the regulation of catalysis CITATION, CITATION.
+To test this, reaction-rate calculations were conducted using these two tetramer structures and a morphed intermediate structure.
+The results showed that the rate per active site was reduced due to active site occlusion and sink sink competition compared to the monomeric form, but could be partly compensated by electrostatic enhancements in the tetramers CITATION.
+The rate reduction due to active site occlusion was particularly notable for the compact tetramer CITATION .
+Efforts to combine the PRAD/WAT structure and the two AChE tetramer structures were not very successful.
+The problem was that in both tetramer structures the four AChE subunits lacked 4-fold symmetry as seen in the WAT 4PRAD complex crystal structure CITATION.
+Since the four WAT chains are staggered in the structure, it is impossible, without substantial distortion of the WAT 4PRAD complex and/or the AChE tetramer structures, to dock the WAT 4PRAD complex along the 2-fold axis between the pairs of AChE dimers.
+In fact, the superhelical axis of the WAT 4PRAD complex structure is at an angle of about 30 to this 2-fold axis CITATION .
+Considering the tight association between PRAD and WAT, the weak affinity of the AChE dimer, and the limited contact between the two dimers in the tetramer, it is reasonable to assume that the PRAD WAT interaction dominates over the inter-subunit interaction in the association of AChE tetramer with ColQ.
+In fact, AChE only exists as a soluble monomer if the WAT sequence is deleted CITATION, indicating that the dimerization forces are weak.
+In a previous study of subunit association in cholinesterases, this interaction was identified as the weak hydrophobic interaction, compared with the strong interaction seen between WAT and PRAD CITATION.
+It has also been shown that if two proteins, for example, AChE and alkaline phosphatase both with WAT sequences at their C-termini are mixed with PRAD at various ratios, tetramers containing three subunits of one protein and one of the other are underrepresented CITATION.
+This points to a symmetric AChE T 4 ColQ complex form in physiological conditions.
+Since the two crystal structures of AChE tetramer were generated experimentally, they have to be accessible from the physiological model through conformational changes.
+In this study, we built an AChE T 4 ColQ complex model strictly following the PRAD WAT interaction.
+Although molecular dynamics is a useful tool to observe dynamics in conformational changes, the size of the system poses too much a challenge in this case CITATION.
+Block normal mode analysis uses coarse-grained representation for the protein to reduce the computational cost and has been shown to be a useful tool in predicting low-frequency motions seen in large protein assemblies, for example, the swelling of a virus capsid CITATION CITATION, the ratchet motion of the ribosome CITATION, the collective motions in HIV-1 transcriptase CITATION, myosin CITATION, CITATION, ATPase CITATION, CITATION, and chaperonin GroEL CITATION, etc. These low-frequency motions are often related to the conformational changes required by the biological functions of the protein assemblies.
+Here we applied BNMA to the AChE T 4 ColQ complex model and calculated the 100 lowest normal modes.
+By projecting the conformational changes onto these normal modes, it was found that the two AChE tetramer crystal structures could be rationalized by using these low-frequency normal modes.

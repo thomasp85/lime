@@ -1,0 +1,23 @@
+### abstract ###
+the ratio-bias phenomenon  observed by psychologist seymour epstein and colleagues  is a systematic manifestation of irrationality
+when offered a choice between two lotteries  individuals consistently choose the lottery with the greater number of potential successes  even when it offers a smaller probability of success
+in the current study  we conduct experiments to confirm this phenomenon and test for the existence of bias as distinct from general irrationality
+moreover  we examine the effect of introducing a monetary incentive of varying size depending on the treatment on the extent of irrational choices within this framework
+we confirm the existence of the bias
+moreover  the existence of an incentive significantly reduces the extent of irrationality exhibited  and that this effect is roughly linear in response to changes in the size of the incentive within the magnitudes investigated
+### introduction ###
+consider the following problem  you are asked to draw a red marble from either of two urns
+urn a contains  NUMBER  marbles   NUMBER  of which is red
+urn b contains  NUMBER  marbles   NUMBER  of which are red
+which urn do you choose
+a rational actor maximizing the probability of choosing a red marble will choose urn a
+psychologist seymour epstein and colleagues  CITATION  have documented that many individuals choose urn b when presented with this choice or similar choices
+epstein named this the ratio-bias phenomenon  as it appears that individuals are biased toward choices with large numbers of potential successes  rather than large probabilities of potential successes
+the present investigation explores the ratio-bias phenomenon along two dimensions
+first  we test for errors within this framework in a symmetric fashion
+referring to the example above  we not only present participants with decisions like that one  but also with decisions in which the urn with the larger number of marbles has the greater probability of success and is therefore the optimal choice
+if we observe similar frequencies of errors in these two circumstances  then we conclude that there is no real ratio-bias phenomenon  but rather observation of random error in both directions
+if the frequency of irrational decisions differs across these treatments  however  then we conclude that the ratio-bias phenomenon exists
+the second dimension of interest is that of incentives
+the participant in a ratio-bias experiment confronts a decision that is well suited to the introduction of a small monetary incentive and the testing of its marginal effect
+we implement a combination within- and between-subjects design to test the effect of monetary incentives on decision making  as well as varying the size of the incentive to test for the effect of incentive magnitude on decision optimality

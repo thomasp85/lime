@@ -1,0 +1,23 @@
+### abstract ###
+We propose a method for support vector machine classification using indefinite kernels
+Instead of directly minimizing or stabilizing a nonconvex loss function, our algorithm simultaneously computes support vectors and a proxy kernel matrix used in forming the loss
+This can be interpreted as a penalized kernel learning problem where indefinite kernel matrices are treated as noisy observations of a true Mercer kernel
+Our formulation keeps the problem convex and relatively large problems can be solved efficiently using the projected gradient or analytic center cutting plane methods
+We compare the performance of our technique with other methods on several standard data sets
+### introduction ###
+Support vector machines (SVM) have become a central tool for solving binary classification problems
+A critical step in support vector machine classification is choosing a suitable kernel matrix, which measures similarity between data points and must be positive semidefinite because it is formed as the Gram matrix of data points in a reproducing kernel Hilbert space
+This positive semidefinite condition on kernel matrices is also known as Mercer's condition in the machine learning literature
+The classification problem then becomes a linearly constrained quadratic program
+Here, we present an algorithm for SVM classification using indefinite kernels}, i e kernel matrices formed using similarity measures which are not positive semidefinite
+Our interest in indefinite kernels is motivated by several observations
+First, certain similarity measures take advantage of application-specific structure in the data and often display excellent empirical classification performance
+Unlike popular kernels used in support vector machine classification, these similarity matrices are often indefinite, so do not necessarily correspond to a reproducing kernel Hilbert space (See  CITATION  for a discussion )  In particular, an application of classification with indefinite kernels to image classification using Earth Mover's Distance was discussed in  CITATION
+Similarity measures for protein sequences such as the Smith-Waterman and BLAST scores are indefinite yet have provided hints for constructing useful positive semidefinite kernels such as those decribed in  CITATION  or have been transformed into positive semidefinite kernels with good empirical performance (see  CITATION , for example)
+Tangent distance similarity measures, as described in  CITATION  or  CITATION , are invariant to various simple image transformations and have also shown excellent performance in optical character recognition
+Finally, it is sometimes impossible to prove that some kernels satisfy Mercer's condition or the numerical complexity of evaluating the exact positive kernel is too high and a proxy (and not necessarily positive semidefinite) kernel has to be used instead (see  CITATION , for example)
+In both cases, our method allows us to bypass these limitations
+Our objective here is to derive efficient algorithms to directly use these indefinite similarity measures for classification
+Our work closely follows, in spirit, recent results on kernel learning (see  CITATION  or  CITATION ), where the kernel matrix is learned as a linear combination of given kernels, and the result is explicitly constrained to be positive semidefinite
+While this problem is numerically challenging,  CITATION   adapted the SMO algorithm to solve the case where the kernel is written as a positively weighted combination of other kernels
+In our setting here, we never  numerically  optimize the kernel matrix because this part of the problem can be solved explicitly, which means that the complexity of our method is substantially lower than that of classical kernel learning algorithms and closer in practice to the algorithm used in  CITATION , who formulate the multiple kernel learning problem of  CITATION  as a semi-infinite linear program and solve it with a column generation technique similar to the analytic center cutting plane method we use here

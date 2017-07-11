@@ -1,0 +1,20 @@
+### abstract ###
+{dimension reduction; kernel methods; low-rank approximation; machine learning; Nystr\"om extension}% In recent years, the spectral analysis of appropriately defined kernel matrices has emerged as a principled way to extract the low-dimensional structure often prevalent in high-dimensional data
+Here we provide an introduction to spectral methods for linear and nonlinear dimension reduction, emphasizing ways to overcome the computational limitations currently faced by practitioners with massive datasets
+In particular, a data subsampling or landmark selection process is often employed to construct a kernel based on partial information, followed by an approximate spectral analysis termed the Nystr\"om extension
+We provide a quantitative framework to analyse this procedure, and use it to demonstrate algorithmic performance bounds on a range of practical approaches designed to optimize the landmark selection process
+We compare the practical implications of these bounds by way of real-world examples drawn from the field of computer vision, whereby low-dimensional manifold structure is shown to emerge from high-dimensional video data streams
+### introduction ###
+In recent years, dramatic increases in available computational power and data storage capabilities have spurred a renewed interest in dimension reduction methods
+This trend is illustrated by the development over the past decade of several new algorithms designed to treat nonlinear structure in data, such as isomap (Tenenbaum  et al ~2000), spectral clustering (Shi \&~Malik~2000), Laplacian eigenmaps (Belkin \&~Niyogi~2003), Hessian eigenmaps (Donoho \&~Grimes~2003) and diffusion maps (Coifman  et al ~2005)
+Despite their different origins, each of these algorithms requires computation of the principal eigenvectors and eigenvalues of a positive semi-definite kernel matrix
+In fact, spectral methods and their brethren have long held a central place in statistical data analysis
+The spectral decomposition of a positive semi-definite kernel matrix underlies a variety of classical approaches such as principal components analysis, in which a low-dimensional subspace that explains most of the variance in the data is sought, Fisher discriminant analysis, which aims to determine a separating hyperplane for data classification, and multidimensional scaling, used to realize metric embeddings of the data
+As a result of their reliance on the exact eigendecomposition of an appropriate kernel matrix, the computational complexity of these methods scales in turn as the cube of either the dataset  dimensionality  or  cardinality  (Belabbas \&~Wolfe~2009)
+Accordingly, if we write  SYMBOL  for the requisite complexity of an exact eigendecomposition, large and/or high-dimensional datasets can pose severe computational problems for both classical and modern methods alike
+One alternative is to construct a kernel based on partial information; that is, to analyse directly a set of `landmark' dimensions or examples that have been selected from the dataset as a kind of summary statistic
+Landmark selection thus reduces the overall computational burden by enabling practitioners to apply the aforementioned algorithms directly to a subset of their original data---one consisting solely of the chosen landmarks---and subsequently to extrapolate their results at a computational cost of  SYMBOL
+While practitioners often select landmarks simply by sampling from their data uniformly at random, we show in this article how one may improve upon this approach in a data-adaptive manner, at only a slightly higher computational cost
+We begin with a review of linear and nonlinear dimension-reduction methods in~\S, and formally introduce the optimal landmark selection problem in~\S
+We then provide an analysis framework for landmark selection in~\S, which in turn yields a clear set of trade-offs between computational complexity and quality of approximation
+Finally, we conclude in~with a case study demonstrating applications to the field of computer vision

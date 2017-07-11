@@ -1,0 +1,14 @@
+### abstract ###
+two experiments examined the benefits of unconscious thought on complex decisions  CITATION
+experiment  NUMBER  attempted to replicate and extend past research by examining the effect of providing reasons prior to rating the options
+results indicated no significant differences between the conditions
+experiment  NUMBER  attempted to replicate the findings of dijksterhuis  bos  nordgren  and van baaren  CITATION  and determine if a memory aid could overcome the limitations of conscious thought on complex tasks
+results revealed that a memory aid improved decisions compared to the conscious thought condition
+participants in the unconscious thought condition did not perform significantly better than did participants in the conscious thought condition
+### introduction ###
+conventional wisdom indicates that we should think  hard  about our options when faced with a difficult decision
+by devoting attention and conscious thought to a difficult decision  one can carefully consider and weigh the various options and choose the option that best matches one's goals
+wilson and schooler  CITATION  challenged this assumption when they found that participants asked to think about their reasons for a decision made apparently worse decisions than participants who did not reflect on their reasons for a decision
+recent work  CITATION  has cast further doubt on the benefits of consciously thinking about one's decisions by demonstrating that consciously thinking about complex tasks i e   tasks which consist of numerous attributes that participants must weigh in order to determine the best option can lead to poorer performance than unconscious thought
+some recent attempts to replicate this effect have been unsuccessful  CITATION
+this paper attempts to replicate the beneficial effects of unconscious thought on complex tasks found by dijksterhuis and colleagues and to examine some conditions that may limit the effect

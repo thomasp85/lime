@@ -1,0 +1,36 @@
+### abstract ###
+Sampling-based methods have previously been proposed for the problem of finding interesting associations in data, even for low-support items
+While these methods do not guarantee precise results, they can be vastly more efficient than approaches that rely on exact counting
+However, for many similarity measures no such methods have been known
+In this paper we show how a wide variety of measures can be supported by a simple  biased\/  sampling method
+The method also extends to find high-confidence association rules
+We demonstrate theoretically that our method is superior to exact methods when the threshold for ``interesting similarity/confidence'' is above the average pairwise similarity/confidence, and the average support is not too low
+Our method is particularly good when transactions contain many items
+We confirm in experiments on standard association mining benchmarks that this gives a significant speedup on real data sets (sometimes much larger than the theoretical guarantees)
+Reductions in computation time of over an order of magnitude, and significant savings in space, are observed
+### introduction ###
+A central task in data mining is finding associations in a binary relation
+Typically, this is phrased in a ``market basket'' setup, where there is a sequence of baskets (from now on ``transactions''), each of which is a set of items
+The goal is to find patterns such as ``customers who buy diapers are more likely to also buy beer''
+There is no canonical way of defining whether an association is interesting --- indeed, this seems to depend on problem-specific factors not captured by the abstract formulation
+As a result, a number of measures exist: In this paper we deal with some of the most common measures, including  Jaccard ~ CITATION ,  lift ~ CITATION ,  cosine , and  all\_confidence ~ CITATION
+In addition, we are interested in high-confidence association rules, which are closely related to the  overlap coefficient\/  similarity measure
+We refer to~ CITATION  for general background and discussion of similarity measures
+In the discussion we limit ourselves to the problem of binary associations, i e , patterns involving pairs of items
+There is a large literature considering the challenges of finding patterns involving larger item sets, taking into account the aspect of time, multiple-level rules, etc
+While some of our results can be extended to cover larger item sets, we will for simplicity concentrate on the binary case
+Previous methods rely on one of the following approaches:     Identifying item pairs  SYMBOL  that ``occur frequently together'' in the transactions --- in particular, this means counting the number of co-occurrences of each such pair ---  or   Computing a ``signature'' for each item such that the similarity of every pair of items can be estimated by (partially) comparing the item signatures
+Our approach is different from both these approaches, and generally offers improved performance and/or flexibility
+In some sense we go directly to the desired result, which is the set of pairs of items with similarity measure above some user-defined threshold  SYMBOL
+Our method is  sampling\/  based, which means that the output may contain false positives, and there may be false negatives
+However, these errors are rigorously understood, and can be reduced to any desired level, at some cost of efficiency --- our experimental results are for a false negative probability of less than 2\%
+The method for doing sampling is the main novelty of this paper, and is radically different from previous approaches that involve sampling
+The main focus in many previous association mining papers has been on  space usage\/  and the number of  passes\/  over the data set, since these have been recognized as main bottlenecks
+We believe that time has come to also carefully consider  CPU time
+A transaction with  SYMBOL  items contains  SYMBOL  item pairs, and if  SYMBOL  is not small the effort of considering all pairs is non-negligible compared to the cost of reading the item set
+This is true in particular if data resides in RAM, or on a modern SSD that is able to deliver data at a rate of more than a gigabyte per second
+One remedy that has been used (to reduce space, but also time) is to require  high support , i e , define ``occur frequently together'' such that most items can be thrown away initially, simply because they do not occur frequently enough (they are below the  support threshold\/ )
+However, as observed in~ CITATION  this means that potentially interesting or useful associations (e g ~correlations between genes and rare diseases) are not reported
+In this paper we consider the problem of finding associations  without\/  support pruning
+Of course, support pruning can still be used to reduce the size of the data set before our algorithms are applied
+In the following sections we first discuss the need for focusing on CPU time in data mining, and then elaborate on the relationship between our contribution and related works

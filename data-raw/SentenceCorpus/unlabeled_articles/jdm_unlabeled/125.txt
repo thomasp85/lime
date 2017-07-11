@@ -1,0 +1,104 @@
+### abstract ###
+would you redirect a trolley to save five people even if it means that the trolley will run over a person on the side track
+most people say they would
+would you push that same person into the path of the trolley in order to save the five
+most people say they would not
+these sorts of intuitive moral judgments are made rapidly and seem almost automatic
+now imagine a combined choice context where one can redirect a trolley  push a person in its path or do nothing
+the number of lives lost from intervening can be varied
+the most straightforward interpretations of current theories of moral judgment predict either no effect or that the combined context will lead to greater focus on lives lost
+in contrast  we observe a similarity effect such that utilitarian choice may become less attractive in the combined choice context
+### introduction ###
+moral judgments are often contrasted with mundane or secular decision making  such as consumer choice
+the latter predominantly involves weighing costs and benefits  which often may not be the preferred strategy in moral situations
+in the now classic trolley problem  CITATION  a runaway trolley threatens to run over and kill five people trapped on a railroad track
+if a switch is flipped  the trolley will move onto another track  saving the five but killing a person trapped on that track
+in the footbridge version the only way to save the five is to push a large person off a bridge to stop the trolley
+most people approve flipping the switch  but disapprove of pushing the person  patterns so consistent that some have claimed they are universal  CITATION
+the reluctance to push the person is often described as an example of deontological decision making  where the focus is on intrinsic goodness or badness of actions per se rather than on instrumental outcomes
+the asymmetry between switch and pushing scenarios has been used as an effective tool for developing and evaluating theories of moral judgment  CITATION
+one popular distinction is the doctrine of double effect  which differentiates between harm caused as means and harm caused as a side effect
+harm as means  such as when the actor uses the body of a single victim to prevent the death of a larger number of people  is considered impermissible
+harm as a side effect  however  such as when the trolley kills the single victim after redirected on the sidetrack  is considered permissible
+other relevant distinctions are between direct and indirect harm  CITATION   and intervention on the victim versus intervention on the harmful object  CITATION
+a number of other studies have varied a plethora of other factors associated with the action  such as spatial distance  CITATION   physical contact between actor and victim  CITATION   temporal order of events sinnott-armstrong et al    NUMBER   further advancing our understanding of the role of the properties of the intervention on moral choice
+although most of the research on trolley problems has focused on factors associated with the intervention  others have looked at the role of utility of the outcomes
+for example  sacrificing a stranger is approved more than sacrificing a relative  but sacrificing an obnoxious person a nazi soldier is approved more than sacrificing the stranger  CITATION
+similarly  the lives of in-group members are valued more than the lives of out-group members  CITATION
+an additional indicator of sensitivity to outcomes is that  when the number of lives at stake increases  the approval for intervention to save these lives increases too  CITATION
+finally  trolley dilemmas have been shown to be influenced by framing of the experimental question
+positive framing  focusing on attention to number of lives saved by the intervention  leads to greater approval for action than negative framing  which focuses it on number of lives lost as a result of the intervention  CITATION
+our study is concerned with context effects based on combining the two classic scenarios into one where the actor can throw a switch to redirect the trolley  push a person off the footbridge or do nothing
+as in the standard case omission leads to five deaths  pushing causes one death and we vary the number of deaths associated with redirecting the trolley
+current moral theories typically do not make explicit predictions about extended context comparisons though the most straightforward interpretations suggest that a combined contexts increase attention to outcomes
+for example  mikhail  CITATION  proposed a switch version with two side-tracks  on one of which there is a person  and the other is empty
+under this condition redirecting the trolley onto the track with the single person on it becomes morally prohibited
+in our study  however we varied both the action and the outcomes in such a way that no choice transparently dominated any other choice
+specifically  in one of our combined contexts the actor could push a large person off a footbridge  sacrificing one person to save five  throw a switch to redirect the trolley away from the five but putting it on a side track where two people will die  or do nothing  in which case five people die
+pushing a person is less desirable than throwing a switch all else equal but killing two people is less desirable than killing one
+if the combined choice context increases attention to outcomes  then by mikhail's analysis the action of throwing the switch should be rated more negatively  because there is an option available leading to fewer deaths
+for the same reason the act of pushing one person to save five should  if anything  become relatively more desirable
+alternatively  the action of pushing may be seen as always wrong  so the disapproval of pushing would not be affected by context
+we collected pilot data on combined contexts that appeared to undermine these seemingly straightforward predictions
+in particular  the presence of the switch option led to less approval of pushing the person  even when throwing the switch led to more deaths
+this led us to consider a different form of choice context effect  a similarity effect
+we know of no theory of moral judgment that predicts similarity effects
+in what follows we first describe similarity effects and closely related context effects and then turn to a study aimed at examining choice context effects
+toc paragraph choice context effects
+--   h NUMBER  class  paragraph  sec anchor -- choice context effects
+  h NUMBER  sec end --  the challenges that moral psychology faces when extrapolating results from binary moral dilemmas to broader contexts shows parallels with the development of choice theory  CITATION
+suppose that we are interested in how much consumers like  NUMBER  prospective car models
+one way is to ask them how much they are willing to pay for a given model
+a shortcoming of this method is that it lacks a reference point to which a person compares the item  so in many cases such answers will not be very informative
+another way to try to capture consumer choices is simply to use binary comparisons where consumers have to choose the more preferred car from all possible pairwise comparisons
+we can transform the choices into some preference metric which will tell us the relative ranking of each car compared to the rest
+further  since such scale will assume transitivity  we can even rely on partial information  where if we do not have data from a direct comparison between cars a and c  we still can infer what people will choose based on the other comparisons in which these two cars participated  CITATION
+these early promising attempts to model choice behavior were quickly undermined by new findings from a wider range of paradigms  CITATION
+depending on the particular configuration of the choice set the addition of a new option has been found to systematically change the preferences
+several context effects have been identified  CITATION   for present purposes  we focus on similarity and compromise effects
+in addition  we consider a context effect associated with separate versus joint evaluation  the so-called evaluability hypothesis  CITATION
+toc paragraph similarity  compromise and evaluability
+--   h NUMBER  class  paragraph  sec anchor -- similarity  compromise and evaluability
+  h NUMBER  sec end --  imagine a buyer has to choose between a toyota prius and a ford focus  and all that she cares about is price and fuel economy
+the toyota prius gets better gas mileage  but the ford focus compensates by having a lower price
+further  imagine that in our hypothetical scenario she finds herself roughly indifferent  NUMBER - NUMBER  between the two options
+early work on rational choice theory recognized that  when additional options become available  the new options might well attract choices  but the theories did assume that the relative preference between the initial set  prius and the focus in our example  would remain the same
+many empirical studies  however  have established that people often violate this independence principle
+with the  similarity effect   CITATION   adding a non-dominated option close to one of the alternatives tends to increase the relative share of its competitor
+for example  if we add a honda insight to the choice set  slightly worse than the prius on fuel efficiency but slightly better on price  the buyer who was previously indifferent about the prius and focus options typically shifts to preferring the focus over the prius
+informally  we could say that the insight steals more choices from the prius than from the focus
+alternatively see figure  NUMBER   imagine adding a honda civic to the choice set rather than the honda insight and assume that the civic is more similar to the focus  being slightly better on gas mileage  but slightly more expensive
+now the relative choice between prius and focus should shift towards the prius as the civic competes more with the focus than with the prius
+we refer to this choice context effects as a similarity effect
+in addition to the similarity effect  two other types of context effect are potentially relevant to the current work
+the first is the compromise effect  whereby introducing a third option that results in one of the first two being seen as a compromise leads to an increase in choices of the compromise option  CITATION
+continuing with the car example  if we add as a third option the nissan leaf  for example  which has a much better gas mileage than the prius  but also is significantly more expensive  then the prius will become a compromise  and studies show that being in the middle often increases consumer preferences  CITATION
+conversely  adding a cheaper  less fuel efficient option to the prius versus focus choice set may make the focus a compromise and lead to it being favored
+how might compromise effects work in our hypothetical scenario
+let's begin with our example of throwing the switch to save five people but leading to the death of two people versus doing nothing
+adding the option of pushing one person to save five could make throwing the switch a compromise between saving more versus fewer lives and  all else equal avoiding actions leading to any deaths
+this leads to the counter-intuitive notion that adding the push option may make throwing the switch more desirable
+the final context effect we will mention stems from the work on separate versus joint evaluation
+imagine you have to assign a value to two dictionaries  one in very good condition and containing  NUMBER   NUMBER  words  and the other in fair condition but with  NUMBER   NUMBER  words
+hsee  CITATION  found that the smaller dictionary is priced higher than the larger one when each is evaluated in isolation separate evaluation  but the smaller dictionary received a lower pricing than the larger one in joint evaluation
+according to the evaluability hypothesis  number of words is not very meaningful piece of information in separate evaluation because there is no reference point for comparison
+as a result  number of words becomes a more important dimension in joint  rather than in separate evaluation  CITATION
+in the same way in our scenario where throwing a switch leads to two people dying but five being saved  the evaluability may shift in the direction of outcome utility when the option of pushing a single person to save five is added
+this would lead to the throwing switch option becoming less desirable  CITATION
+are moral choices equally susceptible to these choice-set context effects
+our initial hunch was that instrumental choices would be based on evaluability
+but we also considered the possibility that options evoking deontological rules might not be susceptible to context effects
+for example  an option saving three lives might be seen as quite positive by itself  but lose its value when there is an option available that would save four lives
+but an inappropriate or immoral act  like pushing a person off a bridge  may remain immoral or equally bad  even when instrumentally less desirable options are added
+the trolley and footbridge problems can be conceptualized as comprised of a choice set having two dimensions  one representing the value or utility of the number of people saved or lost and the other representing the value or cost intrinsic to the actions themselves  including inaction
+this latter dimension is useful for the basic distinction or difference between throwing the switch acceptable versus pushing a person unacceptable when instrumental outcomes are the same
+in addition  baron and his collaborators  CITATION  have shown that  when harmful outcomes are at stake  people often choose to do nothing  showing an omission bias
+for example  one would expect that  given a choice between doing nothing and one person dies versus throwing a switch and one person dies  people will show a strong preference to do nothing
+combining these observations  on the dimension of forms of action leading to harm in this context omission is preferable to throwing the switch which in turn is greatly preferable to pushing a person
+and on the dimension of lives lost  less is better
+these two hypothetical dimensions set of stage for examining context effects
+in the next section we present an empirical study which compares preferences for action and omission in five different choice sets
+the key comparison is between two three-alternative choice-sets trilemmas  which have the same omission and footbridge-intervention options but differ in the number of victims for the switch intervention
+if the approvals for the two shared options pushing and omission differ as a function of the properties of the third option  this will demonstrate a context effect  which may take the form of a similarity effect  a compromise effect or an evaluability effect
+to determine the form of choice context effect ratings will be compared with two-alternative versions of these scenarios
+the predictions of the different theories of context effects are summarized after the description of the design

@@ -1,0 +1,56 @@
+### abstract ###
+The diversity of virus populations within single infected hosts presents a major difficulty for the natural immune response as well as for vaccine design and antiviral drug therapy.
+Recently developed pyrophosphate-based sequencing technologies can be used for quantifying this diversity by ultra-deep sequencing of virus samples.
+We present computational methods for the analysis of such sequence data and apply these techniques to pyrosequencing data obtained from HIV populations within patients harboring drug-resistant virus strains.
+Our main result is the estimation of the population structure of the sample from the pyrosequencing reads.
+This inference is based on a statistical approach to error correction, followed by a combinatorial algorithm for constructing a minimal set of haplotypes that explain the data.
+Using this set of explaining haplotypes, we apply a statistical model to infer the frequencies of the haplotypes in the population via an expectation maximization algorithm.
+We demonstrate that pyrosequencing reads allow for effective population reconstruction by extensive simulations and by comparison to 165 sequences obtained directly from clonal sequencing of four independent, diverse HIV populations.
+Thus, pyrosequencing can be used for cost-effective estimation of the structure of virus populations, promising new insights into viral evolutionary dynamics and disease control strategies.
+### introduction ###
+Pyrosequencing is a novel experimental technique for determining the sequence of DNA bases in a genome CITATION, CITATION.
+The method is faster, less laborious, and cheaper than existing technologies, but pyrosequencing reads are also significantly shorter and more error-prone than those obtained from Sanger sequencing CITATION CITATION .
+In this paper we address computational issues that arise in applying this technology to the sequencing of an RNA virus sample.
+Within-host RNA virus populations consist of different haplotypes that are evolutionarily related.
+The population can exhibit a high degree of genetic diversity and is often referred to as a quasispecies, a concept that originally described a mutation-selection balance CITATION, CITATION.
+Viral genetic diversity is a key factor in disease progression CITATION, CITATION, vaccine design CITATION, CITATION, and antiretroviral drug therapy CITATION, CITATION.
+Ultra-deep sequencing of mixed virus samples is a promising approach to quantifying this diversity and to resolving the viral population structure CITATION CITATION .
+Pyrosequencing of a virus population produces many reads, each of which originates from exactly one but unknown haplotype in the population.
+Thus, the central problem is to reconstruct from the read data the set of possible haplotypes that is consistent with the observed reads and to infer the structure of the population, i.e., the relative frequency of each haplotype.
+Here we present a computational four-step procedure for making inference about the virus population based on a set of pyrosequencing reads.
+First, the reads are aligned to a reference genome.
+Second, sequencing errors are corrected locally in windows along the multiple alignment using clustering techniques.
+Next, we assemble haplotypes that are consistent with the observed reads.
+We formulate this problem as a search for a set of covering paths in a directed acyclic graph and show how the search problem can be solved very efficiently.
+Finally, we introduce a statistical model that mimics the sequencing process and we employ the maximum likelihood principle for estimating the frequency of each haplotype in the population.
+The alignment step of the proposed procedure is straightforward for the data analyzed here and has been discussed elsewhere CITATION.
+Due to the presence of a reference genome, only pair-wise alignment is necessary between each read and the reference genome.
+We will therefore focus on the core methods of error correction, haplotype reconstruction, and haplotype frequency estimation.
+Two independent approaches are pursued for validating the proposed method.
+First, we present extensive simulation results of all the steps in the method.
+Second, we validate the procedure by reconstructing four independent HIV populations from pyrosequencing reads and comparing these populations to the results of clonal Sanger sequencing from the same samples.
+These datasets consist of approximately 5000 to 8000 reads of average length 105 bp sequenced from a 1 kb region of the pol gene from clinical samples of HIV-1 populations.
+Pyrosequencing can produce up to 200,000 usable reads in a single run.
+Part of our contribution is an analysis of the interaction between the number of reads, the sequencing error rate and the theoretical resolution of haplotype reconstruction.
+The methods developed in this paper scale to these huge datasets under reasonable assumptions.
+However, we concentrate mainly on a sample size that produces finer resolution than what is typically obtained using limiting dilution clonal sequencing.
+Since many samples can be run simultaneously and independently, this raises the possibility of obtaining data from about 20 populations with one pyrosequencing run.
+Estimating the viral population structure from a set of reads is, in general, an extremely hard computational problem because of the huge number of possible haplotypes.
+The decoupling of error correction, haplotype reconstruction, and haplotype frequency estimation breaks this problem into three smaller and more manageable tasks, each of which is also of interest in its own right.
+The presented methods are not restricted to RNA virus populations, but apply whenever a reference genome is available for aligning the reads, the read coverage is sufficient, and the genetic distance between haplotypes is large enough.
+Clonal data indicates that the typical variation in the HIV pol gene is about 3 to 5 percent in a single patient CITATION.
+We find that as populations grow more diverse, they become easier to reconstruct.
+Even at 3 percent diversity, we find that much of the population can be reconstructed using our methods.
+The pol gene has been sequenced extensively and only one specific insertion seems to occur, namely the 69 insertion complex, which occurs under NRTI pressure CITATION.
+None of our samples were treated with NRTIs, and the Sanger clones did not display this indel.
+Therefore we assume throughout that there are no true indels in the population.
+However, the algorithms developed in this paper generalize in a straightforward manner for the case of true indels.
+The problem of estimating the population structure from sequence reads is similar to assembly of a highly repetitive genome CITATION.
+However, rather than reconstructing one genome, we seek to reconstruct a population of very similar genomes.
+As such, the problem is also related to environmental sequencing projects, which try to assess the genomes of all species in a community CITATION.
+While the associated computational biology problems are related to those that appear in other metagenomics projects CITATION, novel approaches are required to deal with the short and error-prone pyrosequencing reads and the complex structure of viral populations.
+The problem is also similar to the haplotype reconstruction problem CITATION, with the main difference being that the number of haplotypes is unknown in advance, and to estimating the diversity of alternative splicing CITATION .
+More generally, the problem of estimating diversity in a population from genome sequence samples has been studied extensively for microbial populations.
+For example, the spectrum of contig lengths has been used to estimate diversity from shotgun sequencing data CITATION.
+Using pyrosequencing reads, microbial diversity has been assessed by counting BLAST hits in sequence databases CITATION.
+Our methods differ from previous work in that we show how to analyze highly directed, ultra-deep sequencing data using a rigorous mathematical and statistical framework.

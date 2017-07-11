@@ -1,0 +1,30 @@
+### abstract ###
+Alternative splicing and gene duplication both are processes that diversify the protein repertoire.
+Recent examples have shown that sequence changes introduced by AS may be comparable to those introduced by GD.
+In addition, the two processes are inversely correlated at the genomic scale: large gene families are depleted in splice variants and vice versa.
+All together, these data strongly suggest that both phenomena result in interchangeability between their effects.
+Here, we tested the extent to which this applies with respect to various protein characteristics.
+The amounts of AS and GD per gene are anticorrelated even when accounting for different gene functions or degrees of sequence divergence.
+In contrast, the two processes appear to be independent in their influence on variation in mRNA expression.
+Further, we conducted a detailed comparison of the effect of sequence changes in both alternative splice variants and gene duplicates on protein structure, in particular the size, location, and types of sequence substitutions and insertions/deletions.
+We find that, in general, alternative splicing affects protein sequence and structure in a more drastic way than gene duplication and subsequent divergence.
+Our results reveal an interesting paradox between the anticorrelation of AS and GD at the genomic level, and their impact at the protein level, which shows little or no equivalence in terms of effects on protein sequence, structure, and function.
+We discuss possible explanations that relate to the order of appearance of AS and GD in a gene family, and to the selection pressure imposed by the environment.
+### introduction ###
+Alternative splicing and gene duplication are two main contributors to the diversity of the protein repertoire with enormous impact on protein sequence, structure, and function CITATION CITATION.
+Interestingly, several recent studies point to a direct equivalence between AS and GD.
+There are some cases where alternative splice variants in one organism are similar to gene duplicates in another organism CITATION CITATION.
+For example, the eukaryotic splicing factor U2AF35 has at least two functional splice variants in human, U2AF35a and U2AF35b, which differ by seven amino acids in the RNA recognition motif.
+The fugu orthologue U2AF35-a has no splice variant; instead there is a duplicate gene U2AF35-b with changes identical to those found in the human splice variant U2AF35b CITATION .
+Further, the changes introduced to a sequence are constrained by the need to preserve a stable and functional three-dimensional fold CITATION.
+Indeed, structural studies have shown that insertions and deletions between gene duplicates tend to happen at sequence locations where they are less damaging CITATION, such as loops at solvent-accessible locations.
+These restrictions will apply irrespective of the source of the changes and thus may introduce a certain degree of similarity between the sequence changes associated with GD and AS.
+Finally, recent studies have shown that AS and GD are inversely correlated on a genome-wide scale CITATION, CITATION, i.e., small gene families tend to have more genes with alternative splice variants than do large families.
+These findings together i.e., anecdotal examples, structural constraints, and anticorrelation at the genomic level suggest that AS and GD are interchangeable sources of functional diversification CITATION.
+Genes with AS would not need to produce additional variants in the form of duplicates, and vice versa.
+Here, we first tested the anticorrelation between AS and GD with respect to sequence divergence, function, and gene expression.
+Second, we studied the interchangeability hypothesis at the protein structure level and asked to what extent AS and GD introduce changes to the sequence that are equivalent in their nature and effect on structure and function.
+To this end, we conducted a large-scale comparison of the effects of AS and GD on human and mouse proteins.
+For the vast majority of cases, the two processes result in different protein modifications with different functional implications.
+This finding, while consistent with the different molecular mechanisms underlying both phenomena, contradicts the anticorrelation observed at the genomic level.
+We discuss some possible explanations for this paradox.

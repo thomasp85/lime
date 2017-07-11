@@ -1,0 +1,42 @@
+### abstract ###
+Biophysically detailed models of single cells are difficult to fit to real data.
+Recent advances in imaging techniques allow simultaneous access to various intracellular variables, and these data can be used to significantly facilitate the modelling task.
+These data, however, are noisy, and current approaches to building biophysically detailed models are not designed to deal with this.
+We extend previous techniques to take the noisy nature of the measurements into account.
+Sequential Monte Carlo methods, in combination with a detailed biophysical description of a cell, are used for principled, model-based smoothing of noisy recording data.
+We also provide an alternative formulation of smoothing where the neural nonlinearities are estimated in a non-parametric manner.
+Biophysically important parameters of detailed models are inferred automatically from noisy data via expectation-maximisation.
+Overall, we find that model-based smoothing is a powerful, robust technique for smoothing of noisy biophysical data and for inference of biophysical parameters in the face of recording noise.
+### introduction ###
+Recent advances in imaging techniques allow measurements of time-varying biophysical quantities of interest at high spatial and temporal resolution.
+For example, voltage-sensitive dye imaging allows the observation of the backpropagation of individual action potentials up the dendritic tree CITATION CITATION.
+Calcium imaging techniques similarly allow imaging of synaptic events in individual synapses.
+Such data are very well-suited to constrain biophysically detailed models of single cells.
+Both the dimensionality of the parameter space and the noisy and undersampled nature of the observed data renders the use of statistical techniques desirable.
+Here, we here use sequential Monte Carlo methods CITATION, CITATION a standard machine-learning approach to hidden dynamical systems estimation to automatically smooth the noisy data.
+In a first step, we will do this while inferring biophysically detailed models; in a second step, by inferring non-parametric models of the cellular nonlinearities.
+Given the laborious nature of building biophysically detailed cellular models by hand CITATION CITATION, there has long been a strong emphasis on robust automatic methods CITATION CITATION.
+Large-scale efforts have added to the need for such methods and yielded exciting advances.
+The Neurofitter CITATION package, for example, provides tight integration with a number of standard simulation tools; implements a large number of search methods; and uses a combination of a wide variety of cost functions to measure the quality of a model's fit to the data.
+These are, however, highly complex approaches that, while extremely flexible, arguably make optimal use neither of the richness of the structure present in the statistical problem nor of the richness of new data emerging from imaging techniques.
+In the past, it has been shown by us and others CITATION, CITATION CITATION that knowledge of the true transmembrane voltage decouples a number of fundamental parameters, allowing simultaneous estimation of the spatial distribution of multiple kinetically differing conductances; of intercompartmental conductances; and of time-varying synaptic input.
+Importantly, this inference problem has the form of a constrained linear regression with a single, global optimum for all these parameters given the data.
+None of these approaches, however, at present take the various noise sources in recording situations explicitly into account.
+Here, we extend the findings from CITATION, applying standard inference procedures to well-founded statistical descriptions of the recording situations in the hope that this more specifically tailored approach will provide computationally cheaper, more flexible, robust solutions, and that a probabilistic approach will allow noise to be addressed in a principled manner.
+Specifically, we approach the issue of noisy observations and interpolation of undersampled data first in a model-based, and then in a model-free setting.
+We start by exploring how an accurate description of a cell can be used for optimal de-noising and to infer unobserved variables, such as Ca 2 concentration from voltage.
+We then proceed to show how an accurate model of a cell can be inferred from the noisy signals in the first place; this relies on using model-based smoothing as the first step of a standard, two-step, iterative machine learning algorithm known as Expectation-Maximisation CITATION, CITATION.
+The Maximisation step here turns out to be a weighted version of our previous regression-based inference method, which assumed exact knowledge of the biophysical signals.
+The aim of this paper is to fit biophysically detailed models to noisy electrophysiological or imaging data.
+We first give an overview of the kinds of models we consider; which parameters in those models we seek to infer; how this inference is affected by the noise inherent in the measurements; and how standard machine learning techniques can be applied to this inference problem.
+The overview will be couched in terms of voltage measurements, but we later also consider measurements of calcium concentrations.
+Compartmental models are spatially discrete approximations to the cable equation CITATION, CITATION, CITATION and allow the temporal evolution of a compartment's voltage to be written asFORMULAwhere FORMULA is the voltage in compartment FORMULA, FORMULA is the specific membrane capacitance, and FORMULA is current evolution noise.
+Note the important factor FORMULA which ensures that the noise variance grows linearly with time FORMULA.
+The currents FORMULA we will consider here are of three types:
+Axial currents along dendritesFORMULA
+Transmembrane currents from active, passive, or other membrane conductancesFORMULA
+Experimentally injected currentsFORMULAwhere FORMULA indicates one particular current type, FORMULA its reversal potential and FORMULA its maximal conductance in compartment FORMULA, FORMULA is the membrane resistivity and FORMULA is the current experimentally injected into that compartment.
+The variable FORMULA represents the time-varying open fraction of the conductance, and is typically given by complex, highly nonlinear functions of time and voltage.
+For example, for the Hodgkin and Huxley K -channel, the kinetics are given by FORMULA, withFORMULAand FORMULA themselves nonlinear functions of the voltage CITATION and we again have an additive noise term.
+In practice, the gate noise is either drawn from a truncated Gaussian, or one can work with the transformed variable FORMULA.
+Similar equations can be formulated for other variables such as the intracellular free Ca 2 concentration CITATION .

@@ -1,0 +1,14 @@
+### abstract ###
+We describe an adaptation and application of a search-based structured prediction algorithm ``\searn'' to unsupervised learning problems
+We show that it is possible to reduce unsupervised learning to supervised learning and demonstrate a high-quality unsupervised shift-reduce parsing model
+We additionally show a close connection between unsupervised \searn\ and expectation maximization
+Finally, we demonstrate the efficacy of a semi-supervised extension
+The key idea that enables this is an application of the  predict-self  idea for unsupervised learning
+### introduction ###
+A prevalent and useful version of unsupervised learning arises when both the observed data and the latent variables are structured
+Examples range from hidden alignment variables in speech recognition  CITATION  and machine translation  CITATION , to latent trees in unsupervised parsing  CITATION , and to pose estimation in computer vision  CITATION
+These techniques are all based on probabilistic models
+Their applicability hinges on the tractability of (approximately) computing latent variable expectations, thus enabling the use of EM  CITATION
+In this paper we show that a recently-developed  search-based  algorithm, \searn\  CITATION  (see Section~), can be utilized for unsupervised structured prediction (Section~)
+We show: (1) that under an appropriate construction, \searn\ can imitate the expectation maximization (Section~); (2) that unsupervised \searn\ can be used to obtain competitive performance on an unsupervised dependency parsing task (Section~); and (3) that unsupervised \searn\ naturally extends to a semi-supervised setting (Section~)
+The key insight that enables this work is that we can consider the prediction of the (observed) input to be, itself, a structured prediction problem

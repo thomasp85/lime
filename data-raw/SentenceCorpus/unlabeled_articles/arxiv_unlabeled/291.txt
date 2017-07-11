@@ -1,0 +1,43 @@
+### abstract ###
+In this paper we adapt online estimation strategies to perform model-based clustering on large networks
+Our work focuses on two algorithms, the first based on the SAEM algorithm, and the second on variational methods
+These two strategies are compared with existing approaches on simulated and real data
+We use the method to decipher the connexion structure of the political websphere during the US political campaign in 2008
+We show that our online EM-based algorithms offer a good trade-off between precision and speed, when estimating parameters for mixture distributions in the context of random graphs
+### introduction ###
+Analyzing networks has become an essential part of a number of scientific fields
+Examples include such widely differing phenomena as power grids, protein-protein interaction networks and friendship
+In this work we focus on particular networks which are made of political Weblogs
+With the impact of new social network websites like Myspace and Facebook, the web has an increasing influence on the political debate
+As an example,  CITATION  showed that blogging played an important role in the political debate of the 2004 US Presidential Election
+Although only a small minority of Americans actually used these Weblogs, their influence extended far beyond their readership, as a result of their interactions with national mainstream media
+In this article we propose to uncover the connexion structure of the political websphere during the US political campaign in 2008
+This data set consists of a one-day snapshot of over 130,520 links and 1870 manually classified websites (676 liberal, 1026 conservative and 168 independent) where nodes are connected if there exists a citation from one to another
+Many strategies have been developed to study networks structure and topology
+A distinction can be made between model-free [ CITATION ;  CITATION ] and model-based methods, with connexions between parametric and nonparametric models [ CITATION ]
+Among model-based methods, model-based clustering has provided an efficient way to summarize complex networks structures
+The basic idea of these strategies is to model the distribution of connections in the network, considering that nodes are spread among an unknown number of connectivity classes which are themselves unknown
+This generalizes model-based clustering to network data, and various modeling strategies have been considered
+CITATION  propose a mixture model on dyads that belong to some relational alphabet,  CITATION  propose a mixture on edges,  CITATION  consider continuous hidden variables and Airoldi et al ( CITATION ) consider both mixed membership and stochastic block structure
+In this article our concern is not to assess nor to compare the appropriateness of these different models, but we focus on a computational issue that is shared by most of them
+Indeed, even if the modeling strategies are diverse, EM like algorithms constitute a common core of the estimation strategy [ CITATION ;  CITATION ], and this algorithm is known to be slow to convergence and to be very sensitive to the size of the data set
+This issue should be put into perspective with a new challenge that is inherent to the analysis of network data sets which is the development of optimization strategies with a reasonable speed of execution, and which can deal with networks composed of tens of thousands of nodes, if not more
+To this extent, Bayesian strategies are limited, as they may not handle networks with more than a few hundred [ CITATION ;  CITATION ] or a few thousand [ CITATION ], and heuristic-based algorithms may not be satisfactory from the statistical point of view [ CITATION ]
+Variational strategies have been proposed as well [ CITATION ;  CITATION ], but they are concerned by the same limitations as EM
+Thus, the new question we assess in this work is ``how to perform efficient model-based clustering from a computational point of view on very large networks or on networks that grow over time
+''  Online algorithms constitute an efficient alternative to classical batch algorithms when the data set grows over time
+The application of such strategies to mixture models has been studied by many authors [ CITATION ;  CITATION ]
+Typical clustering algorithms include the online  SYMBOL -means algorithm [ CITATION ]
+More recently,  CITATION  modeled Internet traffic using a recursive EM algorithm for the estimation of Poisson mixture models
+However, an additional difficulty of mixture models for random graphs is that the computation of  SYMBOL , the distribution of the hidden label variables  SYMBOL  conditionally on the observation  SYMBOL , cannot be factorized due to conditional dependency [ CITATION ]
+In this work we consider two alternative strategies to deal with this issue
+The first one is based on the Monte Carlo simulation of  SYMBOL , leading to a Stochastic version of the EM algorithm (Stochastic Approximation EM, SAEM) [ CITATION ]
+The second one is the variational method proposed by  CITATION  which consists in a mean-field approximation of  SYMBOL
+This strategy has also been proposed by  CITATION  and by  CITATION  in the Bayesian framework
+In this article we begin by describing the blog database from the 2008 US presidential campaign
+Then we present the MixNet model proposed by  CITATION , and we compare the model with its principal competitors in terms of modeling strategies
+We use the  CITATION  data set for illustration
+We derive the  online  framework to estimate the parameters of this mixture using SAEM or variational methods
+Simulations are used to show that online methods are very effective in terms of computation time, parameter estimation and clustering efficiency
+These simulations integrate both fixed-size and increasing size networks for which online methods have been designed
+Finally, we uncover the connectivity structure of the 2008 US Presidential websphere using the proposed variational online algorithm of the MixNet model

@@ -1,0 +1,15 @@
+### abstract ###
+previous research demonstrates overestimation of rare events in judgment tasks  and underweighting of rare events in decisions from experience
+the current paper presents three laboratory experiments and a field study that explore this pattern
+the results suggest that the overestimation and underweighting pattern can emerge in parallel
+part of the difference between the two tendencies can be explained as a product of a contingent recency effect  although the estimations reflect negative recency  choice behavior reflects positive recency
+a similar pattern is observed in the field study  immediately following an aversive rare-event i e   a suicide bombing people believe the risk decreases negative recency but at the same time exhibit more cautious behavior positive recency
+the rest of the difference is consistent with two well established mechanisms  judgment error and the use of small samples in choice
+implications for the two-stage choice model are discussed
+### introduction ###
+studies of human reaction to low probability rare events reveal an interesting difference between judgment and decision-making in repeated settings
+judgments probability estimations appear to reflect over-sensitivity to rare events
+that is  the estimated probability of events that occur with probability below  NUMBER   NUMBER  tends to be higher than the objective probability  CITATION
+on the other hand  decision-making from experience tends to reflect underweighting of insensitivity to rare events  CITATION
+that is  decision-makers behave as if events that occur with probability below  NUMBER   NUMBER  occur with smaller probability than their objective probability
+the apparent discrepancy is important in light of the two-stage choice model  CITATION  which assumes that choice can be predicted from estimated probabilities

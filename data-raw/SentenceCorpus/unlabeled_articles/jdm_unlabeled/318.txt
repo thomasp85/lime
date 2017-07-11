@@ -1,0 +1,13 @@
+### abstract ###
+judgment and decision making research overwhelmingly uses null hypothesis significance testing as the basis for statistical inference
+this article examines an alternative  bayesian approach which emphasizes the choice between two competing hypotheses and quantifies the balance of evidence provided by the data-one consequence of which is that experimental results may be taken to strongly favour the null hypothesis
+we apply a recently-developed  bayesian t-test  to existing studies of the anchoring effect in judgment  and examine how the change in approach affects both the tone of hypothesis testing and the substantive conclusions that one draws
+we compare the bayesian approach with fisherian and neyman-pearson testing  examining its relationship to conventional p-values  the influence of effect size  and the importance of prior beliefs about the likely state of nature
+the results give a sense of how bayesian hypothesis testing might be applied to judgment and decision making research  and of both the advantages and challenges that a shift to this approach would entail
+### introduction ###
+in null hypothesis significance testing nhst we summarize the data with a test statistic and determine the probability  p  of obtaining a test statistic which is at least as extreme as the one observed if the null hypothesis h is true
+a low p-value is taken to indicate that the null hypothesis is unlikely to be true  either h is false or a very improbable event has occurred
+nhst has many detractors  CITATION   and various approaches to inference have been offered as alternatives  including an increased focus on effect sizes and confidence intervals  CITATION   and greater emphasis on replicability  CITATION
+perhaps the most comprehensive and radical alternative to nhst is the adoption of a bayesian approach to hypothesis testing  and a number of researchers have recently argued for a more widespread adoption of this approach  CITATION
+while many judgment and decision making jdm researchers will be familiar with bayesian techniques for model fitting and parameter estimation  CITATION   hypothesis testing is overwhelmingly conducted in the nhst framework
+this article begins by introducing bayesian hypothesis testing and applying it to existing work on judgment and decision making

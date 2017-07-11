@@ -1,0 +1,29 @@
+### abstract ###
+The claim that genetic properties of neurons significantly influence their synaptic network structure is a common notion in neuroscience.
+The nematode Caenorhabditis elegans provides an exciting opportunity to approach this question in a large-scale quantitative manner.
+Its synaptic connectivity network has been identified, and, combined with cellular studies, we currently have characteristic connectivity and gene expression signatures for most of its neurons.
+By using two complementary analysis assays we show that the expression signature of a neuron carries significant information about its synaptic connectivity signature, and identify a list of putative genes predicting neural connectivity.
+The current study rigorously quantifies the relation between gene expression and synaptic connectivity signatures in the C. elegans nervous system and identifies subsets of neurons where this relation is highly marked.
+The results presented and the genes identified provide a promising starting point for further, more detailed computational and experimental investigations.
+### introduction ###
+It is an accepted common notion that genes play a major role in the formation of the nervous system; they specify neuronal cell types, help destine neurons into defined neural circuits, and provide important cues determining their communication CITATION, CITATION.
+Many studies have identified specific genes in the nematode C. elegans that disrupt the development of neural circuits.
+These genes are typically responsible for neuronal morphology, axon development, and synaptogenesis.
+Such findings include, e.g., axon guidance genes CITATION, attractive and repulsive interactions CITATION CITATION, presynaptic input modulation CITATION, presynaptic differentiation CITATION, and synaptic specificity genes CITATION.
+These findings have been based on specifically targeted studies, each designed to address a specific pathway, neuron type, receptor or transmitter.
+Yet, it has been difficult to identify on a large scale mutations that determine the specific identity of synaptic connections, mainly because synaptic specification is one of the last steps in a complex process of neuronal differentiation and axonal migration CITATION.
+Sieburth et al. CITATION presented the first large-scale screening for genes involved in the C. elegans neuromuscular junction.
+The study identified more than 100 novel genes that have specific functions in the transmission of signals across this junction.
+While the latter study was not aimed at identifying synaptic connectivity genes, it demonstrated the plausibility of addressing such questions in a large-scale manner.
+In a recent and related study, Varadan et al. CITATION have applied an entropy minimization approach to the C. elegans' data to identify sets of synergistically interacting genes whose joint expression is common to most synapses and predicts neural connectivity, leaving aside the specific identity of the pre- and post-neurons.
+Our study differs from theirs both in its goals, and in its methods.
+It leads to the first quantitative characterization of the relation between the genetic properties of neurons and their synaptic connectivity, concomitantly addressing the majority of C. elegans neurons at large.
+The existing C. elegans neural wiring diagram provides a connectivity signature for each neuron, specifying to which other neurons it is connected.
+Each neuron has also an expression signature extracted from WormBase, specifying the genes directly associated with it.
+Combined together, this data enables the investigation of the relation between expression and connectivity signatures across most of the C. elegans neurons.
+We specifically address two attributes of this relation: the first asks whether it is possible to predict a neuron's connectivity signature based solely on its expression signature.
+The second question is, to what extent do neurons with similar expression signatures have similar connectivity signatures?
+We show that the expression signatures of neurons carry significant information about their connectivity signatures, and further identify specific genes that play a major role in determining this relation.
+The gene sets we identify do not necessarily have a direct causal influence on synaptic connectivity and specificity; however, they provide putative gene targets for further experimental investigation.
+Finally, we suggest a methodological way to study the relations between neurons' expression and connectivity signatures and their actual functional contribution to behavior.
+Quantifying these relations allows addressing a classical question in neuroscience; what dominates the functionality of a neural circuit the local, genetic basis of the individual neurons, or the overall network structure determined by their connectivity?

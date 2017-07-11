@@ -1,0 +1,50 @@
+### abstract ###
+KNN is one of the most popular classification methods, but it often fails to work well with inappropriate choice of distance metric or due to the presence of numerous class-irrelevant features
+Linear feature transformation methods have been widely applied to extract class-relevant information to improve kNN classification, which is very limited in many applications
+Kernels have been used to learn powerful non-linear feature transformations, but these methods fail to scale to large datasets
+In this paper, we present a scalable non-linear feature mapping method based on a deep neural network pretrained with restricted boltzmann machines for improving kNN classification in a large-margin framework, which we call DNet-kNN
+DNet-kNN can be used for both classification and for supervised dimensionality reduction
+The  experimental results on two benchmark handwritten digit datasets show that DNet-kNN has much better performance than large-margin kNN using a linear mapping and kNN based on a deep autoencoder pretrained with retricted boltzmann machines
+### introduction ###
+kNN is one of the most popular classification methods due to its simplicity and reasonable effectiveness: it doesn't require fitting a model and it has been shown to have good performance for classifying many types of data
+However, the good classification performance of kNN is highly dependent on the metric used  for computing pairwise distances between data points
+In practice, we often use Euclidean distances as similarity metric to calculate k nearest  neighbors of data points of interest
+To classify high-dimensional data in real applications, we often need to learn or choose a good distance metric
+Previous work on metric learning in  CITATION  and  CITATION  learns a global linear transformation matrix in the original feature space of data points to make similar data points stay closer while making dissimilar data points move farther apart using additional similarity or label information
+In  CITATION , a global linear transformation is applied to the original feature space of data points to learn Mahalanobis metrics, which requires all data points in the same class collapse to one point
+Making data points in the same class collapse to one point is unnecessary for kNN classification
+It may produce poor performance when data points cannot be essentially collapsed to points,  which is often true for some class containing multiple patterns
+An information-theoretic based approach is used to learn linear transformations in  CITATION
+In  CITATION , a global linear transformation is learned to directly improve kNN classification to achieve the goal of a large margin
+This method has been shown to yield significant improvement over kNN classification, but the linear transformation often fails to give good performance in high-dimensional space and a pre-processing dimensionality reduction step by PCA is often required for success
+In many situations, a linear transformation is not powerful enough to capture the underlying class-specific data manifold; thus we need to resort to more powerful non-linear transformations, so that each data point will stay closer to its nearest neighbors having the same class as itself than to any other data in the non-linearly transformed feature space
+Kernel tricks have been used to kernelize some of the above methods in order to improve kNN classification  CITATION
+The method in  CITATION  extends the work in  CITATION  to perform linear dimensionality reduction to improve large-margin kNN classification and kernelized the method in  CITATION
+However, the kernel-based approaches behave almost like template-based approaches
+If the chosen kernel cannot well reflect the true class-related structure of the data, the resulting performance will be bad
+Besides, kernel-based approaches often have difficulty in handling large datasets
+We might want to achieve non-linear mappings by learning a directed multi-layer belief net or a deep autoencoder, and then perform kNN classification using the hidden distributed representations of the original input data
+However, a multi-layer belief net often suffers from the "explaining away" effect, that is, the top hidden units become dependent conditional on the bottom visible units, which makes inference intractable; and learning a deep autoencoder with backpropagation is amost impossible because the gradient backpropagated to the lower layers from the output often becomes very noisy and meaningless
+Fortunately, recent research has shown that training a deep generative model called Deep Belief Net is feasible by pretraining the deep net using a type of undirected graphical model called Restricted Boltzmann Machine (RBM)  CITATION
+RBMs produce "complementary priors" to make the inference process in a deep belief net much easier, and the deep net can be trained greedily layer by layer using the simple and efficient learning rule of RBM
+The greedy layerwise pretraining strategy has made learning models with deep architures possible  CITATION
+Moreover, the greedy pretraining idea has also been successfully applied to initialize the weights of a deep autoencoder to learn a very powerful non-linear mapping for dimensionality reduction, which is illustrated in Fig 1a) and 1b)
+Besides, the idea of deep learning has motivated researchers to use powerful generative models with deep architectures to learn better discriminative models  CITATION
+In this paper, by combining the idea of deep learning and large-margin discriminative learning, we propose a new kNN classification and supervised dimensionality reduction method called DNet-kNN
+It learns a non-linear feature transformation to directly achieve the goal of large-margin kNN classification, which is based on a Deep Encoder Network pretrained with RBMs as shown in Fig 2
+Our approach is mainly inspired by the work in  CITATION ,  CITATION  and  CITATION
+Given the labels of some or all training data, it allows us to learn a non-linear feature mapping to minimize the invasions to each data point's genuine neighborhood by other impostor nearest neighbors, which favours kNN classification directly
+Previous researchers once used an autoencoder or a deep autoencoder for non-linear dimensionality reduction to improve kNN  CITATION
+None of these approaches used an objective function as direct as what we use here for improving kNN classification
+The approach discussed in  CITATION  uses a convolution net to learn a similarity metric discriminatively, but it was handcrafted
+Our approach based on general deep neural networks is more flexible and the connection weight matrices between layers are automatically learned from data
+We applied DNet-kNN on the USPS and MNIST handwritten digit datasets for classification
+The test error we obtained on the MNIST benchmark dataset is  SYMBOL , which is better than that obtained by deep belief net, deep autoencoder and SVM  CITATION
+In addition, our fine-tuning process is very fast and converges to a good local minimum within several iterations of conjugate-gradient update
+Our experimental results show that: (1) a good generative model can be used as a pretraining stage to improve discriminative learning; (2) pretraining with generative models in a layerwise greedy way makes it possible to learn a good discriminative model with deep architecture;  (3) pretraining with RBMs makes discriminative learning process much faster than that without pretraining; (4) pretraining helps to find a much better local minimum than without pretraining
+These conclusions are consistent with the results of previous research trials on deep networks  CITATION
+We organize this paper as follows: in section 2, we introduce kNN classification using linear transformations in a large-margin framework
+In section 3, we describe previous work on RBM and training models with deep architectures
+In section 4, we present DNet-kNN, which trains a Deep Encoder Network for improving large-margin kNN classification
+In section 5, we present our experimental results on the USPS and MNIST  CITATION  handwritten digit datasets
+In section 6, we conclude the paper with some discussions and propose possible extensions of our current method

@@ -1,0 +1,25 @@
+### abstract ###
+despite vigorous research on risk communication  little is known about the social forces that drive these choices
+erev  wallsten   and  neal  CITATION  showed that forecasters learn to select verbal or numerical probability estimates as a function of which mode yields on average the larger group payoffs
+we extend the result by investigating the effect of group size on the speed with which forecasters converge on the better communication mode
+on the basis of social facilitation theory we hypothesized that small groups induce less arousal and anxiety among their members than do large groups when performing new tasks  and therefore that forecasters in small groups will learn the better communication mode more quickly
+this result obtained in experiment  NUMBER   which compared groups of size  NUMBER  to groups of size  NUMBER  or  NUMBER 
+to test whether social loafing rather than social facilitation was mediating the effects  experiment  NUMBER  compared social to personal feedback holding group size constant at  NUMBER  members
+learning was faster in the personal feedback condition  suggesting that social facilitation rather than loafing underlay the results
+### introduction ###
+the focus of this research is to understand some of the factors that affect how forecasters choose to communicate risk information to others in their groups
+erev  wallsten  and neal  CITATION  suggested that in group contexts forecasters selected their communication modes in a manner that best served their group members as a whole  but the authors looked only at the effects of economic consequences
+we build on this research to investigate the effects of some non-economic  but socially important variables on the use of probabilistic estimates  specifically the effect of group size and ease of social comparison
+erev et al CITATION  designed an experiment inspired by the tragedy of the commons  CITATION   in which individuals acting in their own self-interest collectively hurt or destroy their society
+erev et al CITATION  asked whether forecasters would select language that induced heterogeneous or homogeneous behavior by decision makers as a function of what best served their group
+for example  roads become congested when everyone drives to and from work at the same time
+conversely  traffic moves smoothly when businesses invoke flex hours
+however  in some cases  homogeneous behavior may be preferable
+for example  businesses in some sectors thrive when they all conform to the same standards
+to ask whether forecasters learned to choose language that induced appropriately heterogeneous or homogeneous behavior  erev et al CITATION  designed a study with two different payoff conditions
+in one  everyone in the group received a payoff when two members of the group responsible for making the decisions for the entire group made the same correct choice and in the other condition everyone received a payoff when at least one participant made the correct choice
+in addition to possible group winnings  decision-makers won individual amounts when they were correct
+the authors assumed that  NUMBER  decision-makers make choices that they believe maximize their personal chances of winning and  NUMBER  individuals differ to a greater degree in interpreting verbal than numerical probabilities
+on that basis the authors predicted that forecasters would learn to give verbal judgments when heterogeneous behavior served the group's best interests decision-makers acting in their self interest would make different choices  depending on their interpretations of the verbal terms and numerical judgments when homogeneous behavior best served the group all decision-makers would make the same  most likely choice
+in fact  that is how the data turned out
+this finding suggests that forecasters do learn to adjust their precision of communication in response to group payoffs

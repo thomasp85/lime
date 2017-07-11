@@ -1,0 +1,36 @@
+### abstract ###
+A neural field model is presented that captures the essential non-linear characteristics of activity dynamics across several millimeters of visual cortex in response to local flashed and moving stimuli.
+We account for physiological data obtained by voltage-sensitive dye imaging which reports mesoscopic population activity at high spatio-temporal resolution.
+Stimulation included a single flashed square, a single flashed bar, the line-motion paradigm for which psychophysical studies showed that flashing a square briefly before a bar produces sensation of illusory motion within the bar and moving squares controls.
+We consider a two-layer neural field model describing an excitatory and an inhibitory layer of neurons as a coupled system of non-linear integro-differential equations.
+Under the assumption that the aggregated activity of both layers is reflected by VSD imaging, our phenomenological model quantitatively accounts for the observed spatio-temporal activity patterns.
+Moreover, the model generalizes to novel similar stimuli as it matches activity evoked by moving squares of different speeds.
+Our results indicate that feedback from higher brain areas is not required to produce motion patterns in the case of the illusory line-motion paradigm.
+Physiological interpretation of the model suggests that a considerable fraction of the VSD signal may be due to inhibitory activity, supporting the notion that balanced intra-layer cortical interactions between inhibitory and excitatory populations play a major role in shaping dynamic stimulus representations in the early visual cortex.
+### introduction ###
+Visual cortical activity does not exclusively mirror visual input but rather reflects the contribution of additional recurrent processes involving lateral and local feedback couplings.
+Understanding cortical processing requires a theoretical understanding of the underlying activity dynamics, which can be attained by modeling at various levels of abstraction.
+Naturally, the chosen level should match the level at which neuronal recordings are made CITATION.
+The activity patterns observed using voltage-sensitive dye imaging reflect population activity at the mesoscopic level CITATION, CITATION.
+This suggests the application of mean-field models in which large numbers of neurons are averaged.
+Moreover, we are interested in the relation of neuronal dynamics to the spatial dimensions of the cortical sheet.
+Neural field models CITATION, CITATION CITATION, in which the efficacy of synaptic coupling depends on the notion of distance between neurons or ensembles of neurons, are therefore our preferred choice.
+Here, we show that a minimalistic multiple-layer NF models can simulate mean VSD data in space and time with high accuracy.
+The model is an abstract functional description of VSD-recorded dynamics.
+Thus, it is in the first place phenomenological.
+However, its interpretation in biological terms allows to link its structure and parameters to the neuronal functional architecture.
+The imaging data that we model showed: Two stationary stimuli presented in rapid succession produce a pattern that signals propagation of activity across the bar's retinotopic representation in early visual cortex.
+ii The obtained pattern was different from activity when the bar was flashed alone, and did not match the simple superposition of activities evoked by individually-presented square and bar stimuli.
+iii Rather, we observed propagation of a wave front of activity that was also found when a square stimulus moved physically in visual space CITATION .
+Based on the VSD imaging data CITATION, we hypothesized that a two-layer neural field CITATION CITATION model can account for the findings i iii.
+If so, this would imply that the feedback from higher brain areas is not a principal requirement to produce motion patterns across primary visual cortex upon presentation of a square and a bar flashed in rapid succession .
+Voltage sensitive dye imaging measures relative fluorescence changes that are linearly correlated to changes in membrane potentials CITATION, CITATION.
+This technique currently allows recording of in vivo cortical activity at sub- as well as suprathreshold level with at least 10 ms temporal resolution and a spatial resolution of 50 FORMULAm across several millimeters of cortex.
+Hence, it is well suited to capture the real-time dynamics of millions of neurons at once.
+However, the signal does not distinguish between excitatory or inhibitory contributions to the overall activity.
+Therefore, our model explicitly assumes that the VSD signal reflects a mixture of activity from excitatory and inhibitory neuronal populations, and thus contrasts with studies that interpret VSD data as mainly reflecting excitatory activity.
+We expect to gain insights about the relative contributions of excitatory and inhibitory activities in the VSD signal, because the model allows separate inspection of its inhibitory and excitatory layers.
+In the following, we first describe the underlying data and its preprocessing, our model structure, and our parameter identification procedure.
+Then we present the results including the model fit in comparison to further simplified models, the model prediction regarding similar yet novel stimuli, and the results of a standard linear stability analysis of the homogeneous solution of the model.
+We then follow with a discussion of the findings in relation to alternative modeling approaches, the physiological interpretation of our model, and the role of excitation and inhibition in the model.
+Finally, we consider our results in the context of hypotheses concerning the cortical representation of motion and the origin of the line-motion illusion.

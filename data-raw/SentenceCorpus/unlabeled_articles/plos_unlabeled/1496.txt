@@ -1,0 +1,40 @@
+### abstract ###
+Observability of a dynamical system requires an understanding of its state the collective values of its variables.
+However, existing techniques are too limited to measure all but a small fraction of the physical variables and parameters of neuronal networks.
+We constructed models of the biophysical properties of neuronal membrane, synaptic, and microenvironment dynamics, and incorporated them into a model-based predictor-controller framework from modern control theory.
+We demonstrate that it is now possible to meaningfully estimate the dynamics of small neuronal networks using as few as a single measured variable.
+Specifically, we assimilate noisy membrane potential measurements from individual hippocampal neurons to reconstruct the dynamics of networks of these cells, their extracellular microenvironment, and the activities of different neuronal types during seizures.
+We use reconstruction to account for unmeasured parts of the neuronal system, relating micro-domain metabolic processes to cellular excitability, and validate the reconstruction of cellular dynamical interactions against actual measurements.
+Data assimilation, the fusing of measurement with computational models, has significant potential to improve the way we observe and understand brain dynamics.
+### introduction ###
+A universal dilemma in understanding the brain is that it is complex, multiscale, nonlinear in space and time, and we never have more than partial experimental access to its dynamics.
+To better understand its function one not only needs to encompass the complexity and nonlinearity, but also estimate the unmeasured variables and parameters of brain dynamics.
+A parallel comparison can be drawn in weather forecasting CITATION, although atmospheric dynamics are arguably less complex and less nonlinear.
+Fortunately, the meteorological community has overcome some of these issues by using model based predictor-controller frameworks whose development derived from computational robotics requirements of aerospace programs in 1960s CITATION, CITATION.
+A predictor-controller system employs a computational model to observe a dynamical system, assimilate data through what may be relatively sparse sensors, and reconstruct and estimate the remainder of the unmeasured variables and parameters in light of available data.
+The result of future measured system dynamics is compared with the model predicted outcome, the expected errors within the model are updated and corrected, and the process repeats iteratively.
+For this recursive initial value problem to be meaningful one needs computational models of high fidelity to the dynamics of the natural systems, and explicit modeling of the uncertainties within the model and measurements CITATION CITATION .
+The most prominent of the model based predictor-controller strategies is the Kalman filter CITATION.
+In its original form, the KF solves a linear system.
+In situations of mild nonlinearity, the extended forms of the KF were used where the system equations could be linearized without losing too much of the qualitative nature of the system.
+Such linearization schemes are not suitable for neuronal systems with nonlinearities of the scale of action potential spike generation.
+With the advent of efficient nonlinear techniques in the 1990s such as the ensemble Kalman filter CITATION, CITATION and the unscented Kalman filter CITATION, CITATION, along with improved computational models for the dynamics of neuronal systems CITATION, the prospects for biophysically based ensemble filtering from neuronal systems are now strong.
+The general framework of the UKF differs from the extended KF in that it integrates the fundamental nonlinear models directly, along with iterating the error and noise expectations through these nonlinear equations.
+Instead of linearizing the system equations, UKF performs the prediction and update steps on an ensemble of potential system states.
+This ensemble gives a finite sampling representation of the probability distribution function of the system state CITATION, CITATION CITATION .
+Our hypothesis is that seizures arise from a complex nonlinear interaction between specific excitatory and inhibitory neuronal sub-types CITATION.
+The dynamics and excitability of such networks are further complicated by the fact that a variety of metabolic processes govern the excitability of those neuronal networks, and these metabolic variables are not directly measurable using electrical potential measurements.
+Indeed, it is becoming increasingly apparent that electricity is not enough to describe a wide variety of neuronal phenomena.
+Several seizure prediction algorithms, based only on EEG signals, have achieved reasonable accuracy when applied to static time-series CITATION CITATION.
+However, many techniques are hindered by high false positive rates, which render them unsuitable for clinical use.
+We presume that there are aspects of the dynamics of seizure onset and pre-seizure states that are not captured in current models when applied in real-time.
+In light of the dynamic nature of epilepsy, an approach that incorporates the time evolution of the underlying system for seizure prediction is required.
+As one cannot see much of an anticipatory signature in EEG dynamics prior to seizures, the same can be said of a variety of oscillatory transient phenomena in the nervous system ranging from up states CITATION, spinal cord burst firing CITATION, cortical oscillatory waves CITATION, in addition to animal CITATION and human CITATION epileptic seizures.
+All of these phenomena share the properties that they are episodic, oscillatory, and have apparent refractory periods following which small stimuli can both start and stop such events.
+It has recently been shown that the interrelated dynamics of FORMULA and sodium concentration affect the excitability of neurons, help determine the occurrence of seizures, and affect the stability of persistent states of neuronal activity CITATION, CITATION.
+Competition between intrinsic neuronal ion currents, sodium-potassium pumps, glia, and diffusion can produce slow and large-amplitude oscillations in ion concentrations similar to what is observed physiologically in seizures CITATION, CITATION .
+Brain dynamics emerge from within a system of apparently unique complexity among the natural systems we observe.
+Even as multivariable sensing technology steadily improves, the near infinite dimensionality of the complex spatial extent of brain networks will require reconstruction through modeling.
+Since at present, our technical capabilities restrict us to only one or two variables at a restricted number of sites, computational models become the lens through which we must consider viewing all brain measurements CITATION.
+In what follows, we will show the potential power of fusing physiological measurements with computational models.
+We will use reconstruction to account for unmeasured parts of the neuronal system, relating micro-domain metabolic processes to cellular excitability, and validating cellular dynamical reconstruction against actual measurements.

@@ -1,0 +1,41 @@
+### abstract ###
+investors  like any decision maker  feel regret when they compare the outcome of an investment with what the outcome would have been had they invested differently
+we argue and show that this counterfactual comparison process is most likely to take place when the decision maker's expectations are violated
+across five scenario experiments we found that decision makers were influenced only by forgone investment outcomes when the realized investment fell short of the expected result
+however  when their investments exceeded prior expectations  the effect of foregone investment on regret disappeared
+in addition  experiment  NUMBER  found that individual differences in the need to maximize further moderated the effects of their expectations  such that maximizers always take into account the forgone investment
+the final experiment found that when probed to make counterfactual comparisons  also investments that exceed expectations may lead to regret
+together these experiments reveal insights into the comparative processes leading to decision regret
+### introduction ###
+regret is a negative emotion that most of us are familiar with
+it is a highly relevant emotion in the context of decision making and has been widely studied by psychologists  economists and consumer behavior researchers
+regret is an unpleasant feeling  associated with the wish to undo the regretted event  a strong tendency to metaphorically kick oneself and wanting to get a second chance  CITATION
+this makes regret uniquely linked to decisions made and it has been shown to be a powerful predictor of behavior
+zeelenberg and pieters  CITATION  summarized the scattered findings and theories concerning regret and its impact on decision making and proposed an integrative theory of regret regulation  CITATION
+in their proposition  NUMBER  p  NUMBER   they state that  regret is a comparison-based emotion of self-blame  experienced when people realize or imagine that their present situation would have been better had they decided differently in the past
+  an investor who thinks  for example   if only i had bought google stock  i would have earned much more  feels regret
+the theory of regret regulation was developed to understand how consumers deal with regret and it proposes strategies used to regulate it  CITATION
+to fully understand the impact of regret  it is important to further develop insights into the psychology of this emotion and the processes that may moderate it
+we discuss here how prior expectations about the outcomes of decisions can play such a moderating role
+let us start with the fact that regret is a counterfactual emotion  CITATION
+to feel regret  one needs to run a mental simulation of what happened and what could have happened instead  then compare the two
+hence  the forgone outcome becomes the reference point against which regret is computed
+this is how regret has been conceptualized in the early economic regret theories  CITATION  and has also been well established empirically  CITATION
+this comparing of decision outcomes in regret and in rejoicing may by itself be consequential  as the comparative mind-set may actually carry-over to subsequent decisions  CITATION
+interestingly  lin  huang  and zeelenberg  CITATION  found that the experience of regret can also be affected by other standards of comparison
+that research revealed that not only counterfactual comparisons feed into regret  but also comparisons of the obtained outcome with prior held expectations
+through an online survey  they interviewed  NUMBER  stock investors from a security company
+these investors answered several questions concerning their chosen and forgone investments
+the results showed that forgone outcomes of considered but non-chosen investments indeed influenced the intensity of the regret felt over their investment
+but  and this is relevant here  the a-priori expectations concerning the chosen investment were also significantly related to the regret these investors felt over their financial decisions
+the larger the difference between the return on investment and these expectations  the more intense the regret
+huang and tseng  CITATION  found similar effects in an experimental field study with  NUMBER  managers
+comparisons of obtained outcomes to prior held expectancies have been linked in the literature to the emotional response of disappointment  CITATION   but not yet to regret  CITATION
+this is interesting because regret and disappointment are in many ways related  though clearly distinct emotions  that both serve a role in decision making  CITATION
+ample research  also reviewed in zeelenberg and pieters  CITATION   and their proposition  NUMBER  p  NUMBER  reads  regret is distinct from related other specific emotions such as anger  disappointment  envy  guilt  sadness and shame  and from general negative affect on the basis of its appraisals  experiential content and behavioral consequences
+  it may well be the case that regret resembles disappointment in the sense that the experience is sensitive to expectancy violations
+whether both emotions respond similarly to comparisons with expectations and with forgone alternatives will be examined in experiment  NUMBER 
+these two studies  CITATION  are  to the best of our knowledge  the first to highlight the fact that expectations may impact feelings of regret  but note that this research remains mute with respect to the underlying psychological processes
+also  the data collected in these studies were primarily correlational  precluding strong causal conclusions
+in the present study we thus take stock of the apparent discrepancy between the findings of huang and tseng and lin et al and the prior work on regret
+to do this  we investigate experimentally the impact of expected outcomes and violations of these expectancies on investor regret and disappointment  in hope to shed some light on the psychological processes involved

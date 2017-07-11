@@ -1,0 +1,17 @@
+### abstract ###
+sacred or protected values have important influences on decision making  particularly in the context of intergroup disputes
+thus far  we know little about the process of a value becoming sacred or why one person may be more likely than another to hold a sacred value
+we present evidence that participation in religious ritual and perceived threat to the group lead people to be more likely to consider preferences as protected or sacred values
+specifically  three studies carried out with americans and palestinians show  a that the more people participate in religious ritual the more likely they are to report a preference to be a sacred value studies  NUMBER - NUMBER   b that people claim more sacred values when they are reminded of religious ritual study  NUMBER   and c that the effect of religious ritual on the likelihood of holding a sacred value is amplified by the perception of high threat to the in-group study  NUMBER 
+we discuss implications of these findings for understanding intergroup conflicts  and suggest avenues for future research into the emergence and spread of sacred values
+### introduction ###
+intergroup conflicts become particularly difficult to solve when communities transform preferences such as rights to water sources or land into protected or sacred values  CITATION
+neuroimaging studies and behavioral research suggest that people process sacred values in terms of associated deontological rules rather than their utilitarian value  CITATION
+specifically  when people transform preferences into sacred values they appear to use rules that govern reasoning about religious values  regarding as taboo any attempt to treat sacred values as fungible with secular goods
+ironically  the more money or material things one offers to encourage people to make concessions over their sacred values  the more resistant people seem to be to compromise
+thus  standard negotiation techniques of offering people added material incentives or threatening disincentives to encourage compromise backfire when sacred values are involved  CITATION
+given the influence of sacred values on decision making  it seems important to understand how values acquire sacredness and to explain why some people are more likely than others to think of their preferences as sacred values
+while many sacred values have deep historical roots  others can aquire sacredness quite quickly  CITATION
+famously  ghandi tranformed salt into a sacred value as part of his opposition to british colonial rule  CITATION
+in this paper  we report the first steps of a research program investigating this process
+our research was guided by two ideas  first  people may confer sacredness on preferences  objects or practices by incorporating these preferences into religious rituals  CITATION  thus expanding the category of religious values to include previously secular preferences  CITATION   and second  that this process is more likely to occur under conditions of high perceived group threat

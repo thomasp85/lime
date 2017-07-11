@@ -1,0 +1,38 @@
+### abstract ###
+We consider computation of permanent of a positive  SYMBOL  non-negative matrix,  SYMBOL , or equivalently the problem of weighted counting of the perfect matchings over the complete bipartite graph  SYMBOL
+The problem is known to be of likely exponential complexity
+Stated as the partition function  SYMBOL  of a graphical model, the problem allows exact Loop Calculus representation [Chertkov, Chernyak '06] in terms of an interior minimum of the Bethe Free Energy functional over non-integer doubly stochastic matrix of marginal beliefs,  SYMBOL , also correspondent to a fixed point of the iterative message-passing algorithm of the Belief Propagation (BP) type
+Our main result is an explicit expression of the exact partition function (permanent) in terms of the matrix of BP marginals,   SYMBOL , as  SYMBOL , where  SYMBOL  is the BP expression for the permanent stated explicitly in terms of  SYMBOL
+We give two derivations of the formula, a direct one based on the Bethe Free Energy and an alternative one combining the Ihara graph- SYMBOL  function and the Loop Calculus approaches
+Assuming that the matrix  SYMBOL  of the Belief Propagation marginals is calculated, we provide two lower bounds and one upper-bound to estimate the multiplicative term
+Two complementary lower bounds are based on the Gurvits-van der Waerden theorem and on a relation between the modified permanent and determinant respectively
+### introduction ###
+The problem of calculating the permanent of a non-negative matrix arises in many contexts in statistics,  data analysis and physics
+For example, it is intrinsic to the parameter learning of a flow used to follow particles in turbulence and to cross-correlate two subsequent images  CITATION
+However, the problem is  SYMBOL -hard   CITATION ,  meaning that solving it in a time polynomial in the system size,  SYMBOL , is unlikely
+Therefore, when size of the matrix is sufficiently large, one naturally looks for ways to approximate the permanent
+A very significant breakthrough  was achieved with invention of a so-called Fully-Polynomial-Randomized Algorithmic Schemes (FPRAS) for the permanent problem  CITATION : the permanent is approximated in a polynomial time, with high probability and within an arbitrarily small relative error
+However, the complexity of this FPRAS is  SYMBOL , making it impractical for the majority of realistic applications
+This motivates the task of finding a lighter deterministic or probabilistic algorithm capable of evaluating the permanent more efficiently
+This paper continues the thread of  CITATION  and  CITATION , where the Belief Propagation (BP) algorithm was suggested as an efficient heuristic of good (but not absolute) quality to approximate the permanent
+The BP family of algorithms, originally introduced in the context of error-correction codes  CITATION  and artificial intelligence  CITATION , can generally be stated for any graphical model  CITATION
+The exactness of the BP on any graph without loops  suggests that the algorithm can be an efficient heuristic for evaluating the partition function or for finding a Maximum Likelihood (ML) solution for the Graphical Model (GM) defined on sparse graphs
+However, in the general loopy cases one would normally not expect BP to work well,  thus making the heuristic results of  CITATION  somehow surprising, even though not completely unexpected in view of existence of polynomially efficient algorithms for the ML version of the problem  CITATION , also realized in  CITATION  via an iterative BP algorithm
+This raises the questions of understanding the performance of BP: what it does well and what it misses
+It also motivates the challenge of improving the BP heuristics
+An approach potentially capable of handling the question and the challenge was recently suggested in the general framework of GM
+The Loop Series/Calculus (LS) of  CITATION  expresses the ratio between the Partition Function (PF) of a binary GM and its BP estimate in terms of a finite series, in which each term is associated with the so-called generalized loop (a subgraph with all vertices of degree larger than one) of the graph
+Each term in the series,  as well as the BP estimate of the partition function, is expressed in terms of a doubly stochastic matrix of marginal probabilities,  SYMBOL , for matching pairs to contribute a perfect matching
+This matrix  SYMBOL  describes a minimum of the so-called Bethe free energy,  and it can also be understood as a fixed point of an iterative BP algorithm
+The first term in the resulting LS is equal to one
+Accounting for all the loop-corrections, one recovers the exact expression for the PF
+In other words,  the LS holds the key to understanding the gap between the approximate BP estimate for the PF and the exact result
+In section  and section , we will give a technical introduction to the variational Bethe Free Energy (BFE) formulation of BP and a brief overview of the LS approach for the permanent problem respectively {Our results } In this paper, we develop an LS-based approach to describe the quality of the BP approximation for the permanent of a non-negative matrix (i) Our natural starting point is the analysis of the BP solution itself conducted in section
+Evaluating the permanent of the non-negative matrix,  SYMBOL , dependent on the temperature parameter,  SYMBOL , we find that a non-integer BP solution is observed only at  SYMBOL , where  SYMBOL  is defined by \eq() (ii) At  SYMBOL , we derive an alternative representation for the LS in section
+The entire LS is collapsed to a product of two terms: the first term is an easy-to-calculate function of  SYMBOL , and the second term is the permanent of the matrix,  SYMBOL  (The binary operator  SYMBOL  denotes the element-wise multiplication of matrices ) This is our main result stated in theorem , and the majority of the consecutive statements of our paper follows from it
+We also present yet another, alternative, derivation of the theorem  using the multivariate Ihara-Bass formula for the graph zeta-function in subsection  (iii) Section  presents two easy-to-calculate lower bounds for the LS
+The lower bound stated in the corollary  is based on the Gurvits-van der Waerden theorem applied to  SYMBOL
+Interestingly enough this lower bound is invariant with respect to the BP transformation, i e it is exactly equivalent to the lower bound derived via application of the van der Waerden-Gurvits theorem to the original permanent
+Another lower bound is stated in theorem
+Note,  that as follows from an example discussed in the text, the two lower bounds are complementary: the latter is stronger at sufficiently small temperatures,  while the former dominates the large  SYMBOL  region (iv) Section  discusses an upper bound on the transformed permanent based on the application of the Godzil-Gutman formula and the Hadamard inequality
+Possible future extensions of the approach are discussed in section

@@ -1,0 +1,58 @@
+### abstract ###
+Hidden Markov models have been successfully applied to the tasks of transmembrane protein topology prediction and signal peptide prediction.
+In this paper we expand upon this work by making use of the more powerful class of dynamic Bayesian networks.
+Our model, Philius, is inspired by a previously published HMM, Phobius, and combines a signal peptide submodel with a transmembrane submodel.
+We introduce a two-stage DBN decoder that combines the power of posterior decoding with the grammar constraints of Viterbi-style decoding.
+Philius also provides protein type, segment, and topology confidence metrics to aid in the interpretation of the predictions.
+We report a relative improvement of 13 percent over Phobius in full-topology prediction accuracy on transmembrane proteins, and a sensitivity and specificity of 0.96 in detecting signal peptides.
+We also show that our confidence metrics correlate well with the observed precision.
+In addition, we have made predictions on all 6.3 million proteins in the Yeast Resource Center database.
+This large-scale study provides an overall picture of the relative numbers of proteins that include a signal-peptide and/or one or more transmembrane segments as well as a valuable resource for the scientific community.
+All DBNs are implemented using the Graphical Models Toolkit.
+Source code for the models described here is available at LINK.
+A Philius Web server is available at LINK, and the predictions on the YRC database are available at LINK.
+### introduction ###
+The structure of a protein determines its function.
+Knowledge of the structure can therefore be used to guide the design of drugs, to improve the interpretation of other information such as the locations of mutations, and to identify remote protein homologs.
+Indirect methods such as X-ray crystallography and nuclear magnetic resonance spectroscopy are required to determine the tertiary structure of a protein.
+Membrane proteins are essential to a variety of processes including small-molecule transport and signaling, and are of significant biological interest.
+However, they are not easily amenable to existing crystallization methods, and even though some of the most difficult problems in this area have been overcome in recent years, the number of known tertiary structures of membrane structures remains very low.
+Computational methods that can accurately predict the basic topology of transmembrane proteins from easily available information therefore continue to be of great interest.
+To be most valuable, a predicted topology include not only the locations of the membrane-spanning segments, but should also correctly localize the N- and C-termini relative to the membrane.
+Many proteins include a short N-terminal signal peptide that initially directs the post-translational transport of the protein across the membrane and is subsequently cleaved off after transport.
+A signal peptide includes a strongly hydrophobic segment which is not a part of the mature protein but is often misclassified as a membrane-spanning portion of a transmembrane protein.
+Conversely, a transmembrane protein with a membrane-spanning segment near the N-terminus is often misclassified as having a signal peptide.
+Therefore, signal peptide prediction and transmembrane topology prediction should be performed simultaneously, rather than being treated as two separate tasks.
+Membrane proteins are classically divided into two structural classes: those which traverse the membrane using an -helical bundle, such as bacteriorhodopsin, and those which use a -barrel, such as porin.
+The -barrel motif is found only in a small fraction of all membrane proteins.
+Lately, some attention has been given to some irregular structures such as re-entrant loops and random coil regions.
+In this work, however, we focus on the -helical class, both because most membrane proteins fall into this class, and because they constitute most of the known 3D structures.
+The two most common machine learning approaches applied to the prediction of both signal peptides and the topology of transmembrane proteins are hidden Markov models and artificial neural networks, while some predictors use a combination of these two approaches.
+HMMs are particularly well suited to sequence labeling tasks, and task-specific prior knowledge can be encoded into the structure of the HMM, while ANNs can learn to make classification decisions based on hundreds of inputs.
+The first HMM-based transmembrane protein topology predictors were introduced ten years ago: TMHMM CITATION and HMMTOP CITATION.
+Both of these predictors define a set of structural classes which capture the variation in amino acid composition of different portions of the membrane protein.
+For example, the membrane-spanning helix is known to be highly hydrophobic, and cytoplasmic loops generally contain more positively charged amino acids than non-cytoplasmic loops.
+During training the HMM learns a set of emission distributions, one for each of the structural classes.
+TMHMM is trained using a two-pass discriminative training approach followed by decoding using the one-best algorithm CITATION.
+HMMTOP introduced the hypothesis that the difference between the amino acid distributions in the various structural classes is the main driving force in determining the final protein topology, and that therefore the most likely topology is the one that maximizes this difference for a given protein.
+HMMTOP CITATION was also the first to allow constrained decoding to incorporate additional evidence regarding the localization of one or more positions within the protein sequence.
+The presence of a signal peptide within a given protein has also been successfully predicted using both HMMs CITATION and ANNs CITATION .
+As mentioned above, the confusion between signal peptides and transmembrane segments is one of the largest sources of error both for conventional transmembrane topology predictors and signal peptide predictors CITATION, CITATION.
+Motivated by this difficulty, the HMM Phobius CITATION was designed to combine the signal peptide model of SignalP-HMM CITATION with the transmembrane topology model of TMHMM CITATION.
+The authors showed that including a signal peptide sub-model improves overall accuracy in detecting and differentiating proteins with signal peptides and proteins with transmembrane segments.
+In this work, we introduce Philius, a combined transmembrane topology and signal peptide predictor that extends Phobius by exploiting the power of dynamic Bayesian networks.
+The application of DBNs to this task provides several advantages, specifically: a new two-stage decoding procedure, a new way of expressing non-geometric duration distributions, and a new approach to expressing label uncertainty during training.
+Philius is inspired by Phobius and tackles the problem of discriminating among four basic types of proteins: globular, globular with a signal peptide, transmembrane, and transmembrane with a signal peptide.
+Philius also predicts the location of the signal peptide cleavage site and the complete topology for membrane proteins.
+We report state-of-the-art results on the discrimination task and improvements over Phobius on the topology prediction task.
+We also introduce a set of confidence measures at three different levels: at the level of protein type, at the level of the individual topology segment, and at the level of the full topology.
+Confidence measures for topology predictions were introduced by Mel n et al. CITATION, and we expand upon this work with these three types of scores that correlate well with the observed precision.
+Finally, based on the Philius predictions on the entire Yeast Resource Center CITATION protein database, we provide an overview of the relative percentages of different types of proteins in different organisms as well as the composition of the class of membrane proteins.
+Transmembrane protein topology prediction can be stated as a supervised learning problem over amino acid sequences.
+The training set consists of pairs of sequences of the form where o o 1, ,o n is the sequence of amino acids for a protein of known topology, and s s 1, ,s n is the corresponding sequence of labels.
+The o i are drawn from the alphabet of 20 amino acids FORMULA, and the s i are drawn from the alphabet of topology labels, FORMULA, corresponding respectively to cytoplasmic loops, membrane-spanning segments, non-cytoplasmic loops, and signal peptides.
+After training, a learned model with parameters takes as input a single amino acid test sequence o and seeks to predict the best corresponding label sequence s .
+We solve this problem using a DBN, which we call Philius.
+Before describing the details of our model, we first review HMMs and explain how they are a simple form of DBN.
+The generality of the DBN framework provides significantly expanded flexibility relative to HMMs, as described in CITATION.
+A recently published primer CITATION provides an introduction to probabilistic inference using Bayesian networks for a variety of applications in computational biology.

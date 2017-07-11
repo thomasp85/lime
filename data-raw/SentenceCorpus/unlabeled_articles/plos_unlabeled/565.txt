@@ -1,0 +1,20 @@
+### abstract ###
+Dendrite morphology, a neuron's anatomical fingerprint, is a neuroscientist's asset in unveiling organizational principles in the brain.
+However, the genetic program encoding the morphological identity of a single dendrite remains a mystery.
+In order to obtain a formal understanding of dendritic branching, we studied distributions of morphological parameters in a group of four individually identifiable neurons of the fly visual system.
+We found that parameters relating to the branching topology were similar throughout all cells.
+Only parameters relating to the area covered by the dendrite were cell type specific.
+With these areas, artificial dendrites were grown based on optimization principles minimizing the amount of wiring and maximizing synaptic democracy.
+Although the same branching rule was used for all cells, this yielded dendritic structures virtually indistinguishable from their real counterparts.
+From these principles we derived a fully-automated model-based neuron reconstruction procedure validating the artificial branching rule.
+In conclusion, we suggest that the genetic program implementing neuronal branching could be constant in all cells whereas the one responsible for the dendrite spanning field should be cell specific.
+### introduction ###
+Dendrite morphology is the most prominent feature of nerve cells, typically used by neuroanatomists to discriminate and classify them CITATION.
+These tree-like ramifications represent the input region of the neurons and fulfil the role of a complex computational unit CITATION CITATION.
+Typically, dendritic arborizations are analyzed in a descriptive way, e.g. by enumerating local and global branching parameters CITATION CITATION.
+Very little is known about the general rule leading to their distinct appearance partly due to the wide variety among different neurons.
+In insects, same neurons across individuals are rather invariant in their anatomy and constant in their function.
+Lobula plate tangential cells of the fly visual system CITATION are uniquely identifiable and are therefore ideal subjects for investigating the basic rule constraining dendrite formation.
+They integrate local motion information over an array of retinotopically arranged columnar elements CITATION.
+Accordingly, their planar dendritic trees cover the area corresponding to their distinct primary receptive fields.
+In this paper we isolate potential fundamental principles which may lead to the morphological identity of individual LPTCs.

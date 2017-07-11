@@ -1,0 +1,43 @@
+### abstract ###
+ADP-glucose pyrophosphorylase, a key allosteric enzyme involved in higher plant starch biosynthesis, is composed of pairs of large and small subunits.
+Current evidence indicates that the two subunit types play distinct roles in enzyme function.
+Recently the heterotetrameric structure of potato AGPase has been modeled.
+In the current study, we have applied the molecular mechanics generalized born surface area method and identified critical amino acids of the potato AGPase LS and SS subunits that interact with each other during the native heterotetrameric structure formation.
+We have further shown the role of the LS amino acids in subunit-subunit interaction by yeast two-hybrid, bacterial complementation assay and native gel.
+Comparison of the computational results with the experiments has indicated that the backbone energy contribution of the interface residues is more important in identifying critical residues.
+We have found that lateral interaction of the LS-SS is much stronger than the longitudinal one, and it is mainly mediated by hydrophobic interactions.
+This study will not only enhance our understanding of the interaction between the SS and the LS of AGPase, but will also enable us to engineer proteins to obtain better assembled variants of AGPase which can be used for the improvement of plant yield.
+### introduction ###
+ADP-glucose pyrophosphorylase is a key regulatory allosteric enzyme involved in starch biosynthesis in higher plants.
+It catalyzes the rate limiting reversible reaction and controls the carbon-flux in the -glucan pathway by converting Glucose-1-phosphate and ATP to ADP-glucose and pyrophosphate using Mg 2 as the cofactor CITATION CITATION.
+Regulation of almost all AGPases depends on the 3-phosphoglyceric acid to inorganic phosphate ratio.
+While 3-PGA functions as the main stimulator, Pi inhibits the activity of enzyme CITATION CITATION.
+Plant AGPases consist of pairs of small and large subunits thereby constituting a heterotetrameric structure.
+These two subunits are encoded by two distinct genes CITATION.
+In potato tuber AGPase the sequence identity between the different subunits is 53 percent suggesting a common ancestral gene CITATION, CITATION.
+The molecular weights of tetrameric AGPases range from 200 to 240 kDa depending on the tissue and plant species.
+Specifically, molecular weights of LS and SS in potato tuber AGPase are 51 kDa and 50 kDa, respectively CITATION.
+It was found that SS and LS have different roles in the enzyme functionality.
+SS was shown to have both catalytic and regulatory functions whereas LS is mainly responsible for regulating the allosteric properties of SS CITATION CITATION.
+These results were also supported by the studies that showed LS was incapable of assembling into a catalytically active oligomeric structure, whereas SS was able to form a homotetramer with catalytic properties CITATION, CITATION.
+However, this SS homotetramer showed defective properties in terms of catalysis and regulation.
+It required higher concentrations of 3-PGA for activation and was more sensitive to Pi inhibition.
+These results suggested that LS was essential for the enzyme to function efficiently CITATION, CITATION, CITATION.
+Alternatively, recent studies have indicated that the LS may bind to substrates glucose-1 phosphate and ATP.
+The binding of the LS to substrates may allow the LS to interact cooperatively with the catalytic SS in binding substrates and effectors and, in turn, influence net catalysis CITATION, CITATION CITATION.
+In addition, specific regions from both the LS and the SS were found to be important for subunit association and enzyme stability CITATION.
+Also, using chimeric maize/potato small subunits, Cross et al. CITATION found a polymorphic motif in the SS which is critical for subunit interaction.
+They have concluded that a 55-amino acid region between the residues 322 376 directly interacts with LS and significantly contributes to the overall enzyme stability.
+Recently crystal structure of SS was found in a homotetrameric form by Jin et al. CITATION.
+Neither the LS nor the heterotetrameric AGPase structure have been solved yet.
+This is due to the difficulty of obtaining AGPase in stable form.
+However, it is critical to elucidate the native heterotetrameric AGPase structure and identify the key residues taking place in subunit-subunit interactions to obtain a more detailed picture of the enzyme.
+Understanding the structure and the hot spot residues in the subunit interface will enable us to manipulate the native enzyme to get a stable form which can be utilized for improving the yield of crops.
+The feasibility of such an approach has been shown previously CITATION, CITATION.
+We modeled the LS structure of potato tuber AGPase and proposed a model for the heterotetrameric AGPase CITATION.
+In this study, we extended our previous work by examining our AGPase model to identify important residues mediating the interactions between the LS and the SS both by computational and experimental techniques.
+Based on Molecular mechanics generalized born surface area method, two distinct LS domains are involved in LS-SS subunit interaction.
+The residues of the potato AGPase LS Asn 97, Pro 327, Ile 330, Ile 335, Ile 339, Ile 340, and His 342 are involved in lateral interaction with the potato AGPase SS whereas residues Arg 45, Arg 88, Arg 92, and Trp 135 are involved in longitudinal interaction with the potato AGPase SS.
+The effect of these mutations on the interactions of the LS and the SS of potato AGPase were further characterized in vivo using the bacterial complementation and the yeast two-hybrid methods.
+Also, experimental results indicated that the backbone G binding energy of the interface amino acids is a decisive parameter for the subunit-subunit interaction rather than side chain G binding or total G binding energies.
+This study will highlight the important structural aspects of AGPase structure and provide insights for further attempts to engineer a more functional form of the enzyme.

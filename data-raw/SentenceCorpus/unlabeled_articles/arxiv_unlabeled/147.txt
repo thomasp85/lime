@@ -1,0 +1,13 @@
+### abstract ###
+We give a characterization of Maximum Entropy/Minimum Relative Entropy inference by providing two `strong entropy concentration' theorems
+These theorems unify and generalize Jaynes' `concentration phenomenon' and Van Campenhout and Cover's `conditional limit theorem'
+The theorems characterize exactly in what sense a prior distribution  SYMBOL  conditioned on a given constraint and the distribution  SYMBOL  minimizing  SYMBOL  over all  SYMBOL  satisfying the constraint are `close' to each other
+We then apply our theorems to establish the relationship between entropy concentration and a game-theoretic characterization of Maximum Entropy Inference due to Tops{\o}e and others
+### introduction ###
+Jaynes' Maximum Entropy (MaxEnt) Principle is a well-known principle for inductive inference  CITATION
+It has been applied to statistical and machine learning problems ranging from protein modeling to stock market prediction  CITATION
+One of its characterizations (some would say `justifications') is the so-called  concentration phenomenon\/   CITATION
+Here is an informal version of this phenomenon,  in the words of  CITATION :  For the case in which a prior distribution over the domain at hand is available,  CITATION  have proven the related  conditional limit theorem
+In Sections~-, we provide a strong generalization of both the concentration phenomenon and the conditional limit theorem
+In Section~, the results of Section~ are used to   extend an existing game-theoretic characterization (again, some would say ``justification'')  of Maximum Entropy due to  CITATION
+In this way, we provide sharper results on two of the most frequently  cited characterizations of the maximum entropy principle

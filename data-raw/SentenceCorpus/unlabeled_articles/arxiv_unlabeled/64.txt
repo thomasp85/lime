@@ -1,0 +1,30 @@
+### abstract ###
+We consider the problem of minimal correction of the training set to make it consistent with monotonic constraints
+This problem arises during analysis of data sets via techniques that require monotone data
+We show that this problem is NP-hard in general and is equivalent to finding a maximal independent set in special orgraphs
+Practically important cases of that problem considered in detail
+These are the cases when a partial order given on the replies set is a total order or has a dimension 2
+We show that the second case can be reduced to maximization of a quadratic convex function on a convex set
+For this case we construct an approximate polynomial algorithm based on convex optimization
+Keywords: machine learning, supervised learning, monotonic constraints
+### introduction ###
+Requirements to a classifying rule in supervised learning problems consist of two parts
+The first part is induced by a set of precedents, called the training set
+Each element in the training set is a pair of "object--reply" type
+A classifying rule which is a mapping from objects set to the replies set should map objects from the training set pairs to the consistent replies
+And the second part of requirements express our common knowledge of a classifying rule
+One of the popular types of such requirements is the monotonicity which is considered in that paper
+In some cases these two parts of requirements can not be satisfied both and then we have a problem of a minimal correction of the training set
+Let us see what that problem is
+Suppose the sets  SYMBOL  are given and on this sets we have partial orders  SYMBOL  consistently
+We assume more that the partial order  SYMBOL  is a lattice
+For any given mapping  SYMBOL  where  SYMBOL  we pose a problem of finding a function  SYMBOL  which is monotone due to partial orders  SYMBOL  and minimizes the following functional:  SYMBOL
+Let us denote the set of monotonic functions from  SYMBOL  to  SYMBOL  by  SYMBOL
+Then for a given mapping  SYMBOL  our task is the following:  SYMBOL   Every mapping  SYMBOL  which is monotone on the subset  SYMBOL  can be extended to the mapping monotone on the whole set  SYMBOL  because  SYMBOL  is a lattice
+Actually on every finite subset of the lattice  SYMBOL  the operation  SYMBOL  is defined and the function  SYMBOL  is both monotone and satisfies  SYMBOL
+From this we see that in the posed problem we can imply that  SYMBOL
+From the above said we conclude more that this problem is equivalent to finding a maximal subset  SYMBOL  such that the function  SYMBOL  restricted on the subset  SYMBOL  is monotone
+So let us consider the following generalization of our problem which we will call MaxCMS(Maximal Consistent with Monotonicity Set) {MaxCMS } The finite sets  SYMBOL  where  SYMBOL  are given; on each of them partial orders  SYMBOL  are defined consistently and the function  SYMBOL  is given
+Then every element  SYMBOL  is assigned by a positive integer weight  SYMBOL
+Our task is to find a maximal by weight subset  SYMBOL  such that the function  SYMBOL  restricted on  SYMBOL  is monotone i e SYMBOL {Definition 1 } The set  SYMBOL  is called acceptable iff the function  SYMBOL  restricted on  SYMBOL  is monotone {Definition 2 } A set which  is acceptable and maximal by weight is denoted by  SYMBOL (in some cases we use this notation to mean the weight of this set)
+In the remainder of the paper we will consider that problem

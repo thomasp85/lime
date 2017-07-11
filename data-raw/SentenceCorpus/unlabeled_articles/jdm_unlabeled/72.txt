@@ -1,0 +1,29 @@
+### abstract ###
+this paper investigates the boundaries of the recent result that eliciting more than one estimate from the same person and averaging these can lead to accuracy gains in judgment tasks
+it first examines its generality  analysing whether the kind of question being asked has an effect on the size of potential gains
+experimental results show that the question type matters
+previous results reporting potential accuracy gains are reproduced for year-estimation questions  and extended to questions about percentage shares
+on the other hand  no gains are found for general numerical questions
+the second part of the paper tests repeated judgment sampling's practical applicability by asking judges to provide a third and final answer on the basis of their first two estimates
+in an experiment  the majority of judges do not consistently average their first two answers
+as a result  they do not realise the potential accuracy gains from averaging
+### introduction ###
+imagine you have been asked to make a quantitative judgment  say  somebody wants to know when shakespeare's romeo and juliet was first performed  or you might be planning a holiday in the alps and are wondering about the elevation of mont blanc
+an effective strategy to answer such questions is to make an estimate and average it with that of a second judge  a friend  a colleague or just about anybody else  CITATION
+what  though  if your colleague or friend is unavailable and cannot give you that second opinion
+recent research suggests that you could improve your answer by bringing yourself to make a second estimate and applying the averaging principle to your own two estimates  CITATION
+the effectiveness of this suggestion  however  will depend on both the degree to which you are able to elicit two independent estimates from yourself and your willingness to average them
+previous research has focused on the method used to elicit the second estimate
+the focus here lies on the type of question being asked  and its interaction with how successive estimates are generated
+i report experimental results for different sets of questions which aim to be more representative of quantitative judgments  CITATION
+i first reproduce previous results which establish the existence of accuracy gains for year-estimation questions such as  in what year were bacteria discovered
+   CITATION
+while i find similar gains for questions about percentage shares e g    which percentage of spanish homes have access to the internet
+   i do not find evidence of accuracy gains for general numerical questions such as  what is the distance in kilometers between barcelona and the city of hamburg  in germany
+  or  what is the average depth of the mediterranean sea
+ 
+i then investigate whether this difference can be explained by the degree to which answers to the various question types are implicitly bounded  but this hypothesis is not supported by the data
+a second factor is whether judges actually recognise the potential gains from averaging and behave accordingly
+larrick and soll  CITATION  argue that people often do not understand the properties and benefits of averaging procedures
+my experimental data provide further evidence  only a small minority of judges consistently average their estimates
+often  judges settle for one of their first two judgments as the final answer instead or even extrapolate  providing a final answer that lies outside of the range spanned by their first two estimates

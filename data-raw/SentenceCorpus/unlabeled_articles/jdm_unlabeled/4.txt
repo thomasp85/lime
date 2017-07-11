@@ -1,0 +1,14 @@
+### abstract ###
+decision making research often dichotomises between more deliberative  cognitive processes and more heuristic  intuitive and emotional processes
+we argue that within this two-systems framework  CITATION  there is ambiguity over how to map the system  NUMBER  system  NUMBER  axis  and the notion of intuitive processing  onto the distinction between conscious and non-conscious processes
+however the convergent concepts of experience-based metacognitive judgements  CITATION  and of fringe consciousness  CITATION  can clarify intuitive processing as an informative conscious feeling without conscious access to the antecedents of the feeling
+we stress that these intuitive feelings can be used to guide behaviour in a controlled and contextually sensitive manner that would not be permitted by purely non-conscious influences on behaviour
+an outline is provided for how to empirically recognise these intuitive feelings
+this is illustrated with an example from research on implicit learning where intuitive feelings may play an important role in peoples' decisions and judgements
+finally we suggest that our approach to understanding intuitive feelings softens rather than reinforces the two-systems dichotomy
+### introduction ###
+the influential two-systems framework  within decision making and judgement research  dichotomises between processes that are characterised as heuristic  affective  and intuitive  versus those that are seen as more deliberative  cognitive  and rational
+following stanovich and west  CITATION  we refer to these supposedly separable systems as system  NUMBER  s NUMBER  and system  NUMBER  s NUMBER  respectively
+kahneman  CITATION  declares there is considerable agreement over the properties of these systems which for s NUMBER  include being fast  automatic  effortless  associative  and difficult to control or modify  and which for s NUMBER  include being slower  serial  effortful  deliberately controlled  and relatively flexible
+CITATION  despite a tendency to associate s NUMBER  with non-conscious processing and s NUMBER  with conscious processing  we suggest that within representative formulations of this two-systems framework  such as kahneman's  CITATION  summary of his nobel prize winning work and epstein's  CITATION  seminal paper  there is considerable ambiguity over how to map the system  NUMBER  system  NUMBER  axis and the notion of intuitive processing onto the distinction between conscious and non-conscious processes
+our aim in this paper is to outline this ambiguity  to argue why clarification is important  to describe how the clarification can be made both theoretically and empirically  and to suggest how consideration of the consciousness dimension can soften the two-systems dichotomy

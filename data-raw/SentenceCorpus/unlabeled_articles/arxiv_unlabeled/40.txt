@@ -1,0 +1,57 @@
+### abstract ###
+For   dimension reduction in  SYMBOL , the method of  Cauchy random projections  multiplies the original data matrix  SYMBOL  with a random matrix  SYMBOL  ( SYMBOL ) whose entries are  iid 
+samples of the standard Cauchy  SYMBOL
+Because of the impossibility results,  one can not hope to recover the pairwise  SYMBOL  distances in  SYMBOL  from  SYMBOL ,  using linear estimators without incurring large errors
+However, nonlinear estimators are still useful for certain applications in data stream computation, information retrieval, learning, and data mining
+We propose three types of nonlinear estimators: the bias-corrected sample median estimator, the bias-corrected geometric mean estimator, and the bias-corrected maximum likelihood estimator
+The sample median estimator and the geometric mean estimator are asymptotically (as  SYMBOL ) equivalent but the latter is more accurate at small  SYMBOL
+We derive explicit tail bounds for the geometric mean estimator and establish an analog of the Johnson-Lindenstrauss  (JL) lemma for dimension reduction in  SYMBOL , which is weaker than the classical JL lemma for dimension reduction in  SYMBOL
+Asymptotically, both the sample median estimator and the geometric mean estimators are about  SYMBOL  efficient compared to the maximum likelihood estimator (MLE)
+We analyze the moments of the MLE and propose approximating the distribution of the MLE by an  inverse Gaussian
+### introduction ###
+This paper focuses on dimension reduction in  SYMBOL ,  in particular, on the method based on  Cauchy random projections   CITATION , which is special case of  linear random projections
+The idea of  linear random projections  is to multiply the original data matrix  SYMBOL  with a random projection matrix  SYMBOL , resulting in a projected matrix  SYMBOL
+If  SYMBOL , then it should be much more efficient to compute certain summary statistics (e g , pairwise distances) from   SYMBOL  as opposed to  SYMBOL
+Moreover,  SYMBOL  may be small  enough to reside in physical memory while  SYMBOL  is often too large to fit in the main memory
+The choice of the random projection matrix  SYMBOL  depends on which norm we would like to work with
+CITATION  proposed constructing  SYMBOL  from   iid 
+samples of  SYMBOL -stable distributions, for dimension reduction in  SYMBOL  ( SYMBOL )
+In the stable distribution family  CITATION , normal is 2-stable and Cauchy is 1-stable
+Thus, we will call random projections for  SYMBOL  and  SYMBOL ,   normal random projections  and  Cauchy random projections , respectively
+In  normal random projections   CITATION , we can estimate the original pairwise  SYMBOL  distances of  SYMBOL  directly using the corresponding  SYMBOL  distances of  SYMBOL  (up to a normalizing constant)
+Furthermore, the Johnson-Lindenstrauss  (JL) lemma  CITATION  provides the performance guarantee
+We will review  normal random projections  in more detail in Section
+For  Cauchy random projections , we should not use the  SYMBOL  distance in  SYMBOL  to approximate the original  SYMBOL  distance in  SYMBOL , as the Cauchy distribution does not even have  a finite first moment
+The impossibility results  CITATION  have proved that one can not hope to recover the  SYMBOL  distance using linear projections and linear estimators (e g , sample mean), without incurring large errors
+Fortunately, the impossibility results do not rule out nonlinear estimators, which may be still useful in certain applications in data stream computation, information retrieval, learning, and data mining
+CITATION  proposed using the sample median (instead of the sample mean) in  Cauchy random projections  and described its application in data stream computation
+In this study, we provide three types of nonlinear estimators:  the bias-corrected sample median estimator, the bias-corrected geometric mean estimator, and the bias-corrected maximum likelihood estimator
+The sample median estimator and the geometric mean estimator are asymptotically equivalent (i e , both are about  SYMBOL  efficient as the maximum likelihood estimator), but the latter is more accurate at small sample size  SYMBOL
+Furthermore, we derive explicit tail bounds for the bias-corrected geometric mean estimator and establish an analog of the  JL Lemma for dimension reduction in  SYMBOL
+This analog of the JL Lemma for  SYMBOL  is weaker than the classical JL Lemma for  SYMBOL , as the geometric mean estimator is a non-convex norm and hence is not a metric
+Many efficient algorithms, such as some sub-linear time (using super-linear memory) nearest neighbor algorithms  CITATION , rely on the metric properties (e g , the triangle inequality)
+Nevertheless, nonlinear estimators may be still useful in important scenarios
+Estimating  SYMBOL  distances online  \\ The original data matrix  SYMBOL  requires  SYMBOL  storage space; and hence it is often too large for physical memory
+The storage cost of all pairwise distances is  SYMBOL , which may be also too large for the  memory
+For example, in information retrieval,  SYMBOL  could be the total number of  word types or documents at Web scale
+To avoid page fault, it may be more efficient to estimate the distances on the fly from the  projected data matrix  SYMBOL  in the memory
+Computing all pairwise  SYMBOL  distances  \\ In distance-based clustering and  classification applications, we need to compute all pairwise distances in  SYMBOL , at the cost of time  SYMBOL
+Using  Cauchy random projections , the cost can be reduced to  SYMBOL
+Because  SYMBOL , the savings could be enormous
+Linear scan nearest neighbor searching \\ We can always search for the nearest neighbors by linear scans
+When working with the projected data matrix  SYMBOL  (which is in the  memory), the cost of searching for the nearest neighbor for one data point is time  SYMBOL , which may be still significantly faster than the sub-linear algorithms working with the original data matrix  SYMBOL  (which is often on the disk)
+We briefly comment on  coordinate sampling , another strategy for dimension reduction
+Given a data matrix  SYMBOL , one can randomly sample  SYMBOL  columns from  SYMBOL  and estimate the summary statistics (including  SYMBOL  and  SYMBOL  distances)
+Despite its simplicity, there are two major disadvantages in coordinate sampling
+First, there is no performance guarantee
+For  heavy-tailed data, we may have to choose  SYMBOL  very large in order to achieve sufficient accuracy
+Second, large datasets are often highly sparse, for example,  text data  CITATION  and market-basket data  CITATION
+CITATION  and   CITATION  provide an alternative coordinate sampling strategy, called  Conditional Random Sampling (CRS) , suitable for sparse data
+For non-sparse data, however, methods based on  linear  random projections  are superior
+The rest of the paper is organized as follows
+Section  reviews  linear random projections
+Section  summarizes the main results for three types of nonlinear estimators
+Section  presents the sample median estimators
+Section  concerns the geometric mean estimators
+Section  is devoted to the maximum likelihood estimators
+Section  concludes the paper

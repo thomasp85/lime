@@ -1,0 +1,8 @@
+### abstract ###
+In 50 percent of progressing HIV-1 patients, CXCR4-tropic virus emerges late in infection, often overtaking CCR5-tropic virus as the dominant viral strain.
+This phenotypic switch is strongly associated with rapidly declining CD4 T cell counts and AIDS onset, yet its causes remain unknown.
+Here, we analyze a mathematical model for the mechanism of X4 emergence in late-stage HIV infection and use this analysis to evaluate the utility of a promising new class of antiretroviral drugs CCR5 inhibitors in dual R5, X4 infection.
+The model shows that the R5-to-X4 switch occurs as CD4 T cell activation levels increase above a threshold and as CD4 T cell counts decrease below a threshold during late-stage HIV infection.
+Importantly, the model also shows that highly active antiretroviral therapy can inhibit X4 emergence but that monotherapy with CCR5 blockers can accelerate X4 onset and immunodeficiency if X4 infection of memory CD4 T cells occurs at a high rate.
+Fortunately, when CXCR4 blockers or HAART are used in conjunction with CCR5 blockers, this risk of accelerated immunodeficiency is eliminated.
+The results suggest that CCR5 blockers will be more effective when used in combination with CXCR4 blockers and caution against CCR5 blockers in the absence of an effective HAART regimen or during HAART failure.

@@ -1,0 +1,28 @@
+### abstract ###
+Research in reinforcement learning has produced algorithms for optimal decision making under uncertainty that fall within two main types
+The first employs a Bayesian framework, where optimality improves with increased computational time
+This is because the resulting planning task takes the form of a dynamic programming problem on a belief tree with an infinite number of states
+The second type employs relatively simple algorithm which are shown to suffer small regret within a distribution-free framework
+This paper presents a lower bound and a high probability upper bound on the optimal value function for the nodes in the Bayesian belief tree, which are analogous to similar bounds in POMDPs
+The bounds are then used to create more efficient strategies for exploring the tree
+The resulting algorithms are compared with the distribution-free algorithm UCB1, as well as a simpler baseline algorithm on multi-armed bandit problems
+### introduction ###
+In recent work~ CITATION , Bayesian methods for exploration in Markov decision processes (MDPs) and for solving known partially-observable Markov decision processes (POMDPs), as well as for exploration in the latter case, have been proposed
+All such methods suffer from computational intractability problems for most domains of interest
+The sources of intractability are two-fold
+Firstly, there may be no compact representation of the current belief
+This is especially true for POMDPs
+Secondly, optimally behaving under uncertainty requires that we create an  augmented  MDP model in the form of a tree  CITATION , where the root node is the current belief-state pair and children are all possible subsequent belief-state pairs
+This tree grows large very fast, and it is particularly problematic to grow in the case of continuous observations or actions
+In this work, we concentrate on the second problem -- and consider algorithms for expanding the tree
+Since the Bayesian exploration methods require a tree expansion to be performed, we can view the whole problem as that of  nested  exploration
+For the simplest exploration-exploitation trade-off setting, bandit problems, there already exist nearly optimal, computationally simple methods~ CITATION
+Such methods have recently been extended to tree search~ CITATION
+This work proposes to take advantage of the special structure of belief trees in order to design nearly-optimal algorithms for expansion of nodes
+In a sense, by recognising that the tree expansion problem in Bayesian look-ahead exploration methods is also an optimal exploration problem, we develop tree algorithms that can solve this problem efficiently
+Furthermore, we are able to derive interesting upper and lower bounds for the value of branches and leaf nodes which can help limit the amount of search
+The ideas developed are tested in the multi-armed bandit setting for which nearly-optimal algorithms already exist
+The remainder of this section introduces the augmented MDP formalism employed within this work and discusses related work
+Section~ discusses tree expansion in exploration problems and introduces some useful bounds
+These bounds are used in the algorithms detailed in Section~, which are then evaluated in Section~
+We conclude with an outlook to further developments

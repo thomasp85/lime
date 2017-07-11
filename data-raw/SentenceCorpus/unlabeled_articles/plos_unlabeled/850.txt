@@ -1,0 +1,50 @@
+### abstract ###
+Predicting protein function from structure remains an active area of interest, particularly for the structural genomics initiatives where a substantial number of structures are initially solved with little or no functional characterisation.
+Although global structure comparison methods can be used to transfer functional annotations, the relationship between fold and function is complex, particularly in functionally diverse superfamilies that have evolved through different secondary structure embellishments to a common structural core.
+The majority of prediction algorithms employ local templates built on known or predicted functional residues.
+Here, we present a novel method that automatically generates structural motifs associated with different functional sub-families within functionally diverse domain superfamilies.
+Templates are created purely on the basis of their specificity for a given FSG, and the method makes no prior prediction of functional sites, nor assumes specific physico-chemical properties of residues.
+FLORA is able to accurately discriminate between homologous domains with different functions and substantially outperforms popular structure comparison methods and a leading function prediction method.
+We benchmark FLORA on a large data set of enzyme superfamilies from all three major protein classes and demonstrate the functional relevance of the motifs it identifies.
+We also provide novel predictions of enzymatic activity for a large number of structures solved by the Protein Structure Initiative.
+Overall, we show that FLORA is able to effectively detect functionally similar protein domain structures by purely using patterns of structural conservation of all residues.
+### introduction ###
+The prediction of protein function from structure has become of increasing interest as a significant proportion CITATION of structures solved by the structural genomics initiatives lack functional annotation.
+Furthermore, structure-based approaches are of particular interest for predicting binding sites and/or catalytic sites for the purposes of protein engineering and pharmaceutical development.
+Many current methods focus on encoding a template of functional residues and then aligning this template to whole structures.
+The problems with taking this approach are deciding what qualifies as a functional residue and creating biologically-accurate templates for the ever increasing number of available protein structures being deposited in the PDB CITATION.
+Resources such as the Catalytic Site Atlas CITATION are carefully curated by hand and restricted to residues directly involved in catalysis, whereas MSDSite CITATION and PDBSite CITATION, CITATION generate templates based on active site residues defined in the PDB file by the authors.
+Although these resources are undoubtedly extremely valuable, it is questionable whether sufficient coverage of the PDB can be maintained when manual intervention is required.
+To address the problem of generating templates for all protein structures, there are a number of methods that aim to do this automatically.
+For example, the reverse template method CITATION decomposes a query structure into tri-peptide fragments, which are then matched against a non-redundant set of PDB structures using the search algorithm JESS CITATION.
+Hits are evaluated according to the sequence similarity of the local environment of the template.
+The GASP method CITATION uses a genetic algorithm to construct templates based on their ability to discriminate between different protein families against a background of representatives from the SCOP database CITATION.
+Similarly, DRESPAT CITATION implements a graph theoretical approach to discover structural patterns associated with a given family of proteins to locate ligand binding motifs.
+MultiProt CITATION can provide template of structures through a multiple structure alignment.
+A recent extension of the Evolutionary Trace method for binding site prediction was used to create structural templates based on predicted functional residues CITATION.
+SiteEngines CITATION produces templates by matching the geometry and physico-chemical properties of residues in binding site clefts.
+As well as atom or residue-level templates, other non-template-based approaches seek to compare the electrostatic properties of binding sites or surface accessible clefts which often co-locate with active sites .
+One inherent complexity of using PDB structures to transfer annotations between enzymes is the binding state in which the protein is crystallised for example, structures crystallised with non-cognate ligands, substrate analogs, transition states or apo-enzymes CITATION.
+As a consequence, precise geometric matching in the active site region can be problematic due to the conformational changes that occur on ligand binding.
+To address this issue, the methods mentioned above use a variety of approaches such as graph matching or geometric hashing with various tolerance levels.
+The SOIPPA method CITATION, CITATION takes the alternative approach of using a geometric potential to characterise the shape formed by a given set of C atoms, to account for both local and global relationships between residues across the protein structure.
+In a recent ligand-binding site comparison analysis, SOIPPA was able to detect distant similarities between very different protein folds binding a range of adenine-containing ligands CITATION .
+Despite the many template methods present in the literature, very few are publicly available to the general user.
+Hence, the first step in assigning function by structure is often to use global structure comparison methods, which can detect distant evolutionary relationships even where sequence similarity is weak.
+These methods have been specifically applied to function prediction to assign confidence values when inheriting GO terms between related structures.
+However, detecting very distant relatives remains a challenge as structure comparison methods generally give an absolute measure of structural distance, such as RMSD, and applying a cut-off at which one can deduce that two proteins perform related functions results in many missed relationships.
+Analyses of CATH CITATION, CITATION have shown that although function and structure are well conserved in the majority of superfamilies, there are a significant number of highly diverse superfamilies where this is not the case CITATION.
+Moreover, the latter superfamilies are disproportionately represented in both the PDB and in the genomes and tend to exhibit a wide range of core biological functions across a large range of species CITATION.
+An analysis by Reeves et al. CITATION showed that relatives within these superfamilies tend to share a common evolutionary core, but this core is embellished with different insertions of secondary structure elements that often correlate with changes in function.
+However, although structural embellishments might change some facet of function, others have found that relatives can still retain other aspects in common CITATION, CITATION.
+Therefore, calculating a global measure of structural similarity or distance between two proteins can be less informative than focussing on the structural motifs relevant to a given aspect of function.
+The FLORA algorithm presented here was designed to derive structural templates for functional sub-groups within diverse CATH superfamilies.
+FLORA first performs global structure alignment across the superfamily to recognise the distinctive structural patterns associated with each FSG and builds templates based on these patterns.
+New functional homologues are then detected by using the global structural alignments to relatives in each FSG again, but only scoring the similarity over positions identified by the FLORA motif.
+This approach performs very well in discriminating between different enzymatic functions, compared to global methods and another motif-based approach.
+Although we benchmark here on enzyme superfamilies, the method is applicable to superfamilies containing non-enzymatic relatives.
+To test FLORA, we have automatically generated a large data set of domains from 29 diverse superfamilies.
+Our data set allows us to look at the variation of FLORA results between superfamilies and to stress the importance of using a large test data set for benchmarking methods.
+We have benchmarked FLORA against CE CITATION, CATHEDRAL CITATION and Reverse Templates CITATION to give an indication of how it performs in comparison to other standard methods of function prediction.
+We also present some examples of structural motifs identified by FLORA and explain their functional relevance.
+Finally, we use FLORA to make novel predictions of function for proteins solved by the Protein Structure Initiative .

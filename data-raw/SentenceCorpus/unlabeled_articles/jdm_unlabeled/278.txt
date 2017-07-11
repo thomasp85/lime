@@ -1,0 +1,28 @@
+### abstract ###
+sacred values are different from secular values in that they are often associated with violations of the cost-benefit logic of rational choice models
+previous work on sacred values has been largely limited to religious or territorial conflicts deeply embedded in historical contexts
+in this work we find that the iranian nuclear program  a relatively recent development  is treated as sacred by some iranians  leading to a greater disapproval of deals which involve monetary incentives to end the program
+our results suggest that depending on the prevalence of such values  incentive-focused negotiations may backfire
+### introduction ###
+at least since the end of the second world war economic and foreign policy decision-making has been dominated by the  rational actor  perspective which assumes that decision-makers model the world on the basis of rational choice  cost-benefit  calculations that are commensurable across cultures  CITATION
+although it is well accepted that decision makers often fail to make normatively rational choices  the assumption that they nonetheless are seeking to maximize utility dominates
+for example  the makeup and performance of the principal forums for u s policy  CITATION  leaves little doubt that policy decisions should result from instrumental choices by goal-oriented political and economic actors
+the official national security strategy of the united states explicitly states a commitment to  results-oriented planning  that focuses on  actions and results rather than rule-making   CITATION
+recent work on  protected   CITATION  or  sacred   CITATION  values has challenged the presumption that issues under dispute in inter-group conflicts are fungible and can be valued along a common scale
+this new body of research has emphasized that protagonists in disputes often invest values with transcendental qualities  CITATION  which affect decision-making
+for example in a large scale study of israelis and palestinians  ginges  atran  medin  and  shikaki  CITATION  presented subjects with peace deals involving mutual compromises over core issues  such as the future of jerusalem  and experimentally varied incentives to compromise within each deal
+in sharp contrast with the rational actor perspective  subjects who viewed the issues under dispute as sacred values responded with greater outrage to deals with added material incentives to compromise those values
+material incentives to compromise backfired presumably because they made salient the taboo against measuring commitment to sacred values along instrumental metrics
+however  this paradoxical effect held only for people who treated the issue as a sacred value and not for those who saw the values as important but not sacred
+the existing empirical work on sacred values has been focused predominantly on conflicts embedded in a complex historical contexts often marking the life and identity of several generations  CITATION   such as  dealing with issues such as sovereignty over jerusalem  gaza and the west bank  CITATION   conflict over the babri mosque in india  CITATION   and centuries old sharia law in indonesia  CITATION
+yet  it seems possible that issues with a much narrower historical context can become sacred values  especially when they involve identity-related issues such as sovereignty
+in the research reported here  we investigate whether such values would also lead to judgments and decisions that would not be instrumentally rational
+specifically  we focus on iran's stance on its national nuclear program  using it as a test bed for emerging sacred values
+in the past few years  the iranian government has actively defended its right to having a nuclear program in part by framing the dispute as analogues to past historical events in which the advancement of the iranian nation was interrupted by foreign powers
+specifically  the iranian government has made  a conscious effort to link the proliferation issue to the struggle for nationalization of oil half a century ago  a struggle that continues to strongly resonate with the iranian people   CITATION
+by drawing parallels between these events  the nuclear dispute is essentially framed as an ongoing resistance with deep historical context
+consequently  the iranian government has vigorously defended its  inalienable rights   CITATION  for having the program  at recent news conference iran's foreign minister motakki argued   we cannot have any compromise with respect to the iranian nation's inalienable right  to acquire a nuclear capability  CITATION
+while the public discourse in the west about the iranian nuclear program is focused on risks  costs and benefits  the iranian position that they  will not retreat one iota   CITATION  and  will 'never ever' compromise on nuclear dispute   CITATION  is mainly in the domain of sacred rhetoric  CITATION
+we investigated whether iranians who treat the iranian nuclear program as a sacred value would be amenable to material incentives to compromise
+the u s and its allies  including the u k and france  are currently contemplating material  sanctions that bite   CITATION
+it is critical  therefore  to know what the possible reactions of iranians to sanctions may be

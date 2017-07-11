@@ -1,0 +1,79 @@
+### abstract ###
+AIMX  we test in the context of a dictator game the proposition that individuals may experience a self-control conflict between the temptation to act selfishly and the better judgment to act pro-socially
+OWNX  we manipulated the likelihood that individuals would identify self-control conflict, and we measured their trait ability to implement self-control strategies
+OWNX  our analysis reveals a positive and significant correlation between trait self-control and pro-social behavior in the treatment where we expected a relatively high likelihood of conflict identification-but not in the treatment where we expected a low likelihood
+MISC  the magnitude of the effect is of economic significance
+OWNX  we conclude that subtle cues might prove sufficient to alter individuals' perception of allocation opportunities, thereby prompting individuals to draw on their own cognitive resources to act pro-socially
+### introduction ###
+MISC  lured by temptation, individuals may find themselves acting against their better judgment
+MISC  self-control failure, famously termed akrasia in plato's protagoras  CITATION , persists throughout domains of daily life and represents a central issue of both philosophy and modern-day social sciences
+MISC  for example, the dieter faced with the opportunity to indulge in a delicious creamy cake may perceive a conflict between indulging and maintaining a good figure
+MISC  the student may feel conflicted between the desire to go to the cinema and her better judgment to stay home and study
+MISC  and, similarly, the fashionista might feel conflicted between the temptation to purchase new boots and her better judgment to maintain a responsible budget
+MISC  perhaps less intuitively, but no less importantly, the question of pro-social versus selfish behavior may be understood in similar terms
+MISC  this conceptualization may help reconcile conflicting notions in economics of selfish and pro-social motivations
+MISC  that individuals should care much about their own self-interest seems almost tautological and requires little further exposition, but that individuals also should care about the interest of others-at the expense of that of their own-has attracted considerable attention  CITATION
+MISC  for example, many individuals voluntarily contribute to charity or to public goods e g , recycling, and they pay their taxes despite low likelihood of punishment for failing to do so
+MISC  nonetheless, one could imagine that even individuals of generally pro-social inclination on occasion may feel tempted to act selfishly and hence underreport income to the authorities
+MISC  that is, pro-social preferences potentially fly in the face of basic urges for personal gain-or greed-and the individual may thus experience a self-control conflict between better judgment to act pro-socially and the temptation to act selfishly
+MISC  self-control-our capacity to overrule temptation-is no less complex than it is important
+MISC  a multitude of conceptualizations exist, many of which are complementary
+MISC  typically, and in line with classic ideas of the conflict between reason and passion, authors view self-control as a "cold" executive function that guides behavior in the face of "hot" impulses to act against better judgment  CITATION
+MISC  willpower, then, represents the combined resources that the executive function-or the planner, in the parlance of thaler and shefrin  CITATION -brings to bear in a deliberate struggle against temptation  CITATION
+MISC  such resources may include cognitive strategies to divert attention away from temptation  CITATION , strategies of pre-commitment  CITATION , or possibly the sheer strength of mind to hold back from the song of the sirens
+OWNX  our conceptualization of self-control mirrors these
+MISC  only recently has the psychological literature started to explore how the question of pro-social versus selfish behavior relates to that of self-control
+MISC  loewenstein  CITATION  suggests that selfish behavior may be motivated by visceral urges or drive-states, resembling cravings for relief from hunger, pain, and sexual deprivation
+MISC  o'donoghue and loewenstein  CITATION  argue that such selfish urges may conflict with the "colder", more abstract preferences for altruism, as visceral urges for sweets may conflict with more abstract preferences for a fine figure or good health
+CONT  at present, there is but indirect evidence for this idea
+MISC  for example, pronin et al CITATION  show that decisions about others resemble decisions about "future selves", both classes of which contrast to decisions about less abstract "present selves"
+MISC  albrecht et al CITATION  report consistent results; individuals who choose between immediate and delayed rewards for themselves exhibit less patience and more affective involvement activation in the dopaminergic reward system than do individuals who make such choices for others-or for themselves in the future
+MISC  moreover, curry et al CITATION  find in a standard public goods game that individuals' discount rates are negatively associated with their contributions to the public good
+MISC  that is, more "impatient" individuals contributed less to the public good than did "patient" ones
+MISC  arriving at similar results, fehr and leibbrandt  CITATION  report that patient vs impatient fishermen, whose time preferences were elicited in the lab, exhibited more cooperative behavior in a common resource problem and were in the field less likely to over-exploit the common pool resource
+MISC  furthermore, burks et al CITATION  find that "short-term" patience-the  beta   in the  beta  -&#x3b4;  model-is positively associated with cooperative behavior in a sequential prisoner's dilemma
+MISC  however, duffy and smith  CITATION  report no effect of cognitive load-a manipulation intended to deplete cognitive resources and thereby impair self-control-on outcomes across treatments in a repeated multi-player prisoner's dilemma
+MISC  an emerging literature on the "default" response in games of trust and reciprocity lends further credence to the notion that altruistic responses require self-control
+MISC  achtziger et al CITATION  subjected players in an ultimatum game to cognitive resource depletion, and show that depleted proposers made lower offers-they became less altruistic
+MISC  moreover, depleted responders were more likely to reject offers that were unfair to themselves-they exhibited "altruistic punishment"
+MISC  halali et al CITATION  report the same for responders, but with a different depletion task
+MISC  crockett et al CITATION  subjected responders to acute tryptophan depletion-a procedure that temporarily reduces serotonin levels in the brain and thereby impairs self-control  CITATION ; reduced serotonin levels raised rejection rates and this reduction is positively correlated with impulsive choice in a delay-discounting task  CITATION
+MISC  using a trust game, knoch et al CITATION  subjected trustees' right lateral prefrontal cortex to transcranial magnetic stimulation, which reduces functioning in the targeted brain region
+MISC  trustees, though cognizant that returning a share of the investments was both strategic and norm-compliant, were unable to do so under impaired executive functioning; self-control seems necessary to act on the better judgment to resist the temptation to keep the received investment entirely for oneself
+BASE  closest to our domain of inquiry, piovesan and wengstrom  CITATION  measured response times of participants in a repeated dictator game, lasting 24 periods
+MISC  they find both across and within participants that lower response times are associated with more selfish choices
+MISC  one interpretation of their results is that the default behavior is to act selfishly and that pro-social behavior requires the successful resolution of a self-control conflict, which slows the response time
+MISC  such successful resolution of conflict would require cognitive resources, but hauge et al CITATION  report no effect of cognitive load on players in one-shot dictator games
+AIMX  in this paper we attempt a more direct test of the hypothesis that pro-social versus selfish behavior may represent a self-control problem
+OWNX  we employ a standard measure of pure pro-social behavior, the one-shot dictator game, which invokes neither concerns for strategy nor for reciprocity; and a well-grounded psychometric measure of self-control, the rosenbaum self-control schedule  CITATION
+OWNX  further, we explore the conditions under which we expect an association between self-control and pro-social behavior
+OWNX  in so doing, we rely on two conditions necessary for successfully exercising restraint in the face of temptation; myrseth and fishbach  CITATION  propose a two-stage model of self-control, which postulates that an individual in the face of temptation first identifies conflict or not between indulging and pursuing a higher-order goal and, second, that the individual next employs self-control strategies if and only if conflict was identified at the first stage see figure 1
+MISC  critically, self-control strategies are relevant to the decision to indulge only when the individual has identified self-control conflict
+MISC  therefore, one strategy for investigating whether the problem of pro-social versus selfish behavior resembles one of self-control is to test whether the tendency to apply self-control strategies is positively associated with pro-social behavior when individuals have identified self-control conflict, but less so or not at all when individuals have not
+MISC  determinants of conflict identification in the face of temptation have been explored only recently
+MISC  in some contexts, the question is almost trivial and identification of conflict virtually obvious
+MISC  for example, the diabetic dieter probably knows that having even a single, tempting chocolate may incur major costs
+MISC  however, the question of self-control conflict is more ambiguous for the non-diabetic dieter, who faces the same chocolate
+MISC  having this one chocolate alone will not incur major costs, but doing so regularly might
+MISC  similarly, the good citizen may find that a general failure to act generously would represent a major threat to his self-image, but being stingy on just a couple of occasions is a more ambiguous matter
+MISC  myrseth and fishbach  CITATION  use the term epsilon cost temptation to denote tempting opportunities that incur nothing but trivial costs when consumed in small amounts, but potentially serious costs when consumed extensively
+MISC  they argue that individuals identify self-control conflict in the face of epsilon cost temptation if and only if two conditions are met: a the focal consumption opportunity must be viewed in relation to multiple additional opportunities, and b the decision maker must assume that similar choices are made for each opportunity  CITATION
+MISC  that is, considering the question of whether or not to have a delicious creamy cake will evoke self-control conflict in the dieter if the dining opportunity is viewed in relation to future opportunities for dessert consumption, but not if the dining opportunity is viewed in isolation, as a singular episode
+MISC  similarly, the question of whether or not to be generous-to donate to a charitable organization-may elicit self-control conflict if the decision is viewed in relation to future decisions, but not if the decision is viewed in isolation
+MISC  if viewed in relation to future decisions, the question of how much to donate on a single occasion may have bearing on the decision maker's self-image; donating now-and in the future-indicates a generous character, whereas keeping the money for oneself does not
+MISC  however, if viewed in isolation, the question of how much to donate has little bearing on self-image; the present decision of how much to donate is considered only in light of immediate consequences, leaving self-image out of the equation
+MISC  because a consistent self-image represents an important motivator for pro-social behavior  CITATION , we expect that individuals are more likely to identify self-control conflict between selfish and pro-social behavior if the allocation decision is seen in relation to future opportunities than if it is seen in isolation
+MISC  myrseth and fishbach  CITATION  show that subtle framing manipulations are sufficient to influence identification of self-control conflict in the face of epsilon cost temptation
+MISC  they find that presenting a calendar displaying the current month, with a grid separating the dates, raised participants' subsequent consumption of potato chips relative to that of participants whom were presented a calendar without a grid
+MISC  they argue that the gridded calendar activated an isolated versus interrelated frame of the choice opportunity; it made participants more likely to isolate the date in question and thus less likely to see the decision task in relation to similar future opportunities
+MISC  consequently, the grid reduced the likelihood that participants would identify a conflict between the temptation to have chips and the better judgment to maintain a fine figure and good health
+MISC  indeed, participants who viewed the gridded calendar reported experiencing less conflict during their decision to have chips or not than did those who viewed the non-gridded calendar
+MISC  furthermore, participants' trait ability to implement self-control strategies, measured by rosenbaum's  CITATION  psychometric scale, was positively associated with chips consumption for those who viewed the calendar without the grid and who were more likely to identify conflict, but not for others who viewed the calendar with and who were less likely to identify conflict
+MISC  that is, participants who viewed the calendar without the grid, more likely than those who viewed the calendar with, identified self-control conflict and therefore leveraged their self-control strategies to resist the tempting chips
+BASE  to explore our hypothesis that the problem of pro-social versus selfish behavior may represent one of self-control, we have applied the empirical strategy from myrseth and fishbach  CITATION  in the dictator game-a participant is granted an endowment and asked to split it between herself and a recipient  CITATION , and in our case the red cross featured as recipient  CITATION
+OWNX  the game thus pits pro-social motivations against self-interest
+OWNX  if pro-social versus selfish behavior could represent a self-control conflict, we would expect participants' trait self-control, as measured by rosenbaum's  CITATION  scale, to correlate positively with pro-social behavior for participants who have just previously viewed a calendar without a grid, but less so or not at all for participants who have viewed a calendar with
+OWNX  the graph in figure 2 displays donation, as a function of level of self-control, for two different levels of identification likelihood
+OWNX  in the case of low likelihood, the slope is expected to be weakly positive
+OWNX  in the case of the higher likelihood, however, the slope is expected to be strictly greater than that in the case of low likelihood
+OWNX  this means that for a given level of self-control, one might observe substantially different donation behavior depending on whether conflict was identified or not

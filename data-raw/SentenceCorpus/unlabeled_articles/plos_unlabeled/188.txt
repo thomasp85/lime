@@ -1,0 +1,40 @@
+### abstract ###
+Ample evidence has accumulated for the evolutionary importance of duplication events.
+However, little is known about the ensuing step-by-step divergence process and the selective conditions that allow it to progress.
+Here we present a computational study on the divergence of two repressors after duplication.
+A central feature of our approach is that intermediate phenotypes can be quantified through the use of in vivo measured repression strengths of Escherichia coli lac mutants.
+Evolutionary pathways are constructed by multiple rounds of single base pair substitutions and selection for tight and independent binding.
+Our analysis indicates that when a duplicated repressor co-diverges together with its binding site, the fitness landscape allows funneling to a new regulatory interaction with early increases in fitness.
+We find that neutral mutations do not play an essential role, which is important for substantial divergence probabilities.
+By varying the selective pressure we can pinpoint the necessary ingredients for the observed divergence.
+Our findings underscore the importance of coevolutionary mechanisms in regulatory networks, and should be relevant for the evolution of protein-DNA as well as protein-protein interactions.
+### introduction ###
+Initially put forward by Stevens in 1951 CITATION and later advocated by Ohno in his seminal work CITATION, gene duplication followed by functional divergence is now seen as a general mechanism for acquiring new functions CITATION.
+Also, regulatory networks are thought to be shaped significantly by genetic duplication CITATION.
+For instance, sequence analysis of transcription factor families points to various historical duplication events CITATION, CITATION.
+However, very little is known about the subsequent mutational divergence pathways or about the corresponding stepwise phenotypical changes that are subject to selection.
+While these issues have not yet been explored experimentally, related generic aspects of mutational plasticity have been addressed theoretically CITATION CITATION.
+However, a central obstacle in studying mutational pathways through computer simulations remains the unknown relation between the sequence and binding affinity, for which, in general, a rather abstract mapping has to be assumed.
+To describe the formation of a new regulatory interaction after a duplication event, which is our current aim, such an abstract approach would be particularly speculative.
+Here we reason that many characteristics of the adaptation of real protein-DNA contacts are hidden in the extensive body of mutational data that has been accumulated over many years.
+These measured repression values can be used as fitness landscapes, in which pathways can be explored by computing consecutive rounds of single base pair substitutions and selection.
+Here we develop this approach to study the divergence of duplicate repressors and their binding sites.
+More specifically, we focus on the creation of a new and unique protein-DNA recognition, starting from two identical repressors and two identical operators.
+We consider selective conditions that favor the evolution toward independent regulation.
+Interestingly, such regulatory divergence is inherently a coevolutionary process, where repressors and operators must be optimized in a coordinated fashion.
+The mere presence of a selective pressure is clearly not a sufficient condition to achieve a new function.
+Rather, the evolutionary potential and limitations can be seen as governed by the shape of the actual fitness landscape and the evolutionary search within it.
+Studying these intrinsic limitations to divergence represents the overall aim of this work.
+Many open questions arise when considering the formation of a new protein-DNA interaction, which may be viewed as the construction of a new lock and uniquely matching key.
+For instance, how should the protein be modified step-by-step to recognize a new DNA-binding site that also does not yet exist, or vice versa?
+One would expect that complementary mutations need to occur in the protein and DNA-binding site.
+Does this mean that temporary losses in fitness must be endured when taking single-mutation steps?
+And, how many mutations must minimally accumulate before a noticeable new recognition is obtained on which selection can act?
+The latter is an important point: mutations conferring a selective advantage spread more readily through a population CITATION, resulting in a drastic increase of the divergence probability.
+These questions are addressed by exhaustively searching the landscape for optimal pathways, as well as by complementary population dynamics simulations.
+Previously it has been shown that lac repressor mutants indeed exist that can bind exclusively to mutant lac operators CITATION.
+Our simulations reveal that a duplicated repressor-operator pair can readily evolve to achieve such independence of binding, while monotonously increasing its fitness in a step-by-step process.
+Moreover, simply following the fittest mutants does predominantly guide the system to the desired global optimum, which indicates funnel-like features in the fitness landscape.
+A detailed analysis of the subsequent network changes indicates a generic sequence of events, of which we study the underlying mechanisms by varying the applied selective pressure.
+Next, we show that the trajectories we find in the optimal pathway simulations are not rare exceptions, since similar trajectories are followed using a probabilistic scheme for accepting a mutation.
+The results further suggest the feasibility of studying regulatory divergence in laboratory evolution experiments, and finally we make a comparison to alternative models for the creation of new regulatory interactions.

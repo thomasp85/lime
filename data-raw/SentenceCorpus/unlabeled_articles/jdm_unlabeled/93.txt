@@ -1,0 +1,39 @@
+### abstract ###
+considerable research has pointed towards processing differences as a viable means for understanding the strength and likelihood of a framing effect
+in the current study we explored how differences in processing may emerge through diurnal patters in circadian rhythm  which varies across individuals
+we predicted that during circadian off-times  participants would exhibit stronger framing effects whereas framing effects would be relatively weaker during on-times
+six-hundred and eighty five individuals took part in the study  the findings supported our hypothesis  revealing a diurnal pattern of risk responding that varies across the  NUMBER -hour circadian cycle
+### introduction ###
+the most studied examples of risk and decision making revolve around risky-choice framing  CITATION   which has its foundations in prospect theory  CITATION
+according to prospect theory  the presentation of an outcome as either a loss or gain affects the amount of risk a person is willing to accept
+this effect is due to differences in perceived subjective value and is captured by the s-shaped value function
+this function is concave for gains  which leads to risk-averse preferences  and convex for losses  which leads to preference for risky alternatives
+in the most well known example of this framing effect  participants read of an asian disease that will potentially kill  NUMBER  people  CITATION
+the participant is then asked to choose between two alternatives for dealing with the disease
+one alternative contains a certain outcome e g    NUMBER  people saved for certain and the other has a stated likelihood for an outcome e g   a  NUMBER   NUMBER  probability that all  NUMBER  people will be saved and a  NUMBER   NUMBER  probability that no one will be saved
+the alternatives are presented either positively people saved or negatively people die
+importantly  both of the alternatives contain exactly the same  expected outcome   or numerical magnitude
+people tend to choose the certain risk free option when the problem is framed positively and the risky option when it is framed negatively
+while this framing effect has proved enduring  a number of studies have pointed toward processing differences as a determining factor for the strength of this framing effect
+one of the most widely investigated personality factors in framing research is need-for-cognition nfc  CITATION
+this personality trait reflects the extent to which people engage in effortful thought and how much they enjoy doing so
+thus  individuals with high levels of nfc should process tasks more effortfully whereas individuals low in this trait should use less effort
+research has shown that framing effects are lessened for individuals who are high in nfc  CITATION
+similar results were found by simon  fagley and halleran  CITATION  when high nfc was combined with math ability or depth of processing
+related research has shown that merely requesting an elaboration or rationale  CITATION  can influence the likelihood of framing effects
+other research has shown that presenting a task as either high or low in personal importance  which should lead to more or less effortful processing respectively  influences the likelihood of framing effects  CITATION
+overall  the findings from these studies tend to show that  when more effort is involved in the task  this framing effect is attenuated  with one exception  CITATION
+in a somewhat similar approach  research from fuzzy-trace theory  CITATION  has shown that  when greater  gist like  memory retrieval is used  framing effects are robust whereas  when the more precise  verbatim  retrieval is relied on  framing effects are less evident
+recent investigations have shown support for fuzzy trace as a viable means for understanding framing effects  CITATION
+one ability factor that has been identified is numeracy  which refers to the propensity to integrate complex numeric information
+research  CITATION  has shown that low numerate individuals respond more superficially to non-numeric sources of information i e   frame and consequently  they have been shown to demonstrate stronger framing effects  CITATION
+in an investigation of another individual difference variable  frederick  CITATION  used a cognitive reflection test to show that risky-choice framing effects were attenuated for people relying on more conscious  deliberative processing and more robust for people using more automatic processing
+similar findings were reported by oechssler  roider   and  schmitz  CITATION
+other research has shown that ability differences may influence this framing effect
+in one study  stanovich and west  CITATION  found that individuals with relatively higher cognitive ability  as measured by sat scores  were less likely to exhibit framing effects
+later research has shown that working memory also plays a role in framing effects  CITATION  but the exact nature of this role has not been completely defined
+recently  however  stanovich and west  CITATION  have reexamined their original assumptions in a larger study and their findings seem to call their prior hypotheses for framing effects into question
+taken together  these findings create a picture of how framing effects can differ across individuals and situations
+clearly the type of processing involved can have important and predictable influences on the choices people make
+these findings suggest that framing effects will be less likely when a person is being more thoughtful  diligent  or involved in the decision task
+a variety of factors may influence the effort and deliberative processing a person uses

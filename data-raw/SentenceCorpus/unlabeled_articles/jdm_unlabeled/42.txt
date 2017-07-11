@@ -1,0 +1,58 @@
+### abstract ###
+some studies have found that choices become more risk averse after gains and more risk seeking after losses  although other studies have found the opposite
+the latter tend to use hypothetical cases that encourage deliberation
+in the current study  we examined the effects of prior gains and losses on a task designed to encourage less reflective decision making  the iowa gambling task igt
+fifty participants conducted a manipulated decision-making task in which one group gained money  whereas the other group lost money  followed by the igt
+participants who experienced a prior monetary loss displayed more risky choice behavior on the igt than subjects who experienced a prior gain
+these effects were not mediated by a positive or negative affect  although the sample size may have been too small to detect a small effect
+### introduction ###
+kahneman and tversky  CITATION  noted that people are often risk averse for gains and risk seeking for losses
+whether people consider a consequence of their choice as a loss or as a gain is dependent on their point of reference
+this reference point  which is often equivalent to the current wealth position  plays a key role in the theory of choice
+it should be possible to manipulate perceptions of the domain gain or loss with actual prior gains or losses
+people may see their starting point  before the gain or loss  as the reference point
+if they had lost money  for example  they may see new gambles as in the domain of losses  and they therefore might be risk seeking
+earlier studies of the effect of gains and losses show conflicting results
+thaler and johnson  CITATION  found the opposite resultswhich they called a  house money effect although their participants would take risks to gain back all of their loss
+weber and zuchel  CITATION  review this literature and find some conditions that support the prospect theory prediction
+aside from their result  however  most of the results consistent with prospect theory are from studies that use more realistic situations such as investment  rather than hypothetical tasks
+some traditional economic studies addressing theories of decision-making assume that decision-making is based on deliberate evaluations of varying option-outcome scenarios  that is  people weigh the pros and cons of various choices against each other and base their decision on the outcome of this comparison
+these kinds of choices can be characterized as deliberate  and carefully thought-out
+however  some recent psychological studies addressing decision-making show that decisions can also be driven by less carefully thought-out choices  CITATION   are often implicit and automatic  CITATION   and are based on  gut-feelings   CITATION  or emotions  CITATION
+recently  sanfey et al CITATION  made a clear distinction between these two psychological systems involved in economic decision-making  an emotional system  which involves the activation of automatic processes and a deliberative system involving controlled processes  with each having separate neural substrates
+in the present contribution  we want to apply this recent knowledge to risk aversion
+is risk aversion after gains the consequence of people's deliberate  conscious decisions to avoid risk
+or is the case that risk aversion can largely automatic  whereby people's current reference point leads them to pursue less risky options without deliberately weighting all outcome scenarios
+in the present study we examined the role of reference point in a task designed to encourage automatic  emotional driven decision-making  the iowa gambling task igt
+during the igt participants have to select cards from four decks that range in probability and magnitude of rewards and punishments  CITATION
+to translate our hypothesis pertaining to risk aversion to the igt  it is necessary to explain the igt in some detail
+in the igt  participants can repeatedly choose usually up to  NUMBER  times between four decks of cards
+two of the decks e g   a and b are disadvantageous
+they produce large immediate gains  but these gains are followed by large losses  leading to an overall loss in the long run
+the other remaining decks e g   c and d are advantageous
+the gains are modest but consistent and the losses are small
+consistently choosing these decks leads to gains in the long run
+this means that people who are risk seeking would be predominantly choose decks a and b  leading to losses in the long run
+conversely  people who are risk averse will predominantly choose decks c and d  leading to overall gain
+this means that risk aversion translates into better performance overall gains on the igt  whereas risk seeking would translate into poor performance overall losses
+the psychological process that determines people's behavior in the igt is crucial to our hypothesis that risk aversion is not only based on deliberately weighting all outcome scenarios
+a general consensus is that people performing the igt at some point steer towards certain profitable decks  in rather automatic way
+whether this automatic behavior is entirely unconscious is still subject to debate  see maia and mcclelland  CITATION   and dunn et al CITATION
+behavior on the igt can be seen as a form of implicit learning  CITATION   whereby behavior changes before people can verbalize why they do what they are doing
+therefore  the igt can be regarded as an instrument capable of assessing intuitive and emotion-based decision-making processes
+in addition to our central aimto test the relative automaticity of risk aversionwe have another goal
+economic studies addressing theories of decision-making often rely on hypothetical situations and choices in which participants are confronted with monetary gambles without any real consequences
+although the use of real incentives is often not crucial for the outcome of experiments  using real incentives has an important role to play in establishing the quality  credibility  and generalizability of experimental data  CITATION
+in the present study  we addressed this point by using real monetary remunerations in order to mimic real-life decision-making more closely
+for the purpose of the present study  we experimentally manipulated the reference point
+that is  participants first performed a manipulated gamble-task in which they either gained or lost money as a result of their performance in actuality  they had no influence on these gains or losses
+note that this experimental set-up comes close to real-life situations in which a person's reference point real or perceived is often the result of their prior choices
+it is known that individual differences can influence behavioral decision-making
+these individual difference variables include reward sensitivity  CITATION   gender  CITATION   and age  CITATION
+in line with previous research  CITATION   we expected that our experimental manipulation would have an effect on participants' affect
+more precisely  a prior gain would yield an increase of positive affect  whereas an earlier loss would result in an increase of negative affect
+it has been suggested that affect might influence decision-making  CITATION
+positive affect can promote increased sensitivity to losses  CITATION
+in the present study  we investigated whether the above-mentioned individual differences and affect may have an additional effect on the participants' decision-making
+the main hypothesis was that people who experienced a prior gain on a gambling task performed better i e   made more advantageous choices as a consequence of risk aversion on the igt as compared to persons who experienced a prior loss
+furthermore  we asked whether this effect was influenced by subjective affect  and various other individual differences

@@ -1,0 +1,41 @@
+### abstract ###
+Halobacterium salinarum is a bioenergetically flexible, halophilic microorganism that can generate energy by respiration, photosynthesis, and the fermentation of arginine.
+In a previous study, using a genome-scale metabolic model, we have shown that the archaeon unexpectedly degrades essential amino acids under aerobic conditions, a behavior that can lead to the termination of growth earlier than necessary.
+Here, we further integratively investigate energy generation, nutrient utilization, and biomass production using an extended methodology that accounts for dynamically changing transport patterns, including those that arise from interactions among the supplied metabolites.
+Moreover, we widen the scope of our analysis to include phototrophic conditions to explore the interplay between different bioenergetic modes.
+Surprisingly, we found that cells also degrade essential amino acids even during phototropy, when energy should already be abundant.
+We also found that under both conditions considerable amounts of nutrients that were taken up were neither incorporated into the biomass nor used as respiratory substrates, implying the considerable production and accumulation of several metabolites in the medium.
+Some of these are likely the products of forms of overflow metabolism.
+In addition, our results also show that arginine fermentation, contrary to what is typically assumed, occurs simultaneously with respiration and photosynthesis and can contribute energy in levels that are comparable to the primary bioenergetic modes, if not more.
+These findings portray a picture that the organism takes an approach toward growth that favors the here and now, even at the cost of longer-term concerns.
+We believe that the seemingly greedy behavior exhibited actually consists of adaptations by the organism to its natural environments, where nutrients are not only irregularly available but may altogether be absent for extended periods that may span several years.
+Such a setting probably predisposed the cells to grow as much as possible when the conditions become favorable.
+### introduction ###
+Halobacterium salinarum is a halophilic archaeon that thrives in extremely saline environments with salt concentrations reaching 4 M or higher.
+The organism is perhaps most well known for its retinal-protein bacteriorhodopsin, which is a light-driven proton pump.
+BR is the only known nonchlorophyll structure that allows photosynthesis CITATION.
+It is currently being developed for applications in optical security CITATION, optical data storage CITATION, and holography CITATION.
+Accordingly, H. salinarum's photosynthetic capabilities are its most well-studied aspects.
+For example, the 3D structure of BR has been resolved, and its complete catalytic cycle elucidated at the molecular level.
+However, despite the focus on BR, photosynthesis is not the only means by which H. salinarum can generate energy.
+Respiration CITATION, CITATION as well as the fermentation of arginine CITATION, CITATION are other mechanisms utilized by the organism.
+This bioenergetic flexibility makes the archaeon a good model system for investigating the interplay between different energy production modes.
+H. salinarum is also one of the few reported organisms that can use potassium gradients for long term energy storage in a battery-like manner CITATION .
+The metabolic network of an organism can be reconstructed from genomic, biochemical, and physiological data CITATION, CITATION, CITATION.
+This network consists of the known and hypothesized reactions that take place within the organism, and is considered to be on a genome-scale when most or all of the genes with known metabolic function are included CITATION.
+We, in a previous study, have reconstructed and proposed such a network for Halobacterium salinarum CITATION.
+In addition to the immediate information gained from metabolic reconstructions, these networks can be analyzed to gain insights on emergent system properties through the use of appropriate computational methods.
+In this respect, the constraints-based framework has emerged as an important and convenient tool for modeling such systems because it does not require the detailed information typically required by full kinetic models.
+Rather, constraints-based models require only generally available physicochemical information such as stoichiometry, reversibility, energy balance, and, when available, reaction velocities CITATION, CITATION, CITATION .
+One of the methods available under the constraints-based framework is Flux Balance Analysis.
+Essentially, FBA uses linear optimization to find a flux distribution that maximizes a particular objective function, e.g., growth rate or ATP production CITATION, CITATION.
+It has been shown that such optimality principles, within limits and under defined conditions, can describe the operation of metabolic networks, including the prediction of internal fluxes CITATION, CITATION.
+Extensions to FBA include hybrid models that introduce some degree of dynamics through the integration of time-variant input rates to the static model CITATION, CITATION, CITATION .
+Our aim in this study is two-fold.
+First, we set out to investigate the interplay between energy generation, nutrient utilization and biomass production under different bioenergetic modes.
+Second, we also analyzed the relationships between the different energy producing mechanisms of respiration, photosynthesis and fermentation themselves, which are typically examined individually.
+To achieve these, we used a genome-scale metabolic network that connects the different aspects.
+Our results include several findings that are contrary to assumptions which are typically made; particularly with respect to the utilization of nutrients, and how the bioenergetic modes operate.
+From a more methodological perspective, we also sought out to extend the existing framework for hybrid genome-scale metabolic models to handle biological systems where nutrient utilization and growth rates vary with time.
+Such changes in nutrient consumption, for example, can be the result of the differences between growth phases, or can arise from the interactions between the supplied metabolites.
+We demonstrate that the extended methodology not only accounts for such dynamics, but in several instances actually led to the identification of the underlying causes.

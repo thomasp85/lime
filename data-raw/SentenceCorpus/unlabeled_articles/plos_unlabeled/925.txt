@@ -1,0 +1,49 @@
+### abstract ###
+Certain theories suggest that it should be difficult or impossible to eradicate a vaccine-preventable disease under voluntary vaccination: Herd immunity implies that the individual incentive to vaccinate disappears at high coverage levels.
+Historically, there have been examples of declining coverage for vaccines, such as MMR vaccine and whole-cell pertussis vaccine, that are consistent with this theory.
+On the other hand, smallpox was globally eradicated by 1980 despite voluntary vaccination policies in many jurisdictions.
+Previous modeling studies of the interplay between disease dynamics and individual vaccinating behavior have assumed that infection is transmitted in a homogeneously mixing population.
+By comparison, here we simulate transmission of a vaccine-preventable SEIR infection through a random, static contact network.
+Individuals choose whether to vaccinate based on infection risks from neighbors, and based on vaccine risks.
+When neighborhood size is small, rational vaccinating behavior results in rapid containment of the infection through voluntary ring vaccination.
+As neighborhood size increases, a threshold is reached beyond which the infection can break through partially vaccinated rings, percolating through the whole population and resulting in considerable epidemic final sizes and a large number vaccinated.
+The former outcome represents convergence between individually and socially optimal outcomes, whereas the latter represents their divergence, as observed in most models of individual vaccinating behavior that assume homogeneous mixing.
+Similar effects are observed in an extended model using smallpox-specific natural history and transmissibility assumptions.
+This work illustrates the significant qualitative differences between behavior infection dynamics in discrete contact-structured populations versus continuous unstructured populations.
+This work also shows how disease eradicability in populations where voluntary vaccination is the primary control mechanism may depend partly on whether the disease is transmissible only to a few close social contacts or to a larger subset of the population.
+### introduction ###
+Model-based analyses of vaccination programmes have often concluded that it should be difficult or impossible to eradicate a vaccine-preventable disease under a voluntary vaccination policy without other incentives CITATION CITATION.
+As vaccination coverage increases, the disease becomes increasingly rare due to herd immunity.
+Eventually, the infection risk to susceptible individuals decreases to zero, while the individual risk due to the vaccine remains constant.
+Hence, the individual motive to vaccinate is also reduced to zero as vaccine coverage increases.
+This should be true, in principle, even for a disease such as smallpox with very high case fatality rates, as long as the infection risk is deemed sufficiently small.
+This effect, similar to the Prisoner's Dilemma has also been explored in game theoretical analyses of infectious disease dynamics and vaccination CITATION CITATION, CITATION, CITATION.
+In game theoretical treatments, it has been shown that vaccine coverage beyond the eradication threshold is not a Nash equilibrium if vaccine risk is nonzero, because a small group of individuals can achieve a higher payoff by switching to a nonvaccinator strategy CITATION.
+Such strategic, self-interested behavior has been suggested as a possible contributor to vaccine scares in countries with a voluntary vaccination policy, such as England Wales, which experienced declines in vaccine uptake for pertussis in the 1970s CITATION, CITATION, CITATION, and in measles mumps rubella vaccine uptake more recently CITATION.
+Recent work has explored exceptions to this rule, for instance finding cases of multiple equilibria when virulence varies with age CITATION and when vaccines are sufficiently imperfect CITATION .
+To date, smallpox is the only vaccine-preventable disease ever to have been globally eradicated CITATION, although polio is closer to eradication than ever before CITATION.
+The last foothold of smallpox was in low-income countries, particularly in Africa and South Asia CITATION.
+Jurisdictions in these countries often had widely varying vaccination policies.
+For instance, vaccination was compulsory in some Indian states, but voluntary in others CITATION.
+Even in the final stages of eradication, when outbreaks were becoming less frequent, individuals often continued to voluntarily opt for vaccination, without the benefit of individual financial incentives to vaccinate.
+If the foregoing theories are correct that diseases cannot generally be eradicated under voluntary vaccination, how was smallpox globally eradicated despite voluntary vaccination in some jurisdictions?
+Most, if not all, previous mathematical models that analyze discrepancies between individually and socially optimal vaccination strategies under voluntary vaccination have considered populations without spatial or social contact structure, and where populations are large enough for the continuum approximation to apply.
+This also appears to be true of behavior-infection models more generally CITATION, including those that study vaccine supply-demand dynamics at the international level, and non game-theoretical treatments of the problem.
+In these previous analyses, populations are generally considered to be homogeneously mixing, meaning that individuals are as likely to be infected by a member of their own household as they are by someone from the general public.
+However, the inadequacy of homogenous mixing models for certain situations has been widely documented, as have the differences between the predictions of homogeneous-mixing models and models where transmission is constrained to take place on a contact network CITATION CITATION.
+In the present context, the homogeneous mixing assumption is arguably a good approximation for highly transmissible diseases spread primarily through aerosol droplets, such as measles.
+However, the assumption seems less valid for diseases that are transmitted through close contact, such as sexually-transmitted infections.
+Despite a few spectacular and widely reported cases of aerosol transmission CITATION, smallpox is also spread primarily through close contact, and typically requires prolonged face-to-face contact CITATION .
+Here, we show that disease dynamics under a voluntary vaccination policy are substantially and qualitatively altered by the introduction of individual-level social contact structure.
+We analyze a social contact network model, where each node represents an individual, and each link represents a close contact through which infection may spread.
+Individuals decide whether or not to vaccinate based upon their expected payoffs for vaccinating versus not vaccinating.
+We assume the vaccine is free to individuals, which describes the situation for many major pediatric vaccines in advanced countries, as well as the situation under the WHO smallpox eradication program in the 1970s.
+We first study epidemics on this contact network for a general vaccine-preventable infection with simplified SEIR-type disease history.
+At baseline parameter values, for small neighborhood sizes, outbreaks are quickly contained using only voluntary ring vaccination.
+As the neighborhood size increases while infection risk is held constant, a threshold neighborhood size is reached.
+Above this threshold, voluntary vaccination fails and the population experiences both a considerable final epidemic size and a large number vaccinated.
+Hence, the limit of large neighborhood size in this model recovers dynamics similar to those of homogeneous mixing models.
+Because the force of infection is held constant as neighborhood size increases, the failure of voluntary vaccination is attributable solely to a decrease in how localized disease transmission is on the network.
+We associate smaller neighborhood sizes with close contact infections such as smallpox, and larger neighborhood sizes with diseases that do not require close contact for transmission, such as measles.
+We carry out a similar investigation for smallpox-specific disease history and vaccine properties, with similar results.
+This analysis illustrates the importance of considering discrete, contact-structured populations for modeling vaccinating behavior for close contact infections, and provides a framework for reconciling previous theoretical predictions concerning the ineradicability of infectious diseases under voluntary vaccination to the empirical fact of the global eradication of smallpox and local elimination of many other infectious diseases through voluntary vaccination.

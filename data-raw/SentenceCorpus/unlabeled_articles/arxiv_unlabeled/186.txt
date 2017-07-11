@@ -1,0 +1,26 @@
+### abstract ###
+In statistical problems, a set of parameterized  probability distributions is used to estimate  the true probability distribution
+If Fisher  information matrix at the true distribution is singular,  then it has been left unknown what we can estimate about the  true distribution from random samples
+In this paper, we study a singular regression problem and  prove a limit theorem which shows the relation between  the singular regression problem and two birational invariants,  a real log canonical threshold and a singular fluctuation
+The obtained theorem has an important application to statistics,  because it enables us to estimate the generalization error from the training error  without any knowledge of the true probability distribution
+### introduction ###
+Let  SYMBOL  and  SYMBOL  be natural numbers, and  SYMBOL  and  SYMBOL  be   SYMBOL  and  SYMBOL  dimensional real Euclidean spaces respectively
+Assume that  SYMBOL  is a probability space and that   SYMBOL  is an  SYMBOL -valued random variable which is subject to a simultaneous probability density function,   SYMBOL  where  SYMBOL  is a probability density function on  SYMBOL ,  SYMBOL  is a constant,  SYMBOL  is a measurable function from  SYMBOL  to  SYMBOL , and  SYMBOL  is the Euclidean norm of  SYMBOL
+The function  SYMBOL  is called a regression function of  SYMBOL
+Assume that  SYMBOL  is a set of random variables which are independently subject to the same probability distribution as  SYMBOL
+Let  SYMBOL  be a subset of  SYMBOL
+Let  SYMBOL  be a function from  SYMBOL  to  SYMBOL
+The square error  SYMBOL  is a real function on  SYMBOL ,   SYMBOL  An expectation operator  SYMBOL  on  SYMBOL  is defined by  SYMBOL } where  SYMBOL  is a measurable function,   SYMBOL  is a probability density function on  SYMBOL , and   SYMBOL  is a constant called an inverse temperature
+Note that  SYMBOL  is not a constant but a random variable because  SYMBOL  depends on random variables
+Two random variables  SYMBOL  and  SYMBOL  are defined by  SYMBOL *} These random variables  SYMBOL  and  SYMBOL  are called the generalization  and training errors respectively
+Since  SYMBOL , it is expected  on some natural conditions that  both  SYMBOL  and  SYMBOL  converge to  SYMBOL   when  SYMBOL  tends to infinity  if there exists  SYMBOL  such that  SYMBOL
+In this paper,  we ask how fast such convergences are, in  other words, our study concerns with a limit theorem  which shows the convergences   SYMBOL  and  SYMBOL , when  SYMBOL
+If Fisher information matrix   SYMBOL  where  SYMBOL , is positive definite for arbitrary  SYMBOL , then this problem  is well known as a regular regression problem
+In fact,  in a regular regression problem, convergences   SYMBOL  and   SYMBOL  hold
+However, if  SYMBOL  is singular, that is to say, if  SYMBOL , then the problem is called a singular regression problem and convergences of  SYMBOL  and  SYMBOL  have been left unknown
+In general it has been difficult to study a limit theorem  for the case when Fisher information matrix is singular
+However, recently, we have shown that a limit theorem  can be established based on resolution of singularities, and that  there are mathematical relations between the limit theorem  and two birational invariants in singular density estimation  CITATION
+In this paper we prove a new limit theorem for the singular regression problem, which enables us to estimate birational invariants from random samples
+The limit theorem proved in this paper has an important application to  statistics, because the expectation value of the  generalization error  SYMBOL  can be estimated from that of the training error  SYMBOL  without any knowledge of the true probability distribution \vskip3mm {Example} Let  SYMBOL ,  SYMBOL ,  SYMBOL ,  and  SYMBOL
+If the function  SYMBOL  is defined by   SYMBOL  and  SYMBOL , then the set  SYMBOL  is not one point, and Fisher information matrix at  SYMBOL   is singular
+A lot of functions used in statistics, information science, brain informatics,  and bio-informatics are singular, for example, artificial neural networks, radial basis functions, and wavelet functions

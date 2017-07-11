@@ -1,0 +1,34 @@
+### abstract ###
+T-Cell antigen Receptor repertoire is generated through rearrangements of V and J genes encoding and chains.
+The quantification and frequency for every V-J combination during ontogeny and development of the immune system remain to be precisely established.
+We have addressed this issue by building a model able to account for V -J gene rearrangements during thymus development of mice.
+So we developed a numerical model on the whole TRA/TRD locus, based on experimental data, to estimate how V and J genes become accessible to rearrangements.
+The progressive opening of the locus to V-J gene recombinations is modeled through windows of accessibility of different sizes and with different speeds of progression.
+Furthermore, the possibility of successive secondary V-J rearrangements was included in the modelling.
+The model points out some unbalanced V-J associations resulting from a preferential access to gene rearrangements and from a non-uniform partition of the accessibility of the J genes, depending on their location in the locus.
+The model shows that 3 to 4 successive rearrangements are sufficient to explain the use of all the V and J genes of the locus.
+Finally, the model provides information on both the kinetics of rearrangements and frequencies of each V-J associations.
+The model accounts for the essential features of the observed rearrangements on the TRA/TRD locus and may provide a reference for the repertoire of the V-J combinatorial diversity.
+### introduction ###
+Functional antigen receptors expressed by T lymphocytes are generated during ontogeny by somatic recombination of gene segments coding for the variable, the joining, and the constant segments CITATION.
+The recombination mechanism is largely dependent on both the accessibility of the loci and the RAG enzymatic complex CITATION CITATION.
+The murine TRA/TRD locus is composite, encoding TR and chains and encompassed of more than 100 functional V genes CITATION.
+In theory, each of the V genes may target one of the 49 functional J genes.
+The use of V and J genes during the process of recombination has been widely debated, and the studies support the consensus that V-J combinations are not random, with a use of J segments starting at the 5 end and proceeding to the 3 end CITATION CITATION.
+The accessibility of the J region is controlled by the TR enhancer, located at the 3 end of the C gene CITATION and by two promoters: T early, located at the 5 end of the J region and ii J49 located 15 Kb downstream of TEA.
+Both of the promoters are activated by E CITATION, CITATION, CITATION.
+E controls all the V to J associations whereas the two promoters are required for the rearrangements of the J genes situated at the 5 end of the J region.
+However, the analyses of TEA-deleted alleles and those of blockade of TEA transcription showed significant alterations in J use and support the hypothesis that the TEA promoter can regulate both positively the promoters located in the first 12 Kb of J genes and negatively the downstream promoters CITATION, CITATION CITATION .
+A particularity of the TRA locus is an absence of allelic exclusion CITATION and its ability to undergo multiple cycles of secondary rearrangements CITATION, CITATION.
+The process of successive rearrangements is stopped by either positive selection, which downregulates recombinase expression CITATION or by cell death.
+Therefore, the impact of secondary rearrangements on the TR gene assembly regulation remains to be defined.
+Regarding the V and J gene use, it is suggested that the first V-J association targets the secondary one into a set of J segments located near the J segment involved in the primary rearrangement CITATION, CITATION.
+The rules governing the use of the V genes have not been clearly elucidated.
+Nevertheless, observations converge to a consensus: the use of V segments would progress from proximal V genes, located near the J region, towards the V genes located in the distal region CITATION, CITATION.
+At this point in time, the mechanism involved in the control of accessibility of V genes remains to debate CITATION .
+The current state of the technology permits the analysis of some V-J combinations, essentially those at the extremities of the locus but still fails to establish a complete estimation of the V-J combinations.
+The main obstacle comes from the fact that some V genes are duplicated in similar copies in the V region central part, making problematic their unambiguous identification by molecular methods CITATION .
+Consequently, numerical modelling of the V-J recombination process may offer valuable support to overcome the difficulty for accessing to a global view of TRA repertoire.
+For instance, if the J genes are chosen in a sequential way in the model, their use results unimodal, whereas it is known from experimental data that TRA/TRD locus displays two Hot Spots of recombination CITATION CITATION.
+This discrepancy led us to build a mathematical model, parameterized from experimental data, on all V and J genes, including those in distal, proximal, and central positions.
+Confrontation between the data obtained from experiments and from modelling makes possible an estimation of dynamical parameters, such as the accessibility to rearrangements and the frequencies of the V-J associations, giving a more accurate estimation of the TRA combinatorial diversity.

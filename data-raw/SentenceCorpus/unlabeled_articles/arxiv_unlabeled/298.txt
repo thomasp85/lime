@@ -1,0 +1,47 @@
+### abstract ###
+We propose a novel non-parametric adaptive anomaly detection algorithm for high dimensional data based on score functions derived from nearest neighbor graphs on  SYMBOL -point nominal data
+Anomalies are declared whenever the score of a test sample falls below  SYMBOL , which is supposed to be the desired false alarm level
+The resulting anomaly detector is shown to be asymptotically optimal in that it is uniformly most powerful for the specified false alarm level,  SYMBOL , for the case when the anomaly density is a mixture of the nominal and a known density
+Our algorithm is computationally efficient, being linear in dimension and quadratic in data size
+It does not require choosing complicated tuning parameters or function approximation classes and it can adapt to local structure such as local change in dimensionality
+We demonstrate the algorithm on both artificial and real data sets in high dimensional feature spaces
+### introduction ###
+Anomaly detection involves detecting statistically significant deviations of test data from nominal distribution
+In typical applications the nominal distribution is unknown and generally cannot be reliably estimated from nominal training data due to a combination of factors such as limited data size and high dimensionality
+We propose an adaptive non-parametric method for anomaly detection based on score functions that maps data samples to the interval  SYMBOL
+Our score function is derived from a K-nearest neighbor graph (K-NNG) on  SYMBOL -point nominal data
+Anomaly is declared whenever the score of a test sample falls below  SYMBOL  (the desired false alarm error)
+The efficacy of our method rests upon its close connection to multivariate p-values
+In statistical hypothesis testing, p-value is any transformation of the feature space to the interval  SYMBOL  that induces a uniform distribution on the nominal data
+When test samples with p-values smaller than  SYMBOL  are declared as anomalies, false alarm error is less than  SYMBOL
+We develop a novel notion of p-values based on measures of level sets of likelihood ratio functions
+Our notion provides a characterization of the optimal anomaly detector, in that, it is uniformly most powerful for a specified false alarm level for the case when the anomaly density is a mixture of the nominal and a known density
+We show that our score function is asymptotically consistent, namely, it converges to our multivariate p-value as data length approaches infinity
+Anomaly detection has been extensively studied
+It is also referred to as novelty detection  CITATION , outlier detection  CITATION , one-class classification  CITATION  and single-class classification  CITATION  in the literature
+Approaches to anomaly detection can be grouped into several categories
+In parametric approaches~ CITATION  the nominal densities are assumed to come from a parameterized family and generalized likelihood ratio tests are used for detecting deviations from nominal
+It is difficult to use parametric approaches when the distribution is unknown and data is limited
+A K-nearest neighbor (K-NN) anomaly detection approach is presented in  CITATION
+There an anomaly is declared whenever the distance to the K-th nearest neighbor of the test sample falls outside a threshold
+In comparison our anomaly detector utilizes the global information available from the entire K-NN graph to detect deviations from the nominal
+In addition it has provable optimality properties
+Learning theoretic approaches attempt to find decision regions, based on nominal data, that separate nominal instances from their outliers
+These include one-class SVM of Sch SYMBOL lkopf et
+al
+CITATION  where the basic idea is to map the training data into the kernel space and to separate them from the origin with maximum margin
+Other algorithms along this line of research include support vector data description  CITATION ,  linear programming approach  CITATION , and single class minimax probability machine  CITATION
+While these approaches provide impressive computationally efficient solutions on real data, it is generally difficult to precisely relate tuning parameter choices to desired false alarm probability
+Scott and Nowak  CITATION  derive decision regions based on minimum volume (MV) sets, which does provide Type I and Type II error control
+They approximate (in appropriate function classes) level sets of the unknown nominal multivariate density from training samples
+Related work by Hero  CITATION  based on geometric entropic minimization (GEM) detects outliers by comparing test samples to the most concentrated subset of points in the training sample
+This most concentrated set is the  SYMBOL -point minimum spanning tree(MST) for  SYMBOL -point nominal data and converges asymptotically to the minimum entropy set (which is also the MV set)
+Nevertheless, computing  SYMBOL -MST for  SYMBOL -point data is generally intractable
+To overcome these computational limitations  CITATION  proposes heuristic greedy algorithms based on leave-one out K-NN graph, which while inspired by  SYMBOL -MST algorithm is no longer provably optimal
+Our approach is related to these latter techniques, namely, MV sets of  CITATION  and GEM approach of  CITATION
+We develop score functions on K-NNG which turn out to be the empirical estimates of the volume of the MV sets containing the test point
+The volume, which is a real number, is a sufficient statistic for ensuring optimal guarantees
+In this way we avoid explicit high-dimensional level set computation
+Yet our algorithms lead to statistically optimal solutions with the ability to control false alarm and miss error probabilities
+The main features of our anomaly detector are summarized (1) Like  CITATION  our algorithm scales linearly with dimension and quadratic with data size and can be applied to high dimensional feature spaces (2) Like  CITATION  our algorithm is provably optimal in that it is uniformly most powerful for the specified false alarm level,  SYMBOL , for the case that the anomaly density is a mixture of the nominal and any other density (not necessarily uniform) (3) We do not require assumptions of linearity, smoothness, continuity of the densities or the convexity of the level sets
+Furthermore, our algorithm adapts to the inherent manifold structure or local dimensionality of the nominal density (4) Like  CITATION  and unlike other learning theoretic approaches such as  CITATION  we do not require choosing complex tuning parameters or function approximation classes

@@ -1,0 +1,58 @@
+### abstract ###
+Macrophages are versatile immune cells that can detect a variety of pathogen-associated molecular patterns through their Toll-like receptors.
+In response to microbial challenge, the TLR-stimulated macrophage undergoes an activation program controlled by a dynamically inducible transcriptional regulatory network.
+Mapping a complex mammalian transcriptional network poses significant challenges and requires the integration of multiple experimental data types.
+In this work, we inferred a transcriptional network underlying TLR-stimulated murine macrophage activation.
+Microarray-based expression profiling and transcription factor binding site motif scanning were used to infer a network of associations between transcription factor genes and clusters of co-expressed target genes.
+The time-lagged correlation was used to analyze temporal expression data in order to identify potential causal influences in the network.
+A novel statistical test was developed to assess the significance of the time-lagged correlation.
+Several associations in the resulting inferred network were validated using targeted ChIP-on-chip experiments.
+The network incorporates known regulators and gives insight into the transcriptional control of macrophage activation.
+Our analysis identified a novel regulator that may have a role in macrophage activation.
+### introduction ###
+Dynamic cellular processes, such as the response to a signaling event, are governed by complex transcriptional regulatory networks.
+These networks typically involve a large number of transcription factors that are activated in different combinations in order to produce a particular cellular response.
+The macrophage, a vital cell type of the mammalian immune system, marshals a variety of phenotypic responses to pathogenic challenge, such as secretion of pro-inflammatory mediators, phagocytosis and antigen presentation, stimulation of mucus production, and adherence.
+In the innate immune system, the first line of defense against infection, the macrophage's Toll-like receptors play a crucial role by recognizing distinct pathogen-associated molecular patterns, such as flagellin, lipopeptides, or double-stranded RNA CITATION, CITATION.
+TLR signals are first channeled through adapter molecules and then through parallel cross-talking signal pathways.
+These activated pathways initiate a transcriptional program in which over 1,000 genes CITATION and hundreds of TF genes CITATION can be differentially expressed, and which is tailored to the type of infection CITATION, CITATION.
+The transcriptional network underlying macrophage activation can exhibit many distinct steady-states which are associated with tissue- and infection-specific macrophage functions CITATION.
+The transcriptional response is also dynamic and characterized by temporal waves of gene activation CITATION, CITATION, CITATION, each enriched for distinct sets of gene functions CITATION, CITATION and likely to be controlled by different combinations of transcriptional regulators CITATION, CITATION.
+Long-term, elucidating the transcriptional network underlying TLR-stimulated macrophage activation, and identifying key regulators and their functions, would greatly enhance our understanding of the innate immune response to infection and potentially yield new ideas for vaccine development.
+Computational analysis of high-throughput experimental data is proving increasingly useful in the inference of transcriptional regulatory interaction networks CITATION CITATION and in the identification and prioritization of potential regulators for targeted experimental validation CITATION, CITATION.
+Time-course microarray expression measurements have been used to infer dynamic transcriptional networks in yeast CITATION, CITATION and static influence networks in mammalian cell lines CITATION.
+In the context of primary macrophages, expression-based computational reconstruction of the transcriptional control logic underlying the activation program is not straightforward and progress is difficult to measure, for several reasons.
+First, transcriptional control within mammalian networks in general CITATION, and for key TLR-responsive genes in particular CITATION, is combinatorial.
+Second, many induced TFs are subject to post-translational activation CITATION and dynamic control of nuclear localization CITATION.
+Third, targeted genetic perturbations are presently infeasible to perform on a large scale in a mammalian animal model, and expression knockdown is difficult in macrophages due to the tendency of the vector to stimulate TLRs.
+Finally, the few transcriptional regulatory interactions that have been validated through targeted experiments in TLR-stimulated primary macrophages are not available in a single gold standard dataset.
+Therefore, in the context of transcriptional regulation in the mammalian macrophage, with presently accessible expression data sets, large-scale computational inference is primarily useful for statistically identifying potential regulatory interactions, rather than as an inference tool for predicting the transcriptional control logic for specific target genes.
+For the reasons described above, in order to computationally infer transcriptional regulatory interactions in a mammalian system, it is necessary to include additional sources of evidence to constrain or inform the transcriptional network model selection.
+Computational scanning of the promoter sequences of clusters of co-expressed genes for known transcription factor binding site motifs has proved particularly valuable when combined with global expression data CITATION, CITATION, CITATION.
+Recently, Nilsson et al. CITATION used a combination of expression clustering and promoter sequence scanning for TFBS motifs to construct an initial transcriptional network of the macrophage stimulated with the TLR4 stimulus lipopolysaccharide.
+Their work identified two novel regulators, but the clustering was based on an expression dataset with a single stimulus, limited biological replicates, and few time points.
+Moreover, TFBS motif scanning of co-expressed clusters, without utilizing expression dynamics, provides only a limited and static picture of the underlying transcriptional network.
+Many TFBS motifs are often recognized by multiple TFs, making difficult the unambiguous identification of the regulating TF from TFBS enrichment alone.
+Furthermore, because of the tendency of TFBS motifs to co-occur CITATION, it is difficult to determine from among a set of co-occurring motifs which associated TF is the most relevant to the condition-specific regulation of the target cluster.
+In the TLR-stimulated macrophage, core transcription factors already expressed in the cell are rapidly activated and initiate transcriptional regulation of second wave TF genes CITATION.
+Such transcriptionally regulated TF genes are key candidates for an integrated analysis combining TF-specific dynamic expression data and sequence-based motif scanning data.
+This work is concerned with using computational data integration to identify a set of core differentially expressed transcriptional regulators in the TLR-stimulated macrophage and, in the form of statistical associations, the clusters of co-expressed genes that they may regulate.
+The clusters are differentiated based on temporal and stimulus-specific activation, and in this sense, the inferred associations constitute a preliminary dynamic transcriptional network for the TLR-stimulated macrophage.
+To achieve this, we used a novel computational approach incorporating TFBS motif scanning and statistical inference based on time-course expression data across a diverse array of stimuli.
+Our approach involved four steps.
+A set of genes was identified that were differentially expressed by wild-type macrophages under at least one TLR stimulation experiment.
+These genes were clustered based on their expression profiles across a wide range of conditions and strains, grouping genes based on the similarity of the timing and stimulus-dependence of their induction.
+Gene Ontology annotations were used to identify functional categories enriched within the gene clusters.
+Promoter sequences upstream of the genes within each cluster were scanned for a library of TFBS motifs, each recognized by at least one differentially expressed TF, to identify possible associations between TFs and gene clusters.
+Across eleven different time-course studies, dynamic expression profiles of TF genes and target genes were compared in order to identify possible causal influences between differentially expressed TF genes and clusters.
+Several techniques have been developed specifically for model inference from time-course expression data, notably dynamic Bayesian networks CITATION and ODE-based model selection CITATION.
+However, the parametric complexity of these model classes makes it difficult to apply them to infer a network underlying a specific cellular perturbation with a limited expression dataset.
+Here, potential transcriptional regulatory influence is inferred from time-course expression data using the time-lagged correlation statistic, which has been used to infer biochemical interaction networks CITATION as well as transcriptional networks CITATION CITATION.
+The TLC has the advantage that it accounts for the time delay between differential expression of an induced TF and differential expression of a target gene.
+In contrast to standard correlation-based methods that identify co-expressed genes, the TLC method uses temporal ordering of expression to determine whether the time lag between two correlated genes is consistent with a causal interaction.
+We developed a novel method to identify the optimal time lag for each gene pair, and used a prior probability distribution of transcriptional time delays to score possible interactions.
+By combining the promoter scanning-based evidence with the evidence obtained by the time-lagged correlation analysis of the expression data, we were able to identify a network of statistically significant associations between 36 TF genes and 27 co-expressed clusters.
+Overall, 63 percent of differentially expressed genes are included in the network.
+The network provided insights into the temporal organization of the transcriptional response and into combinations of TFs that may act as key regulators of macrophage activation.
+Finally, the analysis identified a potential transcriptional regulator, TGIF1, which was not previously known to play a role in macrophage activation.
+As a targeted experimental validation of the inferred network, two transcriptional regulators, p50 and IRF1, were assayed for binding to cis-regulatory elements in LPS-stimulated macrophages using ChIP-on-chip, and were confirmed to bind the promoters of genes in four out of five predicted target clusters at significantly higher proportions than expected for a random set of TLR-responsive genes.

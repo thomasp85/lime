@@ -1,0 +1,31 @@
+### abstract ###
+using brunswik's  CITATION  lens model framework  hammond  CITATION  proposed interpersonal conflict theory to explain the nature  source  and resolution of disagreement or  cognitive conflict  between parties performing judgment tasks
+an early review by brehmer  CITATION  highlighted the potential of this approach in  for example  understanding the structure of cognitive conflicts  and the effect of task and person variables on judgment policy change and conflict resolution
+however  our bibliographic and content reviews from  NUMBER  to the present day demonstrate that research on cognitive conflict using the lens model has declined sharply  while research on  task conflict  has grown dramatically
+there has also been a shift to less theoretical precision and methodological rigor
+we discuss possible reasons for these developments  and suggest ways in which lens model research on cognitive conflict can be revitalized by borrowing from recent theoretical and methodological advances in the field of judgment and decision making
+### introduction ###
+it was during the cognitive revolution in psychology and the cold war period in political history when hammond  CITATION  proposed that conflicts between parties performing judgment tasks could be viewed as purely cognitive  thus making it unnecessary to examine the motivations and values of conflicting parties as social psychologists might do
+in interpersonal conflict ipc theory  hammond  CITATION  outlined how this cognitive conflict could be construed within brunswik's  CITATION  lens model framework  as well as the experimental methods that researchers could use to study the nature  source  and resolution of disagreement between parties performing judgment tasks
+briefly  cognitive conflict represents differences in how parties conceptualize the solution to a problem
+for instance  different parties may have different policies for solving a judgment problem in terms of the information they rely on
+inconsistency in how parties apply their judgment policies can also lead to disagreement
+thus  according to ipc theory  parties striving to make a joint judgment on the same task could conflict because they disagree in principle in that they have different policies for how to solve the problem and or in practice in that they are inconsistent in the application of their policies
+importantly  while cognitive conflict is different from conflict caused by motivational and value differences among parties  cognitive differences can evolve into motivational and value-laden conflicts
+under these circumstances  the underlying cognitive differences can be very difficult to detect and resolve
+an early review of research using ipc theory published in psychological bulletin by brehmer  CITATION  highlighted the potential of this approach in advancing our understanding of cognitive conflict in both laboratory and real world settings
+despite this  since that time  ipc theory appears to have featured little in the growing field of judgment and decision making jdm
+for example  in a historical review of theories in the field  goldstein and hogarth  CITATION  provide only a passing mention of ipc theory when considering developments in judgment research
+the need for conflict theories  including cognitive conflict  seems apparent in an era characterized by international terrorism where  amongst other things  parties disagree about the level of threat  and how to manage and minimize it  CITATION   and in an era characterized by a movement towards greater use of alternative dispute resolution
+in fact  today  a theory of cognitive conflict could benefit from recent theoretical and methodological advances in the field of jdm
+for instance  jdm researchers have shown that individuals are likely to use simple process models when performing judgment tasks  CITATION   and that non-cognitive factors such as emotions may affect how individuals make judgments  CITATION
+in addition  researchers have employed new tools such as virtual environments and computer simulations when studying judgment behavior  CITATION
+our goal is to evaluate the evolution of ipc theory from its inception to the present day
+specifically  we consider how research on cognitive conflict has developed in terms of its theoretical underpinnings and methodological stance  and we review the findings of empirical research on cognitive conflict
+our goal is modest in that we focus our efforts on cognitive conflict as it directly emerged from the ipc paradigm and related lens model framework
+a review of conflict theories and research more generally are not within the scope of the present paper
+the article is organized into three main parts
+first  we consider the emergence of ipc theory from  CITATION  to  CITATION  by outlining its roots in brunswikian psychology  the experimental methodology employed  and early research findings
+second  from  NUMBER  to the present day  we trace the evolution of ipc theory and cognitive conflict research by conducting bibliographic and content reviews of publications that cite central articles by hammond  NUMBER  and brehmer  NUMBER 
+finally  we discuss the future of ipc theory and cognitive conflict research by considering opportunities for theoretical advancement and methodological innovation offered currently in the field of jdm
+we hope these will inspire future researchers

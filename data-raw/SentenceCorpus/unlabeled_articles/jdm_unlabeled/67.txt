@@ -1,0 +1,39 @@
+### abstract ###
+research on forecasting is effectively limited to forecasts that are expressed with clarity  which is to say that the forecasted event must be sufficiently well-defined so that it can be clearly resolved whether or not the event occurred and forecasts certainties are expressed as quantitative probabilities
+when forecasts are expressed with clarity  then quantitative measures scoring rules  calibration  discrimination  etc
+can be used to measure forecast accuracy  which in turn can be used to measure the comparative accuracy of different forecasting methods
+unfortunately most real world forecasts are not expressed clearly
+this lack of clarity extends to both the description of the forecast event and to the use of vague language to express forecast certainty
+it is thus difficult to assess the accuracy of most real world forecasts  and consequently the accuracy the methods used to generate real world forecasts
+this paper addresses this deficiency by presenting an approach to measuring the accuracy of imprecise real world forecasts using the same quantitative metrics routinely used to measure the accuracy of well-defined forecasts
+to demonstrate applicability  the inferred probability method is applied to measure the accuracy of forecasts in fourteen documents examining complex political domains
+### introduction ###
+forecasting accuracy  and the determination of practices  methods and tools that improve accuracy  is a topic of substantial research and practical importance
+CITATION  when endeavoring to measure forecast accuracy  researchers generally require that the forecasted events be clearly described and that the degree of forecast certainty be expressed as quantitative probabilities
+in contrast to forecasting research  most published forecasts describe forecast events with considerable imprecision and use vague certainty expressions  CITATION
+this is particularly true of forecasts about complex international political events  which is a substantive domain of interest to us
+consider for example the statement from the stratfor forecasts for  NUMBER  for iran it's rather difficult to gauge what is meant by  fair chance 
+is that a  NUMBER  percent  chance  a  NUMBER  percent  chance  or perhaps an  NUMBER  percent  chance
+if the event occurs  it would be unclear if it should be judged as a mostly accurate or inaccurate forecast
+consider also the following statement from the stratfor iran  NUMBER  forecast in addition to the fact that different individuals vary widely in their interpretation of the word  likely   CITATION   the phrase  backing down  is itself hard to define
+if there is a negotiated settlement does that mean that iran  backed down   that the other parties  backed down   or that a settlement was found where everyone could claim success
+in such cases it is difficult to specify clear criteria a priori for determining whether or not the event occurred
+anecdotally  authors of forecasting documents have expressed to us vigorous arguments in favor of imprecise forecasts
+they believe that clarity requirements severely limit their ability to express what they intend to say
+for example  a phrase such as  backing down  succinctly describes an important element of a forecast event-namely that the individuals involved will be accepting an option that is less desirable than their expressed preference
+in addition many forecasters prefer verbal certainty expressions to quantitative uncertainties because they believe the later connotes artificial precision and misleads readers
+though there may be valid reasons for expressing forecasts imprecisely there is still a need to evaluate forecast accuracy
+research in expert political judgment  CITATION  would suggest that  lacking objective feedback on the accuracy of their forecasts  experts are unlikely to accurately determine when their forecasts were inaccurate
+in particular  given the hindsight memory bias  we would anticipate that forecasters will remember certainty statements such as  fair chance  as having meant a low probability when the event didn't occur and a high probability when the event did occur
+furthermore  without measuring the accuracy of real world forecasts it is difficult to compare the accuracy of different forecasting methods outside of artificial research settings-and unfortunately results from artificial research settings are widely ignored by practitioners
+the distinction between academic research and practice is well illustrated by the fourteen years of research with political analysts summarized in tetlock  CITATION
+every research effort described by tetlock involved constructing carefully defined forecasting questions and asking analysts to provide quantitative forecasts
+the forecasts that the analysts actually published were not examined
+in this paper we describe a method for measuring the accuracy of imprecise forecasts
+our objective is to add sufficient rigor to the evaluation of imprecise forecasts to enable the application of common metrics of forecast accuracy to forecasts that are actually published
+our approach incorporates two basic techniques  inferred probabilities and impartial ground truth judgments
+first we use inferred probabilities to impute quantitative probabilities from verbal expressions of certainty
+simply put  we ask multiple readers to assign quantitative probabilities based on their understanding of the written document  rather than their personal beliefs
+second we ask multiple ground truth raters  who do not see the original documents or inferred probabilities  to independently research and estimate whether or not a forecasted event has occurred
+in addition  as needed  we use inter rater agreement data to statistically adjust estimated ground truth frequencies
+below we present the details of our current instantiation of the inferred probability method

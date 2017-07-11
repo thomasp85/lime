@@ -1,0 +1,31 @@
+### abstract ###
+Protein identification using mass spectrometry is an indispensable computational tool in the life sciences.
+A dramatic increase in the use of proteomic strategies to understand the biology of living systems generates an ongoing need for more effective, efficient, and accurate computational methods for protein identification.
+A wide range of computational methods, each with various implementations, are available to complement different proteomic approaches.
+A solid knowledge of the range of algorithms available and, more critically, the accuracy and effectiveness of these techniques is essential to ensure as many of the proteins as possible, within any particular experiment, are correctly identified.
+Here, we undertake a systematic review of the currently available methods and algorithms for interpreting, managing, and analyzing biological data associated with protein identification.
+We summarize the advances in computational solutions as they have responded to corresponding advances in mass spectrometry hardware.
+The evolution of scoring algorithms and metrics for automated protein identification are also discussed with a focus on the relative performance of different techniques.
+We also consider the relative advantages and limitations of different techniques in particular biological contexts.
+Finally, we present our perspective on future developments in the area of computational protein identification by considering the most recent literature on new and promising approaches to the problem as well as identifying areas yet to be explored and the potential application of methods from other areas of computational biology.
+### introduction ###
+Proteomics is a relatively new but rapidly maturing discipline within life science research for understanding the biology of an organism via the large-scale study of the proteins expressed by the organism.
+There is already a vast body of literature applying proteomics in many different areas of clinical and biochemical interest and in the study of the pathogenesis, development, prevention, and treatment of a wide range of diseases CITATION .
+Protein identification is a key and essential step in the field of proteomics.
+The examination of patterns of protein expression alone can, of course, lead to important discoveries, including, for example, classification of samples on the basis of a particular pattern.
+However, without identifying the proteins known to be critically involved in the system under investigation, it is not possible to delve into the biological explanation for these patterns or to develop hypotheses as to the underlying biology of the system of interest.
+Thus, while protein identification may often be overlooked or taken for granted, it remains the key initial step in elucidating the biology of an organism by studying its protein expression.
+Our ability to maximize the benefit of proteomics to life science research is often dependent on our ability to accurately, quickly, and completely identify the full complement of proteins found in our samples of interest.
+The exponential growth in DNA sequence and protein databases, coupled with a similar growth in machine throughput, and the critical nature of protein identification to the proteomics process, has seen an explosion in interest in protein identification.
+For example, both the number and proportion of National Center for Biotechnology articles containing the phrase protein identification has seen exponential growth in the past decade.
+Mass spectrometry has emerged as the primary tool for protein identification and is the cornerstone of proteomics.
+While it was first used almost a century ago CITATION, the use of mass spectrometry for biological applications dates from the 1950s CITATION, and its use in peptide identification dates from the 1960s CITATION.
+Accuracy, speed, and sample weight range have seen improvements spanning many orders of magnitude in recent decades CITATION, making mass spectrometry one of the greatest scientific success stories of the twentieth century.
+No fewer than five Nobel laureates have been awarded the distinction for their pioneering work in mass spectrometry.
+The speed and accuracy of these machines make them amenable to the high-throughput applications required not just in proteomics, but also in many other areas of the life sciences, resulting in rapid developments in hardware, software, and data management in the last decade.
+When we consider the use of mass spectrometers for protein identification, these rapid developments have lead to a bewildering number of instrument configurations, analysis algorithms, and data formats.
+Mass spectrometry is often critically important in a number of research pipelines.
+As such, biologists, and computational biologists especially, are often expected to meaningfully manage and interpret mass spectrometry data, requiring an understanding of the most up-to-date methods available to maximize true protein identifications and minimize false identifications for their particular application.
+This insight into protein identification algorithms is important because often the results may be ambiguous, and the biases chosen to make the problem computationally tractable can radically affect the result.
+Despite the improvements in mass spectrometry hardware and the reliability of modern protein identification software, several studies involving a range of mass spectrometers, datasets, and identification algorithms have shown in each case that fewer than half of the proteins in a complex proteomic sample can be identified CITATION CITATION.
+Given the critical role of protein identification in proteomic analysis, this review aims to explore this apparent upper limit on the effectiveness of current protein identification algorithms and to give relevant background information and practical suggestions to computational biologists and life scientists so the best possible protein identifications can be realized.

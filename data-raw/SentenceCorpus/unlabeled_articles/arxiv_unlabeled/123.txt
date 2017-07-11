@@ -1,0 +1,10 @@
+### abstract ###
+We prove existence and uniqueness of the minimizer for the average geodesic distance to the points of a geodesically convex set on the sphere
+This implies a corresponding existence and uniqueness result for an optimal algorithm for halfspace learning, when data and target functions are drawn from the uniform distribution
+### introduction ###
+Let  SYMBOL  be the unit sphere in  SYMBOL  with normalized uniform measure  SYMBOL  and geodesic metric  SYMBOL , and let  SYMBOL  be a proper convex cone with nonempty interior in  SYMBOL
+We will show that the function  SYMBOL  defined by%  SYMBOL % attains its global minimum at a unique point on  SYMBOL
+While existence of the minimum is straightforward, uniqueness seems surprisingly difficult to prove
+A similar problem has been considered in  CITATION  and  CITATION
+In these works the intention is to define a centroid, so integration is replaced by finite summation and  SYMBOL  replaced by  SYMBOL
+Since the problem is rather obvious, it appears likely that a proof of the above result exists somewhere in the literature and we just haven't been able to find it

@@ -1,0 +1,46 @@
+### abstract ###
+Pavlovian predictions of future aversive outcomes lead to behavioral inhibition, suppression, and withdrawal.
+There is considerable evidence for the involvement of serotonin in both the learning of these predictions and the inhibitory consequences that ensue, although less for a causal relationship between the two.
+In the context of a highly simplified model of chains of affectively charged thoughts, we interpret the combined effects of serotonin in terms of pruning a tree of possible decisions,.
+We show how a drop in behavioral inhibition, putatively resulting from an experimentally or psychiatrically influenced drop in serotonin, could result in unexpectedly large negative prediction errors and a significant aversive shift in reinforcement statistics.
+We suggest an interpretation of this finding that helps dissolve the apparent contradiction between the fact that inhibition of serotonin reuptake is the first-line treatment of depression, although serotonin itself is most strongly linked with aversive rather than appetitive outcomes and predictions.
+### introduction ###
+Serotonin is a neuromodulator that appears to play a critical role in a wealth of psychiatric conditions, including depression, anxiety, panic, and obsessive compulsions.
+However, despite the importance of serotonergic pharmacotherapies, notably selective serotonin reuptake inhibitors, the roles that serotonin plays in normal and abnormal function are still mysterious.
+We start from three particular findings.
+First, 5-HT is involved in the prediction of aversive events, possibly as a form of opponent CITATION CITATION to dopamine CITATION CITATION.
+Second, 5-HT is involved in behavioral inhibition CITATION CITATION, preventing or curtailing ongoing actions in light of predictions of aversive outcomes.
+The third finding is the collection of psychopharmacological data implicating 5-HT in animal models of depression and anxiety CITATION CITATION, together with the fact that depleting 5-HT in human subjects who have recovered from depression, can reinstate an acute, at times fulminant, re-experience of subjective symptoms of the disease, as assessed by various rating scales CITATION CITATION.
+Furthermore, while SSRIs are used in the treatment of depression, genetically induced, constitutive decreases in the efficiency of 5-HT reuptake are a risk factor for depression CITATION CITATION.
+These findings are hard to connect: the second fact seems orthogonal to the first and third, which are themselves in apparent contradiction.
+If 5-HT is really involved in predicting aversive outcomes, then depleting it should surely have positive rather than negative affective consequences.
+We suggest that the missing link comes from considering the interactions between Pavlovian predictions and ongoing action selection.
+The interaction is seen in conditioned suppression CITATION, a standard workhorse test for aversive predictions.
+Animals are trained to emit appetitive instrumental actions, and to associate a light with a shock.
+Presentation of the light during instrumental performance reduces the rate at which animals emit those responses.
+Neither the theoretical nor the neurobiological status of this interaction is completely resolved, though there is some evidence of the involvement of 5-HT in the nucleus accumbens in its realization CITATION CITATION .
+Here, we treat a subset of the inhibitory processes associated with Gray's behavioral inhibition system CITATION, CITATION, CITATION, CITATION in terms of what might be called a preparatory Pavlovian response.
+Consummatory Pavlovian responses are pre-programmed reactions to the presence of affectively significant outcomes such as food, water, or threats.
+Preparatory Pavlovian responses are similarly pre-programmed responses to predictions of those outcomes.
+Even though the predictions are learned, the responses are not, and may therefore be behaviorally inappropriate in certain circumstances CITATION, CITATION.
+For our purposes, and as long noted by Deakin and Graeff CITATION, the most important preparatory Pavlovian response to a prediction of a threat CITATION is inhibition, in the form of withdrawal or disengagement.
+This explicitly links the first two findings discussed above, as the inhibition is directly associated with aversive predictions.
+To explore the consequences of reflexive, direct inhibition of action for learning in affective settings, together with the repercussions when 5-HT is compromised, we built a highly simplified model that sought to isolate these effects from more general learning effects.
+More specifically, we built a model of trains of thoughts.
+In our treatment, we considered thoughts as actions that lead from one belief state to the next.
+Trains of thought gained value through their connections with a group of terminal states that were preassigned either positive or negative affective values.
+5-HT directly inhibited chains of thought predicted to lead toward negative terminal states.
+Our model can be seen in terms of 5-HT's pruning of a decision tree of outcome states and choices CITATION, CITATION .
+We argue that the results on tryptophan depletion above now emerge when considering the consequences of this reflexive behavioral inhibition on ongoing learning about the world, and on subsequent action choice and predictions.
+The most notable effect in the model is a critical bias toward optimistic valuation.
+That is, states and actions with potentially negative consequences are under-explored and incorrectly -valued because of the reflexive inhibition.
+When inhibition fails, though, which is the last of the three issues mentioned above, there are two adverse consequences.
+First, the inhibition is no longer a crutch for instrumental action choice, so subjects have to learn to avoid potentially bad situations rather than being able to rely on this reflexive mechanism.
+Second, due to a mismatch between policy and value function, characteristic inconsistencies between the predicted and actual values arise, with the actual values encountered being more negative than predicted, though also actually more realistic.
+This mismatch between policy and value function also leads to an overall reduction in rewards obtained.
+Boosting 5-HT in the model again restores the status quo.
+Of course, this highly simplified model cannot possibly, by itself, accommodate all the diverse and confusing roles of 5-HT.
+Nevertheless, it replicates some prominent behavioral and pharmacological facets of depression and anxiety in humans and animal models, which we return to in the Discussion.
+The next section defines the model of trains of thought more formally.
+The Results section considers normal learning, and the consequences of impairments to 5-HT processing.
+We save for the Discussion a broader discussion of data and theories pertaining to 5-HT.

@@ -1,0 +1,48 @@
+### abstract ###
+We propose a randomized algorithm for   training Support vector machines(SVMs) on large datasets
+By using ideas from Random projections we show that  the combinatorial dimension of SVMs is  SYMBOL  with high probability
+This estimate of combinatorial dimension is used  to derive an iterative algorithm, called RandSVM,  which at each step calls an existing solver to train SVMs on  a randomly chosen subset of size  SYMBOL
+The algorithm has probabilistic guarantees and is  capable of training SVMs  with Kernels for both classification and regression problems
+Experiments done on synthetic and real life data sets demonstrate that the algorithm scales up  existing SVM learners, without loss of accuracy \keywords{Support Vector Machines,  Randomized Algorithms, Random Projections} \subclass{68W20 90C25 90C06 90C90 }
+### introduction ###
+Consider a training data set  SYMBOL  where  SYMBOL  are data points and  SYMBOL  are labels
+The problem of learning a linear classifier,  SYMBOL ,  where  SYMBOL  or a linear function  SYMBOL  when  SYMBOL  is a scalar  can be understood as estimating  SYMBOL  from  SYMBOL
+Over the years Support Vector Machines(SVMs) have emerged as powerful tools for estimating such functions
+In this paper we concentrate on developing  randomized algorithms for learning SVMs on large datasets
+For a  detailed review of SVM classification and SVM regression please see  CITATION
+To develop notation we briefly discuss the problem of training linear classifiers
+The SVM formulation for linearly separable datasets is given by  CITATION    SYMBOL }  where  SYMBOL , is the euclidean norm of  SYMBOL
+The formulation has very interesting geometric underpinnings  ~ CITATION
+It can be understood as computing the distance between convex  hulls of the sets  SYMBOL  and  SYMBOL
+For linearly non-separable datasets the following formulation \\     C-SVM-1:  \\  SYMBOL } which will be called  SYMBOL , again due to  CITATION , can be used
+This  formulation do not have an elegant geometric interpretation like the separable  case,  but one can consider C-SVMs as computing the distance between two  reduced convex hulls ~ CITATION
+Both the formulations are instances of  Abstract Optimization Problem(AOP) ~ CITATION
+An AOP is defined as follows:  Every AOP has a  combinatorial dimension associated  with it; the combinatorial dimension captures the notion of number of free variables for that AOP
+An AOP can be solved by a randomized algorithm by selecting subsets of size greater than the combinatorial dimension of the problem~ CITATION
+We wish to exploit this property  of AOPs to design randomized algorithms for SVMs
+The idea is to develop an iterative algorithm where in each step one needs  to solve a SVM formulation on a small subset of the training data
+Crucial  to this idea is the size of the subset which is tied to the combinatorial  dimension of the SVM formulation
+To this end note that at optimality  SYMBOL  is given by  SYMBOL } for both the separable and non-separable case
+Using the  SYMBOL  variables one can define the set of Support vectors~(SVs),  SYMBOL } which defines  SYMBOL
+The set  SYMBOL  may not be unique, though  SYMBOL  is
+The combinatorial dimension of SVMs is given by the minimum number of SVs   required to define  SYMBOL
+More formally  SYMBOL } where  SYMBOL  is the cardinality of the set  SYMBOL
+The parameter  SYMBOL  does not change with number of examples  SYMBOL , and is often much less than  SYMBOL
+Apriori the value of  SYMBOL  is not known, but for linearly separable classification problems the following holds:  SYMBOL
+This follows from the observation that  it computes the distance between 2 non-overlapping convex hulls~ CITATION
+When the problem is not linearly separable, the reduced convex hull interpretation leads to a very crude upper bound, which is much larger than  SYMBOL
+The idea of iterating over randomly sampled subsets of size greater than   SYMBOL , for training SVMs was first explored by  ~ CITATION , and  the resulting algorithm was called RandSVM
+The  RandSVM procedure iterates over subsets of size proportional to  SYMBOL  , as shown in Algorithm~
+However as the authors noted that RandSVM is not practical because of the following reasons
+For linear classifiers the sample size is too large in case of high dimensional data sets
+For non-linear SVMs ~ CITATION   the dimension of feature space is usually unknown when using kernels
+Even in this case one can obtain a very crude  upper-bound on  SYMBOL  by the reduced convex hull approach but  is not really useful as the number obtained is very large \end{algorithm}  This work overcomes the above problems using ideas from random projections~ CITATION  and randomized algorithms~ CITATION
+As mentioned by the authors of RandSVM, the biggest bottleneck in their algorithm is the value of  SYMBOL  as it is too large
+The main contribution of this work is, using ideas from random projections, the conjecture that if RandSVM is solved using  SYMBOL  equal to  SYMBOL , then the solution obtained is close to optimal with high probability(Theorem~, particularly for linearly separable and almost separable data sets
+Almost separable data sets are those which become linearly separable when a small number of properly chosen data points are deleted from them
+The second contribution is an algorithm which, using ideas from randomized algorithms for Linear Programming(LP), solves the SVM problem by using samples of size linear in  SYMBOL
+This work also shows that the theory can be applied to non-linear kernels
+The formulation naturally applies to regression problems
+The paper is organized as follows: Section~ introduces the previous work, Section~ presents the improved algorithm for classification for almost linearly  separable data
+Section~ presents the improved algorithm for the  SYMBOL tube regression formulation
+We present our results  and conclusions in Section~ and ~

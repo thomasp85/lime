@@ -1,0 +1,32 @@
+### abstract ###
+MISC Numerous psychophysical experiments found that humans preferably rely on a narrow band of spatial frequencies for recognition of face identity.
+MISC A recently conducted theoretical study by the author suggests that this frequency preference reflects an adaptation of the brain's face processing machinery to this specific stimulus class.
+AIMX The purpose of the present study is to examine this property in greater detail and to specifically elucidate the implication of internal face features.
+OWNX To this end, I parameterized Gabor filters to match the spatial receptive field of contrast sensitive neurons in the primary visual cortex.
+OWNX Filter responses to a large number of face images were computed, aligned for internal face features, and response-equalized.
+OWNX The results demonstrate that the frequency preference is caused by internal face features.
+OWNX Thus, the psychophysically observed human frequency bias for face processing seems to be specifically caused by the intrinsic spatial frequency content of internal face features.
+### introduction ###
+MISC In the brain, the structure of neuronal circuits for processing sensory information matches the statistical properties of the sensory signals CITATION.
+MISC Taking advantage of these statistical regularities contributes to an optimal encoding of sensory signals in neuronal responses, in the sense that the code conveys the highest information with respect to specific constraints CITATION CITATION.
+OWNX Among the various constraints which were formulated we find, for example, keeping metabolic energy consumption as low as possible CITATION CITATION, or keeping total wiring length between processing units at a minimum CITATION, or maximizing the suppression of spatio-temporal redundancy in the input signal CITATION, CITATION CITATION .
+MISC As for visual stimuli, natural images reveal a conspicuous statistical regularity that comes as an approximately linear decrease of their amplitude spectra as a function of spatial frequency CITATION CITATION.
+MISC This means that pairs of luminance values are strongly correlated CITATION, and this property could be exploited for gain controlling of visual neurons.
+MISC Then, visual neurons would have equal sensitivities or response amplitudes independent of their spatial frequency preference CITATION.
+MISC According to this response equalization hypothesis, gain should thus be incremented with increasing spatial frequency, such that the distribution of response amplitudes of frequency-tuned neurons to a typical natural image is flat.
+MISC An argument in favor of employing response equalization is that it would lead to an improvement of information transmission from one neuronal stage to another, because the output of one stage would match the limited dynamic range of a second one CITATION .
+BASE The present article builds upon previously reported results for whitened amplitude spectra of face images CITATION : the whitened spectra reveal a spatial frequency maximum at 10 15 cycles per face, but only if external face features are suppressed.
+MISC The predicted frequency maximum nevertheless agrees well with numerous psychophysical experiments, which found that face identity is preferably processed in a narrow band of spatial frequencies from 8 to 16 cycles per face CITATION CITATION .
+MISC Despite of it all, the results presented in CITATION indicate that the maxima in the amplitude spectra are caused by the compound effect of horizontally oriented internal face features.
+MISC Quantitatively, the maxima thus occur in units of cycles per face height, whereas most psychophysical studies instead measure their results in terms of cycles per face width.
+MISC Furthermore, although a clear enhancement of horizontal amplitudes could be observed in the spectra, horizontal amplitudes showed a somewhat noisy dependence on spatial frequency.
+MISC Both effects are a consequence of that face features were not considered individually, what causes a mixing of the spatial frequency content of individual face features in the spectra.
+MISC The mixing leads to averaging-out effects such that any possible enhancement of spectral amplitudes at other than the horizontal orientation goes unnoticed, but also may cause interference effects which lead to the mentioned noisy dependence of amplitudes on spatial frequency.
+AIMX The present study addresses the two issues by means of an extensive analysis of face images by means of Gabor filters.
+OWNX The filters were thereby parameterized to match the spatial receptive field of band-limited, oriented and contrast sensitive neurons in the primary visual cortex CITATION CITATION.
+OWNX Great care has been taken to guarantee the correct alignment of filter responses with respect to the position of internal face features prior to their averaging.
+MISC Doing so permits to precisely elucidate how the frequency dependence of Gabor responses is related to each of the four internal face features.
+OWNX The resulting graphs of whitened Gabor amplitudes versus spatial frequency are smooth and reveal distinct maxima at nearly all orientations.
+OWNX The most stable maxima, however, are observed at horizontal feature orientations in the first place, but also at vertical orientations.
+OWNX This observation holds true for all of the internal face features.
+OWNX The present study therefore shows how the individual internal face features contribute to the psychophysically observed frequency preference, and proposes concrete mechanisms of how higher amplitudes of whitened cell responses at an early level could possibly lead to the psychophysically measured effects.

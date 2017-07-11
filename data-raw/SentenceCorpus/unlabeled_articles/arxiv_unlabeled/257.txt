@@ -1,0 +1,27 @@
+### abstract ###
+We present \searn, an algorithm for integrating \textsc{sear}ch and l\textsc{earn}ing to solve complex structured prediction problems such as those that occur in natural language, speech, computational biology, and vision \searn\ is a meta-algorithm that transforms these complex problems into simple classification problems to which any binary classifier may be applied
+Unlike current algorithms for structured learning that require  decomposition  of both the loss function and the feature functions over the predicted structure, \searn\ is able to learn prediction functions for  any  loss function and  any  class of features
+Moreover, \searn\ comes with a strong, natural theoretical guarantee: good performance on the derived classification problems implies good performance on the structured prediction problem
+### introduction ###
+Prediction is the task of learning a function  SYMBOL  that maps inputs  SYMBOL  in an input domain  SYMBOL  to outputs  SYMBOL  in an output domain  SYMBOL
+Standard algorithms---support vector machines, decision trees, neural networks, etc
+---focus on ``simple'' output domains such as  SYMBOL  (in the case of binary classification) or  SYMBOL  (in the case of univariate regression)
+We are interested in problems for which elements  SYMBOL  have complex internal structure
+The simplest and best studied such output domain is that of labeled sequences
+However, we are interested in even more complex domains, such as the space of English sentences (for instance in a machine translation application), the space of short documents (perhaps in an automatic document summarization application), or the space of possible assignments of elements in a database (in an information extraction/data mining application)
+The structured complexity of features and loss functions in these problems significantly exceeds that of sequence labeling problems
+From a high level, there are four dimensions along which structured prediction algorithms vary: structure (varieties of structure for which efficient learning is possible), loss (different loss functions for which learning is possible), features (generality of feature functions for which learning is possible) and data (ability of algorithm to cope with imperfect data sources such as missing data, etc )
+An in-depth discussion of alternative structured prediction algorithms is given in Section~
+However, to give a flavor, the popular conditional random field algorithm  CITATION  is viewed along these dimensions as follows
+Structure: inference for a CRF is tractable for any graphical model with bounded tree width; Loss: the CRF typically optimizes a log-loss approximation to 0/1 loss over the entire structure; Features: any feature of the input is possible but only output features that obey the graphical model structure are allowed; Data: EM can cope with hidden variables
+We prefer a structured prediction algorithm that is not limited to models with bounded treewidth, is applicable to any loss function, can handle arbitrary features and can cope with imperfect data
+Somewhat surprisingly, \searn\ meets nearly all of these requirements by transforming structured prediction problems into binary prediction problems to which a vanilla binary classifier can be applied \searn\ comes with a strong theoretical guarantee: good binary classification performance implies good structured prediction performance
+Simple applications of \searn\ to standard structured prediction problems yield tractable state-of-the-art performance
+Moreover, we can apply \searn\ to more complex, non-standard structured prediction problems and achieve excellent empirical performance
+This paper has the following outline:   Introduction
+Core Definitions
+The \searn\ Algorithm
+Theoretical Analysis
+A Comparison to Alternative Techniques
+Experimental results
+Discussion

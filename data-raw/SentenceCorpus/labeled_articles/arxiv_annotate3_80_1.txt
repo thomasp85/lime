@@ -1,0 +1,15 @@
+### abstract ###
+MISC	defensive forecasting is a method of transforming laws of probability  stated in game theoretic terms as strategies for sceptic  into forecasting algorithms
+MISC	there are two known varieties of defensive forecasting    continuous    in which sceptic s moves are assumed to depend on the forecasts in a  semi continuous manner and which produces deterministic forecasts  and   randomized    in which the dependence of sceptic s moves on the forecasts is arbitrary and forecaster s moves are allowed to be randomized
+AIMX	this note shows that the randomized variety can be obtained from the continuous variety by smearing sceptic s moves to make them continuous  
+CONT	textbf new as compared to version  NUMBER    NUMBER  august  NUMBER   of this report   the assumption of version  NUMBER  that the outcome space   is finite is relaxed  and now it is only assumed to be compact
+CONT	in the case where   is finite  it is shown that forecaster can choose his randomized forecasts concentrated on a finite set of cardinality at most
+### introduction ###
+MISC	the continuous variety of defensive forecasting was essentially introduced by levin  CITATION   but was later rediscovered by kakade and foster  CITATION  and takemura  et al    CITATION
+CONT	the randomized variety was introduced  in the case of von mises s version of the game theoretic approach to probability  by foster and vohra  CITATION  and further developed by  among others  sandroni  et al    CITATION   these papers  however  were only concerned with asymptotic calibration
+CONT	non asymptotic versions of the randomized variety were proposed by sandroni  CITATION   based on standard measure theoretic probability  and vovk and shafer  CITATION   based on game theoretic probability 
+BASE	kakade and foster  CITATION  noticed that some calibration results require very little randomization  this will be an important aspect of our theorem  
+AIMX	this note states two simple results about defensive forecasting  theorem  about the continuous variety and theorem  about the randomized variety
+OWNX	the proof of theorem  is obtained from the proof of theorem  by blurring sceptic s moves
+OWNX	in our informal discussions we will be assuming that the set   of all possible outcomes is finite  although we will try to make mathematical statements as general as possible
+OWNX	the reader who is only interested in the main ideas might choose to specialize theorems  and  and their proofs to the case of finite

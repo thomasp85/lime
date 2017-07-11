@@ -1,0 +1,43 @@
+### abstract ###
+In many fields where human understanding plays a crucial role, such as bioprocesses, the capacity of extracting knowledge from data is of critical importance
+Within this framework, fuzzy learning methods, if properly used, can greatly help human experts
+Amongst these methods, the aim of orthogonal transformations, which have been proven to be mathematically robust, is to build rules from a set of training data and to select the most important ones by linear regression or rank revealing techniques
+The OLS algorithm is a good representative of those methods
+However, it was originally designed so that it only cared about numerical performance
+Thus, we propose some modifications of the original method to take interpretability into account
+After recalling the original algorithm, this paper presents the changes made to the original method, then discusses some results obtained from benchmark problems
+Finally, the algorithm is applied to a real-world fault detection depollution problem
+### introduction ###
+Fuzzy learning methods, unlike ``black-box'' models such as neural networks, are likely to give interpretable results, provided that some constraints are respected
+While this ability is somewhat meaningless in some applications such as stock market prediction, it becomes essential when human experts want to gain insight into a complex problem (e g industrial  CITATION  and biological  CITATION  processes, climate evolution  CITATION )
+These considerations explain why interpretability issues in Fuzzy Modeling have become an important research topic, as shown in recent literature  CITATION
+Even so, the meaning given to interpretability in Fuzzy Modeling is not always the same
+By interpretability, some authors mean mathematical interpretability, as in  CITATION  where a structure is developed in Takagi-Sugeno systems, that leads to the interpretation of every consequent polynomial as a Taylor series expansion about the rule center
+Others mean linguistic interpretability, as in  CITATION ,  CITATION
+The present paper is focused on the latter approach
+Commonly admitted requirements for interpretability are a small number of consistent membership functions and a reasonable number of rules in the fuzzy system
+Orthogonal transformation methods provide a set of tools for building rules from data and selecting a limited subset of rules
+Those methods were originally designed for linear optimization, but subject to some conditions they can be used in fuzzy models
+For instance, a zero order Takagi Sugeno model can be written as a set of r fuzzy rules, the  SYMBOL  rule being:   SYMBOL }  where  SYMBOL  are the fuzzy sets associated to the  SYMBOL  variables for that given rule, and  SYMBOL  is the corresponding crisp rule conclusion
+Let  SYMBOL  be  SYMBOL  input-output pairs of a data set, where  SYMBOL  and  SYMBOL
+For the  SYMBOL  pair, the above Takagi Sugeno model output is calculated as follows:  SYMBOL } In equation ,  SYMBOL  is the conjunction operator used to combine elements in the rule premise,  SYMBOL  represents, within the  SYMBOL  rule, the membership function value for  SYMBOL
+Let us introduce the rule firing strength  SYMBOL
+Thus equation  can be rewritten as:  SYMBOL }  Once the fuzzy partitions have been set, and provided a given data set, the  SYMBOL  can be computed for all  SYMBOL  in the data set
+Then equation  allows to reformulate the fuzzy model as a linear regression problem, written in matrix form as:  SYMBOL
+In that matrix form, y is the sample output vector, P is the firing strength matrix,  SYMBOL  is the rule consequent vector and E is an error term
+Orthogonal transformation methods can then be used to determine the  SYMBOL  to be kept, and to assign them optimal values in order to design a zero order Takagi Sugeno model from the data set
+A thorough review of the use of orthogonal transformation methods (SVD, QR, OLS) to select fuzzy rules  can be found in  CITATION
+They can be divided into two main families: the methods that select rules using the  SYMBOL  matrix decomposition only, and others that also use the output  SYMBOL  to do a best fit
+The first family of methods (rank revealing techniques) is particularly interesting when the input fuzzy partitions include redundant or quasi redundant fuzzy sets
+The orthogonal least squares (OLS) technique belongs to the second family and allows a rule selection based on the rule respective contribution to the output inertia or variance
+With respect to this criterion, it gives a good summary of the system to be modeled, which explains why it has been widely used in Statistics, and also why it is particularly suited for rule induction, as shown for instance in  CITATION
+The aim of the present paper is to establish, by using the OLS method as an example, that orthogonal transformation results can be made interpretable, without suffering too much loss of accuracy
+This is achieved by building interpretable fuzzy partitions  and by reducing the number of rule conclusions
+This turns orthogonal transformations into useful tools for modeling regression problems and extracting knowledge from data
+Thus they are worth a careful study as there are few available techniques for achieving this double objective, contrary to knowledge induction in classification problems
+In section , we recall how the original OLS works
+Section  introduces the learning criteria that will be used in our modified OLS algorithm
+Section  presents the modifications necessary to respect the interpretability constraints
+In the next section, the modified algorithm is applied to benchmark problems, compared to the original one and to reference results found in the literature
+A real-world application is presented and analyzed in section
+Finally we give some conclusions and perspectives for future work

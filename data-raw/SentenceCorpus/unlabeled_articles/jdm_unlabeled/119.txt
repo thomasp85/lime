@@ -1,0 +1,59 @@
+### abstract ###
+magical beliefs about contagion via contact  CITATION  may emerge when people overgeneralize real-world mechanisms of contamination beyond their appropriate boundaries  CITATION
+do people similarly overextend knowledge of airborne contamination mechanisms
+previous work has shown that very young children believe merely being close to a contamination source can contaminate an item  CITATION   we asked whether this same hyper-avoidant intuition is also reflected in adults' judgments
+in two studies  we measured adults' ratings of the desirability of an object that had made contact with a source of contamination  an object nearby that had made no contact with the contaminant  and an object far away that had also made no contact
+adults showed a clear proximity effect  wherein objects near the contamination source were perceived to be less desirable than those far away  even though a separate group of adults unanimously acknowledged that contaminants could not possibly have made contact with either the nearby or far-away object study  NUMBER 
+the proximity effect also remained robust when a third group of adults was explicitly told that no contaminating particles had made contact with the objects at any time study  NUMBER 
+we discuss implications of our findings for extending the scope of magical contagion effects beyond the contact principle  for understanding the persistence of intuitive theories despite broad acceptance of science-based theories  and for constraining interpretations of the developmental work on proximity beliefs
+### introduction ###
+people often resist reconciling their intuitive beliefs about the world with more recently learned theories uncovered by science
+for example  people may intuitively cling to the belief that catching a cold is directly caused by exposure to cold temperatures
+although scientific research has revealed alternative mechanisms e g   rhinovirus transmission that have come to be broadly accepted by the lay public  people may nonetheless behave in accordance with their initial belief
+from a real-world perspective  our intuitive theories are critical to examine because although they can often be irrational and unsupported by science  they can still strongly influence our behaviors  CITATION
+for instance  people's excessive avoidance of aids patients  despite explicit knowledge that hiv cannot be transmitted via casual contact  is partially fueled by non-scientific  intuitive theories of contamination  CITATION
+in general  such irrational or magical beliefs may emerge when people's core intuitive knowledge and assumptions about major domains  CITATION  are inappropriately overgeneralized to other domains or situations  CITATION
+for example  beliefs about contamination that are correct within the biological domain can be overextended to the psychological domain  yielding behaviors consistent with the belief that a socially disliked person can somehow transmit undesirable properties onto objects he or she touches  CITATION
+perhaps the most well-known of such overextensions of domain knowledge is the magical contagion effect in adults  wherein people permanently reject objects that had come into even brief  innocuous contact with an aversive source  CITATION
+for example  adults rejected a thoroughly washed sweater worn by a homeless person  CITATION  and juice touched by a sterilized cockroach  CITATION
+in these instances  there is no real danger of contamination  CITATION   yet even when any physical justification for rejection is removed e g   via washing or sterilization  people continue to reject the contacted object
+in studies such as these  rozin and colleagues demonstrated modern adults' adherence to several key features of the anthropologically and historically documented magical law of contagion  CITATION   which fundamentally states that objects  once in contact are always in contact
+  first  people behave as though physical contact is critical for undesirable properties to be transmitted  second  the contagion is characterized by dose insensitivity  such that even the briefest and most negligible contact is believed to transmit a substantial amount of undesirable properties that can then be transmitted on to other objects  third  the contagion is characterized by relative permanence in that it is believed to persist for a long time after the contact has ceased and is impervious to washing or sterilization  CITATION
+rozin and colleagues thereby clearly argued  and showed  that contact is the central characteristic of the magical contagion effect  CITATION
+in the current studies  we asked whether adults also adhere to magical beliefs about contamination from nearby sources even in the complete absence of contact the proximity effect  henceforth
+given the absence of contact  the proximity effect is conceptually distinct from the magical law of contagion  once in contact  always in contact 
+in theory  the existence of a proximity effect is highly plausible if the classic magical contagion effect is driven by an overgeneralization of real-world contamination mechanisms  as previously argued  CITATION
+the proximity effect  if obtained  could readily be construed as an overextension of known mechanisms for airborne contamination to situations in which it is clearly impossible
+there is some prior evidence that very young children behave as though an item is contaminated just by being near a contaminant  CITATION
+in one developmental study  for example  springer and belk  CITATION  told children one of several stories about a boy who drank a glass of juice
+in their  physical contact  story  a bug first fell into the juice and was removed  in their  proximity  story  the bug was near the juice but never made contact with it
+most  NUMBER - NUMBER -year-olds in their study rejected the juice only in the physical contact story
+in contrast  a significant portion of the  NUMBER - NUMBER -year-olds in their study also rejected the juice in the proximity story  demonstrating the proximity effect
+given this apparent developmental shift between age groups in showing the proximity effect  researchers have generally attributed the effect to insufficient knowledge and magical thinking in very young children  suggesting that it may reflect ignorance of real-world mechanisms of contamination  CITATION
+indeed  there has been little or no evidence to suggest otherwise  as experiments on the proximity effect have rarely been attempted with adults  who presumably know the correct mechanisms of contamination
+if even the most minimal contact with the source was clearly and completely eliminated  would adults still behave as though contamination occurs
+whether adults show such an overextension of knowledge about airborne contamination is an open question
+one possibility is that by adulthood  such naive  radically inaccurate theories of contamination have been edited or replaced by more scientifically grounded theories
+alternatively  such intuitions may run deeply and persistently  and only be overridden in specific  learned cases such as bug-and-juice scenarios
+for example  older children and adults may have repeatedly encountered bug-and-juice scenarios in real life  and have explicitly learned to accept juice that is proximal to a contaminant  despite their intuitions
+in our study  we used scenarios that even adults would not encounter frequently  thereby increasing our ability to measure their intuitive  unpracticed responses
+previously  only toyoma  CITATION  reported preliminary evidence for a proximity effect in both children and adults  using verbally described scenarios in which a child came upon a glass and found that it had a contaminant e g   a roach either inside or next to the glass
+however  in that study  it was very ambiguous as to whether contact with the contaminant had ever occurred before the child's encounter with them e g   a live roach could have crawled anywhere prior to that moment  making it perfectly reasonable to reject the glass
+this is a critical problem  given that work on the dose insensitivity principle  CITATION  has repeatedly shown that even the briefest and tiniest point of contact is still treated as contact  following the magical law of contagion
+therefore  it remains unknown whether adults would show a true proximity effect  such that they reject an item while believing that its contamination was physically impossible
+similarly  studies using  chain of contagion  tasks cannot be construed as definitive tests of the proximity effect
+in such tasks  a clean pencil is touched to a contaminant  a second clean pencil is then touched to the first pencil  and so on for a total of  NUMBER  pencils  with contamination judgments made for each pencil in the chain  CITATION
+these studies showed that adults' judgments of contamination decrease moving down the chain  and never come close to zero
+however  in this paradigm  contact clearly occurred at each point in the chain
+therefore  contamination beliefs about the second pencil can be explained in that the second pencil made physical contact with the now-contaminated first pencil  which  by the magical law of contagion  allowed the first pencil to transmit the contagion
+adults' judgments in this task thereby demonstrated adherence to the magical law of contagion and its principles e g   physical contact  dose insensitivity  and permanence  but the task does not constitute a clear test of the proximity effect
+finally  the well-known study wherein people rejected fudge shaped to look like feces  CITATION  cannot reasonably be reinterpreted as having shown the proximity effect
+although no contact with a contaminant was involved in that study paradigm  neither was the effect of proximity to a contaminant tested
+that is  in that study  there was no contaminant to which an object could be proximal
+rozin et al CITATION  instead designed the fudge-resembling-feces study as a test of a conceptually distinct  anthropologically documented law of sympathetic magic known as the law of similarity  which holds that  appearance is reality  e g   if it looks like feces  it must also share some of the other properties of feces
+accordingly  this study demonstrates that modern adults adhere to the law of similarity  but it does not  and indeed was never intended to  address the magical law of contagion  once in contact  always in contact  or the possibility of a proximity effect
+thus  a new investigation was needed to clearly test for the proximity effect
+in the current studies  we used vignettes that we pre-tested to ensure it was clear that contact with contaminants had never occurred
+we modified rozin and colleagues' well-known paradigm  in which they asked participants to rate the desirability of having contact with objects that had previously had contact with different sources
+the current work departed clearly from rozin and colleagues' task in that participants rated the desirability of having contact with objects that had been in varying degrees of proximity with different sources
+contact with the aversive source was eliminated in the critical conditions to measure the effect of proximity

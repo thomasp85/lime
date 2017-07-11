@@ -1,0 +1,34 @@
+### abstract ###
+We consider the task of opportunistic channel access in a primary system composed of independent Gilbert-Elliot channels where the secondary (or opportunistic) user does not dispose of a priori information regarding the statistical characteristics of the system
+It is shown that this problem may be cast into the framework of model-based learning in a specific class of Partially Observed Markov Decision Processes (POMDPs) for which we introduce an algorithm aimed at striking an optimal tradeoff between the exploration (or estimation) and exploitation requirements
+We provide finite horizon regret bounds for this algorithm as well as a numerical evaluation of its performance in the single channel model as well as in the case of stochastically identical channels
+### introduction ###
+In recent years, opportunistic spectrum access for cognitive radio has been the focus of significant research efforts  CITATION
+These works propose to improve spectral efficiency by making smarter use of the large portion of the frequency bands that remains unused
+In Licensed Band Cognitive Radio, the goal is to share the bands licensed to primary users with non primary users called secondary users or cognitive users
+These secondary users must carefully %sense the primary users's presence and adapt their own transmission identify available spectrum resources and communicate avoiding to disturb the primary network
+Opportunistic spectrum access thus has the potential for significantly increasing the spectral efficiency of wireless networks
+In this paper, we focus on the opportunistic communication model previously considered by  CITATION , which consists of  SYMBOL  channels in which a single secondary user searches for idle channels temporarily unused by primary users
+The  SYMBOL  channels are modeled as Gilbert-Elliot channels: at each time slot, a channel is either idle or occupied and the availability of the channel evolves in a Markovian way
+Assuming that the secondary user can only sense  SYMBOL  channels simultaneously  CITATION , his main task is to choose which channel to sense at each time aiming to maximise its expected long-term transmission efficiency
+Under this model, channel allocation may be interpreted as a planning task in a particular class of Partially Observed Markov Decision Process (POMDP) also called restless bandits  CITATION
+In the works of  CITATION , it is assumed that the statistical information about the primary users' traffic is fully available to the secondary user
+In practice however, the statistical characteristics of the traffic %(i e the transition probabilities of the availabilty of each channel)  are not fixed a priori and must be somehow estimated by the secondary user
+As the secondary user selects channels to sense, we are not faced with a simple parameter estimation problem but with a task which is closer to reinforcement learning  CITATION
+We consider scenarios in which the secondary user first carries out an  exploration phase  in which the statistical information regarding the model is gathered and then follows by the  exploitation phase , where the optimal sensing policy, based on the estimated parameters, is applied
+The key issue is to reach the proper balance between exploration and exploitation
+This issue has been considered before by  CITATION  who proposed an asymptotic rule to set the length of the exploration phase but without a precise evaluation of the performance of this approach
+Lai et al  CITATION  also considered this problem in the multiple secondary users case but in a simpler model where each channel is modeled as an independent and identically distributed source
+In the field of reinforcement learning, this class of problems is known as  model-based reinforcement learning  for which several approaches have been proposed recently  CITATION
+However, none of these directly applies to the channel allocation model in which the state of the channels is only partially observed
+Our contribution consists in proposing a strategy, termed  Tiling Algorithm , for adaptively setting the length of the exploration phase
+Under this strategy, the length of the exploration phase is not fixed beforehand and the exploration phase is terminated as soon as we have accumulated enough statistical evidence to determine the optimal sensing policy
+The distinctive feature of this approach is that it comes with strong performance guarantees in the form of finite-horizon regret bounds
+For the sake of clarity, this strategy is described in the general abstract framework of parametric POMDPs
+Remark that the channel access model corresponds to a specific example of POMDP parameterized by the transition probabilities of the availability of each channel
+As the approach relies on the restrictive assumption that for each possible parameter value the solution of the planning problem be fully known, it is not applicable to POMDPs at large but is well suited to the case of the channel allocation model
+We provide a detailed account of the use of the approach for two simple instances of the opportunistic channel access model, including the case of stochastically identical channels considered by  CITATION
+The article is organized as follows
+The channel allocation model is formally described in Section
+In Section , the tiling algorithm is presented and its performance in terms of finite-horizon regret bounds are obtained
+The application to opportunistic channel access is detailed in Section , both in the one channel model and in the case of stochastically identical channels

@@ -1,0 +1,30 @@
+### abstract ###
+An approach to the acceleration of parametric weak classifier boosting is proposed
+Weak classifier is called parametric if it has fixed number of parameters and, so, can be represented as a point into multidimensional space
+Genetic algorithm is used instead of exhaustive search to learn parameters of such classifier
+Proposed approach also takes cases when effective algorithm for learning some of the classifier parameters exists into account
+Experiments confirm that such an approach can dramatically decrease classifier training time while keeping both training and test errors small
+### introduction ###
+Boosting is one of the commonly used classifier learning approaches
+It is machine learning meta-algorithm that iteratively learns additive model consisting of weighed \term{weak} classifiers that belong to some classifier family  SYMBOL
+In case of two-class classification problem (which we will consider in this paper) boosted classifier usually has form  SYMBOL } There  SYMBOL  is a sample to classify,  SYMBOL  are weak classifiers learned during boosting procedure,  SYMBOL  are weak classifier weights,  SYMBOL ,  SYMBOL
+Set  SYMBOL  is referred to as \term{weak} classifier family
+That is because it elements should have error rate only slightly better than random guessing
+It expresses the key idea of boosting: strong classifier can be built on top of many weak
+There are many boosting procedures that differ by the type of loss being optimized for the final classifier
+But no matter what kind of boosting procedure is used, on each iteration it should select (learn) a weak classifier with minimal weighed loss from  SYMBOL  family using special algorithm called \term{weak learner}
+Fast and accurate optimization methods are often not applicable there (especially in the case of discrete classifier parameters), so exhaustive search over weak classifier parameter space is used as a weak learner
+Unfortunately, exhaustive search can take a lot of time
+For example, learning cascade of boosted classifiers based on haar features with \term{AdaBoost} and exhaustive search over classifier parameter space took several weeks in the famous work  CITATION
+That's why it is often very important to decrease weak classifier learning time using some appropriate numerical optimization approach
+One of the widely used approaches to the numerical optimization is genetic algorithm  CITATION
+It is based on biological evolution ideas
+Optimization problem solution is coded as \term{chromosome} vector \term{Initial population} of solutions is created using random number generator \term{Fitness function} is then used to assign fitness value to every population member
+Solutions with the biggest fitness values are selected for the next step
+In the next step, \term{genetic operators} (crossover and mutation usually) are applied to selected chromosomes to produce new solutions and to modify existing ones slightly
+That modified solutions form up a new generation
+Then described process repeats
+That's how evolution is modeled
+It continues until global or suboptimal solution is found or time allowed for evolution is over
+Genetic algorithms are often used for global extremum search in big and complicated search spaces
+It makes genetic algorithm good candidate for weak classifier learner

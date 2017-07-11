@@ -1,0 +1,57 @@
+### abstract ###
+Representing and analyzing complex networks remains a roadblock to creating dynamic network models of biological processes and pathways.
+The study of cell fate transitions can reveal much about the transcriptional regulatory programs that underlie these phenotypic changes and give rise to the coordinated patterns in expression changes that we observe.
+The application of gene expression state space trajectories to capture cell fate transitions at the genome-wide level is one approach currently used in the literature.
+In this paper, we analyze the gene expression dataset of Huang et al. which follows the differentiation of promyelocytes into neutrophil-like cells in the presence of inducers dimethyl sulfoxide and all-trans retinoic acid.
+Huang et al. build on the work of Kauffman who raised the attractor hypothesis, stating that cells exist in an expression landscape and their expression trajectories converge towards attractive sites in this landscape.
+We propose an alternative interpretation that explains this convergent behavior by recognizing that there are two types of processes participating in these cell fate transitions core processes that include the specific differentiation pathways of promyelocytes to neutrophils, and transient processes that capture those pathways and responses specific to the inducer.
+Using functional enrichment analyses, specific biological examples and an analysis of the trajectories and their core and transient components we provide a validation of our hypothesis using the Huang et al. dataset.
+### introduction ###
+Our understanding of the molecular basis of a wide range of biological processes, including development, differentiation, and disease, has evolved significantly in recent years.
+Increasingly, we are coming to recognize that it is not single genes, but rather complex networks of genes, gene products, and other cellular elements that drive cellular metabolism and cell fate, and when perturbed, can lead to development of disease phenotypes.
+Representing and analyzing such complex networks, encompassing thousands or tens of thousands of elements, presents significant challenges.
+One approach that has begun to be applied is the representation of transcriptional changes as transitions that occur with the state space defined by the expression states of all genes within the cell CITATION, CITATION.
+This approach has a number of advantages, including providing a framework for predictive modeling and the incorporation of stochastic components in the biological process.
+The underlying assumption in such an analysis is that each cellular phenotype can invariably be traced back to a particular class of genome-wide gene expression signatures representing a specific region of the gene expression state space.
+As described in Huang et al. CITATION, this signature for a particular cellular state at a particular instant in time is represented by a multidimensional gene expression vector in a high dimensional space where each coordinate represents the expression level of a particular gene.
+By considering all possible configurations that this signature can take, we create a multidimensional landscape that is referred to as the expression state space CITATION.
+Each observed phenotype can be represented as a single point in the state space.
+When cells transition through successive phenotypes, for example, during the different stages of hematopoietic differentiation, specific sets of genes alter their expression levels as dictated by an underlying transcriptional program and these changes can be represented by a continuous trajectory in expression state space; ultimately these represent the transcriptional program being played out by the cell's collection of gene networks and complex pathways.
+Kauffman CITATION first proposed the idea that stable cell fates, the cellular phenotypes we observe, correspond to attractors in the expression state space, stable points to which the system would return to if subjected to a small perturbation.
+He points out that in principle cells could adopt any permutation of gene expression states however this is not what we observe in nature.
+According to Kauffman, since there are about 250 different cell types, there must be approximately that number of attractors in state space, either valleys or peaks in the landscape, that represent the stable cell fates or cell types that cells will ultimately converge to in the presence of an inducer or perturbation.
+While this is an interesting model, direct experimental evidence supporting it and its overall utility in explaining cellular mechanism remain to be seen.
+Huang et al. CITATION reported evidence they claim demonstrated the existence of an attractor.
+They conducted a gene expression time-course experiment on the differentiation of human HL-60 promyelocytic cells into neutrophils using two different inducers, dimethyl sulfoxide and all-trans retinoic acid.
+Time-course data was collected using Affymetrix U95Av2 GeneChips and analyzed to provide gene expression level measures necessary to create a state-space model.
+Using principal components analysis, they develop a two-dimensional state space representation in which DMSO and ATRA induce initially divergent trajectories that, over time, converge on a common trajectory leading to a final expression state representing the neutrophils.
+They argue that instead of observing trajectories that explore the state space, the trajectories display convergence to a single point and that this therefore provides empirical proof that attractive states exist in nature.
+Here, we propose an alternative interpretation of this convergent behavior that does not appeal to the attractor hypothesis but rather explores this observation in the context of a superposition of components that reflect the pathways activated by the applied perturbations.
+To this end, we extend the work of Huang et al. CITATION by decomposing the state space trajectories into components comprising two sets of genes, a core group and transient group that capture the stimulus-independent and stimulus-dependent effects, respectively.
+The superposition of these components reflect the observation that both sources of effects independently influence the overall shape of the trajectory taken during the cell fate transition.
+We show how this division allows us to look at functional behavior of genes and their contribution to the cell fate transitions in a more enlightening way.
+Using regression models, we isolate core genes that are common to both stimuli and represent those critical to the differentiation process.
+The genes outside the core represent the transient component of the trajectory corresponding to the perturbation effects.
+To illustrate our ideas, we apply our method to the same published dataset generated by Huang et al. CITATION .
+The HL-60 cell line has long been used as a model to understand the molecular mechanisms driving the progression and pathogenesis of acute promyelocytic leukemia CITATION.
+In normal promyelocytes, proliferation and differentiation are tightly coupled processes.
+However this balance comes unstuck in APL cells and as a result cells proliferate in a disregulated fashion.
+The discovery that inducers like RA and DMSO could reprogram APL cells to overcome this block and resume differentiation, led to the emergence of a class of therapeutics known as differentiation therapy CITATION .
+DMSO is an organic solvent but also functions as a cryoprotective agent for tissue cell culture CITATION.
+Although it is widely used in veterinary medicine in the treatment of pain and inflammation, it is not generally used in humans because it is known to be hepatotoxic.
+The hormone ATRA is a derivative of vitamin A and belongs to a class of molecules called retinoids CITATION.
+ATRA is currently used in differentiation therapies that treat human patients with APL.
+Current complete remission rates for APL patients on ATRA-based differentiation therapy in combination with chemotherapy have been reported to be as high as 90 95 percent CITATION.
+At the molecular level, both DMSO and ATRA arrest the cell cycle at the G1-S phase transition point, and induce terminal differentiation of HL-60 cells, resulting in neutrophil-like cells.
+ATRA and DMSO are biochemically distinct molecules that activate slightly different sets of pathways in HL-60 cells.
+Huang et al. CITATION explain that this is the reason why the trajectories initially diverge and explore different parts of the expression state space.
+They argue that it is the presence of an attractor that then causes the trajectories to converge from different directions to eventually arrive at a common endpoint, and discount the possibility of a specific, unique differentiation pathway that may be triggered by both inducers.
+While this argument may seem conceptually appealing, upon further inspection the attractor hypothesis greatly limits our ability to develop mechanistic interpretations or to build predictive models of cell fate transitions.
+We believe that there exists an alternative, more plausible interpretation that Huang et al. CITATION and Kauffman CITATION have not considered.
+Our interpretation is based on the recognition that there are two types of processes that contribute to cell fate transitions: one, a core biological process inherent to the transition-specific event and two, a transient process related to the direct effects that the particular inducing agent exerts on the cell.
+The early divergence seen in the state space trajectories described by Huang et al. CITATION is reflective of the cells' response to specific perturbation and the compound-specific response that follows.
+We expect these transient processes to dominate only at the initial period of the time-course since most drugs are metabolized quickly by the cell.
+Once this disorder has subsided, the targeted effects of each inducer are expected to have begun triggering the core processes and as this occurs, the directions that both trajectories adopt become more and more convergent because the overlap in activated pathways in DMSO-induced cells and ATRA-induced cells is growing larger as the cells transition towards their common endpoint.
+The source of this convergence therefore is not necessarily due to the existence of an attractor but instead can be explained by the combination of these two types of processes exerting their temporal effects on cells.
+Indeed, if such an attractor existed, then there should be a whole class of perturbations that would cause transitions from the initial to the final state, rather than a small number that activate a single core pathway.
+If one adopts the attractor hypothesis as the basis for cell-fate transitions, then our interpretation is much closer to that of Conrad Waddington, in which he argued for the canalization of state space through the existence of defined paths, or canals, between attractor states CITATION CITATION .

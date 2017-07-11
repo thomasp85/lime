@@ -1,0 +1,47 @@
+### abstract ###
+Higher-order tensor decompositions are analogous to the familiar Singular Value Decomposition (SVD), but they transcend the limitations of matrices (second-order tensors)
+SVD is a powerful tool that has achieved impressive results in information retrieval, collaborative filtering, computational linguistics, computational vision, and other fields
+However, SVD is limited to two-dimensional arrays of data (two modes), and many potential applications have three or more modes, which require higher-order tensor decompositions
+This paper evaluates four algorithms for higher-order tensor decomposition: Higher-Order Singular Value Decomposition (HO\nobreakdash-SVD), Higher-Order Orthogonal Iteration (HOOI), Slice Projection (SP), and Multislice Projection (MP)
+We measure the time (elapsed run time), space (RAM and disk space requirements), and fit (tensor reconstruction accuracy) of the four algorithms, under a variety of conditions
+We find that standard implementations of HO\nobreakdash-SVD and HOOI do not scale up to larger tensors, due to increasing RAM requirements
+We recommend HOOI for tensors that are small enough for the available RAM and MP for larger tensors
+### introduction ###
+Singular Value Decomposition (SVD) is growing increasingly popular as a tool for the analysis of two-dimensional arrays of data, due to its success in a wide variety of applications, such as information retrieval  CITATION , collaborative filtering  CITATION , computational linguistics  CITATION , computational vision  CITATION , and genomics  CITATION
+SVD is limited to two-dimensional arrays (matrices or second-order tensors), but many applications require higher-dimensional arrays, known as higher-order tensors
+There are several higher-order tensor decompositions, analogous to SVD, that are able to capture higher-order structure that cannot be modeled with two dimensions (two modes)
+Higher-order generalizations of SVD include Higher-Order Singular Value Decomposition (HO\nobreakdash-SVD)  CITATION , Tucker decomposition  CITATION , and PARAFAC (parallel factor analysis)  CITATION , which is also known as CANDECOMP (canonical decomposition)  CITATION
+Higher-order tensors quickly become unwieldy
+The number of elements in a matrix increases quadratically, as the product of the number of rows and columns, but the number of elements in a third-order tensor increases cubically, as a product of the number of rows, columns, and tubes
+Thus there is a need for tensor decomposition algorithms that can handle large tensors
+In this paper, we evaluate four algorithms for higher-order tensor decomposition: Higher-Order Singular Value Decomposition (HO\nobreakdash-SVD)  CITATION , Higher-Order Orthogonal Iteration (HOOI)  CITATION , Slice Projection (SP)  CITATION , and Multislice Projection (MP) (introduced here)
+Our main concern is the ability of the four algorithms to scale up to large tensors
+In Section~, we motivate this work by listing some of the applications for higher-order tensors
+In any field where SVD has been useful, there is likely to be a third or fourth mode that has been ignored, because SVD only handles two modes
+The tensor notation we use in this paper is presented in Section~
+We follow the notational conventions of \newcite{kolda2006moh}
+Section~ presents the four algorithms, HO\nobreakdash-SVD, HOOI, SP, and MP
+For HO\nobreakdash-SVD and HOOI, we used the implementations given in the MATLAB Tensor Toolbox  CITATION
+For SP and MP, we created our own MATLAB implementations
+Our implementation of MP for third-order tensors is given in the Appendix
+Section~ presents our empirical evaluation of the four tensor decomposition algorithms
+In the experiments, we measure the time (elapsed run time), space (RAM and disk space requirements), and fit (tensor reconstruction accuracy) of the four algorithms, under a variety of conditions
+The first group of experiments looks at how the algorithms scale as the input tensors grow increasingly larger
+We test the algorithms with random sparse third-order tensors as input
+HO\nobreakdash-SVD and HOOI exceed the available RAM when given larger tensors as input, but SP and MP are able to process large tensors with low RAM usage and good speed
+HOOI provides the best fit, followed by MP, then SP, and lastly HO\nobreakdash-SVD
+The second group of experiments examines the sensitivity of the fit to the balance in the ratios of the core sizes (defined in Section~)
+The algorithms are tested with random sparse third-order tensors as input
+In general, the fit of the four algorithms follows the same pattern as in the first group of experiments (HOOI gives the best fit, then MP, SP, and HO\nobreakdash-SVD), but we observe that SP is particularly sensitive to unbalanced ratios of the core sizes
+The third group explores the fit with varying ratios between the size of the input tensor and the size of the core tensor
+For this group, we move from third-order tensors to fourth-order tensors
+The algorithms are tested with random fourth-order tensors, with the input tensor size fixed while the core sizes vary
+The fit of the algorithms follows the same pattern as in the previous two groups of experiments, in spite of the move to fourth-order tensors
+The final group measures the performance with a real (nonrandom) tensor that was generated for a task in computational linguistics
+The fit follows the same pattern as in the previous three groups of experiments
+Furthermore, the differences in fit are reflected in the performance on the given task
+This experiment validates the use of random tensors in the previous three groups of experiments
+We conclude in Section~
+There are tradeoffs in time, space, and fit for the four algorithms, such that there is no absolute winner among the four algorithms
+The choice will depend on the time, space, and fit requirements of the given application
+If good fit is the primary concern, we recommend HOOI for smaller tensors that can fit in the available RAM, and MP for larger tensors

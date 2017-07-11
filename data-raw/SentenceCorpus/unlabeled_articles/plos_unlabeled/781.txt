@@ -1,0 +1,57 @@
+### abstract ###
+During embryonic development, the positional information provided by concentration gradients of maternal factors directs pattern formation by providing spatially dependent cues for gene expression.
+In the fruit fly, Drosophila melanogaster, a classic example of this is the sharp on off activation of the hunchback gene at midembryo, in response to local concentrations of the smooth anterior posterior Bicoid gradient.
+The regulatory region for hb contains multiple binding sites for the Bcd protein as well as multiple binding sites for the Hb protein.
+Some previous studies have suggested that Bcd is sufficient for properly sharpened Hb expression, yet other evidence suggests a need for additional regulation.
+We experimentally quantified the dynamics of hb gene expression in flies that were wild-type, were mutant for hb self-regulation or Bcd binding, or contained an artificial promoter construct consisting of six Bcd and two Hb sites.
+In addition to these experiments, we developed a reaction diffusion model of hb transcription, with Bcd cooperative binding and hb self-regulation, and used Zero Eigenvalue Analysis to look for multiple stationary states in the reaction network.
+Our model reproduces the hb developmental dynamics and correctly predicts the mutant patterns.
+Analysis of our model indicates that the Hb sharpness can be produced by spatial bistability, in which hb self-regulation produces two stable levels of expression.
+In the absence of self-regulation, the bistable behavior vanishes and Hb sharpness is disrupted.
+Bcd cooperative binding affects the position where bistability occurs but is not itself sufficient for a sharp Hb pattern.
+Our results show that the control of Hb sharpness and positioning, by hb self-regulation and Bcd cooperativity, respectively, are separate processes that can be altered independently.
+Our model, which matches the changes in Hb position and sharpness observed in different experiments, provides a theoretical framework for understanding the data and in particular indicates that spatial bistability can play a central role in threshold-dependent reading mechanisms of positional information.
+### introduction ###
+How an embryo achieves pattern and form from an initially undifferentiated state has fascinated people at least since the time of Aristotle.
+Scientific advances on this began over a century ago, with, for example, the experiments of Hans Driesch on sea urchin embryos CITATION, from which he proposed that the embryo has a coordinate system specifying cellular position; and from the experiments of Ethel Browne CITATION, who showed that a piece of hydra mount induced a secondary axis when grafted into the body of another hydra.
+These and other subsequent results were synthesized by Lewis Wolpert in 1969 CITATION into a definition of positional information.
+According to this concept, the spatial asymmetries of concentration gradients of chemical signals provide positional information during cellular differentiation; each cell reads its position from the local morphogen concentration and differentiates accordingly.
+Wolpert's concept of morphogen gradients has become a central tenet of developmental biology CITATION CITATION.
+Modern molecular techniques have demonstrated numerous cases of protein concentration patterns in embryogenesis, and many have been shown to act as morphogens.
+In the late 1980's, the Bicoid protein gradient was characterized and its concentration-dependent effect on downstream target genes in Drosophila was demonstrated CITATION CITATION.
+This has since become one of the most studied examples of morphogen gradient signaling in developmental biology CITATION, CITATION .
+Reaction-network models have been successfully applied to describe a great variety of systems in physics, chemistry, and biology CITATION CITATION.
+Along with this, many mathematical tools have been developed to support such applications.
+With these tools, one can show that certain reaction networks may exhibit multiple stationary states, for particular ranges of their rate constants.
+Bistability is a special case, in which the system can evolve to either of two asymptotically stable steady states.
+Under certain conditions, spatial patterning or oscillations can arise CITATION CITATION.
+In biology, bistability has long been established in control of the cell cycle and other oscillations CITATION, CITATION, and also recently reported in an artificial gene regulation network CITATION.
+In Drosophila, spatial bistability has been proposed for dorso-ventral patterning CITATION, CITATION .
+In early embryogenesis, the diffusion of Bcd protein, translated from mRNA localized at the anterior end of the egg, forms an exponential concentration gradient, establishing the anterior posterior axis CITATION, CITATION, CITATION.
+Bcd is a transcriptional regulator, and through its asymmetric distribution acts as a morphogen, governing the positions at which the downstream gap genes will be activated.
+In combination with cross-regulation between these genes, the initial Bcd asymmetry is propagated and refined, establishing the first stage of embryo segmentation CITATION, CITATION CITATION.
+It is still not well characterized, however, what mechanisms interpret the smooth Bcd positional information into sharp and precisely positioned downstream target gene expression.
+hunchback is one of the first gap genes activated by Bcd, with strong anterior expression and a sharp on off boundary at mid-embryo CITATION, CITATION CITATION.
+Anterior hb activation depends on Bcd, as shown by Struhl et al CITATION and Driever et al CITATION, and on its own self-regulation, as already reported by Treisman et al CITATION and Margolis et al CITATION ; many Bcd and Hb binding sites have been identified in the hb promoter region, as reported by Treisman et al., among others CITATION CITATION.
+Hb has maternal and zygotic contributions, and provides positional information for other gap genes, such as Kr ppel, knirps, and giant, and for the homeotic gene Ultrabithorax CITATION CITATION.
+Removal of both maternal and zygotic hb expression results in severe deletions and polarity reversals of the most anterior segments CITATION.
+In normal development, Hb expression drops from highest to lowest over about 10 percent egg length ; Considerable attention has been focused on what molecular mechanism generates this Hb sharpness.
+Early on, it was shown that a hb enhancer element of 300 base pairs, containing 6 Bcd binding sites, is sufficient to reproduce the regulatory activity of Bcd on hb CITATION, CITATION.
+It was shown that Bcd binds to these sites cooperatively and it was hypothesized that, due to this cooperativity, a small change in Bcd concentration across some threshold could produce a large change in hb promoter occupancy, generating the on off expression pattern CITATION, CITATION, CITATION CITATION.
+However, these studies did not establish that cooperativity is sufficient to generate Hb border sharpness.
+To quantify the degree of Bcd's cooperativity, Ma et al. CITATION used a six-Bcd site fragment of the hb promoter in a DNase I footprint assay, and found a Hill coefficient of about 3.6; Burz et al. CITATION, using a gel-shift assay with a 230 bp hb enhancer, found a Hill coefficient of 3.0.
+From quantified in vivo patterns of Bcd and Hb proteins, Gregor et al. CITATION, estimated a higher value for this coefficient, of around 5 ; and suggested that it could support the proposal of Crauk and Dostatni CITATION that Hb expression is entirely determined by Bcd cooperative binding.
+However, systems with such high Hill coefficients would be expected to show temperature sensitivity.
+Houchmandzadeh et al. CITATION showed that the Bcd gradient is strongly affected by temperature changes of 20 C, but that the Hb pattern is largely unaffected.
+Dependence on Bcd with Hill coefficients between 3 and 5 would be expected to show far greater effects on Hb than are observed, indicating that Bcd cannot be the only factor regulating the Hb border.
+The insufficiency of Bcd cooperativity to produce Hb sharpness is also supported by the findings of Simpson-Brose et al. CITATION, who showed that synergy between Hb and Bcd is necessary to establish the expression patterns of the gap genes, including hb itself.
+To address these issues, we have taken a combined experimental and theoretical approach to understand how the hb gene converts the positional information of the smooth Bcd gradient into a sharp expression pattern.
+We used wild-type embryos to experimentally determine how Hb position and sharpness change in time; and we measured how these quantities are affected in embryos mutant for Bcd cooperative binding and for hb self-regulation, and by use of an artificial promoter with 6 Bcd and 2 Hb binding sites.
+We also developed a predictive reaction diffusion model of hb transcription, incorporating both Bcd cooperative binding and hb self-regulation.
+By fitting this model to wild-type Bcd and Hb patterns, we determined kinetic parameters of the model, such as binding constants.
+With these parameters, our model successfully reproduces the dynamic development of the Hb pattern.
+By reducing Bcd binding constants or the number of Bcd binding sites, our model reproduces the same mutant phenotypes as our experiments, and predicts a loss of sharpness for a hb self-regulation mutant, which we experimentally verified.
+By applying dynamical systems theory to the model, we show that Hb sharpness is due to spatial bistability stemming from hb self-regulation.
+This means that Hb does not have a single steady-state concentration continuously dependent on Bcd, but that at a threshold Bcd concentration, two stable steady states become available to Hb, and a small change in Bcd concentration can create a dramatic shift in Hb concentration.
+This shift between steady states is responsible for the sharpness of the Hb boundary.
+The position of the Bcd threshold is controlled by Bcd cooperative binding, but this mechanism itself is not sufficient to generate hb's expression sharpness.

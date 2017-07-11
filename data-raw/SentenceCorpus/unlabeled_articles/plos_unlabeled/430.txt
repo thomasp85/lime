@@ -1,0 +1,45 @@
+### abstract ###
+The calcium/calmodulin-dependent protein kinase II plays a key role in the induction of long-term postsynaptic modifications following calcium entry.
+Experiments suggest that these long-term synaptic changes are all-or-none switch-like events between discrete states.
+The biochemical network involving CaMKII and its regulating protein signaling cascade has been hypothesized to durably maintain the evoked synaptic state in the form of a bistable switch.
+However, it is still unclear whether experimental LTP/LTD protocols lead to corresponding transitions between the two states in realistic models of such a network.
+We present a detailed biochemical model of the CaMKII autophosphorylation and the protein signaling cascade governing the CaMKII dephosphorylation.
+As previously shown, two stable states of the CaMKII phosphorylation level exist at resting intracellular calcium concentration, and high calcium transients can switch the system from the weakly phosphorylated to the highly phosphorylated state of the CaMKII.
+We show here that increased CaMKII dephosphorylation activity at intermediate Ca 2 concentrations can lead to switching from the UP to the DOWN state.
+This can be achieved if protein phosphatase activity promoting CaMKII dephosphorylation activates at lower Ca 2 levels than kinase activity.
+Finally, it is shown that the CaMKII system can qualitatively reproduce results of plasticity outcomes in response to spike-timing dependent plasticity and presynaptic stimulation protocols.
+This shows that the CaMKII protein network can account for both induction, through LTP/LTD-like transitions, and storage, due to its bistability, of synaptic changes.
+### introduction ###
+Synaptic plasticity is thought to underlie learning and memory, but the mechanisms by which changes in synaptic efficacy are induced and maintained over time are still unclear.
+Numerous experiments have shown how synaptic efficacy can be increased or decreased by spike timing of presynaptic and postsynaptic neurons CITATION, CITATION, presynaptic firing rate CITATION, CITATION, or presynaptic firing paired with postsynaptic holding potential CITATION.
+These experiments have led to phenomenological models that capture one or several of these aspects CITATION CITATION.
+However, these models tell us nothing about the biochemical mechanisms of induction and maintenance of synaptic changes.
+The question of the mechanisms at the biochemical level has been addressed by another line of research work originating from early work by Lisman CITATION.
+Models at the biochemical level describe enzymatic reactions of proteins in the postsynaptic density CITATION CITATION.
+These proteins form a network with positive feedback loops that can potentially provide a synapse with several stable states two, in the simplest case providing a means to maintain the evoked changes.
+Hence, synapses in such models are similar to binary switches, exhibiting two stable states, an UP state with high efficacy, and a DOWN state with low efficacy.
+The idea of binary synapses is supported by recent experiments on CA3-CA1 synapses CITATION CITATION .
+One of the proposed positive feedback loops involves the calcium/calmodulin-dependent protein kinase II kinase-phosphatase system CITATION CITATION.
+CaMKII activation is governed by Ca 2 /calmodulin binding and is prolonged beyond fast-decaying calcium transients by its autophosphorylation CITATION.
+Autophosphorylation of CaMKII at the residue theronine-286 in the autoregulatory domain occurs after calcium/calmodulin binding and enables the enzyme to remain autonomously active after dissociation of calcium/calmodulin CITATION.
+In turn, as long as CaMKII stays activated it is reversibly translocated to a postsynaptic density -bound state where it interacts with multiple LTP-related partners structurally organizing protein anchoring assemblies and therefore potentially delivering -amino-3-hydroxyl-5-methyl-4-isoxazole-propionate acid receptors to the cell surface CITATION, CITATION CITATION.
+The direct phosphorylation of the AMPA receptor GluR1 subunit by active CaMKII enhances AMPA channel function CITATION, CITATION.
+The network involving CaMKII is particularly appealing in terms of learning and memory maintenance since N-methyl-D-aspartate receptor -dependent LTP requires calcium/calmodulin activation of CaMKII, potentially expressed by the phosphorylation level or the number of AMPA receptors, or both CITATION, CITATION, CITATION, CITATION CITATION.
+However, the role of CaMKII beyond LTP induction remains controversial CITATION CITATION.
+Finally, there is experimental evidence for the involvement of proteins associated with CaMKII activity, and calcineurin in LTP and LTD CITATION CITATION.
+We emphasize that multiple mechanisms supporting LTP/LTD induction and expression are likely to be present in synapses of different regions we focus here on synapses for which the above statements have been shown to apply, e.g., the CA3-CA1 Schaffer collateral synapse .
+Modeling studies have shown that a system including CaMKII and associated pathways could be bistable in a range of calcium concentrations including the resting level a necessary requirement for the maintenance of long-term changes CITATION, CITATION, CITATION, CITATION.
+In such models, the two states correspond to two stable phosphorylation levels of the CaMKII protein for a given calcium concentration, i.e., a weakly and a highly phosphorylated state.
+A transition from the DOWN to the UP state which could underlie long-term potentiation can be induced by a sufficiently large and prolonged increase in calcium concentration.
+However, the opposite transition which could underlie depotentiation or LTD only occurs under unrealistic conditions, for example decrease of calcium concentration below resting level.
+Furthermore, it has not been considered how these biochemical network models behave in response to calcium transients evoked by experimental protocols that are known to induce synaptic plasticity such as STDP, which has been shown to rely on kinase and phosphatase activation CITATION.
+Rubin et al. reproduce experimental results on STDP using a model detector system which qualitatively resembles the protein network influencing CaMKII, but this model does not exhibit bistability CITATION.
+Other studies on biochemical signal transduction pathways including CaMKII showed that the AMPA receptor activity can reproduce bidirectional synaptic plasticity as a function of calcium CITATION, CITATION.
+However, realistic stimulation protocols were not investigated in these models, and again they do not show bistability.
+In this paper, we consider a realistic model of protein interactions associated with CaMKII autophosphorylation through calcium/calmodulin and dephosphorylation by protein phosphatase 1 in the PSD.
+We first study the steady-state phosphorylation properties of CaMKII with respect to calcium and changing levels of PP1 activity.
+Conditions are elaborated for which the system allows for LTP and LTD transitions in reasonable ranges of calcium concentrations.
+We then demonstrate the ability of the CaMKII system to perform LTP- or LTD-like transitions in response to STDP stimulation protocols.
+We expose the CaMKII system to calcium transients evoked by pairs of presynaptic and postsynaptic spikes with a given time lag and show that short positive time lags evoke transitions from the DOWN to the UP state and short negative time lags lead to transitions from the UP to the DOWN state.
+We demonstrate furthermore that the CaMKII model qualitatively reproduces experimental plasticity outcomes for presynaptic stimulation protocols.
+Finally, we consider the transition behavior in response to purely presynaptic or postsynaptic spike-pair stimulation protocols.

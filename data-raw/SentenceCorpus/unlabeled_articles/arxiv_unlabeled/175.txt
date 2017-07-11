@@ -1,0 +1,21 @@
+### abstract ###
+We present an algorithm, called the  SYMBOL , for learning to make decisions in situations where the payoff of only one choice is observed, rather than all choices
+The algorithm reduces this setting to binary classification, allowing one to reuse of any existing, fully supervised binary classification algorithm in this partial information setting
+We show that the Offset Tree is an optimal reduction to binary classification
+In particular, it has regret at most  SYMBOL  times the regret of the binary classifier it uses (where  SYMBOL  is the number of choices), and no reduction to binary classification can do better
+This reduction is also computationally optimal, both at training and test time, requiring just  SYMBOL  work to train on an example or make a prediction
+Experiments with the  SYMBOL  show that it generally performs better than several alternative approaches
+### introduction ###
+This paper is about learning to make decisions in partial feedback settings where the payoff of only one choice is observed rather than all choices
+As an example, consider an internet site recommending ads or other content based on such observable quantities as user history and search engine queries, which are unique or nearly unique for every decision
+After the ad is displayed, a user either clicks on it or not
+This type of feedback differs critically from the standard supervised learning setting since we don't observe whether or not the user would have clicked had a different ad beed displayed instead
+In an online version of the problem, a policy chooses which ads to display and uses the observed feedback to improve its future ad choices
+A good solution to this problem must explore different choices and properly exploit the feedback
+The problem faced by an internet site, however, is more complex
+They have observed many interactions historically, and would like to exploit them in forming an initial policy, which may then be improved by further online exploration
+Since exploration decisions have already been made, online solutions are not applicable
+To properly use the data, we need  non-interactive  methods for learning with partial feedback
+This paper is about constructing a family of algorithms for non-interactive learning in such partial feedback settings
+Since any non-interactive solution can be composed with an exploration policy to form an algorithm for the online learning setting, the algorithm proposed here can also be used online
+Indeed, some of our experiments are done in an online setting

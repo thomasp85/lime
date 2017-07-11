@@ -1,0 +1,63 @@
+### abstract ###
+A client-server architecture to simultaneously solve multiple learning tasks from distributed datasets is described
+In such architecture, each client is associated with an individual learning task and the associated dataset of examples
+The goal of the architecture is to perform information fusion from multiple datasets while preserving privacy of individual data
+The role of the server is to collect data in real-time from the clients and codify the information in a common database
+The information coded in this database can be used by all the clients to solve their individual learning task, so that each client can exploit the informative content of all the datasets without actually having access to private data of others
+The proposed algorithmic framework, based on regularization theory and kernel methods, uses a suitable class of “mixed effect” kernels
+The new method is illustrated through a simulated music recommendation system
+### introduction ###
+The solution of learning tasks by joint analysis of multiple datasets is receiving increasing attention in different fields and under various perspectives
+Indeed, the information provided by data for a specific task may serve as a domain-specific inductive bias for the others
+Combining datasets to solve multiple learning tasks is an approach known in the machine learning literature as  multi-task learning  or  learning to learn   CITATION
+In this context, the analysis of the  inductive transfer  process and the investigation of general methodologies for the simultaneous learning of multiple tasks are important topics of research
+Many theoretical and experimental results support the intuition that, when relationships exist between the tasks, simultaneous learning performs better than separate (single-task) learning  CITATION
+Theoretical results include the extension to the multi-task setting of generalization bounds and the notion of VC-dimension  CITATION  and a methodology for learning multiple tasks exploiting unlabeled data (the so-called semi-supervised setting)  CITATION
+Importance of combining datasets is especially evident in biomedicine
+In pharmacological experiments, few training examples are typically available for a specific subject due to technological and ethical constraints  CITATION
+This makes hard to formulate and quantify models from experimental data
+To obviate this problem, the so-called  population method  has been studied and applied with success since the seventies in pharmacology  CITATION
+Population methods are based on the knowledge that subjects, albeit different, belong to a population of similar individuals, so that data collected in one subject may be informative with respect to the others  CITATION
+Such population approaches belongs to the family of so-called  mixed-effect  statistical methods
+In these methods, clinical measurements from different subjects are combined to simultaneously learn individual features of physiological responses to drug administration  CITATION
+Population methods have been applied with success also in other biomedical contexts such as medical imaging and bioinformatics  CITATION
+Classical approaches postulate finite-dimensional nonlinear dynamical systems whose unknown parameters can be determined by means of optimization algorithms  CITATION
+Other strategies include Bayesian estimation with stochastic simulation  CITATION  and nonparametric population methods  CITATION
+Information fusion from different but related datasets is widespread also in econometrics and marketing analysis, where the goal is to learn user preferences by analyzing both user-specific information and information from related users, see eg CITATION
+The so-called  conjoint analysis  aims to determine the features of a product that mostly influence customer's decisions
+In the web, collaborative approaches to estimate user preferences have become standard methodologies in many commercial systems and social networks, under the name of  collaborative filtering  or  recommender systems , see eg CITATION
+Pioneering collaborative filtering systems include Tapestry  CITATION , GroupLens  CITATION , ReferralWeb  CITATION , PHOAKS  CITATION
+More recently, the collaborative filtering problem has been attacked with machine learning methodologies such as Bayesian networks  CITATION , MCMC algorithms  CITATION , mixture models  CITATION , dependency networks  CITATION , maximum margin matrix factorization  CITATION
+Coming back to the machine learning literature, in the single-task context much attention has been given in the last years to non-parametric techniques such as kernel methods  CITATION  and Gaussian processes  CITATION
+These approaches are powerful and theoretically sound, having their mathematical foundations in regularization theory for inverse problems, statistical learning theory and Bayesian estimation  CITATION
+The flexibility of kernel engineering allows for the estimation of functions defined on generic sets from arbitrary sources of data
+These methodologies have been recently extended to the multi-task setting
+In  CITATION , a general framework to solve multi-task learning problems using kernel methods and regularization has been proposed, relying on the theory of reproducing kernel Hilbert spaces (RKHS) of vector-valued functions  CITATION
+In many applications (e-commerce, social network data processing, recommender systems), real-time processing of examples is required
+On-line multi-task learning schemes find their natural application in data mining problems involving very large datasets, and are therefore required to scale well with the number of tasks and examples
+In  CITATION , an on-line task-wise algorithm to solve multi-task regression problems has been proposed
+The learning problem is formulated in the context of on-line Bayesian estimation, see eg CITATION , within which Gaussian processes with suitable covariance functions are used to characterize a non-parametric mixed-effect model
+One of the key features of the algorithm is the capability to exploit shared inputs between the tasks in order to reduce computational complexity
+However, the algorithm in  CITATION  has a centralized structure in which tasks are sequentially analyzed, and is not able to address neither architectural issues regarding the flux of information nor privacy protection
+In this paper, multi-task learning from distributed datasets is addressed using a client-server architecture
+In our scheme, clients are in a one-to-one correspondence with tasks and their individual database of examples
+The role of the server is to collect examples from different clients in order to summarize their informative content
+When a new example associated with any task becomes available, the server executes an on-line update algorithm
+While in  CITATION  different tasks are sequentially analyzed, the architecture presented in this paper can process examples coming in any order from different learning tasks
+The summarized information is stored in a  disclosed database  whose content is available for download enabling each client to compute its own estimate exploiting the informative content of all the other datasets
+Particular attention is paid to confidentiality issues, especially valuable in commercial and recommender systems, see eg CITATION
+First, we require that each specific client cannot access other clients data
+In addition, individual datasets cannot be reconstructed from the disclosed database
+Two kind of clients are considered:  active  and  passive  ones
+An active client sends its data to the server, thus contributing to the collaborative estimate
+A passive client only downloads information from the disclosed database without sending its data
+A regularization problem with a parametric bias term is considered in which a  mixed-effect kernel  is used to exploit relationships between the tasks
+Albeit specific, the mixed-effect non-parametric model is quite flexible, and its usefulness has been demonstrated in several works  CITATION
+The paper is organized as follows
+Multi-task learning with regularized kernel methods is presented in section , in which a class of mixed-effect kernels is also introduced
+In section , an efficient centralized off-line algorithm for multi-task learning is described that solves the regularization problem of section
+In section , a rather general client-server architecture is described, which is able to efficiently solve online multi-task learning from distributed datasets
+The server-side algorithm is derived and discussed in subsection , while the client-side algorithm for both active and passive clients is derived in subsection
+In section , a simulated music recommendation system is employed to test performances of our algorithm
+Conclusions (section ) end the paper
+The Appendix contains technical lemmas and proofs

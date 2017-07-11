@@ -1,0 +1,32 @@
+### abstract ###
+we used a diffusion model to examine the effects of response-bias manipulations on response time rt and accuracy data collected in two experiments involving a two-choice decision making task
+we asked  NUMBER  subjects to respond  low  or  high  to the number of asterisks in a  NUMBER  x  NUMBER  grid  based on an experimenter-determined decision cutoff
+in the model  evidence is accumulated until either a  low  or  high  decision criterion is reached  and this  in turn  initiates a response
+we performed two experiments with four experimental conditions
+in conditions  NUMBER  and  NUMBER   the decision cutoff between low and high judgments was fixed at  NUMBER 
+in condition  NUMBER   we manipulated the frequency with which low- and high-stimuli were presented
+in condition  NUMBER   we used payoff structures that mimicked the frequency manipulation
+we found that manipulating stimulus frequency resulted in a larger effect on rt and accuracy than did manipulating payoff structure
+in the model  we found that manipulating stimulus frequency produced greater changes in the starting point of the evidence accumulation process than did manipulating payoff structure
+in conditions  NUMBER  and  NUMBER   we set the decision cutoff at  NUMBER    NUMBER   or  NUMBER  experiment  NUMBER  and at  NUMBER  or  NUMBER  experiment  NUMBER 
+in condition  NUMBER   there was an equal number of low- and high-stimuli  whereas in condition  NUMBER  there were unequal proportions of low- and high-stimuli
+the model analyses showed that starting-point changes accounted for biases produced by changes in stimulus proportions  whereas evidence biases accounted for changes in the decision cutoff
+### introduction ###
+it is well known that experimental manipulations in perceptual decision making tasks produce systematic changes in the behavioral responses of the subjects
+experimental psychologists  for example  have observed that subjects bias their responses based on the probability of occurrence of the stimulus  CITATION
+formal models have been used to describe and predict response bias in perceptual two-choice tasks  CITATION
+these models typically conceptualize the decision process as the accumulation of sensory information over time towards a decision threshold
+the aim of this study was to use one of these models  CITATION  to examine what processes account for biases in two-choice tasks produced by manipulations of stimulus frequency  payoffs  and movement in the decision cutoff i e   the point at which stimuli are assigned to one versus the other response category
+in manipulations of stimulus frequency  it is well known that response times rts to stimuli that appear more often are faster than rts to stimuli shown less often
+in addition  accuracy is increased from less to more frequent stimuli
+remington  CITATION   for example  used a task in which subjects responded to one of two lights by depressing corresponding keys
+there were blocks of trials in which each light was turned on in half of the trials  blocks in which one light was turned on in  NUMBER  percent  of the trials and the other in  NUMBER  percent  of the trials  and blocks in which these proportions were reversed
+in comparison to the equally likely condition  response times rts were faster for trials in which a light appeared more often and slower for trials in which it appeared less often
+studying the effects of explicit payoff manipulations has also been of long-standing interest in cognitive psychology  CITATION
+fitts  CITATION   for example  used payoff matrices to allow subjects to earn a bonus at the end of a session
+subjects always earned one point for each correct and fast response  but lost points based on one of the following structures  one  they lost half a point for correct and slow responses  one tenth of a point for wrong and fast and responses  or one point for wrong and slow responses  two  they lost one tenth of a point for correct and slow responses  half a point for wrong and fast responses  or one point for wrong and slow responses
+fitts found that subjects either responded faster and made more errors or responded more slowly and made fewer errors  in order not to lose too many points
+more recently  rorie  gao  mcclelland  and newsome  CITATION  manipulated response biases with payoffs in a motion discrimination task with multiple reward contingencies and four reward conditions
+the two rhesus monkeys tested showed indistinguishable psychophysical performance in the neutral reward conditions but biased performance i e   faster response and increased response probability toward the high-reward response in biased conditions
+our present study manipulated stimulus frequency and payoffs as typically reported in the literature  but planned a novel direct comparison of the two manipulations in an attempt to answer whether the effect observed on both rt and accuracy due to changes in stimulus frequency is similar to the effect due to changes in reward values
+moreover  we added to this comparison a less commonly studied manipulation of decision cutoffs

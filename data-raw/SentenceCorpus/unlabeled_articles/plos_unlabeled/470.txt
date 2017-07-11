@@ -1,0 +1,29 @@
+### abstract ###
+In many biological systems, the interactions that describe the coupling between different units in a genetic network are nonlinear and stochastic.
+We study the interplay between stochasticity and nonlinearity using the responses of Chinese hamster ovary mammalian cells to different temperature shocks.
+The experimental data show that the mean value response of a cell population can be described by a mathematical expression which is valid for a large range of heat shock conditions.
+A nonlinear stochastic theoretical model was developed that explains the empirical law for the mean response.
+Moreover, the theoretical model predicts a specific biological probability distribution of responses for a cell population.
+The prediction was experimentally confirmed by measurements at the single-cell level.
+The computational approach can be used to study other nonlinear stochastic biological phenomena.
+### introduction ###
+Complex biological systems are built out of a huge number of components.
+These components are diverse: DNA sequence elements, mRNA, transcription factors, etc. The concentration of each component changes over time.
+One way to understand the functions of a complex biological system is to construct a quantitative model of the interactions present in the system.
+These interactions are usually nonlinear in terms of the concentrations of the components that participate in the interaction process.
+For example, the concentration of a dimer is proportional to the product of the concentrations of the molecules that dimerise.
+Besides being nonlinear, the interactions are also stochastic.
+The production process of a molecule is not deterministic, and it is governed by a probability rate of production.
+In what follows, a nonlinear stochastic model for the response to heat shocks in CHO mammalian cells will be developed.
+Heat stress is just one example of the many ways a molecular system can be perturbed.
+From a general perspective, the structure of a molecular system is uncovered by imposing different perturbations on the system under study, and then the responses of the system are measured.
+From the experimental collection of pairs of input output signals, laws that describe the system can be uncovered.
+This is the fundamental idea in Systems and Synthetic Biology CITATION CITATION and has long proved to be successful in the field of electronics.
+The input signals are applied through the use of signal generators CITATION CITATION.
+An input signal that is easy to manipulate is a heat pulse, the parameters to change being the pulse temperature and its duration.
+Members of the stress protein family such as the heat shock protein 70 are highly responsive to temperature variations.
+This protein is a molecular chaperone and is a critical component of a complex genetic network that enables the organism to respond to deleterious effects of stress CITATION CITATION.
+Since Hsp70 is thus an important regulator in a complex system, our goal was to find if it is possible to develop a mathematical model of the regulation of its expression in mammalian cells exposed to heat shock.
+Our specific objectives were determine an equation representing the average expression of Hsp70 over time in a cell population after an initial heat shock, determine how the physical parameters of heat shock influence the parameters of this equation, and determine the mathematical model that describes the expression of Hsp70 at the single-cell level.
+We first describe the process of inferring the mathematical model from the experimental data.
+Then a mathematical study of the model will follow.

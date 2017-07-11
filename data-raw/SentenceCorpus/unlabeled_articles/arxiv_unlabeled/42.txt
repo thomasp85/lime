@@ -1,0 +1,49 @@
+### abstract ###
+Recent advances in machine learning make it possible to design efficient prediction algorithms for data sets with huge numbers of parameters
+This paper describes a new technique for ``hedging'' the predictions output by many such algorithms, including support vector machines, kernel ridge regression, kernel nearest neighbours, and by many other state-of-the-art methods
+The hedged predictions for the labels of new objects include quantitative measures of their own accuracy and reliability
+These measures are provably valid under the assumption of randomness, traditional in machine learning: the objects and their labels are assumed to be generated independently from the same probability distribution
+In particular, it becomes possible to control (up to statistical fluctuations) the number of erroneous predictions by selecting a suitable confidence level
+Validity being achieved automatically, the remaining goal of hedged prediction is efficiency: taking full account of the new objects' features and other available information to produce as accurate predictions as possible
+This can be done successfully using the powerful machinery of modern machine learning
+### introduction ###
+The two main varieties of the problem of prediction, classification and regression, are standard subjects in statistics and machine learning
+The classical classification and regression techniques can deal successfully with conventional small-scale, low-dimensional data sets; however, attempts to apply these techniques to modern high-dimensional and high-throughput data sets encounter serious conceptual and computational difficulties
+Several new techniques, first of all support vector machines  CITATION  and other kernel methods, have been developed in machine learning recently with the explicit goal of dealing with high-dimensional data sets with large numbers of objects
+A typical drawback of the new techniques is the lack of useful measures of confidence in their predictions
+For example, some of the tightest upper bounds of the popular PAC theory on the probability of error exceed~1 even for relatively clean data sets ( CITATION , p ~249)
+This paper describes an efficient way to ``hedge'' the predictions produced by the new and traditional machine-learning methods, i e , to complement them with measures of their accuracy and reliability
+Appropriately chosen, not only are these measures valid and informative, but they also take full account of the special features of the object to be predicted
+We call our algorithms for producing hedged predictions ``conformal predictors''; they are formally introduced in Section
+Their most important property is the automatic validity under the randomness assumption (to be discussed shortly)
+Informally, validity means that conformal predictors never overrate the accuracy and reliability of their predictions
+This property, stated in Sections  and , is formalized in terms of finite data sequences, without any recourse to asymptotics
+The claim of validity of conformal predictors depends on an assumption that is shared by many other algorithms in machine learning, which we call the assumption of randomness: the objects and their labels are assumed to be generated independently from the same probability distribution
+Admittedly, this is a strong assumption, and areas of machine learning are emerging that rely on other assumptions (such as the Markovian assumption of reinforcement learning; see, eg ,  CITATION ) or dispense with any stochastic assumptions altogether (competitive on-line learning; see, eg ,  CITATION )
+It is, however, much weaker than assuming a parametric statistical model, sometimes complemented with a prior distribution on the parameter space, which is customary in the statistical theory of prediction
+And taking into account the strength of the guarantees that can be proved under this assumption, it does not appear overly restrictive
+So we know that conformal predictors tell the truth
+Clearly, this is not enough: truth can be uninformative and so useless
+We will refer to various measures of informativeness of conformal predictors as their ``efficiency''
+As conformal predictors are provably valid, efficiency is the only thing we need to worry about when designing conformal predictors for solving specific problems
+Virtually any classification or regression algorithm can be transformed into a conformal predictor, and so most of the arsenal of methods of modern machine learning can be brought to bear on the design of efficient conformal predictors
+We start the main part of the paper, in Section , with the description of an idealized predictor based on Kolmogorov's algorithmic theory of randomness
+This ``universal predictor'' produces the best possible hedged predictions but, unfortunately, is noncomputable
+We can, however, set ourselves the task of approximating the universal predictor as well as possible
+In Section  we formally introduce the notion of conformal predictors and state a simple result about their validity
+In that section we also briefly describe results of computer experiments demonstrating the methodology of conformal prediction
+In Section  we consider an example demonstrating how conformal predictors react to the violation of our model of the stochastic mechanism generating the data (within the framework of the randomness assumption)
+If the model coincides with the actual stochastic mechanism, we can construct an optimal conformal predictor, which turns out to be almost as good as the Bayes-optimal confidence predictor (the formal definitions will be given later)
+When the stochastic mechanism significantly deviates from the model, conformal predictions remain valid but their efficiency inevitably suffers
+The Bayes-optimal predictor starts producing very misleading results which superficially look as good as when the model is correct
+In Section  we describe the ``on-line'' setting of the problem of prediction, and in Section  contrast it with the more standard ``batch'' setting
+The notion of validity introduced in Section  is applicable to both settings, but in the on-line setting it can be strengthened: we can now prove that the percentage of the erroneous predictions will be close, with high probability, to a chosen confidence level
+For the batch setting, the stronger property of validity for conformal predictors remains an empirical fact
+In Section  we also discuss limitations of the on-line setting and introduce new settings intermediate between on-line and batch
+To a large degree, conformal predictors still enjoy the stronger property of validity for the intermediate settings
+Section  is devoted to the discussion of the difference between two kinds of inference from empirical data, induction and transduction (emphasized by Vladimir Vapnik  CITATION )
+Conformal predictors belong to transduction, but combining them with elements of induction can lead to a significant improvement in their computational efficiency (Section )
+We show how some popular methods of machine learning can be used as underlying algorithms for hedged prediction
+We do not give the full description of these methods and refer the reader to the existing readily accessible descriptions
+This paper is, however, self-contained in the sense that we explain all features of the underlying algorithms that are used in hedging their predictions
+We hope that the information we provide will enable the reader to apply our hedging techniques to their favourite machine-learning methods

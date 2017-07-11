@@ -1,0 +1,9 @@
+### abstract ###
+We examine the complexity of learning the distributions produced by finite-state quantum sources
+We show how prior techniques for learning hidden Markov models can be adapted to the  quantum generator  model to find that the analogous state of affairs holds: information-theoretically, a polynomial number of samples suffice to approximately identify the distribution, but computationally, the problem is as hard as learning parities with noise, a notorious open question in computational learning theory
+### introduction ###
+In recent work, Wiesner and Crutchfield~ CITATION  introduced  Quantum Generators  as a formal model of simple quantum mechanical systems
+In this model, a simple quantum mechanical system is observed repeatedly, yielding a classical stochastic process consisting of the sequence of discrete measurement outcomes, analogous to how an underlying Markov process yields a sequence of observations in a hidden Markov model
+From this perspective, it is natural to wonder what can be learned about such a simple quantum mechanical system from the sequence of measurement outcomes
+In this work, we consider the question of whether or not it is feasible to learn the distribution on measurement outcomes from a reasonable (polynomially  bounded) number of observations
+We state two theorems on this subject: first, in Section~, we show that it is information-theoretically  possible to learn the distribution over measurements for binary processes in polynomially many observations, but we then show in Section~ that under a standard hardness assumption (Conjecture~, that it is computationally infeasible to learn parity functions in the presence of classification noise) that it is also computationally infeasible to learn the output distribution of a Quantum Generator (also for a binary alphabet)

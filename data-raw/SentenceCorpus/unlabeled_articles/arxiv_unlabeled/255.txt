@@ -1,0 +1,26 @@
+### abstract ###
+We learn multiple hypotheses for related tasks under a latent hierarchical relationship between tasks
+We exploit the intuition that for  domain adaptation , we wish to share classifier structure, but for  multitask learning , we wish to share covariance structure
+Our hierarchical model is seen to subsume several previously proposed multitask learning models and performs well on three distinct real-world data sets
+### introduction ###
+We consider two related, but distinct tasks: domain adaptation (DA)  CITATION  and multitask learning (MTL)  CITATION
+Both involve learning related hypotheses on multiple data sets
+In DA, we learn multiple classifiers for solving the  same problem  over data from  different distributions
+In MTL, we learn multiple classifiers for solving  different problems  over data from the  same distribution
+Seen from a Bayesian perspective, a natural solution is a hierarchical model, with hypotheses as leaves  CITATION
+However, when there are more than two hypotheses to be learned (i e , more than two domains or more than two tasks), an immediate question is: are all hypotheses equally related
+If not, what is their relationship
+We address these issues by proposing two hierarchical models with  latent  hierarchies, one for DA and one for MTL (the models are nearly identical)
+We treat the hierarchy nonparametrically, employing Kingman's coalescent  CITATION
+We derive an EM algorithm that makes use of recently developed efficient inference algorithms for the coalescent  CITATION
+On several DA and MTL problems, we show the efficacy of our model
+Our models for DA and MTL share a common structure based on an unknown hierarchy
+The key difference between the DA model and the MTL model is in what information is shared across the hierarchy
+For simplicity, we consider the case of linear classifiers (logistic regression and linear regression)
+This can be extended to non-linear classifiers by moving to Gaussian processes  CITATION
+In domain adaption, a useful model is to assume that there is a single classifier that ``does well'' on all domains  CITATION
+In the context of hierarchical Bayesian modeling, we interpret this as saying that the weight vector associated with the linear classifier is generated according to the hierarchical structure
+On the other hand, in MTL, one does  not  expect the same weight vector to do well for all problems
+Instead, a common assumption is that features co-vary in similar ways between tasks  CITATION
+In a hierarchical Bayesian model, we interpret this as saying that the covariance structure associated with the linear classifiers is generated according to the hierarchical structure
+In brief: for DA, we share weights; for MTL, we share covariance

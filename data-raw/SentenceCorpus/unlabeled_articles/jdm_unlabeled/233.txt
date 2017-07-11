@@ -1,0 +1,68 @@
+### abstract ###
+this study compares judgments of the fairness of economic actions among survey populations in switzerland  and both student and non-student groups in the people's republic of china  with the earlier kahneman  knetsch and thaler  CITATION  surveys of canadians
+the findings suggest that fairness concerns matter among all of these groups  and the general patterns of what was and was not considered to be fair were similar
+however  there were also some significant differences with the influence of fairness being weaker in the two chinese samples than in the groups from the western countries  with the influence being weakest in the chinese student population for the wage related topics
+on the whole  almost no significant gender differences were found in any of the new surveys
+### introduction ###
+fairness concerns often play an important role in people's choices and decisions
+we commonly observe people forgoing some opportunities to maximize their own material well-being out of concern for others and adherence to standards of fairness
+evidence consistent with this behaviour has also been documented in numerous studies involving both survey responses to hypothetical scenarios  CITATION  and decisions with real monetary payoffs  CITATION
+although there is little empirical evidence one way or the other  judgments of fairness might well differ among different populations
+as bicchieri  CITATION  suggests  there is no particular unique norm of fairness  but one of several might be invoked depending on context
+even though there may be a broad consensus within a given culture about how  for example  goods and opportunities should be allocated or distributed  there may be differences between them
+although past studies have shown the nature and importance of fairness concerns and how people commonly respond to unfair behaviour  they have nearly all been conducted in western countries and cultures
+very little evidence has been reported on fairness concerns in eastern countries such as the people's republic of china
+although bian and keller  CITATION  reported survey responses to some of the questions in kkt by the chinese mba students in shenhai  comparing the results from one city in china to those from usa to infer between-country differences might be subject to some criticism
+as suggested in oosterbeek et al CITATION   within-country differences can be of the same magnitude as between-country differences
+one purpose of the present study is to survey chinese respondents from three cities for their responses to all four types of fairness norms summarized by kkt and to compare their judgments to those of people in different cultures
+i choose canada  switzerland  and the p r
+china for comparison  using a common methodology to facilitate the comparisons
+since this study is based on kkt  canada is used as a baseline  and besides  because the canadian survey  CITATION  was conducted over two decades ago  it provides a limited comparison of judgments over this time period  and switzerland is chosen for sample availability and its having much more in common with canada than with china in terms of culture and level of economic development
+further comparisons of these judgments are also made between student and non-student populations in china  and between male and female respondents in china and switzerland
+the findings indicate that fairness matters among all of the respondent groups  and generally in similar ways
+there are  however  some differences  particularly between the chinese respondents and those from both western countries
+all of the studies were based on survey responses to the same questions involving simple narrative vignettes used by kkt in their early telephone interview survey study of fairness among canadian respondents
+these questions allowed tests  for example  of the extent to which people regarded wage cuts as a fair response to market conditions when employers were or were not making normal profits
+the framing of questions in terms of these vignettes were similarly useful in determining the influence of reference profits and what was found to be the important role of a reference transaction in shaping people's judgments of fairness - often independent of or contrary to traditional economic justifications of the particular actions
+this research extends a growing empirical literature that examines patterns of people's fairness judgments - much of it based on not only the methods  but the findings of what people judged to be fair or acceptable actions and what they judged to be unfair in the kkt study
+frey et al CITATION   for example  used questions similar to those in the kkt study in surveys of german and swiss populations
+their findings were much the same in terms of respondents' negative responses to the use of price to eliminate excess demand
+shiller  boycko  and korobov  CITATION  investigated people in the soviet union and the united states with some questions again similar to those used by kkt
+with some economically relatively minor differences  similar patterns of fairness judgments were found between the soviet and american respondents
+both groups of respondents considered it unfair to increase price in response to a sudden surge of excess demand  a finding by and large consistent with the kkt findings
+in general  findings from these representative surveys showed consistent results
+however  although showing how people in canada and some other countries evaluate the fairness of various economic behaviours  they are limited to western cultures and were conducted some considerable time ago
+they provide little direct evidence of how people in other cultures might react to similar questions  and given present interest  particularly people in p r
+china
+some related studies have been carried out in china  but they have used other methods and populations
+for example  bian and keller  CITATION  found that the judgments of chinese business graduate students differed from those of the random household sample of canadians on the fairness of exploiting added market power for short-term profit
+while interesting and perhaps indicative of the possibility of a wider disparity  the difference between the respondents may well be limited to the particular sample population
+in another study  bian and keller  CITATION  used a different sample of government and business people to ask about life and death issues rather than about common economic behaviors  and while again interesting and useful for studies of decisions by these special groups  the sample and the questions allow little comparability to the kkt or the present studies
+the latter studies involved respondents more generally representative of wider populations  and questions concerning the fairness of economic actions and decisions intended to protect profits  exploit market power  allocate gains  and depart from previous reference transactions
+the present study also contributes to the literature on cross-cultural investigation of human fairness judgments  CITATION  by providing some empirical evidence that can be used to test the existing related theories
+for this present study  china and switzerland or canada to be compared might differ in political  social  economic and cultural aspects
+due to the co-existence of political  socioeconomic and cultural differences between the countries for comparison  attributing cross-country difference to cultural factor was challenged
+however  chen and tang  CITATION  provided some evidence that culture's role in affecting people's economic behavior might be more significant than that of non-cultural factors
+in order to explore the influence of within-country cultural difference  they chose xiamen and lhasa tibet in china for comparison and used singapore as a control sample because of its similarity in culture with xiamen and heterogeneity in political systems  social institutions and level of economic development
+they found no significant differences in people's behavior in an ultimatum game between xiamen and singapore  but people in lhasa differed from the former two samples  suggesting that the influence of culture dominates that of non-cultural factors
+thus  considering the cultural discrepancies between china and the western group in two dimensions see table  NUMBER   including power distance and individualism as proposed by hofstede  CITATION   culture is expected to play a critical role in affecting people's fairness judgments
+toc paragraph hypothesis  NUMBER a --   h NUMBER  class  paragraph  sec anchor -- hypothesis  NUMBER a   h NUMBER  sec end --  chinese people and people from switzerland and canada diverge in fairness judgments for some economic actions
+more chinese people judge the same action as fair than their counterparts
+hypothesis  NUMBER a is formulated based mainly on hofstede  CITATION
+as seen from table  NUMBER   the group of switzerland and canada and china are on the opposite sides along the axis of each index  and china has a higher score on the power distance index while a lower score on the individualism index
+according to hofstede  CITATION   large power distance indicates that to a large extent the less powerful members of society within a country accept that power is distributed unequally  and that people generally accept the fact that  power is a basic fact of society that antedate good or evil and its legitimacy is irrelevant  and power-holders are entitled to privileges   CITATION
+similarly  collectivism  in contrast with high individualism  is associated with the norm that the interests of group outweigh the interests of individuals and that the group provides protection
+in this study  the people whose actions are judged in all scenarios hold market power more or less and at the same time most of them represent interests of an organization or a group
+so theories on power distance and collectivism predict chinese would be more willing to accept decisions of power-holders or of groups  which supports hypothesis  NUMBER a
+however  inglehart's  CITATION  two dimensions on culture seem to contradict each other in conjecturing people's fairness judgments
+compared with switzerland and canada  china is evaluated as less self-expressing which is consistent with hypothesis  NUMBER a  but more secular and thus should be less likely to defer to authority
+this made me propose an alternative for hypothesis  NUMBER a
+toc paragraph hypothesis  NUMBER b --   h NUMBER  class  paragraph  sec anchor -- hypothesis  NUMBER b   h NUMBER  sec end --  more chinese people judge the same action as unfair than their counterparts
+men and women think and behave differently in many respects  which have received much attention and thus spurred studies on gender differences
+this study also examined whether gender affects people's judgments of fairness in the marketplace  with three new surveys
+findings from some gender studies on judgments or perceptions of social preference such as fairness or justice  CITATION  revealed that males and females might differ from each other in this respect
+on fairness judgments  for example  beldona and namasivayam  CITATION  documented statistically significant differences where females perceived significantly less fairness across all pricing scenarios in both discount and surplus frames
+so i expect gender differences exist
+toc paragraph hypothesis  NUMBER  --   h NUMBER  class  paragraph  sec anchor -- hypothesis  NUMBER    h NUMBER  sec end --  male and female respondents differ in their fairness judgments in each of the three surveys
+this paper is organized as follows
+the following section of the paper describes the nature of the surveys carried out in china and switzerland

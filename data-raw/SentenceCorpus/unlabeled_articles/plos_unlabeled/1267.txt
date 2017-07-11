@@ -1,0 +1,38 @@
+### abstract ###
+Understanding the principles governing axonal and dendritic branching is essential for unravelling the functionality of single neurons and the way in which they connect.
+Nevertheless, no formalism has yet been described which can capture the general features of neuronal branching.
+Here we propose such a formalism, which is derived from the expression of dendritic arborizations as locally optimized graphs.
+Inspired by Ram n y Cajal's laws of conservation of cytoplasm and conduction time in neural circuitry, we show that this graphical representation can be used to optimize these variables.
+This approach allows us to generate synthetic branching geometries which replicate morphological features of any tested neuron.
+The essential structure of a neuronal tree is thereby captured by the density profile of its spanning field and by a single parameter, a balancing factor weighing the costs for material and conduction time.
+This balancing factor determines a neuron's electrotonic compartmentalization.
+Additions to this rule, when required in the construction process, can be directly attributed to developmental processes or a neuron's computational role within its neural circuit.
+The simulations presented here are implemented in an open-source software package, the TREES toolbox, which provides a general set of tools for analyzing, manipulating, and generating dendritic structure, including a tool to create synthetic members of any particular cell group and an approach for a model-based supervised automatic morphological reconstruction from fluorescent image stacks.
+These approaches provide new insights into the constraints governing dendritic architectures.
+They also provide a novel framework for modelling and analyzing neuronal branching structures and for constructing realistic synthetic neural networks.
+### introduction ###
+Neuronal circuits are composed of a large variety of branched structures axons and dendrites forming a highly entangled web, reminiscent of a stochastic fractal CITATION.
+Despite this apparent chaos, more than a century ago Ram n y Cajal was able to extract order from this neuroanatomical complexity, formulating fundamental anatomical principles of nerve cell organization CITATION.
+Cajal described three biological laws of neuronal architecture : optimization principles for conservation of space, cytoplasm and conduction time in the neural circuitry.
+These principles helped him to classify his observations and allowed him to postulate a wide variety of theories of functionality and directionality of signal flow in various brain areas.
+In the meantime, many of these ideas have been substantiated by applying more rigorous statistical analysis: circuitry and connectivity considerations as well as simple wire-packing constraints have been shown to determine the statistics of dendritic morphology CITATION CITATION.
+It has also been shown mathematically that the specific organization and architecture of many parts of the brain reflect the selection pressure to reduce wiring costs for the circuitry CITATION CITATION .
+In parallel, the development of compartmental modelling techniques based on the theories of Wilfrid Rall have highlighted the importance of a neuron's precise branching morphology for its electrophysiological properties CITATION, and have shown that dendrites can play an important role in the computations performed on the inputs to the cell CITATION, CITATION.
+In fact, requirements for highly selective connectivity CITATION, CITATION, coherent topographic mapping, sophisticated computation or signal compartmentalization at the level of the single cell CITATION and the network could all contribute to this observed intricacy of brain wiring.
+These two lines of investigation raise the question as to whether computation plays the determining role in shaping the morphological appearance of neuronal branching structures.
+Alternatively, the simple laws of material and conduction time preservation of Ram n y Cajal could have more influence.
+Using computational techniques it has become possible to construct synthetic neuronal structures in silico governed by the simulation of physical and biological constraints CITATION, CITATION CITATION.
+In two recent papers CITATION, CITATION, we derived a growth algorithm for building dendritic arborisations following closely the constraints previously described by Ram n y Cajal.
+The algorithm builds tree structures which minimize the total amount of wiring and the path from the root to all points on the tree, corresponding to material and conduction time conservation respectively.
+Synthetic insect dendrite morphologies were faithfully reproduced in terms of their visual appearance and their branching parameters in this way.
+Here we explore the algorithm's general applicability and its potential to describe any type of dendritic branching.
+If the algorithm is sufficient to accurately mimic the essential structure of neuronal circuitry we can resolve the relative importance of computation and wiring constraints in shaping neuronal morphology.
+We can then claim that Ram n y Cajal's laws are sufficient for shaping neuronal morphology.
+Specific computation will then only play a subordinate role in determining a neuron's branching pattern.
+We show here that while Cajal's laws do represent a strict constraint on neuronal branching, a neuronal morphology has a certain freedom to operate within these constraints.
+Firstly, by adjusting the balance between the two wiring costs, a dendrite can efficiently set its electrotonic compartmentalization, a quantity attributable to computation.
+Secondly, the density profile of the spanning field in which a dendrite grows determines its shape dramatically.
+Thirdly, a few weaker constraints such as the suppression of multifurcations, the addition of spatial jitter or the sequential growth of sub-regions of a dendrite are helpful for reproducing the dendritic branching patterns of particular preparations.
+These additional constraints might shed light on further functional, computational, developmental or network determinants for certain dendritic structures, and more of these will follow when applying our method to many more preparations.
+Moreover, the simple principles presented in this study can be used to efficiently edit, visualize, and analyze neuronal trees.
+Finally, these approaches allow one to generate highly realistic synthetic branched structures, and to automatically reconstruct neuronal branching from microscopy image stacks.

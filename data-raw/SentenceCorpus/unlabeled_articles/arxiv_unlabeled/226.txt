@@ -1,0 +1,32 @@
+### abstract ###
+Inferring the sequence of states from observations is one of the most fundamental problems in Hidden Markov Models
+In statistical physics language, this problem is equivalent to computing the marginals of a one-dimensional model with a random external field
+While this task can be accomplished through transfer matrix methods,  it becomes quickly intractable when the underlying state space is large
+This paper develops several low-complexity approximate algorithms to  address this inference problem when the state space becomes large
+The new algorithms are based on various mean-field approximations of the transfer matrix
+Their performances are studied in detail on a simple realistic model for DNA pyrosequencing
+### introduction ###
+Hidden Markov Models (HMM's) are a workhorse of modern statistics and  machine learning, with applications ranging from speech recognition to biological sequence alignment, to pattern classification  CITATION
+An HMM defines the joint distribution over a sequence of states  SYMBOL ,  SYMBOL , and observations   SYMBOL , whereby the states form a Markov chain and the observations  are conditionally independent given the sequence of states
+In formulae we have  SYMBOL }  The most fundamental algorithmic task related to HMM's is arguably the problem of inferring the sequence of states   SYMBOL  from the observations
+The conditional  distribution of the state sequence given the observations is, by Bayes theorem,  SYMBOL } where  SYMBOL  can be thought as a normalization constant
+The state sequence can then be estimated by the sequence of most likely states (symbol maximum a posteriori probability -MAP- estimation)  SYMBOL } This reduces the inference problem to the problem of computing marginals of  SYMBOL
+From a statistical physics point of view  CITATION , the  conditional distribution () can be regarded as the Boltzmann distribution of a one dimensional system with variables  SYMBOL  and energy function  SYMBOL } at temperature  SYMBOL
+The sequence of observations thus act  as a quenched external field
+As suggested by this analogy, the  marginals of  SYMBOL  can be computed efficiently using a transfer matrix algorithm
+In the present context this is also known as the Bahl-Cocke-Jelinek-Raviv (BCJR) algorithm  CITATION
+The BCJR algorithm has complexity that is linear in the sequence length and quadratic in the number of states  SYMBOL
+More precisely, the complexity in  SYMBOL  is the same as  multiplying an  SYMBOL  matrix times an  SYMBOL  vector
+While this is easy for simple models with a few states, it becomes intractable for complex models
+A simple mechanism leading to state space explosion is the presence of memory in the underlying Markov chain, or the dependence of each observation on multiple states
+In all of these cases, the model can be reduced to a standard HMM via state space augmentation, but the augmented  state space becomes exponential in the memory length
+This leads to severe limitations on the tractable memory length
+This paper proposes several new algorithms for addressing this problem
+Our basic intuition is that, when the memory length gets large, the transfer matrix can be accurately approximated using mean field ideas
+We study the proposed method on a concrete model used in DNA pyrosequencing
+In this case, one is interested in inferring the  underlying DNA sequence from an absorption signal that carries  traces of the base type at several positions
+The effective memory length scales roughly as the square root of the sequence length, thus making plain transfer matrix impractical
+The paper is organized as follows
+The next section will define the  concrete model we study, and Section  describes the connection with DNA pyrosequencing to motivate it
+Section  describes the transfer matrix algorithm and several low complexity approximation schemes
+After describing a few bounds in , numerical and analytical results are collected in Section  \\

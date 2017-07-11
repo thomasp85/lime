@@ -1,0 +1,37 @@
+### abstract ###
+auctions  normally considered as devices facilitating trade  also provide a way to probe mechanisms governing one's valuation of some good or action
+one of the most intriguing phenomena in auction behavior is the winner's curse - the strong tendency of participants to bid more than rational agent theory prescribes  often at a significant loss
+the prevailing explanation suggests that humans have limited cognitive abilities that make estimating the correct bid difficult  if not impossible
+using a series of auction structures  we found that bidding approaches rational agent predictions when participants compete against a computer
+however  the winner's curse appears when participants compete against other humans  even when cognitive demands for the correct bidding strategy are removed
+these results suggest the humans assign significant future value to victories over human but not over computer opponents even though such victories may incur immediate losses  and that this valuation anomaly is the origin of apparently irrational behavior
+### introduction ###
+auctions of various types constitute a ubiquitous mechanism for buying and selling items of limited quantity or availability
+given the commonality of auctions  it is noteworthy that under fairly general conditions  even highly experienced bidders tend to suffer net losses  CITATION
+this fact has come to be called the winner's curse and was first identified in auctions for drilling rights in the gulf of mexico  CITATION
+the phenomenon has since been reported in a range of other field settings  CITATION  as well as laboratory studies  CITATION
+experiments have shown that naive bidders initially incur large losses that decline over time  but the  curse  nonetheless persists even for very experienced  CITATION  or professional  CITATION  auction participants
+the winner's curse arises in auctions for items of fixed  but unknown  value known as common value auctions
+oil drilling rights satisfy these conditions because the amount of oil in a region and hence its market value is the same for all bidders  yet cannot be precisely estimated
+to understand the source of the winner's curse  begin by assuming that estimates of value for each bidder are correct on average with some amount of variance
+if participants bid their estimated value  the winner of the auction will be that participant with the most optimistic estimate
+since estimates are distributed around the true value  the most optimistic estimate will generally be an overestimate of the true value and a net loss will therefore occur for that bidder
+hence  on average the winner is cursed by the statistical fact that their estimate is more likely than not to be greater than the true value
+to avoid the winner's curse it is necessary to modify one's bid beyond one's estimate of the true value to account for the conditional probability of winning the auction
+that is  a  good  bid ought to be sufficiently less than one's estimate in order to acknowledge the fact that winning is most likely to occur for an overestimate
+in practice  auction participants do modify their bids strategically  but the correction is not sufficient to avoid the winner's curse  CITATION
+there have been several proposed mechanisms for the winner's curse  CITATION
+these explanations generally propose that bidders fail to perform rationally due to cognitive limitations  CITATION
+the hypothesis is that people understand they must submit bids less than their estimates  but they are unable to accurately calculate exactly how much less to bid
+in this study  we examine this hypothesis and find no support for it
+we first present data demonstrating that the winner's curse is not a consequence of limited cognitive abilities
+we then demonstrate that the curse depends instead on the social nature of the auction environment
+previous work on the psychology of auctions has demonstrated that social influences have a significant effect on bidding
+in escalating auctions  in which participants bid sequentially until a single high bidder remains  people are subject to intense emotions that impede rationalization and may lead to extremely high bids  CITATION
+this phenomenon  known as  auction fever   is likely to be related to the winner's curse  according to our thesis
+the winner's curse has previously be thought to be an entirely separate phenomenon because the uncertainty inherent in common value auctions presumably make cognitive demands overwhelming  CITATION
+additionally  in our experiments the social environment is minimal
+each participant submits a sealed bid essentially in isolation and the highest submitted bid wins  leaving no opportunity for competitive fire to escalate with the progression of the auction
+our findings address both of these points
+first  despite the challenges posed by lack of information in common value auctions  people are able to converge to stable bidding strategies in less than  NUMBER  trials that remain constant when cognitive demands are eliminated
+second  we find that the winner's curse is in fact strongly dependent on social context

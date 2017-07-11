@@ -1,0 +1,27 @@
+### abstract ###
+using kahneman and tversky's life-death decision paradigm  wang and colleagues CITATION have shown two characteristic phenomena regarding people's attitude to risk when the contextual group size is manipulated
+in both positive and negative frames  people tend to take greater risks in life-death decisions as the contextual group size becomes smaller  this risk-seeking attitude is greater when framed positively than negatively
+this second characteristic often leads to the disappearance of the framing effect in small group contexts comprising of  NUMBER  or  NUMBER  people
+their results could shed new light on the effect of contextual group size on people's risk choice
+however these results are usually observed in laboratory experiments with university student samples
+this study aims to examine the external validity of these results through different ways of experimentation and with a different sample base
+the first characteristic was replicated in both a face-to-face interview with a randomly selected sample of the japanese general public  and a web-based experiment with a non-student sample  but not the second
+### introduction ###
+over the last three decades  empirical research on human cognition and decision-making behavior has shown a systematic bias in a number of decision-making areas
+one of the pioneering studies in this field was performed by kahneman and tversky on the effects of framing in life-death decision problems CITATION
+in their study  subjects were presented with a cover story explaining that  NUMBER  people were suspected to be infected with a fatal asian disease for which only two curative plans are available
+specifically  plan a has a deterministic outcome  while plan b has a probabilistic outcome
+the deterministic outcome ensures the survival of one-third of the patients i e    NUMBER  survivors  while the probabilistic outcome results in a one-third probability that all of the patients will survive  and a two-thirds probability that no one will survive
+after the subjects read the cover story  they were asked to choose one of the two plans
+the framing effect as demonstrated by tversky and kahneman CITATION is as follows  when this problem was represented in terms of saving lives a  positive frame   most subjects  NUMBER  percent  were risk-averse  the certain survival of  NUMBER  lives was more attractive than the risky choice  in which there was only a one-third chance of saving all  NUMBER  lives
+in contrast  when this problem was represented in terms of losing lives a  negative frame   most subjects  NUMBER  percent  favored the risky choice  the assured death of  NUMBER  people was less attractive than the two-thirds probability that  NUMBER  could die
+a number of studies have been conducted to test the reliability and generalizability of tversky and kahneman's original study
+on the one hand  with the standard cover story  strong framing effects have been replicated not only in different kinds of respondents  such as university faculty staff  students  and physicians CITATION but also in various applied areas CITATION
+on the other hand  some studies have shown little or no framing effect when the context or cover story was manipulated
+apparently  this framing effect is sensitive both to the context in which the problem is described CITATION   and to various cognitive and social variables CITATION
+in support for the cognitive social line of inquiry  a series of studies by wang and colleagues observed an obvious effect of contextual group size on people's attitude to risk detailed in the next section
+however this effect was usually detected in experiments with university students
+thus  to examine the external validity of the contextual group size effect  it is worth verifying whether this effect can be replicated with a different method of experimentation with different sample types
+section  NUMBER  will explain wang's effect of contextual group size
+sections  NUMBER  and  NUMBER  report the results of two experiments that verify the validity of the above effect
+in section  NUMBER   we conclude with a summary and discussion of these results

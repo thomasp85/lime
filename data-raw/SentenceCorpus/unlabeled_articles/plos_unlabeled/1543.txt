@@ -1,0 +1,78 @@
+### abstract ###
+Genome wide association studies, which test for association between common genetic markers and a disease phenotype, have shown varying degrees of success.
+While many factors could potentially confound GWA studies, we focus on the possibility that multiple, rare variants may act in concert to influence disease etiology.
+Here, we describe an algorithm for RV analysis, RareCover.
+The algorithm combines a disparate collection of RVs with low effect and modest penetrance.
+Further, it does not require the rare variants be adjacent in location.
+Extensive simulations over a range of assumed penetrance and population attributable risk values illustrate the power of our approach over other published methods, including the collapsing and weighted-collapsing strategies.
+To showcase the method, we apply RareCover to re-sequencing data from a cohort of 289 individuals at the extremes of Body Mass Index distribution.
+Individual samples were re-sequenced at two genes, FAAH and MGLL, known to be involved in endocannabinoid metabolism.
+The RareCover analysis identifies exactly one significantly associated region in each gene, each about 5 Kbp in the upstream regulatory regions.
+The data suggests that the RVs help disrupt the expression of the two genes, leading to lowered metabolism of the corresponding cannabinoids.
+Overall, our results point to the power of including RVs in measuring genetic associations.
+### introduction ###
+The Common Disease, Common Variant hypothesis CITATION CITATION postulates that the etiology of common diseases is mediated by commonly occurring genomic variants in a population.
+This has served as the basis for genome wide association studies that test for association between individual genomic markers and the disease phenotype.
+Using genome-wide panels of common SNPs, GWA studies have been successful in identifying hundreds of statistically significant associations for many common diseases as well as several quantitative traits CITATION CITATION.
+Nevertheless, the success of GWA studies has been mixed.
+Significant genetic loci have not been detected for several common diseases that are known to have a strong genetic component CITATION.
+Additionally, for many common diseases, associations discovered in GWA studies can account for only a small fraction of the heritability of the disease.
+While many factors could potentially confound GWA studies, we focus on the possibility that multiple, rare variants may act in concert to influence disease etiology.
+The alternative to the CDCV hypothesis, the Common Disease, Rare Variant hypothesis has been the topic of much recent debate CITATION, and has shown promise in explaining disease etiology in multiple studies.
+For example, rare variants have been implicated in reduced sterol absorption and, consequently, lower plasma levels of LDL CITATION, CITATION and colorectal cancer CITATION.
+While some studies have shown RVs to increase risk, a recent study indicates that RVs also act protectively, with multiple RVs in renal salt handling genes showing association with reduced renal salt resorption and reduced risk of hypertension CITATION.
+Additionally, rare mutations in IFIH1 have been shown to act protectively against type 1 diabetes CITATION .
+The aforementioned studies and others focused on re-sequencing of the coding regions of candidate genes using Sanger sequencing.
+Recent technological advances in DNA sequencing have made it possible to re-sequence large stretches of a genome in a cost-effective manner.
+This is enabling large-scale studies of the impact of RVs on complex diseases.
+However, several properties of rare variants make their genetic effects difficult to detect with current approaches.
+Bodmer and Bonilla provide an excellent review of the properties of RVs, and the differences between rare, and common variant analysis CITATION.
+As an example, if a causal variant is rare, and the disease is common, then the allele's Population-Attributable-Risk, and consequently the odds-ratio, will be low.
+Additionally, even highly penetrant RVs are unlikely to be in Linkage Disequilibrium with more common genetic variations that might be genotyped for an association study of a common disease.
+Therefore, single-marker tests of association, which exploit LD-based associations, are likely to have low power.
+If the CDRV hypothesis holds, a combination of multiple RVs must contribute to population risk.
+In this case, there is a challenge of detecting multi-allelic association between a locus and the disease.
+Methods to detect such associations are only just being developed.
+A natural approach is a collapsing strategy, where multiple RVs at a locus are collapsed into a single variant.
+Such strategies have low power when causal and neutral RVs are combined.
+Madsen and Browning have recently proposed a weighted-sum statistic to detect loci in which disease individuals are enriched for rare variants CITATION.
+In their approach, variants are weighted according to their frequency in the unaffected sample, with low frequency variants being weighted more heavily.
+Each individual is scored as a sum of the weights of the mutations carried.
+The test then determines if the diseased individuals are weighted more heavily than expected in a null-model.
+Madsen and Browning show that with FORMULA of variants in a group being causal and a combined odds ratio FORMULA, the weighted-sum statistic detects associations with high power.
+While effective, this approach depends upon the inclusion of high proportion of causal rare variants in the formation of the test statistics and strong penetrance to detect significant association.
+In their simulations, the PAR of the locus is partitioned equally among all variants, an assumption that may not always hold.
+The Combined Multivariate and Collapsing Method, proposed by Li and Leal, combines variants into groups based upon predefined criteria CITATION.
+An individual has a 1 for a group if any variant in the group is carried and a 0 otherwise.
+The CMC approach then considers each of the groups in a multivariate analysis to explain disease risk.
+This combination of the collapsing approach and multivariate analysis results in an increase of power over single-marker and multiple marker approaches.
+However, as Li and Leal point out, the method relies on correct grouping of variants.
+The power is reduced as functional variants are excluded and non-functional variants are included in a group.
+Assignment of SNPs to incorrect groups may, in fact, decrease power below that attainable through single marker analysis.
+Indeed, a recent analysis by Manolio and colleagues suggests that new methods might be needed when the causal variants have both low PAR and low penetrance values CITATION .
+Here, we focus on a model-free method, RareCover, that collapses only a subset of the variants at a locus.
+Informally, consider a locus FORMULA encoding a set FORMULA of rare variants.
+RareCover associates FORMULA with a phenotype by measuring the strongest possible association formed by collapsing any subset FORMULA of variants at FORMULA.
+At first glance, such an approach has many problems.
+First, selecting an optimal subset of SNPs is computationally intensive, scaling as FORMULA.
+We show that a greedy approach to selecting the optimal subset scales linearly, making it feasible to conduct associations on a large set of candidate loci.
+A second confounding factor is that the large number of different tests at a locus increase the likelihood of false association.
+The adjustment required to control the type I error could decrease the power of the method.
+However, extensive simulations show otherwise.
+Our results suggest that moderately penetrant alleles FORMULA with small PAR FORMULA, and moderately sized cohorts are sufficient for RareCover to detect significant association.
+This compares well with the current power of single-marker GWA studies on common variants, and outperforms other methods for RV detection.
+We also applied RareCover to the analysis of two genes, FAAH, and MGLL, in the endocannabinoid pathway in a large sequencing study of obese and non-obese individuals.
+The endocannabinoid pathway is an important mediator of a variety of neurological functions CITATION, CITATION.
+Endocannabinoids, acting upon CB1 receptors in the brain, the gastrointestinal tract, and a variety of other tissues, have been shown to influence food intake and weight gain in animal models of obesity.
+Using a selective endocannabinoid receptor antagonist, SR141716 leads to reduced food intake in mice.
+Correspondingly, elevation of leptin levels have been shown to decrease concentrations of endogenous CB1 agonists, Anandamide, and 2-AG in mice, thereby reducing food-intake CITATION.
+The FAAH and MGLL enzymes serve as regulators of endocannabinoid signaling in the brain CITATION, by catalyzing the hydrolysis of endocannabinoid including anandamide, and 2-AG.
+Gene expression studies in lean and obese women show significantly decreased levels of AEA and 2-AG, as well as over-expression of CB1 and FAAH in lean, as opposed to obese women CITATION.
+While evidence points to a genetic association of these loci with obesity, multiple recent studies using common SNPs in the FAAH region have failed to confirm an association CITATION CITATION.
+A Pro129Thr polymorphism was tentatively associated with obesity in a cohort of Europe and and Asian ancestry, but has not been replicated in other data CITATION .
+We tested the hypothesis that multiple, rare alleles at these loci are associated with obesity.
+We have used unpublished data from Frazer and colleagues, where the FAAH and MGLL regions were re-sequenced using next generation technologies in 148 obese and 150 non-obese individuals taken as extremes of the body mass index distribution from subjects in a large clinical trial.
+The resequencing identified a number of common, and rare variants in the region.
+We applied RareCover to determine if multiple RVs, i.e., allelic heterogeneity, mediated the genetic effects of FAAH and MGLL on obesity.
+RareCover identified a single region at each locus with permutation adjusted p-values of FORMULA and FORMULA.
+In each case, the significant locus was immediately upstream of the gene, consistent with a regulatory function for the rare variants.

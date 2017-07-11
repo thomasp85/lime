@@ -1,0 +1,29 @@
+### abstract ###
+We introduce  algorithmic information theory , also known as the theory of  Kolmogorov complexity
+We explain the main concepts of this quantitative approach to defining `information'
+We discuss the extent to which Kolmogorov's and Shannon's information theory have a common purpose, and where they are fundamentally different
+We indicate how recent developments within the theory allow one to formally distinguish between  `structural' (meaningful) and `random' information\/  as measured by the  Kolmogorov structure function , which leads to a mathematical formalization of Occam's razor in inductive inference
+We end by discussing some of the philosophical implications of the theory
+### introduction ###
+How should we measure the amount of information about a phenomenon that is given to us by an observation concerning the phenomenon
+Both `classical' (Shannon) information theory (see the chapter by  CITATION ) and algorithmic information theory start with the idea that this amount can be measured by  the minimum number of bits needed to describe the observation
+But whereas Shannon's  theory considers description methods that are optimal relative to some given probability distribution, Kolmogorov's algorithmic theory takes a different, nonprobabilistic approach: any computer program that first computes (prints) the string representing the observation, and then terminates, is viewed as a valid description
+The amount of information in the string is then defined as the size (measured in bits) of the  shortest\/  computer program that outputs the string and then terminates
+A similar definition can be given for infinite strings, but in this case the program produces element after element forever
+Thus, a long sequence of 1's such as  SYMBOL } contains little information because a program of size about  SYMBOL  bits outputs it:  SYMBOL  SYMBOL = 3 1415
+
+
+SYMBOL \pi$ forever)
+Such a definition would appear to make the amount of information in a string (or other object) depend on the particular programming language used
+Fortunately, it can be shown that all reasonable choices of programming languages lead to quantification of the amount of `absolute' information in individual objects that is invariant up to an additive constant
+We call this quantity the `Kolmogorov complexity' of the object
+While regular strings have small Kolmogorov complexity, random strings have Kolmogorov complexity about equal to their own length
+Measuring complexity and information in terms of program size has turned out to be a very powerful idea with applications in areas such as theoretical computer science, logic, probability theory, statistics and physics \paragraph{This Chapter} Kolmogorov complexity was introduced independently and with different motivations by R J Solomonoff (born 1926), A N Kolmogorov (1903--1987) and G
+Chaitin (born 1943) in 1960/1964, 1965 and 1966 respectively  CITATION
+During the last forty years, the subject has developed into a major and mature area of research
+Here, we give a brief overview of the subject geared towards an audience specifically interested in the philosophy of information
+With the exception of the recent work on the Kolmogorov structure function and parts of the discussion on philosophical implications, all material we discuss here can also be found in the standard textbook  CITATION
+The chapter is structured as follows: we start with an introductory section in which we define Kolmogorov complexity and list its most important properties
+We do this in a much simplified (yet formally correct) manner, avoiding both technicalities and all questions of motivation (why this definition and not another one )
+This is followed by Section~ which provides an informal overview of the more technical topics discussed later in this chapter, in Sections~--~
+The final Section~, which discusses the theory's philosophical implications, as well as Section~, which discusses the connection to inductive inference, are less technical again, and should perhaps be glossed over before delving into the technicalities of Sections~--~

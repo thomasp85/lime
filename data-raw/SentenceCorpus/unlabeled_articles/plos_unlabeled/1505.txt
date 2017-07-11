@@ -1,0 +1,43 @@
+### abstract ###
+The development of systemic approaches in biology has put emphasis on identifying genetic modules whose behavior can be modeled accurately so as to gain insight into their structure and function.
+However, most gene circuits in a cell are under control of external signals and thus, quantitative agreement between experimental data and a mathematical model is difficult.
+Circadian biology has been one notable exception: quantitative models of the internal clock that orchestrates biological processes over the 24-hour diurnal cycle have been constructed for a few organisms, from cyanobacteria to plants and mammals.
+In most cases, a complex architecture with interlocked feedback loops has been evidenced.
+Here we present the first modeling results for the circadian clock of the green unicellular alga Ostreococcus tauri.
+Two plant-like clock genes have been shown to play a central role in the Ostreococcus clock.
+We find that their expression time profiles can be accurately reproduced by a minimal model of a two-gene transcriptional feedback loop.
+Remarkably, best adjustment of data recorded under light/dark alternation is obtained when assuming that the oscillator is not coupled to the diurnal cycle.
+This suggests that coupling to light is confined to specific time intervals and has no dynamical effect when the oscillator is entrained by the diurnal cycle.
+This intringuing property may reflect a strategy to minimize the impact of fluctuations in daylight intensity on the core circadian oscillator, a type of perturbation that has been rarely considered when assessing the robustness of circadian clocks.
+### introduction ###
+Real-time monitoring of gene activity now allow us to unravel the complex dynamical behavior of regulatory networks underlying cell functions CITATION.
+However, understanding the collective behavior of even a few molecular actors defies intuition, as it depends not only on the topology of the interaction network but also on strengths and response times of its links CITATION.
+A mathematical description of a regulatory network is thus necessary to qualitatively and quantitatively understand its dynamical behavior, but obtaining it is challenging.
+State variables and parameters are subject to large fluctuations CITATION, which create artificial complexity and mask the actual network structure.
+Genetic modules are usually not isolated but coupled to a larger network, and a given gene can be involved in different modules and pathways CITATION.
+It is thus important to identify gene circuits whose dynamical behavior can be modeled quantitatively, to serve as model circuits.
+One strategy for obtaining such circuits has been to construct synthetic networks, which are isolated by design CITATION CITATION.
+As recent experiments have shown, an excellent quantitative agreement can be obtained by incorporating when needed detailed descriptions of various biochemical processes CITATION .
+Another strategy is to study natural gene circuits whose function makes them relatively autonomous and stable.
+The circadian clocks that drive biological processes around the day/night cycle in many living organisms are natural candidates, as these genetic oscillators keep track of the most regular environmental constraint: the alternation of daylight and darkness caused by Earth rotation CITATION CITATION.
+Informed by experiments, circadian clock models have progressively become more complex, evolving from single loops featuring a self-repressed gene CITATION, CITATION to networks of interlocked feedback loops CITATION CITATION .
+Here we report surprisingly good agreement between the mathematical model of a single transcriptional feedback loop and expression profiles of two central clock genes of Ostreococcus tauri.
+This microscopic green alga is the smallest free-living eukaryote known to date and belongs to the Prasinophyceae, one of the most ancient groups of the green lineage.
+Ostreococcus displays a very simple cellular organization, with only one mitochondrion and one chloroplast CITATION, CITATION.
+Its small genome sequence revealed a high compaction and a very low gene redundancy CITATION.
+The cell division cycle of Ostreococcus is under control of a circadian oscillator, with cell division occurring at the end of the day in light/dark cycles CITATION.
+These daily rhythms in cell division meet the criteria characterizing a circadian clock, as they can be entrained to different photoperiods, persist under constant conditions and respond to light pulses by phase shifts that depend on internal time CITATION .
+Very recently, some light has been shed on the molecular workings of Ostreococcus clock by Corellou et al. CITATION.
+Since the clock of closely related Arabidopsis has been extensively studied, they searched Ostreococcus genome for orthologs of higher plant clock genes and found only two, similar to Arabidopsis central clock genes Toc1 and Cca1 CITATION.
+These two genes display rhythmic expression both under light/dark alternation and in constant light conditions.
+A functional analysis by overexpression/antisense strategy showed that Toc1 and Cca1 are important clock genes in Ostreococcus.
+Overexpression of Toc1 led to increased levels of CCA1 while overexpression of Cca1 resulted in lower levels of TOC1.
+Furthermore CCA1 was shown to bind to a conserved evening element sequence that is required for the circadian regulated activity of Toc1 promoter.
+Whether Toc1 and Cca1 work in a negative feedback loop could not be inferred from this study since Ostreococcus clock appeared to rely on more than a simple Toc1/Cca1 negative feedback loop.
+Interestingly, Arabidopsis genes Toc1 and Cca1 were the core actors of the first plant clock model, based on a transcriptional loop where TOC1 activates Cca1 and the similar gene Lhy, whose proteins dimerize to repress Toc1 CITATION, CITATION.
+However, this model did not reproduce well expression peaks of Toc1 and Cca1 in Arabidopsis CITATION and was extended to adjust experimental data CITATION.
+Current Arabidopsis clock models feature several interlocked feedback loops CITATION, CITATION.
+This led us to investigate whether the transcriptional feedback loop model where Toc1 activates Cca1 and is repressed by Cca1 would be relevant for Ostreococcus.
+We not only found that this two-gene loop model reproduces perfectly transcript profiles of Ostreococcus Toc1 and Cca1 but that excellent adjustment of data recorded under light/dark alternation is obtained when no model parameter depends on light intensity.
+This counterintuitive finding suggests that the oscillator is not permanently coupled to light across the 24-hour cycle but only during specific time intervals, which is supported by numerical simulations.
+In this article, we propose that the invisibility of coupling in entrainment conditions reflects a strategy to shield the oscillator from natural fluctuations in daylight intensity.

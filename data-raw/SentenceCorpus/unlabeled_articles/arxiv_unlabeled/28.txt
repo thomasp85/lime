@@ -1,0 +1,12 @@
+### abstract ###
+Assuming that the loss function is convex in the prediction, we construct a prediction strategy universal for the class of Markov prediction strategies, not necessarily continuous
+Allowing randomization, we remove the requirement of convexity
+### introduction ###
+This paper belongs to the area of research known as universal prediction of individual sequences (see  CITATION  for a review): the predictor's goal is to compete with a wide benchmark class of prediction strategies
+In the previous papers  CITATION  and  CITATION  we constructed prediction strategies competitive with the important classes of Markov and stationary, respectively, continuous prediction strategies
+In this paper we consider competing against possibly discontinuous strategies
+Our main results assert the existence of prediction strategies competitive with the Markov strategies
+This paper's idea of transition from continuous to general benchmark classes was motivated by Skorokhod's topology for the space  SYMBOL  of ``c\`adl\`ag'' functions, most of which are discontinuous
+Skorokhod's idea was to allow small deformations not only along the vertical axis but also along the horizontal axis when defining neighborhoods
+Skorokhod's topology was metrized by Kolmogorov so that it became a separable space ( CITATION , Appendix III;  CITATION , p ~913), which allows us to apply one of the numerous algorithms for prediction with expert advice (Kalnishkan and Vyugin's Weak Aggregating Algorithm in this paper) to construct a universal algorithm
+In Section  we give the main definitions and state our main results, Theorems  and ; their proofs are given in Sections  and , respectively

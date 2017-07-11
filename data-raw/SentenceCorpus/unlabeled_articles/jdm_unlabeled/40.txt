@@ -1,0 +1,10 @@
+### abstract ###
+an experienced decision aider reflects on how misaligned priorities produce decision research that is less useful than it could be
+### introduction ###
+ NUMBER  years ago many of us thought we were on the brink of a new era  thanks to emerging decision analysis tools  we could look forward to a brave new world  where we would no longer make foolish mistakes that ruin our lives
+so far  nothing like that is remotely in sight  and i don't expect it ever will be
+however  i still believe that decision aiding  and prescriptive decision analysis in particular  can become a major force for good in the world  but it will take an upheaval in how decision tools are fashioned and how they are used
+it won't come about spontaneously  because the root problem is not technique  but motivation  which is notoriously difficult to correct
+today  i want to talk about how we can make decision aiding more successful  by making usefulness a top priority in the decision aiding community and among decision researchers in particular
+a lot of important decision research is being done  but not very much of it is helping decision aiding to get used and be useful
+i think that can be turned around  but it won't be easy

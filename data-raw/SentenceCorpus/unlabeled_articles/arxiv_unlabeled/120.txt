@@ -1,0 +1,37 @@
+### abstract ###
+We present an extension of Principal Component Analysis (PCA) and a new algorithm for clustering points in  SYMBOL  based on it
+The key property of the algorithm is that it is affine-invariant
+When the input is a sample from a mixture of two arbitrary Gaussians, the algorithm correctly classifies the sample assuming only that the two components are separable by a hyperplane, ie , there exists a halfspace that contains most of one Gaussian and almost none of the other in probability mass
+This is nearly the best possible, improving known results substantially  CITATION
+For  SYMBOL  components, the algorithm requires only that there be some  SYMBOL -dimensional subspace in which the  overlap  in every direction is small
+Here we define overlap to be the ratio of the following two quantities: 1) the average squared distance between a point and the mean of its component, and 2) the average squared distance between a point and the mean of the mixture
+The main result may also be stated in the language of linear discriminant analysis: if the standard Fisher discriminant  CITATION  is small enough, labels are not needed to estimate the optimal subspace for projection
+Our main tools are isotropic transformation, spectral projection and a simple reweighting technique
+We call this combination  isotropic PCA
+### introduction ###
+We present an extension to Principal Component Analysis (PCA), which is able to go beyond standard PCA in identifying ``important'' directions
+When the covariance matrix of the input (distribution or point set in  SYMBOL ) is a multiple of the identity, then PCA reveals no information; the second moment along any direction is the same
+Such inputs are called isotropic
+Our extension, which we call  isotropic PCA , can reveal interesting information in such settings
+We use this technique to give an affine-invariant clustering algorithm for points in  SYMBOL
+When applied to the problem of unraveling mixtures of arbitrary Gaussians from unlabeled samples, the algorithm yields substantial improvements of known results
+To illustrate the technique, consider the uniform distribution on the set  SYMBOL , which is isotropic
+Suppose this distribution is rotated in an unknown way and that we would like to recover the original  SYMBOL  and  SYMBOL  axes
+For each point in a sample, we may project it to the unit circle and compute the covariance matrix of the resulting point set
+The  SYMBOL  direction will correspond to the greater eigenvector, the  SYMBOL  direction to the other
+See Figure  for an illustration
+Instead of projection onto the unit circle, this process may also be thought of as importance weighting, a technique which allows one to simulate one distribution with another
+In this case, we are simulating a distribution over the set  SYMBOL , where the density function is proportional to  SYMBOL , so that points near  SYMBOL  or  SYMBOL  are more probable }  In this paper, we describe how to apply this method to mixtures of arbitrary Gaussians in  SYMBOL  in order to find a set of directions along which the Gaussians are well-separated
+These directions span the Fisher subspace of the mixture, a classical concept in Pattern Recognition
+Once these directions are identified, points can be classified according to which component of the distribution generated them, and hence all parameters of the mixture can be learned
+What separates this paper from previous work on learning mixtures is that our algorithm is affine-invariant
+Indeed, for every mixture distribution that can be learned using a previously known algorithm, there is a linear transformation of bounded condition number that causes the algorithm to fail
+For  SYMBOL  components our algorithm has nearly the best possible guarantees (and subsumes all previous results) for clustering Gaussian mixtures
+For  SYMBOL , it requires that there be a  SYMBOL -dimensional subspace where the  overlap  of the components is small in every direction (See section )
+This condition can be stated in terms of the Fisher discriminant, a quantity commonly used in the field of Pattern Recognition with labeled data
+Because our algorithm is affine invariant, it makes it possible to unravel a much larger set of Gaussian mixtures than had been possible previously
+The first step of our algorithm is to place the mixture in isotropic position (see Section ) via an affine transformation
+This has the effect of making the  SYMBOL -dimensional Fisher subspace, i e , the one that minimizes the Fisher discriminant, the same as the subspace spanned by the means of the components (they only coincide in general in isotropic position), for  any  mixture
+The rest of the algorithm identifies directions close to this subspace and uses them to cluster, without access to labels
+Intuitively this is hard since after isotropy, standard PCA reveals no additional information
+Before presenting the ideas and guarantees in more detail, we describe relevant related work

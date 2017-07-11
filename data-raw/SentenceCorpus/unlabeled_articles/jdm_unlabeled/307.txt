@@ -1,0 +1,31 @@
+### abstract ###
+the theory of planned behaviour  CITATION  is based on a utility framework  and the risk-as-feelings hypothesis  CITATION  is a feelings-based behavioural model
+the tpb and raf are first compared and contrasted
+two empirical studies investigated the predictive power of consequence-based vs affect-based evaluative judgements for behavioural intentions  study  NUMBER  n    NUMBER  applied a regression model to examine the predictive value of a subset of shared variables  unique tpb variables  and unique raf variables for intentions to have unsafe sex
+study  NUMBER  n    NUMBER  experimentally examined whether intentions are driven by consequences or feelings  in two decision vignettes with opposite qualities  a positive hedonic experience with potential negative consequences unsafe sex vs a negative hedonic experience with potential positive consequences back surgery
+the results supported the tpb by emphasising the role of outcome-expectations in the construction of intentions  and the raf by showing the importance of affective subcomponents in attitudes
+### introduction ###
+humans sometimes act in order to reach an outcome  and other times out of enjoyment for the activity itself
+this difference has been referred to as extrinsic vs intrinsic motivation  CITATION   incentives vs motivation  CITATION   and utilitarian vs hedonically driven behaviour  CITATION   and represents a general dichotomy between action as goal and action as mean towards a goal
+there is often a conflict between the hedonic quality of the behaviour and its consequences
+although hedonic qualities could be seen as a particular kind of behavioural consequence  the experiential part of such a displeasure is  by definition  in the present  whereas other behavioural outputs lie in the future
+thus  one suggested underlying mechanism for the tension between behaviour and consequences is the fundamental difference in time perspective associated with ongoing activities and their consequences
+it has been suggested that the need for self-regulation exists in most individuals due to an inconsistency between short- and long-term consequences of an option  CITATION
+intertemporal discounting exemplifies one such failure to balance the subjective value of immediate to more distant goals  and a systematic devaluation of future as opposed to immediate outcomes  CITATION
+the present paper focuses on dilemmas where the values associated with the performance of the behaviour and the values of the consequences are in conflict  even when holding time-perspective constant
+several theoretical accounts may shed light on the difference between actions as goals or as means
+meta-theories of human motivation  such as self-determination theory  CITATION  centre on motivational mechanisms  claiming that a set of basic motivational needs drive behaviour
+the need for competence  autonomy  and belongingness are proposed as general behavioural driving forces  fairly independently of time-perspectives
+thus  in addition to motivation towards mastery and independence  social norms direct our behaviour
+the most socially accepted action is the default option  and complying with it may not be experienced as decision making
+other theories focus on preventing factors  such as cognitive limitations
+to this end  several dual-process theories  CITATION  demonstrate our ability and unique human predisposition to pay attention to potentially contradictory sources of information  e g   affective experiential vs reason based consequential
+these authors  CITATION  circumvent the issue of time perspective indirectly  by showing how the intuitive  basic  and effortless experiential heuristic system for processing is faster than the intentional  reason-based  and effortful rational analytical system
+the rapid processing of affective and immediate information may result in behaviour which is more inclined to follow the affective rather than the analytical system
+there is ample evidence that intentions may be directed at activities just for the pleasure of it  with little consideration of the potential consequences  e g   smoking  heavy drinking  unsafe sex  hazardous driving  and unhealthy eating
+on the basis of this tension between consequences and feelings  the present study set out to compare and contrast two theoretical psychological frameworks  which identify key structures and processes of planned- and feelings-based behaviour  the theory of planned behaviour  CITATION  and the risk-as-feelings hypothesis  CITATION
+furthermore  we aimed at an empirical investigation of core predictors for behavioural intentions in decision making under ambivalence
+decision ambivalence is here defined as perceived tension between the hedonic quality of the behaviour and its potential consequences in behavioural choices
+the present paper is organized as the following  the two theoretical frameworks are presented first  followed by a theoretical analysis which separates their basic components into shared and unique variables
+then  we present the outline and results of two empirical studies  investigating the predictive power of the models
+next  we discuss the findings in light of the theoretical frameworks and the reviewed literature

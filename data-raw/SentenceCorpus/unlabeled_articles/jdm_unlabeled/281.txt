@@ -1,0 +1,107 @@
+### abstract ###
+this paper examines conditions that do or do not lead to accurate judgments of frequency jof and judgments of duration jod
+in three experiments  duration and frequency of visually presented stimuli are varied orthogonally in a within-subjects design
+experiment  NUMBER  reveals an asymmetric judgment pattern
+jofs reflected actual presentation frequency quite accurately and were unbiased by exposure duration
+conversely  jods were almost insensitive to actual exposure duration and were systematically biased by presentation frequency
+we show  however  that a tendency towards a symmetric judgment pattern can be obtained by manipulating encoding conditions
+sustaining attention during encoding experiment  NUMBER  or enhancing richness of the encoded stimuli experiment  NUMBER  increases judgment sensitivity in jod and yields biases in both directions jof biased by exposure duration   jod biased by presentation frequency
+the implications of these findings for underlying memory mechanisms are discussed
+### introduction ###
+event frequency and duration are of fundamental importance in behavioral adaptation  CITATION
+predators  for instance  increase their chances of survival if they approach areas where the prey resides more frequently and for longer periods of time
+conversely  prey should strive to avoid areas where predators roam frequently and consistently
+consider an individual who must decide where to go hunting  the probability of maximizing the individual's yield is a function of the frequency and length of time duration prey lingers in a certain area
+assume the individual is an experienced hunter who has often visited different areas in the past and observed the behavior of the prey animals
+further assume that the observations made would represent a valid sample of the prey animals' migrations
+in order to properly adapt his own behavior to the environment  the hunter should use frequentistic and temporal information in his subsequent choice  CITATION
+this requires two abilities  first  the individual must be capable of discriminating differences in frequency and duration  second  representations of frequency and duration must be stored in memory so that they can be used later for judgment and decision making
+psychologists from various fields have studied processing of duration and frequency extensively
+their approaches  however  differ
+research in animal cognition and neuropsychology focuses primarily on discrimination and short term storage  CITATION
+cognitive psychologists are often interested in memory processes  CITATION   whereas jdm researchers mainly consider judgmental heuristics  CITATION
+these fields host different theoretical perspectives  apply different research paradigms and arrive at diverging interpretations of the phenomena
+consider  for example  the case of frequency judgment
+cognitive psychologists normally employ learning procedures to induce frequency knowledge in the laboratory and usually find that participants subsequently make quite accurate judgments
+they explain their findings with reference to general models of memory  CITATION
+conversely  jdm researchers often investigate factors that cause changes in judgment accuracy and explain their results with reference to judgmental heuristics  CITATION
+the separation between research fields has been often lamented  but there is an increasing number of researchers striving towards integration both on the methodological and the theoretical level  CITATION  in this paper  we report studies using a research paradigm from cognitive psychology to induce knowledge about frequency and duration
+we compare judgments in two related domains  judgments of duration jod and judgments of frequency jof
+we manipulate conditions of encoding and assess their effects on judgmental patterns
+specifically  we compare jod and jof regarding differences in their retrospective sensitivity and differences in their susceptibility for biases
+with this approach  we seek to increase our knowledge of fundamental memory processes
+such knowledge may help to achieve a better understanding of variations in judgment
+in the remainder of the introduction  we give a brief overview of the state of research on processing of frequency and duration and arrive at a working hypothesis regarding storage of these entities in memory
+ample evidence indicates that organisms are remarkably good at discriminating differences in frequency and duration  CITATION
+like animals  CITATION   adult humans  CITATION  and even young children  CITATION  are capable of effectively discriminating low range frequencies n  less than   NUMBER 
+similarly  humans  like many other species  are able to discriminate temporal information across a wide range of intervals - from circadian timing to the timing of seconds and even milliseconds  CITATION
+the discrimination of very short durations in the millisecond range  in particular  seems to be very accurate  CITATION
+all together  research findings suggest that a common mental mechanism drives discrimination of both stimulus dimensions - frequency and duration  CITATION
+granting the findings on discrimination  one may be tempted to assume that frequency and duration would also affect storage in memory in a similar fashion
+according to such a common-path hypothesis figure  NUMBER   frequency and duration would have commensurate effects on a stimulus' representation r and subsequent judgment  CITATION  for instance  they may both change the accessibility or strength of an event in memory
+changes in strength could be modeled by different theoretical approaches to memory
+in connectionist-network models  frequency and duration may be conceived to change the strength of associations among r  its features and other constituents in the network  CITATION
+in multiple-trace models  CITATION   strength is primarily conceived as a function of the number of traces representing a stimulus or event  at least if encoding and response criteria are constant
+other things being equal  trace number is assumed to increase as a function of encounter frequency
+it may also increase as a function of duration because prolonged exposure may entail repetitive encoding of the event
+regardless of the underlying mechanism  a common-path hypothesis assumes that the same property of memory is used in subsequent judgments
+accordingly  jof and jod should be made through assessments of the strength of r in memory
+one main prediction to be derived from such a common-path hypothesis is that jof and jod should be symmetrically biased
+accordingly  jof should be biased by exposure duration  while jod should be biased by exposure frequency
+empirical evidence for the common-path hypothesis  however  is mixed
+supporting evidence stems mostly from jdm research on heuristics that are assumed to use memory strength as a predictor for quantitative judgments
+for example  when applying the availability heuristic  CITATION   an individual is thought to estimate a criterion by assessing the ease with which the stimulus stimuli can be rehearsed from memory
+the fluency heuristic  CITATION  employs a similar process  the more fluently a stimulus is processed due to previous exposure  the higher the estimation of the criterion  CITATION
+in line with this notion  some studies have provided evidence that exposure duration biases subsequent jof
+for example  williams and durso  CITATION  varied the duration of words  NUMBER   NUMBER    NUMBER    NUMBER  sec between subjects
+they found that subsequent frequency judgments were systematically biased by duration
+specifically  the longer the category exemplars were shown in the presentation  the higher the estimated size of the category  and the higher the probability that exemplars could be reproduced in a free recall test
+lewandowsky and smith  CITATION  found similar effects earlier
+employing a within-subjects design  they varied exposure duration  NUMBER   NUMBER    NUMBER   NUMBER    NUMBER  sec and assessed the effects on frequency judgments and recall
+both measures were positively correlated with exposure duration
+similarily  jod were found to be systematically biased by frequency
+ornstein  CITATION  showed that retrospective judgments of time intervals reflected the number of available events that filled the episode
+hintzman  CITATION  reported evidence showing that jod systematically reflected exposure frequency of the stimulus but see the discussion of this paper in the next section
+taken together  these findings support the assumptions of a common-path hypothesis  because jof and jod seem to behave symmetrically with regard to biases
+a conclusive test  however  requires us to consider two other aspects of the judgment pattern
+one is the relative strength of the biases  the other is judgment sensitivity  judgment sensitivity refers to the degree to which experienced differences in duration and frequency can be reproduced in judgments
+to this end  one must compare jof and jod within the same experiment
+such an approach was applied earlier in memory research
+in a seminal paper  hintzman  CITATION  varied frequency on four levels  NUMBER    NUMBER    NUMBER    NUMBER  repetitions and duration on five levels  NUMBER    NUMBER    NUMBER    NUMBER    NUMBER  seconds in a within-subjects design
+after the presentation he asked participants to either judge the frequency with which each word occurred or the duration it was shown on an average trial
+hintzman found that jof showed a remarkable sensitivity for actual differences in exposure repetition
+moreover  jof were only weakly affected by differences in duration
+conversely  judgment sensitivity was comparatively lower in jod
+as another difference  and already noted in the previous section  jod were systematically influenced biased by actual frequency
+hintzman  CITATION  concluded that the asymmetric pattern of results differences in retrospective sensitivity  uni-directional bias violates a common-path hypothesis and suggests that frequency and duration affect memory in a different fashion
+hintzman reported similar results in subsequent studies  CITATION
+all together  empirical evidence from this line of research suggests that frequency and duration are stored differently in memory
+the findings reported so far form an incoherent picture
+duration biases on jof sometimes occur and sometimes do not
+jod seem to be more susceptible to biases than jof  but there is also evidence for the opposite  CITATION
+there are several possible explanations for the mixed evidence
+an important one is that the type of judgment task differs between studies
+as for jod  some studies use retrospective tasks  CITATION  and some use prospective tasks  CITATION
+as for jof  most studies documenting duration biases on jof used set-size tasks
+that is  participants estimated the size of categories containing different exemplars  CITATION
+in contrast  duration biases on jof are less pronounced in tasks that assess judgment of event frequencies  CITATION
+another possible explanation is that encoding conditions may differ across tasks and studies
+encoding of frequency requires comparatively little attention to the stimulus
+one must simply realize that the stimulus occurs
+encoding of duration  however  requires that the individual additionally sustains attention to the stimulus for the entire period of its presence
+differences in procedures and materials may differentially affect the individual's inclination to attend to the stimuli proportionate to actual duration
+in the literature on time perception  it is a widespread notion that attention is a crucial variable in time processing  CITATION
+consequently  differences in result patterns might be caused by differences in encoding rather than by differences in memory
+without systematically considering encoding conditions  it might be a premature conclusion to dismiss a common-path hypothesis
+the present research focuses on the role of encoding conditions in jod and jof
+in three experiments  we varied total duration and frequency of stimuli orthogonally within the same experimental design
+specifically  the presentation of the stimuli differed with regard to repetition frequency  NUMBER    NUMBER    NUMBER  times and the total summed duration they appeared on the screen  NUMBER    NUMBER    NUMBER  sec
+the resulting  NUMBER  frequency x  NUMBER  duration factorial design was always implemented within subjects
+following stimuli presentation  participants made jof and jod
+specifically  they judged the frequency of the event's occurrence  its total duration exps  NUMBER    NUMBER    NUMBER   and its single average duration exp  NUMBER  we generally assess the pattern of judgment as the central dependent variable
+it takes two dimensions into account - judgment sensitivity and biases
+judgment sensitivity refers to the extent to which individuals are able to reproduce differences on stimulus dimensions in their judgments
+biases are indicators for the type of memory representation underlying the judgment
+experiment  NUMBER  serves as a baseline study in which we did not control for encoding conditions
+experiment  NUMBER  compares different conditions of the focus of attention during encoding
+experiment  NUMBER  compares different types of stimulus formats that differ in likelihood of holding the observer's attention on the stimuli during encoding

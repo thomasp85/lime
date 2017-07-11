@@ -1,0 +1,23 @@
+### abstract ###
+% Given a matrix  SYMBOL  of low-rank, we consider the problem of reconstructing it from noisy observations of a small, random subset of its entries
+The problem arises in a variety of applications, from collaborative filtering (the `Netflix problem') to structure-from-motion and positioning
+We study a low complexity algorithm introduced by  CITATION , based on a combination of spectral techniques and manifold optimization, that we call  here {OptSpace}
+We prove performance guarantees that are  order-optimal in a number of circumstances
+### introduction ###
+Spectral techniques are an authentic workhorse in machine learning, statistics, numerical analysis, and signal processing
+Given  a matrix  SYMBOL , its largest singular values---and the associated singular vectors---`explain' the most significant correlations in the  underlying data source
+A low-rank approximation of  SYMBOL  can further be used for low-complexity implementations of a number of linear algebra algorithms  CITATION
+In many practical circumstances we have access only to a sparse subset of the entries of an  SYMBOL  matrix  SYMBOL
+It has   recently been discovered that, if the matrix  SYMBOL  has rank  SYMBOL , and unless it is too `structured', a small random subset of its  entries allow to reconstruct it  exactly
+This result was first proved by  CITATION  by analyzing a convex relaxation introduced by  CITATION
+A tighter analysis of the same convex relaxation was  carried out by  CITATION
+A number of iterative schemes to solve the convex optimization problem appeared soon thereafter  CITATION
+In an alternative line  of work,  CITATION  attacked the same problem using a combination of spectral techniques and manifold optimization: We will refer to their algorithm as \optspace \optspace\, is intrinsically of low complexity,   the most complex operation being computing  SYMBOL  singular values (and the corresponding singular vectors)   of a sparse  SYMBOL  matrix
+The performance guarantees proved by  CITATION  are comparable  with the information theoretic lower bound: roughly   SYMBOL  random entries are needed to reconstruct  SYMBOL  exactly (here we assume  SYMBOL  of order  SYMBOL )
+A related approach was also developed by  CITATION , although without performance guarantees for matrix  completion
+The above results crucially rely on the assumption that   SYMBOL  is  exactly  a rank  SYMBOL  matrix
+For many applications of interest, this assumption is unrealistic and it is therefore important to investigate their robustness
+Can the above approaches be generalized when the underlying data is `well approximated' by a rank  SYMBOL  matrix
+This question was addressed by  CITATION  within the convex relaxation approach of  CITATION
+The present paper proves a similar robustness result for \optspace
+Remarkably the guarantees we obtain are order-optimal in a variety of circumstances, and improve over the analogous results of  CITATION

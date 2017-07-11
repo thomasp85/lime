@@ -1,0 +1,16 @@
+### abstract ###
+We consider the task of learning a classifier from the feature space  SYMBOL  to the set of classes  SYMBOL , when the features can be partitioned into class-conditionally independent feature sets  SYMBOL  and  SYMBOL
+We show the surprising fact that the class-conditional independence can be used to represent the original learning task in terms of 1) learning a classifier from  SYMBOL  to  SYMBOL  and 2) learning the class-conditional distribution of the feature set  SYMBOL
+This fact can be exploited for semi-supervised learning because the former task can be accomplished purely from unlabeled samples
+We present experimental evaluation of the idea in two real world applications
+### introduction ###
+Semi-supervised learning is said to occur when the learner exploits (a presumably large quantity of) unlabeled data to supplement a relatively small labeled sample, for accurate induction
+The high cost of labeled data and the simultaneous plenitude of unlabeled data in many application domains, has led to considerable interest in semi-supervised learning in recent years
+We show a somewhat surprising consequence of class-conditional feature independence that leads to a simple semi-supervised learning algorithm
+When the feature set can be partitioned into two class-conditionally independent sets, we show that the original learning problem can be reformulated in terms of the problem of learning a predictor from  one  of the partitions to the other
+That is, the latter partition acts as a  surrogate  for the class variable
+Since such a predictor can be learned from only unlabeled samples, an effective semi-supervised algorithm results
+In the next section we present the simple yet interesting result on which our semi-supervised learning algorithm (which we call  surrogate learning ) is based
+We present examples to clarify the intuition behind the approach and present a special case of our approach that is used in the applications section
+We then examine related ideas in previous work and situate our algorithm among previous approaches to semi-supervised learning
+We present empirical evaluation on two real world applications where the required assumptions of our algorithm are satisfied

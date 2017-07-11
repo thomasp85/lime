@@ -1,0 +1,27 @@
+### abstract ###
+Simian Virus 40 Large Tumor Antigen is an efficient helicase motor that unwinds and translocates DNA.
+The DNA unwinding and translocation of LTag is powered by ATP binding and hydrolysis at the nucleotide pocket between two adjacent subunits of an LTag hexamer.
+Based on the set of high-resolution hexameric structures of LTag helicase in different nucleotide binding states, we simulated a conformational transition pathway of the ATP binding process using the targeted molecular dynamics method and calculated the corresponding energy profile using the linear response approximation version of the semi-macroscopic Protein Dipoles Langevin Dipoles method.
+The simulation results suggest a three-step process for the ATP binding from the initial interaction to the final tight binding at the nucleotide pocket, in which ATP is eventually locked by three pairs of charge-charge interactions across the pocket.
+Such a cross-locking ATP binding process is similar to the binding zipper model reported for the F1-ATPase hexameric motor.
+The simulation also shows a transition mechanism of Mg 2 coordination to form the Mg-ATP complex during ATP binding, which is accompanied by the large conformational changes of LTag.
+This simulation study of the ATP binding process to an LTag and the accompanying conformational changes in the context of a hexamer leads to a refined cooperative iris model that has been proposed previously.
+### introduction ###
+Helicases are a family of ATPase motors that couple the energy of ATP binding and hydrolysis to conformation changes, which in turn is coupled to the unwinding and translocation of DNA CITATION.
+Simian Virus 40 large tumor antigen is an efficient hexameric helicase that belongs to the helicase superfamily III, as well as the AAA protein family.
+The high resolution structures of LTag hexameric helicase in different nucleotide binding states have been previously reported CITATION, CITATION, including the Apo, the ATP-bound and the ADP-bound states.
+These three structures reveal an iris-like motion of the hexamer helicase during the drastic conformational switches that are triggered by ATP binding and hydrolysis.
+Accompanying the iris-motion of the LTag hexamer is the longitudinal movements of the six -hairpins along the central channel.
+Despite the advancement in LTag helicase studies mentioned above, the detailed paths for these conformational switches and the corresponding energetics associated with the ATP binding process are unknown, which can be simulated by a computational approach using molecular dynamics and targeted molecular dynamics.
+Molecular dynamics propagates the molecular system under the laws of classic mechanics CITATION, CITATION, and is suitable for studying conformational changes.
+However, the current computational capability restricts the size of the studied system and the time scale of MD simulation.
+For the studies of larger and more complex systems, targeted molecular dynamics has been used to accelerate the simulation, which adopts an additional holonomic constraint on the physical potential to reduce the root mean square deviation between the current structure and the final structure CITATION.
+TMD is suitable to calculate the transition pathways between two known protein conformations.
+The combination of MD and TMD methods have been widely applied to the dynamics studies of various systems, such as the Ras p21 in the signal transition pathway CITATION, F1-ATPase system CITATION, CITATION, the GroEL complex CITATION, and the human a-7 nAChR receptor CITATION.
+Here we adopted TMD to calculate the whole transition pathway and used MD to simulate the accurate conformational change in certain key time slots.
+In order to understand the energetic aspects of ATP triggered conformational changes of LTag hexameric helicase, we simulated the ATP binding process of LTag and the associated conformational changes.
+We first built an Apo state with six ATPs placed 20 away from the binding pocket of the original Apo structure.
+Then we used the TMD approach to calculate the transition pathway from the Apo state to the ATP bound state and examined the ATP binding process that powered this conformational transition.
+The results suggest an ATP molecule goes through a three-step process before being locked inside the nucleotide pocket.
+Meanwhile, the configurations of the binding pocket along the ATP binding pathway were evaluated by using the linear response approximation version of the semi-macroscopic protein dipoles langevin dipoles method, a method that is capable of evaluating binding free energies significantly faster than the microscopic methods with comparable accuracy CITATION.
+In addition, the simulation results of the conformational transition reveal a refined pathway for the cooperative iris-like movement of LTag hexamer helicase previously observed in crystal structures.

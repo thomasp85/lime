@@ -1,0 +1,26 @@
+### abstract ###
+the ratio-bias rb phenomenon is considered to provide systematic evidence of irrationality
+when judging the probability of a low-probability event  many people judge it as less likely when it is expressed as a ratio of small numbers e g    NUMBER -in- NUMBER  than when it is expressed as a ratio of large numbers e g    NUMBER -in- NUMBER 
+four experiments show that the phenomenon is increased by the experimental paradigm  which misleads subjects regarding the aim of the task by inducing equal-ratio neglect
+one factor is constant across the texts of the experiment  NUMBER - NUMBER   a particular sentence that induces subjects to neglect the equal ratio and invites them to express feelings about the outcome of the target event rather than giving a rational answer
+this intent is strengthened by the formulation of the question experiment  NUMBER   which explicitly asks the subject to express the feeling connected to the lotteries and the absence of a third option experiment  NUMBER    NUMBER   the right one  which expresses the  indifference  between the two options
+in experiment  NUMBER   the task lacks only the third option  and  simply by adding the option that allows subjects to express the correct answer  the rb disappears
+### introduction ###
+the ratio-bias rb phenomenon occurs when people judge an unlikely event as less likely or more surprising when its probability is presented in the form of an equivalent ratio of smaller e g    NUMBER -in- NUMBER  versus larger e g    NUMBER -in- NUMBER  numbers  CITATION
+the phenomenon  which is as robust as it is surprising  is of special interest because it seems to demonstrate that many people   despite intellectually knowing better  prefer to behave in certain situations according to their intuitive impressions   CITATION
+the phenomenon seems to provide compelling evidence for the existence of two independent processing modes that sometimes conflict with each other and often interact in a manner that produces compromises  CITATION
+a typical experimental paradigm is a game of chance  CITATION  in which subjects indicate from which of two trays of red and white jellybeans  one  large  e g    NUMBER  red out of  NUMBER  jellybeans and one  small  e g    NUMBER  red out of  NUMBER  jellybeans  they prefer to draw with the hope of obtaining a winning red jellybean
+when the two trays offer equal probabilities of drawing a red jellybean  the rational decision is to report no tray preference
+however  most subjects select the tray with the larger number of red jellybeans  and many  despite acknowledging they know better  are willing to pay small sums of money for the privilege of doing so  CITATION  rather than having the selection made randomly
+subjects were instructed to indicate how they believed most people would behave others-perspective and how they believed they themselves would behave self-perspective
+according to these authors  judging others' behavior is more revealing because it circumvents subjects' desire to present themselves as rational people
+the ratio bias has been investigated in the health domain by yamagishi  CITATION  and pinto-prades et al CITATION
+yamagishi  CITATION  gave subjects mortality rates for well-known causes of death  varying both the percentage incidence rate and the population frame deaths per  NUMBER  or  NUMBER   NUMBER  people within subjects
+ratings of risk were consistently higher with a frame of  NUMBER   NUMBER  than a frame of  NUMBER   regardless of the actual percentage incidence rate
+similarly  pinto-prades et al CITATION  investigated and replicated the ratio bias in the context of choices between medical treatments with a given probability of death
+many studies on the rb  CITATION  have presented subjects with a choice between a  NUMBER -in- NUMBER  chance of success and a  NUMBER -in- NUMBER  chance of success as well as a choice between  NUMBER -in- NUMBER  and  NUMBER -in- NUMBER 
+they found that many individuals  NUMBER  percent  and  NUMBER  percent   respectively preferred the latter choice the large urn even though the former the small urn offered a greater probability of success
+the existence of the bias has also been confirmed in studies testing the effect of incentives  CITATION
+a recent study of risky judgments  CITATION  also provides support for the rb effect over a conflicting theory  the construal level theory clt
+given the statements   NUMBER  people die from cancer every day  and the equivalent   NUMBER   NUMBER  people die from cancer every year   construal level theory predicts that the former will result in higher risk judgments  whereas the ratio-bias effect predicts higher risk judgments for the latter statement
+this study showed that the ratio bias effect seems to dominate construal level theory when the two are compared  although one-third of bonner and newell's subjects show the opposite effect

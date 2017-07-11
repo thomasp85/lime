@@ -1,0 +1,21 @@
+### abstract ###
+In recent years, spectral clustering has become one of the most popular modern clustering algorithms
+It is simple to implement, can be solved efficiently by standard linear algebra software, and very often outperforms traditional clustering algorithms such as the k-means algorithm
+On the first glance spectral clustering appears slightly mysterious, and it is not obvious to see why it works at all and what it really does
+The goal of this tutorial is to give some intuition on those questions
+We describe different graph Laplacians and their basic properties, present the most common spectral clustering algorithms, and derive those algorithms from scratch by several different approaches
+Advantages and disadvantages of the different spectral clustering algorithms are discussed
+### introduction ###
+Clustering is one of the most widely used techniques for exploratory data analysis, with applications ranging from statistics, computer science, biology to social sciences or psychology
+In virtually every scientific field dealing with empirical data, people attempt to get a first impression on their data by trying to identify groups of ``similar behavior'' in their data
+In this article we would like to introduce the reader to the family of spectral clustering algorithms
+Compared to the ``traditional algorithms'' such as  SYMBOL -means or single linkage, spectral clustering has many fundamental advantages
+Results obtained by spectral clustering often outperform the traditional approaches, spectral clustering is very simple to implement and can be solved efficiently by standard linear algebra methods \\  This tutorial is set up as a self-contained introduction to spectral clustering
+We derive spectral clustering from scratch and present different points of view to why spectral clustering works
+Apart from basic linear algebra, no particular mathematical background is required by the reader
+However, we do not attempt to give a concise review of the whole literature on spectral clustering, which is impossible due to the overwhelming amount of literature on this subject
+The first two sections are devoted to a step-by-step introduction to the mathematical objects used by spectral clustering: similarity graphs in Section , and graph Laplacians in Section
+The spectral clustering algorithms themselves will be presented in Section
+The next three sections are then devoted to explaining why those algorithms work
+Each section corresponds to one explanation: Section  describes a graph partitioning approach, Section  a random walk perspective, and Section  a perturbation theory approach
+In Section  we will study some practical issues related to spectral clustering, and discuss various extensions and literature related to spectral clustering in Section

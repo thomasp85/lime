@@ -1,0 +1,99 @@
+### abstract ###
+Spectro-temporal receptive fields have been widely used as linear approximations to the signal transform from sound spectrograms to neural responses along the auditory pathway.
+Their dependence on statistical attributes of the stimuli, such as sound intensity, is usually explained by nonlinear mechanisms and models.
+Here, we apply an efficient coding principle which has been successfully used to understand receptive fields in early stages of visual processing, in order to provide a computational understanding of the STRFs.
+According to this principle, STRFs result from an optimal tradeoff between maximizing the sensory information the brain receives, and minimizing the cost of the neural activities required to represent and transmit this information.
+Both terms depend on the statistical properties of the sensory inputs and the noise that corrupts them.
+The STRFs should therefore depend on the input power spectrum and the signal-to-noise ratio, which is assumed to increase with input intensity.
+We analytically derive the optimal STRFs when signal and noise are approximated as Gaussians.
+Under the constraint that they should be spectro-temporally local, the STRFs are predicted to adapt from being band-pass to low-pass filters as the input intensity reduces, or the input correlation becomes longer range in sound frequency or time.
+These predictions qualitatively match physiological observations.
+Our prediction as to how the STRFs should be determined by the input power spectrum could readily be tested, since this spectrum depends on the stimulus ensemble.
+The potentials and limitations of the efficient coding principle are discussed.
+### introduction ###
+In response to acoustic input signals, neurons in the auditory pathway are typically selective to sound frequency FORMULA and have particular response latencies.
+At least ignoring cases with FORMULA kHz, in which neuronal responses often phase lock to the sound waves, a spectro-temporal receptive field is often used to describe the tuning properties of a neuron CITATION, CITATION, CITATION, CITATION.
+This is a two-dimensional function FORMULA that reports the sensitivity of the neuron at response latency FORMULA to acoustic inputs of frequency FORMULA for a given stimulus ensemble.
+More specifically, in a stimulus ensemble, the power FORMULA of the acoustic input at frequency FORMULA at time FORMULA fluctuates around an average level denoted by FORMULA.
+If we let FORMULA denote the neuron's response at time FORMULA, then FORMULA best approximates the linear relationship between FORMULA and FORMULA in this stimulus ensemble asFORMULANote that in this paper, we refer to FORMULA as the input spectrogram, although some authors also include the average input power FORMULA.
+Though FORMULA is not a full description of acoustic input, since it ignores features such as the phase of the oscillation in the sound wave, it is the only relevant aspect of the auditory input as far as the STRF is concerned.
+Note that if we use FORMULA to denote the deviation of the neural response from its spontaneous activity level, then both FORMULA and FORMULA have zero mean.
+We will use this simplification throughout the paper.
+In studies in which the temporal dimension is omitted, the STRF is called the spectral receptive field .
+Figure 1 cartoons a typical STRF.
+This has excitatory and inhibitory regions, reflecting its preferred frequency and response latency.
+For example, if FORMULA peaks at frequency FORMULA and time FORMULA, then this neuron prefers frequency FORMULA and should respond to an input impulse FORMULA of this frequency with latency FORMULA.
+We will also refer to FORMULA as the receptive field, the filter kernel, or the transfer function from input to neural responses, as these all convey the same or similar meanings.
+A neuron's STRF is typically estimated using reverse correlation methods CITATION, CITATION .
+However, there are extensive nonlinearities in the signal transformation along the auditory pathway.
+Indeed, the STRF formulation of neural responses, though linear in spectral power, is already a second-order nonlinear function of the auditory sound wave.
+There are two kinds of nonlinearities when inputs are represented as spectrograms.
+The simpler one is a static nonlinearity FORMULA, which when applied to the linear approximation FORMULA of equation enables better predictions of the neural responses CITATION, CITATION.
+This static nonlinearity however does not alter the spectro-temporal selectivity of the neuron seen in the linear STRF.
+This paper is interested in the more complex nonlinearity that the STRFs are dependent on the stimulus ensemble used to estimate them CITATION, CITATION, CITATION, CITATION.
+For example, the STRFs are wider when the stimuli are narrow-band rather than wide-band CITATION, or when the stimuli are animal vocalizations rather than noise CITATION.
+The STRF also becomes more band-pass when sound intensity increases.
+The dependence of the STRFs on the stimulus ensemble holds, for example, for type IV neurons in the cochlear nucleus of cats CITATION, CITATION, the inferior colliculus of the frog CITATION and the gerbil CITATION, and field L region of the songbird CITATION.
+Nonlinearities in the auditory system become progressively stronger further from the periphery.
+Despite the nonlinearities, the concept of the STRF is still widely used, not only because it provides a meaningful description of the spectro-temporal selectivity of the neurons in a given stimulus ensemble, but also because it can predict neural responses to novel stimuli reasonably well, as long as the stimuli are drawn from the same stimulus ensemble as that used to estimate the STRF in the first place.
+Reasonable predictions from the STRFs have been obtained for the responses of auditory nerves and auditory midbrain neurons CITATION, CITATION, CITATION.
+They have also been obtained for responses of the auditory cortical neurons when the stimulus ensemble is composed of biologically more meaningful static or dynamic ripples.
+If the linear neural filter is augmented to include the filtering performed by the head and ears, it is also possible to predict the preferred locations of sound sources of auditory cortical neurons based on the linear neural filter for input spectrograms CITATION.
+Meanwhile, linear STRF models fail to capture many complex phenomena, particularly in the auditory cortex, and nonlinearities are not limited to being just static or monotonic.
+It has been suggested that some auditory cortical neurons process auditory objects in a highly non-linear manner, by selectively responding to a weak object component while ignoring loud components that occupy the same region in frequency space in auditory mixtures of these object components CITATION, and some prefer low over high spectral contrast sounds CITATION.
+Strong nonlinearities in the auditory processes have long since motivated nonlinear models of auditory responses .
+This paper aims to understand from a computational, rather than a mechanistic, perspective why the auditory encoding transform should depend on the stimulus ensemble in the ways observed.
+More specifically, the paper focuses on cases in which STRFs can reasonably capture neural responses, and aims to identify and understand the computational goal of the STRFs for a given stimulus ensemble finding a metric according to which the STRFs are optimal for the ensemble.
+This would provide a rationale for how the physiologically measured STRFs should depend on or adapt to the stimulus ensemble.
+This paper does not address what linear or nonlinear mechanisms could build the optimal STRFs, or whether or how nonlinear auditory processes enable the adaptation of the STRFs to the stimulus ensemble.
+Existing computational models of auditory neurons, including ones with the notion that cochlear hair cells perform independent component analysis to provide an efficient code for inputs using spikes in the auditory nerves CITATION, CITATION, cannot explain the observed dependence of the STRFs on the stimulus ensemble .
+Restricting attention to the temporal properties of STRF, Lesica and Grothe CITATION observed that the temporal filter in STRF adapted to the level of ambient noise in the input environment.
+In particular, the temporal receptive field in the STRF changed from being bandpass to being low pass with the increase of ambient noise.
+They argued using a simple model that such adaptation in the STRF enables more efficient coding of the input information.
+This study applies the principles of efficient coding to understand the auditory STRF and its variations with sound intensities and other input characteristics.
+It generalizes the work of Lesica and Grothe CITATION to understand the temporal and spectral filtering characteristics of STRF adaptation to changes in noise, signal and correlations in input statistics.
+Explicitly, the principle of efficient coding states that the neural receptive fields should enable the neural responses to transmit as much sensory information as possible to the central nervous system, subject to the limitation in neural cost in representing and transmitting information.
+This principle has been proposed CITATION and successfully applied to the visual system to understand the receptive fields in the early visual pathway CITATION, CITATION, CITATION, CITATION, CITATION, CITATION.
+We will borrow heavily techniques and intuitions from vision to derive and explain the results in this paper.
+To make initial progress, it is necessary to start with some simplifying assumptions.
+First, we assume that the statistical characteristics of the stimulus ensemble do not change more rapidly than the speed at which the sensory encoding adapts, so that the stimulus ensemble can be approximated as being stationary as far as optimal encoding is concerned.
+Knowing when this assumption does not hold tells us when the encoding is not optimal, e.g., when one sees poorly for a brief moment before the visual encoding adapts to a sudden change from a dark room to a bright garden.
+Second, for mathematical convenience, we assume that the linear STRF model as in equation can approximate adapted auditory neural responses reasonably well.
+As we know from above, this assumption often does not hold, particularly for auditory cortical neurons.
+This paper leaves the extension of the optimal encoding to nonlinear cases for future studies.
+Third, to derive a closed-form, analytical, solution to the optimal STRF, we assume that the input statistics in the stimulus ensemble can be approximated as being Gaussian, with higher order correlations in the input contributing only negligibly to the inefficiency of the representation in the original sensory inputs.
+Although it is known that the natural auditory inputs are far from Gaussian CITATION, as for the case of vision, the discrepancy may have only a limited impact on the input inefficiency, as measured by the amount of information redundancy in the original sensory input CITATION, CITATION, CITATION .
+To understand how sensory inputs should be recoded to increase coding efficiency, we start with visual encoding to draw insights and made analogies with auditory encoding.
+In vision, large amounts of raw data about the visual world are transduced by photoreceptors.
+However, the optic nerve, which transmits the input data to the visual cortex via thalamus, can only accommodate a dramatically smaller data rate.
+It has thus been proposed that early visual processes use an efficient coding strategy to encode as much information as possible given the limited bandwidth CITATION, CITATION, in other words, to recode the data such that the redundancy in the data is reduced and consequently the data can be transmitted by the limited bandwidth.
+Compression is possible since images are very redundant CITATION, CITATION, CITATION, CITATION, e.g., with strong correlations between visual inputs at nearby points in time and space.
+Removing such correlations can cut down the data rate substantially CITATION .
+One way to remove the correlations is to transform the raw input FORMULA into a different representation FORMULA in neural responses that would then have a much smaller data rate than FORMULA, yet preserving essential input information.
+This transform is often approximated by the visual receptive field, analogous to the auditory STRFs.
+For instance, the center-surround receptive fields of the retinal ganglion cells help remove spatial redundancy CITATION, CITATION, CITATION.
+They do this by making the ganglion cells preferentially respond to spatial contrast in the input, and so eliminating responses to visual locations whose input is redundant with that of their neighbors.
+Consequently, the responses of retinal ganglion cells are much less correlated than those of the photoreceptors, making their representation much more efficient.
+One facet of this efficient encoding hypothesis is that the optimal receptive field transform should depend on the statistical properties, such as the correlation structure and intensity, of the input.
+This dependence has been used to explain adaptation, to changes in input statistics, of visual receptive field characteristics, such as the sizes of center-surround regions and the color tuning of retinal neurons, or the ocular dominance properties of striate cortical neurons CITATION, CITATION, CITATION, CITATION, CITATION, CITATION.
+In the auditory system, information redundancy is also reduced along the auditory pathway CITATION.
+Although this redundancy reduction was only investigated in the neural responses to sensory inputs rather than in the coding transform leading to the neural responses, it suggested that coding efficiency is one of the goals of early auditory processes.
+More formally, the efficient coding scheme is depicted in Figure 2A.
+The input contains sensory signal FORMULA and noise FORMULA.
+The net input FORMULA is encoded by a linear transfer function FORMULA into output.FORMULAwhich also contains additional noise FORMULA introduced in the encoding process.
+When the input has multiple channels, e.g., many different photoreceptors or hair cells, FORMULA is a vector with many components, as indeed is FORMULA.
+Output FORMULA is a vector representing the neural population responses from many neurons.
+For output neuron FORMULA, we have FORMULA.
+Therefore FORMULA is a matrix, and its FORMULA row FORMULA models the receptive field for output neuron FORMULA as the array of effective weights from input receptors FORMULA to output neuron FORMULA.
+In the particular example when input neurons are photoreceptors and output neurons are retinal ganglion cells, FORMULA is the effective connection from photoreceptor FORMULA to ganglion cell FORMULA, and collectively, FORMULA describe the linear receptive field of this ganglion cell.
+We consider the problem of finding an optimal FORMULA that maximizes the information extracted by FORMULA about FORMULA, i.e., the mutual information FORMULA CITATION between FORMULA and FORMULA subject to a given cost of the neural encoding, which depends on the responses in a way we will describe shortly.
+Therefore, the optimal FORMULA should minimize the objective function:FORMULAwhere FORMULA is a parameter whose value specifies a particular balance between the needs to minimize costs and to maximize extracted information.
+Neural costs can arise from various sources, such as the metabolic energy cost for generating neural activities or spikes CITATION and the cost of thicker axons to transmit higher rates of neural firing.
+We follow a formulation that has been productive in vision CITATION, CITATION, and model the neural cost asFORMULAwhere FORMULA indicates the average over the stimulus ensemble.
+This givesFORMULAIt has been shown CITATION, CITATION, CITATION, CITATION that the FORMULA that provides the most efficient coding according to FORMULA has the following properties.
+At high signal-to-noise ratio, FORMULA is such that FORMULA extracts the difference between correlated channels, and thus avoids transmitting redundant information.
+Hence, for example, in photopic conditions, retinal ganglion cells have center-surround spatial receptive fields which extract the spatial contrast of the input.
+By contrast, at low SNR, FORMULA is a smoothing filter that averages out input noise instead of reducing redundancy.
+This avoids spending neural cost on transmitting noise.
+Hence, for example, in scotopic conditions, when SNR can be considered as being low, the receptive fields of retinal ganglion cells expand the sizes of their center regions and weaken their suppressive surrounds CITATION.
+We will apply this framework to the auditory encoding to understand STRFs and their adaptation to stimulus ensembles.

@@ -1,0 +1,31 @@
+### abstract ###
+In this paper, we present two classes of Bayesian approaches to the two-sample problem
+Our first class of methods extends the Bayesian t-test to include all parametric models in the exponential family and their conjugate priors
+Our second class of methods uses Dirichlet process mixtures (DPM) of such conjugate-exponential distributions as flexible nonparametric priors over the unknown distributions
+%On synthetic examples and real medical datasets, we show that our tests are competitive with the best state-of-the-art methods for this task, even outperforming them on average on the medical datasets
+### introduction ###
+In this paper, we tackle the so-called two-sample problem:  An associated test is called a two-sample test
+Such tests are encountered in various disciplines from the life sciences to the social sciences:   In medical studies, one may want to find out if two classes of patients show different behaviour, response to a drug or susceptibility to a disease
+In microarray analysis, one may compare measurements from different weeks, labs or platforms to find out if they follow the same distribution, before integrating them into one dataset, in order to increase sample size
+In the neurosciences, one may want to compare measurements of brain signals under different external stimuli, to check whether brain activity is affected by these stimuli
+In the social sciences, one may want to compare whether the behavior of a group of people, eg when they graduate, marry, or die, is different across countries or generations
+In the financial sciences, one could for example compare the set of transactions performed at a stock exchange during different weeks, to find out if there is a change in activity in the financial markets
+While this question has been studied in detail by classic statistics for univariate data, there is less work on multivariate data (which we review in Section )
+The only machine learning approach to this problem is a kernel method by  CITATION , using the means of the two samples  SYMBOL  and  SYMBOL  in a universal reproducing kernel Hilbert Space as its test statistics, but it has created lots of interest in that subject and follow-on studies~ CITATION
+Here, we approach this two-sample problem from a Bayesian perspective
+The classic Bayesian formulation of this problem would be in terms of a Bayes factor~ CITATION  which represents the likelihood ratio that the data were generated according to hypothesis  SYMBOL  (that is from the same distribution) or hypothesis  SYMBOL  (that is from different distributions)
+However, how to exactly define these two hypotheses is a crucial question, and many answers have been given in the Bayesian literature with hypotheses that are tailored to a specific problem or application domain; one example are the Bayesian t-tests used in microarray data analysis~ CITATION
+Our goal in this paper is to define two general classes of two-sample tests that represent a precise formulation of the two-sample problem, but are not tailored to a specific application
+They are designed to offer an attractive middle ground between the general idea of using Bayes factors and the specialised hypotheses testing problems studied in the literature
+In detail, we define a class of nonparametric Bayesian two sample tests based on Dirichlet process mixture models
+The use of Dirichlet process mixtures for flexible nonparametric modelling of general unknown distributions has a long history in Statistics
+However, although the two-sample problem depends crucially on testing whether data come from one or two unknown distributions, Bayesian approaches based on nonparametric density models have not been explored to date
+Here we propose and explore such a non-parametric method using the classic Dirichlet process mixture
+To the best of our knowledge, the only work that is remotely related is that on a Bayesian test for a parametric versus a nonparametric model of the data by Berger and Guglielmi~ CITATION
+This addresses a different but related question since it assumes a parametric null hypothesis
+We also define a parametric Bayesian two-sample test where the model of the data is a member of the exponential family
+This test generalizes the Bayesian t-test by~ CITATION  and~ CITATION , who assume that the samples are Gaussian
+This paper is structured as follows
+In Section~ we will review existing approaches to the two-sample problem on multivariate data, and highlight some differences between frequentist and Bayesian hypothesis testing
+In Section~ we outline the common core of our two Bayesian two-sample test, before providing the details on the parametric test in Section~ and on the non-parametric  test in Section~
+%In Section~ we will evaluate the performance of our tests, comparing it to the state-of-the-art methods in this field

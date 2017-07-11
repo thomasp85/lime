@@ -1,0 +1,58 @@
+### abstract ###
+We consider a class of fully stochastic and fully distributed algorithms, that we prove to learn equilibria in games
+Indeed, we consider a family of stochastic distributed dynamics that we prove to converge weakly (in the sense of weak convergence for probabilistic processes) towards their mean-field limit, i
+e an ordinary differential equation (ODE) in the general case
+We focus then on a class of stochastic dynamics where this ODE turns out to be related to multipopulation replicator dynamics
+% , well-known and studied in evolutionary game theory
+Using facts known about convergence of this ODE, we discuss the convergence of the initial stochastic dynamics: For general games, there might be non-convergence, but when convergence of the ODE holds, considered stochastic algorithms converge towards Nash equilibria
+For games admitting Lyapunov functions, that we call Lyapunov games, the stochastic dynamics converge
+We prove that any ordinal potential game, and hence any potential game is a Lyapunov game, with a multiaffine Lyapunov function
+For Lyapunov games with a multiaffine Lyapunov function, we prove that this Lyapunov function is a super-martingale over the stochastic dynamics
+This leads a way to provide bounds on their time of convergence by martingale arguments
+This applies in particular for many classes of games that have been considered in literature, including several load balancing game scenarios and congestion games
+### introduction ###
+Consider a scenario where agents learn from their experiments, by small adjustments
+This might  be  for example about choosing their telephone companies, or about their portfolio investments
+%, that we will assume to be rational
+% Assume that agents are rational
+We are interested in understanding when the whole market can converge towards rational situations, i e Nash equilibria in the sense of game theory
+This is natural to expect dynamics of adjustments to be stochastic, and fully distributed, since we expect agents to adapt their strategies based on their local knowledge of the market, and since agents are often involved in games where a global, and hence local, deterministic description of the whole global market is not possible
+% We also want to avoid dynamics that would suppose a global knowledge of the market, that is to say we   Several such dynamics of adjustments have been considered recently in the algorithmic game theory literature
+Up to our knowledge, this has been done mainly for deterministic dynamics or best-response based dynamics: Computing a best response requires a global description of the market
+Stochastic variations, avoiding a global description, have been considered
+However, considered dynamics are somehow rather ad-hoc, in order to get efficient convergence time bounds, and still mainly best-response based
+We want to consider here more general dynamics, and discuss when one may expect convergence
+This could lead to consider any dynamics  which is monotone with respect to the utility of players, in relation with evolutionary game theory literature  CITATION
+We propose to restrict here to dynamics that lead to dynamics related to (possibly perturbed) replicator dynamics
+Somehow, as algorithmic game theory can be seen as an algorithmic version of classical game theory, our long term aim is to better understand algorithmic evolutionary game theory
+Somehow, we could also say, that as best-response dynamics can be seen as strategies that visit corners of the simplex of (mixed) strategies, we are interested in a long term objective in learning methods that could be seen as interior point methods to find equilibria
+Basic game theory framework
+Let  SYMBOL  be the set of players
+Every player  SYMBOL  has a set  SYMBOL  of  pure strategies
+Let  SYMBOL  be the cardinal of  SYMBOL
+A  mixed strategy   SYMBOL  corresponds to a probability distribution over pure strategies: pure strategy  SYMBOL  is chosen with probability  SYMBOL , with  SYMBOL
+Let  SYMBOL  be the simplex of mixed strategies for player  SYMBOL
+Any pure strategy  SYMBOL  can be considered as mixed strategy  SYMBOL , where vector  SYMBOL  denotes the unit probability vector  with  SYMBOL  component unity, hence as a corner of  SYMBOL
+Let  SYMBOL  be the space of all mixed strategies
+A  strategy profile   SYMBOL  specifies the (mixed or pure) strategies of all players:  SYMBOL  corresponds to the mixed strategy played by player  SYMBOL
+Following classical convention, we write often write abusively  SYMBOL , where  SYMBOL  denotes the vector of the strategies played by all other players
+We allow games whose payoffs may be random: we only assume that whenever the strategy profile  SYMBOL  is known, each player  SYMBOL  gets a random  cost  of expected value  SYMBOL
+In particular, the expected cost for player  SYMBOL   for playing pure strategy  SYMBOL   is denoted by  SYMBOL
+Some classes of games
+Several classes of % (deterministic) games where players' costs are based on the shared usage of a common set of resources  SYMBOL  where each resource  SYMBOL  has an associated nondecreasing cost function denoted by  SYMBOL , have been considered in algorithmic game theory literature
+In  load balancing games   CITATION , resources are called machines, and players compete for elements (i e singleton subsets) of  SYMBOL
+Hence, the pure strategy space  SYMBOL  of player  SYMBOL  having a weight  SYMBOL  corresponds to  SYMBOL  or a subset of  SYMBOL , and a pure strategy  SYMBOL  for player  SYMBOL  is some element  SYMBOL
+The cost for player (task)  SYMBOL   under profile of pure strategies (assignment)  SYMBOL   corresponds to  SYMBOL , where  SYMBOL  is the load of machine  SYMBOL :   SYMBOL , that is to say %  defined as  the sum of the weights of the tasks running on it
+In  congestion games   CITATION , resources are called edges, and players compete for subsets of  SYMBOL
+Hence, the pure strategy space  SYMBOL  of player  SYMBOL  is a subset of  SYMBOL  and a pure strategy  SYMBOL  for player  SYMBOL  is a subset of  SYMBOL
+The cost of player  SYMBOL  under  profile of pure strategies  SYMBOL  corresponds to  SYMBOL  where  SYMBOL  is the number of % players  that use resource  SYMBOL  in  SYMBOL , that is to say the number of  SYMBOL  with  SYMBOL
+In  weighted congestion games , weights  SYMBOL  are associated to players, and one takes instead  SYMBOL
+In  task allocation games   CITATION ,  as in load balancing games, resources are called machines, and players compete for elements (i e singleton subsets) of  SYMBOL
+Each resource (machine)  SYMBOL  is  assumed to have a function   SYMBOL  that takes as input a set of tasks  SYMBOL  assigned to it, and outputs a cost  SYMBOL  for each participating player  SYMBOL
+The cost of player  SYMBOL  under  profile of pure strategies  SYMBOL  is then given by  SYMBOL
+Functions  SYMBOL  can be considered as speed and scheduling policies, and associated costs as corresponding completion time for player (task)  SYMBOL
+For example, SPT and LPT are policies that schedule the jobs without preemption respectively in order of increasing or decreasing weights (processing times)  CITATION
+Clearly, load balancing games are particular task allocation games, and load balancing games are particular weighted congestion games
+A load balancing game whose weights are unitary is a particular congestion game
+Ordinal and potential games
+All these classes of games can be related to ordinal and potential games introduced by  CITATION :  A game is an  ordinal potential game  if there exists some function  SYMBOL  from  pure  strategies to  SYMBOL  such that for all pure strategies  SYMBOL ,  SYMBOL , and  SYMBOL , one has   SYMBOL

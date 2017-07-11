@@ -1,0 +1,14 @@
+### abstract ###
+AIMX	the paper extends research on fixed-pie perceptions by suggesting that disputants may prefer proposals that are perceived to be equally attractive to both parties i e , balanced rather than one-sided, because balanced agreements are seen as more likely to be successfully implemented
+OWNX	we test our predictions using data on israeli support for the geneva accords, an agreement for a two state solution negotiated by unofficial delegations of israel and the palestinian authority in 2003
+OWNX	the results demonstrate that israelis are more likely to support agreements that are seen favorably by other israelis, but - contrary to fixed-pie predictions - israeli support for the accords does not diminish simply because a majority of palestinians favors rather than opposes the accords
+AIMX	we show that implementation concerns create a demand among israelis for balance in the degree to which each side favors or opposes the agreement
+OWNX	the effect of balance is noteworthy in that it creates considerable support for proposals even when a majority of israelis and palestinians oppose the deal
+### introduction ###
+MISC	normative models of bargaining and negotiation suggest that if there is potential for mutual benefit, conflicting parties should be able to achieve it  CITATION
+CONT	descriptive accounts and empirical investigations of negotiation behavior  CITATION , however, suggest that a number of psychological barriers to conflict resolution are likely to make efficient deal making difficult  CITATION
+MISC	for example, research on cognitive biases associated with egocentric perceptions suggests that negotiators and evaluators of negotiated agreements are likely to exhibit a "fixed-pie bias"  CITATION
+MISC	the fixed-pie bias refers to the belief that any gain for one party will be associated with an equivalent loss to the other party
+CONT	this belief is a "bias" when it persists even in contexts where there is a possibility of compatible interests or mutual benefit
+MISC	a large body of research finds that negotiators are susceptible to the fixed-pie bias prior to, during, and even after negotiations  CITATION
+AIMX	in the current paper we investigate and extend research on fixed pie bias in the context of protracted intergroup conflict

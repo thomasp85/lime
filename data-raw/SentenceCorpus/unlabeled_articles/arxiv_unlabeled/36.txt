@@ -1,0 +1,16 @@
+### abstract ###
+We introduce a simple framework for learning aggressive maneuvers in flight control of UAVs
+Having inspired from biological environment, dynamic movement primitives are analyzed and extended using nonlinear contraction theory
+Accordingly, primitives of an observed movement are stably combined and concatenated
+We demonstrate our results experimentally on the Quanser Helicopter, in which we first imitate aggressive maneuvers  and then use them as primitives to achieve new maneuvers that can fly over an obstacle
+### introduction ###
+The role of UAVs (Unmanned Aerial Vehicles) has gained significant importance in the last decades
+They have many advantages (agility, low surface area, ability to work in constrained or dangerous places) over their conventional precedents
+In addition, current UAVs are more biologically-inspired in terms of shape and performance because of the improvements in electronics and propulsion
+Unfortunately, we are still far away from using their capacity at the fullest
+This  is mostly related with the weakness of current control algorithms against high-dimensional and   nonlinear environments
+In this sense, generating aggressive maneuvers is interesting and hard to accomplish
+In this paper, our approach to solve this issue is designed in view of the experiments on frogs and monkeys which suggest that we are faced with an inverse-kinematics algorithm that adapts to the environment and changes in a sequence of target points irrespective of the initial conditions
+In theory, we analyzed dynamic movement primitives (DMPs) CITATION  and combined them using contraction theory
+In experiments, obstacle avoidance DMP of a human-piloted flight data is segmented into parts and combined at different initial points to achieve maneuvers against different obstacles on different locations
+Background of our work is briefly detailed below

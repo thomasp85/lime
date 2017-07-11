@@ -1,0 +1,52 @@
+### abstract ###
+It has become clear that a large proportion of functional DNA in the human genome does not code for protein.
+Identification of this non-coding functional sequence using comparative approaches is proving difficult and has previously been thought to require deep sequencing of multiple vertebrates.
+Here we introduce a new model and comparative method that, instead of nucleotide substitutions, uses the evolutionary imprint of insertions and deletions to infer the past consequences of selection.
+The model predicts the distribution of indels under neutrality, and shows an excellent fit to human mouse ancestral repeat data.
+Across the genome, many unusually long ungapped regions are detected that are unaccounted for by the neutral model, and which we predict to be highly enriched in functional DNA that has been subject to purifying selection with respect to indels.
+We use the model to determine the proportion under indel-purifying selection to be between 2.56 percent and 3.25 percent of human euchromatin.
+Since annotated protein-coding genes comprise only 1.2 percent of euchromatin, these results lend further weight to the proposition that more than half the functional complement of the human genome is non-protein-coding.
+The method is surprisingly powerful at identifying selected sequence using only two or three mammalian genomes.
+Applying the method to the human, mouse, and dog genomes, we identify 90 Mb of human sequence under indel-purifying selection, at a predicted 10 percent false-discovery rate and 75 percent sensitivity.
+As expected, most of the identified sequence represents unannotated material, while the recovered proportions of known protein-coding and microRNA genes closely match the predicted sensitivity of the method.
+The method's high sensitivity to functional sequence such as microRNAs suggest that as yet unannotated microRNA genes are enriched among the sequences identified.
+Futhermore, its independence of substitutions allowed us to identify sequence that has been subject to heterogeneous selection, that is, sequence subject to both positive selection with respect to substitutions and purifying selection with respect to indels.
+The ability to identify elements under heterogeneous selection enables, for the first time, the genome-wide investigation of positive selection on functional elements other than protein-coding genes.
+### introduction ###
+The human genome has been shaped by the evolutionary forces of mutation, genetic drift, and selection, with the latter acting, in the main, to purify functional regions of deleterious mutations.
+By comparing the human and mouse genomes, previously it was estimated that about 5 percent of the human genome has undergone fewer point mutations than expected under a neutral substitution model CITATION, CITATION.
+Accepting that this is most likely caused by the effects of purifying selection acting on deleterious mutations, the observation implies that at least 5 percent of the human genome is biologically functional.
+Since the only known large class of functional genomic elements, protein-coding exons, is believed to constitute only 1.2 percent of our genome CITATION, this remains a surprising result.
+To begin to understand the biological role of the remaining non-genic functional elements, the essential first step is their identification.
+Recent studies have focussed on the most highly conserved of these elements, namely ultraconserved elements CITATION.
+These elements exhibit a surprisingly high level of conservation that is rare even among protein-coding exons, and studies have begun to suggest intriguing roles of such elements in alternative splicing and development CITATION, CITATION.
+However, the vast majority of non-genic elements are not perfectly conserved with respect to point mutations, and the reliable identification of these elements within a sea of neutrally evolving DNA has proved difficult.
+Deep conservation among diverse phyla is a reliable sign of conserved biological function, but is less suitable for identifying recently evolved sequence.
+Comparative methods for closely related species typically analyze substitution patterns to flag conserved regions CITATION.
+These methods are well-developed, and they exploit phylogenetic information and correlations along the sequence to achieve high sensitivities.
+Although extremely powerful, these methods can be hard to calibrate because of incompletely understood variations in neutral rates of substitution due to, for instance, methylation levels, chromatin state, transcriptional activity, and chromosomal location, and conservative calibration leads to a reduction of sensitivity.
+Deep sequencing of mammalian genomes considerably improves the power of comparative methods CITATION, and while expensive, this will eventually represent the most satisfying solution to the sensitivity problem.
+Of all mutation processes, point substitutions are the most prevalent, with insertions and deletions approximately 10-fold less frequent.
+While nucleotide substitution models have been studied intensively CITATION, CITATION, with the exception of gene finding CITATION indels have largely been treated as evolutionary nuisance events, to be accounted for by alignment procedures, but otherwise uninformative.
+Contrary to this view, we show that indels are highly informative evolutionary events.
+We introduce a model describing the neutral distribution of indels over the genome, and show that this model fits a large proportion of human mouse alignment data remarkably well.
+We then show that deviations from the model are, in the main, not caused by variations in the neutral indel rates, but are consistent with selection acting to purify the genome of deleterious indels that arise in functional regions.
+We first applied this neutral indel model to derive upper and lower bounds on the proportion of genome under purifying selection with respect to indels.
+Our observations can be explained by proposing that between 78.8 0.6 Mb and 100.0 0.8 Mb of the human genome has been under indel-purifying selection since the human mouse split.
+Although still much higher than the 1.2 percent represented by coding exons, this represents a substantially lower estimate than the previous 5 percent estimate based on substitution-level conservation CITATION, CITATION, but is consistent with a more recent estimate CITATION.
+Restricting ourselves to ancestral repeats, transposable elements inserted before the human mouse split, we found a near-exact fit between observations and the neutral model predictions.
+Applying the same method as before, we predict that among the 1,263 Mb of TEs, only at most 1.2 Mb have been under sustained purifying selection.
+This is the first time to our knowledge that a model of neutral evolution has quantified the proportion of TEs that have evolved neutrally.
+As a second application of the neutral indel model, we identified a large proportion of sequence elements that have evolved under indel-purifying selection.
+The model allowed us to calculate the predicted false-discovery rate for the entire set, as well as Bayesian posterior probabilities for individual elements to be under indel-purifying selection.
+By correlating this set with various independent functional indicators, both positive and negative, it is shown to be highly enriched with functional DNA.
+The key strength of the proposed method lies in its independence of selection with respect to point mutations.
+Consequently, the method can provide independent confirmation of selection, thereby improving the specificity of methods based on substitutions alone.
+Moreover, an exciting possibility is that the method allows identification of sequence elements that have been under heterogeneous selection, i.e., that have been subject to purifying selection with respect to indels, but subject to positive selection or relaxed constraints with respect to substitutions.
+Examples of such elements would include spacers between regulatory elements whose relative distance is functionally constrained, such as those shown to exist in Drosophila CITATION.
+Although functional, the nucleotide sequence of such spacers is probably immaterial, implying relaxed constraints with respect to substitutions.
+An even more interesting class consists of elements whose sequence is under positive selection with respect to substitutions, while at the same time under purifying selection with respect to indels.
+Since indels can be highly disruptive of function in protein-coding and RNA genes, as is evident from the 10-fold reduced indel rates in exons compared with neutrally evolving DNA, it is conceivable that such elements exist.
+Without exploiting the evolutionary imprint of indel-purifying selection, it is difficult to see how to identify functional elements under positive selection with respect to substitutions in the absence of a comprehensive functional annotation, which only exists currently for protein-coding genes.
+An analysis of percent sequence identity suggested that as much as 5 percent of DNA under indel-purifying selection, or roughly 3 5 Mb, may be under heterogeneous selection.
+Among the indel-conserved elements identified, those that exhibit more than the expected number of substitutions for neutrally evolving DNA still showed correlations with the functional indicators mentioned above, thereby further confirming the existence of elements under heterogeneous selection.

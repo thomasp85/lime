@@ -1,0 +1,19 @@
+### abstract ###
+anchoring effects  the assimilation of numerical estimates to previously considered standards  are highly robust
+two studies examined whether mood and expertise jointly moderate the magnitude of anchoring
+previous research has demonstrated that happy mood induces judges to process information in a less thorough manner than sad mood  which means that happy judges tend to be more susceptible to unwanted influences
+however  this may not be true for anchoring effects
+because anchoring results from an elaborate process of selective knowledge activation  more thorough processing should lead to more anchoring  as a result  sad judges should show stronger anchoring effects than happy judges and happy judges may even remain uninfluenced by the given anchors
+because information processing of experts may be relatively independent of their mood  however  mood may influence anchoring only in non-experts
+results of two studies on legal decision-making study  NUMBER  and numeric estimates study  NUMBER  are consistent with these expectations
+these findings suggest that  at least for non-experts  positive mood may eliminate the otherwise robust anchoring effect
+### introduction ###
+human judgment is shaped by affective influences
+how people judge and evaluate a given target critically depends on how they feel  CITATION
+judges' mood  for example  influences how they judge their own lives  CITATION   other persons  CITATION   or the frequency of risks  CITATION
+these effects might occur because judges tend to use their mood as information in the judgment process  CITATION
+however  moods influence human judgments not only because they are used directly as information  but also because they exert a more indirect influence by changing how judges process information
+in particular  judges who are in a happy mood tend to process information in a more superficial or heuristic manner  whereas those in a sad mood tend to process information more thoroughly  CITATION
+for example  judges in a happy mood rely more on the use of stereotypes  CITATION  and other heuristic strategies  CITATION  than judges in a sad mood  CITATION
+to the extent that the use of such heuristic strategies leads to judgmental biases  CITATION   these findings suggest that happy judges are typically less accurate and more biased than sad judges
+however  there appears to be at least one notable exception to this rule - judgmental anchoring

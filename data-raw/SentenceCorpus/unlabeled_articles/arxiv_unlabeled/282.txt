@@ -1,0 +1,35 @@
+### abstract ###
+Ensemble learning aims to improve generalization ability by using multiple base learners
+It is well-known that to construct a good ensemble, the base learners should be  accurate  as well as  diverse
+In this paper, unlabeled data is exploited to facilitate ensemble learning by helping augment the diversity among the base learners
+Specifically, a semi-supervised ensemble method named {\udeed} is proposed
+Unlike existing semi-supervised ensemble methods where error-prone  pseudo-labels  are estimated for unlabeled data to enlarge the labeled data to improve accuracy, {\udeed} works by maximizing accuracies of base learners on labeled data while maximizing diversity among them on unlabeled data
+Experiments show that {\udeed} can effectively utilize unlabeled data for ensemble learning and is highly competitive to well-established semi-supervised ensemble methods
+### introduction ###
+In  ensemble learning   CITATION , a number of base learners are trained and then combined for prediction to achieve strong generalization ability
+Numerous effective ensemble methods have been proposed, such as \textsc{Boosting}  CITATION , \textsc{Bagging}  CITATION , \textsc{Stacking}  CITATION , etc , and most of these methods work under the supervised setting where the labels of training examples are known
+In many real-world tasks, however, unlabeled training examples are readily available while obtaining their labels would be fairly expensive
+Semi-supervised learning   CITATION  is a major paradigm to exploit unlabeled data together with labeled training data to improve learning performance automatically, without human intervention
+This paper deals with semi-supervised ensembles, that is, ensemble learning with labeled and unlabeled data
+In contrast to the huge volume of literatures on ensemble learning and on semi-supervised learning, only a few work has been devoted to the study of semi-supervised ensembles
+As indicated by Zhou  CITATION , this was caused by the different philosophies of the ensemble learning community and the semi-supervised learning community
+The ensemble learning community believes that it is able to boost the performance of weak learners to strong learners by using multiple learners, and so there is no need to use unlabeled data; while the semi-supervised learning community believes that it is able to boost the performance of weak learners to strong learners by exploiting unlabeled data, and so there is no need to use multiple learners
+However, as Zhou indicated  CITATION , there are several important reasons why ensemble learning and semi-supervised learning are actually mutually beneficial, among which an important one is that by considering unlabeled data it is possible to help augment the  diversity  among the base learners, as explained in the following paragraph
+It is well-known that the generalization error of an ensemble is related to the average generalization error of the base learners and the diversity among the base learners
+Generally, the lower the average generalization error (or, the higher the average accuracy) of the base learners and the higher the diversity among the base learners, the better the ensemble  CITATION
+Previous ensemble methods work under supervised setting, trying to achieve a high average accuracy and a high diversity by using the labeled training set
+It is noteworthy, however, pursuing a high accuracy and a high diversity may suffer from a dilemma
+For example, for two classifiers which have perfect performance on the labeled training set, they would not have diversity since there is no difference between their predictions on the training examples
+Thus, to increase the diversity needs to sacrifice the accuracy of one classifier
+However, when we have unlabeled data, we might find that these two classifiers actually make different predictions on unlabeled data
+This would be important for ensemble design
+For example, given two pairs of classifiers,  SYMBOL  and  SYMBOL , if we know that all of them are with 100 SYMBOL  accuracy on labeled training data, then there will be no difference taking either the ensemble consisting of  SYMBOL  or the ensemble consisting of  SYMBOL ; however, if we find that  SYMBOL  and  SYMBOL  make the same predictions on unlabeled data, while  SYMBOL  and  SYMBOL  make different predictions on some unlabeled data, then we will know that the ensemble consisting of  SYMBOL  should be better
+So, in contrast to previous ensemble methods which focus on achieving both high accuracy and high diversity using only the labeled data, the use of unlabeled data would open a promising direction for designing new ensemble methods
+In this paper, we propose the {\udeed} ( Unlabeled Data to Enhance Ensemble Diversity ) approach
+Experiments show that by using unlabeled data for diversity augmentation, {\udeed} achieves much better performance than its counterpart which does not consider the usefulness of unlabeled data
+Moreover, {\udeed} also achieves highly comparable performance to other state-of-the-art semi-supervised ensemble methods
+The rest of this paper is organized as follows
+Section  briefly reviews related work on semi-supervised ensembles
+Section  presents {\udeed}
+Section  reports our experimental results
+Finally, Section  concludes

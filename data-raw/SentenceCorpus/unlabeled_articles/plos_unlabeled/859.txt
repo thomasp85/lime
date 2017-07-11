@@ -1,0 +1,45 @@
+### abstract ###
+Understanding complex networks of protein-protein interactions is one of the foremost challenges of the post-genomic era.
+Due to the recent advances in experimental bio-technology, including yeast-2-hybrid, tandem affinity purification and other high-throughput methods for protein-protein interaction detection, huge amounts of PPI network data are becoming available.
+Of major concern, however, are the levels of noise and incompleteness.
+For example, for Y2H screens, it is thought that the false positive rate could be as high as 64 percent, and the false negative rate may range from 43 percent to 71 percent.
+TAP experiments are believed to have comparable levels of noise.
+We present a novel technique to assess the confidence levels of interactions in PPI networks obtained from experimental studies.
+We use it for predicting new interactions and thus for guiding future biological experiments.
+This technique is the first to utilize currently the best fitting network model for PPI networks, geometric graphs.
+Our approach achieves specificity of 85 percent and sensitivity of 90 percent.
+We use it to assign confidence scores to physical protein-protein interactions in the human PPI network downloaded from BioGRID.
+Using our approach, we predict 251 interactions in the human PPI network, a statistically significant fraction of which correspond to protein pairs sharing common GO terms.
+Moreover, we validate a statistically significant portion of our predicted interactions in the HPRD database and the newer release of BioGRID.
+The data and Matlab code implementing the methods are freely available from the web site: LINK.
+### introduction ###
+Networks are used to model natural phenomena studied in computational and systems biology.
+Nodes in networks represent biomolecules such as genes or proteins, and edges between the nodes indicate interactions between the corresponding biomolecules.
+These interactions could be of many different types, including functional, genetic, and physical interactions.
+Understanding these complex networks is a fundamental issue in systems biology.
+Of particular importance are protein-protein interaction networks.
+In PPI networks, nodes correspond to proteins and two nodes are linked by an edge if the corresponding proteins can interact.
+The topology of PPI networks can give new insight into the function of individual proteins, protein complexes and cellular machinery as a complex system CITATION, CITATION .
+Advances in high-throughput techniques such as yeast-2-hybrid, tandem affinity purification, and mass spectrometric protein complex identification are producing a growing amount of experimental PPI data for many organisms CITATION CITATION.
+However, the data produced by these techniques have very high levels of false positives and false negatives.
+Y2H screens have false negative rates in the range from 43 percent to 71 percent and TAP has false negative rates of 15 percent 50 percent CITATION.
+False positive rates for Y2H could be as high as 64 percent and for TAP experiments they could be as high as 77 percent CITATION.
+Thus, reducing the level of noise in PPI networks and assessing the confidence of each interaction is an essential task.
+Two recent studies provided two high quality PPI data sets for Saccharomyces cerevisiae CITATION, CITATION.
+Gavin et al. CITATION defined socio-affinity scores measuring the log-odds of the number of times two proteins are observed together, relative to their frequency in the data set.
+They use not only direct bait-prey connections but also indirect prey-prey relationships.
+In this, two proteins are each identified as preys in a purification in which a third protein is used as bait.
+Krogan et al. CITATION used machine learning methods, including Bayesian networks and boosted stump decision trees, to define confidence scores for potential interactions.
+These scores are based on direct bait-prey observations.
+They used a Markov clustering algorithm to define protein complexes.
+Data sets produced by these two groups are very different and thought to contain many false positives.
+In CITATION these two data sets were merged into one set of experimentally based PPIs by analyzing the primary affinity purification data using the purification enrichment scoring system.
+Using the set of manually curated PPIs, they showed that this new data set is more accurate than the original individual sets and is comparable to PPIs defined using small scale experimental methods.
+From the original 12,122 interactions from these two studies in the General Repository of Interaction Data CITATION they discarded 7,504 as being of low confidence.
+Applying their metric they discovered 4456 new interactions, that were not among the original 12,122 interactions, and produced a set of 9,074 interactions with accuracy comparable to the accuracy of the small scale experiments.
+In this paper we use this high confidence data set to test our approach.
+In recent years several random graph models have been proposed to model PPI networks: Erd s-R nyi random graphs with the same degree distribution as in data CITATION, scale-free graphs CITATION, geometric random graphs CITATION CITATION, and stickiness-index-based models CITATION.
+The technique presented in this paper is one of the first to use a network model of PPI networks for purposes other than just generating synthetic data.
+We demonstrate that a geometric graph model can be used for assessing the confidence levels of known interactions in PPI networks and predicting novel ones.
+We apply our technique to de-noise PPI data sets by detecting false positives and false negative interactions.
+This new approach is compared with existing PPI network post-processing techniques in the final section.

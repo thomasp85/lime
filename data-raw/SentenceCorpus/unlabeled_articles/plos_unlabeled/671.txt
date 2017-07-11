@@ -1,0 +1,66 @@
+### abstract ###
+Fluorescent proteins have been widely used as genetically encodable fusion tags for biological imaging.
+Recently, a new class of fluorescent proteins was discovered that can be reversibly light-switched between a fluorescent and a non-fluorescent state.
+Such proteins can not only provide nanoscale resolution in far-field fluorescence optical microscopy much below the diffraction limit, but also hold promise for other nanotechnological applications, such as optical data storage.
+To systematically exploit the potential of such photoswitchable proteins and to enable rational improvements to their properties requires a detailed understanding of the molecular switching mechanism, which is currently unknown.
+Here, we have studied the photoswitching mechanism of the reversibly switchable fluoroprotein asFP595 at the atomic level by multiconfigurational ab initio calculations and QM/MM excited state molecular dynamics simulations with explicit surface hopping.
+Our simulations explain measured quantum yields and excited state lifetimes, and also predict the structures of the hitherto unknown intermediates and of the irreversibly fluorescent state.
+Further, we find that the proton distribution in the active site of the asFP595 controls the photochemical conversion pathways of the chromophore in the protein matrix.
+Accordingly, changes in the protonation state of the chromophore and some proximal amino acids lead to different photochemical states, which all turn out to be essential for the photoswitching mechanism.
+These photochemical states are a neutral chromophore, which can trans-cis photoisomerize, an anionic chromophore, which rapidly undergoes radiationless decay after excitation, and a putative fluorescent zwitterionic chromophore.
+The overall stability of the different protonation states is controlled by the isomeric state of the chromophore.
+We finally propose that radiation-induced decarboxylation of the glutamic acid Glu215 blocks the proton transfer pathways that enable the deactivation of the zwitterionic chromophore and thus leads to irreversible fluorescence.
+We have identified the tight coupling of trans-cis isomerization and proton transfers in photoswitchable proteins to be essential for their function and propose a detailed underlying mechanism, which provides a comprehensive picture that explains the available experimental data.
+The structural similarity between asFP595 and other fluoroproteins of interest for imaging suggests that this coupling is a quite general mechanism for photoswitchable proteins.
+These insights can guide the rational design and optimization of photoswitchable proteins.
+### introduction ###
+Fluorescent proteins have been widely used as genetically encodable fusion tags to monitor protein localizations and dynamics in live cells CITATION CITATION.
+Recently, a new class of green fluorescent protein -like proteins has been discovered, which can be reversibly photoswitched between a fluorescent and a non-fluorescent state CITATION CITATION.
+As the reversible photoswitching of photochromic organic molecules such as fulgides or diarylethenes is usually not accompanied by fluorescence CITATION, this switching reversibility is a very remarkable and unique feature that may allow fundamentally new applications.
+For example, the reversible photoswitching, also known as kindling, may provide nanoscale resolution in far field fluorescence optical microscopy much below the diffraction limit CITATION CITATION.
+Likewise, reversibly switchable fluorescent proteins will enable the repeated tracking of protein location and movement in single cells CITATION.
+Since fluorescence can be sensitively read out from a bulky crystal, the prospect of erasable three-dimensional data storage is equally intriguing CITATION .
+The GFP-like protein asFP595, isolated from the sea anemone Anemonia sulcata, is a prototype for a reversibly switchable fluorescent protein.
+The protein can be switched from its non-fluorescent off state to the fluorescent on state by green light of 568 nm wavelength CITATION, CITATION, CITATION, CITATION.
+From this so-called kindled on state, the same green light elicits a red fluorescence emission at 595 nm.
+Upon kindling, the intensity of the absorption maximum at 568 nm diminishes, and an absorption peak at 445 nm appears.
+The kindled on state can be promptly switched back to the initial off state by this blue light of 445 nm.
+Alternatively, the off state is repopulated through thermal relaxation within seconds.
+In addition, if irradiated with intense green light over a long period of time, asFP595 can also be irreversibly converted into a fluorescent state that cannot be quenched by light any more CITATION.
+The nature of this state is hitherto unknown.
+The switching cycle of asFP595 is reversible and can be repeated many times without significant photobleaching.
+These properties render asFP595 a promising fluorescence marker for high-resolution optical far-field microscopy, as recently demonstrated by Hofmann and coworkers CITATION.
+Currently, however, with its low fluorescence quantum yield and rather slow switching kinetics, the photochromic properties of asFP595 need to be improved.
+To systematically exploit the potential of such switchable proteins and to enable rational improvements to the properties of asFP595, a detailed molecular understanding of the photoswitching mechanism is mandatory.
+The aim of this study is to obtain a detailed mechanistic picture of the photoswitching mechanism of asFP595 at the atomic level, i.e., to understand the dynamics of both the activation process and the de-activation process .
+High-resolution crystal structures of the wild-type asFP595 in its off state CITATION, CITATION, CITATION, of the Ser158Val mutant in its on state CITATION, and of the Ala143Ser mutant in its on and off states CITATION were recently determined.
+Similar to GFP, asFP595 adopts a -barrel fold enclosing the chromophore, a 2-acetyl-5-imidazolinone.
+The chromophore is post-translationally formed in an autocatalytic cyclization-oxidation reaction of the Met63-Tyr64-Gly65 triad.
+As compared to the GFP chromophore, the -system of MYG is elongated by an additional carbonyl group CITATION .
+Reversible photoswitching of asFP595 was possible even within protein crystals, and x-ray analysis showed that the off-on switching of the fluorescence is accompanied by a conformational trans-cis isomerization of the chromophore CITATION.
+In a recent study CITATION, we have shown that the isomerization induces changes of the protonation pattern of the chromophore and some of the surrounding amino acids, and that these changes account for the observed shifts in the absorption spectrum upon kindling.
+Based on the comparison between measured and calculated absorption spectra, the major protonation states in the ground state have been assigned to the zwitterion and the anion for the trans conformer, whereas the neutral chromophore is dominant for the cis conformation .
+Here, we study the photochemical behavior of each of the previously identified protonation states.
+We have addressed the following questions: How does light absorption induce the isomerization of the chromophore within the protein matrix, and how do the different protonation states affect the internal conversion mechanism?
+Which is the fluorescent species, and how can the fluorescence quantum yield be increased?
+To address these questions, we have carried out nonadiabatic molecular dynamics simulations using a hybrid quantum-classical QM/MM approach.
+This approach includes diabatic surface hopping between the excited state and the ground state.
+The forces acting on the chromophore were calculated using the CASSCF CITATION, CITATION multi-reference method, which, although not always yielding highly accurate excitation and fluorescence energies, has shown to be a reliable method for mechanistic studies of photochemical reactions involving conical intersections CITATION .
+A number of approaches for modeling nonadiabatic dynamics have been described in the literature, such as Tully's fewest switches surface hopping CITATION, and multiple spawning CITATION.
+For recent reviews, see CITATION, CITATION.
+In the context of QM/MM simulations, the surface hopping approach to photobiological problems has been pioneered by Warshel and coworkers CITATION, CITATION.
+The diabatic surface hopping approach used in this work differs from the other approaches in two main respects.
+First, in our approach a binary decision is made at each integration time step of the trajectory, based only on the current wavefunctions of the ground and excited states.
+Second, hopping is only allowed at the conical intersection seam, where hopping probability approaches unity.
+This could in principle underestimate the crossing probabilty, because we do not allow for transitions in regions of strong coupling but no real crossing.
+However, for ultra-fast photochemical reactions in large polyatomic systems, decay predominantly takes place at the CI seam, as also shown by others CITATION.
+Thus, most surface hops are essentially diabatic, justifying our approach.
+In addition, both energy and momentum are conserved upon a transition, as the trajectory never leaves the diabatic energy surface.
+The theoretical background and algorithmic implementation of the diabatic surface hopping are detailed in the Supporting Information .
+Several theoretical studies on the photochemistry of the GFP chromophore have been conducted, applying both static ab initio CITATION CITATION and DFT calculations CITATION, and dynamics simulations based on a semi-empirical Hamiltonian CITATION.
+In addition, vertical excitation energies of asFP595 model chromophores in the gas phase and in a continuum dielectric were calculated by DFT and ab initio methods CITATION, CITATION, as well as in a minimal protein environment by means of DFT and CASSCF calculations within a QM/MM approach CITATION .
+By identifying key residues in the cavity of the asFP595 chromophore, our nonadiabatic QM/MM molecular dynamics simulations elucidate how the protein surrounding governs the photoreactivity of this photoswitchable protein.
+Based on the simulations, we provide a new mechanism that qualitatively explains measured decay times and quantum yields, and that predicts the structures and protonation states of the photochemical intermediates and of the irreversibly fluorescent state.
+We also suggest excited state proton transfer to play an important mechanistic role.
+However, the detailed study of such ESPT processes is beyond the scope of this paper.
+Our predictions can be probed by, e.g., time-resolved Fourier transform infrared spectroscopy and x-ray crystallography.

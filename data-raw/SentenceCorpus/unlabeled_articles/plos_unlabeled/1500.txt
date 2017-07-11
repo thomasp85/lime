@@ -1,0 +1,46 @@
+### abstract ###
+Competence is a transiently differentiated state that certain bacterial cells reach when faced with a stressful environment.
+Entrance into competence can be attributed to the excitability of the dynamics governing the genetic circuit that regulates this cellular behavior.
+Like many biological behaviors, entrance into competence is a stochastic event.
+In this case cellular noise is responsible for driving the cell from a vegetative state into competence and back.
+In this work we present a novel numerical method for the analysis of stochastic biochemical events and use it to study the excitable dynamics responsible for competence in Bacillus subtilis.
+Starting with a Finite State Projection solution of the chemical master equation, we develop efficient numerical tools for accurately computing competence probability.
+Additionally, we propose a new approach for the sensitivity analysis of stochastic events and utilize it to elucidate the robustness properties of the competence regulatory genetic circuit.
+We also propose and implement a numerical method to calculate the expected time it takes a cell to return from competence.
+Although this study is focused on an example of cell-differentiation in Bacillus subtilis, our approach can be applied to a wide range of stochastic phenomena in biological systems.
+### introduction ###
+Competence is the ability of a cell, usually a bacterium, to bind and internalize transforming exogenous DNA.
+Under stressful environments, such as nutrient limitations, some cells enter competence while other cells commit irreversibly to sporulation.
+Entry in competence is a transient probabilistic event that facilitates copying of the exogenous DNA CITATION, CITATION.
+It has been shown that among a group of cells only a randomly chosen fraction enters in competence CITATION, CITATION.
+Proper modeling and correctly accounting for noise in the model of this phenomenon is crucial to understanding the underlying biological explanation.
+The few cells that enter competence express a high concentration of the key regulator ComK, which activates hundreds of genes, including the genes encoding the DNA-uptake and recombination systems CITATION CITATION.
+Competence is understood as a bistability pattern CITATION, CITATION and the nonlinear system describing the competence regulatory circuit is an excitable dynamical system.
+Auto-activation of the regulator ComK is responsible for the bistable response in competence development.
+Auto-activation of ComK, is essential and can be sufficient to generate a bistable expression pattern CITATION CITATION.
+Specifically, the concentration of an inducer must cross a certain threshold to start the positive feedback.
+Different experimental studies concluded that an auto activation of ComK is the only needed factor for bistability to occur in the expression of this protein CITATION, CITATION, CITATION.
+In CITATION, Smits et.
+al discuss the factors that determine the required threshold for the activation of ComK and deduce that other transcription factors can raise or lower the threshold.
+Although many proteins are involved in the regulation of competence, there are two main proteins that play a major role.
+S el et al. CITATION propose a deterministic model driven by an additive noise to describe the dynamics of competence regulation.
+We use the reduced order Stochastic Differential Equation model presented in CITATION to develop a discrete stochastic model for competence.
+Calculating the probability and the expected time for entering and returning from competence, requires solving for the splitting probabilities and the first moment passage time.
+The problem of calculating the first passage time has been studied heavily in the literature for the stochastic difference equations, Fokker Planck equations and some special cases of the CME.
+For a detailed treatment of this topic see CITATION CITATION and references therein.
+Researchers usually use Monte-Carlo simulations to calculate the distribution of the first passage time when working with he CME.
+We propose in this work, an alternative approach that makes it possible to calculate the states in which the system will be as time evolves.
+The main idea here is to aggregate regions of the state space over which specie evolve into absorbing states.
+This technique is useful in analytically computing the distribution of the first passage time, by providing a way to deal with the infinite dimension of the state space over which the system evolves.
+The contributions of this paper are threefold.
+First, it provides a new method to calculate exact probabilities of biological phenomena where transient behaviors such as competence, which is the topic we chose to study here, occur.
+Second, it shows how to calculate sensitivities of the probabilities of passing to the transient state with respect to the system's parameters.
+Third, it gives a methodology to calculate the expected time that it takes a cell to return from its transient state.
+All these methods can be used to analyze any biological system that has the characteristic of switching between two states, while staying for a while in the unstable state.
+In this paper we start by describing the chemical reactions and the deterministic model.
+We then generate the Chemical Master Equation of our proposed discrete stochastic model.
+The CME characterizes the evolution of the probability density of the different discrete states.
+We simulate it using the Stochastic Simulation Algorithm and show how the solution can be approximated using the Finite State Projection method.
+We then conduct a sensitivity analysis studying the effect that the various system parameters have on the probability with which a cell enters in competence.
+This analysis shows the usefulness of our proposed numerical method in analyzing the roles of the different affinity, transcription and degradation rates, etc., in driving the cellular switching.
+Finally, we analyze the roles of these parameters in determining the expected time a cell stays in competence.

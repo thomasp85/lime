@@ -1,0 +1,36 @@
+### abstract ###
+Fly lobula plate tangential cells are known to perform wide-field motion integration.
+It is assumed that the shape of these neurons, and in particular the shape of the subclass of VS cells, is responsible for this type of computation.
+We employed an inverse approach to investigate the morphology-function relationship underlying wide-field motion integration in VS cells.
+In the inverse approach detailed, model neurons are optimized to perform a predefined computation: here, wide-field motion integration.
+We embedded the model neurons to be optimized in a biologically plausible model of fly motion detection to provide realistic inputs, and subsequently optimized model neuron with and without active conductances along their dendrites to perform this computation.
+We found that both passive and active optimized model neurons perform well as wide-field motion integrators.
+In addition, all optimized morphologies share the same blueprint as real VS cells.
+In addition, we also found a recurring blueprint for the distribution of g K and g Na in the active models.
+Moreover, we demonstrate how this morphology and distribution of conductances contribute to wide-field motion integration.
+As such, by using the inverse approach we can predict the still unknown distribution of g K and g Na and their role in motion integration in VS cells.
+### introduction ###
+Neurons in different animals and brain regions feature a wealth of different dendritic morphologies and distributions of ionic conductances CITATION, CITATION.
+While the physiological effects of these morphologies and conductance distributions are increasingly understood, how the computational functions these dendrites perform emerge from their morphologies and physiologies is still incompletely known.
+Computational function is defined here as input-output transformation, resulting from the physiology and subserving the biological purpose of that neuron.
+Notable exceptions to this incomplete understanding are neurons close the sensory input for which the electrophysiological dynamics are recorded during sensory stimulation, the morphology is known and both can be correlated to the neuron's sensory coding.
+One such example are the fly lobula plate tangential cells, which responds to visual motion in preferred directions, and which are demonstrated to be wide-field motion detectors CITATION, CITATION .
+We have recently developed an inverse approach to elucidate dendritic structure-function relationships.
+The underlying assumption of the inverse is that dendritic structure parallels the computational function performed in dendrites.
+In the inverse approach, we start with a computational function of interest and optimize model neurons including dendritic morphology to perform this function.
+Here, we apply the inverse approach to investigate the neuronal morphology-function relationship in the fly LTPCs.
+We focus on a particular type of LPTC, the VS cells that respond to vertical motion.
+Briefly, VS cells receive motion sensitive signals from the medulla in a retinotopic organization on their dendrites.
+These inputs are noisy insofar they are corrupted by spatial modulation reflecting the activity of individual inputs to the VS cell CITATION.
+While the membrane potential of VS cells at the sites of synaptic input reproduces the fast input dynamics, by the time the signal reaches the axon the cells' physiology and anatomy gets rid of the temporal modulations imposed by their presynaptic local motion detectors.
+The output of the LPTCs is a smooth signal that encodes the direction of the presented moving stimulus CITATION, CITATION.
+Thus the function of a single VS cell is temporal smoothing of motion sensitive inputs to produce a smooth output signal.
+This computation is rewarded in the optimization performed in this work.
+In line with the argument described in CITATION we assume that the dendritic morphology computes temporal smoothing.
+The aim of this study is to identify the morphological building blocks required to perform wide-field motion integration, and to investigate how physiological processes interact with the morphology to perform wide-field motion integration.
+In this work, we start by formalizing the notion of temporal smoothing and subsequently optimize different model neurons to perform this computation.
+We found that our optimized model neurons share crucial morphological features with real VS cell morphologies and that the intrinsic dynamics show remarkable similarity to the real cells.
+Our results provide an alternative line of support for the hypothesis that the VS cell's morphology contributes to the computation of wide-field motion integration in these cells.
+Moreover, from our simulations we were able to identify the morphological building blocks required to perform wide-field motion integration and conclude that passive dendrites alone can account for temporal smoothing, and active ion-channels can be used to balance the responses to visual stimulation in the preferred and null-direction.
+Due to the similarity of our optimized models and real VS cells we can predict the actual -but still unknown- distribution of three ionic conductances and their role in wide-field integration in VS cells.
+We discuss the significance of our results and compare our findings to a related approach.

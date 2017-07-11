@@ -1,0 +1,44 @@
+### abstract ###
+We study the tracking problem, namely, estimating the hidden state of an object over time, from unreliable and noisy measurements
+The standard framework for the tracking problem is the generative framework, which is the basis of solutions such as the Bayesian algorithm and its approximation, the particle filters
+However, the problem with these solutions is that they are very sensitive to model mismatches
+In this paper, motivated by online learning, we introduce a new framework -- an  explanatory  framework -- for tracking
+We provide an efficient tracking algorithm for this framework
+We provide experimental results comparing our algorithm to the Bayesian algorithm on simulated data
+Our experiments show that when there are slight model mismatches, our algorithm vastly outperforms the Bayesian algorithm
+### introduction ###
+We study the tracking problem, which has numerous applications in AI, control and finance
+In tracking, we are given noisy measurements over time, and the problem is to estimate the hidden state of an object
+The challenge is to do this reliably, by combining measurements from multiple time steps and prior knowledge about the state dynamics, and the goal of tracking is to produce estimates that are as close to the true states as possible
+The most popular solutions to the tracking problem are the Kalman filter~ CITATION , the particle filter~ CITATION , and their numerous extensions and variations ( eg ~ CITATION ), which are  based on a generative framework for the tracking problem
+Suppose we want to track the state  SYMBOL  of an object at time  SYMBOL , given only measurement vectors  SYMBOL  \changeto{at time}{for times}  SYMBOL
+In the generative approach, we think of the state  SYMBOL  and measurements  SYMBOL  as random variables
+We represent our knowledge regarding the dynamics of the states using the transition process  SYMBOL  and our knowledge regarding the (noisy) relationship between the states and the observations by the measurement process  SYMBOL
+Then, given only the observations, the goal of tracking is to estimate the hidden state sequence  SYMBOL
+This is done by calculating the likelihood of each state sequence and then using as the estimate either the sequence with the highest posterior probability (maximum a posteriori, or MAP) or the expected value of the state with respect to the posterior distribution (the Bayesian algorithm)
+In practice, one uses particle filters, which are an approximation to the Bayesian algorithm
+The problem with the generative framework is that in practice, it is very difficult to precisely determine the distributions of the measurements
+Moreover, the Bayesian algorithm is very sensitive to model mismatches, \changeto{and}{so} using a model which is slightly different from the model generating the measurements can lead to a large divergence between the estimated states and the true states
+To address this, we introduce an online-learning-based framework for tracking
+In our framework, called the   framework, we are given a set of state sequences or paths in the state space; but instead of assuming that the observations are \changeto{generated}{ generated } by a measurement model from \changeto{ a path in this set }{a path in this set}, we think of each path as a mechanism for  explaining  the observations
+We emphasize that this is done regardless of how the observations are generated
+Suppose \changeto{that the}{a} path \changeto{ SYMBOL }{ SYMBOL } is proposed as an explanation of the observations \changeto{ SYMBOL }{ SYMBOL } \changeto{Then, we}{We} measure the quality of this \explanatory\ path using a predefined  loss function , which depends only on the measurements (and not on the hidden true state)
+The tracking algorithm selects its own \explanatory\ path by taking a weighted average of the best \explanatory\ paths according the past observations
+The theoretical guarantee we provide is that the loss of the \explanatory\ path generated in this online way by the tracking algorithm is close to that of the \explanatory\ path with the minimum \changeto{loss, where}{such loss; here,} the loss is measured according to the loss function supplied to the algorithm
+Such guarantees are analogous to competitive analysis used in online learning~ CITATION , and it is important to note that such guarantees hold uniformly for  any  sequence of observations, regardless of any probabilistic assumptions
+Our next contribution is to provide an online-learning-based algorithm for tracking in the \explanatory\ framework
+Our algorithm is based on \nhedge~ CITATION , which is a general online learning algorithm \nhedge\ can be instantiated with  any loss function
+When supplied with a bounded loss function, it is guaranteed to produce a path with loss close to that of the path with the minimum loss, from a set of candidate paths
+As it is inefficient to directly apply \nhedge\ to tracking, we derive a Sequential \changeto{Monte-Carlo-based}{Monte Carlo} approximation to \nhedge, and we show that this approximation is efficient
+To demonstrate the robustness of our tracking algorithm, we perform simulations on a simple one-dimensional tracking problem
+We evaluate tracking performance by measuring the average distance between the states estimated by the algorithms, and the true hidden states
+We instantiate our algorithm with a simple clipping loss function
+Our simulations show that our algorithm consistently outperforms the Bayesian algorithm, under high measurement noise, and a wide range of levels of model mismatch
+We note that Bayesian algorithm can also be interpreted in the \explanatory\ framework
+In particular, if the loss of a path is the negative log-likelihood (the log-loss) under some measurement model, then, the Bayesian algorithm can be shown to produce a path with log-loss close to that of the path with the minimum log-loss
+One may be tempted to think that our tracking solution follows the same approach; however, the point of our paper is that one can use loss functions that are different from log-loss, and in particular, we show a scenario \changeto{where}{in which} using other loss functions produces better tracking performance than the Bayesian algorithm (or its approximations)
+The rest of the paper is organized as follows
+In Section 2, we explain in detail our explanatory model for tracking
+In Section 3, we present \changeto{Normalhedge }{NormalHedge, on which our tracking algorithm is based}
+In Section 4, we provide our \changeto{actual tracking algorithm}{tracking algorithm} \changeto{Section 5 presents some experiments that compare our algorithm with the Bayesian algorithm on simulated data }{Section 5 presents the experimental comparison of our algorithm with the Bayesian algorithm } \changeto{Finally, in Section 6, we report on our experiments with face-tracking }{Finally, we discuss related work in Section 6 }  The detailed bounds and proofs for NormalHedge are provided in the supplementary material
+We feel that the algorithm NormalHedge may be of more general interest, and hence these details for NormalHedge have been submitted to NIPS in a companion paper

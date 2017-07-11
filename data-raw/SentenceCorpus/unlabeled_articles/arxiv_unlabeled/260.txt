@@ -1,0 +1,19 @@
+### abstract ###
+Dirichlet process (DP) mixture models provide a flexible Bayesian framework for density estimation
+Unfortunately, their flexibility comes at a cost: inference in DP mixture models is computationally expensive, even when conjugate distributions are used
+In the common case when one seeks only a maximum a posteriori assignment of data points to clusters, we show that search algorithms provide a practical alternative to expensive MCMC and variational techniques
+When a true posterior sample is desired, the solution found by search can serve as a good initializer for MCMC
+Experimental results show that using these techniques is it possible to apply DP mixture models to very large data sets
+### introduction ###
+Dirichlet process (DP) mixture models provide a flexible Bayesian solution to nonparametric density estimation
+Their flexibility derives from the fact that one need not specify a number of mixture components a priori
+In practice, DP mixture models have been used for problems in genomics  CITATION , relational learning  CITATION , data mining  CITATION  and vision  CITATION
+Despite these successes, the flexibility of DP mixture models comes at a high computational cost
+Standard algorithms based on MCMC, such as those described by \namecite{neal98dpmm}, are computationally expensive and can take a long time to converge to the stationary distribution
+Variational techniques  CITATION  are an attractive alternative, but are difficult to implement and can remain slow
+In this paper, we show that standard search algorithms, such as A*, and beam search, provide an attractive alternative to these expensive techniques
+Our algorithms allows one to apply DP mixture models to very large data sets
+Like variational approaches to DP mixture models, we focus on conjugate distributions from the exponential family
+Unlike MCMC techniques, which can produce samples of cluster assignments from the corresponding posterior, our search-based techniques will only find an approximate MAP cluster assignment
+We do not believe this to be a strong limitation: in practice, the applications cited above all use MCMC techniques to draw a sample and then simply choose from this sample the single assignment with the highest posterior probability
+If one needs samples from the posterior, then the solution found by our methods could initialize MCMC

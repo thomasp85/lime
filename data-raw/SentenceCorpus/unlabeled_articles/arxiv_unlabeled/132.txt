@@ -1,0 +1,35 @@
+### abstract ###
+The games of prediction with expert advice are considered in this paper
+We present some modification of Kalai and Vempala algorithm of following the perturbed leader for the case of unrestrictedly large one-step gains
+We show that in general case the cumulative gain of any probabilistic prediction algorithm can be much worse than the gain of some expert of the pool
+Nevertheless, we give the lower bound for this cumulative gain in general case and construct a universal algorithm which has the optimal performance; we also prove that in case when one-step gains of experts of the pool have ``limited deviations'' the performance of our algorithm is close to the performance of the best expert
+### introduction ###
+Experts algorithms are used for online prediction or repeated decision making or repeated game playing
+Any such algorithm is based on a ``pool of experts''
+At any step  SYMBOL , each expert gives its recommendation
+From this, a ``master decision'' is performed
+After that, losses (or rewards)  SYMBOL  are assigned to each expert  SYMBOL  by the environment (or adversary)
+The master algorithm also receives some loss or reward depending on the master decision
+The goal of the master algorithm is to perform almost as well as the best expert in hindsight in the long run
+Prediction with Expert Advice considered in this paper proceeds as follows
+We are asked to perform sequential actions at times  SYMBOL
+At each time step  SYMBOL , we observe results of actions of experts in the form of their gains and losses on steps  SYMBOL
+After that, at the beginning of the step  SYMBOL   Learner  makes a decision to follow one of these experts, say Expert  SYMBOL
+At the end of step  SYMBOL  Learner receives the same gain or loss as Expert  SYMBOL  at step  SYMBOL
+We use notations and definitions from~ CITATION  and~ CITATION
+Let  SYMBOL  be the cumulative loss of Expert  SYMBOL  at time  SYMBOL
+Given  SYMBOL ,  SYMBOL , at time  SYMBOL , a natural idea to solve the expert problem is ``to follow the leader'', i e to select the expert  SYMBOL  which performed best in the past
+The following simple example from Kalai and Vempala~ CITATION  shows that Learner can perform much worse than each expert: let the current losses of two experts on steps  SYMBOL  be  SYMBOL  and  SYMBOL
+The ``Follow Leader'' algorithm always chooses the wrong prediction
+The method of following the perturbed leader was discovered by Hannan~ CITATION
+Kalai and Vempala~ CITATION  rediscovered this method and published a simple proof of the main result of Hannan
+They called the algorithm of this type FPL (Following the Perturbed Leader)
+Hutter and Poland~ CITATION  presented a further developments of the FPL algorithm for countable class of experts, arbitrary weights and adaptive learning rate
+The FPL algorithm outputs prediction of an expert  SYMBOL  which minimizes  SYMBOL  SYMBOL \xi_t^i SYMBOL i=1,m SYMBOL t=1,2,SYMBOL p(t)=e^{-t} SYMBOL SYMBOL  SYMBOL  SYMBOL SYMBOL n SYMBOL i SYMBOL t SYMBOL 0s^i_t1 SYMBOL t SYMBOL B_t SYMBOL s_tB_t SYMBOL t SYMBOL s^i_t SYMBOL i SYMBOL 0s^i_t1$ seems to be too restrictive
+In Appendix~ we consider some applications of results of Sections~- of this paper
+We define two financial experts learning the fractional Brownian motion whose one-step gains at any step can not be restricted in advance
+This application is at the bottom of our special interest in zero-sum games with unbounded gains in Section~
+In this paper we present some modification of Kalai and Vempala algorithm for the case of unrestrictedly large one-step gains not bounded in advance
+We show that in general case, the cumulative gain of any probabilistic prediction algorithm can be much worse than the gain of some expert of the pool
+Nevertheless, we give the lower bound for cumulative gain of any probabilistic algorithm in general case and prove that our universal algorithm has optimal performance; we also prove that in case when one-step gains of experts of the pool have ``limited deviations'' (in particular, when they are bounded) the performance of our algorithm is close to the performance of the best expert
+This result is some improvement of results mentioned above

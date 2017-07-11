@@ -1,0 +1,16 @@
+### abstract ###
+donation requests often convey numerical information about the people in need
+in two studies we investigated the effects of numeracy and presentation format on the underlying affective and cognitive mechanisms of donation decisions
+in study  NUMBER   participants were presented with information about a victim in need  either in a frequency format or in a percentage format
+in study  NUMBER   we manipulated the identifiability and number of target victims
+our results demonstrate that donations of individuals lower in numeracy were more susceptible to changes in numeric presentation format than those higher in numeracy
+importantly  the underlying mechanisms for donations differed by numeracy
+whereas the mental image of the victim influenced donation decisions of less numerate people only  the estimated impact of a donation was positively correlated with donation amounts for both more and less numerate individuals
+### introduction ###
+in reports of the effects of natural and man-made catastrophes e g   famines  floods  tsunamis  and wars  it is common to encounter statistics about the number of human lives affected
+for example  the earthquake in haiti on january  NUMBER    NUMBER  affected  NUMBER  million people  of which approximately  NUMBER   NUMBER  lost their lives  CITATION  and an estimated  NUMBER   NUMBER  families were left homeless  CITATION
+although it may be difficult to truly comprehend the scope of such tragedies  CITATION   numerical figures are typically used to convey the enormity of suffering
+humanitarian aid organizations likewise use numerical information to communicate the needs of the victims and to entice benefactors to make financial contributions
+the total number of lives affected  the estimated number of individuals that would benefit from a donation  and the ratio between them can all be important aspects in the decision to help
+potential donors are expected to understand and use such numerical information when deciding whether to support a humanitarian aid project
+however  comprehension and use of this information may differ depending on how it is presented and who the potential donor is

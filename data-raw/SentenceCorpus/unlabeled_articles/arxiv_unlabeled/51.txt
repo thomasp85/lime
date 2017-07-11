@@ -1,0 +1,64 @@
+### abstract ###
+We propose simple randomized strategies for sequential decision (or prediction) under imperfect monitoring, that is, when the decision maker (forecaster) does not have access to the past outcomes but rather to a feedback signal
+The proposed strategies are consistent in the sense that they achieve, asymptotically, the best possible average reward among all fixed actions
+It was Rustichini  CITATION  who first proved the existence of such consistent predictors
+The forecasters presented here offer the first constructive proof of consistency
+Moreover, the proposed algorithms are computationally efficient
+We also establish upper bounds for the rates of convergence
+In the case of deterministic feedback signals, these rates are optimal up to logarithmic terms
+### introduction ###
+In sequential decision problems a decision maker (or forecaster) tries to predict the outcome of a certain unknown process at each (discrete) time instance and  takes an action accordingly
+Depending on the outcome of the predicted event and the action taken, the decision maker receives a reward
+Very often, probabilistic modeling of the underlying process is difficult
+For such situations the prediction problem can be formalized as a repeated game between the decision maker and the environment
+This formulation goes back to the 1950's when Hannan~ CITATION  and Blackwell~ CITATION  showed that the decision maker has a randomized strategy that guarantees,  regardless of the outcome sequence, an average asymptotic reward as high as the maximal reward one could get by knowing the empirical distribution of the outcome sequence in advance
+Such strategies are called  Hannan consistent
+To prove this result, Hannan and Blackwell assumed that the decision maker has full access to the past outcomes
+This case is termed the  full information  or the  perfect monitoring  case
+However, in many important applications, the decision maker has limited information about the past elements of the sequence to be predicted
+Various models of limited feedback have been considered in the literature
+Perhaps the best known of them is the so-called  multi-armed bandit problem  in which the forecaster is only informed of its own reward but not the actual outcome; see Ba\~nos~ CITATION , Megiddo~ CITATION , Foster and Vohra~ CITATION , Auer, Cesa-Bianchi, Freund, and Schapire~ CITATION , Hart and Mas Colell~ CITATION
+For example, it is shown in  CITATION  that Hannan consistency is achievable in this case as well
+Sequential decision problems like the ones considered in this paper have been studied in different fields under various names such as repeated games, regret minimization, on-line learning, prediction of individual sequences, and sequential prediction
+The vocabulary of different sub-communities differ
+Ours is perhaps closest to that used by learning theorists
+For a general introduction and survey of the sequential prediction problem we refer to Cesa-Bianchi and Lugosi  CITATION
+In this paper we consider a general model in which the information available to the forecaster is a general given  (possibly randomized) function of the outcome and the decision of the forecaster
+It is well understood under what conditions Hannan consistency is achievable in this setup, see Piccolboni and Schindelhauer  CITATION  and Cesa-Bianchi, Lugosi, and Stoltz  CITATION
+Roughly speaking, this is possible whenever, after suitable transformations of the problem, the reward matrix can be expressed as a linear function of the matrix of (expected) feedback signals
+However, this condition is not always satisfied and then the natural question is what the best achievable performance for the decision maker is
+This question was answered by Rustichini  CITATION  who characterized the maximal achievable average reward that can be guaranteed asymptotically for all possible outcome sequences (in an almost sure sense)
+However, Rustichini's proof of achievability is not constructive
+It uses abstract  approachability  theorems due to Mertens, Sorin, and Zamir  CITATION  and it seems unlikely that his proof method can give rise to computationally efficient prediction algorithms, as noted in the conclusion of  CITATION
+A simplified efficient approachability-based strategy in the special case where the feedback is a function of the action of nature alone was shown in Mannor and Shimkin  CITATION
+In the general case, the simplified approachability-based strategy of  CITATION  falls short of the maximal achievable average reward characterized by Rustuchini  CITATION
+The goal of this paper is to develop computationally efficient forecasters in the general prediction problem under imperfect monitoring that achieve the best possible asymptotic performance
+We introduce several forecasting strategies that exploit some specific properties of the problem at hand
+We separate four cases, according to whether the feedback signal only depends on the outcome or both on the outcome and the forecaster's action and whether the feedback signal is deterministic or not
+We design different prediction algorithms for all four cases
+As a by-product, we also obtain finite-horizon performance bounds with explicit guaranteed rates of convergence in terms of the number  SYMBOL  of rounds the prediction game is played
+In the case of deterministic feedback signals these rates are optimal up to logarithmic factors
+In the random feedback signal case we do not know if it is possible to construct forecasters with a significantly smaller regret
+A motivating example for such a prediction problem arises naturally in multi-access channels that are prevalent in both wired and wireless networks
+In such networks, the communication medium is shared between multiple decision makers
+It is often technically difficult to synchronize between the decision makers
+Channel sharing protocols, and, in particular, several variants of spread spectrum, allow multiple agents to use the same channel (or channels that may interfere with each other) simultaneously
+More specifically, consider a wireless system where multiple agents can choose in which channel to transmit data at any given time
+The quality of each channel may be different and interference from other users using this channel (or other ``close'' channels) may affect the base-station reception
+The transmitting agent may choose which channel to use and how much power to spend on every transmission
+The agent has a tradeoff between the amount of power wasted on transmission and the cost of having its message only partially received
+The transmitting agent may not receive immediate feedback on how much data were received in the base station (even if feedback is received, it often happens on a much higher layer of the communication protocol)
+Instead, the transmitting agent can monitor the transmissions of the other agents
+However, since the transmitting agent is physically far from the base-station and the other agents, the information about the channels chosen by other agents and the amount of power they used is imperfect
+This naturally abstracts to an online learning problem with imperfect monitoring
+The paper is structured as follows
+In the next section we formalize the prediction problem we investigate, introduce the  target quantity, that is, the best achievable reward, and the notion of regret
+In Section  we describe some analytical properties of a key function  SYMBOL , defined in Section
+This function represents the worst possible average reward for a given vector of observations and is needed in our analysis
+In Section  we consider the simplest special case when the actions of the forecaster do not influence the feedback signal, which is, moreover, deterministic
+This case is basically as easy as the full information case and we obtain a regret bound of the order of  SYMBOL  (with high probability) where  SYMBOL  is the number of rounds of the prediction game
+In Section  we study random feedback signals but still with the restriction that it is only determined by the outcome
+Here we are able to obtain a regret of the order of  SYMBOL
+The most general case is dealt with in Section
+The forecaster introduced there has a regret of the order of  SYMBOL
+Finally, in Section  we show that this may be improved to  SYMBOL  in the case of deterministic feedback signals, which is known to be optimal (see  CITATION )

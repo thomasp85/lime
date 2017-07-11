@@ -1,0 +1,40 @@
+### abstract ###
+a gender difference in risk preferences  with women being more averse to risky choices  is a robust experimental finding
+speculating on the sources of this difference  croson and gneezy recently pointed to the tendency for women to experience emotions more strongly and suggested that feeling more strongly about negative outcomes would lead to greater risk-aversion
+here we test this hypothesis in an international survey with  NUMBER  respondents from india and  NUMBER  from us where we ask questions about a hypothetical lottery
+in both countries we find that emotions about outcomes are stronger among women  and that this effect partially mediates gender difference in willingness to enter the lottery
+### introduction ###
+why do women engage in less risky behaviors than men
+prior work demonstrates that females' lower risk preferences and less risky behavior is robust across a variety of contexts  CITATION
+of particular relevance for the current work  researchers have documented substantial gender differences in financial decisions involving risk  CITATION
+women  for instance  are substantially less likely than men to enter lotteries  CITATION
+a number of meta-theoretical perspectives - from structural role theories  CITATION  to evolutionary approaches  CITATION  - are consistent with these observations
+however  only recently have researchers begun to study underlying causal mechanisms of these gender differences
+there are several possible explanations of gender differences in entering lotteries
+first  males and females for whatever reason may assign different probabilities to the likelihood of winning or losing lotteries  second  men and women may experience different positive or negative reactions to the benefits and costs of entering lotteries
+in a recent review of the literature on gender differences in risk preferences  croson and gneezy  CITATION  pointed to research on the tendency for women to experience stronger emotional reactions to outcomes and events than men
+the authors hypothesized that a tendency for women to experience stronger emotional reactions to outcomes may explain gender differences in risk preferences
+the goal of the current study is to address this heretofore untested hypothesis using a cross-national sample
+to elaborate  the tendency for women to experience stronger emotional reactions would explain gender differences in risky financial decisions  such as whether to enter a lottery  if a compared to men  women evaluated losing more strongly  and b the strength of negative evaluations of losing predicted decisions about whether to enter lotteries
+thus  we predict that evaluations of losing will mediate gender differences in tendencies to join lotteries
+but  assuming for the moment that females tend to experience stronger emotional reactions to all outcomes as suggested by croson and gneezy  they would also experience stronger positive reactions to winning
+wouldn't these stronger positive reactions offset the negative emotional reactions  creating a null effect of gender on lottery decisions
+we argue that the typical setup of lotteries that assigns much higher probabilities of losing than of winning does not allow stronger positive reactions to winning to counterbalance stronger negative reactions to losing
+in other words  because people know that they are most likely to lose  the expected emotional reactions to losing lotteries should be a much stronger predictor of decisions to enter them than expected emotional reactions to winning lotteries
+thus  even if we do find stronger reactions to winning and losing among women  we expect that only reactions to losing will influence decisions to play
+results from a recent study by harris et al CITATION  are consistent with this hypothesis
+using a sample of undergraduate psychology students  these researchers measured gender differences in stated likelihood of engaging in a variety of risky behaviors
+the researchers found that  in most domains  females weighed negative outcomes more strongly than did males
+further  compared to males  females expected negative outcomes to occur with a greater likelihood
+finally  harris and colleauges found that the evaluation of negative outcomes as well as the expected likelihood of those outcomes partially mediated gender differences in stated willingness to engage in risky behaviors
+but  to the extent that decision-makers overestimate the likelihood of negatively valued events  CITATION   we cannot know for certain whether gender differences in reactions to losing explain gender differences in lottery decisions
+thus  one goal of the current reseaerch is to make the probabilities of winning and losing known and explicit  and measure gender differences in evaluations of winning and losing under these conditions
+as explained below  a second goal of the study was to offer a cross-cultural test of the prediction
+the study outlined in the section to follow tests the hypotheses using amazon's mechanical turk
+users tend to be disproportionately from the u s and india
+thus  our dataset allows us to test the robustness of our hypotheses using men and women from two different continents
+prior work  CITATION  addressing cross-cultural differences in risk taking found that americans tend to be less risk seeing than chinese
+hsee and weber use the  cushion hypothesis  to explain these cross-national differences  arguing that in times of financial need  decision makers in collectivist cultures can rely on network ties for help
+this  cushion  or safety net thus allows for more risky behavior
+thus  we might expect to observe more risk taking among indians than americans
+most importantly  however  we should expect the predicted gender differences to occur above and beyond any cross-cultural differences

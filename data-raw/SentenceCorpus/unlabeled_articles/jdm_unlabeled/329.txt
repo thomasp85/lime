@@ -1,0 +1,28 @@
+### abstract ###
+inferences consistent with  recognition-based  decision-making may be drawn for various reasons other than recognition alone
+we demonstrate that  for  NUMBER -alternative forced-choice decision tasks  less-is-more effects reduced performance with additional learning are not restricted to recognition-based inference but can also be seen in circumstances where inference is knowledge-based but item knowledge is limited
+one reason why such effects may not be observed more widely is the dependence of the effect on specific values for the validity of recognition and knowledge cues
+we show that both recognition and knowledge validity may vary as a function of the number of items recognized
+the implications of these findings for the special nature of recognition information  and for the investigation of recognition-based inference  are discussed
+### introduction ###
+investigations of the recognition heuristic rh typically involve participants making judgments about items about which they have limited knowledge  such as the relative sizes of cities in the usa
+for example  a participant might be presented with the two cities san diego and san antonio and asked which is bigger
+in the classic work of goldstein and gigerenzer  CITATION   it is assumed that the participant will guess if they recognize neither of the items  they will use whatever additional knowledge is available to make a decision if they recognize both of the items and  crucially  if they recognize only one of the items  they will choose this item as the larger without consulting any other cues or searching for further information the recognition heuristic or rh
+this is because items of larger size are more likely to be encountered  hence more likely to be recognized the recognition-magnitude correlation
+recognizing one of the two items is thus a useful cue for choosing the recognized item
+if both items are recognized  however  additional knowledge is needed to make the decision and such additional knowledge may be very limited
+recognition-driven inference can give rise to the less-is-more effect lime  whereby individuals who recognize many of the items often perform worse than individuals who recognize fewer of the items  CITATION
+the lime is a counter-intuitive finding  predicted to occur under given circumstances if the rh is applied  CITATION
+the counter-intuitive nature of the lime prediction allows for a strong test of the rh and has been used as a rhetoric device to promote the heuristic  CITATION
+evidence for the lime has also been observed empirically  CITATION  but  counter to this  failures to observe the effect have also been cited in attempts to refute the rh  CITATION
+at least as originally introduced  a lime is a mathematical necessity given certain assumptions rather than a proof of recognition-based inference
+nevertheless  the consensus appears to be that the observation of a lime implies that the recognition heuristic was employed  CITATION   and that the use of knowledge will dilute or reduce the size of the lime  CITATION
+here we explore whether limes are also mathematical necessities if those assumptions are altered somewhat - specifically if inference is no longer recognition-based but instead makes reference to some form of knowledge
+limes need not appear only when the rh is studied in isolation
+they are also predicted by formal models of knowledge-based inference if those models exploit the recognition principle
+gigerenzer and goldstein  CITATION  used the appearance of the effect as part of their comparison of five integration algorithms with the take the best ttb algorithm  CITATION
+ttb and all of the integration algorithms were implemented such that  in each case  recognition was used as a cue if only one item was recognized p  NUMBER 
+unsurprisingly  all six algorithms produced a non-monotonic relationship between recognition and correct inference  CITATION
+however  as we will demonstrate  limes can be produced by knowledge-based decision-making processes which use neither recognition-driven inference nor the related speed-of-retrieval inference that schooler and hertwig  CITATION  have shown produces similar advantageous effects for moderate over lesser forgetting rates
+the first aim of this paper is to prove by analytical means that limes can be produced by knowledge-based decision-rules
+they are not unique to recognition-driven inference and cannot therefore be viewed as providing unconditional support for this hypothesis

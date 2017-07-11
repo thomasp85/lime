@@ -1,0 +1,43 @@
+### abstract ###
+AIMX	this paper studies quantum annealing  qa  for clustering  which can be seen as an extension of simulated annealing  sa 
+OWNX	we derive a qa algorithm for clustering and propose an annealing schedule  which is crucial in practice
+CONT	experiments show the proposed qa algorithm finds better clustering assignments than sa
+CONT	furthermore  qa is as easy as sa to implement
+### introduction ###
+MISC	clustering is one of the most popular methods in data mining
+MISC	typically  clustering problems are formulated as optimization problems  which are solved by algorithms  for example the em algorithm or convex relaxation
+MISC	however  clustering is typically np hard
+MISC	the simulated annealing  sa   CITATION  is a promising candidate
+MISC	CITATION  proved sa was able to find the global optimum with a slow cooling schedule of temperature
+CONT	although their schedule is in practice too slow for clustering of a large amount of data  it is well known that sa still finds a reasonably good solution even with a faster schedule than what  citeauthor geman NUMBER   proposed
+CONT	in statistical mechanics  quantum annealing  qa  has been proposed as a novel alternative to sa  CITATION
+CONT	qa adds another dimension     to sa for annealing  see fig
+BASE	thus  it can be seen as an extension of sa
+MISC	qa has succeeded in specific problems  e g the ising model in statistical mechanics  and it is still unclear that qa works better than sa in general
+OWNX	we do not actually think qa intuitively helps clustering  but we apply qa to clustering just as procedure to derive an algorithm
+MISC	a derived qa algorithm depends on the definition of quantum effect
+OWNX	we propose quantum effect    which leads to a search strategy fit to clustering
+AIMX	our contribution is 1) to propose a qa based optimization algorithm for clustering in particular quantum effect for clustering and a good annealing schedule  which is crucial for applications 2) and to experimentally show the proposed algorithm optimizes clustering assignments better than sa
+OWNX	we also show the proposed algorithm is as easy as sa to implement 
+OWNX 	the algorithm we propose is a markov chain monte carlo  mcmc  sampler  which we call qa st sampler
+OWNX	as we explain later  a naive qa sampler is intractable even with mcmc
+OWNX	thus  we approximate qa by the suzuki trotter  st  expansion  CITATION  to derive a tractable sampler  which is the qa st sampler
+OWNX	qa st looks like parallel   sas with interaction    see fig  
+OWNX	at the beginning of the annealing process  qa st is almost the same as   sas
+OWNX	hence  qa st finds    local  optima independently
+OWNX	as the annealing process continues  interaction   in fig becomes stronger to move   states closer
+OWNX	qa st at the end picks up the state with the lowest energy in   states as the final solution
+OWNX	qa st with the proposed quantum effect   works well for clustering
+OWNX	fig is an example where data points are grouped into four clusters
+OWNX	SYMBOL and SYMBOL are locally optimal and   is globally optimal
+OWNX	suppose SYMBOL is equal to two and SYMBOL and SYMBOL in fig correspond to SYMBOL and SYMBOL in fig
+OWNX	although   and   are local optima  the interaction   in fig allows   and   to search for a better clustering assignment between   and
+OWNX	quantum effect   defines the distance metric of clustering assignments
+OWNX	in this case  the proposed   locates   between   and
+OWNX	thus  the interaction   gives good chance to go to   because   makes   and   closer  see fig  
+OWNX	the proposed algorithm actually finds   from   and
+OWNX	fig is just an example
+MISC	however  a similar situation often occurs in clustering
+MISC	clustering algorithms in most cases give   almost   globally optimal solutions like   and    where the majority of data points are well clustered  but some of them are not
+MISC	thus  a better clustering assignment can be constructed by picking up well clustered data points from many sub optimal clustering assignments
+MISC	note an assignment constructed in such a way is located between the sub optimal ones by the proposed quantum effect   so that qa st can find a better assignment between sub optimal ones

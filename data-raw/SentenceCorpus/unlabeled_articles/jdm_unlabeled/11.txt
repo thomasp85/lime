@@ -1,0 +1,24 @@
+### abstract ###
+decision research in psychology has traditionally been influenced by the homo oeconomicus metaphor with its emphasis on normative models and deviations from the predictions of those models
+in contrast  the principal metaphor of cognitive psychology conceptualizes humans as 'information processors'  employing processes of perception  memory  categorization  problem solving and so on
+many of the processes described in cognitive theories are similar to those involved in decision making  and thus increasing cross-fertilization between the two areas is an important endeavour
+a wide range of models and metaphors has been proposed to explain and describe 'information processing' and many models have been applied to decision making in ingenious ways
+this special issue encourages cross-fertilization between cognitive psychology and decision research by providing an overview of current perspectives in one area that continues to highlight the benefits of the synergistic approach  cognitive modeling of multi-attribute decision making
+in this introduction we discuss aspects of the cognitive system that need to be considered when modeling multi-attribute decision making e g   automatic versus controlled processing  learning and memory constraints  metacognition and illustrate how such aspects are incorporated into the approaches proposed by contributors to the special issue
+we end by discussing the challenges posed by the contrasting and sometimes incompatible assumptions of the models and metaphors
+### introduction ###
+the traditional approach to the study of judgment and decision making jdm is to compare a judgment or a decision which can be considered as a judgment about what to do  CITATION  to a standard or  benchmark
+  the comparison enables an evaluation of whether a particular judgment is  good  or  bad  relative to the standard
+normative models which provide these standards are valuable because their clear sets of rules or axioms  such as those derived from economics expected utility theory and mathematics probability theory can be used to test predictions about human behavior
+when behavior deviates from the predictions of normative models - i e   biases are observed - attempts can be made to ascertain why and  often  techniques for overcoming such biases can be prescribed
+this approach with its focus on deviations from normative models contrasts the ideal of a homo oeconomicus with the apparent reality of a cognitive miser or even loser and has been enormously influential and useful
+however  it has not been without its critics  CITATION
+both metaphors fall short of psychology's actual goal because they tend  to define human decision making by what it is not   CITATION   and as a consequence jdm research has tended to follow its own path and  some would argue  become disconnected from much of psychology in general and cognitive psychology in particular  CITATION
+this  disconnection  is a great pity given that many of the issues at the core of understanding human judgment and decision making are  necessarily  central to the wider goal of understanding human cognition
+the papers in this special issue of the judgment and decision making grew from a symposium held at the max planck institute for research on collective goods which focused on one area of jdm research which we believe has and will continue to benefit from its overlap with more mainstream cognitive psychology
+the area is multi-attribute judgment and the symposium explored recent advances in the cognitive modeling approaches that have been brought to bear on the basic question of how we make judgments when faced with multiple pieces of information
+in the  NUMBER  years since the seminal attempt by john payne  CITATION  to make jdm research  more cognitive  a wide range of approaches from cognitive psychology has been applied to this question
+our aim in this issue is to provide the reader with an up-to-date overview of these approaches and to emphasize the important and influential advances that can be made by taking the interface between jdm and cognitive psychology seriously
+contrasting the different approaches allows for the identification of possible boundary conditions for their appropriateness as valid models of cognitive processing  and  we hope will suggest fruitful avenues for future research
+this paper is structured as follows  we begin with a brief introduction  CITATION  which serves to highlight the things we know about cognition that should be incorporated into models of multi-attribute judgment  we then discuss briefly how these aspects are addressed in some of the models considered by contributors to the special issue
+this collection of models  however  cannot simply be viewed as complementary accounts since they sometimes conflict with respect to fundamental assumptions

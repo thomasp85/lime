@@ -1,0 +1,41 @@
+### abstract ###
+The Bayesian framework is a well-studied and successful framework for inductive reasoning, which includes hypothesis testing and confirmation, parameter estimation, sequence prediction, classification, and regression
+But standard statistical guidelines for choosing the model class and prior are not always available or can fail, in particular in complex situations
+Solomonoff completed the Bayesian framework by providing a rigorous, unique, formal, and universal choice for the model class and the prior
+I discuss in breadth how and in which sense universal (non- iid  )\ sequence prediction solves various (philosophical) problems of traditional Bayesian sequence prediction
+I show that Solomonoff's model possesses many desirable properties: Strong total and future bounds, and weak instantaneous bounds, and in contrast to most classical continuous prior densities has no zero p(oste)rior problem, ie \ can confirm universal hypotheses, is reparametrization and regrouping invariant, and avoids the old-evidence and updating problem
+It even performs well (actually better) in non-computable environments \ifjournal
+### introduction ###
+Given the weather in the past, what is the probability of rain tomorrow
+What is the correct answer in an IQ test asking to continue the sequence 1,4,9,16,
+Given historic stock-charts, can one predict the quotes of tomorrow
+Assuming the sun rose 5000 years every day, how likely is doomsday (that the sun does not rise) tomorrow
+These are instances of the important problem of induction or time-series forecasting or sequence prediction
+Finding prediction rules for every particular (new) problem is possible but cumbersome and prone to disagreement or contradiction
+What is desirable is a formal general theory for prediction
+The Bayesian framework is the most consistent and successful framework developed thus far  CITATION
+A Bayesian considers a set of environments\eqbr=hypotheses\eqbr=models  SYMBOL  which includes the true data generating probability distribution  SYMBOL
+From one's prior belief  SYMBOL  in environment  SYMBOL  and the observed data sequence  SYMBOL , Bayes' rule yields one's posterior confidence in  SYMBOL
+In a prequential  CITATION  or transductive  CITATION  setting, one directly determines the predictive probability of the next symbol  SYMBOL  without the intermediate step of identifying a (true or good or causal or useful) model
+With the exception of Section , this paper concentrates on  prediction  rather than model identification
+The ultimate goal is to make ``good'' predictions in the sense of maximizing one's profit or minimizing one's loss
+Note that classification and regression can be regarded as special sequence prediction problems, where the sequence  SYMBOL  of  SYMBOL -pairs is given and the class label or function value  SYMBOL  shall be predicted
+The Bayesian framework leaves open how to choose the model class  SYMBOL  and prior  SYMBOL
+General guidelines are that  SYMBOL  should be small but large enough to contain the true environment  SYMBOL , and  SYMBOL  should reflect one's prior (subjective) belief in  SYMBOL  or should be non-informative or neutral or objective if no prior knowledge is available
+But these are informal and ambiguous considerations outside the formal Bayesian framework
+Solomonoff's  CITATION  rigorous, essentially unique, formal, and universal solution to this problem is to consider a single large universal class  SYMBOL  suitable for  all  induction problems
+The corresponding universal prior  SYMBOL  is biased towards simple environments in such a way that it dominates (=superior to) all other priors
+This leads to an a priori probability  SYMBOL  which is equivalent to the probability that a universal Turing machine with random input tape outputs  SYMBOL , and the shortest program computing  SYMBOL  produces the most likely continuation (prediction) of  SYMBOL
+Many interesting, important, and deep results have been proven for Solomonoff's universal distribution  SYMBOL   CITATION
+The motivation and goal of this paper is % to provide a broad discussion of how and in which sense universal sequence prediction solves all kinds of (philosophical) problems of Bayesian sequence prediction, and to % present some recent results
+% Many arguments and ideas could be further developed
+I hope that the exposition stimulates such a future, more detailed, investigation
+In Section , I review the excellent predictive and decision-theoretic performance results of Bayesian sequence prediction for generic (non- iid  )\ countable and continuous model classes
+Section  critically reviews the classical principles (indifference, symmetry, minimax) for obtaining objective priors, introduces the universal prior inspired by Occam's razor and quantified in terms of Kolmogorov complexity
+In Section  (for  iid  \  SYMBOL ) and Section  (for universal  SYMBOL ) I show various desirable properties of the universal prior and class (non-zero p(oste)rior, confirmation of universal hypotheses, reparametrization and regrouping invariance, no old-evidence and updating problem) in contrast to (most) classical continuous prior densities
+I also complement the general total bounds of Section  with some universal and some  iid 
+-specific instantaneous and future bounds
+Finally, I show that the universal mixture performs better than classical continuous mixtures, even in uncomputable environments
+Section  contains critique, summary, and conclusions
+The reparametrization and regrouping invariance, the (weak) instantaneous bounds, the good performance of  SYMBOL  in non-computable environments, and most of the discussion (zero prior and universal hypotheses, old evidence) are new or new in the light of universal sequence prediction
+Technical and mathematical non-trivial new results are the Hellinger-like loss bound \req{lbnd} and the instantaneous bounds \req{iIIDbnd} and \req{iMbnd}

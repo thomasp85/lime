@@ -1,0 +1,61 @@
+### abstract ###
+This paper addresses the problem of finding the nearest neighbor (or one of the R-nearest neighbors) of a query object  SYMBOL  in a database of  SYMBOL  objects
+In contrast with most existing approaches, we can only access the ``hidden'' space in which the objects live through a similarity oracle
+The oracle, given two reference objects and a query object, returns the reference object closest to the query object
+The oracle attempts to model the behavior of human users, capable of making statements about similarity, but not of assigning meaningful numerical values to distances between objects
+Using such an oracle, the best we can hope for is to obtain, for every object  SYMBOL  in the database, a sorted list of the other objects according to their distance to  SYMBOL
+We call the position of object  SYMBOL  in this list the  rank  of  SYMBOL  with respect to  SYMBOL
+The difficulty of searching using such an oracle depends on the non-homogeneities of the underlying space
+We use two different characterizations of the underlying space to capture this property
+The first one,  rank distortion , relates pairwise ranks to the average difference in ranks w r t
+other objects (a more precise definition is given in Section )
+The second one, the combinatorial framework (a notion from  CITATION ), defines approximate triangle inequalities on ranks (a more precise definition is given in Section )
+Roughly speaking, it defines a multiplicative factor  SYMBOL  by which the triangle inequality on ranks can be violated
+Utilizing the insights from these ideas, we develop a hierarchical search algorithm that builds a data structure, which allows us to retrieve the nearest neighbor with high probability in  SYMBOL  questions
+The learning requires asking  SYMBOL  questions in total and we need to store  SYMBOL  bits in total
+We also provide an approximate nearest neighbor search algorithm
+Finally, we show a lower bound of  SYMBOL  average number of questions in the search phase for randomized algorithms when the answers to all possible questions in the learning phase are given
+We also introduce  rank-sensitive  hash functions which gives same hash value for ``similar'' objects based on the rank-value of the objects obtained from the similarity oracle
+As one application of RSH, we demonstrate that, we can retrieve one of the  SYMBOL -nearest neighbor of a query point in  SYMBOL  evaluations of the hash function, where  SYMBOL  only depends on  SYMBOL  and the rank distortion
+### introduction ###
+Consider the situation where we want to search and navigate a database, but we do not know the underlying relationships between the objects
+In particular, distances may be difficult to discern, or may not be well-defined
+Such situations are common with  objects where human perception may be involved
+A collection of pictures of faces, taken from different angles and distances is an illustration of such a dataset
+Indeed, the distances between feature vectors might be far from the similarity perceived by humans
+Notwithstanding, either with human-assistance or approximate classification, we may be able to determine the relative proximity of an object with respect to a small number of other objects
+Humans have the ability to compare objects and make statements about which are the most similar ones, though they can probably not assign a meaningful numerical value to similarity
+This led to the question of how to design search algorithms based on binary similarity decisions of the type ``A looks more like B than C''
+More formally, we aim to design an algorithm that given a query object ( eg ,  a face), efficiently returns an object that is similar to that object among the objects in a database
+To do so, we have access to a similarity oracle which, given two reference objects and a query object, can tell which of the two reference objects is most similar to the query object
+We measure the performance of all our algorithms in terms of the number of questions that we need to ask the oracle
+We can pre-process the database during a learning phase, and use the resulting answers to facilitate the search process
+We do  not  make the assumption that the ``hidden'' space in which the database objects live needs to be a metric space
+Using this oracle one can retrieve for every object  SYMBOL  in the database, a sorted list of the other objects according to their distance to  SYMBOL
+We call the position of object  SYMBOL  in this list the  rank  of  SYMBOL  with respect to  SYMBOL , and denote it by  SYMBOL
+Clearly, this relationship can be asymmetric  i e ,    SYMBOL  in general
+This setup raises several new questions and issues, as any space can be described by its ranks relationships
+How much does the fact that the rank of some object  SYMBOL  w r t
+some other object  SYMBOL  is  SYMBOL , and the rank of  SYMBOL  w r t
+SYMBOL  is  SYMBOL  tell us about the rank of  SYMBOL  w r t
+SYMBOL
+In this paper, we introduce the notion of  rank distortion  (see Section  for a rigorous definition)
+The rank distortion captures how closely  SYMBOL  is related to the average  SYMBOL
+The framework introduced in  CITATION , defines approximate triangle inequalities on the ranks, another way to capture these relationships
+Those inequalities roughly tell us how ``transitive'' the similarity relationship is and give us a notion of  combinatorial disorder
+If we have this information, we can use partial rank information to estimate, or infer the other ranks
+In this paper, we will first investigate the case where we can use such a characterization of the hidden space as an input to our algorithms
+We develop a randomized hierarchical scheme that improves the existing bounds for nearest neighbor search based on a similarity oracle (see Section )
+We also prove, as far as we know, the first lower bound on the average number of questions to be asked for randomized nearest-neighbor search in this setup (see Section )
+Then, in Section , we ask what can be done if no characterization of the hidden space is known and therefore cannot be used as an input to the algorithms
+In that case, we cannot estimate, or limit, ranks anymore if we have partial rank information
+Nevertheless, we develop algorithms that can decompose the space such that dissimilar objects are likely to get separated, and similar objects have the tendency to stay together
+This generalizes the notion of randomized  SYMBOL - SYMBOL -trees ( CITATION ) to our setup
+Building on this intuition, we introduce the notion of  rank-sensitive hashing  (RSH) in Section
+Similarly to locality-sensitive hashing, we can retrieve one of the  SYMBOL  nearest neighbors of a query point very efficiently
+The hash function itself does not require any characterization of the subjacent space as an input
+However, the smallest value of  SYMBOL  we can choose depends on the rank distortion
+In general, both the criteria (combinatorial disorder and rank distortion) we use to characterize the hidden space seem to capture how ``homogeneous'' that space is
+It appears that the less homogeneous it is, the more difficult it becomes to search
+In particular, if the rank relationship is very asymmetric, and some objects are far from every other object, the information contained about those objects in the ranks matrix is very sparse and hard to capture
+We apply this idea of RSH to NN search, but we believe that this might be useful in other scenarios as well

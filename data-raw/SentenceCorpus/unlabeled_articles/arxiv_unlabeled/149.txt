@@ -1,0 +1,25 @@
+### abstract ###
+For supervised and unsupervised learning, positive definite kernels allow to use large and potentially infinite dimensional feature spaces with a computational cost that only depends on the number of observations
+This is usually done through the penalization of predictor functions by  Euclidean or Hilbertian norms
+In this paper, we explore penalizing by sparsity-inducing norms such as the  SYMBOL -norm or the block  SYMBOL -norm
+We assume that the kernel decomposes into a large sum of individual basis kernels which can be embedded in a directed acyclic graph; we show that it is then possible to perform kernel selection through a hierarchical multiple kernel learning framework,  in polynomial time in the number of selected kernels
+This framework is naturally applied to non linear variable selection; our extensive simulations on synthetic datasets and datasets from the UCI repository show that efficiently exploring the large feature space through sparsity-inducing norms leads to state-of-the-art predictive performance
+### introduction ###
+In the last two decades,  kernel methods have been a prolific  theoretical and algorithmic machine learning framework
+By using appropriate regularization by Hilbertian norms, representer theorems enable to consider large and potentially infinite-dimensional feature spaces while working within an implicit feature space no larger than the number of observations
+This has led to numerous works on kernel design adapted to specific data types and generic kernel-based algorithms for many learning tasks (see, eg ,  CITATION )
+Regularization by sparsity-inducing norms, such as the  SYMBOL -norm has also attracted a lot of interest in recent years
+While early work has focused on efficient algorithms to solve the convex optimization problems, recent research has looked at the model selection properties and predictive performance of such methods, in the linear case~ CITATION  or within the multiple kernel learning framework~ CITATION
+In this paper, we aim to bridge the gap between these two lines of research by trying to use  SYMBOL -norms  inside  the feature space
+Indeed, feature spaces are large and we expect the estimated predictor function to require only a small number of features, which is exactly the situation where  SYMBOL -norms have proven advantageous
+This leads to two natural questions that we try to answer in this paper: (1) Is it feasible to perform optimization in this very large feature space with cost which is polynomial in the size of the input space (2) Does it lead to better predictive performance and feature selection
+More precisely, we consider a positive definite kernel that can be expressed as a large sum of positive definite  basis  or  local kernels
+This exactly corresponds to the situation where a large feature space is the concatenation of  smaller feature spaces, and we aim to do selection among these many kernels, which may be done through  multiple kernel learning~ CITATION
+One major difficulty however is that the number of these smaller kernels is usually exponential in the dimension of the input space and applying multiple kernel learning directly in this decomposition would be intractable
+In order to peform selection efficiently, we make the extra assumption that these small kernels can be embedded in a  directed acyclic graph  (DAG)
+Following~ CITATION , we consider in \mysec{mkl} a specific combination of  SYMBOL -norms that is adapted to the DAG, and will restrict the authorized sparsity patterns; in our specific kernel framework, we are able to use the DAG to design an optimization algorithm which has polynomial complexity in the number of selected kernels (\mysec{optimization})
+In simulations (\mysec{simulations}), we focus on   directed grids , where our framework allows to perform non-linear variable selection
+We provide extensive experimental validation of our novel regularization framework; in particular, we compare it to the regular  SYMBOL -regularization and shows that it is always competitive and often leads to better performance, both on synthetic examples, and standard regression and classification datasets from the UCI repository
+Finally, we extend in \mysec{consistency} some of the known consistency results of the Lasso and multiple kernel learning~ CITATION , and give a partial answer to the model selection capabilities of our regularization framework by giving necessary and sufficient conditions for model consistency
+In particular, we show that our framework is adapted to estimating consistently only the  hull   of the relevant variables
+Hence, by restricting the statistical power of our method, we gain computational efficiency

@@ -1,0 +1,60 @@
+### abstract ###
+De novo computational design of synthetic gene circuits that achieve well-defined target functions is a hard task.
+Existing, brute-force approaches run optimization algorithms on the structure and on the kinetic parameter values of the network.
+However, more direct rational methods for automatic circuit design are lacking.
+Focusing on digital synthetic gene circuits, we developed a methodology and a corresponding tool for in silico automatic design.
+For a given truth table that specifies a circuit's input output relations, our algorithm generates and ranks several possible circuit schemes without the need for any optimization.
+Logic behavior is reproduced by the action of regulatory factors and chemicals on the promoters and on the ribosome binding sites of biological Boolean gates.
+Simulations of circuits with up to four inputs show a faithful and unequivocal truth table representation, even under parametric perturbations and stochastic noise.
+A comparison with already implemented circuits, in addition, reveals the potential for simpler designs with the same function.
+Therefore, we expect the method to help both in devising new circuits and in simplifying existing solutions.
+### introduction ###
+A central concept of Synthetic Biology CITATION is the rational design of synthetic gene circuits by means of modularized, standard parts, which are DNA traits with well-defined functions.
+The field aims at adapting methods and ideas such as part composability and abstraction hierarchy from engineering to biology.
+Several computational tools embracing these concepts have been developed.
+Moreover, some tools permit to realize circuits in a drag and drop way as it is typical in electronics CITATION CITATION.
+Nevertheless, de novo design of circuits able to reproduce a target function is not an easy task and its automation represents a major challenge in Synthetic Biology.
+Previously, Fran ois and Hakim CITATION showed that small networks characterized by a desired behavior can be obtained by evolutionary optimization of a set of independent circuits.
+Similar optimization-based tools like Genetdes CITATION and OptCircuit CITATION use simulated annealing and mixed integer dynamic optimization, respectively.
+These approaches yielded interesting circuit designs, but they have several inherent limitations.
+Computational complexity requires very simplified models that do not represent basic parts but lump functionalities of entire genes.
+Similarly, brute-force optimization can only cope with rather small networks, and it requires dual optimization of circuit structure and of kinetic parameter values.
+Hence, more direct, rational design methods are desired.
+Here, instead of looking for a general solution to the automatic design challenge, we focus on digital circuits.
+These circuits employ Boolean logic where input and output signals can take only two values: 0 and 1.
+In the simplest case, a Boolean gate uses two input signals to compute a single logical output.
+More complex digital circuits convert FORMULA inputs into a single output.
+In both cases, the input-output relation is represented by a truth table where each entry specifies one of the possible FORMULA combinations of input signal values and the corresponding binary output.
+In biology, digital circuits are important for several reasons.
+First, logical gates such as those determined by the action of two different activators on a promoter are abundant in natural systems.
+They are often found in association with feed-forward loop motifs and provide more complicated functionalities such as sign sensitive delays CITATION, CITATION and pulse generation CITATION.
+More complex networks of several FFLs interacting with basic Boolean gates control sporulation in B. subtilis CITATION as well as the neuronal system of C. elegans CITATION.
+An analysis of possible implementations of logical gates could, thus, help further our understanding of natural biological networks.
+In synthetic biology, secondly, complex digital circuits are required for the construction of biosensors and molecular computers.
+Biosensors should respond to well-defined external cues that may be specified with a truth table.
+The more inputs can be sensed, the better is the ability of the biosensor to discriminate between similar environmental conditions.
+Such biosensors could be integrated, for instance, into bioreactors for the production of biofuels CITATION.
+Furthermore, they could play an important role in disease treatment Anderson et al. CITATION implemented a biosensor that mimics a logical gate to control bacterial invasion of tumor cells in response to signals from the tumor environment.
+Even more complex biosensors could work as molecular computers that perform a diagnosis on the basis of the sensed substances and release drugs if necessary CITATION .
+Motivated by these two aspects, several synthetic gene circuits that implement Boolean logic have been realized experimentally in the past years.
+Most of these circuits rely on transcriptional control schemes.
+In fact, it is well known that bacterial promoters can display logic behavior when controlled by two transcription factors CITATION CITATION.
+More complex Boolean promoters have been engineered, for instance, in mammalian cells CITATION.
+However, the number of repressors and activators generally used in synthetic biology is low and the rational engineering of transcription factors can be a complex process CITATION .
+Alternatively, Boolean gates are achieved in nature by mechanisms of translation control like base-pairing between antisense small-RNAs and the mRNA, or structural mRNA modifications due to the binding of chemical effectors to riboswitches and ribozymes CITATION, CITATION.
+These are complex RNA structures made of two modules: an aptamer, where a chemical binds, and an actuator that either undergoes structural modifications in a riboswitch or gets spliced in a ribozyme as a consequence of the chemical binding.
+Both riboswitches and ribozymes can either repress or activate translation CITATION.
+Furthermore, a tandem riboswitch, where a single actuator is under the control of two aptamers, has been observed in B. clausii CITATION.
+With two distinct inputs, it represents a natural Boolean gate located on the mRNA.
+Taking these structures as models, similar synthetic RNA constructs have been engineered recently CITATION.
+In particular, Win and Smolke CITATION have built complex ribozymes that establish the most common two-input Boolean gates.
+Importantly, the design of small RNAs is easy compared to the design of transcription factors.
+Despite these individual successes, synthetic biology fundamentally lacks tools and concepts for automatic computational design.
+Logical circuits are suitable starting points for automatic design because the target function can be defined easily by a truth table.
+Here, we combine approaches from electrical circuit design with our previous model for circuit design with composable parts CITATION, CITATION to develop a method for the automatic design of digital synthetic gene circuits.
+It is implemented as an add-on for the process modeling tool ProMoT CITATION, CITATION.
+The circuits use a set of standard biological parts and Boolean gates whose kinetic parameters take appropriate default values without invoking any optimization algorithms.
+In addition to previously developed building blocks such as two-operator-containing promoters, we consider externally controllable ribosome binding sites.
+The method requires only a truth table to directly produce several possible circuit designs that process up to four different inputs to yield a unique, pre-defined output signal.
+Design alternatives are ranked according to a complexity score that reflects the efforts for practical implementation.
+Simulations on single gates and on networks of different complexity confirm the validity of our approach by highlighting accurate representation of the truth table and robustness of the designed circuits.

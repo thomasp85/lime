@@ -1,0 +1,51 @@
+### abstract ###
+We derive an exact and efficient Bayesian regression algorithm for piecewise constant functions of unknown segment number, boundary location, and levels
+It works for any noise and segment level prior, eg \ Cauchy which can handle outliers
+We derive simple but good estimates for the in-segment variance
+We also propose a Bayesian regression curve as a better way of smoothing data without blurring boundaries
+The Bayesian approach also allows straightforward determination of the evidence, break probabilities and error estimates, useful for model selection and significance and robustness studies
+We discuss the performance on synthetic and real-world examples
+Many possible extensions will be discussed
+### introduction ###
+We consider the problem of fitting a piecewise constant function through noisy one-dimensional data, as eg \ in Figure , where the segment number, boundaries and levels are unknown
+Regression with piecewise constant (PC) functions, also known as change point detection, has many applications
+For instance, determining DNA copy numbers in cancer cells from micro-array data, to mention just one recent
+We provide a full Bayesian analysis of PC-regression
+For a fixed number of segments we choose a uniform prior over all possible segment boundary locations
+Some prior on the segment levels and data noise within each segment is assumed
+Finally a prior over the number of segments is chosen
+From this we obtain the posterior segmentation probability distribution (Section )
+In practice we need summaries of this complicated distribution
+A simple maximum (MAP) approximation or mean does not work here
+The right way is to proceed in stages from determining the most critical segment number, to the boundary location, and finally to the then trivial segment levels
+We also extract the evidence, the boundary probability distribution, and an interesting non-PC regression curve including error estimate (Section )
+We derive an exact polynomial-time dynamic-programming-type algorithm for all quantities of interest (Sections  and )
+Our algorithm works for any noise and level prior
+We consider more closely the Gaussian ``standard'' prior and heavy-tailed robust-to-outliers distributions like the Cauchy, and briefly discuss the non-parametric case (Sections  and )
+Finally, some hyper-parameters like the global data average and variability and local within-level noise have to be determined
+We introduce and discuss efficient semi-principled estimators, thereby avoiding problematic or expensive numerical EM or Monte-Carlo estimates (Section )
+We test our method on some synthetic examples (Section ) and some real-world data sets (Section )
+The simulations show that our method handles difficult data with high noise and outliers well
+Our basic algorithm can (easily) be modified in a variety of ways: For discrete segment levels, segment dependent variance, piecewise linear and non-linear regression, non-parametric noise prior, etc (Section )
+Sen and Srivastava  CITATION  developed a frequentist solution to the problem of detecting a single (the most prominent) segment boundary (called change or break point)
+Olshen et al \  CITATION  generalize this method to detect pairs of break points, which improves recognition of short segments
+Both methods are then (heuristically) used to recursively determine further change points
+Another approach is penalized Maximum Likelihood (ML)
+For a fixed number of segments, ML chooses the boundary locations that maximize the data likelihood (minimize the mean square data deviation)
+Jong et al \  CITATION  use a population based algorithm as minimizer, while Picard et al \  CITATION  use dynamic programming, which is structurally very close to our core recursion, to find the exact solution in polynomial time
+An additional penalty term has to be added to the likelihood in order to determine the correct number of segments
+The most principled penalty is the Bayesian Information Criterion  CITATION
+Since it can be biased towards too simple  CITATION  or too complex  CITATION  models, in practice often a heuristic penalty is used
+An interesting heuristic, based on the curvature of the log-likelihood as a function of the number of segments, has been used in  CITATION
+Our Bayesian regressor is a natural response to penalized ML
+Many other regressors exist; too numerous to list them all
+Another closely related work to ours is Bayesian bin density estimation by Endres and F\"oldi\'ak  CITATION , who also average over all boundary locations, but in the context of density estimation
+A full Bayesian approach (when computationally feasible) has various advantages over others: A generic advantage is that it is more principled and hence involves fewer heuristic design choices
+This is particularly important for estimating the number of segments
+Another generic advantage is that it can be easily embedded in a larger framework
+For instance, one can decide among competing models solely based on the (Bayesian) evidence
+Finally, Bayes often works well in practice, and provably so if the model assumptions are valid
+We can also extract other information (nearly for free), like probability estimates and variances for the various quantities of interest
+Particularly interesting is the expected level (and variance) of each data point
+This leads to a regression curve, which is very flat, i e \ smoothes the data, in long and clear segments, wiggles in less clear segments, follows trends, and jumps at the segment boundaries
+It thus behaves somewhat between local smoothing (which wiggles more and blurs jumps) and rigid PC-segmentation

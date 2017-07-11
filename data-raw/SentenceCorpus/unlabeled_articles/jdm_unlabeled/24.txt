@@ -1,0 +1,139 @@
+### abstract ###
+we examine two departures of individual perceptions of randomness from probability theory  the hot hand and the gambler's fallacy  and their respective opposites
+this paper's first contribution is to use data from the field individuals playing roulette in a casino to demonstrate the existence and impact of these biases that have been previously documented in the lab
+decisions in the field are consistent with biased beliefs  although we observe significant individual heterogeneity in the population
+a second contribution is to separately identify these biases within a given individual  then to examine their within-person correlation
+we find a positive and significant correlation across individuals between hot hand and gambler's fallacy biases  suggesting a common root cause of the two related errors
+we speculate as to the source of this correlation locus of control  and suggest future research which could test this speculation
+### introduction ###
+almost every decision we make involves uncertainty in some way
+yet research on decision making under uncertainty demonstrates that our judgments are often not consistent with probability theory
+intuitive ideas of randomness depart systematically from the laws of chance
+this research suggests that we have developed a number of judgment heuristics for analyzing complex  real-world events
+although many decisions based on these heuristics are consistent with probability theory  there are also situations where heuristics lead to statistical illusions and suboptimal actions
+this paper investigates the existence and impact of two of these statistical illusions  the gambler's fallacy and the hot hand
+both of these illusions characterize individuals' perceptions of non-autocorrelated random sequences
+thus both involve perceptions of sequences of events rather than one-time events
+the gambler's fallacy is a belief in negative autocorrelation of a non-autocorrelated random sequence of outcomes like coin flips
+for example  imagine jim repeatedly flipping a fair coin and guessing the outcome before it lands
+if he believes in the gambler's fallacy  then after observing three heads in a row  his subjective probability of seeing another head is less than  NUMBER  percent 
+thus he believes a tail is  due   and is more likely to appear on the next flip than a head
+in contrast  the hot hand is a belief in positive autocorrelation of a non-autocorrelated random sequence of outcomes like winning or losing
+for example  imagine rachel repeatedly flipping a fair coin and guessing the outcome before it lands
+if she believes in the hot hand  then after observing three correct guesses in a row her subjective probability of guessing correctly on the next flip is higher than  NUMBER  percent 
+thus she believes that she is  hot  and more likely than chance to guess correctly
+notice that these two biases are not simply opposites
+the gambler's fallacy describes beliefs about outcomes of the random process e g   heads or tails  while the hot hand describes beliefs of outcomes of the individual like wins and losses
+in the gambler's fallacy  the coin is due  in the hot hand the person is hot
+for purposes of our study  we will identify four possible biases that individuals could exhibit
+the gambler's fallacy and its opposite  the hot outcome  are beliefs about the coin's outcomes involving negative versus positive autocorrelation of random outcomes
+the hot hand and its opposite  the stock of luck  are beliefs about the individual's success involving positive versus negative autocorrelation of winning or losing
+thus someone can believe both in the gambler's fallacy that after three coin flips of heads tails is due and the hot hand that after three wins they will be more likely to correctly guess the next outcome of the coin toss
+these biases are believed to stem from the same source  the representativeness heuristic  as discussed below  CITATION
+in this paper we use empirical data from gamblers in casinos to examine the existence  prevalence and correlation between gambler's fallacy and hot hand beliefs
+a companion paper  croson and sundali  CITATION  uses the same data to examine the aggregate market impact of these biases
+in contrast  here we will identify the biases at the individual level  and examine the within-participant correlation between the two
+empirical data  while difficult to obtain and to code  can provide an important complement and robustness check on other methods in investigating biases
+participants in the casinos are making real decisions with their own money on the line
+further  the participants represent a more motivated sample than typical students at a university  gamblers have a very real incentive to learn the game they are playing and to make decisions in accordance with their beliefs
+the use of casino data does  however  involve some limitations
+in particular  we were prevented from directly contacting the gamblers in the study  thus we cannot ask particular individuals why they bet how they did or about their beliefs at the time of placing the bet
+also  the gambling population  while motivated  is a selected subsample of the population at large
+thus we will have to be cautious in our claims of external validity from this study
+nonetheless  we believe that the demonstration of these biases in the field at the level of the individual is an important contribution in and of itself
+we are also one of the very few papers to identify multiple biases within an individual and to characterize the correlation between them
+the gambler's fallacy is defined as an incorrect belief in negative autocorrelation of a non-autocorrelated random sequence
+for example  individuals who believe in the gambler's fallacy believe that after three red numbers appearing on the roulette wheel  a black number is  due   that is  is more likely to appear than a red number
+gambler's fallacy-type beliefs were first observed in the laboratory under controlled conditions in the literature on probability matching
+in these experiments subjects were asked to guess which of two colored lights would next illuminate
+after seeing a string of one outcome  subjects were significantly more likely to guess the other  an effect referred to in that literature as negative recency  CITATION
+ayton and fischer  CITATION  also demonstrate the existence of gambler's fallacy beliefs in the lab when subjects choose which of two colors will appear next on a simulated roulette wheel
+gal and baron  CITATION  show that gambler's fallacy behavior is not simply caused by boredom  participants in their experiments were asked how they would best maximize their earnings  and they responded with gambler's fallacy type logic
+the gambler's fallacy is thought to be caused by the representativeness heuristic  CITATION
+here  chance is perceived as  a self-correcting process in which a deviation in one direction induces a deviation in the opposite direction to restore the equilibrium   CITATION
+thus after a sequence of three red numbers appearing on the roulette wheel  black is more likely to occur than red because a sequence red-red-red-black is more representative of the underlying distribution than a sequence red-red-red-red
+we test for the gambler's fallacy in our data by looking at the impact of previous outcomes on current bets at roulette
+people who believe in the gambler's fallacy should be less likely to bet on a number that has previously appeared
+for purposes of this analysis  we will examine two separate definitions of hotness  hot outcome and hot   hand
+hot outcome will simply be the opposite of the gambler's fallacy  that is  an incorrect belief in positive autocorrelation of a non-autocorrelated random sequence
+for example  individuals who believe in hot outcome believe that after three red numbers appearing on the roulette wheel  another red number is more likely to appear than a black number because red numbers are hot
+notice that here the outcomes are hot e g   red numbers  rather than individuals  as in the hot hand  below
+in the lab  the literature on probability matching also provides evidence favoring hot outcome beliefs
+edwards  CITATION   lindman and edwards  CITATION  and feldman  CITATION  all found positive recency effects in probability matching tasks
+in particularly long sequences of the probability matching game  participants were significantly more likely to guess the same outcome as had been observed previously
+we will test for hot outcome beliefs in our data by looking at the impact of previous outcomes on current bets at roulette
+if gamblers believe in hot outcomes  they should be more likely to bet on an outcome that has previously been observed
+thus a positive relationship between previously-observed outcomes and current bets is indicative of a belief in hot outcomes
+hot hand is different from hot outcome
+rather than believing that a particular outcome is hot  individuals who believe in the hot hand believe that a particular person is hot
+for example  if an individual has won in the past  whatever numbers they choose to bet on are likely to win in the future  not just the numbers they've won with previously
+gilovich  vallone and tversky  CITATION  demonstrated that individuals believe in the hot hand in basketball shooting  and that these beliefs are not correct i e   basketball shooters' probability of success is indeed serially uncorrelated
+other evidence from the lab shows that subjects in a simulated blackjack game bet more after a series of wins than they do after a series of losses  both when betting on their own play and on the play of others  CITATION
+further evidence of the hot hand in a laboratory experiment comes from ayton and fischer  CITATION
+participants exhibit more confident in their guesses of what color will next appear after a string of correct guesses than after a string of incorrect guesses
+explanations for the hot hand are numerous
+it is clearly related to the illusion of control  CITATION   where individuals believe they can control outcomes that are  in fact  random
+gilovich et al    CITATION  suggest that the hot hand also arises out of the representativeness heuristic  just as the gambler's fallacy
+they write        this second explanation is supported by data in which participants are asked to generate strings of random numbers
+the strings generated produced significantly fewer runs of the same outcome than a truly random sequence would  CITATION
+we will test for hot hand beliefs in our data by looking at how betting behavior changes in response to wins and losses
+in particular  hot hand beliefs predict that after winning  individuals will increase the number of bets they place and after losing  decrease them
+just as the gambler's fallacy and the hot outcome are opposing biases  the hot hand has an opposing bias  referred to here as  stock of luck  beliefs
+individuals believe they have a stock or fixed amount of luck and  once it's spent  their probability of winning decreases
+thus after a string of wins  individuals are less likely to win rather than more likely as predicted by the hot hand because they have exhausted their stock of luck
+the effect has been demonstrated in the lab by leopard  CITATION  who examines choice behavior in a series of gambles and demonstrates that subjects take more risk after losing than after winning  suggesting that their bad luck is about to change or their good luck about to run out
+stock of luck beliefs predict that after winning  individuals will decrease the number of bets they place and  after a loss  increase them
+thus a negative relationship observed between current betting behavior and previous wins losses will provide evidence for this bias
+a large literature identifies individual differences in risk attitudes  CITATION
+in addition  previous work has identified individual heterogeneity in biased beliefs about sequences of gambles
+friedland  CITATION  uses a personality inventory to categorize individuals into luck-oriented and chance-oriented
+in a questionnaire design  he finds gamblers' fallacy behavior in luck-oriented individuals but no such behavior  and in particular  no dependence of current bets on past outcomes  in chance-oriented individuals
+in the field  previous work has also found individual heterogeneity in biased beliefs
+keren and wagenaar  CITATION  examine blackjack play of  NUMBER  individuals who played at least  NUMBER  hands and changed their bets over time
+of these   NUMBER  had relationships between previous outcomes and bet changes thus  exhibiting a bias of some sort
+fourteen of them increased their bets after they won and decreased them after they lost consistent with the hot hand  while  NUMBER  decreased their bets after winning and increased them after losing consistent with stock of luck
+as in these studies  we will use our data to analyze individual differences in betting behavior
+only two previous papers examine field behavior at roulette
+the first is an observational sociological field study by oldman  CITATION  which informally reports both the gambler's fallacy and the hot outcome
+he writes that   t he bet on a particular spin tends to be placed on outcomes that are  due' either because they have not occurred for some time or because that is the way  things are running
+ ' p  NUMBER 
+the second source  wagenaar  CITATION   discusses data from  NUMBER  roulette players in a casino who stayed between  NUMBER  and  NUMBER  spins each
+of the  NUMBER  players who varied their bets most  he finds after a win  NUMBER  percent  of bets involve increased risk hot hand and  NUMBER  percent  involve decreased risk stock of luck
+after a loss   NUMBER  percent  of bets involve decreased risk hot hand and  NUMBER  percent  of bets do not stock of luck
+however  wagenaar does not present an analysis of how individuals differ on this dimension
+while previous papers have investigated the gambler's fallacy and hot hand biases  our work makes two important and original contributions
+first  it provides a field setting in which it is possible to investigate both biases at once
+these biases have been analyzed together only in the lab  CITATION
+second  our empirical data will allow us to identify individual differences in these biases
+we will be able to examine the correlation between these biases within the individual
+in this study we use observational data from the field  individuals betting at roulette in a casino
+roulette is a useful game for a number of reasons
+first  it is serially uncorrelated  unlike other casino games like blackjack or baccarat where cards are dealt without replacement
+second  each player has his or her own colored chips  thus tracking an individual's betting behavior is feasible
+finally  roulette is an extremely popular and accessible game which requires relatively little skill to play unlike craps  for example  which is perceived as a game for experts
+thus roulette is likely to suffer from less selection bias than craps  although we are already selecting participants from the casino gambling population  mentioned above as an unavoidable selection bias
+roulette involves a dealer sometimes two  a wheel and a layout
+the wheel is divided into  NUMBER  even sectors  numbered  NUMBERNUMBER   plus  NUMBER  and  NUMBER 
+each space is red or black  with the  NUMBER  and  NUMBER  colored green
+the wheel is arranged as shown in figure  NUMBER   such that red and black numbers alternate
+players arrive at the roulette table and offer the dealer money either cash or casino chips
+in exchange  they are given special roulette chips for betting at this wheel
+these chips are not valid anywhere else in the casino  and each player at the table has a unique color of chips
+players bet by placing chips on a numbered layout  the wheel is spun and a small white ball rolled around its edge
+the ball lands on a particular number in the wheel  which is the winning number for that round  and is announced publicly by the dealer
+next  the dealer clears away all losing bets  players who had bet on the winning number in some configuration are paid in their own-colored chips and a new round of betting begins
+figure  NUMBER  shows a typical layout  along with the types of bets that can be made
+unlike the wheel  the layout is arranged in numerical order
+players can place their bets on varying places on the layout
+bets of the type on the number  NUMBER  are called  straight up  bets
+these are bets on a single number
+if the number comes up on the wheel  this bet would pay the player  NUMBER  for  NUMBER   NUMBER  to  NUMBER 
+that is  when  NUMBER  chip is bet  the dealer pays the player  NUMBER  chips directly  and the chip that was bet is not removed from the table
+bets of the type between the  NUMBER  and  NUMBER    line bets  are bets on two numbers
+if either of the numbers comes up  this bet pays the player  NUMBER  for  NUMBER 
+players can also bet on combinations of  NUMBER  numbers by the  NUMBER  which pay  NUMBER  for  NUMBER   combinations of  NUMBER  numbers on the corner of  NUMBERNUMBERNUMBERNUMBER  which pay  NUMBER  for  NUMBER   or combinations of  NUMBER  numbers by the  NUMBERNUMBER  which pay  NUMBER  for  NUMBER 
+players can  of course  bet on  outside  bets like red black  even odd and low high
+these bets will not be included in our analysis  as they are not bet often enough to allow identification at the individual level  but are discussed in our companion paper on aggregate behavior  croson and sundali  CITATION
+notice that all these bets have the same expected value NUMBER   NUMBER  percent  on a double-zero wheel
+since the house advantage on almost all bets at the wheel is the same  there is no economic reason to bet one way or another or for that matter  at all
+in this paper  we will compare actual betting behavior we observe against a benchmark of random betting and search for systematic and significant deviations from that benchmark

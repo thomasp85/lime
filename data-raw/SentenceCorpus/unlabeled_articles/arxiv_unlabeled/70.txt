@@ -1,0 +1,28 @@
+### abstract ###
+In this paper, we study the application of sparse principal component analysis (PCA) to clustering and feature selection problems
+Sparse PCA seeks sparse factors, or linear combinations of the data variables, explaining a maximum amount of variance in the data while having only a limited number of nonzero coefficients
+PCA is often used as a simple clustering technique and sparse factors allow us here to interpret the clusters in terms of a reduced set of variables
+We begin with a brief introduction and motivation on sparse PCA and detail our implementation of the algorithm in d'Aspremont et al (2005)
+We then apply these results to some classic clustering and feature selection problems arising in biology
+### introduction ###
+This paper focuses on applications of sparse principal component analysis to clustering and feature selection problems, with a particular focus on gene expression data analysis
+Sparse methods have had a significant impact in many areas of statistics, in particular regression and classification (see  CITATION ,  CITATION  and  CITATION  among others)
+As in these areas, our motivation for developing sparse multivariate visualization tools is the potential of these methods for yielding statistical results that are both more interpretable and more robust than classical analyses, while giving up little statistical efficiency
+Principal component analysis (PCA) is a classic tool for analyzing large scale multivariate data
+It seeks linear combinations of the data variables (often called factors or principal components) that capture a maximum amount of variance
+Numerically, PCA only amounts to computing a few leading eigenvectors of the data's covariance matrix, so it can be applied to very large scale data sets
+One of the key shortcomings of PCA however is that these factors are linear combinations of  all  variables; that is, all factor coefficients (or loadings) are non-zero
+This means that while PCA facilitates model interpretation and visualization by concentrating the information in a few key factors, the factors themselves are still constructed using  all  observed variables
+In many applications of PCA, the coordinate axes have a direct physical interpretation; in finance or biology for example, each axis might correspond to a specific financial asset or gene
+In such cases, having only a few nonzero coefficients in the principal components would greatly improve the relevance and interpretability of the factors
+In sparse PCA, we seek a trade-off between the two goals of  expressive power  (explaining most of the variance or information in the data) and  interpretability  (making sure that the factors involve only a few coordinate axes or variables)
+When PCA is used as a clustering tool, sparse factors will allow us to identify the clusters with the action of only a few variables
+Earlier methods to produce sparse factors include Cadima and Jolliffe  CITATION  where the loadings with smallest absolute value are thresholded to zero and nonconvex algorithms called SCoTLASS by  CITATION , SLRA  CITATION  and SPCA by  CITATION
+This last method works by writing PCA as a regression-type optimization problem and applies LASSO  CITATION , a penalization technique based on the  SYMBOL  norm
+Very recently,  CITATION  and  CITATION  also proposed a greedy approach which seeks globally optimal solutions on small problems and uses a greedy method to approximate the solution of larger ones
+In what follows, we give a brief introduction to the relaxation of this problem in  CITATION  and describe how this smooth optimization algorithm was implemented
+The most expensive numerical step in this algorithm is the computation of the gradient as a matrix exponential and our key numerical contribution here is to show that using only a partial eigenvalue decomposition of the current iterate can produce a sufficiently precise gradient approximation while drastically improving computational efficiency
+We then show on classic gene expression data sets that using sparse PCA as a simple clustering tool isolates very relevant genes compared to other techniques such as recursive feature elimination or ranking
+The paper is organized as follows
+In Section , we begin with a brief introduction and motivation on sparse PCA and detail our implementation of the algorithm in a numerical toolbox called DSPCA, which is available for download on the authors' websites
+In Section , we describe the application of sparse PCA to clustering and feature selection on gene expression data

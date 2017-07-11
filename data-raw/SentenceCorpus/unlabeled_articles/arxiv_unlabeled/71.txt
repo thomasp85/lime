@@ -1,0 +1,39 @@
+### abstract ###
+% We consider the problem of estimating the parameters of a Gaussian or binary distribution in such a way that the resulting undirected graphical model is sparse
+Our approach is to solve a maximum likelihood problem with an added  SYMBOL -norm penalty term
+The problem as formulated is convex but the memory requirements and complexity of existing interior point methods are prohibitive for problems with more than tens of nodes
+We present two new algorithms for solving problems with at least a thousand nodes in the Gaussian case
+Our first algorithm uses block coordinate descent, and can be interpreted as recursive  SYMBOL -norm penalized regression
+Our second algorithm, based on Nesterov's first order method, yields a complexity estimate with a better dependence on problem size than existing interior point methods
+Using a log determinant relaxation of the log partition function ( CITATION ), we show that these same algorithms can be used to solve an approximate sparse maximum likelihood problem for the binary case
+We test our algorithms on synthetic data, as well as on gene expression and senate voting records data
+### introduction ###
+% Put the title of the first chapter on this line Undirected graphical models offer a way to describe and explain the relationships among a set of variables, a central element of multivariate data analysis
+The principle of parsimony dictates that we should select the simplest graphical model that adequately explains the data
+In this paper weconsider practical ways of implementing the following approach to finding such a model:  given a set of data, we solve a maximum likelihood problem with an added  SYMBOL -norm penalty to make the resulting graph as sparse as possible
+Many authors have studied a variety of related ideas
+In the Gaussian case, model selection involves finding the pattern of zeros in the inverse covariance matrix, since these zeros correspond to conditional independencies among the variables
+Traditionally, a greedy forward-backward search algorithm is used to determine the zero pattern  CITATION
+However, this is computationally infeasible for data with even a moderate number of variables
+CITATION  introduce a gradient descent algorithm in which they account for the sparsity of the inverse covariance matrix by defining a loss function that is the negative of the log likelihood function
+Recently,  CITATION  considered penalized maximum likelihood estimation, and  CITATION  proposed a set of large scale methods for problems where a sparsity pattern for the inverse covariance is given and one must estimate the nonzero elements of the matrix
+Another way to estimate the graphical model is to find the set of neighbors of each node in the graph by regressing that variable against the remaining variables
+In this vein,  CITATION  employ a stochastic algorithm to manage tens of thousands of variables
+There has also been a great deal of interest in using  SYMBOL -norm penalties in statistical applications
+CITATION  apply an  SYMBOL  norm penalty to sparse principle component analysis
+Directly related to our problem is the use of the Lasso of  CITATION  to obtain a very short list of neighbors for each node in the graph
+CITATION  study this approach in detail, and show that the resulting estimator is consistent, even for high-dimensional graphs
+The problem formulation for Gaussian data, therefore, is simple
+The difficulty lies in its computation
+Although the problem is convex, it is non-smooth and has an unbounded constraint set
+As we shall see, the resulting complexity for existing interior point methods is  SYMBOL , where  SYMBOL  is the number of variables in the distribution
+In addition, interior point methods require that at each step we compute and store a Hessian of size  SYMBOL
+The memory requirements and complexity are thus prohibitive for  SYMBOL  higher than the tens
+Specialized algorithms are needed to handle larger problems
+The remainder of the paper is organized as follows
+We begin by considering Gaussian data
+In Section  we set up the problem, derive its dual, discuss properties of the solution and how heavily to weight the  SYMBOL -norm penalty in our problem
+In Section  we present a provably convergent block coordinate descent algorithm that can be interpreted as recursive  SYMBOL -norm penalized regression
+In Section  we present a second, alternative algorithm based on Nesterov's recent work on non-smooth optimization, and give a rigorous complexity analysis with better dependence on problem size than interior point methods
+In Section  we show that the algorithms we developed for the Gaussian case can also be used to solve an approximate sparse maximum likelihood problem for multivariate binary data, using a log determinant relaxation for the log partition function given by  CITATION
+In Section , we test our methods on synthetic as well as gene expression and senate voting records data

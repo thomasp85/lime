@@ -1,0 +1,28 @@
+### abstract ###
+researchers typically use incentives such as money or course credit in order to obtain participants who engage in the specific behaviors of interest to the researcher
+there is  however  little understanding or agreement on the effects of different types and levels of incentives used
+some results in the domain of statistical reasoning suggest that performance differences - previously deemed theoretically important - may actually be due to differences in incentive types across studies  NUMBER  participants completed one of five variants of a statistical reasoning task  for which they received either course credit  flat fee payment  or performance-based payment incentives
+successful task completion was more frequent with performance-based incentives than with either of the other incentive types
+performance on moderately difficult tasks compared to very easy and very hard tasks was most sensitive to incentives
+these results can help resolve existing debates about inconsistent findings  guide more accurate comparisons across studies  and be applied beyond research settings
+### introduction ###
+in the behavioral sciences  research participants typically must be provided with some type of incentive for their participation much like employees typically must be paid
+although it has long been noted that the amount of incentive provided to animals can influence subsequent performance  CITATION   the use of research incentives for humans has been characterized by both inconsistencies across fields and controversy about effectiveness
+the norm in psychological research is to tie research participation to course credit often as part of an introductory psychology course or occasionally some other form of set payment amount i e   a flat-fee
+in contrast  the norm in economics research is to pay participants with money and to scale those payments to performance within the research i e   performance-based incentives
+it has recently been noted that such discrepancies in methodology can have implications for cross-disciplinary variations in results and theoretical conclusions from research
+retrospective reviews of past studies have made the case that there is a real issue regarding the effects of participant incentives  but they disagree on what these studies show  CITATION
+camerer  and  hogarth  CITATION  focused on performance-based incentives and found little evidence for global improvements in performance  but more subtle effects of reduced variability in responses  reduced presentation effects  and perhaps performance improvements specifically in judgment tasks that are  responsive to better effort
+  ortmann  and  colleagues  CITATION   found similar results as camerer  and  hogarth  but also found reason to be more optimistic about the effects of financial incentives
+they concluded that  in the majority of cases where payments made a difference  they improved people's performance  p  NUMBER  and that  although payments do not guarantee optimal decisions  in many cases they bring decisions closer to the predictions of the normative models
+moreover  and equally important  they can reduce data variability substantially  p  NUMBER 
+within psychology there has been general debate about the effectiveness of incentives generally  financial incentives  with some arguing for and finding that incentives are important motivators  CITATION   but others taking contrary positions or finding null results  CITATION
+two factors complicate this controversy
+the first factor is the use of diverse behaviors on which the effects of incentives have been assessed  ranging from simple perceptual tasks  CITATION  to complex social coordination tasks  CITATION
+if  as is often supposed  financial incentives should increase effort on tasks  this will be manifested only for tasks on which additional effort yields clear response improvement
+tasks in which participants are already performing at or near their best are not likely to show much improvement  nor are tasks that are so difficult as to be beyond the participant's abilities
+the second factor is the type of incentive used
+when financial incentives are used in psychology they are typically flat-fee payments  which are more directly analogous to the non-financial course credit  payments  that are the norm in psychology  but both of these are very different - in terms of incentive structure - from performance-based financial incentives
+it therefore remains unclear how different types of incentives do or do not systematically affect performance across different types of tasks and different levels of task difficulty
+in experimental economics  by contrast  researchers commonly use performance-based financial incentives and reject the methodology typical of psychology as insufficient in several respects  CITATION
+specifically  it is argued that performance-linked incentives serve to  a reduce variance in performance  b avoid problems of satiation i e   more money is always desirable  thereby maintaining high levels of attention and motivation  c make the target behaviors clear and easy to establish  and d maximize efforts towards optimal behavior or performance

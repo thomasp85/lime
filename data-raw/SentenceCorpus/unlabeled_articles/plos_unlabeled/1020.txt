@@ -1,0 +1,31 @@
+### abstract ###
+A transcriptional regulatory network constitutes the collection of regulatory rules that link environmental cues to the transcription state of a cell's genome.
+We recently proposed a matrix formalism that quantitatively represents a system of such rules and allows systemic characterization of TRS properties.
+The matrix formalism not only allows the computation of the transcription state of the genome but also the fundamental characterization of the input-output mapping that it represents.
+Furthermore, a key advantage of this pseudo-stoichiometric matrix formalism is its ability to easily integrate with existing stoichiometric matrix representations of signaling and metabolic networks.
+Here we demonstrate for the first time how this matrix formalism is extendable to large-scale systems by applying it to the genome-scale Escherichia coli TRS.
+We analyze the fundamental subspaces of the regulatory network matrix to describe intrinsic properties of the TRS.
+We further use Monte Carlo sampling to evaluate the E. coli transcription state across a subset of all possible environments, comparing our results to published gene expression data as validation.
+Finally, we present novel in silico findings for the E. coli TRS, including a gene expression correlation matrix delineating functional motifs; sets of gene ontologies for which regulatory rules governing gene transcription are poorly understood and which may direct further experimental characterization; and the appearance of a distributed TRN structure, which is in stark contrast to the more hierarchical organization of metabolic networks.
+### introduction ###
+Complex regulatory networks control the transcription state of a genome and consequently the functional activity of a cell CITATION.
+Even relatively simple unicellular organisms have evolved complicated networks of regulatory interactions, termed transcriptional regulatory networks, to respond to environmental stimuli CITATION, CITATION.
+External signals known to impact transcription in microorganisms include carbon source, amino acid, and electron acceptor availability, pH level, and heat and cold stress CITATION CITATION.
+Mapping the links between these environmental growth conditions through signaling networks and ultimately to the resulting transcriptional response is of primary interest in the study of cellular systems CITATION.
+Consequently, reconstructions of the TRNs of model organisms are underway CITATION .
+To effectively describe the interconnected functions of the regulated genes and associated regulatory proteins within a given TRN, we recently developed a formalism involving a regulatory network matrix called R CITATION.
+The R matrix represents the components and reactions within a transcriptional regulatory system.
+We illustrated how, by using the fundamental properties of linear algebra, this matrix formalism allows characterization of TRS properties and facilitates in silico prediction of the transcription state of the genome under any specified set of environmental conditions.
+Importantly, as previously reported, the R matrix is distinct from existing approaches that use matrix formalisms and matrix algebra to analyze gene expression data, as it describes relationships governing gene transcription derived from experiments characterizing how specific inputs regulate the expression of individual genes.
+In this way, the R matrix extends previous approaches for characterizing features of TRNs, including Boolean networks CITATION, CITATION CITATION, Bayesian networks CITATION, and stochastic equations CITATION.
+By representing the regulatory rules in matrix form, we can characterize the fundamental subspaces of the matrix, which in turn uniquely represent properties of the TRS that the R matrix contains.
+Furthermore, by using a pseudo-stoichiometric approach as discussed below, the R matrix representation of a TRN is consistent with, and thus easily integratable with, related approaches using stoichiometric matrices to computationally represent the reactions underlying metabolic and signaling networks CITATION CITATION .
+To date, this approach for representing and analyzing TRSs has only been applied to relatively small systems, including the well-studied four-gene lac operon in Escherichia coli as well as a small 25-gene prototypic TRS CITATION.
+Although these model systems have been useful for prototyping studies of the capabilities and behavior of the R matrix, a key unanswered question is how this approach scales to larger, more complex biological systems.
+Here we present first steps toward this end by assembling the R matrix for the genome-scale E. coli TRN, for which regulatory relationships have been previously characterized CITATION and extensive experimental data are available CITATION, CITATION.
+To our knowledge, the work that we present here represents the first R matrix-based model of a genome-scale TRS, and this work has enabled us to gain important insights into the behavior of the R matrix at a larger scale, challenges associated with the scale-up, as well as the underlying biology of E. coli transcriptional regulation.
+Specifically, we derived R directly from a previously developed genome-scale model of E. coli in which transcriptional regulatory rules were overlaid on a constraint-based model of metabolism CITATION.
+This integrated transcriptional regulatory-metabolic model is well-suited for these initial genome-scale R matrix efforts as Boolean regulatory relationships are already defined and the behavior of this model has been well-studied using constraint-based analyses CITATION, CITATION.
+To validate our R matrix analysis, we compared the expression states that we predicted for various environmental growth conditions with available gene expression data.
+We also explored the fundamental subspaces of a related matrix R representing the complete E. coli TRS to describe key systemic properties, including new hypotheses about network structure.
+Ultimately, this work yields an understanding of how the E. coli transcriptional regulatory program functions as a whole and demonstrates the utility of the regulatory network matrix formalism in studying transcriptional regulatory systems at the genome scale moving forward.

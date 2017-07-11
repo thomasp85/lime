@@ -1,0 +1,51 @@
+### abstract ###
+Many proteins, especially in eukaryotes, contain tandem repeats of several domains from the same family.
+These repeats have a variety of binding properties and are involved in protein protein interactions as well as binding to other ligands such as DNA and RNA.
+The rapid expansion of protein domain repeats is assumed to have evolved through internal tandem duplications.
+However, the exact mechanisms behind these tandem duplications are not well-understood.
+Here, we have studied the evolution, function, protein structure, gene structure, and phylogenetic distribution of domain repeats.
+For this purpose we have assigned Pfam-A domain families to 24 proteomes with more sensitive domain assignments in the repeat regions.
+These assignments confirmed previous findings that eukaryotes, and in particular vertebrates, contain a much higher fraction of proteins with repeats compared with prokaryotes.
+The internal sequence similarity in each protein revealed that the domain repeats are often expanded through duplications of several domains at a time, while the duplication of one domain is less common.
+Many of the repeats appear to have been duplicated in the middle of the repeat region.
+This is in strong contrast to the evolution of other proteins that mainly works through additions of single domains at either terminus.
+Further, we found that some domain families show distinct duplication patterns, e.g., nebulin domains have mainly been expanded with a unit of seven domains at a time, while duplications of other domain families involve varying numbers of domains.
+Finally, no common mechanism for the expansion of all repeats could be detected.
+We found that the duplication patterns show no dependence on the size of the domains.
+Further, repeat expansion in some families can possibly be explained by shuffling of exons.
+However, exon shuffling could not have created all repeats.
+### introduction ###
+Proteins are composed of domains, recurrent protein fragments with distinct structure, function, and evolutionary history.
+Protein domains may occur alone, but are more frequently found in combination with other domains in multidomain proteins.
+While the creation of new multidomain architectures through shuffling of protein domains has been studied extensively during the last few years CITATION CITATION, one type of domain recombination has often been ignored: the creation of domain repeats.
+Domain repeats contain two or more domains from the same domain family in tandem.
+Large repeats with more then ten domains in tandem are common in eukaryotes.
+Repeating domains are often short, such as the leucine rich repeat family with a repeating unit of 30 residues.
+Some repeated domain families are mainly found in repeats, e.g., LRR and C2H2 zinc fingers, while other families are also frequently found as a single unit.
+The repeats may form regular structures, such as antiparallel -sheets or solenoids, while others form filaments or are only structured upon binding to their ligands CITATION.
+Some examples of repeats in protein structures can be found in the Propeat database.
+Single amino acids or short peptide motifs may be repeated in proteins, too.
+However, in this study we have focused on larger repeating units, domains.
+Therefore, when repeats are mentioned in this text, it refers to repeats of protein domains.
+Domain repeats are often involved in interactions with proteins or other ligands such as DNA or RNA.
+Even if the repeated domains have a well-defined and conserved structure, the sequence conservation is often low, with only a few conserved residues required for the correct fold.
+Their variable sequences and the variation in number of domains provide flexible binding to multiple binding partners.
+Hence, repeats are found in proteins with highly diverse functions such as the tetratrico peptide repeats that are involved in cell-cycle regulation, transcriptional regulation, protein transport, and assisting protein folding CITATION.
+In addition, the flexible binding properties and sequence variability of repeats have been exploited to create high affinity binders as an alternative to antibodies CITATION .
+The domain repeats are found in all kingdoms of life, and long repeats, containing several domains in tandem, have been observed to be particularly common in multicellular species CITATION, CITATION.
+Repeats have been proposed to provide the eukaryotes with an extra source of variability to compensate for low generation rates CITATION.
+One such example is the LRRs in plant defense systems that enable plants to adapt to new pathogens CITATION .
+Domain repeats are thought to arise via tandem duplications within a gene CITATION, where a segment is duplicated and the copy is inserted next to its origin.
+However, the exact mechanism behind this phenomenon is not fully understood.
+Nonhomologous recombination in intron regions, i.e., exon shuffling, may be responsible for internal duplications in repeats, and this issue has been addressed in this study.
+Another possible explanation is DNA slippage, due to the formation of DNA hairpins, which is common in the creation of nucleotide repeats and short protein repeats CITATION.
+However, Marcotte and coworkers have shown that protein repeats are more likely created from recombination than by DNA slippage since the repeat expansion shows weak dependence on repeat length CITATION .
+In addition to internal duplications, frequent duplications of repeat-containing genes have occurred in the mammalian genomes CITATION.
+This can, in part, explain their abundance in higher eukaryotes.
+In addition, variation in number of repeats between orthologous genes indicates that the loss/gain of domains in repeats is frequent in evolution CITATION.
+Interestingly, the rapid expansion of repeats in eukaryotes could partly be explained by tandem duplication of units containing several repeated domains CITATION CITATION.
+In this study, we aim to investigate how frequent duplications of multiple domains are.
+Further, the number of domains that is duplicated is compared among the different domain families.
+Domains as defined by the Pfam-A database CITATION were detected using HMM-alignments.
+The coverage was increased with relaxed detection criteria for domains in repeated regions of the proteins.
+In addition to investigation of duplication sizes, the domain assignments have been used to study the distribution of repeats and repeated domain families in the three kingdoms of life, the position of repeat expansion, and the location of exon boundaries in repeats.

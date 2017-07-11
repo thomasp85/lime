@@ -1,0 +1,38 @@
+### abstract ###
+The adaptation rule for Vector Quantization algorithms, and consequently the convergence of the generated sequence, depends on the  existence and properties of a function called the energy function, defined on a topological manifold
+Our aim is to investigate the conditions of existence of such a function for a class of algorithms examplified by the initial "K-means"  CITATION  and Kohonen algorithms  CITATION
+The results presented here supplement previous studies, including  CITATION ,  CITATION ,  CITATION , CITATION  and  CITATION
+Our work shows that the energy function is not always a potential but at least the uniform limit of a series of potential functions which we call a pseudo-potential
+It also shows that a large number of existing vector quantization algorithms developed by the Artificial Neural Networks community fall into this category
+The framework we define opens the way to study the convergence of all the corresponding adaptation rules at once, and a theorem gives  promising insights in that direction
+We also demonstrate that the "K-means" energy function is a pseudo-potential but not a potential in general
+Consequently, the energy function associated to the "Neural-Gas"  is not a potential in general
+### introduction ###
+In vector quantization theory  CITATION , a set of prototypes    SYMBOL  is placed on a manifold  SYMBOL , in order to minimize the following integral function, called the "energy function":   SYMBOL } where  SYMBOL  indicates the probability density defined on  SYMBOL
+We focus on the stochastic iterative approaches where at each time step, a datum  SYMBOL  is drawn from the probability density function (pdf)  SYMBOL , and the prototypes  SYMBOL  are adapted according to  SYMBOL  using the adaptation rule:  SYMBOL } where the adaptation step is tuned using the parameter  SYMBOL  generally decreasing over the time ( SYMBOL  is taken thereafter equal to 1 without restricting the general results), and  SYMBOL  is a "neighborhood" function particular to each vector quantization algorithm
+Here we focus on discontinuous  SYMBOL  functions
+A main concern in the field of Vector Quantization, is to decide whether the adaptation rule () corresponds or not to a stochastic gradient descent along the energy function (),  i e whether this energy function is or is not a potential onto the entire manifold  SYMBOL
+On one hand, if the energy function is a potential then the convergence of the prototypes obeying their adaptation rule toward a minimum of this energy function is well established, in particular in the stochastic optimization framework  CITATION  with which this paper is concerned
+For example, the energy function associated to the K-means algorithm  CITATION , stochastic version of the LBG algorithm of Linde  et al CITATION , is a potential as long as the pdf  SYMBOL  is continuous  CITATION
+On the other hand, if the energy function is not a potential, then very few is known about the convergence of the corresponding adaptation rule
+For example, several results  CITATION  have already shown that for a continuous density  SYMBOL , the corresponding vector adaptation rule of the Kohonen Self-Organizing Map (SOM) algorithm  CITATION   CITATION  does not correspond to a stochastic gradient descent along a global energy function, and the convergence, although being observed in practice, turns out to be very difficult to prove, not to mention that most of the efforts have been carried out on the Kohonen rule  CITATION
+All the vector quantization algorithms we study in this paper  are variants of the K-means algorithm as we will see in section
+We know these algorithms converge in practice toward acceptable value of their energy functions whenever they are proved to be associated or not to potentials
+However, the theoretical study of their convergence is not available, so they remain largely heuristics
+Among all these algorithms, the Neural-Gas  CITATION  deserves a particular attention
+It has been claimed by its authors  to be associated to a global potential in general, hence to a converging adaptation rule
+We propose a counter-example with a discontinuous pdf  SYMBOL  which demonstrates that this claim is not true
+This shows that the study of the convergence of all these algorithms is still in its infancy and motivates the present work
+In this paper, we propose a framework which encompasses all these algorithms
+We study this framework and we demonstrate that the energy function associated to these algorithms is not a potential in general
+We also demonstrate that this energy function belongs to a broad class of functions which includes potential functions as a special case
+The energy functions within this class are called "pseudo-potentials"
+The results we obtain do not depend on the continuity of the probability density function  SYMBOL , and give a first step toward an explanation why all the algorithms shown to belong to this framework succeed, in practice, in minimizing their associated energy function whether they are potentials or not
+This framework should open up further avenues for a general study of the convergence properties of all the algorithms it contains at once
+In section 2, we present the framework of this study
+In section 3, we define  a "pseudo-potential" function, which can be approximated by a series of potential functions: we define the concept of cellular manifold and this series of potentials
+In section 4, we give the main theorem which states that an energy function of that framework is necessarily a pseudo-potential
+We consider the K-means to show that pseudo-potentials are not always potentials
+We discuss the consequence on the convergence of the corresponding adaptation rule
+In section 5, we show that most of the common vector quantization algorithms belong to that framework
+At last we conclude in section 6

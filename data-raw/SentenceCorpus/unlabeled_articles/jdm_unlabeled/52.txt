@@ -1,0 +1,98 @@
+### abstract ###
+it has been proposed that recognition can form the basis of simple but ecologically rational decision strategies CITATION
+borges  goldstein  ortmann  and gigerenzer CITATION found that constructing share portfolios based on simple name recognition alone often yielded better returns than the market index
+we describe four studies with seven samples of participants from three countries total n    NUMBER  in which the returns of recognized and unrecognized shares from several stock markets were tracked over various periods of time
+we find no support for the claim that a simple strategy of name recognition can be used as a general strategy to select stocks that yield better-than-average returns
+however  there was some suggestion in the data that recognition performs better when the market is falling and worse when it is rising
+a follow-up study indicated that the absence of an overall recognition effect could not easily be attributed to our reliance on student participants or smaller samples than borges et al CITATION had used
+we conclude that  with respect to changes in value  selecting stocks on the basis of name recognition is a near-random method of portfolio construction that offers little  if any  benefit to the personal investor
+### introduction ###
+can quick-and-dirty decisions reasonably be expected to result in satisfactory outcomes  or do complex problems demand complex strategies
+the extent to which the array of difficult choices that we face can be adequately tackled by simple strategies has been a recurring theme in five decades of decision research  CITATION
+one of the simplest choice or inference strategies imaginable is the recognition heuristic
+quite simply   if one of two objects is recognized and the other is not  then infer that the recognized object has the higher value   CITATION
+thus  when asked to pick which movie yielded the greater gross takings  sin city or steget efter  the person who recognizes only one of these titles can use the recognition heuristic though the person who recognises neither or both of these movies must make their choice some other way
+when the rate or frequency of exposure correlates positively with value  the heuristic will lead to choice or inference accuracy above chance levels  CITATION
+thus  in our example  the positive association between media coverage such as advertising and movie attendances means that the recognition heuristic should have some ecological validity for the choice in question
+recent analysis by schooler and hertwig  CITATION  shows that the effectiveness of recognition may even be enhanced by forgettingeven though this leads to a failure to recognize some previously seen objects
+if remembered objects are more likely to be associated with the relevant characteristics of the environment than forgotten ones  this will enhance the predictive or inferential power of recognition
+in this paper we examine the application of the recognition heuristic to investment decisions  where one of many possible investments can be made
+here the recognition heuristic demands that   when choosing a set of objects from a larger set  choose the subset of recognized objects   CITATION
+why might people use such a heuristic
+first  in some situations  they may consciously accept the logic expressed in the previous paragraph
+it probably makes sense to many people that the consumer products  movies  sports teams  and sports personalities that they have heard of are more successful than those they have notand they will be happy to make inferences accordingly
+there are occasions when failure generates notoriety  ford's edsell car  the movie flop waterworld  the  NUMBER  jamaican bobsleigh team  or  eddie the eagle  whose olympic ski-jumping preparation lacked only a ski-jump
+nonetheless  generally speaking  people know that it is success that breeds the personal exposure or column inches that will encourage recognition
+alternatively  there may be other occasions when  in the absence of deliberative reasoning about recognition  more intuitive processes may drive recognition-based choices
+people reliably prefer familiar stimuli  CITATION more so when they fail to recognise previously presented stimuli at better than chance levels and are presumably not conscious of prior exposure  CITATION
+bornstein  CITATION  suggests that a preference for the familiar may be adaptive  as unfamiliar stimuli and situations have greater potential for risk than familiar ones do
+people also judge more fluent i e   more easily processed stimuli positively  CITATION   and often base their judgements on how easily objects or events can be recalled  CITATION
+although not necessarily easy to distinguish empirically  such accounts are conceptually distinct from the recognition heuristicstimuli may be more or less familiar  fluent or available  but are simply recognised or not recognised
+nonetheless  recognised stimuli are inevitably more familiar and more available than unrecognised ones  and possibly  on average  more fluent too  CITATION
+these features could explain why recognition-based choice may occur  even when the conditions that make it an effective strategy in certain circumstances are unknown or absent
+the use of the recognition heuristic has been the subject of several empirical investigations
+gigerenzer and goldstein  CITATION  reported that this heuristic helped people to make correct inferences when faced with the task of assessing which of two foreign cities had the greater population
+with some modified experimental designs  this observation has also been replicated for additional samples of cities  CITATION   for rivers and for mountains  CITATION
+assessing such geographical objects is associated with stable characteristics  the true answer has rarely changed in living memory  and will usually not change for many years to come  CITATION
+for example  the correct answer to the question  which city is larger  colchester or stockholm
+  has been the same for centuries and is unlikely to be different in the foreseeable future
+this contrasts with dynamic domains such as sports events  where the accuracy of inferences varies over time
+for instance  tennis ace roger federer is likely  though not certain  to beat the lowly-ranked ezequiel krivulin
+furthermore  there may eventually come a time when this highly recognized superstar will begin to lose on a regular basis to younger unknown players
+nonetheless  it has been shown that recognition can  to some extent  predict the outcome of sports events  CITATION
+in this paper we re-examine the effectiveness of the recognition heuristic using an important  but notoriously difficult  taskstock picking
+this task is also associated with variable characteristics  and so provides a tough test for the recognition heuristic
+borges et al CITATION  found name recognition to be a surprisingly successful basis for stock investment
+lay people and business graduates in the usa and germany indicated which company names they recognized among the largest companies listed on the new york and frankfurt stock exchanges
+portfolios of shares consisting of the most frequently recognized shares outperformed portfolios consisting of shares recognized by fewer than  NUMBER  percent  of participants over a six-month period beginning december  NUMBER 
+these portfolios of frequently recognised shares outperformed the market index in six of eight possible comparisons treating recognition data from the four pools of participants across each of the two stock markets as distinct comparisons
+only for americans' recognition of u s stocks did recognition-based investment under-perform the market index
+this was symptomatic of a general trend in which the advantage for highly recognised stocks was greatest when people were apparently most ignoranti e   using the recognition data for foreign stock markets where recognition rates were  unsurprisingly  lower than for domestic stocks
+that such a simple strategy should prove to be effective was surprisingand therefore grabbed attention among the financial press as it runs counter to the efficient market hypothesis  which anticipates that the index cannot consistently be beaten by simple investment strategies
+borges et al CITATION  provide some speculation on the reasons for their results  for instance the possibility that features such as market share  company size and prestige may all be associated with both recognition and profitability  and that limited recognition best exploits the ability of the recognition heuristic to discriminate profitable and unprofitable shares
+put simply  the suggestion is that company success and other features that foster recognition also tend to drive up share value
+hence recognized shares will yield higher average returns than unrecognized ones
+if an individual recognizes few shares  they probably only recognize the elite companies whose size and success has made them household names with good prospects for share return
+however  an important question is whether such a mechanism could be sustainable in a market
+boyd failed to replicate borges et al 's  CITATION  results in a falling  bear  market with a sample of american students providing recognition data on us stocks
+both boyd  CITATION  and borges et al CITATION  discuss the possibility that recognition may not be a good strategy in such markets when  big  firms are often observed to perform poorly
+merton's  CITATION  model of capital market equilibrium predicts that attempts to replicate borges et al 's  CITATION  finding are more likely to fail than to succeed
+merton  CITATION  points out that investors can acquire only those shares that they recognize
+consequently  demand and value will tend to be higher for company shares that are widely recognized
+however  merton's theory predicts that investment returns will correlate negatively with recognitionmore highly recognized firms will yield lower returns  implying that the recognition heuristic should under-perform the market index
+this is consistent with the  neglected firms effect  whereby the shares of firms with narrow investor bases outperform more widely held shares  CITATION
+the effect persists even when company size is controlled  and may be interpreted as an informational effect
+for obvious reasons  investors need information in order to predict future profits  dividends  and stock returns
+the less information investors have  the greater the chance that important information that predicts extreme changes in value is missing
+however  investment-relevant information e g   earnings releases will be less abundant  and therefore more expensive  for obscure firms than for  high-profile  corporations that enjoy high levels of recognition and that release detailed reports on a regular basis
+therefore  in order to invest in unfamiliar companies  investors require a risk premium on their investment  which roughly corresponds to their increased effort in searching for information about those companies
+risk aversion would make investing in the potentially risky shares of relatively unknown firms comparatively unappealing  unless better-than-average returns can be expected from such shares
+in contrast  the market will sustain share returns from well-known companies that are more modest  as investors feel that they have  or can obtain  sufficient information on these shares to be able to guard against the risk of severe losses
+several studies have examined factors that ought to affect recognition  CITATION  such as analyst coverage  advertising expenditure or exchange listing
+many of these have found an effect upon security value consistent with merton  CITATION
+for instance  barber and odean  CITATION  showed that private investors tended to purchase  high-profile  stocks that had previously experienced high volumes or returns  or had been in recent news reports
+this strategy was shown to under-perform the market index
+weber  siebenmorgen and weber  CITATION  provide some insight into why investors might follow an unprofitable investment strategy driven by the  attention-grabbing  features of shares
+they found that people tend to perceive shares that they recognize as less risky than those that they fail to recognize
+more direct tests of merton's  theory have tended to focus on breadth of ownership among institutions with holdings in excess of   NUMBER  million as a proxy for recognition
+contrary to the predictions of merton  CITATION   chen et al CITATION  found that low levels of recognition predicted low returns
+however  lehavy and sloan  CITATION  showed that changes in the breadth of ownership do indeed positively predict current share value and negatively predict future returns when autocorrelations for value or return over time are controlled
+lehavy and sloan  CITATION  and others who have examined breadth of ownership recognize its limitations as a proxy for recognition
+whilst it is plausible that increases in recognition will often result in increases in the breadth of ownership  it is illogical that decreases in the breadth of ownership might imply that some investors no longer recognize a particular company that they previously knew of
+the studies reported here employ a direct measure of recognition  we simply ask a sample of people whether they recognize the name of a companies listed on the stock exchange
+thus share recognition is considered at the level of the individual potential investor  rather than at the level of the large corporate investor
+we use these data to re-examine whether simple recognition alone can form the basis of a viable investment strategy
+in particular  two questions that relate to how well borges et al 's  CITATION  findings generalize are considered
+firstly  were their results simply a function of random variation in prices or applicable only to a particular period of time
+to this end our studies commence at different time points  and we track share value over differing periods of time
+readers will see that  despite being at the mercy of the markets  this allowed us to test the effectiveness of the recognition heuristic in markets that fell and rose to differing degreespermitting a detailed re-evaluation of borges et al 's  CITATION  and boyd's  CITATION  findings under a variety of conditions
+secondly  are borges et al 's findings restricted only to particular combinations of populations of participants and stock markets
+thus  can one say that  recognition is an ecologically valid strategy for stock selection  or simply that  recognition data from germans and americans selects better than average german stocks
+  in considering this issue  we examine recognition data on stocks from five countries for participants from three countries
+in all   NUMBER  of the  NUMBER  possible combinations that this could yield are availableand some combinations can be examined for more than one study with recognition data from different samples of participants collected at different points in time
+this permits us to test the recognition heuristic over a range of recognition rates typically high for domestic or  home  shares  and low for overseas or  away  shares
+examination of many such participant-market combinations is important in order to determine whether there might be any general effect that favours or penalizes recognized over unrecognized shares
+although borges et al CITATION  report eight comparisons between portfolios of recognized and unrecognized shares  these are not independent comparisons
+for instance  there was some overlap in which shares are always recognized by laypeople and business graduates from a given country  CITATION
+in summary  we re-examine the two key findings of the borges et al CITATION  data   NUMBER  the overall validity of recognition as a method of stock selection  and  NUMBER  the increased effectiveness of recognition for  more ignorant  participants with lower levels of recognition
+note that we are not interested in whether personal or professional investors actually use the recognition heuristicsimply in whether  if they did  it would be effective

@@ -1,0 +1,11 @@
+### abstract ###
+the purpose of the present study was to investigate the effect of perceived time pressure on a learning-based task called the iowa gambling task igt
+one hundred and sixty-three participants were randomly assigned to one of two groups
+the experimental group was informed that the time allotted was typically insufficient to learn and successfully complete the task
+the control group was informed that the time allotted was typically sufficient to learn and successfully complete the task
+both groups completed the igt and performance was recorded
+the major finding was that participants who were advised that the amount of time allotted was typically insufficient to complete the task performed significantly worse than those who were advised that time was typically sufficient to complete the task
+### introduction ###
+research shows that real time constraints adversely influence igt performance  CITATION
+there remains a need  however  to determine how perceived time pressure affects igt decision-making
+in essence  is igt performance impaired by real time constraints or simply the perception of time constraints

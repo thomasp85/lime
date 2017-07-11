@@ -1,0 +1,15 @@
+### abstract ###
+Two ubiquitous aspects of large-scale data analysis are that the data often have heavy-tailed properties and that diffusion-based or spectral-based methods are often used to identify and extract structure of interest
+Perhaps surprisingly, popular distribution-independent methods such as those based on the VC dimension fail to provide nontrivial results for even simple learning problems such as binary classification in these two settings
+In this paper, we develop distribution-dependent learning methods that can be used to provide dimension-independent sample complexity bounds for the binary classification problem in these two popular settings
+In particular, we provide bounds on the sample complexity of maximum margin  classifiers when the magnitude of the entries in the feature vector decays according to a power law and also when learning is performed with the so-called Diffusion Maps kernel
+Both of these results rely on bounding the annealed entropy of gap-tolerant classifiers in a Hilbert space
+We provide such a bound, and we demonstrate that our proof technique generalizes to the case when the margin is measured with respect to more general Banach space norms
+The latter result is of potential interest in cases where modeling the relationship between data elements as a dot product in a Hilbert space is too restrictive
+### introduction ###
+Two ubiquitous aspects of large-scale data analysis are that the data often have heavy-tailed properties and that diffusion-based or spectral-based methods are often used to identify and extract structure of interest
+In the absence of strong assumptions on the data,  popular distribution-independent methods such as those based on the VC dimension fail to provide nontrivial results for even simple learning problems such as binary classification in these two settings
+At root, the reason is that in both of these situations the data are formally very high dimensional and that (without additional regularity assumptions on the data) there may be a small number of ``very outlying'' data points
+In this paper, we develop distribution-dependent learning methods that can be used to provide dimension-independent sample complexity bounds for the maximum margin version of the binary classification problem in these  two popular settings
+In both cases,  we are able to obtain nearly optimal linear classification hyperplanes since the distribution-dependent tools we employ are able to control the aggregate effect of the ``outlying'' data points
+In particular, our results will hold even though the data may be  infinite-dimensional and unbounded

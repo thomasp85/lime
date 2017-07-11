@@ -1,0 +1,38 @@
+### abstract ###
+OWNX We introduce a new principle for model selection in regression and classification
+MISC Many regression models are controlled by some smoothness or flexibility or complexity parameter  SYMBOL , eg the number of neighbors to be averaged over in k nearest neighbor (kNN) regression or the polynomial degree in regression with polynomials
+MISC Let  SYMBOL  be the (best) regressor of complexity  SYMBOL  on data  SYMBOL
+MISC A more flexible regressor can fit more data  SYMBOL  well than a more rigid one
+MISC If something (here small loss) is easy to achieve it's typically worth less
+OWNX We define the loss rank of  SYMBOL  as the number of other (fictitious) data  SYMBOL  that are fitted better by  SYMBOL  than  SYMBOL  is fitted by  SYMBOL
+OWNX We suggest selecting the model complexity  SYMBOL  that has minimal loss rank (LoRP)
+CONT Unlike most penalized maximum likelihood variants (AIC,BIC,MDL), LoRP only depends on the regression functions and the loss function
+CONT It works without a stochastic noise model, and is directly applicable to any non-parametric regressor, like kNN
+AIMX In this paper we formalize, discuss, and motivate LoRP, study it for specific regression problems, in particular linear ones, and compare it to other model selection schemes
+### introduction ###
+OWNX Consider a regression or classification problem in which we want to determine the functional relationship  SYMBOL  from data  SYMBOL , ie we seek a function  SYMBOL  such that  SYMBOL  is close to the unknown  SYMBOL  for all  SYMBOL
+OWNX One may define regressor  SYMBOL  directly, eg `average the  SYMBOL  values of the  SYMBOL  nearest neighbors (kNN) of  SYMBOL  in  SYMBOL ', or select the  SYMBOL  from a class of functions  SYMBOL  that has smallest (training) error on  SYMBOL
+OWNX If the class  SYMBOL  is not too large, e g the polynomials of fixed reasonable degree  SYMBOL , this often works well
+OWNX What remains is to select the right model complexity  SYMBOL , like  SYMBOL  or  SYMBOL
+OWNX This selection cannot be based on the training error, since the more complex the model (large  SYMBOL , small  SYMBOL ) the better the fit on  SYMBOL  (perfect for  SYMBOL  and  SYMBOL )
+MISC This problem is called overfitting, for which various remedies have been suggested:  We will not discuss empirical test set methods like cross-validation, but only training set based methods
+MISC See eg CITATION  for a comparison of cross-validation with Bayesian model selection
+MISC Training set based model selection methods allow using all data  SYMBOL  for regression
+MISC The most popular ones can be regarded as penalized versions of Maximum Likelihood (ML)
+OWNX In addition to the function class  SYMBOL , one has to specify a sampling model  SYMBOL , eg that the  SYMBOL  have independent Gaussian distribution with mean  SYMBOL
+OWNX ML chooses  SYMBOL , Penalized ML (PML) then chooses  SYMBOL Penalty SYMBOL , where the penalty depends on the used approach (MDL  CITATION , BIC  CITATION , AIC  CITATION )
+OWNX In particular, modern MDL  CITATION  has sound exact foundations and works very well in practice
+MISC All PML variants rely on a proper sampling model (which may be difficult to establish), ignore (or at least do not tell how to incorporate) a potentially given loss function, and are typically limited to (semi)parametric models
+AIMX The main goal of the paper is to establish a criterion for selecting the ``best'' model complexity  SYMBOL based on regressors  SYMBOL  given as a black box without insight into the origin or inner structure of  SYMBOL , that does not depend on things often not given (like a stochastic noise model),  and that exploits what is given (like the loss function)
+OWNX The key observation we exploit is that large classes  SYMBOL  or more flexible   regressors  SYMBOL  can fit more data  SYMBOL  well than more rigid ones, eg many  SYMBOL  can be fit well with high order polynomials
+OWNX We define the  loss rank  of  SYMBOL  as the number of other (fictitious) data  SYMBOL  that are fitted better by  SYMBOL  than  SYMBOL  is fitted by  SYMBOL , as measured by some loss function
+OWNX The loss rank is large for regressors fitting  SYMBOL  not well  and  for too flexible regressors (in both cases the regressor fits many other  SYMBOL  better)
+OWNX The loss rank has a minimum for not too flexible regressors which fit  SYMBOL  not too bad
+OWNX We claim that minimizing the loss rank is a suitable model selection criterion, since it trades off the quality of fit with the flexibility of the model
+OWNX Unlike PML, our new Loss Rank Principle (LoRP) works without a noise (stochastic sampling) model, and is directly applicable to any non-parametric regressor, like kNN
+OWNX In Section , after giving a brief introduction to regression, we formally state LoRP for model selection
+OWNX To make it applicable to real problems, we have to generalize it to continuous spaces and regularize infinite loss ranks
+OWNX In Section  we derive explicit expressions for the loss rank for the important class of linear regressors, which includes kNN, polynomial, linear basis function (LBFR), Kernel, and projective regression
+OWNX In Section  we compare linear LoRP to Bayesian model selection for linear regression with Gaussian noise and prior, and in Section  to PML, in particular MDL, BIC, AIC, and MacKay's  CITATION  and Hastie's et al  CITATION  trace formulas for the effective dimension
+OWNX In this paper we just scratch at the surface of LoRP
+OWNX Section  contains further considerations, to be elaborated on in the future

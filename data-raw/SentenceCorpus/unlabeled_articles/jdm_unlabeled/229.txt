@@ -1,0 +1,41 @@
+### abstract ###
+when participants in psychophysical experiments are asked to estimate or identify stimuli which differ on a single physical dimension  their judgments are influenced by the local experimental context - the item presented and judgment made on the previous trial
+it has been suggested that similar sequential effects occur in more naturalistic  real-world judgments
+in three experiments we asked participants to judge the prices of a sequence of items
+in experiment  NUMBER   judgments were biased towards the previous response assimilation but away from the true value of the previous item contrast  a pattern which matches that found in psychophysical research
+in experiments  NUMBER a and  NUMBER b  we manipulated the provision of feedback and the expertise of the participants  and found that feedback reduced the effect of the previous judgment and shifted the effect of the previous item's true price from contrast to assimilation
+finally  in all three experiments we found that judgments were biased towards the centre of the range  a phenomenon known as the  regression effect  in psychophysics
+these results suggest that the most recently-presented item is a point of reference for the current judgment
+the findings inform our understanding of the judgment process  constrain the explanations for local context effects put forward by psychophysicists  and carry practical importance for real-world situations in which contextual bias may degrade the accuracy of judgments
+### introduction ###
+when people make basic perceptual judgments - about the brightness of a light or the loudness of a tone  for example - their responses are greatly influenced by the context in which the stimuli are presented  a square of a given size is regarded as large when most of the squares in the experiment are of smaller size  but regarded as small when most of the squares are larger  CITATION
+it has long been known that this insight from psychophysics has relevance to more complex   real world  situations
+thus  the perceived severity of a moral transgression depends upon the ensemble of scenarios presented for judgment  even when participants are explicitly instructed to ignore this context  CITATION
+psychophysical studies have therefore demonstrated the importance of what may be termed the global experimental context - the set of stimuli employed - in determining perceptual judgments  and this insight has proven useful in more complex and naturalistic judgment tasks
+yet psychophysical judgments are also influenced by local context - by the stimuli presented on the past few trials - and a number of authors have provided evidence that the same principal applies to more complex  non-perceptual decisions too  CITATION
+the current article develops this idea by studying sequential effects in a complex judgment task using the analytical tools and experimental manipulations employed in psychophysical research
+the dependency of perceptual judgments on the events of the last few trials has been extensively researched by psychophysicists
+the typical approach is to employ a regression model in which the current judgment  j   is the dependent variable and the current stimulus and stimuli and or responses from trials earlier in the sequence are predictors
+in particular  jesteadt  luce  and green  CITATION  advocated the use of the following regression model   where p is the value of the stimulus presented on the current trial  p is the value of the stimulus on the previous trial  and j is the value of the judgment made on the previous trial
+equation  has been applied to data from a large number of psychophysical experiments
+in these experiments  the participant is presented with a sequence of stimuli which differ in one physical attribute  such as tones which differ in loudness  and asked to form some judgment of that attribute  the precise nature of the judgment depends on the psychophysical task
+in magnitude estimation experiments  the participant is asked to assign a number which indicates his or her subjective impression of the loudness of each tone  either with respect to an explicit standard  CITATION  or on an absolute scale  CITATION
+in cross-modality matching experiments  the participant is asked to adjust the magnitude of one dimension  such as loudness  so that it matches a magnitude on another dimension  such as brightness  CITATION
+in category judgment experiments  the participant is asked to put each stimulus into one of several categories  CITATION
+in absolute identification experiments  each stimulus is given a unique label - for example  the stimuli are numbered  NUMBER - NUMBER  - and the participant is asked to name the stimulus presented on each trial  CITATION
+equation  has been used to study sequential effects in all of these paradigms
+the details of the results depend somewhat on the experimental task but the general pattern is robust  the response on the current trial is biased towards the judgment made on the previous trial but away from the stimulus presented on that trial  CITATION
+that is  there is assimilation to the immediately preceding response but contrast to the immediately preceding stimulus
+these sequential effects have been given various interpretations  many of which assume that there is some kind of perceptual interference from the previous stimulus and that the previous item and the judgment assigned to it serve as a point of reference when evaluating the current stimulus  CITATION
+it is argued that even when participants are asked to judge stimuli with respect to long-term referents  they use the most recently experienced events as a framework for judgment  CITATION
+many real-world tasks have a structural similarity to magnitude estimation or category judgment  in that people esimate or classify a sequence of stimuli
+however  the stimuli are very different
+the tones  lights and lines used in psychophysical investigations are very simple and notoriously difficult to store in long-term memory  indeed  it is frequently asserted that our capacity for processing such stimuli is limited to about  NUMBER  items  CITATION   in contrast to our capacity to recognise and identify many thousands of complex objects  CITATION
+the labile mental representations of psychophysical stimuli may be responsible for the observed sequential effects  the inability to form accurate long-term representations may push people towards the use of recent items as a frame of reference
+when people make real-world judgments about complex items  and when the judgments are of a type with which they are very familiar  it may be that the sequential effects are eliminated as people use only long-term referents and stable internal scales of judgment
+indeed  many of the models of sequential effects in psychophysical judgment make assumptions which explicitly concern perceptual tasks and which are not readily extended to other situations  CITATION
+the current article asks whether the pattern of sequential dependencies seen in psychophysical tasks extends to situations in which people make judgments about non-physical dimensions of complex  real-world objects
+in three experiments we asked participants to judge the prices of various items
+we chose this task because it corresponds reasonably well to an important aspect of our economic lives  we are routinely exposed to sequences of products and  implicitly or explicitly  assess their probable cost
+this task was also attractive because it allowed us to use rich  complex stimuli and to require judgments about a property that does not correspond to a simple physical aspect of the item presented for judgment
+in experiment  NUMBER   we ask whether judgments of price exhibit sequential dependencies of the type seen in psychophysical experiments

@@ -1,0 +1,34 @@
+### abstract ###
+We have developed a multi-scale biophysical electromechanics model of the rat left ventricle at room temperature.
+This model has been applied to investigate the relative roles of cellular scale length dependent regulators of tension generation on the transduction of work from the cell to whole organ pump function.
+Specifically, the role of the length dependent Ca 2 sensitivity of tension, filament overlap tension dependence, velocity dependence of tension, and tension dependent binding of Ca 2 to Troponin C on metrics of efficient transduction of work and stress and strain homogeneity were predicted by performing simulations in the absence of each of these feedback mechanisms.
+The length dependent Ca 50 and the filament overlap, which make up the Frank-Starling Law, were found to be the two dominant regulators of the efficient transduction of work.
+Analyzing the fiber velocity field in the absence of the Frank-Starling mechanisms showed that the decreased efficiency in the transduction of work in the absence of filament overlap effects was caused by increased post systolic shortening, whereas the decreased efficiency in the absence of length dependent Ca 50 was caused by an inversion in the regional distribution of strain.
+### introduction ###
+Contraction of the heart is a fundamental whole organ phenomenon driven by cellular mechanisms.
+With each beat the myocytes in the heart generate tension and relax.
+This local cellular scale tension is transduced into a coordinated global whole heart deformation resulting in an effective, organized and efficient system level pump function.
+Fundamental to achieving this efficient transudation of work is the integration of organ, tissue and cellular scale mechanisms.
+However, while efficiency is important in the heart, the role and relative importance of the underlying mechanisms responsible for achieving the efficient transduction of work from the cell to the organ remains unclear.
+In the healthy heart, structural heterogeneities in the morphology, electrophysiology, metabolic and neural mechanisms provide a stable physiological framework that facilitates a coordinated contraction CITATION resulting in the ETW.
+However, over shorter time scales, sub cellular mechanisms are the most likely candidates for regulating the ETW in the face of dynamic variation in cardiac demand.
+Specifically, the sarcomeres themselves contain tension and deformation feedback mechanisms that regulate the development of active tension based on the local tension, strain and strain rate.
+These provide a regulatory process to modulate deformation and tension signals experienced by the cell into a coordinated global response CITATION CITATION .
+The four major TDF mechanisms are length dependent changes in Ca 2 sensitivity CITATION, filament overlap CITATION, tension dependent binding of Ca 2 to troponin C CITATION and velocity dependent cross bridge kinetics CITATION.
+TDF mechanisms 1 and 2 are characterised by the length dependent changes in the steady state force Ca 2 relationship, which is routinely described by a Hill curve CITATION, CITATION.
+Length dependent changes in Ca 50 are measured by the decreased concentration of Ca 2 required to produce half maximal activation as the muscle increases in length.
+Length dependent changes in the filament overlap result in active tension increasing as the muscle increases in length.
+Ca 2 binding to TnC acts as a switch activating tension generation.
+As crossbridges bind to generate tension they increase the affinity of Ca 2 to TnC causing more Ca 2 to bind, which results in the generation of more tension.
+The velocity dependence of tension can be described by a transient and stable component.
+The transient component is characterised by the multiphase tension response to step changes in length and the stable component is characterised by the tension during contraction at a constant velocity.
+In general as the velocity of contraction increases the active tension decreases.
+These four mechanisms provide both positive and negative feedback for tension development and are fundamental to the functioning of the heart, yet their relative roles, if any, in the ETW have not been investigated.
+This is in part due to the experimental challenges in studying subcellular function in whole heart preparations CITATION and the modelling challenges in performing biophysical whole organ coupled electromechanics simulations CITATION, CITATION.
+Recent advances in computer power and coupling methods CITATION now allow the simulation of strongly coupled multi-scale electromechanical models of the left ventricle.
+These models contain explicit biophysical representations of cellular electrophysiology, Ca 2 dynamics, tension generation, deformation and the multiple feedback loops that operate between each of these systems.
+In this study we analyse the transduction of local cellular scale work into whole organ pressure-volume work in the heart using computational modelling.
+Using the definitions of Hill CITATION for positive and negative work, we propose a new metric to quantify the ETW during each phase of the contraction cycle as the ratio of positive work to total work.
+To isolate and quantify the role of TDF in the transduction of cellular work into whole organ pump function over a heart beat we have developed a model of the rat left ventricle, at room temperature, that incorporates the TDF mechanisms.
+The model contains a biophysical electromechanical rat myocyte model CITATION, transversely isotropic constitutive law CITATION and heterogeneous fiber orientation CITATION.
+By comparing the ETW over each phase of the heart beat in the absence of each of the TDF mechanisms we aim to quantify the effect of each of the TDF mechanisms.

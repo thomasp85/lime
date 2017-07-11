@@ -1,0 +1,33 @@
+### abstract ###
+Transcriptional regulators recognize specific DNA sequences.
+Because these sequences are embedded in the background of genomic DNA, it is hard to identify the key cis-regulatory elements that determine disparate patterns of gene expression.
+The detection of the intra- and inter-species differences among these sequences is crucial for understanding the molecular basis of both differential gene expression and evolution.
+Here, we address this problem by investigating the target promoters controlled by the DNA-binding PhoP protein, which governs virulence and Mg 2 homeostasis in several bacterial species.
+PhoP is particularly interesting; it is highly conserved in different gamma/enterobacteria, regulating not only ancestral genes but also governing the expression of dozens of horizontally acquired genes that differ from species to species.
+Our approach consists of decomposing the DNA binding site sequences for a given regulator into families of motifs using a machine learning method inspired by the Divide Conquer strategy.
+By partitioning a motif into sub-patterns, computational advantages for classification were produced, resulting in the discovery of new members of a regulon, and alleviating the problem of distinguishing functional sites in chromatin immunoprecipitation and DNA microarray genome-wide analysis.
+Moreover, we found that certain partitions were useful in revealing biological properties of binding site sequences, including modular gains and losses of PhoP binding sites through evolutionary turnover events, as well as conservation in distant species.
+The high conservation of PhoP submotifs within gamma/enterobacteria, as well as the regulatory protein that recognizes them, suggests that the major cause of divergence between related species is not due to the binding sites, as was previously suggested for other regulators.
+Instead, the divergence may be attributed to the fast evolution of orthologous target genes and/or the promoter architectures resulting from the interaction of those binding sites with the RNA polymerase.
+### introduction ###
+Whole genome sequences, as well as microarray and chromatin inmunoprecipitation with array hybridization data provide the raw material for the characterization and understanding of the underlying regulatory systems.
+It is still challenging, however, to discern the sequence elements relevant to differential gene expression, such as those corresponding to the binding sites of transcriptional factors and RNA polymerase, when they are embedded in the background of genomic DNA sequences that do not play a role in gene expression CITATION.
+This raises the question: how does a single regulator distinguish promoter sequences when affinity is a major determinant of differential expression?
+Also, how does a regulator evolve given that there appears to be a non-monotonic co-evolution of regulators and targets CITATION CITATION ?
+Methods that look for matching to a consensus pattern have been successfully used to identify BSs in promoters controlled by particular TFs CITATION CITATION.
+Tools for motif discovery are designed to find unknown, relatively short sequence patterns located primarily in the promoter regions of genomes CITATION.
+Because these searches are performed in a context of short signals embedded in high statistical noise, current tools tend to discard a relevant number of samples that only weakly resemble a consensus CITATION.
+Moreover, the strict cutoffs used by these methods, while increasing specificity, display lower sensitivity CITATION, CITATION to weak but still functional BSs.
+Because the consensus motif reflects a single pattern derived by averaging DNA sequences, it often conceals sub-patterns that might define distinct regulatory mechanisms CITATION.
+Overall, the use of consensuses tends to homogenize sequence motifs among promoters and even across species CITATION, CITATION, which hampers the discovery of key features that distinguish co-regulated promoters within and across species.
+To circumvent the limitations of consensus methods CITATION, we decomposed BS motifs into sub-patterns CITATION, CITATION by applying the classical Divide Conquer strategy CITATION, CITATION.
+We then compared different forms of decomposed BS motifs of a TF into families of motifs from a computational clustering perspective.
+In so doing, we extracted the maximal amount of useful genomic information through the effective handling of the biological and experimental variability inherent in the data, and then combined them into an accurate multi-classifier predictor CITATION, CITATION.
+Although there is a computational usefulness of the submotifs CITATION, CITATION, it was not clear if these families of motifs were just a computational artifact or if they could provide insights into the regulatory process carried out by a regulator and its targets.
+To address this problem, we evaluated the ability of the submotifs to characterize gene expression both within and across genomes.
+First, we used submotifs to distinguish between functional and non-functional BSs in genome-wide searches using a combination of ChIP-chip and custom expression microarray experiments.
+Then, we determined the evolutionary significance of the submotifs by calculating their rate of evolution CITATION, CITATION and mapping the gain and loss events along the phylogenetic tree of gamma/enterobacteria.
+The interspecies variation of orthologous genes, the conservation of the regulatory protein, as well as the cis-features conforming the promoter architecture allowed us to evaluate the major causes of divergences between species CITATION, CITATION .
+We applied our approach to analyze the genes regulated by the PhoP/PhoQ two-component system, which mediates the adaptation to low Mg 2 environments and/or virulence in several bacteria species including Escherichia coli species, Salmonella species, Shigella species, Erwinia species, Photorhabdus and Yersinia species.
+Two-component systems represent the primary signal transduction paradigm in prokaryotic organisms.
+Although proteins encoded by these systems are often well conserved throughout different bacterial species CITATION, CITATION, regulators like PhoP differentially control the expression of many horizontally-acquired genes, which constitute one of the major sources of genomic variation CITATION .

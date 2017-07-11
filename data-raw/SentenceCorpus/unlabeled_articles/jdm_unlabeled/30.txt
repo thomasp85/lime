@@ -1,0 +1,73 @@
+### abstract ###
+across many real-world domains  men engage in more risky behaviors than do women
+to examine some of the beliefs and preferences that underlie this difference   NUMBER  participants assessed their likelihood of engaging in various risky activities relating to four different domains gambling  health  recreation  and social  and reported their perceptions of  NUMBER  probability of negative outcomes   NUMBER  severity of potential negative outcomes  and  NUMBER  enjoyment expected from the risky activities
+women's greater perceived likelihood of negative outcomes and lesser expectation of enjoyment partially mediated their lower propensity toward risky choices in gambling  recreation  and health domains
+perceptions of severity of potential outcomes was a partial mediator in the gambling and health domains
+the genders did not differ in their propensity towards taking social risks
+a fifth domain of activities associated with high potential payoffs and fixed minor costs was also assessed
+in contrast to other domains  women reported being more likely to engage in behaviors in this domain
+this gender difference was partially mediated by women's more optimistic judgments of the probability of good outcomes and of outcomes being more intensely positive
+### introduction ###
+accidents are a very frequent cause of death  particularly among young adults and teenagers u s center for disease control  cdc    CITATION   and men are more often the victims of accidents than are women  CITATION
+for example  for every  NUMBER   NUMBER  us drivers  men are three times as likely as women to be involved in fatal car accidents  CITATION
+while some of this well-known difference in automobile death rates probably reflects differences in the average amount of time men and women spend driving  it seems likely that another important cause is that males voluntarily engage in risky behaviors more often than do females
+for example  us women report usually using seat belts substantially more often than men  CITATION   and men have been shown to run yellow lights more often than women  CITATION
+furthermore  similar differences are seen in a wide variety of other forms of accident statistics
+male pedestrians in the uk are involved in accidents about  NUMBER  percent  more often than female pedestrians  and men die much more often from drowning or accidental poisoning throughout the western world  CITATION
+thus  there seems little doubt that men must be engaging in more risky behaviors across a broad range of domains
+despite its obvious practical importance  some key aspects of the psychological underpinnings of gender differences in risk taking have not been examined
+the present article seeks to shed new light on these underpinnings  by asking a substantial sample of college men and women to report various perceptions and preferences related to a wide range of risk-taking scenarios
+the existence of gender differences in propensity to take risks has been documented in a large number of questionnaire and experimental studies
+for example  a meta-analysis by byrnes  miller  and schafer  CITATION  reviewed over  NUMBER  papers on gender differences in risk perception
+they concluded that the literature  clearly  indicated that  male participants are more likely to take risks than female participants  p  NUMBER 
+recent work has begun to examine the generality and cognitive underpinnings of these differences in greater detail  CITATION
+in one important study that provides a backdrop for the present investigation  weber  blais  and betz  CITATION  assessed the risks that men and women perceived in behaviors spanning five different content domains financial  health safety  recreational  ethical  and social decisions
+gender differences were found in four of the five domainssocial decision-making being the exceptionwith males perceiving less risk and indicating a greater likelihood of engaging in risky behaviors
+similar gender differences have been found in these domains in a large german sample  CITATION
+across studies  the social domain is unique in that either no gender differences are found or when they are found  it is women who report greater propensity to engage in risky behaviors and perceive overall greater benefit and less risk in doing so  CITATION
+of interest  these authors also found great variability in an individual's willingness to engage in risk across domains  suggesting that risk taking is not simply the product of some general personality trait that promotes risk seeking
+instead  individual and group differences are substantially due to differing perceptions of risk in different domains
+for the most part  previous research has relied on a unitary and subject-defined notion of  risk  e g    how risky is the behavior or situation
+ 
+a number of researchers have examined the role of various affect dimensions in determining overall perceptions of riskiness
+slovic  CITATION  proposes that several psychological risk dimensions including dread  control  and knowledge contribute to perceived riskiness
+follow-up research has shown the material as well as emotional factors also impact overall risk judgments  CITATION
+any global assessment of perceived risk combines elements of a belief  how likely is it that something bad will happen
+  and a subjective valuation of that outcome  how bad would that be
+ 
+thus  in common parlance a given behavior might be said to be riskier than another behavior if the former has more severe potential consequences  or if it has a higher risk of potential negative consequences  or both
+for example  leaving one's bike unattended for a day in a busy city  and bungie jumping could both be described as risky behaviors  and yet the probabilities and potential bad outcomes are enormously different in the two cases
+past research shows that decomposing these elements can shed important light on individual and group differences in responses to risky situations
+gurmankin levy and baron  CITATION  had subjects assess badness of unfortunate medical outcomes associated with a defined probability e g    NUMBER  percent  chance of loss of a big toe
+different groups men vs women  physicians vs non-physicians were differentially sensitive to probability as against severity
+the present article pursues a similar approach to explore the determinants of men's and women's willingness to engage in different risky activities
+note that in the field of finance  where distribution of potential outcomes is obviously continuous  risk is often conceptualized as the variability of the returns offered by a choice
+following that approach  some theorists have found it useful to conceive of people's generalized risk preferences in terms of how this variability affects an individual's disposition to choose an option  CITATION
+while this seems quite reasonable  in many real world risky choice scenarios e g   riding motorcycle without helmet  not using sunscreen  etc
+  it would seem to be a reasonable simplification to view the potential negative outcomes as a unitary event  having a probability and some degree of un-desirability
+this approach will be followed here  although in the general discussion we will point out the potential for follow-up work that would consider risks involving more than a single discrete negative outcome
+remarkably  the literature with adults does not seem to contain any studies that seek to decompose the perceptions of risk involved in real-world risky behaviors  in order to determine whether the genders differ in their evaluations of the likelihoods and costs of negative outcomes
+a number of plausible hypotheses immediately present themselves
+one such hypothesis is that women do not evaluate the probability of negative outcomes differently than men  they simply assume perhaps rightly  perhaps not that they would be more emotionally upset or harmed by negative outcomes  should these occur
+alternatively  one may hypothesize that women assess as greater the probability of unfavorable outcomes  without projecting any stronger negative reactions to these outcomes than do men
+while studies of gender effects in adult risk preferenceswith the exception of gurmankin levy and baron  CITATION have not addressed this issue  there is one study within the developmental literature that explored this question
+hillier and morrongiello  CITATION  examined gender differences in perceptions involved in physical risk taking in children
+using pictorial descriptions e g   riding bicycle with no helmet in street and an interview to determine how children assessed risks  they found that girls appraised more general risk i e   judged the situations as more unsafe than boys
+the genders also differed in the factors that contributed to their overall risk judgments
+boys' risk judgments were significantly predicted by their ratings of injury severity while girls' risk judgments were better predicted by their ratings of vulnerability to any type of injury
+this suggests that girls may avoid risky situations with any likelihood of perceived injury and boys may avoid risky situations only if the possible perceived injuries are judged as being severe
+as noted above  the literature with adults has not examined whether the genders differ in their evaluations of  NUMBER  the likelihood of potential negative outcomes and  NUMBER  their appraisals of the severity of these potential outcomes
+in adults  either or both of these aspects of risk may mediate gender differences in engaging in  risky  behaviors
+a third factor may also be responsible for the gender differences in propensity to engage in risky behaviors  the genders may differ in their estimates of the enjoyment offered by the activity  assuming that negative outcomes do not take place
+this last possibility finds some support from weber et al CITATION  and johnson et al  NUMBER   who found that relative to women  men judged they would obtain greater benefits from engaging in risky behaviors in all domains except social
+using a risk-return framework  weber and colleagues have suggested that risky decision making can be seen as a trade-off between fear risk and hope expected returns
+the present study had two major goals
+the first was to separately assess gender differences in the three kinds of assessments just mentioned
+to put it in simple terms  the present study asks  do women tend  for example  to engage in dangerous recreational activities less often because a they think the likelihood of injury is greater  b they think the severity of an injury  were it to occur  would be greater  and or c because they simply do not find the positive aspects of such activities as attractive as men do
+in addition  we examined whether such assessments vary depending upon the domain of behavior and compared patterns of risk perception with individuals' reports of engaging in risky behaviors in the past
+a second aim was to explore an important category of choices popularly referred to as  taking a chance  that have not  to our knowledge  been examined in previous studies of individual differences in risk  decisions to engage or not engage in behaviors that offer a small probability of a large positive reward in return for some small but certain cost
+an example is trying to be the  NUMBER th caller to a radio station in order to win a large sum of money
+this type of scenario will be referred to as the  positive domain 
+one possible explanation for why women engage in fewer risky activities is that they are relatively pessimistic and feel themselves relatively  unlucky  i e   prone to experience the least desirable possible outcome more often than would be expected based on overall frequencies
+if this is so  then women should also show less interest than men in options offering a low probability of positive reward
+another possibility is that women see low-frequency outcomes whether good or bad as more likely to occur  in which cases they should show greater attraction to choices in the positive domain

@@ -1,0 +1,17 @@
+### abstract ###
+indecisiveness is an individual difference measure of chronic difficulty and delay in decision making
+indecisiveness is associated with low decisional confidence and distinct patterns of pre-choice information search behavior
+the present study explored whether the confidence levels and search behaviors associated with individual indecisiveness also emerge in group decision making contexts
+in this study   NUMBER  decisive and indecisive participants were assigned to make a decision individually or in a homogenous three-person group
+indecisiveness score was found to predict participant decisional confidence in the individual condition but not in the group condition  with group participants being overall more confident than individuals
+similar results were obtained for other related measures of participants' perceptions of the decision task
+surprisingly  no indecisiveness-related differences in information search were found  suggesting that other aspects of the group process contribute to increased confidence
+the results provide initial evidence that indecisiveness does not influence group decision making and that  especially for indecisive individuals  working in groups may be a way to boost decisional confidence
+### introduction ###
+indecisiveness is an individual difference measure associated with chronic difficulty and delay in decision making  CITATION
+self-report descriptors include  taking a long time to decide  not knowing how to decide  feeling uncertain during decision making  avoiding decisions  changing ones mind  and regretting decisions  CITATION
+given that the tendencies of indecisive individuals appear poorly adapted to many tasks  CITATION   an important goal is to identify circumstances in which indecisiveness is likely to compromise effective decision making
+the present research is motivated by the question of whether the relationship between indecisiveness and patterns of decision making in informational search contexts observed with individuals extends to groups
+in the introduction  we first review past empirical work establishing a relationship between indecisiveness  decisional confidence  and informational search patterns
+we then motivate our interest in exploring these relationships in a group decision making context  and integrate relevant group literature
+finally  we present an empirical study of the relationship between indecisiveness and patterns of decision making in individuals versus small groups

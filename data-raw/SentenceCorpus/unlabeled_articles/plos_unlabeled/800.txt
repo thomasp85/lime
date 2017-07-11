@@ -1,0 +1,33 @@
+### abstract ###
+Identification of pathways involved in the structural transitions of biomolecular systems is often complicated by the transient nature of the conformations visited across energy barriers and the multiplicity of paths accessible in the multidimensional energy landscape.
+This task becomes even more challenging in exploring molecular systems on the order of megadaltons.
+Coarse-grained models that lend themselves to analytical solutions appear to be the only possible means of approaching such cases.
+Motivated by the utility of elastic network models for describing the collective dynamics of biomolecular systems and by the growing theoretical and experimental evidence in support of the intrinsic accessibility of functional substates, we introduce a new method, adaptive anisotropic network model, for exploring functional transitions.
+Application to bacterial chaperonin GroEL and comparisons with experimental data, results from action minimization algorithm, and previous simulations support the utility of aANM as a computationally efficient, yet physically plausible, tool for unraveling potential transition pathways sampled by large complexes/assemblies.
+An important outcome is the assessment of the critical inter-residue interactions formed/broken near the transition state, most of which involve conserved residues.
+### introduction ###
+Many proteins assume more than one functional conformation, stabilized by ligand binding or changes in environmental conditions.
+A typical example is the bacterial chaperonin GroEL CITATION, a widely studied ATP-regulated molecular machine and member of heat shock protein Hsp60 family.
+GroEL assists in unfolding and refolding misfolded or partially folded proteins CITATION CITATION.
+It is composed of two back-to-back stacked rings, each containing seven subunits of 60 kDa.
+Each subunit is, in turn, composed of three domains, equatorial, intermediate and apical.
+GroEL works together with the co-chaperonin, GroES.
+The activity of GroEL-GroES complex entails a series of allosteric transitions in structure, triggered by ATP binding and hydrolysis, described in Figure 1: In the absence of nucleotide binding, both rings assume the closed state, designated as T/T state for the two rings.
+Cooperative binding of seven ATP molecules to the subunits in one of the rings, hereafter referred to as the cis ring, drives the conformational change of these subunits to the open state, thus leading to the R/T form of the cis/trans rings.
+The R/T form exposes a number of hydrophobic residues at the apical domains of the cis ring subunits.
+These groups attract the unfolded or partially folded peptide to be encapsulated in the cylindrical chamber following the attachment of GroES.
+ATP hydrolysis provides the energy needed to process the substrate and leads to the state R /T. This process is terminated upon binding of seven ATP molecules to the adjoining ring, hence the term negative cooperative effect induced by ATP binding.
+The structure with ADP and ATP molecules bound to the respective cis and trans rings favors the opening of the GroES cap and release of the peptide and ADP molecules to start a new cycle, this time, with the roles of the former cis and trans rings being inverted.
+Of interest is to understand the molecular basis of the negative cooperative effect triggered upon binding of seven ATP molecules to the trans ring.
+ATP binding induces in this case a structural change on the cap-binding region at a distance of 65.
+Understanding the mechanism of this allosteric signaling is of fundamental importance because of the critical role chaperonins play in preventing aggregation and regulating folding vs. degradation events.
+Several studies have been published on the allosteric pathways and dynamics of GroEL CITATION CITATION since the original determination of the ADP-bound complex CITATION.
+These studies provide valuable insights into the successive states involved in the chaperonin cycle.
+The elucidation of allosteric transition mechanisms has been a challenge, however, both experimentally and computationally, due to the transient nature of the high energy conformers between the states, the multiplicity of pathways, and the large size of this biomolecular system.
+Several computational methods have been developed in the last two decades for exploring the structural transition pathways of biomolecules.
+These include methods based on minimizing path-dependent functionals CITATION, CITATION, stochastic path integration CITATION, MaxFlux method for identifying the path of maximum flux CITATION, CITATION, nudged elastic band method CITATION, and the determination of temperature-independent reaction coordinates by action minimization CITATION CITATION.
+Other groups resorted to targeted molecular dynamics simulations in the presence of holonomic constraints CITATION, CITATION CITATION, Monte Carlo- and MD-based methods for sampling ensembles of stochastic transition paths.
+Yet, the identification of the transition state and accompanying conformational rearrangements are by and large inaccessible for systems of the order of megadaltons like GroEL.
+Coarse-grained models and methods appear as the only tractable tools in such cases.
+Perhaps the most comprehensive computational study of GroEL allosteric dynamics is that of Hyeon, Lorimer and Thirumalai, where the T R R transition has been examined by Brownian dynamics simulations using a state-dependent self-organized polymer model CITATION.
+These simulations, performed for subunit dimers and heptamers, provided valuable insights on the heterogeneity of the transition pathways and the kinetics of salt bridges' formation/rupture at the successive transitions T R and R R .

@@ -1,0 +1,37 @@
+### abstract ###
+Animals with rudimentary innate abilities require substantial learning to transform those abilities into useful skills, where a skill can be considered as a set of sensory motor associations.
+Using linear neural network models, it is proved that if skills are stored as distributed representations, then within-lifetime learning of part of a skill can induce automatic learning of the remaining parts of that skill.
+More importantly, it is shown that this free-lunch learning is responsible for accelerated evolution of skills, when compared with networks which either cannot benefit from FLL or cannot learn.
+Specifically, it is shown that FLL accelerates the appearance of adaptive behaviour, both in its innate form and as FLL-induced behaviour, and that FLL can accelerate the rate at which learned behaviours become innate.
+### introduction ###
+Both evolution and learning may be considered as different types of adaptation.
+Learning occurs within a lifetime, whereas genetic change occurs across lifetimes CITATION.
+Whereas genetic change ensures that a task can be executed innately, learning permits even the most rudimentary innate ability to be honed into a useful skill.
+In an environment that fluctuates from generation to generation, learning permits an innate ability to be adapted to the particular physical environment into which each generation is born.
+If the environment ceases to fluctuate, then genetic assimilation CITATION can transform a rudimentary innate ability, which requires much learning, into an innate skill, which requires minimal learning.
+This transformation is more likely to occur if the cost of learning is high CITATION, CITATION, and, in this case, computer simulations suggest that learning can accelerate the rate of genetic assimilation CITATION via the Baldwin effect CITATION.
+However, if learning is sufficiently inexpensive, then genetic change may not occur at all CITATION, CITATION.
+Overall, there appears to be a tradeoff between learning and genetic assimilation, such that learning can subsidize genetic change, especially if learning is inexpensive.
+All but the most primitive organisms learn in order to survive, and organisms which learn quickly are at a selective advantage relative to those that learn slowly.
+Therefore, a mechanism which reduces the time required to learn a given behaviour confers a selective advantage.
+One candidate for such a mechanism is FLL CITATION, CITATION .
+As explained below, FLL ensures that in the process of learning one set of associations or behaviours another set of associations is usually learned.
+These associations could comprise either perceptual skills, or motor skills .
+Before considering how FLL can accelerate evolution of certain types of behaviours, FLL will be described in its original context of spontaneous recovery of memory in humans CITATION and in neural network models CITATION.
+Note that FLL is not unique to a specific class of network architectures, although it does assume that associations are learned using a form of supervised learning.
+In humans, FLL has been demonstrated using a task in which participants learned the positions of letters on a nonstandard computer keyboard CITATION.
+After a period of forgetting, participants relearned a proportion of these letter positions.
+Crucially, it was found that this relearning induced recovery of the non-relearned letter positions.
+More recently, a set of theorems provided a formal characterization of FLL in linear neural network models CITATION.
+In essence, FLL occurs in neural network models because each association is distributed amongst all connection weights between units.
+After partial forgetting, relearning some of the associations forces all of the weights closer to pre-forgetting values, resulting in improved performance even on non-relearned associations; a general proof is provided in CITATION.
+A geometric demonstration of FLL for a network with two connection weights is given in Figure 1.
+Networks with multiple input and output units can be considered without loss of generality CITATION .
+The protocol used to examine FLL in neural networks is as follows.
+A network with n input units and one output unit has n connection weights.
+This network learns a set A of m n associations, where A A 1 A 2 comprises two subsets A 1 and A 2 of n 1 and n 2 associations, respectively.
+After the associations A have been learned and then partially forgotten, performance error on subset A 1 is measured.
+Finally, only A 2 is relearned, and then performance error on A 1 is remeasured.
+FLL occurs if relearning A 2 improves performance on A 1.
+It has been proven that the probability of FLL approaches unity as the number of weights increases CITATION.
+For the sake of brevity, this is reflected in phrases such as learning A 2 usually improves performance on A 2 in this paper.

@@ -1,0 +1,31 @@
+### abstract ###
+The mechanism for cortical folding pattern formation is not fully understood.
+Current models represent scenarios that describe pattern formation through local interactions, and one recent model is the intermediate progenitor model.
+The intermediate progenitor model describes a local chemically driven scenario, where an increase in intermediate progenitor cells in the subventricular zone correlates to gyral formation.
+Here we present a mathematical model that uses features of the IP model and further captures global characteristics of cortical pattern formation.
+A prolate spheroidal surface is used to approximate the ventricular zone.
+Prolate spheroidal harmonics are applied to a Turing reaction-diffusion system, providing a chemically based framework for cortical folding.
+Our model reveals a direct correlation between pattern formation and the size and shape of the lateral ventricle.
+Additionally, placement and directionality of sulci and the relationship between domain scaling and cortical pattern elaboration are explained.
+The significance of this model is that it elucidates the consistency of cortical patterns among individuals within a species and addresses inter-species variability based on global characteristics and provides a critical piece to the puzzle of cortical pattern formation.
+### introduction ###
+Cerebral cortical patterns have fascinated scientists for centuries with their beauty and complexity.
+Numerous groups relate malformations in sulcal patterns to different diseases in humans, such as autism CITATION and attention deficit/hyperactivity disorder CITATION.
+Though many advances have occurred in cortical development and sulcogenesis, the understanding of how sulci form and what factors determine the placement of sulci is still limited.
+The cerebral cortex across species displays a variety of shapes and sizes and also wide array of sulcal patterning.
+Studying the evolutionary development of sulcal patterns might provide clues about the cortical development taking place in humans.
+A major advance in determining how these sulcal patterns form was the introduction of the axonal tension hypothesis CITATION.
+This hypothesis describes a mechanically-based scenario where axonal tension, created by developing corticocortical connections in strongly interconnected regions, pulls together gyral walls and creates a folding pattern.
+This hypothesis furthered the concept that variability between folding patterns among individuals is genetically driven, not just the consequence of random mechanical buckling from a confined cortex.
+Other mechanochemical models have also been proposed to explain morphogenesis in the central nervous system CITATION .
+Recently, it has been suggested that a cortical pattern can arise based on regional patterns of intermediate progenitor cells in the subventricular zone CITATION.
+The intermediate progenitor model, which builds upon the intermediate progenitor cell hypothesis CITATION, states that during the development of the cortex certain radial glial cells in the ventricular zone are activated to create IP cells that travel to the SVZ.
+These IP cells amplify the amount of neurons created in a given radial column.
+Furthermore, a subset of IP cells creates a local amplification of neurons in upper cortical layers surrounded by areas of non-amplification, resulting in a wedge shape in the cortex.
+This wedge shape is representative of a gyrus.
+This new hypothesis is still being debated CITATION, CITATION and, if correct, could be a scenario for chemically-based pattern formation in the cortex.
+Here, a relatively simple and, we believe, elegant chemically-driven mathematical model is proposed to explain how IP cell subsets are distributed spatially and temporally in the developing cortex.
+Our model, which we call the Global Intermediate Progenitor model, uses a Turing reaction-diffusion system CITATION containing an activator and inhibitor on a prolate spheroidal surface to determine regional areas of activation of the production of IP cells.
+The GIP model allows determination of the placement of the initial sulci underlying observed complex cortical patterns.
+It also demonstrates that the initial folds of the arising sulcal pattern are governed by the global shape of the lateral ventricle.
+The dependency on the global shape provides a critical piece to the puzzle of cortical development.

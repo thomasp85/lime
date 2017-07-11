@@ -1,0 +1,29 @@
+### abstract ###
+judgments and decisions under uncertainty are frequently linked to a prior sequential search for relevant information
+in such cases  the subject has to decide when to stop the search for information
+evidence accumulation models from social and cognitive psychology assume an active and sequential information search until enough evidence has been accumulated to pass a decision threshold
+in line with such theories  we conceptualize the evidence threshold as the  desired level of confidence  dlc of a person
+this model is tested against a fixed stopping rule one-reason decision making and against the class of multi-attribute information integrating models
+a series of experiments using an information board for horse race betting demonstrates an advantage of the proposed model by measuring the individual dlc of each subject and confirming its correctness in two separate stages
+in addition to a better understanding of the stopping rule within the narrow framework of simple heuristics  the results indicate that individual aspiration levels might be a relevant factor when modelling decision making by task analysis of statistical environments
+### introduction ###
+ some use it sometimes
+ this is the short statement by which newell  CITATION  concluded the empirical research on the well-known take-the-best heuristic ttb
+this fast and frugal heuristic was introduced by gigerenzer  hoffrage  and kleinbolting  CITATION  and gigerenzer and goldstein  CITATION  to provide an alternative to traditionally proposed strategies in judgment and decision making research
+according to these traditional models  a rational decision requires a comprehensive integration of all available information about all alternatives
+such integration can become computationally complex as soon as information cues are probabilistic and numerous
+gigerenzer and goldstein  CITATION   however  were able to show by a simulation of a binary attribute cue paradigm that choosing the best alternative out of two can be very simple when searching the available cues in the sequential order of descending validity the probability that a cue will lead to the correct decision  given that it discriminates between the alternatives and deciding on the direction of the first discriminating cue
+in the stimulus environment they used german cities  their population size and a number of features being present in the cities or not  this simple three-step-heuristic containing a search rule  a stopping rule and a decision rule led to decisions of the same quality as a comprehensive computational integration of the entire set of cue information
+the termination of information search after having found a first discriminating cue has therefore been called one-reason decision making ordm  CITATION
+the term ordm was chosen in clear contrast to models that stand for the integration of all available information usually not reflecting how the information was compiled
+these models can be of varying complexity  ranging from simple tallying to complex multiple linear regression  CITATION
+what they have in common is that at least two pieces of information need to be present for starting a comparison and  in case of several cues indicating the same option  an integration of the available information
+in contrast to the class of ordm  we subsume this broad class under the term  more-reason decision making  mrdm  because the search for more than one discriminating piece of information is a prerequisite for information integration
+ttb  as the most prominent representative of ordm  reveals an impressively high number of correct predictions  compared to mrdm models  CITATION
+these mathematical results allow ttb to rank amongst the rational strategies to be used in probabilistic decision making  especially but not only when information needs to be searched for
+however  the empirical findings concerning the use of ttb - compared to mrdm models - were heterogeneous
+while the conclusions of some studies were generally against the use of ttb because they found only particular use of this strategy  CITATION   a survey of more recent studies shows more evidence for the use of ttb  CITATION
+one unresolved question is the fact that participants repeatedly showed a huge inter- and intra-individual inconsistency in using a single strategy  CITATION
+so far  there have been no statistical environments in which all participants of an experiment acted according to ttb or refrained from using it
+but what is even more problematic is the inconsistent use of the ordm stopping rule
+the most surprising effect was reported by newell  weston and shanks  CITATION   testing a sequential search paradigm using only two available cues  they found a number of participants  NUMBER  percent  of their sample continuing information search in some instances even when the more valid cue discriminated  hence completely ignoring the fact that the second cue would not be able to compensate the first information

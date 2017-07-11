@@ -1,0 +1,43 @@
+### abstract ###
+Protegrin peptides are potent antimicrobial agents believed to act against a variety of pathogens by forming nonselective transmembrane pores in the bacterial cell membrane.
+We have employed 3D Poisson-Nernst-Planck calculations to determine the steady-state ion conduction characteristics of such pores at applied voltages in the range of 100 to 100 mV in 0.1 M KCl bath solutions.
+We have tested a variety of pore structures extracted from molecular dynamics simulations based on an experimentally proposed octomeric pore structure.
+The computed single-channel conductance values were in the range of 290 680 pS.
+Better agreement with the experimental range of 40 360 pS was obtained using structures from the last 40 ns of the MD simulation, where conductance values range from 280 to 430 pS.
+We observed no significant variation of the conductance with applied voltage in any of the structures that we tested, suggesting that the voltage dependence observed experimentally is a result of voltage-dependent channel formation rather than an inherent feature of the open pore structure.
+We have found the pore to be highly selective for anions, with anionic to cationic current ratios on the order of 10 3.
+This is consistent with the highly cationic nature of the pore but surprisingly in disagreement with the experimental finding of only slight anionic selectivity.
+We have additionally tested the sensitivity of our PNP model to several parameters and found the ion diffusion coefficients to have a significant influence on conductance characteristics.
+The best agreement with experimental data was obtained using a diffusion coefficient for each ion set to 10 percent of the bulk literature value everywhere inside the channel, a scaling used by several other studies employing PNP calculations.
+Overall, this work presents a useful link between previous work focused on the structure of protegrin pores and experimental efforts aimed at investigating their conductance characteristics.
+### introduction ###
+Antimicrobial peptides are small proteins produced by the innate immune system of many plants and animals as a first line of defense against bacterial infections CITATION, CITATION.
+Due to their persistence in nature as well as their nonspecific mechanism of action, there has been significant research activity aimed at designing novel antibiotics based on AMPs CITATION ; the expectation is that bacteria will not develop significant resistance to antibiotics designed based on these peptides.
+Thus far, such drug design efforts have been largely hampered by a lack of understanding of the fundamental mechanism of action of AMPs.
+Although recent evidence suggests that intracellular targets may play an important role in the action of many AMPs CITATION, CITATION CITATION, there is a strong body of evidence suggesting that the ability of peptides to interact with and disrupt the bacterial membrane is essential to their mechanism of action CITATION, CITATION CITATION.
+AMPs of various structural classes have been shown to have significant disruptive effects on both living bacterial membranes and model membrane systems, such as lipid bilayers CITATION, CITATION, CITATION and lipid monolayers CITATION, CITATION, CITATION.
+For thorough reviews of several proposed mechanisms of membrane disruption, the reader is referred to CITATION.
+Most relevant for the present work is the model in which AMPs aggregate to form large, nonselective pores in the bacterial membrane, which result in uncontrolled ion leakage, decay of the transmembrane potential, uncontrolled water transport, loss of cell contents and ultimately cell death.
+We have focused our efforts on protegrin-1, a particularly potent antimicrobial peptide, which has recently been shown to form such pores in lipid bilayers of certain compositions.
+Protegrins are small peptides isolated from porcine leukocytes that exhibit strong antimicrobial activity against a broad range of both Gram-positive and Gram-negative bacteria CITATION.
+Protegrins are characterized by a -hairpin conformation that is held together by two cysteine-cysteine disulfide bonds.
+They contain 16 18 amino acids, and are typically highly cationic, with the positive charges arising from arginine residues at the hairpin turn region and the two termini.
+In the present work, we focus on the most prevalent natural form of protegrin, designated as PG-1, with the amino acid sequence RGGRLCYCRRRFCVCVGR-NH 2.
+Mani and coworkers CITATION have conducted solid-state NMR experiments to investigate the membrane-bound structure of a PG-1 peptide, and have concluded that this peptide likely forms octomeric pores in lipid bilayers composed of a 3 1 mixture of palmitoyloleoyl-phosphatidylethanolamine to palmitoyloleoyl-phosphatidylglycerol CITATION.
+Langham and coworkers used the structure suggested from these NMR experiments as the starting configuration of a molecular dynamics simulation in a lipid bilayer of the same composition CITATION.
+This simulation showed the pore to be stable over more than 150 ns.
+Figure 1 shows a cartoon representation a single protegrin peptide, as well as a side view of the proposed pore structure.
+Prior to these studies of the pore structure of protegrin, early evidence of protegrin pores was provided by the experiments of Mangoni and coworkers CITATION and Sokolov and coworkers CITATION, in which the conductance characteristics of protegrin-treated membranes were measured.
+Such knowledge of the nonequlibrium ion flow through protegrin pores may be closely related to their mechanism of action, since the unrestricted flow of ions through the membrane could result in potentially lethal membrane depolarization.
+Mangoni and coworkers conducted voltage clamp experiments in Xenopus laevis oocyte membranes treated with protegrin-1 and several analogues CITATION.
+They found that protegrins form weakly anion selective pores in the presence of several different salts, with KCl solutions exhibiting almost no selectivity.
+Furthermore, they found that the conductance of such pores does not exhibit any voltage dependence over a voltage range of 100 to 30 mV.
+Sokolov and coworkers CITATION carried out conductance measurements across several different types of planar phospholipid bilayers treated with protegrin-1 as well as protegrin-3.
+These authors found that both protegrin analogues form weakly anion selective channels in mixed phospholipid bilayers, and moderately cation-selective channels in bilayers containing negatively charged bacterial lipopolysaccharide.
+They reported a voltage-dependent single-channel conductance in the range of 40 360 picoSiemens, depending on the peptide used, the lipid bilayer composition, and the applied voltage.
+In the present work, we attempt to explain and quantify the conductance behaviour of protegrin pores in terms of the structural information from NMR experiments CITATION and molecular dynamics simulations CITATION.
+In particular, we explore the connection between structural features such as the size of the pore opening and the magnitude of the conductance, as well as the surprising experimental finding of both Mangoni and coworkers CITATION and Sokolov and coworkers CITATION that the protegrin pore is only slightly anion selective, despite having a total charge of 56.
+Our investigation is based on the Poisson-Nernst-Planck theory, a continuum method of calculating non-equilibrium ion concentrations and fluxes around a fixed structure in the presence of an applied electrical voltage.
+In our model, we simulate a voltage across a protegrin pore embedded in a lipid bilayer patch, and measure the resulting current.
+Since the PNP model requires a rigid structure, we perform the calculations using several snapshots from the MD simulations of Langham and coworkers CITATION.
+The description of the underlying equations and the numerical scheme used to solve them is deferred to the Methods section below.

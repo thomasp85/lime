@@ -1,0 +1,18 @@
+### abstract ###
+in this paper i explore how the evolution of emotional expression and co-operative planning in humans may inform the way they communicate about risks  and what implication this may have for models of rationality in risk communication
+in particular  i focus on aspects of human language that enable successful co-ordination around shared tasks that involve the management of uncertainty by a group
+i distinguish between performative action-oriented and constative description-oriented aspects of human communication  and argue that the human logical vocabulary of conditionals  quantifiers and probability expressions often conveys pragmatic signals that implicitly encourage or discourage a course of action that is under discussion
+i review some studies that illustrate this perspective by highlighting the role of emotional undertone in risk communication and management  and show how it differs from existing models of risk communication and decision-making
+### introduction ###
+in this paper  i will take the view that the primary function of communication is to excite or inhibit behaviours in others  and only secondarily to evoke and describe states of the world  CITATION
+taking the view that human language evolved first as a means of social influence  and only second as a means of describing and representing the world can help understand why human logical language - far from containing disinterested and dispassionate devices for describing reality - is essentially argumentative in structure and function  CITATION
+thus the conditionals  quantifiers and probability expressions that humans naturally use when making plans to deal with uncertainty will implicitly signal a speaker's attitude to the action under question  for example  whether he wishes to encourage or discourage it
+i argue that human communication emerges out of the expression of emotion  which primarily serves to influence the behaviour of conspecifics  CITATION
+the emotional tone inherent to risk communication will influence others with respect to avoiding dangers and planning to take advantage of opportunities
+framing and polarity effects which focus the hearer's attention either on the positive or the negative aspects of a question  CITATION  are pervasive in discussions about decisions  because actions can either be taken or not taken
+there is no middle ground here  and one must therefore decide whether to flee or not to flee in the face of threat  to buy or not to buy a share  to recruit or not to recruit a candidate
+although we can hedge and qualify judgments by saying  she's quite rather extremely good   in making a decision we have to choose by saying  she's the one  or  he's not got what it takes 
+due to this lack of middle ground  it is hard if not impossible to give completely disinterested and dispassionate advice about decisions  as the normal use of the human logical vocabulary leads us to argue implicitly either for or against taking the action in question
+this pragmatic view of risk communication is at variance with that which would emerge from the view that language is a purely representational system
+in the representational view  the function of an expert such as a doctor  a banker might be to assemble the relevant facts and present them in an objective way to the client  so that the client could make an informed decision to take a treatment  to make an investment
+in this view  the aim of the expert will be to  re-present  reality in a client-centred way  that is  distil a view of reality that is relevant to what the client needs to know  but disinterested in that the expert does not communicate his own preferences

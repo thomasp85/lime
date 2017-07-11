@@ -1,0 +1,32 @@
+### abstract ###
+Algorithm selection is typically based on models of algorithm performance,  learned during a separate  offline  training sequence, which can be  prohibitively expensive
+In recent work, we adopted an  online  approach, in which a performance model is iteratively updated and used to guide selection on a sequence of problem instances
+The resulting  exploration-exploitation  trade-off was represented as a bandit problem with expert advice, using an  existing solver for this game, but this required the setting of an arbitrary  bound on algorithm runtimes, thus invalidating the optimal regret of the solver
+In this paper, we propose a simpler framework for representing algorithm selection as a bandit problem, with partial information, and an  unknown  bound on losses
+We adapt an existing solver to this game, proving a bound on its expected regret,  which holds also for the resulting algorithm selection technique
+We present  preliminary experiments with a set of SAT solvers on a mixed SAT-UNSAT benchmark
+### introduction ###
+Decades of research in the fields of Machine Learning and Artificial Intelligence brought us a variety of alternative algorithms for solving many kinds of problems
+Algorithms often display variability in performance quality, and computational cost, depending on the particular problem instance being solved: in other words, there is no single ``best'' algorithm
+While a ``trial and error'' approach is still the most popular, attempts to automate algorithm selection are not new   CITATION , and have grown to form a consistent and dynamic field of research in the area of  Meta-Learning   CITATION
+Many selection methods follow an  offline  learning scheme, in which the availability of a  large training set of performance data for the different algorithms is assumed
+This data is used to learn a model that %can  maps ( problem ,  algorithm ) pairs to expected performance, or to some probability distribution on performance
+The model is later used to select and run, for each new problem instance, only the algorithm that is expected to give the best results
+While this approach might sound reasonable, it actually ignores the computational cost of the initial training phase: collecting a representative sample of performance data has to be done via   solving a set of training problem instances, and each instance is solved repeatedly, at least once for each of the available algorithms,  or more if the algorithms are randomized
+Furthermore, these training instances are assumed to be representative of future ones, as the model is not updated after training
+In other words, there is an obvious trade-off  between the  exploration  of algorithm performances on different problem instances, aimed at learning the model, and the  exploitation  of the best algorithm/problem combinations, based on the model's predictions
+This trade-off is typically ignored  in offline algorithm selection, and the size of the training set  is chosen heuristically
+In our previous work  CITATION , we have kept an  online  view of algorithm selection, in which the only input available to the meta-learner is a set of algorithms, of  unknown performance, and a sequence of problem instances that have to be solved
+Rather than artificially subdividing the problem set into a training and a test set, we iteratively update the model  each time an instance is solved, and use it to guide algorithm selection on the next instance
+Bandit problems  CITATION  offer a solid theoretical framework for dealing with the exploration-exploitation trade-off in an online setting
+One important obstacle to the straightforward application of a bandit problem solver to algorithm selection is that most existing solvers assume a bound on losses to be available beforehand
+In  CITATION  we dealt with this issue heuristically, fixing the bound in advance
+In this paper, we introduce a modification of an existing bandit problem solver  CITATION , which allows it to deal with an unknown bound on losses, while retaining a bound on the expected regret
+This allows us to propose a simpler version of  the algorithm selection framework \GambleTA, originally introduced in   CITATION
+The result is a  parameterless online algorithm selection method,  the first, to our knowledge, with a provable upper bound on regret
+The rest of the paper is organized as follows
+Section  describes a tentative taxonomy of algorithm selection methods, along with a few examples from literature
+Section  presents our framework for representing algorithm selection as a bandit problem, discussing the introduction of a higher level of selection among different algorithm selection techniques ( time allocators )
+Section  introduces the modified bandit problem solver for unbounded loss games,  along with its bound on regret
+Section  describes   experiments with SAT solvers
+Section  concludes the paper

@@ -1,0 +1,36 @@
+### abstract ###
+Accumulated experimental observations demonstrate that protein stability is often preserved upon conservative point mutation.
+In contrast, less is known about the effects of large sequence or structure changes on the stability of a particular fold.
+Almost completely unknown is the degree to which stability of different regions of a protein is generally preserved throughout evolution.
+In this work, these questions are addressed through thermodynamic analysis of a large representative sample of protein fold space based on remote, yet accepted, homology.
+More than 3,000 proteins were computationally analyzed using the structural-thermodynamic algorithm COREX/BEST.
+Estimated position-specific stability and its component enthalpy and entropy were quantitatively compared between all proteins in the sample according to all-vs.-all pairwise structural alignment.
+It was discovered that the local stabilities of homologous pairs were significantly more correlated than those of non-homologous pairs, indicating that local stability was indeed generally conserved throughout evolution.
+However, the position-specific enthalpy and entropy underlying stability were less correlated, suggesting that the overall regional stability of a protein was more important than the thermodynamic mechanism utilized to achieve that stability.
+Finally, two different types of statistically exceptional evolutionary structure-thermodynamic relationships were noted.
+First, many homologous proteins contained regions of similar thermodynamics despite localized structure change, suggesting a thermodynamic mechanism enabling evolutionary fold change.
+Second, some homologous proteins with extremely similar structures nonetheless exhibited different local stabilities, a phenomenon previously observed experimentally in this laboratory.
+These two observations, in conjunction with the principal conclusion that homologous proteins generally conserved local stability, may provide guidance for a future thermodynamically informed classification of protein homology.
+### introduction ###
+Protein structure and function are ultimately determined by thermodynamics.
+For example, Anfinsen's seminal work CITATION demonstrated that the native state of a protein exists at a minimum in Gibbs free energy of stability under physiological conditions.
+Binding and catalysis are also governed by free energy: the sign and magnitude of the free energy change of each functional reaction controls the reaction's direction and equilibrium extent, respectively CITATION, CITATION .
+Gibbs free energy results from the summed, often opposing, contributions of enthalpy and entropy : G H T S. Generally, in the case of proteins, changes in free energy are small as compared to the underlying enthalpic or entropic changes CITATION.
+Reactions can be dominated by either enthalpy or entropy, but it is most often the case that a sometimes delicate balance between enthalpy and entropy controls protein structure and function.
+Unfortunately for the goal of thermodynamic characterization of protein folds, each of these quantities can be challenging to accurately predict.
+While enthalpy can be rationalized in terms of information derived from atomic coordinates CITATION, entropy is harder to estimate, frequently requiring knowledge not apparent from a single structure, such as information about the conformational degeneracy of the protein CITATION CITATION.
+Equally as challenging is the task of developing a robust analysis that reports the position-specific stability within the protein, rather than reporting either: the energetic contribution of a residue or the stability of a protein as a whole .
+Due in part to the inherent difficulty of accurately computing global and local enthalpy, entropy, and free energy, all protein structure classification strategies of which we are aware do not incorporate thermodynamic information.
+It is our hypothesis that this theoretical omission limits the complete understanding of protein fold space.
+There may also be practical consequences to such an omission.
+For example, it is possible that thermodynamic information, as a protein observable independent of sequence or structure CITATION, could improve computational tools for sequence alignment, fold recognition CITATION, or homology detection, thereby clarifying discrepancies in existing classification schemes that are based on only sequence and structure.
+Thermodynamic information may also yield new understanding, not available from current schemes, about evolutionary sequence, structure, and functional relationships CITATION.
+One particularly important and as yet unanswered question is the degree to which protein stability and its components are conserved during fold evolution: does the concept of thermodynamic homology meaningfully exist beyond conservative point mutations?
+As a step towards integration of thermodynamic information into existing protein classification schemes, the local free energy of stability, enthalpy, and entropy are here computed for a large representative database of protein domains using the previously described COREX/BEST algorithm CITATION CITATION.
+Importantly, the diverse proteins studied have accepted evolutionary relationships CITATION and are expertly curated CITATION such that any homologs are remote.
+Thus, by experimental design, trivial comparisons between the thermodynamics of closely related proteins are explicitly excluded from this analysis.
+The central aim of this work is to assess the degree of thermodynamic conservation among remotely homologous protein domains.
+Three findings relating thermodynamics to protein sequence and structure are reported.
+First, in accordance with previous work CITATION, it is confirmed that homologous proteins exhibit correlated thermodynamic information.
+Second, enthalpy and entropy are less correlated than stability, suggesting that homologous sequence differences result in enthalpic and entropic changes that largely balance to preserve the local stability of an evolved protein as compared to an ancestral one.
+Third, based on manual inspection of structural and thermodynamic alignments of homologous and non-homologous pairs of proteins, an organizational framework is postulated to guide the future integration of COREX/BEST thermodynamic information into theories of protein fold evolution.

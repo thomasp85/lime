@@ -1,0 +1,70 @@
+### abstract ###
+Real-time object detection has many applications in video surveillance, teleconference and multimedia retrieval \etc
+Since Viola and Jones  CITATION  proposed the first real-time AdaBoost based face detection system, much effort has been spent on improving the boosting method
+In this work, we first show that feature selection methods other than boosting can also be used for training an efficient object detector
+In particular, we introduce Greedy Sparse Linear Discriminant Analysis (GSLDA)  CITATION  for its conceptual simplicity and  computational efficiency; and slightly better detection performance is achieved compared with  CITATION
+Moreover, we propose a new technique, termed Boosted Greedy Sparse Linear Discriminant Analysis (BGSLDA), to efficiently train a detection cascade
+BGSLDA exploits the sample re-weighting property of boosting and the class-separability criterion of GSLDA
+Experiments in the domain of highly skewed data distributions, \eg, face detection, demonstrates that classifiers trained with the proposed BGSLDA outperforms AdaBoost and its variants
+This finding provides a significant opportunity to argue that AdaBoost and similar approaches are not the only methods that can achieve high classification results for high dimensional data in  object detection
+### introduction ###
+\IEEEPARstart{R}{eal-time} objection detection such as face detection has numerous computer vision applications, \eg,  intelligent video surveillance, vision based teleconference systems and content based image retrieval
+Various detectors have been proposed in the literature  CITATION
+Object detection is challenging due to the variations of the visual appearances, poses and illumination conditions
+Furthermore, object detection is a  highly-imbalanced   classification task
+A typical natural image contains many more negative background patterns than object patterns
+The number of background patterns can be  SYMBOL  times larger than the number of object patterns
+That means, if one wants to achieve a high detection rate, together with a low false detection rate, one needs a specific classifier
+The cascade classifier takes this imbalanced distribution into consideration  CITATION
+Because of the huge success of Viola and Jones' real-time AdaBoost based face detector  CITATION , a lot of incremental work has been proposed
+Most of them have focused on improving the underlying boosting method or accelerating the training process
+For example, AsymBoost was introduced in  CITATION  to alleviate the limitation of AdaBoost in the context of highly skewed example distribution
+Li  CITATION  proposed FloatBoost for a better detection accuracy by introducing a backward feature elimination step into the AdaBoost training procedure
+Wu  CITATION  used forward feature selection for fast training by ignoring the re-weighting scheme in AdaBoost
+Another technique based on the statistics of the weighted input data was used in  CITATION  for even faster  training
+KLBoost was proposed in  CITATION  to train a strong classifier
+The weak classifiers of KLBoost are based on histogram divergence of linear features
+Therefore in the detection phase, it is not as efficient as Haar-like features
+Notice that in KLBoost, the classifier design is separated from feature selection
+In this work (part of which was published in preliminary form in  CITATION ),  we propose an improved learning algorithm for face detection, dubbed Boosted Greedy Sparse Linear Discriminant Analysis (BGSLDA)
+Viola and Jones  CITATION  introduced a framework for selecting discriminative features and training classifiers in a cascaded manner as shown in Fig ~
+The cascade framework allows most non-face patches to be rejected quickly before reaching the final node, resulting in fast performance
+A test image patch is reported as a face only if it passes tests in all nodes
+This way, most non-face patches are rejected by these early nodes
+Cascade detectors lead to very fast detection speed and high detection rates
+Cascade classifiers have also been used in the context of support vector machines (SVMs) for faster face detection  CITATION
+In  CITATION , soft-cascade is developed to  reduce the training and design complexity
+The idea was further developed in  CITATION
+We have followed Viola and Jones' original cascade classifiers in this work
+One issue that contributes to the efficacy of the system comes from the use of AdaBoost algorithm for training  cascade nodes
+AdaBoost is a forward stage-wise additive modeling with the weighted exponential loss function
+The algorithm combines an ensemble of weak classifiers to produce a final strong classifier with high classification accuracy
+AdaBoost chooses a small subset of weak classifiers and assign them with proper coefficients
+The linear combination of weak classifiers can be interpreted as a decision hyper-plane in the weak classifier space
+The proposed BGSLDA differs from the original AdaBoost in the following aspects
+Instead of selecting decision stumps with minimal weighted error as in AdaBoost, the proposed algorithm finds a new weak leaner that maximizes the class-separability criterion
+As a result, the coefficients of selected weak classifiers are updated repetitively during the learning process according to this criterion
+Our technique  differs from  CITATION  in the following  aspects
+CITATION  proposed the concept of Linear Asymmetric Classifier (LAC) by addressing the asymmetries and   asymmetric node learning  goal in the cascade framework
+Unlike our work where the features are selected based on the  Linear Discriminant Analysis (LDA) criterion,  CITATION  selects features using AdaBoost SYMBOL AsymBoost algorithm
+Given the selected features, Wu then build an optimal linear classifier for the node learning goal using LAC or LDA
+Note that similar techniques have also been applied in neural network
+In  CITATION , a nonlinear adaptive feed-forward layered network with linear output units has been introduced
+The input data is nonlinearly transformed into a space in which classes can be separated more easily
+Since LDA considers the number of training samples of each class, applying LDA at the output of neural network hidden units has been shown to increase the classification accuracy of two-class problem with unequal class membership
+As our experiments show, in terms of feature selection,  the proposed BGSLDA methods is superior than AdaBoost and AsymBoost   for object detection }     The key contributions of this work are as follows
+We introduce GSLDA  as an alternative approach for training face detectors
+Similar results are obtained compared with Viola and Jones' approach
+We propose a new algorithm, BGSLDA, which combines the sample re-weighting schemes typically used in boosting into GSLDA
+Experiments show that BGSLDA can achieve better detection performances
+We show that feature selection and classifier training techniques can have different objective functions (in other words, the two processes can be separated) in the context of training a visual detector
+This offers more flexibility and even better performance
+Previous boosting based approaches select features and train a classifier simultaneously
+Our results confirm that it is beneficial to consider the highly skewed data distribution when training a detector
+LDA's learning criterion already incorporates this imbalanced data information
+Hence it is better than standard AdaBoost's exponential loss for training an object detector
+The remaining parts of the paper are structured as follows
+In Section~, the GSLDA algorithm is introduced as an alternative learning technique to object detection problems
+We then discuss how LDA incorporates imbalanced data information when training a classifier in Section~
+Then, in Sections~ and , the proposed BGSLDA algorithm is described and the training time complexity is discussed
+Experimental results are shown in Section~ and the paper is concluded in Section~

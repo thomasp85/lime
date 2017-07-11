@@ -1,0 +1,38 @@
+### abstract ###
+Cell polarity is a general cellular process that can be seen in various cell types such as migrating neutrophils and Dictyostelium cells.
+The Rho small GTPases have been shown to regulate cell polarity; however, its mechanism of emergence has yet to be clarified.
+We first developed a reaction diffusion model of the Rho GTPases, which exhibits switch-like reversible response to a gradient of extracellular signals, exclusive accumulation of Cdc42 and Rac, or RhoA at the maximal or minimal intensity of the signal, respectively, and tracking of changes of a signal gradient by the polarized peak.
+The previous cell polarity models proposed by Subramanian and Narang show similar behaviors to our Rho GTPase model, despite the difference in molecular networks.
+This led us to compare these models, and we found that these models commonly share instability and a mass conservation of components.
+Based on these common properties, we developed conceptual models of a mass conserved reaction diffusion system with diffusion driven instability.
+These conceptual models retained similar behaviors of cell polarity in the Rho GTPase model.
+Using these models, we numerically and analytically found that multiple polarized peaks are unstable, resulting in a single stable peak, and that sensitivity toward changes of a signal gradient is specifically restricted at the polarized peak.
+Although molecular networks may differ from one cell type to another, the behaviors of cell polarity in migrating cells seem similar, suggesting that there should be a fundamental principle.
+Thus, we propose that a mass conserved reaction diffusion system with diffusion-driven instability is one of such principles of cell polarity.
+### introduction ###
+Eukaryotic cells such as neutrophils and Dictyostelium cells respond to temporal and spatial gradients of extracellular signals with directional movements CITATION CITATION.
+This process, known as chemotaxis, is a fundamental cellular process CITATION, CITATION CITATION.
+In a migrating cell, specific molecular events take place at the front and back edges CITATION, CITATION, CITATION, CITATION.
+The spatially distinctive molecular accumulation inside cells is known as cell polarity.
+The front back polarity usually has one axis, and this uniqueness is an important property because a migrating cell with two fronts could not move effectively CITATION.
+Another behavior of the front back polarity is higher sensitivity of the front to a gradient of extracellular signals CITATION, CITATION.
+This would also be important because the direction of movement should be controlled at the front edge.
+Many molecules that are involved in chemotaxis in mammalian cells have been identified CITATION, CITATION.
+Some molecules, including phosphoinositide 3-kinase, phosphatidylinositol 3,4,5-triphosphate, Cdc42, Rac, and F-actin, are specifically localized at the front, whereas others, including phosphatase and tensin homologue deleted on Chromosome 10 and RhoA, are at the back of migrating cells CITATION, CITATION, CITATION, CITATION CITATION.
+The Rho family of small GTPases in particular play a central role in chemotaxis and in establishing cell polarity CITATION CITATION.
+However, the mechanism of generating spatial accumulation of the Rho GTPases in cell polarity has yet to be clarified.
+Many mathematical models that account for gradient sensing and signal amplification in cell polarity have been proposed CITATION.
+The local excitation and global inhibition model has been proposed to explain spatial gradient sensing CITATION, CITATION.
+Some models involve positive feedback loops for amplified accumulation of signaling molecules CITATION CITATION.
+A reaction diffusion model that includes local self-enhancement and long-range antagonistic effects has been proposed for directional sensitivity CITATION.
+Most of the reported models of cell polarity, which involve the detailed parameters such as concentrations or rate constants, have been constructed with many parameters and equations.
+Although these detailed models are at least partially successful in reproducing experimental observations in cell polarity, the theoretical essence underlying cell polarity has not been explicitly demonstrated; thus, a simple conceptual model that can be used for analytical study is needed to extract common principles in cell polarity.
+Although the reported models consist of distinct molecular species or networks, it should be especially emphasized that many of them are able to exhibit similar behaviors of cell polarity regardless of their different frameworks.
+This fact indicates that a common principle should underlie the models, and a conceptual model is suitable for extracting common principles in cell polarity.
+Because the Rho small GTPases are key regulators for cell polarity CITATION, CITATION, we first developed a reaction diffusion model of the Rho GTPases on the basis of an earlier model CITATION to examine the spatial properties of the Rho GTPases.
+We found that the interaction of the Rho GTPases per se can generate specific spatial accumulation of the Rho GTPases, and that our model shows important behaviors of cell polarity.
+We also found that our model exhibits behaviors similar to the model by Narang and Subramanian CITATION, CITATION, which is based on the molecular networks that are different from ours.
+This suggests that common principles should underlie both models.
+We found that a mass conservation of components and diffusion-driven instability are commonly conserved in the Narang and Subramanian models and in our model.
+Based on these common properties, we established conceptual models of a mass conserved reaction diffusion system, and found that such properties can account for the critical behaviors of cell polarity.
+These results strongly suggest that a mass conservation of components with diffusion-driven instability is one of the fundamental principles of cell polarity.

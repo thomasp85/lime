@@ -1,0 +1,21 @@
+### abstract ###
+The method of defensive forecasting is applied to the problem of prediction with expert advice for binary outcomes
+It turns out that defensive forecasting is not only competitive with the Aggregating Algorithm but also handles the case of ``second-guessing'' experts, whose advice depends on the learner's prediction; this paper assumes that the dependence on the learner's prediction is continuous
+### introduction ###
+There are many known techniques in competitive on-line prediction, such as following the perturbed leader (see, eg ,  CITATION ), Bayes-type aggregation (see, eg ,  CITATION ) and the closely related potential methods, gradient descent (see, eg ,  CITATION ) and closely related exponentiated gradient descent  CITATION , and the recently developed technique of defensive forecasting (see, eg ,  CITATION )
+Defensive forecasting combines the ideas of game-theoretic probability (see, eg ,  CITATION ) with Levin and G\'acs's ideas of neutral measure  CITATION  and Foster and Vohra's ideas of universal calibration  CITATION
+See  CITATION  for a general review of competitive on-line prediction
+This paper applies the technique of defensive forecasting to prediction with expert advice in the simple case of binary outcomes The learner's goal in prediction with expert advice is to compete with free agents, called experts, who are allowed to choose any predictions at each step
+We will be interested in performance guarantees of the type  SYMBOL } where  SYMBOL  is the number of experts,  SYMBOL  is a constant depending on  SYMBOL ,  SYMBOL  is the learner's cumulative loss over the first  SYMBOL  steps, and  SYMBOL  is the  SYMBOL th expert's cumulative loss over the first  SYMBOL  steps (see \S\S-- for precise definitions)
+It has been shown by Watkins ( CITATION , Theorem 8) that the Aggregating Algorithm (implementing Bayes-type aggregation for general loss functions  CITATION , the AA for short) delivers the optimal value of the constant  SYMBOL  in () whenever the goal () can be achieved (Watkins's result was based on earlier results by Haussler, Kivinen, and Warmuth  CITATION , Theorem 3 1, and Vovk  CITATION , Theorem 1, establishing the optimality of the AA for a large number of experts ) Theorem  of this paper asserts that, perhaps surprisingly, defensive forecasting also achieves the same performance guarantee
+Whether the goal () is achievable depends on the loss function used for evaluating the learner's and experts' performance
+The necessary and sufficient condition is that the loss function should ``perfectly mixable'' (see for a definition)
+For simplicity, we first consider two specific, perhaps most important, examples of perfectly mixable loss functions: the quadratic loss function in and the log loss function in \S
+Those two sections are self-contained in that they do not require familiarity with the AA
+In the last section, \S, we establish the general result, for arbitrary perfectly mixable loss functions
+In an appendix we state Watkins's theorem in the form needed in this paper
+It is interesting that the technique of defensive forecasting is also applicable to experts who are allowed to ``second-guess'' the learner: their recommendations can depend (in a continuous manner in this paper) on the learner's prediction
+It is not clear that second-guessing experts can be handled at all by the AA
+A result similar to this paper's results is proved by Stoltz and Lugosi in  CITATION , Theorem 14 (a more detailed comparison will be given in  CITATION )
+Second-guessing experts are useful in game theory (where competing with second-guessing experts is known as prediction with a small internal regret)
+For a more down-to-earth example of a useful second-guessing expert, remember that humans tend to give too categorical (i e , close to 0 or 1) predictions; therefore, a useful second-guessing expert for a human learner would transform his/her predictions to less categorical ones (according to the learner's expected calibration curve  CITATION )

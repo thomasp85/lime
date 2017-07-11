@@ -1,0 +1,54 @@
+### abstract ###
+Advances in time-lapse fluorescence microscopy have enabled us to directly observe dynamic cellular phenomena.
+Although the techniques themselves have promoted the understanding of dynamic cellular functions, the vast number of images acquired has generated a need for automated processing tools to extract statistical information.
+A problem underlying the analysis of time-lapse cell images is the lack of rigorous methods to extract morphodynamic properties.
+Here, we propose an algorithm called edge evolution tracking to quantify the relationship between local morphological changes and local fluorescence intensities around a cell edge using time-lapse microscopy images.
+This algorithm enables us to trace the local edge extension and contraction by defining subdivided edges and their corresponding positions in successive frames.
+Thus, this algorithm enables the investigation of cross-correlations between local morphological changes and local intensity of fluorescent signals by considering the time shifts.
+By applying EET to fluorescence resonance energy transfer images of the Rho-family GTPases Rac1, Cdc42, and RhoA, we examined the cross-correlation between the local area difference and GTPase activity.
+The calculated correlations changed with time-shifts as expected, but surprisingly, the peak of the correlation coefficients appeared with a 6 8 min time shift of morphological changes and preceded the Rac1 or Cdc42 activities.
+Our method enables the quantification of the dynamics of local morphological change and local protein activity and statistical investigation of the relationship between them by considering time shifts in the relationship.
+Thus, this algorithm extends the value of time-lapse imaging data to better understand dynamics of cellular function.
+### introduction ###
+Cell morphological change is a key process in the development and homeostasis of multicellular organisms CITATION, CITATION.
+Various types of morphological change appear during migration and differentiation; essential events occurring as part of these processes usually accompany morphologically different phenotypes.
+Therefore, cell morphology has been used as a key indicator of cell state CITATION.
+High-throughput analyses of cell morphodynamic properties have been used recently to discover new functions of specific proteins CITATION.
+Moreover, the outcomes of morphological change such as the intricate shape of neuronal dendrites, remind us that morphogenesis itself plays a role in the emergence of cellular function CITATION .
+Quantitative approaches are helping to unveil cellular morphodynamic systems, and they are generating new technical requirements.
+Because cellular morphological change is highly dynamic, time-lapse imaging is necessary to understand the mechanism of cell morphology regulation.
+Progress in the development of fluorescent probes has enabled the direct observation of cell morphological changes and/or the localization and activity of specific proteins CITATION CITATION, but time-lapse imaging has highlighted the difficulty of extracting characteristic information from an immense number of images.
+Nevertheless, several approaches in the context of quantitative analysis have appeared recently.
+A series of studies using quantitative fluorescent speckle microscopy, for instance, revealed the power of computer-assisted high-throughput analysis for time-lapse microscopy images: analysis of the number of moving and blinking speckles suggested distinct regulation of actin reorganization dynamics in different intracellular regions CITATION, CITATION .
+Indeed, computational methods have been used to determine the properties of morphological dynamics, protein activity and gene expression CITATION CITATION.
+There are two major approaches for the detailed analysis of local morphological changes of cells.
+One is the kymograph, which is a widely used method to describe motion with a time-position map of the morphology time course.
+The time course of change in intensity could also be monitored by arranging sequential images of a specific region of interest CITATION.
+Although there are drawbacks to this approach, such as restriction of the analyzed area to a narrow ROI and the need to manually define the ROI, recent studies have avoided these limitations by using polar coordinates to explore the motility dynamics of the entire peripheral region of round cells.
+Indeed, the polar coordinate-based approach showed isotropic and anisotropic cell expansion, and examined stochastic, transient extension periods or periodic contractions CITATION, CITATION.
+The second approach is to track cellular edge boundaries by tracing virtually defined markers.
+Kass and Terzopoulos introduced an active contour model known as SNAKES CITATION, which is widely used to analyze moving video images in applications including biomedicine.
+For example, Dormann et al. used SNAKES to quantify cell motility and analyze the specific translocation of PH domain-containing proteins into the leading edge CITATION.
+Marker-based tracking has advantages in quantifying highly motile cell morphology, because it does not require a fixed axis, which is necessary in the kymograph approach.
+Recently, Machacek and Danuser developed an elegant framework to trace a moving edge, using marker tracking modified by the level set method to elucidate morphodynamic modes of various motile cells such as fibroblasts, epithelial cells, and keratocytes CITATION .
+Although previous methodologies have successfully described the specific aspects of cellular morphodynamics, there remain challenges to quantify the relationship between morphodynamics and signaling events.
+One representative problem is the association between regions in different frames.
+To scrutinize the dynamic relationship between morphological change and molecular signaling, we need to cross-correlate them in a time-dependent manner.
+A polar coordinate system does not ensure the association of time-shifted local domains, and is unsuitable for non-circular cell shapes.
+The virtual marker tracking method satisfies this requirement for cells with broadly consistent shapes, but its fixed number of markers causes unequal distribution when a dramatic shape change such as the persistent growth of neurites in neurons, occurs.
+Taking these problems into account, we perceive the need for a novel quantification method to better understand the mechanisms of morphodynamic regulation by molecular signaling.
+We focused on the Rho-family small GTPases, or Rho GTPases, as signaling molecules associated with cell morphodynamics.
+Rho GTPases, which act as binary switches by cycling between inactive and active states, play key roles in linking biochemical signaling with biophysical cellular behaviors CITATION, CITATION mainly through reorganization of the actin and microtubule cytoskeleton CITATION.
+It is well known that RhoA, Rac1, and Cdc42 have unique abilities to induce specific filamentous actin structures, i.e., stress fibers, lamellipodia, and filopodia, respectively CITATION.
+Considerable evidence, mainly obtained using constitutively-active or dominant-negative mutants, supports a promotional role of Rac1 and Cdc42 and an inhibitory role of RhoA in cell protrusion CITATION, CITATION.
+Although some researchers have challenged this widely-accepted notion in a variety of cell contexts CITATION CITATION, our current study has been motivated by this predominant view.
+The objective of this study was to uncover the relationship between spatio-temporal activities of Rho GTPases and morphological changes of the cells.
+To achieve this, we needed a data analysis tool to assess the link between biochemical signaling and biophysical phenomena.
+However, we do not focus on unveiling the orchestration of the complete signaling pathways that regulate cell morphology.
+In addition, we elucidated how Rho GTPases regulate two-dimensional morphological changes of cells, rather than three-dimensional changes.
+These findings will however be meaningful because the results can be compared with earlier findings CITATION CITATION.
+Therefore, we first present an algorithm called edge evolution tracking to quantify local morphological change.
+The main features of our method are that identification of a local morphological change is based on an area difference between two consecutive frames; cell edge is not characterized by point markers, but by line segments, which are defined by the area difference; and past history and future evolution of each segment can be evaluated by connecting segments between consecutive frames.
+Therefore, this method enables us to trace complex cell edge extension and contraction while maintaining the consistency of the ROI during the analysis.
+Second, applying EET to fluorescence resonance energy transfer time-lapse images of three Rho GTPases, we found a significant time-shifted cross-correlation between morphological change and GTPase activity.
+Our study reveals the utility of detailed cellular morphodynamic profiling and spatio-temporal signal profiling to measure the time-shifted relationship between morphodynamics and protein activity.

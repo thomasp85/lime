@@ -1,0 +1,25 @@
+### abstract ###
+Computational efforts to identify functional elements within genomes leverage comparative sequence information by looking for regions that exhibit evidence of selective constraint.
+One way of detecting constrained elements is to follow a bottom-up approach by computing constraint scores for individual positions of a multiple alignment and then defining constrained elements as segments of contiguous, highly scoring nucleotide positions.
+Here we present GERP, a new tool that uses maximum likelihood evolutionary rate estimation for position-specific scoring and, in contrast to previous bottom-up methods, a novel dynamic programming approach to subsequently define constrained elements.
+GERP evaluates a richer set of candidate element breakpoints and ranks them based on statistical significance, eliminating the need for biased heuristic extension techniques.
+Using GERP we identify over 1.3 million constrained elements spanning over 7 percent of the human genome.
+We predict a higher fraction than earlier estimates largely due to the annotation of longer constrained elements, which improves one to one correspondence between predicted elements with known functional sequences.
+GERP is an efficient and effective tool to provide both nucleotide- and element-level constraint scores within deep multiple sequence alignments.
+### introduction ###
+The identification and annotation of all functional elements in the human genome is one of the main goals of contemporary genetics in general, and the ENCODE project in particular CITATION, CITATION, CITATION.
+Comparative sequence analysis, enabled by multiple sequence alignments of the human genome to dozens of mammalian species, has become a powerful tool in the pursuit of this goal, as sequence conservation due to negative selection is often a strong signal of biological function.
+After constructing a multiple sequence alignment, one can quantify evolutionary rates at the level of individual positions and identify segments of the alignment that show significantly elevated levels of conservation.
+Several computational methods for constrained element detection have been developed, with most falling into one of two broad categories: generative model-based approaches, which attempt to explicitly model the quantity and distribution of constraint within an alignment, and bottom-up approaches, which first estimate constraint at individual positions and then look for clusters of highly constrained positions.
+A widely used generative approach, phastCons CITATION, uses a phylo-Hidden Markov Model to find the most likely parse of the alignment into constrained and neutral hidden states.
+While HMMs are widely used in modeling biological sequences, they have known drawbacks: transition probabilities imply a specific geometric state duration distribution, which in the context of phastCons means predicted constrained and neutral segment length.
+This may bias the resulting estimates of element length and total genomic fraction under constraint.
+One of the leading bottom-up approaches is GERP CITATION, which quantifies position-specific constraint in terms of rejected substitutions, the difference between the neutral rate of substitution and the observed rate as estimated by maximum likelihood, and heuristically extends contiguous segments of constrained positions in a BLAST-like CITATION manner.
+However, GERP is computationally slow because its maximum likelihood computation uses the Expectation Maximization algorithm CITATION to estimate a new set of branch lengths for each position of the alignment; this step is also undesirable methodologically because it involves estimating k real-valued parameters from k nucleotides of data.
+Furthermore, the extension heuristic used by GERP may induce biases in the length of predicted CEs.
+In this work we present GERP, a novel bottom-up method for constrained element detection that like GERP uses rejected substitutions as a metric of constraint.
+GERP uses a significantly faster and more statistically robust maximum likelihood estimation procedure to compute expected rates of evolution that results in a more than 100-fold reduction in computation time.
+In addition, we introduce a novel criterion of grouping constrained positions into constrained elements using statistical significance as a guide and assigning p-values to our predictions.
+We apply a dynamic programming approach to globally predict a set of constrained elements ranked by their p-values and a concomitant false positive rate estimate.
+Using GERP we analyzed an alignment of the human genome and 33 other mammalian species, identifying over 1.3 million constrained elements spanning over 7 percent of the human genome with high confidence.
+Compared to previous methods, we predict a larger fraction of the human genome to be contained in constrained elements due to the annotation of many fewer but longer elements, with a very low false positive rate.

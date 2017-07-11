@@ -1,0 +1,37 @@
+### abstract ###
+Correlated changes of nucleic or amino acids have provided strong information about the structures and interactions of molecules.
+Despite the rich literature in coevolutionary sequence analysis, previous methods often have to trade off between generality, simplicity, phylogenetic information, and specific knowledge about interactions.
+Furthermore, despite the evidence of coevolution in selected protein families, a comprehensive screening of coevolution among all protein domains is still lacking.
+We propose an augmented continuous-time Markov process model for sequence coevolution.
+The model can handle different types of interactions, incorporate phylogenetic information and sequence substitution, has only one extra free parameter, and requires no knowledge about interaction rules.
+We employ this model to large-scale screenings on the entire protein domain database.
+Strikingly, with 0.1 trillion tests executed, the majority of the inferred coevolving protein domains are functionally related, and the coevolving amino acid residues are spatially coupled.
+Moreover, many of the coevolving positions are located at functionally important sites of proteins/protein complexes, such as the subunit linkers of superoxide dismutase, the tRNA binding sites of ribosomes, the DNA binding region of RNA polymerase, and the active and ligand binding sites of various enzymes.
+The results suggest sequence coevolution manifests structural and functional constraints of proteins.
+The intricate relations between sequence coevolution and various selective constraints are worth pursuing at a deeper level.
+### introduction ###
+Coevolution is prevalent at species, organismic, and molecular levels.
+At the molecular level, selective constraints operate on the entire system, which often require coordinated changes of its components.
+The most well-known example is the compensatory substitution of nucleic acid pairs in RNA secondary structures CITATION CITATION.
+Interacting nucleotides vary between AU, CG, and GU pairs in different species in order to maintain the hydrogen bonds.
+Coordinated changes of amino acid residues have also been investigated.
+Typically these studies acquired one family of aligned sequences and examined covariation between aligned positions or of the entire sequences.
+Some of these have applied different covariation metrics including correlation coefficients CITATION CITATION, mutual information CITATION CITATION, and the deviance between marginal and conditional distributions CITATION.
+These studies demonstrate that sequence covariation is powerful in detecting protein protein interactions CITATION, CITATION, ligand-receptor bindings CITATION, CITATION, and the folding structure of single proteins CITATION, CITATION.
+In addition to direct physical interactions, distant coevolving amino acid residues are reported to be energetically coupled CITATION or subject to the functional constraints of the proteins CITATION .
+A major drawback of many covariation metrics is the lack of phylogenetic information.
+The sequences manifesting the same level of covariation may arise from either a few independent substitutions in early ancestors or correlated changes along multiple lineages CITATION, CITATION.
+In RNA structure prediction, many authors have thereby extended the continuous-time Markov process of sequence substitution CITATION to coevolving nucleic acid pairs CITATION, CITATION, CITATION, CITATION.
+However, direct application of these models to protein coevolution is intractable due to the large number of parameters in the CTMP of amino acid pairs.
+This problem was addressed by replacing amino acids in a CTMP with simplified, surrogate alphabet sets such as the presence/absence of a protein in each species CITATION or the charge and size of amino acid groups CITATION.
+Yet this simplification deviates from the standard CTMP of sequence substitution, in which a rich set of empirical models are available.
+All the previous studies of detecting protein coevolution target a few proteins or protein domains, such as myoglobin CITATION, PGK CITATION, Ntr family CITATION, PDZ domain family CITATION, Gag, Hsp90, and GroEL proteins CITATION.
+The availability of large-scale protein sequences and their phylogenetic information allows us to perform a systematic screening on all the known protein families.
+Such large-scale screening will give comprehensive information of coevolution among all the protein domains and provide insight about their physical/functional couplings.
+We propose a general coevolutionary CTMP model which requires neither simplification of states nor prior knowledge about interactions, and has only one extra free parameter.
+Sequence substitution of the two sites is modeled by a continuous-time Markov process.
+The null model hypothesizes that two sites evolve independently.
+The alternative model is obtained from the null model by reweighting the independent substitution rate matrix to favor double over single changes.
+We apply this model to all the inter- and intra-domain position pairs in all the known protein domain families in Pfam database CITATION.
+Strikingly, from a large number of pairwise comparisons the coevolving domain pairs are highly enriched with domains in the same proteins, protein complexes, or possessing the same functions.
+Moreover, the coevolving positions demonstrate a tendency of spatial coupling and are mapped to functionally important sites of their proteins.

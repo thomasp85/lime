@@ -1,0 +1,30 @@
+### abstract ###
+In a sensor network, in practice, the communication among sensors is subject to:  The signal-to-noise ratio~(SNR) is usually a main factor in determining the probability of error (or of communication failure) in a link
+These probabilities are then a proxy for  the SNR under which the links operate
+The paper studies the problem of designing the topology, ie ,   assigning the probabilities of reliable communication among sensors (or of link failures) to maximize the rate of convergence of average consensus, when the link communication costs are taken into account, and there is an overall communication budget constraint
+To consider this problem,  we address a number of preliminary issues:    With these results, we formulate topology design, subject to random link failures and to a communication cost constraint, as a constrained convex optimization problem to which we apply semidefinite programming techniques
+We show by an extensive numerical study that the optimal design improves significantly the convergence speed of the consensus algorithm and can achieve the asymptotic performance of a non-random network at a fraction of the communication cost
+### introduction ###
+We consider the design of the optimal topology, i e , the communication configuration of a sensor network that maximizes  the convergence rate of average consensus
+Average consensus is a distributed algorithm that has been considered by Tsitsiklis in his PhD thesis,  CITATION , see also~ CITATION ,  found application recently in several areas, and is the subject of active research, e
+g,,  CITATION
+This topology design for sensor networks  has not received much attention in the literature
+References~ CITATION  and~ CITATION  consider  restrict it to classes of random graphs,  in particular, small-world topologies
+The more general question of designing the topology that maximizes the convergence rate, under a constraint on the number of network links,  was considered in our previous work,  CITATION , where we reduced to average consensus the problem of distributed inference in sensor networks; see also~ CITATION
+Realistic networks operate under stress:   We model such a non-deterministic network topology as a random field
+Specifically, we assume the following:  Designing the network topology corresponds then to   The paper extends our preliminary  convergence results,  CITATION , on networks with random links
+The recent paper~ CITATION  adopts a similar model and  analyzes convergence properties using ergodicity of stochastic matrices
+Consensus with a randomized network also relates to gossip algorithms,  CITATION , where only a single pair of randomly selected sensors is allowed to communicate at each iteration, and the communication exchanged by the nodes is averaged
+In our randomized consensus, we use multiple  randomly selected links at each iteration and, in contradistinction with~ CITATION , we design the optimal topology, i e , the optimal weight (not simple average) and the optimal probabilities of edge utilization, recognizing that communication entails costs, and that there is a communication cost constraint
+Other recent work on evolving topologies includes~ CITATION  that considers continuous time consensus in networks with switching topologies and communication delays, and~ CITATION  that studies distributed consensus when the network is  a complete graph with identical link failure probabilities on all links
+We outline the paper
+Section~ summarizes spectral graph theory concepts like  the graph Laplacian~ SYMBOL  and the graph algebraic connectivity   SYMBOL
+% of the  Laplacian~ SYMBOL
+The Section formulates the problem of distributed average consensus with random link failures
+Sections~ and  derive necessary and sufficient conditions  for convergence of the mean state, mss convergence, and a s ~convergence in terms of the average  SYMBOL  and in terms of  SYMBOL , where  SYMBOL
+Section~ presents bounds on the mss convergence rate
+Section~ addresses the topology design for random networks with communication cost constraints
+We formulate a first version of the problem, the randomized distributed consensus with a communication cost constraint (RCCC), and then an alternate version, which we show is a convex constrained optimization problem,  to which we apply semidefinite programming~(SDP) techniques
+Section~  studies the performance of the topologies found by solving numerically the SDP optimization
+We show that these designs can improve significantly the convergence rate, for example, by a factor of~ SYMBOL , when compared to geometric networks (networks where sensors communicate with every other sensor within a fixed radius) and that they can achieve practically the (asymptotic) performance of a nonrandom network at a fraction, eg , 50~\%, of the communication cost per iteration
+Section~ concludes the paper

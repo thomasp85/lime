@@ -1,0 +1,37 @@
+### abstract ###
+We perform a large-scale study of intrinsically disordered regions in proteins and protein complexes using a non-redundant set of hundreds of different protein complexes.
+In accordance with the conventional view that folding and binding are coupled, in many of our cases the disorder-to-order transition occurs upon complex formation and can be localized to binding interfaces.
+Moreover, analysis of disorder in protein complexes depicts a significant fraction of intrinsically disordered regions, with up to one third of all residues being disordered.
+We find that the disorder in homodimers, especially in symmetrical homodimers, is significantly higher than in heterodimers and offer an explanation for this interesting phenomenon.
+We argue that the mechanisms of regulation of binding specificity through disordered regions in complexes can be as common as for unbound monomeric proteins.
+The fascinating diversity of roles of disordered regions in various biological processes and protein oligomeric forms shown in our study may be a subject of future endeavors in this area.
+### introduction ###
+Many proteins and protein regions have been shown to be intrinsically disordered under native conditions; namely, they contain no or very little well-defined structure CITATION CITATION.
+Intrinsically disordered proteins have been found in a wide scope of organisms and their disorder content was shown to increase with organism complexity CITATION CITATION.
+Comparative analysis of the functional roles of disordered proteins suggest that they are predominantly located in the cell nucleus; are involved in transcription regulation and cell signaling; and also can be associated with the processes of cell cycle control, endocytosis, replication and biogenesis of cytoskeleton CITATION, CITATION .
+IDPs have certain properties and functions that distinguish them from proteins with well-defined structures.
+IDPs have no unique three-dimensional structure in an isolated state but can fold upon binding to their interaction partners CITATION, CITATION, CITATION CITATION.
+Conformational changes upon binding in proteins with unstructured regions are much larger than those in structured proteins CITATION.
+The conformations of disordered regions in a protein complex are determined not only by the amino acid sequences but also by the interacting partners CITATION, CITATION.
+IDPs can have many different functions and can bind to many different partners using the same or different interfaces CITATION.
+IDPs can accommodate larger interfaces on smaller scaffolds compared to proteins with well-defined structure CITATION, CITATION, CITATION.
+IDPs typically have an amino acid composition of low aromatic content and high net charge as well as low sequence complexity and high flexibility CITATION, CITATION, CITATION.
+Intrinsic disorder provides for a rapid degradation of unfolded proteins, thereby enabling a rapid response to changes in protein concentration CITATION.
+Finally, intrinsic disorder offers an elegant mechanism of regulation through post-translational modifications for many cellular processes CITATION, CITATION .
+Predictions of disorder in proteins take into account the characteristic features of unstructured proteins and have been shown to be rather successful, especially in the case of large regions.
+According to the results of CASP7, the best prediction groups successfully identified 50 70 percent of the disordered residues with false positive rates from 3 percent to 16 percent CITATION.
+Prediction methods aim to identify disordered regions through the analysis of amino acid sequences using mainly the physico-chemical properties of the amino acids CITATION, CITATION CITATION or evolutionary conservation CITATION, CITATION CITATION .
+As protein interactions are crucial for protein function, the biological role of disordered proteins should also be studied in this context.
+Indeed, folding of disordered proteins into ordered structures may occur upon binding to their specific partners CITATION, CITATION, CITATION CITATION which may allow disordered regions to structurally accommodate multiple interaction partners with high specificity and low affinity CITATION, CITATION CITATION.
+Moreover, it has been shown that the binding mechanism, whether binding occurs between folded or unfolded chains, depends on the structural characteristics, interface properties, and degree of minimal frustration of monomers CITATION, CITATION.
+Binding through unfolded or partially unfolded intermediates can provide a kinetic advantage through the fly-casting mechanism CITATION.
+According to this mechanism a dimensionality reduction occurs when the folding of a disordered protein is coupled with binding, thereby speeding up the search for specific targets.
+A database of continuous protein fragments has been compiled from the Protein Data Bank to include short protein chains bound to larger proteins CITATION, CITATION.
+It has been argued that MORFs participate in the coupling of binding and folding, a hypothesis that was supported by the analysis of the composition and predicted disorder of MORF segments.
+As a result of studying the subtle structural differences of the same proteins in different conditions and functional states, many so-called dual personality protein segments were found able to exist in both ordered and disordered states CITATION.
+There is a continuous range between completely structured and completely disordered proteins in which intermediate cases are rather common CITATION : proteins that are disordered but compact, multi-domain proteins with disordered linkers, and ordered proteins with some local disorder.
+Examples of proteins with intrinsically disordered regions which exhibit coupling between folding and binding have been described in the literature previously CITATION, CITATION, CITATION CITATION.
+Nevertheless, the universality of this phenomenon and functional importance of many disordered regions remains unclear.
+The question can be expanded further to how much intrinsic disorder do protein complexes contain and what is its functional importance?
+To answer these questions we examine observed and predicted disorder in protein complexes and unbound proteins using a large-scale dataset of protein structures.
+The atomic details of structures and the conserved binding mode analysis introduced earlier CITATION allow us to monitor changes happening on or near interaction interfaces and to infer their functional importance.

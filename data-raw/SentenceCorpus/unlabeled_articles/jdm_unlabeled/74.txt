@@ -1,0 +1,28 @@
+### abstract ###
+we present the concordant-ranks cr strategy that decision makers use to quickly find an alternative that is proximate to an ideal alternative in a multi-attribute decision space
+cr implies that decision makers prefer alternatives that exhibit concordant ranks between attribute values and attribute weights
+we show that  in situations where the alternatives are equal in multi-attribute utility mau  minimization of the weighted euclidean distance wed to an ideal alternative implies the choice of a cr alternative
+in two experiments  participants chose among  as well as evaluated  alternatives that were constructed to be equal in mau
+in experiment  NUMBER   four alternatives were designed in such a way that the choice of each alternative would be consistent with one particular choice strategy  one of which was the cr strategy
+in experiment  NUMBER   participants were presented with a cr alternative and a number of arbitrary alternatives
+in both experiments  participants tended to choose the cr alternative
+the cr alternative was on average evaluated as more attractive than other alternatives
+in addition  measures of wed  between given alternatives and the ideal alternative  by and large agreed with the preference order for choices and attractiveness evaluations of the different types of alternatives
+these findings indicate that both choices and attractiveness evaluations are guided by proximity of alternatives to an ideal alternative
+### introduction ###
+the modern consumer society involves many decision situations in which one alternative needs to be chosen from a set of several fairly attractive alternatives
+this is true for large investments such as the purchase of a car or a home  but also for everyday consumer choices such as deciding what to eat
+in all these choice situations  there might be several alternatives that cannot easily be discarded
+indeed  a fundamental feature of market economies is to offer several alternatives that are attractive at least for some people some of the times  depending on their different tastes and monetary constraints
+thus  there are markets for attractive luxury cars  attractive budget cars  and so on
+usually  decision makers find a promising alternative that serves as a candidate for the final choice  which may be checked more or less thoroughly and differentiated from other alternatives before making the final choice  CITATION
+they look through car ads  or browse a website for homes for sale  and may quickly find a promising alternative
+this ability to make quick choices helps the consumer to solve life puzzles because lack of time is a fundamental feature of the modern consumer society  CITATION
+the present paper is concerned with the strategies people use in such situations
+that is  how do people quickly find the most promising alternative out of several fairly attractive alternatives that are difficult to differentiate from each other with respect to their overall attractiveness
+we suggest that in such situations individuals will choose the alternative that is close to their ideal alternative
+this manifests itself by using a strategy that we call the concordant-ranks strategy cr
+according to this strategy  decision makers choose the alternative for which there is a concordance between the rank-order of the attribute values and importance weights of the attributes  provided that the overall attractiveness of the alternatives is approximately equal
+to study such choices and to test the validity of the cr strategy  we presented participants with individually tailored alternatives to choose from  each constructed to be approximately equal in attractiveness
+assuming that multi-attribute utility mau  CITATION  could be used as an approximate indicator of alternative attractiveness  the alternatives were constructed such that they were equal in mau based on attributes and attribute weights that participants generated themselves
+the study focused on how participants quickly find the promising alternative i e   a tentative or preliminary choice  rather than on how they build up a complex argumentation structure to justify a final choice  CITATION

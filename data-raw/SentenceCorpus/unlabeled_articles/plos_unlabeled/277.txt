@@ -1,0 +1,47 @@
+### abstract ###
+Hypoxia induces the expression of genes that alter metabolism through the hypoxia-inducible factor.
+A theoretical model based on differential equations of the hypoxia response network has been previously proposed in which a sharp response to changes in oxygen concentration was observed but not quantitatively explained.
+That model consisted of reactions involving 23 molecular species among which the concentrations of HIF and oxygen were linked through a complex set of reactions.
+In this paper, we analyze this previous model using a combination of mathematical tools to draw out the key components of the network and explain quantitatively how they contribute to the sharp oxygen response.
+We find that the switch-like behavior is due to pathway-switching wherein HIF degrades rapidly under normoxia in one pathway, while the other pathway accumulates HIF to trigger downstream genes under hypoxia.
+The analytic technique is potentially useful in studying larger biomedical networks.
+### introduction ###
+Molecular oxygen is the terminal electron acceptor in the mitochondrial electron transport chain.
+Hypoxia, or oxygen deficiency, induces a number of metabolic changes with rapid and profound consequences on cell physiology.
+A hypoxia-induced shortage of energy alters gene expression, energy consumption, and cellular metabolism to allow for continued energy generation despite diminished oxygen availability.
+A molecular interaction map of the hypoxia response network has been proposed CITATION CITATION on the basis of analyzing conserved components between nematodes and mammals.
+The key element in this network, hypoxia-inducible factor, is a master regulator of oxygen-sensitive gene expression CITATION CITATION.
+HIF is a heterodimeric transcription factor which consists of one of the three different members and a common constitutive ARNT subunit which is also known as HIF.
+The system also includes an enzyme family: prolyl hydroxylases, which directly sense the level of oxygen and hydroxylate HIF by covalently modifying the HIF subunits.
+It is very likely that reactive oxidative species, which are a byproduct of mitochondrial respiration, are also involved in oxygen sensing by neutralizing a necessary cofactor, Fe 2, for the hydroxylation of HIF by a PHD CITATION CITATION.
+There are three members in this enzyme family: PHD1, PHD2, and PHD3.
+The hydroxylated HIF is then targeted by the von Hippel-Lindau tumor-suppressor protein for the ubiquitination-dependent degradation.
+Hypoxia response element is the promoter of the hypoxia-regulated genes, and the occupancy of HRE controls the expression levels of these genes.
+The cascade in Figure 1 consists of an input and an output as the core network.
+The network is characterized by a switch-like behavior, namely the sharp increase of HIF when the oxygen decreases below a critical value, followed by a sharp increase of HRE occupancy.
+It was observed experimentally on many cell lines including Hela cells CITATION and Hep 3B cells CITATION that HIF increases exponentially as the oxygen concentration decreases.
+The past two decades have seen a growing body of work on the use of mathematical modeling to help uncover both general principles behind molecular networks and to provide quantitative explanations of particular network phenomena CITATION that may one day have sufficient predictive power to accurately model large subnetworks of the cell.
+In this sense, Kohn et al. CITATION have successfully modeled the switch-like response characteristics of HRE occupancy, by numerically integrating a system of ordinary differential equations involving a score of molecular species related to hypoxia.
+The large model, however, does not identify the smaller components that are actually responsible for the switch-like response and that may occur in other such networks.
+Furthermore, a numerical solution does not provide the type of insight that mathematical formulas can.
+At the same time, it is virtually impossible to solve symbolically the type of nonlinear differential equations that model reactions.
+In this context, methods are desirable that are both tractable, that reduce a system to its key components, and that are not solely reliant on numerical solution.
+Extreme pathway analysis is one such recently developed method CITATION CITATION.
+In this method, the dynamics of interactions between species are formulated as a Boolean network in which the state of a gene is represented as either transcribed or not transcribed.
+Upregulation and downregulation of genes are captured through an appropriate sign and a scaling constant.
+The Boolean network is then formulated as a matrix of interaction rules that is then analyzed to help reveal key components and their contributions to the dynamic behavior CITATION.
+The theory of matrices then allows us to look for vectors that characterize the matrix in ways that are helpful for further analysis.
+The EPA technique, in particular, finds vectors that correspond to the boundaries of the space of steady-state solutions to the differential equations.
+We note that similar methods, such as flux balance analysis and elementary modes analysis, have been developed in other contexts CITATION CITATION.
+They essentially yield the same results CITATION, which have been verified by ExPa CITATION and CellNetAnalyzer CITATION, CITATION.
+These methods provide a way out of the intractable complexity of sizable molecular networks CITATION CITATION .
+Our contribution is to go beyond this type of matrix approach and provide a detailed quantitative analysis that explains the observed behavior in the models.
+This is achieved by combining elementary pathway identification via EPA, which depends solely on the network topology, and the detailed analytical as well as numerical analysis of the governing differential equations in the model, which allows studies of the phase space spanned by the mostly unknown rate constants in the differential equations.
+Specifically, EPA is first used in our approach to decompose the original network into several underlying pathways.
+Following this, we make some reasonable approximations to facilitate analytic solution.
+We show that this analytic solution, in the case of the hypoxia network, explains the switch-like behavior.
+This explanation is confirmed by comparing the numerical output of the simplified model with the numerical output of the complete differential equation model.
+A second contribution of this paper is to highlight a particular mechanism of pathway-switching or pathway branching effect CITATION that appears to cause the sharp response to oxygen concentration.
+In particular, we examine the flux redistribution among the elementary pathways as a function of oxygen concentration.
+We also identify the key molecular species involved in the subcomponent of the network and show quantitatively how the response of this subcomponent exactly matches the overall response and thus is responsible for it.
+For hypoxia, our analysis suggests that the cycle of abundant production and efficient degradation of HIF plays the main role in the sharp response.

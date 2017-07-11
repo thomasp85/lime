@@ -1,0 +1,39 @@
+### abstract ###
+Many important protein protein interactions are mediated by the binding of a short peptide stretch in one protein to a large globular segment in another.
+Recent efforts have provided hundreds of examples of new peptides binding to proteins for which a three-dimensional structure is available but where no structure of the protein peptide complex is known.
+To address this gap, we present an approach that can accurately predict peptide binding sites on protein surfaces.
+For peptides known to bind a particular protein, the method predicts binding sites with great accuracy, and the specificity of the approach means that it can also be used to predict whether or not a putative or predicted peptide partner will bind.
+We used known protein peptide complexes to derive preferences, in the form of spatial position specific scoring matrices, which describe the binding-site environment in globular proteins for each type of amino acid in bound peptides.
+We then scan the surface of a putative binding protein for sites for each of the amino acids present in a peptide partner and search for combinations of high-scoring amino acid sites that satisfy constraints deduced from the peptide sequence.
+The method performed well in a benchmark and largely agreed with experimental data mapping binding sites for several recently discovered interactions mediated by peptides, including RG-rich proteins with SMN domains, Epstein-Barr virus LMP1 with TRADD domains, DBC1 with Sir2, and the Ago hook with Argonaute PIWI domain.
+The method, and associated statistics, is an excellent tool for predicting and studying binding sites for newly discovered peptides mediating critical events in biology.
+### introduction ###
+Protein protein interactions are vital for all cellular processes, including signaling, DNA repair, trafficking, replication, gene-expression and metabolism.
+These interactions can vary substantially in how they are mediated.
+What perhaps most often comes to mind are interactions involving large interfaces, such as those inside the hemoglobin tetramer, however, many important protein interactions, particularly those that are transient, low-affinity or related to post-translational modification events like phosphorylation, are mediated by the binding of a globular domain in one protein to a short peptide stretch in another CITATION.
+These stretches often reside in the non-globular and/or disordered parts of the proteome, including many of the disordered interaction hubs CITATION, CITATION, thus helping to explain many of the emerging functional roles for such regions.
+Peptide regions binding to a common protein, or domain, often conform to a sequence pattern, or linear motif that captures the key features of binding CITATION.
+For instance, SH3 domains bind PxxP motifs, WW domains bind PPxY or PPLP motifs, and SH2, 14-3-3 and PTB domains bind phosphorylated peptides CITATION.
+Since they are generally held to be more chemically tractable than interactions involving larger interfaces, protein peptide interactions also represent an important new class of drug targets, and there are a growing number of small molecules that are designed to target them CITATION .
+The discovery of new peptides and motifs mediating interactions has been of intense interest in recent years.
+Several techniques have been developed to uncover new variants of peptides that bind to known partners.
+For instance, phage display and peptide array technologies have been applied to uncover new peptide partners for many proteins or domains, including SH3 CITATION, WW CITATION and PDZ CITATION domains.
+Several computational approaches have also been developed that use protein peptide complexes of known 3D structure to find additional peptides that are likely to bind, and recently, probabilistic interaction networks have been used to predict peptide regions corresponding to kinase substrate CITATION.
+The common thread to all of these approaches is that they rely on prior knowledge of the type of peptide binding to a domain and often require further knowledge of the peptide binding site on the globular protein.
+They are thus generally only effective for finding new variants of known peptides, and cannot directly uncover new protein peptide interaction types.
+Protein protein docking is currently the only widely used technique that can be applied to this problem generally, however this approach has limited application for peptides longer than 4 residues largely owing to the high degree of flexibility that one must consider when docking a typical peptide of 5 10 residues or the need for a known peptide conformation which is only rarely available CITATION.
+Moreover, docking methods are very sensitive to conformational changes and require very high-resolution structures to perform well.
+Determining new protein peptide interaction types is problematic experimentally, mostly because it is difficult in advance to know the regions in larger proteins responsible for binding, necessitating painstaking experiments such as deletion mutagenesis coupled to binding assays.
+To address this, several computational methods have been developed to discover new protein peptide-motif pairs using the principle of sequence over-representation in proteins with a common interacting partner CITATION CITATION.
+These methods, together with much conventional work focused on understanding interactions, have identified or predicted hundreds of new peptide-motifs mediating interactions with particular protein domain families.
+However, these discoveries rarely provide information about where the peptide binds the protein.
+Knowing these details can suggest further experiments and help ultimately to design chemical modulators of the interaction.
+Structures of protein peptide complexes for all newly discovered interactions will require substantial time to become available, though the rapid increase in structural data for single proteins means that very often 3D structures are available for at least part of a protein in isolation.
+There is thus a widening gap between proteins of known structure that are known or predicted to bind to a particular peptide and available 3D complexes that would foster a deeper understanding of mechanism and afford the discovery of additional peptides.
+Here we present a method that attempts to bridge this gap by predicting the binding site for peptides on protein surfaces.
+We used a dataset of protein peptide complexes of known 3D structure extracted from the Protein Data Bank CITATION to define spatial position specific scoring matrices capturing preferences for how each amino acid binds to protein surfaces.
+Three dimensional position specific scoring matrices have been used in the past to predict protein folding CITATION, to assess the quality of structural models CITATION or to predict the function of proteins based on the matches of these position specific scoring matrices to a new protein structure CITATION and to identify protein surface similarities CITATION.
+However, to the best of our knowledge, they have not been used to predict interactions in this way.
+For a new protein peptide pair, we identify candidate peptide binding sites by linking predicted sites for each residue on the protein surface according to peptide-deduced distance constraints.
+We developed statistics to determine the confidence of a prediction to estimate whether or not a putative peptide binds.
+When applied to a benchmark in a cross-validated fashion, we obtained excellent sensitivity and specificity, which allowed us to apply the approach to several new interactions, such as the interaction of the viral oncoprotein latent membrane protein 1 with the tumor necrosis factor receptor 1-associated death domain protein CITATION offering suggestions of binding sites for further investigation.

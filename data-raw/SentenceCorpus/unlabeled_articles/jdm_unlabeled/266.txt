@@ -1,0 +1,31 @@
+### abstract ###
+although the priority heuristic ph is conceived as a cognitive-process model  some of its critical process assumptions remain to be tested
+the ph makes very strong ordinal and quantitative assumptions about the strictly sequential  non-compensatory use of three cues in choices between lotteries   NUMBER  the difference between worst outcomes   NUMBER  the difference in worst-case probabilities  and  NUMBER  the best outcome that can be obtained
+these aspects were manipulated orthogonally in the present experiment
+no support was found for the ph
+although the main effect of the primary worst-outcome manipulation was significant  it came along with other effects that the ph excludes
+a strong effect of the secondary manipulation of worst-outcome probabilities was not confined to small differences in worst-outcomes  it was actually stronger for large worst-outcome differences
+overall winning probabilities that the ph ignores exerted a systematic influence
+the overall rate of choices correctly predicted by the ph was close to chance  although high inter-judge agreement reflected systematic responding
+these findings raise fundamental questions about the theoretical status of heuristics as fixed modules
+### introduction ###
+for almost four decades  theoretical and empirical work on judgment and decision making has been inspired by the notion of cognitive heuristics
+accordingly  people rarely try to utilize all available information exhaustively  making perfectly accurate judgments
+they are usually content with non-optimal but satisficing solutions  CITATION
+the cognitive tools that afford such satisficing solutions are commonly called heuristics
+their reputation has improved enormously
+having first been devalued as mental short-cuts  sloppy rules of thumb  and sources of biases and shortcomings  in the more recent literature heuristics are often characterized as fast  frugal  and functional
+ simple heuristics that make us smart   CITATION  were shown to outperform more ambitious models of rational inference in simulation studies  CITATION
+yet  in addition to the mathematical proof and simulation that heuristics may perform well when they are applied  the crucial psychological assumption says that decision makers actually do use such heuristics  which are sometimes explained as reflecting phylogenetic  evolutionary learning  CITATION
+although correlational evidence for the correspondence of a simulated heuristic and a validity criterion is sufficient to study the first functional aspect  hypothesis testing about the actual cognitive process supposed in a heuristic calls for the repertoire of experimental cognitive psychology
+thus  for a crucial test of the assumption that judgments of frequency or probability actually follow the availability heuristic  CITATION   it is essential to manipulate its crucial feature  namely the ease with which information comes to mind
+likewise  for a cogent test of the anchoring heuristic  CITATION   it has to be shown that judges actually adjust an initial extreme anchor insufficiently
+without appropriate experimental manipulations of the presumed mental operations  it is impossible to prove the causal role of the hypothesized heuristic process
+the percentage of a focal heuristic's correct predictions of judgments or decisions cannot provide cogent and distinct evidence about the underlying process  CITATION
+in the early stage of the heuristics-and-biases research program  though  serious experimental attempts to assess the postulated cognitive operations had been remarkably rare
+hardly any experiment had manipulated the ease of a clearly specified retrieval operation supposed to underlie the availability heuristic  CITATION  or the gradual adjustment process supposed to underlie the anchoring heuristic  CITATION
+more recently  though  this situation has been changing
+a number of fast and frugal heuristics have been specified precisely enough to allow for strict experimental tests of underlying cognitive processes
+tests of the take-the-best heuristic  CITATION  have been concerned with the assumption that cues can be ordered by validity  CITATION
+research on the recognition heuristic tested whether comparative judgments are really determined by mere exposure rather than a substantive evaluation of the comparison objects  CITATION
+it seems fair to conclude that strict empirical tests have resulted in a more critical picture of the validity and scope of the postulated heuristics  CITATION

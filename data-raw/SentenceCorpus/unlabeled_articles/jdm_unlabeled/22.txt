@@ -1,0 +1,20 @@
+### abstract ###
+many controversies in medical science can be framed as tension between a coherence approach which seeks logic and explanation and a correspondence approach which emphasizes empirical correctness
+in many instances  a coherence-based theory leads to an understanding of disease that is not supported by empirical evidence
+physicians and patients alike tend to favor the coherence approach even in the face of strong  contradictory correspondence evidence
+examples include the management of atrial fibrillation  treatment of acute bronchitis  and the use of vitamin e to prevent heart disease
+despite the frequent occurrence of controversy stemming from coherence-correspondence conflicts  medical professionals are generally unaware of these terms and the philosophical traditions that underlie them
+learning about the coherence-correspondence distinction and using the best of both approaches could not only help reconcile controversy but also lead to striking advances in medical science
+### introduction ###
+theories of truth have been debated since the time of aristotle
+more recently in the twentieth century  philosophical discussion has focused on the distinction between  coherence  and  correspondence  theories of truth  CITATION
+the coherence approach seeks logic and explanation  often through the application of a scientific theory
+the correspondence approach ignores theory in favor of empirical correctness
+for example  the quality of a weather forecast predicting rain might be judged either with regard to a state-of-the-art forecast model coherence or whether it actually rained correspondence
+hammond  CITATION  has argued that the concepts of coherence and correspondence are necessary for understanding and organizing research findings in the field of judgment and decision making
+likewise  i argue that they are necessary to understand conflicts in medicine
+although these concepts provide the foundation for medical research  the terms  coherence  and  correspondence  are virtually unknown to medical investigators and physicians alike
+the distinction between science  making logical sense  coherence and being  empirically correct  correspondence seldom appears in the medical literature
+this paper examines a number of medical controversies using the framework of coherence and correspondence and hypothesizes that failure to appreciate the differences between coherence and correspondence is the underlying cause of the controversies
+furthermore  reframing the disagreement in terms of two different  but equally useful  approaches may reduce or eliminate the controversies
+several illustrations of medical controversies show both the tension between the approaches as well as the explicit lack of awareness of these concepts

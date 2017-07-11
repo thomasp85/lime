@@ -1,0 +1,48 @@
+### abstract ###
+Influenza can be transmitted through respirable, inspirable, direct-droplet-spray, and contact modes.
+How these modes are affected by features of the virus strain, host population, and environment have only recently come under investigation.
+A discrete-event, continuous-time, stochastic transmission model was constructed to analyze the environmental processes through which a virus passes from one person to another via different transmission modes, and explore which factors increase or decrease different modes of transmission.
+With the exception of the inspiratory route, each route on its own can cause high transmission in isolation of other modes.
+Mode-specific transmission was highly sensitive to parameter values.
+For example, droplet and respirable transmission usually required high host density, while the contact route had no such requirement.
+Depending on the specific context, one or more modes may be sufficient to cause high transmission, while in other contexts no transmission may result.
+Because of this, when making intervention decisions that involve blocking environmental pathways, generic recommendations applied indiscriminately may be ineffective; instead intervention choice should be contextualized, depending on the specific features of people, virus strain, or venue in question.
+### introduction ###
+On June 11, 2009 the WHO declared the H1N1 influenza virus a pandemic.
+Health organizations worldwide were prompted to escalate their efforts to minimize transmission within their jurisdictions.
+Airports began to monitor incoming passengers while schools increased their already intensive surveillance activities.
+Recommendations were established with regard to masks, hygiene, decontamination, and isolation of suspected cases.
+This interest in intervention and control of person-to-person transmitted illnesses with multiple potential routes of transmission began to intensify during the emergence of SARS and later the H5N1 virus.
+Heightened awareness of the potential for another pandemic influenza led to increased funding to study non-pharmaceutical interventions by the CDC as well as increased efforts in modeling influenza transmission.
+These studies were funded in order to better understand optimal intervention and control strategies.
+Much insight was gained into influenza mitigation strategies such as border closure, social distancing, antiviral prophylaxis, restriction of public transportation, and school closure CITATION CITATION.
+To date, however, little is known about the relative contributions of the different influenza transmission modes and how these might vary due to heterogeneity in viral strain, host, and environment.
+This manuscript explores potential effects of these unknown factors by presenting: a transmission model structure that explicitly describes the environmental processes through which viruses pass from one person to another, thereby distinguishing the different modes of transmission; and an analytical approach that explores which factors increase or decrease different modes of transmission under the given model structure.
+The model analyzed is an environmental infection transmission system model that elaborates the approach to such models by Li et al. CITATION by formulating the model in a discrete event framework and greatly expanding on the details of the various processes involved.
+It does not define contact events with transmission probabilities for each event as most transmission models do CITATION.
+A problem with that approach is defining what constitutes a contact.
+Instead we define events related to virus excretion, environmental survival, uptake, and causation of infection.
+This allows us to address events at a level that is more relevant to possible interventions and the construction of more meaningful causal theory.
+To inform relevant intervention options for influenza, we consider four potential modes of transmission: respirable, inspirable, direct-droplet-spray, and contact mediated transmission CITATION CITATION.
+In this manuscript we consider each mode as follows.
+Respirable transmission occurs when viruses on small particles are inhaled and deposit in the alveolar region of the lower respiratory tract.
+Inspirable transmission occurs when viruses on medium size particles are inhaled and deposit in the upper respiratory tract.
+Direct-droplet-spray transmission occurs when viruses on large particles from the cough or sneeze of an infected individual deposit directly on a susceptible individual's mucous membranes.
+Contact transmission occurs when an infected person contaminates their own hands or contaminates surfaces via their hands or via droplets with virus laden large particles.
+Transfer of pathogens may then result in contamination of the hands of others who then may touch their eyes, nose or mouth to self-inoculate, potentially infecting the upper respiratory tract.
+We assess how different feasible model parameters influence how much transmission follows these different routes.
+For example, different viruses may have different infectivity, survivability, transferability, or shedding profiles.
+Similarly, among different populations who have different behaviors, susceptibility profiles, or shedding profiles, the same virus may have different effects depending on the type of population present.
+Finally, even with identical viral strains and human populations, environmental venues may have variable host densities, surface area to volume ratios, or host movement patterns that can generate different population level infection outcomes.
+These diverse sources of heterogeneity that we address form the corners of the epidemiologic triad .
+We assess the effects of these sources of heterogeneity on relative magnitude of influenza transmission modes in a scenario where all individuals move randomly in an identical fashion.
+We construct a detailed stochastic individual based model of environmental influenza transmission.
+We use values from empirical literature as well as expert judgment to parameterize this model.
+We apply upper and lower parameter constraints to 18 parameters, and obtain a Latin hypercube sample of this constrained parameter space.
+We analyze the resulting outcome space with respect to how different transmission modes are more or less important in specific contexts.
+With this work we contribute to the body of literature discussing the dominant mode of influenza transmission CITATION, CITATION CITATION.
+Additionally, this work takes an incremental step forward from previous environmental infection transmission models CITATION, CITATION, CITATION CITATION as: we model all four modes of influenza transmission simultaneously; we do so in an agent based framework rather than with ordinary differential equation based framework; and this model is solely informed parametrically by empirical work no model fitting or optimization procedures were used to parameterize this model.
+We explicitly point out where the holes in the empirical literature exist.
+We show that depending on the scenario, one mode may be more or less important than another.
+Therefore, when intervening, generic recommendations applied indiscriminately may be ineffective; instead intervention choice should be contextualized depending on the specific features of people, virus, or venue in question.
+We consider how features related to pathology, behavior, and microbiology in the host, pathogen, and environment alter the magnitude of transmission via each mode.

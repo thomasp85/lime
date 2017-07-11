@@ -1,0 +1,13 @@
+### abstract ###
+although mechanical turk has recently become popular among social scientists as a source of experimental data  doubts may linger about the quality of data provided by subjects recruited from online labor markets
+we address these potential concerns by presenting new demographic data about the mechanical turk subject population  reviewing the strengths of mechanical turk relative to other online and offline methods of recruiting subjects  and comparing the magnitude of effects obtained using mechanical turk and traditional subject pools
+we further discuss some additional benefits such as the possibility of longitudinal  cross cultural and prescreening designs  and offer some advice on how to best manage a common subject pool
+### introduction ###
+mechanical turk started in  NUMBER  as a service to  crowd-source  labor intensive tasks and is now being used as a source of subjects for experimental research  CITATION
+however  a combination of unfamiliarity with what online labor markets are and how to use them  uncertainty about the demographic characteristics of their participants and concerns about data quality from this sample may make some researchers wary of using mechanical turk to collect data
+to address these concerns we report demographic characteristics of mechanical turk workers  highlight some of the unique practical and methodological strengths of mechanical turk as a source of research subjects and compare classic judgment and decision making effects in this population and more traditional subject populations
+the article is organized as follows
+in section  NUMBER   we introduce the main features of mechanical turk and demonstrate that the population of mechanical turk is at least as representative of the u s population as traditional subject pools
+further  we show that it is shifting to include more international participants
+in section  NUMBER   we review the logic underlying concerns with collecting data using mechanical turk and present the strengths and potentials of mechanical turk relative to other online and offline methods of recruiting subjects
+in section  NUMBER   we present the results of a comparative study involving classic experiments in judgment and decision-making  we found no differences in the magnitude of effects obtained using mechanical turk and using traditional subject pools

@@ -1,0 +1,19 @@
+### abstract ###
+we report a study of the effects the choice set on financial decision making related to retirement savings and risky investment
+the participants were presented with either a full range of choice options or a limited subset of the feasible options
+the choices of saving and risk are affected by the position of each option in the range of presented options
+this result demonstrated that the range of the options offered as possible saving rates and levels of investment risk influences decisions about saving and risk
+the study was conducted on a sample of working people  and we controlled whether the participants can financially afford in their real life the decisions taken in the test
+in addition  various measures of risk aversion did not account for the risk taken in each condition
+surprisingly  only the simplest and most direct risk preference measure was a significant predictor of the responses within a particular choice set context  although the actual choices were still very much influenced by the range
+thus  the results reported here suggest that financial judgments and choices are relative  which corroborates  in an important practical domain  previous related work with abstract gambles and hypothetical risky investments
+### introduction ###
+this article presents a study that investigated how far simple  and practically relevant  modifications in the decision making context can affect how people make financial decisions related to retirement savings and investment
+specifically  we aim  using a realistic setting  to make a suggestive replication of a new and powerful context effectprospect relativity CITATION   in an important practical domain
+in this article  we present a study that investigates the effects of the framing and presentation of financial information when asking people to express their preferences in relation to different retirement savings and investment scenarios
+the experimental design and method are based on the recent discovery of a substantial dependence of human preferences on the set of options they are presented with
+this phenomenon was termed prospect relativity and indicates a lack of stable underlying preference function CITATION
+this finding  which we describe in more detail below  is striking illustration of the view that preferences are often constructed  on the fly  rather being a stable basis for decision making CITATION
+a theoretically important question is how far these effects transfer from abstract low-stakes gambles to major financial decisions that could significantly affect long-term well-being
+if we observe such transfer to realistic financial decisions  then this would have practical significance for marketing  sales  and provision of advice in the financial services industry
+our goal was to investigate how far individual variation in saving and risk preferences is stable across different realistic decision contexts

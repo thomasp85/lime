@@ -1,0 +1,59 @@
+### abstract ###
+Minimizing the rank of a matrix subject to affine constraints is a fundamental problem with many important applications in machine learning and statistics
+In this paper we propose a simple and fast algorithm  SYMBOL  (Singular Value Projection) for rank minimization with affine constraints ( SYMBOL ) and show that SVP recovers the minimum rank solution for affine constraints that satisfy the {restricted isometry property}
+We show robustness of our method to noise with a strong geometric convergence rate even for noisy measurements
+Our results improve upon a recent breakthrough by Recht, Fazel and Parillo  CITATION  and Lee and Bresler  CITATION  in three significant ways: 1) our method ( SYMBOL ) is significantly simpler to analyze and easier to implement, 2) we give recovery guarantees under strictly weaker isometry assumptions 3) we give geometric convergence guarantees for   SYMBOL  and, as demonstrated empirically,  SYMBOL  is significantly faster on real-world and synthetic problems
+In addition, we address the practically important problem of low-rank matrix completion, which can be seen as a special case of  SYMBOL
+However, the affine constraints defining the matrix-completion problem do not obey the {restricted isometry property} in general
+We empirically demonstrate that our algorithm recovers low-rank {incoherent} matrices from an almost optimal number of uniformly sampled entries
+We make partial progress towards proving exact recovery and provide some intuition for the performance of  SYMBOL  applied to matrix completion by showing a more restricted isometry property
+Our algorithm outperforms existing methods, such as those of  CITATION , for  SYMBOL  and the matrix-completion problem by an order of magnitude and is also significantly more robust to noise
+### introduction ###
+In this paper we study the general affine rank minimization problem (ARMP), \renewcommand{\theequation}{ARMP}  SYMBOL } \renewcommand{\theequation}{\arabic{equation}} \addtocounter{equation}{-1} where  SYMBOL   is an affine transformation from  SYMBOL  to  SYMBOL
+The general affine rank minimization problem is of considerable practical interest and many important machine learning problems such as matrix completion, low-dimensional metric embedding, low-rank kernel learning can be viewed as instances of the above problem
+Unfortunately, ARMP is NP-hard in general and is also NP-hard to approximate ( CITATION )
+Until recently, most known methods for  SYMBOL  were heuristic in nature with few known rigorous guarantees
+The most commonly used heuristic for the problem is to assume a factorization of  SYMBOL  and optimize the resulting non-convex problem by alternating minimization  CITATION , alternative projections  CITATION  or alternating LMIs  CITATION
+Another common approach is to relax the rank constraint to a convex function such as the trace-norm or the log determinant  CITATION ,  CITATION
+However, most of these methods do not have any optimality guarantees
+Recently, Meka et al CITATION  proposed online learning based methods for ARMP
+However, their methods can only guarantee at best a logarithmic approximation for the minimum rank
+In a recent breakthrough, Recht et al ~ CITATION  obtained the first nontrivial exact-recovery results for  SYMBOL  obtaining guaranteed rank minimization for affine transformations  SYMBOL  that satisfy a {restricted isometry property} ( SYMBOL )
+Define the isometry constant of  SYMBOL ,  SYMBOL  to be the smallest number such that for all  SYMBOL  of rank at most  SYMBOL ,   SYMBOL }  Recht et al ~show that for affine constraints with bounded isometry constants (specifically,  SYMBOL ), finding the minimum trace-norm solution recovers the minimum rank solution
+Their results were later extended to noisy measurements and isometry constants up to  SYMBOL  by Lee and Bresler  CITATION
+However, even the best existing optimization algorithms for the trace-norm relaxation are relatively inefficient in practice and their results are hard to analyze
+In another recent work, Lee and Bresler  CITATION  obtained exact-recovery guarantees for  SYMBOL  satisfying  SYMBOL  using a different approach
+Lee and Bresler propose an algorithm (ADMiRA) motivated by the {orthogonal matching pursuit} line of work in compressed sensing, and show that for affine constraints with isometry constant  SYMBOL  their algorithm recovers the optimal solution
+They also prove similar guarantees for noisy measurements and provide a geometric convergence rate for their algorithm
+However, their method is not very efficient for large datasets and is hard to analyze
+In this paper we propose a simple and fast algorithm  SYMBOL  (Singular Value Projection) based on the classical projected gradient algorithm
+We present a simple analysis showing that  SYMBOL  recovers the minimum rank solution for affine constraints that satisfy  SYMBOL  even in the presence of noise and prove the following guarantees
+Independent of our work, Goldfarb and Ma  CITATION  proposed an algorithm similar to our algorithm
+However, their analysis and formulation is different from ours
+In particular, their analysis builds on the analysis of Lee and Bresler and they require stronger isometry assumptions,  SYMBOL , than we do
+In addition, we make partial progress on analyzing  SYMBOL  for the matrix completion problem and proving exact recovery
+Our analysis of  SYMBOL  is motivated by the recent work in the field of compressed sensing by Blumensath and Davies  CITATION , Garg and Khandekar  CITATION
+Our results improve the results of Recht et al ~and Lee and Bresler as follows
+SYMBOL  is considerably simpler to analyze than the methods of Recht et al ~and Lee and Bresler
+Further, we need weaker isometry assumptions on  SYMBOL : we only require  SYMBOL  as opposed to  SYMBOL  required by Recht et al ,  SYMBOL  required by Lee and Bresler  CITATION  and  SYMBOL  required by Lee and Bresler  CITATION
+SYMBOL  has a strong geometric convergence rate and is faster than using the best trace-norm optimization algorithms and the methods of Lee and Bresler by an order of magnitude
+Although restricted isometry property is natural in settings where the affine constraints contain information about all the entries of the unknown matrix, in several cases of considerable practical interest the affine constraints only contain {local information} and may not satisfy  SYMBOL  directly
+One such important problem where  SYMBOL  does not hold directly is the low-rank matrix completion problem
+In the matrix completion problem we are given the entries of an unknown low-rank matrix  SYMBOL  for ordered pairs  SYMBOL  and the goal is to complete the missing entries of  SYMBOL
+A highly popular application of the matrix completion problem is in the field of collaborative filtering, where typically the task is to predict user ratings given past ratings of the users
+Recently, a lot of attention has been given to the problem  due to the Netflix Challenge  CITATION
+Other applications of matrix completion include triangulation from incomplete data, link prediction in social networks etc
+Similar to  SYMBOL , the low-rank matrix completion is also NP-hard in general and most methods are heuristic in nature with no theoretical guarantees
+The alternating least squares minimization heuristic and its variants  CITATION  perform the best in practice but are notoriously hard to analyze
+Recently, Candes and Recht  CITATION , Candes and Tao  CITATION  and Keshavan et al ~ CITATION  obtained the first non-trivial results for low-rank matrix completion under a few additional assumptions
+Broadly, these papers give exact-recovery guarantees when the optimal solution  SYMBOL  is  SYMBOL -{incoherent} (see Definition ), and the entries  SYMBOL  are chosen uniformly at random with  SYMBOL , where  SYMBOL  depends only on  SYMBOL
+However, the algorithms of the above papers, even when using methods tailored specifically for matrix-completion such as those of Cai et al ~ CITATION , are quite expensive in practice and not very tolerant to noise
+As low-rank matrix completion is a special case of  SYMBOL , we can naturally adapt our algorithm  SYMBOL  for matrix completion
+We demonstrate empirically that for a suitable step-size,  SYMBOL  significantly outperforms the methods of  CITATION ,  CITATION ,  CITATION ,  CITATION  in accuracy, computational time and tolerance to noise
+Furthermore, our experiments strongly suggest (see Figure~) that guarantees similar to those of  CITATION ,  CITATION  hold for  SYMBOL , achieving exact recovery for incoherent matrices from an almost optimal number of entries
+Although we do not provide a rigorous proof of exact-recovery for  SYMBOL  applied to matrix completion, we make partial progress in this direction and give strong intuition for the performance of  SYMBOL
+We prove that though the affine constraints defining the matrix-completion problems do not obey the restricted isometry property, they obey the restricted isometry property over incoherent matrices
+This weaker  SYMBOL  condition along with a hypothesis bounding the incoherence of the iterates of  SYMBOL  imply exact-recovery of a low-rank incoherent matrix from an almost optimal number of entries
+We also provide strong empirical evidence supporting our hypothesis bounding the incoherence of the iterates of  SYMBOL  (see Figure ) }  We first present our algorithm  SYMBOL  in Section~ and present its analysis for affine constraints satisfying  SYMBOL  in Section~
+In Section~, we specialize our algorithm  SYMBOL  to the task of low-rank matrix completion and prove a more restricted isometry property for the matrix completion problem
+In Section~, we give empirical results for  SYMBOL  applied to  SYMBOL  and matrix-completion on real-world and synthetic problems

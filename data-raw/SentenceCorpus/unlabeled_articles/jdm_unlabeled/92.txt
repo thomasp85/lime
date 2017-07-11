@@ -1,0 +1,22 @@
+### abstract ###
+inferences about target variables can be achieved by deliberate integration of probabilistic cues or by retrieving similar cue-patterns exemplars from memory
+in tasks with cue information presented in on-screen displays  rule-based strategies tend to dominate unless the abstraction of cue-target relations is unfeasible
+this dominance has also been demonstrated - surprisingly - in experiments that demanded the retrieval of cue values from memory  CITATION
+in three modified replications involving a fictitious disease  binary cue values were represented either by alternative symptoms e g   fever vs hypothermia or by symptom presence vs absence e g   fever vs no fever
+the former representation might hinder cue abstraction
+the cues were predictive of the severity of the disease  and participants had to infer in each trial who of two patients was sicker
+both experiments replicated the rule-dominance with present-absent cues but yielded higher percentages of exemplar-based strategies with alternative cues
+the experiments demonstrate that a change in cue representation may induce a dramatic shift from rule-based to exemplar-based reasoning in formally identical tasks
+### introduction ###
+in making choices between objects people express either preferences which bike do i like more
+or inferences which share will fare better
+
+often  multiple pieces of information about attributes or probabilistic cues have to be combined
+traditionally  decision researchers formulate decision strategies as processing steps that somehow integrate the cues  either in a weighted additive fashion  CITATION   or according to noncompensatory rules like lexicographic orderings  CITATION
+numerous strategies have been proposed  and participants appear to choose between them adaptively  CITATION
+juslin  olsson  and olsson  CITATION  emphasized the structural similarity of choice and categorization tasks which both involve the integration of features   cues
+however  in categorization  exemplar-based models assuming the storage and retrieval of feature patterns as a basis for inference  rather than piecemeal cue integration cue abstraction models  cam  have proven successful  CITATION
+juslin and his colleagues explored the applicability of exemplar models to multiple cue judgment tasks and found successes as well as failures  CITATION
+persson and rieskamp  CITATION  extended juslin's approach to memory-based decisions in which cue values had to be retrieved from memory rather than being presented by the experimenter i e  during the judgmental phase of the experiments  participants received only the stimulus names  and all of their respective attributes - which had been learned beforehand - had to be retrieved from long term memory
+to their surprise  p and r did not find more exemplar-based decision making  rather  most participants adopted cam
+we will test the conjecture that retrieval from memory per se does not induce exemplar-based decisions  whereas the difficulty of cue abstraction in combination with memory retrieval does

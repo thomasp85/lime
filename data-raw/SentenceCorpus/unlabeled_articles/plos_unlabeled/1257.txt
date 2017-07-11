@@ -1,0 +1,45 @@
+### abstract ###
+Sumoylation, the covalent attachment of SUMO to proteins, differs from other Ubl pathways.
+In sumoylation, E2 ligase Ubc9 can function without E3 enzymes, albeit with lower reaction efficiency.
+Here, we study the mechanism through which E3 ligase RanBP2 triggers target recognition and catalysis by E2 Ubc9.
+Two mechanisms were proposed for sumoylation.
+While in both the first step involves Ubc9 conjugation to SUMO, the subsequent sequence of events differs: in the first E2-SUMO forms a complex with the target and E3, followed by SUMO transfer to the target.
+In the second, Ubc9-SUMO binds to the target and facilitates SUMO transfer without E3.
+Using dynamic correlations obtained from explicit solvent molecular dynamic simulations we illustrate the key roles played by allostery in both mechanisms.
+Pre-existence of conformational states explains the experimental observations that sumoylation can occur without E3, even though at a reduced rate.
+Furthermore, we propose a mechanism for enhancement of sumoylation by E3.
+Analysis of the conformational ensembles of the complex of E2 conjugated to SUMO illustrates that the E2 enzyme is already largely pre-organized for target binding and catalysis; E3 binding shifts the equilibrium and enhances these pre-existing populations.
+We further observe that E3 binding regulates allosterically the key residues in E2, Ubc9 Asp100/Lys101 E2, for the target recognition.
+### introduction ###
+Protein function is regulated by numerous mechanisms, one of which is post-translational modification.
+Covalent binding of ubiquitin and ubiquitin-like modifiers to target proteins constitute a key step in cellular processes including differentiation, apoptosis, cell cycle, and stress response CITATION CITATION.
+Here, we focus on one member of the Ubl super-family, SUMO, with the aim of figuring out the mechanism through which SUMO is conjugated to its target proteins.
+SUMO-1, -2, -3 and -4 exist in mammals CITATION CITATION.
+Sumoylation can change the proteins' intracellular localization, interaction patterns with other proteins and modifications by other post-translational events.
+It is important in development CITATION and is related to cancer drug resistance CITATION, CITATION.
+For simplicity, below, SUMO refers to SUMO-1.
+At least 100 different proteins have been reported as targets for sumoylation CITATION CITATION.
+Analogous to conjugation mechanisms of Ub/Ubls, SUMO is attached to target proteins following sequential activation by E1, E2 and in most cases, E3 enzymes CITATION.
+Following activation of the SUMO precursor CITATION, the E1 enzyme Aos1/Uba2 and SUMO form a thioester bond.
+The SUMO thioester is next transferred to the active cysteine of Ubc9, the single known E2 enzyme of the sumoylation pathway CITATION, CITATION, CITATION.
+Then SUMO is transferred from E2 to a target protein lysine residue.
+E3 enzymes that ensure target specificity and increase reaction efficiency usually mediate this step.
+Among the sumoylation targets, RanGAP1, p53 and I B are modified without an E3 ligase in vitro, although the reaction rates are slower compared to E3-mediated conjugation CITATION.
+E2 ligase Ubc9 is essential CITATION, CITATION and conserved CITATION.
+It recognizes a consensus sumoylation motif, -K-x-D/E, where represents a hydrophobic residue, K is the SUMO acceptor lysine, x is any amino acid and D/E is an acidic residue CITATION.
+The E2 ligase also interacts with E3 enzymes during the transfer of SUMO to targets CITATION.
+In addition to the consensus sumoylation motif, sumoylation target RanGAP1 has a second contact surface with the E2 ligase Ubc9, which is thought to be responsible for the higher efficiency of modification compared to other substrates CITATION.
+A fragment of the E3 enzyme RanBP2, consisting of the IR1-M-IR2 domains is sufficient for E3 activity in vivo and in vitro CITATION.
+Moreover, IR1-M and M-IR2 constructs are also functional with IR1-M being the catalytic core domain CITATION CITATION.
+The activity of the E3 fragment indicates that E3 exerts its catalytic effect by altering the structural properties of the E2-SUMO complex, increasing the affinity of the complex for specific protein targets, rather than by forming direct target interactions CITATION.
+The crystal structure of the SUMO-RanGAP1-Ubc9-RanBP2 complex supports this idea CITATION.
+Recent work also shows that E3 ligase RanBP2 prevents dissociation of SUMO from its target RanGAP1, leading to an increase in the sumoylated RanGAP1 levels CITATION.
+Due to the strong interactions between RanGAP1 and E2, it has been a debated question whether RanBP2 exerts its E3 activity for RanGAP1 or whether it only maintains the complex at the nuclear pore complex CITATION, CITATION .
+Our aim is to understand the mechanism through which the E3 ligase RanBP2 triggers target recognition and catalysis by E2 in sumoylation.
+We carried out explicit solvent molecular dynamic simulations for the E2 ligase Ubc9, SUMO, and the E2-SUMO complex with and without the E3 enzyme RanBP2.
+We modeled the conjugated E2-SUMO complex, in RanBP2 bound and unbound forms, based on the SUMO-RanGAP1-Ubc9-RanBP2 crystal structure.
+Our results indicate that E3 binding induces a higher population of target binding and catalysis-ready E2, restricting the conformational space of the E2-SUMO complex.
+We observe that RanBP2 binding enhances the correlations between the fluctuations of E2 residues involved in catalytic activity and target recognition, which implies that RanBP2 is indeed an E3 ligase for the sumoylation of the target protein RanGAP1.
+Our results further lead us to propose that the mechanism through which E3 ligase RanBP2 triggers E2 target recognition and catalysis in sumoylation is allostery: RanBP2 is an allosteric effector of E2 ligase Ubc9.
+Below, we refer to the specific proteins simulated rather than the protein functional class to which they belong.
+These were the ones crystallized by Reverter and Lima CITATION .

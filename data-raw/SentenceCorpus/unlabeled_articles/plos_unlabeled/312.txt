@@ -1,0 +1,61 @@
+### abstract ###
+The topology of cellular circuits is key to understand their robustness to both mutations and noise.
+The reason is that many biochemical parameters driving circuit behavior vary extensively and are thus not fine-tuned.
+Existing work in this area asks to what extent the function of any one given circuit is robust.
+But is high robustness truly remarkable, or would it be expected for many circuits of similar topology?
+And how can high robustness come about through gradual Darwinian evolution that changes circuit topology gradually, one interaction at a time?
+We here ask these questions for a model of transcriptional regulation networks, in which we explore millions of different network topologies.
+Robustness to mutations and noise are correlated in these networks.
+They show a skewed distribution, with a very small number of networks being vastly more robust than the rest.
+All networks that attain a given gene expression state can be organized into a graph whose nodes are networks that differ in their topology.
+Remarkably, this graph is connected and can be easily traversed by gradual changes of network topologies.
+Thus, robustness is an evolvable property.
+This connectedness and evolvability of robust networks may be a general organizational principle of biological networks.
+In addition, it exists also for RNA and protein structures, and may thus be a general organizational principle of all biological systems.
+### introduction ###
+The biochemical parameters that determine the behavior of cellular systems from proteins to genome-scale regulatory networks change continually.
+Such change has two principal sources.
+One of them is genetic and consists of mutations.
+The other is nongenetic; it is exemplified by noise internal to the organism and by environmental change.
+In contrast to mutations, which are relatively rare, internal noise is ubiquitous and substantial.
+Much of it consists of stochastic variation in gene expression and expression regulation CITATION CITATION.
+Such noise makes all biochemical parameters affecting a circuit's behavior appear to fluctuate randomly.
+Environmental change, such as a change in temperature, salinity, or nutrient availability, can similarly affect many parameters at once.
+These observations suggest that biological circuits are not fine-tuned to exercise their functions only for precise values of their biochemical parameters.
+Instead, they must be able to function under a range of different parameters.
+In other words, they must be robust to parameter change.
+These insights have lead to explorations of circuit robustness in processes ranging from bacterial chemotaxis to embryonic development CITATION CITATION .
+Quantitative models of cellular circuits help us to understand processes as different as circadian rhythms CITATION CITATION, the cell cycle CITATION, organismal development CITATION, CITATION, CITATION, CITATION, CITATION CITATION, bacterial chemotaxis CITATION, and the behavior of synthetic circuitry CITATION CITATION.
+Several classes of models are used to represent such biological networks.
+The first class comprises differential equation models.
+The continuous state variables in these equations correspond to the concentrations or activities of gene products.
+The interactions of these gene products are represented through biochemical parameters such as binding affinities of transcriptional regulators to DNA, dissociation constants of ligand-receptor complexes, or kinetic rate constants of enzymes.
+A nearly universal problem is that quantitative information about these biochemical parameters is absent, even for experimentally well-studied systems.
+In other words, some knowledge of the topology of a circuit who interacts with whom may exist, but the strengths of the interactions are usually unknown.
+Even where measurements of biochemical parameters are available, they are often order-of-magnitude estimates rather than quantitative measurements with known precision.
+This difficulty leads one naturally to a second class of models in which only the qualitative nature of the state variables is considered.
+Our focus here is not to consider any one circuit but many circuit architectures or topologies.
+Because of the incessant changes of biochemical parameters and the lack of quantitative information about their values, such an approach is appropriate for studying fundamental properties of cellular circuits; in particular, one may ask what features are responsible for the robustness of a circuit architecture or topology CITATION, CITATION, CITATION, CITATION, CITATION.
+In this work, we carry out an analysis for a model of transcriptional regulation networks with important functions in developmental processes.
+Despite its level of abstraction, this model has proven highly successful in explaining the regulatory dynamics of early developmental genes in the fruit fly Drosophila as well as in predicting mutant phenotypes CITATION, CITATION CITATION.
+It has also helped to elucidate why mutants often show a release of genetic variation that is cryptic in the wild-type, and how adaptive evolution of robustness occurs in genetic networks of a given topology CITATION CITATION.
+Most recently, it has helped explain how sexual reproduction can enhance robustness to recombination CITATION .
+The model CITATION is concerned with a regulatory network of N transcriptional regulators, which are represented by their expression patterns S at some time t during a developmental or cell-biological process and in one cell or domain of an embryo.
+The time scale of the model's expression dynamics is the time scale characteristic for transcriptional regulation, which is on the order of minutes, and not on the order of days, weeks, or months, as for complete development from zygote to adult.
+The model's transcriptional regulators can influence each other's expression through cross-regulatory and autoregulatory interactions, which are encapsulated in a matrix w. The elements w ij of this matrix indicate the strength of the regulatory influence that gene j has on gene i. This influence can be either activating, repressing, or absent.
+Put differently, the matrix w represents the genotype of this system, while the expression state is its phenotype.
+We model the change in the expression state S of the network as time t progresses according to the difference equation where is a constant, and is a sigmoidal function whose values lie in the interval.
+This equation reflects the regulation of gene i's expression by other genes.
+We are here concerned with networks whose expression dynamics start from a prespecified initial state S at some time t 0 during development, and arrive at a prespecified stable equilibrium or target expression state S. We will call such networks viable networks.
+The initial state is determined by regulatory factors upstream of the network, which may represent signals from the cell's environment or from other domains of an embryo.
+Transcriptional regulators that are expressed in the stable equilibrium state S affect the expression of genes downstream of the network.
+As a modeling assumption, we think of their expression as critical for the course of development.
+Thus, deviations from S are highly deleterious.
+It is because our work starts from such a developmental framework that S and S play a central role; this is in contrast with most studies determining the generic properties of random Boolean networks CITATION, CITATION, CITATION, CITATION, CITATION CITATION.
+We here examine the relationship between robustness and network topology for millions of networks with different topologies.
+Topology is synonymous with the structure of the matrix w, because each of w's nonzero entries corresponds to one regulatory interaction among the circuit's genes.
+Changes in topology correspond to the loss of a regulatory interaction, or to the appearance of a new regulatory interaction that was previously absent.
+Such topological changes can occur on very short evolutionary time scales, in particular in higher eukaryotes with large regulatory regions CITATION.
+This underscores the need to study their effects on network robustness.
+In our analysis, we first ask how robustness to mutations and noise varies within an ensemble of networks with different topologies.
+Subsequently, and more importantly, we also ask whether highly robust topologies can evolve from topologies with low robustness through gradual topological changes.

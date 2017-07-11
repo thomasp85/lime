@@ -1,0 +1,62 @@
+### abstract ###
+researchers in the decision making tradition usually analyze multiple decisions within experiments by aggregating choices across individuals and using the individual subject as the unit of analysis
+this approach can mask important variations and patterns within the data
+specifically  it ignores variations in decisions across a task or game and possible influences of characteristics of the subject or the experiment on these variations
+we demonstrate  by reanalyzing data from two previously published articles  how a mixed model analysis addresses these limitations
+our results  with a modified iowa gambling task and a prisoner's dilemma game  illustrate the ways in which such an analysis can test hypotheses not possible with other techniques  is more parsimonious  and is more likely to be faithful to theoretical models
+### introduction ###
+experiments within the broad decision making tradition can involve subjects making multiple decisions  either with different partners or groups  CITATION  or as repeated decisions in a learning task  CITATION
+analyses of these data typically involve examination of how the rewards received are related to characteristics of the experiment and or the individuals involved  CITATION
+complex multivariate analyses are relatively rare
+this typical analytic approach has at least one major drawback
+most studies in this tradition involve multiple decisions for each individual
+that is  each subject participates in several decisions
+it is entirely possible that individuals vary their decisions across the rounds of play in which they engage
+looking at the average of the results of these decisions could mask important variations and patterns within the data
+aggregated analyses do not allow the researcher to fully examine the ways in which characteristics of participants and the experimental design affect decisions
+in other words  these analyses can provide descriptive results  but only hints of the decision-making dynamics within the experiments
+we suggest that data from these experiments fit the classic form of multi-level  or nested  data sets in that they usually include multiple decisions from an actor  within one or more set conditions
+mixed models have been specifically developed to deal with multi-level units of observation and can help us understand the process or dynamics of decision making within our studies
+in this paper we describe the logic of mixed model analyses  contrasting them with the familiar within- and between- subject designs
+we then demonstrate the use of these models with decision making data by reanalyzing data from two previously published articles
+the first study  CITATION  involves a modification of the iowa gambling task with multiple decisions by individual players in response to a variety of stimuli  and the second  CITATION  involves prisoner dilemma games conducted within seven person groups
+finally  we briefly describe the wide range of possible applications and the advantages of the approach  provide pragmatic advice for using hierarchical models  and encourage their broader use in decision making research
+although the major aim of this paper is to illustrate the utility of this method  we include an appendix with the sas language used for our analyses to provide greater transparency and encourage use of the method
+a mixed model is one in which there are both between- and within-subject variables
+as noted above  studies in the decision research literature often focus exclusively on between-subject variables in their analyses and ignore within-subject variables  those that affect the variations in decisions that one individual makes
+yet  variations in individuals' decisions are often theoretically and substantively important
+thus  we argue that it is more natural  fruitful  and parsimonious to analyze many decision making studies using a mixed model approach
+in addition  mixed models are very flexible and can adapt to a wide variety of experimental designs
+in a pure within-subjects design  all of the subjects serve in all of the treatment conditions
+the first panel of table  NUMBER  illustrates this design  assuming that there are two different design elements a and b
+in this design  each subject s participates in each condition of design element a a and design element b b
+an example would be the classic lichtenstein and slovic  CITATION  study in which gamblers in a las vegas casino showed within-subject preference reversals based on response mode bids and choices
+the pure between-subjects design is one in which each subject serves in only a single condition and there is no within-subject variation
+this design is illustrated in the second panel of table  NUMBER   where each subject s is in only one condition of the two design conditions a and b
+in other words  in the pure between- subjects design  subjects are nested within a and b  ab  each subject contributes a single observation on the dependent variable and thus appears in only a single treatment condition
+many decision making studies use this design  CITATION  or simplify their data to mimic this design by summarizing across all of the decisions that an individual makes to form a summary score  CITATION
+this summary number is then used as the dependent variable
+researchers also use a design that involves repeated measures or conditions for one or more factors that are presented to each subject within-subject variables such as a set of rewards in a neuroimaging study and variables such as gender or culture or experimental conditions such as positive and negative frames that subjects do not share between-subject variables
+this design is frequently referred to by psychologists as a mixed design and is illustrated in the third part of table  NUMBER   with b as the within- subjects factor and a as the between-subjects factor
+the term mixed is particularly apt in that there are sources of variance that are produced by between-subjects differences and by within-subjects differences and both types of differences contribute to the statistical analysis
+this design allows us to assess within-subject differences at the same time as we study between-subject relationships
+the design also allows us to model the dependency of successive decisions  what is technically called auto regression  or the tendency for individuals to behave in a similar manner from one decision to another
+researchers have used mixed models in a variety of settings
+much of the original work on mixed models was conducted in agricultural settings and thus  statisticians also refer to such models as a split-plot design
+in the agricultural setting  plots were often considered random with each plot exposed to the same set of fixed experimental conditions on one of the experimental variables  while the plots were nested within experimental conditions of a different experimental variable
+these mixed designs contain at least one within-subject plot variable and at least one between-subject plot variable  CITATION
+the panel models used by economists have both a between-units often firms component and a within-units changes over time component  CITATION
+sociologists have used hierarchical linear models to examine the influence of characteristics of school classrooms and entire schools on individual student achievement  CITATION
+developmental psychologists and educational researchers have used the models to examine  growth curves   changes in individuals' achievement or developmental characteristics the within-subject variable for students varying on different characteristics the between-subject analysis  CITATION
+thus  there are a wide variety of analytical methods that pay close attention to within and between individual or group variables
+two widely used general modeling strategies are hierarchical linear models and mixed models
+either of these allows for the modeling of random variation for individuals and of decisions nested within individuals
+for the situations analyzed in this paper  either hierarchical linear modeling or a mixed modeling approach can be used
+we suggest that the general logic of this approach can be applied to the issues facing experimenters studying decision making and help researchers develop a more accurate understanding of the elements of the decision making process that lead to hypothesized outcomes
+within many such experiments  a given individual makes numerous choices  often across a variety of experimental settings
+because individuals make multiple decisions  these decisions are not statistically independent
+the usual method of handling such data is simply to aggregate all decisions to the level of the individual and ignore any intra-individual variation
+such a practice  however  ignores potential variation and limits the extent to which researchers can assess the impact of experimental variables on individual choice
+it also encourages researchers to conduct numerous separate bivariate analyses
+use of mixed models can provide both a more inclusive  yet more parsimonious and efficient  method of analysis
+we now illustrate the utility of these models by reanalyzing data from two different studies

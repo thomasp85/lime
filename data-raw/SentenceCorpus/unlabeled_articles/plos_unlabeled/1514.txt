@@ -1,0 +1,39 @@
+### abstract ###
+The epidemic spread of infectious diseases is ubiquitous and often has a considerable impact on public health and economic wealth.
+The large variability in the spatio-temporal patterns of epidemics prohibits simple interventions and requires a detailed analysis of each epidemic with respect to its infectious agent and the corresponding routes of transmission.
+To facilitate this analysis, we introduce a mathematical framework which links epidemic patterns to the topology and dynamics of the underlying transmission network.
+The evolution, both in disease prevalence and transmission network topology, is derived from a closed set of partial differential equations for infections without allowing for recovery.
+The predictions are in excellent agreement with complementarily conducted agent-based simulations.
+The capacity of this new method is demonstrated in several case studies on HIV epidemics in synthetic populations: it allows us to monitor the evolution of contact behavior among healthy and infected individuals and the contributions of different disease stages to the spreading of the epidemic.
+This gives both direction to and a test bed for targeted intervention strategies for epidemic control.
+In conclusion, this mathematical framework provides a capable toolbox for the analysis of epidemics from first principles.
+This allows for fast, in silico modeling - and manipulation - of epidemics and is especially powerful if complemented with adequate empirical data for parameterization.
+### introduction ###
+Despite huge efforts to improve public health, the spread of infectious diseases is still ubiquitous at the beginning of the 21st century, and there is considerable variability in epidemic patterns between locations.
+Although the recent influenza pandemic has been a global challenge, there have nonetheless been differences in its timing in the northern and southern hemisphere due to seasonal effects CITATION, CITATION.
+Another prominent example for epidemic variability is the prevalence of sexually transmitted diseases, specifically HIV infections.
+Although HIV is endemic in many populations at low levels or restricted to high-risk groups, it has become highly endemic in other parts of the world CITATION, CITATION.
+As a consequence, the spread of infectious diseases cannot be understood globally but understood only as the result of several local factors, such as climate and hygiene conditions, population density and structure, and cultural habits and mobility.
+Epidemic models aim to capture the mechanisms that link these factors to the emergent epidemics and to promote an understanding of the underlying dynamic processes as a prerequisite for intervention strategies CITATION, CITATION.
+A useful abstraction in this context is to regard individuals that may be infected as nodes of a network in which the links are the potentially infectious contacts among individuals.
+A major remaining challenge in modern epidemiology is to link the variability of transmission networks to the corresponding emergent epidemics.
+Models that are flexible and can be adapted to specific epidemic situations best meet these challenges.
+Because we focus on the interplay between transmission network topology and epidemics, we will restrict ourselves to diseases caused by agents that lead to either immunity or death in their host, i.e., in which infection can occur only once.
+These epidemics can be described by Susceptible-Infected-Recovered or SIR models CITATION, CITATION.
+We refer to the mathematically closely related case, where infection eventually leads to the death of the host, as a SID model.
+The original, or classical, SIR model CITATION assumes a mass-action type dynamic and as a consequence describes epidemics in homogeneous, well-mixed populations.
+Because this is generally not a good approximation of real world situations, current epidemic models strive for an integrated approach that considers both information about the course of disease and the relevant transmission network CITATION, CITATION.
+The models vary in their assumptions, attention to detail, computational costs, and as a consequence, their fields of application.
+Compartmental SIR models consider different contact patterns in sub-populations and link them via a contact matrix CITATION, providing a coarse-grained, but often adequate, representation.
+Network-based SIR models consider the distribution in each individual's number of infectious contacts FORMULA in the transmission network CITATION CITATION.
+These models allow for the study of transmission networks with strong heterogeneity in the number of contacts among individuals, which in some cases also means that they consider correlations in the way contacts are made CITATION, CITATION, or clustering CITATION CITATION.
+Although these approaches focus on static networks, a recent approach considers networks with arbitrary degree distributions and transient contacts and allows for the derivation of the temporal evolution in the number of susceptible and infected nodes from a closed set of equations CITATION CITATION.
+Finally, pair models are a very general approach CITATION for studying SIR epidemics on heterogeneous networks.
+They provide a large amount of flexibility in considering the way contacts are made and maintained CITATION CITATION, but, as a trade-off, they quickly become very computationally demanding CITATION .
+An assumption often implicitly made in epidemic models is that the epidemic sweeps through the population at much shorter time scales than the time scale of background demographic processes, i.e., natural birth and death processes are neglected.
+This is a good approximation in cases such as the yearly influenza epidemics, but it is hardly adequate for HIV epidemics, which span decades.
+To compensate for this limitation, we integrated demographic background processes into recent network epidemic models CITATION, CITATION.
+With HIV in mind as a case study, we focus on disease epidemics that lead to death after infection of susceptible individuals, possibly after undergoing several stages of the disease.
+In addition to earlier work, our approach also allows for an in depth study of the interplay between epidemic spreading and the structure and dynamics of the underlying transmission network.
+Strictly speaking, all approaches discussed only predict the mean behavior of epidemics within the limit of an infinite host population.
+However, our comparisons with finite size, agent-based simulations show that this is a good and computationally efficient approximation already for moderate population sizes.

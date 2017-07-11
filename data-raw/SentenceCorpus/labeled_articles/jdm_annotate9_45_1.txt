@@ -1,0 +1,35 @@
+### abstract ###
+MISC	previous research on anchoring has shown this heuristic to be a very robust psychological phenomenon ubiquitous across many domains of human judgment and decision-making
+CONT	despite the prevalence of anchoring effects  researchers have only recently begun to investigate the underlying factors responsible for how and in what ways a person is susceptible to them
+AIMX	this paper examines how one such factor  the big-five personality trait of openness-to-experience  influences the effect of previously presented anchors on participants' judgments
+OWNX	our findings indicate that participants high in openness-to-experience were significantly more influenced by anchoring cues relative to participants low in this trait
+OWNX	these findings were consistent across two different types of anchoring tasks providing convergent evidence for our hypothesis
+### introduction ###
+MISC	the anchoring effect  CITATION  refers to the adjustment of one's assessment  higher or lower  based upon previously presented external information or an  anchor
+MISC	the anchoring heuristic appears to be prevalent throughout human decision processes and has been shown to reliably influence judgments in a variety of domains including probability estimates  CITATION   negotiation  CITATION   legal judgments  CITATION   and general knowledge  CITATION
+MISC	further  anchoring effects appear viable across most situations for both novices and experts  CITATION  and seem to be effective under conditions of monetary incentives  CITATION  and in real-world settings  CITATION
+MISC	anchoring thus appears to be a very robust psychological phenomenon
+MISC	however  not all individuals may be equally influenced by anchoring cues
+MISC	identification of factors that influence how and in what ways a person is susceptible to this heuristic should further the understanding of the process
+MISC	one avenue of approach is to investigate the role of individual difference factors
+MISC	tversky and kahneman  CITATION  pointed to the important role of  personal characteristics  of the decision maker in risky choice situations
+MISC	later work by stanovich and west  CITATION  suggested that intellectual traits influence decision making and consequential choice preference
+MISC	recently  individual differences have been found in numerical reliance  CITATION   ambiguity  CITATION   preference for actions or inactions  CITATION  and the optimistic bias  CITATION
+MISC	the big-five personality traits  CITATION  have proven to be important individual difference factors for understanding decision choices
+MISC	further  attesting to the importance of individual differences  levin and hart  CITATION  demonstrated that individual differences in preference appear to originate at a very early age
+MISC	taken together  these findings suggest that the impact of individual difference factors on decision-making is both profound and pervasive
+AIMX	the purpose of the current study is to investigate how one individual difference factor may influence the strength of the anchoring effect
+AIMX	specifically  we are interested in how individual differences in the personality trait of openness-to-experience influences anchoring effects
+MISC	in the last couple of decades the five-factor model of personality has become the most widely tested and well-regarded personality trait model
+MISC	a great deal of research has supported this model's validity and reliability  CITATION
+CONT	while most research has agreed on the nature of the first four factors  the nature of the fifth factor has been controversial  a controversy predominately based upon whether a lexical approach  derived from language frequency within the lexicon of a particular language  CITATION   or a questionnaire approach  CITATION  should be used to measure it
+MISC	the fifth factor is often labeled openness-to-experience  which refers to a propensity to adjust beliefs and behaviors when exposed to new types of information or ideas  CITATION
+MISC	individuals scoring high on this dimension are more open to new ideas  CITATION  and motivated to seek variety and external experience
+MISC	individuals scoring low tend to be less inclined to consider alternative opinions and are more steadfast in their own beliefs  CITATION  making them more likely to rely upon information that is familiar and conventional  CITATION
+MISC	a fundamental aspect of the anchoring effect is that individuals are sensitive to information which they have experienced
+MISC	this change in judgment  which is based upon external cues  seems particularly relevant and related to the openness-to-experience personality trait
+MISC	specifically  as research has shown  the openness trait reflects individual propensities to  adjust  one's beliefs  CITATION  and to consider external information  CITATION
+OWNX	therefore  based upon the nature of the openness-to-experience trait and the processes involved in the anchoring effect  we hypothesize that individual differences in openness-to-experience will influence susceptibility to anchoring effects
+OWNX	specifically  we hypothesize that the judgments of those individuals high in this trait will be more influenced by previously presented anchors whereas those individuals low in this trait will be less influenced by the anchor
+OWNX	to test this hypothesis  we first measured individual levels of the personality trait of openness-to-experience
+OWNX	we then provided participants with an anchoring task involving either the mississippi river study  NUMBER  or african nations in the un study  NUMBER 

@@ -1,0 +1,55 @@
+### abstract ###
+We show how text from news articles can be used to predict intraday price movements of financial assets using support vector machines
+Multiple kernel learning is used to combine equity returns with text as predictive features to increase classification performance and we develop an analytic center cutting plane method to solve the kernel learning problem efficiently
+We observe that while the direction of returns is not predictable using either text or returns, their size is, with text features producing significantly better performance than historical returns alone
+### introduction ###
+Asset pricing models often describe the arrival of novel information by a jump process, but the characteristics of the underlying jump process are only coarsely, if at all, related to the underlying source of information
+Similarly, time series models such as ARCH and GARCH have been developed to forecast volatility using asset returns data but these methods also ignore one key source of market volatility: financial news
+Our objective here is to show that text classification techniques allow a much more refined analysis of the impact of news on asset prices
+Empirical studies that examine stock return predictability can be traced back to  CITATION  among others, who showed that there is no significant autocorrelation in the daily returns of thirty stocks from the Dow-Jones Industrial Average
+Similar studies were conducted by  CITATION  and  CITATION , who find significant autocorrelation in squared and absolute returns (i e volatility)
+These effects are also observed on intraday volatility patterns as demonstrated by  CITATION  and by  CITATION  on absolute returns
+These findings tend to demonstrate that, given solely historical stock returns, future stock returns are not predictable while volatility is
+The impact of news articles has also been studied extensively
+CITATION  for example studied price fluctuations in interest rate and foreign exchange futures markets following macroeconomic announcements and showed that prices mostly adjusted within one minute of major announcements
+CITATION  aggregated daily announcements by  Dow Jones \& Company  into a single variable and  found no correlation with market absolute returns and weak correlation with firm-specific absolute returns
+However,  CITATION  aggregated intraday news concerning companies listed on the Australian Stock Exchange into an exogenous variable in a GARCH model and found significant predictive power
+These findings are attributed to the conditioning of volatility on news
+Results were further improved by restricting the type of news articles included
+The most common techniques for forecasting volatility are often based on Autoregressive Conditional Heteroskedasticity (ARCH) and Generalized ARCH (GARCH) models mentioned above
+For example, intraday volatility in foreign exchange and equity markets is modeled with MA-GARCH in  CITATION  and ARCH in  CITATION
+See  CITATION  for a survey of ARCH and GARCH models and various other applications
+Machine learning techniques such as neural networks and support vector machines have also been used to forecast volatility
+Neural networks are used in  CITATION  to forecast implied volatility of options on the SP100 index, and support vector machines are used to forecast volatility of the SP500 index using daily returns in  CITATION
+Here, we show that information from press releases can be used to predict intraday abnormal returns with relatively high accuracy
+Consistent with  CITATION  and  CITATION , however, the direction of returns is not found to be predictable
+We form a text classification problem where press releases are labeled positive if the absolute return jumps at some (fixed) time after the news is made public
+Support vector machines (SVM) are used to solve this classification problem using both equity returns and word frequencies from press releases
+Furthermore, we use multiple kernel learning (MKL) to optimally combine equity returns with text as predictive features and increase classification performance
+Text classification is a well-studied problem in machine learning, ( CITATION  and  CITATION  among many others show that SVM significantly outperform classic methods such as naive bayes)
+Initially, naive bayes classifiers were used in  CITATION  to do three-class classification of an index using daily returns for labels
+News is taken from several sources such as  Reuters  and  The Wall Street Journal
+Five-class classification with naive bayes classifiers is used in  CITATION  to classify intraday price trends when articles are published at the  YAHOO
+Finance  website
+Support vector machines were also used to classify intraday price trends in  CITATION  using  Reuters  articles and in  CITATION  to do four-class classification of stock returns using press releases by  PRNewswire
+Text classification has also been used to directly predict volatility (see  CITATION  for a survey of trading systems that use text)
+Recently,  CITATION  used SVM to predict if articles from the  Bloomberg service  are followed by abnormally large volatility; articles deemed important are then aggregated into a variable and used in a GARCH model similar to  CITATION
+CITATION  use Support Vector Regression (SVR) to forecast stock return volatility based on text in SEC mandated 10-K reports
+They found that reports published after the Sarbanes-Oxley Act of 2002 improved forecasts over baseline methods that did not use text
+Generating trading rules with genetic programming (GP) is another way to incorporate text for financial trading systems
+Trading rules are created in  CITATION  using GP for foreign exchange markets based on technical indicators and extended in  CITATION  to combine technical indicators with non-publicly available information
+Ensemble methods were used in  CITATION  on top of GP to create rules based on headlines posted on  Yahoo  internet message boards
+Our contribution here is twofold
+First, abnormal returns are predicted using text classification techniques similar to  CITATION
+Given a press release, we predict whether or not an abnormal return will occur in the next  SYMBOL  minutes using text and past absolute returns
+The algorithm in  CITATION  uses text to predict whether returns jump up 3\%, down 3\%, remain within these bounds, or are ``unclear'' within 15 minutes of a press release
+They consider a nine months subset of the eight years of press releases used here
+Our experiments analyze predictability of absolute returns at many horizons and demonstrate significant initial intraday predictability that decreases throughout the trading day
+Second, we optimally combine text information with asset price time series to significantly enhance classification performance using multiple kernel learning (MKL)
+We use an analytic center cutting plane method (ACCPM) to solve the resulting MKL problem
+ACCPM is particularly efficient on problems where the objective function and gradient are hard to evaluate but whose feasible set is simple enough so that analytic centers can be computed efficiently
+Furthermore, because it does not suffer from conditioning issues, ACCPM can achieve higher precision targets than other first-order methods
+The rest of the paper is organized as follows
+Section  details the text classification problem we solve here and provides predictability results using using either text or absolute returns as features
+Section  describes the multiple kernel learning framework and details the analytic center cutting plane algorithm used to solve the resulting optimization problem
+Finally, we use MKL to enhance the prediction performance

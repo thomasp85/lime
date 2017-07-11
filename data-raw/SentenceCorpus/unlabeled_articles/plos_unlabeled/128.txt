@@ -1,0 +1,52 @@
+### abstract ###
+Many alternative splicing events are regulated by pentameric and hexameric intronic sequences that serve as binding sites for splicing regulatory factors.
+We hypothesized that intronic elements that regulate alternative splicing are under selective pressure for evolutionary conservation.
+Using a Wobble Aware Bulk Aligner genomic alignment of Caenorhabditis elegans and Caenorhabditis briggsae, we identified 147 alternatively spliced cassette exons that exhibit short regions of high nucleotide conservation in the introns flanking the alternative exon.
+In vivo experiments on the alternatively spliced let-2 gene confirm that these conserved regions can be important for alternative splicing regulation.
+Conserved intronic element sequences were collected into a dataset and the occurrence of each pentamer and hexamer motif was counted.
+We compared the frequency of pentamers and hexamers in the conserved intronic elements to a dataset of all C. elegans intron sequences in order to identify short intronic motifs that are more likely to be associated with alternative splicing.
+High-scoring motifs were examined for upstream or downstream preferences in introns surrounding alternative exons.
+Many of the high- scoring nematode pentamer and hexamer motifs correspond to known mammalian splicing regulatory sequences, such as GCATG, indicating that the mechanism of alternative splicing regulation is well conserved in metazoans.
+A comparison of the analysis of the conserved intronic elements, and analysis of the entire introns flanking these same exons, reveals that focusing on intronic conservation can increase the sensitivity of detecting putative splicing regulatory motifs.
+This approach also identified novel sequences whose role in splicing is under investigation and has allowed us to take a step forward in defining a catalog of splicing regulatory elements for an organism.
+In vivo experiments confirm that one novel high-scoring sequence from our analysis, CTATC, is important for alternative splicing regulation of the unc-52 gene.
+### introduction ###
+One of the interesting lessons learned from the analysis of the human genome is that we may possess fewer than 25,000 genes CITATION.
+One mechanism to dramatically increase the complexity of the human proteome from this lower-than-expected number of genes is to allow some genes to encode multiple proteins.
+This process can be accomplished by alternative precursor messenger RNA splicing.
+Studies that use expressed sequence tag alignments to identify alternatively spliced genes have led researchers to predict that up to 60 percent of human genes are alternatively spliced CITATION CITATION.
+Alternative splicing events can be regulated in tissue-specific, developmental, and hormone-responsive manners, providing additional mechanisms for the regulation of gene expression CITATION, CITATION.
+Understanding alternative splicing and its regulation is a key component to understanding metazoan genomes.
+The current models for alternative splicing regulation are based on the interactions of intronic or exonic RNA sequences, known as cis elements, with splicing regulatory proteins known as trans-acting splicing factors CITATION.
+The binding of splicing factors to the pre-mRNA regulates the ability of the spliceosomal machinery to recognize and promote alternative splicing.
+The role of intronic elements in regulating splicing is well established and has been shown to work in a combinatorial fashion based on the trans-acting factors that are present.
+For example, the inclusion of the 18-nucleotide-long, neural-specific N1 exon of the human c-SRC gene is regulated by the downstream control sequence found in the intron downstream of the N1 exon.
+This sequence serves as a recruitment site for both constitutive and neuronal cell-specific splicing factors such as nPTB, FOX-1, and FOX-2 CITATION CITATION.
+The vertebrate RNA-binding protein FOX-1 can also regulate muscle-specific alternative splicing through interactions with the RNA sequence GCAUG CITATION, and repeats of this sequence have been shown to be important for alternative splicing regulation of the fibronectin exon EIIIB and the rat calcitonin/CGRP exon 4 CITATION, CITATION.
+Many other examples of complex and combinatorial regulation of alternative splicing through intronic cis elements have been demonstrated, and combinatorial interactions between proteins such as Nova-1, polypyrimidine tract binding protein, and ETR-3, with specific cis sequences, are important for alternative splicing regulation CITATION CITATION .
+Intronic sequences are non-coding, and therefore they should have less evolutionary selective pressure to maintain their sequence.
+An exception to this should be intronic sequences that regulate alternative splicing.
+In an analysis of alternatively spliced human cassette exons, it was found that on average, approximately 100 nucleotides of intron sequence, flanking either side of the exon, tend to be highly conserved between the mouse and human genomes, with 88 percent identity in the upstream sequences and 80 percent identity in the downstream sequences CITATION.
+Some clues to potential splicing regulatory motifs arise from these studies.
+For example, Sorek and Ast found that the sequence TGCATG was the second most common hexamer in the first 100 nucleotides downstream of alternatively spliced exons, appearing in 18 percent of these intronic regions CITATION.
+Another study of aligned mouse/human alternative exons found that GCATG is the most overrepresented pentamer in the proximal conserved region of the intron downstream of alternative exons CITATION.
+A third study found that TGCATG is frequently located in introns flanking brain-enriched alternative exons, and its presence and spacing are highly conserved in these genes from fish to man CITATION .
+Using the nematode Caenorhabditis elegans as a model system, we have been working to take advantage of comparative genomics to identify cis-acting regulators of alternative splicing.
+The C. elegans gene structure, splicing machinery, and gene expression regulation is similar to that of other higher eukaryotes, with the exception that the average intron size is smaller.
+Our lab has previously developed methods for identification of alternatively spliced genes in C. elegans by aligning the genome sequence with ESTs and mRNA sequence CITATION.
+We developed an algorithm, the Wobble Aware Bulk Aligner, for creating interspecies genome alignments between C. elegans and the related roundworm, Caenorhabditis briggsae CITATION.
+WABA employs a hidden Markov model to identify aligned regions as coding, high homology, low homology, and no homology.
+It also factors the AT richness of C. elegans introns into its calculations when it defines an intronic region as high homology CITATION.
+C. briggsae and C. elegans diverged approximately 100 million years ago, yet are indistinguishable by eye CITATION.
+Alignment of these two genomes revealed that exonic sequences are highly conserved between these species, but intronic and intergenic sequences are rarely conserved CITATION.
+We found that these rare, high homology sequences in introns are more likely to occur in the introns flanking alternatively spliced exons than in total introns CITATION.
+We hypothesized that these conserved intronic regions were cis-acting regulatory elements for alternative splicing.
+This nematode alignment, with relatively limited regions of high homology, provides the possibility for more specific pinpointing of intronic splicing regulatory elements than the much longer 100-nucleotide-long conserved regions flanking alternative exons in mouse/human alignments CITATION .
+In this paper, we present the analysis of conserved regions of introns flanking alternatively spliced exons in C. elegans and correlate these conserved regions with alternative splicing regulation.
+We collected these conserved sequence regions into a database and searched for overrepresented pentamers and hexamers relative to a total intron database, similar to the method used by Burge's group to identify exonic splicing enhancers CITATION.
+This allowed us to create a table of potential intronic alternative splicing cis-regulatory motifs.
+Since many RNA recognition motif containing splicing factors recognize specific sequences on the order of 4 6 nucleotides in length CITATION, CITATION, CITATION, CITATION CITATION, the high-scoring motifs in this catalog may represent specific binding sites for particular splicing factors.
+Several of our highest scoring motifs in this analysis correlate with known vertebrate splicing regulatory elements, for example, GCATG CITATION, but several have not been previously identified.
+A number of candidates identified by this method were tested in an in vivo splicing reporter system in C. elegans.
+We have used this analysis to identify and confirm a new, highly conserved, alternative splicing regulatory element, CTATC.
+We show that this sequence works in coordination with GCATG to regulate the alternative splicing of the unc-52 gene.

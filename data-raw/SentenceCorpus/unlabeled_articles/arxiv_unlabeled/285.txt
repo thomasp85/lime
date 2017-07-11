@@ -1,0 +1,8 @@
+### abstract ###
+We investigate the problem of learning a topic model -- the well-known Latent Dirichlet Allocation -- in a distributed manner, using a cluster of C processors and dividing the corpus to be learned equally among them
+We propose a simple approximated method that can be tuned, trading speed for accuracy according to the task at hand
+Our approach is asynchronous, and therefore suitable for clusters of heterogenous machines
+### introduction ###
+Very large datasets are becoming increasingly common -- from specific collections, such as Reuters and PubMed, to very broad and large ones, such as the images and metadata of sites like Flickr, scanned books of sites like Google Books and the whole internet content itself
+Topic models, such as Latent Dirichlet Allocation (LDA), have proved to be a useful tool to model such collections, but suffer from scalability limitations
+Even though there has been some recent advances in speeding up inference for such models, this still remains a fundamental open problem

@@ -1,0 +1,41 @@
+### abstract ###
+This paper introduces a new approach to solve sensor management problems
+Classically sensor management problems can be well formalized as Partially-Observed Markov Decision Processes (POMPD)
+The original approach developped here consists in deriving the optimal parameterized policy based on stochastic gradient estimation
+We assume in this work that it is possible to learn the optimal policy off-line (in simulation ) using models of the environement and of the sensor(s)
+The learned policy can then be used to manage the sensor(s)
+In order to approximate the gradient in a stochastic context, we introduce a new method to approximate the gradient, based on Infinitesimal Approximation (IPA)
+The effectiveness of this general framework is illustrated by the managing of an Electronically Scanned Array Radar
+### introduction ###
+Years after years the complexity and the performances of many sensors have increased leading to more and more complex sensor(s)-based systems which supply the decision centers with an increasing amount of data
+The number, the types and the agility of sensors along with the increased quality of data far outstrip the ability of a human to manage them: it is often difficult to compare how much information can be gained by way of a given management scheme  CITATION
+It results from this the necessity to derive unmanned sensing platforms that have the capacity to adapt to their environment  CITATION
+This problem is often refered as the  Sensor(s) Management Problem
+In more simple situations, the operational context may lead to works on sensor(s) management like in the  radar - infrared sensor  case  CITATION
+A general definition of this problem could then be : sensor management is the effective use of available sensing and database capabilities to meet the mission goals
+Many applications deal with military applications,a classical one being to detect, to track and tp identify smart targets (a smart target can change its way of moving or its way of sensing when it detects it is under analysis) with several sensors
+The questions are then the following at each time: how must we group the sensors, how long, in which direction, and with which functioning mode
+The increasing complexity of the targets to be detected, tracked and identified, makes the management even more difficult and led to the development of researches on the definition of an optimal sensor management scheme in which the targets and the sensors are treated altogether in a complex dynamic system  CITATION
+Sensor Management has become very popular this last years and many approaches can be found in the litterature
+In  CITATION  and  CITATION  the authors use a the modelling of the detection process of an Electronically Scanned Array (ESA) Radar to propose management scheme during the detection step
+In  CITATION  an information-based approach is use to manage a set of sensors
+From a theorical point of view the sensor management can be modelled as a Partially Observable Markov Decision Process (POMDP)  CITATION
+Whatever the underlying application, the sensor management problem consists in choosing at each time  SYMBOL  an action  SYMBOL  within the set  SYMBOL  of available actions
+The choice of  SYMBOL  is generally based on the density state vector  SYMBOL  describing the environment of the system and variables of the system itself
+It is generally assumed that the state or at least a part of this state is Markovian
+Moreover in most of the applications, we only have access to a partial information of the state and  SYMBOL  must be estimated from the measurements  SYMBOL
+This estimation process is often derived within a Bayesian framework where we use state-dynamics and observation models such as:   SYMBOL }   SYMBOL }  where  SYMBOL ,  SYMBOL ,  SYMBOL  and  SYMBOL  respectively stands for the state noise, the measurements noise, the state-dynamics and the measurement function
+SYMBOL  and  SYMBOL  are generally time varying functions
+The control problem consists in finding the scheduling policy  SYMBOL  i e select  SYMBOL  given the past and the possible futures
+However, this control problem may have a theorical solution, it is generally untractable in practice
+However few works propose optimal solution in the frame of POMDPs like  CITATION
+Beside, several works have been carried out to find sub-optimal policies like for instance myopic policies
+Reinforcement Learning and Q-Learning have also been used to propose a solution ( CITATION )
+We propose in this paper to look for a policy within a class of parametrized policy  SYMBOL  and to learn it which means learn the optimal value of  SYMBOL
+Funding our work on the approach described in  CITATION  we assume that it is possible to learn this policy  in simulation  using models of the overall system
+Once the optimal parameter has been found it is used to manage the sensor(s)
+The frame of this work being the detection and localization of targets, we show in the last part of this paper how it may be applied the the management of an ESA radar
+The section  described the modelling of a sensor management problem using a POMDP approach
+In the section  we derive the algorithm to learn the parameter of the policy
+In section  we show how this method may be used for the tasking of an ESA radar
+Finally section  exhibits firts simulations results

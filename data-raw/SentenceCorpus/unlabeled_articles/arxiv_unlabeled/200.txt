@@ -1,0 +1,44 @@
+### abstract ###
+This paper addresses the general problem of domain adaptation which arises in a variety of applications where the distribution of the labeled sample available somewhat differs from that of the test data
+Building on previous work by \emcite{bendavid}, we introduce a novel distance between distributions,  discrepancy distance , that is tailored to adaptation problems with arbitrary loss functions
+We give Rademacher complexity bounds for estimating the discrepancy distance from finite samples for different loss functions
+Using this distance, we derive novel generalization bounds for domain adaptation for a wide family of loss functions
+We also present a series of novel adaptation bounds for large classes of regularization-based algorithms, including support vector machines and kernel ridge regression based on the empirical discrepancy
+This motivates our analysis of the problem of minimizing the empirical discrepancy for various loss functions for which we also give novel algorithms
+We report the results of preliminary experiments that demonstrate the benefits of our discrepancy minimization algorithms for domain adaptation
+### introduction ###
+In the standard PAC model  CITATION  and other theoretical models of learning, training and test instances are assumed to be drawn from the same distribution
+This is a natural assumption since, when the training and test distributions substantially differ, there can be no hope for generalization
+However, in practice, there are several crucial scenarios where the two distributions are more similar and learning can be more effective
+One such scenario is that of  domain adaptation , the main topic of our analysis
+The problem of domain adaptation arises in a variety of applications in natural language processing  CITATION , speech processing  CITATION , computer vision  CITATION , and many other areas
+Quite often, little or no labeled data is available from the  target domain , but labeled data from a  source domain  somewhat similar to the target as well as large amounts of unlabeled data from the target domain are at one's disposal
+The domain adaptation problem then consists of leveraging the source labeled and target unlabeled data to derive a hypothesis performing well on the target domain
+A number of different adaptation techniques have been introduced in the past by the publications just mentioned and other similar work in the context of specific applications
+For example, a standard technique used in statistical language modeling and other generative models for part-of-speech tagging or parsing is based on the maximum a posteriori adaptation which uses the source data as prior knowledge to estimate the model parameters  CITATION
+Similar techniques and other more refined ones have been used for training maximum entropy models for language modeling or conditional models  CITATION
+The first theoretical analysis of the domain adaptation problem was presented by \emcite{bendavid}, who gave VC-dimension-based generalization bounds for adaptation in classification tasks
+Perhaps, the most significant contribution of this work was the definition and application of a distance between distributions, the  SYMBOL  distance, that is particularly relevant to the problem of domain adaptation and that can be estimated from finite samples for a finite VC dimension, as previously shown by \emcite{kifer}
+This work was later extended by \emcite{blitzer} who also gave a bound on the error rate of a hypothesis derived from a weighted combination of the source data sets for the specific case of empirical risk minimization
+A theoretical study of domain adaptation was presented by \emcite{nips09}, where the analysis deals with the related but distinct case of adaptation with multiple sources, and where the target is a mixture of the source distributions
+This paper presents a novel theoretical and algorithmic analysis of the problem of domain adaptation
+It builds on the work of \emcite{bendavid} and extends it in several ways
+We introduce a novel distance, the  discrepancy distance , that is tailored to comparing distributions in adaptation
+This distance coincides with the  SYMBOL  distance for 0-1 classification, but it can be used to compare distributions for more general tasks, including regression, and with other loss functions
+As already pointed out, a crucial advantage of the  SYMBOL  distance is that it can be estimated from finite samples when the set of regions used has finite VC-dimension
+We prove that the same holds for the discrepancy distance and in fact give data-dependent versions of that statement with sharper bounds based on the Rademacher complexity
+We give new generalization bounds for domain adaptation and point out some of their benefits by comparing them with previous bounds
+We further combine these with the properties of the discrepancy distance to derive data-dependent Rademacher complexity learning bounds
+We also present a series of novel results for large classes of regularization-based algorithms, including support vector machines (SVMs)  CITATION  and kernel ridge regression (KRR)  CITATION
+We compare the pointwise loss of the hypothesis returned by these algorithms when trained on a sample drawn from the target domain distribution, versus that of a hypothesis selected by these algorithms when training on a sample drawn from the source distribution
+We show that the difference of these pointwise losses can be bounded by a term that depends directly on the empirical discrepancy distance of the source and target distributions
+These learning bounds motivate the idea of replacing the empirical source distribution with another distribution with the same support but with the smallest discrepancy with respect to the target empirical distribution, which can be viewed as reweighting the loss on each labeled point
+We analyze the problem of determining the distribution minimizing the discrepancy in both 0-1 classification and square loss regression
+We show how the problem can be cast as a linear program (LP) for the 0-1 loss and derive a specific efficient combinatorial algorithm to solve it in dimension one
+We also give a polynomial-time algorithm for solving this problem in the case of the square loss by proving that it can be cast as a semi-definite program (SDP)
+Finally, we report the results of preliminary experiments showing the benefits of our analysis and discrepancy minimization algorithms
+In section~, we describe the learning set-up for domain adaptation and introduce the notation and Rademacher complexity concepts needed for the presentation of our results
+Section~ introduces the discrepancy distance and analyzes its properties
+Section~ presents our generalization bounds and our theoretical guarantees for regularization-based algorithms
+Section~ describes and analyzes our discrepancy minimization algorithms
+Section~ reports the results of our preliminary experiments

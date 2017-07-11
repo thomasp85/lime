@@ -1,0 +1,52 @@
+### abstract ###
+We show that learning a convex body in  SYMBOL , given random samples from the body, requires  SYMBOL  samples
+By learning a convex body we mean finding a set having at most  SYMBOL  relative symmetric difference with the input body
+To prove the lower bound we construct a hard to learn family of convex bodies
+Our construction of this family is very simple and based on error correcting codes
+### introduction ###
+We consider the following problem: Given uniformly random points  from a convex body in  SYMBOL , we would like to approximately learn the body with as few samples as possible
+In this question, and throughout this paper, we are  interested in the number of samples but not in the computational requirements for  constructing such an approximation
+Our main result will show that this needs about  SYMBOL  samples
+This problem is a special case of the statistical problem of inferring  information about a probability distribution from samples
+For example, one can approximate the centroid of the body with a sample of size roughly linear in  SYMBOL
+On the other hand, a sample of size polynomial in  SYMBOL  is not  enough to approximate the volume of a convex body within a constant factor ( CITATION ,  and see Section  here for a discussion)
+Note that known approximation algorithms for the volume (e g ,  CITATION ) do not work in this setting as they need a membership oracle and random points from various carefully chosen subsets of the  input body
+Our problem also relates to work in learning theory (e g ,  CITATION ), where one is  given samples generated according to (say) the Gaussian distribution and each sample is labeled  ``positive'' or ``negative'' depending on whether it belongs to the body
+Aside from different distributions, another difference between the learning setting of   CITATION  and ours is that in ours one gets only positive examples
+Klivans~et~al ~ CITATION  give an algorithm and a nearly matching lower bound for learning convex bodies  with labeled samples chosen according to the Gaussian distribution
+Their algorithm takes time   SYMBOL  and they also show a lower bound of  SYMBOL
+The problem of learning convex sets from uniformly random samples from them was raised by Frieze~et~al ~ CITATION
+They gave a polynomial time algorithm for learning parallelopipeds
+Another somewhat related direction is the work on the learnability of discrete distributions by Kearns~et~al ~ CITATION
+Our lower bound result (like that of  CITATION ) also allows for membership oracle queries
+Note that it is known that estimating the volume of convex bodies requires an exponential number of  membership  queries if the algorithm is  deterministic   CITATION , which implies that learning bodies requires an exponential number of membership queries because if an algorithm can learn the body then it can also estimate its volume
+To formally define the notion of learning we need to specify a distance   SYMBOL  between bodies
+A natural choice  in our setting is to consider the total variation distance of the uniform distribution on each body (see Section )
+We will use the term  random oracle of a convex body  SYMBOL   for a black box that  when queried outputs a uniformly random point from  SYMBOL
+Remarkably, the lower bound of Klivans~et~al ~ CITATION  is numerically essentially identical to  ours ( SYMBOL  for  SYMBOL  constant)
+Constructions similar to theirs are possible for our particular scenario~ CITATION
+We believe that our argument is considerably simpler, and elementary compared to that of  CITATION
+Furthermore, our construction of the hard to learn family  is explicit
+Our construction makes use of error correcting codes
+To our knowledge, this connection with  error correcting codes is new in such contexts and may find further applications
+See Section~ for some further comparison \paragraph{An informal outline of the proof } The idea of the proof is to find a large family of convex bodies in  SYMBOL  satisfying two conflicting goals: (1) Any two bodies in the family are almost disjoint; (2) and yet they look alike in the sense that a small sample of random points from any such body is insufficient for determining which one it is
+Since any two bodies are almost disjoint, even approximating a body would allow one to determine it exactly
+This will imply that it is also hard to approximate
+We first construct a family of bodies that although not almost disjoint, have sufficiently large symmetric difference
+We will then be able to construct a family with almost disjoint bodies by taking products of bodies in the first family
+The first family is quite natural (it is described formally in Sec ~)
+Consider the cross polytope  SYMBOL  in  SYMBOL  (generalization of the octahedron to  SYMBOL  dimensions: convex hull of the vectors  SYMBOL , where  SYMBOL  is the unit vector in  SYMBOL  with the   SYMBOL th coordinate  SYMBOL  and the rest  SYMBOL )
+A  peak  attached to a facet  SYMBOL  of  SYMBOL  is a pyramid that has  SYMBOL  as its base and has its other vertex outside  SYMBOL  on the normal to  SYMBOL  going  through its centroid
+If the height of the peak is sufficiently small then attaching peaks to any subset of the  SYMBOL  facets will result in a convex polytope
+We will show later that we can choose the height so that the volume of all the  SYMBOL  peaks is  SYMBOL  fraction of the volume of  SYMBOL
+We call this family of bodies  SYMBOL  [We remark that our construction of cross-polytopes with peaks has resemblance to a construction in  CITATION  with different parameters, but there does not  seem to be any connection between the problem studied there and the problem we are interested in ]  Intuitively, a random point in a body from this family tells one that if the point is in one of the peaks then that peak is present, otherwise one learns nothing
+Therefore if the number of queries is at most a polynomial in  SYMBOL , then one learns nothing about most of the peaks and so the algorithm cannot tell which body it got
+But these bodies do not have large symmetric difference (can be as small as a  SYMBOL  fraction of the cross polytope if the two bodies differ in just one peak) but we can pick a subfamily of them having pairwise symmetric difference at least  SYMBOL  by picking a large random subfamily
+We will do it slightly differently which will be more convenient for the proof: Bodies in  SYMBOL  have one-to-one correspondence with binary strings of length  SYMBOL : each facet corresponds to a coordinate of the string which takes value  SYMBOL  if that facet has a peak attached, else it has value  SYMBOL
+To ensure that any two bodies in  our family differ in many peaks it suffices to ensure that their corresponding strings have large Hamming distance
+Large sets of such strings are of course furnished by good error correcting codes
+From this family we can obtain another family of almost disjoint bodies by taking products, while preserving the property that polynomially many random samples do not tell the bodies apart
+This product trick (also known as tensoring) has been used many times before, in particular for amplifying hardness, but we are not aware of its use in a setting similar to ours
+Our construction of the product family also resembles the operation of concatenation in coding theory
+Acknowledgments
+We are grateful to Adam Kalai and Santosh Vempala for useful discussions

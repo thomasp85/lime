@@ -1,0 +1,63 @@
+### abstract ###
+A current challenge is to develop computational approaches to infer gene network regulatory relationships based on multiple types of large-scale functional genomic data.
+We find that single-layer feed-forward artificial neural network models can effectively discover gene network structure by integrating global in vivo protein:DNA interaction data with genome-wide microarray RNA data.
+We test this on the yeast cell cycle transcription network, which is composed of several hundred genes with phase-specific RNA outputs.
+These ANNs were robust to noise in data and to a variety of perturbations.
+They reliably identified and ranked 10 of 12 known major cell cycle factors at the top of a set of 204, based on a sum-of-squared weights metric.
+Comparative analysis of motif occurrences among multiple yeast species independently confirmed relationships inferred from ANN weights analysis.
+ANN models can capitalize on properties of biological gene networks that other kinds of models do not.
+ANNs naturally take advantage of patterns of absence, as well as presence, of factor binding associated with specific expression output; they are easily subjected to in silico mutation to uncover biological redundancies; and they can use the full range of factor binding values.
+A prominent feature of cell cycle ANNs suggested an analogous property might exist in the biological network.
+This postulated that network-local discrimination occurs when regulatory connections are explicitly disfavored in one network module, relative to others and to the class of genes outside the mitotic network.
+If correct, this predicts that MBF motifs will be significantly depleted from the discriminated class and that the discrimination will persist through evolution.
+Analysis of distantly related Schizosaccharomyces pombe confirmed this, suggesting that network-local discrimination is real and complements well-known enrichment of MBF sites in G1 class genes.
+### introduction ###
+Hundreds of yeast RNAs are expressed in a cell cycle dependent, oscillating manner.
+In both budding yeast and fission yeast, these RNAs cluster into four or five groups, each corresponding roughly to a phase of the cycle CITATION CITATION.
+Large sets of phase-specific RNAs are also seen in animal and plant cells CITATION CITATION, arguing that an extensive cycling transcription network is a fundamental property of Eukaryotes.
+The complete composition and connectivity of the cell cycle transcription network is not yet known for any eukaryote, and many components may vary over long evolutionary distances CITATION CITATION, CITATION, but some specific regulators are paneukaryotic, as are some of their direct target genes.
+Coupled with experimental accessibility, this conservation of core components and connections make the yeast mitotic cycle an especially good test case for studies of network structure, function, and evolution.
+To expose the underlying logic of this transcription network, a starting point is to decompose the cell cycle into its component phases and link the pertinent regulatory factors with their immediate regulatory output patterns, here in the form of phasic RNA expression.
+One way to do this is to integrate multiple genome-wide data types that impinge on connection inference, including factor:DNA interaction data from chromatin IP studies, RNA expression patterns, and comparative genomic analysis.
+This is appealing partly because these assays are genome-comprehensive and hypothesis-independent, so they can, in principle, reveal regulatory relationships not detected by classical genetics.
+However, the scale and complexity of these datasets require new methods to discover and rank candidate connections, while also accommodating considerable experimental and biological noise.
+Microarray RNA expression studies in budding yeast have identified 230 to 1,100 cycling genes, the upper number encompassing nearly a fifth of all yeast genes CITATION, CITATION, CITATION, CITATION.
+Specifics of experimental design and methods of analysis contribute to the wide range in the number of genes designated as cycling, but there is agreement on a core set of nearly 200.
+Yeast molecular genetic studies have established that transcriptional regulation is critical for controlling phase-specific RNA expression for some of these genes, though this does not exclude modulation and additional contributions from post-transcriptional mechanisms.
+About a dozen Saccharomyces transcription factors have been causally associated with direct control of cell cycle expression patterns, including repressors, activators, co-regulators, and regulators that assume both repressing and activating roles, depending on context: Ace2, Fkh1, Fkh2, Mbp1, Mcm1, Ndd1, Stb1, Swi4, Swi5, Swi6, Yhp1, and Yox1.
+These can serve as internal control true-positive connections.
+Conversely, a majority of yeast genes have no cell cycle oscillatory expression, and true negatives can be drawn from this group.
+A practical consideration is how well the behavior of a network is represented in critical datasets.
+In this case, cells in all cell cycle phases are present in the mixed phase, exponentially growing yeast cultures used for the largest and most complete set of global protein:DNA interaction data so far assembled in functional genomics CITATION.
+These data are further supported by three smaller studies of the same basic design CITATION CITATION.
+This sets the cell cycle apart from many other transcription networks whose multiple states are either partly or entirely absent from the global ChIP data.
+Equally important are RNA expression data that finely parse the kinetic trajectory for every gene across the cycle of budding yeast CITATION, CITATION and also in the distantly related fission yeast, S. pombe CITATION CITATION.
+This combination of highly time-resolved RNA expression data and phase-mixed ChIP/array data can be used to assign protein:DNA interactions to explicit cell cycle phases, while evolutionary comparison with S. pombe highlight exceptionally conserved and presumably fundamental network properties.
+Many prior efforts to infer yeast transcription network connections from genome-wide data CITATION CITATION, CITATION, CITATION were designed to address the global problem of finding connection patterns across the entire yeast transcriptome by using very large and diverse collections of yeast RNA, DNA, and/or chromatin immunoprecipitation data.
+The present work focuses instead on a single cellular process and its underlying gene network, which represents a natural level of organization positioned between the single gene at one extreme and the entire interlocking community of networks that govern the entire cell.
+To model regulatory factor:target gene behavior, we adapted neural networks to integrate global expression and protein:DNA interaction data.
+Artificial neural networks are structural computational models with a long history in pattern recognition CITATION.
+A general reason for thinking ANNs could be effective for this task is that they have some natural similarities with transcription networks, including the ability to create nonlinear sparse interactions between transcriptional regulators and target genes.
+They have previously been applied to model relatively small gene circuits CITATION CITATION, though they have not, to our knowledge, been used for the problem of inferring network structure by integrating large-scale data.
+We reasoned that a simple single-layer ANN would be well-suited to capture and leverage two additional known characteristics of eukaryotic gene networks.
+First, factor binding in vivo varies over a continuum of values, as reflected in ChIP data, in vivo footprinting, binding site numbers and affinity ranges, and site mutation analyses.
+These quantitative differences can have biological significance to transcription output by affecting cooperativity, background leaky expression or the lack of it, and the temporal sequencing of gene induction as factors become available or disappear.
+This is quite different from a world in which binding is reduced to a simple two-state, present/absent call.
+Neural networks are able to use the full range of binding probabilities in the dataset.
+Second, ANNs can give weight and attention to structural features such as the persistent absence of specific factors from particular target groups of genes.
+This negative image information is potentially important and not used by other methods applied to date CITATION, CITATION, CITATION, CITATION.
+The inherent ability of ANNs to use these properties is a potential strength compared with algorithms that rest solely on positive evidence of factor:target binding or require discretization of binding measurements into a simplified bound/unbound call.
+ANNs have been most famously used in machine learning as black boxes to perform classification tasks, in which the goal is to build a network based on a training dataset that will subsequently be used to perform similar classifications on new data of similar structure.
+In these classical ANN applications, the weights within the network are of no particular interest, as long as the trained network performs the desired classification task successfully when extrapolating to new data.
+ANNs are used here in a substantially different way, serving as structural models CITATION.
+Specifically, we use simple feed-forward networks in which the results of interest are mainly in the weights and what they suggest about the importance of individual transcription factors or groups of factors for specifying particular expression outputs.
+Here ANNs were trained to predict the RNA expression behavior of genes during a cdc28 synchronized cell cycle, based solely on transcription factor binding pattern, as measured by ChIP/array for 204 yeast factors determined in an exponentially growing culture CITATION.
+The resulting ANN model is then interrogated to identify the most important regulator-to-target gene associations, as reflected by ANN weights.
+Ten of the twelve major known transcriptional regulators of cell cycle phase-specific expression ranked at the very top of the 204-regulator list in the model.
+The cell cycle ANNs were remarkably robust to a series of in silico mutations, in which binding data for a specific factor was eliminated and a new family of ANN models were generated.
+Additional doubly and triply mutated networks correctly identified epistasis relationships and redundancies in the biological network.
+This approach was also applied to two additional, independent cell cycle expression studies to illustrate generality across data platforms, and to probe how the networks might change under distinct modes of cell synchronization.
+Analysis of the weights matrices from the resulting models shows that the neural nets take advantage of information about specifically disfavored or disallowed connections between factors and expression patterns, together with the expected positive connections for other factors, to assign genes to their correct expression outputs.
+This led us to ask if there is a corresponding bias in the biological network against binding sites for specific factors in some expression families as suggested by the ANN.
+We found that this is the case, in multiple sensu stricto yeast genomes relatively closely related to Saccharomyces cerevisiae, and also in the distantly related fission yeast S. pombe.
+This appears to be a deeply conserved network architecture property, even though very few specific orthologous genes are involved.

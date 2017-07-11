@@ -1,0 +1,30 @@
+### abstract ###
+Recognizing analogies, synonyms, anto\-nyms, and associations appear to be four distinct tasks, requiring distinct NLP algorithms
+In the past, the four tasks have been treated independently, using a wide variety of algorithms
+These four semantic classes, however, are a tiny sample of the full range of semantic phenomena, and we cannot afford to create ad hoc algorithms for each semantic phenomenon; we need to seek a unified approach
+We propose to subsume a broad range of phenomena under analogies
+To limit the scope of this paper, we restrict our attention to the subsumption of synonyms, antonyms, and associations
+We introduce a supervised corpus-based machine learning algorithm for classifying analogous word pairs, and we show that it can solve multiple-choice SAT analogy questions, TOEFL synonym questions, ESL synonym-antonym questions, and similar-associated-both questions from cognitive psychology
+### introduction ###
+A pair of words (petrify:stone) is  analogous  to another pair (vaporize:gas) when the semantic relations between the words in the first pair are highly similar to the relations in the second pair
+Two words (levied and imposed)  are  synonymous  in a context (levied a tax) when they can be interchanged (imposed a tax), they are are  antonymous  when they have opposite meanings (black and white), and they are  associated  when they tend to co-occur (doctor and hospital)
+On the surface, it appears that these are four distinct semantic classes, requiring distinct NLP algorithms, but we propose a uniform approach to all four
+We subsume synonyms, antonyms, and associations under analogies
+In essence, we say that  SYMBOL  and  SYMBOL  are antonyms when the pair  SYMBOL : SYMBOL  is analogous to the pair black:white,  SYMBOL  and  SYMBOL  are synonyms when they are analogous to the pair levied:imposed, and  SYMBOL  and  SYMBOL  are associated when they are analogous to the pair doctor:hospital
+There is past work on recognizing analogies  CITATION , synonyms  CITATION , antonyms  CITATION , and associations  CITATION , but each of these four tasks has been examined separately, in isolation from the others
+As far as we know, the algorithm proposed here is the first attempt to deal with all four tasks using a uniform approach
+We believe that it is important to seek NLP algorithms that can handle a broad range of semantic phenomena, because developing a specialized algorithm for each phenomenon is a very inefficient research strategy
+It might seem that a lexicon, such as WordNet  CITATION , contains all the information we need to handle these four tasks
+However, we prefer to take a corpus-based approach to semantics
+Veale \shortcite{veale04} used WordNet to answer 374 multiple-choice SAT analogy questions, achieving an accuracy of 43\%, but the best corpus-based approach attains an accuracy of 56\%  CITATION
+Another reason to prefer a corpus-based approach to a lexicon-based approach is that the former requires less human labour, and thus it is easier to extend to other languages
+In Section~, we describe our algorithm for recognizing analogies
+We use a standard supervised machine learning approach, with feature vectors based on the frequencies of patterns in a large corpus
+We use a support vector machine (SVM) to learn how to classify the feature vectors  CITATION
+Section~ presents four sets of experiments
+We apply our algorithm for recognizing analogies to multiple-choice analogy questions from the SAT college entrance test, multiple-choice synonym questions from the TOEFL (test of English as a foreign language), ESL (English as a second language) practice questions for distinguishing synonyms and antonyms, and a set of word pairs that are labeled  similar ,  associated , and  both , developed for experiments in cognitive psychology
+We discuss the results of the experiments in Section~
+The accuracy of the algorithm is competitive with other systems, but the strength of the algorithm is that it is able to handle all four tasks, with no tuning of the learning parameters to the particular task
+It performs well, although it is competing against specialized algorithms, developed for single tasks
+Related work is examined in Section~ and limitations and future work are considered in Section~
+We conclude in Section~

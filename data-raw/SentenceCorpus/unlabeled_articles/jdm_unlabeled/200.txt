@@ -1,0 +1,52 @@
+### abstract ###
+patients suffering from the behavioral variant of frontotemporal dementia ftd-b often exaggerate their abilities
+are those errors in judgment limited to domains in which patients under-perform  or do ftd-b patients overestimate their abilities in other domains
+is overconfidence in ftd-b patients domain-specific or domain-general
+to address this question  we asked patients at early stages of ftd-b to judge their performance in two domains attention  perception in which they exhibit relatively spared abilities
+in both domains  ftd-b patients overestimated their performance relative to patients with dementia of alzheimer type dat and healthy elderly subjects
+results are consistent with a domain-general deficit in metacognitive judgment
+we discuss these findings in relation to  regression to the mean  accounts of overconfidence and the role of emotions in metacognitive judgments
+### introduction ###
+how good are you at multitasking
+how good are you at remembering people's names
+judgments people make about their own cognitive abilities vary greatly from one person to another
+these judgments about the self are also systematically biased relative to the judgments made by others about us CITATION
+we often regard ourselves as more competent than others CITATION and better than what is justified by our actual performance CITATION
+discouraging as these observations might be  people can learn and improve at most cognitive tasks
+the learning occurs not only at the task levelwe can get better at playing the pianobut also at the meta-levelwe become more attuned to judging just how good we are at playing the piano
+these examples illustrate several aspects of what is known in the cognitive and developmental literatures as metacognition or the knowledge people possess about their own cognitive abilities  including beliefs about their own performance in specific tasks
+some psychologists have argued that metacognitive judgment is secondary to actual performance CITATION
+according to this view  the knowledge and skills required to perform tasks in a certain domain are also required for judging one's ability in that domain
+one corollary of this view is that metacognitive judgment is domain-specific  a person who is good at remembering things and bad at understanding how others feel will be relatively aware of his good memory skills but relatively unaware of his poor empathy skills
+despite its intuitive appeal  this view has been challenged as confounding metacognitive judgment with level of performance
+because subjective estimates of performance are never perfectly correlated with actual performance  judgments of performance will regress toward the mean  participants who perform worst in a given domain will tend to overestimate their ability in that domain  while those performing best will tend to underestimate
+in other words  the relation between actual performance and subjective judgment may reflect a statistical artifact rather than a genuine relation between cognitive and meta-cognitive levels CITATION
+although biased beliefs about one's own skills are the norm  such biases are often exacerbated in psychiatric and neurological disorders CITATION
+denial of deficit  reduced self-awareness  loss of insight  and anosognosia are all clinical terms that broadly refer to the same phenomenon  a patient's distorted assessment of her own skills
+these patient populations provide an excellent opportunity to test the domain-specificity of metacognitive judgment  as certain abilities become severely affected by the disease while others remain relatively unaffected
+thus  it is possible to ask whether metacognitive judgments become distorted only in the affected domains or the distortion generalizes to judgments in spared domains
+the answer to this question so far has been mixed
+consistent with the domain-specificity hypothesis  some studies have reported cases of patients with hemiplegia who deny their paralysis but acknowledge limitations in other domains CITATION
+there is also evidence that failures of awareness cluster around symptoms
+for example  in a study of denial in dementia of alzheimer's type dat  a factor analysis of questionnaire data revealed two independent factors  a  cognitive denial  related to length of disease and severity of cognitive deficits  and a  behavioral denial  related to behavioral disinhibition and inappropriate emotional displays CITATION
+in contrast  other studies have reported findings consistent with a domain-general deficit  showing that metacognitive errors extend beyond the specific domain of impairment
+for example  patients with probable dat have been reported to overestimate their performance not only in memory but also in visuo-spatial tasks CITATION
+furthermore  denial in dat seems to correlate more strongly with frontal lobe deficit than with memory problems  despite the latter being more typical of dat CITATION
+although denial of deficit is prevalent in the clinical setting and may help us understand over-optimism in healthy adults  until not long ago research on denial of deficit had proceeded independently from the experimentally based literature on metacognitive judgment
+recently  the clinical and experimental traditions have become better integrated and clinical researchers have begun to rely more heavily on experimental paradigms CITATION
+such experimental designs are useful for comparing patients' judgments of their performance to their actual performance on the task
+furthermore  by asking the patient to predict performance before the task and to estimate it after the task  it is possible to assess metacognitive monitoring i e   whether metacognitive judgment improves after experiencing the task
+experimental designs can be applied to domains other than the one of primary clinical concern
+this feature becomes important when testing the domain generality of metacognitive judgment
+the patient populations in our study consisted of patients with a behavioral variant of frontotemporal dementia ftd-b and patients with early dementia of alzheimer type dat
+although ftd-b has an insidious onset and a gradual progression  its clinical presentation bears close resemblance to cases of orbitofrontal damage caused by traumatic brain injury  such as the famous case of phineas gage CITATION
+ftd-b patients are often described by their spouses as unable or unwilling to take other people's feelings into account when deciding how to act
+they often exhibit inappropriate social behavior  changes in personality and poor decision making CITATION
+at early stages of the disease  many ftd-b patients deny having difficulties or seem unconcerned about them CITATION
+such a denial has been documented in the social and emotional domains but needs to be explored further in domains of relatively spared performance
+in contrast to ftd-b  patients in early stages of dat have their social skills relatively spared
+the deficit in dat is primarily of episodic memory CITATION
+at early stages  dat patients tend to be aware of their deficit  but this awareness declines as the disease progresses CITATION
+after describing ftd-b's denial of deficit in semi-structured interviews  we report two experiments that examined whether ftd-b patients overestimate their performance relative to dat patients and healthy adults
+pre- and post-test judgments of performance were obtained for an attention task experiment  NUMBER   stroop task and a perception task experiment  NUMBER   change blindness task
+by testing metacognition in two different domains attention  perception  neither of which is prototypically impaired in early dementia  we were able to test the domain-generality of metacognitive judgments

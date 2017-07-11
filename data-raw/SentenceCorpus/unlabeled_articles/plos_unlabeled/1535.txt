@@ -1,0 +1,72 @@
+### abstract ###
+Much of the complexity of biochemical networks comes from the information-processing abilities of allosteric proteins, be they receptors, ion-channels, signalling molecules or transcription factors.
+An allosteric protein can be uniquely regulated by each combination of input molecules that it binds.
+This regulatory complexity causes a combinatorial increase in the number of parameters required to fit experimental data as the number of protein interactions increases.
+It therefore challenges the creation, updating, and re-use of biochemical models.
+Here, we propose a rule-based modelling framework that exploits the intrinsic modularity of protein structure to address regulatory complexity.
+Rather than treating proteins as black boxes, we model their hierarchical structure and, as conformational changes, internal dynamics.
+By modelling the regulation of allosteric proteins through these conformational changes, we often decrease the number of parameters required to fit data, and so reduce over-fitting and improve the predictive power of a model.
+Our method is thermodynamically grounded, imposes detailed balance, and also includes molecular cross-talk and the background activity of enzymes.
+We use our Allosteric Network Compiler to examine how allostery can facilitate macromolecular assembly and how competitive ligands can change the observed cooperativity of an allosteric protein.
+We also develop a parsimonious model of G protein-coupled receptors that explains functional selectivity and can predict the rank order of potency of agonists acting through a receptor.
+Our methodology should provide a basis for scalable, modular and executable modelling of biochemical networks in systems and synthetic biology.
+### introduction ###
+A goal of biology is to understand the structure and function of the biochemical networks that underpin cellular decision-making.
+One organizing principle is that these networks are inherently modular CITATION CITATION, with specific functions ascribed to a subset of proteins in the network.
+Yet, like logic gates in electronic circuits, even individual proteins can perform sophisticated computations and integrate multiple inputs CITATION CITATION.
+In engineering, a modular approach to the analysis of a system scales well with the size of the system and its complexity.
+Indeed, engineers design systems hierarchically with modules comprising other modules.
+If molecular biology is similarly modular, which structures are the atomic modules from which larger modules are constructed?
+In signalling networks, we may plausibly ascribe this role to protein subunits and domains CITATION, CITATION.
+Their function as elementary modules often depends on allosteric transitions: an interaction at one site alters the structure at a distant site via a conformational change.
+Indeed, allostery increases the information-processing ability of a network because it transforms proteins from passive substrates to dynamic computational elements CITATION.
+A modular approach to the analysis and design of biochemical networks should therefore explicitly describe the computations performed by individual allosteric proteins.
+Efforts to tackle complexity in biochemical networks should also exploit the modularity of protein structure.
+Protein structure is hierarchical, and a given protein often has domains also present in other proteins or repeated subunits.
+For example, many signalling proteins contain SH2 or PDZ domains, and many receptors, ion channels and enzymes are multimers.
+In genetic networks, transcription factors are also often multimers or have a common DNA-binding domain, such as a zinc finger or homeobox.
+The re-use of protein domains is both a simplifying and confounding feature: once a domain has been characterized, that characterization can be used again, but it is also necessary to model molecular cross-talk between signalling pathways that contain proteins with similar structures.
+In vivo, protein interactions can generate both combinatorial and regulatory complexity.
+Combinatorial complexity is an explosion in the number of possible species in a system as the number of proteins and interactions in the system increases.
+It arises because the number of states of a module dramatically increases as its proteins bind ligands as well as each other and as different residues are covalently modified CITATION, CITATION.
+For example, p53, the so-called cellular gatekeeper, has 37 known modification sites and so potentially 2 37 states CITATION.
+Thus, a complete description of the system potentially requires a combinatorially large number of chemically distinct species and reactions.
+In contrast, regulatory complexity is a combinatorial increase in the number of parameters required to describe the regulatory interactions within a system as the number of interactions increase.
+This complexity arises because the strength of protein interactions depends on the state of a module, and each state of the module potentially requires a unique set of parameters to characterize interactions within the module, with other modules in the network, and with molecules external to the network.
+Measuring this number of parameters in vivo is challenging.
+Rule-based modelling addresses combinatorial complexity and allows biologists to specify the regulatory logic of a system CITATION.
+Examples include BioNetGen CITATION, Kappa CITATION, Moleculizer CITATION and StochSim CITATION.
+Rather than explicitly enumerating each species and reaction in the network, a rule-based model describes a system as a collection of biomolecules interacting according to a set of rules.
+Each rule is a template for a reaction that specifies the reactants, products and all relevant biochemical parameters.
+Thus, combinatorially complex systems are compactly described because a large number of distinct reactions are subsumed in the template encoded by a single rule.
+An algorithm may automatically infer a complete reaction network prior to simulation or, if the combinatorial complexity is too great, use alternative techniques to simulate the system CITATION, CITATION.
+Importantly, some rules also specify contextual conditions that constrain when an interaction can occur and hence encode the regulatory logic of the network.
+For example, a rule may allow only a doubly phosphorylated MAP kinase to phosphorylate its substrate.
+Rule-based formalisms can describe complex biochemical systems, but inherently offer little guidance on avoiding a number of methodological problems.
+First, using rules to specify the regulatory logic of a system does not address the system's regulatory complexity.
+Consider G protein-coupled receptors, which allosterically couple an extracellular ligand-binding site to an intracellular G protein-binding site CITATION.
+GPCRs can be promiscuous, binding multiple intracellular targets CITATION, CITATION.
+Supposing a given GPCR can bind one of L different drugs or endogenous ligands and one of G different G proteins, then in principle we require LG pair-wise cooperativity parameters to describe how each ligand regulates the GPCR's affinity for each G protein.
+Thus, the number of regulatory parameters scales with LG, and the number of rules also scales with LG because each parameter is part of a rule with distinct contextual constraints.
+Promiscuous allosteric proteins can therefore require a large number of rules and parameters to characterize their interactions.
+Second, a module should have a well-described function and be easily re-used and portable between systems, but most rule-based formalisms are not inherently modular.
+Modellers typically treat proteins as black boxes and define interactions using biochemical equations.
+In such interaction-centric approaches, the regulation of proteins is encoded by rules with ad hoc conditions that no longer apply when the proteins interact with different partners.
+These ad hoc rules obfuscate the mechanism underlying allosteric regulation because they do not show explicitly how the intrinsic structural and thermodynamic properties of allosteric proteins generate their functional properties.
+In contrast, a biomolecule-centric approach would encode regulatory logic in the proteins themselves.
+Fewer changes to rules would then be required to define how a new set of interaction partners regulates the protein's activity.
+If a model includes protein domains and subunits, re-use of these components would also be simplified.
+Finally, models generated by rule-based methods should be thermodynamically correct.
+In biochemical networks, there are often sets of reversible reactions that connect into a closed loop, forming a thermodynamic cycle.
+In many of these cycles no free energy is consumed: for example, when proteins bind multiple ligands, when ligands bind several conformations of a protein, or when ion channels bind multiple agonists and have closed, open, and desensitized states.
+Thermodynamics imposes a mathematical relationship between the equilibrium constants for all the reactions involved in such cycles: their product must be unity.
+Equilibrium constants cannot therefore be assigned independently.
+A thermodynamically correct methodology should ensure that a model satisfies this constraint, ideally by construction.
+Here, we present a modular and scalable modelling methodology that alleviates the regulatory as well as the combinatorial complexity of biochemical networks.
+We first describe our modelling framework, which uses a thermodynamically grounded treatment of allostery in which ligands distinguish only the conformational state of allosteric proteins.
+We also introduce a rule-based modelling tool that implements our methodology: the Allosteric Network Compiler.
+We use ANC to examine how allostery can make macromolecular assembly more efficacious.
+We then show how our modelling framework describes common mechanisms of allostery by mapping the regulatory properties of a protein onto conformational changes in the protein itself and demonstrate how we can ease the analysis of multiple ligands interacting through an allosteric protein.
+Next, we discuss how our approach reduces regulatory complexity and thereby increases a model's modularity.
+Finally, we use our framework to develop a model of G protein-coupled receptors whose regulatory complexity scales with instead of LG and consequently has greater predictive power.
+While our major goal is to introduce a new modular modelling methodology rather than its implementation, we have made ANC and the models we discuss available at: LINK.

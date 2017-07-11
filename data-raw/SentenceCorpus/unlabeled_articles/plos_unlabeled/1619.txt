@@ -1,0 +1,50 @@
+### abstract ###
+Non-intermingling, adjacent populations of cells define compartment boundaries; such boundaries are often essential for the positioning and the maintenance of tissue-organizers during growth.
+In the developing wing primordium of Drosophila melanogaster, signaling by the secreted protein Hedgehog is required for compartment boundary maintenance.
+However, the precise mechanism of Hh input remains poorly understood.
+Here, we combine experimental observations of perturbed Hh signaling with computer simulations of cellular behavior, and connect physical properties of cells to their Hh signaling status.
+We find that experimental disruption of Hh signaling has observable effects on cell sorting surprisingly far from the compartment boundary, which is in contrast to a previous model that confines Hh influence to the compartment boundary itself.
+We have recapitulated our experimental observations by simulations of Hh diffusion and transduction coupled to mechanical tension along cell-to-cell contact surfaces.
+Intriguingly, the best results were obtained under the assumption that Hh signaling cannot alter the overall tension force of the cell, but will merely re-distribute it locally inside the cell, relative to the signaling status of neighboring cells.
+Our results suggest a scenario in which homotypic interactions of a putative Hh target molecule at the cell surface are converted into a mechanical force.
+Such a scenario could explain why the mechanical output of Hh signaling appears to be confined to the compartment boundary, despite the longer range of the Hh molecule itself.
+Our study is the first to couple a cellular vertex model describing mechanical properties of cells in a growing tissue, to an explicit model of an entire signaling pathway, including a freely diffusible component.
+We discuss potential applications and challenges of such an approach.
+### introduction ###
+During embryonic development of complex multicellular organisms, spatial reference points need to be established within tissues.
+These are often formed by specialized groups of cells that are capable of signaling to neighboring cells.
+Such signaling centers define coordinate systems along which newly arising cells can orient themselves and make crucial decisions regarding proliferation, differentiation or migration CITATION, CITATION, CITATION, CITATION, CITATION, CITATION.
+Because of their pervasive importance, tissue-organizing centers need to be precisely controlled both spatially and temporally, as well as with respect to their signaling amplitude.
+One possible mechanism for spatial control of tissue organizers is to restrict the movement of cells at fixed boundary positions.
+This phenomenon is indeed observed, and it involves the separation of groups of cells that have already been spatially instructed to assume distinct identities, for example at segment- or parasegment-boundaries.
+Akin to water in oil, the two cell populations are seen to establish and maintain a relatively straight interface to each other, effectively minimizing their contact area.
+The minimizing force is assumed to help stabilize the interface against random perturbations that may arise from cell divisions or from arbitrary cell movements; thus, any organizing activity that is associated with the interface is likewise stabilized.
+How is this separation, or sorting, of cells of distinct identities achieved?
+One line of work attributes this to differential cell adhesion CITATION, CITATION : cell populations might develop distinct adhesive properties; these affinity differences would then allow them to sort out from one another.
+Another line of reasoning is based on Differential Interfacial Tension CITATION, CITATION : this hypothesis suggests that cells might actively constrict surfaces that are in contact with neighboring cells, depending on the cellular identity of neighbors and/or depending on signaling events.
+Both mechanisms would ultimately lead to physical forces that would help keep the cell populations apart.
+The developing wing primordium of Drosophila is particularly well suited to study boundary formation.
+It is not required for larval viability, can be manipulated experimentally through an advanced genetic toolkit, and has been well characterized.
+The disc contains a compartment boundary that separates anterior from posterior cells; this boundary is inherited from specification events occurring early in the embryo.
+The initial embryonic events that give rise to the boundary involve mutual signaling between stripes of cells, mediated by an extensively studied network of genes.
+Once established, the cellular identities on both sides of these boundaries are stable throughout larval development and well into adult life.
+The compartment boundary in the disc is strictly respected by all cells, even when cells on one side of the boundary are artificially provided with a competitive growth advantage over cells on the other side of the boundary CITATION.
+The wing disc itself is a simple, flat, epithelial sheet, and the orientations of cell divisions appear largely random CITATION.
+Genetic analysis and computational modeling of this tissue is simplified by the fact that daughter cells arising from cell divisions usually remain in physical contact and do not migrate away from each other.
+This has been shown experimentally by tracing descendents of single cells; in most cases such a clone of offspring cells will form a coherent patch of connected cells.
+This behavior suggests that the complicated processes of cell intercalation and migration can be neglected, to a first approximation, when studying boundary maintenance in this tissue.
+Working with such wing discs, a recent, seminal study has begun to shed light on possible boundary formation mechanisms CITATION.
+The authors have directly demonstrated an increased mechanical tension at cell-to-cell interfaces located immediately at the boundary, using laser ablation experiments.
+Subsequent computer simulations then revealed that collectively such local forces are sufficient to maintain a stable compartment boundary.
+These results are intriguing, but they raise a number of new questions: Boundary formation in the wing disc is known to depend on the secreted and diffusible signaling protein Hedgehog, which is produced by posterior cells and specifically sensed and transduced by anterior cells CITATION, CITATION.
+If diffusible Hh indeed somehow influences mechanical tension, what conditions must then be met to ensure a well-defined boundary?
+So far, all known transcriptional responses of Hh signaling are occurring several cell-diameters wide into the responding tissue.
+How is the response in this case restricted to the immediate boundary region?
+Furthermore, experimental suppression of Hh signaling has been shown to lead to ectopic boundary formation distant from the actual boundary CITATION.
+Does this mean that the influence of Hh signaling does extend beyond the actual boundary, and if so, why does this not have a noticeable consequence in the wild type situation?
+Here, we propose a mechanistic model that can generate a localized outcome of Hh signaling with respect to physical forces and mechanical properties, despite a longer range of the molecular response in terms of target gene expression.
+Furthermore, we estimate the distance from the boundary, up to which Hh signaling may be able prime cells for boundary formation; this distance is inferred using both experimental results as well as modeling results, and we estimate it to be at least 10 cell diameters.
+We approach the problem by first formulating an explicit, two-dimensional model of Hh production, diffusion and transduction, and by then coupling this setup to a physical model of the growing tissue.
+In our modeling approach, cells and their contact surfaces are described as a graph of connected vertexes.
+Our model essentially follows the Differential Interface Tension hypothesis; it is a modified version of a model that has been previously established for the very same tissue CITATION.
+We observe good compartment boundary formation over a range of simulation parameters, and the modeling outcomes agree qualitatively with experimental perturbations specifically performed for this study.

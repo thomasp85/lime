@@ -1,0 +1,30 @@
+### abstract ###
+% Sparse coding---that is, modelling data vectors as sparse linear combinations of basis elements---is widely used in machine learning, neuroscience, signal processing, and statistics
+This paper focuses on the large-scale matrix factorization problem that consists of  learning  the basis set in order to adapt it to specific data
+Variations of this problem include dictionary learning in signal processing, non-negative matrix factorization and sparse principal component analysis
+In this paper, we propose to address these tasks with a new online optimization algorithm, based on stochastic approximations, which scales up gracefully to large data sets with millions of training samples, and extends naturally to various  matrix factorization formulations, making it suitable for a wide range of learning problems
+A proof of convergence is presented, along with experiments with natural images and genomic data demonstrating that it leads to state-of-the-art performance in terms of speed and optimization for both small and large data sets
+### introduction ###
+The linear decomposition of a signal using a few atoms of a  learned  dictionary instead of a predefined one---based on wavelets  CITATION  for example---has recently led to state-of-the-art results in numerous low-level signal processing tasks such as image denoising  CITATION , texture synthesis  CITATION  and audio processing  CITATION , as well as higher-level tasks such as image classification  CITATION , showing that sparse learned models are well adapted to natural signals
+Unlike decompositions based on principal component analysis and its variants, these models do not impose that the basis vectors be orthogonal, allowing more flexibility to adapt the representation to the data
+In machine learning and statistics, slightly different matrix factorization problems are formulated  in order to obtain a few  interpretable  basis elements from a set of data vectors
+This includes non-negative matrix factorization and its variants  CITATION , and sparse principal component analysis  CITATION
+As shown in this paper, these problems have strong similarities; even though we first focus on the problem of dictionary learning, the algorithm we propose is able to address all of them
+While learning the dictionary has proven to be critical to achieve (or improve upon) state-of-the-art results in signal and image processing, effectively solving the corresponding optimization problem is a significant computational challenge, particularly in the context of large-scale data sets that may include millions of training samples
+Addressing this challenge and designing a generic algorithm which is  capable of efficiently handling various matrix factorization problems, is the topic of this paper
+Concretely, consider a signal  SYMBOL  in  SYMBOL
+We say that it admits a sparse approximation over a \mbox{ dictionary }  SYMBOL  in  SYMBOL , with  SYMBOL  columns referred to as  atoms , when one can find a linear combination of a ``few'' atoms from  SYMBOL  that is ``close'' to the signal  SYMBOL
+Experiments have shown that modelling a signal with such a sparse decomposition ( sparse coding ) is very effective in many signal processing applications  CITATION
+For natural images, predefined dictionaries based on various types of wavelets  CITATION  have also been used for this task
+However, learning the dictionary instead of using off-the-shelf bases has been shown to dramatically improve signal reconstruction  CITATION
+Although some of the learned dictionary elements may sometimes ``look like'' wavelets (or Gabor filters), they are tuned to the input images or signals, leading to much better results in practice
+Most recent algorithms for dictionary learning  CITATION  are iterative  batch  procedures, accessing the whole training set at each iteration in order to minimize a cost function under some constraints, and cannot efficiently deal with very large training sets  CITATION , or dynamic training data changing over time, such as video sequences
+To address these issues, we propose an  online  approach that processes the signals, one at a time, or in mini-batches
+This is particularly important in the context of image and video processing  CITATION , where it is common to learn dictionaries adapted to small patches, with training data that may include several millions of these patches (roughly one per pixel and per frame)
+In this setting, online techniques based on stochastic approximations are an attractive alternative to batch methods~(see, eg ,  CITATION )
+For example, first-order stochastic gradient descent with projections on the constraint set  CITATION  is sometimes used for dictionary learning (see  CITATION  for instance)
+We show in this paper that it is possible to go further and exploit the specific structure of sparse coding in the design of an optimization procedure tuned to this problem, with low memory consumption and lower computational cost than classical batch algorithms
+As demonstrated by our experiments, it scales up gracefully to large data sets with millions of training samples, is easy to use, and is faster than competitive methods
+The paper is structured as follows: Section~ presents the dictionary learning problem
+The proposed method is introduced in Section , with a proof of convergence in Section~
+Section~ extends our algorithm to various matrix factorization problems that generalize dictionary learning, and Section  is devoted to experimental results, demonstrating that our algorithm is suited to a wide class of learning problems

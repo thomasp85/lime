@@ -1,0 +1,42 @@
+### abstract ###
+the tempting fate effect is that the probability of a fateful outcome is deemed higher following an action that  tempts  the outcome than in the absence of such an action
+in this paper we evaluate the hypothesis that the effect is due to an illusion of control induced by a causal framing of the situation
+causal frames require that the action make a difference to an outcome and that the action precedes the outcome
+if an illusion of control modulates the reluctance to tempt fate  then actions that make a difference to well-being and that occur prior to the outcome should tempt fate most strongly
+in experiments  NUMBER - NUMBER  we varied whether the action makes a difference and the temporal order of action and outcome
+in experiment  NUMBER  we tested whether an action can tempt fate if all outcomes are negative
+the results of all four experiments supported our hypothesis that the tempting fate effect depends on a causal construal that gives rise to a false sense of control
+### introduction ###
+risen and gilovich  CITATION  have shown that taking an action or making a decision that presupposes a certain state of the world can make the opposite state seem more likely  even when the action or decision has no real causal impact
+for example  people judge that leaving one's umbrella at home increases the probability that it will rain
+risen and gilovich argue that this reluctance to tempt fate occurs because an action that presupposes a good outcome leads to anticipated regret and therefore draws attention disproportionally to the negative outcome
+the negative outcome then seems more likely because it is more available
+in this paper we elaborate risen and gilovich's hypothesis to specify conditions that exacerbate and attenuate the feeling of tempting fate
+our claim is that it is not merely the availability of the bad outcome that makes it seem more likely
+rather the reluctance to tempt fate stems from an illusory causal belief that the action will influence the outcome  an illusion of control  CITATION
+we further argue that this illusion of control depends on a causal construal of the role of one's action on the outcome
+we understand the illusion of control to be more than a feeling that by taking an action one can bring about a desired outcome  when in fact the outcome is due to chance
+we take the term  control  to be more general and to encompass any counterfactual dependency between action and outcome  including a possible action and a bad outcome
+our use of the term  control  denotes a relation between variables  not states of variables
+an agent will feel control over an outcome only if the agent believes at some level that his or her action has a causal relation to the outcome
+causality imposes certain requirements on relations between actions and outcomes
+first  for an action to cause an outcome  the action must make a difference to the outcome  CITATION
+second  the action must precede the outcome  CITATION
+people are highly sensitive to these requirements and therefore we propose that they experience a reluctance to tempt fate when there are cues in the environment suggesting that they should frame their actions causally  specifically that an action has the potential make a difference to the actor's well-being and that the action precedes the determination of the outcome
+by definition  fate-tempting actions have no real causal impact on the outcome in question  bringing or leaving an umbrella does not influence whether it will rain
+however such actions can affect well-being in a way that depends on the uncontrolled outcome
+for instance  the decision to leave the umbrella at home and the weather jointly determine whether one gets wet
+we argue that actions in which well-being is a joint function of the choice and the uncontrolled outcome are likely to inspire a reluctance to tempt because the casual efficacy of the action leads to a sense of control
+in contrast  actions that do not directly influence well-being will not seem to tempt fate
+we use the term  make-a-difference  to denote a choice that interacts with the uncontrolled outcome to determine well-being
+temporal priority is another fundamental property of causal relations and one that people are highly sensitive to  CITATION
+morris  sim  and girotto  CITATION  used this principle to provide evidence that an illusion of control mediated choices in a prisoner's dilemma game
+they compared behavior in games where the opponent had already chosen but what they chose was unknown to cases where the opponent had not chosen yet
+people were more likely to cooperate if their opponent had not chosen yet even though their own choice was unknown to the opponent
+this suggests that decision-making was influenced by a belief at some level that one's choice could influence the opponent even though it was unknown to him or her  CITATION
+similarly we hypothesized that the feeling of tempting fate will be attenuated if the outcome has already been determined  even if one lacks knowledge of the outcome
+in sum  our hypothesis predicts that the feeling that one is tempting fate should be strengthened when the choice makes a difference to well-being and the uncontrolled outcome has not yet been determined
+in the first study we manipulated both whether the choice makes a difference and the temporal order of outcome and decision to test this prediction
+the second study replicated the first using different wording to rule out an alternative explanation
+the third study extended the manipulation to a scenario adapted from risen and gilovich  CITATION
+the fourth study examined whether the choice must make a difference that matters

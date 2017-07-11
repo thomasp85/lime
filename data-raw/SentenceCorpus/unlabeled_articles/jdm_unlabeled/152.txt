@@ -1,0 +1,15 @@
+### abstract ###
+people make systematic and predictable mistakes regarding estimations of average speed and journey time
+in addition  people have been shown to commit a time-saving bias by underestimating the time that can be saved when increasing from a low speed and overestimating the time that can be saved when increasing from a relatively high speed
+these misestimations have been shown to relate to biases in judgments of the speed required to arrive at a specific time and to choosing unduly high speed
+professional drivers  such as taxi drivers  might be less susceptible to these biases due to their increased driving experience
+in the current study  we interviewed taxi drivers about a journey they were currently making and examined their estimations of journey time  average speed and time savings
+compared to a group of non-professional car drivers  taxi drivers showed the same considerable misestimations of driving speed  journey time and time savings as non-professionals
+however  overestimations of time savings among taxi drivers were smaller than those made by car drivers
+we discuss the practical significance of these findings
+### introduction ###
+estimating driving speed is not an easy task
+research on mean speed estimation indicates that people make systematic errors in estimating average speed
+for example  when judging the mean speed of a trip that included two parts  one with a higher speed and one with a lower speed  people overestimate the weight of the higher speed and underestimate the impact of the lower speed on the average speed of the entire trip  CITATION
+for example  when drivers were asked to estimate the mean speed of a journey when it was possible to drive at a high speed e g    NUMBER  kph for most of the trip except for a limited part of the trip  where speed limit was significantly lower e g    NUMBER  kph  the mean speed of the entire route was overestimated  CITATION
+in contrast to previous theoretical assertions that people assign equal weights to different speeds when estimating the mean speed of a trip  CITATION   these studies found that people actually assign different weights to different speeds  usually overweighting higher speeds and underweighting lower speeds  CITATION

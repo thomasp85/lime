@@ -1,0 +1,66 @@
+### abstract ###
+Combination therapies are often needed for effective clinical outcomes in the management of complex diseases, but presently they are generally based on empirical clinical experience.
+Here we suggest a novel application of search algorithms originally developed for digital communication modified to optimize combinations of therapeutic interventions.
+In biological experiments measuring the restoration of the decline with age in heart function and exercise capacity in Drosophila melanogaster, we found that search algorithms correctly identified optimal combinations of four drugs using only one-third of the tests performed in a fully factorial search.
+In experiments identifying combinations of three doses of up to six drugs for selective killing of human cancer cells, search algorithms resulted in a highly significant enrichment of selective combinations compared with random searches.
+In simulations using a network model of cell death, we found that the search algorithms identified the optimal combinations of 6 9 interventions in 80 90 percent of tests, compared with 15 30 percent for an equivalent random search.
+These findings suggest that modified search algorithms from information theory have the potential to enhance the discovery of novel therapeutic drug combinations.
+This report also helps to frame a biomedical problem that will benefit from an interdisciplinary effort and suggests a general strategy for its solution.
+### introduction ###
+The problem of combination therapy has medical and algorithmic aspects.
+Medically, we are still not able to provide effective cures for most chronic, complex diseases that are the main causes of death and disability, nor are we able to address the progressive age-related decline in human functional capacity.
+Algorithmically, when biological dysfunction involves complex biological networks, therapeutic interventions on multiple targets are likely to be required.
+Because the effect of drugs depends on the dose, several doses need to be studied, and the number of possible combinations rises quickly.
+For example, many cancer chemotherapy regimens are composed of 6 or more drugs from a pool of more than 100 clinically used anticancer drugs and exploring even larger combinations might be justified CITATION.
+If we were to study all combinations of 6 out of 100 compounds at 3 different doses we would have 8.9 10 11 possibilities.
+This example shows that the problem requires a qualitatively new approach rather than simply more efficient screening technology.
+Combined drug interventions are a common therapeutic strategy for complex diseases such as hypertension and cancer.
+As pointed out recently for cancer therapy CITATION, most therapies were initially developed as effective single agents and only later combined clinically.
+A possible approach to the exploration of new therapeutic activities not present in individual drugs is based on the exhaustive study of all possible combinations of pairs of compounds CITATION.
+This brute force approach has detected many interesting novel pairs of compounds CITATION, but the resulting exponential expansion in the number of possibilities precludes the comprehensive exploration of larger combinations.
+Several authors CITATION, CITATION have recently argued that the future of combination therapy lies in the development of accurate quantitative network models that capture the mechanistic interactions of cellular and organism physiology.
+Fitzgerald et al. CITATION acknowledge that we do not yet know what these models will look like, and that systems biology research is still data-limited for this purpose.
+Indeed their recent review does not report any successful application of this approach to combination therapies.
+Here we suggest a novel solution to the problem of combination drug therapy, making use of search algorithms originally developed for digital communication.
+When modified in several key aspects, these search strategies can be used to find more effective combined therapeutic interventions without the need for a fully factorial experimental design.
+These algorithms may also provide a framework upon which information from system-wide molecular data and from mechanistic computational networks models can be superimposed.
+To understand the motivation for our work it is important to consider that, even if simulations might play a role, the intended use of the algorithms is not entirely in silico, but partially in vivo or in vitro, using high-throughput biological measurements in organisms or isolated cells, respectively.
+This approach becomes increasingly relevant because high-throughput measurement technology, initially developed by drug companies for the screening of large libraries of compounds in multi-well plate formats, is now more and more available to the scientific community.
+It is useful to regard the information processing by our experimental systems as parallel biological computations, since the algorithms we are using are indeed derived from algorithms that were implemented in silico in other scientific fields.
+Parallel measurements are suitable for multi-well high-throughput technology.
+There are requirements regarding the computational complexity of the algorithms that limit the choice of suitable approaches.
+These requirements are discussed in more detail in the Results.
+Both the number of operations and computational costs unique to in vivo/in vitro algorithms should be considered.
+Algorithm design requires the application of an appropriate structure to the data.
+Although there are many options to represent the space of possible drug combinations, we used a tree representation with drug combinations as nodes linking to all possible additions of one drug in the next level.
+Individual drugs form the base of the tree and combinations of maximum size are at the top.
+When exploring the drug combination tree going from smaller to larger combinations, as in the algorithms we suggest, we are giving more weight to lower-order drug interactions.
+This is consistent with data available on adverse drug interactions, which are reported mostly for two-drug combinations CITATION, CITATION.
+Estimating the optimal size of a combination is a different problem, examined in detail in the Discussion.
+The beneficial effect of a combination is also due to additive components and to multiple higher-order effects.
+The search algorithms we suggest are derived from sequential decoding algorithms.
+These were chosen in part because of similarities among the data trees to be searched in the biological and decoding applications.
+Sequential decoding algorithms are used for convolutional codes, in which nearby nodes in the data tree are related, similarly to different but partially overlapping combinations of drugs.
+Another feature of sequential algorithms that fit our purposes is the use of a list-based memory of the path taken to reach each node.
+We provide in the Discussion a detailed argument suggesting that a suitable algorithm should be able to integrate all available information on the state of the system with that obtained by iterative measurements.
+The integration should take place at every iteration within the algorithm, rather than being a weighted average of different methods applied separately.
+The presence of the updated list as a guide for each iteration provides our algorithms with a natural mean of information integration.
+Both the fully factorial dataset we show in Figure 1 and the complex structure of the biological networks that are being reconstructed in systems biology supports this expectation of frequent non-linearities in phenotype measurements along the data tree.
+Therefore we are interested in algorithms that can search within a solution space presenting substantial non-linearities.
+If the relation among drugs in a combination were linear, the best algorithm would simply determine the best dose in single drug measurements and use these to obtain the best combination.
+If, on the contrary, non-linearities were extreme, the use of stochastic algorithms might be preferable.
+Stochastic algorithms can cope with multiple local minima in the solution space, but they do so by incorporating a random element.
+This requires a price in terms of computational cost, and the performance of stochastic algorithms is therefore often not as good as that of more tailored algorithms CITATION, CITATION.
+The algorithms we suggest can cope with moderate and variable non-linearities by going back to previous nodes in the tree.
+Starting with the stack sequential algorithm, which was developed to search for optimal decoding in the field of digital communications CITATION, we describe and test algorithms that can be used to search for an optimal combination of a sizeable number of drugs, by testing only a small subset of all possible combinations.
+The algorithms are useful for large combinations, where collecting fully factorial datasets is not feasible.
+We present results obtained from simulations in a computational model of cell death and from experiments using two models with complementary biological properties: restoring the decline with age in heart function and exercise capacity in Drosophila melanogaster;and selective killing of human cancer cells.
+The first in vivo experimental model has the advantage of including the complexity of whole organism interventions, while the second in vitro model has the potential for markedly higher throughput testing.
+These models are also representative of two different general types of multi-drug interventions: one type aims at improving function, while the other is based on the induction of cell death, a selective disruption of network function.
+Results suggest that optimal or near-optimal combinations of compounds can be found in these systems with only a small fraction of the number of tests as a fully factorial design, and with significantly higher efficacy than random searching.
+In summary the contributions of this work are:
+Constructing a novel problem statement for the search of drug combinations, using a novel approach to systems biology .
+Collecting exhaustive experimental measurements sufficient to solve the problem conclusively.
+Constructing a computational method to solve the problem approximately with fewer experimental measurements.
+The suggested algorithms are modeled on algorithms already used in other fields, while our main original contribution is in their novel application.
+Providing additional experiments to support the generality of the approach.

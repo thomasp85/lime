@@ -1,0 +1,38 @@
+### abstract ###
+recent research has emphasized emotion's role in non-utilitarian judgments  but has not focused much on characteristics of subjects contributing to those judgments
+the present article relates utilitarian judgment to individual disposition to experience various emotions
+study  NUMBER  first investigated the relationship among state emotions and utilitarian judgment
+diverse emotions were elicited during judgment  guilt  sadness  disgust  empathy  anger  and anxiety  etc
+using psychological scales  study  NUMBER  found that trait emotions predict the extent of utilitarian judgments  especially trait anger  trait disgust  and trait empathy
+unlike previous research that designated emotions only as factors mitigating utilitarian judgment  this research shows that trait anger correlates positively with utilitarian judgment
+on the other hand  disgust and empathy correlated negatively
+guilt and shame-though previous research argued that their absence increased utilitarian judgment-appear unrelated to the extent of utilitarian judgment
+these results suggest that people's emotional dispositions can affect their judgment
+this finding might contribute to untangling the complex mechanisms of utilitarian judgments
+### introduction ###
+ no matter what happens in the courtroom  it all comes down to emotion of jury
+  - boston legal  CITATION in the trolley dilemma  a runaway trolley is headed for five people who will be killed unless steps are taken to stop it
+the only way to save them is to hit a switch that will turn the trolley onto an alternate track where it will kill one person instead of five
+should you turn the trolley in order to save five people at the expense of one
+according to greene  sommerville  nystrom  darley   and  cohen  CITATION   most people said yes
+now consider another problem  the footbridge dilemma
+as before  a trolley threatens to kill five people
+you are standing next to a large stranger on a footbridge that spans the tracks  in between the oncoming trolley and the five people
+in this scenario  the only way to save the five people is to push this stranger off the bridge with your own hands  onto the tracks below
+he will die if you do this  however his body will stop the trolley from reaching the others
+should you save the five others by pushing this stranger to his death
+most people say no  CITATION
+the question is  why not
+ utilitarianism is defined as the idea that the morally correct course of action is the one that produces the greatest total benefit for all people affected  CITATION
+from a psychological point of view  utilitarian judgments are defined as endorsing harmful actions that promote the greater good  CITATION  and judgments favoring the aggregate welfare over the welfare of fewer individuals  CITATION
+there are differences between the trolley dilemma and the footbridge dilemma  greene et al CITATION  labeled them as an impersonal moral dilemma and a personal moral dilemma  respectively
+according to greene  and  haidt  CITATION   personal moral violations meet the following criteria  the violation must be likely to cause serious bodily harm  this harm must befall a particular person or set of people  and the harm must not result from the deflection of an existing threat onto a different party
+in short  personal moral violation is  me hurt you   CITATION   that is i  as an agent  hurt you  a visible person in front of me
+if it fails to meet these criteria  the moral violation is impersonal
+using personal and impersonal moral scenarios  greene et al CITATION  argued that emotional engagements influence only personal moral situations as opposed to impersonal ones
+in addition  it had been shown that moral judgment could be induced by hypnotic disgust  CITATION
+in a subsequent study  CITATION   emotion's role on utilitarian judgment had been supported by inducing positive affect  which resulted in increasing utilitarian judgments
+since then  it has been suggested that the argument that damage to the ventromedial prefrontal cortex vmpfc increases utilitarian judgments because the vmpfc damage causes emotional deficits-that is  absence of guilt  shame and empathy  CITATION
+nonetheless  there are a few empirical studies about people's individual disposition related to emotion as to utilitarian judgments
+it was suggested that judgments would vary from individual to individual  CITATION
+if tasks and mood induction affect people's utilitarian judgment  we might think that people's emotional disposition also affects moral judgment

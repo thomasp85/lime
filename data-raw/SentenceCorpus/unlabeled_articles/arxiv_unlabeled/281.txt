@@ -1,0 +1,39 @@
+### abstract ###
+We describe the Median  SYMBOL -flats (MKF) algorithm, a simple online method for hybrid linear modeling, ie , for approximating data by a mixture of flats
+This algorithm simultaneously partitions the data into clusters while finding their corresponding best approximating  SYMBOL   SYMBOL -flats, so that the cumulative  SYMBOL  error is minimized
+The current implementation restricts  SYMBOL -flats to be  SYMBOL -dimensional linear subspaces
+It requires a negligible amount of storage, and its complexity, when modeling data consisting of  SYMBOL  points in  SYMBOL  with  SYMBOL   SYMBOL -dimensional linear subspaces, is of order  SYMBOL , where  SYMBOL  is the number of iterations required for convergence (empirically on the order of  SYMBOL )
+Since it is an online algorithm, data can be supplied to it incrementally and it can incrementally produce the corresponding output
+The performance of the algorithm is carefully evaluated using synthetic and real data
+### introduction ###
+Many common data sets can be modeled by mixtures of flats (i e , affine subspaces)
+For example, feature vectors of different moving objects in a video sequence lie on different affine subspaces (see eg ,  CITATION ), and similarly, images of different faces under different illuminating conditions are on different linear subspaces with each such subspace corresponding to a distinct face~ CITATION
+Such data give rise to the problem of hybrid linear modeling, i e , modeling data by a mixture of flats
+Different kinds of algorithms have been suggested for this problem utilizing different mathematical theories
+For example, Generalized Principal Component Analysis (GPCA)~ CITATION  is based on algebraic geometry, Agglomerative Lossy Compression (ALC)~ CITATION  uses information theory, and Spectral Curvature Clustering (SCC)~ CITATION  uses multi-way clustering methods as well as multiscale geometric analysis
+On the other hand, there are also some heuristic approaches, eg , Subspace Separation~ CITATION  and Local Subspace Affinity (LSA)~ CITATION
+Probably, the most straightforward method of all is the  SYMBOL -flats (KF) algorithm or any of its variants~ CITATION
+The  SYMBOL -flats algorithm aims to partition a given data set  SYMBOL  into  SYMBOL  subsets  SYMBOL , each of which is well approximated by its best fit  SYMBOL -flat
+More formally, given parameters  SYMBOL  and  SYMBOL , the algorithm tries to minimize the objective function  \sum_{i=1}^K \min_{d-\text{flats } L_i} \sum_{\bx_j \cX_i} \dist^2(\bx_j,L_i)\,
+In practice, the minimization of this function is performed iteratively as in the  SYMBOL -means algorithm~ CITATION
+That is, after an initialization of  SYMBOL   SYMBOL -flats (for example, they may be chosen randomly), one repeats the following two steps until convergence: 1) Assign clusters according to minimal distances to the flats determined at the previous stage 2) Compute least squares  SYMBOL -flats for these newly obtained clusters by Principal Component Analysis (PCA)
+This procedure is very fast and is guaranteed to converge to at least a local minimum
+However, in practice, the local minimum it converges to is often significantly worse than the global minimum
+As a result, the  SYMBOL -flats algorithm is not as accurate as more recent hybrid linear modeling algorithms, and even in the case of underlying linear subspaces (as opposed to general affine subspaces) it often fails when either  SYMBOL  is sufficiently large (e g ,  SYMBOL ) or there is a large component of outliers
+This paper has two goals
+The first one is to show that in order to significantly improve the robustness to outliers and noise of the  SYMBOL -flats algorithm, it is sufficient to replace its objective function (Eq ~\eqref{eq:objective_kflats}) with  \sum_{i=1}^K \min_{d-\text{flats } L_i} \sum_{\bx_j \cX_i} \dist(\bx_j,L_i)\,, that is, replacing the  SYMBOL  average with an  SYMBOL  average
+The second goal is to establish an online algorithm for this purpose, so that data can be supplied to it incrementally, one point at a time, and it can incrementally produce the corresponding output
+We believe that an online procedure, which has to be very different than  SYMBOL -flats, can also be beneficial for standard settings of moderate-size data which is not streaming
+Indeed, it is possible that such a strategy will converge more often to the global minimum of the  SYMBOL  error than the straightforward  SYMBOL  generalization of  SYMBOL -flats (assuming an accurate algorithm for computing best  SYMBOL  flats)
+In order to address those goals we propose the Median  SYMBOL -flats (MKF) algorithm
+We chose this name since in the special case where  SYMBOL  the well-known  SYMBOL -medians algorithm (see eg ,  CITATION ) approximates the minimum of the same energy function
+The MKF algorithm employs a stochastic gradient descent strategy~ CITATION  in order to provide an online approximation for the best  SYMBOL   SYMBOL -flats
+Its current implementation only applies to the setting of underlying linear subspaces (and not general affine ones)
+Numerical experiments with synthetic and real data indicate superior performance of the MKF algorithm in various instances
+In particular, it outperforms some standard algorithms in the cases of large outlier component or relatively large intrinsic dimension of flats
+Even on the Hopkins 155 Database for motion segmentation~ CITATION , which requires small intrinsic dimensions, has little noise, and few outliers, the MKF performs very well and in particular better than  SYMBOL -flats
+We speculate that this is because the iterative process of MKF converges more often to a global minimum than that of the  SYMBOL -flats
+The rest of this paper is organized as follows
+In Section~ we introduce the MKF algorithm
+Section~ carefully tests the algorithm on both artificial data of synthetic hybrid linear models and real data of motion segmentation in video sequences
+Section~ concludes with a brief discussion and mentions possibilities for future work

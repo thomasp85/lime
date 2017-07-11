@@ -1,0 +1,30 @@
+### abstract ###
+Supervised learning deals with the inference of a distribution over an output or label space  SYMBOL  conditioned on points in an observation space  SYMBOL , given a training dataset  SYMBOL  of pairs in  SYMBOL
+However, in a lot of applications of interest, acquisition of large amounts of observations is easy, while the process of generating labels is time-consuming or costly
+One way to deal with this problem is  active  learning, where points to be labelled are selected with the aim of creating a model with better performance than that of an model trained on an equal number of randomly sampled points
+In this paper, we instead propose to deal with the labelling cost directly: The learning goal is defined as the minimisation of a cost which is a function of the expected model performance and the total cost of the labels used
+This allows the development of general strategies and specific algorithms for  Though the main focus of the paper is optimal stopping, we also aim to provide the background for further developments and discussion in the related field of active learning
+### introduction ###
+Much of classical machine learning deals with the case where we wish to learn a target concept in the form of a function  SYMBOL , when all we have is a finite set of examples  SYMBOL
+However, in many practical settings, it turns out that for each example  SYMBOL  in the set only the observations  SYMBOL  are available, while the availability of observations  SYMBOL  is restricted in the sense that either  In this paper we deal with the second case, where we can actually obtain labels for any  SYMBOL , but doing so incurs a cost
+Active learning algorithms (i e CITATION ) deal indirectly with this by selecting examples which are expected to increase accuracy the most
+However, the basic question of whether new examples should be queried at all is seldom addressed
+This paper deals with the labelling cost explicitly
+We introduce a cost function that represents the trade-off between final performance (in terms of generalisation error) and querying costs (in terms of the number of labels queried)
+This is used in two ways
+Firstly, as the basis for creating cost-dependent stopping rules
+Secondly, as the basis of a comparison metric for learning algorithms and associated stopping algorithms
+To expound further, we decide when to stop by estimating the expected performance gain from querying additional examples and comparing it with the cost of acquiring more labels
+One of the main contributions is the development of methods for achieving this in a Bayesian framework
+While due to the nature of the problem there is potential for misspecification, we nevertheless show experimentally that the stopping times we obtain are close to the optimal stopping times
+We also use the trade-off in order to address the lack of a principled method for comparing different active learning algorithms under conditions similar to real-world usage
+For such a comparison a method for choosing stopping times independently of the test set is needed
+Combining stopping rules with active learning algorithms allows us to objectively compare active learning algorithms for a range of different labelling costs
+The paper is organised as follows
+Section~ introduces the proposed cost function for when labels are costly, while Section~ discusses related work
+Section~ derives a Bayesian stopping method that utilises the proposed cost function
+Some experimental results illustrating the proposed evaluation methodology and demonstrating the use of the introduced stopping method are presented in Section~
+The proposed methods are not flawless, however
+For example, the algorithm-independent stopping rule requires the use of  iid 
+examples, which may interfere with its coupling to an active learning algorithm
+We conclude with a discussion on the applicability, merits and deficiencies of the proposed approach to optimal stopping and of principled testing for active learning

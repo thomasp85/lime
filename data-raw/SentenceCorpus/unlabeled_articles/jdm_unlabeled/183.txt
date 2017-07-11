@@ -1,0 +1,18 @@
+### abstract ###
+we explored how the perspective through which individuals view their actions influences their ethicality  comparing a narrow perspective that allows for evaluation of each choice in isolation  to a broad perspective that promotes an aggregate view of one's choices
+to examine unethical behavior we employed a computerized variation of a trivia game that challenges the player's integrity because  rather than choosing the correct answer  players indicate whether the correct highlighted answer is the answer they had in mind
+in experiment  NUMBER  perspective was modified through the choice procedure  broad perspective evoked by an aggregate decision regarding the upcoming test items and narrow perspective evoked by a segregated decision regarding each upcoming test item
+in experiment  NUMBER  perspective was evoked through differential priming
+across both experiments  when given a monetary incentive to succeed  the adoption of a narrow perspective increased cheating  as evidenced by overall higher reported success rates
+### introduction ###
+dishonest behavior seems pervasive
+for example  the estimated total damage to the american clothing industry from wardrobing-the habit of returning purchased clothes after wearing  amounts to   NUMBER  billion annually  CITATION   and the damage to us companies from employee theft and fraud reaches an estimate of   NUMBER  billion a year  CITATION
+on an individual level  research on lying has found that people lie in some  NUMBER  percent  of their daily interactions  CITATION
+in stark contrast to these findings  most people  including those who engage in the above practices  maintain a positive moral self-concept  CITATION
+if being moral is so highly valued in society  why then is unethical behavior so pervasive
+and what determines its extent
+in this paper  we propose that the individual's perspective is an important factor that affects moral behavior and determines its extent
+we use the term perspective to indicate the size of the window through which individuals perceive and evaluate their choices
+we propose that when evaluating options from a broad perspective  considering choices as embedded in a larger context of other choices and decisions  rather than as isolated instances  people place greater weight on the aggregate consequences of their actions
+in contrast  when evaluating the same options from a narrow perspective  as is the case when focusing separately on each specific choice  people place greater weight on the specific consequences of the particular action
+basic research in decision making shows that preferences are highly affected by normatively irrelevant factors such as the framing of the problem  the method of elicitation and the context in which the decision is made  CITATION

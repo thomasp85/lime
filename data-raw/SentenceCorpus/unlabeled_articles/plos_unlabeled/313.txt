@@ -1,0 +1,73 @@
+### abstract ###
+Protein point mutations are an essential component of the evolutionary and experimental analysis of protein structure and function.
+While many manually curated databases attempt to index point mutations, most experimentally generated point mutations and the biological impacts of the changes are described in the peer-reviewed published literature.
+We describe an application, Mutation GraB, that identifies, extracts, and verifies point mutations from biomedical literature.
+The principal problem of point mutation extraction is to link the point mutation with its associated protein and organism of origin.
+Our algorithm uses a graph-based bigram traversal to identify these relevant associations and exploits the Swiss-Prot protein database to verify this information.
+The graph bigram method is different from other models for point mutation extraction in that it incorporates frequency and positional data of all terms in an article to drive the point mutation protein association.
+Our method was tested on 589 articles describing point mutations from the G protein coupled receptor, tyrosine kinase, and ion channel protein families.
+We evaluated our graph bigram metric against a word-proximity metric for term association on datasets of full-text literature in these three different protein families.
+Our testing shows that the graph bigram metric achieves a higher F-measure for the GPCRs, protein tyrosine kinases, and ion channel transporters.
+Importantly, in situations where more than one protein can be assigned to a point mutation and disambiguation is required, the graph bigram metric achieves a precision of 0.84 compared with the word distance metric precision of 0.73.
+We believe the graph bigram search metric to be a significant improvement over previous search metrics for point mutation extraction and to be applicable to text-mining application requiring the association of words.
+### introduction ###
+With the advent of ultra high throughput screening and high-density array technology, the biological community has come to appreciate the value of unbiased surveys of complex biological systems.
+Bioinformatics tools have become an integral part of the analysis of these extensive datasets.
+When complex data is collected centrally, the analysis can be straightforward.
+When data is collected in a distributed fashion, investigators must agree on a centralized data-deposition strategy or we must develop tools to interrogate the published literature and extract relevant information.
+Manually curated online databases have developed to meet this need, but they are difficult to maintain and scale.
+Accordingly, the biological text-mining field has evolved to identify and extract information from the literature for database storage and access.
+Two types of tasks predominate in biological text mining: the extraction of gene and protein names CITATION CITATION and the extraction of interactions between proteins CITATION CITATION.
+The BioCreAtIvE challenge was CITATION focused on name extraction CITATION with the additional task of functional annotation CITATION.
+Other text-mining applications focus on hypothesis generation CITATION, probing protein subcellular localization CITATION, and pathway discovery CITATION .
+Recent work has also focused on the extraction of protein point mutations from biomedical literature CITATION CITATION.
+Protein point mutations, the substitution of a wild-type amino acid with an alternate one, can be important to our understanding of protein function, evolutionary relationships, and genetic disorders.
+From a functional perspective, researchers introduce point mutations into proteins to assay the importance of a particular residue to protein function.
+Evolution relies upon mutations or polymorphisms in DNA, a mechanism for creating diversity in protein sequences.
+While the term mutation is used to imply deleterious changes, and polymorphism means a difference within species, for text-mining purposes we refer to a point mutation as a substitution of a different amino acid for the reference amino acid.
+dbSNP CITATION and the Human Gene Mutation Database CITATION are two of many databases that catalog point mutations and their downstream effects.
+These databases are manually curated, which limits the speed of input into the database and the breadth of information represented, but does aid in the incorporation of complex information that is difficult for text-mining tools to parse.
+The task of point mutation extraction can be decomposed into two subtasks.
+First, it is necessary to identify the protein and mutation terms discussed within an article.
+After these entities are identified, an association must be made between the point mutation and its correct protein of origin.
+This problem is trivial when a paper discusses a single protein but increasingly complex when multiple proteins are present.
+In our evaluation of Mutation Graph Bigram, we downloaded 589 full-text PDF articles related to the GPCR, tyrosine kinase, and ion channel protein families from PubMed-provided links.
+Using our dictionary-based protein term identification method, we counted 350 articles out of the total 589 that contained a point mutation that could have belonged to multiple proteins.
+A few methods for point mutation extraction have been developed.
+Rebholz-Schuhmann et al. CITATION describe a method called MEMA that scans Medline abstracts for mutations.
+Baker and Witte CITATION CITATION describe a method called Mutation Miner that integrates point mutation extraction into a protein structure visualization application.
+Our own group has presented MuteXt CITATION, a point mutation extraction method applied to G protein coupled receptor and nuclear hormone receptor literature.
+MEMA and MuteXt use a straightforward dictionary search to identify protein/gene names and a word proximity distance measurement to disambiguate between multiple protein terms.
+Both methods, while providing a simple and successful method for point mutation extraction, were limited in two areas.
+First, the word distance measurement is not always correct in disambiguating between protein terms.
+Second, MEMA was evaluated on a set of abstracts, which are intrinsically more limited than the full-text article.
+In our literature set, the abstracts contained only 15 percent of the point mutations found in the full text.
+The point mutations were also validated against OMIM CITATION, which only contains disease-related point mutations.
+MuteXt was trained and evaluated on GPCR and intranuclear hormone receptor literature and contained customizations in the algorithm for dealing with problematic protein naming and amino acid numbering cases.
+Mutation Miner approaches the problem differently.
+This method identifies and relates proteins, organisms, and point mutations using NLP analysis at a sentence level.
+An entity pair is assigned if both entities match noun phrase patterns.
+This method would work well if all point mutations were described in conjunction with associated proteins and organisms at the sentence level, which we have observed is not always the case.
+Mutation Miner also incorporates protein sequence information, but for use in annotating protein 3-D structures with mutation information instead of point mutation validation.
+Our method improves on MEMA, MuteXt, and Mutation Miner by using a novel graph bigram metric that incorporates frequency and location of terms to disambiguate between proteins and searches full-text information.
+Like MuteXt, Mutation GraB utilizes the Swiss-Prot protein database CITATION for sequence validation, which intrinsically contains more sequence variation than OMIM.
+We addressed the utility of our application by standardizing the algorithm for all protein families and by evaluating our method on three different protein family literature sets covering 589 articles.
+More detailed comparisons with MEMA and Mutation Miner are described in the Discussion section.
+For our task of associating point mutations to protein terms, it is not sufficient to minimally tag a protein name in the literature; we must also find its correct gene identifier in a corresponding database.
+The BioCreAtIvE challenge addressed this problem with the 1B subtask of identifying a protein/gene mentioned in the text and annotating it with its correct gene identifier.
+Solutions for this challenge ranged from rule-based methods CITATION to machine-learning approaches CITATION to a combination of both.
+Unfortunately, some of these methods may not be applicable to our point mutation extraction task.
+The participants in the BioCreAtIve challenge were provided a large set of annotated sentences categorized under three different organisms; human, yeast, and fly.
+Some solutions for the subtask 1B consisted of learning the training data for each organism, then applying the learned functions to a test set also divided by organism.
+This approach is suboptimal for our task for two reasons.
+First, because point mutations are frequently analyzed at a protein family and superfamily level, methods trained on protein names from organism-specific lexicons would not be well-suited for analysis across many species.
+Second, our goal is to create a broadly applicable methodology for point mutation extraction that can be utilized on any categorization of proteins.
+Machine-learning approaches benefit from large detailed annotated training sets.
+In our experience, the manual labor involved in annotating the amount of text necessary to learn protein family specific nomenclature on the scale presented by BioCreAtIve is likely to undermine the benefits of automated point mutation extraction.
+Methods relying solely on rule-based features for protein-name identification generally perform at a lower precision and recall than methods incorporating machine learning.
+However, since rule-based methods do not necessarily require annotated training data, they are advantageous when such data is unavailable or difficult to acquire.
+Our approach to protein term identification is similar to other rule-based approaches CITATION, CITATION, CITATION.
+We first create a dictionary using the names and synonyms of proteins in a protein family; the protein names are retrieved from their respective Swiss-Prot and Entrezgene entries.
+The terms in the dictionary are then searched for in the journal literature.
+Depending on the character length and composition of these terms, we search by different regular expressions with varying levels of specificity.
+A further description of this is detailed in the Methods section.

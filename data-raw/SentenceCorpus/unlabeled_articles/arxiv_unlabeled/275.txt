@@ -1,0 +1,48 @@
+### abstract ###
+This paper introduces a principled approach for the design of a scalable general reinforcement learning agent
+Our approach is based on a direct approximation of AIXI, a Bayesian optimality notion for general reinforcement learning agents
+Previously, it has been unclear whether the theory of AIXI could motivate the design of practical algorithms
+We answer this hitherto open question in the affirmative, by providing the first computationally feasible approximation to the AIXI agent
+To develop our approximation, we introduce a new Monte-Carlo Tree Search algorithm along with an agent-specific extension to the Context Tree Weighting algorithm
+Empirically, we present a set of encouraging results on a variety of stochastic and partially observable domains
+We conclude by proposing a number of directions for future research
+### introduction ###
+Reinforcement Learning  CITATION  is a popular and influential paradigm for agents that learn from experience
+AIXI  CITATION  is a Bayesian optimality notion for reinforcement learning agents in unknown environments
+This paper introduces and evaluates a practical reinforcement learning agent that is directly inspired by the AIXI theory
+Consider an agent that exists within some unknown environment
+The agent interacts with the environment in cycles
+In each cycle, the agent executes an action and in turn receives an observation and a reward
+The only information available to the agent is its history of previous interactions
+The  general reinforcement learning problem  is to construct an agent that, over time, collects as much reward as possible from the (unknown) environment
+The AIXI agent is a mathematical solution to the general reinforcement learning problem
+To achieve generality, the environment is assumed to be an unknown but computable function; i e \ the observations and rewards received by the agent, given its past actions, can be computed by some program running on a Turing machine
+The AIXI agent results from a synthesis of two ideas: sep1mm\parskip0mm  the use of a finite-horizon expectimax operation from sequential decision theory for action selection; and  an extension of Solomonoff's universal induction scheme  CITATION  for future prediction in the agent context
+More formally, let  SYMBOL  denote the output of a universal Turing machine  SYMBOL  supplied with program  SYMBOL  and input  SYMBOL ,  SYMBOL  a finite lookahead horizon, and  SYMBOL  the length in bits of program  SYMBOL
+The action picked by AIXI at time  SYMBOL , having executed actions  SYMBOL  and having received the sequence of observation-reward pairs  SYMBOL  from the environment, is given by:  SYMBOL } Intuitively, the agent considers the sum of the total reward over all possible futures up to  SYMBOL  steps ahead, weighs each of them by the complexity of programs consistent with the agent's past that can generate that future, and then picks the action that maximises expected future rewards
+Equation () embodies in one line the major ideas of Bayes, Ockham, Epicurus, Turing, von Neumann, Bellman, Kolmogorov, and Solomonoff
+The AIXI agent is rigorously shown by  CITATION  to be optimal in many different senses of the word
+In particular, the AIXI agent will rapidly learn an accurate model of the environment and proceed to act optimally to achieve its goal
+Accessible overviews of the AIXI agent have been given by both  CITATION  and  CITATION
+A complete description of the agent can be found in  CITATION
+As the AIXI agent is only asymptotically computable, it is by no means an algorithmic solution to the general reinforcement learning problem
+Rather it is best understood as a Bayesian  optimality notion  for decision making in general unknown environments
+As such, its role in general AI research should be viewed in, for example, the same way the minimax and empirical risk minimisation principles are viewed in decision theory and statistical machine learning research
+These principles define what is optimal behaviour if computational complexity is not an issue, and can provide important theoretical guidance in the design of practical algorithms
+This paper demonstrates, for the first time, how a practical agent can be built from the AIXI theory
+As can be seen in Equation~(), there are two parts to AIXI
+The first is the expectimax search into the future which we will call  planning
+The second is the use of a Bayesian mixture over Turing machines to predict future observations and rewards based on past experience; we will call that  learning
+Both parts need to be approximated for computational tractability
+There are many different approaches one can try
+In this paper, we opted to use a generalised version of the UCT algorithm  CITATION  for planning and a generalised version of the Context Tree Weighting algorithm  CITATION  for learning
+This combination of ideas, together with the attendant theoretical and experimental results, form the main contribution of this paper
+The paper is organised as follows
+Section  introduces the notation and definitions we use to describe environments and accumulated agent experience, including the familiar notions of reward, policy and value functions for our setting
+Section  describes a general Bayesian approach for learning a model of the environment
+Section  then presents a Monte-Carlo Tree Search procedure that we will use to approximate the expectimax operation in AIXI
+This is followed by a description of the Context Tree Weighting algorithm and how it can be generalised for use in the agent setting in Section
+We put the two ideas together in Section  to form our AIXI approximation algorithm
+Experimental results are then presented in Sections
+Section  provides a discussion of related work and the limitations of our current approach
+Section  highlights a number of areas for future investigation

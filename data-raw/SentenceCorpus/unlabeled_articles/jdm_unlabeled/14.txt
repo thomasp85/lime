@@ -1,0 +1,28 @@
+### abstract ###
+several studies propose that exemplar retrieval contributes to multi-attribute decisions
+the authors have proposed a process theory enabling a priori predictions of what cognitive representations people use as input to their judgment process  CITATION
+according to sigma  exemplar retrieval is a back-up system when the task does not allow for additive and linear abstraction and integration of cue-criterion knowledge e g   when the task is non-additive
+an important question is to what extent such shifts occur spontaneously as part of automatic procedures  such as error-minimization with the delta rule  or if they are controlled strategy shifts contingent on the ability to identify a sufficiently successful judgment strategy
+in this article data are reviewed that demonstrate a shift between exemplar memory and cue abstraction  as well as data where the expected shift does not occur
+in contrast to a common assumption of previous models  these results suggest a controlled and contingent strategy shift
+### introduction ###
+exemplar models have proven particularly successful for describing categorization learning and categorical decisions  CITATION
+in the last years  researchers have shown interest in studying exemplar-based reasoning as a basis for other sorts of judgments and decisions  CITATION
+it has thus been increasingly acknowledged that many everyday judgments  like  for example  a diagnosis of a patient  or the decision to hire a job candidate or to purchase a car may  at least in part  be driven by the retrieval of concrete  similar previous examples
+despite this interest  the nature of the interaction between exemplar memory and other processes  such as rule-based processes  has received relatively little empirical scrutiny
+as an illustration  imagine a teacher predicting the final grades of students in an economy class on the basis of four different test results
+when looking at robin  the teacher might infer that his high score on the winter exam should be associated with a high final grade
+his medium score on the national high school economy exam should also be associated with a high grade  since that exam is very difficult
+the teacher considers the different individual test results and integrates their combined impact on the grade
+this exemplifies a judgment process based on abstracted knowledge of the relations between individual cues the tests and their difficulty and the criterion the final grade
+for lisa  on the other hand  the teacher might realize that her test results are very similar to robin's
+since the teacher gave robin a final grade of  NUMBER  out of  NUMBER   she decides to give lisa an  NUMBER  as well
+this illustrates a judgment based on a similar concrete exemplar
+although these examples are highly simplified  we can probably all agree that we have at times engaged in both sorts of processes
+what is less clear  and has received relatively little attention in judgment and decision research  are what task properties invite the one or the other process  and what processes that instigate shifts between the processes
+the possibility that exemplar memory interacts with rule-based processes has been modeled in the context of  for example  classification learning  CITATION   and arithmetic learning  CITATION
+without claiming identity  these models share the assumption that a transition from one process to another occurs automatically at an item-based level  either as a side-effect of obligatory  accumulative encoding  CITATION  or as implemented by an error-driven learning rule typical of connectionist models  CITATION
+a viable alternative  however  is that the shifts are hypothesis-driven  involving controlled and sequential tests of strategies  sustained over a period of trials  CITATION
+according to this view  the choice of the one rather than the other strategy is the result of an active and effortful process of problem solving and contingent on the perceived success of the strategy
+the aim of this article is to review data on multiple-cue judgment  CITATION  that demonstrate abilities to shift between the processes  as well as striking and stubborn inabilities to make appropriate shifts
+these data  in turn  serve to shed light on the nature of the mechanisms controlling the shifts between processes

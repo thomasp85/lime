@@ -1,0 +1,42 @@
+### abstract ###
+This paper generalizes the traditional statistical concept of prediction intervals for arbitrary probability density functions in high-dimen\-sional feature spaces by introducing significance level distributions, which provides interval-independent probabilities for continuous random variables
+The advantage of the transformation of a probability density function into a significance level distribution is that it enables one-class classification or outlier detection in a direct manner
+### introduction ###
+A prediction interval is an interval that will, with a specified degree of confidence, contain future realizations or, in the terminology of pattern recognition, feature vectors  CITATION
+The appeal of this concept is its clear stochastic meaning
+The great disadvantage is that this definition is usually too restricted, for example for multimodal distributions
+It is intuitively clear that, in this case, more than one interval for probable feature vectors can exist and it would be better to speak of prediction  regions
+Even more complicated is the situation for high-dimensional feature spaces
+This lack of generality is probably the reason why prediction intervals are rarely used in pattern recognition
+This is actually a pity, because prediction regions would be very useful, for example, for the recognition of outliers  CITATION  or the detection of novelty or normality
+Instead of prediction intervals, numerous other methods are used for this purpose
+They can be grouped roughly into two categories:   Distance-based and novelty or normality score-based approaches  CITATION ,  Methods that introduce a separate rejection class in combination with a classifier  CITATION
+If applying the method I propose here to outlier detection, it belongs to the first category with a probability as normality score
+Before going into the details, I will give a short overview of related works
+Simple distance-based methods rely on the concept of the neighborhood of a point, for example, the  SYMBOL  nearest neighborhood  CITATION
+Outliers are those points for which there are less than  SYMBOL  points within a distance  SYMBOL  in the dataset
+CITATION  propose a method to choose this threshold  SYMBOL  automatically based upon a dataset
+The idea is to consider as outliers the set of points with the highest distances to their  SYMBOL th nearest neighbors
+Of course, here is also a threshold necessary, but it has now a statistical reasoning as quartile of the  SYMBOL th nearest neighbor distance distribution, which simplifies the choice
+A more recent article based on this idea is published by  CITATION , who apply a weighted sum of the  SYMBOL th nearest distances per point
+Although the idea is quite simple, the methods have low computation costs
+Furthermore, they make only minor assumptions about the underlying distribution
+Another category of algorithms that are related to outlier detection is robust regression
+The outlier detection is here more a means to an end, because the goal is to avoid that outliers influence the estimation of the regression function
+This means that it is in this case sufficient to detect outliers indirectly
+CITATION , for example, apply an outlier-score to control the influence that a point has in the parameter estimation process of the regression function
+For this purpose, weights are introduced, which are estimated based on the assumption that the noise is Gaussian distributed
+This is often sufficient, for example for most sensor signals
+The algorithm is real-time capable, but far away from generality
+This method also belongs to category one
+The idea of the second category is very different
+At the first glance, it seems to be impossible to use classifiers to detect outliers, because classifiers need for the estimation of their parameters samples from inliers  and  outliers
+Usually, only samples for inliers are available
+The idea is to create a enclosing cloud of outlier samples synthetically with a random generator
+Afterwards, it is possible to train the classifier
+CITATION , for example, apply a neural network for this purpose
+Other classifiers are also possible, for example, an SVM  CITATION
+Regardless of the applied classifier, these probabilistic methods need for the generation of the hull a measure in which degree a generated sample point is an outlier
+CITATION , for example, use for this purpose simple prediction intervals ( SYMBOL  ranges)
+In conclusion, both categories have to solve the same problem: to find an appropriate zero level set for the inlier generating density
+In the subsequent sections I will show that this problem can be mapped to a choice of a significance level and that it is possible to generalize the traditional statistical concept of prediction intervals to prediction regions

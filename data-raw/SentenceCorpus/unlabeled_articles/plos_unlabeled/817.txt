@@ -1,0 +1,56 @@
+### abstract ###
+An increasing number of cis-regulatory RNA elements have been found to regulate gene expression post-transcriptionally in various biological processes in bacterial systems.
+Effective computational tools for large-scale identification of novel regulatory RNAs are strongly desired to facilitate our exploration of gene regulation mechanisms and regulatory networks.
+We present a new computational program named RSSVM, which employs Support Vector Machines for efficient identification of functional RNA motifs from random RNA secondary structures.
+RSSVM uses a set of distinctive features to represent the common RNA secondary structure and structural alignment predicted by RNA Sampler, a tool for accurate common RNA secondary structure prediction, and is trained with functional RNAs from a variety of bacterial RNA motif/gene families covering a wide range of sequence identities.
+When tested on a large number of known and random RNA motifs, RSSVM shows a significantly higher sensitivity than other leading RNA identification programs while maintaining the same false positive rate.
+RSSVM performs particularly well on sets with low sequence identities.
+The combination of RNA Sampler and RSSVM provides a new, fast, and efficient pipeline for large-scale discovery of regulatory RNA motifs.
+We applied RSSVM to multiple Shewanella genomes and identified putative regulatory RNA motifs in the 5 untranslated regions in S. oneidensis, an important bacterial organism with extraordinary respiratory and metal reducing abilities and great potential for bioremediation and alternative energy generation.
+From 1002 sets of 5 -UTRs of orthologous operons, we identified 166 putative regulatory RNA motifs, including 17 of the 19 known RNA motifs from Rfam, an additional 21 RNA motifs that are supported by literature evidence, 72 RNA motifs overlapping predicted transcription terminators or attenuators, and other candidate regulatory RNA motifs.
+Our study provides a list of promising novel regulatory RNA motifs potentially involved in post-transcriptional gene regulation.
+Combined with the previous cis-regulatory DNA motif study in S. oneidensis, this genome-wide discovery of cis-regulatory RNA motifs may offer more comprehensive views of gene regulation at a different level in this organism.
+The RSSVM software, predictions, and analysis results on Shewanella genomes are available at LINK.
+### introduction ###
+RNA is remarkably versatile CITATION, CITATION, acting not only as messengers to transfer genetic information from DNA to protein, but also as critical structural components CITATION and catalytic enzymes CITATION, CITATION in the cell.
+More intriguingly, non-coding RNAs have been found to play important regulatory roles.
+They can mediate gene expression post-transcriptionally in two ways: one is to serve as trans-acting antisense RNAs, such as microRNAs, which hybridize with target mRNAs to silence their expression CITATION, CITATION ; the other is to form structural cis-elements in the mRNAs, such as riboswitches, which regulate gene expression by mediating transcription termination or translation initiation CITATION, CITATION.
+The regulatory roles of ncRNAs make them promising drug targets CITATION and efficient tools for drug development and gene therapy CITATION, CITATION .
+In the past a few years, many cis-regulatory RNA structural motifs have been identified in prokaryotes CITATION CITATION.
+They are often located in the 5 untranslated regions of the mRNAs and can sense or interact with cognate factors, including proteins, RNAs, small metabolites, or even temperature changes, to mediate transcription attenuation CITATION, translation initiation CITATION, or mRNA stability CITATION.
+The functions of the regulatory RNAs are intrinsically tied to their secondary structures, mostly recognizable as stem-loops or pseudoknots.
+Moreover, regulatory RNAs are often conserved during evolution: similar regulatory RNA elements can be shared by multiple co-regulated genes in the same metabolic pathway, or conserved in orthologous genes across closely related species CITATION .
+Experimental screenings CITATION for cis-regulatory RNAs are highly labor and time consuming.
+As demonstrated by previous studies CITATION, CITATION, a parallel way is to find good candidates computationally followed by targeted experimental validation.
+Because functional regulatory RNAs are often evolutionarily conserved in their secondary structures, we can identify them by finding significantly conserved RNA secondary structures in orthologous genes across closely related species.
+To accomplish this, we need two tools: one is to accurately predict common RNA secondary structures in multiple related sequences, and the other is to distinguish functional RNA secondary structures from random foldings of RNA sequences.
+A number of algorithms have been developed for common RNA secondary structure prediction, such as RNAalifold CITATION, Dynalign CITATION, comRNA CITATION, CMFinder CITATION and FoldAlign CITATION, CITATION.
+We recently published a new algorithm, called RNA Sampler CITATION, for predicting common RNA secondary structures and structural alignments in multiple sequences.
+Both our study CITATION and independent studies from other researchers CITATION, CITATION have demonstrated that RNA Sampler provides more accurate structure predictions and generates better structural alignments on sequences of a wide range of identities than other leading software for similar purposes.
+Moreover, RNA Sampler runs fast and is feasible for common RNA secondary structure prediction on the genome scale.
+Studies have shown that for a single sequence RNA secondary structure alone is not sufficient to distinguish functional RNA from random sequence CITATION, CITATION.
+However, with the availability of multiple RNA sequences from related species, comparative genomics approaches provide additional power to identify functional RNA structures.
+One strategy is to design a scoring function for the predicted RNA secondary structures and examine the difference between the score distributions of real structures and randomly permutated structures, as employed by the RNA identification pipeline based on CMfinder CITATION or comRNA CITATION.
+But one limitation of such an approach is that the user needs to generate a large number of random sequence sets for each set of real sequences and doing structure predictions on these permutated sequence sets is usually time consuming.
+Besides, it can be difficult to find a score cutoff to make the call between functional and random RNAs.
+Another strategy is to train a classification model based on features that can distinguish common structures of known functional RNAs from those of random RNAs and then apply the classification model on the newly predicted common RNA structures to determine whether they are of functional or random RNAs.
+RNA classification algorithms employing this strategy include QRNA, RNAz and Dynalign LIBSVM.
+QRNA CITATION classifies a pairwise sequence alignment by the posterior probabilities of three probabilistic models, RNA, Coding and Null.
+RNAz CITATION and Dynalign LIBSVM CITATION both employ support vector machines to build the classification models.
+To train a classification model, the developer still needs to generate a large number of random sequence sets as the negative training sets and make structure predictions on them, but once the classification model is trained, the user can directly utilize the model to identify functional RNAs without the need to generate, and perform folding of, random sequences.
+The type of sequences used to train the classification models is essential to their classification performance on new sequences.
+QRNA and Dynalign LIBSVM only use tRNAs and rRNAs in their training on RNA structures, and RNAz is trained on multiple RNA gene/motif families from the Rfam database but only uses sequence sets with high identities.
+To avoid overfitting the classification model to specific classes of RNAs, using training sets that cover a wide range of sequence identities and a variety of RNA families is more desirable.
+In addition, training the classification model using more accurately predicted RNA common structures and alignments is advantageous for more sensitive classification of functional RNAs from random ones.
+RNAz uses RNAalifold CITATION for common RNA structure prediction.
+When using sequence alignments as its input, RNAalifold performs poorly in predicting RNA structures on sequence sets of low identities CITATION.
+The structure prediction accuracy of RNAalifold may be improved by using structural alignments, but RNAz might need to be re-trained to use structural alignments.
+In this paper, we present a new SVM based functional RNA identifier named RSSVM.
+RSSVM applies a set of features to represent common RNA secondary structures and structural alignments generated by RNA Sampler, which predicts RNA structures more accurately than other approaches CITATION CITATION.
+RSSVM is trained with RNA sets with a wide range of sequence identities from all bacterial RNA motif/gene families in the Rfam database CITATION.
+RSSVM is more sensitive in identifying real functional RNAs than other leading RNA classification programs, including RNAz, Dynalign LIBSVM and QRNA, at the same false positive rate.
+We applied RSSVM on multiple Shewanella genomes to identify putative cis-regulatory RNA motifs in the 5 -UTRs of orthologous genes.
+Shewanella oneidensis is a facultative, gram-negative -proteobacterium.
+It has extraordinary abilities to use a wide variety of metals and organic molecules as electron acceptors in respiration CITATION CITATION, which gives it great potential to be applied in bioremediation of both metal and organic pollutants.
+The complete genomic sequences of Shewanella oneidensis and multiple other Shewanella species provide good resources for discovering cis-regulatory RNAs using comparative genomics approaches.
+Combining with the recent predictions of putative DNA cis-regulatory motifs in S. oneidensis CITATION, we will have a more complete view of gene regulation in S. oneidensis at different regulation levels.

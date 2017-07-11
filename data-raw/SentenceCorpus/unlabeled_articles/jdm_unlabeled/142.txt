@@ -1,0 +1,16 @@
+### abstract ###
+a wise decider d uses the contents of his mind fully  accurately and efficiently
+d's ideal decisions  i e   those that best serve his interests  would be embedded in a comprehensive set of totally coherent judgments lodged in his mind
+they would conform to the norms of statistical decision theory  which extracts quantitative judgments of fact and value from d's mind contents and checks them for coherence
+however  the most practical way for d to approximate his ideal may not be with models that embody those norms  i e   with applied decision theory adt
+in practice  adt can represent only some of d's judgments and those imperfectly
+quite different decision aid  including intuition  pattern recognition and cognitive vigilance especially combined  typically outperform feasible adt models-with some notable exceptions
+however  decision theory training benefits d's informal decisions
+adt  both formal and informal  should become increasingly useful and widespread  as technical  cultural and institutional impediments are overcome
+### introduction ###
+we would surely all agree that most people especially other people
+make poor decisions and suffer the consequences
+we marry abusive spouses and elect incompetent presidents  where we should have known better
+we do not seem to have learned much over the ages
+in the  NUMBER s  a new analytic technology  applied decision theory adt-also known as  decision analysis -promised to revolutionize decision practice  CITATION
+i have spent a long career trying to realize that promise

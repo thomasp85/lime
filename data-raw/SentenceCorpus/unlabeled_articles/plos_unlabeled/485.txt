@@ -1,0 +1,30 @@
+### abstract ###
+The major DNA constituent of primate centromeres is alpha satellite DNA.
+As much as 2 percent 5 percent of sequence generated as part of primate genome sequencing projects consists of this material, which is fragmented or not assembled as part of published genome sequences due to its highly repetitive nature.
+Here, we develop computational methods to rapidly recover and categorize alpha-satellite sequences from previously uncharacterized whole-genome shotgun sequence data.
+We present an algorithm to computationally predict potential higher-order array structure based on paired-end sequence data and then experimentally validate its organization and distribution by experimental analyses.
+Using whole-genome shotgun data from the human, chimpanzee, and macaque genomes, we examine the phylogenetic relationship of these sequences and provide further support for a model for their evolution and mutation over the last 25 million years.
+Our results confirm fundamental differences in the dispersal and evolution of centromeric satellites in the Old World monkey and ape lineages of evolution.
+### introduction ###
+Alpha-satellite is the only functional DNA sequence associated with all naturally occurring human centromeres.
+Alpha satellite consists of tandem repetitions of a 171-bp AT-rich sequence motif.
+In humans, two distinct forms of alpha-satellite are recognized based on their organization and sequence properties.
+In humans, a large fraction is arranged into higher-order repeat arrays where alpha-satellite monomers are organized as multimeric repeat units ranging in size from 3 5 Mb CITATION.
+While individual human alpha satellite monomer units show 20 percent 40 percent single-nucleotide variation, the sequence divergence between higher-order repeat units is typically less than 2 percent CITATION, CITATION.
+The number of multimeric repeats within any centromere varies between different human individuals and, as such, is a source of considerable chromosome length polymorphism.
+Unequal crossover of satellite DNA between sister chromatid pairs or between homologous chromosomes during meiosis is largely responsible for copy-number differences and is thought to be fundamental in the evolution of these HOR arrays.
+The organization and unit of periodicity of these arrays are specific to each human chromosome CITATION, CITATION, with the individual monomer units classified into one of five different suprafamilies based on their sequence properties CITATION, CITATION.
+Interestingly, studies of closely related primates, such as the chimpanzee and orangutan CITATION, CITATION indicate that these particular associations do not persist among the centromeres of homologous chromosome, implying that the structure and content of centromeric DNA changes very quickly over relatively short periods of evolutionary time.
+In addition to higher-order arrays, large tracts of alpha-satellite DNA have more recently been described that are devoid of any HOR structure CITATION, CITATION CITATION.
+The individual repeats within these segments show extensive sequence divergence and have been classified as monomeric alpha-satellite DNA.
+Such monomeric tracts are frequently located at the periphery of centromeric DNA CITATION, CITATION, CITATION.
+Consequently, unlike higher-order arrays, some of these regions have been accurately sequenced and assembled because they localize in the transition regions between euchromatin and heterochromatin.
+Phylogenetic and probabilistic analyses suggest that the higher-order alpha-satellite DNA emerged more recently and displaced existing monomeric repeat sequence as opposed to having arisen by unequal crossing-over of local monomeric DNA CITATION .
+Centromeres and pericentromeric regions are frequently poorly assembled in primate whole-genome sequence assemblies CITATION CITATION.
+These regions are generally regarded as too difficult to accurately sequence and assemble strictly from whole-genome shotgun sequence.
+However, most WGS sequencing efforts include substantial amounts of alpha-satellite repeat sequence.
+Indeed, as much as 2 percent 5 percent of the sequence generated from the underlying WGS consists of centromeric satellite sequences such data most often remain as unassembled in public database repositories.
+In this study, we develop computational methods to systematically identify and classify alpha-satellite sequences from primate WGS sequence.
+We predict novel HOR structures from uncharacterized primate genomes and define the phylogenetic relationship of these sequences within the context of known human HOR satellite sequences.
+Finally, we take advantage of publicly available cloned resources to experimentally validate the dispersal of these newly described alpha-satellite sequences within various primate genomes.
+The data provide the first genome-wide sequence analysis of alpha-satellite DNA among primates from WGS data and a framework to identify and characterize more repeat-rich, complex regions of genomes as part of genome sequencing projects.

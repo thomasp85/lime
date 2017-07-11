@@ -1,0 +1,50 @@
+### abstract ###
+The extracellular matrix plays a critical role in orchestrating the events necessary for wound healing, muscle repair, morphogenesis, new blood vessel growth, and cancer invasion.
+In this study, we investigate the influence of extracellular matrix topography on the coordination of multi-cellular interactions in the context of angiogenesis.
+To do this, we validate our spatio-temporal mathematical model of angiogenesis against empirical data, and within this framework, we vary the density of the matrix fibers to simulate different tissue environments and to explore the possibility of manipulating the extracellular matrix to achieve pro- and anti-angiogenic effects.
+The model predicts specific ranges of matrix fiber densities that maximize sprout extension speed, induce branching, or interrupt normal angiogenesis, which are independently confirmed by experiment.
+We then explore matrix fiber alignment as a key factor contributing to peak sprout velocities and in mediating cell shape and orientation.
+We also quantify the effects of proteolytic matrix degradation by the tip cell on sprout velocity and demonstrate that degradation promotes sprout growth at high matrix densities, but has an inhibitory effect at lower densities.
+Our results are discussed in the context of ECM targeted pro- and anti-angiogenic therapies that can be tested empirically.
+### introduction ###
+The extracellular matrix is a major component of the extravascular tissue region, or stroma, and plays a central role in morphogenesis, including embryogenesis CITATION, tissue repair and wound healing CITATION, new blood vessel growth CITATION, and cancer invasion CITATION.
+A large body of research is concentrated on understanding how cell-ECM interactions impact and regulate morphogenic processes.
+Results from such investigations illuminate the active role of the ECM in transmitting biochemical signals and mechanical forces that mediate cell survival, phenotype, shape, and orientation.
+This area continues to be a target of intense investigation.
+Cells are equipped with and can upregulate transmembrane receptors that enable them to receive signals from and interact with their environment.
+Integrins are one such receptor and are stimulated by the various proteins of the ECM CITATION, CITATION.
+Endothelial cells attach directly to the collagen fibers in the ECM through the FORMULA integrin receptors CITATION.
+Biochemical signals originating within the cell can affect integrin-ligand binding affinity and consequently modulate cellular adhesion to the matrix.
+Focal adhesion complexes form and bind directly to the cell's cytoskeleton CITATION.
+Once assembled, a focal adhesion anchors the cell to the ECM, which is used by the cell for movement.
+These focal adhesions are assembled and disassembled dynamically to facilitate cell migration.
+Migratory guidance via focal adhesion binding sites in the ECM is a phenomenon referred to as contact guidance and plays a key role in guiding new vessel growth CITATION .
+The physical properties of the ECM, such as density, heterogeneity, and stiffness, that affect cell behavior is also an area of current investigation.
+Matrigel, a popular gelatinous protein substrate for in vitro experiments of angiogenesis, is largely composed of collagen and laminin and contains growth factors, all of which provide an environment conducive to cell survival.
+In experiments of endothelial cells on Matrigel, increasing the stiffness of the gel or disrupting the organization of the cellular cytoskeleton, inhibits the formation of vascular cell networks CITATION, CITATION.
+Cells respond to alterations in the mechanical properties of the ECM, for example, by upregulating their focal adhesions on stiffer substrates CITATION.
+For anchorage-dependent cells, including endothelial cells, increasing the stiffness of the ECM therefore results in increased cell traction and slower migration speeds CITATION.
+Measurements of Matrigel stiffness as a function of density show a positive relationship between these two mechanical properties CITATION.
+That is, as density increases, so does matrix stiffness.
+In light of these two findings, it is not surprising that this experimental study also shows slower cell migration speeds as matrix density increases CITATION.
+Moreover, matrices with higher fiber density transfer less strain to the cell CITATION and experiments of endothelial cells cultured on collagen gels demonstrate that directional sprouting, called branching, is induced by collagen matrix tension CITATION.
+Thus, via integrin receptors, the mechanical properties of the ECM influence cell-matrix interactions and modulate cell shape, cell migration speed, and the formation of vascular networks.
+Understanding how individual cells interpret biochemical and mechanical signals from the ECM is only a part of the whole picture.
+Morphogenic processes also require multicellular coordination.
+In addition to the guidance cues cells receive from the ECM, they also receive signals from each other.
+During new vessel growth, cells adhere to each other through cell-cell junctions, called cadherins, and in order to migrate, cells must coordinate integrin mediated focal adhesions with these cell-cell bonds.
+This process is referred to as collective or cluster migration CITATION.
+During collective migration, cell clusters often organize as two-dimensional sheets CITATION .
+Cells also have the ability to condition the ECM for invasion by producing proteolytic enzymes that degrade specific ECM proteins CITATION.
+In addition, cells can synthesize ECM components, such as collagen and fibronectin CITATION, CITATION, and can further reorganize the ECM by the forces they exert on it during migration CITATION, CITATION, CITATION.
+Collagen fibrils align in response to mechanical loading and cells reorient in the direction of the applied load CITATION.
+Tractional forces exerted by vascular endothelial cells on Matrigel cause cords or tracks of aligned fibers to form promoting cell elongation and motility CITATION.
+As more experimental data are amassed, the ECM is emerging as the vital component to morphogenic processes.
+In this work, we extend our cellular model of angiogenesis CITATION and validate it against empirical measurements of sprout extension speeds.
+We then use our model to investigate the effect of ECM topography on vascular morphogenesis and focus on mechanisms controlling cell shape and orientation, sprout extension speeds, and sprout morphology.
+We show the dependence of sprout extension speed and morphology on matrix density, fiber network connectedness, and fiber orientation.
+Notably, we observe that varying matrix fiber density affects the likelihood of capillary sprout branching.
+The model predicts an optimal density for capillary network formation and suggests matrix heterogeneity as a mechanism for sprout branching.
+We also identify unique ranges of matrix density that promote sprout extension or that interrupt normal angiogenesis, and show that maximal sprout extension speeds are achieved within a density range similar to the density of collagen found in the cornea.
+Finally, we quantify the effects of proteolytic matrix degradation by the tip cell on sprout velocity and demonstrate that degradation promotes sprout growth at high densities, but has an inhibitory effect at lower densities.
+Based on these findings, we suggest and discuss several ECM targeted pro- and anti-angiogenesis therapies that can be tested empirically.

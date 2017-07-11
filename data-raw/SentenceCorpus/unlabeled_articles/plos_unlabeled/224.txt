@@ -1,0 +1,37 @@
+### abstract ###
+The intrinsic, or mitochondrial, pathway of caspase activation is essential for apoptosis induction by various stimuli including cytotoxic stress.
+It depends on the cellular context, whether cytochrome c released from mitochondria induces caspase activation gradually or in an all-or-none fashion, and whether caspase activation irreversibly commits cells to apoptosis.
+By analyzing a quantitative kinetic model, we show that inhibition of caspase-3 and Casp9 by inhibitors of apoptosis results in an implicit positive feedback, since cleaved Casp3 augments its own activation by sequestering IAPs away from Casp9.
+We demonstrate that this positive feedback brings about bistability, and that it cooperates with Casp3-mediated feedback cleavage of Casp9 to generate irreversibility in caspase activation.
+Our calculations also unravel how cell-specific protein expression brings about the observed qualitative differences in caspase activation.
+Finally, known regulators of the pathway are shown to efficiently shift the apoptotic threshold stimulus, suggesting that the bistable caspase cascade computes multiple inputs into an all-or-none caspase output.
+As cellular inhibitory proteins frequently inhibit consecutive intermediates in cellular signaling cascades, the feedback mechanism described in this paper is likely to be a widespread principle on how cells achieve ultrasensitivity, bistability, and irreversibility.
+### introduction ###
+Apoptosis, an evolutionary conserved form of cell suicide, allows multicellular organisms to eliminate damaged or excess cells in order to maintain tissue homeostasis.
+Dysregulation of apoptosis is associated with various pathological conditions, including cancer and neurodegenerative disorders.
+Aspartate-specific cysteine proteases, also known as caspases, are the central executioners of apoptosis.
+In most cases, apoptotic stimuli activate initiator caspases, whose substrates, the effector caspases, ultimatively cause cellular demise by cleaving various cellular substrates CITATION .
+Figure 1A schematically depicts the so-called extrinsic and intrinsic apoptotic pathways that elicit apoptosis by cleaving and thereby activating caspase-3, the major cellular effector caspase.
+The extrinsic pathway is initiated by ligand-binding to death receptors, which then oligomerize and recruit various proteins, including pro-Casp8, into the so-called death-inducing signaling complex.
+Formation of the death-inducing signaling complex leads to autoprocessing of pro-Casp8 into active Casp8, which then cleaves Casp3.
+Cytotoxic stress or death-receptor stimulated Casp8 engage the intrinsic, or mitochondrial, apoptosis pathway by inducing the translocation of proapoptotic Bcl-2 family members such as Bax and Bid to mitochondria.
+This event, which is negatively regulated by antiapoptotic Bcl-2 family members, results in the release of proapoptotic proteins from mitochondria into the cytosol.
+Cytosolic cyto c then elicits the oligomerization of Apaf-1 into an active high-molecular-weight complex, the apoptosome, which recruits and stimulates Casp9, and thereby allows activation of effector caspases such as Casp3.
+Smac and inhibitors of apoptosis such as X-linked IAP establish an additional layer of regulation in the intrinsic pathway: XIAP inhibits the catalytic activities of Casp9 and Casp3 through reversible binding, and cytosolic Smac relieves this inhibition by sequestering XIAP away from caspases CITATION .
+Experimental studies revealed that the qualitative behaviour of caspase activation in the intrinsic pathway depends on the cellular context.
+Cyto c added to cytosolic extracts activates Casp3 in an all-or-none fashion in some cells CITATION CITATION, while gradual activation was observed in other systems CITATION CITATION.
+As cyto-c release from mitochondria can be a reversible event CITATION, which does not affect mitochondrial function CITATION CITATION, it has been suggested that downstream caspase activation irreversibly commits cells to apoptosis CITATION, CITATION.
+Accordingly, cyto c induced Casp3 activation remained elevated even after a strong decline in cytosolic cyto c CITATION or after apo cyto c, an inhibitor of apoptosome formation, was added CITATION.
+Furthermore, the time course of caspase activation via the intrinsic pathway equals that for irreversible commitment to apoptosis CITATION, CITATION, and caspase-inhibition allows for long-term cellular recovery and/or proliferation after removal of apoptotic stimuli CITATION, CITATION, CITATION CITATION.
+Finally, Fas-treated Jurkat T cells, which enter apoptosis by the intrinsic pathway, escaped commitment to death as judged by maintenance of clonogenic potential if Casp3 was inhibited CITATION.
+On the contrary, Casp3 activation was found to be a reversible event in glycochenodeoxycholate-treated hepatocytes CITATION .
+These qualitative differences in caspase activation suggest that the intrinsic pathway is bistable in some cells, but monostable in others.
+While simple monostable systems respond in a gradual and reversible manner, complex bistable systems exhibit true all-or-none responses and in some cases irreversibility.
+Bistability is thought to require a positive circuit, which may be established either by positive feedback or by double-negative feedback.
+Once a threshold stimulus is exceeded, such positive circuits allow bistable systems to switch from low activation levels to high activation levels in an all-or-none fashion.
+Bistable systems display hysteresis, meaning that different stimulus-response curves are obtained depending upon whether the system began in its off or its on state.
+In some cases, the on state is maintained indefinitely after the stimulus is removed, so that the system shows irreversible activation CITATION.
+Experimental studies confirmed that bistability indeed occurs in natural and artificial biological networks CITATION CITATION .
+Recent mathematical modeling demonstrated that bistability can arise from hidden, or implicit, feedback loops that are usually not explicitly drawn in biochemical reaction schemes CITATION, CITATION.
+Similarily, we present a model showing that inhibition of Casp3 and Casp9 by IAPs results in an implicit positive feedback and in bistability.
+As cellular inhibitory proteins frequently inhibit consecutive intermediates in cellular signaling cascades, the mechanism described in this paper is likely to be a widespread principle on how cells achieve ultrasensitivity, bistability, and irreversibility .

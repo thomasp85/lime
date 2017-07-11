@@ -1,0 +1,49 @@
+### abstract ###
+We consider the problem of high-dimensional non-linear variable selection for supervised learning
+Our approach is based on performing linear selection among exponentially many  appropriately defined  positive definite kernels that characterize non-linear interactions between the original variables
+To select efficiently from these many kernels, we use the natural hierarchical structure of the problem to extend the multiple kernel learning framework to kernels that can  be embedded in a directed acyclic graph; we show that it is then possible to perform kernel selection through a graph-adapted sparsity-inducing norm,  in polynomial time in the number of selected kernels
+Moreover, we study the consistency of variable selection  in high-dimensional settings, showing that under certain assumptions, our regularization framework allows a number of irrelevant variables which is  exponential in the number of observations
+Our simulations on synthetic datasets and datasets from the UCI repository show state-of-the-art predictive performance for non-linear regression problems
+### introduction ###
+High-dimensional problems represent a recent and important topic in machine learning, statistics and signal processing
+In such settings, some notion of sparsity is a fruitful way of avoiding overfitting, for example through variable or feature selection
+This has led to many  algorithmic and theoretical advances
+In particular, regularization by sparsity-inducing norms such as the  SYMBOL -norm has  attracted a lot of interest in recent years
+While early work has focused on efficient algorithms to solve the convex optimization problems, recent research has looked at the model selection properties and predictive performance of such methods, in the linear case~ CITATION  or within constrained non-linear settings such as the multiple kernel learning framework~ CITATION  or generalized additive models~ CITATION
+However, most of the recent work dealt with  linear high-dimensional  variable selection, while the focus of much of the earlier work in machine learning and statistics was  on  non-linear low-dimensional  problems: indeed, in the last two decades,  kernel methods have been a prolific  theoretical and algorithmic machine learning framework
+By using appropriate regularization by Hilbertian norms, representer theorems enable to consider large and potentially infinite-dimensional feature spaces while working within an implicit feature space no larger than the number of observations
+This has led to numerous works on kernel design adapted to specific data types and generic kernel-based algorithms for many learning tasks  CITATION
+However, while non-linearity is required in many domains such as computer vision or bioinformatics, most theoretical results related to non-parametric methods do not scale well with input dimensions
+In this paper, our goal is to bridge the gap between linear and non-linear methods, by tackling  high-dimensional non-linear  problems
+The task of non-linear variable section is a hard problem with few approaches that have both good theoretical and algorithmic properties, in particular in high-dimensional settings
+Among classical  methods, some are implicitly or explicitly based on sparsity and model selection, such as boosting~ CITATION , multivariate additive regression splines~ CITATION ,  decision trees~ CITATION , random forests~ CITATION , Cosso~ CITATION  or Gaussian process based methods~ CITATION , while some others do not rely on sparsity, such as nearest neighbors or kernel methods~ CITATION
+First attempts were made to combine non-linearity and sparsity-inducing norms by considering  generalized additive models , where the predictor function is assumed to be a sparse linear combination of non-linear functions of each variable~ CITATION
+However, as shown in \mysec{universal}, higher orders of interactions are needed for universal consistency, i e , to adapt to the potential high complexity of the interactions between the relevant variables; we need to potentially allow  SYMBOL  of them for  SYMBOL  variables (for all possible subsets of the  SYMBOL  variables)
+Theoretical results suggest that with appropriate assumptions,  sparse methods such as greedy methods and methods based on the  SYMBOL -norm would be able to deal correctly with  SYMBOL  features if  SYMBOL  is of the order of the number of observations  SYMBOL ~ CITATION
+However, in presence of more than a few dozen variables, in order to deal with that many features, or even to simply enumerate those, a certain form of factorization or recursivity is needed
+In this paper, we propose to use a hierarchical structure based on directed acyclic graphs, which is natural in our context of non-linear variable selection
+We consider a positive definite kernel that can be expressed as a large sum of positive definite  basis  or  local kernels
+This exactly corresponds to the situation where a large feature space is the concatenation of  smaller feature spaces, and we aim to do selection among these many kernels (or equivalently feature spaces), which may be done through  multiple kernel learning~ CITATION
+One major difficulty however is that the number of these smaller kernels is usually exponential in the dimension of the input space and applying multiple kernel learning directly to this decomposition would be intractable
+As shown in \mysec{decompositions}, for non-linear variable selection, we consider a sum of kernels which are indexed by the set of subsets of all considered variables, or more generally by  SYMBOL , for  SYMBOL
+In order to perform selection efficiently, we make the extra assumption that these small kernels can be embedded in a  directed acyclic graph  (DAG)
+Following~ CITATION , we consider in \mysec{mkl} a specific combination of  SYMBOL -norms that is adapted to the DAG, and that will restrict the authorized sparsity patterns to certain configurations; in our specific kernel-based framework, we are able to use the DAG to design an optimization algorithm which has polynomial complexity in the number of selected kernels (\mysec{optimization})
+In simulations (\mysec{simulations}), we focus on   directed grids , where our framework allows to perform non-linear variable selection
+We provide some experimental validation of our novel regularization framework; in particular, we compare it to the regular  SYMBOL -regularization, greedy forward selection and non-kernel-based methods, and shows that it is always competitive and often leads to better performance, both on synthetic examples, and standard regression datasets from the UCI repository
+Finally, we extend in \mysec{consistency} some of the known consistency results of the Lasso and multiple kernel learning~ CITATION , and give a partial answer to the model selection capabilities of our regularization framework by giving necessary and sufficient conditions for model consistency
+In particular, we show that our framework is adapted to estimating consistently only the  hull   of the relevant variables
+Hence, by restricting the statistical power of our method, we gain computational efficiency
+Moreover, we show that we can obtain scalings between the number of variables and the number of observations which are similar to the linear case~ CITATION : indeed, we show that our regularization framework may achieve non-linear variable selection consistency even with a number of variables  SYMBOL  which is exponential in the number of observations  SYMBOL
+Since we deal with  SYMBOL  kernels, we achieve consistency with a number of kernels which is  doubly  exponential in  SYMBOL
+Moreover, for general directed acyclic graphs, we show that the total number of vertices may grow unbounded as long as the maximal out-degree (number of children) in the DAG is less than exponential in the number of observations
+This paper extends previous work~ CITATION , by providing more background on multiple kernel learning, detailing all proofs, providing new consistency results in high dimension, and comparing our non-linear predictors with non-kernel-based methods \paragraph{Notation } Throughout the paper we consider Hilbertian norms  SYMBOL  for elements  SYMBOL  of Hilbert spaces, where the specific Hilbert space can always be inferred from the context (unless otherwise stated)
+For rectangular matrices  SYMBOL , we denote by  SYMBOL  its largest singular value
+We   denote by  SYMBOL  and  SYMBOL  the largest and smallest eigenvalue of a symmetric matrix  SYMBOL
+These are naturally extended to compact self-adjoint operators~ CITATION
+Moreover, given a vector  SYMBOL  in the product space  SYMBOL  and a subset  SYMBOL  of  SYMBOL ,  SYMBOL  denotes the vector in  SYMBOL  of elements of  SYMBOL  indexed by  SYMBOL
+Similarly, for a matrix  SYMBOL  defined with  SYMBOL  blocks adapted to  SYMBOL ,  SYMBOL   denotes the submatrix of   SYMBOL  composed of blocks of  SYMBOL  whose rows are in  SYMBOL  and columns are in  SYMBOL
+Moreover,  SYMBOL  denotes the cardinal of the set  SYMBOL  and  SYMBOL  denotes the dimension of the Hilbert space  SYMBOL
+We denote by  SYMBOL    the  SYMBOL -dimensional vector of ones
+We denote by  SYMBOL  the positive part of a real number  SYMBOL
+Besides, given matrices  SYMBOL , and a subset  SYMBOL  of  SYMBOL ,  SYMBOL  denotes the block-diagonal matrix composed of the blocks indexed by   SYMBOL
+Finally, we let denote  SYMBOL  and  SYMBOL  general probability measures and expectations

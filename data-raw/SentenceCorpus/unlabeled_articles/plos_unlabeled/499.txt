@@ -1,0 +1,37 @@
+### abstract ###
+Recently, a number of advanced screening technologies have allowed for the comprehensive quantification of aggravating and alleviating genetic interactions among gene pairs.
+In parallel, TAP-MS studies have been successful at identifying physical protein interactions that can indicate proteins participating in the same molecular complex.
+Here, we propose a method for the joint learning of protein complexes and their functional relationships by integration of quantitative genetic interactions and TAP-MS data.
+Using 3 independent benchmark datasets, we demonstrate that this method is 50 percent more accurate at identifying functionally related protein pairs than previous approaches.
+Application to genes involved in yeast chromosome organization identifies a functional map of 91 multimeric complexes, a number of which are novel or have been substantially expanded by addition of new subunits.
+Interestingly, we find that complexes that are enriched for aggravating genetic interactions are more likely to contain essential genes, linking each of these interactions to an underlying mechanism.
+These results demonstrate the importance of both large-scale genetic and physical interaction data in mapping pathway architecture and function.
+### introduction ###
+Genetic interactions are logical relationships between genes that occur when mutating two or more genes in combination produces an unexpected phenotype CITATION CITATION.
+Recently, rapid screening of genetic interactions has become feasible using Synthetic Genetic Arrays or diploid Synthetic Lethality Analysis by Microarray CITATION, CITATION.
+SGA pairs a gene deletion of interest against a deletion to every other gene in the genome.
+The growth/no growth phenotype measured over all pairings defines a genetic interaction profile for that gene, with no growth indicating a synthetic-lethal genetic interaction.
+Alternatively, all combinations of double deletions can be analyzed among a functionally-related group of genes CITATION CITATION.
+A recent variant of SGA termed E-MAP CITATION has made it possible to measure continuous rates of growth with varying degrees of epistasis.
+Aggravating interactions are indicated if the growth rate of the double gene deletion is slower than expected, while for alleviating interactions the opposite is true CITATION, CITATION .
+One popular method to analyze genetic interaction data has been to hierarchically cluster genes using the distance between their genetic interaction profiles.
+Clusters of genes with similar profiles are manually searched to identify the known pathways and complexes they contain as well as any genetic interactions between these complexes.
+This approach has been applied to several large-scale genetic interaction screens in yeast including genes involved in the secretory pathway CITATION and chromosome organization CITATION.
+Segr et al. CITATION extended basic hierarchical clustering with the concept of monochromaticity, in which genes were merged into the same cluster based on minimizing the number of interactions with other clusters that do not share the same classification .
+Another set of methods has sought to interpret genetic relationships using physical protein-protein interactions CITATION.
+Among these, Kelley and Ideker CITATION used physical interactions to identify both within-module and between-module explanations for genetic interactions.
+In both cases, modules were detected as clusters of proteins that physically interact with each other more often than expected by chance.
+The within-module model predicts that these clusters directly overlap with clusters of genetic interactions.
+The between-module model predicts that genetic interactions run between two physical clusters that are functionally related.
+This approach was improved by Ulitsky et al. CITATION using a relaxed definition of physical modules.
+In related work, Zhang et al. CITATION screened known complexes annotated by the Munich Information Center for Protein Sequences to identify pairs of complexes with dense genetic interactions between them.
+One concern with the above approaches, and the works by Kelley and Ulitsky in particular, is that they make assumptions about the density of interactions within and between modules which have not been justified biologically.
+Ideally, such parameters should be learned directly from the data.
+Second, between-module relationships are identified by separate, independent searches of the network seeded from each genetic interaction.
+This local search strategy can lead to a set of modules that are highly overlapping or even completely redundant with one another.
+Finally, genetic interactions are assumed to be binary growth/no growth events while E-MAP technology has now made it possible to measure continuous values of genetic interaction with varying degrees of epistasis.
+Here, we present a new approach for integrating quantitative genetic and physical interaction data which addresses several of these shortcomings.
+Interactions are analyzed to infer a set of modules and a set of inter-module links, in which a module represents a protein complex with a coherent cellular function, and inter-module links capture functional relationships between modules which can vary quantitatively in strength and sign.
+Our approach is supervised, in that the appropriate pattern of physical and genetic interactions is not predetermined but learned from examples of known complexes.
+Rather than identify each module in independent searches, all modules are identified simultaneously within a single unified map of modules and inter-module functional relationships.
+We show that this method outperforms a number of alternative approaches and that, when applied to analyze a recent EMAP study of yeast chromosome function, it identifies numerous new protein complexes and protein functional relationships.

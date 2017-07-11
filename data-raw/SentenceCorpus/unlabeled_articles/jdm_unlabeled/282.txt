@@ -1,0 +1,38 @@
+### abstract ###
+we investigated the role of individual differences in cognitive reflection in decision making
+we measured the performance of  NUMBER  participants in the cognitive reflection test  CITATION  and a number of decision-making tasks
+we examined the relation of cognitive reflection with performance in tasks that assess correspondence as distinct from coherence  such as predicting the ratings of chess players
+we found significant correlations between cognitive reflection and all the estimation measures in correspondence tasks
+our results suggest that cognitive reflection is a thinking disposition that includes more characteristics than originally proposed by frederick  CITATION
+we proposed that cognitive reflection is related to the concept of actively open-minded thinking  CITATION
+we concluded that cognitive reflection is a thinking disposition that interacts with knowledge  domain-specific heuristics and characteristics of the environment and that it may play an essential role in the adaptation of the decision maker to different environments and situations
+### introduction ###
+humans often violate the tenets of rationality as ruled by logic  statistics  expected utility theory or other normative models of rational decision making  CITATION
+instead of making decisions or judgments based on those models  humans tend to use heuristics that sometimes lead them to commit systematic errors or biases  CITATION
+nonetheless  not all humans are biased  some of them perform as if they use normative models of rationality  CITATION
+numerous studies have shown that adherence to normative principles and cognitive abilities or thinking dispositions are positively related  CITATION
+this article aims to investigate the role of a thinking disposition - cognitive reflection - in decision making
+frederick  CITATION  defined cognitive reflection as the  ability or disposition to resist reporting the response that first comes to mind  pp  NUMBER   and developed the cognitive reflection test crt in order to measure this thinking disposition
+frederick also proposed a more general conception of cognitive reflection based on dual-system theories  CITATION
+briefly  dual-system theories propose that humans have two cognitive systems  system  NUMBER 's processes are quick  effortless  intuitive and heuristic  and system  NUMBER 's processes are slow  effortful  reflective and rule-based
+based on a default-interventionist conception of system  NUMBER   CITATION   frederick  CITATION  identified two characteristics of system  NUMBER  related to cognitive reflection  its capacity to monitor system  NUMBER 's outputs and its capacity to override system  NUMBER 's functioning
+research has shown that individual differences in crt play a role in individual's decisions and judgments on tasks where their behavior could be compared to predictions of normative models  CITATION
+those studies found that crt was positively related to choices predicted by expected utility theory  CITATION  in risky choice tasks
+note  however  that frederick  CITATION  also found that  in the domain of gains  high crt scorers chose more risky options than low crt scorers even when the expected value of the risk option was lower than that of the safe option
+in intertemporal choice frederick  CITATION  showed that crt was positively related with choosing patient options i e   high crt scorers had lower discount rates than that of low crt scorers and oechssler et al CITATION  found and almost significant difference in the same direction
+furthermore  oechssler et al CITATION  found that high crt scorers were better than low crt scorers at avoiding logical fallacies and also they were less overconfident
+this article is concerned with three topics related to cognitive reflection   NUMBER  do individual differences in cognitive reflection  as measured by crt  influence behavior in correspondence decision-making tasks those in which accuracy is measured by an external criterion rather than by internal consistency  NUMBER  does the crt measure only the  ability or disposition to resist reporting the response that first comes to mind 
+or does it also measure a broader disposition such as actively open-minded thinking  CITATION   NUMBER  does general knowledge account for the influence of cognitive reflection on decision making
+or does cognitive reflection influence decision making independently from general knowledge
+correspondence tasks are those that test the correspondence of participants' estimations with facts of the world  CITATION
+for example  participant's estimations of number of inhabitants in cities are compared to actual number of inhabitants in cities
+the theoretical interest of correspondence tasks is that good performance in them is typically explained by participants' use of fast-and-frugal heuristics  CITATION  and not by adherence to normative principles
+as far as we are aware  the present study is the first one in relating cognitive reflection  as measured by crt  with correspondence decision-making tasks
+previous research has shown that high crt scorers engage in heuristic behavior in tasks that investigate participants' judgments but not whether these judgments match facts of the world  CITATION
+cokely and kelley  CITATION  found that high performance in crt was related to more elaborative heuristic search
+based on these results we predicted that cognitive reflection and performance would be positively related in correspondence tasks in which the use of heuristics is helpful
+the second topic we investigated was whether crt only measures a disposition to refrain from reporting an intuitive response or that  as suggested by cokely and kelley  CITATION   crt also measures reflectiveness or thoroughness in decision making  CITATION
+if this is the case  cognitive reflection  as measured by crt  would be a more general thinking disposition analogous to baron's  CITATION  concept of actively open-minded thinking
+the third topic was concerned with alternative explanations of the role of crt in decision-making tasks
+since crt positively correlates with different types of general knowledge - e g   numeracy  CITATION  and academic achievement  CITATION  - it could be argued that the relation between crt and decision making is explained by individual differences in general knowledge
+we tested this by using tasks that did not require numeracy skills

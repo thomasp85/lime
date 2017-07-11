@@ -1,0 +1,42 @@
+### abstract ###
+excess choice has previously been shown to have detrimental effects on decisions about consumer products
+as the number of options increases  people are more likely to put off making an active choice i e   defer and show less satisfaction with any purchase actually made
+we extend this line of enquiry to choosing a charitable organisation to volunteer for
+the issue is important because the number of voluntary organisations is enormous and the impact of such a decision may be greater than for consumer decisions in terms of time commitment and benefits to the volunteer and society
+study  NUMBER  asked students to examine a real volunteering website and record how many organisations they considered  decision difficulty and whether or not they would like to sign up for a chosen organisation or prefer to defer a decision
+study  NUMBER  presented either a relatively small  NUMBER  or large  NUMBER  choice set of hypothetical organisations and measured deferment likelihood and decision difficulty
+in both studies the more options considered  the greater the likelihood to defer
+this effect was mediated by decision difficulty
+this research is the first to find that detrimental effects of excess choice extend to volunteering
+implications for volunteer recruitment are discussed
+### introduction ###
+western societies place great value on the provision of extensive choice  CITATION
+choice  it is argued  enhances the ability to match individual preferences to outcomes  CITATION   is associated with feelings of personal autonomy and well-being  CITATION   and people tend to react negatively when choice is restricted  CITATION
+however  the benefits of extensive choice need to be considered alongside potential costs
+research suggests  for instance  that too much choice may encourage confusion and choice deferment  CITATION  as well as a reduction in satisfaction with chosen options  CITATION
+moreover  economic theory has long recognised that as options become more similar the opportunity costs of the next best alternative foregone also rise
+this tension between wanting more options but finding them difficult to deal with has been referred to as the paradox of choice  CITATION
+to date  however  much of this research has focused on consumer decision making for products such as jams  chocolates  pens  soft drinks  sweets  gift boxes and music  CITATION  and we still know very little about whether the paradox of choice exists for more consequential decisions  CITATION
+the aim of the current research was to investigate whether extensive choice undermines decision making with respect to a potentially more meaningful decision context  namely choosing an organisation to volunteer for
+volunteering one's time without concern for financial gain is a serious time commitment for many individuals  which has been linked to a range of volunteer benefits such as greater life satisfaction  improved health  skill development and better job prospects  CITATION   as well as obvious benefits for others
+consequently  the implications for the individual of deciding which organisation to volunteer for are potentially much larger than for many of the consumer contexts explored previously
+like many of these consumer contexts  however  the charity and volunteer sector is one where excess choice abounds
+for example  NUMBER   NUMBER  charities are registered in the uk alone  CITATION
+moreover  the national centre for social research and the institute for volunteering research  CITATION  estimates that the economic benefit of uk volunteering is around   xa NUMBER   NUMBER  billion annually
+the current uk government has placed increased volunteering at the heart of its big society agenda  CITATION
+if this plethora of organisations is indeed detrimental for volunteer recruitment this could have a major effect on service delivery and the success of the big society and other similar initiatives
+understanding how people make decisions about selecting volunteer organisations and how best to structure these choices to aid people's decision making could therefore have considerable policy implications
+for research into volunteer recruitment  students are a very important population to investigate
+this is an age and stage of life when many people begin volunteering for the first time
+in the uk  for instance  around  NUMBER  percent  of first year students  CITATION  and more than  NUMBER   NUMBER  students in total volunteer each year through organised volunteering programmes at their higher education institutions student volunteering england  sve    NUMBER 
+key motivations include wanting to learn new skills  NUMBER   NUMBER  percent  and to gain experience for their future career  CITATION
+the contribution to the economy is estimated to be around   xa NUMBER   NUMBER  million pounds  CITATION
+importantly students also tend to continue volunteering after leaving college
+in the us  college graduates were more likely to volunteer  NUMBER   NUMBER  percent  than people without college experience  NUMBER   NUMBER  percent  and were also more likely to still be volunteering later in life  CITATION
+the present studies focus on the potential of extensive choice to increase the likelihood that individuals will put off making an immediate decision and instead defer a decision to later
+given the general propensity not to revisit deferred decisions  CITATION  this could have important implications for volunteer recruitment
+our primary hypothesis was that as the number of organisations considered by potential volunteers increases  the likelihood that they will state a preference to defer the decision will also increase
+in study  NUMBER   subjects were asked to explore one of the main uk volunteering websites and choose which organisation they would most like to volunteer with
+the association between the number of options considered and deferment likelihood was then tested
+study  NUMBER  presented subjects with either a large or relatively small choice set of hypothetical organisations  and deferment preferences were again recorded
+our secondary hypothesis was that feelings of confusion  difficulty and lack of confidence during the decision process might mediate this effect  CITATION

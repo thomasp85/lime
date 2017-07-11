@@ -1,0 +1,67 @@
+### abstract ###
+individuals are often ambiguity-averse when choosing among purely chance-based prospects  CITATION
+however  they often prefer apparently ambiguous ability-based prospects to unambiguous chance-based prospects
+according to the competence hypothesis  CITATION   this pattern derives from favorable perceptions of one's competence
+in most past tests of the competence hypothesis  ambiguity is confounded with personal controllability and the source of the ambiguity e g   chance vs missing information
+we unconfound these factors in three experiments and find strong evidence for independent effects of both ambiguity aversion and competence
+in experiment  NUMBER   participants preferred an unambiguous chance-based option to an ambiguous ability-based option when the ambiguity derived from chance rather than uncertainty about one's own ability
+in experiments  NUMBER  and  NUMBER   which used different operationalizations of ambiguity in choice contexts with actual consequences  participants attempted to avoid both ambiguity and chance insofar as they could
+these findings support and extend the competence hypothesis by demonstrating ambiguity aversion independent of personal controllability and source of ambiguity
+### introduction ###
+folk wisdom advises   better the devil you know than the devil you don't
+  most people abide by this logic when choosing between options with known probabilities and others that have ambiguous probabilities or second-order uncertainty
+people often choose the former - manifesting what decision scientists call  ambiguity aversion
+  in a classic demonstration by ellsberg  CITATION   decision makers faced a choice between two urns  one contained  NUMBER  percent  red and  NUMBER  percent  black marbles whereas the other had an unknown distribution
+selection of a marble of a specified color produced a monetary prize
+participants showed no color preference  but they did show a clear preference for the  NUMBER   NUMBER  urn
+this preference is hard to justify on rational grounds because the ambiguous urn cannot contain a lower proportion of both red and black marbles
+later work showed that people prefer the unambiguous urn even when the expected value of the other ambiguous urn is higher  CITATION   and that they are willing to pay more an  ambiguity premium  to draw from the  NUMBER   NUMBER  urn  CITATION
+several persuasive explanations have been offered to account for ambiguity aversion
+frisch and baron  CITATION  proposed that decision makers are particularly averse to missing information  especially if that information can be known or manipulated by others such as an opponent or may become available at some later point in the decision process
+these authors also suggest that people are concerned about the blame and regret that may follow a decision made in the context of missing information
+as an example  parents are relatively less willing to vaccinate their children in a setting where the characteristics of children who experience side effects from the vaccination are unspecified  CITATION
+similarly  heath and tversky  CITATION  argue that participants in the ellsberg paradigm mentally simulate the attributions that will be made following selection of the marble  and consequently worry about being blamed if the ambiguous urn turns out to present a smaller chance of winning
+indeed  curley  yates  and abrams  CITATION  observed that ambiguity aversion is greater when the contents of the ambiguous urn will be revealed to others
+an important feature of the ellsberg paradigm is that the contents of the ambiguous urn are knowable - just unknown to the participants
+the outcome of the decision also hinges on chance and is not in any way tethered to participants' own knowledge or abilities
+heath and tversky  CITATION  suggest that if people feel competent in the decision domain - and if competence is related to the outcome - they should exhibit less ambiguity aversion
+in an illustrative study  participants predicted outcomes of american football games over a five-week period and also assessed their own knowledge about each game
+they then chose between betting on the team they predicted would win or a lottery in which the chances of winning were identical but determined by chance
+as long as participants perceived the probability of winning to be   NUMBER  or higher  those with higher perceived knowledge chose the bet over the lottery  suggesting that perceptions of competence in the domain attenuated ambiguity aversion
+similar findings emerged in contexts where voters made predictions about outcomes in the november  NUMBER  presidential election and where students made predictions about future news events  CITATION
+competence in the decision domain likely reduced the perception of missing information that frisch and baron posited to be key to ambiguity aversion
+thus  heath and tversky proposed that perceived competence affects perceived ambiguity and does not have an independent effect of its own
+however  other characteristics of this decision paradigm suggest that competence has an independent effect
+most importantly  people generally prefer controllable to uncontrollable outcomes  CITATION   and are more optimistic about the outcomes of controllable outcomes  CITATION
+in most though not all tests of the competence hypothesis  the unambiguous option is chance-determined  meaning that the manipulation of competence may be confounded with outcome controllability
+if the probabilities of the skill-based option were ambiguous  participants might still choose the skill option  suggesting they prefer skill over chance  enough to override any opposing effect of ambiguity
+controllability  rather than ambiguity  may also account for the choice of betting on familiar vs unfamiliar domains of competence e g   weather in one's own geographical area vs weather in a distal unknown geographical area  given that familiarity or proximity can be conflated with controllability due to magical thinking  CITATION
+another possibility in the current context is that people are responding not to competence or controllability per se but rather to the reason for the ambiguity
+that is  ambiguity could have different effects depending on its source
+in tests of the competence hypothesis  the ability-based option is ambiguous because it is not associated with a clearly stated probability of winning as there is for the chance option
+the ambiguity is instead related to natural variation in competence and perceptions of competence  thereby confounding the source of ambiguity with competence
+if the ambiguity associated with the ability-based option derived from factors unrelated to personal competence  such as chance  it is likely that the ability-based option would become less appealing
+above we suggested that chance-based options in tests of the competence hypothesis should possess ambiguity i e   a range of probabilities rather than a point estimate  and here we take this one step further by arguing that the competence-based options should possess the same kind of ambiguity untethered to competence
+finally  previous experiments offered competence options that were based on a priori beliefs  limiting the way competence was conceptualized
+in no cases was competence manipulated - in particular  by giving participants feedback in the competence domain - to more directly test the role of competence in choices involving ambiguity
+we report three experiments that systematically separate ambiguity from controllability and the source of ambiguity in order to determine whether people continue to exhibit ambiguity aversion as predicted by the competence hypothesis
+in experiment  NUMBER   participants face a choice between an unambiguous chance-based prospect and an ambiguous ability-based prospect
+importantly  the latter prospect is ambiguous because its difficulty is determined by chance
+we predicted that decision-makers would prefer the chance-based option - contrary to the typical pattern in tests of the competence hypothesis but nevertheless illustrative of ambiguity aversion
+experiment  NUMBER  builds on this study by presenting participants with a chance option  a low-ambiguity ability-based option with approximately a  NUMBER  percent  chance of winning  and a high-ambiguity ability-based option with win probabilities ranging from  NUMBER  percent - NUMBER  percent 
+because the ambiguity inherent in the third option is due to chance and because the first option is entirely chance-based  we expect participants to prefer the low-ambiguity ability-based option over the other two - demonstrating preferences for controllability and against ambiguity in the same context
+in this experiment  we also give participants performance feedback upon which to base their choices rather than relying on a priori beliefs about competence
+experiment  NUMBER  builds on the standard competence hypothesis paradigm by pitting two ability-based options against each other while independently manipulating the level of ambiguity
+finally  we ask participants to make the same choice for someone else  thereby completely separating ambiguity from controllability
+if ambiguity aversion is independent of controllability  then choices for other people should mirror those for the self
+experiment  NUMBER  tests a similar hypothesis using a different operationalization of ambiguity which again is unaffected by personal controllability
+in this case  we give participants a choice among an unambiguous chance-based option  an ability-based option where they must outperform a low ambiguity opponent  and an ability-based option where they must instead outperform a high ambiguity opponent
+as in experiment  NUMBER   we expect people to prefer the ability-based options but to show ambiguity aversion by selecting the option in which they compete against the low ambiguity opponent
+an additional characteristic of previous studies in this literature is that the probability of winning the chance-based option was always unambiguous i e   a fixed probability
+in experiments  NUMBER  and  NUMBER   we also introduce ambiguity to the chance-based option in the form of a range of probabilities
+doing so provides an even more conservative test of whether preference for ability-based tasks in previous tests was due to ambiguity or simply a preference for ability-based over chance-based tasks
+moreover  by defining ambiguity in terms of the opponent in experiment  NUMBER   we have yet again disentangled ambiguity from personal competence  and in a different manner than in experiment  NUMBER  where we ask participants to make choices both for themselves and others
+in sum  we report three experiments designed to test and extend the competence hypothesis
+studies include both hypothetical and actual choices and in the final two experiments more than one ability-based choice
+we expect that people will exhibit ambiguity aversion even when controllability is held constant
+they should prefer chance-based options only when the ability options are more ambiguous  but when choosing among similar ability-based options they should prefer those lower in ambiguity

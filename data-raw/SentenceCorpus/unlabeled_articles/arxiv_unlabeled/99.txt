@@ -1,0 +1,35 @@
+### abstract ###
+We consider the problem of choosing a density estimate from a set of distributions~ SYMBOL , minimizing the  SYMBOL -distance to an unknown distribution ( CITATION )
+Devroye and Lugosi~ CITATION  analyze two algorithms for the problem: Scheff\'e tournament winner and minimum distance estimate
+The Scheff\'e tournament estimate requires fewer computations than the minimum distance estimate, but has strictly weaker guarantees than the latter
+We focus on the computational aspect of density estimation
+We present two algorithms, both with the same guarantee as the minimum distance estimate
+The first one, a modification of the minimum distance estimate, uses the same number (quadratic in  SYMBOL ) of computations as the Scheff\'e tournament
+The second one, called ``efficient minimum loss-weight estimate,'' uses only a linear number of computations, assuming that  SYMBOL  is preprocessed
+We also give examples showing that the guarantees of the algorithms cannot be improved and explore randomized algorithms for density estimation
+### introduction ###
+We study the following density estimation problem considered in~ CITATION
+There is an unknown distribution  SYMBOL  and we are given  SYMBOL  (not necessarily independent) samples which define empirical distribution  SYMBOL
+Given a finite class  SYMBOL  of distributions, our objective is to output  SYMBOL  such that the error  SYMBOL  is minimized
+The use of the  SYMBOL -norm is well justified by it has many useful properties, for example, scale invariance and the fact that approximate identification of a distribution in the  SYMBOL -norm gives an estimate for the probability of every event
+The following two parameters influence the error of a possible estimate: the distance of  SYMBOL  from  SYMBOL  and the empirical error
+The first parameter is required since we have no control over  SYMBOL , and hence we cannot select a distribution which is better than the ``optimal'' distribution in  SYMBOL , that is, the one closest to  SYMBOL  in  SYMBOL -norm
+It is not obvious how to define the second parameter---the error of  SYMBOL  with respect to  SYMBOL
+We follow the definition of~ CITATION , which is inspired by~ CITATION  (see Section~ for a precise definition)
+Devroye and Lugosi~ CITATION  analyze two algorithms in this setting: Scheff\'e tournament winner and minimum distance estimate
+The minimum distance estimate, defined by Yatracos~ CITATION , is a special case of the minimum distance principle, formalized by Wolfowitz in~ CITATION
+The minimum distance estimate is a helpful tool, for example, it was used by~ CITATION  to obtain estimates for the smoothing factor for kernel density estimates and also by~ CITATION  for hypothesis testing
+The Scheff\'e tournament winner algorithm requires fewer computations than the minimum distance estimate, but it has strictly weaker guarantees (in terms of the two parameters mentioned above) than the latter
+Our main contribution are two procedures for selecting an estimate from  SYMBOL , both of which have the same guarantees as the minimum distance estimate, but are computationally more efficient
+The first has a quadratic (in  SYMBOL ) cost, matching the cost of the Scheff\'e tournament winner algorithm
+The second one is even faster, using  linearly  many (in  SYMBOL ) computations (after preprocessing  SYMBOL )
+Now we outline the rest of the paper
+In Section~ we give the required definitions and introduce the notion of a test-function (a variant of Scheff\'e set)
+Then, in Section~, we restate the previous density estimation algorithms (Scheff\'e tournament winner and the minimum distance estimate) using test-functions
+Next, in Section~, we present our algorithms
+The first one is a modification of the minimum-distance estimate with improved (quadratic in  SYMBOL ) computational cost
+The second one, which we call ``efficient minimum loss-weight estimate,'' has only  linear  computational cost after preprocessing  SYMBOL
+In Section~ we explore randomized density estimation algorithms
+In the final Section~, we give examples showing tightness of the theorems stated in the previous sections
+Throughout this paper we focus on the case when  SYMBOL  is finite, in order to compare the computational costs of our estimates to previous ones
+However our results generalize in a straightforward way to infinite classes as well if we ignore computational complexity

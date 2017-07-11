@@ -1,0 +1,37 @@
+### abstract ###
+We develop the concept of  ABC -Boost ( A daptive  B ase  C lass Boost) for  multi-class classification and  present   ABC -MART, a concrete implementation of  ABC -Boost
+The original MART ( M ultiple  A dditive  R egression  T rees) algorithm has been very successful in large-scale applications
+For binary classification, ABC-MART recovers MART
+For multi-class  classification,  ABC-MART considerably improves MART, as  evaluated on several public data sets
+### introduction ###
+Classification is a basic task in machine learning
+A training data set  SYMBOL  consists of  SYMBOL  feature vectors (samples)  SYMBOL , and  SYMBOL  class labels,  SYMBOL ,  SYMBOL  to  SYMBOL
+Here  SYMBOL  and  SYMBOL  is the number of classes
+The  task is to predict the class labels
+This study focuses on multi-class classification ( SYMBOL )
+Many classification algorithms are based on  boosting  CITATION , which is  regarded one of most significant breakthroughs in machine learning
+MART CITATION  ( M ultiple  A dditive  R egression  T rees) is a successful boosting algorithm, especially for large-scale applications in industry practice
+For example, the regression-based ranking method developed in Yahoo
+CITATION  used an underlying learning algorithm based on MART
+McRank  CITATION , the classification-based ranking method, also used MART as the underlying learning procedure
+This study proposes  ABC -Boost ( A daptive  B ase  C lass Boost) for  multi-class classification
+We present   ABC -MART, a concrete implementation of {ABC}-Boost
+ABC-Boost  is based on the following two key ideas:   For multi-class classification, popular loss functions for  SYMBOL  classes usually assume a constraint CITATION   such that only the values for  SYMBOL  classes are needed
+Therefore, we can choose a  base class  and derive  algorithms only for   SYMBOL  classes
+At each boosting step, although the base class is not explicitly trained, it will implicitly benefit from  the training on  SYMBOL  classes, due to the constraint
+Thus, we  adaptively  choose the base class which  has the ``worst'' performance
+The idea of assuming a constraint on the loss function and  using a base class  may not be at all surprising
+For binary ( SYMBOL ) classification, a ``sum-to-zero'' constraint on the loss function is automatically considered so that we only need to train the algorithm for one (instead of  SYMBOL ) class
+For multi-class ( SYMBOL ) classification, the sum-to-zero constraint on the loss function is also ubiquitously adopted CITATION
+In particular, the multi-class  Logitboost  CITATION  algorithm was derived by explicitly averaging over  SYMBOL  base classes
+The loss function adopted in our ABC-MART is the same as in MART CITATION  and  Logitboost  CITATION
+All three algorithms assume the ``sum-to-zero'' constraint
+However, we obtain different first and second derivatives of the loss function, from MART CITATION  and  Logitboost  CITATION
+See Section  for details
+In terms of implementation, our proposed ABC-MART differs from the original MART algorithm only in a few lines of code
+Since MART is known to be a successful algorithm, much of our work is devoted to the empirical comparisons of ABC-MART with MART
+Our experiment results on publicly available data sets will demonstrate that ABC-MART could considerably improves MART
+Also, ABC-MART reduces both the training and testing time by  SYMBOL , which may be quite beneficial when  SYMBOL  is small
+We notice that data sets in industry applications are often quite large (e g , several million samples CITATION )
+Publicly available data sets (e g , UCI repository), however, are mostly small
+In our study, the  Covertype  data set from the UCI repository is reasonably large with 581,012 observations \\   We first review the original MART algorithm and functional gradient boosting CITATION

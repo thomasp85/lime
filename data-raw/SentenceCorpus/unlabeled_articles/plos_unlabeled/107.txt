@@ -1,0 +1,63 @@
+### abstract ###
+We study the evolution of cooperation under indirect reciprocity, believed to constitute the biological basis of morality.
+We employ an evolutionary game theoretical model of multilevel selection, and show that natural selection and mutation lead to the emergence of a robust and simple social norm, which we call stern-judging.
+Under stern-judging, helping a good individual or refusing help to a bad individual leads to a good reputation, whereas refusing help to a good individual or helping a bad one leads to a bad reputation.
+Similarly for tit-for-tat and win-stay-lose-shift, the simplest ubiquitous strategies in direct reciprocity, the lack of ambiguity of stern-judging, where implacable punishment is compensated by prompt forgiving, supports the idea that simplicity is often associated with evolutionary success.
+### introduction ###
+Many biological systems employ cooperative interactions in their organization CITATION.
+Humans, unlike other animal species, form large social groups in which cooperation among non-kin is widespread.
+This contrasts with the general assumption that the strong and selfish individuals are the ones who benefit most from natural selection.
+This being the case, how is it possible that unselfish behaviour has survived evolution?
+Adopting the terminology resulting from the seminal work of Hamilton, Trivers, and Wilson CITATION CITATION, an act is altruistic if it confers a benefit b to another individual in spite of accruing a cost c to the altruist.
+In this context, several mechanisms have been invoked to explain the evolution of altruism, but only recently an evolutionary model of indirect reciprocity has been developed by Nowak and Sigmund CITATION, which, with remarkable simplicity, addressed unique aspects of human sociality, such as trust, gossip, and reputation CITATION.
+As a means of community enforcement, indirect reciprocity had been investigated earlier in the context of economics, notably by Sugden CITATION and Kandori CITATION.
+More recently, many studies CITATION, CITATION, CITATION CITATION have been devoted to investigating how altruism can evolve under indirect reciprocity.
+Indeed, according to Alexander CITATION, indirect reciprocity presumably provides the mechanism that distinguishes us humans from all other living species on Earth.
+Moreover, as recently argued in CITATION, indirect reciprocity may have provided the selective challenge driving the cerebral expansion in human evolution.
+In the indirect reciprocity game, any two players are supposed to interact at most once with each other, one in the role of a potential donor, with the other as a potential receiver of help.
+Each player can experience many rounds, but never with the same partner twice, direct retaliation being unfeasible.
+By helping another individual, a given player may increase her reputation, which may change the predisposition of others to help her in future interactions.
+However, her new reputation depends on the social norm used by her peers to assess her action as a donor.
+Previous studies of reputation-based models of cooperation reviewed recently CITATION indicate that cooperation outweighs defection whenever, among other factors, assessment of actions is based on norms that require considerable cognitive capacities CITATION, CITATION, CITATION, even when individuals are capable of making binary assessments only, in a world in black and white CITATION, as assumed in most recent studies.
+Furthermore, stable cooperation hinges on the availability of reliable reputation information CITATION.
+Such high cognitive capacity contrasts with technology-based interactions, such as e-trade, which also rely on reputation-based mechanisms of cooperation CITATION CITATION.
+Indeed, anonymous one-shot interactions between individuals loosely connected and geographically dispersed usually dominate e-trade, raising issues of trust-building and moral hazard CITATION.
+Reputation in e-trade is introduced via a feedback mechanism which announces the ratings of sellers.
+Despite the success and high levels of cooperation observed in e-trade, it has been found CITATION that publicizing a detailed account of the seller's feedback history does not improve cooperation, as compared with publicizing only the seller's most recent rating.
+In other words, practice shows that simple reputation-based mechanisms are capable of promoting high levels of cooperation.
+In view of the previous discussion, it is hard to explain the success of e-trade on the basis of the results obtained so far for reputation-based cooperation in the context of indirect reciprocity.
+Let us consider a world in black and white consisting of a set of tribes, such that each tribe lives under the influence of a single norm, common to all individuals.
+Each individual engages once in the indirect reciprocity game with all other tribe inhabitants.
+Her action as a donor will depend on her individual strategy, which dictates whether she will provide help or refuse to do it depending on her and the recipient's reputation.
+Reputations are public: this means that the result of every interaction is made available to everyone through the indirect observation model introduced in CITATION.
+This allows any individual to know the current status of the co-player without observing all of her past interactions.
+On the other hand, this requires a way to spread the information to the entire population.
+Consistently, language seems to be an important cooperation promoter CITATION, although recent mechanisms of reputation-spreading rely on electronic databases.
+Since reputations are either GOOD or BAD, there are 2 4 16 possible strategies.
+On the other hand, the number of possible norms depends on their associated order.
+The simplest are the so-called first-order norms, in which all that matters is the action taken by the donor.
+In second-order norms, the reputation of one of the players also contributes to decide the new reputation of the donor.
+And so on, in increasing layers of complexity as shown in Figure 2, which illustrates the features of third-order norms such as those we shall employ here.
+Any individual in the tribe shares the same norm, which in turn raises the question of how each inhabitant acquired it.
+We do not address this issue here.
+However, inasmuch as indirect reciprocity is associated with community enforcement CITATION, CITATION, one may assume, for simplicity, that norms are acquired through an educational process.
+Moreover, it is likely that a common norm contributes to the overall cohesiveness and identity of a tribe.
+It is noteworthy, however, that if norms were different for different individuals, the indirect observation model would not be valid, as it requires trust in judgments made by co-inhabitants.
+For a norm of order n, there are possible norms, each associated with a binary string of length 2 n. We consider third-order norms : in assessing a donor's new reputation, the observer has to make a contextual judgment involving the donor's action, as well as her and the recipient's reputations scored in the previous action.
+We introduce the following evolutionary dynamics in each tribe: during one generation all individuals interact once with each other via the indirect reciprocity game.
+When individuals reproduce, they replace their strategy by that of another individual from the same tribe, chosen proportional to her accumulated payoff CITATION.
+The most successful individuals in each tribe have a higher reproductive success.
+Since different tribes are under the influence of different norms, the overall fitness of each tribe will vary from tribe to tribe, as well as the plethora of successful strategies that thrive in each tribe.
+This describes individual selection in each tribe.
+Tribes engage in pairwise conflicts with a small probability, associated with selection between tribes.
+After each conflict, the norm of the defeated tribe will change toward the norm of the victor tribe, as detailed in the Methods section.
+We consider different forms of conflict between tribes, which reflect different types of inter-tribe selection mechanisms: group selection CITATION, CITATION CITATION based on the average global payoff of each tribe as well as selection resulting from inter-tribe conflicts modeled in terms of games the display game of war of attrition, and an extended hawk dove game CITATION.
+We perform extensive computer simulations of evolutionary dynamics of sets of 64 tribes, each with 64 inhabitants.
+Once a stationary regime is reached, we collect information for subsequent statistical analysis.
+We compute the frequency of occurrence of bits 1 and 0 in each of the 8-bit locations.
+A bit is said to fixate if its frequency of occurrence exceeds or equals 98 percent.
+Otherwise, no fixation occurs, which we denote by X, instead of by 1 or 0.
+We analyze 500 simulations for the same value of b, subsequently computing the frequency of occurrence 1, 0, and X of the bits 1, 0, and X, respectively.
+If 1 0 X, the final bit is 1; if 0 1 X, the final bit is 0; otherwise we assume it is indeterminate, and denote it by.
+It is noteworthy that our bit-by-bit selection/transmission procedure, though artificial, provides a simple means of mimicking biological evolution, where genes are interconnected by complex networks and yet evolve independently.
+Certainly, a co-evolutionary process would be more appropriate, and this will be explored in future work.

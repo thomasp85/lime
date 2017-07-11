@@ -1,0 +1,46 @@
+### abstract ###
+The centrality-lethality rule, which notes that high-degree nodes in a protein interaction network tend to correspond to proteins that are essential, suggests that the topological prominence of a protein in a protein interaction network may be a good predictor of its biological importance.
+Even though the correlation between degree and essentiality was confirmed by many independent studies, the reason for this correlation remains illusive.
+Several hypotheses about putative connections between essentiality of hubs and the topology of protein protein interaction networks have been proposed, but as we demonstrate, these explanations are not supported by the properties of protein interaction networks.
+To identify the main topological determinant of essentiality and to provide a biological explanation for the connection between the network topology and essentiality, we performed a rigorous analysis of six variants of the genomewide protein interaction network for Saccharomyces cerevisiae obtained using different techniques.
+We demonstrated that the majority of hubs are essential due to their involvement in Essential Complex Biological Modules, a group of densely connected proteins with shared biological function that are enriched in essential proteins.
+Moreover, we rejected two previously proposed explanations for the centrality-lethality rule, one relating the essentiality of hubs to their role in the overall network connectivity and another relying on the recently published essential protein interactions model.
+### introduction ###
+An intriguing question in the analysis of biological networks is whether biological characteristics of a protein, such as essentiality, can be explained by its placement in the network, i.e., whether topological prominence implies biological importance.
+One of the first connections between the two in the context of a protein interaction network, the so-called centrality-lethality rule, was observed by Jeong and colleagues CITATION, who demonstrated that high-degree nodes or hubs in a protein interaction network of Saccharomyces cerevisiae contain more essential proteins than would be expected by chance.
+Since then the correlation between degree and essentiality was confirmed by other studies CITATION CITATION, but until recently there was no systematic attempt to examine the reasons for this correlation.
+In particular, what is the main topological determinant of essentiality?
+Is it the number of immediate neighbors or some other, more global topological property that essential proteins may have in a protein interaction network?
+Jeong and colleagues CITATION suggested that overrepresentation of essential proteins among high-degree nodes can be attributed to the central role that hubs play in mediating interactions among numerous, less connected proteins.
+Indeed, the removal of hubs disrupts the connectivity of the network, as measured by the network diameter or the size of the largest connected component, more than the removal of an equivalent number of random nodes CITATION, CITATION.
+Therefore, under the assumption that an organism's function depends on the connectivity among various parts of its interactome, hubs would be predominantly essential because they play a central role in maintaining this connectivity.
+Recently, He and colleagues challenged the hypothesis of essentiality being a function of a global network structure and proposed that the majority of proteins are essential due to their involvement in one or more essential protein protein interactions that are distributed uniformly at random along the network edges CITATION.
+Under this hypothesis, hubs are proposed to be predominantly essential because they are involved in more interactions and thus are more likely to be involved in one which is essential.
+In this work we carefully evaluate each of the proposed explanations for the centrality-lethality rule.
+Recently several hypotheses that linked structural properties of protein interaction networks to biological phenomena have come under scrutiny, with the main concern being that the observed properties are due to experimental artifacts and/or other biases present in the networks and as such lack any biological implication.
+To limit the impact of such biases on the results reported in our study we use six variants of the genomewide protein interaction network for Saccharomyces cerevisiae compiled from diverse sources of interaction evidence CITATION CITATION .
+To assess whether the essentiality of hubs is related to their role in maintaining network connectivity we performed two tests.
+First, if this were the case, then we would expect essential hubs to be more important for maintaining network connectivity than nonessential hubs.
+We found that this is not the case.
+Next, in addition to node degree, we consider several other measures of topological prominence, and we demonstrate that some of them are better predictors of the role that a node plays in network connectivity than node degree.
+Thus, if essentiality were related to maintaining network connectivity, then one would expect essentiality to be better correlated with these centrality measures than with the node degree.
+However, we found that node degree is a better predictor of essentiality than any other measure tested.
+To reject the essential protein interaction model CITATION, we used a hypothesis testing approach.
+Namely, we observed that this model implies that the probability that a protein is essential is independent of the probability that another noninteracting protein is essential.
+However, in the tested networks the essentiality of noninteracting proteins that share interaction partners is correlated.
+Thus, we reject the independence assumption and, as a result, the essential protein interaction model with high confidence.
+Motivated by our findings we propose an alternative explanation for the centrality-lethality rule.
+Our explanation draws on a growing realization that phenotypic effect of gene-knockout experiments is a function of a group of functionally related genes, such as genes whose gene products are members of the same multiprotein complex CITATION.
+It is well known that densely connected subnetworks are enriched in proteins that share biological function.
+Therefore, one would expect that dense subnetworks of protein interaction networks should be either enriched or depleted in essential proteins.
+Indeed, Hart and colleagues observed that essential proteins are not distributed evenly among the set of automatically indentified multiprotein complexes CITATION.
+In this work we observe that the same phenomenon holds for potentially larger groups of densely connected and functionally related proteins, which we call COmplex BIological Modules.
+We demonstrate that due to the uneven distribution of essential proteins among COBIMs the majority of the essential proteins lie in those COBIMs that are enriched in essential proteins, which we call Essential COmplex BIological Modules .
+By the very definition, ECOBIMs contain, relative to their size, more essential nodes than a random group of proteins of the same size.
+But what fraction of all essential hubs are members of such ECOBIMs?
+How does this number relate to what is expected by chance?
+In fact, how does the enrichment of hubs that are members/nonmembers of ECOBIMs in essential proteins relate to the enrichment values expected by chance under a suitable randomization protocol?
+We propose that membership in ECOBIMs largely accounts for the enrichment of hubs in essential proteins.
+In support of this hypothesis, we found that the fraction of essential proteins among non-ECOBIM hubs is, depending on the network, only 13 35 percent, which is almost as low as the network average.
+Furthermore the essentiality of nodes that are not members of ECOBIMs is only weakly correlated with their degree.
+Finally, using a randomization experiment we demonstrated that these properties are characteristic of the protein interaction network and are unlikely in a corresponding randomized network.

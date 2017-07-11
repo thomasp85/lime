@@ -1,0 +1,32 @@
+### abstract ###
+Walley's Imprecise Dirichlet Model (IDM) for categorical  iid  \ data extends the classical Dirichlet model to a set of priors
+It overcomes several fundamental problems which other approaches to uncertainty suffer from
+Yet, to be useful in practice, one needs efficient ways for computing the imprecise=robust sets or intervals
+The main objective of this work is to derive exact, conservative, and approximate, robust and credible interval estimates under the IDM for a large class of statistical estimators, including the entropy and mutual information
+### introduction ###
+This work derives interval estimates under the Imprecise Dirichlet Model (IDM)  CITATION  for a large class of statistical estimators
+In the IDM one considers an  iid  \ process with unknown chances  SYMBOL  for outcome  SYMBOL
+The prior uncertainty about  SYMBOL  is modeled by a set of Dirichlet priors  SYMBOL , where%  %  SYMBOL , and  SYMBOL  is a hyper-parameter, typically chosen between 1 and 2
+Sets of probability distributions are often called Imprecise probabilities, hence the name IDM for this model
+We avoid the term  imprecise  and use  robust  instead, or capitalize  Imprecise
+The IDM overcomes several fundamental problems which other approaches to uncertainty suffer from  CITATION
+For instance, the IDM satisfies the representation invariance principle and the symmetry principle, which are mutually exclusive in a pure Bayesian treatment with proper prior  CITATION
+SYMBOL  The counts  SYMBOL  for  SYMBOL  form a minimal sufficient statistic of the data of size  SYMBOL
+Statistical estimators  SYMBOL  usually also depend on the chosen prior: so a set of priors leads to a set of estimators  SYMBOL
+For instance, the expected chances  SYMBOL  lead to a robust interval estimate  SYMBOL
+Robust intervals for the variance  SYMBOL   CITATION  and for the mean and variance of linear-combinations  SYMBOL  have also been derived  CITATION
+Bayesian estimators (like expectations) depend on  SYMBOL  and  SYMBOL  only through  SYMBOL  (and  SYMBOL  which we suppress), i e \  SYMBOL
+The main objective of this work is to derive approximate, conservative, and exact intervals  SYMBOL  for general  SYMBOL , and for the expected (also called predictive) entropy and the expected mutual information in particular
+These results are key building blocks for applying the IDM
+Walley suggests, for instance, to use  SYMBOL  for inference problems and  SYMBOL  for decision problems  CITATION , where  SYMBOL  is some function of  SYMBOL
+One application is the inference of robust tree-dependency structures  CITATION , in which edges are partially ordered based on Imprecise mutual information
+Section  gives a brief introduction to the IDM and describes our problem setup
+In Section  we derive exact robust intervals for concave functions  SYMBOL , such as the entropy
+Section  derives approximate robust intervals for arbitrary  SYMBOL
+In Section  we show how bounds of elementary functions can be used to get bounds for composite function, especially for sums and products of functions
+The results are used in Section  for deriving robust intervals for the mutual information
+The issue of how to set up IDM models on product spaces is discussed in Section
+Section  addresses the problem of how to combine Bayesian credible intervals with the robust intervals of the IDM
+Conclusions are given in Section
+Appendix  lists properties of the  SYMBOL  function, which occurs in the expressions for the expected entropy and mutual information
+Appendix  contains a table of used notation

@@ -1,0 +1,31 @@
+### abstract ###
+we introduce the berlin numeracy test  a new psychometrically sound instrument that quickly assesses statistical numeracy and risk literacy
+we present  NUMBER  studies n  NUMBER  showing robust psychometric discriminability across  NUMBER  countries e g   germany  pakistan  japan  usa and diverse samples e g   medical professionals  general populations  mechanical turk web panels
+analyses demonstrate desirable patterns of convergent validity e g   numeracy  general cognitive abilities  discriminant validity e g   personality  motivation  and criterion validity e g   numerical and non-numerical questions about risk
+the berlin numeracy test was found to be the strongest predictor of comprehension of everyday risks e g   evaluating claims about products and treatments  interpreting forecasts  doubling the predictive power of other numeracy instruments and accounting for unique variance beyond other cognitive tests e g   cognitive reflection  working memory  intelligence
+the berlin numeracy test typically takes about three minutes to complete and is available in multiple languages and formats  including a computer adaptive test that automatically scores and reports data to researchers www
+riskliteracy
+org
+the online forum also provides interactive content for public outreach and education  and offers a recommendation system for test format selection
+discussion centers on construct validity of numeracy for risk literacy  underlying cognitive mechanisms  and applications in adaptive decision support
+### introduction ###
+mathematics skills are among the most influential educational factors contributing to economic prosperity in industrialized countries  CITATION
+accordingly  there has been considerable interest in the causes and consequences of numeracy  CITATION   which refers specifically to mathematical or quantitative literacy  CITATION
+the more basic levels of numeracy are concerned with the  real number line  time  measurement  and estimation  whereas higher levels focus on  an understanding of ratio concepts  notably fractions  proportions  percentages  and probabilities   CITATION
+much of the research on numeracy has involved assessment of a wide range of mathematical skills among large and diverse samples
+more recently  however  research and theory in the decision sciences has focused on a subset of numeracy that is important for informed and accurate risky decision making-i e   statistical numeracy  CITATION
+in this paper  we use  statistical numeracy  specifically to refer to an understanding of the operations of probabilistic and statistical computation  such as comparing and transforming probabilities and proportions  CITATION
+these statistical aspects of numeracy are key features of risk assessment in business and engineering  CITATION   and play central roles in health risk quantification and communication  CITATION
+moreover-although risk commonly refers to many topics  CITATION -economic and psychological theory have long held that decision making under risk is that involving known  statistical probabilities  and quantitative  probabilistic reasoning   CITATION
+in these ways and others  statistical numeracy is one factor that gives rise to risk literacy-i e   the ability to accurately interpret and act on information about risk
+indeed  statistical numeracy has been shown to be a predictor of decision strategies  affective reactions  comprehension and normative choices across many risky economic  health  and consumer decisions  CITATION
+efforts to measure individual differences in statistical numeracy and risk literacy come primarily in three forms
+some research examines risky decisions in relation to individual differences in overall educational attainment  cognitive abilities  or cognitive styles  CITATION
+other research primarily focusing on clinical and health domains has developed a valid subjective instrument for self-reported estimations of numeracy  CITATION
+most common  however  is the use of objective performance measures of numeracy-i e   psychometric tests  CITATION
+in this paper  we review the development of the most widely used statistical numeracy instruments  CITATION   examining successes and psychometric limits
+we then introduce a new test of statistical numeracy and risk literacy-i e   the berlin numeracy test
+the berlin numeracy test can be used in multiple formats i e   computer adaptive  paper-and-pencil  multiple choice  single-item median-split  providing a fast  valid  and reliable tool for research  assessment  and public outreach
+specifically  we show that the new test offers unique predictive validity for comprehension of everyday risks beyond other cognitive ability and numeracy tests e g   cognitive reflection  working memory span  and fluid intelligence
+furthermore  we show that the berlin numeracy test dramatically improves psychometric discriminability among highly-educated individuals e g   college students and graduates  medical professionals  across diverse cultures and different languages
+we close with a discussion of construct validity  underlying mechanisms  and applications e g   custom-tailored  interactive  and adaptive risk communication

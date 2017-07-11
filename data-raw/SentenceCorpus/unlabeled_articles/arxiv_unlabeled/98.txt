@@ -1,0 +1,16 @@
+### abstract ###
+Markov random fields are used to model high dimensional distributions in a number of applied areas
+Much recent interest has been devoted to the reconstruction of the dependency structure from independent samples from the Markov random fields
+We analyze a simple algorithm for reconstructing the underlying graph defining a Markov random field on  SYMBOL  nodes and maximum degree  SYMBOL  given observations
+We show that under mild non-degeneracy conditions it reconstructs the generating graph with high probability using  SYMBOL  samples where  SYMBOL  depend on the local interactions
+For most local interaction  SYMBOL  are of order  SYMBOL
+Our results are optimal as a function of  SYMBOL  up to a multiplicative constant depending on  SYMBOL  and the strength of the local interactions
+Our results seem to be the first results for general models that guarantee that  the  generating model is reconstructed
+Furthermore, we provide explicit  SYMBOL  running time bound
+In cases where the measure on the graph has correlation decay, the running time is  SYMBOL  for all fixed  SYMBOL
+We also discuss the effect of observing noisy samples and show that as long as the noise level is low, our algorithm is effective
+On the other hand, we construct an example where large noise implies non-identifiability even for generic noise and interactions
+Finally, we briefly show that in some simple cases, models with hidden nodes can also be recovered
+### introduction ###
+In this paper we consider the problem of reconstructing the graph structure of a Markov random field from independent and identically distributed samples
+Markov random fields (MRF) provide a very general framework for defining high dimensional distributions and the reconstruction of the MRF from observations has attracted much recent interest, in particular in biology, see eg ~ CITATION  and a list of related references~ CITATION

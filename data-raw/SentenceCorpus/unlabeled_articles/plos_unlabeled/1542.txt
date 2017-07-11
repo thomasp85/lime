@@ -1,0 +1,33 @@
+### abstract ###
+When movement outcome differs consistently from the intended movement, errors are used to correct subsequent movements by updating an internal model of motor and/or sensory systems.
+Here, we examine changes to an internal model of the motor system under changes in the variance structure of movement errors lacking an overall bias.
+We introduced a horizontal visuomotor perturbation to change the statistical distribution of movement errors anisotropically, while monetary gains/losses were awarded based on movement outcomes.
+We derive predictions for simulated movement planners, each differing in its internal model of the motor system.
+We find that humans optimally respond to the overall change in error magnitude, but ignore the anisotropy of the error distribution.
+Through comparison with simulated movement planners, we found that aimpoints corresponded quantitatively to an ideal movement planner that updates a strictly isotropic internal model of the error distribution.
+Aimpoints were planned in a manner that ignored the direction-dependence of error magnitudes, despite the continuous availability of unambiguous information regarding the anisotropic distribution of actual motor errors.
+### introduction ###
+The motor system is exquisitely sensitive to perturbation.
+The ability to sense a discrepancy between planned and executed movement and respond accordingly is one of the hallmarks of motor learning CITATION, CITATION, CITATION, CITATION.
+Here, we are concerned with the nature of the error signal used to update future movement plans when the result of a movement does not match the intended outcome.
+Of course there is an infinite number of statistics of the error signal that the CNS might use to update future motor plans, ranging from a running average of recent errors, to n th-order moments of the distribution of past errors.
+We are interested in exploring the limits of what statistics can be modeled by the nervous system.
+Previous work has focused on neuromotor corrections to imposed bias, where corrective responses are found opposite to the direction of previous errors, and proportional to prior error extents CITATION, CITATION, CITATION.
+This work supports motor learning models in which future motor plans incorporate an inverse of the command that would have produced the previous error.
+This deterministic model of motor learning suggests that errors from past movements are subtracted off of future motor plans.
+Such models can be traced at least to Helmholtz CITATION, who used this type of model to describe perceptual constancy following eye movements.
+However, these deterministic models fail to recognize that the CNS can neither simply read off a motor error from noisy sensory signals, nor can it produce identical motor outcomes with repetitions of motor commands.
+The relationships between sensory signal and motor error, and between motor command and motor outcome, must be inferred; those inferences are far from certain.
+Recognizing this, current research has examined the role of uncertainty in motor learning CITATION, CITATION.
+For example, Sheidt et al. CITATION added a stochastic element to an average force field and found that subjects adapted to the uncertain field strength by tracking its expectation over recent errors.
+Here, we are interested in the response to changes in motor uncertainty, and ask whether these responses result from updating an internal model of motor variance; and if so, which aspects of the variance structure of the uncertain error signal are modeled.
+In these studies, we increased motor noise anisotropically by stimulating a reflexive motor response known to occur when reaching in the presence of horizontal visual-field motion, or drift CITATION.
+From trial to trial observers were shown leftward motion, rightward motion or a static stimulus, in random order.
+The motion, if present, began at the halfway-point of the reach, and resulted in a perturbation of the reach in the direction of the visual motion.
+Subjects could not plan in advance for any particular drift condition since these were randomly intermixed, nor could they compensate for the drift online because the timing of the reach and drift-onset insured that reaches were completed before feedback correction was possible CITATION.
+Because this reflexive manual following response affects only the horizontal component of a reach, it was possible to test which aspects of the new, anisotropic distribution of motor errors was modeled by the CNS.
+We test for changes in the internal representation of motor noise by monitoring changes in reach plans toward visible targets, which depend on the details of the information available to the CNS concerning motor uncertainty.
+In these experiments, successful reaches to targets earn subjects a monetary bonus; reaches that instead intersect a neighboring region of the screen induce a monetary loss.
+In two sessions, each beginning with reaches to targets without penalties, subjects learn their natural and perturbed noise distributions, and then respond to target-penalty pairs later in the session, allowing us to assess their internal representation of motor uncertainty.
+Our results indicate that the CNS updates a strictly circular internal model of motor variance, even when the distribution of actual errors is anisotropic.
+This result is consistent with recent psychophysical and neurophysiological results CITATION, CITATION, CITATION, CITATION indicating independent encoding of the directions and extents of movement errors, because a system that updates only a circular internal representation of errors is equivalent to a system that monitors only the magnitudes of those errors, ignoring their directions.

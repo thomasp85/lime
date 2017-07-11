@@ -1,0 +1,39 @@
+### abstract ###
+Given a time series of multicomponent measurements  SYMBOL , the usual objective of nonlinear blind source separation (BSS) is to find a ``source" time series  SYMBOL , comprised of statistically independent combinations of the measured components
+In this paper, the source time series is required to have a density function in  SYMBOL  that is equal to the product of density functions of individual components
+This formulation of the BSS problem has a solution that is unique, up to permutations and component-wise transformations
+Separability is shown to impose constraints on certain locally invariant (scalar) functions of  SYMBOL , which are derived from local higher-order correlations of the data's velocity  SYMBOL
+The data are separable if and only if they satisfy these constraints, and, if the constraints are satisfied, the sources can be explicitly constructed from the data
+The method is illustrated by using it to separate two speech-like sounds recorded with a single microphone
+### introduction ###
+Sensory devices often receive signals from multiple physical stimuli that evolve simultaneously but are unrelated to one another
+In many of these situations, it is necessary to create separate representations of one or more of these stimuli by blindly processing the observed signals (i e , by processing them without prior knowledge of the nature of the stimuli)
+In recent years, there has be considerable progress in the solution of this ``blind source separation" (BSS) problem for the special case in which the signals and source variables are linearly related
+However, although nonlinear BSS is often performed effortlessly by humans, computational methods for doing this are quite limited~ CITATION
+Consider a time series of data  SYMBOL , where  SYMBOL  is a multiplet of  SYMBOL  measurements ( SYMBOL )
+The usual objectives of nonlinear BSS are: 1) determine if these data are instantaneous mixtures of  SYMBOL  statistically independent source components  SYMBOL   SYMBOL } where  SYMBOL  is a possibly nonlinear, invertible  SYMBOL  mixing function; 2) if this is the case, compute the mixing function
+In other words, the problem is to find a coordinate transformation  SYMBOL  that transforms the observed data  SYMBOL  from the measurement-defined coordinate system ( SYMBOL ) on state space to a special source coordinate system ( SYMBOL ) in which the components of the transformed data are statistically independent
+Let  SYMBOL  be the state space probability density function (PDF) in the source coordinate system, defined so that  SYMBOL  is the fraction of total time that the source trajectory  SYMBOL  is located within the volume element  SYMBOL  at location  SYMBOL
+In the usual formulation of the BSS problem, the source components are required to be statistically independent in the sense that their state space PDF is the product of the density functions of the individual components  SYMBOL } In every formulation of BSS, multiple solutions can be created by permutations and component-wise transformations of any one solution
+However, it is well known that the criterion in () is so weak that it suffers from a much worse non-uniqueness problem: namely, in this form of the BSS problem, multiple solutions can be created by transformations that mix the source variables (see~ CITATION  and references therein)
+The issue of non-uniqueness can be circumvented by considering the data's trajectory in  SYMBOL  ( SYMBOL ) instead of  SYMBOL  (i e , state space)
+First, let  SYMBOL  be the PDF in this space, defined so that  SYMBOL  is the fraction of total time that the location and velocity of the source trajectory are within the volume element  SYMBOL  at location  SYMBOL
+An earlier paper~ CITATION  described a formulation of the BSS problem in which this PDF was required to be the product of the density functions of the individual components  SYMBOL } Separability in  SYMBOL  is a stronger requirement than separability in state space
+To see this, note that () can be recovered by integrating both sides of () over all velocities, but the latter equation cannot be deduced from the former one
+In fact, it can be shown that () is strong enough to guarantee that the BSS problem in  SYMBOL  has a unique solution, up to permutations and component-wise transformations~ CITATION
+Furthermore, this type of statistical independence has the virtue of being satisfied by almost all classical physical systems that are composed of non-interacting subsystems, which are the generators of most signals of interest
+The author previously demonstrated~ CITATION  that the  SYMBOL  PDF of a time series induces a Riemannian geometry on the state space, with the metric equal to the local second-order correlation matrix of the data's velocity
+Nonlinear BSS can be performed by computing this metric in the  SYMBOL  coordinate system (i e , by computing the second-order correlation of  SYMBOL  at each point  SYMBOL ), as well as its first and second derivatives with respect to  SYMBOL
+However, although this is a mathematically correct and complete method of solving the nonlinear BSS problem, it suffers from a practical difficulty: namely, if the dimensionality of state space is high, a great deal of data is required to cover it densely enough in order to calculate these derivatives accurately
+The current paper~ CITATION  shows how to perform nonlinear BSS by computing higher-order local correlations of the data's velocity, instead of computing derivatives of its second-order correlation
+This approach is advantageous because it requires much less data for an accurate computation
+For example, in the synthetic speech separation experiment in Section III, the new method can separate two synthetic utterances recorded with a single microphone after minutes of observation, rather than the hours of observation required by the differential geometric method
+The method described in this paper differs significantly from the methods proposed by other investigators because it uses a criterion of statistical independence in  SYMBOL , instead of state space
+In addition, there are technical differences between the proposed method and conventional ones
+First of all, the technique in this paper exploits statistical constraints on the data that are  locally  defined in state space, in contrast to the usual criteria for statistical independence that are  global  conditions on the data time series or its time derivatives~ CITATION
+Furthermore, unlike many other methods~ CITATION , the mixing function is derived in a constructive, deterministic, and non-parametric manner, without employing iterative algorithms, without using probabilistic learning methods, and without parameterizing it with a neural network architecture or other means
+In addition, the proposed method can handle any differentiable mixing function, unlike some other techniques that only apply to a restricted class of mixing functions~ CITATION
+The next section describes how to separate two-dimensional data into two one-dimensional source variables
+Section III illustrates the method by using it to separate two simultaneous speech-like sounds that are recorded with a single microphone
+The implications of this work are discussed in the last section
+The appendix describes how the method can be generalized to separate data of arbitrary dimensionality into possibly multidimensional source variables

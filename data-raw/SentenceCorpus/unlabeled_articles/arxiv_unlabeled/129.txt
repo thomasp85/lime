@@ -1,0 +1,33 @@
+### abstract ###
+As a fundamental problem in pattern recognition, graph matching has applications in a variety of fields, from computer vision to computational biology
+In graph matching, patterns are modeled as graphs and pattern recognition amounts to finding a correspondence between the nodes of different graphs
+Many formulations of this problem can be cast in general as a quadratic assignment problem, where a linear term in the objective function encodes node compatibility and a quadratic term encodes edge compatibility
+The main research focus in this theme is about designing efficient algorithms for approximately solving the quadratic assignment problem, since it is NP-hard
+In this paper we turn our attention to a different question: how to  estimate  compatibility functions such that the solution of the resulting graph matching problem best matches the expected solution that a human would manually provide
+We present a method for  learning graph matching : the training examples are pairs of graphs and the `labels' are matches between them
+Our experimental results reveal that learning can substantially improve the performance of standard graph matching algorithms
+In particular, we find that simple linear assignment with such a learning scheme outperforms Graduated Assignment with bistochastic normalisation, a state-of-the-art quadratic assignment relaxation algorithm
+### introduction ###
+Graphs are commonly used as abstract representations for complex structures, including DNA sequences, documents, text, and images
+In particular they are extensively used in the field of computer vision, where many problems can be formulated as an attributed graph matching problem
+Here the nodes of the graphs correspond to local features of the image and edges correspond to relational aspects between features (both nodes and edges can be attributed, i e ~they can encode feature vectors)
+Graph matching then consists of finding a correspondence between nodes of the two graphs such that they 'look most similar' when the vertices are labeled according to such a correspondence
+Typically, the problem is mathematically formulated as a quadratic assignment problem, which consists of finding the assignment that maximizes an objective function encoding local compatibilities (a linear term) and structural compatibilities (a quadratic term)
+The main body of research in graph matching has then been focused on devising more accurate and/or faster algorithms to solve the problem approximately (since it is NP-hard); the compatibility functions used in graph matching are typically handcrafted
+An interesting question arises in this context: If we are given two attributed graphs to match,  SYMBOL  and  SYMBOL , should the optimal match be uniquely determined
+For example, assume first that  SYMBOL  and  SYMBOL  come from two images acquired by a surveillance camera in an airport's lounge; now, assume the same  SYMBOL  and  SYMBOL  instead come from two images in a photographer's image database; should the optimal match be the same in both situations
+If the algorithm takes into account exclusively the graphs to be matched, the optimal solutions will be the same since the graph pair is the same in both cases
+This is the standard way graph matching is approached today
+In this paper we address what we believe to be a limitation of this approach
+We argue that if we know the `conditions' under which a pair of graphs has been extracted, then we should take into account  how graphs arising in those conditions are typically matched
+However, we do not take the information on the conditions explicitly into account, since this would obviously be impractical
+Instead, we approach the problem purely from a statistical inference perspective
+First, we extract graphs from a number of images acquired under the same conditions as those for which we want to solve, whatever the word `conditions' means (e g ~from the surveillance camera or the photographer's database)
+We then  manually  provide what we understand to be the optimal matches between the resulting graphs
+This information is then used in a  learning  algorithm which learns a map from the space of pairs of graphs to the space of matches
+In terms of the quadratic assignment problem, this learning algorithm amounts to (in loose language) adjusting the node and edge compatibility functions such that the expected optimal match in a test pair of graphs agrees with the expected match they would have had, had they been in the training set
+In this formulation, the learning problem consists of a convex, quadratic program which is readily solvable by means of a column generation procedure
+We provide experimental evidence that applying learning to standard graph matching algorithms significantly improves their performance
+In fact, we show that learning improves upon non-learning results so dramatically that linear assignment  with learning  outperforms Graduated Assignment with bistochastic normalisation, a state-of-the-art quadratic assignment relaxation algorithm
+Also, by introducing learning in Graduated Assignment itself, we obtain results that improve both in accuracy and speed over the best existing quadratic assignment relaxations
+A preliminary version of this paper appeared in  CITATION

@@ -1,0 +1,54 @@
+### abstract ###
+we conducted three studies to investigate how well pictographs communicate medical screening information to persons with higher and lower numeracy skills
+in study  NUMBER   we conducted a  NUMBER  probability level  higher vs lower x  NUMBER  reference information  yes vs no x  NUMBER  subjective numeracy  higher vs lower between-subjects design
+persons with higher numeracy skills were influenced by probability level but not by reference information
+persons with lower numeracy tended to differentiate between a higher and a lower probability when there was no reference information
+study  NUMBER  consisted of interviews about the mental processing of pictographs
+higher numeracy was associated with counting the icons and relying on numbers depicted in the graph
+study  NUMBER  was an experiment with the same design as in study  NUMBER   but  rather than using reference information  we varied the sequence of task type counting first vs non-counting first to explore the role of the focus on numerical information
+persons with lower numeracy differentiated between higher and lower risk only when they were in the non-counting first condition
+task sequence did not influence the risk perceptions of persons with higher numeracy
+in sum  our results suggest that pictographs may be useful for persons with higher and lower numeracy
+however  these groups seem to process the graph differently
+persons with higher numeracy rely more on the numerical information depicted in the graph  whereas persons with lower numeracy seem to be confused when they are guided towards these numbers
+### introduction ###
+patients are often confronted with difficult medical decisions
+many of these decisions have to be made based on numerical information  CITATION
+therefore  it is quite important that this information is understood correctly
+past research has shown that many people have difficulties understanding numerical risk information  CITATION   and that persons with low numeracy skills the ability to understand numbers are especially challenged by numerical information  CITATION
+therefore  not surprisingly  more and more studies show that low numeracy is associated with less understanding of medical information and unfavorable decision outcomes  CITATION
+different solutions have been proposed for improving the communication of medical information
+some authors suggest  for example  that numbers should be expressed as frequencies  CITATION  or  especially for persons with low numeracy  conveyed in graphs  CITATION
+one special type of graph combines these two recommendations for risk communication because the graph a shows frequency information  and b conveys numbers in a purely graphical way
+these so-called pictographs show the number of people affected by a certain medical condition in a larger group of people  CITATION
+therefore  this type of graph seems to be a promising tool for communicating medical information to persons with low numeracy
+several studies show that pictographs help people with low numeracy understand medical information  CITATION
+however  although pictographs seem to improve low-numerates' direct understanding of the presented numbers e g   knowledge of how many persons are affected by a certain disease  it is not yet clear how this graph influences low-numerates' risk perception
+the influence of pictographs on risk perception  however  may be crucial because perceiving a risk as either high or low might have a greater impact on behavioral intentions than understanding the numerical information alone  CITATION
+generally  pictographs seem to evoke lower risk perceptions than other presentation formats such as the paling perspective scale  CITATION  or numerical frequencies  CITATION
+unfortunately  it is not possible to decide whether a reported risk perception is the  correct  one  because it is subjective in nature
+to handle this difficulty  one can conduct an experiment to investigate whether different levels of probabilities evoke different levels of perceived risk  CITATION
+in this approach  participants are faced with either a higher or lower probability  and then estimate their perceived risk
+we then analyze the extent to which participants confronted with the higher risk perceive the risk as higher than participants confronted with the lower risk
+results of two previous studies following this procedure using pictographs showed that a higher probability did not evoke a higher level of perceived risk than a lower probability  CITATION
+this result might suggest that  although some studies showed that pictographs seem to help persons with low numeracy to understand the numbers depicted in a graph  pictographs may not help them to evolve clearly distinguishable risk perceptions to the same degree
+thus  the type of task used in a study may influence the evaluation of pictographs
+the role of numeracy in this perception process is  to our knowledge  not yet fully understood
+we therefore conducted three studies to examine the influence of numeracy on people's perceptions and  as a new approach to this question  on people's processing of numerical medical information depicted in pictographs
+to examine this issue  we chose the context of cancer screening test results  as some studies have shown that numeracy is important in this area  CITATION
+numeracy is defined as a person's ability to understand and process numerical concepts  CITATION
+it can be measured in two different ways
+objective measures assess people's numeracy by letting them solve mathematical tasks  CITATION
+one problem with using such objective measures in mail-in surveys is that the respondents might use helping devices such as calculators
+this would then bias the resulting numeracy score
+furthermore  respondents might find it annoying to fill in such questionnaires and  thus  might simply avoid them when they have the opportunity to do so  CITATION
+to cope with this problem  fagerlin and colleagues  CITATION  developed the subjective numeracy scale  which assesses self-reported numeracy skills
+this measure offers the advantage of shorter administration and less reluctance from participants than objective measures  CITATION
+on the other hand  this measure relies entirely on self-reported numerical ability and preference
+moreover  although it is positively correlated with objective numeracy  CITATION   it does not measure exactly the same construct as the direct measurement of mathematical skills in objective numeracy measures
+in short  the aim of our first study was to examine the influence of subjective numeracy on the perception of cancer screening test results presented in pictographs
+following siegrist and keller's approach  CITATION   we conducted an experiment to examine whether different levels of probabilities evoke different levels of perceived risk
+to reach a deeper understanding into how pictographs might influence risk perception in relation to numeracy  we conducted a second study
+we thereby directly examined the processing of cancer screening results depicted in pictographs and its association with numeracy
+finally  in study  NUMBER   we explored the role of the sequence of the task numerical understanding first vs risk perception first in the context of risk communication with pictographs and numeracy
+with this manifold procedure  we aim to broaden the existing knowledge about numeracy in medical decisions by investigating the role of numeracy in risk perception

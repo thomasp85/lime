@@ -1,0 +1,28 @@
+### abstract ###
+In this paper we propose an algorithm for polynomial-time reinforcement learning in factored Markov decision processes (FMDPs)
+The factored optimistic initial model (FOIM) algorithm, maintains an empirical model of the FMDP in a conventional way, and always follows a greedy policy with respect to its model
+The only trick of the algorithm is that the model is initialized optimistically
+We prove that with suitable initialization (i) FOIM converges to the fixed point of approximate value iteration (AVI); (ii) the number of steps when the agent makes non-near-optimal decisions (with respect to the solution of AVI) is polynomial in all relevant quantities; (iii) the per-step costs of the algorithm are also polynomial
+To our best knowledge, FOIM is the first algorithm with these properties
+This extended version contains the rigorous proofs of the main theorem
+A version of this paper appeared in ICML'09
+### introduction ###
+Factored Markov decision processes (FMDPs) are practical ways to compactly formulate sequential decision problems---provided that we have ways to solve them
+When the environment is unknown, all effective reinforcement learning methods apply some form of the ``optimism in the face of uncertainty'' principle: whenever the learning agent faces the unknown, it should assume high rewards in order to encourage exploration
+Factored optimistic initial model  (FOIM) takes this principle to the extreme: its model is initialized to be overly optimistic
+For more often visited areas of the state space, the model gradually gets more realistic, inspiring the agent to head for unknown regions and explore them, in search of some imaginary ``Garden of Eden''
+The working of the algorithm is simple to the extreme: it will not make any explicit effort to balance exploration and exploitation, but always follows the greedy optimal policy with respect to its model
+We show in this paper that this simple (even simplistic) trick is sufficient for effective FMDP learning
+The algorithm is an extension of OIM ( optimistic initial model )  CITATION , which is a sample-efficient learning algorithm for flat MDPs
+There is an important difference, however, in the way the model is solved
+Every time the model is updated, the corresponding value function needs to be re-calculated (or updated) For flat MDPs, this is not a problem: various dynamic programming-based algorithms (like value iteration) can solve the model to any required accuracy in polynomial time
+The situation is less bright for generating near-optimal FMDP solutions: all currently known algorithms may take exponential time, eg the approximate policy iteration of  CITATION  using decision-tree representations of policies, or solving the exponential-size flattened version of the FMDP
+If we require polynomial running time (as we do in this paper in search for a practical algorithm), then we have to accept sub-optimal solutions
+The only known example of a polynomial-time FMDP planner is  factored value iteration  (FVI)  CITATION , which will serve as the base planner for our learning method
+This planner is guaranteed to converge, and the error of its solution is bounded by a term depending only on the quality of function approximators
+Our analysis of the algorithm will follow the established techniques for analyzing sample-efficient reinforcement learning (like the works of  CITATION  on flat MDPs and  CITATION  on FMDPs)
+However, the listed proofs of convergence rely critically on access to a near-optimal planner, so they have to be generalized suitably
+By doing so, we are able to show that FOIM converges to a bounded-error solution in polynomial time with high probability
+We introduce basic concepts and notations in section , then in section  we review existing work, with special emphasis to the immediate ancestors of our method
+In sections  and  we describe the blocks of FOIM and the FOIM algorithm, respectively
+We finish the paper with a short analysis and discussion

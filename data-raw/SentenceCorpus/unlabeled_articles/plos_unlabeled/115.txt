@@ -1,0 +1,50 @@
+### abstract ###
+G protein coupled receptors, encoded by about 5 percent of human genes, comprise the largest family of integral membrane proteins and act as cell surface receptors responsible for the transduction of endogenous signal into a cellular response.
+Although tertiary structural information is crucial for function annotation and drug design, there are few experimentally determined GPCR structures.
+To address this issue, we employ the recently developed threading assembly refinement method to generate structure predictions for all 907 putative GPCRs in the human genome.
+Unlike traditional homology modeling approaches, TASSER modeling does not require solved homologous template structures; moreover, it often refines the structures closer to native.
+These features are essential for the comprehensive modeling of all human GPCRs when close homologous templates are absent.
+Based on a benchmarked confidence score, approximately 820 predicted models should have the correct folds.
+The majority of GPCR models share the characteristic seven-transmembrane helix topology, but 45 ORFs are predicted to have different structures.
+This is due to GPCR fragments that are predominantly from extracellular or intracellular domains as well as database annotation errors.
+Our preliminary validation includes the automated modeling of bovine rhodopsin, the only solved GPCR in the Protein Data Bank.
+With homologous templates excluded, the final model built by TASSER has a global C root-mean-squared deviation from native of 4.6, with a root-mean-squared deviation in the transmembrane helix region of 2.1.
+Models of several representative GPCRs are compared with mutagenesis and affinity labeling data, and consistent agreement is demonstrated.
+Structure clustering of the predicted models shows that GPCRs with similar structures tend to belong to a similar functional class even when their sequences are diverse.
+These results demonstrate the usefulness and robustness of the in silico models for GPCR functional analysis.
+All predicted GPCR models are freely available for noncommercial users on our Web site .
+### introduction ###
+G protein coupled receptors are integral membrane proteins embedded in the cell surface that transmit signals to cells in response to stimuli such as light, Ca 2, odorants, amino acids, nucleotides, peptides, or proteins and mediate many physiological functions through their interaction with heterotrimeric G proteins CITATION, CITATION.
+Many diseases involve the malfunction of these receptors, making them important drug targets.
+In human, the estimated number of GPCRs is approximately 948 CITATION, corresponding to about 5 percent of the total number of human genes CITATION.
+However, more than 45 percent of all modern drugs target GPCRs; these represent around 25 percent of the 100 top-selling drugs worldwide CITATION, CITATION .
+While knowledge of a protein's structure furnishes important information for understanding its function and for drug design CITATION, progress in solving GPCR structures has been slow CITATION.
+Nuclear magnetic resonance spectroscopy and X-ray crystallography are the two major techniques used to determine protein structures.
+NMR spectroscopy has the advantages that the protein does not need to be crystallized and dynamical information can be extracted.
+However, high concentrations of dissolved proteins are needed; and as yet no complete GPCR structure has been solved by the method.
+X-ray crystallography can provide very precise atomic information for globular proteins, but GPCRs are extremely difficult to crystallize.
+In fact, only a single GPCR, bovine rhodopsin from the rod outer segment membrane, has been solved CITATION.
+It is unlikely that a significant number of high-resolution GPCR structures will be experimentally solved in the very near future.
+This situation limits the use of structure-based approaches for drug design and restricts research into the mechanisms that control ligand binding to GPCRs, activation and regulation of GPCRs, and signal transduction mediated by GPCRs CITATION .
+Fortunately, as demonstrated by the recent CASP experiments CITATION, computer-based methods for deducing the three-dimensional structure of a protein from its amino acid sequence have been increasingly successful.
+Among the three types of structure prediction algorithms homology modeling CITATION, CITATION, threading CITATION, CITATION, and ab initio folding CITATION CITATION CM, which builds models by aligning the target sequence to an evolutionarily related template structure, provides the most accurate models.
+However, its success is largely dictated by the evolutionary relationship between target and template proteins.
+For example, for proteins with greater than 50 percent sequence identity to their templates, CM models tend to be quite close to the native structure, with a 1- root-mean-squared-deviation from native for their backbone atoms, comparable to low-resolution X-ray and NMR experiments CITATION, CITATION.
+When the sequence identity drops below 30 percent, termed the twilight zone, CM model accuracy sharply decreases because of the lack of a significant structure match and substantial alignment errors.
+Here, the models provided by CM are often closer to the template on which the model is based rather than the native structure of the sequence of interest.
+This has been a significant unsolved problem CITATION.
+Among all registered human GPCRs, there are only four sequences that have a sequence identity to bovine RH greater than 30 percent.
+Ninety-nine percent of human GPCRs, with an average sequence identity to bovine RH of 19.5 percent, lie outside the traditional comparative modeling regimen CITATION .
+Recently CITATION, CITATION, CITATION, CITATION, we developed the threading assembly refinement methodology, which combines threading and ab initio algorithms to span the homologous to nonhomologous regimens.
+In a large-scale, comprehensive benchmark test of 2,234 representative proteins from the Protein Data Bank CITATION, after excluding templates having greater than 30 percent sequence identity to the target, two thirds of single domain proteins can be folded to models with a C RMSD to native of less than 6.5 CITATION, CITATION.
+As a significant advance over traditional homology modeling, many models are improved with respect to their threading templates .
+In the absence of additional GPCR crystal structures, computer-based modeling may provide the best alternative to obtaining structural information CITATION CITATION.
+In this work, we exploit TASSER to predict tertiary structures for all 907 GPCR sequences in the human genome that are less than 500 amino acids in length.
+Only the sequence of the given GPCR is passed to TASSER and no other extrinsic knowledge is incorporated into our structure prediction approach.
+Because the rearrangements of TM helices from RH may occur for nonhomologous GPCRs, the ability to refine templates is the most important advantage of using TASSER in comprehensive GPCR modeling.
+Also, distinct from many other GPCR modeling methods that only attempt to model the TM helical regions CITATION, CITATION, CITATION, TASSER generates reasonable predictions for the loop regions.
+In benchmark tests CITATION, for 39 percent of loops of four or more residues, TASSER models have a global RMSD less than 3 from native.
+In contrast, using the widely used homology modeling tool, MODELLER CITATION, CITATION, the percentage of loops with this accuracy is 12 percent CITATION.
+If one considers only the accuracy of the loop conformation itself, then 89 percent of the TASSER-generated loops have a local RMSD of less than 3, and the average RMSD for loops up to 50 residues is below 4.
+This is especially important in GPCR modeling as the extracellular loops are often critical in determining ligand specificity CITATION CITATION.
+Therefore, full-length TASSER models offer substantial advantages over traditional comparative modeling methods and are likely to be of greater aid in understanding the ligand and signaling interactions of GPCRs.

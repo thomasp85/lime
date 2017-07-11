@@ -1,0 +1,22 @@
+### abstract ###
+we examined choice behavior in younger versus older adults using a medical decision-making task similar to medicare part d
+the study was designed to assess age differences in choice processes in general and specifically designed to examine the effect of choice set size on performance
+data are drawn from a larger study on choice and aging  in which ninety-six younger adults ages  NUMBER - NUMBER  and  NUMBER  older adults ages  NUMBER - NUMBER  selected a prescription drug plan from either  NUMBER  or  NUMBER  different options
+as hypothesized  choice set size was a significant predictor of individuals' ability to choose the best plan
+participants who were presented with  NUMBER  plans were less likely to choose the correct prescription drug plan
+age did not have a negative effect on decision performance  however numeracy and speed of processing significantly affected performance across groups
+older adults were more likely to be characterized as satisficers on a decision personality measure  but this categorization did not predict performance on the choice task
+### introduction ###
+in january  CITATION   the medicare modernization act known as medicare part d came into effect in the u s   offering millions of medicare beneficiaries the opportunity to purchase insurance coverage to help them pay for their prescription drugs
+unlike other health benefits provided by medicare  part d benefits are not provided directly by the government  but rather by private insurance companies
+that is  older adults buy insurance directly from insurance companies while the government oversees certain aspects of the program
+one consequence of this design is the large number of insurance plans available for beneficiaries
+in most states older adults have more than  NUMBER  insurance plans to choose from
+CITATION  while older adults have reported satisfaction with the program  CITATION   they have also deemed the program to be too complicated
+indeed  when the kaiser family foundation  NUMBER  asked doctors  pharmacists and older adults what they thought about the medicare d program   NUMBER  percent  of doctors   NUMBER  percent  of pharmacists and  NUMBER  percent  of older adults judged it to be too complicated
+one might wonder  therefore  about the usefulness of offering older adults such a large array of choice
+economist and psychologist have long cherished the idea of choice
+recent research  however  has come to question this basic assumption  arguing that too much choice can reduce the quality of the decision and the satisfaction with the decision  CITATION
+as the field of cognitive aging has documented declines in speed of processing and executive functioning  which could potentially affect older adults' ability to process information and make decisions  CITATION   we set out to study how the natural aging process may interact with choice set size and the implications for decision quality
+medicare part d was used as the basis of the task because of its current relevance in the real world decision-making of older adults
+specifically  the study examined the relationship between the number of drug plan choices available and the effect of age on individuals' ability to make objective and subjective decisions

@@ -1,0 +1,55 @@
+### abstract ###
+We study the problem of decision-theoretic online learning (DTOL)
+Motivated by practical applications, we focus on DTOL when the number of actions is very large
+Previous algorithms for learning in this framework have a tunable learning rate parameter, and a barrier to using online-learning in practical applications is that it is not understood how to set this parameter optimally, particularly when the number of actions is large
+In this paper, we offer a clean solution by proposing a novel and completely parameter-free algorithm for DTOL
+We introduce a new notion of regret, which is more natural for applications with a large number of actions
+We show that our algorithm achieves good performance with respect to this new notion of regret; in addition, it also achieves performance close to that of the best bounds achieved by previous algorithms with optimally-tuned parameters, according to previous notions of regret
+### introduction ###
+In this paper, we consider the problem of decision-theoretic online learning (DTOL), proposed by Freund and Schapire~ CITATION
+DTOL is a variant of the problem of prediction with expert advice~ CITATION
+In this problem, a learner must assign probabilities to a fixed set of actions in a sequence of rounds
+After each assignment, each action incurs a loss (a value in  SYMBOL ); the learner incurs a loss equal to the expected loss of actions for that round, where the expectation is computed according to the learner's current probability assignment
+The  regret  (of the learner) to an action is the difference between the learner's cumulative loss and the cumulative loss of that action
+The goal of the learner is to achieve, on any sequence of losses, low regret to the action with the lowest cumulative loss (the best action)
+DTOL is a general framework that captures many learning problems of interest
+For example, consider tracking the hidden state of an object in a continuous state space from noisy observations~ CITATION
+To look at tracking in a DTOL framework, we set each action to be a path (sequence of states) over the state space
+The loss of an action at time  SYMBOL  is the distance between the observation at time  SYMBOL  and the state of the action at time  SYMBOL , and the goal of the learner is to predict a path which has loss close to that of the action with the lowest cumulative loss
+The most popular solution to the DTOL problem is the Hedge algorithm~ CITATION
+In Hedge, each action is assigned a probability, which depends on the cumulative loss of this action and a parameter  SYMBOL , also called the  learning rate
+By appropriately setting the learning rate as a function of the iteration~ CITATION  and the number of actions, Hedge can achieve a regret upper-bounded by  SYMBOL , for each iteration  SYMBOL , where  SYMBOL  is the number of actions
+This bound on the regret is optimal as there is a  SYMBOL  lower-bound~ CITATION
+In this paper, motivated by practical applications such as tracking, we consider DTOL in the regime where \changeto{ SYMBOL , the number of actions,}{the number of actions  SYMBOL } is very large
+A major barrier to using online-learning for practical problems is that when  SYMBOL  is large, it is not understood how to set the learning rate  SYMBOL
+CITATION  suggest setting  SYMBOL  as a fixed function of the number of actions  SYMBOL
+However, this can lead to poor performance, as we illustrate by an example in Section~, and the degradation in performance is particularly exacerbated as  SYMBOL  grows larger
+One way to address this is by simultaneously running multiple copies of Hedge with multiple values of the learning rate, and choosing the output of the copy that performs the best in an online way
+However, this solution is impractical for real applications, particularly as  SYMBOL  is already very large (For more details about these solutions, please see Section~ )     In this paper, we take a step towards making online learning more practical  by proposing a novel, completely adaptive algorithm for DTOL
+Our algorithm is called NormalHedge
+NormalHedge is very simple  and easy to implement, and in each round, it simply involves a single line search, followed by an updating of weights for all actions
+A second issue with using online-learning in problems such as tracking,  where  SYMBOL  is very large, is that the regret to the  best action  is not an effective measure of performance
+For problems such as tracking, one expects to have a lot of actions that are close to the action with the lowest loss
+As these actions also have low loss, measuring performance with respect to a small group of actions that perform well is extremely reasonable -- see, for example, Figure~
+In this paper, we address this issue by introducing a new notion of regret, which is more natural for practical applications
+We order the cumulative losses of all actions from lowest to highest and define the  regret of the learner to the top  SYMBOL -quantile  to be the difference between the cumulative loss of the learner and the  SYMBOL -th element in the sorted list }   We prove that for NormalHedge, the regret to the top  SYMBOL -quantile of actions is at most  SYMBOL  which holds  simultaneously for all  SYMBOL  and  SYMBOL
+If we set  SYMBOL , we get that the regret to the best action is upper-bounded by  SYMBOL , which is only slightly worse than the bound achieved by Hedge with optimally-tuned parameters
+Notice that in our regret bound, the term involving  SYMBOL  has no dependence on  SYMBOL
+In contrast, Hedge cannot achieve a regret-bound of this nature uniformly for all  SYMBOL  (For details on how Hedge can be modified to perform with our new notion of regret, see Section~)
+NormalHedge works by assigning each action  SYMBOL  a potential; actions which have lower cumulative loss than the algorithm are assigned a potential  SYMBOL , where  SYMBOL  is the regret of action  SYMBOL  and  SYMBOL  is an adaptive scale parameter, which is adjusted from one round to the next, depending on the loss-sequences
+Actions which have higher cumulative loss than the algorithm are assigned potential  SYMBOL
+The weight assigned to an action in each round is then  proportional to the derivative of its potential
+One can also interpret Hedge as a potential-based algorithm, and under this interpretation, the potential assigned by Hedge to action  SYMBOL  is proportional to  SYMBOL  \changeto{This potential used by Hedge and other related algorithms differs significantly from the one we use }{This potential used by Hedge differs significantly from the one we use } Although other potential-based methods have been considered in the context of online learning~ CITATION , our potential function is very novel, and to the best of our knowledge, has not been studied in prior work
+Our proof techniques are also different from previous potential-based methods
+Another useful property of NormalHedge, which Hedge does not possess, is that it assigns zero weight to any action whose cumulative loss is larger than the cumulative loss of the algorithm itself
+In other words, non-zero weights are assigned only to actions which perform better than the algorithm
+In most applications\changeto{ of DTOL}{,} we expect a small set of the actions to perform significantly better than most of the actions \changeto{As the regret of the hedging algorithm is guaranteed to be small, this means that the algorithm will perform better than most of the actions and will  therefore assign them zero probability }{The regret of the algorithm is guaranteed to be small, which means that the algorithm will perform better than most of the actions and thus assign them zero probability }   CITATION  have proposed more recent solutions to DTOL in which the regret of Hedge to the best action is upper bounded by a function of  SYMBOL , the loss of the best action, or by a function of the variations in the losses
+These bounds can be sharper than the bounds with respect to  SYMBOL
+Our analysis (and in fact, to our knowledge, any analysis based on potential functions in the style of~ CITATION ) do not directly yield these kinds of bounds
+We therefore leave open the question of finding an adaptive algorithm for DTOL which has regret upper-bounded by a function that depends on the loss  of the best action
+The rest of the paper is organized as follows
+In Section 2, we provide NormalHedge
+In Section 3, we provide an example that illustrates the suboptimality of standard online learning algorithms, when the parameter is not set properly
+In Section 4, we discuss Related Work
+In Section 5, we present some outlines of the proof
+The proof details are in the Supplementary Materials

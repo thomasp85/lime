@@ -1,0 +1,69 @@
+### abstract ###
+OWNX The Minimum Description Length principle for online sequence estimation/prediction in a proper learning setup is studied
+MISC If the underlying model class is discrete, then the total expected square loss is a particularly interesting performance measure: (a) this quantity is finitely bounded, implying convergence with probability one, and (b) it additionally specifies the convergence speed
+MISC For MDL, in general one can only have loss bounds which are finite but exponentially larger than those for Bayes mixtures
+AIMX We show that this is even the case if the model class contains only Bernoulli distributions
+OWNX We derive a new upper bound on the prediction error for countable Bernoulli classes
+OWNX This implies a small bound (comparable to the one for Bayes mixtures) for certain important model classes
+OWNX We discuss the application to Machine Learning tasks such as classification and hypothesis testing, and generalization to countable classes of iid models
+### introduction ###
+MISC ``Bayes mixture", ``Solomonoff induction", ``marginalization", all these terms refer to a central induction principle: Obtain a predictive distribution by integrating the product of prior and evidence over the model class
+MISC In many cases however, the Bayes mixture is computationally infeasible, and even a sophisticated approximation is expensive
+MISC The MDL or MAP (maximum a posteriori) estimator is both a common approximation for the Bayes mixture and interesting for its own sake: Use the model with the largest product of prior and evidence
+MISC In practice, the MDL estimator is usually being approximated too, since only a local maximum is determined
+MISC How good are the predictions by Bayes mixtures and MDL
+MISC This question has attracted much attention
+MISC In many cases, an important quality measure is the  total  or cumulative  expected loss  of a predictor
+MISC In particular the square loss is often considered
+MISC Assume that the outcome space is finite, and the model class is continuously parameterized
+MISC Then for Bayes mixture prediction, the cumulative expected square loss is usually small but unbounded, growing with  SYMBOL , where  SYMBOL  is the sample size  CITATION
+MISC This corresponds to an  instantaneous  loss bound of  SYMBOL
+MISC For the MDL predictor, the losses behave similarly  CITATION  under appropriate conditions, in particular with a specific prior
+MISC Note that in order to do MDL for continuous model classes, one needs to  discretize  the parameter space, see also  CITATION
+MISC On the other hand, if the model class is discrete, then Solomonoff's theorem  CITATION  bounds the cumulative expected square loss for the Bayes mixture predictions finitely, namely by  SYMBOL , where  SYMBOL  is the prior weight of the ``true" model  SYMBOL
+MISC The only necessary assumption is that the true distribution  SYMBOL  is contained in the model class, ie that we are dealing with  proper learning
+MISC It has been demonstrated  CITATION , that for both Bayes mixture and MDL, the proper learning assumption can be essential: If it is violated, then learning may fail very badly
+MISC For MDL predictions in the proper learning case, it has been shown  CITATION  that a bound of  SYMBOL  holds
+MISC This bound is exponentially larger than the Solomonoff bound, and it is sharp in general
+MISC A finite bound on the total expected square loss is particularly interesting:   It implies convergence of the predictive to the true probabilities with probability one
+MISC In contrast, an instantaneous loss bound of  SYMBOL  implies only convergence in probability
+MISC Additionally, it gives a  convergence speed , in the sense that errors of a certain magnitude cannot occur too often
+MISC So for both, Bayes mixtures and MDL, convergence with probability one holds, while the convergence speed is exponentially worse for MDL compared to the Bayes mixture
+MISC We avoid the term ``convergence rate" here, since the order of convergence is identical in both cases
+MISC It is eg  SYMBOL  if we additionally assume that the error is monotonically decreasing, which is not necessarily true in general
+MISC It is therefore natural to ask if there are model classes where the cumulative loss of MDL is comparable to that of Bayes mixture predictions
+AIMX In the present work, we concentrate on the simplest possible stochastic case, namely discrete Bernoulli classes
+OWNX Note that then the MDL ``predictor" just becomes an estimator, in that it estimates the true parameter and directly uses that for prediction
+OWNX Nevertheless, for consistency of terminology, we keep the term predictor
+OWNX It might be surprising to discover that in general the cumulative loss is still exponential
+OWNX On the other hand, we will give mild conditions on the prior guaranteeing a small bound
+MISC Moreover, it is well-known that the instantaneous square loss of the Maximum Likelihood estimator decays as  SYMBOL  in the Bernoulli case
+OWNX The same holds for MDL, as we will see
+OWNX If convergence speed is measured in terms of instantaneous losses, then much more general statements are possible  CITATION , this is briefly discussed in Section
+MISC A particular motivation to consider discrete model classes arises in Algorithmic Information Theory
+MISC From a computational point of view, the largest relevant model class is the class of all computable models on some fixed universal Turing machine, precisely prefix machine  CITATION
+MISC Thus each model corresponds to a program, and there are countably many programs
+MISC Moreover, the models are stochastic, precisely they are  semimeasures  on strings (programs need not halt, otherwise the models were even measures)
+MISC Each model has a natural description length, namely the length of the corresponding program
+MISC If we agree that programs are binary strings, then a prior is defined by two to the negative description length
+MISC By the Kraft inequality, the priors sum up to at most one
+MISC Also the Bernoulli case can be studied in the view of Algorithmic Information Theory
+MISC We call this the  universal setup : Given a universal Turing machine, the related class of Bernoulli distributions is isomorphic to the countable set of computable reals in  SYMBOL
+MISC The description length  SYMBOL  of a parameter  SYMBOL  is then given by the length of its shortest program
+MISC A prior weight may then be defined by  SYMBOL
+MISC If a string  SYMBOL  is generated by a Bernoulli distribution with computable parameter  SYMBOL , then with high probability the two-part complexity of  SYMBOL  with respect to the Bernoulli class does not exceed its algorithmic complexity by more than a constant, as shown by Vovk  CITATION
+MISC That is, the two-part complexity with respect to the Bernoulli class  is  the shortest description, save for an additive constant
+MISC Many Machine Learning tasks are or can be reduced to sequence prediction tasks
+MISC An important example is classification
+MISC The task of classifying a new instance  SYMBOL  after having seen (instance,class) pairs  SYMBOL  can be phrased as to predict the continuation of the sequence  SYMBOL
+MISC Typically the (instance,class) pairs are iid
+MISC Cumulative loss bounds for prediction usually generalize to prediction  conditionalized  to some inputs  CITATION
+OWNX Then we can solve classification problems in the standard form
+OWNX It is not obvious if and how the proofs in this paper can be conditionalized
+OWNX Our main tool for obtaining results is the Kullback-Leibler divergence
+OWNX Lemmata for this quantity are stated in Section
+OWNX Section  shows that the exponential error bound obtained in  CITATION  is sharp in general
+OWNX In Section , we give an upper bound on the instantaneous and the cumulative losses
+OWNX The latter bound is small eg under certain conditions on the distribution of the weights, this is the subject of Section
+OWNX Section  treats the universal setup
+OWNX Finally, in Section  we discuss the results and give conclusions

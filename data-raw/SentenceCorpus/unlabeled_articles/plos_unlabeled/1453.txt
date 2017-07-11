@@ -1,0 +1,51 @@
+### abstract ###
+Alpha-helical transmembrane proteins constitute roughly 30 percent of a typical genome and are involved in a wide variety of important biological processes including cell signalling, transport of membrane-impermeable molecules and cell recognition.
+Despite significant efforts to predict transmembrane protein topology, comparatively little attention has been directed toward developing a method to pack the helices together.
+Here, we present a novel approach to predict lipid exposure, residue contacts, helix-helix interactions and finally the optimal helical packing arrangement of transmembrane proteins.
+Using molecular dynamics data, we have trained and cross-validated a support vector machine classifier to predict per residue lipid exposure with 69 percent accuracy.
+This information is combined with additional features to train a second SVM to predict residue contacts which are then used to determine helix-helix interaction with up to 65 percent accuracy under stringent cross-validation on a non-redundant test set.
+Our method is also able to discriminate native from decoy helical packing arrangements with up to 70 percent accuracy.
+Finally, we employ a force-directed algorithm to construct the optimal helical packing arrangement which demonstrates success for proteins containing up to 13 transmembrane helices.
+This software is freely available as source code from LINK.
+### introduction ###
+Alpha-helical transmembrane proteins constitute roughly 30 percent of the proteins encoded in a typical genome and are involved in a wide variety of important biological processes including cell signalling, transport of membrane-impermeable molecules and cell recognition.
+Many are also prime drug targets, and it has been estimated that more than half of all drugs currently on the market target membrane proteins CITATION.
+Despite significant efforts to predict TM protein topology CITATION, CITATION, CITATION, comparatively little attention has been directed toward developing a method to pack the helices together.
+Since the membrane-spanning region is predominantly composed of alpha-helices with a common alignment, this task should in principle be easier than predicting the fold of globular proteins as the longitudinal constraints of helix packing mostly reduces the solution space from three dimensions to two.
+However, topologies consisting of large numbers of TM helices as well as structural features including re-entrant, tilted and kinked helices render simple approaches that may work for regularly packed proteins unable to predict the diverse packing arrangements now present in structural databases.
+Early attempts to predict TM protein folds were based on sequence similarity to proteins with a known three-dimensional structure, using statistically derived environmental preference parameters combined with experimentally determined features CITATION.
+Another method calculated amino acid substitution tables for residues in membrane proteins where the side chain was accessible to lipid.
+By comparing observed substitutions obtained from sequence alignments of TM regions, accessibility of residues to the lipid could be predicted.
+In combination with a Fourier transform method to detect alpha-helices, the buried and exposed faces could then be discriminated and the presence of charged residues used to construct a three-dimensional model CITATION.
+Other methods also made use of exposed surface prediction to allocate helix positions, in combination with an existing framework for globular protein structure prediction involving the combinatorial enumeration of windings over a predefined architecture followed by the selection of preferred folds CITATION.
+However, these methods were only suitable for 7 TM helix bundles such as rhodopsin and were unsuitable for other topologies.
+More recently, a modified version of the fragment-based protein tertiary structure prediction method FRAGFOLD CITATION was modified to model TM proteins.
+FRAGFOLD is based on the assembly of super-secondary structural fragments using a simulated annealing algorithm in order to narrow the search of conformational space by pre-selecting fragments from a library of highly resolved protein structures.
+FILM CITATION added a membrane potential to the FRAGFOLD energy terms which was derived from the statistical analysis of a data set of TM proteins with experimentally defined topologies.
+Results obtained by applying the method to small membrane proteins of known three-dimensional structure showed it could predict both helix topology and conformation at a reasonable accuracy level.
+Despite these good results, the combinatorial complexity of such ab initio protein folding methods means that it is unfeasible to use such approaches for large TM structures, many of which are longer than 150 residues.
+Modification of another globular protein ab initio modelling program, ROSETTA CITATION, added an energy function that described membrane intra-protein interactions at atomic level and membrane protein/lipid interactions implicitly, while treating hydrogen bonds explicitly CITATION.
+Results suggest that the model captures the essential physical properties that govern the solvation and stability of TM proteins, allowing the structures of small protein domains, up to 150 residues, to be predicted successfully to a resolution of less than 2.5.
+A recent enhancement of the algorithm demonstrated that by constraining helix-helix packing arrangements at particular positions based on local sequence-structure correlations for each helix of the interface independently, TM proteins with more complex topologies could be modelled to within 4 of the native structure CITATION .
+The prediction of helix-helix interactions, derived from residue contacts and topology, has only recently been investigated in TM proteins due to the relative paucity of TM protein crystal structures.
+In contrast, a number of globular protein contact predictors exist based on a variety of machine learning algorithms CITATION, CITATION, and contact prediction has also been used to assess globular protein models submitted to the Critical Assessment of Structure Prediction experiment CITATION.
+However, analysis has shown that such globular proteins contact predictors perform poorly when applied to TM proteins, most likely due to differences between TM and globular interaction motifs CITATION.
+A number of studies have identified structural and sequence motifs recurring frequently during helix helix interaction in TM proteins.
+One investigation analysed interacting helical pairs according to their three-dimensional similarity, allowing three quarters of pairs to be grouped into one of five tightly clustered motifs CITATION.
+The largest of these consisted of an anti-parallel motif with left-handed packing angles, stabilised by the packing of small side chains every seven residues, while right-handed parallel and anti-parallel structures showed a similar tendency though spaced at four-residue intervals.
+Another study identified a specific aromatic pattern, aromatic-XX-aromatic, which was demonstrated to stabilise helix-helix interactions during assembly CITATION, while others include the GXXXG motif found in glycophorin A CITATION, heptad motifs of leucine residues CITATION, and polar residues through formation of hydrogen bonds CITATION .
+The discovery of these recurring motifs, and the likelihood that there are more as yet undiscovered, suggests predictability by a generalised pattern search strategy.
+Recently, two methods have been developed that attempt to predict residue contacts and helix-helix interaction.
+TMHcon CITATION uses a neural network in combination with profile data, residue co-evolution information, predicted lipid exposure using the LIPS method CITATION, and a number of TM protein specific features, such as residue position within the TM helix, in order to predict helix-helix interaction.
+TMhit CITATION uses a two-level hierarchical approach in combination with a support vector machine classifier.
+The first level discriminates between contacts and non-contacts on a per residue basis, before the second level determines the structure of the contact map from all possible pairs of predicted contact residues therefore avoiding the high computational cost incurred by the quadratic growth of residue pair prediction.
+Here, we present a novel method to predict lipid exposure, residue contacts, helix-helix interactions and finally the optimal helical packing arrangements of TM proteins.
+Using molecular dynamics data to label residues potentially exposed to lipid, we have trained and cross-validated a SVM classifier to predict per residue lipid exposure with 69 percent accuracy.
+This information is combined with PSI-BLAST profile data and a variety of sequence-based features to train an additional SVM to predict residue contacts.
+Combining these results with a priori topology information, we are able to predict helix-helix interaction with up to 65 percent accuracy under stringent cross-validation on a non-redundant test set of 74 protein chains.
+We then tested the ability of the method to discriminate native from decoy helical packing arrangement using a decoy set of 2811 structures.
+By comparing our predictions with the test set, we were able to identify the native packing arrangement with up to 70 percent accuracy.
+All these performance metrics represents significant improvements over existing methods.
+In order to visualise the global packing arrangement, we adopted a graph-based approach.
+By employing a force-directed algorithm, the method attempts to minimise edge crossing while maintaining uniform edge length, attributes common in native structures.
+Finally, a genetic algorithm is used to rotate helices in order to prevent residue contacts occurring across the longitudinal helix axis.

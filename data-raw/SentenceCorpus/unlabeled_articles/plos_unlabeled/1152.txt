@@ -1,0 +1,64 @@
+### abstract ###
+In a 1997 seminal paper, W. Maddison proposed minimizing deep coalescences, or MDC, as an optimization criterion for inferring the species tree from a set of incongruent gene trees, assuming the incongruence is exclusively due to lineage sorting.
+In a subsequent paper, Maddison and Knowles provided and implemented a search heuristic for optimizing the MDC criterion, given a set of gene trees.
+However, the heuristic is not guaranteed to compute optimal solutions, and its hill-climbing search makes it slow in practice.
+In this paper, we provide two exact solutions to the problem of inferring the species tree from a set of gene trees under the MDC criterion.
+In other words, our solutions are guaranteed to find the tree that minimizes the total number of deep coalescences from a set of gene trees.
+One solution is based on a novel integer linear programming formulation, and another is based on a simple dynamic programming approach.
+Powerful ILP solvers, such as CPLEX, make the first solution appealing, particularly for very large-scale instances of the problem, whereas the DP-based solution eliminates dependence on proprietary tools, and its simplicity makes it easy to integrate with other genomic events that may cause gene tree incongruence.
+Using the exact solutions, we analyze a data set of 106 loci from eight yeast species, a data set of 268 loci from eight Apicomplexan species, and several simulated data sets.
+We show that the MDC criterion provides very accurate estimates of the species tree topologies, and that our solutions are very fast, thus allowing for the accurate analysis of genome-scale data sets.
+Further, the efficiency of the solutions allow for quick exploration of sub-optimal solutions, which is important for a parsimony-based criterion such as MDC, as we show.
+We show that searching for the species tree in the compatibility graph of the clusters induced by the gene trees may be sufficient in practice, a finding that helps ameliorate the computational requirements of optimization solutions.
+Further, we study the statistical consistency and convergence rate of the MDC criterion, as well as its optimality in inferring the species tree.
+Finally, we show how our solutions can be used to identify potential horizontal gene transfer events that may have caused some of the incongruence in the data, thus augmenting Maddison's original framework.
+We have implemented our solutions in the PhyloNet software package, which is freely available at: LINK.
+### introduction ###
+Accurate species trees, which model the evolutionary histories of sets of species, play a central role in comparative genomics, conservation studies, and analyses of population divergence, among many other applications.
+Traditionally, a species tree is inferred by sequencing a single locus in a group of species, its tree, known as the gene tree, is reconstructed using a method such as maximum likelihood, and this tree is declared to be the species tree.
+The underlying assumption is, obviously, that the gene tree and the species tree are identical, and hence reconstructing the former amounts to learning the latter.
+However, biologists have long recognized that this assumption is not necessarily always valid.
+Nevertheless, due to limitations of sequencing technologies, this approach remained the standard method until very recently.
+With the advent of whole-genome sequencing, complete genomes of various organisms are becoming increasingly available, and particularly important, data from multiple loci in organisms are becoming available.
+The availability of such data has allowed for analyzing multiple loci in various groups of species.
+These analyses have in many cases uncovered widespread incongruence among the gene trees of the same set of organisms.
+Therefore, while reconstructing a gene tree requires considering the process of nucleotide substitution, reconstructing a species tree requires, in addition, considering the process that resulted in the incongruities among the gene trees, so that the species phylogeny is inferred by reconciling these incongruities.
+In this paper, we address the problem of efficient inference of accurate species trees from multiple loci, when the gene trees are assumed to be correct, and their incongruence is assumed to be exclusively due to lineage sorting.
+We also address the integration of horizontal gene transfer, as a potential cause of gene tree incongruence, into the framework.
+Let us illustrate the process of lineage sorting and the way it causes gene tree incongruence.
+From an evolutionary perspective, and barring any recombination, the evolutionary history of a set of genomes would be depicted by a tree that is the same tree that models the evolution of each gene in these genomes.
+However, events such as recombination break linkage among the different parts of the genome, and those unlinked parts may take different paths through the phylogeny, which results in gene trees that differ from the species tree as well as from each other, due to lineage sorting.
+Widespread gene tree incongruence due to lineage sorting has been shown recently in several groups of closely related organisms, including yeast CITATION, Drosophila CITATION, Staphylococcus aureus CITATION, and Apicomplexan CITATION.
+In this case, gene trees need be reconciled within the branches of the species tree, as shown in Figure 1.
+A few methods have been introduced recently for analyzing gene trees, reconciling their incongruities, and inferring species trees despite these incongruities.
+Generally speaking, each of these methods follows one of two approaches: the combined analysis approach or the separate analysis approach; see Figure 2.
+In the combined analysis aproach, the sequences from multiple loci are concatenated, and the resulting supergene data set is analyzed using traditional phylogenetic methods, such as maximum parsimony or maximum likelihood; e.g., CITATION.
+In the separate analysis approach, the sequence data from each locus is first analyzed individually, and a reconciliation of the gene trees is then sought.
+One way to reconcile the gene trees is by taking their majority consensus; e.g., CITATION.
+Another is the democratic vote method, which entails taking the tree topology occurring with the highest frequency among all gene trees as the species tree.
+Shortcomings of these methods based on the two approaches have been analyzed by various researchers CITATION, CITATION.
+Recently, Bayesian methods following the separate analysis approach have been developed CITATION, CITATION.
+While these methods have a firm statistical basis, they are very time consuming, taking hours and days even on moderate-size data sets, which limits their scalability .
+In CITATION, Maddison proposed a parsimony-based approach for inferring species trees from gene trees by minimizing the number of extra lineages, or minimizing deep coalesces.
+A heuristic for this approach was later described in CITATION.
+In CITATION, Than et al. provided a two-stage heuristic for inferring the species tree under the MDC criterion.
+However, no exact solutions for computing the MDC criterion exist.
+In this paper, we provide a formal definition of the notion of extra lineages, first described in CITATION.
+We then present exact solutions an integer linear programming algorithm and a dynamic programming algorithm for finding the optimal species tree topology from a set of gene tree topologies, under the MDC criterion.
+Our solutions are based on two central observations: the species tree is a maximal clique in the compatibility graph of the set of species clusters, and quantifying the amount of incongruence between a set of gene trees and a species tree can be obtained by a simple counting of lineages within the branches of the species tree.
+The accuracy and computational efficiency of these solutions, as we demonstrate, allow for analysis of genome-scale data sets and analysis of large numbers of data sets, such as those involved in simulation studies.
+Given that MDC is a parsimonious explanation of the incongruence in the data, it is imperative that sub-optimal solutions are considered.
+The computational efficiency of our solutions allow for a rapid exploration of sub-optimal solutions.
+Last but not least, these exact solutions allow us to empirically study properties of MDC as an optimality criterion for inferring the species tree.
+We have implemented both exact solutions in the PhyloNet software package CITATION .
+We reanalyze the Apicomplexan data set of CITATION, the yeast data set of CITATION, and a large number of synthetic data sets of species/gene trees that we simulated using the Mesquite tool of CITATION.
+For each data set, our method computed the species tree in at most a few seconds, and produced very accurate species trees, as we show.
+In the case of the Apicomplexan data set, we provide a tree that is slightly different from the one proposed by the authors in CITATION, and discuss this tree.
+For the yeast data set, we obtain a tree that is identical to the one proposed by the authors in CITATION, as well as other studies, such as CITATION.
+In addition to the quality of the species trees and efficiency with which our method inferred them, one advantage of our method is that it can be used in an exploratory fashion, to screen multiple species tree candidates, and study the reconciliation scenarios within the branches of each of them.
+We illustrate the utility of this capability on the yeast and Apicomplexan data sets.
+Further, for the Apicomplexan data set, we illustrate how to screen for possible horizontal gene transfer events using the reconciliation scenarios computed by other methods.
+Using the synthetic data sets, we study the statistical consistency, as well as convergence rate, of the MDC criterion.
+We also show that it may be sufficient to consider only the set of clusters induced by the gene trees, which, in practice, may be much smaller than the set of all clusters of species, thus achieving further reduction in computation time.
+Nonetheless, we present an example to illustrate that, in certain cases, focusing only on the gene tree clusters may result in a sub-optimal species tree under MDC.
+The computational efficiency of our methods, coupled with the promising properties of the MDC criterion, makes our methods particularly applicable to large, genome-scale data sets.

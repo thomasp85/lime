@@ -1,0 +1,51 @@
+### abstract ###
+Despite the conventional wisdom that proactive security is superior to reactive security, we show that reactive security can be competitive with proactive security as long as the reactive defender learns from past attacks instead of myopically overreacting to the last attack
+Our game-theoretic model follows common practice in the security literature by making worst-case assumptions about the attacker: we grant the attacker complete knowledge of the defender's strategy and do not require the attacker to act rationally
+In this model, we bound the competitive ratio between a reactive defense algorithm (which is inspired by online learning theory) and the best fixed proactive defense
+Additionally, we show that, unlike proactive defenses, this reactive strategy is robust to a lack of information about the attacker's incentives and knowledge
+### introduction ###
+Many enterprises employ a Chief Information Security Officer~(CISO) to manage the enterprise's information security risks
+Typically, an enterprise has many more security vulnerabilities than it can realistically repair
+Instead of declaring the enterprise ``insecure'' until every last vulnerability is plugged, CISOs typically perform a cost-benefit analysis to identify which risks to address, but what constitutes an effective CISO strategy
+The conventional wisdom~ CITATION  is that CISOs ought to adopt a ``forward-looking'' proactive approach to mitigating security risk by examining the enterprise for vulnerabilities that might be exploited in the future
+Advocates of proactive security often equate reactive security with myopic bug-chasing and consider it ineffective
+We establish sufficient conditions for when reacting  strategically  to attacks is as effective in discouraging attackers
+We study the efficacy of reactive strategies in an economic model of the CISO's security cost-benefit trade-offs
+Unlike previously proposed economic models of security (see Section~), we do not assume the attacker acts according to a fixed probability distribution
+Instead, we consider a game-theoretic model with a strategic attacker who responds to the defender's strategy
+As is standard in the security literature, we make worst-case assumptions about the attacker
+For example, we grant the attacker complete knowledge of the defender's strategy and do not require the attacker to act rationally
+Further, we make conservative assumptions about the reactive defender's knowledge and do not assume the defender knows all the vulnerabilities in the system or the attacker's incentives
+However, we do assume that the defender can observe the attacker's past actions, for example via an intrusion detection system or user metrics~ CITATION
+In our model, we find that two properties are sufficient for a reactive strategy to perform as well as the best proactive strategies
+First, no single attack is catastrophic, meaning the defender can survive a number of attacks
+This is consistent with situations where intrusions (that, say, steal credit card numbers) are regrettable but not business-ending
+Second, the defender's budget is \term{liquid}, meaning the defender can re-allocate resources without penalty
+For example, a CISO can reassign members of the security team from managing firewall rules to improving database access controls at relatively low switching costs
+Because our model abstracts many vulnerabilities into a single graph edge, we view the act of defense as increasing the attacker's \term{cost} for mounting an attack instead of preventing the attack (e g , by patching a single bug)
+By making this assumption, we choose not to study the tactical patch-by-patch interaction of the attacker and defender
+Instead, we model enterprise security at a more abstract level appropriate for the CISO
+For example, the CISO might allocate a portion of his or her budget to engage a consultancy, such as WhiteHat or iSEC Partners, to find and fix cross-site scripting in a particular web application or to require that employees use SecurID tokens during authentication
+We make the technical assumption that attacker costs are linearly dependent on defense investments locally
+This assumption does not reflect patch-by-patch interaction, which would be better represented by a step function (with the step placed at the cost to deploy the patch)
+Instead, this assumption reflects the CISO's higher-level viewpoint where the staircase of summed step functions fades into a slope
+We evaluate the defender's strategy by measuring the attacker's cumulative return-on-investment, the \term{return-on-attack}~(ROA), which has been proposed previously~ CITATION
+By studying this metric, we focus on defenders who seek to ``cut off the attacker's oxygen,'' that is to reduce the attacker's incentives for attacking the enterprise
+We do not distinguish between ``successful'' and ``unsuccessful'' attacks
+Instead, we compare the payoff the attacker receives from his or her nefarious deeds with the cost of performing said deeds
+We imagine that sufficiently disincentivized attackers will seek alternatives, such as attacking a different organization or starting a legitimate business
+In our main result, we show sufficient conditions for a learning-based reactive strategy to be competitive with the best fixed proactive defense in the sense that the competitive ratio between the reactive ROA and the proactive ROA is at most  SYMBOL , for all  SYMBOL , provided the game lasts sufficiently many rounds (at least  SYMBOL )
+To prove our theorems, we draw on techniques from the online learning literature
+We extend these techniques to the case where the learner does not know all the game matrix rows  a priori , letting us analyze situations where the defender does not know all the vulnerabilities in advance
+Although our main results are in a graph-based model with a single attacker, our results generalize to a model based on Horn clauses with multiple attackers
+Our results are also robust to switching from ROA to attacker profit and to allowing the proactive defender to revise the defense allocation a fixed number of times
+Although myopic bug chasing is most likely an ineffective reactive strategy, we find that in some situations a  strategic  reactive strategy is as effective as the optimal fixed proactive defense
+In fact, we find that the natural strategy of gradually reinforcing attacked edges by shifting budget from unattacked edges ``learns'' the attacker's incentives and constructs an effective defense
+Such a strategic reactive strategy is both easier to implement than a proactive strategy---because it does not presume that the defender knows the attacker's intent and capabilities---and is less wasteful than a proactive strategy because the defender does not expend budget on attacks that do not actually occur
+Based on our results, we encourage CISOs to  question the assumption that proactive risk management is inherently superior to reactive risk management \paragraph{Organization } Section~ formalizes our model
+Section~ shows that perimeter defense and defense-in-depth arise naturally in our model
+Section~ presents our main results bounding the competitive ratio of reactive versus proactive defense strategies
+Section~ outlines scenarios in which reactive security out-performs proactive security
+Section~ generalizes our results to Horn clauses and multiple attackers
+Section~ relates related work
+Section~ concludes }

@@ -1,0 +1,44 @@
+### abstract ###
+In many real world applications, data cannot be accurately represented by vectors
+In those situations, one possible solution is to rely on dissimilarity measures that enable sensible comparison between observations
+Kohonen's Self-Organizing Map (SOM) has been adapted to data described only through their dissimilarity matrix
+This algorithm provides both non linear projection and clustering of non vector data
+Unfortunately, the algorithm suffers from a high cost that makes it quite difficult to use with voluminous data sets
+In this paper, we propose a new algorithm that provides an important reduction of the theoretical cost of the dissimilarity SOM without changing its outcome (the results are exactly the same as the ones obtained with the original algorithm)
+Moreover, we introduce implementation methods that result in very short running times
+Improvements deduced from the theoretical cost model are validated on simulated and real world data (a word list clustering problem)
+We also demonstrate that the proposed implementation methods reduce by a factor up to 3 the running time of the fast algorithm over a standard implementation
+### introduction ###
+The vast majority of currently available data analysis methods are based on a vector model in which observations are described with a fixed number of real values, i e , by vectors from a fixed and finite dimensional vector space
+Unfortunately, many real world data depart strongly from this model
+It is quite common for instance to have variable size data
+They are natural for example in online handwriting recognition  CITATION  where the representation of a character drawn by the user can vary in length because of the drawing conditions
+Other data, such as texts for instance, are strongly non numerical and have a complex internal structure: they are very difficult to represent accurately in a vector space
+While a lot of work has been done to adapt classical data analysis methods to structured data such as tree and graph  CITATION  for neural based unsupervised processing of structured data and also  CITATION }, as well as to data with varying size, there is still a strong need for efficient and flexible data analysis methods that can be applied to any type of data
+A way to design such methods is to rely on one to one comparison between observations
+It is in general possible to define a similarity or a dissimilarity measure between arbitrary data, as long as comparing them is meaningful
+In general, data analysis algorithms based solely on (dis)similarities between observations are more complex than their vector counterparts, but they are universal and can therefore be applied to any kind of data
+Moreover, they allow one to rely on specific (dis)similarities constructed by experts rather than on a vector representation of the data that induces in general unwanted distortion in the observations
+Many algorithms have been adapted to use solely dissimilarities between data
+In the clustering field, the k-means algorithm  CITATION  has been adapted to dissimilarity data under the name of Partitioning Around Medoids  CITATION
+More recently, approaches based on deterministic annealing have been used to propose another class of extensions of the k-means principle  CITATION
+Following the path taken for the k-means, several adaptation of Kohonen's Self-Organizing Map  CITATION  to dissimilarity data have been proposed
+CITATION  proposed a probabilistic formulation of the SOM that can be used directly for dissimilarity data
+Deterministic annealing schemes have been also used for the SOM  CITATION
+In the present paper, we focus on an adaptation proposed in  CITATION , where it was applied successfully to a protein sequence clustering and visualization problem, as well as to string clustering problems
+This generalization is called the Dissimilarity SOM (DSOM, also known as the median SOM), and can be considered as a SOM formulation of the PAM method
+Variants of the DSOM were applied to temperature time series  CITATION , spectrometric data  CITATION  and web usage data  CITATION
+A major drawback of the DSOM is that its running time can be very high, especially when compared to the standard vector SOM
+It is well known that the SOM algorithm behaves linearly with the number of input data  CITATION
+On the contrary, the DSOM behaves quadratically with this number (see Section )
+We propose in this paper several modifications of the basic algorithm that allow a much faster implementation
+The quadratic nature of the algorithm cannot be avoided, essentially because dissimilarity data are intrinsically described by a quadratic number of one to one dissimilarities
+Nevertheless, the standard DSOM algorithm cost is proportional to  SYMBOL , where  SYMBOL  is the number of observations and  SYMBOL  the number of clusters that the algorithm has to produce, whereas our modifications lead to a cost proportional to  SYMBOL
+Moreover, a specific implementation strategy reduces the actual computation burden even more
+An important property of all our modifications is that the obtained algorithm produces  exactly  the same results as the standard DSOM algorithm
+The paper is organized as follows
+In section  we recall the SOM adaptation to dissimilarity data and obtain the theoretical cost of the DSOM
+In section , we describe our proposed new algorithm as well as the implementation techniques that decrease its running time in practice
+Finally we evaluate the algorithm in section
+This evaluation validates the theoretical cost model and shows that the implementation methods reduce the running time
+The evaluation is conducted on simulated data and on real world data (a word list clustering problem)

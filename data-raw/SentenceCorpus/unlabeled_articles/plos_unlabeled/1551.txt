@@ -1,0 +1,17 @@
+### abstract ###
+We used a multi-round, two-party exchange game in which a healthy subject played a subject diagnosed with a DSM-IV disorder, and applied a Bayesian clustering approach to the behavior exhibited by the healthy subject.
+The goal was to characterize quantitatively the style of play elicited in the healthy subject by their DSM-diagnosed partner.
+The approach exploits the dynamics of the behavior elicited in the healthy proposer as a biosensor for cognitive features that characterize the psychopathology group at the other side of the interaction.
+Using a large cohort of subjects, we found statistically significant clustering of proposers' behavior overlapping with a range of DSM-IV disorders including autism spectrum disorder, borderline personality disorder, attention deficit hyperactivity disorder, and major depressive disorder.
+To further validate these results, we developed a computer agent to replace the human subject in the proposer role and show that it can also detect these same four DSM-defined disorders.
+These results suggest that the highly developed social sensitivities that humans bring to a two-party social exchange can be exploited and automated to detect important psychopathologies, using an interpersonal behavioral probe not directly related to the defining diagnostic criteria.
+### introduction ###
+Social interactions among humans reflect the execution of some of the most important and complex behavioral software with which humans are endowed.
+Consequently, we should expect the computations involved in human social exchange to be subtle and perhaps even difficult to expose and study in controlled settings.
+However, exposing these computations is crucial if we are to improve our characterization and understanding of normal human cognitive function and dysfunction.
+In recent years, the components of social exchange in healthy subjects have been probed using interactive economic exchange games CITATION CITATION.
+These games typically involve two subjects interacting for one or multiple rounds through the exchange of monetary gestures to one another.
+For our purposes here, these games require three classes of computation be intact and functioning in the minds of the interacting subjects.
+They require that each subject can compute norms for what is fair in each exchange, detect deviations in monetary gestures that deviate from these norms, and choose actions predicated on such deviations CITATION CITATION.
+These experimental probes have been used previously in the area of behavioral economics and neuroeconomics, but here we show that the behavioral gestures elicited in the context of economic exchange games can be used to classify certain psychopathologies.
+The twist in our effort here is that we use a data-driven approach examining the reactions of the healthy partner as a kind of biosensor while playing an exchange game with a subject possessing a psychopathology.

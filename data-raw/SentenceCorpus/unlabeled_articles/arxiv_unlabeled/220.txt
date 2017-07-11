@@ -1,0 +1,35 @@
+### abstract ###
+We study the regret of optimal strategies for online convex optimization games
+Using von Neumann's minimax theorem, we show that the optimal regret in this adversarial setting is closely related to the behavior of the empirical minimization algorithm in a stochastic process setting: it is equal to the maximum, over joint distributions of the adversary's action sequence, of the difference between a sum of minimal expected losses and the minimal empirical loss
+We show that the optimal regret has a natural geometric interpretation, since it can be viewed as the gap in Jensen's inequality for a concave functional---the minimizer over the player's actions of expected loss---defined on a set of probability distributions
+We use this expression to obtain upper and lower bounds on the regret of an optimal strategy for a variety of online learning problems
+Our method provides upper bounds without the need to construct a learning algorithm; the lower bounds provide explicit optimal strategies for the adversary
+### introduction ###
+Within the Theory of Learning, two particular topics have gained significant popularity over the past 20 years: Statistical Learning and Online Adversarial Learning
+Papers on the former typically study generalization bounds, convergence rates, complexity measures of function classes---all under the assumption that the examples are drawn, typically in an  iid 
+manner, from some underlying distribution
+Working under such an assumption, Statistical Learning finds its roots in statistics, probability theory, high-dimensional geometry, and one can argue that the main questions are by now relatively well-understood
+Online Learning, while having its origins in the early 90's, recently became a popular area of research once again
+One might argue that it is the assumptions, or lack thereof, that make online learning attractive
+Indeed, it is often assumed that the observed data is generated maliciously rather than being drawn from some fixed distribution
+Moreover, in contrast with the ``batch learning'' flavor of Statistical Learning, the sequential nature of the online problem lets the adversary change its strategy in the middle of the interaction
+It is no surprise that this adversarial learning seems quite a bit more difficult than its statistical cousin
+The worst case adversarial analysis does provide a realistic modeling in learning scenarios such as network security applications, email spam detection, network routing etc , which is largely responsible for the renewed interest in this area
+Upon a review of the central results in adversarial online learning---most of which can be found in the recent book Cesa-Bianchi and Lugosi  CITATION ---one cannot help but notice frequent similarities between the guarantees on performance of online algorithms and the analogous guarantees under stochastic assumptions
+However, discerning an explicit link has remained elusive
+Vovk  CITATION  notices this phenomenon: ``for some important problems, the adversarial bounds of on-line competitive learning theory are only a tiny amount worse than the average-case bounds for some stochastic strategies of Nature
+''   In this paper, we attempt to build a bridge between adversarial online learning and statistical learning
+Using von Neumann's minimax theorem, we show that the optimal regret of an algorithm for online convex optimization is exactly the difference between a sum of minimal expected losses and the minimal empirical loss, under an adversarial choice of a stochastic process generating the data
+This leads to upper and lower bounds for the optimal regret that exhibit several similarities to results from statistical learning
+The online convex optimization game proceeds in rounds
+At each of these  SYMBOL  rounds, the player (learner) predicts a vector in some convex set, and the adversary responds with a convex function which determines the player's loss at the chosen point
+In order to emphasize the relationship with the stochastic setting, we denote the player's choice as  SYMBOL  and the adversary's choice as  SYMBOL
+Note that this differs, for instance, from the notation in  CITATION
+Suppose  SYMBOL  is a  convex compact  class of functions, which constitutes the set of Player's choices
+The Adversary draws his choices from a  closed compact  set  SYMBOL
+We also define a continuous bounded loss function  SYMBOL  and assume that  SYMBOL  is convex in the second argument
+Denote by  SYMBOL  the associated loss class
+Let  SYMBOL  be the set of all probability distributions on  SYMBOL
+Denote a sequence  SYMBOL  by  SYMBOL
+We denote a joint distribution on  SYMBOL  by a bold-face  SYMBOL  and its conditional  and marginal distributions by  SYMBOL  and  SYMBOL , respectively
+The online convex optimization interaction is described as follows \frameitblack{ {Online Convex Optimization (OCO) Game }  \setlength{sep}{-1pt} []  At each time step  SYMBOL  to  SYMBOL ,  Player chooses  SYMBOL   Adversary chooses  SYMBOL   Player observes  SYMBOL  and suffers loss  SYMBOL    }  The objective of the player is to minimize the {regret}  SYMBOL $  It turns out that many online learning scenarios can be realized as instances of OCO, including prediction with expert advice, data compression,  sequential investment, and forecasting with side information (see, for example,~ CITATION )

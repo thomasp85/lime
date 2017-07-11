@@ -1,0 +1,28 @@
+### abstract ###
+taking a falsificationist perspective  the present paper identifies two major shortcomings of existing approaches to comparative model evaluations in general and strategy classifications in particular
+these are  NUMBER  failure to consider systematic error and  NUMBER  neglect of global model fit
+using adherence measures to evaluate competing models implicitly makes the unrealistic assumption that the error associated with the model predictions is entirely random
+by means of simple schematic examples  we show that failure to discriminate between systematic and random error seriously undermines this approach to model evaluation
+second  approaches that treat random versus systematic error appropriately usually rely on relative model fit to infer which model or strategy most likely generated the data
+however  the model comparatively yielding the best fit may still be invalid
+we demonstrate that taking for granted the vital requirement that a model by itself should adequately describe the data can easily lead to flawed conclusions
+thus  prior to considering the relative discrepancy of competing models  it is necessary to assess their absolute fit and thus  again  attempt falsification
+finally  the scientific value of model fit is discussed from a broader perspective
+### introduction ###
+the comparative evaluation of theories is an issue of fundamental importance in all sciences
+in general  many disciplines proceed by submitting a particular theory or derived hypothesis to empirical tests and evaluating it through the logic of verification and falsification
+although such tests can be constructed to differentiate between models experimentum crucis given that opposing predictions can be derived  CITATION   it is more common that their comparison proceeds more indirectly
+specifically  underlying assumptions or predictions derived from each particular model are tested independently
+over time  instances of confirmation and disconfirmation are accumulated for each model
+according to the classical falsificationist logic  CITATION   a model that repeatedly fails relevant tests is eventually discarded
+thereby  the question of which is the better theory or model is answered indirectly  in the long run  it is the model which makes testable and falsifiable predictions and endures critical tests of these
+there are numerous implementations of this approach in jdm research and well-stated arguments have been formulated in favor of testing critical properties or central assumptions of single models  CITATION
+indeed  a typical variant is to conduct series of investigations which successively shed light on the determinants and or bounding conditions of certain effects or theories
+however  discontent with testing properties of single models in isolation has been voiced
+the line of argument can be summarized as follows  CITATION   it is problematic to test a specific hypothesis derived from a single model against the indefinite number of unspecified alternatives
+rather  it is argued that we need to compare alternative models directly
+in line with such arguments  a popular approach is to specify several competing models and directly compare these in terms of their ability to account for empirical data  CITATION
+one particular variant specific to jdm research is the strategy classification approach which attempts to identify the decision strategy an individual most likely used  CITATION
+following the idea that people adaptively select from a set of strategies  CITATION   models are compared on the level of individual subjects and the superior model is retained as a description of how the decision maker proceeded
+in the current paper  we focus on comparative model testing in general and the more jdm-specific procedure of strategy classification in particular
+following the notion that a good test of a theory is one that implements a sufficiently high hurdle to be overcome by this theory  CITATION   we identify two major shortcomings in existing approaches to comparative model evaluation   NUMBER  failure to distinguish between random and systematic error and  NUMBER  neglect of global model fit

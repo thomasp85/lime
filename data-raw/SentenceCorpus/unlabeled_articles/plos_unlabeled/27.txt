@@ -1,0 +1,59 @@
+### abstract ###
+Changes in the synaptic connection strengths between neurons are believed to play a role in memory formation.
+An important mechanism for changing synaptic strength is through movement of neurotransmitter receptors and regulatory proteins to and from the synapse.
+Several activity-triggered biochemical events control these movements.
+Here we use computer models to explore how these putative memory-related changes can be stabilised long after the initial trigger, and beyond the lifetime of synaptic molecules.
+We base our models on published biochemical data and experiments on the activity-dependent movement of a glutamate receptor, AMPAR, and a calcium-dependent kinase, CaMKII.
+We find that both of these molecules participate in distinct bistable switches.
+These simulated switches are effective for long periods despite molecular turnover and biochemical fluctuations arising from the small numbers of molecules in the synapse.
+The AMPAR switch arises from a novel self-recruitment process where the presence of sufficient receptors biases the receptor movement cycle to insert still more receptors into the synapse.
+The CaMKII switch arises from autophosphorylation of the kinase.
+The switches may function in a tightly coupled manner, or relatively independently.
+The latter case leads to multiple stable states of the synapse.
+We propose that similar self-recruitment cycles may be important for maintaining levels of many molecules that undergo regulated movement, and that these may lead to combinatorial possible stable states of systems like the synapse.
+### introduction ###
+Long-term storage of neuronal information is believed to occur through alterations in synaptic efficacy.
+Many mechanisms have been identified for changes in synaptic strength, including modulation of neurotransmitter release, conductivity changes in receptors, changes in numbers of receptors or active synapses, and structural alterations of the synapse.
+Among these, the insertion of glutamate receptors of the alpha-amino-3-hydroxy-5-methyl-4-isoxazole propionate subtype into the postsynaptic membrane and the modulation of receptor conductance by phosphorylation are key events in modulating synaptic efficacy.
+A fundamental issue challenges all of these mechanisms: how can they last a lifetime?
+Synaptic memories can decay in at least three ways: turnover, diffusive exchange, and stochasticity.
+Turnover of major postsynaptic molecules ranges from periods of a few minutes to a few days and may be further enhanced by synaptic activity CITATION.
+One solution to loss of memory due to molecular turnover is the concept of self-sustaining molecular switches CITATION.
+These typically involve some form of molecular feedback giving rise to chemical systems, which can stably settle into one of two states.
+Such two-state, or bistable, systems can store information in a binary manner.
+Provided there is a steady supply of replacement molecules, molecular turnover can be tolerated, since newly synthesised, na ve molecules become entrained to the current state of the system.
+Some current proposals for such bistable synaptic switches include the calcium calmodulin type II kinase hypothesis CITATION, a mitogen-activated protein kinase feedback loop CITATION, CITATION, and, recently, the mammalian target of rapamycin protein synthesis loop CITATION.
+Of these, the CaMKII model has been posed in the most detail with the most complete structural correlates.
+According to this model, CaMKII at the synapse can undergo autophosphorylation, which leads to activation of the kinase.
+The activated kinase molecules catalyze the phosphorylation of yet more CaMKII molecules, resulting in a self-sustaining cycle.
+The MAPK feedback loop model also involves a self-sustaining cycle, but in this case several intermediate molecules participate in the loop.
+The protein synthesis loop model is based on the observation of local protein translation machinery associated with synapses.
+Messenger RNA for several proteins, including the ribosomes themselves, is also present.
+Thus, high local protein synthesis creates the machinery for maintaining high levels of synthesis.
+This protein synthetic loop is regulated by mTOR.
+The second mechanism for decay of synaptic memory is diffusive exchange of synaptic proteins, leading to washout of specific states in the synapse.
+Extrapolations from free diffusion constants suggest that diffusive exchange between the synaptic spine and dendrite is likely to be rapid, under 10 s even for proteins CITATION.
+The postsynaptic density is an elaborate cytoskeletal and signalling complex that provides anchors for synaptic proteins close to the region of presynaptic neurotransmitter release.
+This anchoring solves the problem of free diffusion and washout of active molecules, but introduces the problem of regulating the insertion of molecules into the correct locations.
+There is considerable evidence for targeted trafficking of molecules to and from the PSD.
+One such trafficking cycle is the insertion and removal of glutamate receptors of the AMPA subtype into the synaptic membrane CITATION.
+A striking and physiologically important example of receptor insertion is the conversion of silent synapses, lacking AMPA receptors, into active synapses with a full complement of receptors.
+The delivery of AMPARs to the synaptic membrane involves two streams: a constitutive pathway involving glutamate receptor heteromers 2 and 3, and an activity-dependent pathway involving GluR12 CITATION.
+Based on current evidence, the activity-dependent insertion of GluR12 into the synaptic membrane is stimulated by phosphorylation on Ser845 CITATION, CITATION.
+There is also evidence for such phosphorylation being implicated in synaptic plasticity CITATION, CITATION.
+CaMKII also translocates to the PSD upon calmodulin binding and stimulation CITATION.
+Thus, in addition to their known involvement in synaptic plasticity, AMPARs and CaMKII have mechanisms for activity-dependent recruitment to the PSD in a manner that acts counter to washout processes CITATION.
+This combination of attributes makes these molecules interesting candidates for analysing molecular memory mechanisms.
+Nevertheless, over the long term, even anchoring events are reversible and additional processes must be considered for stability.
+A third important obstacle to stable memory formation is biochemical stochasticity.
+This causes uncertainty in the outcome of biochemical reactions involving small numbers of molecules.
+Such fluctuations are severe at the synapse, where many important signalling molecules are present in low numbers, that is, less than 100 molecules.
+In a typical synaptic volume of 0.1 fl CITATION there are an estimated five free Ca 2 ions.
+Under stochastic conditions, there is a finite probability of spontaneous state flips in bistable molecular switches CITATION, CITATION.
+The lifetime of the stable states depends both on reaction rates and on the number of molecules.
+For example, the proposed MAPK switch does not fare well in synaptic volumes, and spontaneously flips state on the time scale of minutes CITATION.
+Nevertheless, these time estimates are highly dependent on assumptions about diffusion, anchoring, and the levels of noise in other synaptic pathways.
+Putting these themes together, a plausible synaptic memory mechanism might look like a bistable molecular switch that is resistant to turnover, incorporates traffic of molecules to and from the PSD, and is unlikely to spontaneously flip state even when small synaptic molecule numbers are taken into account.
+In this study we report a novel glutamate receptor based switch that emerges from a consideration of its traffic and satisfies these criteria.
+We also examine a possible CaMKII switch in the context of these criteria.
+Finally, we integrate these switches to explore how multiple synaptic states may arise CITATION .

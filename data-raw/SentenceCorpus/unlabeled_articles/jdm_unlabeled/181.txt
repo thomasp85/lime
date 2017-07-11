@@ -1,0 +1,32 @@
+### abstract ###
+the present research investigated the relationship between individual differences in maximizing versus satisficing i e   seeking to make the single best choice  rather than a choice that is merely good enough and well-being  in interaction with the society in which an individual lives
+data from three distinct cultural groups adults  drawn respectively from the u s n  NUMBER   western europe n  NUMBER   and china n  NUMBER   were analyzed
+the results showed that  in societies where choice is abundant i e   u s and western europe  maximizers reported less well-being than satisficers  and this difference was mediated by experienced regret
+however  in the non-western society china  maximizing was unrelated to well-being
+although in china maximizing was associated with more experiences of regret  regret had no substantial relationship to well-being
+these patterns also emerged for the individual facets of the maximizing scale  although with a notable difference between the u s and europe for the high standards facet
+it is argued that  in societies where abundant individual choice is highly valued and considered the ultimate route to personal happiness  maximizers' dissatisfaction and regret over imperfect choices is a detrimental factor in well-being  whereas it is a much less crucial determinant of well-being in societies that place less emphasis on choice as the way to happiness
+### introduction ###
+autonomy and choice in individual decision making are highly valued in western societies
+greater choice can provide two types of benefits
+first  it can enable choosers to find exactly what they want
+and  secondly  it can enhance their feeling of autonomy and freedom
+nonetheless  various studies have recently cautioned that unlimited choice may come at a price and does not always benefit mental health and well-being  CITATION
+in this regard  schwartz  CITATION  argued that  as options are added within a domain of choice  several problems may materialize
+first  the process of collecting adequate and complete information about options makes choosing more laborious
+second  as options expand  people's standards for what is an acceptable outcome rise
+and thirdly  people may come to believe that any imperfect result is their fault  because  with so many options  they have no excuse for not getting the  right  one
+ironically  however  the more options there are  the more likely it becomes that one does not choose the best option  CITATION
+these problems have become especially relevant in contemporary western societies  where people are overwhelmed by near-unlimited options in all domains of life
+in this regard  bellah  madsen  sullivan  swinder  and tipton  CITATION  already argued that people in western societies feel increasingly uneasy about their life decisions because they are unsure about whether they are making the right choices  and according to schwartz  CITATION   this  excess of freedom  p  NUMBER  has resulted in a dramatic increase in people's dissatisfaction with their lives and even in clinical depression
+however  not everybody may be equally sensitive to the problems that come with exposure to an abundance of choice
+it has been argued that people who always want to maximize the outcomes of their choices are most vulnerable to the negative effects of too much choice  CITATION
+for these people  an excess of options becomes problematic because  to make sure they choose the optimal option  all information about each alternative has to be considered  which is often difficult or even impossible
+moreover  there is likely to be a lingering doubt that the best option has nevertheless been missed  especially when it has not been possible to consider all options
+hence  the potential for regret is ever present  because there is always the possibility that there is a better option  out there   and failing to find it means a failure to optimize personal satisfaction
+on the other hand  people can approach choices differently  using a  good enough  strategy  in which any option that meets a certain threshold of acceptability is considered satisfactory
+in this approach to choice  the individual does not have to consider all information about each option  the standards for what is acceptable are more modest meaning that several options can be satisfactory and these standards do not depend on the number of options because adding more options does not suddenly render a good option unacceptable
+moreover  there is no failure in choosing a merely decent  but not perfect  option when adopting a  good enough  approach to choice
+importantly  schwartz et al CITATION  found considerable  stable individual differences in people's dispositional tendency to use either a  good enough  strategy or a  maximizing  strategy
+people on either side of this dispositional continuum have been labeled satisficers and maximizers  respectively  and the latter group is expected to be more vulnerable to the problems that arise from an excess of choice
+indeed  various studies showed that maximizers experience higher levels of regret compared to satisficers and that they show lower levels of satisfaction with decisions  and lower levels of well-being more generally

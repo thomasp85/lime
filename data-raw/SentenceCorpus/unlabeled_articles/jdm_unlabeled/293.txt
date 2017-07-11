@@ -1,0 +1,20 @@
+### abstract ###
+empathic responses  such as sympathy towards others  are a key ingredient in the decision to provide help to those in need
+the determinants of empathic responses are usually thought to be the vividness  similarity  and proximity of the victim
+however  recent research highlights the role that attention plays in the generation of feelings
+we expanded on this idea by investigating whether sympathy depends on cognitive mechanisms such as attention
+in two studies we found that sympathy responses were lower and reaction times were longer when targets were presented with distractors
+in addition  online sympathy judgments that allow attentional focusing on a target lead to greater affective responses than judgments made from memory
+we conclude that attention is an ingredient in the generation of sympathy  and discuss implications for research on prosocial behaviour and the interaction between attention and emotions
+### introduction ###
+witnessing the suffering of others often invokes emotional reactions in the observers
+the link between empathic responses and willingness to provide help to others has been the subject of recent research on emotional responses and prosocial behaviour
+feelings such as empathy  sympathy  compassion  distress  pity  and even anticipated regret are typically involved in decisions to provide assistance or donate money to those in need  CITATION
+given the prominent role of emotions in prosocial behaviour  research has begun to tackle the important question of what drives the generation of feelings relevant for helping others
+slovic  CITATION  suggests a model by which mental images and attention are two vital precursors for emotional reactions towards others in distress
+mental images can contain affective tags that serve as a signal for the selection of behavioural alternatives  CITATION
+a direct consequence of this mechanism is that people are more likely to generate sympathetic responses when they are able to mentally imagine the victim
+in fact  research on perspective taking  CITATION  supports this notion and shows that more empathic concern is generated for victims that are similar to the perceiver  CITATION
+additionally  we seem to  feel  more for individual victims than for groups of victims because mental images of single  identified victims are more vivid and concrete  CITATION
+the predisposition to perceive groups of people as less unitary is closely connected to gestalt theories of perception  CITATION   an association which highlights that perceptual processes are closely related to other  more complex impression formation processes  CITATION
+the connection between gestalt principles of perception and impression formation is of particular interest  as perceptual processes impose limitations on our ability to process large numbers of people in the same way that psychological processes may restrict our ability to feel compassion for large numbers of victims

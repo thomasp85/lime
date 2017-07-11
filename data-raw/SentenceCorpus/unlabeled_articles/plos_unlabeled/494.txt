@@ -1,0 +1,27 @@
+### abstract ###
+Bacterial species, and even strains within species, can vary greatly in their gene contents and metabolic capabilities.
+We examine the evolution of this diversity by assessing the distribution and ancestry of each gene in 13 sequenced isolates of Escherichia coli and Shigella.
+We focus on the emergence and demise of two specific classes of genes, ORFans and HOPs, since these genes, in contrast to most conserved ancestral sequences, are known to be a major source of the novel features in each strain.
+We find that the rates of gain and loss of these genes vary greatly among strains as well as through time, and that ORFans and HOPs show very different behavior with respect to their emergence and demise.
+Although HOPs, which mostly represent gene acquisitions from other bacteria, originate more frequently, ORFans are much more likely to persist.
+This difference suggests that many adaptive traits are conferred by completely novel genes that do not originate in other bacterial genomes.
+With respect to the demise of these acquired genes, we find that strains of Shigella lose genes, both by disruption events and by complete removal, at accelerated rates.
+### introduction ###
+The wide variation in bacterial genome sizes was originally detected in the 1960s by DNA reassociation analyses CITATION.
+And because bacteria have gene dense chromosomes, the differences in genome sizes implied that there were likely to be vast differences in the gene contents of bacterial species.
+With the current availability of hundreds of complete genome sequences, it is now possible to establish exactly which genes are present in, as well as those that are absent from, a genome.
+Among sequenced bacterial genomes, gene sets vary over 40-fold, ranging from 182 genes in the gammaproteobacterial symbiont Carsonella ruddii CITATION to almost 8000 genes in the soil-dwelling acidobacterium Solibacter usitatus .
+The wide variation in genome sizes and gene contents can also be observed between strains within individual bacterial genera or species.
+For example, isolates of Frankia that are more than 97 percent identical in their rRNA sequences the conventional cutoff value for a bacterial species can differ by as many as 3500 genes, which represents nearly half of their 7.5 Mb genome CITATION.
+Even among bacterial strains of similar genome sizes, there can be substantial differences in gene repertoires CITATION.
+Unlike mammals, in which only about 1 percent of the genes in a genome are unique to a taxonomic order, the gene contents of bacterial genomes can change rapidly over relatively short evolutionary distances.
+The generation of novel gene repertoires is a consequence of the ongoing processes of gene acquisition and gene loss CITATION CITATION.
+Although several mechanisms can generate new genes CITATION, CITATION, CITATION, the novel gene sets observed in closely related bacterial strains result largely from gene transfer from distant sources, as duplications and gene rearrangement only rarely produce entirely unique genes in the short timescales in which bacterial gene sets evolve.
+Although homolog searches indicate that many genes arise from lateral transfer from other bacteria, most bacteria also contain genome-specific sets of genes that lack any homologs in the known databases CITATION, CITATION, CITATION.
+Counteracting the augmentation of bacterial genomes by gene acquisition, gene loss occurs both through large-scale deletions CITATION as well as by smaller changes that erode and inactivate individual genes CITATION, CITATION, CITATION.
+As observed for acquired sequences, prokaryotes also contain genome-specific sets of inactivated genes, which can comprise up to 41 percent of their annotated genes CITATION .
+Taken together, these lineage-specific gene repertoires indicate the need to monitor bacterial genome dynamics i.e., the manner in which genes are gained and lost over short evolutionary timescales.
+To this end, comparisons of closely related strains of Bacillus CITATION, Staphylococcus aureus CITATION and E. coli CITATION, CITATION have shown that gene acquisitions are prevalent at the tips of the phylogeny and that recently acquired genes seem to evolve more quickly.
+However, few studies have examined the fate of these genes within a bacterial lineage or have asked how many or which classes of genes, once acquired, are maintained, disrupted or removed from a genome.
+We address these questions by assessing the differences in gene repertoires among 13 sequenced strains of E. coli/Shigella clade.
+These strains are closely related, yet display substantial differences in genome size and gene content CITATION, CITATION, allowing us to pinpoint the introduction and persistence of genes in the lineages leading to these genomes.

@@ -1,0 +1,43 @@
+### abstract ###
+Various characteristics of complex gene regulatory networks have been discovered during the last decade, e.g., redundancy, exponential indegree distributions, scale-free outdegree distributions, mutational robustness, and evolvability.
+Although progress has been made in this field, it is not well understood whether these characteristics are the direct products of selection or those of other evolutionary forces such as mutational biases and biophysical constraints.
+To elucidate the causal factors that promoted the evolution of complex GRNs, we examined the effect of fluctuating environmental selection and some intrinsic constraining factors on GRN evolution by using an individual-based model.
+We found that the evolution of complex GRNs is remarkably promoted by fixation of beneficial gene duplications under unpredictably fluctuating environmental conditions and that some internal factors inherent in organisms, such as mutational bias, gene expression costs, and constraints on expression dynamics, are also important for the evolution of GRNs.
+The results indicate that various biological properties observed in GRNs could evolve as a result of not only adaptation to unpredictable environmental changes but also non-adaptive processes owing to the properties of the organisms themselves.
+Our study emphasizes that evolutionary models considering such intrinsic constraining factors should be used as null models to analyze the effect of selection on GRN evolution.
+### introduction ###
+The genetic basis of organismal evolution is one of the fundamental problems in biology CITATION CITATION.
+The modes of selection for phenotypes would influence the fixation probabilities of the mutations that affect the phenotypes CITATION, and the profile of the mutations fixed during the course of evolution would determine the architecture of the genomes and the genetic systems underlying the phenotypes CITATION.
+However, because genetic systems would modify the phenotypic effects of the mutations, the properties of the genetic system would influence the rates and directions of phenotypic evolution as well as the mutational robustness and evolvability CITATION CITATION.
+Therefore, both phenotypes and genetic systems have evolved by mutually influencing each other.
+Gene regulatory networks constitute important parts of such genetic systems and are involved in various biological processes such as environmental responses in unicellular organisms and cell differentiation in multicellular organisms CITATION, CITATION, CITATION.
+Recent theoretical and experimental studies have revealed that complex GRNs have evolved by successive gene duplication, changes in regulatory interactions, and particularly in prokaryotes, horizontal gene transfer CITATION CITATION.
+In addition, recent studies have addressed the structural features of complex GRNs such as redundancy, scale-free outdegree distributions and exponential indegree distributions CITATION, CITATION CITATION and the contribution of these features to genetic characteristics such as mutational robustness and evolvability CITATION CITATION .
+One important question with regard to the evolution of complex GRNs is the evolutionary origin of these structural and mutational properties.
+Various evolutionary processes simultaneously influence GRN evolution and these properties are interrelated.
+It is thus difficult to identify the factors that have promoted the evolution of these properties, which could evolve as a result of being directly influenced by selection and also incidentally as a result of other factors CITATION CITATION.
+Thus, to identify the factors responsible for the evolution of the properties of complex GRNs, it is necessary to consider not only selection but also various mutational processes and constraining processes.
+Selection for phenotype is one of the most important driving forces of organismal evolution.
+However, the impact of phenotypic selection on the evolution of GRNs is unclear.
+The mode of selection strongly influences the fate of mutations and the profile of mutations fixed during the course of evolution ultimately determines the architecture of GRNs.
+Thus, it is important to examine how different modes of phenotypic selection would affect the evolution of GRNs.
+However, there are significant limitations to our general understanding of the processes of adaptation in evolutionary biology.
+Many previous studies on the evolution of mutational robustness with respect to GRNs have focused on the fixation of phenotypically neutral mutations under stabilizing selection with a constant optimal environment CITATION, CITATION.
+On the other hand, the fixation of beneficial mutations for phenotypic adaptation under changing environments is limited CITATION .
+Many studies have suggested that some examples of GRN architectures are related to mutational robustness and evolvability CITATION, CITATION, CITATION, CITATION.
+Theoretical studies have proposed that these genetic properties appear to be evolvable traits CITATION, CITATION CITATION and that these genetic properties could play a significant role in organismal evolution CITATION.
+However, it is unclear how mutational robustness and evolvability influences the process of GRN evolution.
+Certain properties of GRN might have evolved through non-adaptive processes such as mutations and biophysical constraints on gene regulation CITATION, CITATION, CITATION CITATION.
+Mutations in particular is the ultimate source of genetic variation.
+Thus, the biased properties of mutations can potentially influence the tendency of an organism to evolve.
+For example, the probability of a transcription factor binding site formation as a result of mutations could vary by several orders of magnitude mainly owing to the extensive variation in the size of potential cis-regulatory regions among organisms CITATION, CITATION, and the rate of gene deletion could be several times higher than the rate of gene duplication in certain organisms CITATION, CITATION.
+Moreover, it has been suggested that the horizontal transfer of regulatory genes is observed to a lesser extent than that of phenotypic genes CITATION.
+Several studies have suggested that certain characteristic features of complex GRNs, such as redundancy and scale-free degree distributions could evolve as an inevitable outcome of mutations CITATION, CITATION.
+However, these previous studies have not considered certain essential evolutionary processes such as selection and gene duplication.
+It is therefore unclear whether such characteristic features of complex GRNs evolved as a result of selection or as a result of the inherent properties of the mutations.
+The purpose of this study was to identify the evolutionary causes of various structural and mutational properties of complex GRNs, such as redundancy, indegree and outdegree distributions, mutational robustness, and evolvability.
+For this purpose, we constructed an individual-based model of GRN that dynamically controls gene expression levels and allows populations to evolve under various fluctuating conditions of selection with various kinds of mutations such as gene duplication and deletion, cis-, trans-regulatory mutation and horizontal gene transfer.
+In this study, to explore selective conditions that promote the evolution of complex GRNs, we first examine the evolution of GRNs under various conditions of fluctuating selection.
+Second, for showing the adaptive mechanisms for the evolution of complex GRNs, we examine the fitness effect of all the mutations that arose during the evolution.
+Third, to explore whether internal factors of organisms promote or inhibit the evolution of GRNs, we examined the impact of gene expression cost, constraints on expression dynamics, and several types of mutational biases such as the relative rates of gene duplication and deletion, the possibility of formation of new transcription factor binding sites and horizontal gene transfers.
+Finally, on the basis of the results of the above analyses, we discuss the major evolutionary causes of various properties of complex GRNs, i.e., redundancy, scale-free out-degree distributions, exponential in-degree distributions, mutational robustness, and evolvability.

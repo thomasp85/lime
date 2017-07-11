@@ -1,0 +1,40 @@
+### abstract ###
+Advances in the computational identification of functional noncoding polymorphisms will aid in cataloging novel determinants of health and identifying genetic variants that explain human evolution.
+To date, however, the development and evaluation of such techniques has been limited by the availability of known regulatory polymorphisms.
+We have attempted to address this by assembling, from the literature, a computationally tractable set of regulatory polymorphisms within the ORegAnno database.
+We have further used 104 regulatory single-nucleotide polymorphisms from this set and 951 polymorphisms of unknown function, from 2-kb and 152-bp noncoding upstream regions of genes, to investigate the discriminatory potential of 23 properties related to gene regulation and population genetics.
+Among the most important properties detected in this region are distance to transcription start site, local repetitive content, sequence conservation, minor and derived allele frequencies, and presence of a CpG island.
+We further used the entire set of properties to evaluate their collective performance in detecting regulatory polymorphisms.
+Using a 10-fold cross-validation approach, we were able to achieve a sensitivity and specificity of 0.82 and 0.71, respectively, and we show that this performance is strongly influenced by the distance to the transcription start site.
+### introduction ###
+Our ability to identify the molecular mechanisms responsible for specific genetic traits within our population will be enhanced by our imminent ability to decipher each individual's genome.
+This is evident from recent advances in sequencing and genotyping technologies, which allow an increasing number of variants to be sampled for association and linkage and contribute a growing number of sources of variation and their frequencies to public databases each year.
+As new variants are identified, each becomes a molecular window into our past, present, and future each aids in tracing our genetic heritage and in charting the footsteps of our common evolution, and possesses the potential to predict disease or drug susceptibilities, ideally acting as an early-warning system in preventative medical practice.
+However, our ability to catalog genotypes has far outstripped our ability to implicate them in phenotypes.
+Currently, more than 6 million unique single-nucleotide polymorphisms are included in version 126 of dbSNP CITATION ; of these SNPs, only a very small fraction have been associated with a phenotype using genetic association or linkage analysis.
+This is because association studies are costly, time-consuming, and dependent on the frequency of the genotype in the sampled population.
+Furthermore, many SNPs are not necessarily expected to have a function.
+To select candidates for functional validation, computational methods have been developed to identify SNPs that alter the protein-coding structure of genes CITATION CITATION.
+These types of computational methods tend to prioritize putative functional SNPs by identifying those SNPs that alter a protein's amino acid sequence, are located within well-conserved regions or functional protein domains, and alter the biochemical structure of the protein.
+However, very few methods identify regulatory SNPs that alter the expression of genes.
+Such rSNPs have been implicated in the etiology of several human diseases, including cancer CITATION, CITATION, depression CITATION, systemic lupus erythematosus CITATION, perinatal HIV-1 transmission CITATION, and response to type 1 interferons CITATION.
+This work aims to extend computer-based techniques to identify this particular class of functional variants within the core promoter regions of human genes.
+Conventional computational approaches to rSNP classification have predominantly relied on allele-specific differences in the scoring of transcription factor weight matrices as supplied from databases such as TRANSFAC and Jaspar CITATION, CITATION, CITATION.
+SNPs located within matrix positions possessing high information content are assumed more likely to be functional.
+Support for this hypothesis to date, however, has been restricted to single-case examples.
+Furthermore, a recent study has failed to detect significant weight matrix signals in 65 percent of regulatory polymorphisms CITATION.
+However, the prevailing hypothesis in computational regulatory element prediction has been that the majority of predictions using unrestricted application of matrix-based approaches are false positives.
+By extending this technique and using phylogenetic footprinting between mouse and human, it was demonstrated that from ten SNPs that show significant allele-specific differences in Jaspar predictions, seven also demonstrated electrophoretic mobility shift differences CITATION.
+However, only two of the seven had a marked effect in reporter gene assays.
+Conservation alone has also been demonstrated as a poor discriminant of function in a study of regulatory polymorphisms in Eukaryotic Promoter Database promoters, where zero of ten experimentally validated regulatory variants were in conserved binding sites CITATION .
+A substantial challenge with developing strategies for identifying functional noncoding variants has been the shortage of characterized regulatory variants.
+Few studies have successfully identified the causative variant after a susceptibility haplotype is identified.
+To address this problem, we have assembled the largest openly available collection of functional regulatory polymorphisms within the ORegAnno database CITATION.
+From this dataset, we have examined several features of these SNPs as they relate to polymorphisms of unknown function within the promoter regions of associated genes.
+Our hypothesis is that using a combination of regulatory and population genetics properties, the discriminative efficacy of individual properties can be evaluated, and significant predictors of rSNP function can be chosen.
+Within our assayed set, we have found that the best discriminants are the distance to the transcription start site, local repetitive density and content, sequence conservation, minor allele frequency and derived allele frequency, and CpG island presence.
+Notably, the unrestricted application of a matrix-based approach is demonstrated to be one of the least effective classifiers.
+We have used this dataset of rSNPs and their properties to train a support vector machine classifier.
+Two approaches were used to train the classifier: one in which the properties of all rSNPs were compared with that of all the ufSNPs, and one in which each property value of the positive SNPs and ufSNPs within an associated gene were compared with the average values for each property within that gene.
+The All approach is designed to determine if there are any properties that are important across the test set, while the Group approach is designed to determine if there are important directional shifts in values within a promoter that may discriminate functional SNPs from ufSNPs.
+In a 10-fold cross-validated test, the SVM achieves a receiver operating characteristic value of 0.83 0.05 for the All analysis and 0.78 0.04 for the Group analysis .

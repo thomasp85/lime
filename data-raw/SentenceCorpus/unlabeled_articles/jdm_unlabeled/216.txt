@@ -1,0 +1,53 @@
+### abstract ###
+in forecasting and decision making  people can and often do represent a degree of belief in some proposition
+at least two separate constructs capture such degrees of belief  likelihoods capturing evidential balance and support capturing evidential weight
+this paper explores the weight or justification that evidence affords propositions  with subjects communicating using a belief function in hypothetical legal situations  where justification is a relevant goal
+subjects evaluated the impact of sets of  NUMBERNUMBER  pieces of evidence  varying in complexity  within a hypothetical legal situation
+the study demonstrates the potential usefulness of this evidential weight measure as an alternative or complement to the more-studied probability measure
+subjects' responses indicated that weight and likelihood were distinguished  that subjects' evidential weight tended toward single elements in a targeted fashion  and  that there were identifiable individual differences in reactions to conflicting evidence
+specifically  most subjects reacted to conflicting evidence that supported disjoint sets of suspects with continued support in the implicated sets  although an identifiable minority reacted by pulling back their support  expressing indecisiveness
+such individuals would likely require a greater amount of evidence than the others to counteract this tendency in support
+thus  the study identifies the value of understanding evidential weight as distinct from likelihood  informs our understanding of the psychology of individuals' judgments of evidential weight  and furthers the application and meaningfulness of belief functions as a communication language
+### introduction ###
+probabilities are useful when acting in the absence of complete knowledge  e g   in forecasting or decision making
+such probabilities are interpreted as measures of degrees of likelihood and are assessed against a criterion of truth CITATION
+scoring rules  as assessments of the quality of probability judgments  operate from this perspective  comparing likelihood assessments to actual outcomes  in an application of the truth criterion CITATION
+however  from the very origins of probability theory  scholars recognized that truth is not the only criterion of potential interest for interpreting probabilities
+smith  benson and curley CITATION tied this recognition to a philosophical analysis of knowledge as    NUMBER  justified true belief   NUMBER   CITATION and to the use of probabilities as qualifications of beliefs that fall short of knowledge
+the analysis highlights two separate criteria along which such beliefs may be qualified  truth and justification
+this theoretical distinction forms the basis of a long-standing differentiation between pascalian probability based on likelihood relative to a criterion of truth and baconian probability based on support relative to a criterion of justification
+CITATION
+the distinction is also the basis of a common differentiation between the weight and the balance of evidence that can be traced to keynes CITATION and which has played a major role in motivating the study of ambiguity in decision-making beginning with ellsberg CITATION
+in short  likelihoods are intended to capture the balance of evidence and are connected with the criterion of truth
+if a is true  not-a is false
+to the degree that the evidence favors a  the balance of evidence moves toward a and away from not-a in equal measure
+the weight of evidence is connected with the criterion of justification
+weight depends upon the quantity and credibility of the evidence  how much good evidence is there
+how well does the evidence afford any differentiation of possibilities
+unlike evidential balance  evidential weight does not imply complementarity
+in probability theory  when the judgment of one hypothesis increases  the sum of the judgments for the remaining hypotheses must decrease by the same amount
+in truth  one and only one of a mutually exclusive set of events can occur  thus likelihoods should exhibit complementarity  and probabilities capture this feature
+in contrast  evidential weight as a construct  grounded in the criterion of justification  is not expected to exhibit this property
+increased support for one possibility does not necessarily impinge on the support for other possibilities
+the belief functions of dempster-shafer theory are discussed in this paper as justification-based measures that do not incorporate complementarity as a necessary axiom
+one source of the confusion between the constructs of likelihood and weight  and of the measures attached to them  is that these constructs and measures generally correlate
+a useful analogy can be drawn here with height and weight as two aspects of size
+though these measures correlate  they capture distinct size constructs
+similarly  probabilities as measures of likelihood and belief functions as measures of justification may correlate  but they capture different degree-of-belief constructs
+griffin and tversky CITATION provided a demonstration of the usefulness of the distinction  showing how the inclusion of considerations of weight  in addition to the balance of evidence  can serve to explain various empirical characteristics of confidence judgments
+there are a number of situations in which justification is of primary interest to the decision maker  or of interest in addition to truth
+for example  justification is of interest in legal settings where the goal is to remove doubt  in stock analysis for which the emphasis is upon justifying recommendations to clients  in diagnostic tasks in which the truth is not feasibly determinable e g   within public policy debates  and in scientific inference CITATION
+despite this history and their potential usefulness  measures of justification have been little studied empirically or been confounded with measures of likelihood
+the research has probably been somewhat hampered by the respective and different natures of truth and justification
+probability theory as capturing likelihoods benefits from the ultimate realization of the truth in many instances for which it is applied and because of the underpinnings of randomization and relative frequency from which it historically derives CITATION
+the application of a system used for capturing justification  and the use of dempster-shafer theory for this purpose  is more equivocal about the underlying theoretical mechanisms supporting such judgments CITATION
+here the argument for applying dempster-shafer theory is based on correspondence between aspects of evidential weight and unique features of the theory  e g   its noncomplementarity and the natural representation of ignorance  i e the case where no information is present CITATION
+in terms of previous work using dempster-shafer theory  most prior research with this system has been theoretical  for example  in pursuing the use of belief functions for propagating uncertainty in ai expert systems in addition or instead of using probabilities CITATION
+although sparse  there is some suggestive empirical work
+the cited work of griffin and tversky CITATION   directly  and the extensive work on the effects of ambiguity in decision making CITATION   indirectly  testify to the relevance of evidential weight to decision behavior
+in addition  responses in hypothetical legal contexts that emphasize justification exhibit noncomplementarity of degrees of belief in a manner consistent with the tenets of dempster-shafer theory CITATION
+briggs and krantz CITATION adopted a measurement perspective and demonstrated that judgments of evidential strength are separable
+that is  subjects    NUMBER  showed clear separation of relevant from irrelevant evidence and of designated from surrounding relevant evidence   NUMBER   p  NUMBER 
+in sum  the results support the value and viability of measuring evidential weight as distinct from the more commonly assessed construct of likelihood
+since likelihood judgments have received more attention than weight judgments and are often confused with them  particular emphasis must be placed on this distinction
+specifically  important distinctions from discussions in the literature need to be drawn  separating justification-based measures such as in the present application of dempster-shafer theory from weak theories of likelihood and from the theory of subjective probability called support theory
