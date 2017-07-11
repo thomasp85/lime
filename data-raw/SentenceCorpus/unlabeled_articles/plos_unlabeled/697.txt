@@ -1,0 +1,54 @@
+### abstract ###
+As modeling of changes in backbone conformation still lacks a computationally efficient solution, we developed a discretisation of the conformational states accessible to the protein backbone similar to the successful rotamer approach in side chains.
+The BriX fragment database, consisting of fragments from 4 to 14 residues long, was realized through identification of recurrent backbone fragments from a non-redundant set of high-resolution protein structures.
+BriX contains an alphabet of more than 1,000 frequently observed conformations per peptide length for 6 different variation levels.
+Analysis of the performance of BriX revealed an average structural coverage of protein structures of more than 99 percent within a root mean square distance of 1 Angstrom.
+Globally, we are able to reconstruct protein structures with an average accuracy of 0.48 Angstrom RMSD.
+As expected, regular structures are well covered, but, interestingly, many loop regions that appear irregular at first glance are also found to form a recurrent structural motif, albeit with lower frequency of occurrence than regular secondary structures.
+Larger loop regions could be completely reconstructed from smaller recurrent elements, between 4 and 8 residues long.
+Finally, we observed that a significant amount of short sequences tend to display strong structural ambiguity between alpha helix and extended conformations.
+When the sequence length increases, this so-called sequence plasticity is no longer observed, illustrating the context dependency of polypeptide structures.
+### introduction ###
+High-resolution structure determination of proteins and protein complexes via experimental methods occurs at a significantly slower pace than the collection of novel protein sequences.
+As a result, less than 30 percent of human proteins have a known structure in the Protein Data Bank and the percentage for other species is significantly lower CITATION.
+In addition, structures mostly cover one or a small number of protein domains, thus covering only a fraction of the total sequence of the protein.
+Homology modeling improves this coverage using related proteins with known structures to build a model CITATION CITATION.
+The construction of an adequate homolog can be divided into two related tasks: the placement of the amino acid side chains on a given backbone template and the detection of changes in backbone conformations that are required to accommodate the new sequence.
+For proteins that are relatively close in terms of sequence identity, the backbone-modeling problem is usually ignored, but in many cases the best homology template shows less than 50 percent homology with the target, and small compensatory changes to the backbone are likely to be required to obtain an accurate model.
+Recent advances in protein backbone modeling are based on the observation that protein structures are built from a finite repertoire of structural folds CITATION.
+Structural redundancy allowed the classification of protein folds such as in the SCOP database CITATION, the CATH database CITATION or the FSSP classification CITATION, CITATION.
+The unit of fold classification is usually a protein domain, since large proteins are generally composed of multiple domains.
+As a consequence, the classification comprises a hierarchical organisation of protein domains that embodies evolutionary and structural relationships.
+By creating more categories and thus refining the secondary structure descriptions, it has been proposed that a set of discrete backbone conformational states can be derived CITATION, CITATION.
+Different research groups demonstrated the usefulness of such fragment libraries when reconstructing protein structures by generating sets of protein decoys CITATION CITATION.
+In the latest editions of CASP, prediction approaches that assemble fragments of known structures into a candidate structure have proven to be successful CITATION CITATION.
+In fragment assembly methods, the assumption is made that local interactions create a particular conformational bias, but do not uniquely define local structure CITATION CITATION.
+Instead, environmental constraints will determine the overall compact protein conformation.
+The construction of a final model is composed of three steps: The first step involves a selection of fragment candidates based on their stability that can be measured by a simplified scoring function CITATION.
+In the second step the fragments are assembled combinatorially CITATION, CITATION.
+In the final step the obtained structure is optimized through the employment of a force field CITATION, CITATION.
+This method works well for small all class proteins, and reasonably well for /, and all class proteins.
+The fragment approach has been successfully applied in the structure prediction algorithm Rosetta of Baker and co-workers CITATION CITATION, which also proved to be successful in accurately designing new folds CITATION.
+Publicly accessible libraries however are limited; they are typically small and consider lengths between 4 and 7 residues.
+For instance, by examining fragments of 5 residues, Kolodny and Levitt CITATION created a library of 20 fragments, while Etchebest found only 16 building blocks of this length CITATION.
+The alphabet of Camproux CITATION consists of 27 structural classes and is based on motives of 4 residues.
+By employing their hypercosine method on a set of 150,000 length-7 protein fragments, Hunter and Subramaniam CITATION discovered 13 minimal centroids or representative fragment shapes found in proteins at a resolution of 0.80 Angstrom.
+As such low resolution approaches, restricted to a single fragment length and thus resulting in a limited set of building blocks, might constitute an advantage in terms of computational efficiency for ab initio structure prediction methods, it will also lead to a significant loss of information.
+Wainreb et al made it possible to cluster variable sized fragments, consisting of at least 15 residues, through the implementation of their SSGS algorithm CITATION.
+By allowing more variability in the alignment of loop locations, they created a library of 8,933 building blocks.
+An alternative approach, as implemented by DePristo et al CITATION, uses an ensemble of artificially generated small polypeptide conformations instead of sampling conformations from known protein structures.
+By constraining the chemical properties such as the idealized geometry, phi/psi angles and excluded volume they constructed ensembles of near-native conformations consistent with a surrounding fixed protein structure.
+Our strategy focuses on obtaining a comprehensive set of high-resolution structural fragments without using artificial data or restricting fragment lengths.
+We decided to partition a non-redundant set of high-resolution protein structures into fragments that consist of 4 to 14 residues, because preliminary tests indicated the lack of high structural similarity for more than 50 percent of all fragments when larger lengths were considered.
+Subsequently, clustering techniques were employed to identify structural motifs that are recurrent in different protein structures.
+Over 1,000 recurrent fragment structures or classes were found for each considered peptide length when a structural variation proportional to the length of the fragment was allowed.
+As suggested in CITATION, CITATION, it is important to determine how well the classes of the fragment library cover fold space in order to estimate its value.
+When applied to protein structures not used in the construction of the database, this coverage turned out to be 99 percent on average using a 1 Angstrom RMSD threshold.
+The latter implies that in the majority of the cases studied the so-called irregular regions or loops can also be reconstructed from recurrent building blocks.
+Through the employment of a global fit reconstruction algorithm, backbone traces were generated having an average accuracy of 0.48 Angstrom RMSD.
+Additionally, the ability to use BriX for local secondary structure prediction was examined by looking at the sequence-structure relationship within classes.
+According to previous findings CITATION, the sequence conservation within classes was rather low because of the large number of determined building blocks originating from different families.
+Nonetheless, this analysis led to a quantitative illustration of the context-dependence of polypeptide structure.
+A significant amount of small sequences tend to display strong structural ambiguity: for fragments of length 5, 14 percent of the fragment pairs with identical sequences have structural difference within the range of a helix-to-sheet jump.
+These so-called plastic sequences, i.e. sequences that display diverse structural conformations, display a strong preference for the aliphatic residues Alanine, Valine, and Leucine.
+For fragments of more than 5 residues sequence plasticity is no longer observed, showing that the need for additional context to determine secondary structure is much reduced for longer fragments.

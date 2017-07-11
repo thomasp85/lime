@@ -1,0 +1,45 @@
+### abstract ###
+this paper examines how observing other people's behavior affects risk taking in repeated decision tasks
+in study  NUMBER    NUMBER  participants performed experience-based decision tasks either alone or in pairs  with the two members being exposed to each others' choices and outcomes
+the tasks involved either equiprobable gains and losses or frequent small gains and rare large losses
+the results indicated that  in both risk types  the social exposure increased the proportion of risky selection  but its effect was stronger in the rare-loss condition
+in study  NUMBER  the rare-loss task was administered to  NUMBER  study participants  with a target individual observing the choices of a paired individual
+the results showed that observing others  rather than being observed  led to the pattern of increased risk taking
+the findings of the two studies indicate the importance of distinguishing different types of risky situations and shed light on contradictory findings in the literature
+### introduction ###
+the effect of the social environment on individual decision making is important because many naturally occurring individual behaviors are conducted in the presence of others
+this area of investigation is often studied in the field of social learning  CITATION  which is focused on situations in which individuals have the opportunity to learn from others' experience
+studies in this field tend to address situations where actions differ in their objective value but this information is not shared among all individuals
+therefore  observing others' behavior adds important information about the  right  action to follow
+hardly any empirical research in this field has focused on the interesting problem where the main difference between alternatives is their associated risk or variance
+another field of study relevant to the current context is the study of group behavior  in which groups are typically asked to reach a consensus
+studies of group behavior have addressed the question of social influence on risk taking
+the main finding in this line of research is that groups tend to hold more extreme risk attitudes than those of their individual members
+this finding is typically referred to as the group polarization or groupthink phenomenon  CITATION
+surprisingly  little research has been devoted to individual risk taking decisions in a social context in which people are able to observe aspects of each other's behavior a situation we refer to as social exposure
+the research conducted has yielded mixed results
+blank  CITATION  found that in a repeated choice task exposing three individuals to each others' outcomes facilitated risk taking  compared to choices made alone  CITATION
+conversely  blaskovitch  veach  and ginsburg  CITATION  in an experimental game of blackjack found no effect of social exposure  CITATION
+mixed findings also appear in relevant applied studies
+the presence of co-acting individuals was found to increase risky street crossing in a computerized task but only for adolescents and not for adults  CITATION  yet it facilitated more risky crossing in field studies  CITATION
+still  these mixed findings are usually ignored and this research area is often briefly discussed as an extension of the group polarization phenomenon observed in consensual decisions  CITATION
+the goal of the current study is to clarify the effect of social exposure in two types of risk taking situations involving losses
+one type comprises cases in which gains and losses are equally likely
+the other type involves asymmetry in the likelihood and magnitude of gains and losses  particularly that comprising typical small gains and rare large losses
+a robust behavioral regularity in experience-based decision making is that  when expected values are similar  people choose according to the alternative that produces the best outcomes most of the time  CITATION
+accordingly  people are more likely to select risky alternatives producing rare losses and typical gains than those producing equiprobable gains and losses  a phenomenon which is indeed widely observed  CITATION
+yet note that the same principle predicts that  when a risky alternative produces rare losses  information concerning others' behavior would increase risk taking
+in this situation  others' choice outcomes increase the salience of or the awareness to the differences between the typical favorable outcome from the risky alternative and the typically unfavorable outcome from the safe alternative
+for instance  consider a laboratory decision task consisting of a safe alternative s producing   NUMBER  in each trial  and a risky alternative r producing   NUMBER  in  NUMBER  out of  NUMBER  selections and -  NUMBER  in the remaining selections
+the task is repeated  and payoffs are contingent on the option chosen
+if an individual has decided to stop selecting r  then he she is no longer supplied with additional evidence that the obtained outcome from s   NUMBER  is worse than r's   NUMBER  most of the time
+in a social situation however  others who take risk and pick r are naturally continuing to transmit this information to the decision maker  and are thus likely to increase the level of risk taking
+results consistent with this hypothesis were reported in studies that examined the effect of obtaining feedback from unselected choice alternatives i e   foregone payoffs compared to obtaining feedback from selected ones only
+in decision tasks with a risky alternative producing rare negative outcomes and common favorable outcomes  individuals provided with foregone payoffs are continually presented with the favorable outcomes of this alternative
+indeed  foregone payoffs increase the level of risk taking in such tasks  CITATION
+however  this effect has not been observed for risky alternatives producing equally likely gains and losses  such as betting on a color in a roulette wheel  CITATION
+the latter pattern is explained by the fact that  when a risky alternative is equally likely to produce gains and losses  then its outcomes are not better most of the time  and adding foregone payoffs does not change that fact
+our main argument is that similarly to the effect of foregone payoffs  being exposed to others' choices and outcomes in a decision task would increase risk taking in tasks involving rare losses
+two controlled laboratory studies were conducted to examine this prediction
+study  NUMBER  evaluated the effect of mutual exposure to other people's choices in decision tasks involving rare or equiprobable losses
+the results showed that  while social exposure increased risk taking in both decision tasks  it had a larger effect in the rare loss condition

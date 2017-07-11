@@ -1,0 +1,49 @@
+### abstract ###
+We show how rate-distortion theory provides a mechanism for automated theory building by naturally distinguishing between regularity and randomness
+We start from the simple principle that model variables should, as much as possible, render the future and past conditionally independent
+From this, we construct an objective function for model making whose extrema embody the trade-off between a model's structural complexity and its predictive power
+The solutions correspond to a hierarchy of models that, at each level of complexity, achieve optimal predictive power at minimal cost
+In the limit of maximal prediction the resulting optimal model identifies a process's intrinsic organization by extracting the underlying causal states
+In this limit, the model's complexity is given by the statistical complexity, which is known to be minimal for achieving maximum prediction
+Examples show how theory building can profit from analyzing a process's  causal compressibility , which is reflected in the optimal models' rate-distortion curve---the process's characteristic for optimally balancing structure and noise at different levels of representation
+### introduction ###
+Progress in science is often driven by the discovery of novel patterns
+Historically, physics has relied on the creative mind of the theorist to  articulate mathematical models that capture nature's regularities in physical  principles and laws
+But the last decade has witnessed a new era in collecting  truly vast data sets
+Examples include contemporary experiments in particle  physics  CITATION  and astronomy  CITATION , but range to genomics, automated language translation  CITATION , and web social organization  CITATION
+In all these, the volume of data far exceeds  what any human can analyze directly by hand
+This presents a new challenge---automated pattern discovery and model building
+A principled understanding of model making is critical to provide theoretical guidance for developing automated procedures
+In this Letter, we show how basic  information-theoretic optimality criteria provide a method for automatically constructing a hierarchy of models that achieve different degrees of abstraction
+Importantly, we show that in appropriate limits the method recovers a process's causal organization
+Without this connection, it would be only another approach to statistical inference, with its own ad hoc assumptions about the character of natural pattern
+Our starting point is the observation that natural systems store, process, and produce information---they compute intrinsically  CITATION
+Theory building, then, faces the challenge of extracting from that information the structures underling its generation
+Any physical theory delineates mechanism from  randomness by identifying what part of an observed phenomenon is due to  the underlying process's structure and what is irrelevant
+Irrelevant parts  are considered noise and typically modeled probabilistically
+Successful  theory building therefore depends centrally on deciding what is structure and what is noise; often, an implicit distinction
+What constitutes a good theory, though
+Which information is relevant
+One can answer this question for time series prediction: Information about  the future of the time series is relevant
+Beyond forecasting, though, models are often put to the test by assessing how well they predict new data and, hence, it is of general importance that a model capture information which aids prediction
+Typically, there are many models that explain a given data set, and between two models that are equally predictive, one favors the simpler, smaller, less structurally complex model  CITATION
+However, a more complex model can achieve smaller prediction error than a less complex model
+The trade-off between model complexity and prediction error is tantamount to finding a distinction between causal structure and noise
+The trade-off between assigning a causal mechanism to the occurrence of an event or explaining the event as being merely random has a long history, but  how one implements the trade-off is still a very active topic
+Nonlinear time series analysis  CITATION , to take one example, attempts to account for long-range correlations produced by nonlinear dynamical systems---correlations not adequately modeled by assumptions such as linearity and independent, identically distributed ( iid  ) data
+Success in this endeavor requires directly addressing the notion of structure and pattern  CITATION
+Examination of the essential goals of prediction led to a principled definition of structure that captures a dynamical system's causal organization in part by discovering the underlying  causal states   CITATION
+In  computational mechanics  a process  SYMBOL  is viewed as a communication channel  CITATION : it transmits information from the  past   SYMBOL  to the  future   SYMBOL  by storing it in the present
+For the purpose of forecasting the future two different pasts, say  SYMBOL  and  SYMBOL , are equivalent if they result in the same prediction  CITATION
+In general this prediction is probabilistic, given by the conditional future distribution  SYMBOL
+The resulting equivalence relation  SYMBOL  groups all histories that give rise to the same conditional future distribution:  SYMBOL }    The resulting partition of the space  SYMBOL  of pasts defines the  process's  causal states   SYMBOL
+The causal states constitute a model that is maximally predictive by means of capturing all the information that the past of a time series contains about the future
+As a result, knowing the causal state renders past and future conditionally independent, a property we call  causal shielding , because the causal states have the Markovian property that they  shield  past and future  CITATION :  SYMBOL } where  SYMBOL
+This is related to the fact that the causal-state partition is optimally predictive
+To see this, note that Eq () implies  SYMBOL
+Furthermore, note that, by definition, for  any  partition  SYMBOL  of  SYMBOL  with states  SYMBOL , when the past is known, then the future distribution is not altered by the history-space partitioning:   SYMBOL }  This implies for the causal states that  SYMBOL  and thus  SYMBOL
+Therefore, causal shielding is equivalent to the fact  CITATION  that the causal states capture  all  of the information  SYMBOL  that is shared between past and future:  SYMBOL ,  the process's  excess entropy   SYMBOL  or  predictive information    CITATION
+The causal states are  unique and minimal sufficient statistics  for time series prediction, capturing all of a process's predictive information at maximum efficiency  CITATION
+The causal-state partition has the smallest  statistical complexity ,  SYMBOL , compared to all other  equally predictive partitions  SYMBOL
+SYMBOL  measures the minimal amount of information that must be stored in order to communicate all of the excess entropy from the past to the future
+Briefly stated, the causal states serve as the basis against which alternative models should be compared

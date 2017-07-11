@@ -1,0 +1,16 @@
+### abstract ###
+the current study looks at the role working memory plays in risky-choice framing
+eighty-six participants took the automatic ospan  a measurement of working memory  this was followed by a risky-choice framing task
+participants with high working memory capacities demonstrated well pronounced framing effects  while those with low working memory capacities did not
+this pattern suggests that  in a typical risky-choice decision task  elaborative encoding of task information by those with high working memory capacity may lead them to a more biased decision compared to those with low working memory
+### introduction ###
+throughout our lives  we are faced with many small and large decisions that exist within a variety of contexts
+many of these choices involve some aspect of risk  like choosing whether to invest in certain stocks  deciding on medical treatment options  or even deciding whether to risk human lives
+the most studied examples of risk and decision making involve risky choices presented within a positive or negative framework  or risky-choice framing effects
+risky-choice framing effects are derived from prospect theory predictions  CITATION  and have become one of the most studied examples of rational decision making
+according to prospect theory the presentation of an outcome as either a loss or gain affects the amount of risk a person is willing to accept
+this effect is attributed to differences in perceived subjective value and is captured by the value function  which is concave for gains  yielding risk-aversive preferences  and convex for losses  yielding risk-seeking preferences
+in the most widely tested example  tversky and kahneman  CITATION  presented participants with an asian disease problem wherein  NUMBER  lives were at stake
+participants were then presented with a set of alternatives  one risk-free and the other risky
+the alternatives were framed either positively or negatively  in terms of people that would be  saved  or  die 
+their findings revealed that  despite identical expected values  most participants preferred the risk-free alternative when the problem was framed positively and the risky alternative when framed negatively

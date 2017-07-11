@@ -1,0 +1,57 @@
+### abstract ###
+As a key factor in endemic and epidemic dynamics, the geographical distribution of viruses has been frequently interpreted in the light of their genetic histories.
+Unfortunately, inference of historical dispersal or migration patterns of viruses has mainly been restricted to model-free heuristic approaches that provide little insight into the temporal setting of the spatial dynamics.
+The introduction of probabilistic models of evolution, however, offers unique opportunities to engage in this statistical endeavor.
+Here we introduce a Bayesian framework for inference, visualization and hypothesis testing of phylogeographic history.
+By implementing character mapping in a Bayesian software that samples time-scaled phylogenies, we enable the reconstruction of timed viral dispersal patterns while accommodating phylogenetic uncertainty.
+Standard Markov model inference is extended with a stochastic search variable selection procedure that identifies the parsimonious descriptions of the diffusion process.
+In addition, we propose priors that can incorporate geographical sampling distributions or characterize alternative hypotheses about the spatial dynamics.
+To visualize the spatial and temporal information, we summarize inferences using virtual globe software.
+We describe how Bayesian phylogeography compares with previous parsimony analysis in the investigation of the influenza A H5N1 origin and H5N1 epidemiological linkage among sampling localities.
+Analysis of rabies in West African dog populations reveals how virus diffusion may enable endemic maintenance through continuous epidemic cycles.
+From these analyses, we conclude that our phylogeographic framework will make an important asset in molecular epidemiology that can be easily generalized to infer biogeogeography from genetic data for many organisms.
+### introduction ###
+Phylogenetic inference from molecular sequences is becoming an increasingly popular tool to trace the patterns of pathogen dispersal.
+The time-scale of epidemic spread usually provides ample time for rapidly evolving viruses to accumulate informative mutations in their genomes CITATION.
+As a consequence, spatial diffusion among other processes can leave a measurable footprint in sampled gene sequences from these viruses CITATION.
+Reconstructing both the evolutionary history and spatial process from these sequences provides fundamental understanding of the evolutionary dynamics underlying epidemics, e.g. CITATION, CITATION.
+It is also hoped that these insights can be translated to effective intervention and prevention strategies CITATION and elucidating the key factors in viral transmission and gene flow over larger distances is central in formulating such strategies, e.g. CITATION .
+Phylogeographic analyses are a common approach in molecular ecology, connecting historical processes in evolution with spatial distributions that traditionally scale over millions of years CITATION.
+Many popular phylogeographic approaches CITATION, CITATION can be remiss in ignoring the interaction between evolutionary processes and spatial-temporal domains.
+One first reconstructs a phylogeny omitting spatial information and then conditions the phylogeographic inferences on this reconstruction CITATION, CITATION, exploiting non-parametric tests to evaluate the significance of this conditional structure, e.g. CITATION, CITATION, CITATION.
+To draw conclusions about the epidemic origin or epidemiological linkage between locations, however, we require a reconstruction of the dispersal patterns and process throughout the evolutionary history.
+Considering locations as discrete states, this boils down to the well-known problem of ancestral state inference CITATION.
+Parsimony is a popular heuristic approach to map characters onto a single phylogenetic tree CITATION.
+Unfortunately, parsimony reconstructions ignore important sources of model uncertainty, including both uncertainty in the dispersal process as well as in the unknown phylogeny CITATION.
+In addition, minimizing the number of state exchanges over a phylogeny is misleading when rates of evolution are rapid and when the state exchange probabilities are unequal CITATION .
+Probabilistic methods draw on an explicit model of state evolution, permitting the ability to glimpse the complete state history over the entire phylogeny and conveniently draw statistical inferences CITATION CITATION.
+These analyses typically employ continuous-time Markov chain models for discrete state evolution analogous to common nucleotide, codon or amino acid substitution models CITATION.
+In contrast to parsimony, maximum likelihood-based reconstructions incorporate branch length differences in calculating the conditional probability of each ancestral state given the observed states at the phylogeny tips CITATION.
+Bayesian reconstruction methods enable further generalization of this conditional probability analysis by removing the necessity to fix the Markov model parameters to obtain ancestral states and the necessity to specify a fixed tree topology with known branch lengths.
+Bayesian inference integrates conclusions over all possible parameter values but to achieve this, however, requires prior probability distributions for all aspects of the model.
+While probabilistic methods have been previously presented in a bio- or phylogeographic context, in particular Bayesian methods that integrate over phylogenetic uncertainty and Markov model parameter uncertainty CITATION, viral phylogeography studies have rarely made use of these developments.
+This may be a consequence of low awareness of existing software implementations for arbitrary continuous-time Markov chain models CITATION, CITATION or a lack of appreciation for the uncertainty intrinsic in these reconstructions and the ease with which one can formally access epidemiological linkage through probabilistic approaches.
+A recent phylogeographic study of influenza A H5N1 introduces a heuristic non-parametric test to evaluate whether parsimony-inferred migration events between two particular locations occur at significantly high frequency CITATION.
+Null distributions for these frequencies arise from randomizing tip localities after false discovery rate correction to control for simultaneous testing issues.
+Although this procedure addresses concerns about statistical inference on sparse frequency matrices, the multiple comparison correction still results in a conservative estimate of significant migration events.
+Fully probabilistic approaches may further ease statistical inference, yet similar tests remain lacking for likelihood-based phylogeographic models.
+Advances in evolutionary inference methodology have frequently demonstrated how novel approaches can be appended to a sequence of analyses, in many cases starting from alignment to parameter estimation conditional on tree reconstructions.
+For example, demographic inference has involved genealogy reconstruction, estimating a time scale for the evolutionary history, and coalescent theory to quantify the demographic impact on this tree shape CITATION.
+It is well acknowledged that such sequential procedures ignore important sources of uncertainty because they generally purge error associated with each intermediate estimate.
+With the advent of novel computational techniques like Markov chain Monte Carlo sampling, it has become feasible to integrate many of the models involved and simultaneously estimate parameters of interest.
+Demographic inference is a well-known example of genealogy-based population genetics that benefited from these advances CITATION, CITATION.
+Bayesian MCMC methods also enable ancestral state reconstruction while simultaneously accounting for both phylogenetic and mapping uncertainty.
+Although this adds much needed credibility to ancestral reconstruction CITATION, phylogeographic analysis would benefit even more from fully integrating spatial, temporal and demographic inference.
+Here, we implement ancestral reconstruction of discrete states in a Bayesian statistical framework for evolutionary hypothesis testing that is geared towards rooted, time-measured phylogenies.
+This allows character mapping in natural time scales, calibrated under a strict or relaxed molecular clock, in combination with several models of population size change.
+We use this full probabilistic approach to study viral phylogeography and extend the Bayesian implementation to a mixture model in which exchange rates in the Markov model are allowed to be zero with some probability.
+This Bayesian stochastic search variable selection enables us to construct a Bayes factor test that identifies the most parsimonious description of the phylogeographic diffusion process.
+We also demonstrate how the geographical distribution of the sampling locations can be incorporated as prior specifications.
+Through feature-rich visual summaries of the space-time process, we demonstrate how this approach can offer insights into the spatial epidemic history of Avian influenza A-H5N1 and rabies viruses in Africa.
+The highly pathogenic avian influenza A-H5N1 viruses have been present for over a decade in Southern China and spread in multiple waves to different types of poultry in countries across Asia, Africa and Europe CITATION.
+As a result, highly pathogenic A-H5N1 is now a panzootic disease and represents a continuous threat for human spill-over.
+Strong surveillance has been in place since these viruses caused extensive outbreaks, but the source and early dissemination pathways have remained uncertain.
+Because parsimony analysis has attempted to shed light on the latter CITATION, A-H5N1 provides an ideal example for comparison with Bayesian phylogeographic inference.
+Rabies is endemic in Asia and Africa, where the primary reservoir and vector for rabies virus is the domestic dog.
+Phylogenetic analysis has revealed several genotypes of lyssaviruses ; genotype 1 has been found responsible for classical rabies, a fatal disease in terrestrial mammals throughout the world CITATION, CITATION.
+Here, we explore the phylogeographic history of RABV in domestic dogs in West Central Africa, using recently obtained sequence data, and evaluate the role of viral dispersal in maintaining RABV epidemic cycles.

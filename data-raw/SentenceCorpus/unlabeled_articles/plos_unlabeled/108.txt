@@ -1,0 +1,55 @@
+### abstract ###
+Angiogenesis plays a crucial role in a variety of physiological and pathological conditions including cancer, cardiovascular disease, and wound healing.
+Vascular endothelial growth factor is a critical regulator of angiogenesis.
+Multiple VEGF receptors are expressed on endothelial cells, including signaling receptor tyrosine kinases and the nonsignaling co-receptor Neuropilin-1.
+Neuropilin-1 binds only the isoform of VEGF responsible for pathological angiogenesis, and is thus a potential target for inhibiting VEGF signaling.
+Using the first molecularly detailed computational model of VEGF and its receptors, we have shown previously that the VEGFR Neuropilin interactions explain the observed differential effects of VEGF isoforms on VEGF signaling in vitro, and demonstrated potent VEGF inhibition by an antibody to Neuropilin-1 that does not block ligand binding but blocks subsequent receptor coupling.
+In the present study, we extend that computational model to simulation of in vivo VEGF transport and binding, and predict the in vivo efficacy of several Neuropilin-targeted therapies in inhibiting VEGF signaling: blocking Neuropilin-1 expression; blocking VEGF binding to Neuropilin-1; blocking Neuropilin VEGFR coupling.
+The model predicts that blockade of Neuropilin VEGFR coupling is significantly more effective than other approaches in decreasing VEGF VEGFR2 signaling.
+In addition, tumor types with different receptor expression levels respond differently to each of these treatments.
+In designing human therapeutics, the mechanism of attacking the target plays a significant role in the outcome: of the strategies tested here, drugs with similar properties to the Neuropilin-1 antibody are predicted to be most effective.
+The tumor type and the microenvironment of the target tissue are also significant in determining therapeutic efficacy of each of the treatments studied.
+### introduction ###
+Angiogenesis, the growth of new blood microvessels from preexisting microvasculature, is a critical physiological process for the growth of developing organs and during wound healing, ovulation, and pregnancy.
+Coronary or peripheral ischemia may be relieved by inducing angiogenesis CITATION, CITATION, while diseases of hypervascularization, such as cancer or diabetic retinopathy, are targets of anti-angiogenic drugs CITATION, CITATION.
+Neuronal expression of angiogenic receptors CITATION, CITATION suggests that this work may also be relevant to the development nervous system.
+Our goal is to propose effective targeted therapies using anatomically accurate and molecularly detailed computational models of the growth factors and receptors involved in angiogenesis.
+In this study, we predict that three methods of targeting the same molecule result in distinct therapeutic outcomes, and that one of these methods is more effective than the others.
+Thus, identification of a therapeutic target must be followed by rational design of the targeting molecule to obtain characteristics that maximize the therapeutic potential.
+In addition, the microenvironment in which the drug is to act for example, the expression level of receptors in the tissue is a critical factor in the impact of the therapy.
+Vascular endothelial growth factor is a family of secreted glycoproteins and critical regulators of angiogenesis CITATION, CITATION.
+In vitro, VEGF increases endothelial cell survival, proliferation, and migration.
+In vivo, it increases vascular permeability, activates endothelial cells, and acts as a chemoattractant for nascent vessel sprouts.
+Multiple splice isoforms of VEGF exist; the two most abundant in the human are VEGF 121 and VEGF 165.
+Both isoforms bind to the VEGF receptor tyrosine kinases to induce signals.
+VEGF 165 also interacts with nonsignaling Neuropilin co-receptors and with proteoglycans of the extracellular matrix CITATION, CITATION.
+The binding sites on VEGF 165 for VEGFR2 and Neuropilin-1 are nonoverlapping, so VEGF 165 may bind both simultaneously CITATION.
+There are thus two parallel pathways for VEGF 165 to bind its signaling receptor: binding directly to VEGFR2; and binding to Neuropilin-1, which presents VEGF to VEGFR2.
+VEGF 121 can only form VEGFR2 complexes directly CITATION.
+The VEGF 165 Neuropilin interaction is thus of particular value as a therapeutic target because VEGF 165 is the isoform of VEGF that has been identified as inducing pathological angiogenesis CITATION, CITATION : aberrant angiogenic signaling may be targeted while allowing the normal levels of physiological VEGF signaling to continue.
+In previous work CITATION, CITATION, we developed computational models of VEGF interactions with endothelial cell receptors in vitro, and incorporated previously published experimental data to estimate the kinetic rate of VEGFR2-Neuropilin coupling by VEGF 165.
+We showed that VEGFR2 Neuropilin coupling is sufficient to account for the observed differential effects of VEGF isoforms on multiple cell types and that our model reproduces the distinct VEGF binding and signaling effects on each of these cell types CITATION, CITATION CITATION.
+In addition, we used the model to distinguish between alternate hypotheses of molecular mechanisms of action and demonstrated that the Neuropilin-1 antibody under investigation acts by blocking VEGFR Neuropilin coupling, not by blocking VEGF Neuropilin binding.
+Here, we extend that validated model of the molecular interactions of the VEGF family and its receptors to predict the in vivo behavior of the system by including the ECM and basement membranes, as well as multiple cell types and geometrical parameters characteristic of the tissue.
+Three methods for targeting the VEGF 165 Neuropilin interaction are modeled here.
+First, a blockade of Neuropilin-1 expression may be induced by use of siRNA or other methods to prevent the synthesis of the protein in the cells.
+Second, a protein that occupies the VEGF binding site on Neuropilin-1 can compete with VEGF 165 for binding to that receptor.
+An example is a fragment of the placental growth factor isoform PlGF 2.
+Full-length PlGF 2 binds Neuropilin-1 and VEGFR1 CITATION.
+The fragment, denoted PlGF 2 here, contains only the Neuropilin-1 binding site and does not bind to VEGFR1.
+This protein has been used to block VEGF binding to Neuropilin in vitro CITATION, CITATION.
+An alternative would be a Neuropilin-binding fragment of VEGF 165 itself CITATION, CITATION.
+Third, we may block the interaction between Neuropilins and the VEGFRs, preventing the presentation of VEGF 165 to the signaling receptor, but permitting Neuropilin to sequester that isoform.
+This may be done using a Neuropilin-1 antibody CITATION CITATION that we have previously characterized as permitting VEGF binding to Neuropilin-1, but blocking the subsequent VEGFR coupling CITATION.
+Each of these three strategies has been demonstrated to inhibit VEGF signaling in in vitro assays CITATION, CITATION, CITATION, CITATION ; here we predict their in vivo efficacy.
+This is the first computational model to our knowledge to include the interactions of the VEGF family and their receptors explicitly and in biophysical detail.
+The model includes the kinetics of all ligand receptor interactions, which allows us to examine both short-term and long-term behavior of the system.
+All the parameters for the model have been obtained from previously published experimental data.
+Analysis of characteristic parameters shows that the kinetics of VEGF interactions are slower than the diffusion process, so diffusion is assumed to be fast, and we construct a compartmental model with parenchymal cells secreting VEGF into the interstitial space and VEGF binding to receptors on the endothelial cell surface .
+The geometrical parameters of the tissue under investigation here are also incorporated into the model: interstitial space, tumor cell volume and surface area, microvessel volume and surface area.
+Changes to these parameters would result in changes to the kinetic parameters and concentrations in the model.
+The results presented here are therefore tissue-specific, but the model may be applied to other tissues.
+VEGFR2 is the primary signaling receptor for VEGF, and we first analyze the results of the model for a tissue in which the endothelial cells express VEGFR2 and Neuropilin-1, but not VEGFR1; the effect of VEGFR1 is considered later.
+Initially, the system is in a steady state, as VEGF is secreted by the parenchymal cells and internalized by the endothelial cells, resulting in a flux through the interstitial space and the ECM.
+One of three treatments is initiated at time zero and the time course of VEGF binding followed for 48 hours.
+VEGF VEGFR2 and VEGF VEGFR1 binding are taken as a surrogate for VEGF signaling.

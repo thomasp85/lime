@@ -1,0 +1,42 @@
+### abstract ###
+people prefer their own initials to other letters  influencing preferences in many domains
+the  name letter effect   CITATION  may not apply to negatively valenced targets if people are motivated to downplay or distance themselves from negative targets associated with the self  as previous research has shown  CITATION
+in the current research we examine the relationship between same initial preferences and negatively valenced stimuli
+specifically  we examined donations to disaster relief after seven major hurricanes to test the influence of the name letter effect with negatively valenced targets
+individuals who shared an initial with the hurricane name were overrepresented among hurricane relief donors relative to the baseline distribution of initials in the donor population
+this finding suggests that people may seek to ameliorate the negative effects of a disaster when there are shared characteristics between the disaster and the self
+### introduction ###
+katrina petrillo raised   NUMBER  for hurricane katrina victims by selling lemonade  CITATION
+when asked why  she said  i realized my name is going to go down in history as one of the biggest storms ever   CITATION
+the current research explores whether katrina petrillo's response to the association between hurricane katrina and her name might be more likely than what would be expected by chance
+specifically  we predict that donors who share an initial with a disaster will be more likely to donate to disaster relief efforts for that particular disaster than would individuals who do not share an initial with a disaster
+the prediction that individuals who share an initial with a disaster will be more likely to donate to fundraising efforts targeted at that disaster is consistent with research that has demonstrated that people prefer the initial of their first name over other letters
+this preference  called the name letter effect  CITATION   is reflected in both subjective ratings of initials  CITATION  and in choices of same-initial targets over comparable targets with different initials  CITATION
+shared initials have been shown to influence choices in numerous domains including product preferences  donations to political candidates  spouses and occupations  CITATION
+for example  one study found that people with names beginning with the letter  d  are overrepresented in the profession of dentists and people with names beginning with the letter  l  are overrepresented in the population of lawyers  CITATION
+similarly  people named  george  are more likely to live in georgia than expected by chance and people named  louise  are more likely to live in louisiana  CITATION
+together  these findings indicate that similarities affect judgment and choice  presumably by creating a  unit-relation   CITATION  that facilitates the assimilation of positive feelings of the self into the representation of the target  CITATION
+psychologists have theoretically assumed that people should avoid associations with negative stimuli  CITATION
+this claim is based on several studies that have shown that people  cut off reflected failure   CITATION  of close others in order to protect the ego
+for example  people are less likely to wear clothing displaying the logos of sports teams that have recently lost a game as compared to teams that have recently won a game  CITATION
+similarly  snyder and colleagues  CITATION  randomly assigned groups of college students to receive positive or negative false feedback on a group task
+they found that compared to a no-feedback control  the successful group demonstrated more affiliative tendencies  while the failure group demonstrated less afilliative tendencies
+under other circumstances  individuals may downplay negative features of a target with which they share a unit relationship
+finch and cialdini  CITATION  found that subjects who believed that they shared a birthday with rasputin rated him less negatively after reading a description of his misdeeds than those who did not
+in a recent study  nelson and simmons  CITATION  extended this work by demonstrating that pairing an initial with a negative outcome undermines task performance
+specifically  they found that people whose first names begin with c and d initials have lower gpas than people with other initials and baseball players with k initials the letter used to represent strikes in baseball are more likely to strike out than players with other initials  presumably because people tend to downplay the severity of the negative outcome  much as they downplay rasputin's deeds when they think he shares their birthday
+in other words  people with first names that begin with c and d may implicitly downplay the severity of getting these lower grades  and consequently dampen efforts to perform well
+extending research on implicit egotism and negative stimuli  we contend that people may not always minimize their associations with negative stimuli  CITATION  or downplay their negativity  CITATION
+clearly  katrina petrillo understood the negative impact of hurricane katrina
+she claimed that sharing her name with a severe storm motivated her to help its victims
+if she minimized her association with the storm  it is unlikely that she would attend to the common initial and consequently would feel no more motivated to donate money than anyone else
+similarly  if she downplayed the severity of the storm  it is unlikely that she would mention that it is the  worst storm in history  or invest so much time raising money
+in this case  it is again unlikely that she would be so compelled to donate given previous research suggesting that people are less likely to donate to less severe disasters  CITATION
+katrina petrillo's efforts to raise money for the victims of hurricane katrina is contrary to both of the processes outline above  as well as to self-enhancement literature in general
+CITATION  however  there are circumstances when people may not avoid their association with negative targets  and may even make reparations for the actions of others with whom they share an association
+for example  people will endorse compensatory behavior to right the wrongs committed by their ingroup against an outgroup  CITATION  even if this compensatory behavior comes at a personal cost to the self
+doosje and colleagues  CITATION  found that this phenomena was mediated by feelings of collective guilt  suggesting that responsibility  like positive affect can transfer between members of a unit-relation
+if group membership increases the likelihood of compensatory behavior for the actions of other group members  then perhaps other kinds of unit-relations can do the same
+taken together  previous literatures on self-target associations allow us to speculate that katrina petrillo's sentiment towards the victims of hurricane katrina may be shared by others
+shared-initials are capable of producing a unit relation and there is at least some evidence that a unit-relation with a target that inflicts harm can lead people to help their victims
+this led us to expect that people would  i be more likely to donate money to same-initial disasters  and possibly ii donate more money to same initial disasters

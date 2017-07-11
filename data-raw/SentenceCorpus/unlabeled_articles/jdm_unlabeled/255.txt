@@ -1,0 +1,61 @@
+### abstract ###
+research has shown that people perceive themselves as less biased than others  and as better than average in many favorable characteristics
+we suggest that these types of biased perceptions regarding intentions and behavior of others may directly affect people's decisions
+in the current research we focus on possible influences in the context of helping behavior
+in four experiments we found that  people believe that others  compared to themselves  are less inclined to help and cooperate  are less aware of the number of bystanders and more influenced by the  proportion dominance  bias and by the  identifiable victim effect
+  we demonstrate that these perceptions are naive and unrealistic by showing that decisions from both self and others' perspectives are equally biased
+finally  we show how the perspective from which a decision is made self vs others may affect private as well as public decisions in ways that might not be in the best interest of the decision maker and the public
+### introduction ###
+research on judgment and decision making in recent decades shows that  because of cognitive and motivational biases  individuals consistently rate themselves above average across a variety of domains  such as positive traits  CITATION  and behavior  CITATION
+this bias is known as the  better than average  bta effect
+for example  kruger and dunning  CITATION  found that participants' self-rating of their ability to judge humor and solve logic and grammar problems was higher than average
+they show that this tendency is stronger among those who perform more poorly
+the bta belief has been described as illusory because  on the group level  the majority of people cannot be better than average  assuming a normal distribution of the examined trait  CITATION
+in these studies  people typically compare their characteristics  behaviors or performance with the norm  standard  or the average standing of their reference group
+the bta bias is greater when the comparable target is abstract such as the average student and declines when the target is individuated  CITATION
+the bta bias is also salient in people's evaluations of judgments  people believe their own judgments to be less susceptible to biases than the judgments of others  CITATION
+they tend to view their own decisions as relying on objective cues in the environment  while other's judgments are influenced more by subjective and self-serving features  CITATION
+the  naive realism  idea  CITATION  suggests that people assume that their own views  ideas and perceptions reflect the  truth  or the  real world   and  when others do not share their views  they tend to conclude that the others' views were subject to bias and misperceptions
+although the bta bias may serve the individual by enhancing self esteem  CITATION   it may have a negative effect on decisions when the decision depends on belief about others' behavior
+for example  believing mistakenly that other people won't donate to a certain cause might increase my willingness to donate even when i can't afford it
+on the other hand  thinking that other people will help and relying on their expected help may inhibit intervention  with the result that no help will be provided
+the perceptions of what other people view as the best way to act may influence decisions  especially when these involve public issues
+the public  as well as public decision-makers  are prone to the same biases
+in contrast to private decisions  decisions regarding public policy often taken by politicians and civil servants affect thousands of individuals
+the cost of bad decisions  because of biased perception of citizens' behavior  attitudes or opinions might be very high
+moreover  as public decision-makers and politicians depend strongly on public support  one of their main concerns when making a decision is public opinion and how their decision will be judged by most people
+biased perceptions of public opinion  preferences and choices may thus negatively affect the behavior of individuals and of public decision-makers
+one domain in which the perceptions of others' behavior and judgments may have a critical influence on one's own decisions is the decision to act or intervene in situations when help is needed
+individuals are often exposed to situations in which their personal help is needed directly or indirectly
+policy makers often consider policies that require the cooperation or help of the public
+the self-other comparison has not been studied in this domain  although it is most likely that people's judgments and decisions concerning helping behavior are affected by their perceptions of others
+literature on helping-behavior and bystander intervention emphasizes that other people's behavior in a given situation has considerable influence on one's own decision whether or not to intervene
+not only are people concerned about the opinion of others  CITATION   other people's behavior may also serve as information regarding the appropriate  or right  thing to do  CITATION
+for example  when a person monitors the reactions of others in a situation where help is needed  s he may conclude  from the others' lack of initiative  that everyone believes that intervention is not critical and thus not needed
+the person adopts what s he thinks is the norm of behavior
+perceptions regarding others' opinions and behaviors can be accurate or biased
+individuals may misperceive their social groups or larger social environments in a number of ways that influence their behavior
+ pluralistic ignorance  is one of the most common misperceptions
+it occurs when a majority of individuals falsely assumes that most of their peers behave or think differently from them  when  in fact  their attitudes and or behavior are similar  CITATION
+pluralistic ignorance was suggested as one explanation of the  bystander effect   individuals are less likely to offer help when other people are present than when alone  CITATION
+pluralistic ignorance may thus cause lack of intervention in a case when help is needed  demonstrating how other people's opinions or behavior may have a direct influence on the decision to act or not to act
+another explanation for the bystander effect is known as  diffusion of responsibility
+  by this account  lack of intervention is at least partially caused by the belief that some people will act and thus one's own action is less necessary  CITATION
+other people's behavior may have a greater influence on one's own decisions in situations that are more ambiguous or unfamiliar  CITATION
+recent research indicates that the idea of how other people would act may influence decisions even without the physical presence of others
+blair  thompson   and  wuensch  CITATION  demonstrated that the diffusion-of-responsibility phenomenon extends beyond face-to-face environments  the virtual presence of many others significantly reduced e-mail responsiveness to a request for help
+both explanations for the bystander effect are based on the assumption that people have specific beliefs about the perceptions of others  though there has been no direct effort to test these assumptions
+in the present experiment  we directly test the self-perceptions of participants as well as their perceptions of others in the context of helping behavior
+most people perceive helping others as a desirable behavior and altruism as a superior characteristic
+thus  according to the bta effect  people are expected to perceive themselves as more willing to help than the average person
+in the present research we will examine the bta effect also concerning biases  in the context of helping behavior and intervention
+two biases have recently been studied in that context  the proportion dominance pd bias and the identifiable victim idv effect
+do people perceive themselves as less susceptible than others to those two
+with regard to proportion dominance  studies have shown that people prefer a risk-reducing intervention policy that maximizes relative life-saving saving a larger proportion of the population at the expense of absolute life-saving saving more lives  CITATION
+those studies demonstrate that people tend to choose options that maximize relative life saving even when presented with a comparison of absolute and relative savings  CITATION
+this preference is incompatible with a normative model according to which the value of a single life should be the same regardless of the size of the reference group  CITATION
+with regard to the identified victim effect  people are more willing to help identified victims victims about whom they have some  even if only minimal  information than unidentified ones  CITATION
+in situations when the decision to help involves biases  we expect decisions from the perspective of the self to be as biased as the decisions for the average other as people are not aware of the bias
+however  when confronted with a bias  we assume that the bta mechanism will come into play  resulting in people believing that others are more biased than they themselves are
+the naive belief about others  as opposed to oneself may cause decision-makers to choose an alternative of action which is not to the best of their interest when the behavior  perceptions or attitudes of others is a relevant consideration as often happens in decisions concerning public policy
+thus  in sum  we hypothesize that people perceive themselves as more willing to help than the average person and  at the same time  perceive others to be more prone to biases in the context of helping behavior than they are

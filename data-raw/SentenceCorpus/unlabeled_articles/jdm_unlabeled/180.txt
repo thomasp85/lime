@@ -1,0 +1,31 @@
+### abstract ###
+mathematics is a fundamental tool of research
+although potentially applicable in every discipline  the amount of training in mathematics that students typically receive varies greatly between different disciplines
+in those disciplines where most researchers do not master mathematics  the use of mathematics may be held in too much awe
+to demonstrate this i conducted an online experiment with  NUMBER  participants  all of which had experience of reading research reports and a postgraduate degree in any subject
+participants were presented with the abstracts from two published papers one in evolutionary anthropology and one in sociology
+based on these abstracts  participants were asked to judge the quality of the research
+either one or the other of the two abstracts was manipulated through the inclusion of an extra sentence taken from a completely unrelated paper and presenting an equation that made no sense in the context
+the abstract that included the meaningless mathematics tended to be judged of higher quality
+however  this  nonsense math effect  was not found among participants with degrees in mathematics  science  technology or medicine
+### introduction ###
+the background to this paper is my own subjective experience of a mid-career move from pure mathematics to interdisciplinary work in social science and cultural studies
+in areas like sociology or evolutionary anthropology i found mathematics often to be used in ways that from my viewpoint were illegitimate  such as to make a point that would better be made with only simple logic  or to uncritically take properties of a mathematical model to be properties of the real world  or to include mathematics to make a paper look more impressive
+in those areas in the social sciences and humanities in which it is broadly recognized that mathematics is a valuable tool  mathematical skills may still be generally too low for optimal use of this tool
+there may be a lack of understanding of what mathematics can and should be used for and what it cannot and should not be used for
+if mathematics is held in awe in an unhealthy way  its use is not subjected to sufficient levels of critical thinking
+within the field of pure mathematics  academic writing is expected to be completely transparent to anyone knowledgeable about the mathematical concepts involved
+a typical reviewer of a pure mathematics paper will not tolerate a sentence or paragraph for which the meaning is obscure
+the same cannot be said about some other academic disciplines
+the mathematical physicist alan sokal famously composed a paper that was deliberately obscure and nonsensical  he submitted it to the journal social text where the editors accepted it for publication  CITATION
+this so called  sokal hoax  demonstrated that there are experienced readers of research publications who will not necessarily react adversely to the fact that a text cannot really be made sense of
+indeed  as sokal and bricmont  CITATION  documented in a book following up on the hoax  obscurity is a hallmark of certain academic traditions associated with terms like postmodernism and relativism
+however  these science-bashing genres were not responsible for the abuse of mathematics i referred to above  on the contrary  i found mathematics to be poorly used in fields where the tools of science are held in uncritically high regard
+the acceptance and admiration of writing that actually does not make much sense may be found in both camps
+of course  my personal impressions may be biased
+perhaps there is no widespread acceptance and admiration of obscure or nonsensical use of mathematics in the social sciences and humanities  or  if there is  perhaps it is just as widespread in areas like technology and the natural sciences where everyone learns how to use mathematics
+in order to obtain some hard evidence  i conducted an experiment
+in brief  i recruited participants with research experience from varying disciplines
+participants were presented with two abstracts from published papers in good journals and asked to judge the quality of the research presented in the abstracts
+one of the two abstracts  randomly chosen  was manipulated by the addition of an extra sentence
+this sentence was taken from a completely unrelated paper and presented an equation that made no sense in the context

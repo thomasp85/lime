@@ -1,0 +1,36 @@
+### abstract ###
+MISC similar to research on risky choice, the traditional analysis of intertemporal choice takes the view that an individual behaves so as to maximize the discounted sum of all future utilities
+MISC the well-known allais paradox contradicts the fundamental postulates of maximizing the expected value or utility of a risky option
+AIMX we describe a violation of the law of diminishing marginal utility as well as an intertemporal version of the allais paradox
+### introduction ###
+MISC in the field of intertemporal choice, the discounted-utility du theory proposed by paul samuelson in 1937 was presented not only as a valid normative standard but also as a descriptive theory of actual intertemporal choice behavior  CITATION
+MISC in its general form, the du theory proposes that the value of an option, x; t, is the product of its present utility, ux, and an exponential temporal discounting function, ft, where t is the time at which x is acquired
+MISC the overall value of a mixed option, a = {x, t, x, t, }, denoted va, is simply the sum of these products
+MISC that is, va = sigma  ux ft
+MISC an option a will be preferred to an option b if and only if va  greater than  vb
+MISC however, a large body of empirical evidence demonstrates that people systematically violate this theory
+MISC this includes the common difference effect, the magnitude effect, the gain-loss asymmetry, the delay-speedup asymmetry, and so on  CITATION
+MISC this situation has led researchers to consider extensions and modifications of the du theory to reconcile it with the experimental data
+MISC the most prominent idea to account for these anomalies is the hyperbolic discounting model  CITATION
+MISC this model suggests that the discount rate is not dynamically consistent but that the rate is higher between the present and near future and lower between the near and far distant future
+MISC numerous theories have been developed by transforming the discount function to other forms, from one-parameter hyperbolic discounting  CITATION  to generalized hyperbolic discounting  CITATION , to proportional discounting  CITATION , and to quasi-hyperbolic discounting  CITATION
+MISC however, these models focus on intertemporal choice between pairs of single-dated outcomes represented as pure gains or losses
+MISC when these models are applied to intertemporal choice between pairs of multiple-dated outcomes in mixed contexts, there is general agreement on the additive assumption and the independence assumption
+MISC with an apt transformation of the discounting rate, the additive assumption means that preferences for outcome sequences are based on a simple aggregation of their individual components within intertemporal choice  CITATION
+MISC the independence assumption means that the value or utility of an outcome in one period is independent of outcomes in other periods  CITATION
+MISC because risk and delay might be psychologically equivalent, or at least analogous, and because similar psychological processes might underlie risk and intertemporal choice  CITATION , theoretical development in intertemporal choice has progressed steadily along a similar route as that of risky choice  CITATION
+MISC both lines of research have spawned a large number of variant models
+MISC although the functional forms differ, most theories assume a maximization principle; that is, people calculate the mathematical expectation of each outcome and add them together before choosing the option that maximizes overall value or utility
+MISC a minor difference is that the existing models of intertemporal choice are relatively underdeveloped and are less flexible in dealing with empirical challenges
+MISC for example, research on risky decision making does not treat risky choice as limited to pure gains or pure losses but has been extended to include mixed outcomes involving both gains and losses
+MISC examples include the sign-dependent utility model  CITATION , the rank- and sign-dependent utility model  CITATION , and the transfer of attention exchange model  CITATION
+MISC the well-known allais paradox  CITATION  contradicts the fundamental postulates of maximizing the expected utility of a risky option
+MISC the paradox presents a violation of the cancellation axiom, which asserts that, if two options have a common consequence under a particular event, the preference order of the options should be independent of the value of that consequence  CITATION
+MISC since then, many new descriptive theories of risky choice have abandoned the maximization assumption  CITATION
+MISC most models of intertemporal choice have not yet abandoned the additive assumption and the independence assumption
+MISC these two assumptions would lead to the cancellation axiom, which indicates that a preference between two sequences with elements in common does not depend on the nature of the common elements
+OWNX table 1 illustrates an example of the multiple-dated outcomes problem, which would be used to test the cancellation axiom
+OWNX in problem i, the additive models predict that adding a common element x at time 2 to both option a and option b would not change the preference orderings
+OWNX the violation of cancellation would be observed if the preference orderings were different between problem i and problem i
+OWNX however, if allais's proposition applies to intertemporal choice, we will eventually encounter an intertemporal version of the allais paradox
+OWNX we first illustrate our point with a paradox that is an intertemporal-type violation of the cancellation axiom

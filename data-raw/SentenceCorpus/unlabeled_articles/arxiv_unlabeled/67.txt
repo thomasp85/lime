@@ -1,0 +1,28 @@
+### abstract ###
+In the process of training Support Vector Machines~(SVMs) by decomposition methods, working set selection is an important technique, and some exciting schemes were employed into this field
+To improve working set selection, we propose a new model for working set selection in sequential minimal optimization~(SMO) decomposition methods
+In this model, it selects  SYMBOL  as % SYMBOL  as working set without reselection
+Some properties are given by simple proof, and experiments demonstrate that the proposed method is in general faster than existing methods
+### introduction ###
+In the past few years, there has been huge of interest in Support Vector Machines~(SVMs)~ CITATION  because they have excellent generalization performance on a wide range of problems
+The key work in training SVMs is to solve the follow quadratic optimization problem
+where  SYMBOL  is the vector of all ones,  SYMBOL  is the upper bound of all variables, and  SYMBOL ,  SYMBOL  is the kernel function
+Notable effects have been taken into training SVMs~ CITATION
+Unlike most optimization methods which update the whole vector  SYMBOL  in each iteration, the decomposition method modifies only a subset of  SYMBOL  per iteration
+In each iteration, the variable indices are split into a "working set":  SYMBOL  and its complement  SYMBOL
+Then, the sub-problem with variables  SYMBOL , is solved, thereby, leaving the values of the remaining variables  SYMBOL  unchanged
+This method leads to a small sub-problem to be minimized in each iteration
+An extreme case is the Sequential Minimal Optimization~(SMO)~ CITATION , which restricts working set to have only two elements
+Comparative tests against other algorithms, done by Platt~ CITATION , indicates that SMO is often much faster and has better scaling properties
+Since only few components are updated per iteration, for difficult problems, the decomposition method suffers from slow convergence
+Better method of working set selection can reduce the number of iterations and hence is an important research issue
+Some methods were proposed to solve this problem and to reduce the time of training SVMs~ CITATION
+In this paper, %we proposed  we propose a new model to select the working set
+In this model, specially, it selects  SYMBOL  without reselection
+In another word, once  SYMBOL  are selected, they will not be tested or selected during the following working set selection
+Experiments demonstrate that the new model is in general faster than existing methods
+This paper is organized as following
+In section II, we give literature review, SMO decomposition method and existing working set selection are both discussed
+A new method of working set selection is then presented in section III
+In section IV, experiments with corresponding analysis are given
+Finally, section V concludes this paper

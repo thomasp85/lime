@@ -1,0 +1,47 @@
+### abstract ###
+the recognition heuristic rh - which predicts non-compensatory reliance on recognition in comparative judgments - has attracted much research and some disagreement  at times
+most studies have dealt with whether or under which conditions the rh is truly used in paired-comparisons
+however  even though the rh is a precise descriptive model  there has been less attention concerning the precision of the methods applied to measure rh-use
+in the current work  i provide an overview of different measures of rh-use tailored to the paradigm of natural recognition which has emerged as a preferred way of studying the rh
+the measures are compared with respect to different criteria - with particular emphasis on how well they uncover true use of the rh
+to this end  both simulations and a re-analysis of empirical data are presented
+the results indicate that the adherence rate - which has been pervasively applied to measure rh-use - is a severely biased measure
+as an alternative  a recently developed formal measurement model emerges as the recommended candidate for assessment of rh-use
+### introduction ###
+in the past decade since it was baptized  the recognition heuristic  CITATION  has inspired much innovative research
+it has been studied extensively from a normative and descriptive point of view and provoked some controversial debate at times
+many other interesting investigations notwithstanding  the majority of empirical studies has dealt with the descriptive question of whether and to what extent the recognition cue is considered in isolation - that is  how often the rh is actually used
+whereas some have aimed to show that this is rarely the case altogether  CITATION   others have concentrated on the bounding conditions or determinants of rh-use  CITATION   possible individual differences  CITATION   and tests of alternative cognitive process models  CITATION
+clearly  the rh is a precise model which makes exact predictions about choices and underlying processes
+however  to gain insight about whether and under which conditions these predictions are actually correct  measurement must also be precise
+although many agree that it is a promising and fruitful research strategy to uncover the situational and individual determinants of fast-and-frugal heuristics broder  in press  it is  as yet  much less clear how to study and measure rh-use
+what may  at first glance  appear to be a rather trivial question  turns out to represent a substantial challenge and  in my view  source of much of the controversy surrounding the rh
+so far  emphasis has been put on which paradigms and materials are appropriate for studying the rh
+indeed  pachur et al CITATION  provided an extensive discussion of such questions
+they suggested no less than eight critical methodological necessities which an adequate investigation or test of the rh should  in their view  comprise
+also  they reviewed the extant literature and argued that many previously published studies yield drawbacks with respect to these eight points  CITATION
+however  even if their list of studies with problematic features had not been somewhat incomplete  it does bear the dilemma that the proposed necessities  if taken seriously  leave a rather small niche for empirical investigations of the rh  and  worse yet  severe problems when attempting to measure rh-use
+i will sketch this problem in what follows
+as a central point  pachur et al CITATION  argue that the rh is more likely to be used when objects are naturally recognized and cues must be retrieved from memory
+this is in line with the assumption that inferences from memory are more often based on simple heuristics  an assumption that has received support in the past  CITATION
+the central argument favoring naturally recognized objects is that the rh hinges on decision makers acquiring the recognition-criterion-relation through experience and thus learning to trust on recognition when appropriate
+those who - like myself - buy into such arguments  which rule out teaching participants artificial objects or providing them with cues  are faced with a severe obstacle  how to measure use of the rh when there is no control over participants' cue knowledge
+assume a participant is faced with the judgment which of two cities is larger and recognizes one but not the other
+if she provides the judgment that the recognized object has the higher criterion value  a choice in line with the rh is produced
+however  such cases of adherence cannot imply that recognition was considered in isolation and thus do not provide information about use of the rh
+more generally  a participant may have adhered to the prediction of the cue in question by actually considering some entirely different piece of information that points in the same direction hilbig  in press
+in the case of comparing a recognized with an unrecognized city  for example  a decision maker may have chosen the recognized city based on the knowledge that this city has an international airport  a large university  or the like
+thus  so long as there is no control over participants' further knowledge in specific paired-comparisons  adherence to the prediction of the rh is non-diagnostic
+or  as broder and schiffer  CITATION  put it   simple counting of choices compatible with a model tells us almost nothing about the underlying strategy  p  NUMBER 
+the best remedy for this caveat is  of course  to unconfound recognition and further knowledge  if participants are taught certain objects and cue patterns - as is typically done when studying other fast-and-frugal heuristics  CITATION  and alternative approaches  CITATION  - the experimenter has full control and can investigate whether additional cues alter the degree to which participants adhere to the rh  CITATION
+indeed  unconfounding different cues is vital when considering the adherence to simple one-cue strategies  CITATION
+moreover  full experimental control over cue patterns allows for the application of sophisticated methods for strategy classification  broder and schiffer  CITATION  proposed to bridge the gap between theories of multi-attribute decision making and empirically observed choices by means of a formal measurement model
+this bayesian approach provides information about the decision strategy that most likely generated a data vector
+recently  this approach has been extended to considering choice outcomes  response latencies  and confidence ratings  CITATION
+however  both these elegant approaches necessitate teaching or providing all cue patterns for a set of artificial objects  so as to discriminate between different strategies
+clearly  this is at odds with the central methodological recommendations of pachur et al CITATION  who call for using naturally recognized objects without teaching or providing any further information
+overall  in the paradigm most favored by pachur and colleagues  CITATION   only three pieces of information are available on which researchers must base the assessment whether the rh was used  i which objects were presented in a given trial including their true position on the criterion dimension  ii which of these objects is recognized by the participant  and iii which object is chosen  that is  which is judged to have the higher criterion value
+how  based on these pieces of information  can we measure rh-use
+so far  three classes of measures have been applied  viz
+the adherence rate  enhanced measures based on adherence rates  and a formal measurement model
+in what follows  i will introduce these measures  briefly discuss their theoretical advantages and limitations  and present simulations and a re-analysis of existing empirical data to evaluate them

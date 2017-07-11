@@ -1,0 +1,67 @@
+### abstract ###
+Spike timing dependent plasticity is a learning rule that modifies synaptic strength as a function of the relative timing of pre- and postsynaptic spikes.
+When a neuron is repeatedly presented with similar inputs, STDP is known to have the effect of concentrating high synaptic weights on afferents that systematically fire early, while postsynaptic spike latencies decrease.
+Here we use this learning rule in an asynchronous feedforward spiking neural network that mimics the ventral visual pathway and shows that when the network is presented with natural images, selectivity to intermediate-complexity visual features emerges.
+Those features, which correspond to prototypical patterns that are both salient and consistently present in the images, are highly informative and enable robust object recognition, as demonstrated on various classification tasks.
+Taken together, these results show that temporal codes may be a key to understanding the phenomenal processing speed achieved by the visual system and that STDP can lead to fast and selective responses.
+### introduction ###
+Temporal constraints pose a major challenge to models of object recognition in cortex.
+When two images are simultaneously flashed to the left and right of fixation, human subjects can make reliable saccades to the side where there is a target animal in as little as 120 130 ms CITATION.
+If we allow 20 30 ms for motor delays in the oculomotor system, this implies that the underlying visual processing can be done in 100 ms or less.
+In monkeys, recent recordings from inferotemporal cortex showed that spike counts over time bins as small as 12.5 ms and only about 100 ms after stimulus onset contain remarkably accurate information about the nature of a visual stimulus CITATION.
+This sort of rapid processing presumably depends on the ability of the visual system to learn to recognize familiar visual forms in an unsupervised manner.
+Exactly how this learning occurs constitutes a major challenge for theoretical neuroscience.
+Here we explored the capacity of simple feedforward network architectures that have two key features.
+First, when stimulated with a flashed visual stimulus, the neurons in the various layers of the system fire asynchronously, with the most strongly activated neurons firing first a mechanism that has been shown to efficiently encode image information CITATION.
+Second, neurons at later stages of the system implement spike timing dependent plasticity, which is known to have the effect of concentrating high synaptic weights on afferents that systematically fire early CITATION, CITATION.
+We demonstrate that when such a hierarchical system is repeatedly presented with natural images, these intermediate-level neurons will naturally become selective to patterns that are reliably present in the input, while their latencies decrease, leading to both fast and informative responses.
+This process occurs in an entirely unsupervised way, but we then show that these intermediate features are able to support categorization.
+Our network belongs to the family of feedforward hierarchical convolutional networks, as in CITATION CITATION.
+To be precise, its architecture is inspired from Serre, Wolf, and Poggio's model of object recognition CITATION, a model that itself extends HMAX CITATION and performs remarkably well with natural images.
+Like them, in an attempt to model the increasing complexity and invariance observed along the ventral pathway CITATION, CITATION, we use a four-layer hierarchy in which simple cells gain their selectivity from a linear sum operation, while complex cells gain invariance from a nonlinear max pooling operation .
+Nevertheless, our network does not only rely on static nonlinearities: it uses spiking neurons and operates in the temporal domain.
+At each stage, the time to first spike with respect to stimulus onset is supposed to be the key variable, that is, the variable that contains information and that is indeed read out and processed by downstream neurons.
+When presented with an image, the first layer's S1 cells, emulating V1 simple cells, detect edges with four preferred orientations, and the more strongly a cell is activated, the earlier it fires.
+This intensity latency conversion is in accordance with recordings in V1 showing that response latency decreases with the stimulus contrast CITATION, CITATION and with the proximity between the stimulus orientation and the cell's preferred orientation CITATION.
+It has already been shown how such orientation selectivity can emerge in V1 by applying STDP on spike trains coming from retinal ON- and OFF-center cells CITATION, so we started our model from V1 orientation-selective cells.
+We also limit the number of spikes at this stage by introducing competition between S1 cells through a one-winner-take-all mechanism: at a given location corresponding to one cortical column only the spike corresponding to the best matching orientation is propagated.
+Note that k-winner-take-all mechanisms are easy to implement in the temporal domain using inhibitory GABA interneurons CITATION .
+These S1 spikes are then propagated asynchronously through the feedforward network of integrate-and-fire neurons.
+Note that within this time-to-first-spike framework, the maximum operation of complex cells simply consists of propagating the first spike emitted by a given group of afferents CITATION.
+This can be done efficiently with an integrate-and-fire neuron with low threshold that has synaptic connections from all neurons in the group.
+Images are processed one by one, and we limit activity to at most one spike per neuron, that is, only the initial spike wave is propagated.
+Before presenting a new image, every neuron's potential is reset to zero.
+We process various scaled versions of the input image.
+There is one S1 C1 S2 pathway for each processing scale.
+This results in S2 cells with various receptive field sizes.
+Then C2 cells take the maximum response of S2 cells over all positions and scales, leading to position and scale invariant responses.
+This paper explains how STDP can set the C1 S2 synaptic connections, leading to intermediate-complexity visual features, whose equivalent in the brain may be in V4 or IT.
+STDP is a learning rule that modifies the strength of a neuron's synapses as a function of the precise temporal relations between pre- and postsynaptic spikes: an excitatory synapse receiving a spike before a postsynaptic one is emitted is potentiated whereas its strength is weakened the other way around CITATION.
+The amount of modification depends on the delay between these two events: maximal when pre- and postsynaptic spikes are close together, and the effects gradually decrease and disappear with intervals in excess of a few tens of milliseconds CITATION CITATION.
+Note that STDP is in agreement with Hebb's postulate because presynaptic neurons that fired slightly before the postsynaptic neuron are those that took part in firing it.
+Here we used a simplified STDP rule where the weight modification does not depend on the delay between pre- and postsynaptic spikes, and the time window is supposed to cover the whole spike wave.
+We also use 0 and 1 as soft bounds, ensuring the synapses remain excitatory.
+Several authors have studied the effect of STDP with Poisson spike trains CITATION, CITATION.
+Here, we demonstrate STDP's remarkable ability to detect statistical regularities in terms of earliest firing afferent patterns within visual spike trains, despite their very high dimensionality inherent to natural images.
+Visual stimuli are presented sequentially, and the resulting spike waves are propagated through to the S2 layer, where STDP is used.
+We use restricted receptive fields and weight-sharing.
+Starting with a random weight matrix, we present the first visual stimuli.
+Duplicated cells are all integrating the spike train and compete with each other.
+If no cell reaches its threshold, nothing happens and we process the next image.
+Otherwise for each prototype the first duplicate to reach its threshold is the winner.
+A one-winner-take-all mechanism prevents the other duplicated cells from firing.
+The winner thus fires and the STDP rule is triggered.
+Its weight matrix is updated, and the change in weights is duplicated at all positions and scales.
+This allows the system to learn patterns despite changes in position and size in the training examples.
+We also use local inhibition between different prototype cells: when a cell fires at a given position and scale, it prevents all other cells from firing later at the same scale and within an s/2 s/2 square neighborhood of the firing position.
+This competition, only used in the learning phase, prevents all the cells from learning the same pattern.
+Instead, the cell population self-organizes, each cell trying to learn a distinct pattern so as to cover the whole variability of the inputs.
+If the stimuli have visual features in common, the STDP process will extract them.
+That is, for some cells we will observe convergence of the synaptic weights, which end up being either close to 0 or to 1.
+During the convergence process, synapses compete for control of the timing of postsynaptic spikes CITATION.
+The winning synapses are those through which the earliest spikes arrive CITATION, CITATION, and this is true even in the presence of jitter and spontaneous activity CITATION.
+This preference for the earliest spikes is a key point since the earliest spikes, which correspond in our framework to the most salient regions of an image, have been shown to be the most informative CITATION.
+During the learning, the postsynaptic spike latency decreases CITATION, CITATION, CITATION.
+After convergence, the responses become selective CITATION to visual features of intermediate complexity similar to the features used in earlier work CITATION.
+Features can now be defined as clusters of afferents that are consistently among the earliest to fire.
+STDP detects these kinds of statistical regularities among the spike trains and creates one unit for each distinct pattern.

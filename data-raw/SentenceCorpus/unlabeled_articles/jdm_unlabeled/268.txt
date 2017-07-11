@@ -1,0 +1,18 @@
+### abstract ###
+one major challenge to behavioral decision research is to identify the cognitive processes underlying judgment and decision making
+glockner  CITATION  has argued that  compared to previous methods  process models can be more efficiently tested by simultaneously analyzing choices  decision times  and confidence judgments
+the multiple-measure maximum likelihood mm-ml strategy classification method was developed for this purpose and implemented as a ready-to-use routine in stata  a commercial package for statistical data analysis
+in the present article  we describe the implementation of mm-ml in r  a free package for data analysis under the gnu general public license  and we provide a practical guide to application
+we also provide mm-ml as an easy-to-use r function
+thus  prior knowledge of r programming is not necessary for those interested in using mm-ml
+### introduction ###
+it has been repeatedly argued that individuals make adaptive use of different decision strategies  CITATION  and that the application of the respective strategy might depend on different factors such as participants' characteristics  CITATION   effort accuracy trade-offs  CITATION   learning experiences  CITATION   presentation format  CITATION  and situational forces  CITATION
+some strategies might be entirely based on deliberate computations  CITATION
+others  by contrast  might partially rely on automatic-intuitive processes  CITATION
+glockner and betsch  CITATION  showed that classic process tracing methods such as mouselab  CITATION  might hinder information search processes that are necessary for applying automatic processes
+furthermore  taking into account intuitive-automatic processes  many strategies make essentially the same choice predictions  CITATION
+glockner  CITATION  showed that  considering strategies that make different choice predictions  people can be more efficiently classified by applying the multiple-measure maximum likelihood strategy classification method mm-ml as compared to relying on a choice-based strategy classification alone  CITATION
+furthermore  the mm-ml method also allows us to differentiate between strategies that make the same choice predictions  given that decision time predictions aid discrimination
+preparing an experiment to generate data for the application of the mm-ml method comprises three basic steps   NUMBER  choose dependent measures and specify the distributions of those measures   NUMBER  choose a set of strategies   NUMBER  select items that differentiate between the considered strategies and derive predictions on the dependent measures
+then the fit of the predictions of the strategies to individuals' empirical data is calculated using mm-ml and the strategy most likely accounting for individuals' behavior is identified
+glockner  CITATION  provided an implementation of the mm-ml method in stata - a commercial package for data analysis

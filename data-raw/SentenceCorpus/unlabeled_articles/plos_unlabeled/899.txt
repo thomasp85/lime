@@ -1,0 +1,48 @@
+### abstract ###
+Natural proteins often partake in several highly specific protein-protein interactions.
+They are thus subject to multiple opposing forces during evolutionary selection.
+To be functional, such multispecific proteins need to be stable in complex with each interaction partner, and, at the same time, to maintain affinity toward all partners.
+How is this multispecificity acquired through natural evolution?
+To answer this compelling question, we study a prototypical multispecific protein, calmodulin, which has evolved to interact with hundreds of target proteins.
+Starting from high-resolution structures of sixteen CaM-target complexes, we employ state-of-the-art computational methods to predict a hundred CaM sequences best suited for interaction with each individual CaM target.
+Then, we design CaM sequences most compatible with each possible combination of two, three, and all sixteen targets simultaneously, producing almost 70,000 low energy CaM sequences.
+By comparing these sequences and their energies, we gain insight into how nature has managed to find the compromise between the need for favorable interaction energies and the need for multispecificity.
+We observe that designing for more partners simultaneously yields CaM sequences that better match natural sequence profiles, thus emphasizing the importance of such strategies in nature.
+Furthermore, we show that the CaM binding interface can be nicely partitioned into positions that are critical for the affinity of all CaM-target complexes and those that are molded to provide interaction specificity.
+We reveal several basic categories of sequence-level tradeoffs that enable the compromise necessary for the promiscuity of this protein.
+We also thoroughly quantify the tradeoff between interaction energetics and multispecificity and find that facilitating seemingly competing interactions requires only a small deviation from optimal energies.
+We conclude that multispecific proteins have been subjected to a rigorous optimization process that has fine-tuned their sequences for interactions with a precise set of targets, thus conferring their multiple cellular functions.
+### introduction ###
+Proteins engage in numerous protein-protein interactions, which together regulate the outcome of all biological processes in the cell.
+By some estimates, over a third of all mammalian proteins participate in two or more highly specific protein-protein interactions CITATION.
+Proteins that can interact with a large number of partners play a central role in the modular organization of protein interaction networks CITATION.
+Such proteins, usually referred to as protein hubs, tend to be more essential than others for cell survival CITATION and usually exhibit slower rates of evolution CITATION.
+Moreover, the comprehensive biological activity of these proteins typically requires them to recognize a precise set of targets in a specific way.
+For example, each subfamily of G protein regulators interacts with only a specific subset of G proteins CITATION.
+Proteins with diverse binding capacity have also been termed multispecific proteins CITATION, CITATION .
+The central function of multispecific proteins within interaction networks imposes constraints on their amino acid sequences, especially in their protein-protein interfaces, i.e., the regions that are used to mediate intermolecular interactions with various targets.
+There exist only a few studies that have characterized in great detail the molecular and structural features of multispecific protein interfaces CITATION ; this is mostly due to sparse representation of such protein-protein complexes in the Protein Data Bank.
+A thorough understanding of atomic-level principles governing multispecific interactions is extremely important not only for the advancement of basic science but also for the design of new pharmaceuticals that modify protein-protein interactions.
+Furthermore, such molecular insights will provide critical feedback for systems biology research, which views protein-protein interactions from a high-level network approach CITATION .
+Calmodulin is a paradigm of a multispecific protein, with more than three hundred CaM targets identified to date CITATION.
+CaM is the central player in the FORMULA signaling pathways that control gene transcription, protein phosphorylation, nucleotide metabolism, and ion transport.
+This FORMULA sensor protein translates the changes in FORMULA concentration into activity of many downstream targets, including kinases, phosphatases, enzymes, and ion channels CITATION.
+Remarkably, CaM targets display considerable variability in sequence and structure.
+CaM-binding regions within target proteins are generally rich in hydrophobic and positively charged residues.
+Nevertheless, no consensus CaM-binding sequence exists for all CaM target proteins.
+Recent structural studies have revealed that there are several binding modes accessible to CaM, allowing this protein to interact with its targets in a FORMULA-saturated state CITATION, CITATION, in a partially-saturated FORMULA state CITATION, and in a FORMULA-free state CITATION, CITATION.
+In the FORMULA-saturated form, CaM usually binds to a stretch of FORMULA amino acids that is unfolded in the absence of CaM and becomes helical upon interaction with the protein CITATION.
+In this conventional binding mode, CaM undergoes a conformational change and embraces the target helix with its two globular domains, burying a substantial hydrophobic surface area and providing favorable hydrogen bond and salt bridge interactions with the target.
+FORMULA-saturated CaM binds to its targets with high affinity, displaying FORMULA values in the FORMULA to FORMULA M range CITATION.
+This affinity is reduced at least 1000-fold in the absence of FORMULA, allowing for quick dissociation of CaM from its targets when FORMULA is depleted.
+The multitude of binding constraints placed on CaM during evolution is likely to have produced a sequence that may not be optimal for binding to any particular CaM target, but rather presents a compromise essential for interaction with a large number of partners.
+In this study, we employ a computational design approach CITATION to understand how the compromises required for functional promiscuity CITATION are achieved both on the level of amino acid sequences and on the level of binding energetics.
+First, we computationally evolve CaM to interact with single targets; second, we evolve this protein to bind to multiple partners simultaneously.
+Recently, a similar analysis was performed on twenty multispecific proteins, whose interactions with two to seven targets were considered CITATION, CITATION.
+In contrast to those works, we report a much more comprehensive investigation of a single multispecific protein, CaM.
+We examine interactions in sixteen different CaM-target complexes that exhibit the conventional binding mode.
+Using the structures of these complexes, we perform 697 separate CaM design calculations to obtain FORMULA low energy CaM sequences optimal for either a single target or some combination of the targets.
+Rigorous quantitative and statistical comparisons of the designed CaM sequences and their energies allows us to draw conclusions regarding CaM evolution and to suggest strategies for the design of binders that are both promiscuous yet highly specific.
+In particular, we characterize the CaM binding interface by partitioning its residues into those that are critical for binding affinity and those that are important for multispecificity.
+Furthermore, we analyze the sorts of sequence compromises required to yield proteins with promiscuous interactions and show how this fits with past explanations for the ability of CaM to accommodate many targets.
+Finally, we examine the energetic compromises inherently crucial for multispecificity CITATION, and we find that our results also shed light on the unexpected findings of previous experimental protein design research.

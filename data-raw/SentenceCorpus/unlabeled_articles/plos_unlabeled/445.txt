@@ -1,0 +1,25 @@
+### abstract ###
+Finding functional DNA binding sites of transcription factors throughout the genome is a crucial step in understanding transcriptional regulation.
+Unfortunately, these binding sites are typically short and degenerate, posing a significant statistical challenge: many more matches to known TF motifs occur in the genome than are actually functional.
+However, information about chromatin structure may help to identify the functional sites.
+In particular, it has been shown that active regulatory regions are usually depleted of nucleosomes, thereby enabling TFs to bind DNA in those regions.
+Here, we describe a novel motif discovery algorithm that employs an informative prior over DNA sequence positions based on a discriminative view of nucleosome occupancy.
+When a Gibbs sampling algorithm is applied to yeast sequence-sets identified by ChIP-chip, the correct motif is found in 52 percent more cases with our informative prior than with the commonly used uniform prior.
+This is the first demonstration that nucleosome occupancy information can be used to improve motif discovery.
+The improvement is dramatic, even though we are using only a statistical model to predict nucleosome occupancy; we expect our results to improve further as high-resolution genome-wide experimental nucleosome occupancy data becomes increasingly available.
+### introduction ###
+Finding functional DNA binding sites of transcription factors throughout the genome is a necessary step in understanding transcriptional regulation.
+However, despite an explosion of TF binding data from high-throughput technologies like ChIP-chip, DIP-chip CITATION, PBM CITATION, and gene expression arrays, finding functional occurrences of binding sites of TFs remains a difficult problem because the binding sites of most TFs are short, degenerate sequences that occur frequently in the genome by chance.
+In particular, matches to known TF motifs in the genome often do not appear to be bound by the respective TFs in vivo.
+One popular explanation for this is that when the DNA is in the form of chromatin, not all parts of the DNA are equally accessible to TFs.
+In this state, DNA is wrapped around histone octamers, forming nucleosomes.
+The positioning of these nucleosomes along the DNA is believed to provide a mechanism for differential access to TFs at potential binding sites.
+Indeed, it has been shown that functional binding sites of TFs at regulatory regions are typically depleted of nucleosomes in vivo CITATION CITATION .
+If we knew the precise positions of nucleosomes throughout the genome under various conditions, we could increase the specificity of motif finders by restricting the search for functional binding sites to nucleosome-free areas.
+Here, we describe a method for incorporating nucleosome positioning information into motif discovery algorithms by constructing informative priors biased toward less-occupied promoter positions.
+Our method should improve motif discovery most when it has access to high-resolution nucleosome occupancy data gathered under various in vivo conditions.
+Unfortunately, this data is not currently available for any organism at a whole-genome scale, let alone under a variety of conditions.
+Nevertheless, because our method is probabilistic, even noisy evidence regarding nucleosome positioning can be effectively exploited.
+For example, Segal et al. CITATION recently published a computational model based on high-quality experimental nucleosome binding data that predicts the probability of each nucleotide position in the yeast genome being bound by a nucleosome; these predictions are intrinsic to the DNA sequence and thus independent of condition, but were purported to explain around half of nucleosome positions observed in vivo.
+In addition, Lee et al. CITATION have used ChIP-chip to profile the average nucleosome occupancy of each yeast intergenic region.
+We show that informative positional priors, whether learned from computational occupancy predictions or low-resolution average occupancy data, significantly outperform not only the commonly used uniform positional prior, but also state-of-the-art motif discovery programs.

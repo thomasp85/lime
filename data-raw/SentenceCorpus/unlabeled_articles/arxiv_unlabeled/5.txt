@@ -1,0 +1,21 @@
+### abstract ###
+Consider the problem of joint parameter estimation and prediction in a Markov random field: ie , the model parameters are estimated on the basis of an initial set of data, and then the fitted model is used to perform prediction (e g , smoothing, denoising, interpolation) on a new noisy observation
+Working under the restriction of limited computation, we analyze a joint method in which the  same convex variational relaxation  is used to construct an M-estimator for fitting parameters, and to perform approximate marginalization for the prediction step
+The key result of this paper is that in the computation-limited setting, using an inconsistent parameter estimator (i e , an estimator that returns the ``wrong'' model even in the infinite data limit) can be provably beneficial, since the resulting errors can partially compensate for errors made by using an approximate prediction technique
+En route to this result, we analyze the asymptotic properties of M-estimators based on convex variational relaxations, and establish a Lipschitz stability property that holds for a broad class of variational methods
+We show that joint estimation/prediction based on the reweighted sum-product algorithm substantially outperforms a commonly used heuristic based on ordinary sum-product
+### introduction ###
+Graphical models such as Markov random fields (MRFs) are widely used in many application domains, including spatial statistics, statistical signal processing, and communication theory
+A fundamental limitation to their practical use is the infeasibility of computing various statistical quantities (e g , marginals, data likelihoods etc ); such quantities are of interest both Bayesian and frequentist settings
+Sampling-based methods, especially those of the Markov chain Monte Carlo (MCMC) variety~ CITATION , represent one approach to obtaining stochastic approximations to marginals and likelihoods
+A disadvantage of sampling methods is their relatively high computational cost
+For instance, in applications with severe limits on delay and computational overhead (e g , error-control coding, real-time tracking, video compression), MCMC methods are likely to be overly slow
+It is thus of considerable interest for various application domains to consider less computationally intensive methods for generating approximations to marginals, log likelihoods, and other relevant statistical quantities
+Variational methods are one class of techniques that can be used to generate deterministic approximations in Markov random fields (MRFs)
+At the foundation of these methods is the fact that for a broad class of MRFs, the computation of the log likelihood and marginal probabilities can be reformulated as a convex optimization problem (see~ CITATION  for an overview)
+Although this optimization problem is intractable to solve exactly for general MRFs, it suggests a principled route to obtaining approximations---namely, by relaxing the original optimization problem, and taking the optimal solutions to the relaxed problem as approximations to the exact values
+In many cases, optimization of the relaxed problem can be carried out by ``message-passing'' algorithms, in which neighboring nodes in the Markov random field convey statistical information (e g , likelihoods) by passing functions or vectors (referred to as messages)
+Estimating the parameters of a Markov random field from data poses another significant challenge
+A direct approach---for instance, via (regularized) maximum likelihood estimation---entails evaluating the cumulant generating (or log partition) function, which is computationally intractable for general Markov random fields
+One viable option is the pseudolikelihood method~ CITATION , which can be shown to produce consistent parameter estimates under suitable assumptions, though with an associated loss of statistical efficiency
+Other researchers have studied algorithms for ML estimation based on stochastic approximation~ CITATION , which again are consistent under appropriate assumptions, but can be slow to converge

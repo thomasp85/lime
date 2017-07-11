@@ -1,0 +1,25 @@
+### abstract ###
+The problem of joint universal source coding and modeling, treated in the context of lossless codes by Rissanen, was recently generalized to fixed-rate lossy coding of finitely parametrized continuous-alphabet  iid 
+sources
+We extend these results to variable-rate lossy block coding  of stationary ergodic sources and show that, for bounded metric distortion measures, any finitely parametrized family of stationary sources satisfying suitable mixing, smoothness and Vapnik--Chervonenkis learnability conditions admits universal schemes for joint lossy source coding and identification
+We also give several explicit examples of parametric sources satisfying the regularity conditions
+### introduction ###
+A universal source coding scheme is one that performs asymptotically optimally for all sources within a given class
+Intuition suggests that a good universal coder should acquire a probabilistic model of the source from a sufficiently long data sequence and operate based on this model
+For lossless codes, this intuition has been made rigorous by Rissanen  CITATION : the data are encoded via a two-part code which comprises (1) a suitably quantized maximum-likelihood estimate of the source parameters, and (2) an encoding of the data with the code optimized for the acquired model
+The redundancy of this scheme converges to zero as  SYMBOL , where  SYMBOL  is the block length and  SYMBOL  is the dimension of the parameter space
+Recently we have extended Rissanen's ideas to  lossy  block coding  of finitely parametrized continuous-alphabet  iid 
+sources with bounded parameter spaces  CITATION
+We have shown that, under appropriate regularity conditions, there exist joint universal schemes for lossy coding and source identification whose distortion redundancy and source estimation fidelity both converge to zero as  SYMBOL  as the block length  SYMBOL  tends to infinity
+The code operates by coding each block with the code matched to the parameters estimated from the preceding block
+Moreover, the constant hidden in the  SYMBOL  notation increases with the ``richness" of the model class, as measured by the Vapnik--Chervonenkis (VC) dimension  CITATION  of a certain class of decision regions in the source alphabet
+The main limitation of the results of  CITATION  is the  iid 
+assumption, which excludes such practically relevant model classes as autoregressive sources or Markov and hidden Markov processes
+Furthermore, the assumption of a bounded parameter space may not be always justified
+In this paper we relax both of these assumptions
+Because the parameter space is not bounded, we have to use variable-rate codes with countably infinite codebooks, whose performance is naturally quantified by Lagrangians  CITATION
+We show that, under certain regularity conditions, there are universal schemes for joint lossy source coding and modeling such that, as the block length  SYMBOL  tends to infinity, both the Lagrangian redundancy relative to the best variable-rate code at each block length and the source estimation fidelity at the decoder converge to zero as  SYMBOL , where  SYMBOL  is the VC dimension of a certain class of decision regions induced by the collection of all  SYMBOL -dimensional marginals of the source process distributions
+The key novel feature of our scheme is that, unlike most existing schemes for universal lossy coding, which rely on implicit identification of the active source, it learns an explicit probabilistic model
+Moreover, our results clearly show that the ``price of universality" of a modeling-based compression scheme grows with the combinatorial richness of the underlying model class, as captured by the VC dimension sequence  SYMBOL
+The richer the model class, the harder it is to learn, which in turn affects the compression performance because we use the source parameters learned from past data in deciding how to encode the current block
+These insights may prove useful in such settings as digital forensics or adaptive control under communication constraints, where trade-offs between the quality of parameter estimation and compression performance are of central importance

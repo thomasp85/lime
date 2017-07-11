@@ -1,0 +1,39 @@
+### abstract ###
+scholars in economics and psychology have created a large literature studying reward  punishment and reciprocity
+labor markets constitute a popular application of this body of work  with particular emphasis on how reciprocity helps regulate workplace relationships where managers are unable to perfectly monitor workers
+we study how idiosyncratic features of the labor market compared to most scenarios in which reciprocity applies affect the nature of worker reciprocity
+in particular  we show how having an excess supply of workers simulating unemployment and managers who can observe the reciprocal behavior of workers and hire fire them on that basis simulating the reputational concerns inherent in labor market transactions profoundly alters worker reciprocity
+in the absence of reputational concerns  workers tend to reward kind behavior and punish unkind behavior by managers in approximately equal measure
+in the presence of reputational concerns  workers exhibit a marked increase decrease in the propensity to reward kind punish unkind behavior by managers
+we demonstrate how this is a consequence of workers and managers responding to changes in the strategic incentives to reward and punish
+### introduction ###
+the principle of retaliation is as old as mankind
+as far back as the hammarabian code some  NUMBER  years ago  retaliation of some form has served to organize behavior in both market and non-market situations
+perhaps illustrating the importance of revenge most succinctly is the biblical injunction of exodus  NUMBER   NUMBER - NUMBER    life for life  eye for eye  tooth for tooth bruise for bruise 
+for their part  scholars have explored the importance of negative actions alongside their seemingly more benign cousins  positive actions
+one of the key insights that can be taken from the decades of research within the social sciences is that reciprocity in general is important  and that negative actions toward an individual induce a greater behavioral response than comparable positive actions
+this stylized fact is perhaps best illustrated in the words of baumeister et al CITATION   who provide a broad survey of several areas of study examining positive and negative reciprocity  and conclude that p  NUMBER - NUMBER   italics added   the breadth and convergence of evidence  however  across different areas were striking  which forms the most important evidence
+in no area were we able to find a consistent reversal  such that one could draw a firm conclusion that good is stronger than bad
+this failure to find any substantial contrary patterns occurred despite our own wishes and efforts
+hence  we must conclude that bad is stronger than good at a pervasive  general level
+ within economics  such results have served as the classic example of loss aversion - that people are more sensitive to negative realizations than to positive realizations of uncertainty  CITATION  - have played an important role in policymaking  CITATION   and have informed mechanism design
+in terms of the latter  the principal is confronted with an interesting decision problem if framing of the incentive scheme matters to agent behavior or the number of instruments available to the principal is constrained
+in this manner  choosing between carrots and sticks  for example  plays an important role in the outcome  CITATION
+more generally  scholars have frequently remarked that loss aversion represents one of the most robust general behavioral patterns in the social sciences  CITATION
+in this study  we explore a general  labor-market setting wherein economic theory provides predictions that positive reciprocity should be stronger than negative reciprocity
+the two key features are that the agent is on the short end of a market that includes reputational considerations and that being out of the market provides less utility than being a participant
+under this design  a worker that respects her initial affective reaction and punishes the employer will find herself unemployed
+alternatively  a worker who is nice to the employer will be more likely to be employed in the next period
+since being employed dominates unemployment  we predict that the worker will restrain herself and will not follow the initial affective reaction
+on the other hand  if the employer is nice  the worker will reciprocate strongly since in this situation not only is she employed  but also by a nice employer
+thus  in this situation  positive reciprocity will be stronger than negative reciprocity
+to test our theory  we design a simple controlled laboratory experiment  which yields several insights
+first  consonant with the literature  agents reciprocate
+and  when the interactions are anonymous  negative reciprocity is slightly more important than positive reciprocity  but not significantly so
+also consonant with the literature is the fact that agents become emotionally charged when treated poorly
+yet  this emotional charge does not readily transfer to actions when realistic institutional features of labor markets are in place
+for example  when agents can form reputations  they respond much more acutely to positive than to negative stimuli
+second  the data suggest that the source of the behavioral differences observed is strategic  rather than a change in the social norm of reciprocation in a gift exchange setting
+the remainder of our study proceeds as follows
+section  NUMBER  contains the experimental design
+section  NUMBER  summarizes the experimental results

@@ -1,0 +1,32 @@
+### abstract ###
+labeling a food as  organic  entails a claim about its production but is silent on its calorie content
+nevertheless  people infer that organic cookies are lower in calories and can be eaten more often than conventional cookies study  NUMBER 
+these inferences are observed even when the nutrition label conveys identical calorie content and are more pronounced among perceivers high on pro-environmentalism
+moreover  when evaluating a person with a weight-loss goal  forgoing exercise is deemed more acceptable when the person has just chosen organic rather than conventional dessert study  NUMBER 
+these results reflect an  organic natural - healthy  association that is capable of biasing everyday judgments about diet and exercise
+### introduction ###
+as americans' waistlines have grown  so has their appetite for organic foods u s
+sales of organics rose from approximately   NUMBER  billion in  NUMBER  to   NUMBER  billion in  NUMBER   CITATION   meanwhile  roughly one-third of u s adults now qualify as obese  CITATION
+yet  scant research has explored the implications of  organic  production claims for judgments and decisions related to weight gain
+although organic claims license inferences about lower levels of conventional pesticides and synthetic additives in foods  CITATION   they are silent on calorie content
+might consumers nevertheless assume that organics contain fewer calories as well
+the tendency to overgeneralize health claims suggests this possibility
+previous research has demonstrated that margarine advertised as  no cholesterol  and  healthy  is judged as lower in fat  CITATION  and that nutrient-based claims can promote calorie underestimation  thought to be an important factor in the obesity crisis  CITATION
+it is not clear  however  whether such effects would extend to organic claims  which speak to production process and not nutrient content per se  CITATION
+consistent with activation theory  CITATION   specific nutrient claims e g    no cholesterol  have been shown to affect judgments of closely associated nutrients e g   fat but not of more general  distal concepts e g   cancer risk  CITATION
+from this perspective   organic  and other production-related claims may not be expected to activate  calories  and other nutrient-related concepts
+on the other hand  a number of different theories suggest that organic claims might indeed bias - and specifically  reduce - calorie judgments
+first  strong associations exist between the concepts  organic  and  healthy  in contemporary america  associations that are promoted by marketers and reflected in survey data in which most americans endorse organics as healthier  CITATION
+moreover  natural foods as opposed to those altered by humans in some significant way tend to be seen as inherently good and healthy  CITATION   further supporting associations between organic production and healthy attributes
+given that calorie restriction is nearly synonymous with  healthy  in the u s CITATION   these associations might lead consumers to assume that foods produced organically contain fewer calories than their conventional counterparts  despite the fact that the  organic  designation entails no such claim  CITATION
+second  because calorie estimation is a cognitively demanding task  CITATION   consumers might even substitute the associatively related attribute  healthy  for  organic  as a means for simplifying complex calorie judgments  CITATION
+third  consumers might go beyond the literal meaning of the producer's utterance  CITATION  and infer that a producer who adheres to organic production standards might also care about other health-related aspects of the product  again supporting more general inferences about the product's healthy attributes  CITATION
+fourth  the logic of halo effects  CITATION  more generally suggests that consumers might judge products with one positive attribute more favorably on other attributes  even when they are not substantively related  if so  organics might be judged as lower-calorie to the extent that perceivers hold favorable attitudes toward organic production
+because natural foods tend to be seen as inherently good and healthy  CITATION    organic  halos seem plausible given the back-to-nature connotations of organic production
+although the above considerations all point to generalized positive effects of organic claims  the strength of these effects might be moderated by perceivers' general attitudes toward organic foods
+these attitudes are likely to show more variation than attitudes toward health-related nutrient claims e g    no cholesterol    low-fat  and might vary partly as a function of individual differences in pro-environmentalism  CITATION
+if so  people high on pro-environmentalism might be more affected by organic claims  reflecting that positive halo effects should increase with the positivity of the attitude toward the initial attribute here  organic production
+despite different underlying assumptions  all of these considerations converge on the same core prediction  organic claims might reduce calorie judgments  making the consumption of organic foods seem more compatible with a weight-loss goal
+the present studies test this prediction by assessing the effect of organic claims on perceived calorie content and consumption recommendations as well as the impact of organic consumption on the perceived need to exercise
+we also explore whether individuals high on pro-environmentalism are especially likely to show this effect  consistent with the halo logic outlined above
+note  however  that an alternative prediction is also plausible  those high on pro-environmentalism may know more about organics  rendering them less susceptible to unwarranted inferences from organic claims

@@ -1,0 +1,54 @@
+### abstract ###
+participants decided whom of two patients to prioritize for surgery in three studies
+the factual quantitative information about the patients e g   probability of surviving surgery was given in vignette form with case descriptions on visual analogue scales - vas's
+differentiation and consolidation theory predicts that not only the attractiveness of facts but also the mental representations of objective facts themselves will be restructured in post-decision processes in support of a decision  CITATION
+after the decision  participants were asked to reproduce the objective facts about the patients
+the results showed that distortions of objective facts were used to consolidate a prior decision
+the consolidation process relied on facts initially favoring the non-chosen alternative and on facts rated as less  rather than more important
+### introduction ###
+differentiation and consolidation  diff con  theory is a process theory of human decision making
+it models decision making as a process involving different kinds of sub processes leading to a final decision  CITATION
+according to the theory human decision makers structure and restructure both evaluations and facts about decision alternatives when they make a decision and after the decision
+the goal of that process is to reach sufficient support for the chosen alternative
+for example  a positively evaluated aspect of the initially preferred alternative can be bolstered to make the alternative seem even better when a decision has been reached
+in the post-decision consolidation phase this process continues to strengthen the decision when afterthoughts and outcomes follow
+the theory shares a process and attractiveness restructuring approach to decision making with a number of other models of human decision making  CITATION   some of which were reviewed by brownstein  CITATION  and by simon  snow and read  CITATION
+empirical decision research has shown time after time that value attractiveness evaluation and diagnostic value of facts are restructured before and after a decision  supporting these theories  CITATION
+that is  the chosen alternative is upgraded in attractiveness or in diagnostic value of evidence pro that alternative  CITATION   and or the non- chosen alternative is downgraded before and after a decision
+however  there is a lack of empirical investigations of consolidation of facts in themselves
+if a decision maker is given objective travel time e g    NUMBER  min as a fact of one alternative in a decision between two job offers  she or he may change the evaluation of this fact e g from  relaxing  to  boring  in the process of making a decision
+this evaluation does not mean that the quantitative facts representation must change
+the decision maker should be able to communicate the exact travel time e g    NUMBER  min within a non-systematic random error even if there was an evaluative restructuring and no facts restructuring
+facts consolidation appears when the quantitative or qualitative facts of a decision problem are communicated or reproduced in a distorted way in support of a decision
+the hindsight paradigm introduced by fischhoff  CITATION  uses a judgment approach that has some similarity with the present decision approach but with a focus on the post-event outcome phase
+fischhoff  and other researchers following him  studied how the memory of a person's prior quantitative probability judgments a kind of self generated quantitative  fact  was distorted after outcome knowledge
+they found that in general the quantitative distortions were in the direction of  we knew it all before  bias
+mather  shafir and jonhson  CITATION  studied post-decision memory attributions to the chosen and the non-chosen alternatives after a decision with alternatives described by qualitative features of varying attractiveness
+they found that features with positive attractiveness were attributed comparatively more often to the chosen alternative than to the non-chosen alternative
+the opposite was found for negative features
+when an alternative was assigned to participants  the memory attributions were less supportive of the assigned option than for an option that was chosen voluntary
+this shows that the decision process had a selective effect on memories of evaluative features
+gurkmankin levy and hershey  CITATION  had their participants make treatment choices yes or no concerning a medical treatment with side effects and a success rate of  NUMBER  percent 
+however   since all patients are different he  the doctor  can't be certain that this is your probability   CITATION
+this instruction communicated uncertainty about the probability fact that was used in distortions supporting a participant's choice
+instead of investigating qualitative evaluative features or uncertain probabilities  the present studies will investigate precise quantitative facts on well-defined attributes to find out if the facts are distorted in post-decision memory reproductions
+to specify  the present studies were designed to test the diff con prediction that facts are restructured in post-decision consolidation
+if the hypothesis is confirmed  the sub-processes of the restructuring process will be investigated
+one example is the subprocesses restructuring the mental representations of both the chosen and the non-chosen alternative
+is the chosen alternative restructured to a greater extent than the non-chosen alternative
+this is a new problem that has not been focused on in the past  since the attractiveness of facts or the diagnosticity of facts were in focus - not the facts in themselves
+earlier studies of differentiation and consolidation have shown that attractiveness restructuring does not normally appear on the most important decisive attribute to support a choice
+instead  this is a kind of restructuring that focuses on important conflict attributes that favor a non-chosen alternative
+in fact  attractiveness consolidation processes in a real-life decision sometimes turn disadvantages of a chosen alternative into advantages after the decision
+this was first reported by svenson and hill  CITATION  and later verified by salo and svenson  CITATION  in another real-life context
+we do not expect such drastic restructuring of facts  but according to diff con we predict no systematic changes on the most important decisive attribute but systematic changes of other attributes and in particular changes of facts supporting the non-chosen alternative
+we also want to introduce the visual analogue scale  vas  in a way that is new to decision process research
+this scale has been used primarily in health care to measure pain and in other contexts as a quantitative response scale
+but  in the present context it will be used to give information about facts
+according to diff con theory  a decision has to be sufficiently involving and important to trigger differentiation and consolidation processes
+therefore  we will use a difficult and engaging medical problem in the following empirical studies
+we predict  NUMBER  that facts consolidation will restructure and distort the reproductions of quantitative facts in support of the chosen alternative   NUMBER  that quantitative facts restructuring will follow the same pattern as attractiveness restructuring and concern predominantly other attributes than the most important decisive attribute  and in particular conflict attributes   NUMBER  that facts restructuring can be achieved through changes of both the chosen increasing facts support and the non-chosen alternative weakening facts support for the non-chosen alternative
+we also want  NUMBER  to introduce facts presented on vas scales
+the design will be balanced in order to control for response regression effects easily confounded with true restructuring processes depending on a prior decision
+in the first study  economics students serve as participants  and we use the vas  visual analogue scale  to present a medical vignette case
+the second study replicates the first study with a group of participants who are familiar with medical problems and the vas

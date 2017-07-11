@@ -1,0 +1,48 @@
+### abstract ###
+is variety of the spice of life
+the present research suggests that the answer depends on the rate of consumption
+in three experiments  we find that  whereas a variety of stimuli is preferred to repetition of even a better-liked single stimulus when consumption is continuous  this preference reverses when the satiation associated with repetition is reduced by slowing down the rate of consumption
+decision makers  however  seem to under-appreciate the influence of consumption rate on preference for and satisfaction with variety
+at high rates of consumption  they correctly anticipate their own  high  desire for variety  but at low rates of consumption people tend to overestimate their own desire for variety
+these results complicate the picture presented by prior research on the  diversification bias   suggesting that people overestimate their own desire for variety only when consumption is spaced out over time
+### introduction ###
+the dictum  variety is the spice of life  notwithstanding  people seem to show a surprising tolerance  even preference  for repetition
+whether a favorite snack  pop song  or piece of art  people routinely expose themselves to the same liked stimulus repeatedly
+indeed  prior work has shown that people even surprise themselves with this preference  research on the  diversification bias  has consistently shown that people predict a greater preference for variety and aversion to repetition than they show in their online  immediate preferences  CITATION
+for example  when shopping for the week's supply of yogurt a person might supplement his or her favorite flavor say  strawberry with one or more less preferred alternatives say  vanilla  only to find a surplus of the less preferred flavor at the end of the week  CITATION
+this apparent tolerance for repetition conflicts not only with people's own intuitions  but with on the surface  at least existing models of taste and satiation
+a central tenet of most psychological and economic theories of taste is that enjoyment of enjoyable stimuli declines with repetition  CITATION
+if people repeatedly consume a product  it is thought  they become satiated-and enjoyment decreases
+indeed  in one illustrative study  participants listened to a  NUMBER -second sample of a favorite song  NUMBER  times in quick succession  rating their enjoyment of the experience along the way
+what began as an enjoyable experience became decidedly less so after only the  NUMBER  iteration  CITATION
+how can these seeming inconsistencies-the revealed preference for repetition shown in studies on the diversification bias and the aversion to repetition shown in studies like the above-be reconciled
+one key to the discrepancy may lie in the inter-consumption interval the time between acts of consumption
+whereas studies that demonstrate a preference for repetition tend to involve brief episodes of consumption with a relatively long day or week inter-consumption interval  the song study just described involved a more prolonged consumption experience with no breaks between individual acts of consumption
+this difference is likely to be of critical importance in light of the inherently fleeting nature of satiation
+although people can and do satiate to a given stimulus  such satiation tends to be relatively short-lived  CITATION
+with time  people's preferences typically return to their pre-consumption level
+just as a muscle  CITATION  weakens in the short-term through repeated use  but replenishes over time  satiation seems to have the same property
+whereas the same snack or pop song grows tiresome if repeated in quick succession  the drop-off in enjoyment may be much smaller  or even non-existent  if there is a sufficient gap between consumption intervals
+and if rate of consumption influences the desirability of repetition  it logically follows that it should influence the desirability of its logical complement-variety-as well
+are people aware of the influence of rate of consumption on satiation
+informal observation suggests that they are
+most of us realize that the same favorite food would quickly grow tiresome if served as an appetizer  entree  and dessert at the same sitting-whereas those same three servings would be perfectly palatable if spread out over a month
+and yet  research seems to show that people consistently underestimate their liking for repetition and overestimate their liking for its complement  variety  at least when consumption is spaced  CITATION
+why
+one reason is  time contraction   CITATION
+people tend to underweight the importance of time when predicting their preferences for novelty and liking for repetition  imagining lengthy intervals as if they were short ones
+when predicting their snack preferences over the course of a week  for instance  people think about how unappetizing the same food item would be if consumed in rapid succession  forgetting that time tends to reset one's preferences
+consistent with time contraction  read and loewenstein  CITATION  showed that merely drawing people's attention to the otherwise neglected inter-consumption interval decreased the predicted and  in this instance  inaccurate preference for variety
+note  however  that the time contraction explanation for this unwarranted preference applies only to lengthy inter-consumption intervals
+to the extent that people underestimate their liking for repetition because they imagine a short inter-consumption interval  those predictions should be more calibrated when the inter-consumption interval is in fact short
+in other words  as the inter-consumption interval decreases  predicted preference for variety should align with in-experience and thus actual preferences
+a straightforward prediction naturally follows from this hypothesis concerning people's satisfaction with the choices they make in advance
+as already mentioned  prior work on the diversification bias has consistently shown that people choose greater variety when deciding for future consumption than when deciding in the moment
+it should come as no surprise  then  that people are sometimes dissatisfied with the degree of variety they select prospectively  CITATION
+however  if our thesis is correct then this  miswanting   CITATION  is also likely to vary as a function of the inter-consumption interval
+specifically  as the inter-consumption interval decreases  satisfaction with choices made in advance should increase
+the present research was designed to test these hypotheses
+experiment  NUMBER  explores whether enjoyment of repetition and aversion to variety increases as the inter-consumption interval increases
+experiment  NUMBER  examines whether the tendency to choose more variety in prospect than in the moment-the diversification bias-decreases as the inter-consumption interval decreases
+experiment  NUMBER  also examines whether this causes people to be more satisfied with the consumption choices they make in advance as the inter-consumption interval decreases
+experiment  NUMBER  extends these results by varying the length of the inter-consumption interval and observing the nature of the relationship between this interval  preference for variety  and subsequent enjoyment

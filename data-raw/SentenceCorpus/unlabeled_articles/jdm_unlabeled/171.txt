@@ -1,0 +1,35 @@
+### abstract ###
+the goal of obtaining information to improve classification accuracy can strongly conflict with the goal of obtaining information for improving payoffs
+two environments with such a conflict were identified through computer optimization
+three subsequent experiments investigated people's search behavior in these environments
+experiments  NUMBER  and  NUMBER  used a multiple-cue probabilistic category-learning task to convey environmental probabilities
+in a subsequent search task subjects could query only a single feature before making a classification decision
+the crucial manipulation concerned the search-task reward structure
+the payoffs corresponded either to accuracy  with equal rewards associated with the two categories  or to an asymmetric payoff function  with different rewards associated with each category
+in experiment  NUMBER   in which learning-task feedback corresponded to the true category  people later preferentially searched the accuracy-maximizing feature  whether or not this would improve monetary rewards
+in experiment  NUMBER   an asymmetric reward structure was used during learning
+subjects searched the reward-maximizing feature when asymmetric payoffs were preserved in the search task
+however  if search-task payoffs corresponded to accuracy  subjects preferentially searched a feature that was suboptimal for reward and accuracy alike
+importantly  this feature would have been most useful  under the learning-task payoff structure
+experiment  NUMBER  found that  if words and numbers are used to convey environmental probabilities  neither reward nor accuracy consistently predicts search
+these findings emphasize the necessity of taking into account people's goals and search-and-decision processes during learning  thereby challenging current models of information search
+### introduction ###
+when diagnosing and treating a patient  when choosing a job candidate or a mate  and in many other situations  one must make decisions without having all the relevant information
+are there widely applicable strategies for identifying useful queries
+what governs people's information search
+in information-acquisition situations where no particular benefits and costs apply  statistical optimal experimental design oed models provide one framework for evaluating the value of alternative queries  CITATION
+a variety of experiments suggest that such models can also provide a reasonable description of human information-search behavior  CITATION   in situations with no explicit external payoffs
+but in many situations-for instance  when deciding whether something is safe to eat  whether a suspicious suitcase contains a bomb  or whether a patient should be sent to the cardiac care unit-strong asymmetries in consequences for particular correct or incorrect decisions apply
+these asymmetries have implications for classification decisions
+for instance  a potential cardiac patient should be sent to the cardiac care unit if the risk of heart attack is greater than some threshold
+the threshold should clearly be less than a  NUMBER  percent  chance of heart attack  which would be the threshold for maximizing overall classification accuracy
+are there implications  for information search  of varying benefits and costs for different kinds of correct and incorrect decisions
+intuitively  it may seem that the best strategy is to conduct queries that allow determination of the true state of nature as accurately as possible  and to take payoffs into account only in the actual classification decision
+that intuition is distinctly wrong
+as our theoretical analyses and simulations illustrate  situation-specific costs and benefits must be considered when determining which information to acquire which test to conduct  which question to ask  which query to make  and not only when making classification decisions
+in other words  many highly informative tests are useless  given the applicable situation-specific reward structures
+to what extent does people's information-search behavior appropriately reflect the costs or benefits associated with different correct or mistaken decisions
+we address this in three experiments  using a probabilistic multiple-cue category learning and information-search paradigm
+importantly  we identify and investigate situations in which the goal of obtaining information that helps to maximize the number of correct classification decisions should in principle lead to different search behavior than is appropriate to maximize reward  given the particular environment's reward structure
+the environmental reward structure consists of the payoffs for each kind of correct classification decision  and the costs of each kind of incorrect classification decision
+we examine whether people's information-search behavior appropriately reflects situation-specific reward structures  or whether people may use probability gain  CITATION  to guide their search decisions  even when it is not adaptive to do so

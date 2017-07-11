@@ -1,0 +1,16 @@
+### abstract ###
+For a variety of regularized optimization problems in machine learning,  algorithms computing the entire solution path have been developed recently
+Most of these methods are quadratic programs that are parameterized by a single parameter, as for example the Support Vector Machine (SVM)
+Solution path algorithms do not only compute the solution for one particular value of the regularization parameter but the entire path of solutions, making the selection of an optimal parameter much easier
+It has been assumed that these piecewise linear solution paths have only linear complexity, ie \ linearly many bends
+We prove that for the support vector machine this complexity can be exponential in the number of training points in the worst case
+More strongly, we construct  a single instance of  SYMBOL  input points in  SYMBOL  dimensions for an SVM such that at least  SYMBOL  many distinct subsets of  support vectors % occur as the regularization parameter changes
+### introduction ###
+Regularization methods such as support vector machines (SVM) and  related kernel methods % have become very successful standard tools in many optimization, classification and regression tasks in a variety of areas, for example signal processing, statistics, biology, computer vision and computer graphics as well as data mining
+These regularization methods have in common that they are convex, usually quadratic, optimization problems containing a special parameter in their objective function, called the regularization parameter, representing the tradeoff between two optimization objectives
+In machine learning the two terms are usually the model complexity (regularization term) and the accuracy on the training data (loss term), or in other words the tradeoff between a good generalization performance and over-fitting
+Such parameterized quadratic programming problems have been studied extensively in both optimization and machine learning, resulting in many algorithms that are able to not only compute solutions at a single value of  the parameter, but along the whole solution path as the parameter varies
+For many variants, it is known that the solution paths are piecewise linear functions in the parameter, however, the complexity of these paths remained unknown
+Here we prove that the complexity of the solution path for SVMs, which  are simple instances of parameterized quadratic programs, is indeed  exponential in the worst case
+Furthermore, our example shows that  exponentially many distinct subsets of support vectors of the optimal  solution occur as the regularization parameter changes
+Here  the ``exponentially many'' is valid both in terms of the number of input  points and also in the dimension of the space containing the points

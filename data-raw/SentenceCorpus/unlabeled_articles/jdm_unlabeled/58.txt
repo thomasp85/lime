@@ -1,0 +1,124 @@
+### abstract ###
+many natural decisions contain an element of skill
+modern conceptions of the skill component include control CITATION and competence CITATION
+the control hypothesis states that a task's skill component the sensitivity of the task to skill affects decision making  the competence hypothesis states decision making is affected only if the participant possesses the skill
+three experiments compared risk taking patterns between two groups
+one group faced bets on random events  and another group faced bets on their answers to general knowledge questions  which is a task characterized by control
+in experiment  NUMBER   control increased risk taking markedly with all statistical properties held constant
+in experiment  NUMBER   decisions made in domains of varying difficulty  and by individuals of varying ability  yielded further qualified support for the role of competence
+in experiment  NUMBER   the role of control was replicated  and participants' perceptions of the differences in group treatments aligned more with the implications of the control hypothesis than with the competence hypothesis
+results offered support for the control hypothesis across a range of competence
+### introduction ###
+decision researchers know a great deal about the terms of risk that people will accept and reject on random events such as the drawing of a lottery number  rolling a die  or pulling a poker chip from a bookbag
+less is known about how individuals accept or reject risk when they are betting on their own golf putts  stock picks  organizational decisions or answers to trivia questions
+researchers readily build models of decision making around risky decisions based on random events
+much decision research is analogous to psychophysical perception research  relating psychological events to objective criteria
+a bookbag with  NUMBER  percent white and  NUMBER  percent red poker chips presents a clear objective criterion to which subjective perceptions may readily be compared
+sinking a free throw does not present such a clear criterion with regard to its associated probabilities
+for this reason  researchers have difficulty in evaluating performance relative to a normative criterion when the task is assessing the probability of a made free throw  as well as in establishing valid lawful relationships between relevant probabilities and decisions
+ellsberg  CITATION  and many others have found that people are generally ambiguity averse  in the domain of gains  people prefer a prospect in which probabilities of possible outcomes are known to a prospect in which probabilities of the same outcomes are not stated ambiguous but have the same average value
+the major exception to this is at very low probabilities  where ambiguity is preferred
+in the domain of losses  these preferences are reversed
+examination of the effect of a skill element constitutes a special case of ambiguity
+what is shaquille o'neal's probability of making his next free throw
+at the conclusion of the  NUMBERNUMBER  season  his career free throw rate was  NUMBER   NUMBER  percent   but his free throw rate for the season was only  NUMBER   NUMBER  percent 
+at his next free throw opportunity  he may be suffering from the flu  or coming off a terrible game  or on a hot streak  or he may merely believe he's on a hot streak  CITATION
+unlike a lottery draw  in which it is easier to construct a reasonable estimate of the probability of winning for example  by reading the ticket  the sample space for a successful free throw is not clearly defined
+in other words  the prediction of performance is variable over time in a skilled task  hence it is more difficult to predict on the basis of past performance
+in fact  most definitions of skill state or imply that the person exerting skill can change the probability of success
+the existing evidence suggests that a skilled task that determines an uncertain outcome has an effect on probability assessment and decision making that is distinct from that of ambiguity alone
+for example  in demonstrating the illusion of control  langer  CITATION  showed that people responded differently to vague likelihoods when certain superficial characteristics of the prospects were distorted  for example when the familiar symbols of a deck of cards were replaced by unfamiliar symbols  or when participants were permitted to practice on a random mechanism similar to a roulette wheel
+langer argued that the changes in the appearance of a skill component caused changes in responses
+confidence ratings  bet acceptance and bet amounts were all affected by apparent control  although the illusion of control is not robust to multi-shot gambles  CITATION
+participants bet more when given skill-relevant manipulations such as being able to choose whether to receive more cards in a simulated blackjack game  but not when given skill-irrelevant manipulations such as choosing a different dealer  CITATION
+also  participants high in desire for control bet more than those low in desire for control on events over which they had falsely perceived control
+those high in desire for control bet less than others on events over which they did not have illusory control  CITATION
+recent research has advanced two major conceptions of the role of skill in decision making  competence  CITATION  and control  CITATION
+these conceptions have important commonalities  sharing an emphasis on the role that the skill component of a task plays in shaping decision making under uncertainty apart from the probability and magnitude of possible outcomes
+the control hypothesis claims that people bet more when skill makes a difference  the competence hypothesis claims the same effect but only when an individual possesses the relevant skill
+control is a property of the task  if the task requires actions that can be learned  then it is characterized by control  even if a participant has not yet learned the skill
+competence  on the other hand  is an interactive characteristic of both the task and the person  competence exists only if the task both can be learned the task component and has been learned the person component
+heath and tversky  CITATION  argued that people prefer to bet on questions about knowledge topics in which they feel competent rather than incompetent
+in their studies  participants chose to bet on either the correctness of their answer to a general knowledge question or a random event whose probability matched their previously stated confidence  with identical payoffs in each bet offer
+across an assortment of situations  when betting on questions drawn from intermixed domains  the proportion of times that participants chose to bet on their knowledge was a steeply increasing function of the probability of winning experiments  NUMBER  and  NUMBER 
+because confidence consistently exceeded accuracy in these experiments  betting on a random event whose probability of winning was equal to confidence was more likely to win than betting on the belief itself  and heath and tversky  CITATION  noted that the acceptance of knowledge-based bets over random bets resulted in a  NUMBER  percent  loss of expected earnings
+heath and tversky then experiment  NUMBER  tested the competence hypothesis by drawing questions from discrete domains in which participants believed themselves to be either competent or incompetent
+they observed that  with subjective probability held constant  participants displayed a consistent behavioral pattern  bets in a domain of competence were preferred to bets on random events  which in turn were preferred to bets in a domain of incompetence
+they concluded that people seek out ambiguity in domains of competence but avoid it in areas of incompetence
+fox and tversky  CITATION  presented a companion to the competence hypothesis  the comparative ignorance hypothesis  positing that relative knowledge affects decisions most strongly when the contrast between conditions of greater and lesser competence is brought to the decision maker's attention
+these findings are notably contrary to the early ambiguity findings with random events  when evaluating bets on vaguely probable events with a skill component  participants preferred the ambiguous skilled option at high probabilities but preferred the unambiguous random option at low probabilities
+however  the evidence specifically in support of the control hypothesis remains limited to heath and tversky's experiment  NUMBER  comparing just two domains under unusual selection techniques  which are discussed at more length below
+more recent studies  CITATION  assessed risk attitude by pitting a bet on knowledge item against no bet at all  rather than a bet on a random event of equivalent probability
+goodie constructed bets on knowledge items to be fair  having zero average marginal value if confidence was well calibrated
+in the first two experiments  bet acceptance sharply increased as confidence increased for knowledge bets  bearing a striking resemblance to the comparable data obtained by heath and tversky  CITATION  when using mixed-domain questions
+in experiment  NUMBER   one group considered bets on their knowledge
+the other groups considered bets on events that appeared random to participants but that goodie constructed to be identical in every statistical way to bets on knowledge
+participants accepted more bets on random events at low probabilities and more bets on their knowledge at high probabilities  revealing the anticipated crossover effect
+an important difference arises between studies that utilize questions drawn from a single domain e g   u s history and those that use questions from mixed domains e g   greek mythology  u s history  and sports
+as heath and tversky  CITATION  noted in discussing the differences between single and mixed domains  low confidence items in mixed-domain populations will systematically include more questions from low-competence domains
+similarly  gigerenzer  CITATION  noted the importance of utilizing single-domain questions in assessing confidence in answers
+in a mixed-domain set of general knowledge questions  the methods used by the decision maker to generate confidence assessments become uninterpretable because the decision maker may be using a different reference set than the experimenter
+asking participants questions in a single domain allows for more reliable representations of confidence across all questions asked
+there is reason to expect that control per se influences decision making
+skinner  CITATION   in a major review of the literature  notes that   w hen people perceive that they have a high degree of control  they exert effort  try hard  initiate action  and persist in the face of failures and setbacks  they evince interest  optimism  sustained attention  problem solving  and an action orientation   CITATION
+where control prevails  a prospect with negative expected value  narrowly conceived  might also be an opportunity to learn new skill that will result in future prospects with positive value  and might therefore be worth accepting
+this is an interesting complement to the normative argument made by frisch and baron  CITATION  that other ambiguous prospects  even with positive expected value  might be worth postponing until further information is available to permit better-valued decisions
+we argue that ambiguous prospects characterized by control  even with negative expected value  might be worth pursuing in order to set up better-valued decisions later
+the possibility of accepting bets in order to increase skill does not apply when competence already exists  only when the possibility of exerting control to increase competence prevails
+the goals of this paper are  a to compare across domains wherein people have different degrees of competence  in order to observe the degree to which variation in competence makes a difference in risk attitude  b to extend the risk-attitude findings of goodie  CITATION  to single-domain formats  a manipulation that made a considerable difference in the ambiguity-attitude findings of heath and tversky  CITATION   and c to begin to compare the roles of competence and control in decisions under uncertainty
+the present experiments test the competence hypothesis against the control hypothesis by eliciting betting decisions within domains of varying difficulty and among participants of varying ability
+the distinction between competence and control is most evident in a skill-based task in which a particular participant has little skill
+the control hypothesis suggests people bet more when skill could be attained  the competence hypothesis only when it has been attained
+we can best differentiate between these two hypotheses when skill could be attained but has not
+the control hypothesis suggests the skill element does alter decision making under such conditions  whereas the competence hypothesis suggests it does not
+we report three experiments which use the methods developed by goodie  CITATION
+the basic task of fair bets on knowledge uses three kinds of questions  administered in two phases
+the first question type was a two-alternative forced choice question
+prior studies  CITATION  adapted questions from a collection  CITATION  that sampled from diverse domains
+the present studies randomly selected questions from five well-defined domains
+three question populations selected two of the  NUMBER  u s states at random and asked for a binary comparison on one statistic  population  land area  or population density  manipulated between-subjects
+the other two question populations randomly selected two of the  NUMBER  largest u s cities and elicited a comparison of the cities on either population or driving distance to athens  georgia
+the second question type asked for an assessment of confidence in each question  placed in one of the following categories   NUMBERNUMBER  percent    NUMBERNUMBER  percent    NUMBERNUMBER  percent    NUMBERNUMBER  percent    NUMBERNUMBER  percent    NUMBERNUMBER  percent   and  NUMBERNUMBER  percent 
+in a binary task such as this one  the range of  NUMBER  percentNUMBER  percent  reflects the full range of competence  from complete ignorance where accuracy would be  NUMBER  percent  and confidence should not be much higher  to absolute knowledge where accuracy and confidence are both  NUMBER  percent 
+confidence was taken as the midpoint of the selected confidence category
+we used these categories to assess risk taking across a well-defined array of probabilities from chance to certainty  combining equal spacing of categories in the mid-range and greater discrimination near the endpoints
+this range confers the advantages of reflecting all binary choices and being simple and easily understood  although it also bears the clear limitations of excluding half the probability spectrum
+these studies adopted confidence elicitation methods without alteration from those used by goodie  CITATION
+a third question type elicited acceptance or rejection of a bet on the correctness of each answer that was given
+participants played out these bets for point accumulations that were not backed by monetary incentives
+in all conditions  participants faced a two-alternative choice between a certain outcome and a bet
+the bet was always fair  having average value equal to the certain option if the participant's confidence judgment was well-calibrated
+its average value was less than that of the certain option if the participant was overconfident and greater than the certain option if the participant was underconfident
+after accepting or rejecting the bet  the participant received feedback  including the correct answer to the question  the number of points gained or lost including if no points were gained or lost  and the cumulative point total
+we used two betting formats  with mixed gains and losses  and gains only
+the mixed format was used in order to reflect the structure of many risks which contain the possibility of either gain or loss
+the gains only format was used to eliminate the complexity of possibly differing value and weighting for gains and losses
+we designed both betting formats to provide average outcomes that were equal if the bet was accepted or rejected  assuming good calibration
+betting formats were always varied between subjects  or were kept constant within an experiment  so that no participant needed to comprehend  remember  or distinguish between both
+in the mixed format  the certain option was no change in points  and the bet provided for a gain of  NUMBER  points if the answer was correct or a loss of  NUMBER    confidence  NUMBER -confidence points if the answer was incorrect
+for example  if a participant was  NUMBER  percent  confident in an answer  then she considered a bet wherein she won  NUMBER  points if the answer was correct but a loss of  NUMBER      NUMBER    NUMBER     NUMBER  points if the answer was wrong
+if she rejected the bet  she did not gain or lose any points
+in the gains only structure  the certain option was a gain of  NUMBER  points
+the bet offered a gain of  NUMBER   confidence points if the answer was correct and no gain if the answer was wrong
+so  if the participant bet on an answer in which she had  NUMBER  percent  confidence  she won  NUMBER    NUMBER     NUMBER  points if the answer was correct but nothing if the answer was wrong
+she gained  NUMBER  points if she rejected the bet
+it is easy to show that the average outcome of accepting a bet in either format is equal to the certain option no change in the mixed format or a gain of  NUMBER  points in gains only if pcorrect   confidence  less than the certain option if pcorrect  confidence  and greater than the certain option if pcorrect  confidence
+in experiments  NUMBER  and  NUMBER   we randomly assigned participants to two groups that differed in whether they believed they were betting on their knowledge or on a random event
+the answers group bet on their answers  using either the mixed or gains only format in different experiments
+the random group's bets held all statistical properties constant  differing from the answers group's only in appearing to rely on random events rather than participants' answers
+many dimensions of bets on knowledge are determined by the participants' responses  such as the distribution of subjective probabilities of winning determined by confidence  the frequency of winning determined by accuracy  and any order effects on these dimensions  CITATION
+by basing the apparently random bets on the participant's responses  we can rule out these and any other alternative explanations based on such statistical properties of the responses of participants in the answers condition
+bets that appeared stochastic in fact relied on participants' answers and confidence assessments in the knowledge questions
+in the betting phase  each answer was converted into a bet on a seemingly random event with the stated probability of winning equal to assessed confidence in a corresponding trivia answer  the correctness of the corresponding answer determined the bet's outcome
+for example  if a participant expressed  NUMBER  percent  confidence in her answer to the first question  then the first bet she encountered in the betting phase instructed  a number will be chosen at random between  NUMBER  and  NUMBER   and to win the bet  the chosen number must be less than or equal to the magic number
+the magic number this time is   NUMBER 
+if the chosen number is less than or equal to the magic number  you gain  NUMBER  points
+if the chosen number is greater than the magic number  you lose  NUMBER  points
+if the participant accepted the bet  she won the bet if her answer to the corresponding question was correct and lost the bet if her answer was incorrect
+the magic number  the magnitude of the gain if the bet was won  and the determination of whether the bet was won or lost changed on each betting trial to reflect the confidence expressed in the corresponding answer from the first phase and whether it was correct
+in all experiments  we recruited participants from the research pool of the psychology department at the university of georgia and compensated them with partial credit toward lower-division courses
+we prevented participants from participating in more than one of the present experiments or in any additional related experiments
+participants ran in groups of up to three in a room with individual computer stations separated by five-foot-tall partitions
+we omitted participants' data from analysis if they did not use more than three confidence categories  or if they showed evidence of not attending to the task i e   exclusive betting acceptance or rejection  or radical over- or underconfidence
+thirty participants were excluded for this reason  NUMBER  out of  NUMBER  in experiment  NUMBER    NUMBER  out of  NUMBER  in experiment  NUMBER   and  NUMBER  out of  NUMBER  in experiment  NUMBER 
+see table  NUMBER  for a layout of the structure of our experimental design

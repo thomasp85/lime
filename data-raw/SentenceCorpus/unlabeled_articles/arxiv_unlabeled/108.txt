@@ -1,0 +1,19 @@
+### abstract ###
+0 3cm Consider a class  SYMBOL  of  binary functions  SYMBOL   on a finite interval  SYMBOL
+Define the  sample width  of  SYMBOL   on a finite subset (a sample)  SYMBOL  as \( \w_S(h) \min_{xS} |\w_h(x)| \) where  SYMBOL
+Let   SYMBOL  be the space of all samples in  SYMBOL  of cardinality  SYMBOL   and consider  sets  of wide samples, ie ,  hypersets  which are defined as \( A_{\beta, h} = \{S\mathbb{S}_\ell: \w_{S}(h) \beta\} \) Through an application of the Sauer-Shelah result on the density of sets an upper estimate is obtained on the growth function (or trace) of  the class   SYMBOL ,  SYMBOL , ie , on the number of possible dichotomies obtained by intersecting all hypersets with a fixed collection of samples  SYMBOL  of  cardinality  SYMBOL
+The estimate is  SYMBOL
+### introduction ###
+For any logical expression  SYMBOL   denote by  SYMBOL  the indicator function which takes the value  SYMBOL  or  SYMBOL  whenever  the statement  SYMBOL  is true or false, respectively
+Let  SYMBOL  be any fixed positive integer and define  the space  SYMBOL   of all samples  SYMBOL  of size  SYMBOL
+On  SYMBOL   consider  sets  of wide samples, i e ,  SYMBOL  We refer to such sets as  hypersets
+It will be convenient to associate with these sets the indicator functions on  SYMBOL  which are denoted as  SYMBOL  These are referred to as  hyperconcepts  and we may write   SYMBOL  for brevity
+For any fixed width parameter  SYMBOL   define the  hyperclass   SYMBOL } In words,  SYMBOL  consists of all  sets of subsets  SYMBOL  of cardinality  SYMBOL   on which the corresponding binary functions  SYMBOL  are wide by at least  SYMBOL
+The aim of the paper is to compute the complexity of the hyperclass  SYMBOL  that corresponds to the class  SYMBOL
+Since the domain  SYMBOL  is infinite then so is  SYMBOL  hence one cannot simply measure its cardinality
+Instead  we  apply a standard combinatorial measure of the complexity of a family of sets as follows: suppose  SYMBOL  is  a general domain and  SYMBOL  is  an infinite  class of subsets of  SYMBOL
+For  any subset  SYMBOL  let  \Gamma_\mG(S) |\mG_{|S}| where  SYMBOL
+The   growth function   (see for instance  CITATION )  is defined as  SYMBOL  It measures the rate in which the number of dichotomies obtained by intersecting subsets  SYMBOL  of  SYMBOL  with a finite set  SYMBOL   increases as a function of the cardinality  SYMBOL  of  SYMBOL  in the maximal case (it is  also called the trace of  SYMBOL  in  CITATION )
+Since we are interested in hypersets as opposed to simple sets  SYMBOL  (as above) then we consider the trace on a finite  collection  SYMBOL  of samples (instead of a finite sample  SYMBOL  as above)
+It will be convenient to define  the cardinality of such a collection as the cardinality of the union of its component sets, i e , for any given finite collection  SYMBOL  let  |\zeta| = \left|\bigcup_{S: S\in\zeta} S\right| and we use   SYMBOL  to denote   a possible value of  SYMBOL
+As a measure of complexity of   SYMBOL  we  compute the growth as a function of  SYMBOL , i e SYMBOL

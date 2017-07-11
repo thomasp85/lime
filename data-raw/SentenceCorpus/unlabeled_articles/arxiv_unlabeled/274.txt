@@ -1,0 +1,38 @@
+### abstract ###
+Median clustering extends popular neural data analysis methods such as the self-organizing map or neural gas to general data structures given by a dissimilarity matrix only
+This offers flexible and robust global data inspection methods which are particularly suited for a variety of data as occurs in biomedical domains
+In this chapter, we give an overview about median clustering and its properties and extensions, with a particular focus on efficient implementations adapted to large scale data analysis
+### introduction ###
+The tremendous growth of electronic information in biological and medical domains has turned automatic data analysis and data inspection tools towards a key technology for many application scenarios
+Clustering and data visualization constitute one fundamental problem to arrange data in a way understandable by humans
+In biomedical domains, prototype based methods are particularly  well suited since they represent data in terms of typical values which can be directly inspected by humans and visualized in the plane  if an additional low-dimensional neighborhood or embedding is present
+Popular methodologies include K-means clustering, the self-organizing map, neural gas, affinity propagation, etc
+which have successfully been applied to various problems in the biomedical domain such as gene expression analysis, inspection of mass spectrometric data, health-care, analysis of microarray  data, protein sequences, medical image analysis, etc \  CITATION
+Many popular prototype-based clustering algorithms, however, have been derived for Euclidean data embedded in a real-vector space
+In biomedical applications, data are diverse including temporal signals such as EEG and EKG signals,  functional data such as mass spectra, sequential data such as DNA sequences, complex graph structures such as biological networks, etc
+Often, the Euclidean metric is not appropriate to compare such data, rather, a problem dependent similarity or dissimilarity measure should be used such as  alignment, correlation, graph distances, functional metrics,  or general kernels
+Various extensions of prototype-based methods towards more general data structures exist such as extensions for recurrent and recursive data structures, functional versions, or kernelized formulations, see eg \  CITATION  for an overview
+A very general approach relies on  a matrix which characterizes the pairwise similarities or dissimilarities of data
+This way, any  distance measure or kernel (or generalization thereof which might violate symmetry, triangle inequality, or positive definiteness) can be dealt with including discrete settings which cannot be embedded in Euclidean space such as alignment of sequences  or empirical measurements of pairwise similarities without explicit underlying metric
+Several approaches extend popular clustering algorithms such as K-means or the self-organizing map towards this setting by means of the relational dual formulation or kernelization of the approaches  CITATION
+These methods have the drawback that they partially require specific properties of the dissimilarity matrix (such as positive definiteness), and they represent data in terms of prototypes which are given by (possibly implicit) mixtures of training points, thus they cannot easily be interpreted directly
+Another general approach leverages mean field annealing techniques  CITATION  as a way to optimize a modified criterion that does not rely anymore on the use of prototypes
+As for the relational and kernel approaches, the main drawback of those solutions is the reduced interpretability
+An alternative is offered by a representation of classes by the median or centroid, i e \ prototype locations are restricted to the discrete set given by the training data
+This way, the distance of data points from prototypes is well-defined
+The resulting learning problem is connected to a  well-studied optimization problem, the K-median problem: given a set of data points and pairwise dissimilarities, find  SYMBOL  points forming centroids and an assignment of the data into k classes such that the average dissimilarities of points to their respective closest centroid is minimized
+This problem is NP hard in general unless the dissimilarities have a special form (e g \ tree metrics),  and there exist constant factor approximations for specific settings (e g \ metrics)  CITATION
+The popular K-medoid clustering extends the batch optimization scheme of K-means to this restricted setting of prototypes:  it in turn assigns data points to the respective closest prototypes and determines optimum prototypes for these assignments  CITATION
+Unlike K-means, there does not exist a closed form of the optimum prototypes given fixed assignments such that exhaustive search is used
+This results in a complexity  SYMBOL  for one epoch for K-centers clustering instead of  SYMBOL  for K-means,  SYMBOL  being the number of data points
+Like K-means, K-centers clustering is highly sensitive to initialization
+Various approaches optimize the cost function of K-means or K-median by different methods to avoid local optima as much as possible, such as Lagrange relaxations of the corresponding integer linear program, vertex substitution heuristics, or affinity propagation  CITATION
+In the past years, simple, but powerful  extensions of neural based clustering to general dissimilarities have been proposed which can be seen as generalizations of K-centers clustering to include neighborhood cooperation, such that the topology of data is taken into account
+More precisely, the median clustering has been integrated into the popular self-organizing map (SOM)  CITATION  and its applicability has been demonstrated in a large scale experiment from bioinformatics  CITATION
+Later, the same idea has been integrated into neural gas (NG) clustering together with a proof of the convergence of median SOM and median NG clustering  CITATION
+Like K-centers clustering, the methods require an exhaustive search to obtain optimum prototypes given fixed assignments such that the complexity of a standard implementation for one epoch is  SYMBOL  (this can be reduced to  SYMBOL  for median SOM, see Section  and  CITATION )
+Unlike K-means, local optima and overfitting can widely be avoided due to the neighborhood cooperation such that fast and reliable methods result which are robust with respect to noise in the data
+Apart from this numerical stability, the methods have further benefits: they are given by simple formulas and they are very easy to implement, they rely on underlying cost functions which can be extended towards the setting of partial supervision, and in many  situations a considerable speed-up of the algorithm can be obtained, as demonstrated in  CITATION , for example
+In this chapter, we present an overview about neural based median clustering
+We present the principle methods based on the cost functions of NG and SOM, respectively, and  discuss applications, extensions and properties
+Afterwards, we discuss several possibilities to speed-up the clustering algorithms, including exact methods, as well as single pass approximations for large data sets

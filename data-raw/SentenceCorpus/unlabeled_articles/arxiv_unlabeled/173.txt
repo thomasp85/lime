@@ -1,0 +1,45 @@
+### abstract ###
+The enormous successes have been made by quantum algorithms during the last decade
+In this paper, we combine the quantum game with the problem of data clustering, and then develop a quantum-game-based clustering algorithm, in which data points in a dataset are considered as players who can make decisions and implement quantum strategies in quantum games
+After each round of a quantum game, each player's expected payoff is calculated
+Later, he uses an link-removing-and-rewiring (LRR) function to change his neighbors and adjust the strength of links connecting to them in order to maximize his payoff
+Further, algorithms are discussed and analyzed in two cases of strategies, two payoff matrixes and two LRR functions
+Consequently, the simulation results have demonstrated that data points in datasets are clustered reasonably and efficiently, and the clustering algorithms have fast rates of convergence
+Moreover, the comparison with other algorithms also provides an indication of the effectiveness of the proposed approach \\ \\  Keywords : Unsupervised learning; Data clustering; Quantum computation; Quantum game
+### introduction ###
+Quantum computation is an extremely exciting and rapidly growing field
+More recently, an increasing number of researchers with different backgrounds, ranging from physics, computer sciences and information theory to mathematics and philosophy, are involved in researching properties of quantum-based computation~ CITATION
+During the last decade, a series of significant breakthroughs had been made
+One was that in 1994 Peter Shor surprised the world by proposing a polynomial-time quantum algorithm for integer factorization  CITATION , while in the classical world the best-known classical factoring algorithm works in superpolynomial time
+Three years later, in 1997, Lov Grover proved that a quantum computer could search an unsorted database in the square root of the time  CITATION
+Meanwhile, Gilles Brassard et al combined ideas from Grover's and Shor's quantum algorithms to propose a quantum counting algorithm  CITATION
+In recent years, many interests focus on the quantum game theory and considerable work has been done
+For instance, D A Meyer~ CITATION  studied the Penny Flip game in the quantum world firstly
+His result showed that if a player was allowed to implement quantum strategies, he would always defeat his opponent who played the classical strategies and increase his expected payoff as well J Eisert et al ~ CITATION  quantized the Prisoners' Dilemma and demonstrated that the dilemma could be escaped when both players resort to quantum strategies A P
+Flitney et al ~ CITATION  generalized Eisert's result, the miracle move, i e , the result of the game would move towards the quantum player's preferred result, while the other player used classical strategies L Marinatto et al ~ CITATION  investigated the Battle of the Sexes game in quantum domain
+Their result showed that there existed a unique equilibrium in the game, when the entangled strategies were allowed C F
+Lee et al ~ CITATION  reported that the quantum game is more efficient than the classical game, and they found an upper bound for this efficiency
+Besides, some experiments about the quantum games have also been implemented on different quantum computers~ CITATION
+For more details about quantum games, see~ CITATION
+Successes achieved by quantum algorithms make us guess that powerful quantum computers can figure out solutions faster and better than the best known classical counterparts for certain types of problems
+Furthermore, it is more important that they offer a new way to find potentially dramatic algorithmic speed-ups
+Therefore, we may ask naturally: can we construct quantum versions of classical algorithms or present new quantum algorithms to solve the problems in pattern recognition faster and better on a quantum computer
+Following this idea, some researchers have proposed their novel methods and demonstrated exciting results  CITATION
+In addition, data clustering is a main branch of Pattern Recognition, which is widely used in many fields such as pattern analysis, data mining, information retrieval and image segmentation
+In these fields, however, there is usually little priori knowledge available about the data
+In response to these restrictions, clustering methodology come into being which is particularly suitable for the exploration of interrelationships among data points
+Data clustering is the formal study of algorithms and methods for grouping or classifying unlabeled data points~ CITATION
+In other words, its task is to find the inherent structure of a given collection of unlabeled data points and group them into meaningful clusters~ CITATION
+In this paper, we attempt to combine the quantum game with the problem of data clustering in order to establish a novel clustering algorithm based on quantum games
+In our algorithms, unlabeled data points in a dataset are regarded as players who can make decisions in quantum games
+On a time-varying network formed by players, each player is permitted to use quantum strategies and plays a  SYMBOL  entangled quantum game against every one of his neighbors respectively
+Later, he applies a link-removing-and-rewiring (LRR) function to remove the links of neighbors with small payoffs and create new links to neighbors with higher payoffs at the same time
+Furthermore, the strength of links between a player and his neighbors is different from one another, which is updated by the Grover iteration
+During quantum games, the structure of network and the strength of links between players tend toward stability gradually
+Finally, if each player only connects to the neighbor with the highest strength, the network will naturally divide into several separate parts, each of which corresponds to a cluster
+The remainder of this paper is organized as follows: Section 2 introduces some important concepts about the quantum computation and the quantum Prisoners' Dilemma briefly
+In Section 3, the algorithms are established in two cases of strategies, payoff matrices and link-removing-and-rewiring (LRR) functions, and then they are elaborated and analyzed
+In Section 4, the relationship between the number of nearest neighbors and the number of clusters is discussed
+Next, the effect of the cost in the SD-like payoff matrix is analyzed, and the relationship between the total payoffs and the rates of convergence of algorithms is explained
+In Section 5, those datasets used in the simulations are introduced briefly, and then results of algorithms are demonstrated
+The conclusion is given in Section 6

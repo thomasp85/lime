@@ -1,0 +1,36 @@
+### abstract ###
+researchers frequently argue that within-subjects designs should be avoided because they result in research hypotheses that are transparent to the subjects in the study
+this conjecture was empirically tested by replicating several classic between-subjects experiments as within-subjects designs
+in two additional experiments  psychology students were given the within-subjects versions of these studies and asked to guess what the researcher was hoping to find i e the research hypothesis  and members of the society for judgment and decision making sjdm were asked to predict how well students would perform this task
+on the whole  students were unable to identify the research hypothesis when provided with the within-subjects version of the experiments
+furthermore  sjdm members were largely inaccurate in their predictions of the transparency of a within-subjects design
+### introduction ###
+in the field of psychology  there is a long-standing controversy over the appropriate use of between- and within-subjects designs
+within-subjects designs have greater power and less variability  but many researchers eschew their use for two reasons
+first  it has been argued that within-subjects designs render our research hypotheses transparent  CITATION
+that is  in a within-subjects design  subjects will be aware of the purposes of our experiment and may behave accordingly  thus posing a threat to the internal validity of the experiment
+second  some have argued that life is more similar to a between-subjects design  CITATION
+therefore  between-subjects designs increase the generalizability of the experimental findings
+however  others have argued that between-subjects designs pose their own risks
+parducci  CITATION  and birnbaum  CITATION  contend that  particularly with subjective judgments  the between-subjects design should be abandoned because it results in the confounding of context and stimulus
+the most famous demonstration of this principle was provided by birnbaum  CITATION   who showed that in a between-subjects design subjects rated the number  NUMBER  as being significantly larger than  NUMBER 
+theoretically  in a between-subjects design  the two conditions are identical except for the manipulation of a single stimulus
+in this case  the stimulus to be manipulated was the number being rated   NUMBER  or  NUMBER 
+however  birnbaum argues that subjective judgments cannot be made in isolation  they require a context
+in a within-subjects design  the context is specified  the two or more conditions are compared to each other
+in a between-subjects design  the subjects are left to construct their own context to evaluate the stimulus
+when this is the case  it is very likely that different contexts will be invoked for different stimuli
+in this example   NUMBER  is likely to bring to mind other single-digit numbers for comparison  thus leaving the impression that  NUMBER  is a relatively large number
+in contrast   NUMBER  is likely to bring to mind other triple-digit numbers for comparison  leaving the impression that  NUMBER  is a relatively small number
+thus  in a between-subjects design both the stimuli and the context vary between conditions  confounding the results
+although the relative merits may be theoretically debated  what is more troubling is that hypotheses tested in these two designs often do not result in the same conclusions  CITATION
+for example  in between-subjects comparisons  manipulations of base rates do not affect judgments of probability  leading to the conclusion that base rates are ignored  CITATION
+however  in within-subjects comparisons  base rates have large  significant effects on judgments of probability  leading to the conclusion that base rates are not ignored  CITATION
+despite the concerns about using between-subjects designs to evaluate subjective judgments raised by birnbaum and others  it appears that the within-subjects design has fallen out of favor in many areas of psychology
+in particular  within judgment and decision making there exist many findings supported almost exclusively by between-subjects data
+examples include the hindsight bias  CITATION   research on reason-based choice  CITATION   availability  CITATION   support theory  CITATION  and many classic demonstrations of heuristics and biases  CITATION
+researchers in these areas have frequently argued that between-subjects designs are more appropriate
+one of the main reasons cited for the superiority of between-subjects designs is the belief that within-subjects designs are transparent  CITATION
+although this appears to be a popular reason for rejecting the within-subjects design  this assertion has never been empirically tested
+thus  this gap in the literature inspired the two specific aims of this research
+the first aim was to determine if classic examples of between-subjects designs could be replicated using within-subjects designs

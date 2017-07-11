@@ -1,0 +1,47 @@
+### abstract ###
+Integrative approaches to studying the coupled dynamics of skeletal muscles with their loads while under neural control have focused largely on questions pertaining to the postural and dynamical stability of animals and humans.
+Prior studies have focused on how the central nervous system actively modulates muscle mechanical impedance to generate and stabilize motion and posture.
+However, the question of whether muscle impedance properties can be neurally modulated to create favorable mechanical energetics, particularly in the context of periodic tasks, remains open.
+Through muscle stiffness tuning, we hypothesize that a pair of antagonist muscles acting against a common load may produce significantly more power synergistically than individually when impedance matching conditions are met between muscle and load.
+Since neurally modulated muscle stiffness contributes to the coupled muscle-load stiffness, we further anticipate that power-optimal oscillation frequencies will occur at frequencies greater than the natural frequency of the load.
+These hypotheses were evaluated computationally by applying optimal control methods to a bilinear muscle model, and also evaluated through in vitro measurements on frog Plantaris longus muscles acting individually and in pairs upon a mass-spring-damper load.
+We find a 7-fold increase in mechanical power when antagonist muscles act synergistically compared to individually at a frequency higher than the load natural frequency.
+These observed behaviors are interpreted in the context of resonance tuning and the engineering notion of impedance matching.
+These findings suggest that the central nervous system can adopt strategies to harness inherent muscle impedance in relation to external loads to attain favorable mechanical energetics.
+### introduction ###
+The capability of skeletal muscles to deliver mechanical power is key in determining the neuromechanical performance envelope of organisms.
+How fast and how far animals run, fly, swim, or jump is clearly limited by the mechanical power delivered by the muscle-tendon units to skeletal and environmental loads.
+Therefore, estimating the mechanical energetics of muscles has been of interest in diverse fields such as organismal biomechanics, biomimetic robotics and prosthetics CITATION CITATION .
+Many factors influence the neuromechanical performance of organisms, including the dynamics and mechanical properties of muscle actuators, ii skeletal mechanics, iii neural control and iv influence of loads external to the organism.
+Integrative approaches have been proposed to capture the interaction of all, or subsets of these factors.
+For example, the connection between muscle impedance and neural control has been studied in depth with respect to postural and dynamic stability CITATION, CITATION, locomotory functions CITATION CITATION, manipulation CITATION, CITATION, and other biomechanical tasks CITATION.
+In this work, we adhere to the definition of muscle mechanical impedance as the static and dynamic relation between muscle force and imposed stretch CITATION.
+Muscle impedance encompasses muscle stiffness, which is the static relation between muscle force stretch only.
+In the context of muscle energetics, most investigations focused on experimentally measuring the power output of individual muscles at a range of frequencies, phases and electrical stimulation parameters, and finding maximal power generating capability of muscles under prescribed motion trajectories.
+However, the role of muscle-load interaction on output energetics has not been formalized.
+The central premise of this work is that the mechanical energetics of a muscle-actuated system cannot be determined in a meaningful manner without considering the coupling of muscle properties, load dynamics and neural activation.
+By considering this coupling explicitly, we arrive at phenomena that cannot be captured using standard workloop testing methodologies, including the opportunity to harness muscle-load interaction in an energetically advantageous manner.
+Muscle energetics have been characterized under dynamic conditions, both in vitro CITATION and in vivo CITATION, CITATION, CITATION.
+In vitro measurements relied almost invariably on the workloop technique CITATION.
+In this approach, isolated muscles are subjected to predetermined periodic length variations in time by means of an external motion source.
+At a given phase of the imposed oscillation, an electrical stimulus is delivered synchronously, resulting in periodic muscle contractions.
+A plot of muscle contractile force versus displacement results in a cyclic workloop, with the integrated area within the loop being a measure of the net muscle work done.
+These and similar measurements have been reproduced in the muscle physiology literature for various muscle groups within various organisms CITATION CITATION, and connections between the muscle function and its mechanical energetics have been made CITATION CITATION.
+While such measurements provide useful energetic connections with muscle function, the experimental conditions do not capture representative in vivo conditions because motion profiles are imposed on single isolated muscles with no muscle-load interactions CITATION, and without incorporating the effects of antagonist activity.
+In vivo measurements, on the other hand, capture all of the above effects in principle, but lack the experimental flexibility of varying load conditions in an unambiguous manner.
+Capturing the effect of muscle-load interaction on muscle energetics is critical.
+This interaction can be captured by considering the impedance of the muscles in relation to the impedance of the load.
+When a group of muscles acts on a common load, as exemplified by an antagonist pair acting on a common load, each muscle forms part of the load borne by the other muscles in its group.
+Because muscle impedance is activation dependent, neural control can be used to modulate the effective load observed by each muscle by modulating the impedance of the opposing muscles, thereby offering the opportunity to create favorable impedance conditions that maximize power transfer to the external environmental load.
+This is akin to the notion of impedance matching in engineering systems, where the driving source and the load are matched to provide optimal power transfer.
+In the context of neuromuscular control, impedance matching can enable groups of muscles to work synergistically to provide significantly higher energetics than the sum of individual muscles.
+Consequently, in this investigation we studied the influence of muscle-load interaction on muscle workloop energetics both computationally and experimentally.
+We set up a model problem consisting of a mass-spring-damper system actuated by either a single muscle, or a pair of symmetric, antagonist muscles.
+The input to the system can modulate the net force exerted by the two muscles as well as the net impedance.
+In the context of this problem, we investigated two hypothesis.
+Hypothesis 1 states that the power optimal oscillation frequency of a muscle actuated system is greater than the resonance frequency of the load.
+This is in direct contrast to an impedance-free actuator where the optimal oscillation frequency occurs exactly at the resonance of the load.
+Hypothesis 2 states that a pair of antagonist muscles can work together to produce more power synergistically than individually by margins that cannot be predicted without explicit incorporation of muscle impedance.
+We tested these hypotheses both computationally and experimentally.
+Our computational approach relied on optimal control solutions to the workloop maximization problem, which was based on a mathematical model of the problem.
+The experimental approach relied on in vitro measurements of workloop energetics of electrically-stimulated, frog muscle acting against emulated mass-spring-damper loads.

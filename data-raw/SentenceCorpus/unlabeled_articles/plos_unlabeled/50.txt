@@ -1,0 +1,25 @@
+### abstract ###
+Quasispecies are clouds of genotypes that appear in a population at mutation selection balance.
+This concept has recently attracted the attention of virologists, because many RNA viruses appear to generate high levels of genetic variation that may enhance the evolution of drug resistance and immune escape.
+The literature on these important evolutionary processes is, however, quite challenging.
+Here we use simple models to link mutation selection balance theory to the most novel property of quasispecies: the error threshold a mutation rate below which populations equilibrate in a traditional mutation selection balance and above which the population experiences an error catastrophe, that is, the loss of the favored genotype through frequent deleterious mutations.
+These models show that a single fitness landscape may contain multiple, hierarchically organized error thresholds and that an error threshold is affected by the extent of back mutation and redundancy in the genotype-to-phenotype map.
+Importantly, an error threshold is distinct from an extinction threshold, which is the complete loss of the population through lethal mutations.
+Based on this framework, we argue that the lethal mutagenesis of a viral infection by mutation-inducing drugs is not a true error catastophe, but is an extinction catastrophe.
+### introduction ###
+The concept of a mutation selection balance is one of the oldest and most fundamental pillars of population genetics: natural selection increases the frequency of fit variants while mutations introduce unfit variants, giving rise to an equilibrium distribution balanced between these two effects.
+Mutation selection balance has been invoked to explain the persistence of undesirable genes, for example, those underlying inbreeding depression, genetic diseases, and even senescence.
+Despite the long history of the concept, some of its consequences were only realized in 1971, when Manfred Eigen studied mutation selection dynamics in long genomes CITATION.
+He found that populations do not necessarily attain classic mutation selection balances in which the wild-type allele is most common, but rather attain an equilibrium with an abundant assemblage of mutant genotypes and a rare wild-type.
+He and Peter Schuster later called this collection of genotypes at equilibrium a quasispecies CITATION.
+This concept offered not only an intuitive extension of the mutation selection theory based on simple one- or two-locus systems, but also a novel insight into the impact of mutation rate on evolutionary dynamics.
+In particular, Eigen found that there are states in which a trivial boost in the mutation rate can lead to a fundamental change in the composition of genotypes in the population.
+This change, a phase transition in physics terms, is called the error catastrophe.
+The error catastrophe has been applied liberally as a metaphor for complications of high mutation rates, as likely plagued primordial life CITATION and currently challenges extant viruses with RNA genomes CITATION.
+The error-catastrophe model inspired treatments to extirpate viral populations by mutation enhancement CITATION, CITATION, and the model has been generalized to explain the attraction of populations to mutationally robust regions of fitness landscapes CITATION.
+The error catastrophe has imparted a mystique to the quasispecies concept, and much of the literature on RNA virus evolution now uses quasispecies as an enriched synonym for a high mutation rate.
+An excellent and short review of the topic and its relationship to population genetics theory is provided by Wilke CITATION .
+Eigen's insights were developed in the context of genomes with many loci, each of which suffered mutation.
+Appropriately, the quasispecies has since been considered in this large-genome context.
+Yet many of its concepts are easily illustrated in the much simpler case of few genotypes, which is our approach here.
+Our results are not new, per se, but our models should convey quasispecies and error-catastrophe concepts to a broad audience and correct some common misunderstandings.

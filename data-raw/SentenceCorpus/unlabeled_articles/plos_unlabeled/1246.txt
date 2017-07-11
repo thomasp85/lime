@@ -1,0 +1,45 @@
+### abstract ###
+The On-Off direction-selective ganglion cell in mammalian retinas responds most strongly to a stimulus moving in a specific direction.
+The DSGC initiates spikes in its dendritic tree, which are thought to propagate to the soma with high probability.
+Both dendritic and somatic spikes in the DSGC display strong directional tuning, whereas somatic PSPs are only weakly directional, indicating that spike generation includes marked enhancement of the directional signal.
+We used a realistic computational model based on anatomical and physiological measurements to determine the source of the enhancement.
+Our results indicate that the DSGC dendritic tree is partitioned into separate electrotonic regions, each summing its local excitatory and inhibitory synaptic inputs to initiate spikes.
+Within each local region the local spike threshold nonlinearly amplifies the preferred response over the null response on the basis of PSP amplitude.
+Using inhibitory conductances previously measured in DSGCs, the simulation results showed that inhibition is only sufficient to prevent spike initiation and cannot affect spike propagation.
+Therefore, inhibition will only act locally within the dendritic arbor.
+We identified the role of three mechanisms that generate directional selectivity in the local dendritic regions.
+First, a mechanism for DS intrinsic to the dendritic structure of the DSGC enhances DS on the null side of the cell's dendritic tree and weakens it on the preferred side.
+Second, spatially offset postsynaptic inhibition generates robust DS in the isolated dendritic tips but weak DS near the soma.
+Third, presynaptic DS is apparently necessary because it is more robust across the dendritic tree.
+The pre- and postsynaptic mechanisms together can overcome the local intrinsic DS.
+These local dendritic mechanisms can perform independent nonlinear computations to make a decision, and there could be analogous mechanisms within cortical circuitry.
+### introduction ###
+The On-Off direction-selective ganglion cell of the mammalian retina spikes vigorously to moving stimuli, but only weakly to stationary light spots.
+It responds most strongly over a limited range of stimulus directions, and the direction producing the maximal response is called the preferred direction, while a stimulus moving in the opposite direction, called the null direction, produces little or no response CITATION.
+We refer to such directionally-tuned spike responses as direction-selective.
+On-Off DSGCs are sharply bistratified neurons that respond with a transient depolarization and burst of spikes at both the onset and termination of a bright stimulus within the receptive field.
+Similarly the leading edge of a bright bar crossing the receptive field will produce a transient On-response, and, if the bar is wide relative to the dendritic extent and the speed low enough, the trailing-edge will produce a distinct, temporally separate Off-response.
+In their original description of the DSGC, Barlow and Levick CITATION noted that direction-selective spike output was produced for stimuli that covered only a small fraction of the dendritic arbor.
+They proposed that the synaptic mechanism comprised subunits that were repeated in an array across the receptive field.
+In contrast to most ganglion cells, which initiate spikes in the axon initial segment, the DSGC initiates spikes in the dendritic tree CITATION.
+The dendritic spikes are thought to propagate to the soma and initiate a somatic spike, similar to neurons in other regions of the brain where dendritic spiking is important for signal processing CITATION.
+These observations suggest that some type of local dendritic processing could provide the basis for the proposed subunits.
+Evidence for dendritic spiking in the DSGC was observed in low amplitude spikelets, which appear when somatic spiking is suppressed by local application of tetrodotoxin to the soma, or by hyperpolarizing the soma CITATION.
+Dendritic spikes are hypothesized to initiate somatic spikes with high probability because they are rarely seen under normal conditions.
+Further, both somatic and dendritic spiking responses are strongly tuned to preferred-direction stimuli, whereas the somatic graded potential shows relatively weak directional tuning CITATION CITATION.
+This implies that the DSGC does not employ the mechanism used by most other ganglion cells for synaptic integration, where spikes initiated at the soma reflect the summation of synaptic inputs over the dendritic tree CITATION.
+Instead it suggests that DSGC dendrites sum synaptic inputs and generate local spikes which then propagate to the soma, in the process amplifying the responses' directional selectivity.
+In addition to dendritic spiking in the DSGC, other mechanisms are also important for generating its direction-selective response.
+GABAergic inhibition is essential, and presynaptic mechanisms render both excitatory and inhibitory synaptic inputs to the DSGC directionally-tuned CITATION, CITATION.
+Both excitatory and inhibitory inputs vary in amplitude and relative timing as a function of direction.
+Further, postsynaptic integration of excitatory and inhibitory inputs has been hypothesized to contribute to DS signals CITATION CITATION.
+Postsynaptic inhibition resulting from null direction movement could produce DS signals in two ways: it could block the propagation of dendritic spikes or it could block their initiation CITATION CITATION, CITATION .
+However, the relative contributions of presynaptic and postsynaptic mechanisms to the DS spiking of the DSGC remains unclear.
+Initial theoretical studies suggested that postsynaptic mechanisms might suffice CITATION and this received some experimental support CITATION.
+However, more recently, presynaptic mechanisms have appeared to be the most significant CITATION, CITATION, CITATION, CITATION.
+We wanted to revisit this issue to delineate the relative contributions of presynaptic and postsynaptic mechanisms in a calibrated model.
+To investigate how dendritic processing of synaptic PSPs could amplify DS, we constructed multi-compartment biophysical models of DSGCs, digitized from tracer-injected morphologies calibrated to physiological data obtained prior to tracer injection.
+We stimulated the models with moving light bars that activated synaptic inputs.
+The goal was to explore how morphology, voltage-gated channels, and synaptic inhibition affect the initiation and propagation of dendritic spikes, and to compare these with the known physiological properties.
+Our simulations show that sub-threshold PSPs from the distal dendritic regions of the On-Off DSGC are heavily attenuated by propagation to the soma, but that spikes initiated within local dendritic regions can propagate with high probability to the soma and back-propagate to the remainder of the dendritic tree.
+Therefore active amplification of DS appears to take place during spike initiation in the dendrites.

@@ -1,0 +1,35 @@
+### abstract ###
+This paper presents a theoretical analysis of sample selection bias correction
+The sample bias correction technique commonly used in machine learning consists of reweighting the cost of an error on each training point of a biased sample to more closely reflect the unbiased distribution
+This relies on weights derived by various estimation techniques based on finite samples
+We analyze the effect of an error in that estimation on the accuracy of the hypothesis returned by the learning algorithm for two estimation techniques: a cluster-based estimation technique and kernel mean matching
+We also report the results of sample bias correction experiments with several data sets using these techniques
+Our analysis is based on the novel concept of  distributional stability  which generalizes the existing concept of point-based stability
+Much of our work and proof techniques can be used to analyze other importance weighting techniques and their effect on accuracy when using a distributionally stable algorithm
+### introduction ###
+In the standard formulation of machine learning problems, the learning algorithm receives training and test samples drawn according to the same distribution
+However, this assumption often does not hold in practice
+The training sample available is  biased  in some way, which may be due to a variety of practical reasons such as the cost of data labeling or acquisition
+The problem occurs in many areas such as astronomy,  econometrics, and species habitat modeling
+In a common instance of this problem, points are drawn according to the test distribution but not all of them are made available to the learner
+This is called the  sample selection bias problem
+Remarkably, it is often possible to correct this bias by using large amounts of unlabeled data
+The problem of sample selection bias correction for linear regression has been extensively studied in econometrics and statistics  CITATION  with the pioneering work of \emcite{heckman}
+Several recent machine learning publications  CITATION  have also dealt with this problem
+The main correction technique used in all of these publications consists of reweighting the cost of training point errors to more closely reflect that of the test distribution
+This is in fact a technique commonly used in statistics and machine learning for a variety of problems of this type  CITATION
+With the exact weights, this reweighting could optimally correct the bias, but, in practice, the weights are based on an estimate of the sampling probability from finite data sets
+Thus, it is important to determine to what extent the error in this estimation can affect the accuracy of the hypothesis returned by the learning algorithm
+To our knowledge, this problem has not been analyzed in a general manner
+This paper gives a theoretical analysis of sample selection bias correction
+Our analysis is based on the novel concept of  distributional stability  which generalizes the point-based stability introduced and analyzed by previous authors  CITATION
+We show that large families of learning algorithms, including all kernel-based regularization algorithms such as Support Vector Regression (SVR)  CITATION  or kernel ridge regression  CITATION  are distributionally stable and we give the expression of their stability coefficient for both the  SYMBOL  and  SYMBOL  distance
+We then analyze two commonly used sample bias correction techniques: a cluster-based estimation technique and kernel mean matching (KMM)  CITATION
+For each of these techniques, we derive bounds on the difference of the error rate of the hypothesis returned by a distributionally stable algorithm when using that estimation technique versus using perfect reweighting
+We briefly discuss and compare these bounds and also report the results of experiments with both estimation techniques for several publicly available machine learning data sets
+Much of our work and proof techniques can be used to analyze other importance weighting techniques and their effect on accuracy when used in combination with a distributionally stable algorithm
+The remaining sections of this paper are organized as follows
+Section~ describes in detail the sample selection bias correction technique
+Section~ introduces the concept of distributional stability and proves the distributional stability of kernel-based regularization algorithms
+Section~ analyzes the effect of estimation error using distributionally stable algorithms for both the cluster-based and the KMM estimation techniques
+Section~ reports the results of experiments with several data sets comparing these estimation techniques

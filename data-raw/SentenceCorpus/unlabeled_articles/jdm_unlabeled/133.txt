@@ -1,0 +1,41 @@
+### abstract ###
+three experiments investigated the relations between buyers' wealth or ability to pay atp and sellers' first offers
+study  NUMBER  demonstrated a positive correlation between sellers' first offers and their perceptions of the buyer's atp as well as its real economic power indicated by the company's market value
+in study  NUMBER   sellers in a field experiment made higher offers to potential buyers of higher atp
+study  NUMBER  examined the relations between buyer's atp  the perception of its ability to obtain alternatives to a specific deal  and sellers' first offers
+we found a positive correlation between sellers' perception of buyers' atp  real atp as indicated by market value  and sellers' perception of buyers' availability of alternatives
+as in study  NUMBER   here too  the unit of analysis was the behavior of the individual participant
+however  when sellers were primed to concentrate on buyers' alternatives  their first offers were negatively related to perceived buyer's alternatives
+### introduction ###
+every negotiation must start with a first offer by one of the negotiating parties
+first offers determine the process and outcomes of negotiations  CITATION  by affecting both counteroffers and settlement prices  CITATION  through a process of anchoring and adjustment  CITATION
+but although first offers have become an important research subject in recent years  CITATION   one simple question has not been fully answered  how do initiators decide the amount of their first offer
+research indicates that negotiators focus on various cues and reference points when deciding the amount of their first offer
+the main reference points include market prices  CITATION   reservation prices  CITATION   aspiration prices  CITATION   and own and counterpart's alternatives  CITATION
+several of these cues might not be readily accessible  and negotiators might have to exert some  or even considerable  effort to find or identify them
+on the other hand  easily available cues  such as counterpart's reputation  prestige  power or status  have not been investigated as potential determinants of the initial offers
+one important variable is counterpart's wealth  or ability to pay atp
+the current article focuses on this variable as a determinant of the amount of the first offer
+common sense wisdom might lead us to predict a positive correlation between the counterpart's perceived atp and the first offer that will be presented to him or her
+negotiators will make higher offers to wealthy counterparts because they believe that with greater resources the wealthy can afford to pay more
+common wisdom suggests that this may indeed be the case  a contractor will charge more for fixing your roof if you live in an upscale neighborhood namely  you are considered to have high atp  lawyers charge higher fees from richer costumers  and the same mechanical repair will cost you more if you drive an expensive car which signals high atp
+in legal settings  there is a widely held belief that jurors tend to award higher compensation for  deep pocket  defendants
+on the other hand  though high atp involves plentiful resources  it is also characterized by attributes that are likely to make the counterpart less willing to accept a high offer  leading to a negative atp effect on first offers
+there are two main reasons for this opposite effect
+first  the solid economic basis of high atp negotiators enables them to better search their environment and consequently to find better deals than the one offered
+second  if sellers believe that wealthier buyers are willing to pay more  than it is possible that more sellers would approach high atp buyers
+taken together  these two reasons suggest that high atp negotiators have more alternatives for a given deal  and therefore their batna best alternative to a negotiated agreement would be better than the batna of low atp negotiators
+with a better batna  high atp negotiators are less inclined to accept high offers
+a somewhat parallel reasoning is evident in legal settings
+on the one hand  jurors might be biased against wealthy defendants who can afford to pay and award them higher compensation
+however   deep pockets  have more resources to fight back  CITATION
+in the case of tort law   deep pockets  might have to pay out to many more claims  so they will tend to fight harder on an individual lawsuit
+though considering the counterparts' viewpoint in a negotiation setting  particularly their alternatives for the present deal  is often recommended to negotiators  CITATION   information about counterpart's alternatives is often unavailable
+counterpart's wealth  and therefore its ability to pay atp  on the other hand  is typically more available and more visible than its alternatives or its batna  so it becomes dominant
+we know that decision makers tend to pay attention to a single dominant dimension or attribute of objects they judge  CITATION
+examples of this behavior are the prominence effect  namely the tendency to focus solely on the most important  or most prominent  attribute  CITATION   and the halo effect  namely the tendency to construct global impressions on the basis of a single trait and base subsequent judgments on these overall impressions  CITATION
+thus  because atp is a more ready cue than availability of alternatives in the context of negotiation  we expect a positive atp effect on counterpart's first offers
+in sum  this article focuses on a straightforward question  do sellers make different first offers for the same products or services when dealing with costumers of different economic resources
+though this question is simple  as far as we know it has not been empirically examined
+this article aims to fill this gap by investigating the relation between counterpart's economic wealth and therefore its atp and first offers in negotiation
+the first two studies provide lab and field tests for this prediction

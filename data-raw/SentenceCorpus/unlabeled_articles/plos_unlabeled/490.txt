@@ -1,0 +1,49 @@
+### abstract ###
+A fundamental problem in neuroscience is understanding how working memory the ability to store information at intermediate timescales, like tens of seconds is implemented in realistic neuronal networks.
+The most likely candidate mechanism is the attractor network, and a great deal of effort has gone toward investigating it theoretically.
+Yet, despite almost a quarter century of intense work, attractor networks are not fully understood.
+In particular, there are still two unanswered questions.
+First, how is it that attractor networks exhibit irregular firing, as is observed experimentally during working memory tasks?
+And second, how many memories can be stored under biologically realistic conditions?
+Here we answer both questions by studying an attractor neural network in which inhibition and excitation balance each other.
+Using mean-field analysis, we derive a three-variable description of attractor networks.
+From this description it follows that irregular firing can exist only if the number of neurons involved in a memory is large.
+The same mean-field analysis also shows that the number of memories that can be stored in a network scales with the number of excitatory connections, a result that has been suggested for simple models but never shown for realistic ones.
+Both of these predictions are verified using simulations with large networks of spiking neurons.
+### introduction ###
+A critical component of any cognitive system is working memory a mechanism for storing information about past events, and for accessing that information at later times.
+Without such a mechanism, even simple tasks, such as deciding whether to wear a heavy jacket or a light sweater after hearing the weather report, would be impossible.
+Although it is not known exactly how storage and retrieval of information is implemented in neural systems, a very natural way is through attractor networks.
+In such networks, transient events in the world trigger stable patterns of activity in the brain, so by looking at the pattern of activity at the current time, other areas in the brain can know something about what happened in the past.
+There is now considerable experimental evidence for attractor networks in areas such as inferior temporal cortex CITATION CITATION, prefrontal cortex CITATION CITATION, and hippocampus CITATION, CITATION.
+And from a theoretical standpoint, it is well understood how attractor networks could be implemented in neuronal networks, at least in principle.
+Essentially, all that is needed is an increase in the connection strength among subpopulations of neurons.
+If the increase is sufficiently large, then each subpopulation can be active without input, and thus remember events that happened in the past.
+While the basic theory of attractor networks has been known for some time CITATION CITATION, moving past the in principle qualifier, and understanding how attractors could be implemented in realistic, spiking networks, has been difficult.
+This is because the original Hopfield model violated several important principles: neurons did not obey Dale's law; when a memory was activated, neurons fired near saturation, much higher than is observed experimentally in working memory tasks CITATION, CITATION ; and there was no null background state no state in which all neurons fired at low rates.
+Most of these problems have been solved.
+The first, that Dale's law was violated, was solved by clipping synaptic weights; that is, by using the Hopfield prescription CITATION, assigning neurons to be either excitatory or inhibitory, and then setting any weights of the wrong sign to zero CITATION, CITATION.
+The second, building a Hopfield-type network with low firing rate, was solved by adding appropriate inhibition CITATION CITATION.
+The third problem, no null background, was solved either by making the units sufficiently stochastic CITATION CITATION or adding external input CITATION, CITATION CITATION .
+In spite of these advancements, there are still two fundamental open questions.
+One is: how can we understand the highly irregular firing that is observed experimentally in working memory tasks CITATION ? Answering this question is important because irregular firing is thought to play a critical role both in how fast computations are carried out CITATION and in the ability of networks to perform statistical inference CITATION.
+Answering it is hard, though, because, as pointed out in CITATION, with naive scaling the net synaptic drive to the foreground neurons is proportional to the number of connections per neuron.
+Consequently, because of the high connectivity observed in cortex, the mean synaptic drive is much larger than the fluctuations, which implies that the foreground neurons should fire regularly.
+Moreover, as pointed out by Renart et al. CITATION, even for models that move beyond the naive scaling and produce irregularly firing neurons, the foreground neurons still tend to fire more regularly than the background neurons, something that is inconsistent with experiments CITATION .
+Several studies have attempted to get around this problem, either directly or indirectly CITATION, CITATION CITATION.
+Most of them, however, did not investigate the scaling of the network parameters with its size.
+So, although parameters were found which led to irregular activity, it was not clear how those parameters should scale as the size of the network increased to realistic values.
+In the two that did investigate scaling CITATION, CITATION, irregular firing was possible only if a small fraction of neurons was involved in each memory; i.e., only if the coding level was very small.
+Although there have been no direct measurements of the coding level during persistent activity, at least to our knowledge, experiments in superior temporal sulcus CITATION suggest that it is much larger than the one used in these models.
+We should point out, though, that the model of Renart et al. CITATION is the only one in which the foreground neurons are at least as regular as the background neurons.
+The second open question is: what is the storage capacity of realistic attractor networks?
+That is, how many different memories can be stored in a single network?
+Answering this is critical for understanding the highly flexible and seemingly unbounded memory capacity observed in animals.
+For simple, albeit unrealistic, models the answer is known: as shown in the seminal work of Amit, Gutfreund, and Sompolinsky CITATION, the number of memories that can be stored in a classical Hopfield network CITATION is about 0.14 times the number of neurons.
+For slightly more realistic networks the answer is also known CITATION, CITATION, CITATION, CITATION, CITATION CITATION.
+However, even these more realistic studies lacked biological plausibility in at least one way: connectivity was all all rather than sparse CITATION, CITATION, CITATION, CITATION, the neurons were binary CITATION, CITATION, CITATION, CITATION, CITATION, CITATION, there was no null background CITATION, CITATION, CITATION, CITATION, CITATION, CITATION, the firing rate in the foreground state was higher than is observed experimentally CITATION, CITATION, CITATION, CITATION, CITATION, CITATION, or the coding level was very small CITATION, CITATION .
+Here we answer both questions: we show, for realistic networks of spiking neurons, how irregular firing can be achieved, and we compute the storage capacity.
+Our analysis uses relatively standard mean-field techniques, and requires only one assumption: neurons in the network fire asynchronously.
+Given this assumption, we first show that neurons fire irregularly only if the coding level is above some threshold, although a feature of our model is that the foreground neurons are slightly more regular than the background neurons.
+We then show that the maximum number of memories in our network the capacity is proportional to the number of connections per neuron, a result that is consistent with the simplified models discussed above.
+These predictions are verified with simulations of biologically plausible networks of spiking neurons.

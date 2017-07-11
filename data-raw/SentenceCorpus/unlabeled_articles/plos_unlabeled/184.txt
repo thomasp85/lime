@@ -1,0 +1,42 @@
+### abstract ###
+In prokaryotes, Shine Dalgarno sequences, nucleotides upstream from start codons on messenger RNAs that are complementary to ribosomal RNA, facilitate the initiation of protein synthesis.
+The location of SD sequences relative to start codons and the stability of the hybridization between the mRNA and the rRNA correlate with the rate of synthesis.
+Thus, accurate characterization of SD sequences enhances our understanding of how an organism's transcriptome relates to its cellular proteome.
+We implemented the Individual Nearest Neighbor Hydrogen Bond model for oligo oligo hybridization and created a new metric, relative spacing, to identify both the location and the hybridization potential of SD sequences by simulating the binding between mRNAs and single-stranded 16S rRNA 3 tails.
+In 18 prokaryote genomes, we identified 2,420 genes out of 58,550 where the strongest binding in the translation initiation region included the start codon, deviating from the expected location for the SD sequence of five to ten bases upstream.
+We designated these as RS 1 genes.
+Additional analysis uncovered an unusual bias of the start codon in that the majority of the RS 1 genes used GUG, not AUG. Furthermore, of the 624 RS 1 genes whose SD sequence was associated with a free energy release of less than 8.4 kcal/mol, 384 were within 12 nucleotides upstream of in-frame initiation codons.
+The most likely explanation for the unexpected location of the SD sequence for these 384 genes is mis-annotation of the start codon.
+In this way, the new RS metric provides an improved method for gene sequence annotation.
+The remaining strong RS 1 genes appear to have their SD sequences in an unexpected location that includes the start codon.
+Thus, our RS metric provides a new way to explore the role of rRNA mRNA nucleotide hybridization in translation initiation.
+### introduction ###
+In 1974 Shine and Dalgarno CITATION sequenced the 3 end of Escherichia coli's 16S ribosomal RNA and observed that part of the sequence, 5 ACCUCC 3, was complementary to a motif, 5 GGAGGU 3, located 5 of the initiation codons in several messenger RNAs.
+They combined this observation with previously published experimental evidence and suggested that complementarity between the 3 tail of the 16S rRNA and the region 5 of the start codon on the mRNA was sufficient to create a stable, double-stranded structure that could position the ribosome correctly on the mRNA during translation initiation.
+The motif on the mRNAs, 5 GGAGGU 3, and variations on it that are also complementary to parts of the 3 16S rRNA tail, have since been referred to as the Shine Dalgarno sequence.
+Shine and Dalgarno's theory was bolstered by Steitz and Jakes in 1975 CITATION and eventually experimentally verified, in 1987, by Hui and de Boer CITATION and Jacob et al. CITATION .
+Since Shine and Dalgarno's publication, two different approaches have been used to identify and position SD sequences in prokaryotes: sequence similarity and free energy calculations.
+Methods based on sequence similarity include searching upstream from start codons for sub-strings of the SD sequences that are at least three nucleotides long CITATION.
+Identification errors can arise from this approach for several reasons CITATION.
+A threshold of similarity does not exist that can clearly delineate actual SD sequences from spurious sites with a significant, but low, degree of similarity to the SD sequence.
+The lack of certainty has led to a number of observations in which gene sequences appear to partition themselves into two categories: those with obvious SD sequences and those without.
+The inability of sequence techniques to pinpoint the exact location of the SD sequence poses a problem because its location is believed to affect translation initiation CITATION CITATION .
+The second approach, using free energy calculations, is based on thermodynamic considerations of the proposed mechanism of 30S binding to the mRNA and overcomes the limitations of sequence analysis.
+Watson Crick hybridization occurs between the 3 -terminal, single-stranded nucleotides of the 16S rRNA and the SD sequence in the mRNA and has a significant effect on translation CITATION, CITATION.
+The formation of hydrogen bonds between aligned, complementary nucleotides is the basis of Watson Crick hybridization and results in a more stable, double-stranded structure with lower free energy than the participating single-stranded sequences.
+One long-standing implementation of this model, Mfold CITATION, quantifies the degree of hybridization and the stability of RNA secondary structure by calculating the change in energy CITATION CITATION.
+This method for estimating free energy has been adapted to identify SD sequences by repeatedly calculating the G values for progressive alignments of the rRNA tail with the mRNA in the region upstream of the start codon CITATION, CITATION, CITATION, CITATION.
+All of these studies have observed a trough of negative G upstream of the start codon whose location is largely coincident with the SD consensus sequence.
+This second approach can both identify the SD sequence and pinpoint its exact location as that having the minimal G value.
+However, the exact location of the SD sequence is dependent on the nucleotide indexing scheme of the algorithm, i.e., on which nucleotide is designated as the 0 position.
+To normalize indexing and to further extend free energy analysis through the start codon and into the coding region of genes, we created a new metric, relative spacing.
+This metric localizes binding across the entire translation initiation region, relative to the rRNA tail, enabling us to characterize binding that involves the start codon as well as sequences downstream.
+RS is also independent of the length of the rRNA tail, and this property allows for comparison of binding locations between species.
+By examining sequences downstream from start codons, we could explore mRNAs that lack any upstream region, the leaderless mRNAs CITATION CITATION.
+The lack of any 5 untranslated leader in the mRNAs has prompted searches for other sequence motifs that could interact with the 16S rRNA.
+One of these, the downstream box hypothesis CITATION, has been disproved CITATION.
+Thus, there is a continued search for an explanation for the highly conserved sequences 3 of the initiation codon that have been observed in many leaderless mRNAs CITATION, CITATION, CITATION .
+In this study we use the RS metric to identify the positions of minimal G troughs for genes of 18 species of prokaryotes as a test of its usefulness as a means to improve existing annotation tools, i.e., by identifying SD sequences.
+We observe 2,420 genes where the strongest binding in the entire TIR takes place one nucleotide downstream from the start codon, at RS 1.
+Of these, 624 genes have unusually strong binding.
+We then determine if these 624 genes were mis-annotated and conclude that 384 are.

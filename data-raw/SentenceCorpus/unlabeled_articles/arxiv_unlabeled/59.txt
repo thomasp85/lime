@@ -1,0 +1,39 @@
+### abstract ###
+Ordinal regression is an important type of learning, which has properties of both classification and regression
+Here we describe a simple and effective approach to adapt a traditional neural network to  learn ordinal categories
+Our approach is a generalization of the perceptron method for ordinal regression
+On several benchmark datasets, our method (NNRank) outperforms a  neural network classification method
+Compared with the ordinal regression methods  using Gaussian processes and support vector machines, NNRank achieves comparable performance
+Moreover, NNRank has the advantages of traditional neural networks: learning in both online and batch modes, handling very large training datasets, and making rapid predictions
+These features make NNRank a useful and complementary tool for large-scale data processing tasks such as information retrieval, web page ranking, collaborative filtering, and protein ranking in Bioinformatics \\
+### introduction ###
+Ordinal regression (or ranking learning) is an important supervised problem of  learning a ranking or ordering on instances, which has the property of both  classification and metric regression
+The learning task of ordinal regression is to assign data points into a set of finite ordered categories
+For example, a  teacher rates students' performance using A, B, C, D, and E  (A  SYMBOL  B  SYMBOL  C  SYMBOL  D  SYMBOL  E) (Chu \& Ghahramani, 2005a)
+Ordinal regression is different from classification due to the order of categories
+In contrast to metric regression, the response variables (categories) in  ordinal regression is discrete and finite
+The research of ordinal regression dated back to the ordinal statistics methods in 1980s (McCullagh, 1980; McCullagh \& Nelder, 1983) and  machine learning research in 1990s (Caruana et al , 1996; Herbrich et al , 1998; Cohen et al , 1999)
+It has attracted the considerable attention in recent years due to its potential applications in many data-intensive domains such as information retrieval (Herbrich et al , 1998), web page ranking (Joachims, 2002), collaborative filtering (Goldberg et al , 1992; Basilico \& Hofmann, 2004; Yu et al , 2006),  image retrieval (Wu et al , 2003), and protein ranking (Cheng \& Baldi, 2006) in  Bioinformatics
+A number of machine learning methods have been developed or redesigned to address ordinal regression problem (Rajaram et al , 2003), including  perceptron (Crammer \& Singer, 2002) and its kernelized generalization (Basilico \& Hofmann, 2004), neural network with gradient descent (Caruana et al , 1996; Burges et al , 2005), Gaussian process (Chu \& Ghahramani, 2005b; Chu \& Ghahramani, 2005a; Schwaighofer et al , 2005), large margin classifier (or support vector machine) (Herbrich et al , 1999; Herbrich et al , 2000; Joachims, 2002; Shashua \& Levin, 2003; Chu \& Keerthi, 2005; Aiolli \& Sperduti, 2004; Chu \& Keerthi, 2007), k-partite classifier (Agarwal \& Roth, 2005), boosting algorithm (Freund et al , 2003; Dekel et al , 2002), constraint classification (Har-Peled et al , 2002),  regression trees (Kramer et al , 2001), Naive Bayes (Zhang et al , 2005), Bayesian hierarchical experts (Paquet et al , 2005), binary classification approach (Frank \& Hall, 2001; Li \& Lin, 2006) that decomposes the original ordinal regression problem into a set of binary classifications, and the optimization of nonsmooth cost functions (Burges et al , 2006)
+Most of these methods can be roughly classified into two categories:  pairwise constraint approach (Herbrich et al , 2000; Joachims, 2002; Dekel et al , 2004; Burges et al , 2005) and  multi-threshold approach (Crammer \& Singer, 2002; Shashua \& Levin, 2003; Chu \& Ghahramani, 2005a)
+The former is to convert the full ranking relation into pairwise order constraints
+The latter  tries to learn multiple thresholds to divide data into ordinal categories
+Multi-threshold approaches  also can be unified under the general, extended binary classification framework (Li \& Lin, 2006)
+The ordinal regression methods have different advantages and disadvantages
+Prank (Crammer \& Singer, 2002), a perceptron approach that generalizes the binary perceptron algorithm to the ordinal multi-class situation,  is a fast online algorithm
+However, like a standard perceptron method, its accuracy suffers when dealing with non-linear data, while a quadratic kernel version of Prank  greatly relieves this problem
+One class of accurate large-margin classifier approaches (Herbrich et al , 2000; Joachims, 2002) convert the ordinal relations into  SYMBOL  ( SYMBOL : the number of data points)  pairwise ranking constraints for the structural  risk minimization (Vapnik, 1995; Schoelkopf \& Smola, 2002)
+Thus, it can not be applied to medium size datasets  ( SYMBOL  10,000 data points), without discarding some pairwise preference relations
+It may also overfit noise due to incomparable pairs
+The other class of powerful large-margin classifier  methods (Shashua \& Levin, 2003; Chu \& Keerthi, 2005) generalize the support vector formulation for ordinal regression by finding  SYMBOL  thresholds on the real line that divide   data into  SYMBOL  ordered categories
+The size of this optimization problem is linear in the number of training examples
+However, like support vector machine used for  classification, the prediction speed is slow when the solution is not sparse, which makes it not appropriate for time-critical tasks
+Similarly, another state-of-the-art approach, Gaussian process method (Chu \& Ghahramani, 2005a),   also has the difficulty of handling large training datasets  and the problem of slow prediction speed in some situations
+Here we describe a new neural network approach for ordinal regression that  has the advantages of  neural network learning: learning in both online and batch mode, training on very large dataset (Burges et al , 2005), handling non-linear data, good performance, and rapid prediction
+Our method can  be considered a generalization of the perceptron     learning (Crammer \& Singer, 2002) into multi-layer perceptrons (neural network) for ordinal regression
+Our method is also related to the classic generalized linear models (e g , cumulative logit model) for ordinal regression (McCullagh, 1980)
+Unlike the neural network method (Burges et al , 2005) trained on pairs of   examples to learn pairwise order relations,  our method works on individual data points and uses multiple output nodes to estimate the probabilities of ordinal categories
+Thus, our method falls into the category of multi-threshold approach
+The learning of our method proceeds similarly as traditional neural networks using back-propagation (Rumelhart et al , 1986)
+On the same benchmark datasets, our method yields the performance better than the standard classification  neural networks and comparable to the state-of-the-art methods using support vector machines and  Gaussian processes
+In addition, our method can learn on very large datasets and make rapid predictions

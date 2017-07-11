@@ -1,0 +1,23 @@
+### abstract ###
+Point clouds are sets of points in two or three dimensions
+Most kernel methods for learning on sets of points have not yet dealt with the specific geometrical invariances and practical constraints associated with point clouds in computer vision and graphics
+In this paper, we present extensions of graph kernels for point clouds, which allow to use kernel methods for such objects as shapes, line drawings, or any three-dimensional point clouds
+In order to design rich and numerically efficient kernels with as few free parameters as possible, we use kernels between covariance matrices and their factorizations on graphical models
+We derive polynomial time dynamic programming recursions and  present applications to recognition of handwritten digits and Chinese characters from few training examples
+### introduction ###
+In recent years, kernels for structured data have been designed in many domains, such as bioinformatics~ CITATION , speech processing~ CITATION , text processing~ CITATION  and computer vision~ CITATION
+They provide an elegant way of including known  a priori  information, by using directly the natural topological structure of objects
+Using a priori knowledge through structured kernels have proved beneficial because it allows to reduce the number of training examples, and to re-use existing data representations that are already well developed by experts of those domains
+In this paper, we propose a kernel between point clouds, with applications to classification of line drawings (such as handwritten digits~ CITATION  or Chinese characters~ CITATION ) or shapes~ CITATION
+The natural geometrical structure of point clouds is hard to represent in a few real-valued features~ CITATION , in particular because of (a)  the required local or global invariances by rotation, scaling, and/or translation, (b) the lack of pre-established registrations of the point clouds (i e , points from one cloud are not matched to points from another cloud), and (c) the noise and occlusion that impose that only portions of two point clouds ought to be compared
+Following one of the leading principles for designing kernels between structured data, we propose to look at all possible partial matches between two point clouds~ CITATION
+More precisely, we assume that each point cloud has a graph structure (most often a neighborhood graph), and we consider recently introduced  graph kernels ~ CITATION
+Intuitively, these kernels consider all possible subgraphs and compare and count the matching subgraphs
+However, the set of subgraphs (or even the set of paths) has exponential size and cannot be efficiently described recursively; so larger sets of substructures are commonly used, eg , walks and tree-walks
+As shown in \mysec{graphkernels}, by choosing appropriate substructures and fully factorized local kernels, efficient dynamic programming implementations allow to sum over an exponential number of substructures in polynomial time
+The kernel thus provides an efficient and elegant way of considering very large feature spaces (see, eg ,~ CITATION )
+However, in the context of computer vision, substructures correspond to matched sets of points, and dealing with local invariances imposes to use a local kernel that cannot be readily expressed as a product of separate terms for each pair of points, and the usual dynamic programming approaches cannot then be applied
+The main contribution of this paper is to design a local kernel that is not fully factorized but can be instead factorized according to the graph underlying the substructure
+This is naturally done through graphical models and the design of positive kernels for covariance matrices that factorize on graphical models (\mysec{GM})
+With this novel local kernel, we derive new polynomial time dynamic programming recursions in \mysec{recursions}
+In \mysec{simulations}, we present simulations on handwritten character recognition

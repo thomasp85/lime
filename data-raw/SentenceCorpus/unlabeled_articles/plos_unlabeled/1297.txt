@@ -1,0 +1,36 @@
+### abstract ###
+Understanding the computations performed by neuronal circuits requires characterizing the strength and dynamics of the connections between individual neurons.
+This characterization is typically achieved by measuring the correlation in the activity of two neurons.
+We have developed a new measure for studying connectivity in neuronal circuits based on information theory, the incremental mutual information.
+By conditioning out the temporal dependencies in the responses of individual neurons before measuring the dependency between them, IMI improves on standard correlation-based measures in several important ways: it has the potential to disambiguate statistical dependencies that reflect the connection between neurons from those caused by other sources provided that the dependencies have appropriate timescales, for the study of early sensory systems, it does not require responses to repeated trials of identical stimulation, and it does not assume that the connection between neurons is linear.
+We describe the theory and implementation of IMI in detail and demonstrate its utility on experimental recordings from the primate visual system.
+### introduction ###
+To understand the function of neuronal circuits and systems, it is essential to characterize the connections between individual neurons.
+The major connections between and within many brain areas have been mapped through anatomical studies, but these maps specify only the existence of connections, not their strength or dynamics.
+Measuring the strength and dynamics of the connection between two neurons requires physiological experiments in which the activity of both neurons is measured.
+The most direct of these experiments involves intracellular recordings, which allow the connection between the two neurons to be directly investigated.
+However, intracellular recordings are difficult to perform in vivo and impossible to obtain from more than a few cells at a time.
+Instead, most physiological studies of connectivity rely on extracellular recordings from multi-electrode arrays.
+In these experiments, it is not usually possible to explicitly verify anatomical connectivity, nor to directly characterize the connections.
+Instead, the strength and dynamics of functional connectivity must be inferred through statistical methods.
+The traditional method for characterizing the strength and dynamics of the connection between two neurons is the cross correlation function, which measures the linear correlation between two signals over a range of specified delays CITATION.
+While C XY and its variants have been used successfully in a number of studies, it has limitations that must be considered when studying the connection between neurons CITATION CITATION.
+The limitations of C XY arise from the fact that it is a measure of the total dependency between two signals and, thus, implicitly assumes that all dependencies between them are due to their connection.
+In the case of neurons, there are in fact many potential sources of dependency shared external stimuli, intrinsic cellular and network properties, etc. and C XY cannot disambiguate these dependencies from those due to the actual connection.
+Several modified versions of C XY have been proposed to address these drawbacks.
+For example, if neuronal activity in response to repeated trials of the same external stimulus is available for analysis, as is often the case in early sensory systems, the shift-predictor can be used to remove some of the correlations due to the stimulus CITATION.
+Further modifications to C XY have also been proposed to remove the correlations due to stimulus-driven covariations in activity CITATION and background activity CITATION.
+While these modified approaches have certainly improved upon the standard C XY, the confound of dependencies due to the connection and those arising from other sources remains a general problem.
+In addition to correlation-based methods, there are several other approaches to characterizing the dependency between two signals that can be used to study the connection between two neurons.
+These methods can be generally divided into two classes: model-based and model-free.
+The most common model-based approach to characterizing dependency is Granger causality CITATION.
+With GC, one signal is predicted in two different ways: using an autoregressive model based on its own past and using a multivariate autoregressive model based on its own past and the past of the second signal.
+The strength of the dependency is given by the difference in the predictive power of the two models and the dynamics of the dependency are reflected in the regression parameters that correspond to the influence of the second signal.
+The power of model-based approaches such as GC is dependent on the validity of the underlying model; if the dependency between the two signals is approximately linear, then the characterization provided by GC will be accurate, but in situations where the properties of the dependency are complex or unknown, as is often the case with neurons, a model-free approach may be more appropriate.
+The most common model-free approach to characterizing dependency is transfer entropy, the information-theoretic analog of GC CITATION.
+TE measures the reduction in the entropy of one signal that is achieved by conditioning on its own past and the past of the second signal relative to the reduction in entropy achieved by conditioning on its own past alone.
+TE is a powerful tool for measuring the overall strength of a dependency, but is not suitable for characterizing its dynamics.
+In this paper, we detail a new model-free approach for characterizing both the strength and dynamics of a dependency by conditioning out the temporal correlations in both signals before assessing the strength of the dependency at different delays.
+This approach can overcome some of the confounds that are common in studies of neuronal connectivity CITATION CITATION, as it has the potential to disambiguate statistical dependencies that reflect the connection between neurons from those caused by other sources provided that the dependencies have appropriate timescales.
+In the following sections, we outline the theory behind our measure, which we call incremental mutual information, illustrate its usage on simulated neuronal activity and experimental recordings from the primate visual system, and consider its relationship to other common measures of dependence.
+Matlab code for measuring incremental mutual information is available for download at LINK

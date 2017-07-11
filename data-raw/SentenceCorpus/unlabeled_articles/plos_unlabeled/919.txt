@@ -1,0 +1,41 @@
+### abstract ###
+Recent advances in reconstruction and analytical methods for signaling networks have spurred the development of large-scale models that incorporate fully functional and biologically relevant features.
+An extended reconstruction of the human Toll-like receptor signaling network is presented herein.
+This reconstruction contains an extensive complement of kinases, phosphatases, and other associated proteins that mediate the signaling cascade along with a delineation of their associated chemical reactions.
+A computational framework based on the methods of large-scale convex analysis was developed and applied to this network to characterize input output relationships.
+The input output relationships enabled significant modularization of the network into ten pathways.
+The analysis identified potential candidates for inhibitory mediation of TLR signaling with respect to their specificity and potency.
+Subsequently, we were able to identify eight novel inhibition targets through constraint-based modeling methods.
+The results of this study are expected to yield meaningful avenues for further research in the task of mediating the Toll-like receptor signaling network and its effects.
+### introduction ###
+Toll-like receptors are a group of conserved pattern recognition receptors that activate the processes of innate and adaptive immunity CITATION.
+Recent activity has focused on the characterization of the TLR network and its involvement in the apoptotic, inflammatory, and innate immune responses CITATION CITATION.
+TLR signaling is a primary contributor to inflammatory responses and has been implicated in several diseases including cardiovascular disease CITATION, CITATION.
+Indeed, even in cases of desired inflammatory response, excessive activation of signaling pathways can lead to septic shock and other serious conditions CITATION .
+As such, there is much interest in the development of methods to attenuate or modulate TLR signaling in a targeted fashion.
+For example, one approach involves the inhibition of specific reactions or components within the TLR network that will dampen undesired signaling pathways while not adversely affecting other signaling components CITATION, CITATION.
+These reactions or components should ideally be highly specific to the TLR network and also to one transcription target.
+Therefore, the available, comprehensive data sets of the TLR network need to be put into a more structured, systematic format that enables better understanding of the associated signaling cascades, pathways, and connections to other cellular networks.
+Such a systemic approach is necessary to achieve the ultimate goal of mediating the effects of Toll-like receptor signaling upon the inflammatory, immune, and apoptotic responses.
+This need is particularly important given the amount of experimental data about TLR signaling that is already too large to be analyzed by simply viewing the complex web of overlapping interactions.
+So far, relatively few attempts have been made to organize the plethora of experimental data into a single unified representation CITATION.
+Hence, there is clearly a need to investigate the function and capabilities of this network using a computational model, particularly to yield further insights into the mechanistic action of the TLRs and their immunoadjuvant effects.
+Constraint-based reconstruction and analysis methods represent a systems approach for computational modeling of biological networks CITATION.
+Briefly, all known biochemical transformations for a particular system are collected from various data sources listing genomic, biochemical, and physiological data CITATION, CITATION.
+The reconstruction is built on existing knowledge in bottom-up fashion and can be subsequently converted into a condition-specific model CITATION, CITATION allowing the investigation of its functional properties CITATION, CITATION.
+This conversion involves translating the reaction list into a so-called stoichiometric matrix by extracting the stoichiometric coefficients of substrates and products from each network reaction and placing lower and upper bounds on the network reactions.
+These constraints can include mass-balancing, thermodynamic considerations, and reaction rates CITATION.
+Additionally, environmental constraints can be applied to represent different availabilities of medium components.
+Many computational analysis tools have been developed CITATION, including Flux balance analysis.
+FBA is a formalism in which a reconstructed network is framed as a linear programming optimization problem and a specific objective function is maximized or minimized CITATION.
+COBRA methods are well established for metabolic networks and both reconstruction and analysis tools are widely used CITATION.
+Furthermore, these methods have been successfully applied to other important cellular functions such as transcription and translation CITATION, transcriptional regulation CITATION, and signaling, including JAK-STAT CITATION and angiogenesis CITATION .
+In this study, we present an extended and reformulated model for the TLR network, reconstructed based on the publicly available TLR map CITATION and the COBRA approach CITATION, CITATION.
+Signaling networks have been analyzed using extreme pathway analysis CITATION and FBA CITATION.
+However, since ExPa analysis becomes computationally challenging in large-scale, mass-balanced networks CITATION, we could not apply this method to the TLR network.
+In contrast, network modularization has been established as a method for reducing large-scale networks into more manageable units CITATION CITATION.
+Another approach for reducing network complexity is to focus on input output relationships CITATION, CITATION.
+We used FBA to simplify the mesh of network reactions into ten functionally distinct input output pathways, which show different patterns of signal activation control.
+Furthermore, we used this modular representation of the complex TLR signaling network to determine control points in the network, which are specific for a DIOS pathway.
+These control points allow for the modulation of TLR signaling in a targeted fashion, which will induce a change in undesired signaling while not having an adverse effect on other signaling components.
+Taken together, we show in this study how a signaling network reconstruction and FBA can be used to identify potential candidates for drug targeting.

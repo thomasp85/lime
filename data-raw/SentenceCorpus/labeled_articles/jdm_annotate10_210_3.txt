@@ -1,0 +1,36 @@
+### abstract ###
+AIMX this study was designed to assess sex-related differences in the selection of an appropriate strategy when facing novelty
+OWNX a simple visuo-spatial task was used to investigate exploratory behavior as a specific response to novelty
+OWNX the exploration task was followed by a visual discrimination task  and the responses were analyzed using signal detection theory
+OWNX during exploration women selected a local searching strategy in which the metric distance between what is already known and what is unknown was reduced  whereas men adopted a global strategy based on an approximately uniform distribution of choices
+OWNX women's exploratory behavior gives rise to a notion of a secure base warranting a sense of safety while men's behavior does not appear to be influenced by risk
+OWNX this sex-related difference was interpreted as a difference in beliefs concerning the likelihood of uncertain events influencing risk evaluation
+### introduction ###
+MISC males and females seem to differ in spatial abilities and styles  CITATION
+MISC generally  studies involving navigational problems showed that female cognitive style relies more on detailed information  while male style relies more on global information  CITATION
+MISC evolutionary mechanisms could potentially account for sex differences in spatial behavior
+MISC for example  these behavioral differences may be due to mating patterns that induced a selection of large-range navigation in males  CITATION
+MISC mating patterns or mating strategies are linked to the dynamics of reproduction and sexual selection  CITATION   and sexual selection is restricted to characteristics that influence mate choice and competition for mates
+MISC typically  males have to compete through extensive ranging for access to mates while females have to choose mating partners according to reproductive success  CITATION
+MISC another proposition  but exclusively directed at humans  suggested that the division of labor game hunting and plant gathering would have put greater selection pressure on females' spatial memory because females sustained gathering duties  CITATION
+MISC however  as argued by ecuyer-dab and robert  CITATION    the selection of male characteristics depends on females' choice for mates
+MISC in females  however  spatial cognition would have been primarily shaped by the natural selection of a strong concern for survival both of self and of offspring
+MISC this concern would have compelled them to favor low-risk strategies  like concentrating on proximal spatial cues  when coping with space-related problems
+MISC such focusing would have enabled secure navigation based on detailed landmark encoding  as well as  in certain species  regular feeding based on remembering the exact locations of potential resources  p  NUMBER 
+MISC thus  the hypothesis of labor division would be a by-product of sexual selection and not the cause of sex differences in spatial behavior
+MISC taken together  the literature seems to indicate that the key to understanding the evolution of behavioral sex differences relies on the relative costs and benefits of producing offspring  CITATION
+MISC in that context spatial skills play a crucial role since they increase reproductive success and the accessibility to food resource but  at the same time  multiply the risks of getting lost  being killed or consumed by other animals predation
+MISC hence  the survival of mobile species depends on their ability to balance costs and benefits induced by locomotion and this balancing should differ according to sex
+MISC experimental investigations of sex differences in spatial abilities yield apparently disparate results  CITATION
+MISC this might be partly due to the complexity of contemporary experimental designs  but also to a lack of investigations concerning decision-making processes involved in the selection of strategies
+AIMX the current study investigates sex differences in basic behaviors like exploration  detection and discrimination involving the selection of strategies when coping with uncertainty
+OWNX following the above quotation from ecuyer-dab and robert's  the hypothesis is that women  compared to men  should favor low-risk strategies when coping with space-related problems
+OWNX to test this  i used a simple spontaneous two-dimensional exploratory task
+MISC this choice relies on the fact that exploration is a natural behavior and that it is fundamental in acquiring spatial knowledge
+MISC it seems to be based on driving factors such as curiosity  comfort or mastery over one's environment
+MISC moreover  it is commonly defined as serving to reduce uncertainty and thus allow coping with fear  CITATION
+MISC exploration is mainly characterized by a succession of progressions and stops  CITATION   and the selection of exploration could rely on its capacity to act as a regulator of uncertainty
+MISC indeed  progressions are based on decisions taken during stops  and stops correspond to choice points allowing decisions
+MISC voss  CITATION  refers to the exploration process as the generation and testing of hypotheses concerning the object's meaning and potential use
+OWNX in order to assess risk-taking  a classical visual discrimination task based on the stimuli observed during the exploration task was used
+OWNX the results were analyzed with signal detection theory

@@ -1,0 +1,39 @@
+### abstract ###
+CONT	most generalization bounds in learning theory are based on some measure of the complexity of the hypothesis class used  independently of any algorithm
+CONT	in contrast  the notion of algorithmic stability can be used to derive tight generalization bounds that are tailored to specific learning algorithms by exploiting their particular properties
+CONT	however  as in much of learning theory  existing stability analyses and bounds apply only in the scenario where the samples are independently and identically distributed
+CONT	in many machine learning applications  however  this assumption does not hold
+CONT	the observations received by the learning algorithm often have some inherent temporal dependence
+AIMX	this paper studies the scenario where the observations are drawn from a stationary   mixing or   mixing sequence  a widely adopted assumption in the study of non independent and identically distributed   processes that implies a dependence between observations weakening over time
+OWNX	we prove novel and distinct stability based generalization bounds for stationary   mixing and   mixing sequences
+BASE	these bounds strictly generalize the bounds given in the independent and identically distributed   case and apply to all stable learning algorithms  thereby extending the use of stability bounds to non independent and identically distributed   scenarios
+OWNX	we also illustrate the application of our   mixing generalization bounds to general classes of learning algorithms  including support vector regression  kernel ridge regression  and support vector machines  and many other kernel regularization based and relative entropy based regularization algorithms
+OWNX	these novel bounds can thus be viewed as the first theoretical basis for the use of these algorithms in non independent and identically distributed   scenarios   
+### introduction ###
+CONT	most generalization bounds in learning theory are based on some measure of the complexity of the hypothesis class used  such as the vc dimension  covering numbers  or rademacher complexity
+CONT	these measures characterize a class of hypotheses  independently of any algorithm
+CONT	in contrast  the notion of algorithmic stability can be used to derive bounds that are tailored to specific learning algorithms and exploit their particular properties
+CONT	a learning algorithm is stable if the hypothesis it outputs varies in a limited way in response to small changes made to the training set
+CONT	algorithmic stability has been used effectively in the past to derive tight generalization bounds  CITATION
+CONT	but  as in much of learning theory  existing stability analyses and bounds apply only in the scenario where the samples are independently and identically distributed  independent and identically distributed  
+CONT	in many machine learning applications  this assumption  however  does not hold  in fact  the independent and identically distributed   assumption is not tested or derived from any data analysis
+CONT	the observations received by the learning algorithm often have some inherent temporal dependence
+CONT	this is clear in system diagnosis or time series prediction problems
+CONT	clearly  prices of different stocks on the same day  or of the same stock on different days  may be dependent
+CONT	but  a less apparent time dependency may affect data sampled in many other tasks as well
+AIMX	this paper studies the scenario where the observations are drawn from a stationary   mixing or   mixing sequence  a widely adopted assumption in the study of non independent and identically distributed   processes that implies a dependence between observations weakening over time  CITATION
+OWNX	we prove novel and distinct stability based generalization bounds for stationary   mixing and   mixing sequences
+BASE	these bounds strictly generalize the bounds given in the independent and identically distributed   case and apply to all stable learning algorithms  thereby extending the usefulness of stability bounds to non independent and identically distributed   scenarios
+BASE	our proofs are based on the independent block technique described by  CITATION  and attributed to  CITATION   which is commonly used in such contexts
+CONT	however  our analysis differs from previous uses of this technique in that the blocks of points considered are not of equal size
+BASE	for our analysis of stationary   mixing sequences  we make use of a generalized version of mcdiarmid s inequality  CITATION  that holds for   mixing sequences
+BASE	this leads to stability based generalization bounds with the standard exponential form
+OWNX	our generalization bounds for stationary   mixing sequences cover a more general non independent and identically distributed   scenario and use the standard mcdiarmid s inequality  however  unlike the   mixing case  the   mixing bound presented here is not a purely exponential bound and contains an additive term depending on the mixing coefficient
+OWNX	we also illustrate the application of our   mixing generalization bounds to general classes of learning algorithms  including support vector regression  svr   CITATION   kernel ridge regression  CITATION   and support vector machines  svms   CITATION
+CONT	algorithms such as support vector regression  svr   CITATION  have been used in the context of time series prediction in which the independent and identically distributed   assumption does not hold  some with good experimental results  CITATION
+CONT	to our knowledge  the use of these algorithms in non independent and identically distributed   scenarios has not been previously supported by any theoretical analysis
+CONT	the stability bounds we give for svr  svms  and many other kernel regularization based and relative entropy based regularization algorithms can thus be viewed as the first theoretical basis for their use in such scenarios
+OWNX	the following sections are organized as follows
+OWNX	in section   we introduce the necessary definitions for the non independent and identically distributed   problems that we are considering and discuss the learning scenarios in that context
+OWNX	section  gives our main generalization bounds for stationary   mixing sequences based on stability  as well as the illustration of its applications to general kernel regularization based algorithms  including svr  krr  and svms  as well as to relative entropy based regularization algorithms
+OWNX	finally  section  presents the first known stability bounds for the more general stationary   mixing scenario

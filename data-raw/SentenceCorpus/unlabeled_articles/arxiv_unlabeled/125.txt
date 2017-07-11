@@ -1,0 +1,23 @@
+### abstract ###
+We identify the classical Perceptron algorithm with margin as a member of a broader family of large margin classifiers  which we collectively call the Margitron
+The Margitron, (despite its) sharing the same update rule with the Perceptron, is shown  in an incremental setting to converge in a finite number of updates to solutions possessing any desirable fraction of the maximum margin
+Experiments comparing the Margitron with decomposition SVMs on tasks involving linear kernels and 2-norm soft margin are also reported
+### introduction ###
+It is widely accepted that the larger the margin of the solution hyperplane the greater is the generalisation ability of the learning machine  CITATION
+The simplest online learning algorithm for binary linear classification, the Perceptron  CITATION , does not aim at any margin
+The problem, instead, of finding the optimal margin hyperplane lies at the core of Support Vector Machines (SVMs)  CITATION
+Their efficient implementation, however, is somewhat hindered by the fact that they require solving a quadratic programming problem
+The complications encountered in implementing SVMs has respurred the interest in alternative large margin classifiers many of which are based on the Perceptron algorithm
+The oldest such algorithm which appeared long before the advent of SVMs is the standard Perceptron with margin  CITATION , a straightforward extension of the Perceptron, which, however, in an incremental setting is known to be able to guarantee achieving only up to  SYMBOL  of the maximum margin that the dataset possesses  CITATION
+Subsequently, various algorithms succeeded in achieving larger fractions of the maximum margin by employing modified perceptron-like update rules
+Such algorithms include ROMMA  CITATION , ALMA  CITATION , CRAMMA  CITATION  and MICRA  CITATION
+A somewhat different approach from the hard margin one adopted by most of the algorithms above was also developed which focuses on the minimisation of the 1-norm soft margin loss through stochastic gradient descent
+There is a connection, however, between such algorithms and the Perceptron since their unregularised form with constant learning rate is identical to the Perceptron with margin
+Notable representatives of this approach are the pioneer NORMA  CITATION  and the very recent Pegasos  CITATION
+A question that arises naturally and which we attempt to answer in the present work is whether it is possible to achieve a guaranteed fraction of the maximum margin larger than  SYMBOL  while retaining the original perceptron update rule
+To this end we construct a whole new family of algorithms at least one member of which has guaranteed convergence in a finite number of steps to a solution hyperplane possessing any desirable fraction of the unknown maximum margin
+This family of algorithms in which the classical Perceptron with margin is naturally embedded will be termed the Margitron
+Hopefully, the algorithms belonging to the margitron family by virtue of being generalisations of the very successful Perceptron will have a respectable performance in various classification tasks
+Section 2 contains some preliminaries and the description of the Margitron algorithm
+Section 3 is devoted to a theoretical analysis
+Section 4 contains our experimental results while Section 5 our conclusions

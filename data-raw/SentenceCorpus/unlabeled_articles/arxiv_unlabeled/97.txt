@@ -1,0 +1,35 @@
+### abstract ###
+Learning machines that have  hierarchical structures or hidden variables  are singular statistical models because they are nonidentifiable and  their Fisher information matrices are singular
+In singular statistical models, neither  does the Bayes  a posteriori  distribution converge to the normal distribution nor does the maximum likelihood estimator satisfy asymptotic normality
+This is the main reason that it has been difficult to  predict their generalization performance from trained states
+In this paper, we study four errors,  (1) the Bayes generalization error, (2) the Bayes training error, (3) the Gibbs generalization error, and (4) the Gibbs training error, and prove that there are universal mathematical relations among  these errors
+The formulas proved in this paper are equations of states in statistical estimation because they hold for any true distribution, any parametric model, and any  a priori  distribution
+Also we show that the Bayes and Gibbs generalization errors can be  estimated by Bayes and Gibbs training errors, and we propose  widely applicable information criteria that can be applied to both regular and singular statistical models
+### introduction ###
+Recently, many learning machines are being used in information processing systems
+For  example, layered neural networks, normal mixtures, binomial mixtures, Bayes networks, Boltzmann machines, reduced rank regressions, hidden Markov models, and stochastic context-free grammars  are being employed in pattern recognition, time series  prediction, robotic control, human modeling,  and biostatistics
+Although their generalization performances determine the accuracy of the information systems,  it has been difficult to estimate generalization  errors based on training errors, because such  learning machines are singular statistical models
+A parametric model is called regular if the mapping from the parameter to the  probability distribution is one-to-one and if its Fisher information matrix is always positive definite
+If a statistical model is regular, then  the Bayes  a posteriori  distribution converges to the normal distribution,  and the maximum likelihood estimator satisfies  asymptotic normality
+Based on such properties,  the relation between the generalization error and the training error was clarified, on which some information criteria  were proposed
+On the other hand, if the mapping from the  parameter to the probability distribution is not one-to-one or if the Fisher information matrix is  singular, then the parametric model is called singular
+In general, if a learning machine has hierarchical structure or hidden variables, then it is singular
+Therefore, almost all learning machines are singular
+For singular learning machines, the log likelihood  function can not be approximated by any quadratic form of the parameter, with the result that the conventional relationship between generalization errors and  training errors does not hold either for the maximum likelihood method  CITATION   CITATION  CITATION  or  Bayes estimation  CITATION
+Singularities strongly affect generalization performances  CITATION  and learning dynamics  CITATION
+Therefore, in order to establish the mathematical foundation of singular learning theory, it is necessary  to construct the formulas which hold even in singular learning machines
+Recently, we proved  CITATION  CITATION  that the  generalization error in Bayes estimation is asymptotically equal to  SYMBOL , where  SYMBOL  is the rational number  determined by the zeta function of a learning machine and  SYMBOL  is the number of training samples
+In regular statistical models,  SYMBOL ,  where  SYMBOL  is the dimension of the parameter space, whereas in singular statistical models,  SYMBOL   depends strongly on the learning machine, the true distribution, and the  a priori  probability distribution
+In practical applications, the true distribution is often unknown, hence it has been difficult to estimate the generalization error from the training error
+To estimate the generalization error when we do not have any information about the true distribution, we need a general formula which holds independently of singularities
+In this paper, we study four errors,  (1) the Bayes generalization error  SYMBOL , (2) the Bayes training error  SYMBOL , (3) the Gibbs generalization error  SYMBOL , and (4) the Gibbs training error  SYMBOL , and prove the formulas  SYMBOL *} where  SYMBOL  denotes the expectation value and   SYMBOL  is the inverse temperature  of the  a posteriori  distribution
+These equations assert that the increased error from training to  generalization is in proportion to  the difference between the Bayes and Gibbs training errors
+It should be emphasized that these formulas hold for any true distribution, any learning machine,  any  a priori  probability distribution, and any singularities, therefore they reflect the universal laws of statistical estimation
+Also,  based on the formula, we propose widely applicable information  criteria (WAIC) which can be applied to both regular and singular learning machines
+In other words, we can apply WAIC without  any knowledge about the true distribution
+This paper consists of six parts
+In Section 2, we  describe the main results of this paper
+In Section 3,  we propose widely applicable information criteria  and show how to apply them to statistical estimation
+In Section 4, we prove the main results in the mathematically rigorous way
+In Sections 5 and 6, we discuss and conclude of this paper
+The proofs of lemmas are quite technical hence they are presented in Appendix

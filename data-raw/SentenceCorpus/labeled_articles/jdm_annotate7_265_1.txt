@@ -1,0 +1,20 @@
+### abstract ###
+MISC third-party punishment has recently received attention as an explanation for human altruism
+MISC feelings of anger in response to norm violations are assumed to motivate third-party sanctions, yet there is only sparse and indirect support for this idea
+AIMX we investigated the impact of both anger and guilt feelings on third-party sanctions
+OWNX in two studies both emotions were independently manipulated
+OWNX results show that anger and guilt independently constitute sufficient but not necessary causes of punishment
+OWNX low levels of punishment are observed only when neither emotion is elicited
+OWNX we discuss the implications of these findings for the functions of altruistic sanctions
+### introduction ###
+MISC people often defend the interests of others
+MISC they stand up for their friends if someone speaks ill about them in their absence
+MISC they do not tolerate a colleague being bullied at work
+MISC they boycott consumer products that are produced using child labor
+MISC some even come to the aid of a stranger who is being physically harassed, in spite of obvious personal danger
+MISC in general, people retaliate against injustice even if they are not directly victimized
+MISC sanctioning of norm-violations is vital for prosocial behavior to be sustained  CITATION
+MISC however, punishing norm-violations is costly in terms of time and energy
+MISC it may even impose physical risks
+MISC punishing injustice is therefore considered to be a moral act, particularly when it is performed on behalf of others  CITATION
+AIMX this begs the question of what incites third-party sanctions, as they usually oppose self-interest

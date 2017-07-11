@@ -1,0 +1,29 @@
+### abstract ###
+Calmodulin kinase II mediates critical signaling pathways responsible for divergent functions in the heart including calcium cycling, hypertrophy and apoptosis.
+Dysfunction in the CaMKII signaling pathway occurs in heart disease and is associated with increased susceptibility to life-threatening arrhythmia.
+Furthermore, CaMKII inhibition prevents cardiac arrhythmia and improves heart function following myocardial infarction.
+Recently, a novel mechanism for oxidative CaMKII activation was discovered in the heart.
+Here, we provide the first report of CaMKII oxidation state in a well-validated, large-animal model of heart disease.
+Specifically, we observe increased levels of oxidized CaMKII in the infarct border zone.
+These unexpected new data identify an alternative activation pathway for CaMKII in common cardiovascular disease.
+To study the role of oxidation-dependent CaMKII activation in creating a pro-arrhythmia substrate following myocardial infarction, we developed a new mathematical model of CaMKII activity including both oxidative and autophosphorylation activation pathways.
+Computer simulations using a multicellular mathematical model of the cardiac fiber demonstrate that enhanced CaMKII activity in the infarct BZ, due primarily to increased oxidation, is associated with reduced conduction velocity, increased effective refractory period, and increased susceptibility to formation of conduction block at the BZ margin, a prerequisite for reentry.
+Furthermore, our model predicts that CaMKII inhibition improves conduction and reduces refractoriness in the BZ, thereby reducing vulnerability to conduction block and reentry.
+These results identify a novel oxidation-dependent pathway for CaMKII activation in the infarct BZ that may be an effective therapeutic target for improving conduction and reducing heterogeneity in the infarcted heart.
+### introduction ###
+Calmodulin kinase II mediates diverse roles in the heart, including excitation-contraction coupling, sinus node automaticity, apoptosis, hypertrophy, and gene transcription CITATION, CITATION.
+Mounting experimental evidence demonstrates an important role for CaMKII in heart disease and arrhythmias.
+Specifically, CaMKII overexpression occurs in human heart failure CITATION and transgenic mice overexpressing CaMKII develop dilated cardiomyopathy CITATION, CITATION.
+Conversely, transgenic inhibition of CaMKII prevents structural remodeling and improves heart function following myocardial infarction CITATION while knockout mice lacking the predominant cardiac CaMKII isoform are resistant to development of pressure overload-induced hypertrophy and/or heart failure CITATION, CITATION.
+Finally, CaMKII inhibition prevents arrhythmias in several different mouse models of heart disease CITATION, CITATION .
+CaMKII is activated by binding of Ca 2 /calmodulin and may undergo inter-subunit autophosphorylation that allows the kinase to retain activity even upon dissociation of Ca 2 /calmodulin CITATION.
+Recently, a novel CaMKII activation pathway was identified where oxidation at specific methionine residues in the CaMKII regulatory subunit results in persistent activity independent of autophosphorylation CITATION.
+While oxidative-dependent CaMKII activation has been shown to mediate apoptosis in response to chronic AngII treatment in the mouse CITATION as well as arrhythmogenic afterdepolarizations in isolated cardiomyocytes treated with hydrogen peroxide CITATION, nothing is known about its role in large animal models of heart disease.
+Considering that levels of reactive oxygen species such as H 2O 2 and superoxide are elevated following myocardial infarction CITATION, we hypothesized that oxidation of CaMKII represents an important pathway for CaMKII activation in the infarct border zone that may provide a mechanistic link between increased ROS production, Na channel remodeling and conduction slowing following MI.
+In this study, we describe a dramatic increase in levels of oxidized CaMKII in a well-validated large animal model of arrhythmias following MI CITATION CITATION.
+To investigate a role for oxidized CaMKII in regulating refractoriness and conduction in the infarct BZ, we develop a novel mathematical model of CaMKII activity that includes oxidation and autophosphorylation activation pathways.
+Our computer simulations show that enhanced CaMKII activity in the BZ, due primarily to increased oxidation, leads to slowed conduction, prolonged refractory periods and increased vulnerability to conduction block at the BZ margin.
+Our results identify oxidation-dependent CaMKII activation as a potential link between oxidative stress and electrical remodeling after myocardial infarction.
+Furthermore, our findings support CaMKII inhibition as a potential therapy for reducing susceptibility to ventricular tachycardia by improving conduction and reducing refractory gradients in the infarcted heart.
+Finally, it is important to note the oxidative activation of CaMKII allows for independent regulation of the kinase by a host of unique upstream activators and signaling partners with great potential relevance to human disease.
+As details emerge regarding regulation of the kinase by this newly identified pathway, they may be incorporated into our model to study electrophysiological consequences of CaMKII activation via this independent signaling pathway.

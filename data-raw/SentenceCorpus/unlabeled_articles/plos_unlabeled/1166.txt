@@ -1,0 +1,53 @@
+### abstract ###
+Large-scale protein interaction networks have typically been discerned using affinity purification followed by mass spectrometry and yeast two-hybrid techniques.
+It is generally recognized that Y2H screens detect direct binary interactions while the AP/MS method captures co-complex associations; however, the latter technique is known to yield prevalent false positives arising from a number of effects, including abundance.
+We describe a novel approach to compute the propensity for two proteins to co-purify in an AP/MS data set, thereby allowing us to assess the detected level of interaction specificity by analyzing the corresponding distribution of interaction scores.
+We find that two recent AP/MS data sets of yeast contain enrichments of specific, or high-scoring, associations as compared to commensurate random profiles, and that curated, direct physical interactions in two prominent data bases have consistently high scores.
+Our scored interaction data sets are generally more comprehensive than those of previous studies when compared against four diverse, high-quality reference sets.
+Furthermore, we find that our scored data sets are more enriched with curated, direct physical associations than Y2H sets.
+A high-confidence protein interaction network derived from the AP/MS data is revealed to be highly modular, and we show that this topology is not the result of misrepresenting indirect associations as direct interactions.
+In fact, we propose that the modularity in Y2H data sets may be underrepresented, as they contain indirect associations that are significantly enriched with false negatives.
+The AP/MS PIN is also found to contain significant assortative mixing; however, in line with a previous study we confirm that Y2H interaction data show weak disassortativeness, thus revealing more clearly the distinctive natures of the interaction detection methods.
+We expect that our scored yeast data sets are ideal for further biological discovery and that our scoring system will prove useful for other AP/MS data sets.
+### introduction ###
+Insights into the architectures and mechanisms of cellular processes can be obtained by elucidation of genome-wide protein interaction networks that describe the physical associations between the component proteins.
+Such maps, or interactomes, can be exploited to enhance many types of biological discovery including protein function prediction CITATION, inference of disease genes CITATION, and identification of condition-specific response modules CITATION.
+The yeast Saccharomyces cerevisiae has been routinely employed as a model system for high-throughput studies and PINs have been determined using a number of platforms including yeast two-hybrid screens CITATION CITATION, affinity purification followed by mass spectrometry CITATION CITATION, and protein-fragment complementation assays CITATION.
+Each approach perceives interactions in a distinct manner.
+The Y2H and PCA techniques detect direct binary interactions, although the PCA approach does not rely upon expression of a reporter gene as required in Y2H screens, while the AP/MS techniques purify and identify protein complexes.
+The reliability of each technique has been extensively debated in the literature and comprehensive analyses have resulted in contrasting conclusions CITATION, CITATION CITATION.
+However, it is generally accepted that any measure of reliability is not absolute and largely dependent on the nature of a pre-defined gold standard reference set.
+An additional complexity arises in the analysis, or interpretation, of an AP/MS data set because there is no standard, or well-defined, system to distinguish between the direct and indirect interactions present in a purified complex.
+The only information available for an individual purification is its composition: a tagged bait protein and associated co-purified prey proteins.
+Furthermore, the constituent proteins are identified by complex MS methods and different platforms often yield varying compositions for identical purifications CITATION, CITATION.
+Another concern is that the compositions of the purifications are influenced by the protein abundances CITATION, CITATION, CITATION - proteins having a higher abundance are more likely to be detected in more purifications and, therefore, inferred to be involved in more interactions after tabulation of all bait-prey pairs CITATION.
+To address these issues, a number of approaches for the analysis of AP/MS data sets have been employed CITATION, CITATION, CITATION, CITATION.
+These techniques have the common goal of discerning protein pairs that are appreciably co-purified relative to some random background.
+While each method determines scores representing the likelihood of observing two proteins together, the scores are computed using different procedures: Gavin et al. calculate log-ratios of observed co-occurrences relative to expected CITATION ; Krogan et al. utilize a combination of machine learning algorithms CITATION ; Collins et al. implement a supervised algorithm derived from Bayesian methods and optimized with empirically-derived parameters CITATION ; and Hart et al. determine interaction probabilities based on hypergeometric distributions CITATION.
+The qualities of the generated PINs have been found to be superior to comparable data sets constructed by straightforward tabulations of bait-prey interactions CITATION, CITATION, CITATION.
+These evaluations were generally deduced from direct comparisons against complexes manually curated by the Munich Information Center on Protein Sequences CITATION .
+A recent study of high-throughput Y2H data sets explored the characteristic strengths and distributions of functional interactions and non-functional interactions in order to assess the extent to which the latter impedes the formation of functional protein complexes CITATION.
+It was conjectured that the overall impact upon biochemical efficiencies had evolved to a tolerable limit.
+Motivated by the use of randomization techniques as a tool to measure, or discover, enrichments of network motifs CITATION and connectivity correlations CITATION in complex networks, we developed a shuffling-based approach to assess the levels of interaction specificity detected in AP/MS data sets.
+This system allows for the computation of pair-wise protein co-occurrence significance scores by comparing experimentally observed numbers with those from randomized realizations.
+A CS score for two proteins provides a statistical measure of their propensity to co-purify, or interact, in an AP/MS data set.
+The approach requires no training set or machine learning and is, therefore, applicable to any AP/MS data set for any species regardless of whether any curated information exists or not.
+It is found that these AP/MS data sets contain significant enrichments of specific, or high-scoring, associations.
+Additionally, we showed that high-quality direct physical interactions curated in two prominent data bases have significantly high CS scores.
+Therefore, while the AP/MS data sets contain prevalent non-specific, or transient, associations, our scoring analysis reveals that there is an underlying preference for proteins to form selective, or discriminating, associations.
+Our resultant scored interaction data sets were further assessed by comparisons against four diverse, high-quality reference data sets, each representing a unique manner of interaction detection, association mechanism, and/or curation.
+For most references, we found that the accuracies of our scored interaction sets were manifestly higher than those of previous studies.
+Additionally, our scored data sets are the only ones that typically outperformed experimental Y2H interaction sets CITATION CITATION.
+A high-confidence PIN extracted from the AP/MS data of Gavin et al. CITATION was revealed to be free of abundance effects while those derived from the data of Krogan et al. CITATION contained weak abundance biases.
+Therefore, it would appear that in high-quality AP/MS data sets, interaction specificity is not coupled with protein abundance.
+We note that the converse has recently been found to be true of Y2H interaction data sets CITATION .
+The high-confidence PIN derived from the data of Gavin et al. CITATION was shown to be highly modular, containing many localized densely-connected regions, and strikingly different to a commensurate random network.
+We also demonstrated that the observed high modularity is not a result of misinterpreting indirect associations as direct interactions; rather, it is a result of direct physical associations.
+Furthermore, we suggest that the modularity in Y2H interaction data sets may be underrepresented as indirect associations in these PINs are significantly enriched with manually-curated physical interactions, i.e., they are likely false negatives.
+The high-confidence AP/MS PIN shows assortative mixing, meaning that proteins having similar numbers of total interactions prefer to interact with each other.
+A consequence of assortativity is that high-degree proteins, or hubs, prefer to associate with each other rather than with proteins having very small numbers of total interactions.
+In agreement with a previous study CITATION, we find that a consolidated Y2H PIN shows weak disassortative mixing while a manually-curated set of high-confidence physical binary interactions displays both, and in equal measure, assortative and disassortative mixing.
+Therefore, high-quality AP/MS data appear assortative while Y2H interaction data appear disassortative.
+We expect that our scored yeast data sets are ideal for further investigations involving biological discovery and that our procedure will prove useful for the analysis of current and future AP/MS data sets for a variety of species.
+We have compared our high-quality AP/MS interaction data sets with those from Y2H screens and perceived a number of novel insights regarding their substances and network properties.
+Certainly, their topologies are contrasting and must reflect their different methods of interaction detection.

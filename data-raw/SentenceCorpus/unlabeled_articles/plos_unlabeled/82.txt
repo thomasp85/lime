@@ -1,0 +1,25 @@
+### abstract ###
+It is well established that various cortical regions can implement a wide array of neural processes, yet the mechanisms which integrate these processes into behavior-producing, brain-scale activity remain elusive.
+We propose that an important role in this respect might be played by executive structures controlling the traffic of information between the cortical regions involved.
+To illustrate this hypothesis, we present a neural network model comprising a set of interconnected structures harboring stimulus-related activity, and a group of executive units with task-related activity patterns that manage the information flowing between them.
+The resulting dynamics allows the network to perform the dual task of either retaining an image during a delay, or recalling from this image another one that has been associated with it during training.
+The model reproduces behavioral and electrophysiological data gathered on the inferior temporal and prefrontal cortices of primates performing these same tasks.
+It also makes predictions on how neural activity coding for the recall of the image associated with the sample emerges and becomes prospective during the training phase.
+The network dynamics proves to be very stable against perturbations, and it exhibits signs of scale-invariant organization and cooperativity.
+The present network represents a possible neural implementation for active, top-down, prospective memory retrieval in primates.
+The model suggests that brain activity leading to performance of cognitive tasks might be organized in modular fashion, simple neural functions becoming integrated into more complex behavior by executive structures harbored in prefrontal cortex and/or basal ganglia.
+### introduction ###
+An important unanswered question in neurobiology is how neural activity organizes itself to produce coherent behavior.
+Lesion, electrophysiological, and imaging studies targeting specific cognitive functions have provided very detailed insights into how different regions of the brain contribute to behavior.
+More specifically, they have shown the role of various regions of cortex in implementing functions such as visual representation of stimuli CITATION, CITATION, sustainment of the memory of a stimulus CITATION, representation of tasks CITATION or abstract rules CITATION, CITATION, selection of a response among a set of possibilities CITATION, CITATION, shielding of memory from distractions CITATION, and planning of movements CITATION.
+However, it remains unclear how the different regions of cortex interact together to build even the simplest behavior.
+Indeed, even the elementary action of looking at an object and preparing to reach for it requires a cascade of neural processes that have to take place in the right order and with the proper timing to be successful.
+Here, we propose that adequate behavior can be generated from the set of functions mentioned above if the information these cortical regions contain and exchange with each other is managed by executive or control structures in a manner suiting the task at hand.
+Brain-scale activity coding for integrated behavior might then be constructed by these executive units, from a repertoire of simple neurocognitive functions, which would be selected, recruited, ordered, and synchronized to implement the necessary neural computations.
+To illustrate this hypothesis, we present a neural network model able to pass the mixed-delayed response task, which was introduced to study memory retrieval in the monkey using visual associations CITATION, CITATION, CITATION.
+This task consists of randomly mixed delayed-matching to sample and delayed-pair association trials CITATION, CITATION, which require that the subject either maintain the memory of an image during a delay, or remember an image associated with it, respectively.
+Which type of trial is to be performed is signaled to the subject during the delay.
+The network contains structures harboring image-related activities, each of them implementing one of the elementary functions crucial for task execution: visual representation, working memory, and planning memory.
+These areas are complemented by executive units, which control the activity held in these layers and regulate the information flow between them.
+The neural computations necessary to perform the tasks are encoded in the firing patterns of these control units, which are coordinated and depend strongly both on the trial type and the phase of the trial.
+The resulting dynamics allows the network to be trained for the DMS and then for the DPA task while reproducing electrophysiological data gathered on the inferior temporal CITATION, CITATION and prefrontal CITATION cortices of monkeys performing similar tasks.

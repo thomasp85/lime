@@ -1,0 +1,64 @@
+8
+
+dir
+2273
+https://svn.ics.uci.edu/datalab/GradSchool/text_datasets/multicorpora/arxiv_plos_jdm/train/word_lists
+https://svn.ics.uci.edu/datalab/GradSchool
+
+
+
+2013-05-31T00:05:30.966903Z
+2273
+chambers
+
+
+svn:special svn:externals svn:needs-lock
+
+cont_N15.txt
+file
+
+
+
+
+2013-05-30T21:57:59.000000Z
+7c57b6ff4c00d03d22b7a81e0f2b92c1
+2013-05-31T00:05:30.966903Z
+2273
+chambers
+
+own_N15.txt
+file
+
+
+
+
+2013-05-30T21:57:59.000000Z
+a50daf1406b91c66c29028fb4597ba8a
+2013-05-31T00:05:30.966903Z
+2273
+chambers
+
+aim_N15.txt
+file
+
+
+
+
+2013-05-30T21:57:59.000000Z
+d0eb905587ea6cef20a3e956185f160f
+2013-05-31T00:05:30.966903Z
+2273
+chambers
+
+base_N15.txt
+file
+
+
+
+
+2013-05-30T21:59:33.000000Z
+60c36e5743174678d42d7614c843d741
+2013-05-31T00:05:30.966903Z
+2273
+chambers
+

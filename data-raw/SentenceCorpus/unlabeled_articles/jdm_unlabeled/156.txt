@@ -1,0 +1,31 @@
+### abstract ###
+previous research on the role of choice set size in decision making has focused on decision outcomes and satisfaction
+in contrast  little is known about interindividual differences in preferences for larger versus smaller choice sets  let alone the causes of such differences
+drawing on self-efficacy theory  two studies examined the role of decision-making self-efficacy in preferences for choice
+using a correlational approach  study  NUMBER  n    NUMBER  found that decision-making self-efficacy was positively associated with preferences for choice across a range of consumer decisions
+this association was found both between- and within-subjects
+study  NUMBER  n    NUMBER  experimentally manipulated decision-making self-efficacy for an incentive-compatible choice among photo printers
+preferences for choice and pre-choice information seeking were significantly lower in a low-efficacy condition compared to a high-efficacy condition and a control group
+future research directions and implications for decision-making theory and public policy are discussed
+### introduction ###
+from the supermarket to the hospital  consumers are faced with more choice than ever before  CITATION
+previous research on this phenomenon has focused almost exclusively on the consequences of having more versus less choice  CITATION
+in contrast  very few studies have investigated preferences for choice  that is  how much choice people actually want
+the limited research in this area suggests that  while larger choice sets are generally more enticing  CITATION   there are significant inter- and intra-individual differences
+empirically  preferences for choice were found to vary across decision domains  age groups  and even nationalities  CITATION
+although the underlying mechanisms that drive preferences for choice have not been systematically explored  converging evidence points to a key role of decision-making self-efficacy dmse
+drawing on self-efficacy theory  the present research employs correlational study  NUMBER  and experimental approaches study  NUMBER  to systematically examine the proposed link between dmse and preferences for choice
+self-efficacy  which refers to the belief in one's ability to succeed in a given task  CITATION   drives individuals to prefer more challenging tasks and persist more in the face of such challenges  CITATION
+two streams of recent empirical work suggest that dmse  which entails confidence in the ability to make effective decisions  may affect preferences for choice
+first  individuals with higher versus lower dmse prefer decisions that are more challenging and complex  CITATION   and seek more information when making decisions  CITATION
+the latter effect has been demonstrated across multiple domains ranging from consumer choices  CITATION  to career selection  CITATION  and health-related decisions  CITATION
+since dmse engenders preferences for complex decisions and increased information  and information and complexity are part and parcel of increased choice  it is plausible that dmse would also be associated with preferences for larger choice sets
+additional support for this notion stems from the finding that individuals prefer more choice when decisions are relatively simple as compared to more challenging-conditions that  in theory  generate high versus low levels of dmse  respectively
+for example  individuals are more likely to prefer larger versus smaller choice sets when there are fewer versus more attributes to consider  or when dominating alternatives are present versus absent  CITATION
+one study involving hypothetical decisions among consumer products demonstrated that individuals prefer larger assortments when they assume that the options within the assortments will be ordered based on their preferences i e   from most to least preferred versus not  CITATION
+in a similar vein  individuals prefer increased choice when their choice-relevant preferences are highly accessible  CITATION
+in combination  these findings suggest that individuals prefer more choice when they expect to be able to make effective decisions
+although previous research is consistent with predictions derived from self-efficacy theory  the association between dmse and preferences for choices has-to the best of our knowledge-not been systematically examined
+to address this research gap  we conducted two studies to investigate the role of dmse in consumer decision making
+study  NUMBER  examined correlations between self-report measures of dmse and preferences for choice across multiple consumer domains
+study  NUMBER  assessed the effect of experimental manipulations of dmse on preferences for choice and information-seeking in a complex decision scenario with realistic outcomes

@@ -1,0 +1,30 @@
+### abstract ###
+We introduce a new protocol for prediction with expert advice in which each expert evaluates the learner's and his own performance using a loss function that may change over time and may be different from the loss functions used by the other experts
+The learner's goal is to perform better or not much worse than each expert, as evaluated by that expert, for all experts simultaneously
+If the loss functions used by the experts are all proper scoring rules and all mixable, we show that the defensive forecasting algorithm enjoys the same performance guarantee as that attainable by the Aggregating Algorithm in the standard setting and known to be optimal
+This result is also applied to the case of ``specialist'' (or ``sleeping'') experts
+In this case, the defensive forecasting algorithm reduces to a simple modification of the Aggregating Algorithm
+### introduction ###
+We consider the problem of online sequence prediction
+A process generates outcomes  SYMBOL  step by step
+At each step  SYMBOL , a learner tries to guess the next outcome announcing his prediction  SYMBOL
+Then the actual outcome  SYMBOL  is revealed
+The quality of the learner's prediction is measured by a loss function: the learner's loss at step  SYMBOL  is  SYMBOL
+Prediction with expert advice is a framework that does not make any assumptions about the generating process
+The performance of the learner is compared to the performance of several other predictors called experts
+At each step, each expert gives his prediction  SYMBOL , then the learner produces his own prediction  SYMBOL  (possibly based on the experts' predictions at the last step and the experts' predictions and outcomes at all the previous steps), and the accumulated losses are updated for the learner  and for the experts
+There are many algorithms for the learner in this framework; for a review, see~ CITATION
+In practical applications of the algorithms for prediction with expert advice, choosing the loss function is often a problem
+The task may have no natural measure of loss, except the vague concept that the closer the prediction to the outcome the better
+Thus one can select among several common loss functions, for example, the quadratic loss (reflecting the idea of least squares methods) or the logarithmic loss (which has an information theory background)
+A similar issue arises when experts themselves are prediction algorithms that optimize some losses internally
+Then it is unfair to these experts when the learner competes with them according to a ``foreign'' loss function
+This paper introduces a new version of the framework of prediction with expert advice where there is no single fixed loss function but some loss function is linked to every expert
+The performance of the learner is compared to the performance of each expert according to the loss function linked to that expert
+Informally speaking, each expert has to be convinced that the learner performs almost as well as, or better than, that expert himself
+We prove that a known algorithm for the learner, the defensive forecasting algorithm  CITATION , can be applied in the new setting and gives the same performance guarantee as that attainable in the standard setting, provided all loss functions are proper scoring rules \ifFULLThe only new requirement is that all loss functions used by the experts must be ``similar''
+All strictly proper scoring rules (in particular, the quadratic and logarithmic loss functions) are similar to each other in this sense \blueend Another framework to which our methods can be fruitfully applied is that of ``specialist experts'': see, eg ,  CITATION ,  CITATION , and  CITATION
+We generalize some of the known results in the case of mixable loss functions
+To keep presentation as simple as possible, we restrict ourselves to binary outcomes  SYMBOL , predictions from  SYMBOL , and a finite number of experts
+We formulate our results for mixable loss functions only
+However, these results can be easily transferred  to more general settings (non-binary outcomes, arbitrary prediction spaces, countably many experts, second-guessing experts, etc )\ where the methods of~ CITATION  work

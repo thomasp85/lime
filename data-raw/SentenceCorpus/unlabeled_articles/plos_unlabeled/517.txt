@@ -1,0 +1,51 @@
+### abstract ###
+Signal output from receptor G-protein effector modules is a dynamic function of the nucleotide exchange activity of the receptor, the GTPase-accelerating activity of GTPase-activating proteins, and their interactions.
+GAPs may inhibit steady-state signaling but may also accelerate deactivation upon removal of stimulus without significantly inhibiting output when the receptor is active.
+Further, some effectors are themselves GAPs, and it is unclear how such effectors can be stimulated by G proteins at the same time as they accelerate G protein deactivation.
+The multiple combinations of protein protein associations and interacting regulatory effects that allow such complex behaviors in this system do not permit the usual simplifying assumptions of traditional enzyme kinetics and are uniquely subject to systems-level analysis.
+We developed a kinetic model for G protein signaling that permits analysis of both interactive and independent G protein binding and regulation by receptor and GAP.
+We evaluated parameters of the model by global least-squares fitting to a diverse set of steady-state GTPase measurements in an m1 muscarinic receptor G q phospholipase C- 1 module in which GTPase activities were varied by 10 4-fold.
+We provide multiple tests to validate the fitted parameter set, which is consistent with results from the few previous pre-steady-state kinetic measurements.
+Results indicate that GAP potentiates the GDP/GTP exchange activity of the receptor, an activity never before reported; exchange activity of the receptor is biased toward replacement of GDP by GTP; receptor and GAP bind G protein with negative cooperativity when G protein is bound to either GTP or GDP, promoting rapid GAP binding and dissociation; GAP indirectly stabilizes the continuous binding of receptor to G protein during steady-state GTPase hydrolysis, thus further enhancing receptor activity; and receptor accelerates GDP/GTP exchange primarily by opening an otherwise closed nucleotide binding site on the G protein but has minimal effect on affinity of G protein for nucleotide.
+Model-based simulation explains how GAP activity can accelerate deactivation 10-fold upon removal of agonist but still allow high signal output while the receptor is active.
+Analysis of GTPase flux through distinct reaction pathways and consequent accumulation of specific GTPase cycle intermediates indicate that, in the presence of a GAP, the receptor remains bound to G protein throughout the GTPase cycle and that GAP binds primarily during the GTP-bound phase.
+The analysis explains these behaviors and relates them to the specific regulatory phenomena described above.
+The work also demonstrates the applicability of appropriately data-constrained system-level analysis to signaling networks of this scale.
+### introduction ###
+G protein-mediated signaling modules display a variety of dynamic input-output behaviors despite their use of a single, relatively simple biochemical mechanism.
+Signal amplification, the ratio of effector proteins activated to agonist-bound receptors, can vary from unity to hundreds.
+Activating ligands may bind receptors with affinities ranging from picomolar through millimolar.
+GAPs, which can accelerate hydrolysis of bound GTP over 2000-fold, can accelerate both activation and deactivation in cells with variable inhibitory effect CITATION.
+Activation and deactivation rates upon addition and removal of agonist can thus range from 10 ms to minutes.
+Heterotrimeric G proteins convey signals by traversing a cycle of GTP binding and hydrolysis: the GTP bound state of the G subunit is active and deactivation is caused by hydrolysis of bound GTP to GDP CITATION.
+The rates of activation and deactivation, and consequent effects on signal output at steady state, are regulated by interactions of the G subunit with receptors CITATION, G subunits CITATION, GTPase-activating proteins CITATION and multiple other proteins CITATION.
+The net effect of these inputs depends on the identities of the individual proteins, their concentrations and their own regulatory controls.
+Regulatory inputs to G protein modules are interactive, and it has been difficult to establish quantitative understanding of how they cooperate to control signal output.
+While some signals, particularly G protein-gated channels, can be monitored accurately in cells in real time, it has been harder to quantitate the intermediary reactions of the GTPase cycle and protein protein binding or dissociation.
+Recently developed optical sensors are promising CITATION CITATION but still do not provide complete or simultaneous coverage of multiple events and often do not provide absolute data.
+Conversely, quantitative biochemical assays using in vitro reconstituted systems have provided absolute biochemical data CITATION, CITATION but have not adequately described the simultaneous regulatory interactions that are so important.
+Consequently, quantitative understanding of the dynamic behavior of an intact G protein module remains elusive.
+Computational modeling is used frequently to clarify mechanistic thinking about complex biochemical systems, including G protein signaling.
+Quantitative models can potentially combine information on individual reactions to simulate the behavior of a complex system, or use system-level data to test the validity of a proposed mechanism.
+The work of Linderman and colleagues, for example, has provided consistent examples of these approaches to G protein signaling CITATION CITATION.
+The G protein-mediated yeast pheromone response has also been the focus of significant modeling efforts because of its presumed paucity of off-pathway inputs CITATION CITATION.
+In at least one case, the failure of a simple model of this pathway motivated discovery of a novel mechanism for feedback regulation and subsequent refinement of the model CITATION.
+However, modeling of G protein modules has often been descriptive, with parameters arbitrarily chosen for a few reactions such that model output mimics an experimental result.
+Alternatively, the inner workings of the G protein module itself have been condensed into an arbitrary function of agonist concentration and receptor regulation to allow analysis of a downstream event such as Ca 2 release or protein phosphorylation or, even more distal, transcription.
+A major problem in developing quantitative models of G protein modules has been accurate assignment of parameters to the many processes that are known to occur.
+These include both the GTPase cycle reactions and the multiple protein-protein interactions that govern these reactions.
+This problem is significant because local protein concentrations at the plasma membrane and the regulated association of these proteins are both unknown, either for resting cells or during dynamic signaling.
+In this study, we have used purified proteins, heterotrimeric G q, m1 muscarinic acetylcholine receptors and phospholipase C- 1, reconstituted at uniform and controllable concentrations into unilamellar phospholipid vesicles, to overcome this first limitation.
+We estimated formation of multi-protein complexes according to their individual activities.
+The second major problem in modeling signaling through G protein modules is the difficulty in assigning correct, or even plausible, values of rate or equilibrium constants for the reactions included in the model.
+Despite their apparently small size, an informative model of a single G protein module will contain multiple parameters that are not readily accessible from individual measurements.
+These parameters may vary widely among different modules, which prohibits most literature-mining approaches.
+If all or most of the relevant parameters are not individually available for the module of interest, then an adequately large and diverse dataset must be produced to allow parameters to be fit to the data.
+Last, even with a presumably adequate dataset, the numerical fitting process that extracts values for the parameters and subsequent validation of the fit are both central problems in modeling signaling systems.
+We have adapted and extended several approaches to deal with the difficulty of fitting a model with a fairly large number of parameters using a modest amount of data.
+We present a modestly complex model of signal output in a G protein model that contains many of the salient regulatory interactions that characterize G protein signaling.
+We used steady-state GTPase data to support a Metropolis-Monte Carlo fitting strategy, and argue that most parameters are reasonably assigned, with statistical data to help qualify fits for individual parameters.
+The resultant parameter set shows that receptor accelerates both GDP dissociation and GTP binding, and that GAPs potentiate the receptor's nucleotide exchange catalyst activity.
+Further, the model argues strongly that GAP activity indirectly favors continued binding of receptor to G protein throughout the GTPase cycle, thus further potentiating the receptor's activity.
+Such indirect stabilization of receptor-G protein binding, referred to as kinetic scaffolding to distinguish it from direct interaction, was suggested as a mechanism for how a GAP can accelerate deactivation upon removal of agonist without substantially inhibiting signaling CITATION, CITATION, CITATION, CITATION.
+Model-based simulation of signal output describes how GAPs combine these mechanisms to independently control signal amplitude and kinetics.

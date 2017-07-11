@@ -1,0 +1,18 @@
+### abstract ###
+although many models for risky choices between gambles assume that information is somehow integrated  the recently proposed priority heuristic ph claims that choices are based on one piece of information only
+that is  although the current reason for a choice according to the ph can vary  all other reasons are claimed to be ignored
+however  the choices predicted by the ph and other pieces of information are often confounded  thus rendering critical tests of whether decisions are actually based on one reason only  impossible
+the current study aims to remedy this problem by manipulating the number of reasons additionally in line with the choice implied by the ph
+the results show that participants' choices and decision times depend heavily on the number of reasons in line with the ph - thus contradicting the notion of non-compensatory  one-reason decision making
+### introduction ###
+the adaptive toolbox metaphor  put forward by gigerenzer and co-workers  CITATION   implies that decision makers possess and use a collection of simple rules of thumb - the so-called fast-and-frugal heuristics - to achieve very good results with very little effort
+since it was originally formulated  the toolbox has been rapidly growing and new heuristics are introduced almost regularly
+despite broder's  CITATION  criticism that  inventing more and more new heuristics may soon become futile if they are not seriously tested empirically  p  NUMBER  the adaptive toolbox was recently extended to preferential decisions by means of the priority heuristic  CITATION  - a simple lexicographic rule for choices between gambles
+although the idea of adaptive decision making in choice is  in itself  not novel  CITATION   the ph represents a new development in this area
+brandstatter et al CITATION  concluded that the ph outperforms both normative and other heuristic models in predicting participants choices
+also  they claim that it represents a process model of choice  describing the sequence of steps taken by a decision maker's cognitive apparatus
+both claims have been seriously questioned and substantial debates about the properties of the ph  CITATION  and  more generally  the plausibility of the fast-and-frugal-heuristics approach  CITATION  have arisen
+one serious caveat to studies investigating the ph lies in the selection of gambles used  the choice predicted by the ph and the gamble favored by other pieces of information are often confounded
+thus  adherence rates to the ph  or modal choices as studied by brandstatter et al CITATION  might be biased measures of whether participants' decisions are truly based on one reason only  as claimed by the ph
+the current study aims to remedy this problem
+first  the choice rule of the ph will be introduced along with a description of the problem of confounded information in gamble-pairs

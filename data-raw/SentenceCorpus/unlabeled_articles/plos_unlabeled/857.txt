@@ -1,0 +1,77 @@
+### abstract ###
+Trp-cage is a designed 20-residue polypeptide that, in spite of its size, shares several features with larger globular proteins.
+Although the system has been intensively investigated experimentally and theoretically, its folding mechanism is not yet fully understood.
+Indeed, some experiments suggest a two-state behavior, while others point to the presence of intermediates.
+In this work we show that the results of a bias-exchange metadynamics simulation can be used for constructing a detailed thermodynamic and kinetic model of the system.
+The model, although constructed from a biased simulation, has a quality similar to those extracted from the analysis of long unbiased molecular dynamics trajectories.
+This is demonstrated by a careful benchmark of the approach on a smaller system, the solvated Ace-Ala 3-Nme peptide.
+For the Trp-cage folding, the model predicts that the relaxation time of 3100 ns observed experimentally is due to the presence of a compact molten globule-like conformation.
+This state has an occupancy of only 3 percent at 300 K, but acts as a kinetic trap.
+Instead, non-compact structures relax to the folded state on the sub-microsecond timescale.
+The model also predicts the presence of a state at FORMULA of 4.4 from the NMR structure in which the Trp strongly interacts with Pro12.
+This state can explain the abnormal temperature dependence of the FORMULA and FORMULA chemical shifts.
+The structures of the two most stable misfolded intermediates are in agreement with NMR experiments on the unfolded protein.
+Our work shows that, using biased molecular dynamics trajectories, it is possible to construct a model describing in detail the Trp-cage folding kinetics and thermodynamics in agreement with experimental data.
+### introduction ###
+Understanding protein folding thermodynamics and kinetics is a central issue in molecular biology CITATION CITATION and computer-aided modeling is becoming increasingly useful also in this field.
+Direct comparison between simulations and experiments requires both an accurate description of the system and the possibility to sample extensively the configuration space.
+In order to observe folding with molecular dynamics, it is necessary to use very large computers CITATION, CITATION, worldwide distributed computing CITATION, or an enhanced sampling technique CITATION CITATION .
+A system that is almost ideal for theoretical investigation is the Trp-cage CITATION, a designed 20-residue miniprotein that folds rapidly CITATION and spontaneously to a globular structure.
+The NMR structure CITATION reveals a compact hydrophobic core, in which the Trp side chain is buried.
+The secondary structure elements include a short FORMULA, a 3 10-helix and a polyproline II helix at the C-terminus.
+The folding mechanism of this system has been studied with several experimental techniques.
+Calorimetry, circular dichroism spectroscopy CITATION and fluorescence CITATION show a cooperative two-state folding behavior with transition midpoint at approximately 314 K and a relaxation time of 3.1 s at 296 K CITATION.
+UV-Resonance Raman CITATION reveals a more complex unfolding behavior, with the presence of a compact intermediate that retains an FORMULA character and in which the hydrophobic core is even more compact.
+NMR experiments CITATION, CITATION show a substantially cooperative thermal unfolding, but the large negative chemical shift deviations of FORMULA and FORMULA suggest that those residues might pack more tightly as the temperature is raised.
+Also fluorescence correlation spectroscopy experiments cannot be interpreted in terms of a simple two-state folding and the formation of a molten-globule-like intermediate has been proposed CITATION .
+By atomistic modeling the Trp-cage folding has been studied using several different approaches CITATION CITATION.
+In particular, with an all-atom explicit-solvent description, the folding of Trp-cage has been studied by replica exchange molecular dynamics CITATION, CITATION.
+Starting from an extended configuration, a structure with a FORMULA root mean square deviation 2 from the NMR reference structure is obtained after 100 ns of simulation on 40 replicas CITATION.
+A relatively high melting temperature of 440 K is predicted.
+Other studies suggested that, even if Trp-cage is a rather small system, achieving statistical convergence in a REMD simulation may require much longer simulation times CITATION, CITATION.
+The kinetics of Trp-cage folding was studied, in explicit solvent, by transition path sampling CITATION and transition interface sampling CITATION.
+The folding of Trp-cage was also investigated by two of us using the bias exchange metadynamics approach CITATION, in which metadynamics potentials acting on different collective variables are exchanged among molecular dynamics simulations performed at the same temperature.
+Using this method it is possible to explore simultaneously a virtually unlimited number of CVs.
+Since all the MD simulations are performed at the same temperature the number of replicas does not grow with the system size like in REMD and in the approach of Ref.
+CITATION.
+Using BE it was possible to reversibly fold Trp-cage CITATION, villin headpiece, advillin headpiece together with two of their mutants CITATION and Insulin chain B CITATION using an explicit solvent force field, in less than 100 nanoseconds of simulation with only eight replicas.
+Recently this method was also used for exploring the mechanism of enzyme reactions CITATION .
+In atomistic simulations of biological systems, after an exhaustive exploration is achieved, it is necessary to extract from the trajectory the relevant metastable conformations, to assign their occupation probability, and to compute the rates for transitions among them.
+Several methods have been developed for this scope CITATION CITATION.
+These methods have the big advantage of reducing a complex dynamics in a high-dimensional configuration space to a Markov process describing transitions among a finite number of metastable states.
+They are suitable for analyzing an ergodic molecular dynamics trajectory, but they cannot be straightforwardly applied if the system is evolved under the action of an external bias.
+In this paper we present a method that allows exploiting the statistics accumulated in a bias exchange metadynamics run CITATION for constructing a detailed kinetic and thermodynamic model of a complex process such as the Trp-cage folding.
+The approach presented here aims at extracting the same information from a BE simulation as one can obtain from the analysis of a long ergodic MD run or of several shorter runs CITATION CITATION.
+The method relies on the projection of the BE trajectory on the space defined by a set of variables, which are assumed to describe the relevant physics of the system.
+These variables are not necessarily the ones that are used for the BE simulation and can be chosen FORMULA.
+Once the CVs are selected, the rate model is constructed following three steps:
+A cluster analysis is performed on the BE trajectories in a possibly extended CV space, assigning each configuration explored during the biased dynamics to a reference structure that is close by in CV space.
+Next, the equilibrium population of each bin is calculated from the BE simulations using a weighted histogram analysis method CITATION exploiting the metadynamics bias potentials.
+Finally, a kinetic model is constructed by assigning rates to transitions among bins.
+The transition rates are assumed to be of the form introduced in Ref.
+CITATION, namely to depend exponentially on the free energy difference between the bins with a prefactor that is determined by a diffusion matrix FORMULA and by the bins relative position.
+The only free parameter in the model is FORMULA, as the free energies are already assigned.
+Following Ref.
+CITATION FORMULA is estimated maximizing the likelihood of an unbiased MD trajectory .
+The model constructed in this manner is designed to optimally reproduce the long time scale dynamics of the system.
+It can be used, for example, for characterizing the metastable misfolded intermediates of the folding process.
+The advantage of using biased trajectories, besides the acceleration of slow transitions, is a greatly enhanced accuracy of the estimated free energy at transition state regions.
+This approach is first illustrated on the Ace-Ala 3-Nme peptide.
+This system is simple enough to allow benchmarking the results against a long standard MD simulation.
+For this system the model is capable of reproducing with excellent accuracy the kinetics and thermodynamics observed in the unbiased run.
+The same approach is then applied to the Trp-cage miniprotein.
+A model is built that allows describing the folding process, computing the folding rates and the NMR spectra, simulating a T-jump experiment, etc. The scenario that emerges is in good agreement with the available experimental data.
+By kinetic Monte Carlo CITATION, CITATION and Markov cluster analysis CITATION, CITATION several metastable sets are identified.
+These states, except for the folded cluster, can be considered misfolded intermediates of the folding process.
+At 298 K two main clusters are present, with a population of 58 percent and 25 percent, respectively.
+The most populated is the folded state and its structural properties are very close to the NMR ensemble.
+The second most populated cluster retains a significant amount of secondary structure, but has a FORMULA from the native state of approximately 4.4.
+In this cluster, the Trp is trapped in a hydrophobic pocket and its distance from Pro12 and Gly11 is reduced.
+The presence of this cluster in the thermal ensemble of the system can explain some anomalies in the temperature behavior observed in NMR CITATION and UV-Raman CITATION experiments.
+The structures of the most populated misfolded intermediates are in good agreement with the unfolded states distances reported in Ref.
+CITATION.
+Using the kinetic model a fluorescence T-jump experiment is also simulated.
+In agreement with the experimental results CITATION, a relaxation time of 2.3 0.7 s is found.
+This time is primarily determined by the relaxation towards the folded state of a compact molten globule-like structure, which acts as a kinetic trap.
+Relaxation times among all the other clusters, including transitions between fully unstructured states and the folded state, are all in the sub-microsecond time domain.
+Thus, surprisingly, the relaxation time measured by fluorescence may not be directly related to the folding transition, if one calls folding the transition from a random coil to the native state.

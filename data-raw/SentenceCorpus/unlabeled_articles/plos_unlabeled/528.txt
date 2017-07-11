@@ -1,0 +1,47 @@
+### abstract ###
+Long after a new language has been learned and forgotten, relearning a few words seems to trigger the recall of other words.
+This free-lunch learning effect has been demonstrated both in humans and in neural network models.
+Specifically, previous work proved that linear networks that learn a set of associations, then partially forget them all, and finally relearn some of the associations, show improved performance on the remaining associations.
+Here, we prove that relearning forgotten associations decreases performance on nonrelearned associations; an effect we call negative free-lunch learning.
+The difference between free-lunch learning and the negative free-lunch learning presented here is due to the particular method used to induce forgetting.
+Specifically, if forgetting is induced by isotropic drifting of weight vectors, then free-lunch learning is observed.
+However, as proved here, if forgetting is induced by weight values that simply decay or fall towards zero, then negative free-lunch learning is observed.
+From a biological perspective, and assuming that nervous systems are analogous to the networks used here, this suggests that evolution may have selected physiological mechanisms that involve forgetting using a form of synaptic drift rather than synaptic decay, because synaptic drift, but not synaptic decay, yields free-lunch learning.
+### introduction ###
+The idea that structural changes underpin the formation of new memories can be traced to the 19th century CITATION.
+More recently, Hebb proposed that When an axon of cell A is near enough to excite B and repeatedly or persistently takes part in firing it, some growth process or metabolic change takes place in one or both cells such that A's efficiency, as one of the cells firing B, is increased CITATION.
+It is now widely accepted that learning involves some form of Hebbian adaptation, and a growing body of evidence suggests that Hebbian adaptation is associated with the long-term potentiation observed in neuronal systems CITATION.
+LTP is an increase in synaptic efficacy which occurs in the presence of pre-synaptic and post-synaptic activity, and can be specific to a single synapse.
+One consequence of Hebbian adaptation is that information regarding a specific association is distributed amongst many synaptic connections, and therefore gives rise to a distributed representation of each association.
+In CITATION, participants learned the layout of letters on a scrambled keyboard.
+After a period of forgetting, participants relearned a subset of letter positions.
+Crucially, this improved performance on the remaining letter positions.
+However, whereas relearning some associations shows evidence of FLL in some studies CITATION CITATION, this is not found in not all studies CITATION.
+This discrepancy may be because the many studies performed to investigate this general phenomenon use a wide variety of different materials and procedures, with some measuring recall and others measuring recognition performance, for example.
+However, within the realms of psychology, one relevant effect is known as part-set cueing inhibition.
+Part-set cueing inhibition CITATION occurs when a subject is exposed to part of a set of previously learned items, which is found to reduce recall of nonrelearned items.
+However, CITATION showed that a learned row of words was better recalled if the cues consisted of a subset of words placed in their learned positions than if cue words were placed in other positions.
+In this case, part-set cueing seems to improve performance, but only if each part appears in the spatial position in which it was originally learned.
+This position-specificity is consistent with the FLL effect reported using the scrambled keyboard procedure in CITATION but has no obvious concomitant in network models .
+If the brain stores information as distributed representations, then each neuron contributes to the storage of many associations.
+Therefore, relearning some old and partially forgotten associations should affect the integrity of other associations learned at about the same time.
+As noted above, previous work has shown that relearning some forgotten associations does not disrupt other associations, but partially restores them.
+This FLL effect has also been demonstrated in neural network models, where it can accelerate evolution of adaptive behaviors CITATION.
+Crucially, in CITATION, the proof that relearning some associations partially restores other associations assumes that forgetting is caused by the addition of isotropic noise to connection weights, which could result from the cumulative effect of small random changes in connection weights.
+In contrast, here we prove that if forgetting is induced by shrinking weights towards zero, so that weights fall towards the origin, then relearning some associations disrupts other associations.
+The protocol used to examine FLL here is the same as that used in CITATION and CITATION and is as follows.
+First, learn a set of n 1 n 2 associations A A 1 A 2 consisting of two subsets A 1 and A 2 of n 1 and n 2 associations, respectively.
+After all learned associations A have been partially forgotten, measure performance error on subset A 1.
+Finally, relearn only subset A 2 and then remeasure performance on subset A 1.
+FLL occurs if relearning subset A 2 improves performance on A 1.
+In order to preclude a common misunderstanding, we emphasize that, for a network with n connection weights, it is assumed that n n 1 n 2 ; that is, the number of connection weights on each output unit is not less than the number n 1 n 2 of learned associations.
+Using the class of linear network models described below, up to n associations can be learned perfectly .
+The proofs below refer to a network with one output unit.
+However, these proofs apply to networks with multiple output units, because the n connections to each output unit can be considered as a distinct network, in which case our results can be applied to the network associated with each output unit.
+Each association consists of an input vector x and a corresponding target value d. For a network with weight vector w, the response to an input vector x is y w x. We define the performance error for input vectors x 1, ,x k and desired outputs d 1, ,d k to beFORMULAwhere y i w x i is the output response to the input vector x i. By putting X T, d T andFORMULAwe can write Equation 1 succinctly asFORMULA
+The two subsets A 1 and A 2 consist of n 1 and n 2 associations, respectively.
+Let w 0 be the network weight vector after A 1 and A 2 are learned.
+When A 1 and A 2 are forgotten, the network weight vector changes to w 1, say, and the performance error on A 1 becomes E pre E. Finally, relearning A 2 yields a new weight vector, w 2, say, and the performance error on A 1 is E post E. Free-lunch learning has occurred if performance error on A 1 is less after relearning A 2 than it was before relearning A 2 .
+Given weight vectors w 1 and w 2, a matrix X of input vectors, and a vector d of desired outputs, defineFORMULAwhich we shall also refer to simply as .
+In previous work CITATION, we assumed that the forgetting vector v has an isotropic distribution.
+Here we shall assume instead that the post-forgetting weight vector w 1 is given byFORMULAfor some scalar r, so thatFORMULAand thereforeFORMULAThe interpretation of Equation 6 is that forgetting consists of making the optimal weight vector w 0 fall towards the origin by a falling factor 1 r.

@@ -1,0 +1,45 @@
+### abstract ###
+Members of the vascular endothelial growth factor family of proteins are critical regulators of angiogenesis.
+VEGF concentration gradients are important for activation and chemotactic guidance of capillary sprouting, but measurement of these gradients in vivo is not currently possible.
+We have constructed a biophysically and molecularly detailed computational model to study microenvironmental transport of two isoforms of VEGF in rat extensor digitorum longus skeletal muscle under in vivo conditions.
+Using parameters based on experimental measurements, the model includes: VEGF secretion from muscle fibers; binding to the extracellular matrix; binding to and activation of endothelial cell surface VEGF receptors; and internalization.
+For 2-D cross sections of tissue, we analyzed predicted VEGF distributions, gradients, and receptor binding.
+Significant VEGF gradients were predicted in resting skeletal muscle with uniform VEGF secretion, due to non-uniform capillary distribution.
+These relative VEGF gradients were not sensitive to extracellular matrix composition, or to the overall VEGF expression level, but were dependent on VEGF receptor density and affinity, and internalization rate parameters.
+VEGF upregulation in a subset of fibers increased VEGF gradients, simulating transplantation of pro-angiogenic myoblasts, a possible therapy for ischemic diseases.
+The number and relative position of overexpressing fibers determined the VEGF gradients and distribution of VEGF receptor activation.
+With total VEGF expression level in the tissue unchanged, concentrating overexpression into a small number of adjacent fibers can increase the number of capillaries activated.
+The VEGF concentration gradients predicted for resting muscle is sufficient for cellular sensing; the tip cell of a vessel sprout is approximately 50 m long.
+The VEGF gradients also result in heterogeneity in the activation of blood vessel VEGF receptors.
+This first model of VEGF tissue transport and heterogeneity provides a platform for the design and evaluation of therapeutic approaches.
+### introduction ###
+Vascular endothelial growth factor is a key promoter of angiogenesis in vivo and it increases proliferation and migration of endothelial cells cultured in vitro CITATION.
+In rats, there are five main splice variants of VEGF, denoted 120, 144, 164, 188, and 205, and the 120 and 164 isoforms are the most prevalent CITATION.
+VEGF is expressed at different levels by a variety of cells throughout the body including skeletal muscle CITATION CITATION.
+VEGF 164 is secreted as a 45-kDa homodimeric glycoprotein containing an exon-7 encoded domain which allows binding to heparin and neuropilin-1.
+VEGF 120 is also a homodimeric glycoprotein but is missing the exon-7 encoded domain.
+Because of this domain, only VEGF 164 can bind to the heparan sulfate proteoglycans present in high concentrations in the extracellular matrix and basement membrane spaces, and the two splice variants are responsible for different signaling in both physiological and cancer angiogenesis CITATION, CITATION.
+Furthermore, due to the presence of high concentrations of HSPG in the BM that surrounds VEGF-secreting cells, a large amount of VEGF 164 becomes bound and sequestered near sources of VEGF secretion, creating a steep VEGF gradient CITATION.
+The cellular response to VEGF occurs when signaling is initiated by the binding of VEGF to its cell surface receptor tyrosine kinases, VEGFR1 and VEGFR2.
+VEGF is degraded after it is internalized by these two VEGF receptors.
+The receptors and their interactions with VEGF and with each other are discussed in depth in CITATION .
+VEGF is involved in both physiological and pathological angiogenesis.
+VEGF upregulation is necessary for physiological angiogenesis under conditions of hypoxia via oxygen-sensing mechanisms in the HIF-1 pathway CITATION and increased shear stress in blood vessels CITATION.
+In rat extensor digitorum longus muscle during exercise, both hypoxia and increased shear stress induce angiogenesis through overexpression of VEGF by myocytes CITATION.
+Because of the importance of VEGF, many clinical trials are under way for both pro- and anti-angiogenic therapies CITATION CITATION.
+The FDA has approved anti-VEGF treatments including Avastin, an antibody to VEGF, and Macugen, an RNA aptamer which binds to and sequesters human VEGF 165.
+Use of VEGF as a pro-angiogenic treatment for cardiac and limb ischemia has generated intense interest but direct administration of VEGF has not yet produced effective results in humans, and initial trials of transplantation of angiogenic cells have proven effective but require further work CITATION CITATION .
+To create an effective VEGF-driven pro-angiogenic therapy, better understanding is needed of both physiological and pathological VEGF-induced angiogenesis.
+Increasing VEGF concentration leads to angiogenesis, but concentrations of VEGF beyond critical levels may result in formation of abnormal vessels and hemangiomas CITATION, CITATION.
+Thus, normal blood vessels can only be formed if microenvironmental amounts of VEGF are carefully maintained above threshold levels for therapeutic angiogenesis but below threshold levels for abnormal angiogenesis over a prolonged period of time.
+Furthermore, responses to VEGF depend on not only VEGF concentration but also VEGF gradients, which enhance VEGF-induced angiogenesis and direct capillary growth CITATION CITATION.
+Therefore, it is not sufficient to measure bulk quantities of VEGF in large samples of tissue in order to predict angiogenic behavior.
+In the present study, we constructed a computational model to study extracellular diffusion of VEGF in vivo and effects of VEGF upregulation on gradients and receptor binding using the well-characterized rat EDL tissue as a sample environment.
+We have previously constructed models studying the kinetics of VEGF binding to receptors on cells in vitro and the effect of the presence of NRP-1 or placental growth factor CITATION, CITATION.
+We have also shown using Monte Carlo methods that despite very small concentrations of free VEGF, a continuum description in terms of VEGF concentrations is justified CITATION.
+Diffusion of VEGF in vitro has also been studied using a computational model CITATION.
+However, to our knowledge, this is the first model of VEGF diffusion in a geometrically complex in vivo environment and it includes: transport of the two most abundant VEGF isoforms through ECM and BM, HSPG binding kinetics, VEGF secretion, and VEGF receptor binding and internalization kinetics.
+NRP-1 was not included in this model because there are currently no available measurements of the amount of NRP-1 in skeletal muscle.
+Using this model, we predict VEGF distribution and analyze VEGF gradients at a resolution that is currently impossible to measure experimentally.
+Use of this model will aid in understanding mechanisms of physiological and therapeutic VEGF overexpression.
+This model is general and may be built upon in the future to include additional molecular species as new experimental data are emerging, e.g., neuropilin expression level in skeletal muscle; it can also be applied to specific drug interactions and other tissue types.

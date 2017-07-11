@@ -1,0 +1,17 @@
+### abstract ###
+when faced with a choice  people can normally select no option  i e   defer choice
+previous research has investigated when and why individuals defer choice  but has almost never looked at these questions when groups of people make choices
+separate reasons predict that groups may be equally likely  more likely  or less likely than individuals to defer choice
+we re-analyzed some previously published data and conducted a new experiment to address this question
+we found that small groups of people tended to defer choice more often than their members would
+assuming that the groups used a plurality rule but gave additional weight to individual preferences to defer choice allowed the groups' responses to be predicted quite well
+we discuss several possible explanations of these findings
+### introduction ###
+when given a choice  as well as being able to select one option  people are often also able to select none of the options  that is  to defer choice
+many of these choices are not made alone  but by a group of people  be it family members  friends  or colleagues
+the current research investigates who is more likely to defer choice  groups making choices collectively or members of those groups making choices individually
+it is possible to think of situations in which groups are more likely to defer choice compared to their members - just think of any time you were assigned to a committee of people who could not reach a decision  even though each of the individual members had a clear preference
+in contrast  some established principles of group decision making suggest that groups may be less likely to defer choice than their members
+the phenomenon of groupthink implies  for instance  that members who are hesitant to make a decision as individuals are swayed by the team spirit
+as a consequence  groups may be more prone than some of their members to make hasty decisions rather than to delay a decision  CITATION
+empirical evidence concerning whether groups or individuals are more likely to defer choice appears to be non-existent

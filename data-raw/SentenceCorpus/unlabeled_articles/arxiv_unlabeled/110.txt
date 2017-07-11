@@ -1,0 +1,60 @@
+### abstract ###
+We propose a novel model for nonlinear dimension reduction motivated by the probabilistic formulation of principal component analysis
+Nonlinearity is achieved by specifying different transformation matrices at different locations of the latent space and smoothing the transformation using a Markov random field type prior
+The computation is made feasible by the recent advances in sampling from von Mises-Fisher distributions
+### introduction ###
+\PARstart{P}{rincipal} component analysis (PCA) is an old statistical technique for unsupervised dimension reduction
+It is often used for exploratory data analysis with the objective of understanding the structure of the data
+PCA aims to represent the high dimensional data points with low-dimensional representers commonly called latent variables, which can be used for visualization, data compression etc
+Sometimes PCA is also used as a preprocessing step before regression  CITATION  or clustering  CITATION
+In these context, however, PCA typically does not have satisfying performance due to the ignorance of subsequent analysis
+We denote the original high dimensional data by  SYMBOL , where  SYMBOL
+Note that the superscript  SYMBOL  is used to denote transposition so that  SYMBOL  is a column vector
+We assume the data are already centered so that  SYMBOL
+One common definition of PCA is that of taking a linear combination of the components of  SYMBOL :  SYMBOL  where  SYMBOL  is the weighting coefficient of the  SYMBOL -th covariate
+This can be written as   SYMBOL } where  SYMBOL
+We take  SYMBOL  so that () represents a projection onto the linear subspace spanned by  SYMBOL
+Given  SYMBOL  and  SYMBOL , the optimal linear reconstruction of  SYMBOL  is given by  SYMBOL
+We want  SYMBOL  to be a good representation of the original  SYMBOL
+Thus we aim to minimize  SYMBOL
+It can be shown that the minimizing  SYMBOL  is the eigenvector of  SYMBOL  associated with its largest eigenvalue, called the first principal component and denoted by  SYMBOL
+Similarly, we can define  SYMBOL  principal components  SYMBOL  as the minimizer with respect to  SYMBOL  of the total squared reconstruction error  SYMBOL , where  SYMBOL ,  SYMBOL , and  SYMBOL  is the projection of  SYMBOL  onto the subspace spanned by the columns of  SYMBOL , the principal components
+PCA is a linear procedure since the reconstruction is based on a linear combination of the principal components
+Several nonlinear extensions have been proposed
+The most famous one in the statistical literature is the principal curves proposed in  CITATION
+The principal curve is defined as the curve such that each point on the curve is the center of all the data points whose projection onto the curve is that point
+Thus visually the principal curve is defined as the curve that passes through the ``middle" of the data points
+Although conceptually appealing, the computational constraint makes it difficult to extend this approach to higher dimensions
+Other approaches including neural networks  CITATION , kernel embedding  CITATION , and generative topographic mapping  CITATION  have been proposed
+The absence of probabilistic models in traditional PCA motivated the probabilistic PCA (PPCA) approach adopted by  CITATION
+The advantage of probabilistic modeling is multifold, including providing a mechanism for density modeling, determination of degree of novelty of a new data point, and naturally incorporating incomplete observations
+In  CITATION , the generative model is defined through the observation equation:  SYMBOL } which stated the linear relationship between the latent variable and the data points,  SYMBOL  is a  SYMBOL  matrix that is not constrained to have orthogonal columns a priori, and  SYMBOL  are  iid 
+noises with  SYMBOL
+Note we assume that the data is already centered, otherwise the observation model should be changed to  SYMBOL  with shift parameter  SYMBOL
+In PPCA, we put a zero mean, unit covariance Gaussian prior on  SYMBOL , and the likelihood is maximized over  SYMBOL  after marginalizing over  SYMBOL :  SYMBOL   It is shown that when the noise level  SYMBOL  goes to zero, the maximum likelihood estimator for  SYMBOL  will converge to   SYMBOL } where the matrix  SYMBOL  and  SYMBOL  comes from singular value decomposition of  SYMBOL
+Thus PPCA is a natural extension of the traditional PCA
+CITATION  extends PPCA to mixture PPCA which can be used to model nonlinear structure in the data
+In PPCA, after marginalizing over  SYMBOL , the distribution of  SYMBOL  becomes  SYMBOL  if the data are not centered
+The mixture PPCA models the marginal distribution of  SYMBOL  as   SYMBOL  a mixture with  SYMBOL  components, and for each component, the observation model is  SYMBOL  if the  SYMBOL -th observation comes from the  SYMBOL -th mixture component
+Thus in mixture PPCA, each mixture component is defined by a different linear transformation, while clustering is defined on the original  SYMBOL dimensional space
+Marginalization over  SYMBOL  is still the same using unit covariance Gaussian distribution
+The maximization over  SYMBOL  and  SYMBOL  can be performed using EM algorithm taking the mixture indicators as the missing data
+The experiments in  CITATION  showed that this model has a wide applicability
+We also note that when using  SYMBOL  to reconstruct the data point  SYMBOL , we must also store the mixture component which is responsible for generating  SYMBOL , or, more preferably, the posterior responsibility of each mixture for the  SYMBOL th observation
+This piece of information cannot be recovered from the latent variable  SYMBOL  alone
+Another approach of probabilistic nonlinear PCA based on Gaussian processes has been proposed in  CITATION
+It starts from the same observation model (), but instead of marginalizing over  SYMBOL , it marginalizes over  SYMBOL  by putting independent spherical Gaussian prior on the  SYMBOL  columns of  SYMBOL , resulting in the marginal distribution of  SYMBOL , where  SYMBOL  is the  SYMBOL -th column of  SYMBOL  and  SYMBOL  is the  SYMBOL  matrix of latent variables
+The author noticed that one can replace  SYMBOL  with another kernel matrix to achieve nonlinearity
+Conceptually, this can be regarded as multivariate nonparametric regression problem  SYMBOL  with  SYMBOL  unknown, and need to be found by optimization of the likelihood
+The computational complexity of Gaussian process approach is cubic in the number of data points  SYMBOL , although approximation algorithm can be designed to reduce the complexity
+In this contribution, we propose a novel Bayesian approach to nonlinear PCA which puts priors on both  SYMBOL  and  SYMBOL
+The model is based on an observation model similar to (), but with two differences
+First, the linear transformation is defined through the orthonormal matrix  SYMBOL  instead of  SYMBOL  which roughly corresponds to  SYMBOL  in PPCA
+Second, the linear transformation  SYMBOL  in our model is dependent on the corresponding latent variable
+The linear transformations in different parts of the latent space are related by putting a Markov random field prior over the space of orthonormal matrices which makes the model identifiable
+The model is estimated by Gibbs sampling which explores the posterior distribution of both the latent space and the transformation space
+The computational burden for each iteration of Gibbs sampling is square in the number of data points
+The rest of the paper is organized as follows: In the next section, we present the Baysian model and discuss the Gibbs sampling estimation procedure
+Since we think the readers might not be familiar with the von Mises-Fisher distribution, some background material is also provided
+Some experiments are carried out in section 3 using both simulated manifold data and the handwritten digits data
+We conclude in section 4 with some thoughts on possible extensions of the model

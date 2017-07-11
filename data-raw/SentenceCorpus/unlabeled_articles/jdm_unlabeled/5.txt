@@ -1,0 +1,15 @@
+### abstract ###
+the present research aimed to test the role of mood in the iowa gambling task  CITATION
+in the igt  participants can win or lose money by picking cards from four different decks
+they have to learn by experience that two decks are overall advantageous and two decks are overall disadvantageous
+previous studies have shown that at an early stage in this card-game  players begin to display a tendency towards the advantageous decks
+subsequent research suggested that at this stage  people base their decisions on conscious gut feelings  CITATION
+based on empirical evidence for the relation between mood and cognitive processing-styles  we expected and consistently found that  compared to a negative mood state  reported and induced positive mood states increased this early tendency towards advantageous decks
+our results provide support for the idea that a positive mood causes stronger reliance on affective signals in decision-making than a negative mood
+### introduction ###
+many of us are familiar with the phenomenon that we feel that something is right or wrong  or that one choice option is better than another  without necessarily being able to explain where this  gut feeling  comes from or what it is based on
+when people make a decision  one thing they can do is rely on such affective reactions towards decision-options
+decision-makers can also base their decision on a cognition-based  rule-governed and precise analysis of the different options
+this distinction between decision-making based on feelings and decision-making based on thorough deliberation is a prominent distinction in psychology and decision-making research  CITATION
+the central question we ask here is whether mood is a moderator of people's reliance on feelings versus deliberation in decision-making
+in line with others  we define mood states as diffuse affective states that are not linked to specific stimuli and that are relatively long-lasting  CITATION

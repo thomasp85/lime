@@ -1,0 +1,26 @@
+### abstract ###
+often to the detriment of human decision making  people are prone to an impact bias when making affective forecasts  overestimating the emotional consequences of future events
+the cognitive processes underlying the impact bias  and methods for correcting it  have been debated and warrant further exploration
+in the present investigation  we examined both individual differences and contextual variables associated with cognitive processing in affective forecasting for an election
+results showed that the perceived importance of the event and working memory capacity were both associated with an increased impact bias for some participants  whereas retrieval interference had no relationship with bias
+additionally  an experimental manipulation effectively reduced biased forecasts  particularly among participants who were most distracted thinking about peripheral life events
+these findings have theoretical implications for understanding the impact bias  highlight the importance of individual differences in affective forecasting  and have ramifications for future decision making research
+the possible functional role of the impact bias is discussed within the context of evolutionary psychology
+### introduction ###
+benjamin franklin observed that the declaration of independence  doesn't guarantee happiness  only the pursuit of it
+you have to catch up to it yourself   CITATION
+part of pursuing happiness involves making predictions about which endeavors and events yield the most desired outcomes
+life-altering decisions such as contemplating who to marry or which career to pursue require reasoned predictions regarding long-term emotional benefits
+when asked to make affective forecasts  people accurately predict the direction or valence of their emotional reactions but show surprisingly poor ability to predict the intensity and duration of their anticipated feelings  CITATION
+more specifically  people generally overestimate the emotional impact of future events  a phenomenon termed the impact bias  CITATION
+people expect endless despair in response to romantic breakups and enduring euphoria in response to winning the lottery  whereas reactions tend to be more fleeting than anticipated  CITATION
+although the impact bias tends to be somewhat greater for distressing events  it has been found in predictions for both positive and negative events  including holidays  final course grades  tenure decisions  housing assignments  sports outcomes  meals  prize money  missed train departures  and elections  CITATION
+because people often make decisions based on their predicted emotional reactions  the impact bias leads to frequent errors in decision making  CITATION
+affective forecasting research has highlighted the importance of assessing both predicted and actual emotional reactions  since one type of reaction cannot merely be taken as a proxy for the other
+nonetheless  due to the difficulty of conducting biphasic investigations  researchers have often chosen to examine forecasts only  CITATION  or to use a between-group design  with predicted and actual reactions to an event measured across different samples  CITATION
+in fact  a meta-analysis currently underway  CITATION  indicates that only a small number n    NUMBER  of the  NUMBER   total forecasting studies have used a solid repeated-measures design in which the same participants provided both predicted and actual reactions to the same event
+only two have focused extensively on non-demographic individual difference variables  CITATION
+although the impact bias has been described by past researchers as a relatively general phenomenon  the study of individual differences in affective forecasting can help reveal the thought processes underlying the impact bias
+past research and theory have implicated working memory capacity and proneness to retrieval interference as important individual difference variables that may influence biased forecasts
+in the present investigation  a repeated-measures design was used to determine whether individual differences in cognitive processing influence predicted reactions  actual reactions  or both
+furthermore  we attempted to account for core situational moderators of the impact bias  namely the use of a bias-reduction strategy as well as the perceived importance of the event in question

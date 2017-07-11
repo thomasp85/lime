@@ -1,0 +1,16 @@
+### abstract ###
+Using the game-theoretic framework for probability, Vovk and Shafer~ CITATION  have shown that it is always possible, using randomization, to make sequential probability forecasts that pass any countable set of well-behaved statistical tests
+This result generalizes work by other authors, who consider only tests of calbration
+We complement this result with a lower bound
+We show that Vovk and Shafer's result is valid only when the forecasts are computed with unrestrictedly increasing degree of accuracy
+When some level of discreteness is fixed, we present a game-theoretic generalization of Oakes' example for randomized forecasting that is a test failing any given method of deferministic forecasting; originally, this example was presented for deterministic calibration
+### introduction ###
+Using the game-theoretic framework for probability~ CITATION , Vovk and Shafer have shown in~ CITATION  that it is always possible, using randomization, to make sequential probability forecasts that pass any countable set of well-behaved statistical tests
+This result generalizes work by other authors, among them are Foster and Vohra~ CITATION , Kakade and Foster~ CITATION , Lehrer~ CITATION , Sandrony et al ~ CITATION , who consider only tests of calibration
+We complement this result with a lower bound
+We show that Vovk and Shafer's result is valid only when the forecasts are computed with unrestrictedly increasing degree of accuracy
+When some level of discreteness is fixed, we present a game-theoretic version of Oakes' example for randomized forecasting that is a test failing any given method of deterministic forecasting; originally, this example was presented for deterministic calibration
+To formulate this example, we use the forecasting game presented by Vovk and Shafer~ CITATION , namely Binary Forecasting Game II
+We discuss details of the randomized forecasting algorithms in Section~
+The Shafer and Vovk's~ CITATION  game-theoretic framework is considered in Section~
+We present in this section the original Vovk and Shafer's~ CITATION  result on universal randomized forecasting and prove our result which gives the limits for such forecasting - a game-theoretic version of the Oakes' example for randomized forecasting

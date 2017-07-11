@@ -1,0 +1,23 @@
+### abstract ###
+conflict over iran's nuclear program  which involves a us-led policy to impose sanctions on iran  is perceived by each side as a preeminent challenge to its own national security and global peace
+yet  there is little scientific study or understanding of how material incentives and disincentives  such as economic sanctions  psychologically affect the targeted population and potentially influence behaviour
+here we explore the iranian nuclear program within a paradigm concerned with sacred values
+we integrate experiments within a survey of  NUMBER  iranians
+we find that a relatively small but politically significant portion of the iranian population believes that acquiring nuclear energy has become a sacred value  in the sense that proposed economic incentives and disincentives result in a  backfire effect  in which offers of material rewards or punishment lead to increased anger and greater disapproval
+this pattern was specific to nuclear energy and did not hold for acquiring nuclear weapons
+the present study is the first demonstration of the backfire effect for material disincentives as well as incentives  and on an issue whose apparent sacred nature is recent rather than longstanding
+### introduction ###
+in dealing with political conflict  two broadly different approaches to modeling the values that drive decisions and choice of behavior are the consequentialist approach  based on instrumental or material values  CITATION   and the deontological approach  based on moral or sacred values  CITATION
+the consequentialist approach suggests that all decisions are ultimately based on the expected outcomes of actions
+in contrast  the deontological approach suggests that sacred values represent moral imperatives that circumscribe certain actions independently of  or all out of proportion to  expected outcomes or prospects of success  and that we act in accordance with them because they are the right or noble thing to do  as in fundamental matters of religion  CITATION
+there are serious misgivings about the explanatory adequacy of theories of rational choice in economics  CITATION  and politics  CITATION
+recent work in social and cognitive psychology suggests that sacred values may be critically involved in important decisions in life  CITATION   as well as in sustaining seemingly intractable cultural and political conflicts  CITATION
+sacred values svs appear to be intimately bound up with sentiments of personal and collective identity  CITATION   may have privileged links to emotions  CITATION   show insensitivity to quantity and calculations of loss versus gain  CITATION  and resist material tradeoffs  CITATION
+a psychological implication is that holders of sacred values are strongly averse to using traditional utility-based models to reason about these values
+specifically  while a secular value can easily be substituted with another value  tradeoffs involving svs result in strong negative emotions and moral outrage  CITATION
+one focus of sacred values research has been on seemingly intractable conflicts with deep historical context  as between israelis and palestinians  CITATION   disputes over centuries old sharia law in indonesia  CITATION   and hindu-muslim clashes over the babri mosque in india  CITATION
+fierce inter-group conflicts may also arise over issues with a much narrower history  such as iran's national nuclear program  which is perceived as a major source of challange to security by each side
+the nuclear program has been repeatedly depicted by the iranian leadership as an uncompromisable  CITATION   and  inalienable    CITATION  right
+the white house recently acknowledged the possibility that iran's  ideological commitment to nuclear weapons is such that they're not making a simple cost-benefit analysis on this issue   CITATION
+a preliminary experiment  CITATION  suggested operation of svs for iran's nuclear program  however  the sample was small  and  most importantly  the study was ambiguous about whether the svs were about acquiring nuclear energy or nuclear weapons
+as in previous research this study examined only the effects of material incentives to compromise

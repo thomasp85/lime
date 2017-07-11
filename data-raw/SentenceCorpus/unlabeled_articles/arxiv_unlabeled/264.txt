@@ -1,0 +1,69 @@
+### abstract ###
+Principal component analysis (PCA) is a widely used technique for data  analysis and dimension reduction with numerous applications in science  and engineering
+However, the standard PCA suffers from the fact  that the principal components (PCs) are usually linear combinations  of all the original variables, and it is thus often difficult to  interpret the PCs
+To alleviate this drawback, various sparse  PCA approaches were proposed in literature  CITATION
+Despite success in achieving sparsity, some important properties  enjoyed by the standard PCA are lost in these methods such as  uncorrelation of PCs and orthogonality of loading vectors
+Also,  the total explained variance that they attempt to maximize  can be too optimistic
+In this paper we propose a new formulation  for sparse PCA, aiming at finding sparse and nearly uncorrelated PCs  with orthogonal loading vectors while explaining as much of the total  variance as possible
+We also develop a novel augmented  Lagrangian method for solving a class of nonsmooth constrained  optimization problems, which is well suited for our formulation of sparse  PCA
+We show that it converges to a  feasible  point, and moreover under  some regularity assumptions, it converges to a stationary point
+Additionally, we propose two nonmonotone gradient methods for solving  the augmented Lagrangian subproblems, and establish their global and  local convergence
+Finally, we compare our sparse PCA approach with  several existing methods on synthetic, random, and real data, respectively
+The computational results demonstrate that the sparse PCs produced by our approach  substantially outperform those by other methods in terms of total  explained variance, correlation of PCs, and orthogonality of loading vectors \vskip14pt   {Key words:} sparse PCA, augmented Lagrangian method,  nonmonotone gradient methods, nonsmooth minimization  \vskip14pt   {AMS 2000 subject classification:} 62H20, 62H25, 62H30, 90C30, 65K05
+### introduction ###
+Principal component analysis (PCA) is a popular tool for data  processing and dimension reduction
+It has been widely used in  numerous applications in science and engineering such as biology,  chemistry, image processing, machine learning and so on
+For  example, PCA has recently been applied to human face recognition,  handwritten zip code classification and gene expression data  analysis (see  CITATION )
+In essence, PCA aims at finding a few linear combinations of the  original variables, called  principal components  (PCs), which  point in orthogonal directions capturing as much of the variance  of the variables as possible
+It is well known that PCs can be found  via the eigenvalue decomposition of the covariance matrix  SYMBOL
+However,  SYMBOL  is typically unknown in practice
+Instead, the PCs  can be approximately computed via the singular value decomposition (SVD)  of the data matrix or the eigenvalue decomposition of the sample  covariance matrix
+In detail, let  SYMBOL   be a  SYMBOL -dimensional random vector, and  SYMBOL  be an  SYMBOL  data  matrix, which records the  SYMBOL  observations of  SYMBOL
+Without loss of  generality, assume  SYMBOL  is centered, that is, the column means of  SYMBOL   are all  SYMBOL
+Then the commonly used sample covariance matrix is   SYMBOL
+Suppose the eigenvalue decomposition of   SYMBOL  is   SYMBOL  Then  SYMBOL  gives the PCs, and the columns of  SYMBOL  are the   corresponding loading vectors
+It is worth noting that  SYMBOL   can also be obtained by performing the SVD of  SYMBOL  (see, for  example,  CITATION )
+Clearly, the columns of  SYMBOL  are orthonormal  vectors, and moreover  SYMBOL  is diagonal
+We thus immediately see  that if  SYMBOL , the corresponding PCs are uncorrelated;  otherwise, they can be correlated with each other (see Section   for details)
+We now describe several important  properties of the PCs obtained by the standard PCA when  SYMBOL   is well estimated by  SYMBOL  (see also  CITATION ):  [1 ] The PCs sequentially capture the maximum variance of the variables  approximately, thus encouraging minimal information loss as much as possible; [2 ] The PCs are nearly uncorrelated, so the explained variance by  different PCs has small overlap;   [3 ] The PCs point in orthogonal directions, that is, their loading  vectors are orthogonal to each other
+In practice, typically the first few PCs are enough to represent the data,  thus a great dimensionality reduction is achieved
+In spite of the popularity  and success of PCA due to these nice features, PCA has an obvious drawback,  that is, PCs are usually linear combinations of all  SYMBOL  variables and the  loadings are typically nonzero
+This makes it often difficult to interpret  the PCs, especially when  SYMBOL  is large
+Indeed, in many applications, the original  variables have concrete physical meaning
+For example in biology, each  variable might represent the expression level of a gene
+In these cases,  the interpretation of PCs would be facilitated if they were composed only  from a small number of the original variables, namely, each PC involved a  small number of nonzero loadings
+It is thus imperative to develop sparse  PCA techniques for finding the PCs with sparse loadings while enjoying the  above three nice properties as much as possible
+Sparse PCA has been an active research topic for more than a decade
+The first  class of approaches are based on ad-hoc methods by post-processing the PCs  obtained from the standard PCA mentioned above
+For example, Jolliffe  CITATION   applied various rotation techniques to the standard PCs for obtaining sparse loading  vectors
+Cadima and Jolliffe  CITATION  proposed a simple thresholding approach  by artificially setting to zero the standard PCs' loadings with absolute values  smaller than a threshold
+In recent years, optimization approaches have been  proposed for finding sparse PCs
+They usually formulate sparse PCA into an optimization  problem, aiming at achieving the sparsity of loadings while maximizing the explained  variance as much as possible
+For instance, Jolliffe et al \  CITATION  proposed  an interesting algorithm, called SCoTLASS, for finding sparse orthogonal loading  vectors by sequentially maximizing the approximate variance explained by each PC  under the  SYMBOL -norm penalty on loading vectors
+Zou et al \  CITATION   formulated sparse PCA as a regression-type optimization problem and imposed a  combination of  SYMBOL - and  SYMBOL -norm penalties on the regression coefficients
+d'Aspremont et al \  CITATION  proposed a method, called DSPCA, for  finding sparse PCs by solving a sequence of semidefinite program relaxations  of sparse PCA
+Shen and Huang  CITATION  recently developed an approach  for computing sparse PCs by solving a sequence of rank-one matrix approximation  problems under several sparsity-inducing penalties
+Very recently, Journ\'ee et al \   CITATION  formulated sparse PCA as nonconcave maximization problems with   SYMBOL - or  SYMBOL -norm sparsity-inducing penalties
+They showed that these problems  can be reduced into maximization of a convex function on a compact set, and they  also proposed a simple but computationally efficient gradient method for finding  a stationary point of the latter problems
+Additionally, greedy methods were  investigated for sparse PCA by Moghaddam et al \  CITATION  and d'Aspremont  et al \  CITATION
+The PCs obtained by the above methods  CITATION  are usually sparse
+However, the aforementioned  nice properties of the standard PCs are lost to some extent in these sparse PCs
+Indeed, the likely correlation among the sparse PCs are not considered in these  methods
+Therefore, their sparse PCs can be quite correlated with each other
+Also,  the total explained variance that these methods attempt to maximize can be too  optimistic as there may be some overlap among the individual variances of  sparse PCs
+Finally, the loading vectors of the sparse PCs given by these  methods lack orthogonality except SCoTLASS  CITATION
+In this paper we propose a new formulation for sparse PCA by taking into  account the three nice properties of the standard PCA, that is, maximal  total explained variance, uncorrelation of PCs, and orthogonality of loading  vectors
+We also explore the connection of this formulation with the standard  PCA and show that it can be viewed as a certain perturbation of the standard  PCA
+We further propose a novel augmented Lagrangian method for solving a  class of nonsmooth constrained optimization problems, which is well suited  for our formulation of sparse PCA
+This method differs from the classical augmented  Lagrangian method in that: i) the values of the augmented Lagrangian functions  at their approximate minimizers given by the method are bounded from above; and  ii) the magnitude of penalty parameters outgrows that of Lagrangian multipliers  (see Section  for details)
+We show that this method converges to  a  feasible  point, and moreover it converges to a first-order stationary  point under some regularity assumptions
+We also propose two nonmonotone gradient  methods for minimizing a class of nonsmooth functions over a closed convex set,  which can be suitably applied to the subproblems arising in our augmented  Lagrangian method
+We further establish global convergence and, under a local  Lipschitzian error bounds assumption  CITATION , local linear rate of convergence  for these gradient methods
+Finally, we compare the sparse PCA approach proposed  in this paper with several existing methods  CITATION  on synthetic, random, and real data, respectively
+The computational  results demonstrate that the sparse PCs obtained by our approach substantially  outperform those by the other methods in terms of total explained variance,  correlation of PCs, and orthogonality of loading vectors
+The rest of paper is organized as follows
+In Section , we propose a new formulation for sparse PCA and  explore the connection of this formulation with the standard PCA
+In Section  , we then develop a novel augmented Lagrangian method for  a class of nonsmooth constrained problems, and propose two nonmonotone gradient  methods for minimizing a class of nonsmooth functions over a closed convex set
+In Section , we discuss the applicability and implementation details  of our augmented Lagrangian method for sparse PCA
+The sparse PCA approach proposed  in this paper is then compared with  several existing methods on synthetic, random,  and real data in Section
+Finally, we present some concluding  remarks in Section

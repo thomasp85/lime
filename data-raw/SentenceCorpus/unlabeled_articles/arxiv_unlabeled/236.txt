@@ -1,0 +1,53 @@
+### abstract ###
+Motivated by the philosophy and phenomenal success of compressed sensing, the problem of reconstructing a matrix from a sampling of its entries has attracted much attention recently
+Such a problem can be viewed as an information--theoretic variant of the well--studied matrix completion problem, and the main objective is to design an  efficient  algorithm that can reconstruct a matrix by inspecting only a  small  number of its entries
+Although this is an impossible task in general, Cand\`{e}s and co--authors have recently shown that under a so--called  incoherence  assumption, a rank  SYMBOL   SYMBOL  matrix can be reconstructed using semidefinite programming (SDP) after one inspects  SYMBOL  of its entries
+In this paper we propose an alternative approach that is much more efficient and can reconstruct a larger class of matrices by inspecting a significantly smaller number of the entries
+Specifically, we first introduce a class of so--called  stable  matrices and show that it includes all those that satisfy the incoherence assumption
+Then, we propose a randomized basis pursuit (RBP) algorithm and show that it can reconstruct a stable rank  SYMBOL   SYMBOL  matrix after inspecting  SYMBOL  of its entries
+Our sampling bound is only a logarithmic factor away from the information--theoretic limit and is essentially optimal
+Moreover, the runtime of the RBP algorithm is bounded by  SYMBOL , which compares very favorably with the  SYMBOL  runtime of the SDP--based algorithm
+Perhaps more importantly, our algorithm will provide an  exact  reconstruction of the input matrix in polynomial time
+By contrast, the SDP--based algorithm can only provide an  approximate  one in polynomial time
+### introduction ###
+A fundamental problem that arises frequently in many disciplines is that of reconstructing a matrix with certain properties from some partial information
+Typically, such a problem is motivated by the desire to deduce global structure from a (small) number of local observations
+For instance, consider the following applications:   {Covariance Estimation } In areas such as statistics, machine learning and wireless communications, it is often of interest to find the  maximum likelihood estimate  of the covariance matrix  SYMBOL  of a random vector  SYMBOL
+Such an estimate can be used to study the relationship among the variables in  SYMBOL , or to give some indication on the performance of certain systems
+Usually, extra information is available to facilitate the estimation
+For instance, we may have a number of independent samples that are drawn according to the distribution of  SYMBOL , as well as some structural constraints on  SYMBOL  (e g , certain entries of  SYMBOL  have prescribed values  CITATION , the matrix  SYMBOL  has a Toeplitz structure and some of its entries have prescribed values  CITATION , etc )
+Thus, the estimation problem becomes that of completing a partially specified matrix so that the completion satisfies the structural constraints and maximizes certain likelihood function {Graph Realization } It is a trivial matter to see that given the coordinates of  SYMBOL  points in  SYMBOL , the distance between any two points can be computed efficiently
+However, the inverse problem --- given a subset of interpoint distances, find the coordinates of points (called a  realization ) in  SYMBOL  (where  SYMBOL  is fixed) that fit those distances --- turns out to be anything but trivial (see, eg ,  CITATION )
+Such a problem arises in many different contexts, such as sensor network localization (see, eg ,  CITATION ) and molecular conformation (see, e
+g,  CITATION ), and is equivalent to the problem of completing a partially specified matrix to an  Euclidean distance matrix  that has a certain rank (cf ~ CITATION ) {Recovering Structure from Motion } A fundamental problem in computer vision is to reconstruct the structure of an object by analyzing its motion over time
+This problem, which is known as the  Structure from Motion (SfM) Problem  in the literature, can be formulated as that of finding a low--rank approximation to certain measurement matrix (see, eg ,  CITATION )
+However, due to the presence of occlusion or tracking failures, the measurement matrix often has missing entries
+When one takes into account such difficulties, the reconstruction problem becomes that of completing a partially specified matrix to one that has a certain rank (see, eg ,  CITATION ) {Recommendation Systems } Although electronic commerce has offered great convenience to customers and merchants alike, it has complicated the task of tracking and predicting customers' preferences
+To cope with this problem, various  recommendation systems  have been developed over the years (see, eg ,  CITATION )
+Roughly speaking, those systems maintain a matrix of preferences, where the rows correspond to users and columns correspond to items
+When an user purchases or browses a subset of the items, she can specify her preferences for those items, and those preferences will then be recorded in the corresponding entries of the matrix
+Naturally, if an user has not considered a particular item, then the corresponding entry of the matrix will remain unspecified
+Now, in order to predict users' preferences for the unseen items, one will have to complete a partially specified matrix so that the completion maximizes certain performance measure (such as each individual's utility  CITATION )
+Note that in all the examples above, we are forced to take whatever information is given to us
+In particular, we cannot, for instance, specify which entries of the unknown matrix to examine
+As a result, the reconstruction problem can be ill--posed (e g , there may not be a unique or even any solution that satisfies the given criteria)
+This is indeed an important issue
+However, we shall not address it in this paper (see, eg ,  CITATION  for related work)
+Instead, we take a different approach and consider the information--theoretic aspects of the reconstruction problem
+Specifically, let  SYMBOL  be the rank  SYMBOL  matrix that we wish to reconstruct
+For the sake of simplicity, suppose that  SYMBOL  is known
+Initially,  no  information about  SYMBOL  (other than its rank) is available
+However, we are allowed to inspect  any  entry of  SYMBOL  and inspect as many entries as we desire in order to complete the reconstruction
+Of course, if we inspect all  SYMBOL  entries of  SYMBOL , then we will be able to reconstruct  SYMBOL  exactly
+Thus, it is natural to ask whether we can inspect only a  small  number of entries and still be able to reconstruct  SYMBOL  in an  efficient  manner
+Besides being a theoretical curiosity, such a problem does arise in practical applications
+For instance, in the sensor network localization setting  CITATION , the aforementioned problem is tantamount to asking which of the pairwise distances are needed in order to guarantee a successful reconstruction of the network topology
+It turns out that if the number of required pairwise distances is small, then we will be able to efficiently reconstruct the network topology by performing just a few distance measurements and solving a small semidefinite program (SDP)  CITATION
+To get an idea of what we should aim for, let us first determine the degrees of freedom available in specifying the rank  SYMBOL  matrix  SYMBOL
+This will give us a lower bound on the number of entries of  SYMBOL  we need to inspect in order to guarantee an exact reconstruction
+Towards that end, consider the singular value decomposition (SVD)  SYMBOL , where  SYMBOL  and  SYMBOL  have orthonormal columns, and  SYMBOL  is a diagonal matrix
+Clearly, there are  SYMBOL  degrees of freedom in specifying  SYMBOL
+Now, observe that for  SYMBOL , the  SYMBOL --th column of  SYMBOL  must be orthogonal to all of the previous  SYMBOL  columns, and that it must have unit length
+Thus, there are  SYMBOL  degrees of freedom in specifying the  SYMBOL --th column of  SYMBOL , which implies that there are  SYMBOL  degrees of freedom in specifying  SYMBOL
+By the same argument, there are  SYMBOL  degrees of freedom in specifying  SYMBOL
+Hence, we have:  SYMBOL  SYMBOL A SYMBOL SYMBOL A SYMBOL A SYMBOL A SYMBOL \Theta(\Delta) SYMBOL A SYMBOL nn SYMBOL A=e_1e_1^T SYMBOL e_1=(1,0,\ldots,0)\in\R^n SYMBOL A SYMBOL A SYMBOL A SYMBOL \Theta(\Delta) SYMBOL A SYMBOL A$

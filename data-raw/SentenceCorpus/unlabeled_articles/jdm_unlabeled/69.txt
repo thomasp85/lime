@@ -1,0 +1,59 @@
+### abstract ###
+difficulty making decisions is one of the symptoms of the depressive illness
+previous research suggests that depressed individuals may make decisions that differ from those made by the non-depressed  and that they use sub-optimal decision-making strategies
+for this study we constructed an instrument that aims to measure a variety of decision-making styles as well as the respondent's view of him or herself as a decision-maker decisional self-esteem
+these styles and estimates of decisional self-esteem were then related to depressive symptoms
+depressive symptomatology correlated negatively with perception of self as a decision-maker
+those with higher depression severity scores characterized themselves as being more anxious about decisions  and more likely to procrastinate
+they also reported using fewer productive decision-making strategies  depending more on other people for help with decisions  and relying less on their own intuitions when making decisions
+further research is needed to determine the extent to which these decision-making styles are antecedents to depressive symptomatology or are instead products of  or aspects of  the phenomenology associated with depression
+### introduction ###
+decision-making styles are theorized to be stable  trait-like patterns of approach to situations that call for a decision  CITATION
+like personality traits  these styles do not have perfect predictive power  but instead represent likelihoods of behavior across situations and domains
+that is  a person scoring high on a particular decision-making style  such as spontaneity  when needing to make a decision can be expected to act in a spontaneous manner more often than in a thoughtful and deliberate one
+the number of styles of decision-making is subject to debate
+for instance  scott and bruce  CITATION  suggested that there are five decision styles  whereas harren  CITATION  and nygren  CITATION  identified three decision styles
+decision styles were found to be associated with a variety of behaviors and attitudes  including life choices  such as career and health-related decisions  CITATION   consumer behavior  CITATION   evaluations of new technology  CITATION   and cultural backgrounds  CITATION
+affect  stress  and other  non-rational  internal events are capable of influencing people's decisions  CITATION
+sadness - the emotion most closely associated with depression - has been shown to influence decisions made in both experimental tasks  CITATION  as well as real-life decisions  CITATION
+individuals suffering from a variety of psychopathological conditions that influence the degree and the quality of affect  stress  or anxiety  are therefore likely to engage in decision-making that differs from that of better-adjusted individuals  which may result in less productive decisions  CITATION
+thus  individuals with disorders such as depression may have a particular pattern of decision styles
+the conflict theory of decision-making  CITATION  attempts to characterize the decision-maker in regard to  a confidence in the decision  b the coping strategies used to handle the internal conflict of a decision and to arrive at the most adaptive solution
+an individual's most prominent decision-making style is one that reflects the default coping strategy employed when making important decisions
+a questionnaire to assess both the confidence as a decision-maker as well as the coping strategies has been developed  CITATION   assessing for three styles of decision-making defensive avoidance  hypervigilance  and vigilance as well as the individuals' confidence as a decision-maker
+a strong emotion or psychopathology may affect a decision process either through its effect on decisional self-esteem or by increasing the likelihood that a suboptimal decision coping style such as defensive avoidance or hypervigilance will be employed  rather than the more adaptive decision-making style  namely vigilance
+indeed  avoidant decision style was found to be associated with greater perceived stress  CITATION
+radford  nakane  ohta  mann  and kalucy  CITATION  used the mann  CITATION  questionnaire in a cross-cultural study comparing decision styles of japanese and australian depressed subjects and controls
+australian depressed subjects exhibited lower self-esteem as decision makers compared to australian controls  whereas for japanese subjects there was no such difference
+echoing the findings from their previous work examining decision-making in inpatients with psychiatric disturbances  CITATION   australian depressed subjects found decision-making very stressful  and were more likely than non-depressed to use maladaptive decision styles  interestingly  few differences were found between depressed and nondepressed japanese subjects
+the results found in australian sample were also found in a sample of african-american adolescents from low-income families  CITATION
+as in the radford et al CITATION  study  depressive symptoms correlated with poor self-esteem as a decision-maker  careless decision style  and avoidance of decisions
+many important decisions that will affect later adult life  such as willingness to persevere in school  interest in potential occupations  and choice of peers  are made during the adolescent years
+the association of maladaptive decision styles with adolescent dysphoria  CITATION  highlights the need for earlier identification of the potential problem  which would then allow for earlier  targeted interventions
+other evidence suggesting that depressed individuals may have a distinct pattern of decision-making comes from research in areas related to decision-making
+indecisiveness has been noted as one of the core symptoms of depression  according to the dsm-iv-tr  CITATION
+decisional avoidance  or a tendency to  avoid making a choice by postponing it or by seeking an easy way out that involves no action or change   CITATION  may be especially problematic for depressed individuals  CITATION
+pietromonaco and rook  CITATION  compared the decision styles of dysphoric college students to those of controls by asking them to make decisions about real-life situations with a possible risk and a possible benefit
+dysphoric students considered risks to be more likely  more important  and more damaging in all types of situations
+for social situations  dysphorics also under-rated benefits  as compared to the non-dysphorics  and were more reluctant to proceed with a decision  which is consistent with findings that affective component of decision-making may produce an inverse correlation between perceived risks and benefits  CITATION
+the pietromonaco and rook results suggest that dysphoric individuals may be more avoidant in decisions  and that it might be due to increased perception of risk  which makes them more cautious
+depressed individuals may therefore exhibit greater indecisiveness  greater avoidance of decisions  as well as greater avoidance of risk
+perfectionist tendencies  insofar as they contribute to feelings of disillusionment and dissatisfaction with oneself and with the world  have been shown to be associated with depression  CITATION
+schwartz et al CITATION  found that individuals who tend to pursue the best possible option  rather than the  good enough  option  are more likely to have depressive symptoms
+whereas  satisficers  are likely to be happy with the option that just satisfies their needs   maximizers  are considerably less likely to be fully satisfied with their choices  because the  perfect  option is usually a rather elusive goal
+maximizers are also more prone to experience regret  which further contributes to dysphoria
+regret has also been found to be associated with depressive symptoms  CITATION
+it is therefore likely that decision-making styles based on perfectionism  and tendency towards regret would be associated with depressive symptoms
+interestingly  a recent study found that maximizers may have a somewhat distinct decision style profile  specifically greater spontaneity in their decisions  CITATION
+several questionnaires assessing decision styles have been developed  CITATION   each of which targets a relatively small set of decision styles
+these questionnaires also show considerable overlap in some subscales
+for instance  the analytical subscale from the nygren  CITATION  instrument is similar to the rational subscale from the scott  and  bruce  CITATION  questionnaire  and similar to the mann  CITATION  vigilance subscale
+similarly  the defensive avoidance subscale  CITATION  has features similar to both avoidant and dependant subscales from the scott  and  bruce  CITATION  questionnaire
+each of these instruments also has subscales that are unique
+however  administering more than one questionnaire to study participants would be impractical given the aforementioned overlap
+furthermore  current instruments do not address some styles of decision-making that are likely to be especially relevant for depressed individuals
+as discussed above  risk-avoidance  perfectionism  and being prone to regret have not been included in decision style inventories
+this study aimed to accomplish two goals
+in study  NUMBER   a more comprehensive questionnaire than the ones currently available for the assessment of decision-making styles was created
+the new instrument sampled a broad set of decision-making styles and constructs that are related to decision-making
+in study  NUMBER   the resulting instrument was used to identify patterns of decision-making that are common to depression by relating decision-making styles to the assessment of depressive symptoms

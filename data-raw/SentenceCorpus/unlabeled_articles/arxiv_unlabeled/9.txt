@@ -1,0 +1,40 @@
+### abstract ###
+A method of  topological grammars  is proposed for multidimensional data approximation
+For data with complex topology we define a  principal cubic  complex  of low dimension and given complexity that gives the best approximation for the dataset
+This complex is a generalization of linear and non-linear principal manifolds and includes them as particular cases
+The problem of optimal principal complex construction is transformed into a series of minimization problems for quadratic functionals
+These quadratic functionals have a physically transparent interpretation in terms of elastic energy
+For the energy computation, the whole complex is represented as a system of nodes and springs
+Topologically, the principal complex is a product of one-dimensional continuums (represented by graphs), and the grammars describe how these continuums transform during the process of optimal complex construction
+This factorization of the whole process onto one-dimensional transformations using minimization of quadratic energy functionals allow us to construct efficient algorithms
+### introduction ###
+In this paper, we discuss a classical problem: how to approximate a finite set  SYMBOL  in  SYMBOL  for relatively large  SYMBOL  by a finite subset of a regular low-dimensional object in  SYMBOL
+In application, this finite set is a dataset, and this problem arises in many areas: from data visualization to fluid dynamics
+The first hypothesis we have to check is: whether the dataset  SYMBOL  is situated near a low--dimensional affine manifold (plane) in  SYMBOL
+If we look for a point, straight line, plane,
+
+
+that minimizes the average squared distance to the datapoints, we immediately come to the Principal Component Analysis (PCA)
+PCA is one of the most seminal inventions in data analysis
+Now it is textbook material
+Nonlinear generalization of PCA is a great challenge, and many attempts have been made to answer it
+Two of them are especially important for our consideration: Kohonen's Self-Organizing Maps (SOM) and principal manifolds
+With the  SOM  algorithm  CITATION  we take a finite metric space  SYMBOL  with metric  SYMBOL  and try to map it into  SYMBOL  with (a) the best preservation of initial structure in the image of  SYMBOL  and (b) the best approximation of the dataset  SYMBOL
+The  SOM algorithm has several setup variables to regulate the compromise between these goals
+We start from some initial approximation of the map,  SYMBOL
+On each ( SYMBOL -th) step of the algorithm we have a datapoint  SYMBOL  and a current approximation  SYMBOL
+For these  SYMBOL  and  SYMBOL  we define an ``owner" of  SYMBOL  in  SYMBOL :  SYMBOL
+The next approximation,  SYMBOL , is  SYMBOL } Here  SYMBOL  is a step size,  SYMBOL  is a monotonically decreasing cutting function
+There are many ways to combine steps () in the whole algorithm
+The idea of SOM is very flexible and seminal, has plenty of applications and generalizations, but, strictly speaking, we don't know what we are looking for: we have the algorithm, but no independent definition: SOM is a result of the algorithm work
+The attempts to define SOM as solution of a minimization problem for some energy functional were not very successful  CITATION
+For a known probability distribution,  principal manifolds  were introduced as lines or surfaces passing through ``the middle'' of the data distribution  CITATION
+This intuitive vision was transformed into the mathematical notion of  self-consistency : every point  SYMBOL  of the principal manifold  SYMBOL  is a conditional expectation of all points  SYMBOL  that are projected into  SYMBOL
+Neither manifold, nor projection should be linear: just a differentiable projection  SYMBOL  of the data space (usually it is  SYMBOL  or a domain in  SYMBOL ) onto the manifold  SYMBOL  with the self-consistency requirement for conditional expectations:  SYMBOL  For a finite dataset  SYMBOL , only one or zero datapoints are typically projected into a point of the principal manifold
+In order to avoid overfitting, we have to introduce smoothers that become an essential part of the principal manifold construction algorithms
+SOMs give the most popular approximations for principal manifolds: we can take for  SYMBOL  a fragment of a regular  SYMBOL -dimensional grid and consider the resulting SOM as the approximation to the  SYMBOL -dimensional principal manifold (see, for example,  CITATION )
+Several original algorithms for construction of principal curves  CITATION  and surfaces for finite datasets were developed during last decade, as well as many applications of this idea
+In 1996, in a discussion about SOM at the 5th Russian National Seminar in Neuroinformatics, a method of multidimensional data approximation based on elastic energy minimization was  proposed (see  CITATION  and the bibliography there)
+This method is based on the analogy between the principal manifold and the elastic membrane (and plate)
+Following the metaphor of elasticity, we introduce two quadratic smoothness penalty terms
+This allows one to apply  standard minimization of quadratic functionals (i e , solving a system of linear algebraic equations with a sparse matrix)

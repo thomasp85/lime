@@ -1,0 +1,70 @@
+### abstract ###
+Patterns of spontaneous activity in the developing retina, LGN, and cortex are necessary for the proper development of visual cortex.
+With these patterns intact, the primary visual cortices of many newborn animals develop properties similar to those of the adult cortex but without the training benefit of visual experience.
+Previous models have demonstrated how V1 responses can be initialized through mechanisms specific to development and prior to visual experience, such as using axonal guidance cues or relying on simple, pairwise correlations on spontaneous activity with additional developmental constraints.
+We argue that these spontaneous patterns may be better understood as part of an innate learning strategy, which learns similarly on activity both before and during visual experience.
+With an abstraction of spontaneous activity models, we show how the visual system may be able to bootstrap an efficient code for its natural environment prior to external visual experience, and we continue the same refinement strategy upon natural experience.
+The patterns are generated through simple, local interactions and contain the same relevant statistical properties of retinal waves and hypothesized waves in the LGN and V1.
+An efficient encoding of these patterns resembles a sparse coding of natural images by producing neurons with localized, oriented, bandpass structure the same code found in early visual cortical cells.
+We address the relevance of higher-order statistical properties of spontaneous activity, how this relates to a system that may adapt similarly on activity prior to and during natural experience, and how these concepts ultimately relate to an efficient coding of our natural world.
+### introduction ###
+The classic debates of nature vs. nurture, or innate vs. learned, are pervasive in the literature of early visual development.
+A variety of studies have shown that the visual system requires external experience to mature.
+On the other hand, many animals are able to see at birth, and have a functioning primary visual cortex even before eye opening.
+It might seem straightforward to assign the properties found at birth to be innate and the properties dependent on visual experience to be learned.
+However, a strict dichotomy may unnecessarily limit our integrated understanding of visual development.
+In particular, we wish to focus on the issue of a form of learning that occurs before birth on patterns of activity that are generated internally.
+It is well known that spontaneous endogenous activity is necessary, or permissive, for the proper development of the visual system.
+The point of this paper is to discuss the statistical aspects of this activity that may be sufficient, or instructive, to guide development in much the same way that visual experience refines the mature visual system.
+Essentially we propose an innate learning approach which prepares the system for later experienced-based refinement a diplomatic balance between nature and nurture.
+Several Studies have shown that in the early stages of rat visual development, retinal neurons are spontaneously active and correlated in their bursting patterns of activity CITATION, CITATION.
+Later, these retinal wave patterns were recorded from many animals by calcium imaging in the developing retina CITATION, CITATION, with one example shown in figure 1A.
+Experiments since then have manipulated these waves by abolishing them, over-stimulating them, or otherwise altering their properties and have shown how they are necessary for proper development CITATION CITATION.
+Several models have been proposed for the production of these waves CITATION CITATION.
+For the two most recent models, cholinergic amacrine cells mediate this activity with general agreement about the mechanism.
+Neurons begin bursting spontaneously, while neighboring cells can be recruited if enough cells in the local area are also bursting.
+With such rules for wave formation and propagation, biologically plausible models of retinal wave formation have been able to create complex images, such as those in figure 1B.
+Although retinal spontaneous activity has been well studied, many areas beyond the retina exhibit patterned, spontaneous neural activity.
+In the visual system, both the LGN CITATION and V1 CITATION CITATION have patterned, spontaneous activity during development.
+The effects on LGN and V1 connectivity have been analyzed functionally by layer segregation and orientation column formation CITATION, CITATION.
+Patterned, spontaneous activity is also known to occur in the developing auditory system and is necessary for proper development CITATION, CITATION.
+Similar developmental mechanisms are also found in hippocampus CITATION CITATION and spinal cord CITATION, CITATION.
+From a biophysical perspective it has been shown that spontaneous neural activity is necessary to mediate many mechanistic effects such as axon branching CITATION, dendritic patterning CITATION, and synaptic pruning CITATION, CITATION.
+With the ubiquity of spontaneous activity in development and its ability to affect various aspects of neural connectivity, understanding the general role of spontaneous activity in early visual development is likely to have implications beyond vision.
+In adult primary visual cortex, it has been known for nearly half a century that V1 cells respond strongly to bars and edges CITATION with later experiments demonstrating that simple cells in V1 have a characteristic filter description much like a 2D gabor function CITATION, CITATION as shown in figure 2A.
+The V1 cell has specific elongated subregions of visual space where relatively bright or dark parts in the visual image will stimulate the cell.
+Note that this characterization is purely descriptive as a stimulus-response paradigm by answering what the neuron responds to instead of why the filters have that appearance.
+According to the efficient coding hypothesis, the role of the early visual system is to remove statistical redundancy in the visual code CITATION, CITATION.
+From this hypothesis, one way to understand the visual system is to develop and analyze a visual encoding scheme to remove the redundancy in images of natural scenes.
+This was done using sparse coding CITATION and independent components analysis CITATION on a set of natural images pictures of rocks, trees, forest scenes, etc...
+The derived filters resemble the 2D gabor filters found in V1 simple cells see figure 2B-C.
+One can conclude from these results that V1 is developed and tuned to efficiently encode the visual world.
+In this paper, we make the claim that there is a parsimonious computational reason for the existence of spontaneous patterns - a functional strategy that the early visual system can employ to guide this development both prior to and throughout experience.
+In addition to molecular guidance cues we believe the visual code is refined from training on patterns of spontaneous activity during development in a similar manner to how the juvenile animals refine the visual code on statistical patterns found in natural images.
+Many statistical structure models rely on the pairwise correlations between neighboring units an implicit assumption in other functional descriptions of spontaneous activity CITATION CITATION.
+However, many efficient coding models applied to natural images, such as sparse coding and ICA, rely on statistics beyond pairwise correlations.
+In fact, often as a first step these correlations are removed in a process known as decorrelation or whitening ; a process that at least in part is considered a function of retinal ganglion cells CITATION.
+Although the developmental activity patterns are known to have relevant pairwise correlations, we argue receptive field refinement may also rely on higher-order statistics thus bridging the gap between models of sparse, efficient coding and spontaneous activity.
+We will demonstrate that simple patterns of activity can be used as training images for refining the visual code.
+The patterns we use resemble the only 2D imaged spontaneous activity available retinal waves; this is demonstrated in figure 1, with specific examples of our generated patterns in figure 1D.
+Beyond a visual resemblance, our pattern generation technique also abstracts from the general properties and parameters of the current retinal wave models.
+We strongly note, however, that this is strictly not a retinal wave model but an abstraction of what we believe are the essential features of the relevant endogenous activity.
+We are more concerned in this paper with the statistical nature of the produced activity than its precise localization including whether the activity originates in one particular area or is part of a larger, dynamical system.
+For example, in comparison to retinal waves, LGN/V1 spontaneous activity has a more direct influence on cortical receptive field formation.
+In ferrets the LGN remains spontaneously active at the beginning of V1 activation, while V1 activity and retinal wave production do not significantly overlap in time CITATION.
+LGN and V1 activity have been experimentally characterized CITATION, CITATION, but are far less understood than retinal activity, thus prompting our analogies to retinal waves in this paper.
+Our patterns are generated using a variant of traditional site percolation models CITATION - the analogy to retinal wave propagation and its relation to physiological models is detailed in the discussion section.
+Models common to the study of critical phenomena in physics, such as percolation models or the Ising model, have been used in artificial neural networks and understanding adult retinal neurons and can be equally useful in understanding models of development.
+Ising models, for example, have been adapted as artificial neural networks since Hopfield's network CITATION.
+Recent work has also shown that Ising models are apt analogies for the maximal entropy and high-predictability neural firing in the retina upon natural stimulation CITATION.
+Although the pattern generation technique we use is quite abstract, similar networks have been shown to be relevant biologically and demonstrate desirable statistical properties.
+The main goal of this paper is to show how the same adaptive, efficient algorithm can be applied for both natural inputs as well as spontaneous activity.
+We show that certain wavefront-containing patterns possess the relevant statistics and a percolation network provides a useful abstraction for demonstrating this property.
+These patterns, independent of how they were generated, can simply be used as an existence proof for the possible training role of spontaneous activity.
+First, we will show our generated patterns qualitatively resemble known patterns of spontaneous activity.
+We will then compare various methods of learning V1 receptive fields showing how both natural images and spontaneous activity patterns can be used to produce V1-like gabor filters.
+We will also demonstrate how significant variations of receptive field properties can occur even at the threshold for scale invariance showing flexibility of learning even for this simplified model.
+Finally, one of the main points of this paper, as expressed in the final figure, is that the relevant statistics for sensory coding go beyond simple correlations.
+There are higher-order statistics which are still present after decorrelation.
+Sparse and independent efficient coding algorithms rely on these statistics, which are found in natural scenes and are also present in the particular amorphous, wavefront-containing structure of spontaneous activity patterns.
+We will present how this fact points to the conclusion that the same adaptive coding strategy may then be present both before and during visual experience.

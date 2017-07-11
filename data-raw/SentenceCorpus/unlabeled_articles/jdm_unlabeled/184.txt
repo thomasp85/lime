@@ -1,0 +1,21 @@
+### abstract ###
+three experiments investigated individuals' preferences and affective reactions to negative life experiences
+participants had a more intense negative affective reaction when they were exposed to a highly negative life experience than when they were exposed to two negative events  a highly negative and a mildly negative life event
+participants also chose the situation containing two versus one negative event
+thus   more negative events were better  when the events had different affective intensities
+when participants were exposed to events having similar affective intensities  however  two negative events produced a more intense negative affective reaction
+in addition  participants chose the situation having one versus two negative life experiences
+thus   more negative events were worse  when the events had similar affective intensities
+these results are consistent with an averaging summation a s model and delineate situations when  more  negative life events are  better  and when  more  negative life events are  worse
+  results also ruled out several alternative interpretations including the peak-end rule and mental accounting interpretations
+### introduction ###
+ more is worse  when it comes to negative life events
+this is a conclusion that follows from behavioral approaches
+from behavioral accounts  the addition of a negatively valenced stimulus to an already negatively valenced context should reduce approach and preference tendencies  CITATION
+the averaging summation a s model  CITATION  demonstrated that individuals' feelings and preferences are sometimes  but not always  the sum of the affective values associated with each event  for example  individuals may not always feel more negative after experiencing a compound event containing both a highly negative plus mildly negative event than they feel after experiencing a singular highly negative one
+the model incorporates findings in the judgment and social-influence literatures  CITATION
+averaging  for example  was found in the judgment literature when individuals were given traits or cues that had discrepant values see  however  our discussion of set size effects in section  NUMBER   NUMBER   whereas summation of each individual's impact was seen in the social influence and audience literatures  CITATION   where participants typically performed a task in front of spectators having similar impact ratings such as similar status levels
+from the a s model  averaging effects are not relegated to the judgment domain and summation effects are not relegated to the social influence domain
+rather  individuals' responses reflect sensitivity to the sum of the values associated with each event as well as to central seeking tendencies - the average value of events
+see the appendix for a quantitative expression of this model
+this model was initially developed to provide a theoretical account of how individuals respond to the simultaneous presence of one or multiple audience members having heterogeneous or homogeneous status levels  CITATION

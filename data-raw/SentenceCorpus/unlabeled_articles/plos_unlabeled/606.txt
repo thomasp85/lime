@@ -1,0 +1,45 @@
+### abstract ###
+Both the excitability of a neuron's membrane, driven by active ion channels, and dendritic morphology contribute to neuronal firing dynamics, but the relative importance and interactions between these features remain poorly understood.
+Recent modeling studies have shown that different combinations of active conductances can evoke similar firing patterns, but have neglected how morphology might contribute to homeostasis.
+Parameterizing the morphology of a cylindrical dendrite, we introduce a novel application of mathematical sensitivity analysis that quantifies how dendritic length, diameter, and surface area influence neuronal firing, and compares these effects directly against those of active parameters.
+The method was applied to a model of neurons from goldfish Area II.
+These neurons exhibit, and likely contribute to, persistent activity in eye velocity storage, a simple model of working memory.
+We introduce sensitivity landscapes, defined by local sensitivity analyses of firing rate and gain to each parameter, performed globally across the parameter space.
+Principal directions over which sensitivity to all parameters varied most revealed intrinsic currents that most controlled model output.
+We found domains where different groups of parameters had the highest sensitivities, suggesting that interactions within each group shaped firing behaviors within each specific domain.
+Application of our method, and its characterization of which models were sensitive to general morphologic features, will lead to advances in understanding how realistic morphology participates in functional homeostasis.
+Significantly, we can predict which active conductances, and how many of them, will compensate for a given age- or development-related structural change, or will offset a morphologic perturbation resulting from trauma or neurodegenerative disorder, to restore normal function.
+Our method can be adapted to analyze any computational model.
+Thus, sensitivity landscapes, and the quantitative predictions they provide, can give new insight into mechanisms of homeostasis in any biological system.
+### introduction ###
+Recent studies have demonstrated that neurons and neuronal networks are capable of functional homeostasis, maintaining specific levels of neural activity over long time scales.
+Although the combination of currents within individual neurons of the same class varies widely, the output of these neurons and even the network as a whole remains remarkably stable CITATION CITATION.
+Interestingly, in some circumstances function is maintained despite changes in neuronal morphology CITATION.
+Computational models have been used to explore processes underlying neuronal homeostasis CITATION, and have demonstrated that many combinations of conductance parameters across the parameter space can evoke similar firing patterns CITATION, CITATION, CITATION.
+Neuronal morphology also seems to be under homeostatic control: global features, including the distribution of dendritic mass, are conserved across different classes of neurons, making it unlikely that local morphologic features, such as dendritic length and numbers of branches, are regulated independently CITATION, CITATION.
+Nonetheless, computational models have not yet explored how morphology might contribute to functional homeostasis.
+Dendritic morphology is a critical determinant of neuronal firing dynamics and signal processing CITATION CITATION.
+The influence of morphology on neuronal processing is further enhanced by active ion channels distributed throughout the dendrites CITATION, CITATION CITATION.
+Previous computational studies have identified conductance CITATION, CITATION, CITATION, CITATION and morphologic CITATION, CITATION, CITATION parameters that drive general firing patterns, but have not quantified how these different parameters influence individual models across parameter space.
+Moreover, few studies have analyzed the contributions of intracellular calcium dynamics to firing patterns CITATION, despite the crucial role of intracellular Ca 2 in shaping membrane potential, synaptic transmission, and signaling cascades CITATION .
+Working memory, which maintains a brief mental representation of a recent event necessary for future task performance CITATION, CITATION, is one function thought to exploit the computational capacity of dendrites CITATION, CITATION.
+Persistent neural activity, a hallmark of working memory, has been observed throughout the brain.
+Neurons from the pre-cerebellar nucleus Area II of goldfish exhibit, and likely contribute to, eye velocity storage CITATION CITATION, a mechanism that displays persistent activity long after termination of its eliciting stimulus.
+Experiments suggest that intrinsic properties of individual cells contribute to persistent activity.
+We hypothesize that morphologic properties of Area II neurons partially compensate for intrinsic differences in active and passive conductances to maintain similar firing patterns throughout the nucleus CITATION, CITATION .
+To begin to test hypotheses like this, we introduce a novel application of mathematical sensitivity analysis CITATION in which we quantify the effects of different classes of parameters, like active conductances and morphology, on model output.
+This quantification allows us to compare the effects of each of these parameters on models across parameter space that produce similar output, identifying mechanisms of homeostasis.
+Sensitivity analysis has been used widely in physics, chemical engineering, and biological signaling models to understand the relationship between model input and output CITATION CITATION, but its use within computational neuroscience has been limited CITATION, CITATION.
+Traditionally, sensitivity analysis is performed locally around a single optimal model, or globally reporting a general sensitivity throughout the parameter space, to quantify how each parameter contributes to model output.
+The large number of parameters and their nonlinear interactions render such techniques insufficient over the broad parameter space of neuronal compartment models.
+To synthesize these approaches, we explore sensitivity landscapes, which provide a global picture of parameter sensitivities while identifying how intrinsic properties of individual neurons influence their firing patterns.
+This method can be adapted easily to compare sensitivities of parameters in any computational model.
+Our method is defined by three basic steps: parameterizing morphology to permit its systematic variation; evaluating the sensitivity to small perturbations of models across parameter space; and exploring sensitivity landscapes constructed from the local sensitivities to identify global trends.
+To simplify the presentation of our method, we use a reduced morphologic model comprising a soma and cylindrical dendrite.
+We later demonstrate that our sensitivity analysis method can be applied to models that include more realistic morphologies.
+Our analysis identified principal directions over which sensitivity magnitude, and even sign, to all parameters varied most.
+At the same time, we found domains across the space in which different groups of parameters, even morphologic ones, had the highest sensitivities.
+Together, these results reveal mechanisms that maintain homeostasis, both locally and globally across parameter space.
+We show how sensitivities can be used to predict compensatory tradeoffs quantitatively, between morphologic and conductance parameters that can maintain target activity levels in Area II cells.
+Such compensatory mechanisms exist in many systems where function is conserved despite variability in dendritic structure, synaptic input, or membrane excitability CITATION, CITATION, and may offset some of the morphologic changes associated with aging and neurodegenerative disorders.
+Sensitivity landscapes provide new insight into mechanisms of functional homeostasis throughout the brain, and can facilitate analysis of homeostasis in any biological system.

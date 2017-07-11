@@ -1,0 +1,27 @@
+### abstract ###
+what is the role of recognition in consumer choice
+the recognition heuristic rh proposes that in situations where recognition is correlated with a decision criterion  recognized objects will be chosen more often than unrecognized ones  regardless of any other relevant information available about the recognized object
+past research has investigated this non-compensatory decision heuristic in inference
+here we report two experiments on preference using a naturalistic consumer choice task
+results revealed that  although recognition was a powerful driver of preferences  it was used in a compensatory rather than a non-compensatory way
+specifically  additional information learned about recognized brand objects significantly affected choices
+it appears that recognition is processed in a compensatory manner and combined with other attributes in preferential choice
+### introduction ###
+we tend to like what we know
+studies of the mere exposure effect  CITATION   and decades of experience of product manufacturers and advertisers  confirm that our preferences for products and other objects tend to be related to their familiarity  or to brand awareness  CITATION
+but what precisely is the mechanism by which familiarity or recognition guides choice
+this article asks whether choice is sometimes guided by a non-compensatory mechanism  the recognition heuristic rh
+the rh has been primarily investigated in inferential choice domains  which is the larger city  frankfurt or koblenz
+  and is a simple tool from the  adaptive tool-box  of human judgment and decision making proposed by gigerenzer  todd and the abc research group  CITATION
+these researchers have shown that unlike classical decision strategies e g   linear regression and bayesian models that aim to maximize integration of relevant knowledge to gain a statistically optimal prediction of a decision criterion  efficient inferences can be drawn from minimal knowledge  in this case  mere recognition
+additionally  the rh was proposed to be most applicable in situations where knowledge is limited  that is  not all entities in the choice set are recognized  CITATION
+there are various other domains in which recognition knowledge is limited and where choices depend on preferences rather than inferences
+one obvious example is consumer choice
+as everyone knows  firms invest huge sums of money in advertising
+although many advertisements are informative  often their purpose is simply to increase brand awareness
+firms attempt to repeatedly expose consumers to brand names in the hope of achieving a positive brand image and customer loyalty
+the present study aims to investigate the exact role of brand recognition in consumer choice
+more specifically  it aims to see whether under certain circumstances participants will rely on recognition as a choice strategy regardless of any other information they may have about the recognized well-known brand
+for instance  when choosing between two brands of chocolate in which only one brand is recognized  participants may employ a simple heuristic and choose the recognized brand
+alternatively  they may combine recognition with other information known about the brand  such as whether the manufacturer has a good or poor environmental record
+the present research therefore extends past studies of the recognition heuristic into a new domain  preferential choice

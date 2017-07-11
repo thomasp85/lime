@@ -1,0 +1,55 @@
+### abstract ###
+Conformal prediction uses past experience to determine precise levels of confidence in new predictions
+Given an error probability  SYMBOL , together with  a method that makes a prediction  SYMBOL  of a label  SYMBOL ,  it produces a set of labels, typically containing  SYMBOL , that also contains  SYMBOL  with probability  SYMBOL
+Conformal prediction can be applied to any method for producing  SYMBOL : a nearest-neighbor method, a support-vector machine, ridge regression, etc
+Conformal prediction is designed for an on-line setting in which labels are predicted successively, each one being revealed before the next is predicted
+The most novel and valuable feature of conformal prediction is that if the successive examples are sampled  independently from the same distribution, then the successive predictions will be right  SYMBOL  of the time, even though they are based on an accumulating dataset rather than on  independent datasets
+In addition to the model under which successive examples are  sampled independently, other  on-line compression models can also use conformal prediction
+The widely used Gaussian linear model is one of these
+This tutorial presents a self-contained account of the theory of  conformal prediction and works through several numerical examples
+A more comprehensive treatment of the topic is provided in   Algorithmic Learning in a Random World , by Vladimir Vovk, Alex Gammerman, and Glenn Shafer (Springer, 2005)
+### introduction ###
+How good is your prediction  SYMBOL
+If you are predicting the label  SYMBOL  of a new object, how confident are you that  SYMBOL
+If the label  SYMBOL  is a number, how close do you think it is to  SYMBOL
+In machine learning, these questions are usually answered in a fairly rough way  from past experience
+We expect new predictions to fare about as well as past predictions
+Conformal prediction uses past experience to determine precise  levels of confidence in  predictions
+Given a method for making a  prediction  SYMBOL , conformal prediction produces a   SYMBOL  prediction region ---a set   SYMBOL  that contains  SYMBOL  with probability at least  SYMBOL
+Typically  SYMBOL  also contains the prediction  SYMBOL
+We call  SYMBOL  the  point prediction , and we call  SYMBOL  the  region prediction
+In the case of  regression, where  SYMBOL  is a number,  SYMBOL  is typically an interval  around  SYMBOL
+In the case of classification, where  SYMBOL  has  a limited number of possible values,  SYMBOL  may consist of a few of these values or, in the ideal case, just one
+Conformal prediction can be used with any method of point prediction for classification or regression, including support-vector  machines, decision trees, boosting, neural networks, and Bayesian prediction
+Starting from the method for  point prediction, we construct a  nonconformity measure , which measures how unusual an example looks relative to previous examples, and the  conformal algorithm  turns this nonconformity measure into prediction regions
+Given a nonconformity measure, the conformal algorithm produces a prediction region  SYMBOL  for every probability of error  SYMBOL
+The region  SYMBOL  is a  SYMBOL - prediction  region ; it contains  SYMBOL  with probability at least  SYMBOL
+The regions for different  SYMBOL  are nested:  when  SYMBOL , so that   SYMBOL  is a lower level of confidence than  SYMBOL , we have  SYMBOL
+If  SYMBOL  contains only a single label (the ideal outcome in the  case of classification), we may ask how small  SYMBOL  can be made before we must enlarge  SYMBOL  by adding a second label; the corresponding value of  SYMBOL  is the confidence we assert in the predicted label
+As we explain in~\S, the conformal algorithm  is designed for an on-line setting, in which we predict the labels of objects  successively, seeing each label after we have  predicted it and before we predict the next one
+Our  prediction  SYMBOL  of the  SYMBOL th label  SYMBOL  may use observed features  SYMBOL  of the  SYMBOL th object and the preceding examples  SYMBOL
+The size of the prediction region  SYMBOL  may also depend on these details
+Readers most interested in implementing the conformal algorithm may wish to turn directly to  the elementary examples in  and~and then turn back to the earlier more general material as needed
+As we explain in \S, the on-line picture leads to a new concept of validity for  prediction with confidence
+Classically, a method for finding  SYMBOL  prediction regions was considered valid if it had a  SYMBOL  probability of containing  the label predicted, because by the law of the large numbers it would then be correct  SYMBOL  of the time when repeatedly applied to independent datasets
+But in the on-line picture, we repeatedly apply a method not to independent datasets but to an accumulating dataset
+After using  SYMBOL  and  SYMBOL  to predict  SYMBOL , we use   SYMBOL  and  SYMBOL  to predict  SYMBOL , and so on
+For a  SYMBOL  on-line method to be valid,  SYMBOL  of these predictions must be correct
+Under minimal assumptions, conformal prediction is valid in this new and powerful sense
+One setting where conformal prediction is valid in the new on-line sense is the one in which the  examples  SYMBOL  are sampled independently from a constant  population---i e , from a fixed but unknown probability  distribution  SYMBOL
+It is also valid under the slightly weaker assumption that the examples are probabilistically  exchangeable  (see \S) and under other on-line compression models, including the widely used Gaussian linear model (see \S)
+The validity of conformal prediction under these models is  demonstrated in Appendix~
+In addition to the validity of a method for producing  SYMBOL  prediction regions, we are also interested in its efficiency
+It is efficient if the prediction region is usually  relatively small and therefore informative
+In classification, we would like to see a 95\% prediction region  so small that it contains only the single predicted label  SYMBOL
+In regression, we would like to see a very narrow interval around the predicted number  SYMBOL
+The claim of 95\% confidence for a 95\% conformal prediction region is valid under exchangeability, no matter what the probability distribution  SYMBOL  the examples follow and no matter what nonconformity measure is used to construct the conformal prediction region
+But the efficiency of conformal prediction  will depend on  SYMBOL  and the nonconformity measure
+If we think we know  SYMBOL , we may choose a nonconformity measure that will be efficient if we are right
+If we have prior probabilities for  SYMBOL ,  we may use these prior probabilities to construct a point predictor  SYMBOL  and a nonconformity measure
+In the regression case, we might use as  SYMBOL  the mean of the posterior distribution for  SYMBOL  given the first  SYMBOL  examples and  SYMBOL ; in the classification case, we might use the label with the greatest  posterior probability
+This strategy of first guaranteeing validity under a relatively weak assumption and then seeking efficiency under stronger assumptions conforms to advice long given by John Tukey and others  CITATION
+Conformal prediction is studied in detail in  Algorithmic Learning in a Random World , by Vovk, Gammerman, and Shafer  CITATION
+A recent exposition by Gammerman and Vovk  CITATION  emphasizes connections with the theory of randomness, Bayesian methods, and induction
+In this article we emphasize  the on-line concept of validity, the meaning of exchangeability, and the generalization to other on-line compression models
+We leave aside many important topics  that are treated in  Algorithmic Learning in a Random World , including extensions beyond the on-line picture

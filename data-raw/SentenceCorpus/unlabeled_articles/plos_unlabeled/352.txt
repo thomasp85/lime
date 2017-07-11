@@ -1,0 +1,43 @@
+### abstract ###
+Noncoding RNAs are important functional RNAs that do not code for proteins.
+We present a highly efficient computational pipeline for discovering cis-regulatory ncRNA motifs de novo.
+The pipeline differs from previous methods in that it is structure-oriented, does not require a multiple-sequence alignment as input, and is capable of detecting RNA motifs with low sequence conservation.
+We also integrate RNA motif prediction with RNA homolog search, which improves the quality of the RNA motifs significantly.
+Here, we report the results of applying this pipeline to Firmicute bacteria.
+Our top-ranking motifs include most known Firmicute elements found in the RNA family database.
+Comparing our motif models with Rfam's hand-curated motif models, we achieve high accuracy in both membership prediction and base-pair level secondary structure prediction.
+Of the ncRNA candidates not in Rfam, we find compelling evidence that some of them are functional, and analyze several potential ribosomal protein leaders in depth.
+### introduction ###
+Recent discoveries of novel noncoding RNAs such as microRNAs and riboswitches suggest that ncRNAs have important and diverse functional and regulatory roles that impact gene transcription, translation, localization, replication, and degradation CITATION CITATION.
+In the last few years, several groups have performed genome-scale computational ncRNA predictions based on comparative genomic analysis.
+In particular, Barrick et al. CITATION used a pairwise, BLAST-based approach to discover novel riboswitch candidates in bacterial genomes, many of which now have been experimentally verified.
+Similar studies have been conducted in various bacterial groups CITATION CITATION.
+More recent work has extended these searches to eukaryotes CITATION CITATION, discovering a large number of known microRNAs while producing thousands of novel ncRNA candidates.
+With some exceptions, such as CITATION and CITATION, these approaches follow a similar paradigm, which is to search for conserved secondary structures on multiple-sequence alignments that are constructed based on sequence similarity alone.
+Typically, these schemes use measures such as mutual information between pairs of alignment columns to signal base-paired regions.
+However, the signals such methods seek, namely compensatory base-pair mutations, are exactly the signals that may cause sequence-based alignment methods to misalign, or alternatively refuse to align, homologous ncRNA sequences.
+Even local misalignments may weaken this key structural signal, making the methods sensitive to alignment quality, which is especially problematic on diverged sequences.
+In this paper, we present a novel structure-oriented computational pipeline for genome-scale prediction of cis-regulatory ncRNAs.
+It exploits, but does not require, sequence conservation.
+The pipeline differs from previous methods in three respects.
+First, it searches in unaligned upstream sequences of homologous genes, instead of well-aligned regions constructed by sequence-based methods.
+Second, we predict RNA motifs in unaligned sequences using a tool called CMfinder CITATION, which is very sensitive to RNA motifs with low sequence conservation, and robust to inclusion of long flanking regions or unrelated sequences.
+Finally, we integrate RNA motif prediction with RNA homology search.
+For every predicted motif, we scan a genome database for more homologs, which are then used to refine the model.
+This iterative process improves the model and expands the motif families automatically.
+In this study, we apply this pipeline to discover ncRNA elements in prokaryotes.
+We chose prokaryotes mainly because of the large number of fully sequenced genomes and the great sequence divergence among the species, which can be well-exploited by our approach.
+Our approach has two key advantages.
+First, it is efficient and highly automated.
+Earlier steps are more computationally efficient than later steps, and we can apply filters between steps so that poor candidates are eliminated from subsequent analysis.
+Thus, even though we use some computationally expensive algorithms, the pipeline is scalable to larger problems.
+Besides providing RNA motif prediction, the pipeline also integrates gene context and functional analysis, which facilitates manual biological evaluation.
+Second, this pipeline is highly accurate in finding prokaryotic ncRNAs, especially RNA cis-regulatory elements.
+To demonstrate the performance of this approach, we report our search results in Firmicutes, a Gram-positive bacterial division that includes Bacillus subtilis, a relatively well-studied model organism with many known ncRNAs.
+The method exhibits low false-positive rates on negative controls, and low false-negative rates on known Firmicute ncRNAs.
+The RNA family database CITATION, a partially hand-curated database of noncoding RNAs, includes 13 ncRNA families categorized as cis-regulatory elements with representatives in B. subtilis.
+Of these, 11 are included among our top 50 predictions and a 12th appears somewhat lower in our ranking.
+Two other Rfam families are also represented among our top 50 predictions.
+In addition, both the secondary structure prediction and identified family members are in excellent agreement with Rfam annotation.
+For the 14 Rfam families mentioned above, we achieved 91 percent specificity and 84 percent sensitivity on average in identifying family members, and 77 percent specificity and 75 percent sensitivity in secondary structure prediction.
+Many promising novel ncRNA candidates were also discovered and are discussed below.

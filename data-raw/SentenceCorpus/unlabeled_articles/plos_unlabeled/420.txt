@@ -1,0 +1,49 @@
+### abstract ###
+Membrane fusion is critical to biological processes such as viral infection, endocrine hormone secretion, and neurotransmission, yet the precise mechanistic details of the fusion process remain unknown.
+Current experimental and computational model systems approximate the complex physiological membrane environment for fusion using one or a few protein and lipid species.
+Here, we report results of a computational model system for fusion in which the ratio of lipid components was systematically varied, using thousands of simulations of up to a microsecond in length to predict the effects of lipid composition on both fusion kinetics and mechanism.
+In our simulations, increased phosphatidylcholine content in vesicles causes increased activation energies for formation of the initial stalk-like intermediate for fusion and of hemifusion intermediates, in accordance with previous continuum-mechanics theoretical treatments.
+We also use our large simulation dataset to quantitatively compare the mechanism by which vesicles fuse at different lipid compositions, showing a significant difference in fusion kinetics and mechanism at different compositions simulated.
+As physiological membranes have different compositions in the inner and outer leaflets, we examine the effect of such asymmetry, as well as the effect of membrane curvature on fusion.
+These predicted effects of lipid composition on fusion mechanism both underscore the way in which experimental model system construction may affect the observed mechanism of fusion and illustrate a potential mechanism for cellular regulation of the fusion process by altering membrane composition.
+### introduction ###
+Membrane fusion plays a key role in cellular function, allowing processes as diverse as neurotransmitter release, secretion of peptide hormones, and infection by enveloped viruses.
+Fusion is also critical in allowing intracellular transport.
+The cellular membranes participating in these fusion reactions contain complex mixtures of lipids and proteins.
+The composition and potentially the organization of these mixtures are both variable and closely regulated by the cell CITATION CITATION .
+A variety of experimental and computational model systems CITATION CITATION have been used to gain insight into the basic physical properties underlying membrane fusion.
+Such model systems are of necessity much simpler in nature than the physiologic context for fusion, containing one or a few lipid species and omitting or simplifying the protein environment.
+In designing and interpreting model systems for fusion, it is important to consider how variations in the lipid mixtures chosen may affect the results.
+Investigating how changes in lipid composition affect the kinetics and mechanism of fusion also provides fundamental insight by illuminating which aspects of fusion are robust to small perturbations to the model system used and which are highly model-dependent.
+Experimental data on lipid vesicle fusion indicate that variation in lipid composition plays an important role in determining fusogenicity.
+Much initial work concentrated on the effects on fusion by lipids that prefer either positive or negative membrane curvature CITATION, CITATION.
+Perhaps most extensively characterized is the association between increased fusogenicity and increased fraction of phosphatidylethanolamine CITATION, a lipid headgroup thought to promote negative membrane curvature.
+Plasma membranes in fusogenic contexts have a ratio of phosphatidylcholine to PE headgroups measured at between 0.9 and 2.0 CITATION CITATION.
+The presence of PE has been identified as a critical factor for fusion CITATION CITATION, and many systems used to develop structural models for fusion intermediates contain a substantially higher proportion of PE than physiologic levels CITATION, CITATION, CITATION.
+Similarly, theoretical treatments of proposed fusion intermediates suggest that PE is important to the energetic favorability of the stalk-like state that has been proposed as an early fusion intermediate CITATION, CITATION, CITATION CITATION.
+Other lipid species likely play an additional modulatory role in fusion, and the PC:PE ratio in physiological membranes also varies independently in the inner and outer leaflets CITATION, CITATION.
+In this work, we examine the effect of PC:PE ratio as a first-order approximation of lipid composition effects; we first treat uniform composition in the inner and outer membrane leaflets and then examine asymmetric compositions.
+Membrane curvature has long been believed an important modulator of the fusion process.
+Simply conceived, the curvature strain of a highly curved membrane can provide a driving force that reduces the energetic barrier for the fusion process.
+Most physiological fusion occurs between membranes that have a relatively large radius of curvature or are even concave relative to the fusion site.
+However, the local curvature at the site of fusion has been a subject of much discussion, with several theories positing a membrane protrusion with high local curvature at the site of fusion CITATION CITATION.
+Recent experimental evidence suggests that synaptotagmin, one of the neuronal fusion proteins, preferentially binds to curved membranes, induces tubulation of model membranes with a diameter of 17.5 nm, and accelerates vesicle fusion rates CITATION .
+This important finding provides more direct evidence that highly curved membrane structures such as we simulate here may play an important role in physiological fusion and that induction of curvature may be a major function of the fusion protein apparatus.
+The possibility that physiological fusion may involve highly curved membranes raises the questions of to what degree this curvature is required for fusion and how curvature may differentially affect the formation and stability of fusion intermediates.
+Here, we report initial results in that regard; we refer the reader to the forthcoming work by Lee and Schick for a more extensive investigation of this phenomenon from a field-theoretic perspective .
+Because the structures and detailed kinetics of fusion intermediates are difficult to observe experimentally, computational simulations of fusion play an important role in generating detailed structural and kinetic models for fusion that are consistent with available experimental data.
+Coarse-grained simulations allow a substantial increase in computational tractability at the expense of some fidelity to experiment; the degree of fidelity varies with the particular approximations made in constructing the model.
+The lipid model developed by Marrink and Mark CITATION provides a quantitative approximation of experimentally observable lipid parameters such as area per head group, diffusion, and bilayer width, and represents a good compromise between computational tractability and level of atomistic detail.
+Initial results reported for membrane fusion with this model CITATION demonstrate the fusogenicity of 15 nm vesicles composed of either pure palmitoyloleoyl-PE or a dipalmitoyl-PC:dipalmitoyl-PE mixture, also observing faster fusion pore formation in the DPPC:DPPE mixture than in pure POPE.
+Simulated pure DPPC vesicles were not observed to form fusion pores.
+In subsequent work, we have used this Marrink-Mark coarse-grained model to systematically predict intermediates and kinetics for the fusion of small POPE vesicles CITATION.
+Our simulations suggested a branching fusion pathway in which vesicles first react to form a stalk-like intermediate but then either rapidly form a fusion pore from the stalk-like state or fuse via an intermediate with an expanded hemifusion diaphragm that is metastable on the microsecond timescale.
+Previous theoretical work has suggested these two pathways as alternative hypotheses; we have predicted that these pathways may coexist within a single system.
+In our initial report, we predicted pure POPE vesicles to react via both pathways but to primarily undergo fusion via the late-hemifused intermediate using the indirect pathway.
+We now extend this model to address how more complex mixtures of lipids may affect the reaction mechanism and kinetics of fusion.
+Physiologic membrane fusion takes place in membranes consisting of a complex CITATION, CITATION CITATION and likely inhomogeneous CITATION CITATION mixture of multiple lipid species and proteins.
+Experimental and computational model systems for fusion are far simpler, containing well-defined lipid mixtures; in the case of computational studies, single-component membranes are routinely used CITATION, CITATION, CITATION.
+Given this gap in complexity between model systems used for mechanistic studies of fusion and the physiologic situation they are meant to reproduce, we wish to understand how fusion mechanisms and properties depend on membrane composition.
+We have therefore performed thousands of simulations of vesicle fusion at different lipid compositions to systematically predict how membrane fusion kinetics and intermediates depend on lipid composition.
+This molecular-dynamics approach yields similar results to those recently obtained using self-consistent field theory methods CITATION.
+Our molecular-dynamics analyses, the field-theoretic results of Schick and coworkers, and prior continuum-mechanics work by Kozlov expand computational models to more complex membrane compositions to better approximate experimental models and physiologic scenarios.

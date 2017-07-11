@@ -1,0 +1,40 @@
+### abstract ###
+the history of judgment and decision making is defined by a trend toward increasingly nuanced explanations of the decision making process
+recently  process models have become incredibly sophisticated  yet the tools available to directly test these models have not kept pace
+these increasingly complex process models require increasingly complex process data by which they can be adequately tested
+we propose a new class of data collection that will facilitate evaluation of sophisticated process models
+tracking mouse paths during a continuous response provides an implicit measure of the growth of preference that produces a choice-rather than the current practice of recording just the button press that indicates that choice itself
+recent research in cognitive science  CITATION  has shown that cognitive processing can be revealed in these dynamic motor responses
+unlike current process methodologies  these response dynamics studies can demonstrate continuous competition between choice options and even online preference reversals
+here  in order to demonstrate the mechanics and utility of the methodology  we present an example response dynamics experiment utilizing a common multi-alternative decision task
+### introduction ###
+the past few decades have seen a notable change in the level of analysis characterizing theories and models in decision making
+generally  paramorphic models concerned largely with outcome prediction are giving way to computational models that focus on the processes assumed to produce these responses  CITATION
+this focus on underlying cognitive processes has enabled explanations of paradoxes e g   decoy  compromise effects within unified frameworks  CITATION   rather than increasingly complex algebraic functions divorced from cognitive operations
+this theoretical shift demands accompanying empirical methodologies in order to evaluate these more precisely specified process theories
+for example  the tracking of information search or acquisition during decision tasks has developed from the use of information boards  CITATION  to mouse-tracking techniques  CITATION   to eye-tracking techniques  CITATION
+other methods such as think-aloud protocols and response time analyses  CITATION  have been used  as have clever combinations of several methodologies together to provide converging evidence  CITATION
+here  we would like to introduce what we consider to be the next important and logical step in this important methodological evolution of our field-tracking response dynamics in decision making
+the shortcoming inherent in the  process-tracing  techniques identified above  CITATION  lies in their neglect of the dynamic nature of choice preferences
+the process traced by mouse- and eye-tracking is one of information search  not the deliberation process itself that utilizes this information  verbal reports reflect a subject's perception of how they engaged the task  and are subject to demand characteristics  response times rt indicate how long a task takes  but not the nature of processing that occurs during that interval
+that is not to say that these measures are always uninformative  many authors have fruitfully applied rt analyses for example to infer characteristics of the decision process  CITATION
+however  traditional metrics generally fail to capture the notion that observed choices are the result of a dynamic process where evidence for various response choice alternatives may accumulate over the course of the task
+rts specifically lack sufficient resolution to explore this dynamic evolution of preference in real time
+this deficiency is quite serious given that the evidence accumulation assumption has received extensive theoretical treatment and neurophysiological support  CITATION
+recently  a growing body of research in cognitive science  CITATION  has utilized a novel paradigm that compensates for the deficiency in current jdm methods identified above
+the research on response dynamics captures the continuous  online processing of information as it is revealed in the subject's motor response
+spivey and dale  CITATION  describe the theoretical basis and representative mouse-tracking applications of this approach  CITATION
+the basic paradigm involves simply recording the position of the mouse en route to the selection of an option in a decision task
+the theoretical assumption is that the competitive  pull  of foregone alternatives exerts an influence on these response trajectories  for which there is now substantial behavioral and neurophysiological evidence  CITATION
+therefore  one can measure properties of the response trajectory and draw inferences about the underlying mental processes
+the goal of the current work is to introduce this research stream to the jdm community and illustrate the types of analyses and comparisons it makes possible
+the only other explicitly jdm application  CITATION   tracked mouse responses in a risky decision making task with traditional economic gambles involving either gains or losses  and highlighted the ability to describe changes in the direction and strength of preference online during the task
+when choosing the safe gamble in the realm of gains  subjects proceeded very directly to that gamble
+alternatively  when they chose the risky gamble they first proceeded towards the safe gamble before rapidly changing direction towards the risky gamble
+the opposite pattern was generally true in the realm of losses
+theoretically  these results support models that allow for momentary preference for one option during the task  but ultimate choice of the other option e g   dual-process models or sequential sampling models-a behavior that would not be captured with existing discrete response methods
+in the following demonstration study  we show another application to a traditional jdm task  the iowa gambling task
+we chose this task because its ubiquitous use and experience-based design allow us to showcase the utility of response dynamics both within trial types e g   following a gain or loss  as classified below and across the course of the task as a metric of learning
+the iowa gambling task  CITATION  has traditionally been used to diagnose decision making deficits in individuals with neurological damage
+subjects are presented with four decks of cards  each of which provides wins on every draw and occasional accompanying losses  but they have slightly different payout characteristics see figure  NUMBER 
+typically  two decks hereafter a and b are considered  bad  decks  offering high rewards and high punishments that result in a net loss  whereas two other decks c and d are  good  decks with lower rewards but also lower  more infrequent punishments  CITATION   resulting in a net gain

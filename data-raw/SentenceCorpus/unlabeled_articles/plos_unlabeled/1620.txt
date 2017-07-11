@@ -1,0 +1,32 @@
+### abstract ###
+Duplications of genes encoding highly connected and essential proteins are selected against in several species but not in human, where duplicated genes encode highly connected proteins.
+To understand when and how gene duplicability changed in evolution, we compare gene and network properties in four species that are representative of the increase in evolutionary complexity, defined as progressive growth in the number of genes, cells, and cell types.
+We find that the origin and conservation of a gene significantly correlates with the properties of the encoded protein in the protein-protein interaction network.
+All four species preserve a core of singleton and central hubs that originated early in evolution, are highly conserved, and accomplish basic biological functions.
+Another group of hubs appeared in metazoans and duplicated in vertebrates, mostly through vertebrate-specific whole genome duplication.
+Such recent and duplicated hubs are frequently targets of microRNAs and show tissue-selective expression, suggesting that these are alternative mechanisms to control their dosage.
+Our study shows how networks modified during evolution and contributes to explaining the occurrence of somatic genetic diseases, such as cancer, in terms of network perturbations.
+### introduction ###
+Gene duplicability defines the propensity to retain multiple copies of a gene and varies among species and gene categories.
+In yeast, singleton genes, i.e. single copy genes whose duplication is selected against, preferentially encode members of protein complexes CITATION, highly connected CITATION, CITATION and essential CITATION, CITATION proteins.
+Similar relationships are maintained also in multicellular species such as worm and fly, where singleton genes encode highly connected CITATION and essential CITATION proteins.
+The strict retention of one single copy of these particular gene categories is a consequence of the fragility towards dosage modifications.
+Their duplication is deleterious because it interferes with essential cellular functions and with the fine-tuned equilibrium between formation and disruption of protein-protein interactions CITATION, CITATION .
+Recent studies showed that the duplicability of mammalian hubs and essential proteins is different from that of other species.
+Human hubs CITATION, CITATION and mouse essential proteins that are involved in development CITATION, CITATION, CITATION are preferentially encoded by duplicated genes, while other categories of essential mouse genes can be both singletons and duplicated CITATION.
+These differences between human, mouse and the other species suggest that gene duplicability underwent modifications during evolution, which are likely related with the extensive acquisition of novel genes in vertebrates.
+Through massive gene duplication followed by diversification of paralogs, vertebrates accommodated the expansion of gene families that are involved in regulation, signal transduction, protein transport, and protein modification CITATION, CITATION.
+In this context, it has been proposed that a higher connectivity may favor the functional diversification of paralogs, for example through tissue specialization CITATION.
+However, a thorough analysis of which types of genes undergo modification of their duplicability during evolution and how this influences the network properties of the encoded proteins is still missing.
+The comparison of gene and network properties between species is the most straightforward approach to verify whether the modification of gene duplicability is indeed related to the expansion of the vertebrate gene repertoire.
+Despite the fact that current representations of protein interactomes are still incomplete CITATION, CITATION, CITATION and may include a high fraction of false positives CITATION, the recent completion of interaction screenings in several species finally allows comparative network analyses.
+For example, the comparison of human, fly, worm, and yeast networks showed that they maintain a similar structure despite the difference in size CITATION, CITATION.
+In addition, regardless of their connectivity, proteins that occupy central positions in the interactomes of Saccharomyces cerevisiae, Drosophila melanogaster and Caenorhabditis elegans are also essential and slow-evolving CITATION.
+These studies demonstrate that the comparison of protein and gene properties in different species can be used to infer general evolutionary trends.
+To unravel when the differences between duplicability and network properties arose during evolution, we undertake a comparative analysis of genes and networks in four species, Escherichia coli, yeast, fly, and human.
+These species display different levels of complexity, defined as the number of genes, cells, and cell types CITATION, and also high quality genomic and interaction data.
+We compare connectivity and centrality of all proteins with origin, conservation and duplicability of the corresponding genes.
+We identify a core of singleton hubs whose properties are maintained constant from prokaryotes to human, and another group of duplicated hubs that have emerged during the evolution of vertebrates.
+Our analysis provides evidence of how the hubs properties modified during evolution and helps in interpreting the occurrence of somatic genetic diseases that are typical of multicellularity, such as cancer, in terms of network perturbations.
+In particular, we find that cancer genes are representatives of the two groups of human hubs: one that originated early in evolution and is composed of singleton genes, and the other that appeared later and is enriched in duplicated genes.
+Functionally, these two groups correspond to caretakers and gatekeepers, suggesting that these two different ways to initiate tumorigenesis emerged at different times during evolution.

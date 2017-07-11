@@ -1,0 +1,38 @@
+### abstract ###
+AIMX	we introduce a new principle for model selection in regression and classification
+MISC	many regression models are controlled by some smoothness or flexibility or complexity parameter    e g   the number of neighbors to be averaged over in k nearest neighbor  knn  regression or the polynomial degree in regression with polynomials
+OWNX	let   be the  best  regressor of complexity   on data
+MISC	a more flexible regressor can fit more data   well than a more rigid one
+MISC	if something  here small loss  is easy to achieve it s typically worth less
+OWNX	we define the loss rank of   as the number of other  fictitious  data   that are fitted better by   than   is fitted by
+OWNX	we suggest selecting the model complexity   that has minimal loss rank  lorp 
+MISC	unlike most penalized maximum likelihood variants  aic bic mdl   lorp only depends on the regression functions and the loss function
+MISC	it works without a stochastic noise model  and is directly applicable to any non parametric regressor  like knn
+AIMX	in this paper we formalize  discuss  and motivate lorp  study it for specific regression problems  in particular linear ones  and compare it to other model selection schemes
+### introduction ###
+OWNX	consider a regression or classification problem in which we want to determine the functional relationship   from data    i e   we seek a function   such that   is close to the unknown   for all
+MISC	one may define regressor   directly  e g    average the   values of the   nearest neighbors  knn  of   in     or select the   from a class of functions   that has smallest  training  error on
+MISC	if the class   is not too large  e g the polynomials of fixed reasonable degree    this often works well
+MISC	what remains is to select the right model complexity    like   or
+MISC	this selection cannot be based on the training error  since the more complex the model  large    small    the better the fit on    perfect for   and   
+OWNX	this problem is called overfitting  for which various remedies have been suggested   we will not discuss empirical test set methods like cross validation  but only training set based methods
+MISC	see e g    CITATION  for a comparison of cross validation with bayesian model selection
+MISC	training set based model selection methods allow using all data   for regression
+MISC	the most popular ones can be regarded as penalized versions of maximum likelihood  ml 
+MISC	in addition to the function class    one has to specify a sampling model    e g   that the   have independent gaussian distribution with mean
+MISC	ml chooses    penalized ml  pml  then chooses  penalty   where the penalty depends on the used approach  mdl  CITATION   bic  CITATION   aic  CITATION  
+MISC	in particular  modern mdl  CITATION  has sound exact foundations and works very well in practice
+CONT	all pml variants rely on a proper sampling model  which may be difficult to establish   ignore  or at least do not tell how to incorporate  a potentially given loss function  and are typically limited to  semi parametric models
+AIMX	the main goal of the paper is to establish a criterion for selecting the   best   model complexity   % based on regressors   given as a black box without insight into the origin or inner structure of    % that does not depend on things often not given  like a stochastic noise model   % and that exploits what is given  like the loss function 
+OWNX	the key observation we exploit is that large classes   or more flexible regressors   can fit more data   well than more rigid ones  e g   many   can be fit well with high order polynomials
+OWNX	we define the  loss rank  of   as the number of other  fictitious  data   that are fitted better by   than   is fitted by    as measured by some loss function
+MISC	the loss rank is large for regressors fitting   not well  and  for too flexible regressors  in both cases the regressor fits many other   better 
+MISC	the loss rank has a minimum for not too flexible regressors which fit   not too bad
+OWNX	we claim that minimizing the loss rank is a suitable model selection criterion  since it trades off the quality of fit with the flexibility of the model
+CONT	unlike pml  our new loss rank principle  lorp  works without a noise  stochastic sampling  model  and is directly applicable to any non parametric regressor  like knn
+OWNX	in section   after giving a brief introduction to regression  we formally state lorp for model selection
+OWNX	to make it applicable to real problems  we have to generalize it to continuous spaces and regularize infinite loss ranks
+OWNX	in section  we derive explicit expressions for the loss rank for the important class of linear regressors  which includes knn  polynomial  linear basis function  lbfr   kernel  and projective regression
+OWNX	in section  we compare linear lorp to bayesian model selection for linear regression with gaussian noise and prior  and in section  to pml  in particular mdl  bic  aic  and mackay s  CITATION  and hastie s et al    CITATION  trace formulas for the effective dimension
+AIMX	in this paper we just scratch at the surface of lorp
+OWNX	section  contains further considerations  to be elaborated on in the future

@@ -1,0 +1,20 @@
+### abstract ###
+The differentiation of embryonic stem cells is initiated by a gradual loss of pluripotency-associated transcripts and induction of differentiation genes.
+Accordingly, the detection of differentially expressed genes at the early stages of differentiation could assist the identification of the causal genes that either promote or inhibit differentiation.
+The previous methods of identifying differentially expressed genes by comparing different cell types would inevitably include a large portion of genes that respond to, rather than regulate, the differentiation process.
+We demonstrate through the use of biological replicates and a novel statistical approach that the gene expression data obtained without prior separation of cell types are informative for detecting differentially expressed genes at the early stages of differentiation.
+Applying the proposed method to analyze the differentiation of murine embryonic stem cells, we identified and then experimentally verified Smarcad1 as a novel regulator of pluripotency and self-renewal.
+We formalized this statistical approach as a statistical test that is generally applicable to analyze other differentiation processes.
+### introduction ###
+Cellular differentiation is the process by which a less specialized cell becomes a more specialized cell type, characterized by the expression pattern of a subset of genes during the differentiation process.
+The search for marker genes is widely pursued in almost every differentiation process, although a principled approach is still missing.
+The current practice is to separate distinguishable cell types, measure gene expression from each cell type, and then identify differentially expressed genes.
+Such methods require the expression data for both cell types to be available.
+A limitation of these methods is that by the time the cell types are distinguishable, for example by morphology, many genes have already shown differential expression.
+This set of differentially expressed genes may include the class of early marker genes that are enriched for markers of early differentiating cell lineages as well as genes whose down-regulation triggers differentiation.
+However, the set of differentially expressed genes will also include a second, larger class of genes in which gene expression is not important to the regulation of the differentiation process but in which genes are simply characteristic of the fully differentiated cell types.
+Traditional sample comparison procedures are not designed to separate the two classes differentially expressed genes and as a result, the large lists of differentially expressed genes usually do not provide direct guidance for dissecting underlining mechanisms of differentiation.
+Recognizing early marker genes enables separation of cell types at an early stage of differentiation; in turn, separating cell types at an early stage of differentiation enables identification of early marker genes.
+However, neither piece of the puzzle is currently available to a study of a new differentiation process.
+We demonstrate that, contrary to common belief, early marker genes can be detected by measuring the average expression of a mixture of cell types, provided that enough biological replicates have been measured and statistical test based on variance ratio has been used.
+We provide the theoretical reasoning, a statistical method, and two validation experiments.

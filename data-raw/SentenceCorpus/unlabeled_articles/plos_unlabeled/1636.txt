@@ -1,0 +1,40 @@
+### abstract ###
+In recent times, stochastic treatments of gene regulatory processes have appeared in the literature in which a cell exposed to a signaling molecule in its environment triggers the synthesis of a specific protein through a network of intracellular reactions.
+The stochastic nature of this process leads to a distribution of protein levels in a population of cells as determined by a Fokker-Planck equation.
+Often instability occurs as a consequence of two steady state protein levels, one at the low end representing the off state, and the other at the high end representing the on state for a given concentration of the signaling molecule within a suitable range.
+A consequence of such bistability has been the appearance of bimodal distributions indicating two different populations, one in the off state and the other in the on state.
+The bimodal distribution can come about from stochastic analysis of a single cell.
+However, the concerted action of the population altering the extracellular concentration in the environment of individual cells and hence their behavior can only be accomplished by an appropriate population balance model which accounts for the reciprocal effects of interaction between the population and its environment.
+In this study, we show how to formulate a population balance model in which stochastic gene expression in individual cells is incorporated.
+Interestingly, the simulation of the model shows that bistability is neither sufficient nor necessary for bimodal distributions in a population.
+The original notion of linking bistability with bimodal distribution from single cell stochastic model is therefore only a special consequence of a population balance model.
+### introduction ###
+In the study of cell populations, with vastly improved flow cytometry, access to multivariate distribution measures of cell populations has advanced considerably, calling for a concomitant application of theory sensitive to population heterogeneity.
+In this regard, the population balance framework of Fredrickson et al. CITATION has provided the requisite modeling machinery for the same.
+While this recognition generally exists in the literature, the modeling of gene regulatory processes has been at the single cell level based on it being viewed as an average cell.
+Since gene regulatory processes typically involve a small number of molecules, the reaction network is stochastic in its dynamics, a feature that is included in the single cell analysis.
+A further issue of importance, that of bistability, occurs when two levels of gene expression, one high and referred to as on, and the other low and referred to as off exist for a given concentration of the signaling molecule.
+This issue is very much a part of the stochastic modeling of the single cell CITATION, CITATION.
+Several kinds of stochastic models have been developed; two of them that have been broadly used are the Stochastic Simulation Algorithm CITATION, CITATION, and the Fokker-Planck equation or Stochastic Differential Equations CITATION CITATION.
+The Stochastic model certainly cures the drawback of the deterministic model which describes only the averaged behavior on large populations without realizing the fluctuating behaviors in different cells.
+Bistability has been studied extensively through experiments, theoretical analysis, and numerical simulations CITATION, CITATION, CITATION CITATION.
+A bistable system is characterized by the existence of two stable steady states.
+The modes relating to two stable steady states appear as a bimodal distribution of the population.
+The coexistence of bistability and bimodal distribution has been shown in many publications CITATION, CITATION, CITATION, CITATION CITATION .
+However, almost all of the modeling works on stochastic gene regulation relate to processes at the single-cell level.
+The outcome of numerous simulated trajectories of single cell behavior has been interpreted as population behavior.
+A cell is assumed to act totally independently of other cells without regard to the fact that the signaling environment is continuously altered by the concerted action of all members of the population.
+That no interaction between other cells has been taken into consideration in these models could indeed lead to serious bias.
+The drawback of the single cell model may be overcome by applying the Population Balance approach CITATION.
+A detailed general framework of the application of population balances to microbial populations was developed by Fredrickson et al. CITATION.
+However, the population balance model in the cited work and many others that followed in the literature are based on deterministic behavior of the particulate entities.
+Ramkrishna CITATION shows how the PBM can accommodate random particulate behavior described by stochastic differential equations.
+In this study, we demonstrate formulating a stochastic gene regulation incorporating PBM, which is capable of tracing time evolution of the behavior of the entire cell population.
+A system of pheromone-induced conjugative plasmid transfer CITATION contributing to the dissemination of antibiotic resistance and the virulence of Enterococcus faecalis infections CITATION, CITATION has been simulated in this study as an example of the critical difference between stochastic gene regulation incorporating PBM and single-cell stochastic model.
+It is our objective in this paper to formulate population balance models with stochastic gene expression in single cells.
+Further, we explore circumstances under which bimodal distributions are observed in protein distributions; in particular we investigate the generally prevailing view in the literature that bistability and bimodality of protein distribution occur concurrently CITATION, CITATION, CITATION, CITATION CITATION.
+An exception to this view appears in the work of Karmakar and Bose CITATION, CITATION, who showed that bimodal distributions can arise without bistability when the reaction time of the downstream gene regulation is short relative to the time required for change of DNA conformation.
+Other similar publications can also be found in literature CITATION CITATION.
+While these cited works show bimodal distributions without bistability, it must be understood that their conclusions are based on mechanistic differences in the behavior of isolated single cells.
+In this study, we approach the issue of the relationship between bistability and bimodality from a rational viewpoint; i.e., to examine the nature of protein distribution from cells with and without bistability within the framework of population balances.
+Thus, circumstances will be investigated for Figure 1A, in which bimodal distributions can arise without bistability, and for Figure 1B, in which unimodal distributions can arise even when bistability exists.

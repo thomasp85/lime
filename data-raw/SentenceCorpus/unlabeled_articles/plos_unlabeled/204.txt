@@ -1,0 +1,28 @@
+### abstract ###
+We construct a model to study tradeoffs associated with aging in the adaptive immune system, focusing on cumulative effects of replacing naive cells with memory cells.
+Binding affinities are characterized by a stochastic shape space model.
+System loss arising from an individual infection is associated with disease severity, as measured by the total antigen population over the course of an infection.
+We monitor evolution of cell populations on the shape space over a string of infections, and find that the distribution of losses becomes increasingly heavy-tailed with time.
+Initially this lowers the average loss: the memory cell population becomes tuned to the history of past exposures, reducing the loss of the system when subjected to a second, similar infection.
+This is accompanied by a corresponding increase in vulnerability to novel infections, which ultimately causes the expected loss to increase due to overspecialization, leading to increasing fragility with age.
+In our model, immunosenescence is not the result of a performance degradation of some specific lymphocyte, but rather a natural consequence of the built-in mechanisms for system adaptation.
+This robust, yet fragile behavior is a key signature of Highly Optimized Tolerance.
+### introduction ###
+The adaptive immune system CITATION of vertebrates has evolved in a manner that enables adaptation to the history of infections over the lifetime of each individual organism.
+It consists of a complex, heterogeneous collection of cells that is derived from stem cells in the bone marrow and proliferates in the lymph nodes.
+These cells are endowed with the remarkable ability to discriminate between self and nonself agents within the body and to remove the nonself elements CITATION CITATION.
+B and T cells are the white blood cells that constitute the adaptive components of the immune system.
+They derive their ability to discriminate self from nonself with the binding specificity of their receptors: T cell receptors for T cells, and membrane-bound antibody for B cells.
+These receptors are assembled randomly from gene segments, producing a population of naive cells, in which each individual combination has a different binding specificity.
+The random combinations of genes give the immune system the ability to produce diverse cells capable of responding to many pathogens.
+During an infection, the cells whose receptors recognize the antigen proliferate and differentiate into antigen-removing effector cells and long-lived memory cells.
+The memory cells give rise to a more rapid and efficient response to a secondary exposure to the same antigen.
+However, due to homeostatic regulation of the lymphocyte population, the growth of memory cells reduces the naive cell population size.
+Over time, this has the effect of increasing sensitivity to novel infections.
+We introduce a model that captures this tradeoff between resilience to repeated exposure and sensitivity to new pathogens.
+The model consists of coupled differential equations for immune-system cell populations, defined in terms of their primary immunological function and their binding characteristics.
+The relative population sizes evolve in time, stimulated by episodic infections.
+Antigens are drawn from a probability distribution of their characteristics, which enables estimation of the binding affinity of lymphocytes.
+We include a constraint on the total number of immune cells in the system, and define an immunological loss function that quantifies disease severity.
+The constraint on the number of cells implies that memory, which is specific to infections the system has seen, comes at a price for unseen infections CITATION.
+Our model illustrates how the immune system initially increases in effectiveness but eventually becomes overspecialized with age.

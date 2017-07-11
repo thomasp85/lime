@@ -1,0 +1,42 @@
+### abstract ###
+We introduce a framework for filtering features that employs the Hilbert-Schmidt Independence Criterion (HSIC) as a measure of dependence between the features and the labels
+The key idea is that good features should maximise such dependence
+Feature selection for various supervised learning problems (including classification and regression) is unified under this framework, and the solutions  can be approximated using a backward-elimination algorithm
+We demonstrate the usefulness of our method on both artificial and real world datasets
+### introduction ###
+In supervised learning problems, we are typically given  SYMBOL  data points  SYMBOL  and their labels  SYMBOL
+The task is to find a functional dependence between  SYMBOL  and  SYMBOL ,  SYMBOL , subject to certain optimality conditions
+Representative tasks include binary classification, multi-class classification, regression and ranking
+We often want to reduce the dimension of the data (the number of features) before the actual learning  CITATION ; a larger number of features  can be associated with higher data collection cost, more difficulty in model interpretation,  higher computational cost for the classifier, and decreased generalisation ability
+It is therefore important to select an informative feature subset
+The problem of supervised feature selection can be cast as a combinatorial optimisation problem
+We have a full set of features, denoted  SYMBOL  (whose elements correspond to the dimensions of the data)
+We use these features to predict a particular outcome, for instance the presence of cancer: clearly, only a subset  SYMBOL  of features will be relevant
+Suppose the relevance of  SYMBOL  to the outcome is quantified by  SYMBOL , and is computed by restricting the data to the dimensions in  SYMBOL
+Feature selection can then be formulated as\\[-0 5cm] \\[-0 5cm] where  SYMBOL  computes the cardinality of a set and  SYMBOL  upper bounds the number of selected features
+Two important aspects of problem () are the choice of the criterion  SYMBOL  and the selection algorithm \paragraph{Feature Selection Criterion } The choice of  SYMBOL  should respect the underlying supervised learning tasks --- estimate  dependence function  SYMBOL  from training data and guarantee  SYMBOL  predicts well on test data
+Therefore, good criteria should satisfy two conditions:\\[-0 5cm]  While many feature selection criteria have been explored, few take these two conditions explicitly into account
+Examples include the leave-one-out error bound of SVM  CITATION  and the mutual information  CITATION
+Although the latter has good theoretical justification, it requires density estimation, which is problematic for high dimensional and continuous variables
+We sidestep these problems by employing a mutual-information  like  quantity --- the Hilbert Schmidt Independence Criterion (HSIC)  CITATION
+HSIC uses kernels for measuring dependence and does not require density estimation
+HSIC also has good uniform convergence guarantees
+As we show in section~, HSIC satisfies conditions  I  and  II , required for  SYMBOL  \paragraph{Feature Selection Algorithm } Finding a global optimum for \eq{eq:fs} is in general NP-hard  CITATION
+Many algorithms transform \eq{eq:fs} into a continuous problem by introducing weights on the dimensions  CITATION
+These methods perform well for linearly separable problems
+For nonlinear problems, however, the optimisation usually becomes non-convex and a local optimum does not necessarily provide good features
+Greedy approaches -- forward selection and backward elimination -- are often used to tackle problem () directly
+Forward selection tries to increase  SYMBOL  as much as possible for each inclusion of features, and backward elimination tries to achieve this for each deletion of features~ CITATION
+Although forward selection is computationally more efficient, backward elimination provides better features in general since the features are assessed within the context of all others \paragraph{BAHSIC } In principle, HSIC can be employed using either the forwards or backwards strategy, or a mix of strategies
+However, in this paper, we will focus on a backward elimination algorithm
+Our experiments show that backward elimination outperforms forward selection for HSIC
+Backward elimination using HSIC (BAHSIC) is a filter method for feature selection
+It selects features independent of a particular classifier
+Such decoupling not only facilitates subsequent feature interpretation but also speeds up the computation over wrapper and embedded methods
+Furthermore, BAHSIC is directly applicable to binary, multiclass, and regression problems
+Most other feature selection methods are only formulated either for binary classification or regression
+The multi-class extension of these methods is usually accomplished using a one-versus-the-rest strategy
+Still fewer methods handle classification and regression cases at the same time
+BAHSIC, on the other hand, accommodates all these cases in a principled way: by choosing different kernels, BAHSIC also subsumes many existing methods as special cases
+The versatility of BAHSIC originates from the generality of HSIC
+Therefore, we begin our exposition with an introduction of HSIC

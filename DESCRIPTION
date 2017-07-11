@@ -1,8 +1,9 @@
 Package: lime
 Type: Package
 Title: Local Interpretable Model-Agnostic Explanations
-Version: 0.1.0
-Authors@R: c(person('Thomas Lin', 'Pedersen', role = c('aut', 'cre'), email = "thomasp85@gmail.com"))
+Version: 0.2.0
+Authors@R: c(person('Thomas Lin', 'Pedersen', role = c('cre', 'aut'), email = "thomasp85@gmail.com"),
+             person('Michaël', 'Benesty', role = c('aut'), email = "michael@benesty.fr"))
 Maintainer: Thomas Lin Pedersen <thomasp85@gmail.com>
 Description: When building complex models, it is often difficult to explain why
     the model should be trusted. While global measures such as accuracy are 
@@ -11,6 +12,8 @@ Description: When building complex models, it is often difficult to explain why
     explaining the outcome of black box models by fitting a local model around
     the point in question an pertubations of this point.
 License: MIT + file LICENSE
+URL: https://github.com/thomasp85/lime
+BugReports: https://github.com/thomasp85/lime/issues
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
@@ -23,9 +26,17 @@ Imports: glmnet,
     stringi,
     Matrix,
     stringdist,
-    hrbrthemes
+    hrbrthemes,
+    magrittr,
+    purrr,
+    Rcpp,
+    RcppEigen,
+    assertthat
 RoxygenNote: 6.0.1
 Suggests: caret,
-    e1071,
     randomForest,
+    e1071,
+    xgboost,
     testthat
+LinkingTo: Rcpp, 
+    RcppEigen

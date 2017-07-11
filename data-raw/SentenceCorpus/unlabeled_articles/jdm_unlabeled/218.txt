@@ -1,0 +1,20 @@
+### abstract ###
+previous research has demonstrated that consistency between people's behavior and their dispositions has predictive validity for judgments of regret
+research has also shown that differences in the personality variable of action orientation can influence ability to regulate negative affect
+the present set of studies was designed to investigate how both consistency factors and action-state personality orientation influence judgments of regret
+in study  NUMBER   we used a recalled life event to provide a situation in which the person had experienced either an action or inaction
+individuals with an action orientation experienced more regret for situations involving inaction staying home than situations involving action going out
+state-oriented individuals  however  maintained high levels of regret and did not differ in their regret ratings across either the action or inaction situations
+in study  NUMBER   participants made realistic choices involving either an action or inaction
+our findings revealed the same pattern of results  action-oriented individuals who chose an option that involved not acting inaction had more regret that individuals who chose an option that involved acting action
+state-oriented individuals experienced high levels of regret regardless of whether they chose to act or not to act
+### introduction ###
+unquestionably  we all feel regret at times  whether we missed a great opportunity or failed to make the right decisions when pressed under the weight of burdening stress
+this somber feeling of loss can accompany our actions or lack thereof and be a powerful force for both our emotional and behavioral responses
+efforts at understanding the experiences underlying these feelings of regret have led to different avenues of research
+much of the contemporary work charged with understand regret has spotlighted attention on how imaginary outcomes or  counterfactuals  influence a person's feeling of regret  CITATION
+although this certainly makes up a fascinating facet of the regret process  the  focused attention  of research has lead most researchers to relinquish pursuit of other pre-decisional factors that come into play in the regret process
+recently  however  a good deal of research has begun to examine this aspect of the processes involved in regret
+specifically  research has demonstrated that consistency factors between people and their behavior also play an important role in understanding the regret process  CITATION
+one aspect of the consistency-regret relationship that remains largely uninvestigated is how individual difference factors influence reliance on consistency information
+in this paper we focus on how the individual difference factor of action-state orientation affects responsiveness to decision factors action vs inaction as well as the ability to regulate bad outcome information in a regretful situation

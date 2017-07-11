@@ -1,0 +1,32 @@
+### abstract ###
+The extent to which self-adopted or intervention-related changes in behaviors affect the course of epidemics remains a key issue for outbreak control.
+This study attempted to quantify the effect of such changes on the risk of infection in different settings, i.e., the community and hospitals.
+The 2002 2003 severe acute respiratory syndrome outbreak in Hong Kong, where 27 percent of cases were healthcare workers, was used as an example.
+A stochastic compartmental SEIR model was used: the population was split into healthcare workers, hospitalized people and general population.
+Super spreading events were taken into account in the model.
+The temporal evolutions of the daily effective contact rates in the community and hospitals were modeled with smooth functions.
+Data augmentation techniques and Markov chain Monte Carlo methods were applied to estimate SARS epidemiological parameters.
+In particular, estimates of daily reproduction numbers were provided for each subpopulation.
+The average duration of the SARS infectious period was estimated to be 9.3 days.
+The model was able to disentangle the impact of the two SSEs from background transmission rates.
+The effective contact rates, which were estimated on a daily basis, decreased with time, reaching zero inside hospitals.
+This observation suggests that public health measures and possible changes in individual behaviors effectively reduced transmission, especially in hospitals.
+The temporal patterns of reproduction numbers were similar for healthcare workers and the general population, indicating that on average, an infectious healthcare worker did not infect more people than any other infectious person.
+We provide a general method to estimate time dependence of parameters in structured epidemic models, which enables investigation of the impact of control measures and behavioral changes in different settings.
+### introduction ###
+Emerging infectious diseases have been defined as, infections that have newly appeared in a population or have existed previously but are rapidly increasing in incidence or geographic range.
+CITATION Several features may make them particularly threatening.
+First, recognizing the disease can be difficult when the first cases appear, especially when the symptoms are non-specific.
+Second, no vaccine or specific treatment may be known initially.
+Moreover, heterogeneities in disease transmission may create high-risk groups, such as healthcare workers CITATION CITATION and high-risk geographical areas, thereby dramatically enhancing the impact of the outbreak CITATION .
+The 2003 severe acute respiratory syndrome outbreak in Hong Kong is remarkably illustrative of the above issues: symptoms were similar to pneumonia CITATION ; the incubation period was long enough for local and international transmission to occur CITATION ; no vaccine or treatment was available; as much as 21 percent of cases worldwide were healthcare workers CITATION.
+The outbreak also demonstrated the possible existence of super-spreading events CITATION, during which a few infectious individuals contaminated a high number of secondary cases.
+Hong Kong had two SSEs: the first occurred in Hospital X around March 3 and led to about 125 cases CITATION ; the second occurred in Housing Estate Y on March 19, and led to over 300 cases CITATION, CITATION.
+Despite its particularly threatening features, the outbreak was brought under control.
+In this context, once the epidemic is detected, spontaneous changes in behavior will occur, and non-pharmacological measures are usually initiated to control the outbreak.
+The resulting effects of these two phenomena on disease transmission is not easily quantified.
+The effective contact rate, which reflects the combined influences of social proximity and the probability of infection through each contact, is an essential determinant of disease spread.
+Our aim was to estimate the temporal variation of this parameter in the community and hospitals, over the course of the outbreak.
+Previously published mathematical models of parameter estimation addressed the issues of temporal variability CITATION, CITATION or social heterogeneity CITATION, CITATION.
+Here we present an approach that deals with both issues, together with the occurrence of SSEs.
+Then the method is applied to the 2003 SARS epidemic in Hong Kong .

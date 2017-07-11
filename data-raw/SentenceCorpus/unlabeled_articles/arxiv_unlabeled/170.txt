@@ -1,0 +1,39 @@
+### abstract ###
+Hidden Markov Models (HMMs) are one of the most fundamental and widely used statistical tools for modeling discrete time series
+In general, learning HMMs from data is computationally hard (under cryptographic assumptions), and practitioners typically resort to search heuristics which suffer from the usual local optima issues
+We prove that under a natural separation condition (bounds on the smallest singular value of the HMM parameters), there is an efficient and provably correct algorithm for learning HMMs
+The sample complexity of the algorithm does not explicitly depend on the number of distinct (discrete) observations---it implicitly depends on this quantity through spectral properties of the underlying HMM
+This makes the algorithm particularly applicable to settings with a large number of observations, such as those in natural language processing where the space of observation is sometimes the words in a language
+The algorithm is also simple, employing only a singular value decomposition and matrix multiplications
+### introduction ###
+Hidden Markov Models (HMMs)  CITATION  are the workhorse statistical model for discrete time series, with widely diverse applications including automatic speech recognition, natural language processing (NLP), and genomic sequence modeling
+In this model, a discrete hidden state evolves according to some Markovian dynamics, and observations at a particular time depend only on the hidden state at that time
+The learning problem is to estimate the model only with observation samples from the underlying distribution
+Thus far, the predominant learning algorithms have been local search heuristics, such as the Baum-Welch / EM algorithm  CITATION
+It is not surprising that practical algorithms have resorted to heuristics, as the general learning problem has been shown to be hard under cryptographic assumptions  CITATION
+Fortunately, the hardness results are for HMMs that seem divorced from those that we are likely to encounter in practical applications
+The situation is in many ways analogous to learning mixture distributions with samples from the underlying distribution
+There, the general problem is also believed to be hard
+However, much recent progress has been made when certain separation assumptions are made with respect to the component mixture distributions ( eg ~ CITATION )
+Roughly speaking, these separation assumptions imply that with high probability, given a point sampled from the distribution, one can determine the mixture component that generated the point
+In fact, there is a prevalent sentiment that we are often only interested in clustering when such a separation condition holds
+Much of the theoretical work here has focused on how small this separation can be and still permit an efficient algorithm to recover the model
+We present a simple and efficient algorithm for learning HMMs under a certain natural separation condition
+We provide two results for learning
+The first is that we can approximate the joint distribution over observation sequences of length  SYMBOL  (here, the quality of approximation is measured by total variation distance)
+As  SYMBOL  increases, the approximation quality degrades polynomially
+Our second result is on approximating the  conditional  distribution over a future observation, conditioned on some history of observations
+We show that this error is asymptotically bounded--- i e ~for any  SYMBOL , conditioned on the observations prior to time  SYMBOL , the error in predicting the  SYMBOL -th outcome is controlled
+Our algorithm can be thought of as `improperly' learning an HMM in that we do not explicitly recover the transition and observation models
+However, our model does maintain a hidden state representation which is closely (in fact, linearly) related to the HMM's, and can be used for interpreting the hidden state
+The separation condition we require is a spectral condition on both the observation matrix and the transition matrix
+Roughly speaking, we require that the observation distributions arising from distinct hidden states be distinct (which we formalize by singular value conditions on the observation matrix)
+This requirement can be thought of as being weaker than the separation condition for clustering in that the observation distributions can overlap quite a bit---given one observation, we do not necessarily have the information to determine which hidden state it was generated from (unlike in the clustering literature)
+We also have a spectral condition on the correlation between adjacent observations
+We believe both of these conditions to be quite reasonable in many practical applications
+Furthermore, given our analysis, extensions to our algorithm which relax these assumptions should be possible
+The algorithm we present has both polynomial sample and computational complexity
+Computationally, the algorithm is quite simple---at its core is a singular value decomposition (SVD) of a correlation matrix between past and future observations
+This SVD can be viewed as a Canonical Correlation Analysis (CCA)~ CITATION  between past and future observations
+The sample complexity results we present do not explicitly depend on the number of distinct observations; rather, they implicitly depend on this number through spectral properties of the HMM
+This makes the algorithm particularly applicable to settings with a large number of observations, such as those in NLP where the space of observations is sometimes the words in a language

@@ -1,0 +1,46 @@
+### abstract ###
+microRNAs are important post-transcriptional regulators, but the extent of this regulation is uncertain, both with regard to the number of miRNA genes and their targets.
+Using an algorithm based on intragenomic matching of potential miRNAs and their targets coupled with support vector machine classification of miRNA precursors, we explore the potential for regulation by miRNAs in three plant genomes: Arabidopsis thaliana, Populus trichocarpa, and Oryza sativa.
+We find that the intragenomic matching in conjunction with a supervised learning approach contains enough information to allow reliable computational prediction of miRNA candidates without requiring conservation across species.
+Using this method, we identify 1,200, 2,500, and 2,100 miRNA candidate genes capable of extensive base-pairing to potential target mRNAs in A. thaliana, P. trichocarpa, and O. sativa, respectively.
+This is more than five times the number of currently annotated miRNAs in the plants.
+Many of these candidates are derived from repeat regions, yet they seem to contain the features necessary for correct processing by the miRNA machinery.
+Conservation analysis indicates that only a few of the candidates are conserved between the species.
+We conclude that there is a large potential for miRNA-mediated regulatory interactions encoded in the genomes of the investigated plants.
+We hypothesize that some of these interactions may be realized under special environmental conditions, while others can readily be recruited when organisms diverge and adapt to new niches.
+### introduction ###
+Small RNAs are now accepted as major players in the control of eukaryotic gene expression.
+Most well known are microRNAs and small interfering RNAs, both of which are derived from the processing of dsRNA molecules by members of the Drosha/Dicer family of endonucleases.
+In plants, siRNA and miRNA are distinguished mainly by their biogenesis, not by their mechanism of action.
+MiRNAs arise from stem-loop precursors encoded in the genome, and their major mechanism of action in plants is thought to be post-transcriptional regulation through near-complementary base-pairing to target mRNAs, leading to specific endonucleolytic cleavage and degradation of the target CITATION .
+Most of the initially discovered miRNAs were so highly conserved in evolution that a defining characteristic of a miRNA was that it had to be conserved CITATION.
+This attribute of those miRNAs discovered early has been used successfully by a number of groups to computationally predict new miRNA genes CITATION CITATION.
+Basically, these methods scan the genome for inverted repeats with the potential to form miRNA precursors.
+Such scans typically find on the order of hundreds of thousands to millions of hairpins, depending on genome size and search parameters CITATION.
+This high number is then reduced by only keeping hairpins that are conserved in other species.
+Another approach is to search only transcribed sequences in the form of expressed sequence tags CITATION, CITATION.
+This method works for nonsequenced genomes and efficiently reduces the search space, probably leading to a lower number of false positives, but the method also misses candidates not covered by the expressed sequence tag libraries.
+In miRBase version 8.2, Arabidopsis thaliana has 118 miRNA genes listed, most of which are conserved down to the monocot Oryza sativa.
+However, studies of noncoding RNA have shown that lack of conservation does not necessarily mean lack of function CITATION.
+Potentially, all it takes to evolve a miRNA is for one of the many inverted repeats in the genome to be transcribed and have the necessary structure and sequence features to be recognized and processed by Drosha/Dicer.
+Indeed, large numbers of more narrowly conserved miRNAs also exist CITATION.
+A recent bioinformatic study in human identified patterns associated with miRNA precursors and suggested that the number of miRNA precursors is larger than 25,000 CITATION.
+In plants, a similar situation could exist.
+A deep sequencing effort in Arabidopsis using the massively parallel signature sequence technique has revealed 75,000 distinct small RNA species CITATION mapping to a large variety of genomic contexts, including exons, introns, repetitive DNA, and intergenic regions.
+This is perhaps not surprising considering other studies finding that unexpectedly large fractions of eukaryotic genomes are transcribed also outside and antisense to annotated protein-coding genes CITATION CITATION .
+A necessary feature of any functional miRNA is that it must target at least one mRNA.
+In plants, this means that the miRNA must be almost complementary to some part of the spliced mRNA transcript.
+A set of rules allowing mismatches only in certain positions has been suggested based on experimental observations CITATION.
+The requirement for a target has previously been used to predict plant miRNAs CITATION CITATION : instead of relying on phylogenetic conservation, these methods have successfully used intragenomic matches with potential target mRNAs to find the hairpins potentially capable of producing miRNAs that can regulate the target.
+Such intragenomic matches will inherently arise from the structure and dynamics of the genome: retrotransposons, formation of pseudogenes, and other duplicative events provide sequences almost ready to regulate the originally copied gene CITATION ; likewise, the reverse strand of one gene is complementary to other paralogous genes.
+By not relying on conservation between species, intragenomic matching is capable of more fully charting the potential for post-transcriptional regulation by miRNAs.
+In an effort to reduce spurious predictions, earlier screens for new miRNAs have removed candidates overlapping existing annotation, such as repeats and protein-coding regions.
+Although such filters probably increase the signal-to-noise ratio, they also introduce biases assuming that repeat-derived sequences are not functional and that each sequence segment can have only one function.
+However, transposon-derived conventional miRNAs have been demonstrated in Arabidopsis CITATION, and recent work of several groups show that repeat-associated miRNAs are quite common in mammals CITATION CITATION.
+Borchert et al. point to 50 human miRNAs that are associated with Alu repeats and polymerase III transcription CITATION.
+Piriyapongsa et al. link 55 experimentally characterized human miRNAs to different types of transposable elements CITATION.
+Of these, 18 are conserved in other vertebrate genomes, and the authors predict an additional 85 novel transposable element derived miRNAs.
+These observations, along with the evidence of very complex and widespread transcriptional patterns in eukaryotes, including nested transcripts and antisense transcription CITATION, underlines the importance of enumerating all possible miRNA/target interactions in order to explore the full potential of miRNA-mediated regulation.
+In this paper, we develop and apply the miMatcher pipeline to perform intragenomic matching followed by classification of miRNA candidates using support vector machines.
+Using this method in the three plant genomes A. thaliana, O. sativa, and P. trichocarpa, we find species-specific miRNA-like hairpins with almost perfect complementarity to mRNA targets.
+We present indications that many of these are active and hypothesize that the remainder forms a pool of regulators, which can easily be recruited by natural selection on the adapting organisms.

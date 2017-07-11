@@ -1,0 +1,37 @@
+### abstract ###
+We study how functional constraints bound and shape evolution through an analysis of mammalian voltage-gated sodium channels.
+The primary function of sodium channels is to allow the propagation of action potentials.
+Since Hodgkin and Huxley, mathematical models have suggested that sodium channel properties need to be tightly constrained for an action potential to propagate.
+There are nine mammalian genes encoding voltage-gated sodium channels, many of which are more than 90 percent identical by sequence.
+This sequence similarity presumably corresponds to similarity of function, consistent with the idea that these properties must be tightly constrained.
+However, the multiplicity of genes encoding sodium channels raises the question: why are there so many?
+We demonstrate that the simplest theoretical constraints bounding sodium channel diversity the requirements of membrane excitability and the uniqueness of the resting potential act directly on constraining sodium channel properties.
+We compare the predicted constraints with functional data on mammalian sodium channel properties collected from the literature, including 172 different sets of measurements from 40 publications, wild-type and mutant, under a variety of conditions.
+The data from all channel types, including mutants, obeys the excitability constraint; on the other hand, channels expressed in muscle tend to obey the constraint of a unique resting potential, while channels expressed in neuronal tissue do not.
+The excitability properties alone distinguish the nine sodium channels into four different groups that are consistent with phylogenetic analysis.
+Our calculations suggest interpretations for the functional differences between these groups.
+### introduction ###
+Despite the relatively small number of genes in the human genome, there are many examples of groups of nearly identical genes that perform similar functions.
+Such diversity could either reflect redundancy or evolutionary specialization CITATION, CITATION.
+Specialization could result from tuning to different functional environments, or nearly identical genes might play very different functional roles CITATION .
+Here we explore how functional constraints bound and shape evolution through an analysis of mammalian voltage-gated sodium channels.
+The primary function of voltage-gated sodium channels is to allow the propagation of action potentials CITATION.
+Since Hodgkin and Huxley CITATION, mathematical models have suggested that sodium channel properties need to be tightly constrained for an action potential to propagate.
+In mammals, there are nine different genes encoding voltage-gated sodium channels CITATION, many of which are more than 90 percent identical by sequence CITATION.
+On one hand, the sequence similarity of the channels presumably corresponds to similarity of their functional properties; this is consistent with the idea that these properties must be tightly constrained.
+On the other hand, the multiplicity of genes encoding sodium channels raises the question: why are so many different mechanisms for generating an action potential necessary?
+Sodium channels are predominantly found in specific anatomical regions, suggesting that they might be tuned for specific functions.
+For example, the channels Na v1.1, Na v1.2, Na v1.3, Na v1.6, and Na v1.7 are predominantly localized in the central and peripheral nervous systems; Na v1.8 and Na v1.9 primarily in the dorsal root ganglion; Na v1.4 primarily at skeletal muscular junctions; Na v1.5 primarily in cardiac tissue CITATION .
+In this paper, we address the questions of whether and how sodium channel diversity is bounded by the simplest theoretical constraints on action potential propagation: the sodium channel properties must be tuned to allow the membrane to be excitable, i.e., there must exist a voltage threshold above which an action potential can be produced, and the constraint of a unique resting potential.
+Through a theoretical analysis of macroscopic sodium currents, we demonstrate that these two requirements depend only on sodium channel properties, directly constraining the activation and inactivation curves of sodium channels, which are routinely directly measured in experiments.
+We then compare the constraints with measurements of mammalian sodium channels reported in the literature.
+Our dataset uses 172 different measurements from 40 distinct publications, including both wild-type and mutant Na v1.1 1.9, in human, mouse, and rat, under a range of different conditions including with and without different types of subunits, and with chemicals CITATION CITATION.
+The mutant channels tend to be associated with a disease state and hence presumably differ in a physiologically significant way from the wild-type.
+Our analysis demonstrates that excitability properties alone distinguish the nine sodium channels into four different groups.
+Within each group there is a strong positive correlation between the voltage dependence of activation and inactivation.
+The members of each of the four groups are close according to phylogenetic analysis CITATION, CITATION CITATION.
+What are the functional differences between these groups?
+Two groups correspond to channels expressed in nerve and muscle tissue, respectively.
+Another group has the potential for a voltage threshold substantially higher than the other channels.
+The final group can only produce action potentials in a narrow conductance range and even then has a maximum voltage threshold which is less than thermal fluctuations.
+The separation of the channels into functionally distinct groups suggests that they have evolved to perform specialized tasks.

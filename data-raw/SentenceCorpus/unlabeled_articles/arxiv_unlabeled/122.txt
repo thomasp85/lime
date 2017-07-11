@@ -1,0 +1,30 @@
+### abstract ###
+Several researchers have recently investigated the connection between reinforcement learning and classification
+We are motivated by proposals of approximate policy iteration schemes without value functions, which focus on policy representation using classifiers and address policy learning as a supervised learning problem
+This paper proposes variants of an improved policy iteration scheme which addresses the core sampling problem in evaluating a policy through simulation as a multi-armed bandit machine
+The resulting algorithm offers comparable performance to the previous algorithm achieved, however, with significantly less computational effort
+An order of magnitude improvement is demonstrated experimentally in two standard reinforcement learning domains: inverted pendulum and mountain-car
+### introduction ###
+Supervised and reinforcement learning are two well-known learning paradigms, which have been researched mostly independently
+Recent studies have investigated the use of supervised learning methods for reinforcement learning, either for value function~\mycite{lagoudakis2003lsp,riedmiller2005nfq} or policy representation~\mycite{lagoudakisICML03,fern2004api,langfordICML05}
+Initial results have shown that policies can be approximately represented using either multi-class classifiers or combinations of binary classifiers~\mycite{rexakis+lagoudakis:ewrl2008} and, therefore, it is possible to incorporate classification algorithms within the inner loops of several reinforcement learning algorithms~\mycite{lagoudakisICML03,fern2004api}
+This viewpoint allows the quantification of the performance of reinforcement learning algorithms in terms of the performance of classification algorithms~\mycite{langfordICML05}
+While a variety of promising combinations become possible through this synergy, heretofore there have been limited practical and widely-applicable algorithms
+Our work builds on the work of Lagoudakis and Parr~\mycite{lagoudakisICML03} who suggested an approximate policy iteration algorithm for learning a good policy represented as a classifier, avoiding representations of any kind of value function
+At each iteration, a new policy/classifier is produced using training data obtained through extensive simulation (rollouts) of the previous policy on a generative model of the process
+These rollouts aim at identifying better action choices over a subset of states in order to form a set of data for training the classifier representing the improved policy
+A similar algorithm was proposed by Fern et al ~\mycite{fern2004api} at around the same time
+The key differences between the two algorithms are related to the types of learning problems they are suitable for, the choice of the underlying classifier type, and the exact form of classifier training
+Nevertheless, the main ideas of producing training data using rollouts and iterating over policies remain the same
+Even though both of these studies look carefully into the distribution of training states over the state space, their major limitation remains the large amount of sampling employed at each training state
+It is hinted~\mycite{lagoudakisPhD03}, however, that great improvement could be achieved with sophisticated management of rollout sampling
+Our paper suggests managing the rollout sampling procedure within the above algorithm with the goal of obtaining comparable training sets (and therefore policies of similar quality), but with significantly less effort in terms of number of rollouts and computation effort
+This is done by viewing the setting as akin to a bandit problem over the rollout states (states sampled using rollouts)
+Well-known algorithms for bandit problems, such as Upper Confidence Bounds~\mycite{auerMLJ02} and Successive Elimination~\mycite{evendarJMLR06}, allow optimal allocation of resources (rollouts) to trials (states)
+Our contribution is two-fold: (a) we suitably adapt bandit techniques for rollout management, and (b) we suggest an improved statistical test for identifying early with high confidence states with dominating actions
+In return, we obtain up to an order of magnitude improvement over the original algorithm in terms of the effort needed to collect the training data for each classifier
+This makes the resulting algorithm attractive to practitioners who need to address large real-world problems
+The remainder of the paper is organized as follows
+Section~ provides the necessary background and Section~ reviews the original algorithm we are based on
+Subsequently, our approach is presented in detail in Section~
+Finally, Section~ includes experimental results obtained from well-known learning domains

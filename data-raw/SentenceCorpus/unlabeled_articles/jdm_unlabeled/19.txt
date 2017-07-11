@@ -1,0 +1,35 @@
+### abstract ###
+i show how the coherence correspondence distinction can inform the conversation about decision methods for engineering design
+some engineers argue for the application of multi-attribute utility theory while others argue for what they call heuristics
+to clarify the differences among methods  i first ask whether each method aims at achieving coherence or correspondence
+by analyzing statements in the design literature  i argue that utility theory aims at achieving coherence and heuristics aim at achieving correspondence
+second  i ask if achieving coherence always implies achieving correspondence
+it is important to provide an answer because while in design the objective is correspondence  it is difficult to assess it  and coherence that is easier to assess is used as a surrogate
+i argue that coherence does not always imply correspondence in design and that this is also the case in problems studied in judgment and decision-making research
+uncovering the conditions under which coherence implies  or does not imply  correspondence is a topic where engineering design and judgment and decision-making research might connect
+### introduction ###
+kenneth hammond  CITATION  has pointed out that a method can be evaluated both according to its internal consistency  or coherence  and its external performance  or correspondence
+it is important to keep this distinction in mind when comparing decision methods because one method could be achieving coherence while another method could be achieving correspondence
+for example  the take-the-best heuristic  CITATION  violates a criterion of coherence transitivity that is satisfied by linear regression  while  under some conditions  take-the-best outperforms regression in a criterion of correspondence predictive accuracy
+in this article  i show how the coherence correspondence distinction can inform the conversation about decision methods within a field that has had minimal overlap with jdm judgment and decision making  the field of engineering design
+in  NUMBER   national science foundation nsf engineering design program director george hazelrigg wrote   it is increasingly recognized that engineering design  is a  decision-intensive process  p  NUMBER 
+the nsf has  since  NUMBER   sponsored numerous workshops on decision-based design
+the accreditation board for engineering and technology also defines engineering design as a decision-making process
+what decisions do design engineers make
+design engineers choose among alternative concepts
+a design concept is a technical specification of an artifact that is detailed enough so that the engineer can predict  reasonably accurately  how the artifact will function
+for example  a concept of a chair would specify the material used to build each chair part and the geometrical relationships among the parts
+there are typically many attributes on which design concepts can be evaluated
+examples of attributes for a chair concept are durability  comfort  or production cost
+hereafter  i refer to design concepts as simply designs
+some engineers  CITATION  argue for the application of multi-attribute utility theory for choosing among designs  while others argue for what they call heuristics  such as stuart pugh's convergence process  CITATION
+this debate has by and large ignored the coherence correspondence distinction
+i ask two questions that use the distinction and inform the debate
+the first question is whether each method aims at achieving coherence or correspondence or both
+by analyzing published statements in the design literature  i argue that multi-attribute utility theory aims at achieving coherence while the pugh convergence process aims at achieving correspondence
+the second question is if achieving coherence always implies achieving correspondence
+it is important to answer because while in design the objective of decision-making is correspondence  it is difficult to assess it  and coherence that is easier to assess is used as a surrogate
+for the surrogate coherence to be useful for inferring the objective correspondence  the relationship between the two must be known
+i argue that coherence does not always imply correspondence in design  and that this is also the case in decision problems studied in jdm
+i conclude that the study of conditions under which coherence implies  or does not imply  correspondence is a topic where design and jdm research might connect
+before asking and answering the two questions  i review two methods for making decisions that have a prominent place in engineering design theory and practice

@@ -1,0 +1,43 @@
+### abstract ###
+MISC Metabolic network reconstructions represent valuable scaffolds for -omics data integration and are used to computationally interrogate network properties.
+MISC However, they do not explicitly account for the synthesis of macromolecules.
+OWNX Here, we present the first genome-scale, fine-grained reconstruction of Escherichia coli's transcriptional and translational machinery, which produces 423 functional gene products in a sequence-specific manner and accounts for all necessary chemical transformations.
+BASE Legacy data from over 500 publications and three databases were reviewed, and many pathways were considered, including stable RNA maturation and modification, protein complex formation, and iron sulfur cluster biogenesis.
+OWNX This reconstruction represents the most comprehensive knowledge base for these important cellular functions in E. coli and is unique in its scope.
+OWNX Furthermore, it was converted into a mathematical model and used to: quantitatively integrate gene expression data as reaction constraints and compute functional network states, which were compared to reported experimental data.
+OWNX For example, the model predicted accurately the ribosome production, without any parameterization.
+OWNX Also, in silico rRNA operon deletion suggested that a high RNA polymerase density on the remaining rRNA operons is needed to reproduce the reported experimental ribosome numbers.
+OWNX Moreover, functional protein modules were determined, and many were found to contain gene products from multiple subsystems, highlighting the functional interaction of these proteins.
+OWNX This genome-scale reconstruction of E. coli's transcriptional and translational machinery presents a milestone in systems biology because it will enable quantitative integration of -omics datasets and thus the study of the mechanistic principles underlying the genotype phenotype relationship.
+### introduction ###
+MISC High-throughput experimental technologies enable the production of heterogeneous data, such as expression profiles and proteomic data, for almost any organism of interest.
+MISC A detailed mathematical representation of the in vivo cellular network is required to obtain a holistic understanding of cellular processes from these data sets and to quantitatively integrate them into a biological context.
+MISC One such approach is the bottom-up network reconstruction, which builds manually networks in a brick-by-brick manner using genome annotation and component-specific information CITATION, CITATION.
+MISC This reconstruction procedure is well established for metabolic reaction networks and has been applied to many organisms, including Human CITATION, Saccharomyces cerevisiae CITATION, CITATION, Leishmani major CITATION, Escherichia coli CITATION, Helicobacter pylori CITATION, Pseudomonas aeruginosa CITATION, and Pseudomonas putida CITATION, CITATION .
+MISC These bottom-up metabolic networks differ from other network reconstructions as they are tailored to the genomic content of the target organism and built manually using biochemical, physiological, and other experimental information in addition to the genome annotation.
+MISC Hence, these reconstructions can be thought of as biochemically, genetically, and genomically structured knowledge bases CITATION.
+MISC The reconstruction and modeling procedure is a 4-step process: obtaining a draft reaction list based on genome annotation and biochemical databases, refinement of reaction list using experimental information, conversion of the reaction list into a computable format and application of systems boundaries to define condition-specific models, and the evaluation and validation of the model content using various mathematical methods.
+MISC By iterating step 2 to 4, reconstructions that are self-consistent within their defined scope can be generated.
+MISC Metabolic network reconstruction have demonstrated to be useful in at least 5 areas of applications CITATION : biological discovery CITATION, phenotypic behavior CITATION, bacterial evolution CITATION, network analysis CITATION, and metabolic engineering CITATION.
+MISC This wide range of applications of the metabolic reconstructions is possible because they can be readily converted into predictive, condition-specific models.
+MISC Unlike more traditional approaches to modeling metabolism, the constraint-based modeling approach requires few, if any, parameters CITATION, CITATION.
+MISC The stoichiometric information encoded in the reconstruction can be represented mathematically as a stoichiometric matrix, S, where the rows correspond to the components and the columns correspond to the reactions .
+MISC While the COBRA approach has been successfully applied to metabolic networks, the same principles and assumptions can be also employed to reconstruct and model other cellular functions, such as signaling CITATION CITATION, regulation CITATION, and protein synthesis CITATION.
+BASE In this study, we extended and refined earlier work by Allen et al., which proposed a stoichiometric formalism to model protein synthesis and illustrated it on some E. coli genes and operons CITATION.
+OWNX We created a more detailed, gene-specific representation of the transcriptional and translational processes, which explicitly accounts for the sequence-specific synthesis of DNA, mRNA, and proteins.
+OWNX This reconstruction enables quantitative integration of high-throughput data such as gene expression, proteomic, and mRNA degradation data.
+OWNX Moreover, proteins are produced in high copy numbers in growing cells; thus, any quantitative mechanistic modeling and analysis of high-throughput data needs to account for the synthesis cost associated with these molecules.
+MISC Numerous studies have been published that investigate protein synthesis using kinetic models CITATION CITATION.
+CONT These models are generally tailored to the questions they address making it difficult to readily apply them for modified problems.
+MISC Since stoichiometric relationships are a common requisite for any type of mechanistic modeling, organism-specific BiGG knowledge bases can be used as templates to derive problem-specific, mechanistic models.
+MISC In fact, network stoichiometry is a dominant feature of kinetic models as well CITATION.
+MISC Thus, network reconstruction serves as a platform for steady-state and kinetic modeling .
+AIMX In this study, we present a new generation of network reconstructions, which directly account for the synthesis of individual mRNA and proteins.
+OWNX We named the mathematical representation of this reconstruction the Expression matrix, or E-matrix, since it encodes the expression of mRNA and proteins.
+OWNX All network reactions were formulated to account for gene-specific and E. coli-specific details, such as nucleotide composition, operon association, and sigma factor usage.
+OWNX Furthermore, we used information from three databases and more than 500 scientific publications to formulate mechanistically detailed and accurate reactions.
+OWNX This reconstruction is the first comprehensive database detailing the available information for these cellular functions and can thus be deemed a knowledge base.
+OWNX After conversion of the E-matrix reconstruction into condition-specific models corresponding to different doubling times, we were able to accurately predict the ribosome production reported in literature, without any parameterization.
+OWNX Furthermore, we show that the E-matrix can be used to study the effect of rRNA operon deletion.
+OWNX Our results predict that a high density of RNA polymerases is required on the remaining rRNA operons, to achieve the reported ribosome numbers.
+OWNX Finally, we show that proteins used in the E-matrix could be grouped into functional modules which lead to a more simplified view of the network.

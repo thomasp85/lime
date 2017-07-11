@@ -1,0 +1,54 @@
+### abstract ###
+A new monotonicity-constrained maximum likelihood approach, called Partial Order Optimum Likelihood, is presented and applied to the problem of functional site prediction in protein 3D structures, an important current challenge in genomics.
+The input consists of electrostatic and geometric properties derived from the 3D structure of the query protein alone.
+Sequence-based conservation information, where available, may also be incorporated.
+Electrostatics features from THEMATICS are combined with multidimensional isotonic regression to form maximum likelihood estimates of probabilities that specific residues belong to an active site.
+This allows likelihood ranking of all ionizable residues in a given protein based on THEMATICS features.
+The corresponding ROC curves and statistical significance tests demonstrate that this method outperforms prior THEMATICS-based methods, which in turn have been shown previously to outperform other 3D-structure-based methods for identifying active site residues.
+Then it is shown that the addition of one simple geometric property, the size rank of the cleft in which a given residue is contained, yields improved performance.
+Extension of the method to include predictions of non-ionizable residues is achieved through the introduction of environment variables.
+This extension results in even better performance than THEMATICS alone and constitutes to date the best functional site predictor based on 3D structure only, achieving nearly the same level of performance as methods that use both 3D structure and sequence alignment data.
+Finally, the method also easily incorporates such sequence alignment data, and when this information is included, the resulting method is shown to outperform the best current methods using any combination of sequence alignments and 3D structures.
+Included is an analysis demonstrating that when THEMATICS features, cleft size rank, and alignment-based conservation scores are used individually or in combination THEMATICS features represent the single most important component of such classifiers.
+### introduction ###
+Development of function prediction capabilities is a major challenge in genomics.
+Structural genomics projects are determining the 3D structures of expressed proteins on a high throughput basis.
+However, the determination of function from 3D structure has proved to be a challenging task; the functions of most of these structural genomics proteins remain unknown.
+Computationally based predictive methods can help to guide and accelerate functional annotation.
+The first step toward the prediction of the function of a protein from its 3D structure is to determine its local site of interaction where catalysis and/or ligand recognition occurs.
+Such capabilities have many important practical implications for biology and medicine.
+We have reported on THEMATICS CITATION CITATION, for Theoretical Microscopic Titration Curves, a technique for the prediction of local interaction sites in a protein from its three-dimensional structure alone.
+In the application of THEMATICS, one begins with the 3D structure of the query protein, solves the Poisson-Boltzmann equations using well-established methods, then performs a hybrid procedure to compute the proton occupations of the ionizable sites as functions of the pH.
+Residues involved in catalysis and/or recognition have different chemical properties from ordinary residues.
+In particular, these functionally important residues have anomalous theoretical proton occupation curves.
+THEMATICS exploits this difference and utilizes information from the shapes of the theoretical titration curves of the ionizable residues, as calculated approximately from the computed electrical potential function.
+THEMATICS utilizes only the 3D structure of the query protein as input; neither sequence alignments nor structural comparisons are used.
+Recently it was shown CITATION that, among the methods based on the 3D structure of the query protein only, THEMATICS achieves by far the best performance, as measured by sensitivity and precision for annotated catalytic residues.
+The purpose of the present paper is five-fold: We present a monotonicity-constrained maximum likelihood approach, called Partial Order Optimum Likelihood, to improve performance and expand the capabilities of active site prediction.
+Then it is shown that POOL, with THEMATICS input data alone, outperforms previous statistical CITATION and Support Vector Machine CITATION implementations of THEMATICS when applied to a test set of annotated protein structures.
+It is then demonstrated that the inclusion of one additional 3D-structure-based feature, representing the ordinal size of the surface cleft to which each residue belongs, can result in some improved performance, as demonstrated by ROC curves and validated by Wilcoxon signed-rank tests.
+With the introduction of environment features, POOL then can use the THEMATICS data to predict both ionizable and non-ionizable residues.
+This all-residues extension of THEMATICS, together with a cleft size rank feature, results in a simple 3D-structure-based functional site predictor that performs better than other 3D structure based methods and nearly as well as the very best current methods that utilize both the 3D structure and sequence homology.
+Finally, the POOL approach is able to take advantage of sequence alignment-based conservation scores, when available, in addition to these structure-based features.
+When this additional information is included, the resulting classifier is shown to outperform all other currently available methods using any combination of structure and sequence information.
+In prior implementations of THEMATICS for the identification of active-site residues from the 3D structure of the query protein CITATION CITATION, titration curve shapes were described by the moments of their first derivative functions.
+These first derivative functions are essentially probability density functions and give unity when integrated over all space.
+In Ko et al. CITATION, the third and fourth central moments 3 and 4 of these probability functions were used.
+These moments measure asymmetry and, roughly, the area under the tails relative to the area near the mean, respectively.
+In Tong et al. CITATION, the first moment and second central moment were also used.
+In each of these approaches, the moments measure deviations from normal curve shape and the analyses identify the outliers, the residues that deviate most from the normal proton occupation behavior.
+These prior approaches all use spatial clustering, so that outlier residues are reported as positive by the method if and only if they are in sufficiently close spatial proximity to at least one other outlier.
+Thus the previous THEMATICS identifications involve two stages, where the first stage makes a binary decision on each residue and the second stage finds spatial clusters of the outliers.
+In the new approach reported here, every residue is assigned a probability that it is an active-site residue.
+Here, as an alternative to the clustering approach, we introduce features that describe a residue's neighbors; we call these environment features.
+For a given scalar feature x, we define the value of the environment feature x env for a given residue r to be:FORMULAwhere r is an ionizable residue whose distance d to residue r is less than 9, and the weight w is given by 1/d 2.
+In this study, we use the same features 3 and 4 used in the Ko CITATION approach, along with the additional features 3 env and 4 env.
+Thus every ionizable residue in any protein structure is assigned the 4-dimensional feature vector.
+The present approach has a number of advantages.
+Specifically, active residues may be selected in one step and they can be rank-ordered according to the probability of involvement in an active site.
+Furthermore, while THEMATICS previously has been applied to ionizable residues only, the present approach opens the door to direct prediction of non-ionizable active site residues, because the environment features 3 env and 4 env are well defined for all residues, including the non-ionizable ones.
+Finally, additional geometric features that are obtainable from the 3D structure only may be readily combined with the four THEMATICS features in order to enhance performance.
+Geometric features, such as the relative sizes of the clefts on the surface of the protein structure, have been shown to correlate with active site location CITATION, CITATION.
+For instance, for the majority of single-chain proteins, the catalytic residues are in the largest cleft.
+However geometric features alone do not perform comparatively well for active residue prediction, particularly because they are not very selective.
+It is shown here that cleft size information combined with THEMATICS electrostatic features yields high performance in purely 3D structure based functional site predictions.

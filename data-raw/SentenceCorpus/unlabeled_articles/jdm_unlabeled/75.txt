@@ -1,0 +1,42 @@
+### abstract ###
+we asked jurors awaiting trial assignment to listen to a recorded synopsis of an authentic criminal trial and to make a choice among  NUMBER  verdict possibilities
+each participant juror then deliberated with another juror whose verdict choice differed  as a microcosm of a full jury's deliberation
+analysis of the transcripts of these deliberations revealed both characteristics general to the sample and characteristics for which variation appeared across participants
+findings were interpreted in terms of a model of juror reasoning as entailing theory-evidence coordination
+more frequently than challenging the other's statements  we found  a juror agreed with and added to or elaborated them
+epistemological stance - whether knowledge was regarded as absolute and certain or subject to interpretation - predicted several characteristics of discourse
+absolutists were less likely to make reference to the verdict criteria in their discourse
+those who did so  as well as those who made frequent reference to the evidence  were more likely to persuade their discourse partners
+### introduction ###
+rozin  CITATION  has argued recently that some phenomena are of such broad social significance that they warrant whatever  even imperfect light we are able to shed on them
+the discourse by means of which jurors reach their verdict decisions arguably falls into this category
+jury deliberation is a component of a democratic legal system traditionally shrouded in secrecy
+even if it were more available to external observers  the complexity of  NUMBER  individuals engaged in largely unconstrained dialog about controversial and often intricate matters is so great as to challenge analysis of the process
+unsurprisingly  then  the bulk of jury research has been devoted to an examination of influences on jury outcomes  rather than the deliberation process itself
+the research that does exist on the deliberation process typically is concerned with social influence processes  and has little to say about the phenomenon of key interest to us here - the reasoning by means of which jurors influence one another
+in the work reported here  we undertook to gain insight into the dialogic reasoning that occurs during jury deliberation by reducing its complexity  looking at just a microcosm  albeit an arguably authentic one  of the larger process
+jurors awaiting trial assignment were asked to listen to a tape-recorded synopsis constructed from the transcript of an actual trial and to make a verdict judgment
+two jurors whose judgments differed were then asked to deliberate  as they might in a jury room  and to try to reach agreement with one another regarding the proper verdict
+in the present article  we examine some of the characteristics of this discourse  including both characteristics general to the sample and characteristics for which variation appeared across participants
+an individual juror's task  two of us have argued earlier  is one of theory-evidence coordination  CITATION
+the juror needs to construct multiple theories story-verdict constellations that are evaluated against the presented evidence
+these theories are compared  and the verdict having the most consistent and least discrepant evidence associated with it is selected
+if this characterization is correct  the task requires representations of the evidence  representations of each of the theories verdict definitions and a set of mental operations directed toward coordinating the two
+a specific prediction we test here is therefore that the nature of representations of both will affect the nature and outcome of jurors' deliberation
+individual variation data are consistent with such a model
+kuhn et al CITATION  found that individuals at more advanced epistemological levels who believe that absolute certainty is not possible  and who also tend to be more highly educated  were more likely to choose more moderate intermediate verdicts  NUMBER  degree murder or manslaughter in their individual verdict choices
+performance was also related to a number of argument skills - e g   discounting  counterargument  justifying alternative verdict - that require evidence-theory coordination  CITATION
+in the present article  we wished to explore the utility of this theory-evidence coordination model in shedding light on aspects of the subsequent phase in the jury decision-making process  i e   from an individual juror's reasoning and judgment following presentation of the trial evidence to the engagement of jurors in discourse with one another with the objective of reaching a joint decision
+specifically  we pose two research questions
+first  if success in an excerpt of discourse between two jurors is defined as one successfully persuading the other that the evidence better fits one verdict than another  successful or productive discourse should contain frequent reference to the individual verdicts and the criteria that define each  as well as to the evidence against which they must be compared
+does jurors' discourse in fact have these characteristics
+second  we wished to better understand how the individual differences in juror reasoning identified in earlier work are likely to manifest themselves in juror discourse
+education level has been found a strong predictor of individual juror reasoning  CITATION  and therefore could be anticipated to affect discourse between jurors as well
+however  by itself  education level is a complex  largely opaque variable
+what is likely to make the more educated individual a more incisive reasoner in a juror context
+here we investigate level of epistemological understanding as a likely candidate
+research on epistemological understanding  CITATION  has identified three broad levels of understanding  absolutist an absolute  objective truth can be determined  multiplist subjectivity of interpretation and judgment is recognized and given priority  and evaluativist subjectivity is recognized but does not preclude evaluation and judgment of conflicting interpretations
+the latter levels become more prevalent with increasing age  and more educated individuals tend to fall more often into the latter categories  CITATION
+these different levels of understanding regarding the nature of knowing and certainty  we propose  are implicated in the education difference in juror behavior  and similarly may have implications for the ways in which jurors talk to one another and hence conduct their decision-making task
+specifically  we predict that the absolutist conception of knowledge as certain and objectively knowable works against execution of the theory evidence coordination entailed in the juror task
+the multiplist or relativist conception of knowledge as entirely subjective is more open to examination from multiple perspectives  yet omits the judgmental component characteristic of the evaluativist conception  in which multiple perspectives can be compared and evaluated in a framework of argument and evidence

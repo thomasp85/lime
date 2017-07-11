@@ -1,0 +1,48 @@
+### abstract ###
+The key approaches for machine learning, especially learning in unknown probabilistic environments are new representations and computation mechanisms
+In this paper, a novel quantum reinforcement learning (QRL) method is proposed by combining quantum theory and reinforcement learning (RL)
+Inspired by the state superposition principle and quantum parallelism, a framework of value updating algorithm is introduced
+The state (action) in traditional RL is identified as the eigen state (eigen action) in QRL
+The state (action) set can be represented with a quantum superposition state and the eigen state (eigen action) can be obtained by randomly observing the simulated quantum state according to the collapse postulate of quantum measurement
+The probability of the eigen action is determined by the probability amplitude, which is parallelly updated according to rewards
+Some related characteristics of QRL such as convergence, optimality and balancing between exploration and exploitation are also analyzed, which shows that this approach makes a good tradeoff between exploration and exploitation using the probability amplitude and can speed up learning through the quantum parallelism
+To evaluate the performance and practicability of QRL, several simulated experiments are given and the results demonstrate the effectiveness and superiority of QRL algorithm for some complex problems
+The present work is also an effective exploration on the application of quantum computation to artificial intelligence
+### introduction ###
+\PARstart{L}{earning} methods are generally classified into supervised, unsupervised and  reinforcement learning  (RL)
+Supervised learning requires explicit feedback provided by input-output pairs and gives a map from inputs to outputs
+Unsupervised learning only processes on the input data
+In contrast, RL uses a scalar value named  reward  to evaluate the input-output pairs and learns a mapping from  states  to  actions  by interaction with the environment through trial-and-error
+Since 1980s, RL has become an important approach to machine learning  CITATION - CITATION , and is widely used in artificial intelligence, especially in robotics  CITATION - CITATION ,  CITATION , due to its good performance of on-line adaptation and powerful learning ability to complex nonlinear systems
+However there are still some difficult problems in practical applications
+One problem is the exploration strategy, which contributes a lot to better balancing of  exploration  (trying previously unexplored strategies to find better policy) and  exploitation  (taking the most advantage of the experienced knowledge)
+The other is its slow learning speed, especially for the complex problems sometimes known as ``the curse of dimensionality" when the state-action space becomes huge and the number of parameters to be learned grows exponentially with its dimension
+To combat those problems, many methods have been proposed in recent years
+Temporal abstraction and decomposition methods have been explored to solve such problems as RL and dynamic programming (DP) to speed up learning  CITATION - CITATION
+Different kinds of learning paradigms are combined to optimize RL
+For example, Smith  CITATION  presented a new model for representation and generalization in model-less RL based on the self-organizing map (SOM) and standard Q-learning
+The adaptation of Watkins' Q-learning with fuzzy inference systems for problems with large state-action spaces or with continuous state spaces is also proposed  CITATION ,  CITATION ,  CITATION ,  CITATION
+Many specific improvements are also implemented to modify related RL methods in practice  CITATION ,  CITATION ,  CITATION ,  CITATION ,  CITATION ,  CITATION
+In spite of all these attempts more work is needed to achieve satisfactory successes and new ideas are necessary to explore more effective representation methods and learning mechanisms
+In this paper, we explore to overcome some difficulties in RL using quantum theory and propose a novel quantum reinforcement learning method
+Quantum information processing is a rapidly developing field
+Some results have shown that quantum computation can more efficiently solve some difficult problems than the classical counterpart
+Two important quantum algorithms, the Shor algorithm  CITATION ,  CITATION  and the Grover algorithm  CITATION ,  CITATION  have been proposed in 1994 and 1996, respectively
+The Shor algorithm can give an exponential speedup for factoring large integers into prime numbers and it has been realized  CITATION  for the factorization of integer 15 using nuclear magnetic resonance (NMR)
+The Grover algorithm can achieve a square speedup over classical algorithms in unsorted database searching and its experimental implementations have also been demonstrated using NMR  CITATION - CITATION  and quantum optics  CITATION ,  CITATION  for a system with four states
+Some methods have also been explored to connect quantum computation and machine learning
+For example, the quantum computing version of artificial neural network has been studied from the pure theory to the simple simulated and experimental implementation  CITATION - CITATION
+Rigatos and Tzafestas  CITATION  used quantum computation for the parallelization of a fuzzy logic control algorithm to speed up the fuzzy inference
+Quantum or quantum-inspired evolutionary algorithms have been proposed to improve the existing evolutionary algorithms  CITATION
+Hogg and Portnov  CITATION  presented a quantum algorithm for combinatorial optimization of overconstrained satisfiability (SAT) and asymmetric travelling salesman (ATSP)
+Recently the quantum search technique has been used to dynamic programming  CITATION
+Taking advantage of quantum computation, some novel algorithms inspired by quantum characteristics will not only improve the performance of existing algorithms on traditional computers, but also promote the development of related research areas such as quantum computers and machine learning
+Considering the essence of computation and algorithms, Dong and his co-workers  CITATION  have presented the concept of  quantum reinforcement learning  (QRL) inspired by the state superposition principle and quantum parallelism
+Following this concept, we in this paper give a formal quantum reinforcement learning algorithm framework and specifically demonstrate the advantages of QRL for speeding up learning and obtaining a good tradeoff between exploration and exploitation of RL through simulated experiments and some related discussions
+This paper is organized as follows
+Section II contains the prerequisite and problem description of standard reinforcement learning, quantum computation and related quantum gates
+In Section III, quantum reinforcement learning is introduced systematically, where the state (action) space is represented with the quantum state, the exploration strategy based on the collapse postulate is achieved and a novel QRL algorithm is proposed specifically
+Section IV analyzes related characteristics of QRL such as the convergence, optimality and the balancing between exploration and exploitation
+Section V describes the simulated experiments and the results demonstrate the effectiveness and superiority of QRL algorithm
+In Section VI, we briefly discuss some related problems of QRL for future work
+Concluding remarks are given in section VII

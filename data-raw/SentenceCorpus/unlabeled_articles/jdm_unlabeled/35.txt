@@ -1,0 +1,40 @@
+### abstract ###
+this study directly tests the hypothesis that  at least within the domains of food and drink for americans  the judgment of naturalness has more to do with the history of an object  that is the processes that it has undergone  as opposed to its material content
+individuals rate the naturalness and acceptability of a natural entity water or tomato paste  that same entity with a first transformation in which a natural substance is added or some part removed  and then a second transformation in which the natural additive is removed or the removed part is replaced
+the twice transformed entity is stipulated to be identical to the original natural entity  yet it is rated much less natural and less acceptable
+it differs from the original entity only in its history the reversed processes it has experienced
+the twice transformed entity is also rated as less natural than the once-transformed entity  even though the former is identical to the original natural entity  and the latter is not
+therefore  naturalness depends heavily on the process-history of an entity
+### introduction ###
+ natural  is an attribute that seems to generally improve the perception of the entity to which it is applied
+this may be a manifestation of what kellert and wilson have described as  biophilia   an innate desire for the experience of the human ancestral environment  CITATION
+natural foods are generally considered more desirable  and worth more  than corresponding  non-natural    artificial  or  processed  alternatives  CITATION
+this is perhaps most obvious in the food domain  but natural preference extends to other entities  including fabrics  medicines in some cases  and environments
+the appeal of  natural  may be universal or almost universal  in some domains
+there is direct evidence for its appeal in western cultures in the food domain
+for example  in five european countries and the united states  free associations to the word  natural  are almost entirely positive  CITATION
+there has been some attention to matters related to  natural  in the psychology and risk literatures
+much of this has been motivated by opposition to genetic engineering  particularly of foods
+naturalness  or perception of naturalness  has been identified in a number of lines of research  much of it based on the framings of risk and toxins provided by slovic  CITATION
+psychometric studies on the attributes of varied technologies confirm that a two-dimensional description of familiarity and dread account for much of the variation in response to food risks  CITATION   and there are indications that some of the opposition to technologies are based on fundamental concerns about the propriety and dangers of tampering with nature  CITATION
+the focus of the literature has been on public assessment of health risks  and in this regard  there has been appropriate concern for the value of education of the public and involvement of the public in decision making  and understanding reasons for public distrust of relevant government and industry statements and regulations  CITATION
+there has also been interest in identifying public attitudes to technology and more broadly  the natural world  that might predict which individuals are most opposed to modification of foods  CITATION
+there are two types of justifications for  natural preference   instrumental and ideational  CITATION
+instrumental reasons refer to specific advantages of natural entities  they are more attractive appealing  healthier  and or kinder to the environment
+it is this type of justification that has been the focus of most past research
+ideational reasons come down to the claim that natural is inherently better  in moral and or aesthetic senses
+we have found that although americans usually justify their natural preference in instrumental terms  when these are neutralized for example  by the claim that for a particular comparison  the natural and non-natural entities are chemically identical  natural preference usually remains substantially intact  CITATION
+when challenged on their instrumental accounts  many informants acknowledge that natural is  just better
+    an analysis of the properties of the concept  natural  for lay americans suggests that naturalness is relatively uncompromised by mixing of like natural entities  or changes in physical state such as freezing or crushing  CITATION
+on the other hand  changes in substance  as by boiling or additions or subtractions of entities changes naturalness substantially
+when something is added to or subtracted from a natural entity  the violation of its naturalness could result from the change in material substance  and or the process of intervention
+there are suggestions that process may be more important than change in content
+domestication  which involves major changes in substance  violates naturalness less than the trivial substantial change of replacing a single gene with another
+for example  a cocker spaniel is rated as only modestly less natural than a wolf  whereas a single gene insertion replacement in a variety of species has a massive effect on naturalness  CITATION
+the gene replacement  a process that involves  direct  manipulation of the genome but minimal substantial change  has a much more destructive effect on naturalness than extensive selective breeding  which produces a much larger change in both appearance and the genome
+the idea that process is more important than content in judgments of naturalness needs further evidence and explication
+the ideal comparison not carried out in previous research involves changes that only involve process  or only content
+although it is not possible to imagine a change in content that is human-induced  but does not involve a process  it is possible to imagine action of human-caused processes  but with no change in substance
+this is accomplished if something natural or unnatural is added to a  natural  entity  and then that same additive is removed  leaving the twice processed entity chemically identical to its natural origin form
+the same can be accomplished by removal of something from a natural entity  and then having this subtracted entity replaced
+in this study  we explore judgments of naturalness  similarity  and acceptability of water and one food exemplar tomato paste which undergo this set of double manipulations addition then subtraction  or subtraction and then addition

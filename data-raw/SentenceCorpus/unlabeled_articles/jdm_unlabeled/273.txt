@@ -1,0 +1,42 @@
+### abstract ###
+by manipulating the scale in graphs  this study demonstrated a new evaluation bias caused by attribute salience in graphical representations
+that is  decompressing the graph axis scale changed the relative distance with respect to the options of a given attribute and thus changed the salience of the information in graphical representations
+experiment  NUMBER  showed that the differences in the graphical representations had a significant impact on the evaluation
+experiment  NUMBER  repeated the scale manipulation effect in a different scenario and extended it to a multi-options context
+experiment  NUMBER  disentangled the effect of scale distance manipulation from the other variables e g   scale resolution and assignment of attributes to axes and further supported the finding of experiment  NUMBER 
+these results indicated that attribute salience in graphical representations clearly affects evaluations and that graphs can be manipulated to cause very different impressions of the same data
+this finding is not consistent with the axioms of normative economic theory
+experiment  NUMBER  also tested the attribute importance hypothesis  but the evidence indicated that the participants did not regard the longer axis as the more important attribute
+finally  we related our findings to the impact of visual processing on decision making and discussed them from the perspective of two-system cognitive theory
+### introduction ###
+people often focus on a single  salient aspect of a problem and overlook the rest when making a decision
+such a limited focus can cause a bias in the decision making process and leads to results that violate the axioms of normative economic theory
+interestingly  incidental information e g   the way that preferences are elicited and the wording of the options could in some cases determine which information is perceived as salient  and thus what people would focus on in decision making situations
+evidence has indicated that the means of preference elicitation e g   choose vs reject is likely to shift the focus of decision makers
+in a hypothetical sole-custody case  shafir  CITATION  found that people who had the option to choose tended to focus on the parents' positive attributes  whereas people who were asked to reject tended to focus on the parents' negative attributes
+as a result  a preference-reversal occurs when the same enriched option was the majority choice for both choosing and rejecting
+in line with this focusing view  jones  frisch  yurak  and kim  CITATION  reported an interesting framing effect caused by the description of the options
+when the decision was described as choice e g   should i move to new york or stay in chicago
+  people paid equal attention to each of the options
+however  when the same decision was described as opportunity e g   should i move to new york
+  people focused their attention on the single option that was explicitly mentioned
+thus preference was changed when the opportunity description made the single option more salient
+levin  CITATION  and levin and gaeth  CITATION  evaluated the associative effects of various ways of framing consumer information and found that the consumers' evaluations were more favorable toward beef labeled   NUMBER  percent  lean  than to that labeled   NUMBER  percent  fat   because the information about the lean percentage was salient in the former but not in the latter
+kahneman and tversky  CITATION  found that there was a pseudo-certainty effect in a two-stage risky choice  showing that individuals tended to neglect an earlier contingency and only focus on the second contingent decision
+recently  li  su and sun  CITATION  reported a similar pseudo-immediacy effect in a two-stage intertemporal choice
+interestingly  people also tend to make biased spatial judgments as a result of focusing only on the most salient aspects of spatial stimuli  ignoring other dimensions
+for example  piaget  CITATION  found that children appeared to use only the height of a container when making volume judgments and ignored the diameter of the cylinder
+raghubir and krishna  CITATION  even found similar results with adults
+verge and bogartz  CITATION  asked children to adjust a square to match the area of a rectangle and found that the majority of children tended to equate the side of the square with either the width or the height of the rectangle and neglect the other relevant dimension
+similarly  raghubir and krishna  CITATION  found that people often use the direct distance between the endpoints of a nonstraight path as a proxy for distance judgment  with little regard for the path configuration
+in a recent study  this direct distance bias was even able to be found in a real stock market situation  in which the information was presented using graphs
+the stocks with the higher run lengths were often perceived as riskier  CITATION
+since people often focus on the most salient aspects in spatial judgments and tend to be biased by the focus of attention in choice  as reviewed above  we conjectured that the focusing bias would also appear in decision making problems presented with graphs  if we manipulated the graphical representations of the options
+in order to appreciate the significance of this manipulation  see the scholarship problem in figures  NUMBER  and  NUMBER   in which the same information is provided in each figure  but the salience of the information in the spatial graphical representation differs as a function of the scale employed in each of the graphs
+that is  the waiting time attribute appears to be relatively salient in figure  NUMBER   whereas the money amount attribute appears to be relatively salient in figure  NUMBER 
+imagine that  you applied for a scholarship
+ two types of scholarships a  b were presented with graphs involving two attributes money amounts and waiting time
+  obviously  you would be glad if you could get a scholarship with less waiting time but more money
+on the basis of the following data  please indicate your preference strength on a  NUMBER -point scale ranging from  NUMBER  not at all to  NUMBER  extremely for each type of scholarship
+we hypothesized that the evaluation of the two types would be affected by the scale employed in the graphs  since people tend to focus on the salient attribute
+specifically  the preference strength for type a would be higher in participants who saw figure  NUMBER  than in those who saw figure  NUMBER   but the reverse would be true for type b

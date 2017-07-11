@@ -1,0 +1,26 @@
+### abstract ###
+AIMX In this paper we derive the equations for Loop Corrected Belief Propagation on a continuous variable Gaussian model
+BASE Using the exactness of the averages for belief propagation for Gaussian models, a  different way of obtaining the covariances is found,  based on Belief Propagation on cavity graphs
+OWNX We discuss the relation of this  loop correction algorithm to Expectation Propagation  algorithms for the case in which the model is no longer  Gaussian, but slightly perturbed by nonlinear terms
+### introduction ###
+MISC Message passing techniques in graphical models allow for the computation of (approximate)  marginal probabilities in a time interval scaling polynomially in the  model size
+MISC Their discovery has consequently revolutionized several  fields of applications in the past years, of which error correcting codes and vision are probably the most prominent examples
+MISC In many cases, the corresponding graphs are loopy, implying either that the error resulting from the application of loopy belief propagation (BP) is negligible for the particular model, or it  can be tolerated for the particular purpose BP serves
+MISC In other cases  more sophisticated refinements of BP are necessary, taking into account (part of) the loop errors
+MISC Finding the optimal treatment of these ``loop errors''  motivates an active field of research, in which  different solutions applying to different model classes are developed
+MISC For models involving many short loops,  like on regular lattices, CVM type approaches work well  CITATION , or tree EP approaches  CITATION
+MISC The latter may also be  applied to correct for an incidental large loop
+MISC Unifying frameworks like the Region graphs of  CITATION   lead to general strategies for selecting the basic clusters underlying such approaches for general model classes
+MISC A recent analysis has shown that the local update equations of BP may be interpreted as the zero order term of an expansion in ``cavity connected correlations''
+MISC These quantities are parameterizations of the ``cavity distributions'',  i e , the  distribution over neighbor variables of a central variable which has been removed from the graph
+MISC The Bethe approximation and BP are recovered when this  cavity distribution is assumed to factorize, whereas the first order correction to the local update equations is obtained when one takes into account the pair cumulants  CITATION
+MISC Estimation of these pair cumulants is possible with extra runs of BP, allowing for new polynomial time algorithms, reducing errors to order  SYMBOL   when applying algorithms of which running time scales with an extra factor  of  SYMBOL   CITATION
+MISC Although this scaling seems heavy, the large benefit of the approach is that it does not require selection of basic clusters or underlying  tree-structures, since it takes into account the effect of all loops that contribute to nontrivial correlations in the cavity distribution at once
+MISC The above ``loop correction''  strategy is applicable in the class of models where a perturbative expansion around the Bethe approximation makes sense, i e , in models with large loops and relatively weak interactions
+MISC The principal requirement  is that the magnitude of pair variable cumulants of cavity distributions is an order smaller than the  single variable cumulants, and third order cumulants are even smaller, etc
+MISC However, heuristics based on the strategy allow for other good algorithms  performing well outside these parameter regimes  CITATION
+MISC So far the approach has been developed for discrete variable models on a more abstract  CITATION  versus practical level  CITATION
+AIMX In this paper we apply the idea to graphical models for continuous variables
+OWNX We derive the loop corrected belief propagation equations  for simple tractable Gaussian models,  yielding a message passing scheme that, besides the correct average marginals, also yields the correct variances
+OWNX Besides that we discuss some approaches potentially  applicable to cases in which extra function approximations are necessary,  and the relation with expectation propagation
+BASE A by-product of our loop corrected belief propagation equations is an algorithm that calculates exact covariance matrices for Gaussian models like the one discussed in  CITATION , but without explicitly using linear response

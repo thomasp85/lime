@@ -1,0 +1,77 @@
+### abstract ###
+Many AI researchers and cognitive scientists have argued that analogy is the core of cognition
+The most influential work on computational modeling of analogy-making is Structure Mapping Theory (SMT) and its implementation in the Structure Mapping Engine (SME)
+A limitation of SME is the requirement for complex hand-coded representations
+We introduce the Latent Relation Mapping Engine (LRME), which combines ideas from SME and Latent Relational Analysis (LRA) in order to remove the requirement for hand-coded representations
+LRME builds analogical mappings between lists of words, using a large corpus of raw text to automatically discover the semantic relations among the words
+We evaluate LRME on a set of twenty analogical mapping problems, ten based on scientific analogies and ten based on common metaphors
+LRME achieves human-level performance on the twenty problems
+We compare LRME with a variety of alternative approaches and find that they are not able to reach the same level of performance
+### introduction ###
+When we are faced with a problem, we try to recall similar problems that we have faced in the past, so that we can transfer our knowledge from past experience to the current problem
+We make an analogy between the past situation and the current situation, and we use the analogy to transfer knowledge \shortcite{gentner83,minsky86,holyoak95,hofstadter01,hawkins04}
+In his survey of the computational modeling of analogy-making, French  CITATION  cites Structure Mapping Theory (SMT) \shortcite{gentner83} and its implementation in the Structure Mapping Engine (SME)  CITATION  as the most influential work on modeling of analogy-making
+In SME, an analogical mapping  SYMBOL  is from a source  SYMBOL  to a target  SYMBOL
+The source is more familiar, more known, or more concrete, whereas the target is relatively unfamiliar, unknown, or abstract
+The analogical mapping is used to transfer knowledge from the source to the target
+Gentner  CITATION  argues that there are two kinds of similarity, attributional similarity and relational similarity
+The distinction between attributes and relations may be understood in terms of predicate logic
+An attribute is a predicate with one argument, such as {large}( SYMBOL ), meaning  SYMBOL  is large
+A relation is a predicate with two or more arguments, such as {collides\_with}( SYMBOL ), meaning  SYMBOL  collides with  SYMBOL
+The Structure Mapping Engine prefers mappings based on relational similarity over mappings based on attributional similarity \shortcite{falkenhainer89}
+For example, SME is able to build a mapping from a representation of the solar system (the source) to a representation of the Rutherford-Bohr model of the atom (the target)
+The sun is mapped to the nucleus, planets are mapped to electrons, and mass is mapped to charge
+Note that this mapping emphasizes relational similarity
+The sun and the nucleus are very different in terms of their attributes: the sun is very large and the nucleus is very small
+Likewise, planets and electrons have little attributional similarity
+On the other hand, planets revolve around the sun like electrons revolve around the nucleus
+The mass of the sun attracts the mass of the planets like the charge of the nucleus attracts the charge of the electrons
+Gentner  CITATION  provides evidence that children rely primarily on attributional similarity for mapping, gradually switching over to relational similarity as they mature
+She uses the terms  mere appearance  to refer to mapping based mostly on attributional similarity,  analogy  to refer to mapping based mostly on relational similarity, and  literal similarity  to refer to a mixture of attributional and relational similarity
+Since we use analogical mappings to solve problems and make predictions, we should focus on structure, especially causal relations, and look beyond the surface attributes of things \shortcite{gentner83}
+The analogy between the solar system and the Rutherford-Bohr model of the atom illustrates the importance of going beyond mere appearance, to the underlying structures
+Figures  and  show the LISP representations used by SME as input for the analogy between the solar system and the atom \shortcite{falkenhainer89}
+Chalmers, French, and Hofstadter  CITATION  criticize SME's requirement for complex hand-coded representations
+They argue that most of the hard work is done by the human who creates these high-level hand-coded representations, rather than by SME }  }  Gentner, Forbus, and their colleagues have attempted to avoid hand-coding in their recent work with SME
+The CogSketch system can generate LISP representations from simple sketches  CITATION
+The Gizmo system can generate LISP representations from qualitative physics models  CITATION
+The Learning Reader system can generate LISP representations from natural language text \shortcite{forbus07}
+These systems do not require LISP input
+However, the CogSketch user interface requires the person who draws the sketch to identify the basic components in the sketch and hand-label them with terms from a knowledge base derived from OpenCyc
+Forbus et al CITATION  note that OpenCyc contains more than 58,000 hand-coded concepts, and they have added further hand-coded concepts to OpenCyc, in order to support CogSketch
+The Gizmo system requires the user to hand-code a physical model, using the methods of qualitative physics \shortcite{yan05}
+Learning Reader uses more than 28,000 phrasal patterns, which were derived from ResearchCyc \shortcite{forbus07}
+It is evident that SME still requires substantial hand-coded knowledge
+The work we present in this paper is an effort to avoid complex hand-coded representations
+Our approach is to combine ideas from SME \shortcite{falkenhainer89} and Latent Relational Analysis (LRA) \shortcite{turney06}
+We call the resulting algorithm the Latent Relation Mapping Engine (LRME)
+We represent the semantic relation between two terms using a vector, in which the elements are derived from pattern frequencies in a large corpus of raw text
+Because the semantic relations are automatically derived from a corpus, LRME does not require hand-coded representations of relations
+It only needs a list of terms from the source and a list of terms from the target
+Given these two lists, LRME uses the corpus to build representations of the relations among the terms, and then it constructs a mapping between the two lists
+Tables  and  show the input and output of LRME for the analogy between the solar system and the Ruther\-ford-Bohr model of the atom
+Although some human effort is involved in constructing the input lists, it is considerably less effort than SME requires for its input (contrast Figures  and  with Table~) }  }  Scientific analogies, such as the analogy between the solar system and the Rutherford-Bohr model of the atom, may seem esoteric, but we believe analogy-making is ubiquitous in our daily lives
+A potential practical application for this work is the task of identifying semantic roles \shortcite{gildea02}
+Since roles are relations, not attributes, it is appropriate to treat semantic role labeling as an analogical mapping problem
+For example, the {Judgement} semantic frame contains semantic roles such as {judge}, {evaluee}, and {reason}, and the {Statement} frame contains roles such as {speaker}, {addressee}, {message}, {topic}, and {medium} \shortcite{gildea02}
+The task of identifying semantic roles is to automatically label sentences with their roles, as in the following examples \shortcite{gildea02}:     If we have a training set of labeled sentences and a testing set of unlabeled sentences, then we may view the task of labeling the testing sentences as a problem of creating analogical mappings between the training sentences (sources) and the testing sentences (targets)
+Table~ shows how ``She blames the Government for failing to do enough to help
+'' might be mapped to ``They blame the company for polluting the environment
+'' Once a mapping has been found, we can transfer knowledge, in the form of semantic role labels, from the source to the target }  In Section~, we briefly discuss the hypotheses behind the design of LRME
+We then precisely define the task that is performed by LRME, a specific form of analogical mapping, in Section~
+LRME builds on Latent Relational Analysis (LRA), hence we summarize LRA in Section~
+We discuss potential applications of LRME in Section~
+To evaluate LRME, we created twenty analogical mapping problems, ten science analogy problems \shortcite{holyoak95} and ten common metaphor problems \shortcite{lakoff80}
+Table~ is one of the science analogy problems
+Our intended solution is given in Table~
+To validate our intended solutions, we gave our colleagues the lists of terms (as in Table~) and asked them to generate mappings between the lists
+Section~ presents the results of this experiment
+Across the twenty problems, the average agreement with our intended solutions (as in Table~) was 87 6\%
+The LRME algorithm is outlined in Section~, along with its evaluation on the twenty mapping problems
+LRME achieves an accuracy of 91 5\%
+The difference between this performance and the human average of 87 6\% is not statistically significant
+Section~ examines a variety of alternative approaches to the analogy mapping task
+The best approach achieves an accuracy of 76 8\%, but this approach requires hand-coded part-of-speech tags
+This performance is significantly below LRME and human performance
+In Section~, we discuss some questions that are raised by the results in the preceding sections
+Related work is described in Section~, future work and limitations are considered in Section~, and we conclude in Section~

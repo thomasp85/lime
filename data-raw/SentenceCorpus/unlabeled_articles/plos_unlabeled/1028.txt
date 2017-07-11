@@ -1,0 +1,65 @@
+### abstract ###
+The process of assigning a finite set of tags or labels to a collection of observations, subject to side conditions, is notable for its computational complexity.
+This labeling paradigm is of theoretical and practical relevance to a wide range of biological applications, including the analysis of data from DNA microarrays, metabolomics experiments, and biomolecular nuclear magnetic resonance spectroscopy.
+We present a novel algorithm, called Probabilistic Interaction Network of Evidence, that achieves robust, unsupervised probabilistic labeling of data.
+The computational core of PINE uses estimates of evidence derived from empirical distributions of previously observed data, along with consistency measures, to drive a fictitious system M with Hamiltonian H to a quasi-stationary state that produces probabilistic label assignments for relevant subsets of the data.
+We demonstrate the successful application of PINE to a key task in protein NMR spectroscopy: that of converting peak lists extracted from various NMR experiments into assignments associated with probabilities for their correctness.
+This application, called PINE-NMR, is available from a freely accessible computer server.
+The PINE-NMR server accepts as input the sequence of the protein plus user-specified combinations of data corresponding to an extensive list of NMR experiments; it provides as output a probabilistic assignment of NMR signals to sequence-specific backbone and aliphatic side chain atoms plus a probabilistic determination of the protein secondary structure.
+PINE-NMR can accommodate prior information about assignments or stable isotope labeling schemes.
+As part of the analysis, PINE-NMR identifies, verifies, and rectifies problems related to chemical shift referencing or erroneous input data.
+PINE-NMR achieves robust and consistent results that have been shown to be effective in subsequent steps of NMR structure determination.
+### introduction ###
+Labeling a set of fixed data with another representative set is the generic description for a large family of problems.
+This family includes clustering and dimensionality reduction, an approach in which the original dataset is represented by a set of typically far lower dimension.
+The representative set, often the parameter vector that signifies a set of data points, can be simply the cluster mean or may include additional parameters, such as the cluster diameter.
+The labeling problem is important, because it is encountered in many applications involving data analysis, particularly where prior knowledge of the probability distributions is incomplete or lacking.
+A challenging instance of the labeling problem arises naturally in nuclear magnetic resonance spectroscopy, which along with X-ray crystallography is one of the two major methods for determining protein structures.
+Although NMR spectroscopy is not as highly automated as the more mature X-ray field, it has advantages over X-ray crystallography for structural studies of small proteins that are partially disordered, exist in multiple stable conformations in solution, exhibit weak interactions with ligands, or fail to crystallize readily CITATION, provided that the NMR signals can be assigned to specific atoms in the covalent structure of the protein.
+The labeling problem known as the assignment problem, has been one of the major bottlenecks in protein NMR spectroscopy.
+Protein NMR structure determination generally proceeds through a series of steps.
+The usual approach is first to collect data used in determining backbone and aliphatic side chain assignments.
+These assignments are then used to interpret data collected in order to determine interatomic or torsion angular constraints used in structure determination.
+The front-end labeling process associates one or more NMR parameters with a physical entity ; the back-end labeling process associates NMR parameters with constraints that define or refine conformational states.
+In reality, the distinction between front-end and back-end is artificial.
+Strategies have been developed that use NOESY data for assignments CITATION, CITATION or for direct structure determination without assignments CITATION.
+In addition, as demonstrated recently, structures of small proteins can be determined directly from assigned chemical shifts by a process that largely bypasses the back-end CITATION, CITATION.
+Ideally, all available data should be used in a unified process that yields the best set of assignments and best structure consistent with experiment and with a probabilistic analysis that provides levels of confidence in the assignments and atomic coordinates.
+The usual approach to the solution of the problem of assigning labels to subsets of peaks assembled from multiple sets of noisy spectra is to collect a number of multidimensional, multinuclear datasets.
+After converting the time domain data to frequency domain spectra by Fourier transformation, peaks are picked from each spectrum for analysis.
+Methods have been developed for automated peak picking or global analysis of spectra to yield models consisting of peaks with known intensity, frequency, phase, and decay rate or linewidth CITATION, CITATION.
+In the ideal case, the resulting peak-lists identify combinatorial subsets of two or more covalently bonded nuclei by their respective frequencies.
+These subsets must be assembled in a coherent way to best correspond to specific atoms in the amino acid sequence of the protein.
+In practice, peak lists do not report on all nuclei, and noise peaks are commonplace.
+In the examples analyzed here, the level of missing peaks varied between 9 percent and 38 percent, while the level of noise peaks varied between 10 percent and 135 percent.
+The large number of false positives as well as false negatives typically present in the data result in an explosion of ambiguities during the assembly of subsets.
+A common feature among prior approaches has been to divide the assignment of labels into a sequence of discrete steps and to apply varying methods at each step.
+These steps typically include an assignment step CITATION CITATION, a secondary structure determination step CITATION CITATION, and a validation step CITATION.
+The validation step, in which a discrete reliability measure indicates the possible presence of outliers, misassignments, or abnormal backbone chemical shift values, is sometimes omitted.
+Other steps can be added, or steps can be split further into simpler tasks.
+For example, backbone and side chain assignments frequently are carried out sequentially as separate processes.
+Some approaches to sequence-specific assignment rely on a substantially reduced combinatorial set of input data by assuming a prior subset selection, e.g., prior spin system assembly CITATION, CITATION.
+The specification of conformational states can be added as yet another labeling step.
+For example, backbone dihedral angles can be specified on a grid as determined from chemical shifts CITATION, coupling constants and/or NOEs CITATION, or reduced dipolar couplings CITATION .
+The NMR assignment problem has been highly researched, and is most naturally formulated as a combinatorial optimization problem, which can be subsequently solved using a variety of algorithms.
+A 2004 review listed on the order of 100 algorithms and software packages CITATION, and additional approaches are given in a 2008 review CITATION.
+Prior methods have included stochastic approaches, such as simulated annealing/Monte Carlo algorithms CITATION CITATION, genetic algorithms CITATION, exhaustive search algorithms CITATION, CITATION CITATION, heuristic comparison to predicted chemical shifts derived from homologous proteins CITATION, heuristic best-first algorithms CITATION CITATION, and constraint-based expert system that use heuristic best-first mapping algorithm CITATION.
+Of these, the most established, as judged from BMRB entries that cite the assignment software packages used, are Autoassign CITATION and GARANT CITATION .
+Similarly, a wide range of methods have been used to predict the protein secondary structural elements that play an important role in classifying proteins CITATION, CITATION.
+Prior approaches to assigning a secondary structure label to each residue of the protein have included the method CITATION, the chemical shift index method CITATION, a database approach CITATION, an empirical probability-based method CITATION, a supervised machine learning approach CITATION, and a probabilistic approach that utilizes a local statistical potential to combine predictive potentials derived from the sequence and chemical shifts CITATION.
+Recently, a fully automated approach to protein structure determination, FLYA, has been described that pipelines the standard steps from NMR spectra to structure and utilizes GARANT as the assignment engine CITATION.
+The FLYA approach demonstrates the benefits of making use of information from each step in an iterative fashion to achieve a high number of backbone and side chain assignments.
+Our goal is to implement a comprehensive approach that utilizes a network model rather than a pipeline model and relies on a probabilistic analysis for the results.
+We reformulate the combinatorial optimization problem whereby each labeling configuration in the ensemble has an associated but unknown non-vanishing probability.
+The PINE algorithm enables full integration of information from disparate steps to achieve a probabilistic analysis.
+The use of probabilities provides the means for sharing and refining incomplete information among the current standard steps, or steps introduced by future developments.
+In addition, probabilistic analysis deals directly with the multiple minima problem that arises in cases where the data does not support a single optimal and self-consistent state.
+A common example is a protein that populates two stable conformational states.
+The PINE-NMR package described here represents a first step in approaching the goal of a full probabilistic approach to protein NMR spectroscopy.
+PINE-NMR accepts as input the sequence of the protein plus peak lists derived from one or more NMR experiments chosen by the user from an extensive list of possibilities.
+PINE-NMR provides as output a probabilistic assignment of backbone and aliphatic side chain chemical shifts and the secondary structure of the protein.
+At the same time, it identifies, verifies, and, if needed, rectifies, problems related to chemical shift referencing or the consistency of assignments with determined secondary structure.
+PINE-NMR can make use of prior information derived independently by other means, such as selective labeling patterns or spin system assignments.
+In principle, the networked model of PINE-NMR is extensible in both directions within the pipeline for protein structure determination : it can be combined with adaptive data collection at the front or with three-dimensional structure determination at the back end.
+Such extensions should lead to a rapid and fully automated approach to NMR structure determination that would yield the structure most consistent with all available data and with confidence limits on atom positions explicitly represented.
+In addition to its application to NMR spectroscopy, the PINE approach should be applicable to the unbiased classification of biological data in other domains of interest, such as systems biology, in which data of various types need to be integrated: genomics, proteomics, and metabolomics data collected as a function of time and environmental variables.

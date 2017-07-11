@@ -1,0 +1,52 @@
+### abstract ###
+this paper compares the behavior of individuals playing a classic two-person deterministic prisoner's dilemma pd game with choice data obtained from repeated interdependent security prisoner's dilemma games with varying probabilities of loss and the ability to learn or not learn about the actions of one's counterpart  an area of recent interest in experimental economics
+this novel data set  from a series of controlled laboratory experiments  is analyzed using bayesian hierarchical methods  the first application of such methods in this research domain
+we find that individuals are much more likely to be cooperative when payoffs are deterministic than when the outcomes are probabilistic
+a key factor explaining this difference is that subjects in a stochastic pd game respond not just to what their counterparts did but also to whether or not they suffered a loss
+these findings are interpreted in the context of behavioral theories of commitment  altruism and reciprocity
+the work provides a linkage between bayesian statistics  experimental economics  and consumer psychology
+### introduction ###
+interdependent security ids games are social multi-player games with stochastic payoffs where each player must decide whether or not to mitigate her own risks
+more specifically  each player knows that even if she fully protects herself by investing in a risk-reducing measure  she may still be subject to indirect losses by being  contaminated  by one of the other players who chose not to invest
+as heal and kunreuther  CITATION  have shown  there are a wide variety of significant current problems that fit into an ids framework ranging from investing in airline or port security  protecting oneself against disease through vaccinations  individual users incurring software security costs when connected to a network  and divisions of firms undertaking risky investments that could cause the entire firm to become insolvent or bankrupt as in the current financial crisis
+kunreuther and heal  CITATION  have shown that ids games can have either multiple nash equilibria or just a single nash equilibrium
+in a nash equilibrium both players' strategies are the best response to each other's strategies  CITATION
+this paper presents the results and analysis of controlled laboratory experiments involving two players in an ids game where there is a single nash equilibrium
+if both players invest in a risk-reducing measure  there is no chance that either will suffer a loss
+however  if either or both players do not invest in the protective measure  then there is some likelihood hence the stochastic part that both individuals will suffer a loss
+furthermore the dominant strategy of both players  if they are risk neutral i e   neither risk averse nor risk seeking  is not to invest in the protective measure  despite the fact that had they taken this step  their expected values would have been higher than if they had not
+this ids game can be viewed as a stochastic prisoner's dilemma spd game  an area of increased interest in experimental economics  CITATION
+in the standard deterministic prisoner's dilemma game  two prisoners face the dilemma of testifying for the prosecution against each other and admitting their own crime  or remaining silent  the nash equilibrium strategy is for each prisoner to testify against each other even though both would be better off if they agreed to cooperate with each other by remaining silent
+in an ids game  investing in a risk-mitigating measure is analogous to cooperating in the classic prisoner's dilemma game
+in our experiment  subjects were assigned to play one of three types of prisoner's dilemma games  i a standard deterministic prisoner's game  ii a full feedback stochastic prisoner's dilemma game based on an ids model where the players receive feedback about their counterparts' actions and payoffs each round  and iii a partial feedback stochastic prisoner's dilemma game where the players receive feedback only about their counterparts' payoffs but not their actions
+subjects were randomly paired to play ten prisoner's dilemma games of their assigned type against each other  this is called a repeated prisoner's dilemma game or a supergame
+in the deterministic prisoner's dilemma game  there is considerable evidence from controlled experiments that if players play repeated prisoner's dilemma games against each other  i e   a supergame  cooperation can emerge  even though they would be likely to defect in a single period game  CITATION
+each subject in our experiment played multiple  NUMBER - NUMBER  supergames of the same type i e   deterministic  stochastic full feedback or stochastic partial feedback with randomly chosen counterparts
+more details on our experimental design are provided in section  NUMBER 
+our interest in this research area is both substantive and methodological
+from a substantive perspective  we would like to compare the behavior of individuals in a standard deterministic prisoner's dilemma dpd multi-period supergame with their behavior in an spd supergame based on an ids model
+our interest is in determining whether stochastic payoffs weaken cooperation  and how feedback affects cooperation
+specifically  we compare behavior in a full feedback stochastic game where each player learns about both her counterpart's actions and payoffs with behavior in a partial feedback game where each player only learns about her counterpart's payoffs
+in this partial feedback game  a player may or may not be able to infer her counterpart's action based on the payoffs received by both players  and so the ability to  pin the loss  on the counterpart may be obscured
+behavior in a partial feedback game is of considerable interest today where each decision maker knows only what has happened to her but is unclear as to the cause
+in such social dilemmas each individual receives a higher payoff for making a socially defecting choice e g polluting the environment than for pursuing a socially cooperative choice no matter what the other individuals in society do
+furthermore  all individuals are better off if they all cooperate than if they all defect  CITATION
+from a methodological perspective  we utilize a bayesian hierarchical model to understand more fully the factors that influence individuals to invest in socially beneficial protective measures over time  and whether there are significant differences in behavior when payoffs are deterministic versus stochastic
+to the best of our knowledge this is the first time that bayesian hierarchical methods have been applied to the analysis of repeated prisoner's dilemma game experiments
+CITATION  from a scientific perspective such an analysis enables us to understand more fully how different treatments in a controlled experimental design affect the distribution of individual-level parameters  e g   an individual's likelihood of retaliating against a counterpart
+there are several attractive features of utilizing bayesian hierarchical models for analyzing repeated prisoner's dilemma game experiments
+they include the ability to perform exact small-sample inference where sample sizes are likely to be small  to incorporate within-person dependence with repeated-measures data  and to understand drivers of heterogeneity by tying in covariates of subjects and the context of their decisions to their individual-level parameters
+these are classic advantages of bayesian methods  CITATION  and ones that are particularly salient and relevant to the analysis of repeated prisoner's dilemma game experiments
+to foreshadow the results of our detailed analysis  we summarize the key findings of the paper as follows
+in a two person prisoner's dilemma game  individuals are much more likely to be cooperative when payoffs are deterministic the dpd game than in the spd games where the outcomes are stochastic
+a key factor behind this difference is that subjects in the spd games respond not just to what their counterparts did  but also to whether or not they suffered a loss
+when a person does not invest but his or her counterpart does  the individual is less likely to reciprocate the counterpart's investment in the next period if he or she does not suffer a loss
+in comparing the two aforementioned spd games  one with full feedback on the counterpart's behavior and the other with only partial feedback on the counterpart's behavior  the overall amount of cooperation investment was similar
+however  we found that the pattern of cooperation was different in the two types of games
+in particular  when subjects in the partial feedback game could learn their counterpart's actions implicitly  they were less likely to reciprocate their counterparts' behavior than in analogous situations in the full feedback game where subjects learned their counterparts' behavior explicitly
+the remainder of the paper proceeds as follows
+section  NUMBER  provides a brief summary of theoretical and empirical studies on prisoners' and social dilemmas with a focus on recent experiments in a noisy or stochastic environment
+in section  NUMBER  we describe a general formulation for an interdependent security ids two-player game  showing under what conditions it takes the form of a stochastic prisoner's dilemma game
+after characterizing our experimental design for a set of controlled laboratory experiments section  NUMBER   we then specify a set of between-treatment hypotheses and test them using regression analysis section  NUMBER 
+in section  NUMBER   we build a bayesian hierarchical model that enables us to test hypotheses with respect to within-subject behavior
+section  NUMBER  summarizes the findings  discusses their prescriptive implications and suggests areas for future research

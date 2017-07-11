@@ -1,0 +1,40 @@
+### abstract ###
+taxation policy is driven by many factors  including public opinion  but little research has examined the strength and stability of the public's taxation preferences
+this paper demonstrates one way in which preferences for progressiveness depend on the framing of the question asked
+participants indicated how they would share a fixed tax burden between two individuals who earned different amounts of money  either by adjusting the amount of tax paid by the two individuals  or by adjusting the amount of post-tax income retained
+the units in which tax was described - amount of money or percentage tax rate - were manipulated orthogonally
+there was a strong metric effect  participants favored progressiveness more when tax was described as a percentage rather than amount
+however  there was also a clear interaction  for amounts  participants favored progressiveness significantly more when considering post-tax money retained rather than tax paid  for percentages  no such effect was found
+### introduction ###
+progressiveness in tax is a topical issue
+recently in the united states and united kingdom there has been a move to increase the progressiveness of taxation  one of u s president obama's campaign pledges was to increase the highest rate of income tax to just under  NUMBER  percent 
+similarly  the united kingdom government has recently announced it will introduce a new higher tax band of  NUMBER  percent  for people earning over   xa NUMBER   NUMBER   NUMBER    NUMBER   NUMBER  a year
+conversely  several countries  like russia  ukraine  and the baltic states  have in recent years introduced versions of flat taxes  where all citizens pay the same proportion of their income no matter what its absolute value
+CITATION the structuring of income tax systems generally has multiple - often conflicting - goals
+the most obvious goal is raising revenue to spend on public services  balancing the potential extra revenue taken by high tax rates with the disincentive to work and temptation to illegally evade taxes that high tax rates induce
+another key potential of taxation is distributional  using  for example  utilitarian or egalitarian criteria to redistribute wealth between the rich and poor  CITATION
+although the issue provokes strong opinions about the optimal progressiveness of a tax regime  one area that is often ignored is the extent to which the public believe progressive taxation is fair and appropriate  and the ways in which psychological mechanisms for representing fairness affect tax progressiveness preferences
+existing data give a mixed picture
+generally  when asked whether those on higher incomes should pay a higher marginal rate of tax  people agree  CITATION
+however  people's progressiveness preferences appear to depend on the way in which questions are posed
+for example  roberts  hite  and bradley  CITATION  found that when participants were asked abstract questions about progressiveness - in the form of  are progressive tax rates more or less fair than flat tax rates  - students with some tax education indicated strongly that progressive taxation was more fair  in line with other studies
+however  when asked concrete questions - how much more tax somebody earning   NUMBER   NUMBER  should pay relative to somebody earning   NUMBER   NUMBER  - the same participants indicated a preference for flat taxes  in this case the dominant response being that the former should pay double
+on the other hand  edlund  CITATION  showed that swedish taxpayers favored progressiveness for both abstract and concrete questions  a finding he attributed to swedes' better awareness of the welfare state and other provisions paid for by taxation
+similarly  lewis  CITATION  found that participants who gave preferences for taxation at different incomes favored progressiveness
+this inconsistency is perhaps not surprising given the large body of work that shows that preferences are often unstable  and the way in which options are framed can affect people's preferences in a large number of areas  CITATION
+framing effects have been specifically found in tax preferences  CITATION
+for example  mccaffery and baron  CITATION  demonstrated several framing effects in participants who chose tax regimes for different family situations
+among other things  they found participants indicated that regimes in which the taxation system was described in terms of tax bonuses for certain groups rather than tax penalties for other groups were fairer  even though the situations were numerically identical
+they also found what they called a  metric  effect in which participants favored more progressive taxation when taxation levels were described as percentages of gross income rather than absolute number of dollars
+finally  they found a modest status quo effect  participants were drawn towards the initial taxation structure
+one intriguing finding of roberts et al CITATION  was that participants were less inconsistent between abstract and concrete questions when concrete questions were framed in terms of the amount of money left after tax rather than the amount of tax paid
+furthermore  the authors note in passing that their pattern of results  indicates that changing the reference point from taxes to residual income produced a shift away from regressive taxes and toward flat and progressive taxes  p  NUMBER   although the assertion was not tested statistically
+this framing effect deserves further investigation  for at least two reasons
+first  although asking people about the amount of tax that should be paid by people on different incomes seems the most direct way to assess preferences  asking people about money left after tax may be more grounded in people's experience of paying tax  and hence have a greater stability and validity  it is likely that people are more able to report how much money they take home after tax - not least because that amount appears on their bank statements - than the amount of money they pay in tax in a given month
+second  psychological wellbeing appears to be associated with the - relative or absolute - amount of consumption that a person is able to do  or  crudely  the amount of money they have left after tax and other unavoidable drains on resources are met  CITATION
+this suggests that attempts to determine people's preferences for taxation should use a frame in which residual income is foregrounded
+the experiment reported here examines the effects of two variables  in a completely between-subjects factorial design  the effect of  tax paid  versus  money left  framing  and the effect of describing tax as percentages or amounts - the  metric effect  investigated by mccaffery and baron  CITATION   and interactions between the two variables
+the surface features of the task are similar to those used by roberts et al CITATION   using two taxpayers who have different gross incomes
+however  the response method is different
+in roberts et al 's paper  people were asked about ratios of taxes  in the form  if andy earns   NUMBER k and bob earns   NUMBER k  how much more tax should andy pay than bob
+   and then marking on a scale with labels of  the same amount    twice as much   and so on  which may bias people towards responding heuristically with  twice as much   the most available and justifiable ratio

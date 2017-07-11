@@ -1,0 +1,13 @@
+### abstract ###
+this study investigates the amount and valence of information selected during single item evaluation
+one hundred and thirty-five participants evaluated a cell phone by reading hypothetical customers reports
+some participants were first asked to provide a preliminary rating based on a picture of the phone and some technical specifications
+the participants who were given the customer reports only after they made a preliminary rating exhibited valence bias in their selection of customers reports
+in contrast  the participants that did not make an initial rating sought subsequent information in a more balanced  albeit still selective  manner
+the preliminary raters used the least amount of information in their final decision  resulting in faster decision times
+the study appears to support the notion that selective exposure is utilized in order to develop cognitive coherence
+### introduction ###
+in order to make accurate judgments it is critical that decision-makers limit any biased processing of evidence prior to the final choice
+yet  evidence suggests that biased processing of information frequently occurs during judgment and decision-making  CITATION
+a number of studies have demonstrated that people use both selective exposure to information  CITATION   and selective processing  CITATION  to bias their judgments toward an early favorite  before the decision is made
+CITATION  we focus on the first of these phenomena  selective exposure to information during evidence gathering

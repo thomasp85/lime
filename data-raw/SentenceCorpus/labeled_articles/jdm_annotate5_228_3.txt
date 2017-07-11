@@ -1,0 +1,41 @@
+### abstract ###
+MISC previous tests of cumulative prospect theory cpt and of the priority heuristic ph found evidence contradicting these two models of risky decision making
+MISC however, those tests were criticized because they had characteristics that might "trigger" use of other heuristics
+AIMX this paper presents new tests that avoid those characteristics
+OWNX expected values of the gambles are nearly equal in each choice
+OWNX in addition, if a person followed expected value ev, expected utility eu, cpt, or ph in these tests, she would shift her preferences in the same direction as shifts in ev or eu
+MISC in contrast, the transfer of attention exchange model tax and a similarity model predict that people will reverse preferences in the opposite direction
+CONT results contradict the ph, even when ph is modified to include a preliminary similarity evaluation using the ph parameters
+OWNX new tests of probability-consequence interaction were also conducted
+OWNX strong interactions were observed, contrary to ph
+OWNX these results add to the growing bodies of evidence showing that neither cpt nor ph is an accurate description of risky decision making
+### introduction ###
+AIMX this paper compares three models that attempt to describe risky decision making
+MISC these models are cumulative prospect theory cpt  CITATION , birnbaum's  CITATION  transfer of attention exchange model tax, and the priority heuristic ph of brandstatter, gigerenzer, and hertwig  CITATION
+MISC the ph model is based on the idea that people compare one attribute at a time, such as the minimum prizes
+MISC in addition, the similarity model of rubinstein  CITATION  as modified by leland  CITATION  is also relevant to these studies, although these studies were not designed to test that model
+MISC birnbaum  CITATION  reviewed a number of critical tests that refute any rank dependent utility rdu model  CITATION  including rank and sign-dependent utility  CITATION , cpt, and expected utility eu
+MISC birnbaum  CITATION  noted that many of the same tests that refute cpt also contradict the priority heuristic
+MISC for example, the priority heuristic predicted fewer than half of the modal choices analyzed by birnbaum  CITATION , by birnbaum  CITATION , and by birnbaum and navarrete  CITATION
+MISC some of these choices included cases where 90% or more of the participants satisfied stochastic dominance but the priority heuristic predicts indifference
+MISC in other choices, significantly more than half of the participants about 70% of undergraduates violated stochastic dominance, but the priority heuristic predicts that people should satisfy it
+MISC brandstatter, gigerenzer, and hertwig  CITATION  responded that properties of these choices may have induced people to use other heuristics drawn from a person's "adaptive toolbox"
+MISC presumably, decision makers first decide what rule to use, then they either apply that rule or choose to use another rule
+MISC the mechanism that decides what rule to use has not yet been specified; it is described instead with lists of "triggering conditions," which are estimated from data like parameters
+MISC brandstatter et al CITATION  concluded that the priority heuristic does not apply when there is a stochastic dominance relation in the choice
+MISC in addition, brandstatter et al CITATION  argued that certain choices reviewed by birnbaum  CITATION  used gambles that differed in expected value ev
+MISC brandstatter et al CITATION  presented a figure to show that the priority heuristic is not accurate when expected values evs differ, which led them to suppose that two strategies are at work, one for "easy" choices that differ in ev and one for "harder" choices where evs are nearly equal
+MISC from the data, brandstatter et al CITATION  estimated that, when the ratio of ev exceeds 2, people act as if they choose the gamble with the higher ev
+MISC brandstatter et al consider ev ratio as a proxy for the "difficulty" of a choice, but do not necessarily hold that people actually compute ratios of ev
+MISC they argued that the priority heuristic is accurate for "difficult" choices in which evs are nearly equal
+MISC however, birnbaum  CITATION  noted that ev ratios in birnbaum and navarrete  CITATION  had been inside the region where ph is supposed to apply; in that study, the priority heuristic failed to reproduce even half of the modal choices correctly
+MISC brandstatter et al CITATION  replicated part of that study and their results confirmed that the priority heuristic reproduced fewer than half of the modal choices that they chose for replication  CITATION
+MISC to account for the results, brandstatter et al noted that birnbaum and navarrete  CITATION  used many choices in which both gambles of a choice had the same probability distribution and in some choices two branches had the same probability
+MISC ph was not accurate for such choices, so brandstatter, et al CITATION  theorized that people use a "toting up" heuristic for choices in which two branches had the same probability
+MISC in some of the choices in birnbaum and navarrete  CITATION , there was a common probability-consequence branch in both choices, which was theorized to trigger editing rules and other heuristics that were called up to account for the failures of the priority heuristic
+MISC the arguments of brandstatter et al CITATION  might also provide excuses for previous failures of cpt as well
+AIMX this paper devises a new type of test that avoids the exceptions stated above
+OWNX in these tests, one alternative does not stochastically dominate the other, there are no common probability-consequence branches, probabilities of the consequences are not equal, and expected values are nearly equal
+CONT in addition, unlike previous tests, the new tests use shifts in expected value and expected utility to "help" predictions of ph and cpt
+OWNX that is, expected value and expected utility are both manipulated such that, if a person shifts his or her judgments in the same direction as the changes in eu or ev, his or her choices will appear consistent with ph and cpt
+OWNX however, the choices are designed so that the tax model with parameters typical of previous research predicts that people will shift their choices in the opposite direction of ev, eu, cpt, and ph

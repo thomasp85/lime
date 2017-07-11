@@ -1,0 +1,34 @@
+### abstract ###
+Many large-scale studies on intrinsically disordered proteins are implicitly based on the structural models deposited in the Protein Data Bank.
+Yet, the static nature of deposited models supplies little insight into variation of protein structure and function under diverse cellular and environmental conditions.
+While the computational predictability of disordered regions provides practical evidence that disorder is an intrinsic property of proteins, the robustness of disordered regions to changes in sequence or environmental conditions has not been systematically studied.
+We analyzed intrinsically disordered regions in the same or similar proteins crystallized independently and studied their sensitivity to changes in protein sequence and parameters of crystallographic experiments.
+The observed changes in the existence, position, and length of disordered regions indicate that their appearance in X-ray structures dramatically depends on changes in amino acid sequence and peculiarities of the crystallographic experiment.
+Our study also raises general questions regarding protein evolution and the regulation of protein structure, dynamics, and function via variations in cellular and environmental conditions.
+### introduction ###
+In the past decade, significant progress has been achieved in our understanding of the ubiquity and function of intrinsically disordered proteins CITATION CITATION.
+What once seemed to be a set of exceptions to the traditional structure-to-function paradigm, where every protein was believed to have unique and stable 3D structure to carry out specific function, turned into a field where computational and experimental approaches were developed and combined to accurately characterize disordered proteins CITATION, understand their function CITATION, CITATION, CITATION or mechanisms of binding CITATION CITATION, and estimate their abundance in the protein universe CITATION CITATION.
+Undoubtedly, bioinformatics analyses and methods played a significant role in this process, especially a set of predictors and statistical techniques CITATION, CITATION.
+However, despite previous success, questions can be raised about the generality of our view of disordered proteins in terms of sequence-to-structure determinants and influence of environmental conditions.
+Here, we attempt to address these questions by investigating the variability of observed disordered regions with changes in sequence and environmental conditions used for crystallization.
+Recent studies document the effects of varying environmental conditions on regions of intrinsic disorder in similar proteins.
+Zurdo et al. studied two yeast ribosomal stalk proteins, P1 and P2, which have different functional roles despite high sequence similarity and suggested that their functional differences stem from different structures CITATION.
+Although neither protein is compact in solution and possesses folded structure under physiological pH and temperature, P1 was found to be mostly disordered with low helical content, whereas P2 had significant residual structure.
+This residual structure disappeared at temperatures below 30 C, but was regained under low pH or in the presence of trifluoroethanol.
+Palaninathan et al. reported that conformational changes were observed in the tertiary and quaternary structures in the crystals of the native human transthyretin CITATION.
+At pH 4.0, TTR forms a tetramer and its crystal structure includes electron density for a functionally important EF helix-loop region.
+At pH 3.5, this region is completely disordered.
+Our search of the Protein Data Bank resulted in additional examples where slight changes in experimental conditions strongly correlated with the presence or absence of disordered regions.
+One such case is cyclophilin 40, shown in Figure 1.
+Cyp40 is one of the principal members of a family of large immunophilins found in mammals.
+The exact biological function of large immunophilins is incompletely understood, though they are believed to be strongly associated with Hsp90 and play a crucial regulatory role in the upkeep of steroid receptor activity.
+In PDB, Cyp40 is stored as 1IIP-A and 1IHG-A.
+Both structures were obtained using the vapor diffusion, hanging drop method with recorded temperature of 277K, but 1IIP-A was crystallized at a pH of 8.0, whereas 1IHG-A was crystallized at pH of 6.1.
+The two proteins are identical, yet a rmsd of 14.2 was obtained from their structural alignment.
+Importantly, 1IHG-A contains an ordered region A299-Y365 that was absent from the structure of 1IIP-A.
+Neither protein was solved in the presence of natural ligands.
+In addition to experimental studies, computational analyses of redundant sets of experimentally determined structures for identical protein regions have provided evidence of the existence of numerous protein fragments observed in both ordered and disordered states CITATION.
+The authors analyzed these dual-personality fragments and showed that they are characterized by amino acid compositions different than those for either ordered or disordered proteins and that their main functional roles are regulatory.
+The examples discussed above demonstrate the strong influence experimental parameters can have on disordered residues in crystallized proteins.
+However, a hypothesis that variation in experimental conditions could potentially trigger structural changes affecting the existence, position or length of intrinsically disordered regions has not been systematically tested and quantified.
+In the following work, we provide evidence of significant variation of disordered regions, and protein structures in general, under the same or different experimental conditions that we believe can serve as a basic indicator of environmental regulation of protein structure and disordered regions in vivo.

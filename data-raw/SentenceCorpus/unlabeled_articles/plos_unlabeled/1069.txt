@@ -1,0 +1,35 @@
+### abstract ###
+Transcription factor regulation is often post-translational.
+TF modifications such as reversible phosphorylation and missense mutations, which can act independent of TF expression level, are overlooked by differential expression analysis.
+Using bovine Piedmontese myostatin mutants as proof-of-concept, we propose a new algorithm that correctly identifies the gene containing the causal mutation from microarray data alone.
+The myostatin mutation releases the brakes on Piedmontese muscle growth by translating a dysfunctional protein.
+Compared to a less muscular non-mutant breed we find that myostatin is not differentially expressed at any of ten developmental time points.
+Despite this challenge, the algorithm identifies the myostatin smoking gun through a coordinated, simultaneous, weighted integration of three sources of microarray information: transcript abundance, differential expression, and differential wiring.
+By asking the novel question which regulator is cumulatively most differentially wired to the abundant most differentially expressed genes?
+it yields the correct answer, myostatin.
+Our new approach identifies causal regulatory changes by globally contrasting co-expression network dynamics.
+The entirely data-driven weighting procedure emphasises regulatory movement relative to the phenotypically relevant part of the network.
+In contrast to other published methods that compare co-expression networks, significance testing is not used to eliminate connections.
+### introduction ###
+Evolution, normal development, immune responses and aberrant processes such as diseases and cancer all involve at least some rewiring of regulatory circuits CITATION CITATION.
+Indeed it is the subtle differences in circuit wiring that makes each individual unique.
+The key nodes in regulatory circuits are frequently transcription factors CITATION.
+Thus, there is a great deal of interest in developing methods for decoding TF changes.
+Regulator-target interactions can be assessed by ChIP-on-chip but this requires large amounts of homogenous starting material and TF-specific reagents.
+Furthermore, the recruitment of a TF to a promoter does not necessarily correlate with transcriptional status, so biological interpretation can be complex CITATION.
+Likely sites of key regulatory mutations can be revealed by Whole Genome Scans but this approach requires large numbers of individuals and very dense SNP panels.
+Even so, the exact causal gene may remain ambiguous if there are several genes near the marker.
+In any case, little insight is gained into the underlying regulatory mechanisms.
+In order to gain further insights into the regulatory apparatus, computational approaches are continuously being proposed.
+To date, they all operate by integrating information from multiple levels of biological organisation particularly eQTL, protein-protein interaction and TF binding site data CITATION CITATION .
+Identifying regulatory change solely through contrasts in gene expression data has been elusive because TF tend to be stably expressed at baseline levels CITATION close to the sensitivity of standard high-throughput expression profiling platforms.
+Further, TF activation is often regulated post-translationally and thereby can act somewhat independently of expression level.
+Biologically important common TF activation processes are poorly detected by conventional differential expression analysis.
+We hypothesised that a system-wide network approach might have utility, on the grounds that while a differentially-regulated TF might not be DE between two systems, its new position in the network of the perturbed system might allow detection of the smoking gun.
+To allow reliable evaluation of such a hypothesis a well-defined experimental model system is required.
+Piedmontese cattle are double-muscled because they possess a genomic DNA mutation in the myostatin mRNA transcript CITATION.
+The resulting dysfunctional myostatin protein is a transcriptional regulator that releases the brakes on muscle growth reflecting the importance of TGF- signalling pathways in the determination of final muscle mass and fibre composition CITATION, CITATION.
+A preliminary analysis of the expression of myostatin in Piedmontese Hereford versus Wagyu Hereford animals found that DE of myostatin was not detectable using cDNA-based expression microarrays CITATION, CITATION .
+Thus we have a system in which we know the identity of the gene containing the causal mutation, myostatin, but we cannot identify it by DE of the mRNA in muscle samples.
+By contrasting the muscle transcriptomes of the Piedmontese and Wagyu crosses across 10 developmental time points, our aim was to establish the question to which myostatin is the answer.
+In other words, what question do we need to ask of the gene expression data for it to reveal the identity of the transcriptional regulator containing the causal mutation?

@@ -1,0 +1,16 @@
+### abstract ###
+Engine assembly is a complex and heavily automated distributed-control process, with large amounts of faults data logged everyday
+We describe an application of temporal data mining for analyzing fault logs in an engine assembly plant
+Frequent episode discovery framework is a model-free method that can be used to deduce (temporal) correlations among events from the logs in an efficient manner
+In addition to being theoretically elegant and computationally efficient, frequent episodes are also easy to interpret in the form actionable recommendations
+Incorporation of domain-specific information is critical to successful application of the method for analyzing fault logs in the manufacturing domain
+We show how domain-specific knowledge can be incorporated using heuristic rules that act as pre-filters and post-filters to frequent episode discovery
+The system described here is currently being used in one of the engine assembly plants of General Motors and is planned for adaptation in other plants
+To the best of our knowledge, this paper presents the first real, large-scale application of temporal data mining in the manufacturing domain
+We believe that the ideas presented in this paper can help practitioners engineer tools for analysis in other similar or related application domains as well
+### introduction ###
+Automotive engine assembly is a heavily automated and complex process that is  controlled in a distributed fashion
+Each assembly plant consists of several machines (or operations/stations) that are extensively inter-connected and are programmed to automatically execute the various operations necessary to manufacture an automotive engine
+The distributed control system maintains elaborate logs regarding the time-evolving conditions of all machines in the plant, the status of different operations performed on a particular engine, the throughput statistics of the plant, etc
+In this paper, we present an application that uses temporal data mining techniques for analyzing these time-stamped logs to help in  fault analysis and root-cause diagnosis
+The application presented here is currently being used on a regular basis in engine assembly plants of General Motors }

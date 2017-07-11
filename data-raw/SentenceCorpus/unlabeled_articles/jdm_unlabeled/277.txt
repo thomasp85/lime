@@ -1,0 +1,27 @@
+### abstract ###
+before the recent recession evoked general dismay and uncertainty  this study examined the relative contribution of income and the concern over financial security to life satisfaction
+the degree to which such concerns permeate people's daily lives could be part of the broader concept of wealth  often measured through income and debt  and could help evaluate fiscal instruments promoting financial security
+study  NUMBER  n    NUMBER  used econometric methods to demonstrate that the consideration of financial security was as important to participants' life satisfaction as their monetary assets
+further  outlook on financial security adds to the prediction of life satisfaction above the contribution of income
+content analysis revealed that nearly half the participants n    NUMBER   study  NUMBER  mentioned financial concerns - retirement  college tuition  making ends meet  etc
+- when asked to think about  the future  in an open-ended manner
+these participants reported lower life satisfaction compared with women who did not raise such concerns
+the link between concerns over financial security and life satisfaction  which cannot be fully accounted for by income alone  could guide policy decisions on whether to directly allocate resources toward increasing income or to focus on creating a social and financial safety net
+### introduction ###
+this study aimed to assess the degree to which women's concerns over financial security permeate their daily lives
+the notion of financial security  i claim  is a valid and meaningful factor in the construct of wealth  yet is glaringly missing from economic discussions  as well as from examinations of the association between wealth and life satisfaction
+assessing the depths of financial security concerns could serve to evaluate fiscal tools promoting such security
+in addition  expanding the concept of wealth should inspire well-being researchers and policy makers to inquire participants about financial security alongside questions about income
+researchers have often failed to prove the widespread belief that income accounts for a substantial portion of life satisfaction  CITATION
+easterlin  CITATION  referred to the puzzling dissociation between money and satisfaction as the  illusion of growth and happiness    CITATION  and this disparity has been dubbed  the easterlin paradox
+  one of the proposed explanations was the satisfaction treadmill   CITATION  according to which an improved financial state raises aspirations so that the person now wishes for greater financial gains or other achievements  thus preventing satisfaction from increasing
+the satisfaction treadmill implies that in order to fully understand the association between financial status and life satisfaction  we need to go beyond measures of income and material possessions to examine people's evaluations
+recent research  CITATION  has all but resolved the easterlin paradox by using log income  rather than raw income  to predict life satisfaction
+the logarithmic transformation allows reflection of the non-linear utility of income
+as income increases  finding ways to increase well-being through consumption becomes more difficult  yet still possible
+the transformation results in strong association between economic and well-being measures
+furthermore  deaton  CITATION  has used it to show that no satiation point exists beyond which increments in log income no longer contribute to an increase in life satisfaction
+however  some questions remain unanswered
+one of them  which the satisfaction treadmill touches upon  asks what encompasses people's mental representation of wealth
+another question raised by stevenson and wolfers  CITATION  asks why measures of subjective well-being show that women's happiness has declined both absolutely and relative to men despite indications of major improvements for women in economic wealth and work force participation over recent decades
+the researchers term this  the paradox of declining female happiness

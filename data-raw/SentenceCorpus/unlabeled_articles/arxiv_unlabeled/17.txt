@@ -1,0 +1,39 @@
+### abstract ###
+A fundamental problem in artificial intelligence is that nobody really knows what intelligence is
+The problem is especially acute when we need to consider artificial systems which are significantly different to humans
+In this paper we approach this problem in the following way: We take a number of well known informal definitions of human intelligence that have been given by experts, and extract their essential features
+These are then mathematically formalised to produce a general measure of intelligence for arbitrary machines
+We believe that this measure formally captures the concept of machine intelligence in the broadest reasonable sense
+### introduction ###
+Most of us think that we recognise intelligence when we see it, but we are not really sure how to precisely define or measure it
+We informally judge the intelligence of others by relying on our past experiences in dealing with people
+Naturally, this naive approach is highly subjective and imprecise
+A more principled approach would be to use one of the many standard intelligence tests that are available
+Contrary to popular wisdom, these tests, when correctly applied by a professional, deliver statistically consistent results and have considerable power to predict the future performance of individuals in many mentally demanding tasks
+However, while these tests work well for humans, if we wish to measure the intelligence of other things, perhaps of a monkey or a new machine learning algorithm, they are clearly inappropriate
+One response to this problem might be to develop specific kinds of tests for specific kinds of entities; just as intelligence tests for children differ to intelligence tests for adults
+While this works well when testing humans of different ages, it comes undone when we need to measure the intelligence of entities which are profoundly different to each other in terms of their cognitive capacities, speed, senses, environments in which they operate, and so on
+To measure the intelligence of such diverse systems in a meaningful way we must step back from the specifics of particular systems and establish the underlying fundamentals of what it is that we are really trying to measure
+That is, we need to establish a notion of intelligence that goes beyond the specifics of particular kinds of systems
+The difficulty of doing this is readily apparent
+Consider, for example, the memory and numerical computation tasks that appear in some intelligence tests and which were once regarded as defining hallmarks of human intelligence
+We now know that these tasks are absolutely trivial for a machine and thus do not test the machine's intelligence
+Indeed even the mentally demanding task of playing chess has been largely reduced to brute force search
+As technology advances, our concept of what intelligence is continues to evolve with it
+How then are we to develop a concept of intelligence that is applicable to all kinds of systems
+Any proposed definition must encompass the essence of human intelligence, as well as other possibilities, in a consistent way
+It should not be limited to any particular set of senses, environments or goals, nor should it be limited to any specific kind of hardware, such as silicon or biological neurons
+It should be based on principles which are sufficiently fundamental so as to be unlikely to alter over time
+Furthermore, the intelligence measure should ideally be formally expressed, objective, and practically realisable
+This paper approaches this problem in the following way
+In  Section  we consider a range of definitions of human intelligence that have been put forward by well known psychologists
+From these we extract the most common and essential features and use them to create an informal definition of intelligence
+Section  then introduces the framework which we use to construct our formal measure of intelligence
+This framework is formally defined in  Section
+In  Section  we use our developed formalism to produce a formal definition of intelligence
+Section  closes with a short summary
+A preliminary sketch of the ideas in this paper appeared in the poster  CITATION
+It can be shown that the intelligence measure presented here is in fact a variant of the Intelligence Order Relation that appears in the theory of AIXI, the provably optimal universal agent  CITATION
+A long journal version of this paper is being written in which we give the proposed measure of machine intelligence and its relation to other such tests a much more comprehensive treatment
+Naturally, we expect such a bold initiative to be met with resistance
+However, we hope that the reader will appreciate the value of our approach: With a formally precise definition put forward we aim to better our understanding of what is a notoriously subjective and slippery concept

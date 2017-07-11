@@ -1,0 +1,100 @@
+### abstract ###
+In a multi-armed bandit (MAB) problem, an online algorithm makes a sequence of choices
+In each round it chooses from a time-invariant set of alternatives and receives the payoff associated with this alternative
+While the case of small strategy sets is by now well-understood, a lot of recent work has focused on MAB problems with exponentially or infinitely large  strategy sets, where one needs to assume extra structure in order to make the problem tractable
+In particular, recent literature considered information on similarity between arms
+We consider similarity information in the setting of  contextual bandits , a natural extension of the basic MAB problem where before each round an algorithm is given the  context  -- a hint about the payoffs in this round
+Contextual bandits are directly motivated by placing advertisements on webpages, one of the crucial problems in sponsored search
+A particularly simple way to represent similarity information in the contextual bandit setting is via a  similarity distance  between the context-arm pairs which bounds from above the difference between the respective expected payoffs
+Prior work on contextual bandits with similarity uses ``uniform" partitions of the similarity space, so that each context-arm pair is approximated by the closest pair in the partition
+Algorithms based on ``uniform" partitions disregard the structure of the payoffs and the context arrivals, which is potentially wasteful
+We present algorithms that are based on  adaptive  partitions, and take advantage of "benign" payoffs and context arrivals without sacrificing the worst-case performance
+The central idea is to maintain a finer partition in high-payoff regions of the similarity space and in popular regions of the context space
+Our results apply to several other settings, eg MAB with constrained temporal change~ CITATION  and sleeping bandits~ CITATION
+### introduction ###
+In a multi-armed bandit problem (henceforth, ``multi-armed bandit" will be abbreviated as MAB), an algorithm is presented with a sequence of trials
+In each round, the algorithm chooses one alternative from a set of alternatives ( arms ) based on the past history, and receives the payoff associated with this alternative
+The goal is to maximize the total payoff of the chosen arms
+The MAB setting has been introduced in 1952 in~ CITATION  and studied intensively since then in Operations Research, Economics and Computer Science
+This setting is a clean model for the exploration-exploitation trade-off, a crucial issue in sequential decision-making under uncertainty
+One standard way to evaluate the performance of a bandit algorithm is  regret , defined as the difference between the expected payoff of an optimal arm and that of the algorithm
+By now the MAB problem with a small finite set of arms is quite well understood, eg see~ CITATION
+However, if the arms set is exponentially or infinitely large, the problem becomes intractable unless we make further assumptions about the problem instance
+Essentially, a bandit algorithm needs to find a needle in a haystack; for each algorithm there are inputs on which it performs as badly as random guessing
+Bandit problems with large sets of arms have been an active area of investigation in the past decade (see Section~ for a discussion of related literature)
+A common theme in these works is to assume a certain  structure  on payoff functions
+Assumptions of this type are natural in many applications, and often lead to efficient learning algorithms  CITATION
+In particular, a line of work started in~ CITATION  assumes that some information on similarity between arms is available
+In this paper we consider similarity information in the setting of  contextual bandits ~ CITATION , a natural extension of the basic MAB problem where before each round an algorithm is given the  context  -- a hint about the payoffs in this round
+Contextual bandits are directly motivated by the problem of placing advertisements on webpages, one of the crucial problems in sponsored search
+One can cast it as a bandit problem so that arms correspond to the possible ads, and payoffs correspond to the user clicks
+Then the context consists of information about the page, and perhaps the user this page is served to
+Furthermore, we assume that similarity information is available on both the context and the arms
+Following the work in~ CITATION  on the (non-contextual) bandits, a particularly simple way to represent similarity information in the contextual bandit setting is via a  similarity distance  between the context-arm pairs, which gives an upper bound on the difference between the corresponding payoffs \xhdr{Our model: contextual bandits with similarity information }  The contextual bandits framework is defined as follows
+Let  SYMBOL  be the  context set  and  SYMBOL  be the  arms set , and let  SYMBOL  be the set of feasible context-arms pairs
+In each round  SYMBOL , the following events happen in succession:   a context  SYMBOL  is revealed to the algorithm,  the algorithm chooses an arm  SYMBOL  such that  SYMBOL ,  payoff (reward)  SYMBOL  is revealed
+The sequence of context arrivals  SYMBOL  is fixed before the first round, and does not depend on the subsequent choices of the algorithm
+With  stochastic payoffs , for each pair  SYMBOL  there is a distribution  SYMBOL  with expectation  SYMBOL , so that  SYMBOL  is an independent sample from  SYMBOL
+With  adversarial payoffs , this distribution can change from round to round
+For simplicity, we present the subsequent definitions for the stochastic setting only, whereas the adversarial setting is fleshed out later in the paper (Section~) \OMIT{Here  SYMBOL  is the  payoff function  defined as an independent random sample from some fixed distribution  SYMBOL  over functions  SYMBOL }  In general, the goal of a bandit algorithm is to maximize the total payoff  SYMBOL , where  SYMBOL  is the  time horizon
+In the contextual MAB setting, we benchmark the algorithm's performance in terms of the context-specific ``best arm"
+Specifically, the goal is to minimize the  contextual regret :   The context-specific best arm is a more demanding benchmark than the best arm used in the ``standard" (context-free) definition of regret
+The similarity information is given to an algorithm as a metric space  SYMBOL  which we call the  similarity space , such that the following Lipschitz condition holds:  Without loss of generality,  SYMBOL
+The absence of similarity information is modeled as  SYMBOL
+An instructive special case is the  product similarity space   SYMBOL , where  SYMBOL  is a metric space on contexts ( context space ), and  SYMBOL  is a metric space on arms ( arms space ), and    \xhdr{Prior work: uniform partitions }  CITATION  consider contextual MAB with similarity information on contexts
+They suggest an algorithm that chooses a ``uniform" partition  SYMBOL  of the context space and approximates  SYMBOL  by the closest point in  SYMBOL , call it  SYMBOL
+Specifically, the algorithm creates an instance  SYMBOL  of some bandit algorithm  SYMBOL  for each point  SYMBOL , and invokes  SYMBOL  in each round  SYMBOL
+The granularity of the partition is adjusted to the time horizon, the context space, and the black-box regret guarantee for  SYMBOL
+Furthermore,  CITATION  provides a bandit algorithm  SYMBOL  for the adversarial MAB problem on a metric space that has a similar flavor: pick a ``uniform" partition  SYMBOL  of the arms space, and run a  SYMBOL -arm bandit algorithm such as \EXP~ CITATION  on the points in  SYMBOL
+Again, the granularity of the partition is adjusted to the time horizon, the arms space, and the black-box regret guarantee for \EXP
+Applying these two ideas to our setting (with the product similarity space) gives a simple algorithm which we call the
+Its contextual regret, even for adversarial payoffs, is  where  SYMBOL  is the covering dimension of the context space and  SYMBOL  is that of the arms space \xhdr{Our contributions } Using ``uniform" partitions disregards the potentially benign structure of expected payoffs and context arrivals
+The central topic in this paper is {\bfadaptive partitions} of the similarity space which are adjusted to frequently occurring contexts and high-paying arms, so that the algorithms can take advantage of the problem instances in which the expected payoffs or the context arrivals are ``benign" (``low-dimensional"), in a sense that we make precise later
+We present two main results, one for stochastic payoffs and one for adversarial payoffs
+For stochastic payoffs, we provide an algorithm called  contextual zooming  which ``zooms in" on the regions of the context space that correspond to frequently occurring contexts, and the regions of the arms space that correspond to high-paying arms
+Unlike the algorithms in prior work, this algorithm considers the context space and the arms space  jointly  -- it maintains a partition of the similarity space, rather than one partition for contexts and another for arms
+We develop provable guarantees that capture the ``benign-ness" of the context arrivals and the expected payoffs
+In the worst case, we match the guarantee~\refeq{eq:regret-naive} for the \naiveAlg
+We obtain nearly matching lower bounds using the KL-divergence techniques from~ CITATION
+The lower bound is very general as it holds for every given (product) similarity space  and  for every fixed value of the upper bound
+Our stochastic contextual MAB setting, and specifically the \ZoomAlg, can be fruitfully applied beyond the ad placement scenario described above and beyond MAB with similarity information per se
+First, writing  SYMBOL  one can incorporate ``temporal constraints" (across time, for each arm), and combine them with ``spatial constraints" (across arms, for each time)
+The analysis of contextual zooming yields concrete, meaningful bounds this scenario
+In particular, we recover one of the main results in~ CITATION
+Second, our setting subsumes the stochastic  sleeping bandits  problem~ CITATION , where in each round some arms are ``asleep", i e not available in this round
+Here contexts correspond to subsets of arms that are ``awake"
+Contextual zooming recovers and generalizes the corresponding result in~ CITATION
+Third, following the publication of a preliminary version of this paper, contextual zooming has been applied to bandit learning-to-rank in~ CITATION  \OMIT{ it applies to a version of the adversarial MAB problem in which an adversary is constrained to change the expected payoffs of each arm  gradually , eg by a small amount in each round
+In fact, we can combine significant constraints across time (for each arm) and across arms (for each time) }  \OMIT{For the context-free setting, our guarantees match those in~ CITATION
+Our algorithm and analysis extends to a more general setting where some context-arms pairs may be unfeasible, and moreover the right-hand side of~\refeq{eq:LipschitzD} is replaced by an arbitrary metric on the feasible context-arms pairs }  \OMIT{We apply the \ZoomAlg{} to a (context-free) adversarial MAB problem in which an adversary is constrained to change the expected payoffs of each arm  gradually , eg by a small amount in each round
+This setting is naturally modeled as a contextual MAB problem in which the  SYMBOL -th context arrival is simply  SYMBOL
+Then  SYMBOL  corresponds to the expected payoff of arm  SYMBOL  at time  SYMBOL , and the context metric  SYMBOL  provides an upper bound on the temporal change  SYMBOL
+We term it the {\bf\driftProblem}
+Interestingly, this problem incorporates significant constraints both across time (for each arm) and across arms (for each time); to the best of our knowledge, such MAB models are quite rare in the literature
+Notable special cases of  SYMBOL  include  SYMBOL  and 	 SYMBOL , which corresponds to, respectively, the bounded change per round and the high-probability behavior of a random walk
+We derive provable guarantees for these two examples, and show that they are essentially optimal
+Interestingly, the \problem{} subsumes the stochastic  sleeping bandits  problem~ CITATION , where in each round some arms are ``asleep", i e not available in this round
+Each context arrival  SYMBOL  corresponds to the set of arms that are ``awake" in this round
+More precisely, contexts  SYMBOL  correspond to subsets  SYMBOL  of arms, so that only the context-arm pairs  SYMBOL ,  SYMBOL  are feasible, and the context distance is  SYMBOL
+Moreover, the \problem{} extends the sleeping bandits setting by incorporating similarity information on arms
+The \ZoomAlg{} (and its analysis) applies, and is geared to exploit this additional similarity information
+In the absence of such information the algorithms essentially reduces to the ``highest awake index" algorithm in~ CITATION  } %%%%%%%  \OMIT{ %%%%%%% The analysis of \ZoomAlg{} carries over to the \driftProblem; contextual regret becomes  dynamic regret  -- regret with respect to a benchmark which in each round plays the best arm for this round
+In this setting, the quantity of interest is average dynamic regret, which is typically independent of the time horizon } %%%%%%%%%%%%%%  \OMIT{ %%%%%%%%%%% Furthermore, we consider the  Dynamic MAB problem ~ CITATION  in which the  state  (the current expected payoff) of each arm undergoes an independent Brownian motion on a  SYMBOL  interval with reflecting boundaries
+We treat this problem as (essentially) a special case of the \driftProblem{} such that  SYMBOL , where  SYMBOL  is the  volatility  (speed of change) of the Brownian motion
+We improve the analysis of \ZoomAlg{} to obtain guarantees that are superior to those for the algorithms in~ CITATION , and provide a nearly matching lower bound } %%%%%%%%  For the adversarial setting, we provide an algorithm which maintains an adaptive partition of the context space and thus takes advantage of ``benign" context arrivals
+We develop provable guarantees that capture this ``benign-ness"
+In the worst case, the contextual regret is bounded in terms of the covering dimension of the context space, matching~\refeq{eq:regret-naive}
+Our algorithm is in fact a  meta-algorithm : given an adversarial bandit algorithm \bandit, we present a contextual bandit algorithm which calls \bandit{} as a subroutine
+Our setup is flexible: depending on what additional constraints are known about the adversarial payoffs, one can plug in a bandit algorithm from the prior work on the corresponding version of adversarial MAB, so that the regret bound for \bandit{} plugs into the overall regret bound \OMIT{Our setup allows us to leverage prior work on other adversarial MAB formulations, such as the basic  SYMBOL -arm version~ CITATION , linear payoffs~ CITATION  and convex payoffs~ CITATION }  \xhdr{Discussion } Adaptive partitions (of the arms space) for context-free MAB with similarity information have been introduced in~ CITATION
+This paper further explores the potential of the zooming technique in~ CITATION
+Specifically, contextual zooming extends this technique to adaptive partitions of the entire similarity space, which necessitates a technically different algorithm and a more delicate analysis
+We obtain a clean algorithm for contextual MAB with improved (and nearly optimal) bounds
+Moreover, this algorithm applies to several other, seemingly unrelated problems and unifies some results from prior work
+One alternative approach is to maintain a partition of the context space, and run a separate instance of the zooming algorithm from~ CITATION  on each set in this partition
+Fleshing out this idea leads to the meta-algorithm that we present for adversarial payoffs (with \bandit{} being the zooming algorithm)
+This meta-algorithm is parameterized (and constrained) by a specific a priori regret bound for \bandit
+Unfortunately, any a priori regret bound for zooming algorithm would be a pessimistic one, which negates its main strength -- the ability to adapt to ``benign" expected payoffs \xhdr{Map of the paper } Section~ is related work, and Section~ is Preliminaries
+Contextual zooming is  presented in Section~
+Lower bounds are in Section~
+Some applications of contextual zooming are discussed in Section~
+The adversarial setting is treated in Section~

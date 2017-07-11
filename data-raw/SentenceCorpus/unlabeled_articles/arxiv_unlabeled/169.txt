@@ -1,0 +1,64 @@
+### abstract ###
+Lasso, or  SYMBOL  regularized least squares, has been explored extensively for its remarkable sparsity properties
+It is shown in this paper  that the solution to Lasso, in addition to its sparsity, has robustness properties: it is the solution to a robust optimization problem
+This has two important consequences
+First, robustness provides a connection of the regularizer to a physical property, namely, protection from noise
+This allows a principled selection of the regularizer, and in particular, generalizations of Lasso that also yield convex optimization problems are obtained by considering different uncertainty sets
+Secondly, robustness can itself be used as an avenue to exploring different properties of the solution
+In particular, it is shown that robustness of the solution  explains why the solution is sparse
+The analysis as well as the specific results obtained differ from standard sparsity results, providing different geometric intuition
+Furthermore, it is shown that the robust optimization formulation is related to kernel density estimation, and based on this approach,  a proof that Lasso is consistent is given using robustness directly
+Finally, a  theorem saying that sparsity and algorithmic stability contradict each other, and hence Lasso is not stable, is presented
+### introduction ###
+In this paper we consider linear regression problems with least-square error
+The problem is to find a vector  SYMBOL  so that the  SYMBOL  norm of the residual  SYMBOL  is minimized, for a given matrix  SYMBOL  and vector  SYMBOL
+From a learning/regression perspective, each row of  SYMBOL  can be regarded as a training sample, and the corresponding element of  SYMBOL  as the target value of this observed sample
+Each column of  SYMBOL  corresponds to a feature, and the objective is to find a set of weights so that the weighted sum of the feature values approximates the target value
+It is well known that minimizing the least squared error can lead to sensitive solutions  CITATION
+Many regularization methods have been proposed to decrease this sensitivity
+Among them, Tikhonov regularization  CITATION  and Lasso~ CITATION  are two widely known and cited algorithms
+These methods minimize a weighted sum of the residual norm and a certain regularization term,  SYMBOL  for Tikhonov regularization and  SYMBOL  for Lasso
+In addition to providing regularity, Lasso is also known for the tendency to select sparse solutions
+Recently this has attracted much attention for its ability to reconstruct sparse solutions when sampling occurs far below the Nyquist rate, and also for its ability to recover the sparsity pattern exactly with probability one, asymptotically as the number of observations increases (there is an extensive literature on this subject, and we refer the reader to  CITATION  and references therein)
+The first result of this paper is that the solution to Lasso has robustness properties: it is the solution to a robust optimization problem
+In itself, this interpretation of Lasso as the solution to a robust least squares problem is a development in line with the results of  CITATION
+There, the authors propose an alternative approach of reducing sensitivity of linear regression by considering a robust version of the regression problem, i e , minimizing the worst-case residual for the observations under some unknown but bounded disturbance
+Most of the research in this area considers either the case where the disturbance is row-wise uncoupled  CITATION , or the case where the Frobenius norm of the disturbance matrix is bounded  CITATION
+None of these robust optimization approaches produces a solution that has sparsity properties (in particular, the solution to Lasso does not solve any of these previously formulated robust optimization problems)
+In contrast, we investigate the robust regression problem where the uncertainty set is defined by feature-wise constraints
+Such a noise model is of interest when values of features are obtained with some noisy pre-processing steps, and the magnitudes of such noises are known or bounded
+Another situation of interest is where features are meaningfully coupled
+We define  coupled  and  uncoupled  disturbances and uncertainty sets precisely in Section  below
+Intuitively, a disturbance is feature-wise coupled if the variation or disturbance across features satisfy joint constraints, and uncoupled otherwise
+Considering the solution to Lasso as the solution  of a robust least squares problem has two important consequences
+First, robustness provides a connection of the regularizer to a physical property, namely, protection from noise
+This allows more principled selection of the regularizer, and in particular, considering different uncertainty sets, we construct generalizations of Lasso that also yield convex optimization problems
+Secondly, and perhaps most significantly, robustness  is a strong property that can itself be used as an avenue to investigating different properties of the solution
+We show that robustness of the solution can explain why the solution is sparse
+The analysis as well as the specific results we obtain differ from standard sparsity results, providing different geometric intuition, and extending beyond the least-squares setting
+Sparsity results obtained for Lasso ultimately depend on the fact that introducing additional features incurs larger  SYMBOL -penalty than the least squares error reduction
+In contrast, we exploit the fact that a robust solution is, by definition, the optimal solution under a worst-case perturbation
+Our results show that, essentially, a coefficient of the solution is nonzero if the corresponding feature is relevant under all allowable perturbations
+In addition to sparsity, we also use robustness directly to prove consistency of Lasso
+We briefly list the main contributions as well as the organization of this paper
+In Section~, we formulate the robust regression problem with feature-wise independent disturbances, and show that this formulation is equivalent to a least-square problem with a weighted  SYMBOL  norm regularization term
+Hence, we provide an interpretation of Lasso from a robustness perspective
+% which can be helpful in choosing the regularization parameter
+We generalize the robust regression formulation to loss functions of arbitrary norm in Section~
+We also consider uncertainty sets that require disturbances of different features to satisfy joint conditions
+This can be used to mitigate the conservativeness of the robust solution  and to obtain solutions with additional properties
+%We call these features ``coupled''
+In Section~, we present new sparsity results for the robust regression problem with feature-wise independent disturbances
+This provides a new robustness-based explanation to the sparsity of Lasso
+Our approach gives new analysis and also geometric intuition, and furthermore allows one to obtain sparsity results for more general loss functions, beyond the squared loss
+Next, we relate Lasso to kernel density estimation in Section~
+This allows us to re-prove consistency in a statistical learning setup, using the new robustness tools and formulation we introduce
+Along with our results on sparsity, this illustrates the power of robustness in explaining and also exploring different properties of the solution
+Finally, we prove in Section~ a ``no-free-lunch'' theorem, stating that an algorithm that encourages sparsity cannot be stable {Notation}
+We use capital letters to represent matrices, and boldface letters to represent column vectors
+Row vectors are represented as the transpose of column vectors
+For a vector  SYMBOL ,  SYMBOL  denotes its  SYMBOL  element
+Throughout the paper,  SYMBOL  and  SYMBOL  are used to denote the  SYMBOL  column and the  SYMBOL  row of the observation matrix  SYMBOL , respectively
+We use  SYMBOL  to denote the  SYMBOL  element of  SYMBOL , hence it is the  SYMBOL  element of  SYMBOL , and  SYMBOL  element of  SYMBOL
+For a convex function  SYMBOL ,  SYMBOL  represents any of its sub-gradients evaluated at  SYMBOL
+A vector with length  SYMBOL  and each element equals  SYMBOL  is denoted as  SYMBOL

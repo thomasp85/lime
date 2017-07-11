@@ -1,0 +1,56 @@
+### abstract ###
+The large number of spectral variables in most data sets encountered in spectral chemometrics often renders the prediction of a dependent variable uneasy
+The number of variables hopefully can be reduced, by using either projection techniques or selection methods; the latter allow for the interpretation of the selected variables
+Since the optimal approach of testing all possible subsets of variables with the prediction model is intractable, an incremental selection approach using a nonparametric statistics is a good option, as it avoids the computationally intensive use of the model itself
+It has two drawbacks however: the number of groups of variables to test is still huge, and colinearities can make the results unstable
+To overcome these limitations, this paper presents a method to select groups of spectral variables
+It consists in a forward-backward procedure applied to the coefficients of a B-Spline representation of the spectra
+The criterion used in the forward-backward procedure is the mutual information, allowing to find nonlinear dependencies between variables, on the contrary of the generally used correlation
+The spline representation is used to get interpretability of the results, as groups of consecutive spectral variables will be selected
+The experiments conducted on NIR spectra from fescue grass and diesel fuels show that the method provides clearly identified groups of selected variables, making interpretation easy, while keeping a low computational load
+The prediction performances obtained using the selected coefficients are higher than those obtained by the same method applied directly to the original variables and similar to those obtained using traditional models, although using significantly less spectral variables
+### introduction ###
+Prediction problems are often encountered in analytical spectral chemometrics
+They require estimating the unknown value of a dependent variable from, for example, a near-infrared spectrum
+Such problems may be encountered in the food  CITATION , pharmaceutical  CITATION  and textile  CITATION  industry, to cite only a few
+Viewed from a statistical or data analysis perspective, the main difficulty in such problem is to cope with the colinearity between spectral variables: not only consecutive variables in a spectrum are highly correlated by nature, but in addition real applications usually concern databases with a low number of known spectra, and a high number of spectral variables
+Any method built on the original spectral variables is thus ill-posed, making feature (spectral variable) selection and/or projection necessary
+Selection and projection methods differ by several aspects
+Projection methods are more general by essence, as selection may be regarded as projection with many zero weights
+However, projection methods usually build factors (latent variables) that are combinations of a large number of original features
+Even if their prediction properties are good, they usually suffer from the fact that the latent variables are hardly interpretable in terms of original features (wavelengths in the case of infrared spectra)
+On the contrary, selection methods are based on the principle of choosing a small number of variables among the original ones, leading to easy interpretation
+Of course, the challenge with selection methods is to obtain prediction performances of the same level as projection ones
+In this work, we are interested in variable selection methods providing interpretability
+However, if the whole procedure consisting in selecting the features and building a prediction model on them is kept linear, it will certainly lead to poorer performances than the traditional and widely used PLS (Partial Least Squares), as the latter consists in a projection and a prediction
+It is thus investigated how nonlinear models may be used, both for selecting the features and performing the prediction
+Nonlinear models could be used in a wrapper approach  CITATION , in which their estimated generalization performances is used as a relevance criterion for a group of variables
+This however, is very demanding in terms of computational load because resampling techniques must be used to estimate accurately the predicted error of the model, in addition to the fact that one model must be learned for each considered feature set
+This paper thus focuses on the so-called filter approach: the features are selected prior the use of any prediction model
+Among filter methods, the correlation is the standard criterion to be used for selecting features in a linear way: features with maximal correlation with the dependent (output) variable, and possibly with minimal information between them to avoid redundancy, are selected
+Mutual information (see eg CITATION ) extends the correlation to the measure of nonlinear dependencies, while correlation is strictly limited to linear ones
+As an example, the correlation between a centered antisymmetric variable and its second power is zero, despite the fact they obviously depend one from another (though in a nonlinear way)
+The mutual information avoids this drawback, providing a more general and less restricted way to measure dependencies between variables
+The mutual information (MI) has already been used to select variables from near-infrared spectra  CITATION
+Despite it provides a promising way to extend state-of-the-art spectral analysis to nonlinear methodologies, the direct selection of variables by MI suffers from some drawbacks
+First, the MI estimation becomes difficult as the number of selected variables grows
+Indeed in a forward procedure the estimation is faced to the curse of dimensionality, making the estimation of the MI with the last selected feature much more difficult than with the first selected one
+Second, the low number of spectra usually available for learning makes the results of the selection highly dependent on the data set: a small change in the data can lead to different selected variable sets, resulting in difficult interpretation
+Finally, even though the estimation of the mutual information is less demanding in terms of computation time than the construction of a nonlinear model, the large number of initial variables results in high computation times for the selection
+In this paper, we propose to first reduce the number of variables through a projection of the spectral features before the selection by mutual information
+To maintain the interpretability despite the use of a projection, the latter is achieved by ensuring that each coordinate in the projection corresponds to a restricted set of initial features with consecutive wavelengths
+The general methodology proposed in  CITATION  is followed: spectra are projected on a functional basis
+More precisely, as in eg CITATION , a projection on a basis of B-splines is chosen, rather than wavelets for example; indeed B-splines have the advantage that they span a restricted interval of wavelengths, and that the intervals are roughly of the same length over the whole range
+As a consequence, each coefficient depends on the value of the corresponding spectrum on a limited wavelength interval
+The complete procedure then consists in replacing the spectra by their B-spline coefficients, in selecting relevant coefficients by measuring their mutual information with the output variable, and by predicting the latter using Radial-Basis Function networks (any other nonlinear model could be used)
+All three steps are nonlinear, giving to the procedure the necessary flexibility to reach high performances both in prediction and in interpretation
+Design parameters that are unavoidable in a nonlinear context, such as the number of B-splines to be used in the projection, are set automatically (without the necessity of a user's choice) using a cross-validation method
+This paper shows that the prediction results obtained by this procedure are comparable than those obtained through conventional linear techniques such as PLS
+In addition interpretability is added, as the number of wavelengths selected by the procedure remains low, making it possible to identify which wavelengths are responsible for the phenomenon to predict
+Moreover, B-spline compression allows us both to reduce the feature selection running time and to increase the quality of the prediction results compared to the same nonlinear procedure applied directly to the original spectral variables
+Section  of this paper reminds how spectra can be projected on a basis of B-splines, details how the number of B-splines can be set automatically and analyzes the computational complexity of the procedure
+Section  presents the mutual information criterion and its use in a forward-backward procedure
+It also investigates the computational complexity of the forward-backward method
+Section  shows examples of the application of the proposed method on two data sets
+The first one consists of NIR spectra obtained from fescue grass; the aim is to predict the nitrogen content of the plant
+The second one is a database of spectra from fuel samples for which the goal is to predict the Cetane Number of the fuel

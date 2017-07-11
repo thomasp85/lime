@@ -1,0 +1,49 @@
+### abstract ###
+This paper presents studies on a deterministic annealing algorithm based on quantum annealing for variational Bayes (QAVB) inference, which can be seen as an extension of the simulated annealing for variational Bayes (SAVB) inference
+QAVB	is as easy as SAVB to implement
+Experiments revealed QAVB finds a better local optimum than SAVB in terms of the variational free energy in latent Dirichlet allocation (LDA)
+### introduction ###
+Several studies that are related to machine learning with quantum mechanics have recently been conducted
+The main idea behind these has been based on a generalization of the probability distribution obtained by using a density matrix, which is a self-adjoint positive-semidefinite matrix of trace one
+CITATION  connects the basic probability rule of quantum mechanics, called the ``Born Rule'', which formulates a generalized probability by using a density matrix, to spectral clustering and other machine learning algorithms based on spectral theory
+CITATION  combined a margin maximization scheme with a probabilistic modeling approach by incorporating the concepts of quantum detection and estimation theory  CITATION
+CITATION  proposed a quantum Markov random field using a density matrix and quantum mechanics and applied to image restoration
+Generalizing a Bayesian framework based on a density matrix has also been proposed
+CITATION  proposed a ``quantum Bayes rule'' for conditional density between two probability spaces
+Warmuth et al generalized the Bayes rule to treat a case where the prior was a density matrix  CITATION  and unified Bayesian probability calculus for density matrices with rules for translation between joints and conditionals  CITATION
+Typically, the formulas derived by quantum mechanics generalization have retained the conventional theory as a special case when the density matrices have been diagonal
+Computing the full posterior distributions over model parameters for probabilistic graphical models, eg latent Dirichlet allocation  CITATION , remains difficult in these quantum Bayesian frameworks, as well as classical Bayesian frameworks
+In this paper, we generalize the variational Bayes inference  CITATION , which is widely used framework for probabilistic graphical models, based on ideas that have been used in quantum mechanics
+Variational Bayes (VB) inference has been widely used as an approximation of Bayesian inference for probabilistic models that have discrete latent variables
+For example, in a probabilistic mixture model, such as a mixture of Gaussians, each data point is assigned to a latent class, and a latent variable corresponding to a data point indicates the latent class
+VB is an optimization algorithm that minimizes the cost function
+The cost function, called the negative variational free energy, is a function of latent variables
+We have called the cost function ``energy'' in this paper
+Since VB is a gradient algorithm similar to the Expectation Maximization (EM) algorithm, it suffers from a local optimal problem in practice
+Deterministic annealing (DA) algorithms have been proposed for the EM algorithm  CITATION  and VB  CITATION  based on simulated annealing (SA)  CITATION  to overcome issue with local optima
+We called simulated annealing based VB SAVB
+SA is one of the most well known physics based approaches to machine learning
+SA is based on the concept of statistical mechanics, called ``temperature''
+We decrease the parameter of ``temperature'' gradually in SA
+Because the energy landscape becomes flat at high temperature, it is easy to change the state (see Fig (a))
+However, the state is trapped at low temperature because of the valley in the energy barrier and the transition probability becomes very low
+Therefore, SA does not necessarily find a global optimum in the practical cooling schedule of temperature  SYMBOL
+In physics, quantum annealing (QA) has attracted attention as an alternative annealing method of optimization problems by a process that is analogous to quantum fluctuations  CITATION
+QA is expected to help states avoid being trapped by poor local optima at low temperatures
+The main point of this paper is to explain the novel DA algorithm for VB based on the QA (QAVB) we derived and present the effects of QAVB we obtained through experiments
+QAVB is a generalization of VB and SAVB attained by using a density matrix
+We describe our motivation for deriving QAVB in terms of a density matrix in Section
+Here, we overview the QAVB that we derived
+Interestingly, although QAVB is generalized and formulated by a density matrix, the algorithm for QAVB we finally derived does not need operations for a density matrix such as eigenvalue decomposition and only has simple changes from the SAVB algorithm
+Since SAVB does not necessarily find a global optimum, we still need to run multiple SAVBs independently with different random initializations where  SYMBOL  denote the number of SAVBs
+Here, let us consider running dependently, not independently, multiple SAVBs where ``dependently'' means that we run multiple SAVBs introducing interaction  SYMBOL  among neighboring SAVBs that are randomly numbered such as  SYMBOL ,  SYMBOL  and  SYMBOL  (see Fig (b))
+In Fig ,  SYMBOL  indicates the latent class states of  SYMBOL  data points in the  SYMBOL -th SAVB
+The independent SAVBs have a very low transition probability among states, i e , they have been trapped, at high temperature as shown in Fig (c), while the dependent QAVBs can changes the state in that situation
+This is because interaction  SYMBOL  starts from zero (i e , ``independent''), gradually increases,	 and makes  SYMBOL  and  SYMBOL  approach each other, the state will then be moved into  SYMBOL
+If there is a better state around sub-optimal states that the independent SAVBs find, the dependent SAVBs are expected to work well
+The dependent SAVBs are just QAVB where interaction  SYMBOL  and the above scheme are derived from QA mechanisms as will be explained in the following section
+This paper is organized as follows
+In Section , we introduce the notations used in this paper
+In Section , we motivate QAVB in terms of a density matrix
+Section  and  explain how we derive QAVB and present the experimental results in latent Dirichlet allocation (LDA)
+Section  concludes this paper *}

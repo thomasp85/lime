@@ -1,0 +1,18 @@
+### abstract ###
+hypotheses about decision processes are often formulated qualitatively and remain silent about the interplay of decision  memorial  and other cognitive processes
+at the same time  existing decision models are specified at varying levels of detail  making it difficult to compare them
+we provide a methodological primer on how detailed cognitive architectures such as act-r allow remedying these problems
+to make our point  we address a controversy  namely  whether noncompensatory or compensatory processes better describe how people make decisions from the accessibility of memories
+we specify  NUMBER  models of accessibility-based decision processes in act-r  including the noncompensatory recognition heuristic and various other popular noncompensatory and compensatory decision models
+additionally  to illustrate how such models can be tested  we conduct a model comparison  fitting the models to one experiment and letting them generalize to another
+behavioral data are best accounted for by race models
+these race models embody the noncompensatory recognition heuristic and compensatory models as a race between competing processes  dissolving the dichotomy between existing decision models
+### introduction ###
+one way to increase the precision of theories of decision making is to specify the cognitive processes decision-making mechanisms are assumed to draw on
+corresponding process models predict not only what decision a person will make  but also how the information used to make the decision will be processed
+the past decades have seen repeated calls to develop process models  and in fact  such models have become increasingly popular  CITATION
+the predictions made by these models have motivated a number of debates  for example  whether people rely on noncompensatory  lexicographic as opposed to compensatory  weighted-additive processes in inference  choice  and estimation  CITATION
+yet  often such process models are underspecified relative to the process data against which they can be tested
+in this article  we show how precision can be lent to process models by implementing them in a cognitive architecture
+we will make our point by focusing on a class of models that assume people to make decisions by exploiting the accessibility  CITATION  of memory contents
+these models have been at the focus of a debate about what processes describe people's decisions best when they make inferences about unknown states of the world  such as when predicting which sports teams are likely to win a competition  which politician will win an election  or which cities are likely to grow fastest in the number of inhabitants

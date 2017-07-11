@@ -1,0 +1,38 @@
+### abstract ###
+ninety-eight australian students participated in a functional replication of a study published by dijksterhuis et al CITATION
+the results indicated that unconscious thought does not necessarily lead to better normative decision making performance than conscious thought  which is contrary to the results found in dijksterhuis et al since other studies showed a positive  though statistically not significant  effect for unconscious thought  a meta-analysis comprising a total of  NUMBER  experiments was conducted
+it suggests that there is little evidence for an advantage to normative decision making using unconscious thought
+however  a discussion of potential moderators shows that further study would help to identify situations in which unconscious thought is truly helpful and those in which it is not
+### introduction ###
+in a series of studies  dijksterhuis and colleagues  CITATION  established the surprising and counterintuitive finding that unconscious thought leads to better decision making performance for complex problems than conscious thought
+unconscious thought is defined as  cognitive and  or affective task-relevant processes that take place outside conscious awareness   CITATION
+a second postulate is that the reverse is true for simple decision  consciously thinking about them is better
+this paper is concerned only with the first
+a common denominator of all experiments described by dijksterhuis and colleagues is the experimental technique
+participants are split in two or three groups and provided with a number of pieces of information about a number of options to choose from  for instance four apartments or flatmates
+each option is described by the same number of attributes  and usually these are attributes of the choice option
+for example  an attribute of all choice options for  apartments  might be the size
+typically these attributes are conceptualized dichotomously - either an apartment is spacious or it is not
+all pieces of information about all choice options are presented either as lists e g   newell  wong  cheung   and  rakow  in press  individually and randomized e g   this study  or individually in a fixed order  CITATION  for a fixed amount of time
+prior to the information presentation  participants are informed that they will have to a choose one of the options  CITATION  or b rate each option e g   lerouge  submitted
+then  following the presentation of the information  participants either immediately make a choice between options or think about their choice for a fixed amount of time  CITATION   or are distracted for the same amount of time before making their decision
+the principal claim is that  when the number of factors that ought to be considered is high as indicated by the number of attributes  and the decision is therefore complex  unconscious thought will lead to better decision performance than conscious deliberation
+better decision making which i call  normative  here is defined as choosing  or ranking higher  options with more positive features
+however  although most of dijksterhuis and colleagues' experiments found an effect in the hypothesized direction  such effects often failed to reach statistical significance when comparing the unconscious and conscious group directly
+for example  in the first reported experiment in dijksterhuis'  NUMBER  study the critical comparison did not reach statistical significance p  less than    NUMBER 
+in this context it is important to point out that in the sequence of experiments carried out by dijksterhuis  only the first two to be published  CITATION  were exclusively directed at establishing differences between decision success under unconscious versus conscious thought
+the other experiments primarily investigated further aspects of what was to become the theory of unconscious thought  CITATION
+for example  experiments  NUMBER  and  NUMBER  of dijksterhuis  bos  nordgren  and van baaren's  CITATION  study dealt with the deliberation without attention effect  which required two conditions  a complex and a simple one  which were differentiated by the number of information bits participants received
+however  even though these studies did not primarily contrast conscious with unconscious thought  they frequently provided data supporting the notion that unconscious thought is a superior form of integrating a large amount of information
+conscious thought  according to dijksterhuis  is very useful for monitoring information with respect to a particular criterion  for example the minimal amount of space that must be available in an apartment
+it can engage in logical operations and work with quantities in a precise fashion  as is the case in mathematical operations
+on the other hand  it has limited capacity and is thus unsuitable to integrate large amounts of information
+unconscious thought  on the other hand  is claimed to possess virtually infinite processing capacity  to process information divergently and to employ a natural weighing mechanism for acquired information
+the alleged differences between the two forms of thought have been described by six principles and some additional characteristics in dijksterhuis and nordgren  CITATION   who re-stated the basic tenet that unconscious thought works well for complex decision situations with multiple sources of relevant information
+despite its empirical successes and its advanced conceptual development  the theory of unconscious thought has not been without criticism
+shanks  NUMBER   for example claimed that the unconscious thought effects were an artefact of differential rates of forgetting rather than the product of different forms of processing
+the theory was also criticised for limited sample size in supporting studies  and concern was voiced about the applicability of the theory to the clinical context  CITATION  for which  as dijksterhuis and colleagues pointed out  the theory was not intended
+in addition to these criticisms  the currently published data are fairly limited in that they almost exclusively include studies from one laboratory
+the purpose of the present article is two-fold
+the first aim is to provide replication data for the unconscious decision making effect with an english-speaking sample and english stimulus material
+the study was also designed to gather additional information to rule out potential alternative explanations for the unconscious thought effect

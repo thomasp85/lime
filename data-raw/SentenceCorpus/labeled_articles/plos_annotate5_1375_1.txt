@@ -1,0 +1,34 @@
+### abstract ###
+MISC The firing rate of single neurons in the mammalian hippocampus has been demonstrated to encode for a range of spatial and non-spatial stimuli.
+MISC It has also been demonstrated that phase of firing, with respect to the theta oscillation that dominates the hippocampal EEG during stereotype learning behaviour, correlates with an animal's spatial location.
+MISC These findings have led to the hypothesis that the hippocampus operates using a dual coding system.
+OWNX To investigate the phenomenon of dual coding in the hippocampus, we examine a spiking recurrent network model with theta coded neural dynamics and an STDP rule that mediates rate-coded Hebbian learning when pre- and post-synaptic firing is stochastic.
+AIMX We demonstrate that this plasticity rule can generate both symmetric and asymmetric connections between neurons that fire at concurrent or successive theta phase, respectively, and subsequently produce both pattern completion and sequence prediction from partial cues.
+BASE This unifies previously disparate auto- and hetero-associative network models of hippocampal function and provides them with a firmer basis in modern neurobiology.
+OWNX Furthermore, the encoding and reactivation of activity in mutually exciting Hebbian cell assemblies demonstrated here is believed to represent a fundamental mechanism of cognitive processing in the brain.
+### introduction ###
+MISC The hippocampus and surrounding medial temporal lobe are implicated in declarative memory function in humans and other mammals CITATION.
+MISC Electrophysiology studies in a range of species have demonstrated that the activity of single pyramidal cells within this region can encode for the presence of both spatial and non-spatial stimuli CITATION.
+MISC The majority of empirical investigation has focussed on place cells neurons whose firing rate is directly correlated with an animal's spatial location within the corresponding place field CITATION.
+MISC Subsequent research has identified similar single cell responses to a variety of non-spatial cues including odour CITATION, complex visual images CITATION, CITATION, CITATION, running speed CITATION and the concept of a bed or nest CITATION.
+MISC It has also been demonstrated that the exact timing of place cell discharge, relative to the theta oscillation which dominates the hippocampal EEG during learning, correlates with distance travelled through a place field CITATION, CITATION, CITATION CITATION.
+MISC This phase precession mechanism creates a compressed theta coded firing pattern in place cells which corresponds to the sequence of place fields being traversed CITATION.
+MISC These findings have led to the hypothesis that the hippocampus operates using a dual rate and temporal coding system CITATION, CITATION.
+OWNX Here we present a spiking neural network model which utilises a dual coding system in order to encode and recall both symmetric and asymmetric connections between neurons that exhibit repeated synchronous and asynchronous firing patterns respectively.
+MISC The postulated mnemonic function of the hippocampus has been extensively modelled using recurrent neural networks, and this approach is supported by empirical data CITATION CITATION.
+MISC The biological correlate of these models is widely believed to be the CA3 region, which exhibits dense recurrent connectivity and wherein synaptic plasticity can be easily and reliably induced.
+MISC Pharmacological and genetic knockout studies have demonstrated that NMDAr-dependent synaptic plasticity in CA3 is critical for the rapid encoding of novel information, and synaptic output from CA3 critical for its retrieval CITATION, CITATION.
+MISC Recurrent neural network models of hippocampal mnemonic function have generally utilised rate-coded Hebbian learning rules to generate reciprocal associations between neurons with concurrently elevated firing rates CITATION, CITATION.
+MISC Hypothetically, this corresponds to the presence of either multiple stimuli or multiple overlapping place fields encountered at a single location CITATION CITATION.
+MISC The hippocampus is also implicated in sequence learning, and temporally asymmetric plasticity rules have subsequently been employed in recurrent network models to generate hetero-associative connections between neurons that fire with repeated temporal correlation CITATION CITATION.
+MISC Hypothetically, this corresponds to a sequence of place fields being traversed or stimuli being encountered on a behavioural timescale CITATION.
+MISC Importantly, previous computational models of hetero-associative learning have typically encoded each successive stage of a learned sequence with the activity of a single neuron, while empirical studies estimate that place fields are typically encoded by an ensemble of several hundred place cells CITATION, CITATION CITATION.
+CONT No computational model has thus far integrated auto- and hetero- associative learning in order to simultaneously generate both bi-directional and asymmetric connections between neurons that are active at the same and successive theta phases respectively using a single temporally asymmetric synaptic plasticity rule.
+MISC Empirical data indicates that changes in the strength of synapses within the hippocampus can depend upon temporal correlations in pre- and post- synaptic firing according to a spike-timing dependent plasticity rule CITATION CITATION.
+MISC It is not yet clear if rate-coded auto-associative network models of hippocampal mnemonic function are compatible with STDP or theta coded neural dynamics.
+AIMX        Here, we examine the synaptic dynamics generated by several different STDP rules in a spiking recurrent neural network model of CA3 during the encoding of temporal, rate and dual coded activity patterns created by a phenomenological model of phase precession.
+OWNX We demonstrate that under certain conditions - the STDP rule can generate both bi-directional connections between neurons which burst at concurrent theta phase and asymmetric connections between neurons which fire at consecutive theta phase.
+OWNX Subsequent superthreshold stimulation of a small number of simulated neurons generates putative recall activity, driven by recurrent excitation, that corresponds to pattern completion and/or sequence prediction in auto- and/or hetero- associative connections respectively.
+OWNX Interestingly, these neural dynamics are reminiscent of sharp wave ripple activity observed in vivo CITATION CITATION.
+OWNX These findings demonstrate that STDP and theta coded neural dynamics are compatible with rate-coded auto-associative network models of hippocampal function.
+OWNX Furthermore, the encoding and reactivation of dual coded Hebbian phase sequences of activity in mutually exciting neuronal ensembles demonstrated here has been proposed as a general neural coding mechanism for cognitive processing CITATION, CITATION CITATION .

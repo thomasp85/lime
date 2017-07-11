@@ -1,0 +1,25 @@
+### abstract ###
+We present an algorithmic framework for learning multiple related tasks
+Our framework exploits a form of prior knowledge that relates the output spaces of these tasks
+We present PAC learning results that analyze the conditions under which such learning is possible
+We present results on learning a shallow parser and named-entity recognition system that exploits our framework, showing consistent improvements over baseline methods
+### introduction ###
+When two NLP systems are run on the same data, we expect certain constraints to hold between their outputs
+This is a form of prior knowledge
+We propose a self-training framework that uses such information to significantly boost the performance of one of the systems
+The key idea is to perform self-training  only  on outputs that obey the constraints
+Our motivating example in this paper is the task pair: named entity recognition (NER) and shallow parsing (aka syntactic chunking)
+Consider a hidden sentence with known POS and syntactic structure below
+Further consider four potential NER sequences for this sentence \end{small}   Without ever seeing the actual sentence, can we guess which NER sequence is correct
+NER1 seems wrong because we feel like named entities should not be part of verb phrases
+NER2 seems wrong because there is an NNP, we also include \mytag{NNPS} } (proper noun) that is not part of a named entity (word 5)
+NER3 is amiss because we feel it is unlikely that a  single  name should span more than one NP (last two words)
+NER4 has none of these problems and seems quite reasonable
+In fact, for the hidden sentence, NER4 is correct
+The remainder of this paper deals with the problem of formulating such prior knowledge into a workable system
+There are similarities between our proposed model and both self-training and co-training; background is given in Section~
+We present a formal model for our approach and perform a simple, yet informative, analysis (Section~)
+This analysis allows us to define what good and bad constraints are
+Throughout, we use a running example of NER using hidden Markov models to show the efficacy of the method and the relationship between the theory and the implementation
+Finally, we present full-blown results on seven different NER data sets (one from CoNLL, six from ACE), comparing our method to several competitive baselines (Section~)
+We see that for many of these data sets, less than one hundred labeled NER sentences are required to get state-of-the-art performance, using a discriminative sequence labeling algorithm  CITATION

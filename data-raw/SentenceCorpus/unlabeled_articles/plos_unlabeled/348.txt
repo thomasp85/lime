@@ -1,0 +1,36 @@
+### abstract ###
+Accumulating infections of highly pathogenic H5N1 avian influenza in humans underlines the need to track the ability of these viruses to spread among humans.
+A human-transmissible avian influenza virus is expected to cause clusters of infections in humans living in close contact.
+Therefore, epidemiological analysis of infection clusters in human households is of key importance.
+Infection clusters may arise from transmission events from the animal reservoir, humans who were infected by animals, or humans who were infected by humans.
+Here we propose a method of analysing household infection data to detect changes in the transmissibility of avian influenza viruses in humans at an early stage.
+The method is applied to an outbreak of H7N7 avian influenza virus in The Netherlands that was the cause of more than 30 human-to-human transmission events.
+The analyses indicate that secondary human-to-human transmission is plausible for the Dutch household infection data.
+Based on the estimates of the within-household transmission parameters, we evaluate the effectiveness of antiviral prophylaxis, and conclude that it is unlikely that all household infections can be prevented with current antiviral drugs.
+We discuss the applicability of our method for the detection of emerging human-to-human transmission of avian influenza viruses in particular, and for the analysis of within-household infection data in general.
+### introduction ###
+Outbreaks of highly pathogenic H5N1 avian influenza in Southeast Asia, Europe, and Africa have devastating consequences for poultry CITATION, CITATION, and have resulted in numerous infections in humans CITATION CITATION.
+Although these infections from the animal reservoir continue to accumulate, the virus does not seem to spread extensively among humans.
+Nevertheless, a fear is that these human infections may ultimately spark an influenza pandemic CITATION CITATION.
+Indeed, recent clusters of infections in human households hint at the possibility of virus transmission from humans who were infected by poultry to their household contacts CITATION, CITATION.
+These suggestions are strengthened by the observation of mutations in recent H5N1 viruses that seem to predispose the virus for more efficient transmission in mammals, including humans CITATION CITATION .
+It is likely that a virus with pandemic potential will present itself initially through an increase in the number of infections in humans who have been in close contact with the case infected by animals.
+Therefore, rapid detection and control of clusters of infections is of key importance CITATION, CITATION.
+Such clusters may result from multiple introductions from the animal reservoir, multiple transmission events from humans who were infected by animals, or multiple transmission events from humans who were themselves infected by humans.
+Obviously, evidence for is the most worrisome as it indicates that the virus has acquired the ability to spread efficiently in humans.
+It is often thought that pathogens from the animal reservoir that have made the jump to a new host species are usually not well-adapted for sustained transmission in the new host, and that transmissibility in a new species will gradually increase over time by the process of adaptation by means of natural selection CITATION CITATION.
+Interestingly, however, in the case of H5N1 avian influenza in humans, the evidence so far does not seem to fit this prediction CITATION CITATION.
+Mechanisms that could be responsible for the lack of efficient secondary human-to-human transmission could be due to a dose effect whereby humans infected by animals receive a higher infection dose than humans infected by humans, or to behavioural changes after infection that limit spread of the virus after it has been detected.
+In this paper we develop a method to detect and quantify different routes of virus transmission in a household setting.
+Our main aim is to investigate whether within-household pathogen transmission has been restricted to transmission from the primary infected individual or whether there is evidence that the transmission chain has extended beyond the first generation of human-to-human infections.
+Our analyses are based on theoretical developments on the distribution of the final size of an epidemic in finite populations, which allow construction of flexible methods to analyse within-household transmission chains.
+We apply the method to a recent study of within-household transmission of highly pathogenic avian influenza of the H7N7 subtype that caused a large epidemic in poultry in The Netherlands in 2003.
+Shortly after the detection of virus circulation, the Dutch authorities undertook an aggressive control strategy that consisted of an animal movement ban in the affected regions, tracing and screening suspected flocks, and culling of infected and contiguous flocks.
+In all, a total of 255 flocks became infected during a period of nine weeks, and more than 30 million birds were culled CITATION, CITATION.
+Subsequent studies of poultry workers revealed that at least 86 infections from the animal reservoir to humans had taken place CITATION CITATION.
+In addition, more than 30 household contacts of the infected poultry workers who had not been in direct contact with poultry were reported positive.
+These reports indicate that human-to-human transmission did occur from individuals infected from the animal reservoir.
+Here we analyse data of the transmission chains in 24 households that led to 33 human-to-human transmission events, measuring the extent of onward transmission from humans who were infected by humans.
+We complement the statistical analyses by systematic power analyses to obtain insight into the study size needed to be able to find significant secondary human-to-human transmission, given that it is present.
+Although we have applied the method to a specific dataset, we believe that our method is of general interest as it enables rapid estimation of within-household transmission rates based on data that are easily gathered for most infectious diseases.
+For instance, our method of analysis is not restricted to the analysis of emerging pandemic influenza, but it can just as well be used to estimate different routes of within-household transmission rates of human influenza A viruses CITATION CITATION and, importantly, to assess the potential effectiveness of control measures.

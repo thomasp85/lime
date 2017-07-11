@@ -1,0 +1,48 @@
+### abstract ###
+Phylogenetic profiling is based on the hypothesis that during evolution functionally or physically interacting genes are likely to be inherited or eliminated in a codependent manner.
+Creating presence absence profiles of orthologous genes is now a common and powerful way of identifying functionally associated genes.
+In this approach, correctly determining orthology, as a means of identifying functional equivalence between two genes, is a critical and nontrivial step and largely explains why previous work in this area has mainly focused on using presence absence profiles in prokaryotic species.
+Here, we demonstrate that eukaryotic genomes have a high proportion of multigene families whose phylogenetic profile distributions are poor in presence absence information content.
+This feature makes them prone to orthology mis-assignment and unsuited to standard profile-based prediction methods.
+Using CATH structural domain assignments from the Gene3D database for 13 complete eukaryotic genomes, we have developed a novel modification of the phylogenetic profiling method that uses genome copy number of each domain superfamily to predict functional relationships.
+In our approach, superfamilies are subclustered at ten levels of sequence identity from 30 percent to 100 percent and phylogenetic profiles built at each level.
+All the profiles are compared using normalised Euclidean distances to identify those with correlated changes in their domain copy number.
+We demonstrate that two protein families will auto-tune with strong co-evolutionary signals when their profiles are compared at the similarity levels that capture their functional relationship.
+Our method finds functional relationships that are not detectable by the conventional presence absence profile comparisons, and it does not require a priori any fixed criteria to define orthologous genes.
+### introduction ###
+Comparison of the phylogenetic profiles of orthologous proteins in different species is a well-known and powerful method for detecting functionally related proteins.
+The approach assumes that two functionally related proteins will have been inherited or eliminated in a codependent fashion through speciation.
+Therefore, by examining correlated presence absence patterns in different genomes, it is possible to infer protein co-evolution and a functional relationship.
+After the original idea was published CITATION, the phylogenetic profile method was improved or reinterpreted in many different ways.
+For example: through the application of more complex logical rules to associate and compare protein profiles CITATION ; the use of domain profiles instead of whole proteins CITATION ; refining the algorithm CITATION ; or integration of species phylogenetic information CITATION, CITATION .
+Although the phylogenetic profile method can be improved by integrating new sources of information, in all cases the prediction quality of this method depends on two critical steps: the selection of the reference species sample and the determination of which proteins are orthologues.
+Typically the latter is done using a Reciprocal Best Hits approach with similarity determined by the BLAST algorithm CITATION, CITATION CITATION and an E-value cutoff for potential orthologues.
+In fact, these two steps have different impacts on the prediction quality.
+The reference species problem can be avoided by simply increasing the sample size with new genomes until a certain number has been reached.
+However, there are many problems, e.g., CITATION CITATION, in determining orthology, especially the separation of orthologues from paralogues.
+Multigene families that exist within one genome can also exhibit functional overlap and substitutability between the members.
+The fact that genes evolve at different rates, due to both uneven natural selection pressure on their functions and different species having different mutation rates e.g., rodents accumulate point mutations more rapidly than apes CITATION implies that the evolutionary rates of proteins may vary over several orders of magnitude in the different gene families CITATION.
+This rate variation makes it difficult to choose a single similarity E-value cutoff that can be broadly applied to identify those orthologues most likely to have retained similar functionality.
+The multigene family problem is particularly challenging in eukaryotic genomes wherein the percentage of genes present in multiple homologous copies is much higher than in prokaryotic genomes.
+However, the higher percentage of multigene families is not the only problem that makes it more difficult to correctly assign orthologous relationships in eukaryotic species.
+In contrast to prokaryotes, accurate identification of ORFs is complicated in eukaryotes by noise from domain rearrangements, more complex gene architectures, and a higher presence of noncoding regions.
+Furthermore, in eukaryotes there is a weaker correlation between the number of ORFs and the phenotypic complexity of an organism.
+This is probably due to a number of reasons, perhaps most significantly the greater use of RNA-based regulatory mechanisms CITATION .
+We have developed a novel modification of the phylogenetic profile method that bypasses several of these problems, especially the orthology or functional equivalence as it can also be perceived detection problem, and can detect interacting multigene families.
+This method is particularly applicable to identifying functional networks in eukaryotes, which have so far proven intractable.
+Our approach is based around protein domains, since these are the most elemental units of protein function.
+Furthermore, this allows us to bypass confusion caused by domain rearrangements.
+For this study we have used the domain annotation from the Gene3D database, which stores CATH assignments for complete genomes.
+The first key modification is that we do not consider the presence absence of domains but the number of copies of the domain.
+The second key modification is that we subcluster all the domains at ten levels of sequence identity from 30 percent to 100 percent.
+We then create profiles for every domain family and the subclusters within it, which enables the identification of distinct functional subgroups within domain families.
+Although it is clear that there are always exceptions to any evolutionary model that can be proposed, the co-evolutionary hypothesis implicit in our model supposes that gene copy number in two functionally related protein clusters will vary in a related fashion.
+In our approach, domain occurrence profiles are built at many identity levels, and therefore it is expected that two protein clusters will auto-tune with a significant correlation signal when their profiles are compared at the similarity levels that retain their functional relationship.
+Therefore, domain occurrence profiles were compared all against all to identify correlations in domain copy number variation in all the different identity levels.
+Our method found strong co-evolutionary signals amongst functionally related multigene domain families that could not have been predicted by the conventional presence absence comparison of profiles proposed by Pellegrini et al. CITATION .
+This new approach has a number of features that make it especially useful for eukaryotic genome analysis.
+Firstly, phylogenetic profiles based on protein domains can detect functional relationships that are not detectable using phylogenetic profiles of whole proteins, reducing the noise that protein domain rearrangements produce, particularly in eukaryotes CITATION.
+Secondly, it uses domain occurrence profiles instead of presence absence profiles.
+The latter are less effective in eukaryotic genomes as they do not account for the wide variation in gene copy number observed in eukaryotes.
+And thirdly, the method applied does not require a priori any fixed E-value cutoff to define orthologous groups.
+Because domain clusters are built at several discrete identity levels, the method takes into account much of the variation that uneven selection pressure produces on sequence and functional conservation.

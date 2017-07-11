@@ -1,0 +1,43 @@
+### abstract ###
+Cells of the embryonic vertebrate limb in high-density culture undergo chondrogenic pattern formation, which results in the production of regularly spaced islands of cartilage similar to the cartilage primordia of the developing limb skeleton.
+The first step in this process, in vitro and in vivo, is the generation of cell condensations, in which the precartilage cells become more tightly packed at the sites at which cartilage will form.
+In this paper we describe a discrete, stochastic model for the behavior of limb bud precartilage mesenchymal cells in vitro.
+The model uses a biologically motivated reaction diffusion process and cell-matrix adhesion as the bases of chondrogenic pattern formation, whereby the biochemically distinct condensing cells, as well as the size, number, and arrangement of the multicellular condensations, are generated in a self-organizing fashion.
+Improving on an earlier lattice-gas representation of the same process, it is multiscale, and the cells are represented as spatially extended objects that can change their shape.
+The authors calibrate the model using experimental data and study sensitivity to changes in key parameters.
+The simulations have disclosed two distinct dynamic regimes for pattern self-organization involving transient or stationary inductive patterns of morphogens.
+The authors discuss these modes of pattern formation in relation to available experimental evidence for the in vitro system, as well as their implications for understanding limb skeletal patterning during embryonic development.
+### introduction ###
+Skeletal pattern formation in the developing vertebrate limb depends on interactions of precartilage mesenchymal cells with factors that control the spatiotemporal differentiation of cartilage.
+The most fundamental skeletogenic processes involve the spatial separation of precartilage mesenchyme into chondrogenic and nonchondrogenic domains CITATION, and can be studied in vitro as well as in vivo.
+In high-density micromass cultures of chondrogenic embryonic limb mesenchymal cells CITATION, CITATION, as well as in the developing limb itself CITATION, morphogens of the TGF- family induce the local aggregation or condensation of these cells by a process that involves the upregulation of the adhesive extracellular glycoprotein fibronectin CITATION, CITATION.
+Cells first accumulate in regions of increased cell fibronectin adhesive interactions CITATION CITATION and then acquire epithelioid properties by upregulation of cell cell adhesion molecules CITATION, CITATION.
+Cartilage differentiation follows at the sites of condensation both in vitro and in vivo .
+In certain developmental processes, such as angiogenesis and invasion by cancer cells of surrounding tissues, pre-existing multicellular structures become more elaborate.
+Precartilage condensation, by contrast, is an example of a developmental process in which cells that start out as independent entities interact to form multicellular structures.
+Others in this second category include vasculogenesis, the formation of feather germs, and the aggregation of social amoebae into streams and fruiting bodies.
+Both continuous CITATION CITATION and discrete CITATION CITATION models have been used previously to analyze a wide range of pattern formation behaviors in both categories using concepts such as chemotaxis, haptotaxis, and reaction diffusion instability.
+Discrete models describe the behaviors and interactions of individual biological entities such as organisms, cells, proteins, etc. They are often applied to microscale events where a small number of elements can have a large impact on a system.
+In a previous study CITATION we presented a discrete biological lattice gas model for high-density cultures of precartilage mesenchymal cells derived from the embryonic vertebrate limb.
+This model, which was based on the physical notion of a lattice gas, in which individual particles are free to move from point to point on a lattice at discrete time-steps, accurately simulated the formation of patterns of mesenchymal condensations observed in high-density micromass cultures of such cells.
+In these simulations, the distribution and relative size of the condensations corresponded to in vitro values when appropriate quantities for cell behavioral parameters were chosen, and the simulated patterns were robust against small variations of these values.
+Moreover, the simulated patterns were altered similarly to the cultures when cell density and exposure to or expression of molecular factors represented in the model were altered in a fashion analogous to their counterparts in the living system.
+In the earlier model, each of the limb precartilage mesenchymal cells, and each molecule from a core subset of the molecules they secrete, was represented as a single particle on a common grid.
+Default motion of the cell particles was random, but cell movement was also biased by the presence of fibronectin particles produced and deposited by the cells according to a set of rules involving TGF- and inhibitor particles.
+The latter in turn were produced in a cell-dependent fashion according to a reaction diffusion scheme, the network structure of which was suggested by in vitro experiments CITATION, CITATION, CITATION .
+The ability of the model of Kiskowski et al. CITATION to simulate both qualitative and quantitative aspects of precartilage condensation formation and distribution suggested that the core genetic network cell behavioral mechanism that underlies this biological lattice gas might be sufficient to account for pattern formation in the limb cell micromass system and corresponding features of in vivo limb development.
+However, the model deviated from biological reality in several important ways.
+Mesenchymal cells in vitro are initially surrounded by a small layer of ECM that separates them by less than a cell diameter.
+Those that undergo condensation round up, reducing their surface area, but do not move away from adjacent noncondensing cells.
+Therefore, unlike the situation in the model of Kiskowski et al. CITATION, mesenchymal condensation in micromass culture does not involve accumulation of cells at particular sites with concomitant depletion of cells in surrounding zones.
+The representation of cells, morphogens, and ECM on a common grid is physically unrealistic.
+This is not simply a matter of pixel scale: molecular substances can indeed form deposits and gradients on the same linear scale as cells, and a molecular pixel could be considered to correspond to thousands of molecules.
+Nonetheless, the dynamics of morphogen transport is continuous and is represented in an inauthentically saltatory fashion by pixel displacement on a grid of the same mesh size as that supporting cell translocation.
+Whereas the model of Kiskowski et al. made the assumption that cells halt their motion when they encounter suprathreshold levels of extracellular fibronectin CITATION, this does not agree with measurements CITATION, CITATION indicating that cells actually slightly increase their speed of motion as they enter condensation centers and have a finite probability of escaping from these foci.
+Despite the successes of the model of Kiskowski et al. CITATION, it was unknown whether removing its artifactual aspects and replacing them with more realistic assumptions would lead to similarly authentic results.
+We have therefore designed a more sophisticated model that overcomes each of the listed deficiencies of the earlier one.
+The cells in the new model are extended, multipixel objects that can change shape in the plane and round up by moving pixels into a virtual third dimension.
+The model cells are separated by less than a cell diameter, condense without denuding the regions surrounding condensation centers, and are not irreversibly trapped upon entering a center.
+Finally, two grids of different mesh size are used for cell and molecular dynamics.
+We have found that not only does this improved model reproduce the experimental data accounted for by the model of Kiskowski et al., but that additional morphogenetic features of the micromass culture system are simulated as well.
+Moreover, potential dynamic properties of the developmental process not seen in the earlier simulations, and not capable of being distinguished on the basis of existing experimental data, were disclosed in simulations using the new model, which has therefore provided motivation for further empirical tests.

@@ -1,0 +1,20 @@
+### abstract ###
+Grammar inference deals with determining (preferable simple) models/grammars consistent with a set of observations
+There is a large body of research on grammar inference within the theory of formal languages
+However, there is surprisingly little known on grammar inference for graph grammars
+In this paper we take a further step in this direction and work within the framework of node label controlled (NLC) graph grammars
+Specifically, we characterize, given a set of disjoint and isomorphic subgraphs of a graph  SYMBOL , whether or not there is a NLC graph grammar rule which can generate these subgraphs to obtain  SYMBOL
+This generalizes previous results by assuming that the set of isomorphic subgraphs is disjoint instead of non-touching
+This leads naturally to consider the more involved ``non-confluent'' graph grammar rules
+### introduction ###
+Grammar inference, also called grammar induction, is a general line of research where one is concerned with determining a ``simple'' grammar that is consistent with a given set of possible and impossible outcomes
+Hence, one ``goes back'' in the derivation: instead of determining the generative power of a grammar, one determines the grammar given the generated output
+This topic is well-studied for formal languages, especially with respect to context-free languages, see eg CITATION , however, relatively little is known for graph grammars
+The topic of inference of graph grammars is considered in  CITATION  and uses their so-called Subdue scheme developed in  CITATION
+In  CITATION  a rigorous approach of grammar inference within the framework of node label controlled (NLC) graph grammars  CITATION , a natural and well-studied class of graph grammars, is initiated
+There it is characterized, given a set  SYMBOL  of non-touching isomorphic graphs of a graph  SYMBOL , whether or not there is a graph grammar consisting of one rule able to generate the graphs of  SYMBOL  to obtain  SYMBOL
+We continue this research and generalize this result for the case where these graphs are disjoint instead of non-touching
+Such a generalization requires one to deal with a number of issues
+Most notably, one has to deal with non-confluency issues: the generated graph depends on the order in which touching subgraphs are generated \addconf{Due to space constraints, proofs of the results are omitted, but can be found in an extended version
+
+of this paper }

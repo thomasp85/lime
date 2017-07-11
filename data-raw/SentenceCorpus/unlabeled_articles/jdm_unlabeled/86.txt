@@ -1,0 +1,37 @@
+### abstract ###
+we make hundreds of decisions every day  many of them extremely quickly and without much explicit deliberation
+this motivates two important open questions  what is the minimum time required to make choices with above chance accuracy
+what is the impact of additional decision-making time on choice accuracy
+we investigated these questions in four experiments in which subjects made binary food choices using saccadic or manual responses  under either  speed  or  accuracy  instructions
+subjects were able to make above chance decisions in as little as  NUMBER  ms  and choose their preferred food item in over  NUMBER  percent  of trials at average speeds of  NUMBER  ms
+further  slowing down their responses by either asking them explicitly to be confident about their choices  or to respond with hand movements  generated about a  NUMBER  percent  increase in accuracy
+together  these results suggest that consumers can make accurate every-day choices  akin to those made in a grocery store  at significantly faster speeds than previously reported
+### introduction ###
+we make hundreds of decisions every day  many of them extremely quickly and without much explicit deliberation
+consider  as an example  a trip to the local grocery store
+while unfamiliar and high-stakes purchases often involve careful comparisons  casual observation suggests that many others are made at speeds that seem inconsistent with careful deliberation
+this motivates an important open question in the psychology and neurobiology of decision-making  as well as in the domain of consumer research  what are the fastest speeds at which the human brain is capable of identifying the most valuable options
+previous work on the computational and neurobiological basis of decision-making provides some clues
+multiple studies have shown that the drift-diffusion-model and its variants  which provide a computational description of how choices are made  are able to provide good quantitative descriptions of how accuracy and response times vary with the underlying parameters of the choice problem  CITATION
+all of these models predict a speed-accuracy tradeoff  which has been observed in the data
+however  this literature has not experimentally measured the fastest speeds at which value-based decisions can be made  CITATION
+an examination of previous decision-making studies also suggest that decisions can be made quickly  but provide few clues about how fast these decisions can be made when speed is the goal  perhaps due to external constraints
+for example  in krajbich  armel  and rangel  CITATION   hungry subjects made real choices between pairs of food stimuli displayed on a computer screen with reaction times rt that ranged from  NUMBER   NUMBER  seconds for the easiest choices to  NUMBER   NUMBER  for the most difficult ones
+reaction times in the  NUMBER  ms range have been reported in various other choice studies  CITATION
+studies examining more complex choices  those involving six to twelve options  have reported reaction times in the  NUMBER - NUMBER  seconds range  CITATION
+however  work on the psychophysics of perceptual judgments suggests that the brain may be able to carry out the decisions computations much faster
+thorpe  fize   and  marlot  CITATION  showed that subjects could categorize natural scenes according to whether or not they contain an animal using a go no-go task median rt of  NUMBER  ms on  go  trials and differential erp activity in  NUMBER  ms
+vanrullen  and  thorpe  CITATION  found that subjects could distinguish between animals and vehicles in a go no-go task at similarly fast speeds mean rt of  NUMBER  ms for animals   NUMBER  ms for vehicles  minimum rt of  NUMBER  ms for animals   NUMBER  ms for vehicles as measured by earliest above-chance responses  differential erp activity detected in  NUMBER  ms for both tasks
+further  kirchner  and  thorpe  CITATION  used a novel saccadic choice paradigm to show that a pair of natural scenes flashed in the left and right hemifields could be compared for the presence of one or more animals with a median rt of  NUMBER  ms  and a minimum rt of  NUMBER  ms
+utilizing a similar paradigm  bannerman  milders  de gelder  and sahraie  CITATION  showed that subjects could distinguish a fearful facial expression or body posture from a neutral one in less than  NUMBER  ms mean rt
+similarly  forced-choice saccades to identify human faces can be performed above chance and initiated with a mean reaction time of  NUMBER  ms and a minimum rt  NUMBER  ms  CITATION
+finally  we recently showed that individuals can make magnitude comparisons between two single-digit numbers with high accuracy in  NUMBER  ms on average and are able to perform above chance in as little as  NUMBER  ms  CITATION
+note that  as in the case of simple choice  in all of these experiments subjects had to recognize the stimuli and their location  analyze the stimuli to make a discrimination judgment  and then indicate the outcome of the judgment through a motor response
+thus  given the similar computational demands  it is natural to hypothesize that the brain should be able to make accurate simple choices at much faster speeds than those that have been reported in the literature
+we conducted four experiments designed to address two basic questions  what is the minimum computation time required to make choices with above chance accuracy
+what is the impact of additional computational time on choice accuracy
+an important difficulty in answering these questions is that reaction time measures from standard choice paradigms overestimate the amount of time that it takes to make a decision i e   to compute and compare values  since they include the time that it requires to perceive the stimuli and to deploy the choice
+here  we use a paradigm from vision psychophysics  CITATION   which was developed in the studies described above  and which allows us to minimize the aforementioned measurement problems
+determining the minimum computation times at which consumers can make choices above chance level  as well as the impact of additional time on choice accuracy  is important for two reasons
+first  since a significant fraction of decisions seems to be made at these speeds  it provides an insight into the general quality of human decision-making
+the increased popularity of new technologies in which decisions are made with the click of a mouse further increases the importance of the question

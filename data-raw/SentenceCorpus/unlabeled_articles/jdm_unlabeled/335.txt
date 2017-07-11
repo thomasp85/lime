@@ -1,0 +1,32 @@
+### abstract ###
+the collective recognition heuristic is a simple forecasting heuristic that bets on the fact that people's recognition knowledge of names is a proxy for their competitiveness  in sports  it predicts that the better-known team or player wins a game
+we present two studies on the predictive power of recognition in forecasting soccer games  CITATION  and analyze previously published results
+the performance of the collective recognition heuristic is compared to two benchmarks  predictions based on official rankings and aggregated betting odds
+across three soccer and two tennis tournaments  the predictions based on recognition performed similar to those based on rankings  when compared with betting odds  the heuristic fared reasonably well
+forecasts based on rankings-but not on betting odds-were improved by incorporating collective recognition information
+we discuss the use of recognition for forecasting in sports and conclude that aggregating across individual ignorance spawns collective wisdom
+### introduction ###
+with thousands of bookmakers accepting wagers on sporting events around the world  today  betting on sports is more popular than ever before
+for example  in  NUMBER  bettors in the uk alone wagered  NUMBER  million british pounds on soccer games-placing over  NUMBER  million bets in total  CITATION
+how should bettors and bookmakers make forecasts about sporting events
+many different approaches have been proposed  CITATION
+one common denominator is to muster plenty of knowledge-ranging from various indicators of the strength of individual players and teams to information about past outcomes  such as wins  losses-and then predict game scores e g    NUMBER   NUMBER  or game outcomes  CITATION  based on that knowledge
+knowledge about teams or players seems indispensable for rendering accurate forecasts-statistically or informally
+indeed  it seems absurd to assume that one can successfully predict which tennis player will win a match if one does not even know most of the names of his or her competitors in the tournament
+or can one
+surprisingly  there is mounting evidence that  contrary to thomas carlyle's intuition  the collective wisdom of individual ignorance genuinely exists
+for instance  in a recent study  the ranks of tennis players performing in the wimbledon  NUMBER  tournament-based on how often they were recognized by  NUMBER  amateur tennis players-predicted the match winners better than the atp entry ranking  CITATION
+this  wisdom of ignorant crowds  is one among several examples in sports of the surprising predictive power of simple heuristics that forgo the exploitation of ample amounts of knowledge  CITATION
+the fact that simple forecasting mechanisms can compete with or even outperform more sophisticated ones is by no means a new insight  CITATION
+this finding  however  has been repeatedly met with resistance  is not widely put to use  CITATION   and has not yet made it into popular textbooks of  for example  econometrics see hogarth  in press
+one reason may be the intuitive appeal of the accuracy-effort trade-off  the less information  computation  or time that one uses  the less accurate one's judgments will be
+this trade-off is believed to be one of the few general laws of the human mind  CITATION   and violations of this law are seen as odd exceptions
+in the domain of forecasting sports events it is indeed difficult to judge to  what simple forecasting strategies can outperform more complex ones  simply because of the dearth of data
+in a recent review  goldstein and  gigerenzer  CITATION  noted that   there is a need to test the relative performance of heuristics  experts  and complex forecasting methods more systematically over the years rather than in a few arbitrary championships  p  NUMBER 
+focusing on the predictive power of collective recognition or ignorance in sports  this paper contributes to the literature in four ways
+first  it presents two new studies on the predictive power of recognition in forecasting soccer games  CITATION
+these two studies will show to what extent the previous results can be replicated  CITATION
+second  it compares the predictive power of recognition in these two studies and in previously published research  CITATION  against two benchmarks in all tournaments  predictions based on official rankings e g   fifa for soccer and aggregated betting odds
+third  we investigate whether forecasts based on rankings and betting odds can be improved by incorporating collective recognition information
+fourth  we investigate the performance of a recognition-based heuristic that relies on the recognition of individual names rather than category names e g   the names of soccer players instead of the names of the soccer team itself
+last but not least  let us emphasize that our investigation of collective recognition in the domain of sports should not be taken to mean that the power of collective recognition is restricted to this domain

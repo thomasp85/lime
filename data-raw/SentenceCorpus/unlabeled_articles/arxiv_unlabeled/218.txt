@@ -1,0 +1,14 @@
+### abstract ###
+For a wide variety of regularization methods, algorithms computing the entire solution path have been developed recently
+Solution path algorithms do not only compute the solution for one particular value of the regularization parameter but the entire path of solutions, making the selection of an optimal parameter much easier
+Most of the currently used algorithms are not robust in the sense that they cannot deal with general or degenerate input
+Here we present a new robust, generic method for parametric quadratic programming
+Our algorithm directly applies to nearly all machine learning applications, where so far every application required its own different algorithm
+We illustrate the usefulness of our method by applying it to a very low rank problem which could not be solved by existing path tracking methods, namely to compute part-worth values in choice based conjoint analysis, a popular technique from market research to estimate consumers preferences on a class of parameterized options
+### introduction ###
+We study a combinatorial algorithm to solve parameterized quadratic programs, i e , to compute the whole solution path
+Unlike other methods employed in machine learning, our algorithm can deal with singular objective function matrices, without perturbing the input
+Regularization methods resulting in parametrized quadratic programs have successfully been applied in many optimization, classification and regression tasks in a variety of areas as for example signal processing, statistics, biology, surface reconstruction and information retrieval
+We will briefly review some applications here, and we will also study another application, namely choice based conjoint analysis in more detail
+Conjoint analysis comprises a popular family of techniques mostly used in market research to assess consumers' preferences on a set of options that are specified by multiple parameters, see~ CITATION  for an overview and recent developments
+We will show that a regularization approach to the analysis of preference data leads to a parameterized quadratic program with a sparse, low rank positive semi-definite matrix describing the quadratic term of the objective function

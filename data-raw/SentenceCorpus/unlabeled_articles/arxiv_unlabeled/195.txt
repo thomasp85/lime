@@ -1,0 +1,40 @@
+### abstract ###
+Frequent episode discovery is a popular framework for pattern discovery in event streams
+An episode is a partially ordered set of nodes with each node associated with an event type
+Efficient (and separate) algorithms exist for episode discovery when the associated partial order is total  (serial episode) and trivial (parallel episode)
+In this paper, we propose efficient algorithms for discovering frequent episodes with general partial orders
+These algorithms can be easily specialized to discover serial or parallel episodes
+Also, the algorithms are flexible enough to be specialized for mining in the space of certain interesting subclasses of partial orders
+We point out that there is an inherent combinatorial explosion in frequent partial order mining and  most importantly, frequency alone is not a sufficient measure of interestingness
+We propose a new interestingness measure for general partial order episodes and a discovery  method based on this measure, for filtering out uninteresting partial orders
+Simulations demonstrate the effectiveness of our algorithms
+### introduction ###
+Frequent episode discovery  CITATION  is a popular framework for discovering temporal patterns in symbolic time series data, with applications in several domains like manufacturing  CITATION , telecommunication  CITATION , WWW  CITATION , biology  CITATION , finance  CITATION , intrusion detection  CITATION , text mining  CITATION  etc
+The data in this framework is a single long time-ordered  stream of events and each temporal pattern (called an episode) is essentially a small, partially ordered  collection of nodes, with each node associated with a symbol (called event-type)
+The partial order in the episode constrains the time-order in which events should appear in the data, in order for the events to constitute an occurrence of the episode
+Patterns with a total order on their nodes are called  serial  episodes, while those with an empty partial order are called  parallel  episodes  CITATION
+The task  is to unearth all episodes whose frequency in the data exceeds a user-defined threshold
+Currently, separate algorithms exist in the literature for discovering frequent serial and parallel episodes in data streams  CITATION , while no algorithms are available for the case of episodes with general partial orders
+Related work can be found in the context of sequential patterns  CITATION  where the data consists of multiple sequences and the sequential pattern is a small partially ordered collection of symbols
+A sequential pattern is considered frequent  if there are enough sequences (in the data) in  which the pattern    occurs  atleast once
+By contrast, in frequent episode discovery, we are looking for patterns that repeat often in  a single long stream of events
+This makes the computational task quite different from that in sequential patterns
+In this paper, we develop algorithms for discovering frequent episodes with general partial order constraints over their nodes
+We restrict our attention to a subclass of patterns called  injective  episodes, where an event-type cannot appear more than once in a given episode
+This facilitates the design of efficient algorithms with no restriction whatsoever on the partial orders of episodes
+Further, our algorithms   can handle the usual expiry time constraints for episode occurrences (which limit the time-spans of valid occurrences to some user-defined maximum value)
+Our algorithms can be easily specialized to either discover only frequent serial episodes or only frequent parallel episodes
+Moreover, we can also specialize the method to focus the discovery process to certain classes   of partial order episodes which satisfy what we call as the  maximal subepisode property  (Serial episodes and parallel episodes are specific examples of classes that obey this property)
+As we point out here, one of the difficulties in efficient discovery of general partial orders is that    there is an inherent combinatorial explosion in the number of frequent episodes of any given size
+This is because, for any partial order episode with  SYMBOL  nodes,  there are an exponential number of subepisodes, also of size  SYMBOL , all of which would occur at least as often as the episode (Note that this problem does not arise in, eg , frequent serial episode discovery   because an  SYMBOL -node serial episode cannot have any  SYMBOL -node serial subepisode)
+Thus, frequency alone is insufficient as a measure of interestingness for   episodes with general partial orders
+To tackle this,    we propose a  new  measure called  bidirectional evidence , which captures some notion of entropy of relative frequencies of pairs of events occurring in either order   in the observed occurrences of an episode
+The mining procedure now requires a user-defined threshold on bidirectional evidence in addition to the usual frequency threshold
+We demonstrate the utility of our  algorithms through extensive empirical studies
+The paper is organized as follows
+In Sec ~, we briefly review the frequent episodes formalism  and define injective episodes
+Sec ~ describes the finite state automata  (and its associated properties) for tracking occurrences of injective episodes
+Algorithms for counting frequencies  of partial order episodes  are described in Sec ~
+The candidate generation is described in Sec ~
+Sec ~ describes our new interestingness measure
+We present simulation results in Sec ~ and conclude in Sec ~

@@ -1,0 +1,33 @@
+### abstract ###
+the recognition heuristic models the adaptive use and dominant role of recognition knowledge in judgment under uncertainty
+of the several predictions that the heuristic makes  empirical tests have predominantly focused on the proposed noncompensatory processing of recognition
+some authors have emphasized that the heuristic needs to be scrutinized based on precise tests of the exclusive use of recognition
+although precise tests have clear merits  i critically evaluate the value of such tests as they are currently employed
+first  i argue that using precise measures of the exclusive use of recognition has to go beyond showing that the recognition heuristic-like every model-cannot capture reality completely
+second  i illustrate how precise tests based on response times can lead to unsubstantiated conclusions if the fact that the recognition heuristic does not model the recognition judgment itself is ignored
+finally  i highlight two key but so far neglected aspects of the recognition heuristic  a the connection between recognition memory and the recognition heuristic  and b the mechanisms underlying the adaptive use of recognition
+### introduction ###
+in his essays  the french philosopher michel de montaigne suggested that a good memory is not necessarily coupled with good decision making
+in fact  he seems to imply that decisions can sometimes even benefit from deficits in memory
+how could this be possible
+one answer is that because structures in the mind often reflect meaningful regularities in the world  CITATION   blanks in memory can be exploited for making inferences about the world
+the notion that judgments feed on dynamics in memory has been taken up in several models of decision making
+for instance  tversky and kahneman  CITATION  proposed that the ease with which instances or occurrences can be brought to mind  is an ecologically valid clue  p  NUMBER  about the world and that an availability heuristic based on this ease might operate when people judge probability or frequency
+more recently  goldstein and gigerenzer  CITATION  described the recognition heuristic as a model of how people recruit recognition memory when making inferences more generally
+in contrast to the availability heuristic  the recognition heuristic is a clearly specified computational model with precise search  stopping  and decision rules
+moreover  the recognition heuristic was proposed as an adaptive mental tool with specific boundary conditions  CITATION
+the recognition heuristic makes several testable predictions about recognition and its use in decision making
+first  as the recognition heuristic is assumed to be ecologically rational i e   exploiting a regularity in the environment  recognition should be frequently correlated with quantities in the world
+second  people's use of the recognition heuristic should be sensitive to the structure of the environment
+third  the recognition heuristic predicts that recognition is processed in a noncompensatory fashion-that is  recognition should supersede further cue knowledge
+finally  the heuristic predicts  under certain conditions  a counterintuitive less-is-more effect  where recognizing fewer objects can lead to more accurate inferences than recognizing more objects
+CITATION the precise definition of the recognition heuristic and its assumed role as an adaptive mental tool made it an attractive study object
+maybe not surprisingly  not all empirical investigations have found evidence supporting the heuristic
+of the several predictions that the heuristic makes  it seems fair to say that the assumed noncompensatory processing of recognition has received the greatest attention so far-and has generated the strongest objection  CITATION
+some authors have emphasized the need for precise tests of the recognition heuristic  and a developed precise measures of the exclusive use of recognition  arguing that  precise models deserve precise measures  and b conducted precise tests of the information processing in recognition-based inference based on response times  CITATION
+in the following  i discuss the value of such precise tests as they are currently used and argue that they have done little to advance our understanding of recognition-based inference
+in addition  i highlight two key issues underlying the use of recognition in decision making that seem to have been neglected as a result of the strong focus on testing the noncompensatory processing of recognition
+first  we need to better understand the relationship between recognition as studied in the memory literature and the recognition memory tapped by the recognition heuristic
+second  i summarize proposals of how people might adaptively adjust their reliance on recognition across different situations
+importantly  i do not argue that the developments of precise measures or demonstrations of the recognition heuristic's failure to predict data should be ignored
+rather  i call for a more constructive way to use these findings for refining models of memory-based decision making

@@ -1,0 +1,63 @@
+### abstract ###
+Metagenomics is a discipline that enables the genomic study of uncultured microorganisms.
+Faster, cheaper sequencing technologies and the ability to sequence uncultured microbes sampled directly from their habitats are expanding and transforming our view of the microbial world.
+Distilling meaningful information from the millions of new genomic sequences presents a serious challenge to bioinformaticians.
+In cultured microbes, the genomic data come from a single clone, making sequence assembly and annotation tractable.
+In metagenomics, the data come from heterogeneous microbial communities, sometimes containing more than 10,000 species, with the sequence data being noisy and partial.
+From sampling, to assembly, to gene calling and function prediction, bioinformatics faces new demands in interpreting voluminous, noisy, and often partial sequence data.
+Although metagenomics is a relative newcomer to science, the past few years have seen an explosion in computational methods applied to metagenomic-based research.
+It is therefore not within the scope of this article to provide an exhaustive review.
+Rather, we provide here a concise yet comprehensive introduction to the current computational requirements presented by metagenomics, and review the recent progress made.
+We also note whether there is software that implements any of the methods presented here, and briefly review its utility.
+Nevertheless, it would be useful if readers of this article would avail themselves of the comment section provided by this journal, and relate their own experiences.
+Finally, the last section of this article provides a few representative studies illustrating different facets of recent scientific discoveries made using metagenomics.
+### introduction ###
+For most of its history, life on Earth consisted solely of microscopic life forms, and microbial life still dominates Earth in many aspects.
+The estimated 5 10 30 prokaryotic cells inhabiting our planet sequester some 350 550 Petagrams of carbon, 85 130 Pg of nitrogen, and 9 14 Pg of phosphorous making them the largest reservoir of those nutrients on Earth CITATION.
+Bacteria and archaea live in all environments capable of sustaining other life and in many cases are the sole inhabitants of extreme environments: from deep sea vents with temperatures of 340 C to rocks found in boreholes 6 km beneath the Earth's surface.
+Bacteria, archea, and microeukaryotes dominate Earth's habitats, compound recycling, nutrient sequestration, and, according to some estimates, biomass.
+Microbes are not only ubiquitous, they are essential to all life, as they are the primary source for nutrients, and the primary recyclers of dead matter back to available organic form.
+Along with all other animals and plants, the human condition is profoundly affected by microbes, from the scourges of human, farm animal, and crop pandemics, to the benefits in agriculture, food industry, and medicine to name a few.
+We humans have more bacterial cells inhabiting our body than our own cells CITATION, CITATION.
+It has been stated that the key to understanding the human condition lies in understanding the human genome CITATION, CITATION.
+But given our intimate relationship with microbes CITATION, researching the human genome is now understood to be a necessary though insufficient condition: sequencing the genomes of our own microbes would be necessary too.
+Also, to better understand the role of microbes in the biosphere, it would be necessary to undertake a genomic study of them as well.
+The study of microbial genomes started in the late 1970s, with the sequencing of the genomes of bacteriophages MS2 CITATION and -X174 CITATION.
+In 1995 microbiology took a major step with the sequencing of the first bacterial genome Haemophilus influenza CITATION.
+The genomes of 916 bacterial, 1,987 viral, and 67 archaeal species are deposited in GenBank release 2.2.6.
+Having on hand such a large number of microbial genomes has changed the nature of microbiology and of microbial evolution studies.
+By providing the ability to examine the relationship of genome structure and function across many different species, these data have also opened up the fields of comparative genomics and of systems biology.
+Nevertheless, single organism genome studies have limits.
+First, technology limitations mean that an organism must first be clonally cultured to sequence its entire genome.
+However, only a small percentage of the microbes in nature can be cultured, which means that extant genomic data are highly biased and do not represent a true picture of the genomes of microbial species CITATION CITATION.
+Second, very rarely do microbes live in single species communities: species interact both with each other and with their habitats, which may also include host organisms.
+Therefore, a clonal culture also fails to represent the true state of affairs in nature with respect to organism interaction, and the resulting population genomic variance and biological functions.
+New sequencing technologies and the drastic reduction in the cost of sequencing are helping us overcome these limits.
+We now have the ability to obtain genomic information directly from microbial communities in their natural habitats.
+Suddenly, instead of looking at a few species individually, we are able to study tens of thousands all together.
+Sequence data taken directly from the environment were dubbed the metagenome CITATION, and the study of sequence data directly from the environment metagenomics CITATION .
+However, environmental sequencing comes with its own information-restricting price tag.
+In single organism genomics practically all of the microbe's genome is sequenced, providing a complete picture of the genome.
+We know from which species the DNA or RNA originated.
+After assembly, the location of genes, operons, and transcriptional units can be computationally inferred.
+Control elements and other cues can be identified to infer transcriptional and translational units.
+Consequently, we achieve a nearly complete and well-ordered picture of all the genomic elements in the sequenced organism.
+We may not recognize all the elements for what they are, and some errors may creep in, but we can gauge the breadth of our knowledge and properly annotate those areas of the genome we manage to decipher.
+In contrast, the sequences obtained from environmental genomic studies are fragmented.
+Each fragment was obviously sequenced from a specific species, but there can be many different species in a single sample, for most of which a full genome is not available.
+In many cases it is impossible to determine the true species of origin.
+The length of each fragment can be anywhere between 20 base pairs and 700 bp, depending on the sequencing method used.
+Short sequence reads that are dissociated from their original species can be assembled to lengths usually not exceeding 5,000 bp; consequently, the reconstruction of a whole genome is generally not possible.
+Even the reconstruction of an entire transcriptional unit can be problematic.
+In addition to being fragmented and incomplete, the volume of sequence data acquired by environmental sequencing is several orders of magnitude larger than that acquired in single organism genomics.
+For these reasons, computational biologists have been developing new algorithms to analyze metagenomic data.
+These computational challenges are new and very exciting.
+We are entering an era akin to that of the first genomic revolution almost two decades ago.
+Whole organism genomics allows us to examine the evolution not only of single genes, but of whole transcriptional units, chromosomes, and cellular networks.
+But more recently, metagenomics gave us the ability to study, on the most fundamental genomic level, the relationship between microbes and the communities and habitats in which they live.
+How does the adaptation of microbes to different environments, including host animals and other microbes, manifest itself in their genomes?
+For us humans, this question can strike very close to home, when those habitats are our own bodies and the microbes are associated with our own well-being and illnesses: almost every aspect of human life, as well as the life of every other living being on the planet, is affected by microbes.
+We now have the experimental technology to understand microbial communities and how they affect us, but the sheer volume and fragmentary nature of the data challenge computational biologists to distill all these data into useful information.
+In this article we shall briefly outline some experimental, technological, and computational achievements and challenges associated with metagenomic data, from sequence generation and assembly through the various levels of metagenomic annotation.
+We will also discuss computational issues that are unique to environmental genomics, such as estimating the metagenome size and the handling of associated metadata.
+Finally, we will review some studies highlighting the advantages of metagenomic-based research, and some of the insights it has enabled.

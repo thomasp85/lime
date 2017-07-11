@@ -1,0 +1,19 @@
+### abstract ###
+For a classification problem described by the joint density  SYMBOL , models of  SYMBOL  (the ``Bayesian similarity measure'') have been shown to be an optimal similarity measure for nearest neighbor classification
+This paper analyzes demonstrates several additional properties of that conditional distribution
+The paper first shows that we can reconstruct, up to class labels, the class  posterior distribution  SYMBOL  given  SYMBOL , gives a procedure for recovering the class labels, and gives an asymptotically Bayes-optimal classification procedure
+It also shows, given such an optimal similarity measure, how to construct a classifier that outperforms the nearest neighbor classifier and achieves Bayes-optimal classification rates
+The paper then analyzes Bayesian similarity in a framework where a classifier faces a number of related classification tasks (multitask learning) and illustrates that reconstruction of the class posterior distribution is not possible in general
+Finally, the paper identifies a distinct class of classification problems using  SYMBOL  and shows that using  SYMBOL  to solve those problems is the Bayes optimal solution
+### introduction ###
+Statistical models of similarity have become increasingly important in recent work on information retrieval  CITATION , case-based reasoning  CITATION , pattern recognition CITATION , and computer vision  CITATION
+Of particular interest is Bayesian similarity, a discriminatively trained model of  SYMBOL , which we will abbreviate as  SYMBOL
+These models have been demonstrated to work well in a number of pattern recognition and visual object recognition problems  CITATION
+It is easy to see that nearest neighbor classification using  SYMBOL  minimizes the risk that the class labels for  SYMBOL  and  SYMBOL  differ and therefore is optimal for 1-nearest neighbor classification  CITATION
+However, beyond that observation, there have been several kinds of analysis of Bayesian similarity
+The first, presented by Mahamud  CITATION  is an analysis considering a single instance of a classification problem, determined by a joint distribution  SYMBOL  of class labels  SYMBOL  and feature vectors  SYMBOL
+The authors also argue for the existence of useful invariance properties of Bayesian similarity functions when those functions have a specific form  CITATION
+The second is an analysis based on a hierarchical Bayesian framework presented by Breuel  CITATION , which effectively considers Bayesian similarity in the context of a distribution of related classification tasks
+This paper analyzes the relationship between Bayesian similarity  SYMBOL  and the class posterior distribution  SYMBOL   in both the non-hierarchical and hierarchical cases and uses those results to construct an asymptotically Bayes-optimal classification procedure using Bayesian similarity
+It also presents a new statistical model for the kinds of discrimination tasks described in  CITATION  and  demonstrates that Bayesian similarity is the Bayes-optimal solution for those tasks
+The implications of these results for applications of Bayesian similarity will be discussed at the end

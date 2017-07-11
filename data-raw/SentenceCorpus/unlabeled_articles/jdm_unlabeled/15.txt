@@ -1,0 +1,18 @@
+### abstract ###
+the assumption that people possess a repertoire of strategies to solve the inference problems they face has been made repeatedly
+the experimental findings of two previous studies on strategy selection are reexamined from a learning perspective  which argues that people learn to select strategies for making probabilistic inferences
+this learning process is modeled with the strategy selection learning ssl theory  which assumes that people develop subjective expectancies for the strategies they have
+they select strategies proportional to their expectancies  which are updated on the basis of experience
+for the study by newell  weston  and shanks  CITATION  it can be shown that people did not anticipate the success of a strategy from the beginning of the experiment
+instead  the behavior observed at the end of the experiment was the result of a learning process that can be described by the ssl theory
+for the second study  by broder and schiffer  CITATION   the ssl theory is able to provide an explanation for why participants only slowly adapted to new environments in a dynamic inference situation
+the reanalysis of the previous studies illustrates the importance of learning for probabilistic inferences
+### introduction ###
+how do people make probabilistic inferences  such as inferring the selling price of a car  the severity of an illness  or the likely winner of a tennis match
+different strategies can be applied to make these inferences  such as integrating all available information to predict the criterion
+in fact  many researchers have argued that people are equipped with a repertoire of different cognitive strategies for making judgments and decisions  CITATION
+do people apply different strategies for solving probabilistic inferences
+and if so  how do they select from their strategy repertoire
+the cost-benefit approach to strategy selection argues that people trade off the strategies' anticipated costs and benefits
+in contrast  i will argue that selection is achieved via learning-that is  people learn the success and failure of strategies through experience and select a strategy based on past success
+i will describe a computational theory that specifies this learning process  CITATION  and will use it to explain people's probabilistic  inferences in two previous studies

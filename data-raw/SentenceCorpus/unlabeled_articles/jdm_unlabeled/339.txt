@@ -1,0 +1,88 @@
+### abstract ###
+the  less is more effect  lime occurs when a recognition-dependent agent has a greater probability of choosing the better item than a more knowledgeable agent who recognizes more items
+goldstein and gigerenzer  CITATION  define  alpha  as the probability that a correct choice is made on the basis of recognition alone and  beta  the probability that a correct choice is made when both items are recognized via additional cues
+they claim that a lime occurs if  alpha   greater than   beta   alpha   greater than   NUMBER   NUMBER  and  alpha  and  beta  remain constant as the number of recognized items  n  varies
+in fact  it can be shown that neither of these parameters generally remains constant as n varies  and neither of them are simple functions of n
+therefore  a new theoretical basis for the lime is needed
+this paper provides mathematical results for understanding when the lime can occur and elucidates implications of these results
+the major findings presented here are as follows   	demonstrations that the lime can occur when  alpha   less than or equal to   beta  and fail to occur when  alpha   greater than   beta   and derivation of the conditions for these co-occurrences  	a new characterization of the conditions under which the lime occurs  	generalizations of this characterization to handle imperfect recognition  and  	characterization of when the lime occurs as more items become recognized
+the primary implication of these results is that the advantage of the recognition cue depends not only on cue validities  but also on the order in which items are learned
+this realization  in turn  suggests that research in this area should incorporate a more dynamic focus on learning and memory processes  and the effects of reputational information
+### introduction ###
+in choosing between two items  an agent who recognizes one item but not the other may use this recognition cue to make the choice  whereas one who recognizes both items must use other cues and one who recognizes neither must guess
+the  less is more effect  lime occurs when a recognition-dependent agent has a greater probability of choosing the better item than a more knowledgeable agent who recognizes more items
+this paper provides some new mathematical results for understanding when the lime can occur and elucidates implications of these results
+many researchers investigating the descriptive validity of the recognition heuristic report high usage rates
+goldstein and gigerenzer  CITATION  reported a  NUMBER  percent  usage rate
+serwe and frings  CITATION  found that  NUMBER  percent  of their lay and  NUMBER  percent  of their amateur samples used the recognition heuristic in choosing tennis match winners
+newell and shanks  CITATION  reported  NUMBER  percent  usage in a stock-market setting
+pachur and biele  CITATION  found that the recognition heuristic accounted for  NUMBER  percent  of the forecasts in their study  more than four other candidate mechanisms
+finally  pohl  CITATION  observed that additional cue knowledge increased the usage of the recognition heuristic over cases where recognition of an object did not carry any other knowledge with it
+however  empirical evidence for the lime is equivocal  at least on face value
+goldstein and gigerenzer  CITATION   serwe and frings  CITATION   and scheibehenne and broder  CITATION  are definitely in the  yes  camp  pohl  CITATION  finds that the lime is possible but claims only small effect-sizes  andersson  edman and ekman  CITATION  and ayton and onkal  CITATION  present  less is as good as more  evidence  and pachur and biele  CITATION  are decidedly in the  no  camp
+simulation studies based on real ecologies lend some support to the prospect of limes  CITATION
+moreover  schooler and hertwig  CITATION  and pleskac  CITATION  present simulation results suggesting that imperfect recognition may actually increase the likelihood of a lime
+matters are further complicated by shortcomings in some of the studies and an apparent lack of consensus on the requirements for a test of the lime
+these exigencies  combined with the results presented in this paper  render the corpus of empirical studies problematic and inconclusive
+i shall return to this matter toward the end of this paper
+goldstein and gigerenzer  CITATION  define  alpha  as the probability that a correct choice is made on the basis of recognition alone and  beta  the probability that a correct choice is made when both items are recognized via additional cues
+they claim that a lime occurs if  alpha   greater than   beta   alpha   greater than   NUMBER   NUMBER  and  alpha  and  beta  remain constant as the number of recognized items  n  varies
+this view has been widely accepted and used as a guide for when to expect the lime  CITATION
+pleskac  CITATION  concurs with goldstein and gigerenzer and makes an analogous claim under conditions of imperfect recognition
+however  goldstein and gigerenzer assume that  alpha  and  beta  remain constant as the number of recognized items  n  varies
+in fact  neither of these parameters necessarily remains constant as n varies  and neither of them is a simple function of n
+we shall see demonstrations of these assertions shortly  and indeed goldstein and gigerenzer allowed that the assumption is not realistic
+we shall see how various modifications of this assumption lead to the absence or presence of a lime
+a sufficiently rigorous approach to this problem begins by distinguishing between the probability   beta   of correctly choosing between pairs of recognized items using the knowledge cue  and the probability  v  of correctly choosing between any pair of items using the knowledge cue i e   v is the knowledge cue validity
+to begin  i will demonstrate that the lime can occur when  alpha   less than   beta
+in table  NUMBER  we have  NUMBER  items of which  NUMBER  are recognized
+the left-most column shows the rank of each item on the outcome and the fifth cue rank column shows their ranks on a knowledge cue to be used for choosing between two recognized items
+for purposes of simplification and clarity  throughout this paper i will restrict discussion to a rank-order knowledge cue with no ties
+first  let us determine  alpha
+from table  NUMBER   the number of correct choices is the sum of the  NUMBER -entries in the  recog
+  column whose ranks is greater i e   worse each of the  NUMBER  entries  c    NUMBER     NUMBER     NUMBER     NUMBER     NUMBER     NUMBER     NUMBER 
+the number of incorrect choices is the sum of the  NUMBER -entries whose rank is greater than each of the  NUMBER  entries  d    NUMBER     NUMBER     NUMBER     NUMBER 
+the result is  alpha     NUMBER   NUMBER   NUMBER      NUMBER 
+we use a similar procedure to compute the probability of making a correct choice using the knowledge cue  i e   the knowledge cue validity v
+the c column in table  NUMBER  shows the number of items ranked worse than the item in each row that would be correctly identified by comparing that item's cue-rank with that of the other items
+for example  the first item has cue-rank  NUMBER  so by using the cue to compare it with the other  NUMBER  items we would correctly choose the first item as the better-ranked
+in contrast  the third item has cue-rank  NUMBER   so we would make only  NUMBER  correct choice in comparing its cue-rank with those of the items that actually are ranked worse
+the d column shows the corresponding number of incorrect choices
+there are c    NUMBER  correct and d    NUMBER  incorrect choices  resulting in a cue validity v    NUMBER   NUMBER   NUMBER      NUMBER 
+likewise  from the last two columns in table  NUMBER   the probability of choosing correctly between pairs of recognized items by using the knowledge cue is  beta    c c   d    NUMBER   NUMBER   NUMBER      NUMBER 
+note that v  not equal to   beta
+that is  we have an example of the fact that the probability of making a correct choice between pairs from the  NUMBER  recognized items is not the same as the probability of making a correct choice when all  NUMBER  items are recognized
+moreover  both  alpha  and  beta  can vary depending on the order in which the remaining items are learned i e   become recognizable
+for example  if the next item learned is item  NUMBER  or  NUMBER  then the result will be  beta      NUMBER   whereas if the next is item  NUMBER  or  NUMBER  then the result will be  beta     NUMBER 
+likewise  if item  NUMBER  is learned next  alpha      NUMBER  whereas if item  NUMBER  is learned next  alpha     NUMBER 
+these examples show variation in  alpha  and  beta  as n varies  and they demonstrate that both parameters can take different values for alternative collections of recognized items having the same n
+moreover  there is no generalized relation between the range of possible values of  beta  and v
+assuming v  greater than or equal to   NUMBER   NUMBER  i e   use any negative cue in reverse  there is always at least one pair of items whose rank-order matches the order of the cue  so that if only those two items have been learned then  beta     NUMBER 
+conversely  if v  less than   NUMBER  then there is always at least one pair whose rank-order and cue-order are reversed so that if only those two items have been learned then  beta     NUMBER 
+by the same argument   alpha  can range from  NUMBER  to  NUMBER  depending on the order in which items are learned
+now  we shall build up the probability of making a correct choice between pairs of items in table  NUMBER   initially following goldstein and gigerenzer
+for those pairs where one item is recognized and the other isn't  we use the recognition cue and have     where n is the total number of items and n is the number of recognized items
+the probability of a correct choice when both items are unrecognized i e   where a guess must be made is
+finally  the probability of a correct choice when both items are recognized is
+summing these terms gives goldstein and gigerenzer's  CITATION  formula
+they denote pcorrect by fn  so using their notation and plugging in the appropriate numbers yields fn     NUMBER 
+thus  we have the lime because v     NUMBER   less than  fn    NUMBER   but we also have  alpha     NUMBER   less than   beta     NUMBER   so we observe that if  beta  is allowed to vary and thus differ from v a lime can occur when  alpha   less than   beta
+when  alpha  and  beta  are not constant  not only can the lime occur when  alpha   less than   beta   but the condition  alpha   greater than   beta  does not guarantee a lime
+a counter-example can be constructed by modifying the one in table  NUMBER 
+suppose the knowledge cue ranks for the  NUMBER  objects are   NUMBER   NUMBER   NUMBER   NUMBER   NUMBER   NUMBER   NUMBER   NUMBER   NUMBER   NUMBER  
+then the knowledge cue validity is v    NUMBER   NUMBER     NUMBER      NUMBER 
+now suppose the  NUMBER  recognized objects have outcome ranks   NUMBER   NUMBER   NUMBER   NUMBER   NUMBER   NUMBER  
+then  alpha     NUMBER   NUMBER     NUMBER      NUMBER  and  beta     NUMBER   NUMBER     NUMBER     NUMBER   and  alpha   greater than   beta  is satisfied
+however  both  alpha  and  beta  are less than v so no weighted sum of them and  NUMBER   NUMBER  is going to exceed v
+indeed  fn     NUMBER   so the lime does not occur
+i shall address the issue of how common are occurrences of the lime when  alpha   less than   beta  and no lime when  alpha   greater than   beta  in sections to follow
+finally  we need to distinguish among various definitions of the lime
+goldstein and gigerenzer point out that there are at least three versions  one comparing more and less knowledgeable agents  another comparing performance in different domains  and a third comparing performance as an agent learns new items
+the version we have been discussing is the first kind  v  less than  fn  which katsikopoulos  CITATION  calls the  full experience  lime
+but another is fn  greater than  fn  NUMBER   which can occur regardless of whether v  less than  fn
+let us call this a  local lime
+  the difference between the two is simply that v   fn
+the next section of this paper investigates the co-occurrence of the lime and  alpha   less than   beta
+the third lays out the conditions under which the lime can occur under conditions of perfect and imperfect recognition
+the fourth deals with the effect of learning items  and there is a brief concluding section
+all technical arguments theorems and proofs are relegated to the appendix

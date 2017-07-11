@@ -1,0 +1,13 @@
+### abstract ###
+we compare and critique two measures of risk perception
+we suggest that a single question -  how risky is the situation
+  - captures the concept of risk perception more accurately than the multiple-item measure used by sitkin and weingart  CITATION
+in fact  this latter measure inadvertently captures notions of attractiveness or expected return  rather than risk perception
+we further propose that the error underlying the construction of sitkin and weingart's measure is explained in terms of a top-down model of risk perception  in which perceived risk and perceived return are consequences  rather than determinants  of attractiveness
+two studies compare the validity of the two alternative measures
+### introduction ###
+the concepts of risk  return and attractiveness are distinct concepts in the theory of decision making
+therefore  the empirical measurement of perceived risk should apply special care to avoid its contamination with perceived return and global evaluation attractiveness  and to guard against inadvertent replacing of one kind of meaning with another
+to demonstrate the ease by which these three concepts can be confused  and to understand the reasons for this confusion  we examine a measure of risk perception that was developed by sitkin and weingart  CITATION   and critique its validity as a measure of the concept of risk perception
+we explain the erroneous construction of this measure within the framework of a top-down model of risk perception  CITATION   and we suggest that the error in constructing the measure reflects the inadvertent replacement of a top-down with a bottom-up perception of the relationships between perceived risk  perceived return and attractiveness
+empirical data provide support for these suggestions

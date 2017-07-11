@@ -1,0 +1,45 @@
+### abstract ###
+Computational methods for discovery of sequence elements that are enriched in a target set compared with a background set are fundamental in molecular biology research.
+One example is the discovery of transcription factor binding motifs that are inferred from ChIP chip measurements.
+Several major challenges in sequence motif discovery still require consideration: the need for a principled approach to partitioning the data into target and background sets; the lack of rigorous models and of an exact p-value for measuring motif enrichment; the need for an appropriate framework for accounting for motif multiplicity; the tendency, in many of the existing methods, to report presumably significant motifs even when applied to randomly generated data.
+In this paper we present a statistical framework for discovering enriched sequence elements in ranked lists that resolves these four issues.
+We demonstrate the implementation of this framework in a software application, termed DRIM, which identifies sequence motifs in lists of ranked DNA sequences.
+We applied DRIM to ChIP chip and CpG methylation data and obtained the following results.
+Identification of 50 novel putative transcription factor binding sites in yeast ChIP chip data.
+The biological function of some of them was further investigated to gain new insights on transcription regulation networks in yeast.
+For example, our discoveries enable the elucidation of the network of the TF ARO80.
+Another finding concerns a systematic TF binding enhancement to sequences containing CA repeats.
+Discovery of novel motifs in human cancer CpG methylation data.
+Remarkably, most of these motifs are similar to DNA sequence elements bound by the Polycomb complex that promotes histone methylation.
+Our findings thus support a model in which histone methylation and CpG methylation are mechanistically linked.
+Overall, we demonstrate that the statistical framework embodied in the DRIM software tool is highly effective for identifying regulatory sequence elements in a variety of applications ranging from expression and ChIP chip to CpG methylation data.
+DRIM is publicly available at LINK.
+### introduction ###
+This paper examines the problem of discovering interesting sequence motifs in biological sequence data.
+A widely accepted and more formal definition of this task is: given a target set and a background set of sequences, identify sequence motifs that are enriched in the target set compared with the background set.
+The purpose of this paper is to extend this formulation and to make it more flexible so as to enable the determination of the target and background set in a data driven manner.
+Discovery of sequences or attributes that are enriched in a target set compared with a background set has become increasingly useful in a wide range of applications in molecular biology research.
+For example, discovery of DNA sequence motifs that are overabundant in a set of promoter regions of co-expressed genes can suggest an explanation for this co-expression.
+Another example is the discovery of DNA sequences that are enriched in a set of promoter regions to which a certain transcription factor binds strongly, inferred from chromatin immuno-precipitation on a microarray CITATION measurements.
+The same principle may be extended to many other applications such as discovery of genomic elements enriched in a set of highly methylated CpG island sequences CITATION .
+Due to its importance, this task of discovering enriched DNA subsequences and capturing their corresponding motif profile has gained much attention in the literature.
+Any approach to motif discovery must address several fundamental issues.
+The first issue is the way by which motifs are represented.
+There are several strategies for motif representation: using a k-mer of IUPAC symbols where each symbol represents a fixed set of possible nucleotides at a single position or using a position weight matrix, which specifies the probability of observing each nucleotide at each motif position.
+Both representations assume base position independence.
+Alternatively, higher order representations that capture positional dependencies have been proposed.
+While these representations circumvent the position independence assumption, they are more vulnerable to overfitting and lack of data for determining model parameters.
+The method described in this paper uses the k-mer model with symbols above IUPAC.
+The second issue is devising a motif scoring scheme.
+Many strategies for scoring motifs have been suggested in the literature.
+One simple yet powerful approach uses the hypergeometric distribution for identifying enriched motif kernels in a set of sequences and then expanding these motifs using an EM algorithm CITATION.
+The framework described in this paper is a natural extension of the approach of CITATION.
+YMF CITATION, CITATION is an exhaustive search algorithm which associates each motif with a z-score.
+AlignACE CITATION uses a Gibbs sampling algorithm for finding global sequence alignments and produces a MAP score.
+This score is an internal metric used to determine the significance of an alignment.
+MEME CITATION uses an expectation maximization strategy and outputs the log-likelihood and relative entropy associated with each motif.
+Once a scoring scheme is devised, a defined motif search space is scanned and motifs with significantly high scores are identified.
+To determine the statistical significance of the obtained scores, many methods resort to simulations or ad hoc thresholds.
+Several excellent reviews narrate the different strategies for motif detection and use quantitative benchmarking to compare their performance CITATION CITATION.
+A related aspect of motif discovery, which is outside the scope of this paper, focuses on properties of clusters and modules of TF binding sites.
+Examples of approaches that search for combinatorial patterns and modules underlying TF binding and gene expression include CITATION CITATION .

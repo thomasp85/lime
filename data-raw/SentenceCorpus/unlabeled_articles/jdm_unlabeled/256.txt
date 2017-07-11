@@ -1,0 +1,23 @@
+### abstract ###
+in two studies on mobile phone purchase decisions  we investigated consumers' decision strategies with a newly developed process tracing tool called interactive process tracing iapt
+this tool is a combination of several process tracing techniques active information search  mouselab  and retrospective verbal protocol
+after repeatedly choosing one of four mobile phones  participants formalized their strategy so that it could be used to make choices for them
+the choices made by the identified strategies correctly predicted the observed choices in  NUMBER  percent  experiment  NUMBER  and  NUMBER  percent  experiment  NUMBER  of the cases
+moreover  in experiment  NUMBER  we directly compared mouselab and eye tracking with respect to their impact on information search and strategy description
+we found only minor differences between these two methods
+we conclude that iapt is a useful research tool to identify choice strategies  and that using eye tracking technology did not increase its validity beyond that gained with mouselab
+### introduction ###
+identifying the processes that underlie judgment and decision making has been of great interest to researchers for several decades already
+in this context  two major paradigms have been used  structural modeling and process tracing  CITATION
+structural modeling aims to uncover psychological processes by relating the provided information to the decisions or judgments  typically via multiple linear regression analysis
+the parameters in these models are thought to represent important features of participants' decision strategies  for instance  if a particular attribute receives a high weight in a regression equation it is interpreted as being very important for the decision maker
+despite its popularity  this approach has been criticized for ignoring the predecisional phase  that is  the processes that take place between stimulus presentation and final decision
+for example  svenson  CITATION  concluded that it is  gradually becoming clear that human decision making cannot be understood simply by studying final decisions  p  NUMBER  and  similarly  payne  braunstein  and carroll  CITATION  argued that the  input-output analyses that have been used in most decision research are not fully adequate to develop and test process models of decision behavior  p  NUMBER 
+as a response to these and other objections against structural modeling  CITATION   payne  CITATION  and others developed the process tracing approach by adapting methods from research on human problem solving  CITATION
+as opposed to structural modeling  the aim of process tracing is to directly describe the processes taking place during the predecisional phase
+to achieve this  the participants' information search and integration is closely observed while they work on the decision task
+frequently used methods within this paradigm are information boards  CITATION   verbal protocols  CITATION   the recording of eye movements  CITATION   and the method of active information search  CITATION
+in the following  we briefly describe these process tracing methodologies and discuss their strengths and weaknesses
+we then present a new tool called interactive process tracing iapt  which we developed to identify the decision processes underlying preferential choice
+iapt uses various elements of the process tracing measures mentioned above to combine their strengths and simultaneously overcome some of their weaknesses
+we subsequently describe two experiments in which we successfully applied iapt to identify participants' decision strategies

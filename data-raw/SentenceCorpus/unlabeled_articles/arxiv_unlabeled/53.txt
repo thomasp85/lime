@@ -1,0 +1,20 @@
+### abstract ###
+This correspondence studies an estimator of the conditional  support of a distribution underlying a set of  iid 
+observations
+The relation with mutual information is shown via an extension of  Fano's theorem in combination with a generalization bound based on a compression argument
+Extensions to estimating the conditional quantile interval, and  statistical guarantees on the minimal convex hull are given {Keywords}: -  Statistical Learning, Fano's inequality, Mutual Information, Support Vector Machines
+### introduction ###
+Given a set of paired observations   SYMBOL   which are  iid 
+copies of a random vector  SYMBOL  possessing a fixed but unknown joint distribution  SYMBOL ,  this letter concerns the question which values the random variable  SYMBOL  can  possibly/likely take given a covariate  SYMBOL
+This investigation on predictive tolerance intervals  is motivated as one is often interested in other characteristics of the joint distribution than the conditional expectation (regression): eg in econometrics one is often more interested in the volatility of a market than in its precise prediction
+In environmental sciences  one is typically concerned with the extremal behavior  (i e the min or max value) of a magnitude, and its respective conditioning  on related environmental variables
+The main contribution of this letter is the extension to Fano's classical inequality (see eg CITATION , p 38) which gives a lower-bound to the mutual information of two random variables
+This classical result is extended towards a setting of learning theory where random variables have an arbitrary fixed distribution
+The derivation yields a non-parametric estimator of the mutual information possessing  a probabilistic guarantee which is derived using a classical compression argument
+The described relationship differs from other results relating  estimators and mutual information as eg using Fisher's information matrix  CITATION  or based on Gaussian assumptions as eg in  CITATION , as a distribution free context is adopted
+As an aside,  (i) an estimator of the conditional support is derived  and is extended to the setting of conditional quantiles,  (ii) its theoretical properties are derived,  (iii) the relation to the method of the minimal convex hull is made explicit, and (iv) it is shown how the estimate can be computed efficiently by  solving a linear program
+While studied in the literature eg on quantile regression   CITATION , we argue that this question can be approached   naturally from a setting of statistical learning theory, pattern recognition and Support Vector Machines (SVM), see  CITATION  for an overview
+A main conceptual difference with the existing literature on classical regression and  other predictor methods is that no attempt is made whatsoever to reveal an underlying  conditional mean (as in regression), conditional quantile (as in quantile regression), or minimal risk point prediction of the dependent variable (as in pattern recognition)
+Here we target instead (the change of) the rough contour of the conditional distribution
+This implies that one becomes interested in  (i) to what extent the estimated conditional support of the tube is conservative  (i e does it overestimate the actual conditional support ), and  (ii) what is the probability of covering the actual conditional support (i e to what probability a new sample can occur outside the estimated interval) }   Section II proofs the main result, and explores the relation with the convex hull
+From a practical perspective, Section III provides further insight in  how the optimal estimate can be found efficiently by solving a linear program

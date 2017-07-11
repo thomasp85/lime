@@ -1,0 +1,51 @@
+### abstract ###
+This paper describes an efficient reduction of the learning problem of ranking to binary classification
+The reduction guarantees an average pairwise misranking regret of at most that of the binary classifier regret, improving a recent result of Balcan et al which only guarantees a factor of  SYMBOL
+Moreover, our reduction applies to a broader class of ranking loss functions, admits a simpler proof, and the expected running time complexity of our algorithm in terms of number of calls to a classifier or preference function is improved from  SYMBOL  to  SYMBOL
+In addition, when the top  SYMBOL  ranked elements only are required ( SYMBOL ), as in many applications in information extraction or search engines, the time complexity of our algorithm can be further reduced to  SYMBOL
+Our reduction and algorithm are thus practical for realistic applications where the number of points to rank exceeds several thousands
+Much of our results also extend beyond the bipartite case previously studied
+Our rediction is a randomized one
+To complement our result, we  also derive lower bounds on any deterministic reduction from  binary (preference) classification to ranking, implying that our use of a randomized reduction is essentially necessary for the guarantees we provide
+### introduction ###
+The learning problem of ranking arises in many modern applications, including the design of search engines, information extraction, and movie recommendation systems
+In these applications, the ordering of the documents or movies returned is a critical aspect of the system
+The problem has been formulated within two distinct settings
+In the  score-based setting , the learning algorithm receives a labeled sample of pairwise preferences and returns a  scoring function   SYMBOL  which induces a linear ordering of the points in the set  SYMBOL
+Test points are simply ranked according to the values of  SYMBOL  for those points
+Several ranking algorithms, including RankBoost  CITATION , SVM-type ranking  CITATION , and other algorithms such as PRank  CITATION , were designed for this setting
+Generalization bounds have been given in this setting for the pairwise misranking error  CITATION , including margin-based bounds  CITATION
+Stability-based generalization bounds have also been given in this setting for wide classes of ranking algorithms both in the case of bipartite ranking  CITATION  and the general case  CITATION
+A somewhat different two-stage scenario was considered in other publications starting with Cohen, Schapire, and Singer  CITATION , and later Balcan et al CITATION , which we will refer to as the  preference-based setting
+In the first stage of that setting, a  preference function   SYMBOL  is learned, where values of  SYMBOL  closer to one indicate that  SYMBOL  is ranked above  SYMBOL  and values closer to zero the opposite
+SYMBOL  is typically assumed to be the output of a classification algorithm trained on a sample of labeled pairs, and can be for example a convex combination of simpler preference functions as in  CITATION
+A crucial difference with the score-based setting is that, in general, the preference function  SYMBOL  does not induce a linear ordering
+The order it induces may be non-transitive, thus we may have for example  SYMBOL  for three distinct points  SYMBOL ,  SYMBOL , and  SYMBOL
+To rank a test subset  SYMBOL , in the second stage, the algorithm orders the points in  SYMBOL  by making use of the preference function  SYMBOL  learned in the first stage
+This paper deals with the preference-based ranking setting just described
+The advantage of this setting is that the learning algorithm is not required to return a linear ordering of all points in  SYMBOL , which is impossible to achieve faultlessly in accordance with a true pairwise preference labeling that is non-transitive
+This is more likely to be achievable exactly or with a better approximation when the algorithm is requested instead, as in this setting, to supply a linear ordering, only for a limited subset  SYMBOL
+When the preference function is learned by a binary classification algorithm, the preference-based setting can be viewed as a reduction of the ranking problem to a classification one
+The second stage specifies how the ranking is obtained using the preference function
+Cohen, Schapire, and Singer  CITATION  showed that in the second stage of the preference-based setting, the general problem of finding a linear ordering with as few pairwise misrankings as possible with respect to the preference function  SYMBOL  is NP-complete
+The authors presented a greedy algorithm based on the tournament  degree  for each element  SYMBOL  defined as the difference between the number of elements  SYMBOL  is preferred to versus the number of those preferred to  SYMBOL
+The bound proven by these authors, formulated in terms of the pairwise disagreement loss  SYMBOL  with respect to the preference function  SYMBOL , can be written as  SYMBOL , where  SYMBOL  is the loss achieved by the permutation  SYMBOL  returned by their algorithm and  SYMBOL  the one achieved by the optimal permutation  SYMBOL  with respect to the preference function  SYMBOL
+This bound was given for the general case of ranking, but in the particular case of bipartite ranking (which we define below), a random ordering can achieve a pairwise disagreement loss of  SYMBOL  and thus the bound is not informative
+More recently, Balcan et al  CITATION  studied the bipartite ranking problem and showed that sorting the elements of  SYMBOL  according to the same tournament degree used by  CITATION  guarantees a pairwise misranking regret of at most  SYMBOL  using a binary classifier with regret  SYMBOL
+However, due to the quadratic nature of the definition of the tournament degree, their algorithm requires  SYMBOL  calls to the preference function  SYMBOL , where  SYMBOL  is the number of objects to rank
+We describe an efficient algorithm for the second stage of preference-based setting and thus for reducing the learning problem of ranking to binary classification
+We improve on the recent result of Balcan et al CITATION , by guaranteeing an average pairwise misranking regret of at most  SYMBOL  using a binary classifier with regret  SYMBOL
+In other words, we improve their constant from  SYMBOL  to  SYMBOL
+Our reduction applies (with different constants) to a broader class of ranking loss functions, admits a simpler proof, and the expected running time complexity of our algorithm in terms of number of calls to a classifier or preference function is improved from  SYMBOL  to  SYMBOL
+Furthermore, when the top  SYMBOL  ranked elements only are required ( SYMBOL ), as in many applications in information extraction or search engines, the time complexity of our algorithm can be further reduced to  SYMBOL
+Our reduction and algorithm are thus practical for realistic applications where the number of points to rank exceeds several thousands
+Much of our results also extend beyond the bipartite case previously studied by  CITATION  to the general case of ranking
+A by-product of our proofs is also a bound on the pairwise disagreement loss with respect to the preference function  SYMBOL  that we will compare to the result given by Cohen, Schapire, and Singer  CITATION
+The algorithm used by Balcan et al CITATION  to produce a ranking based on the preference function is known as sort-by-degree and has been recently used in the context of minimizing the feedback arcset in tournaments  CITATION
+Here, we use a different algorithm, QuickSort, which has also been recently used for minimizing the feedback arcset in tournaments  CITATION
+The techniques presented make use of the earlier work by Ailon et al on combinatorial optimization problems over rankings and clustering  CITATION
+The remainder of the paper is structured as follows
+In Section~, we introduce the definitions and notation used in future sections and introduce a family of general loss functions that can be used to measure the quality of a ranking hypothesis
+Section~ describes a simple and efficient algorithm for reducing ranking to binary classification, proves several bounds guaranteeing the quality of the ranking produced by the algorithm, and shows the running-time complexity of our algorithm to be very efficient
+In Section~ we discuss the relationship of the algorithm and its proof with previous related work in combinatorial optimization
+In Section~ we derive a lower bound of factor  SYMBOL  on any deterministic reduction from  binary (preference) classification to ranking, implying that our use of a randomized reduction is essentially necessary for the improved guarantees we provide

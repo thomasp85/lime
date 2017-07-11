@@ -1,0 +1,68 @@
+### abstract ###
+Text of abstract We present a family of pairwise tournaments reducing  SYMBOL -class classification to binary classification
+These reductions are provably robust against a constant fraction of binary errors, simultaneously matching the best possible computation  SYMBOL  and regret  SYMBOL
+The construction also works for robustly selecting the best of  SYMBOL -choices by tournament
+We strengthen previous results by defeating a more powerful adversary than previously addressed while providing a new form of analysis
+In this setting, the error correcting tournament has depth  SYMBOL  while using  SYMBOL  comparators, both optimal up to a small constant
+### introduction ###
+We consider the classical problem of multiclass classification, where given an instance  SYMBOL , the goal is to predict  the most likely label  SYMBOL , according to some unknown  probability distribution
+A common general approach to multiclass learning is to reduce a multiclass problem to a set of binary classification  problems~ CITATION
+This approach is composable with any binary learning algorithm, including online algorithms, Bayesian algorithms, and even humans \shrink{ An alternative is to design a multiclass learning algorithm directly,  typically by extending an existing algorithm for binary classification
+A difficulty with this direct approach is that  some algorithms cannot be easily modified to handle a different learning problem
+For example, the first and still commonly used multiclass versions of the support vector machine may not even converge to the best possible predictor no matter how many examples are used (see  CITATION )
+A single reduction yields a number of different multiclass algorithms in this way
+A key technique for analyzing reductions is  regret analysis , bounding the regret of the resulting multiclass learner in terms of the  regret of the binary classifiers on the binary problems
+Informally, regret is the difference in loss between the predictor and the best possible predictor on the same problem
+Regret analysis is more refined than loss analysis as it bounds only avoidable, excess loss, thus the bounds remain meaningful for problems with high conditional noise }  A key technique for analyzing reductions is  regret analysis , which bounds the regret of the resulting multiclass classifier in terms of the average classification regret on the induced binary problems
+Here  regret  (formally defined in Section~) is the difference between the incurred loss and the smallest achievable loss on the problem, i e , excess loss due to suboptimal prediction
+The most commonly applied reduction is one-against-all, which creates a binary classification problem for each of the  SYMBOL  classes
+The classifier for class  SYMBOL  is trained to predict whether the label is  SYMBOL  or not; predictions are then done by evaluating each binary classifier and randomizing over those that predict ``yes,'' or over all labels if all answers are ``no''
+This simple reduction  is  inconsistent , in the sense that given optimal (zero-regret) binary classifiers, the reduction may not  yield an optimal multiclass classifier in the presence of noise
+Optimizing squared loss of the binary predictions instead of the  SYMBOL  loss makes the approach consistent, but the resulting  multiclass regret scales as  SYMBOL  in the worst case, where  SYMBOL  is the average squared loss regret on the induced problems
+The Probing reduction~ CITATION  upper bounds  SYMBOL  by  the average binary classification  regret
+This composition gives a consistent reduction to binary classification, but it has a square root dependence on the binary regret  (which is undesirable as regrets are between 0 and 1)
+The probabilistic error-correcting output code  approach (PECOC)~ CITATION  reduces  SYMBOL -class classification to learning  SYMBOL  regressors on the interval  SYMBOL , creating  SYMBOL  binary examples per multiclass example at both training and test time, with a test time computation of  SYMBOL
+The resulting multiclass regret is bounded by  SYMBOL , removing the dependence on the number of classes  SYMBOL
+When only a constant number of labels have non-zero probability given features, the computation can be reduced to  SYMBOL  per example~ CITATION
+This state of the problem raises several questions:   Is there a consistent reduction from multiclass to binary classification  that does not have a square root dependence on  SYMBOL ~ CITATION
+For example, an average binary regret of just  SYMBOL  may imply a PECOC multiclass regret of  SYMBOL
+%At the level of  Is there a consistent reduction  that requires just  SYMBOL  computation,  matching the information theoretic lower bound
+The well-known  SYMBOL  tree reduction distinguishes between  the labels using a balanced binary tree, with each non-leaf node predicting ``Is the correct multiclass label to the left or not
+''~ CITATION
+As shown in Section~, this method is inconsistent
+Can the above be achieved with a reduction that only performs pairwise comparisons between classes
+One fear associated with the PECOC approach is that it creates binary problems of the form ``What is the probability that the label is in a given random subset of labels ,''  which may be hard to solve
+Although this fear is addressed by regret analysis (as the latter operates only on avoidable, excess loss), and is  overstated in some cases~ CITATION ,  it is still of some concern, especially with larger values of  SYMBOL
+The error-correcting tournament family presented here answers all of these questions in the affirmative
+It provides an exponentially faster in  SYMBOL  method for multiclass prediction with the resulting multiclass regret bounded by  SYMBOL , where  SYMBOL  is the average binary regret; and every binary classifier logically compares two distinct class labels
+The result is based on a basic observation that if a non-leaf  node fails to predict its binary label, which may be unavoidable due to noise in the distribution,  nodes between this node and the root should have no preference for class label prediction
+Utilizing this observation, we construct a reduction, called the  filter tree , which uses a  SYMBOL  computation per multiclass example at both training and test time, and whose multiclass regret is bounded by  SYMBOL  times the average binary regret
+The decision process of a filter tree, viewed bottom up, can be viewed as a single-elimination tournament on a set of  SYMBOL  players
+Using multiple independent single-elimination tournaments is of no use as it does not affect the  average  regret of an adversary controlling the binary classifiers
+Somewhat surprisingly, it is possible to have  SYMBOL  complete single-elimination  tournaments between  SYMBOL  players in  SYMBOL  rounds, with no player playing twice in the same round
+% ~ CITATION
+An  error-correcting tournament ,  first pairs labels in such simultaneous single-elimination tournaments, followed by a final carefully weighted single-elimination tournament that decides among the  SYMBOL  winners of the first phase
+As for the filter tree, test time evaluation can start at the root and proceed to a multiclass label with  SYMBOL  computation
+This construction is also useful for the problem of robust search, yielding the first algorithm which allows the adversary  to err a constant fraction of the time in the ``full lie'' setting~ CITATION , where a comparator can missort any comparison
+Previous work either applied to the ``half lie'' case where a comparator can fail to sort but can not actively missort~ CITATION , or to a ``full lie'' setting where an adversary has a fixed known bound on the number of lies~ CITATION  or a fixed budget on the fraction of errors so far~ CITATION
+Indeed, it might even appear impossible to have an algorithm robust to a constant fraction of full lie errors since an error can always be reserved for the last comparison
+Repeating the last comparison  SYMBOL  times defeats this strategy
+The result here is also useful for the actual problem of tournament construction in games with real players
+Our analysis does not assume that errors are   iid  ~ CITATION , or have known noise distributions~ CITATION  or known outcome distributions given player skills~ CITATION
+Consequently, the tournaments we construct are robust against severe bias such as a biased referee or some forms of bribery and collusion
+Furthermore, the tournaments we construct are shallow, requiring fewer rounds than  SYMBOL -elimination bracket tournaments, which do not satisfy the guarantee provided here
+In an  SYMBOL - elimination bracket tournament , bracket  SYMBOL  is a single-elimination tournament on all players except the winners of brackets  SYMBOL
+After the bracket winners are determined, the player winning the last bracket  SYMBOL  plays the winner of bracket  SYMBOL  repeatedly until one player has suffered  SYMBOL  losses (they start with  SYMBOL  and  SYMBOL  losses respectively)
+The winner moves on to pair against the winner of bracket  SYMBOL , and the process continues until only one player remains
+This method does not scale well to large  SYMBOL , as the final elimination phase takes  SYMBOL  rounds
+Even for  SYMBOL  and  SYMBOL , our constructions have smaller maximum depth than bracketed  SYMBOL -elimination
+To see that the bracketed  SYMBOL -elimination tournament does not satisfy our goal, note that the second-best player could defeat the first player in the first single elimination tournament, and then once more in the final elimination phase to win, implying that an adversary need control only two matches \paragraph{Paper overview} We begin by defining the basic concepts and introducing some of the  notation in Section~
+Section~ shows that the simple divide-and-conquer tree approach is inconsistent, motivating the Filter Tree algorithm described in section~ (which applies to more general cost-sensitive multiclass problems)
+Section~ proves that the algorithm has the best possible computational dependence, and gives two upper bounds on the regret of the returned (cost-sensitive) multiclass classifier
+Subsection~ presents some experimental evidence that the Filter Tree is indeed a practical approach for multiclass classification
+Section~ presents the error-correcting tournament family parametrized by an integer  SYMBOL , which controls the tradeoff between maximizing robustness ( SYMBOL  large) and minimizing depth ( SYMBOL  small)
+Setting  SYMBOL  gives the Filter Tree, while  SYMBOL  gives a (multiclass to binary)  regret ratio of  SYMBOL  with  SYMBOL  depth
+Setting  SYMBOL  gives regret ratio of  SYMBOL  with depth  SYMBOL
+The results here provide a nearly free generalization of earlier work~ CITATION  in the robust search setting, to a more powerful adversary that can missort as well as fail to sort
+%, and which is only charged according to two labels conditional  Section~ gives an algorithm independent lower bound of 2 on the regret ratio for large  SYMBOL
+When the number of calls to a binary classifier is independent (or nearly independent) of the label predicted, we strengthen this lower bound to  SYMBOL  for large  SYMBOL

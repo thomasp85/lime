@@ -1,0 +1,44 @@
+### abstract ###
+MISC	Alternative splicing contributes to both gene regulation and protein diversity.
+AIMX	To discover broad relationships between regulation of alternative splicing and sequence conservation, we applied a systems approach, using oligonucleotide microarrays designed to capture splicing information across the mouse genome.
+OWNX	In a set of 22 adult tissues, we observe differential expression of RNA containing at least two alternative splice junctions for about 40 percent of the 6,216 alternative events we could detect.
+OWNX	Statistical comparisons identify 171 cassette exons whose inclusion or skipping is different in brain relative to other tissues and another 28 exons whose splicing is different in muscle.
+OWNX	A subset of these exons is associated with unusual blocks of intron sequence whose conservation in vertebrates rivals that of protein-coding exons.
+OWNX	By focusing on sets of exons with similar regulatory patterns, we have identified new sequence motifs implicated in brain and muscle splicing regulation.
+OWNX	Of note is a motif that is strikingly similar to the branchpoint consensus but is located downstream of the 5 splice site of exons included in muscle.
+OWNX	Analysis of three paralogous membrane-associated guanylate kinase genes reveals that each contains a paralogous tissue-regulated exon with a similar tissue inclusion pattern.
+OWNX	While the intron sequences flanking these exons remain highly conserved among mammalian orthologs, the paralogous flanking intron sequences have diverged considerably, suggesting unusually complex evolution of the regulation of alternative splicing in multigene families.
+### introduction ###
+MISC	Splicing is an essential process that constructs protein coding messenger RNA sequences using tiny segments of information buried in the much larger primary transcripts of the eukaryotic gene.
+MISC	Regulated alternative splicing can create different protein coding sequences under different biological circumstances, allowing the production of functionally related but distinct proteins.
+MISC	In addition, alternative splicing can mediate the repression of gene expression by stimulating the formation of transcripts subject to nonsense-mediated decay CITATION CITATION.
+MISC	Splicing patterns seem distinct in the vertebrate nervous system compared to other tissues CITATION, CITATION, and it is tempting to hypothesize that neural alternative splicing contributed to the rapid evolution of the vertebrate brain without large increases in gene number CITATION .
+MISC	Biochemical analysis of alternative splicing has shown that numerous RNA binding proteins influence the use of specific splice sites to stimulate splicing events that lead to particular mRNA isoforms CITATION, CITATION.
+MISC	These RNA binding proteins may activate or repress the use of splice sites by binding to nearby sequences in the exon or in the intron.
+MISC	In many cases, multiple RNA binding proteins combine to create repressing and activating influences that produce patterns of splicing control CITATION, CITATION.
+MISC	Some proteins, such as SR proteins and the CELF proteins, have mostly activating roles, whereas others, such as hnRNP A1, PTB, and nPTB, have mostly repressing roles.
+MISC	Certain proteins can either activate or repress splicing in different contexts, depending on the position of their binding sites or the expression of other RNA binding proteins CITATION, CITATION .
+MISC	A complete catalog of the RNA sequences corresponding to the enhancers and silencers bound by splicing regulatory proteins would greatly aid the understanding of splicing regulatory networks.
+MISC	Thus far, there are only a handful of splicing regulators whose corresponding RNA binding motifs have been identified, whereas there may be many splicing regulators among the hundreds of RNA binding proteins encoded by the mouse genome.
+MISC	In addition, several related but distinct genes produce proteins that bind the same or overlapping sets of sequences; for example, Fox-1 and RBM9 each bind UGCAUG CITATION, CITATION, and the branchpoint binding protein SF1 and the protein quaking each bind UACUAAC-like motifs CITATION CITATION.
+MISC	Adding to this complexity is the tendency for the mRNAs of RNA binding proteins to be alternatively spliced, leading to multiple RNA binding protein isoforms with potentially different functions.
+CONT	Currently, the methods available for expanding the list of known regulators and their target sequences are limited, and the development of this catalog is in the early stage CITATION .
+MISC	Much of the available genomic information on alternative splicing is derived by the alignment of large numbers of expressed sequence tags and messenger RNAs to genome sequences.
+MISC	The analysis of exons that appear to be constitutive or alternative has led to the successful identification of many distinguishing features of alternatively spliced regions CITATION CITATION, even allowing their accurate prediction without cDNA evidence CITATION, CITATION, CITATION.
+CONT	Although cDNA libraries have been invaluable for discovering general features of alternatively spliced exons, it is difficult to connect specific regulatory sequences to specific biological conditions with confidence due to variable and sometimes missing information about the source materials and methods of cDNA library construction.
+CONT	The relatively low number of transcripts present from any one gene also makes it difficult to estimate differences in expression levels using library representation as a measure.
+MISC	Thus, more direct methods are needed to associate alternative splicing events with underlying biological conditions.
+MISC	The recent application of microarray technology to questions of splicing and splicing regulation promises to reveal parallel connections between many splicing events and specific biological or experimental conditions CITATION CITATION.
+MISC	Analysis of experimental changes in splicing for many genes simultaneously should reveal biological conditions necessary for proper splicing regulation in a way that analysis of cDNA libraries cannot, and with breadth that cannot be achieved by analysis of a reporter construct or a few endogenous target genes.
+OWNX	To demonstrate this, we constructed a DNA microarray designed to capture splicing information for about 6,200 alternative events in the mouse transcriptome, using a combination of splice junction and exon probes, and have hybridized RNA from 22 adult mouse tissues.
+AIMX	We examine splicing in these tissues by asking three questions.
+OWNX	First we ask, Which RNA isoforms are present in a particular tissue sample?
+OWNX	To answer this simple question, we used a new method based on comparing the intensity of the probes in a probe set to the distribution of intensities from all probes with similar G C level.
+BASE	This is similar in spirit although different in approach to the present-absent calls from Affymetrix MAS 5.0 algorithms CITATION, as this microarray did not contain mismatch probes.
+OWNX	Using RT-PCR, we show that this method has a true-positive rate of 85 percent.
+OWNX	Second we ask, Which RNA isoforms are differentially expressed across the tissues examined?
+BASE	For each RNA isoform, the intensities of the isoform-specific junction probes were examined across tissues using the Kruskal-Wallis statistical test.
+OWNX	After correcting for multiple testing, about 40 percent of the 6,216 total alternative splicing events examined were found to have more than one RNA form that was differentially expressed, indicating widespread tissue differences in splicing over the tissues.
+OWNX	Third we ask, Which cassette exons are included differentially between brain and nonbrain tissues?
+OWNX	To answer this, we used a regression-based bootstrapping method, which also allows an estimate of the relative change in skipping and inclusion in the two sample groups.
+OWNX	We analyzed the intron sequences associated with exon skipping events that are differentially regulated in brain or muscle relative to other tissues and found unusual patterns of sequence conservation that provide new information about tissue regulation of alternative splicing and its evolution.

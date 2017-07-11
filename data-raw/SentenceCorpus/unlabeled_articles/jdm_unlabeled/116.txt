@@ -1,0 +1,26 @@
+### abstract ###
+we asked whether people can make their confidence judgments more realistic accurate by adjusting them  with the aim of improving the relationship between the level of confidence and the correctness of the answer
+this adjustment can be considered to include a so-called second-order metacognitive judgment
+the participants first gave confidence judgments about their answers to questions about a video clip they had just watched
+next  they attempted to increase their accuracy by identifying confidence judgments in need of adjustment and then modifying them
+the participants managed to increase their metacognitive realism  thus decreasing their absolute bias and improving their calibration  although the effects were small
+we also examined the relationship between confidence judgments that were adjusted and the retrieval fluency and the phenomenological memory quality participants experienced when first answering the questions  this quality was one of either remember associated with concrete  vivid details or know associated with a feeling of familiarity
+confidence judgments associated with low retrieval fluency and the memory quality of knowing were modified more often
+in brief  our results provide evidence that people can improve the realism of their confidence judgments  mainly by decreasing their confidence for incorrect answers
+thus  this study supports the conclusion that people can perform successful second-order metacognitive judgments
+### introduction ###
+realistic confidence judgments about retrieved memories are important in a number of contexts e g   medical and legal contexts
+for example  an eyewitness to a crime must judge his or her level of confidence about correctly having identified the criminal
+although many witnesses may feel confident about their identification  the relation between identification confidence and the correctness of the identification is weak  CITATION
+in spite of this weakness  research has also shown that jurors often judge eyewitness credibility based on the level of confidence the eyewitness expresses  CITATION
+thus  the level of confidence about a memory report should be as accurate as possible relative to the correctness of the report  CITATION
+in general  the realism of confidence judgments pertains to how well a person's confidence for a memory report matches the correctness of the report  CITATION
+the concept of confidence realism includes two aspects  calibration  the relationship between the level of the confidence judgments and the probability of the answer being correct  and discrimination  the extent to which the respondent can discriminate between correct and incorrect answers by means of their confidence judgments
+in this study  we attended only to participants' ability to improve calibration
+numerous studies have reported that people often show overconfidence e g   they are more confident than their memory report is correct
+this is the case both for general knowledge questions  CITATION  and event memory questions  CITATION   although the basis of this so-called overconfidence effect has been widely debated  CITATION
+given that people show a lack of realism in their confidence judgments in many contexts  finding ways to help people improve the realism of their confidence judgments is important
+our first aim was to investigate whether individuals can increase the realism of their confidence judgments of memory reports by adjusting confidence judgments they believe are the most unrealistic
+the task of improving the realism of a confidence judgment  designated here as the adjustment task  involves first identifying which confidence judgments to adjust and then modifying them
+when trying to improve the realism of confidence judgments  people presumably rely on various types of cues
+our second aim was to investigate the potential usefulness of two such cues in identifying confidence judgments that are in need of adjustment and modifying them  retrieval fluency the subjective feeling of ease of recall and the phenomenological quality of the retrieved memories  either remember associated with concrete  vivid detail or know associated with a feeling of familiarity

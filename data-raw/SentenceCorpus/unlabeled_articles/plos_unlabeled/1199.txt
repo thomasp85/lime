@@ -1,0 +1,38 @@
+### abstract ###
+Apparent occupancy levels of proteins bound to DNA in vivo can now be routinely measured on a genomic scale.
+A challenge in relating these occupancy levels to assembly mechanisms that are defined with biochemically isolated components lies in the veracity of assumptions made regarding the in vivo system.
+Assumptions regarding behavior of molecules in vivo can neither be proven true nor false, and thus is necessarily subjective.
+Nevertheless, within those confines, connecting in vivo protein-DNA interaction observations with defined biochemical mechanisms is an important step towards fully defining and understanding assembly/disassembly mechanisms in vivo.
+To this end, we have developed a computational program PathCom that models in vivo protein-DNA occupancy data as biochemical mechanisms under the assumption that occupancy levels can be related to binding duration and explicitly defined assembly/disassembly reactions.
+We exemplify the process with the assembly of the general transcription factors at the genes of the budding yeast Saccharomyces.
+Within the assumption inherent in the system our modeling suggests that TBP occupancy at promoters is rather transient compared to other general factors, despite the importance of TBP in nucleating assembly of the preinitiation complex.
+PathCom is suitable for modeling any assembly/disassembly pathway, given that all the proteins come together to form a complex.
+### introduction ###
+Eukaryotic genes are thought to be regulated by hundreds of proteins that assemble into pre-initiation complexes at promoters using an ordered pathway.
+One aspect of the PIC assembly pathway involves the recruitment of the general transcription factors, such as TBP and TFIIB, by sequence-specific activators.
+TBP and TFIIB then contribute to the recruitment of RNA polymerase II and other GTF's, which eventually start transcription.
+A fundamental question concerning our understanding of gene regulation is the extent to which each assembly and disassembly step is distinct at every gene in a genome.
+Is the traditional biochemical view that TBP locks in or commits to a promoter, and in a recurring manner nucleates PIC formation valid in vivo?
+And is the PIC disassembly process in vivo, simply the reverse of the assembly process?
+Parts of the assembly/disassembly pathway have been rigorously defined in vitro with a few purified proteins and DNA, and this has provided us with our current parsimonious view of PIC regulation CITATION, CITATION, CITATION, CITATION.
+In no case have assembly or disassembly reactions been reconstituted in a way that fully recapitulates the physiological setting at every gene, and so these questions remain open, in regards to the extent to which in vitro defined reactions mimic the in vivo events occurring throughout a genome.
+The answer to this question is not readily addressed in vivo, since reactions are not as definable nor quantifiable as in vitro biochemical reactions with purified components.
+Nonetheless, assays do exist for measuring relative levels of protein DNA complex formation in vivo, and so mechanistic inferences will be sought.
+The goal here is to evaluate in vivo occupancy data in light of biochemical mechanisms that are intended to reflect the corresponding in vivo reaction.
+The extent of biological insight is predicated on rather subjective assessments of the assumptions associated with interpretation of in vivo data.
+Within the context of declared constraints and assumptions, we propose a means to model in vivo protein-DNA occupancy data, so as to better integrate and conceptualize massive genomic datasets.
+This study is focused on the means of such modeling and the assumptions inherent in the data, using specific examples of PIC assembly.
+Currently, perhaps the most widely used assay to measure the occupancy of proteins at genes in vivo is the chromatin immunoprecipitation assay.
+In ChIP, proteins are crosslinked to DNA, the protein is then purified, and the bound DNA identified either through directed PCR or through genome-wide detection platforms.
+In this way, for example, the relative occupancy level of TBP, TFIIB, pol II, and many other proteins at every promoter in the genome in a population of cells can be assayed.
+Recent studies using differential ChIP and photobleaching experiments have provided compelling evidence for a dynamic state of PIC components in living cells CITATION, CITATION, CITATION.
+Therefore, it is now within a conceptual framework to expect factors like RNA polymerase II, TBP, and other GTFs to undergo multiple assembly and disassembly cycles at promoters for each productive transcription event, rather than the traditional simple view that GTF's remain locked in place during multiple transcription cycles.
+The existence and origins of distinct occupancy levels of PIC components on genes has not been systematically explored, and thus is the impetus for conducting the modeling studies described here.
+Differential occupancy patterns for the GTFs have been described CITATION, and may be caused by gene-specific regulators that influence the recruitment or retention of specific general transcription factors, and thus assembly/disassembly mechanisms might differ from gene to gene.
+Here, we attempt to utilize ChIP-chip binding information gleaned at every promoter in the yeast genome to either plausibly infer or exclude PIC assembly/disassembly mechanisms.
+The major limitation in any such approach is that the number of permutations of possible assembly/disassembly mechanisms exceeds the amount of data available to constrain such mechanisms.
+In other words, occupancy data, alone, is insufficient to uniquely specify an ordered PIC assembly and disassembly pathway.
+Imposition of additional constraints, such as predefining either the assembly pathway, might however eliminate certain dissociation mechanisms as incompatible with the data, and thus serves the purpose of plausibly excluding mechanisms rather than uniquely identifying a mechanism.
+Here, we develop a ChIP modeling program, termed PathCom, in the context of a fixed PIC assembly pathway to infer allowable dissociation mechanisms.
+We validate the simulation using an existing chemical kinetics simulator COPASI CITATION.
+Within the declared constraints, we discern the compatibility of different PIC disassembly mechanisms at nearly every transcriptionally-active gene in the yeast genome with existing ChIP-chip occupancy data.

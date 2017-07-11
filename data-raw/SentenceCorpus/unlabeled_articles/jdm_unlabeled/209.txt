@@ -1,0 +1,20 @@
+### abstract ###
+many judgment analysis studies employ multiple regression procedures to estimate the importance of cues
+some studies test the significance of regression coefficients in order to decide whether or not specific cues are attended to by the judge or decision maker
+this practice is dubious because it ignores type ii error
+the purposes of this note are  NUMBER  to draw attention to this issue  specifically as it appears in studies of self-insight   NUMBER  to illustrate the problem with examples from the judgment literature  and  NUMBER  to provide a simple method for calculating post-hoc power in regression analyses in order to facilitate the reporting of type ii errors when regression models are used
+### introduction ###
+for decades judgment analysts have successfully used multiple regression to model the organizing cognitive principles underlying many types of judgments in a variety of contexts  CITATION
+most often these models depict the individual judge or decision maker as combining multiple differentially weighted pieces of information cues in a compensatory manner to arrive at a judgment
+further  these analyses portray those who have acquired expertise on a judgment task as applying their judgment model or  policy  with regular  although less than perfect  consistency
+the ability of linear regression models to accurately reproduce such expert judgments under various conditions has been discussed in detail  CITATION
+if one accepts the proposition that people's judgments can be modeled as though they are multiple regression equations  questions arise such as   NUMBER  how many of the available cues does the individual use
+and  NUMBER  how should the number of cues used be determined
+too many researchers blindly apply statistical significance tests to inform themin a kind of deterministic mannerwhether judges did or did not attend to specific cues
+if the t-test calculated on a cue's weight is significant  then the cue is counted as being attended to by the judge
+relying on p values in this way is a problem because these values are affected by the number of cues and number of cases presented to the judge during the task and by how well the overall regression equation fits the total set of responses
+this issue is discussed in this note which is organized as follows  first  examples from the judgment literature are reviewed to illustrate the existence of the problem
+second  notation commonly used by judgment analysts when describing regression procedures is introduced
+third  using this notation  a method for calculating the post-hoc power of t-tests on regression coefficients based on the noncentral t distribution is described
+fourth  this method is applied to estimate the number of cases necessary for statistical significance in order to illustrate how the investigator's conclusions about the number of cues attended to in a judgment task should be informed by considerations of type ii error
+finally  an spss program for performing the calculations is described and provided in the appendix

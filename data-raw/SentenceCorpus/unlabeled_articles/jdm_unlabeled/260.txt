@@ -1,0 +1,30 @@
+### abstract ###
+a distinction is proposed between recommending for preferred choice options and recommending against non-preferred choice options
+in binary choice  both recommendation modes are logically  though not psychologically  equivalent
+we report empirical evidence showing that speakers recommending for preferred options predominantly select positive frames  which are less common when speakers recommend against non-preferred options
+in addition  option attractiveness is shown to affect speakers' choice of frame  and adoption of recommendation mode
+the results are interpreted in terms of three compatibility effects  i recommendation mode-valence framing compatibility  speakers' preference for positive framing is enhanced under recommending for and diminished under recommending against instructions  ii option attractiveness-valence framing compatibility  speakers' preference for positive framing is more pronounced for attractive than for unattractive options  and iii recommendation mode-option attractiveness compatibility  speakers are more likely to adopt a recommending for approach for attractive than for unattractive binary choice pairs
+### introduction ###
+framing effects have been much debated ever since tversky and kahneman  CITATION  showed that preference for risk is dependent on choice alternatives being framed either in positive or negative terms
+evidently  choice behavior is determined not only by the inherent value of the alternative options  but also by the way in which they are described
+early framing studies exposed participants to vignettes that contained text fragments and recorded decision makers' corresponding choices
+little attention was paid in these studies to the source of the message
+in reality  however  a message is transferred from a source e g   a speaker to a target e g   a listener
+indeed  an analysis of the speakers' and the listeners' perspective is central to the conversational analysis of human judgment  CITATION  and constitutes the essence of grice's logic of conversation and relevance theory
+the social context of decision making is therefore crucial when studying framing
+an understanding of the pragmatics of framing requires not only the study of decision makers' responses to alternative frames  but also an examination of speakers' construction and preference among various possible frames
+the present paper constitutes a continuation of our previous research  CITATION  in which  employing a conversational framework  the persuasive efficacy of speakers and listeners was examined
+specifically  in previous research we analyzed risky choice framing  CITATION   and have shown that speakers who try to persuade a listener to adopt a particular choice alternative possess a distinct preference for positive over negative framing
+judged from listeners' responses  however  the inclination to use positive frames is effective for promoting riskless  but not risky options
+we demonstrated empirically that the incompatibility between speakers and listeners was due to an asymmetry in evaluation mode  CITATION  between speakers and listeners
+speakers can jointly i e   comparatively assess the information and the persuasive qualities of alternative frames
+in contrast  listeners are exposed only to one of these frames and  consequently  can assess the information only separately i e   non-comparatively
+in our earlier research we studied frame valence positive vs negative preferences of speakers' and their effectiveness in persuading listeners
+specifically  we examined the compatibility between speakers and listeners in terms of frame preferences
+in the present study we explore a closely related issue to valence framing  namely the manner by which an option is recommended
+a distinction is proposed between two general persuasive orientations that speakers might adopt   recommending for preferred choice alternatives  and  recommending against non-preferred choice alternatives
+  this distinction is referred to as recommendation mode
+broadly speaking  recommending for entail drawing attention to and listing of desired attributes thus forming a positive orientation
+in contrast  recommending against requires attending to unwanted aspects thus forming a negative orientation
+note that in the present context  positive and negative orientations should be interpreted not just in absolute but also in relative terms
+thus  for example  saying that  item a is cheaper than item b  implies a positive recommendation for a

@@ -1,0 +1,52 @@
+### abstract ###
+Paired-end sequencing is emerging as a key technique for assessing genome rearrangements and structural variation on a genome-wide scale.
+This technique is particularly useful for detecting copy-neutral rearrangements, such as inversions and translocations, which are common in cancer and can produce novel fusion genes.
+We address the question of how much sequencing is required to detect rearrangement breakpoints and to localize them precisely using both theoretical models and simulation.
+We derive a formula for the probability that a fusion gene exists in a cancer genome given a collection of paired-end sequences from this genome.
+We use this formula to compute fusion gene probabilities in several breast cancer samples, and we find that we are able to accurately predict fusion genes in these samples with a relatively small number of fragments of large size.
+We further demonstrate how the ability to detect fusion genes depends on the distribution of gene lengths, and we evaluate how different parameters of a sequencing strategy impact breakpoint detection, breakpoint localization, and fusion gene detection, even in the presence of errors that suggest false rearrangements.
+These results will be useful in calibrating future cancer sequencing efforts, particularly large-scale studies of many cancer genomes that are enabled by next-generation sequencing technologies.
+### introduction ###
+Cancer is a disease driven by selection for somatic mutations.
+These mutations range from single nucleotide changes to large-scale chromosomal aberrations such as deletion, duplications, inversions and translocations.
+While many such mutations have been cataloged in cancer cells via cytogenetics, gene resequencing, and array-based techniques there is now great interest in using genome sequencing to provide a comprehensive understanding of mutations in cancer genomes.
+The Cancer Genome Atlas is one such sequencing initiative that focuses sequencing efforts in the pilot phase on point mutations in coding regions.
+This approach largely ignores copy neutral genome rearrangements including translocations and inversions.
+Such rearrangements can create novel fusion genes, as observed in leukemias, lymphomas, and sarcomas CITATION CITATION.
+The canonical example of a fusion gene is BCR-ABL, which results from a characteristic translocation in many patients with chronic myelogenous leukemia CITATION.
+The advent of Gleevec, a drug targeted to the BCR-ABL fusion gene, has proven successful in treatment of CML patients CITATION, invigorating the search for other fusion genes that might provide tumor-specific biomarkers or drug targets.
+Until recently, it is was generally believed that recurrent translocations and their resulting fusion genes occurred only in hematological disorders and sarcomas, with few suggesting that such recurrent events were prevalent across all tumor types including solid tumors CITATION, CITATION.
+This view has been challenged by the discovery of a fusion between the TMPRSS2 gene and several members of the ERG protein family in prostate cancer CITATION and the EML4-ALK fusion in lung cancer CITATION .
+These studies raise the question of what other recurrent rearrangements remain to be discovered.
+One strategy for genome-wide high-resolution identification of fusion genes and other large scale rearrangements is paired-end sequencing of clones, or other fragments of genomic DNA, from tumor samples.
+The resulting end-sequence pairs, or paired reads, are mapped back to the reference human genome sequence.
+If the mapped locations of the ends of a clone are invalid then a genomic rearrangement is suggested.
+This strategy was initially described in the End Sequence Profiling approach CITATION and later used to assess genetic structural variation CITATION, CITATION.
+An innovative approach utilizing SAGE-like sequencing of concatenated short paired-end tags successfully identified fusion transcripts in cDNA libraries CITATION.
+Present and forthcoming next-generation DNA sequencers hold promise for extremely high-throughput sequencing of paired-end reads.
+For example, the Illumina Genome Analyzer will soon be able to produce millions of paired reads of approximately 30 bp from fragments of length 500 1000 bp CITATION, while the SOLiD system from Applied Biosystems promises 25 bp reads from each end of size selected DNA fragments of many sizes CITATION.
+Similar strategies coupling the generation of paired-end tags with 454 sequencing have also been described CITATION, CITATION .
+Whole genome paired-end sequencing approaches allow for a genome-wide survey of all potential fusion genes and other rearrangements in a tumor.
+This approach holds several advantages over transcript or protein profiling in cancer studies.
+First, discovery of fusion genes using mRNA expression CITATION, cDNA sequencing, or mass spectrometry CITATION depends on the fusion genes being transcribed under the specific cellular conditions present in the sample at the time of the assay.
+These conditions might be different than those experienced by the cells during tumor development.
+Second, measurement of fusions at the DNA sequence level focuses on gene fusions due to genomic rearrangements and thus is less impeded by splicing artifacts or trans splicing CITATION.
+Finally, genome sequencing can identify more subtle regulatory fusions that result when the promoter of one gene is fused to the coding region of another gene, as in the case with with the c-Myc oncogene fusion with the immunoglobin gene promoter in Burkitt's lymphoma CITATION .
+In this paper, we address a number of theoretical and practical considerations for assessing cancer genome organization using paired-end sequencing approaches.
+We are largely concerned with detecting a rearrangement breakpoint, where a pair of non-adjacent coordinates in the reference genome is adjacent in the cancer genome.
+In particular, we extend this idea of a breakpoint to examine the ability to detect fusion genes.
+Specifically, if a clone with end sequences mapping to distant locations identifies a rearrangement in the cancer genome, does this rearrangement lead to formation of a fusion gene?
+Obviously, sequencing the clone will answer this question, but this requires additional effort/cost and may be problematic; e.g. most next-generation sequencing technologies do not archive the genome in a clone library for later analysis.
+We derive a formula for the probability of fusion between a pair of genomic regions given the set of all mapped clones and the empirical distribution of clone lengths.
+These probabilities are useful for prioritizing follow-up experiments to validate fusion genes.
+In a test experiment on the MCF7 breast cancer cell-line, 3,201 pairs of genes were found near clones with aberrantly mapping end-sequences.
+However, our analysis revealed only 18 pairs of genes with a high probability of fusion, of which six were tested and five experimentally confirmed .
+The advent of high throughput sequencing strategies raises important experimental design questions in using these technologies to understand cancer genome organization.
+Obviously, sequencing more clones improves the probability of detecting fusion genes and breakpoints.
+However, even with the latest sequencing technologies, it would be neither practical nor cost effective to shotgun sequence and assemble the genomes of thousands of tumor samples.
+Thus, it is important to maximize the probability of detecting fusion genes with the least amount of sequencing.
+This probability depends on multiple factors including the number and length of end-sequenced clones, the length of genes that are fused, and possible errors in breakpoint localization.
+Here, we derive several formulae that elucidate the trade-offs in experimental design of both current and next-generation sequencing technologies.
+Our probability calculations and simulations demonstrate that even with current paired-end technology we can obtain an extremely high probability of breakpoint detection with a very low number of reads.
+For example, more than 90 percent of all breakpoints can be detected with paired-end sequencing of less than 100,000 clones.
+Additionally, next-generation sequencers can potentially detect rearrangements with a greater than 99 percent probability and localize the breakpoints of these rearrangements to intervals of less than 300 bp in a single run of the machine .

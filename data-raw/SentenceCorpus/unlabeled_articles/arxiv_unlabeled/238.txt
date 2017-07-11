@@ -1,0 +1,44 @@
+### abstract ###
+We present a novel approach for learning nonlinear dynamic models, which leads to a new set of tools capable of solving problems that are otherwise difficult
+We provide theory showing this new approach is consistent for models with long range structure, and apply the approach to motion capture and  high-dimensional video data, yielding results superior to standard alternatives
+### introduction ###
+The notion of hidden states appears in many nonstationary models of the world such as Hidden Markov Models (HMMs), which have discrete states, and Kalman filters, which have continuous states
+Figure~ shows a general dynamic model with observation  SYMBOL  and unobserved hidden state  SYMBOL
+The system is characterized by a state transition probability  SYMBOL , and a state to observation probability  SYMBOL
+The method for predicting future events under such a dynamic model is to maintain a posterior distribution over the hidden state  SYMBOL , based on all observations  SYMBOL  up to time  SYMBOL
+The posterior can be updated using the formula:   The prediction of future events  SYMBOL ,  SYMBOL , conditioned on  SYMBOL  is through the posterior over  SYMBOL :  Hidden state based dynamic models have a wide range of applications, such as time series forecasting, finance, control, robotics, video and speech processing
+Some detailed dynamic models and application examples can be found in  CITATION
+From \Eqref{eq:predict}, it is clear that the benefit of using a hidden state  dynamic model is that the information contained in the observation  SYMBOL  can be captured by a relatively small hidden state  SYMBOL
+Therefore in order to predict the future, we do not have to use all previous observations  SYMBOL  but only its state representation  SYMBOL
+In principle,  SYMBOL  may contain a finite history of length  SYMBOL , such as  SYMBOL
+Although the notation only considers first order dependency, it incorporates higher order dependency by considering a representation of the form  SYMBOL , which is a standard trick }  In an HMM or Kalman filter,  both transition and observation functions are linear maps
+There are reasonable algorithms that can learn these linear dynamic models
+For example, in addition to the classical EM approach, it was recently shown that global learning of certain hidden Markov models can be achieved in polynomial time  CITATION
+Moreover, for linear models, the posterior update rule is quite  simple
+Therefore, once the model parameters are estimated, such models can be readily applied for prediction
+However in many real problems, the system dynamics cannot be approximated linearly
+For such problems, it is often necessary to  incorporate nonlinearity into the dynamic model
+The standard approach to this problem is through nonlinear probability modeling, where prior knowledge is required to define a sensible state representation, together with parametric forms of transition and observation probabilities
+The model parameters are learned by using probabilistic methods such as the EM  CITATION
+When the learned model is applied for prediction purposes, it is necessary to maintain the posterior  SYMBOL  using the update formula in \Eqref{eq:post-update}
+Unfortunately, for nonlinear systems, maintaining  SYMBOL  is generally difficult because the posterior can become exponentially more complex (e g , exponentially many mixture components in a mixture model) as  SYMBOL  increases
+This computational difficulty is a significant obstacle to applying nonlinear dynamic systems to practical problems
+The traditional approach to address the computational difficulty is through approximation methods
+For example, in the particle filtering approach  CITATION , one uses a finite number of samples to represent the posterior distribution and the samples are then updated as observations arrive
+Another approach is to maintain a mixture of Gaussians to approximate the posterior,  SYMBOL , which may also be regarded as a mixture of Kalman filters  CITATION
+Although an exponential in  SYMBOL  number of mixture components are needed to accurately represent the posterior, in practice, one has to use a fixed number of mixture components to approximate the distribution
+This leads to the following question: even if the posterior can be well-approximated by a computationally tractable approximation family (such as finite mixtures of Gaussians), how can one design a good approximate inference method that is guaranteed to find a good quality approximation
+The use of complex techniques required to design  reasonable approximation schemes makes it non-trivial to  apply nonlinear dynamic models for many practical problems
+This paper introduces an alternative approach, where we start with a different representation of a linear dynamic model which we call the  sufficient posterior representation
+It is shown that one can recover the underlying state representation by using prediction methods that are not necessarily probabilistic
+This allows us to model nonlinear dynamic behaviors with many available nonlinear supervised learning algorithms such as neural networks, boosting, and support vector machines in a simple and unified fashion
+Compared to the traditional approach, it has several distinct advantages:   It does not require us to design any explicit state representation and probability model using prior knowledge
+Instead, the representation is implicitly embedded in the representational choice of the underlying supervised learning algorithm, which may be regarded as a black box with the power to learn an arbitrary representation
+The prior knowledge can be simply encoded as input features to the learning algorithms, which significantly simplifies the modeling aspect
+It does not require us to come up with any specific representation of the posterior and the corresponding approximate Bayesian inference schemes for posterior updates
+Instead, this issue is addressed by incorporating the posterior update as part of the learning process
+Again, the posterior representation is implicitly embedded in the representational choice of the underlying supervised learning algorithm
+In this sense, our scheme learns the optimal representation for posterior approximation and the corresponding update rules within the representational power of the underlying supervised algorithm
+It is possible to obtain performance guarantees for our algorithm in terms of the learning performance of the underlying supervised algorithm
+The performance of the latter has been heavily investigated in the statistical and learning theory literature
+Such results can thus be applied to obtain theoretical results on our methods for learning nonlinear dynamic models

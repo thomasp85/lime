@@ -1,0 +1,19 @@
+### abstract ###
+recent research suggesting that people who maximize are less happy than those who satisfice has received considerable fanfare
+the current study investigates whether this conclusion reflects the construct itself or rather how it is measured
+we developed an alternative measure of maximizing tendency that is theory-based  has good psychometric properties  and predicts behavioral outcomes
+in contrast to the existing maximization measure  our new measure did not correlate with life dissatisfaction  nor with most maladaptive personality and decision-making traits
+we conclude that the interpretation of maximizers as unhappy may be due to poor measurement of the construct
+we present a more reliable and valid measure for future researchers to use
+### introduction ###
+the term  satisfice  was coined by herbert simon  CITATION  to describe a decision-making strategy that strives for adequacy  rather than optimality
+people generally satisfice  according to simon  CITATION    because they have not the wits to maximize  p  NUMBER 
+more recently  the tendency to satisfice maximize has been conceptualized as an individual difference or trait  CITATION
+schwartz and his colleagues developed the maximization scale  which contains  NUMBER  self-report items aimed at assessing the general tendency to seek optimality e g    i treat relationships like clothing  i expect to try a lot on before i get the perfect fit
+ 
+low scores on the measure are intended to reflect a general tendency to satisfice
+findings based on the use of this scale have appeared in top academic journals  CITATION   and inferences drawn about maximizers have been reported in major media  CITATION  and a best-selling book  CITATION
+in general  maximizers are characterized as an unhappy group of people  debilitated by unrealistically high expectations in the face of an excess of options
+given that strong inferences have been drawn about the mental well-being of maximizers versus satisficers - based on responses to the maximization scale - it is especially important that we have confidence in the construct validity of the measure
+highhouse and diab  CITATION  suggested that the maximization scale falls short of commonly accepted psychometric standards
+the purpose of the present research  therefore  was to better understand the nature of the construct measured by the maximization scale  and to propose an alternative measure of the maximization construct

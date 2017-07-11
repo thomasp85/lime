@@ -1,0 +1,31 @@
+### abstract ###
+we examine how almost winning in roulette affects subsequent betting behavior
+our main finding is heterogeneity in gambler behavior with some gamblers less likely to bet on numbers that were near misses on the prior spin and other gamblers more likely to bet on near miss numbers
+using a unique data set from the game rapid roulette  we model the likelihood of a gambler betting on a near miss number while controlling for the favorite number bias and the likelihood of a number being a near miss
+we also find no evidence that near misses in roulette leads to gamblers extending the time spent gambling or to the placing of more bets
+### introduction ###
+near-miss events occur in a wide variety of domains including gambling  sports  natural disasters  and industrial accidents
+depending upon the domain there are differing definitions of a near miss
+within the gaming literature  reid  CITATION  defines a near miss as  a special kind of failure to reach a goal  one that comes close to being successful p  NUMBER   which griffiths  CITATION  shortens to  failures that are close to being successful p  NUMBER   and harrigan  CITATION  interprets as a  failure that was close to a win p  NUMBER  
+harrigan  CITATION  notes that some prefer the term  near win  as it is a more logical description of the gambling event under consideration but the term near miss prevails
+in the context of industrial accidents  dillon and tinsley  CITATION  suggest  an event is considered a  near-miss  if the outcome is non-hazardous  but if a hazardous or fatal outcome could have occurred  p  NUMBER  and in a subsequent paper they offer the definition of  successful outcomes in which chance plays a critical role in averting failure   CITATION
+central to the definitions of a near miss is the belief and associated feelings that one almost won but didn't  or almost lost but didn't
+locke  CITATION  uses the term  aww schucks
+  to capture the feeling of almost winning to which we add  that was a close one
+  to capture the feeling of avoiding an accident
+the importance of near-miss events is that they can affect decisions made subsequent to each event
+for example  there is experimental evidence that near misses lead gamblers to play longer
+early research by strickland and grote  CITATION  showed that subjects exposed to a high proportion of winning symbols on the first two wheels of a three wheel slot machine tended to gamble longer  but this result could not be replicated by reid  CITATION  under slightly different experimental conditions
+however  subsequent studies have found experimental evidence that near misses in slot machine games lead to more games played  CITATION  and increased playing time  CITATION
+although most research on the near miss effect has focused on slot machine gambling  some research has examined the near-miss effect in other casino games
+dixon  CITATION  found that subjects playing a simulated roulette game rated losing outcomes as closer to winning both when they were close in location to the winning number and when they were numerically close to the winning number
+another study by dixon et al CITATION  found that blackjack players rated  non-bust  losses as close to wins  with the effect decreasing as the difference in the card values between the player and dealer increased
+while both of these studies found a near miss effect in non-slot machine games  a limitation of these studies was that they were not designed to study how near misses affect subsequent gambling behavior
+near misses also affect decision making away from the casino floor
+in a project management domain  dillon and tinsley  CITATION  provide evidence that near-misses are often viewed as successes  which lead managers to make subsequent riskier decisions
+specifically  dillon and tinsley provide experimental evidence that managers who make decisions that result in near misses are evaluated as highly as managers who make decisions that result in successes and higher than those who fail without a near miss
+further  the evidence suggests that managers who experience near-miss events  but do not experience a failure  will then subjectively assess the probability of a future failure as lower than the objective probability of failure  leading these managers to choose riskier alternatives
+in the domain of natural disasters  dillon  tinsley and cronin  CITATION  provide evidence that if a house avoided flood damage in a hurricane a near-miss then subjects were less likely to buy flood insurance
+subjects were also less likely to evacuate a house that had survived past hurricanes without damage
+explaining this result  dillon  tinsley and cronin  CITATION  write  people did not update given probabilities  they did not calculate new probabilities  they simply felt differently about the initial probabilities that were given
+thus it might be said that near-miss information changes people's frames of reference p  NUMBER 

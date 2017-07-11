@@ -1,0 +1,36 @@
+### abstract ###
+%   <- trailing '%' for backward compatibility of
+sty file We develop a Bayesian framework for tackling the supervised clustering problem, the generic problem encountered in tasks such as reference matching, coreference resolution, identity uncertainty and record linkage
+Our clustering model is based on the Dirichlet process prior, which enables us to define distributions over the countably infinite sets that naturally arise in this problem
+We add  supervision  to our model by positing the existence of a set of unobserved random variables (we call these ``reference types'') that are generic across all clusters
+Inference in our framework, which requires integrating over infinitely many parameters, is solved using Markov chain Monte Carlo techniques
+We present algorithms for both conjugate and non-conjugate priors
+We present a simple---but general---parameterization of our model based on a Gaussian assumption
+We evaluate this model on one artificial task and three real-world tasks, comparing it against both unsupervised and state-of-the-art supervised algorithms
+Our results show that our model is able to outperform other models across a variety of tasks and performance metrics
+### introduction ###
+Supervised clustering is the general characterization of a problem that occurs frequently in strikingly different communities
+Like standard clustering, the problem involves breaking a finite set  SYMBOL  into a  SYMBOL -way partition  SYMBOL  (with  SYMBOL  unknown)
+The distinction between supervised clustering and standard clustering is that in the supervised form we are given training examples
+These training examples enable a learning algorithm to determine what aspects of  SYMBOL  are relevant to creating an appropriate clustering
+The  SYMBOL  training examples  SYMBOL  are subsets of  SYMBOL  paired with their correct partitioning
+In the end, the supervised clustering task is a prediction problem: a new  SYMBOL  is presented and a system must produce a partition of it
+The supervised clustering problem goes under many names, depending on the goals of the interested community
+In the relational learning community, it is typically referred to as  identity uncertainty  and the primary task is to augment a reasoning system so that it does not implicitly (or even explicitly) assume that there is a one-to-one correspondence between elements in an knowledge base and entities in the real world  CITATION
+In the database community, the task arises in the context of merging databases with overlapping fields, and is known as  record linkage   CITATION
+In information extraction, particularly in the context of extracting citations from scholarly publications, the task is to identify which citations are to the same publication
+Here, the task is known as  reference matching   CITATION
+In natural language processing, the problem arises in the context of  coreference resolution , wherein one wishes to identify which entities mentioned in a document are the same person (or organization) in real life  CITATION
+In the machine learning community, it has additionally been referred to as  learning under equivalence constraints   CITATION  and  learning from cluster examples   CITATION
+In this paper, we propose a generative model for solving the supervised clustering problem
+Our model takes advantage of the  Dirichlet process prior , which is a non-parametric Bayesian prior over discrete distributions
+This prior plays two crucial roles: first, it allows us to estimate the number of clusters  SYMBOL  in a principled manner; second, it allows us to control the complexity of the solutions that are learned
+We present inference methods for our model based on Markov chain Monte Carlo methods
+We compare our model against other methods on large, real-world data sets, where we show that it is able to outperform most other systems according to several metrics of performance
+The remainder of this paper is structured as follows
+In Section~, we describe prior efforts to tackle the supervised clustering problem
+In Section~, we develop our framework for this problem, starting from very basic assumptions about the task
+We follow this discussion with a general scheme for inference in this framework (Section~)
+Next, in Section~, we present three generic parameterizations of our framework and describe the appropriate adaptation of the inference scheme to these parameterizations
+We then discuss performance metrics for the supervised clustering problem in Section~ and present experimental results of our models' performance on artificial and real-world problems in Section~
+We conclude in Section~ with a discussion of the advantages and disadvantages of our model, our generic parameterization, and our learning techniques

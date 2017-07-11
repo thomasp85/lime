@@ -1,0 +1,34 @@
+### abstract ###
+Molecular chaperones are essential elements of the protein quality control machinery that governs translocation and folding of nascent polypeptides, refolding and degradation of misfolded proteins, and activation of a wide range of client proteins.
+The prokaryotic heat-shock protein DnaK is the E. coli representative of the ubiquitous Hsp70 family, which specializes in the binding of exposed hydrophobic regions in unfolded polypeptides.
+Accurate prediction of DnaK binding sites in E. coli proteins is an essential prerequisite to understand the precise function of this chaperone and the properties of its substrate proteins.
+In order to map DnaK binding sites in protein sequences, we have developed an algorithm that combines sequence information from peptide binding experiments and structural parameters from homology modelling.
+We show that this combination significantly outperforms either single approach.
+The final predictor had a Matthews correlation coefficient of 0.819 when assessed over the 144 tested peptide sequences to detect true positives and true negatives.
+To test the robustness of the learning set, we have conducted a simulated cross-validation, where we omit sequences from the learning sets and calculate the rate of repredicting them.
+This resulted in a surprisingly good MCC of 0.703.
+The algorithm was also able to perform equally well on a blind test set of binders and non-binders, of which there was no prior knowledge in the learning sets.
+The algorithm is freely available at LINK.
+### introduction ###
+Hsp70 molecular chaperones are part of the quality control machinery that functions to assist protein folding.
+Members of the Hsp70 family have been implicated in refolding of misfolded proteins, folding of newly synthesized polypeptide chains, disassembly of larger aggregates and translocation of proteins in organelles CITATION.
+Hsp70 molecules also enable cell survival during stress or heat-shock conditions that are characterized by an increased concentration of denatured polypeptides.
+These chaperones recognize and bind misfolded or aggregation-prone peptide stretches through exposed hydrophobic regions which are normally buried in the protein core.
+Such exposed regions are typical for non-native proteins CITATION, CITATION .
+Hsp70 molecular chaperones consist of two distinct domains, an N-terminal ATPase domain CITATION and a C-terminal peptide binding domain CITATION.
+Hsp70 function is dependent on an ATP-regulated cycle of substrate binding and release CITATION.
+With ATP bound, substrate affinity is low and Hsp70 resides in an open state, ready to receive a suitable substrate.
+Once the substrate is bound, ATP is hydrolyzed to ADP and Hsp70 undergoes a conformational change to a high affinity state, subsequently trapping the substrate.
+The co-chaperone Hsp40 binds Hsp70 and stimulates the ATPase function, causing retention of the substrate.
+Hsp40 also recognizes hydrophobic stretches and may serve as a substrate delivery chaperone to Hsp70 CITATION, CITATION.
+Upon exchange of ADP for ATP, Hsp70 returns to a low affinity state, enabling binding of another substrate or providing another refolding cycle for the same substrate if necessary.
+The crystallisation of the archetypical and well characterized E coli Hsp70 DnaK bound to a peptide reflects a heptameric substrate binding motif requiring a hydrophobic core region and preferably basic flanking residues that complement the overall negatively charged DnaK surface CITATION.
+This preference was later confirmed in the seminal work of Bukau and co-workers by binding studies of DnaK to cellulose-based peptide libraries and a DnaK binding profile was derived CITATION .
+Contrary to these previous studies on DnaK binding motif profiling which utilised only sequence information, we complement the experimental binding information on a set of peptides with structural data from homology modelling to obtain an accurate predictor.
+Similar dual based approaches have already been shown successful to predict other peptide signatures.
+Prediction of binding of endogenous antigenic peptides to MHC class I molecules was aided by adding structural information from molecular models to the sequence data CITATION.
+Branetti et al used structural data from various SH3/ligand complexes and sequence information from phage libraries to predict preferred ligand binding to different SH3 domains CITATION.
+Recently, an algorithm to predict amylogenic regions in protein sequences profited greatly from the combination of sequence based data and structural information from amyloid fibers crystallographic studies .
+In this article we introduce such a dual based method for profiling DnaK binding sequences.
+We combine sequence based information from experimental binding assays with structural information from molecular modelling via the FoldX force field CITATION.
+We present a DnaK binding prediction algorithm that, under cross-validated conditions, performs strikingly accurate.

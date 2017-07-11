@@ -1,0 +1,24 @@
+### abstract ###
+Support vector machines (SVMs) are an extremely successful type of classification and regression algorithms
+Building an SVM entails solving a constrained convex quadratic programming problem, which is quadratic in the number of training samples
+We introduce an efficient parallel implementation of an support vector regression solver, based on the Gaussian Belief Propagation algorithm (GaBP)
+In this paper, we demonstrate that methods from the complex system domain could be utilized for performing efficient distributed computation
+We compare the proposed algorithm to previously proposed distributed and single-node SVM solvers
+Our comparison shows that the proposed algorithm is just as accurate as these solvers, while being significantly faster, especially for large datasets
+We demonstrate scalability of the proposed algorithm to up to 1,024 computing nodes and hundreds of thousands of data points using an IBM Blue Gene supercomputer
+As far as we know, our work is the largest parallel implementation of belief propagation ever done, demonstrating the applicability of this algorithm for large scale distributed computing systems
+### introduction ###
+Support-vector machines (SVMs) are a class of algorithms that have, in recent years, exhibited superior performance compared to other pattern classification algorithms
+There are several formulations of the SVM problem, depending on the specific application of the SVM (e g , classification, regression, etc )
+One of the difficulties in using SVMs is that building an SVM requires solving a constrained quadratic programming problem, whose size is quadratic in the number of training examples
+This fact has led to extensive research on efficient SVM solvers
+Recently, several researchers have suggested using multiple computing nodes in order to increase the computational power available for solving SVMs
+In this article, we introduce a distributed SVM solver based on the Gaussian Belief Propagation (GaBP) algorithm
+We improve on the original GaBP algorithm by reducing the communication load, as represented by the number of messages sent in each optimization iteration, from  SYMBOL  to  SYMBOL  aggregated messages, where  SYMBOL  is the number of data points
+Previously, it was known that the GaBP algorithm is very efficient for sparse matrices
+Using our novel construction, we demonstrate that the algorithm exhibits very good performance for dense matrices as well
+We also show that the GaBP algorithm can be used with kernels, thus making the algorithm more powerful than what was considered previously thought possible
+Using extensive simulation we demonstrate the applicability of our protocol vs the state-of-the-art existing parallel SVM solvers
+Using a Linux cluster of up to a hundred machines and the IBM Blue Gene supercomputer we managed to solve very large data sets up to hundreds of thousands data point, using up to 1,024 CPUs working in parallel
+Our comparison shows that the proposed algorithm is just as accurate as these previous solvers, while being significantly faster
+A preliminary version of this paper appeared as a poster in~ CITATION

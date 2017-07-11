@@ -1,0 +1,57 @@
+### abstract ###
+The two main agents of human malaria, Plasmodium vivax and Plasmodium falciparum, can induce severe anemia and provoke strong, complex immune reactions.
+Which dynamical behaviors of host immune and erythropoietic responses would foster control of infection, and which would lead to runaway parasitemia and/or severe anemia?
+To answer these questions, we developed differential equation models of interacting parasite and red blood cell populations modulated by host immune and erythropoietic responses.
+The model immune responses incorporate both a rapidly responding innate component and a slower-responding, long-term antibody component, with several parasite developmental stages considered as targets for each type of immune response.
+We found that simulated infections with the highest parasitemia tended to be those with ineffective innate immunity even if antibodies were present.
+We also compared infections with dyserythropoiesis to those with compensatory erythropoiesis or a fixed basal RBC production rate.
+Dyserythropoiesis tended to reduce parasitemia slightly but at a cost to the host of aggravating anemia.
+On the other hand, compensatory erythropoiesis tended to reduce the severity of anemia but with enhanced parasitemia if the innate response was ineffective.
+For both parasite species, sharp transitions between the schizont and the merozoite stages of development were associated with lower parasitemia and less severe anemia.
+Thus tight synchronization in asexual parasite development might help control parasitemia.
+Finally, our simulations suggest that P. vivax can induce severe anemia as readily as P. falciparum for the same type of immune response, though P. vivax attacks a much smaller subset of RBCs.
+Since most P. vivax infections are nonlethal clinically, this suggests that P. falciparum adaptations for countering or evading immune responses are more effective than those of P. vivax.
+### introduction ###
+The parasites that cause human malaria are inoculated by an Anopheles mosquito and initially multiply in the liver.
+After about a week, a primary wave of merozoite forms enters the bloodstream, invades RBCs, and continues the asexual cycle of multiplication, developing into the schizont forms that burst and release more merozoites.
+The pathology of malaria is due to this asexual blood- stage cycle.
+The sexual forms transmissible to mosquitoes appear over time, but in much smaller numbers than the asexual forms.
+The two parasite species that cause the vast majority of human cases, Plasmodium vivax and Plasmodium falciparum, can induce severe anemia; with P. vivax especially, the anemia can appear far out of proportion to the percentage of RBCs infected CITATION .
+Both the innate and adaptive arms of the human immune system mount responses to infections with both species.
+High fevers are a classic feature of infections.
+During P. vivax infections near-periodic episodes of fever are associated with high levels of tumor necrosis factor and other cytokines associated with innate immunity CITATION CITATION.
+Strong cytokine responses also occur in P. falciparum infection, though the timing of paroxysms tends to be irregular CITATION CITATION.
+These fever paroxysms are associated with the synchronized release of merozoites from bursting schizonts.
+This synchronization has been the subject of considerable experimental and theoretical work.
+It is possible that febrile temperatures induce synchronization by differentially influencing development rates of different parasite stages CITATION and that immune responses CITATION, CITATION as well as the host's melatonin release cycle CITATION CITATION contribute to this phenomenon.
+But it is not yet clear whether synchronization helps parasites, perhaps in the way a sudden overwhelming abundance of prey may overwhelm a predator's capacity, or hinders them.
+Malaria parasites have certainly evolved mechanisms of immune evasion; however, P. falciparum exhibits antigenic variation CITATION, adheres to vascular endothelium in response to fever CITATION, and produces prostaglandins which probably modulate host TNF- production CITATION.
+This species also manages to keep the membrane of infected RBCs deformable during its ring stage, apparently reducing exposure of ring-stage parasites to clearance by the spleen CITATION.
+P. vivax can also evade spleen clearance and suppress immune responses directed against its liver stage CITATION .
+Clinical investigations suggest that the malaria parasite and host immune response interact with the host erythropoietic system in a complex, dynamic manner.
+Increased production of TNF- by the host apparently induces anemia CITATION ; experimental evidence suggests that hemozoin produced by P. falciparum suppresses RBC production CITATION.
+Abnormalities observed in P. falciparum-infected patients include suppression of erythroid progenitor cells in bone marrow CITATION, sequestration of parasites in the marrow CITATION, decreased iron absorption and hemoglobin synthesis CITATION, and decreased RBC survival time CITATION.
+Leucocyte infiltration of the marrow and erythroblast degradation by macrophages have been observed in P. vivax infections CITATION.
+Phagocytosis of uninfected RBCs has been observed in vitro and in P. berghei-infected mice CITATION, and is suspected in human malaria CITATION, CITATION.
+P. chabaudi-infected mice show enhanced erythropoiesis that can compensate for RBC loss CITATION ; in humans, elevated levels of erythropoietin are produced in response to P. falciparum infection CITATION.
+Overall, the evidence suggests that RBC destruction or ineffective erythropoiesis may thwart erythropoietin-initiated processes that might otherwise compensate for RBC loss, although erythropoietin may have other protective effects CITATION .
+Most fatal malaria infections are due to P. falciparum, which can induce cerebral complications as well as severe anemia.
+P. vivax infections are characterized by lower levels of parasitemia, and, though often debilitating, are rarely fatal.
+P. falciparum attacks RBCs of all ages, while P. vivax mainly attacks reticulocytes CITATION CITATION, and possibly RBCs up to two weeks old CITATION.
+In a previous report, we argued that targeted depletion of the youngest RBCs makes P. vivax infection potentially much more dangerous than is commonly appreciated: unchecked growth of a P. vivax population would eventually prevent the replacement of older, uninfected RBCs as these senesce and are culled from the circulation CITATION.
+Thus one might expect a strong immune response to P. vivax, despite its seemingly lower threat relative to P. falciparum.
+Furthermore, in that model which did not incorporate an immune response compensatory boosting of RBC production tended to increase parasitemia, while dyserythropoietic response had the opposite effect.
+Here we consider compartmentalized ordinary differential equations representing P. vivax and P. falciparum infections which incorporate a quick-acting innate response and a longer-term acquired antibody response as well as a dynamic erythropoietic system.
+Figure 1 shows the basic scheme; the details are presented below in the Model section.
+The innate response emulates aspects of the fever paroxysm response which is the hallmark symptom of malaria.
+We analyze how these components jointly affect parasite and RBC dynamics.
+We do not attempt to model the full complexity of the immune response in malaria infections: our aim is to assess potential trade-offs between host and parasite for given characteristics of immune and erythropoietic responses.
+However, we do consider several choices of targets for both the innate and antibody responses in the model.
+We assume that bursting schizonts activate the innate response, and that the stage that triggers the antibody response is the same as the stage it targets.
+We also consider different values for the time constant of decay for the effective clearance rate of parasites by the antibody response.
+This time constant is not necessarily the biochemical decay constant of actual antibodies as it also incorporates the possibility of a long lived population of B-cells producing the antibodies.
+The models also incorporate a nonzero standard deviation in the time parasites develop within RBCs.
+We show that host erythopoietic response can affect infection outcome even in the presence of sustained immunological action.
+We show how infection outcome varies with the life stages of parasite targeted by the model immune responses.
+Furthermore, we show that a tight synchronization of merozoite release does not necessarily help parasite populations evade host immune responses.
+Most of our simulated infections assume that the host has no pre-existing antibodies or memory B cells for the parasite, but for some examples we examine the effects of pre-existing antibodies.

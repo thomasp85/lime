@@ -1,0 +1,41 @@
+### abstract ###
+Transitive inference, class inclusion and a variety of other inferential abilities have strikingly similar developmental profiles all are acquired around the age of five.
+Yet, little is known about the reasons for this correspondence.
+Category theory was invented as a formal means of establishing commonalities between various mathematical structures.
+We use category theory to show that transitive inference and class inclusion involve dual mathematical structures, called product and coproduct.
+Other inferential tasks with similar developmental profiles, including matrix completion, cardinality, dimensional changed card sorting, balance-scale, and Theory of Mind also involve these structures.
+By contrast, products are not involved in the behaviours exhibited by younger children on these tasks, or simplified versions that are within their ability.
+These results point to a fundamental cognitive principle under development during childhood that is the capacity to compute products in the categorical sense.
+### introduction ###
+Children acquire various reasoning skills over remarkably similar periods of development.
+Transitive Inference and Class Inclusion are two behaviours among a suite of inferential abilities that have strikingly similar developmental profiles all are acquired around the age of five years CITATION.
+For example, older children can infer that if John is taller than Mary, and Mary is taller than Sue, then John is taller than Sue.
+This form of reasoning is called Transitive Inference.
+Older children also understand that a grocery store will contain more fruit than apples.
+That is, the number of items belonging to the superclass is greater than the number of items in any one of its subclasses.
+This form of reasoning is called Class Inclusion.
+These two types of inference appear to have little in common.
+Transitive Inference typically involves physical relationships between objects, while Class Inclusion involves abstract relative sizes of object classes.
+Nonetheless, explicit tests of these and other inferences for a range of age groups revealed that success was attained from about the median age of five years CITATION .
+Since Piaget, decades of research have revealed important clues regarding the development of inference, yet little is known about the reasons underlying these correspondences.
+A common theme in two recent proposals is the computing of relational information CITATION, CITATION.
+In regard to Relational Complexity theory CITATION, the correspondence between commonly acquired cognitive behaviours is based on the maximum arity of relations that must be processed.
+In regard to Cognitive Complexity and Control theory CITATION, the correspondence is based on the common depth of relation hierarchies.
+Although a relational approach to cognitive behaviour has a formal basis in relational algebra CITATION, certain assumptions must be made about the units of analysis.
+For tasks as diverse in procedure and content as Transitive Inference and Class Inclusion, it is difficult to see how the analysis of one task leads naturally to the other.
+For Relational Complexity theory, Transitive Inference is considered to involve the integration of two binary relations between task elements into an ordered triple, or ternary relation; whereas Class Inclusion is regarded as the integration of three binary relations between three sets of elements into a ternary relation CITATION, CITATION.
+For Cognitive Complexity and Control theory, Transitive Inference involves relations over items; whereas Class Inclusion involves relations over sets of items.
+This theoretical difficulty is symptomatic of the general problem in cognitive science where the basic components of cognition are unknown.
+In the absence of such detailed knowledge, cognitive modelers have been forced to assume a particular representational format.
+This approach, however, does not lend itself to the current problem, because the elements of Transitive Inference and Class Inclusion tasks do not share a common basis.
+Understandably, then, these sorts of behaviours have tended to be studied in detailed isolation, narrowing the scope for identifying general principles.
+Category theory was born out of a desire to establish formal commonalities between various mathematical structures CITATION, CITATION, and has since been applied to the analysis of computational structures in computer science.
+The seminal insight was a shift from objects as the primary focus of analysis to their transformations.
+Contrast, for instance, sets defined in terms of the objects they contain Set Theory against sets defined in terms of the morphisms that map to or from them Category Theory CITATION.
+This insight motivates our categorical approach to the analysis of inference, and our way around the current impasse.
+In cognitive science, several authors have used category theory for a conceptual analysis of space and time CITATION CITATION, though we know of only one other application that has modeled empirical data CITATION.
+Since our application of category theory to cognitive behaviour is novel, we first introduce the basic category theory constructs needed for our subsequent analysis of Transitive Inference, Class Inclusion, and other paradigms.
+The analysis begins with a brief introduction of the sort of data our approach is intended to explain, which primarily concerns contrasts between younger and older children relative to age five, and correlations across paradigms.
+Finally, we extend our categorical approach to more complex levels of inference.
+Our main point is that, despite the apparent lack of resemblance, all these tasks are formally connected via the categorical product, to be defined below.
+The significance of this result is that it opens the door to an entirely new approach to identifying general principles, particularly in regard to the development of inferential abilities, that are less likely to be revealed by standard modeling methods.

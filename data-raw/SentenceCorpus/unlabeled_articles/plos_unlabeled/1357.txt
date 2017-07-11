@@ -1,0 +1,75 @@
+### abstract ###
+It is widely believed that the modular organization of cellular function is reflected in a modular structure of molecular networks.
+A common view is that a module in a network is a cohesively linked group of nodes, densely connected internally and sparsely interacting with the rest of the network.
+Many algorithms try to identify functional modules in protein-interaction networks by searching for such cohesive groups of proteins.
+Here, we present an alternative approach independent of any prior definition of what actually constitutes a module.
+In a self-consistent manner, proteins are grouped into functional roles if they interact in similar ways with other proteins according to their functional roles.
+Such grouping may well result in cohesive modules again, but only if the network structure actually supports this.
+We applied our method to the PIN from the Human Protein Reference Database and found that a representation of the network in terms of cohesive modules, at least on a global scale, does not optimally represent the network's structure because it focuses on finding independent groups of proteins.
+In contrast, a decomposition into functional roles is able to depict the structure much better as it also takes into account the interdependencies between roles and even allows groupings based on the absence of interactions between proteins in the same functional role.
+This, for example, is the case for transmembrane proteins, which could never be recognized as a cohesive group of nodes in a PIN.
+When mapping experimental methods onto the groups, we identified profound differences in the coverage suggesting that our method is able to capture experimental bias in the data, too.
+For example yeast-two-hybrid data were highly overrepresented in one particular group.
+Thus, there is more structure in protein-interaction networks than cohesive modules alone and we believe this finding can significantly improve automated function prediction algorithms.
+### introduction ###
+Biological function is believed to be organized in a modular and hierarchical fashion CITATION.
+Genes make proteins, proteins form cells, cells form organs, organs form organisms, organisms form populations and populations form ecosystems.
+While the higher levels of this hierarchy are well understood, and the genetic code has been deciphered, the unraveling of the inner workings of the proteome poses one of the greatest challenges in the post-genomic era CITATION.
+The development of high-throughput experimental techniques for the delineation of protein-protein interactions as well as modern data warehousing technologies to make data available and searchable are key steps towards understanding the architecture and eventually function of the cellular network.
+These data now allow for searching for functional modules within these networks by computational approaches and for putatively assigning protein function.
+A recent review by Sharan et al. CITATION surveys the current methods of network based prediction methods for protein function.
+Proteins must interact to function.
+Hence, we can expect protein function to be encoded in a protein interaction network.
+The basic underlying assumption of all methods of automated functional annotation is that pairwise interaction is a strong indication for common function.
+Sharan et al. differentiate two basic approaches of network based function prediction: direct methods, which can be seen as local methods applying a guilt-by-association principle CITATION to immediate or second neighbors in the network, and module assisted methods which first cluster the network into modules according to some definition and then annotate proteins inside a module based on known annotations of other proteins in the module.
+So instead of guilt-by-association, one could speak of kin-liability.
+The latter approach to function prediction necessitates a concept of what is to be considered a module in a network.
+Most researchers consider cohesive sets of proteins which are highly connected internally, but only sparsely with the rest of the network CITATION CITATION.
+Such methods have yielded considerable success at the level of very small scale modules and in particular protein complexes.
+Is the concept of a module as a group of cohesively interacting proteins also useful on larger scales?
+Some researchers have argued that modularity in this sense is a universal principle such that small cohesive modules combine to form larger cohesive entities in a nested hierarchy CITATION, CITATION.
+But is this view really adequate to describe the architecture of protein interactions?
+Recently, Wang and Zhang CITATION questioned whether cohesive clusters in protein interaction networks carry biological information at all and suggested a simple network growth model based on gene duplication which would produce the observed structural cohesiveness as an evolutionary byproduct without biological significance.
+We will not go as far as questioning the content of biological information in the network structure but rather argue against the model of a cohesively linked group of nodes in a network as an adequate proxy for a functional module on all scales of the network.
+Consider, as first example, protein complexes.
+Indeed, they consist of proteins working together and experimentally isolated together.
+Only the large scale analysis of protein complexes CITATION, CITATION revealed that they are more dynamic than previously assumed.
+Many proteins can not only be found in a single, but in a multitude of complexes.
+The information about proteins connecting complexes will be lost when searching only for cohesively interacting groups of proteins.
+As a second example, consider transmembrane proteins, like receptors in signal transduction cascades.
+They tend to interact with many different cytoplasmic proteins as well as with their extra-cellular ligands.
+Still, only rarely do different transmembrane receptors interact with each other.
+Thus, the functional class of transmembrane receptors will not be identified when looking for cohesive modules.
+Here, we ask whether such features, which are not discovered by algorithms searching for cohesive modules, are also present in the overall structure of the cellular network.
+If this is the case, methods searching only for cohesive modules would not be able to identify them.
+We group proteins self-consistently into functional roles if they interact in similar ways with other proteins according to their functional roles.
+Such a role may well be a cohesive module, meaning that proteins in this class predominantly interact with other proteins of this class, but it does not have to.
+In other words, we do not impose a structure of cohesive modules on the network in our analysis but rather find the structural representation that is best supported by the data.
+Using the abstraction of a functional role, we generate an image graph of the original network which depicts only the predominant interactions among classes of proteins, thus allowing a bird's-eye view of the network.
+In the case of a protein interaction network studied here, we found sound evidence that cohesive modules on a global scale do not adequately represent the network's global structure.
+We found cohesive groups of proteins acting as intermediates and specifically connecting other groups of proteins.
+Furthermore, we even identified groups of proteins which are only sparsely connected within themselves, but with similar patterns of interaction to other proteins.
+Thus, approaches searching only for cohesive modules which are sparsely connected to the rest of the network might not be sufficient to represent all characteristics of cellular networks.
+Our findings suggest that hierarchical modularity as nested, cohesively interacting groups of proteins has to be reconsidered as a universal organizing principle.
+In which cases does a clustering of a network into cohesive modules not reflect its original architecture?
+Consider the toy network in figure 1 A. There are four known types of proteins in this network.
+Type FORMULA may represents some biological process involving five proteins connected to four proteins of type FORMULA.
+These are linked to another biological process FORMULA which involves five further proteins which finally are linked to four proteins of type FORMULA.
+Not all nodes of the same type necessarily share the same set of neighbors.
+Some nodes of the same type do not have any neighbors in common with nodes of their type or have more neighbors in common with nodes of a different type.
+This shows that in this hypothetical example, direct methods of functional annotations may be limited in their accuracy.
+Clustering the network into cohesive modules cannot capture the full structure of the network.
+The nodes of type B will never be recognized as a proper cluster, because they are not connected internally at all.
+The structure of the example network can, however, be perfectly captured by a simple image graph with 4 nodes.
+The nodes in an image graph correspond to the types of nodes in the network.
+Nodes of type FORMULA are connected to other nodes of type FORMULA and to nodes of type FORMULA.
+Nodes of type FORMULA have connections to nodes of types FORMULA and FORMULA and so forth.
+The concept of defining types of nodes by their relation to other types of nodes is known as regular equivalence in the social sciences CITATION, CITATION.
+Structure recognition in networks can then be seen as finding the best fitting image graph for a network.
+In this context, clustering into functional modules means representing the network by an image graph consisting of isolated, self-linking nodes.
+Once an assignment of nodes into classes is obtained, the rows and columns of the incidence matrix can be reordered such that rows and columns corresponding to nodes in the same class are adjacent.
+The ordering of rows and columns representing nodes in the same class is random.
+This leads to a characteristic structure with dense blocks in the adjacency matrix corresponding to the links in the image graph and sparse or zero blocks corresponding to the links absent in the image graph.
+Structure recognition in networks is therefore also called block modeling and together with the concepts of structural and regular equivalence has a long history in the social sciences CITATION, CITATION.
+In our further discussion, we will denote image graphs that consist only of isolated, self-linked nodes as in figure 1 B, diagonal image graphs due to the block structure along the diagonal in the adjacency matrix that they induce.
+Accordingly, we will call all other image graphs non-diagonal image graphs .

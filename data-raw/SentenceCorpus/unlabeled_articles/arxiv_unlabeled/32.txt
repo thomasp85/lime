@@ -1,0 +1,48 @@
+### abstract ###
+An approach to the classification problem of machine learning, based on building local classification rules, is developed
+The local rules are considered as projections of the global classification rules to the event we want to classify
+A massive global optimization  algorithm is used for optimization of quality criterion
+The algorithm, which has polynomial complexity in typical case, is used to find all high--quality local rules
+The other distinctive feature of the algorithm is the integration of attributes levels selection (for ordered attributes) with rules searching and original conflicting rules resolution strategy
+The algorithm is practical; it was tested on a number of data sets from UCI repository, and a comparison with the other predicting techniques is presented
+### introduction ###
+Extraction of structural information from raw data is a problem which is of great interest for both fundamental and applied studies
+This paper will focus on one  specific example of this problem --- classification
+The goal is to predict a class of a particular event
+This problem was approached from a number of  different disciplines, including Statistical Data Analysis  CITATION , Machine Learning  CITATION , Fuzzy Logic  CITATION , Operations Research  CITATION  and Data Mining  CITATION
+As a result, a variety of learning techniques was developed
+The result of learning can be represented  in a number of different forms
+The form that we are interested in working with is a set of rules
+It should be stressed that some other forms  (such as decision trees, fuzzy models and many others) are equivalent to a set of rules
+A set of rules (or any other form to which  it is equivalent) is often a preferred form of knowledge representation because it allows for  a simple answer to the question, ``What was learned
+'' This specific set of rules was learned from the data
+For an algorithm, which produces only an answer, it is often impossible to understand what was really learned and why this specific answer was produced (The two mentioned knowledge representations differ as follows: in the case that the result is a rule, the  learned knowledge is represented in a language which is richer than one used to describe the dataset; in the case that the result is a value, the learned knowledge is represented in the same language  as the one used to describe the dataset  CITATION )  The model--based techniques,   such as developed in  CITATION ,  take training data as input and  produce a set of rules (or statements which  are equivalent to rules) which can classify any event
+The lazy instance--based techniques, such as developed in  CITATION , return a result tailored to the specific event  we want to classify
+With such techniques  the events similar to the given one are usually found first, then a prediction based on found instances is made
+An interesting attempt to combine model based and lazy instance based learning  was presented in  CITATION
+In  CITATION  a greedy lazy model--based approach for classification was developed in which the result was a rule tailored  to the specific observation
+While such an approach gives a simple rule as an answer  (which is often much easier to understand than a complex rules set) and often works faster for classification of a single event, it--as every greedy algorithm--is not guaranteed to find  the best rule, because the algorithm may not reach the global maximum of the quality criterion and a sub--optimal rule may be returned
+In the work  CITATION  an approach based on the brute force of rule--space scanning was developed
+It was used for finding the ``nuggets'' of knowledge in the data (each nugget is a rule with a high degree of correctness)
+In contrast with greedy type algorithms,   massive search algorithms are guaranteed to find the best rule(s)
+In our early work  CITATION   we presented an approach which combined the  massive model--based rule search approach  with lazy instance--based learning
+In that work we were also interested in ``nuggets'' of knowledge, but only those which were applicable for the instance we wanted to classify
+The result was a set of rules which were applicable  for classification of the given event
+One may think about these rules as  a projection of a global classification rules set to the given instance of the event
+In the current paper this approach is taken to the next  level, and a practical algorithm, applicable to a variety of problems, is presented
+A number of significant improvements have been made since that early version
+The current algorithm includes  the following new features: 1
+highly optimized rule--space scanning, which allows problems with significant number of attributes to be solved; 2
+integration of levels selection procedure for ordered (continuous and literal) attributes with the  rule search algorithm; 3
+information about  dependent attributes directly included into the  tree search algorithm thus significantly reducing  computational complexity; and  4
+an original conflicting rules resolution strategy  which was especially built to work with automatically  generated rules
+To create a practical algorithm, the three aspects --- logical, statistical and computational complexity need to be addressed
+In section  we formulate the problem and discuss the logical formulas  which represent the rules we are interested in finding
+In section  we discuss  the statistical quality criterion which can be used  for evaluation of rule quality and specify the  criteria which we use in this work
+We also present a conflicting rules resolution strategy for automatically generated rules
+At the end of section  a sketch of the algorithm is presented
+In section  we discuss the selection  of attributes for analysis; it should be  stressed that some attributes as they are built in  section  are not independent, and this fact is known in advance
+In section  we discuss  computational complexity issues; an approach which includes information about dependence of the attributes into the  algorithm is proposed
+In section  we discuss error estimation
+In section  we present the data analysis results  and compare our results with the results of C4 5R8  CITATION
+In section  a discussion is presented

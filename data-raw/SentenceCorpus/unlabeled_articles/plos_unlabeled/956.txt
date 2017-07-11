@@ -1,0 +1,39 @@
+### abstract ###
+Nucleoside analogs used in antiretroviral treatment have been associated with mitochondrial toxicity.
+The polymerase- hypothesis states that this toxicity stems from the analogs' inhibition of the mitochondrial DNA polymerase leading to mitochondrial DNA depletion.
+We have constructed a computational model of the interaction of polymerase- with activated nucleoside and nucleotide analog drugs, based on experimentally measured reaction rates and base excision rates, together with the mtDNA genome size, the human mtDNA sequence, and mitochondrial dNTP concentrations.
+The model predicts an approximately 1000-fold difference in the activated drug concentration required for a 50 percent probability of mtDNA strand termination between the activated di-deoxy analogs d4T, ddC, and ddI and the activated forms of the analogs 3TC, TDF, AZT, FTC, and ABC.
+These predictions are supported by experimental and clinical data showing significantly greater mtDNA depletion in cell culture and patient samples caused by the di-deoxy analog drugs.
+For zidovudine we calculated a very low mtDNA replication termination probability, in contrast to its reported mitochondrial toxicity in vitro and clinically.
+Therefore AZT mitochondrial toxicity is likely due to a mechanism that does not involve strand termination of mtDNA replication.
+### introduction ###
+Current guidelines for highly active anti-retroviral treatment regimens of HIV-positive patients recommend two drugs of the nucleoside reverse transcriptase inhibitor class CITATION.
+This class currently consists of: stavudine, lamivudine, zidovudine, zalcitabine, didanosine, abacavir, emtricitabine and tenofovir.
+Though zalcitabine at the time of this writing is still technically approved for treatment its distribution in the United States was discontinued by Roche in 2006.
+In their activated tri-phosphorylated forms, each NRTI acts as a nucleotide analog interacting with the HIV viral reverse transcriptase as an alternative substrate to the natural nucleotides CITATION, CITATION.
+Each of these analogs lacks the 3 OH group necessary for incorporation of the next nucleotide thereby terminating viral DNA strand elongation.
+Although NRTIs are effective drugs and have helped usher HIV into the category of a controllable chronic disease, they are also often toxic, inducing side effects such as lactic acidosis, neuropathy, nausea, lypodistrophy, and myopathy in patients.
+Intolerance of such side effects is a common reason for treatment discontinuation CITATION.
+Any decrease in patient compliance to the treatment regimen is a serious concern that can lead to an increase in viral resistance and ultimately to treatment failure.
+The first step in ameliorating these side effects and preventing them in future antiviral treatments is to understand the mechanisms behind the mitochondrial toxicity of the NRTIs that are in use today.
+As we discuss below, many mechanisms of the mitochondrial toxicity have been proposed.
+In this paper we specifically consider the plausibility of the currently most widely accepted hypothesis for the toxicity mechanism for this class of drugs; interference of mitochondrial DNA replication by the activated drug.
+Polymerase- is the only polymerase responsible for mitochondrial DNA replication.
+While pol- is not believed to directly regulate mtDNA levels, pathogenic mutations in the gene POLG do affect the stability of mtDNA and cause mtDNA depletion CITATION.
+Polymorphisms found in the POLG gene in the human population may cause a natural variability in the activity of this complex enzyme and may conceivably play a role in patient variability in NRTI drug toxicities.
+In a study conducted by Martin et al. CITATION the approved NRTIs were shown to inhibit various host DNA polymerases.
+After the HIV Reverse Transcriptase, the highest affinity of the NRTIs was for polymerase-.
+This, along with the fact that many of the NRTI side-effects resemble symptoms of mitochondrial genetic disorders, implicated interaction with polymerase- and subsequent depletion of mtDNA as a potential cause of NRTI toxicity giving rise to the polymerase- hypothesis CITATION.
+Indeed, experiments have demonstrated decreased mtDNA amounts in various tissue types of NRTI-treated HIV positive patients CITATION CITATION.
+In addition, mtDNA depletion was observed in parallel with cell death, mitochondrial morphological changes, and increased lactate production in liver, heart, neuron, skeletal muscle, adipose, and blood cell cultures after incubation with different NRTIs CITATION CITATION.
+The possible polymerase- dependent toxicity mechanisms that comprise the polymerase- hypothesis are direct inhibition of polymerase- by NRTI-triphosphate without incorporation into the mtDNA, chain termination of mtDNA replication following incorporation of the NRTI triphosphate, and incorporation of the analog triphosphate into mtDNA without chain-termination allowing the NRTI to continue as a point mutation in mtDNA CITATION .
+However, there also exists a substantial body of data that are not consistent with toxicity mechanisms resulting in depletion of mtDNA.
+Martin et al. CITATION showed no association between inhibition of polymerase- by NRTIs and mtDNA depletion.
+Mitochondrial dysfunction has been observed in vitro in mouse muscle, white adipose, brain, liver, and heart tissue CITATION, hepatoma cell lines CITATION as well as CD4 cells CITATION after incubation with NRTIs although no significant decrease in mtDNA amount was observed.
+Particularly, incubation of liver and skeletal muscle cells with ddC, ddI, d4T, and AZT show a higher rate of lactate production in the presence of AZT, but the least amount of mtDNA depletion CITATION, CITATION.
+In clinical settings mtDNA depletion has been seen in parallel with normal cytochrome c oxidase activity, a sign of correct mitochondrial function CITATION, and was not associated with lipoatrophy CITATION.
+Taken together, these findings indicate a weak relationship between mtDNA copy number and nucleoside analog toxicity.
+This warrants a deeper look at the data concerning the interaction of different NRTIs with polymerase-.
+To this end, we have simulated the DNA replication process of mitochondria.
+Using enzyme kinetics data gathered from Johnson et al. CITATION, Feng et al. CITATION, and Hanes et al. CITATION, CITATION we have carried out a series of simulations of mtDNA replication in the presence of various nucleoside analogs that interact with polymerase-.
+These simulations bridge the gap between the basic enzyme kinetics data and the probability of failure of the mtDNA replication process.

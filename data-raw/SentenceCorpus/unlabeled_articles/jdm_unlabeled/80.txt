@@ -1,0 +1,38 @@
+### abstract ###
+prior research has found mixed evidence for the long-theorized link between religiosity and pro-social behavior
+to help overcome this divergence  i hypothesize that pro-social behavior is linked not to religiosity per se  but rather to the salience of religion and religious norms
+i report a field experiment that examined when auction participants will respond to an appeal to continue bidding for secular charitable causes
+religious individuals are more likely than non-religious individuals to respond to an appeal  for charity  only on days that they visit their place of worship  on other days of the week  religiosity has no effect
+notably  the result persists after controlling for a host of factors that may influence bidding  but disappears when the appeal  for charity  is replaced by an appeal to bid for other i e   competitive reasons
+implications for the link between religion and pro-social behavior are discussed
+### introduction ###
+psychologists  sociologists  anthropologists  and religious scholars  CITATION  have long posited a link between religiosity  defined as the degree to which one is involved in religious activities e g   prayer  church attendance  etc
+and pro-social behavior e g   charitable giving  altruism  cooperation  helping  and volunteering
+consistent with this  empirical investigations have repeatedly demonstrated that religiosity is a key predictor of self-reported pro-social behavior  CITATION
+however  when actual behavior rather than self-reporting is studied  the link between religiosity and pro-social behavior disappears  or becomes extremely tenuous  CITATION
+because self-reports are more likely than spontaneous behaviors to reflect a social desirability bias  CITATION   some have argued that religiosity is less linked to actual pro-social behaviors than it is to the desire to be seen by others and to see oneself as pro-social  CITATION
+this paper considers an alternative relationship between religiosity and pro-social behavior  one that may help to explain this discrepancy
+i hypothesize that pro-social behavior is linked not to religiosity per se  but rather to the salience of religion and religious norms  CITATION
+because religious people are more likely to be in situations where religion is salient e g   in prayer  at church  etc
+  they may in fact exhibit a greater propensity to behave pro-socially and to recall doing so in self-report surveys
+however  this heightened tendency towards pro-social behavior will not necessarily extend to contexts in which religion is not salient  as is the case when behaviors are studied in laboratory experiments
+in testing this hypothesis  the current investigation sets aside the oft-debated question   does religion make people nicer
+   and instead asks   when does religion make people nicer
+  i report on a field experiment that assesses whether and when religious vs non-religious auction participants respond to an appeal to continue bidding for non-religious charitable causes
+the findings suggest that religious individuals are more likely to respond to an appeal for charity  but this effect is isolated to days on which they are likely to have attended their place of worship
+prior research on the link between religion and pro-social behavior has insufficiently considered the role that environmental cues play in motivating behavior  CITATION
+environmental cues can have non-conscious effects on behavior in social  CITATION  as well as private  CITATION  domains
+furthermore  stable individual characteristics e g   ideological beliefs often fail to accurately predict behavior unless the task environment contains cues that will trigger the appropriate behavioral norms  CITATION
+for example  berger et al CITATION  find that voters are more likely to support an education initiative if their polling location the environmental cue happens to be a school vs some other location  and that this effect persists even after controlling for the voter's political views  demographic traits  and a host of other factors
+these findings implicate the significant role that context plays in making behavioral norms salient
+more specifically  research on priming effects demonstrates that environmental cues can activate relevant constructs in memory - and make them more accessible  CITATION
+activation can also spread to related constructs that  in turn  guide judgment and behavior  CITATION
+berger and fitzsimons  CITATION   for example  show that increased exposure to images of dogs can lead to increased activation and accessibility of a related category   cats   and to more positive evaluations of the puma brand of sneakers
+likewise  hertel and kerr  CITATION  show that when there is ambiguity regarding the appropriate decision e g   whether to favor one's in-group  people will rely on normative scripts for guidance  the more accessible norms are more likely to be retrieved and to influence decision making
+in the current context  i hypothesize that the link  if any  between religiosity and pro-social behaviors is to be found in the contextually triggered salience of religious norms
+entirely consistent with this thesis  individuals have been shown to behave more cooperatively when they have been unconsciously primed with words associated with god and religion  CITATION
+there is also evidence to suggest that those who are  intrinsically religious  e g   those who pray frequently - but not those who are  extrinsically religious  e g   those who are religious for social or political reasons - tend to be more pro-social in secular aspects of life  CITATION
+these findings suggest that pro-social behavior may be associated less with religiosity i e   the degree to which one is religious than it is with the extent to which religion is salient at a particular time e g   due to a recent or impending trip to church
+when we couple this with the fact that religious people are more likely than non-religious people to be in situations where religion is salient e g   in prayer  at church or temple  etc
+  this may help to explain why self-reported pro-social behavior is higher for religious people
+the current investigation presents an experimental methodology that is able to separate religiosity viewed as a stable individual characteristic from religious salience triggered by contextual cues in a natural field setting  and which allows us to test whether these factors predict actual pro-social behavior

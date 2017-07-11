@@ -1,0 +1,42 @@
+### abstract ###
+%   <- trailing '%' for backward compatibility of
+sty file  We propose a method for improving approximate inference methods that corrects for the influence of loops in the graphical model
+The method is applicable to arbitrary factor graphs, provided that the size of the Markov blankets is not too large
+It is an alternative implementation of an idea introduced recently by  CITATION
+In its simplest form, which amounts to the assumption that no loops are present, the method reduces to the minimal Cluster Variation Method approximation (which uses maximal factors as outer clusters)
+On the other hand, using estimates of the effect of loops (obtained by some approximate inference algorithm) and applying the Loop Correcting (LC) method usually  gives significantly better results than applying the approximate inference algorithm directly without loop corrections
+Indeed, we often observe that the loop corrected error is approximately the square of the error of the approximate inference method used to estimate the effect of loops
+We compare  different variants of the Loop Correcting method with other approximate inference methods on a variety of graphical models, including ``real world''  networks, and conclude that the LC approach generally obtains the most accurate  results
+### introduction ###
+In recent years, much research has been done in the field of approximate inference on graphical models
+One of the goals is to obtain accurate approximations of marginal probabilities of complex probability distributions defined over many variables, using limited computation time and memory
+This research has led to a large number of approximate inference methods
+Apart from sampling (``Monte Carlo'') methods, the most well-known methods and algorithms are variational approximations such as Mean Field (MF), which originates in statistical physics  CITATION ; Belief Propagation (BP), also known as the Sum-Product Algorithm and as Loopy Belief Propagation  CITATION , which is directly related to the Bethe approximation used in statistical physics  CITATION ; the Cluster Variation Method (CVM)  CITATION  and other region-based approximation methods  CITATION , which are related to the Kikuchi approximation  CITATION , a generalization of the Bethe approximation using larger clusters; Expectation Propagation (EP)  CITATION , which includes TreeEP  CITATION  as a special case
+To calculate the results of CVM and other region based approximation methods, one can use the Generalized Belief Propagation (GBP) algorithm  CITATION  or double-loop algorithms that have guaranteed convergence  CITATION
+It is well-known that Belief Propagation yields exact results if the graphical model is a tree, or, more generally, if each connected component is a tree
+If the graphical model does contain loops, BP can still yield surprisingly accurate results using little computation time
+However, if the influence of loops is large, the approximate marginals calculated by BP can have large errors and the quality of the BP results may not be satisfactory
+One way to correct for the influence of short loops is to increase the cluster size of the approximation, using CVM (GBP) with clusters that subsume as many loops as possible
+However, choosing a good set of clusters is highly nontrivial  CITATION , and in general this method will only work if the clusters do not have many intersections, or in other words, if the loops do not have many intersections
+Another method that corrects for loops to a certain extent is TreeEP, which does exact inference on the base tree, a subgraph of the graphical model which has no loops, and approximates the other interactions
+This corrects for the loops that consist of part of the base tree and exactly one additional factor and yields good results if the graphical model is dominated by the base tree, which is the case in very sparse models
+However, loops that consist of two or more interactions that are not part of the base tree are approximated in a similar way as in BP
+Hence, for  denser models, the improvement of TreeEP over BP usually diminishes
+In this article we propose a method that takes into account  all  the loops in the graphical model in an approximate way and therefore obtains more accurate results in many cases
+Our method is a variation on the theme introduced by  CITATION
+The basic idea is to first estimate the cavity distributions of all variables and subsequently improve these estimates by cancelling out errors using certain consistency constraints
+A cavity distribution of some variable is the probability distribution on its Markov blanket (all its neighbouring variables) of a modified graphical model, in which all factors involving that variable have been removed
+The removal of the factors breaks all the loops in which that variable takes part
+This allows an approximate inference algorithm to estimate the strength of these loops in terms of effective interactions or correlations between the variables of the Markov blanket
+Then, the influence of the removed factors is taken into account, which yields accurate approximations to the probability distributions of the original graphical model
+Even more accuracy is obtained by imposing certain consistency relations between the cavity distributions, which results in a cancellation of errors to some extent
+This error cancellation is done by a message passing algorithm which can be interpreted as a generalization of BP in the pairwise case and of the minimal CVM approximation in general
+Indeed, the assumption that no loops are present, or equivalently, that the cavity distributions factorize, yields the BP / minimal CVM results
+On the other hand, using better estimates of the effective interactions in the cavity distributions yields accurate loop corrected results
+Although the basic idea underlying our method is very similar to that described in  CITATION , the alternative implementation that we propose here offers two advantages
+Most importantly, it is directly applicable to arbitrary factor graphs, whereas the original method has only been formulated for the rather special case of graphical models with binary variables and pairwise factors, which excludes eg \ many interesting Bayesian networks
+Furthermore, our implementation appears to be more robust and also gives improved results for relatively strong interactions, as will be shown numerically
+This article is organised as follows
+First we explain the theory behind our proposed method and discuss the differences with the original method by  CITATION
+Then we report extensive numerical experiments regarding the quality of the approximation and the computation time, where we compare with other approximate inference methods
+Finally, we discuss the results and state conclusions

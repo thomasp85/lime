@@ -1,0 +1,31 @@
+### abstract ###
+A  SYMBOL -adic modification of the split-LBG classification method is presented in which first clusterings and then cluster centers  are computed which locally minimise an energy function
+The outcome for a fixed dataset  is independent of the prime number  SYMBOL  with finitely many exceptions
+The methods are applied to the construction of  SYMBOL -adic classifiers in the context of learning
+### introduction ###
+The field  SYMBOL  of   SYMBOL -adic numbers is of interest  in hierarchical classification  because of its inherent hierarchical structure  CITATION
+A great amount of work deals with finding  SYMBOL -adic data representation (e g \  CITATION )
+In  CITATION , the use of more general   SYMBOL -adic numbers for encoding hierarchical data was advocated in order to be able to include the case of non-binary dendrograms into the scheme without having to resort to a larger prime number  SYMBOL
+This was applied in  CITATION  to the special case of data consisting in words over a given alphabet and where proximity of words is defined by the length of the common initial part
+There,  an agglomerative  hierarchic  SYMBOL -adic clustering algorithm was described
+However, the question of finding optimal clusterings of  SYMBOL -adic data was not raised
+Already in  CITATION , the performance of classical and  SYMBOL -adic classification algorithms was compared in the segmentation of moving images
+It was observed that the  SYMBOL -adic ones were often more efficient
+Learning algorithms using  SYMBOL -adic neural networks are described in  CITATION
+Inspired by   CITATION , our main concern in this article will be a  SYMBOL -adic adaptation of the so-called split-LBG method  which finds energy-optimal clusterings of data
+The name ``LBG'' refers to the initials of the authors of  CITATION , where it is described first
+Their method is to find cluster centers, and then to group the data around the centers
+In the next step, the cluster centers are split, and more clusters are obtained
+This process is repeated until the desired class number is attained
+For  SYMBOL -adic data, this approach does not make sense:  first of all, cluster centers are in general not unique; and secondly, because the dendrogram is already determined by data, an arbitrary choice of cluster centers is not possible---this can lead to incomplete clusterings
+Hence, we first find clusterings by refining in the direction of highest energy reduction, until the class number exceeds a prescribed bound
+Thereafter, candidates for cluster centers are computed: they minimise the cluster energy
+The result is a sub-optimal method for   SYMBOL -adic classification which splits a given cluster into its maximal proper subclusters
+A variant discards first all quasi-singletons, i e \ clusters of  energy below a threshold value
+The  a posteriori  choice of centers turns out useful for  constructing % efficient classifiers
+A first application of some of the methods described here to event history data of building stocks is described in  CITATION
+There,  the classification algorithm is performed on different  SYMBOL -adic encodings of the data in order to compare the dynamics of some sampled municipal building stocks
+After introducing notations in Section , we briefly describe the classical split-LBG method in Section
+Section  reformulates the minimisation task of split-LBG in  the  SYMBOL -adic setting, and describes the corresponding algorithms
+The issue on the choice of the prime  SYMBOL  is dealt with in Section
+Section   constructs classifiers and presents an adaptive learning method in which accumulated clusters of large energy are split

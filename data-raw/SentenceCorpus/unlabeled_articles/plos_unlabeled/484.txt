@@ -1,0 +1,37 @@
+### abstract ###
+Lightness illusions are fundamental to human perception, and yet why we see them is still the focus of much research.
+Here we address the question by modelling not human physiology or perception directly as is typically the case but our natural visual world and the need for robust behaviour.
+Artificial neural networks were trained to predict the reflectance of surfaces in a synthetic ecology consisting of 3-D dead-leaves scenes under non-uniform illumination.
+The networks learned to solve this task accurately and robustly given only ambiguous sense data.
+In addition and as a direct consequence of their experience the networks also made systematic errors in their behaviour commensurate with human illusions, which includes brightness contrast and assimilation although assimilation only emerged when the virtual ecology included 3-D, as opposed to 2-D scenes.
+Subtle variations in these illusions, also found in human perception, were observed, such as the asymmetry of brightness contrast.
+These data suggest that illusions arise in humans because natural stimuli are ambiguous, and this ambiguity is resolved empirically by encoding the statistical relationship between images and scenes in past visual experience.
+Since resolving stimulus ambiguity is a challenge faced by all visual systems, a corollary of these findings is that human illusions must be experienced by all visual animals regardless of their particular neural machinery.
+The data also provide a more formal definition of illusion: the condition in which the true source of a stimulus differs from what is its most likely source.
+As such, illusions are not fundamentally different from non-illusory percepts, all being direct manifestations of the statistical relationship between images and scenes.
+### introduction ###
+Understanding how we generate accurate perceptions of surfaces is often best informed by understanding why we sometimes do not.
+Thus, illusions of lightness are essential tools to vision research.
+In many natural environments, light levels vary across space and over time.
+It is important to be able to perceive surfaces independently of this varying light intensity in order to forage or predate successfully, for example.
+A number of models of lightness perception have been proposed, but most of these fail to deal with complex stimuli or only demonstrate a narrow range of behaviours.
+For instance, one well-known heuristic model predicts human lightness perceptions by first subdividing stimuli into multiple local frameworks based on, for instance, junction analysis, and co-planarity as well as other classic gestalt factors.
+Then, within each framework, the ratio of a patch's intensity and the maximum intensity in that patch's local framework is used to predict the reflectance, combining a bright is white and a large is white area rule CITATION.
+These rules are well-defined and effective for simple stimuli, but the application of the rule has not been studied for more complex images CITATION.
+Indeed, it is hard to see how such a model could be applied to even moderately complex stimuli, much less natural scenes under spatially heterogeneous illumination, without extremely complex edge-classification rules that are as yet undefined.
+Furthermore, such human-based heuristics provide little insight into the physiological and/or computational principles of vision that are relevant to all visual animals.
+More computational approaches, on the other hand, are less descriptive, more quantitative, and make fewer assumptions.
+For example, artificial neural networks have been trained to extract scene information, such as object shape and movement, from simple synthetic images CITATION, CITATION ; and a statistical approach using Gibbs sampling and Markov random fields has been used to separate reflectance and illumination from simple images CITATION.
+Most such models, however, are unable to explain brightness contrast and assimilation simultaneously without recourse to one or more adjustable weighting factors.
+One approach that can is the Blakeslee and McCourt filter model CITATION.
+By applying a set of filters, the model produces results that correspond closely to psychophysical results on a wide range of illusory stimuli.
+The same model, however, fails to predict the asymmetry of brightness contrast, where darker surrounds cause larger illusions than equally lighter surrounds, as we discuss later.
+While these asymmetries are not captured by the ODOG model as it is presently implemented, permitting different gain parameters to be applied to the outputs of independent on-channels and off-channels would constitute a logical first step toward accommodating these differences CITATION.
+It is also important to stress that the model does not attempt to predict the reflectance of surfaces, only the perceived brightness of a stimulus, and therefore is unable to explain lightness constancy in more natural scenes under spatially heterogeneous illumination.
+Related machine vision work includes the separation of luminance changes into those caused by shading, and those caused by paint on the surface, using filters and a mixture of Gaussians CITATION ; and a localised mixture of experts and a set of multiscale filters has been used to extract the intrinsic components of an image, including de-noising it CITATION.
+However, these studies do not attempt to explain the human perception of lightness or illusions.
+Thus, explanations as to why and how we see lightness illusions remain incomplete.
+Here we take a different approach to rationalising human illusions and, by extension, lightness perception generally.
+Rather than modelling human perception or known primate physiology as is typical of most models we instead model the empirical process by which vision resolves the most fundamental challenge of visual ecology: the inherent ambiguity of visual stimuli.
+We make no assumptions about particular physiology or cognition, but instead model the process of development/learning from stimuli with feedback from the environment.
+This is analogous to the experiential learning of any animal whose behaviour is guided visually, and which must learn to resolve perceptual ambiguity in order to survive.

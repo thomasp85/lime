@@ -1,0 +1,59 @@
+### abstract ###
+the deliberation-without-attention effect occurs when better decisions are made when people experience a period of distraction before a decision than when they make decisions immediately or when they spend time reflecting on the alternatives
+this effect has been explained  CITATION  by the claim that people engage in unconscious deliberation when distracted and that unconscious thought is better suited for complex decisions than conscious thought
+experiments  NUMBER    NUMBER a  and  NUMBER b in this study included a dominant alternative and failed to find evidence for this effect
+experiment  NUMBER  removed the dominant alternative and manipulated mode of thought within-subjects to eliminate alternative explanations for the failed replication
+in all experiments participants did not make better decisions after unconscious thought  decisions were consistently better than chance when made immediately after the encoding of information
+encouraging people not to think about complex decisions appears to be unwarranted
+### introduction ###
+when making a complex decision such as which car to purchase  should one take time to carefully consider information about each alternative or should one review the information  stop thinking about it  and wait for the best alternative to become known
+a benchmark prescriptive model of decision making  the weighted additive wadd strategy  CITATION   suggests several steps in making complex decisions   NUMBER  list important attributes   NUMBER  weigh each attribute   NUMBER  assess alternatives on all attributes   NUMBER  multiply alternatives' scores on each attribute with that attribute's weight   NUMBER  sum the products for each alternative  and  NUMBER  select the alternative with the greatest sum
+unconscious thought theory  CITATION  proposes that conscious thought is incapable of following these steps in complex decisions because of its capacity limitations  but that unconscious thought is able to reach conclusions that are similar to the prescriptions of wadd
+therefore  utt claims that for complex decisions it is best to encode all of the necessary information and then stop consciously thinking about the alternatives and let the unconscious arrive at a decision
+evidence for utt's claim comes from a series of studies by dijksterhuis and colleagues
+in these studies  participants are given positive and negative attributes of a few alternatives
+all alternatives have the same number of attributes  but one alternative has the most positive attributes and one has the fewest positive attributes
+these are designated as the best and worst alternatives  respectively
+after the information is presented  some participants are instructed to carefully consider the information that had been presented for a specified duration before deciding which alternative is the best
+other participants are distracted e g   by completing anagrams for the same duration before making decisions and  in some experiments  another group makes decisions immediately after the presentation of the attributes
+these three groups are referred to as the conscious thought  unconscious thought  and immediate groups  respectively
+people are generally more likely to select the best alternative after unconscious thought than when these decisions and judgments are made immediately or after conscious thought  CITATION
+this finding is referred to as the deliberation-without-attention effect
+the deliberation-without-attention effect has been demonstrated with complex e g    NUMBER  attributes per alternative  but not simple e g    NUMBER  attributes per alternatives decisions  CITATION
+this effect occurs only when participants are informed that they will be making a decision or judgment after some duration and not when they are given information with no goal  CITATION
+furthermore  this effect disappears when participants are primed to think of themselves as powerful  CITATION
+dijksterhuis and colleagues have also suggested that many decisions are made unconsciously  CITATION  and found evidence that people are more satisfied with decisions made after a period of unconscious thought  CITATION
+because of the importance of the implications of these findings e g   that people should stop consciously deliberating complex decisions  others have attempted to replicate the deliberation-without-attention effect but found little supporting evidence
+several studies have employed methods similar to dijksterhuis  CITATION  or dijksterhuis et al CITATION  and failed to find an advantage of unconscious thought  CITATION
+payne  samper  bettman  and luce  CITATION  allowed some participants to consciously deliberate for as long as they needed and found that judgments made after self-paced conscious thought led to judgments at least as good as and sometimes better than judgments made after a period of unconscious thought
+runnion  CITATION  asked participants to form an impression of four cars after the acquisition phase and found that those in the unconscious condition did not form better memory-based judgments of the best car than conscious deliberators
+furthermore  gonzales-vallejo  lassiter  bellezza  and lindberg  CITATION  criticized utt for being inconsistent with findings in social and cognitive psychology and concluded clear evidence for the deliberation-without-attention effect is lacking because of problems with the dijksterhuis method
+one criticism of the dijksterhuis method concerns the definition of the normatively best alternative  CITATION
+dijksterhuis  CITATION  claims that the alternative with the most positive and fewest negative attributes is the best choice
+to illustrate the problem with this definition  consider the following example  suppose one is deciding between two cars  each with three known attributes
+car a has cupholders and a sunroof  but gets poor gas mileage  while car b has no cupholders or sunroof  but gets good gas mileage
+car a has two positive and one negative attribute and car b has one positive and two negative attributes
+according to dijksterhuis' definition of normativity  one should choose car a
+however  a person who weighs gas mileage more than the sum of the weights for cupholders and sunroofs should select car b over car a
+because the weighing of attributes is idiosyncratic  when positive and negative attributes vary between alternatives  it is difficult to know which alternative one ought to select
+acker  CITATION  and newell et al CITATION  asked participants which attributes were important for their decisions so that normativity could be determined on an individual basis
+to avoid the problems of attribute weighing  gonzales-vallejo et al CITATION  tested for the deliberation-without-attention effect using a dominant alternative
+one alternative dominates another if it is better on at least one attribute and at least as good on every other attribute
+for example  if what is good about car a is also present in car b  but car b also has at least one positive attribute not possessed by car a  then car b dominates car a
+no matter how a person weighs attributes  it is irrational to select or judge as better a dominated alternative  CITATION
+gonzales-vallejo et al CITATION  found that  after a period of distraction  participants could not select the dominant alternative more often than chance
+however  all participants engaged in unconscious thought so performance could not be compared to immediate decisions or those after a period of conscious thought
+despite the failed replications of the deliberation-without-attention effect  further tests are warranted
+recent meta-analyses have reported mean effect sizes of g     NUMBER  in favor of unconscious thought when compared to conscious thought  CITATION  and g    NUMBER  in favor of unconscious thought when compared to both conscious thought and immediate judgments and decisions  CITATION
+new findings continue to be published showing an advantage of unconscious thought over conscious thought
+for example  dijksterhuis  bos  van der leij  and van baaren  CITATION  found that soccer experts are better at predicting the outcome of soccer matches after a period of unconscious thought than they are when making predictions immediately or after a period of conscious deliberation
+furthermore  utt and supporting findings have influenced theories in applied areas such as job design george  in press
+it is imperative that utt continue to be tested and supporting results continue to be replicated
+in the current set of experiments  participants were given four alternatives  one of which dominated the others except in experiment  NUMBER 
+experiment  NUMBER  compared simple and complex decisions made by participants after conscious and unconscious thought
+in experiments  NUMBER a   NUMBER b  and  NUMBER  participants judged the four alternatives after receiving attributes of each
+the difference between judgments of the best and worst alternatives for participants who engaged in unconscious thought was compared with those of participants who engaged in conscious thought experiments  NUMBER a and  NUMBER b and those who made immediate judgments experiments  NUMBER a   NUMBER b  and  NUMBER 
+utt predicts that participants who engage in unconscious thought will select the best car more often than chance and more often than those who engage in conscious thought experiment  NUMBER 
+furthermore  participants who engage in unconscious thought will rate the best car significantly higher than the worst car  and this difference will be greater than the difference for those who engage in conscious thought experiments  NUMBER a and  NUMBER b or make immediate judgments experiments  NUMBER a   NUMBER b  and  NUMBER 
+order of alternatives was also examined in experiment  NUMBER  alternatives were not blocked in experiments  NUMBER a   NUMBER b  and  NUMBER 
+newell et al CITATION  suggest that if impressions about alternatives are formed during the presentation of attributes  there should be a recency effect  information presented later should have a greater impact on decisions than information presented earlier

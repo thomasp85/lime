@@ -1,0 +1,50 @@
+### abstract ###
+In bacterial genomes composed of more than one chromosome, one replicon is typically larger, harbors more essential genes than the others, and is considered primary.
+The greater variability of secondary chromosomes among related taxa has led to the theory that they serve as an accessory genome for specific niches or conditions.
+By this rationale, purifying selection should be weaker on genes on secondary chromosomes because of their reduced necessity or usage.
+To test this hypothesis we selected bacterial genomes composed of multiple chromosomes from two genera, Burkholderia and Vibrio, and quantified the evolutionary rates of all orthologs within each genus.
+Both evolutionary rate parameters were faster among orthologs found on secondary chromosomes than those on the primary chromosome.
+Further, in every bacterial genome with multiple chromosomes that we studied, genes on secondary chromosomes exhibited significantly weaker codon usage bias than those on primary chromosomes.
+Faster evolution and reduced codon bias could in turn result from global effects of chromosome position, as genes on secondary chromosomes experience reduced dosage and expression due to their delayed replication, or selection on specific gene attributes.
+These alternatives were evaluated using orthologs common to genomes with multiple chromosomes and genomes with single chromosomes.
+Analysis of these ortholog sets suggested that inherently fast-evolving genes tend to be sorted to secondary chromosomes when they arise; however, prolonged evolution on a secondary chromosome further accelerated substitution rates.
+In summary, secondary chromosomes in bacteria are evolutionary test beds where genes are weakly preserved and evolve more rapidly, likely because they are used less frequently.
+### introduction ###
+As the number of completely sequenced bacterial genomes has grown, the once surprising discovery of multiple chromosomes has become commonplace.
+Setting aside the issue of nomenclature, why some bacterial genomes are divided into multiple, large replicons and others comprised of only a single DNA molecule is largely unknown CITATION.
+Understanding the origin of secondary replicons helps frame the question.
+Chromosomes may originate by three different mechanisms: by the split of a single chromosome, by chromosome duplication, or by acquisition of a large plasmid with essential genes, which ensures its prolonged maintenance.
+Of these processes, the last has the greatest support because some secondary chromosomes have plasmid-like origins of replication CITATION.
+However, it is the potential effects of genome subdivision that require further investigation and may explain variation in chromosome number and evolution in bacteria.
+One advantage of a divided genome is the potential for faster replication and growth because of multiple origins of DNA replication.
+For example, Vibrio spp.
+with two chromosomes have among the fastest rates of cell division measured.
+Yet in all bacteria, the single origin of replication per chromosome means that growth may occur faster than replication, a problem solved by the ability to initiate new cycles of replication before the completion of previous cycles.
+As a result, daughter cells may be born with multiple partially replicated genomes that are enriched near the origin of replication CITATION .
+Bacteria with multiple chromosomes face the additional challenge of maintaining synchronous replication; if chromosomes are of different sizes, either their timing or their rates of replication must vary.
+In Vibrio, it has been demonstrated that the replication of the smaller, second chromosome is delayed during the cell cycle CITATION, CITATION, CITATION.
+This delayed replication in effect reduces the dosage of genes on the second chromosome during periods of rapid growth CITATION, but does not alter the final heredity of each chromosome.
+Each cell ultimately has one and only one copy of each chromosome, and no evidence yet suggests that this varies.
+Therefore, variation in how bacterial chromosomes evolve is not, at least given current knowledge, an effect of variation in their effective numbers, as in the sex chromosomes of animals CITATION .
+However, variation in gene dosage during the bacterial cell cycle can have profound effects on the expression of these genes as well as their evolutionary rates.
+In bacteria with a single chromosome, genes distant from the origin of replication tend to be expressed less than those nearby, and thus distant genes evolve more rapidly CITATION .
+In bacteria with multiple chromosomes, delayed replication of the smaller replicon could produce a similar effect on its expression and thus its evolution.
+A recent report confirms this effect on expression in fast-growing cells: genes on the late replicating small chromosome of V. parahaemolyticus are expressed significantly less than those on the large chromosome, though expression varies more than would be expected from measured dosage effects CITATION.
+In slow growing cells, overlapping replication cycles are unnecessary and hence no dosage and expression bias is found between chromosomes CITATION.
+Replication bias within divided genomes could therefore accelerate evolution on secondary chromosomes.
+This variation in expression caused by genome location, either relative to the origin of replication or on different chromosomes, can in principle exert selection for gene position.
+Genes that must be expressed frequently should be near the origin of replication and on the primary chromosome CITATION, CITATION.
+It therefore follows that in Vibrio, a significantly greater fraction of growth-essential and growth-contributing genes are found on the large, primary chromosome than on the small chromosome, ii near the origin relative to the terminus of the large chromosome, and even iii near the terminus of the large chromosome relative to the small chromosome CITATION.
+When grown under optimal conditions, the dosage bias of these genes and hence their expression is exaggerated, but under more limiting conditions dosage bias and expression do not vary with gene position CITATION, CITATION.
+Moreover, the growth rate of V. cholerae slows significantly when the replication rate of the second chromosome is genetically amplified CITATION, CITATION.
+These findings imply that selection has shaped Vibrio genomes to contain genes whose functions benefit from higher dosage during rapid growth on the first chromosome and genes that should be expressed less on the second chromosome CITATION, CITATION .
+Comparing related genomes with multiple chromosomes also suggests that their content has been segregated by priority and dispensability.
+In general, the major chromosome tends to have significantly more conserved housekeeping genes, greater overall synteny, and greater conservation of content CITATION, CITATION, CITATION.
+Together, these patterns support a general theory that secondary chromosomes are evolutionary test beds subject to reduced purifying selection and thus greater rates of change.
+The key prediction of this theory is that genes found on secondary chromosomes should evolve faster and more variably than those on the primary chromosome.
+Furthermore, if genes on secondary chromosomes have been less needed or used over long periods of time, then they should exhibit less bias towards the use of favored synonymous codons .
+We tested this theory by studying the evolutionary rates of panorthologs, defined as orthologous genes present in single copy and, for a subset, obeying the consensus species phylogeny, among two sets of monophyletic, completely sequenced genomes with more than one chromosome.
+We then compared the rates of ortholog families found on primary chromosomes with those on secondary chromosomes, calculated the codon bias of these genes, and evaluated their evolutionary patterns in the context of orthologs from sister taxa with only a single chromosome.
+We found that orthologs on secondary chromosomes indeed evolved faster and displayed less skew towards purifying selection than those on primary chromosomes.
+These increased rates of evolution appear to be a consequence of reduced selection for the use of specific codons and translational efficiency because of less frequent expression or necessity CITATION, CITATION, CITATION, CITATION.
+Each prediction of the general theory that secondary chromosomes serve as evolutionary test beds for accessory genes was therefore met.

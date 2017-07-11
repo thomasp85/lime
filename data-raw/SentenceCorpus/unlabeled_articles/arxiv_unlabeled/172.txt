@@ -1,0 +1,25 @@
+### abstract ###
+In the past few years powerful generalizations to the Euclidean k-means problem have been made, such as Bregman clustering~ CITATION , co-clustering (i e , simultaneous clustering of rows and columns of an input matrix)~ CITATION , and tensor clustering~ CITATION
+Like k-means, these more general problems also suffer from the NP-hardness of the associated optimization
+Researchers have developed approximation algorithms of varying degrees of sophistication for k-means, k-medians, and more recently also for Bregman clustering~ CITATION
+However, there seem to be no approximation algorithms for Bregman co- and tensor clustering
+In this paper we derive the first (to our knowledge) guaranteed methods for these increasingly important clustering settings
+Going beyond Bregman divergences, we also prove an approximation factor for tensor clustering with arbitrary separable metrics
+Through extensive experiments we evaluate the characteristics of our method, and show that it also has practical impact
+### introduction ###
+Partitioning data points into clusters is a fundamentally hard problem
+The well-known Euclidean k-means problem that partitions the input data points (vectors in  SYMBOL ) into  SYMBOL  clusters while minimizing sums of their squared distances to corresponding cluster centroids, is an NP hard problem~ CITATION  (exponential in  SYMBOL )
+However, simple and frequently used procedures that rapidly obtain local minima exist since a long time~ CITATION
+Because of its wide applicability and importance, the Euclidean k-means problem has been generalized in several directions
+Specific examples relevant to this paper include:  \setlength{sep}{-1pt}   Bregman clustering ~ CITATION , where instead of minimizing squared Euclidean distances one minimizes Bregman divergences (which are generalized distance functions, see~() or~ CITATION  for details),   Bregman co-clustering ~ CITATION  (which includes both Euclidean~ CITATION  and information-theoretic co-clustering~ CITATION  as special cases), where the set of input vectors is viewed as a matrix and one  simultaneously  clusters rows and columns to obtain coherent submatrices (co-clusters), while minimizing a Bregman divergence, and   Tensor clustering  or multiway clustering~ CITATION , especially the version based on Bregman divergences~ CITATION , where one simultaneously clusters along various dimensions of the input tensor
+For these problems too, the commonly used heuristics perform well, but do not provide theoretical guarantees (or at best assure local optimality)
+For k-means type clustering problems---i e , problems that group together input vectors into clusters while minimizing ``distance'' to cluster centroids---there exist several algorithms that approximate a globally optimal solution
+We refer the reader to~ CITATION , and the numerous references therein for more details
+In stark contrast, approximation algorithms for tensor clustering are much less studied
+We are aware of only two very recent attempts (both papers are from 2008) for the two-dimensional special case of co-clustering, namely,~ CITATION  and  CITATION ---and both of the papers  follow similar approaches to obtain their approximation guarantees
+Both prove a  SYMBOL -approximation for Euclidean co-clustering,  CITATION  an additional factor of  SYMBOL  for binary matrices and an  SYMBOL  norm objective, and  CITATION  a factor of  SYMBOL  for co-clustering real matrices with  SYMBOL  norms
+In all factors  SYMBOL  is an approximation guarantee for clustering either rows or columns
+In this paper, we build upon~ CITATION  and obtain approximation algorithms for tensor clustering with Bregman divergences and arbitrary separable metrics such as  SYMBOL -norms
+The latter result is of particular interest for  SYMBOL -norm based tensor clustering, which may be viewed as a generalization of k-medians to tensors
+In the terminology of~ CITATION , we focus on the ``block average'' versions of co- and tensor clustering
+Additional discussion and relevant references for co-clustering can be found in~ CITATION , while for the lesser known problem of tensor clustering more background can be gained by referring to~ CITATION

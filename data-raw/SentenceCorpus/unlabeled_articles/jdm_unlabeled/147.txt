@@ -1,0 +1,20 @@
+### abstract ###
+according to recent dual-process theories  interpersonal trust is influenced by both impulsive and deliberative processes
+the present research explores the determinants of deliberative trust  investigating how trust decisions are affected by the availability of cognitive resources
+we test the interaction of two relevant factors  self-control the ability to exert mental control over one's behavior and the default response a preselected option that requires minimal or no effort
+past research has shown that self-control has extensive effects on social behavior and decision making
+here  we report that the effect of self-control on trust depends on the default
+across two studies  we find no direct link between self-control and trust
+instead  self-control affects trust indirectly by influencing the level of effort in decision making
+poor self-control due to experimental depletion or trait-based differences predicts adherence to the default-the response that requires the least effort
+### introduction ###
+interpersonal trust plays an important role in myriad contexts  from economic exchanges and organizational settings to friendships and romantic relationships  CITATION
+the factors that influence trust can vary significantly across these domains  CITATION
+to account for this variance  past research has noted the differences between the emotional and cognitive aspects of trust  CITATION
+more recently  murray and colleagues  CITATION  proposed a dual-process model of trust  separating trust into impulsive and deliberative components
+the deliberative aspect of trust often depends on complex considerations
+a potential trustor might consider the risk of the situation  as well as the ability  benevolence  and integrity of the trusted party  CITATION
+ultimately  the trustor has to decide if  given the parameters of the situation  trusting is worth the risk
+if the trustor intends to be thorough about this decision  the process could require a significant investment of time and effort
+the present research investigates how trust decisions change when the ability to deliberate is compromised
+we focus on two factors that interactively affect deliberative trust  self-control the ability to exert cognitive control over one's behavior and the default response the preselected option that requires the least amount of effort

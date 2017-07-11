@@ -1,0 +1,22 @@
+### abstract ###
+We study the problem of dynamic spectrum sensing and access in cognitive radio systems as a partially observed Markov decision process (POMDP)
+A group of cognitive users cooperatively tries to exploit vacancies in primary (licensed) channels whose occupancies follow a Markovian evolution
+We first consider the scenario where the cognitive users have perfect knowledge of the distribution of the signals they receive from the primary users
+For this problem, we obtain a greedy channel selection and access policy that maximizes the instantaneous reward, while satisfying a constraint on the probability of interfering with licensed transmissions
+We also derive an analytical universal upper bound on the performance of the optimal policy
+Through simulation, we show that our scheme achieves good performance relative to the upper bound and improved performance relative to an existing scheme
+We then consider the more practical scenario where the exact distribution of the signal from the primary is unknown
+We assume a parametric model for the distribution and develop an algorithm that can learn the true distribution, still guaranteeing the constraint on the interference probability
+We show that this algorithm outperforms the naive design that assumes a worst case value for the parameter
+We also provide a proof for the convergence of the learning algorithm
+### introduction ###
+Cognitive radios that exploit vacancies in the licensed spectrum have been proposed as a solution to the ever-increasing demand for radio spectrum
+The idea is to sense times when a specific licensed band is not used at a particular place and use this band for unlicensed transmissions without causing interference to the licensed user (referred to as the `primary')
+An important part of designing such systems is to develop an efficient channel selection policy
+The cognitive radio (also called the `secondary user') needs to adopt the best strategy for selecting channels for sensing and access
+The sensing and access policies should jointly ensure that the probability of interfering with the primary's transmission meets a given constraint
+In the first part of this paper, we consider the design of such a joint sensing and access policy, assuming a Markovian model for the primary spectrum usage on the channels being monitored
+The secondary users use the observations made in each slot to track the probability of occupancy of the different channels
+We obtain a suboptimal solution to the resultant POMDP problem
+In the second part of the paper, we propose and study a more practical problem that arises when the secondary users are not aware of the exact distribution of the signals that they receive from the primary transmitters
+We develop an algorithm that learns these unknown statistics and show that this scheme gives improved performance over the naive scheme that assumes a worst-case value for the unknown distribution

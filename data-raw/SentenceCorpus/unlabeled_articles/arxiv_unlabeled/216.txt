@@ -1,0 +1,12 @@
+### abstract ###
+We consider the problem of estimating the conditional probability of a label in time  SYMBOL , where  SYMBOL  is the number of possible labels
+We analyze a natural reduction of this problem to a set of binary regression problems organized in a tree structure, proving a regret bound that scales with the depth of the tree
+Motivated by this analysis, we propose the first online algorithm which provably constructs a logarithmic depth tree on the set of labels to solve this problem
+We test the algorithm empirically, showing that it works succesfully on a dataset with roughly  SYMBOL  labels
+### introduction ###
+The central question in this paper is how to efficiently estimate the conditional probability of label  SYMBOL  given an observation  SYMBOL
+Virtually all approaches for solving this problem require  SYMBOL  time
+A commonly used one-against-all approach, which tries to predict the probability of label  SYMBOL  versus all other labels, for each  SYMBOL ,  requires  SYMBOL  time per training example
+Another common  SYMBOL  approach is to learn a scoring function  SYMBOL  and convert it into a conditional probability estimate according to  SYMBOL , where  SYMBOL  is a normalization factor
+The motivation for dealing with the computational difficulty is the usual one---we want the capability to solve otherwise unsolvable problems
+For example, one of our experiments involves a probabilistic prediction problem with roughly  SYMBOL  labels and  SYMBOL  examples, where any  SYMBOL  solution is intractable

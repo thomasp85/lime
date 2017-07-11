@@ -1,0 +1,51 @@
+### abstract ###
+In large systems, it is important for agents to learn to act effectively, but sophisticated multi-agent learning algorithms generally do not scale
+An alternative approach is to find restricted classes of games where simple, efficient algorithms converge
+It is shown that stage learning efficiently converges to Nash equilibria in large anonymous games if best-reply dynamics converge
+Two features are identified that improve convergence
+First, rather than making learning more difficult, more agents are actually beneficial in many settings
+Second, providing agents with statistical information about the behavior of others can significantly reduce the number of observations needed
+### introduction ###
+Designers of distributed systems are frequently unable to determine how an agent in the system should behave, because optimal behavior depends on the user's preferences and the actions of others
+A natural approach is to have agents use a learning algorithm
+Many multiagent learning algorithms have been proposed including simple strategy update procedures such as  fictitious play ~ CITATION , multiagent versions of  Q-learning ~ CITATION , and  no-regret algorithms ~ CITATION
+However, as we discuss in Section~, existing algorithms are generally unsuitable for large distributed systems
+In a distributed system, each agent has a limited view of the actions of other agents
+Algorithms that require knowing, for example, the strategy chosen by every agent cannot be implemented
+Furthermore, the size of distributed systems requires fast convergence
+Users may use the system for short periods of time and conditions in the system change over time, so a practical algorithm for a system with thousands or millions of users needs to have a convergence rate that is sublinear in the number of agents
+Existing algorithms tend to provide performance guarantees that are polynomial or even exponential
+Finally, the large number of agents in the system guarantees that there will be noise
+Agents will make mistakes and will behave in unexpectedly
+Even if no agent changes his strategy, there can still be noise in agent payoffs
+For example, a gossip protocol will match different agents from round to round; congestion in the underlying network may effect message delays between agents
+A learning algorithm needs to be robust to this noise
+While finding an algorithm that satisfies these requirements for arbitrary games may be difficult, distributed systems have characteristics that make the problem easier
+First, they involve a large number of agents
+Having more agents may seem to make learning harder---after all, there are more possible interactions
+However, it has the advantage that the  outcome of an action typically depends only weakly on what other agents do
+This makes outcomes robust to noise
+Having a large number of agents also make it less useful for an agent to  try to influence others; it becomes a better policy to try to learn an optimal response
+In contrast, with a small number of agents, an agent can attempt to guide learning agents into an outcome that is beneficial for him
+Second, distributed systems are often  anonymous ~ CITATION ; it does not matter  who  does something, but rather  how many  agents do it
+For example, when there is congestion on a link, the experience of a single agent does not depend on who is sending the packets, but on how many are being sent
+Finally, and perhaps most importantly, in a distributed system the system designer controls the game agents are playing
+This gives us a somewhat different perspective than most work, which takes the game as given
+We do not need to solve the hard problem of finding an efficient algorithm for all games
+Instead, we can find algorithms that work efficiently for interesting classes of games, where for us ``interesting'' means ``the type of games a system designer might wish agents to play
+''   Such games should  be ``well behaved,'' since it would be strange to design a  system where an agent's decisions can influence other agents in pathological ways
+In Section~, we show that  stage learning ~ CITATION  is robust, implementable with minimal information, and converges efficiently for an interesting class of games
+In this algorithm, agents divide the rounds of the game into a series of stages
+In each stage, the agent uses a fixed strategy except that he occasionally explores
+At the end of a stage, the agent chooses as his strategy for the next stage whatever strategy had the highest average reward in the current stage
+We prove that, under appropriate conditions, a large system of stage learners will follow (approximate) best-reply dynamics despite errors and exploration
+For games where best-reply dynamics converge, our theorem guarantees that learners will play an approximate Nash equilibrium
+In contrast to previous results where the convergence guarantee scales poorly with the number of agents, our theorem guarantees convergence in a finite amount of time with an infinite number of agents
+While the assumption that best-reply dynamics converge is a strong one, many interesting games converge under best-reply dynamics, including dominance solvable games and games with monotone best replies
+Marden et al ~ CITATION  have observed that convergence of best-reply dynamics is often a property of games that humans design
+Moreover, convergence of best-reply dynamics is a weaker assumption than a common assumption made in the mechanism design literature, that the games of interest have dominant strategies (each agent has a strategy that is optimal no matter what other agents do)
+Simulation results, presented in Section~, show that convergence is fast in practice: a system with thousands of agents can converge in a few thousand rounds
+Furthermore, we identify two factors that determine the rate and quality of convergence
+One is the number of agents: having more agents makes the noise in the systen more consistent so agents can learn using fewer observations
+The other is giving agents statistical information about the behavior of other agents; this can speed convergence by an order of magnitude
+Indeed, even noisy statistical information about agent behavior, which should be relatively easy to obtain and disseminate,  can significantly improve performance

@@ -1,0 +1,32 @@
+### abstract ###
+the current field study compares the time preferences of young adults of similar ages but in two very different environments  one more dangerous and uncertain than the other
+soldiers  college students and a control group of teenagers answered questionnaires about their time preferences
+during mandatory service  soldiers live in a violent atmosphere where they face great uncertainty about the near future and high risk of mortality measured by probability of survival
+university students and teenagers live in much calmer environment and are tested for performance only periodically
+the soldier-subjects show relatively high subjective discount rates when compared to the other two groups
+we suggest that the higher subjective discount rate among soldiers can be the result of high perceived risk in the army as an institution  or higher mortality risk
+### introduction ###
+the subjective discount rate is the rate at which individuals trade current value for future outcome
+this rate varies from person to person  depending on each one's willingness to wait
+in general  an individual who values the present more than the future will have a higher subjective discount rate than a person who places more value on the future
+in the current paper  we examine how military service influences the time preference of soldiers
+we compare the time discount of soldiers in the israel defense forces idf to the time discount of university and high school students
+since its establishment in  NUMBER   the state of israel has had universal conscription for all youths male and female upon completing high school at the age of  NUMBER 
+by law  soldiers serve full-time for two females or three males years  and then continue serving in the reserves
+the idf plays an important part in israeli society  and is supported by a national consensus of the israel population  CITATION
+the soldiers are a unique group because they are drafted at young age  prior to beginning their tertiary education  and earn similar  very low salaries
+their  employer  is a harsh and total institution-where all parts of life of the individuals under its authority are subordinate to and dependent upon the hierarchy of the organization-with very clear values
+the soldiers are intensively trained and tested from the first day of basic training
+conversely  university students in israel usually work and have higher earnings
+they live in much calmer environment and are tested for performance only periodically
+a few studies have tested soldiers' decision making and compare them to civilians
+warner and pleeter  CITATION  studied the choices regarding early retirement plans of older soldiers in the us army
+these soldiers were heterogenic in age  education  and earnings  and choose to join the army as a profession
+in a recent article  haerem et al CITATION   compared educated  military decision makers to business students  and found that the soldiers exhibited high levels of self-efficacy that correlated with risk-seeking behavior
+unlike other studies  our study is the first to test time preferences of young soldiers who did not join the army as a career choice but rather were drafted for mandatory service
+in order to ensure similar test conditions for the soldiers and other young adults  we distributed the questionnaires to both groups when they were travelling on the train
+we found that the soldiers have a higher subjective discount rate when compared to similar age groups
+the rest of the paper is organized as follows  in section  NUMBER   we discuss risk  morbidity  and mortality and their relation to our research
+section  NUMBER  presents the hypothesis
+section  NUMBER  describes the experimental design
+section  NUMBER  presents the results regarding the time preferences of soldiers and students

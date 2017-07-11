@@ -1,0 +1,36 @@
+### abstract ###
+Images can be segmented by first using a classifier to predict an affinity graph that reflects the degree to which image pixels must be grouped together and then partitioning the graph to yield a segmentation
+Machine learning has been applied to the affinity classifier to produce affinity graphs that are good in the sense of minimizing edge misclassification rates
+However, this error measure is only indirectly related to the quality of segmentations produced by ultimately partitioning the affinity graph
+We present the first machine learning algorithm for training a classifier to produce affinity graphs that are good in the sense of producing segmentations that directly minimize the Rand index, a well known segmentation performance measure
+The Rand index measures segmentation performance by quantifying the classification of the connectivity of image pixel pairs after segmentation
+By using the simple graph partitioning algorithm of finding the connected components of the thresholded affinity graph, we are able to train an affinity classifier to directly minimize the Rand index of segmentations resulting from the graph partitioning
+Our learning algorithm corresponds to the learning of maximin affinities between image pixel pairs, which are predictive of the pixel-pair connectivity
+### introduction ###
+Supervised learning has emerged as a serious contender in the field of image segmentation, ever since the creation of training sets of images with {}``ground truth'' segmentations provided by humans, such as the Berkeley Segmentation Dataset  CITATION
+Supervised learning requires 1) a parametrized algorithm that map images to segmentations, 2) an objective function that quantifies the performance of a segmentation algorithm relative to ground truth, and 3) a means of searching the parameter space of the segmentation algorithm for an optimum of the objective function
+In the supervised learning method presented here, the segmentation algorithm consists of a parametrized  classifier  that predicts the weights of a nearest neighbor affinity graph over image pixels, followed by a graph  partitioner  that thresholds the affinity graph and finds its connected components
+Our objective function is the Rand index  CITATION , which has recently been proposed as a quantitative measure of segmentation performance  CITATION
+We {}``soften'' the thresholding of the classifier output and adjust the parameters of the classifier by gradient learning based on the Rand index
+Because maximin edges of the affinity graph play a key role in our learning method, we call it  maximin affinity learning of image segmentation , or MALIS
+The minimax path and edge are standard concepts in graph theory, and maximin is the opposite-sign sibling of minimax
+Hence our work can be viewed as a machine learning application of these graph theoretic concepts
+MALIS focuses on improving classifier output at maximin edges, because classifying these edges incorrectly leads to genuine segmentation errors, the splitting or merging of segments
+To the best of our knowledge, MALIS is the first supervised learning method that is based on optimizing a genuine measure of segmentation performance
+The idea of training a classifier to predict the weights of an affinity graph is not novel
+Affinity classifiers were previously trained to minimize the number of misclassified affinity edges  CITATION
+This is not the same as optimizing segmentations produced by partitioning the affinity graph
+There have been attempts to train affinity classifiers to produce good segmentations when partitioned by normalized cuts  CITATION
+But these approaches do not optimize a genuine measure of segmentation performance such as the Rand index
+The work of Bach and Jordan  CITATION  is the closest to our work
+However, they only minimize an upper bound to a renormalized version of the Rand index
+Both approaches require many approximations to make the learning tractable
+In other related work, classifiers have been trained to optimize performance at detecting image pixels that belong to object boundaries  CITATION
+Our classifier can also be viewed as a boundary detector, since a nearest neighbor affinity graph is essentially the same as a boundary map, up to a sign inversion
+However, we combine our classifier with a graph partitioner to produce segmentations
+The classifier parameters are not trained to optimize performance at boundary detection, but to optimize performance at segmentation as measured by the Rand index
+There are also methods for supervised learning of image labeling using Markov or conditional random fields  CITATION
+But image labeling is more similar to multi-class pixel classification rather than image segmentation, as the latter task may require distinguishing between multiple objects in a single image that all have the same label
+In the cases where probabilistic random field models have been used for image parsing and segmentation, the models have either been simplistic for tractability reasons  CITATION  or have been trained piecemeal
+For instance, Tu et al CITATION  separately train low-level discriminative modules based on a boosting classifier, and train high-level modules of their algorithm to model the joint distribution of the image and the labeling
+These models have never been trained to minimize the Rand index

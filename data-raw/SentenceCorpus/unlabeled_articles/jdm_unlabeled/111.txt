@@ -1,0 +1,40 @@
+### abstract ###
+combining meaning  memory  and development  the perennially popular topic of intuition can be approached in a new way
+fuzzy-trace theory integrates these topics by distinguishing between meaning-based gist representations  which support fuzzy yet advanced intuition  and superficial verbatim representations of information  which support precise analysis
+here  i review the counterintuitive findings that led to the development of the theory and its most recent extensions to the neuroscience of risky decision making
+these findings include memory interference worse verbatim memory is associated with better reasoning  nonnumerical framing framing effects increase when numbers are deleted from decision problems  developmental decreases in gray matter and increases in brain connectivity  developmental reversals in memory  judgment  and decision making heuristics and biases based on gist increase from childhood to adulthood  challenging conceptions of rationality  and selective attention effects that provide critical tests comparing fuzzy-trace theory  expected utility theory  and its variants e g   prospect theory
+surprising implications for judgment and decision making in real life are also discussed  notably  that adaptive decision making relies mainly on gist-based intuition in law  medicine  and public health
+### introduction ###
+what are the cutting-edge approaches to judgment and decision making that will be influential in the next decade
+which hot topics today will turn into the enduring foundational assumptions of tomorrow
+these questions concern new investigators  as they place bets with their most precious commodity  their time  by choosing topics in hopes of making an impact on the field
+however  although new investigators strive to be original and forward thinking  they are also counseled to conduct programmatic and cumulative research
+that is  to make progress on important topics  scientists must build on prior accomplishments  their own and those of others
+in this essay  i provide an overview of recent developments in one theory  and their origins in prior scientific research
+moreover  the topics were chosen with a view to the future
+these are my bets about which approaches have been productive and are gathering momentum
+fortunately  these prognostications are more than simply my opinions barely more than that perhaps because they are based on the behavior of a community of scholars
+these ideas continue to gain greater currency as our field searches for new paradigms and preoccupations  CITATION
+what are the topics that i  and others  believe are taking off and will continue to progress
+among the new trends  the most established topic-one that draws on a rich supply of prior research-is memory
+researchers are increasingly turning to memory for explanations of judgment and decision making  CITATION
+memory is much more than memorization  as i presently explain
+a growing number of contemporary theories have memory as a common denominator  CITATION
+development  defined as changes across the lifespan  is another topic that has gained ground
+because of links to aging and to adolescent risk taking in psychiatry  public health  and neuroscience  this topic has surged in popularity  although it is less established within judgment and decision making  CITATION
+notwithstanding that tversky and kahneman  CITATION  drew on piagetian cognitive illusions to characterize heuristics and biases  CITATION   theories of adult judgment and decision making are only now incorporating developmental results in their core assumptions
+developmental results inform conceptions of whether choices are rational  adaptive  or good  CITATION
+these results have been surprising
+knowing that children reason rationally in the classic sense and that adults forego rational reasoning-which they are capable of-in favor of heuristics and biases casts explanations of judgment and decision making in an entirely new light  CITATION
+last  the topic of meaning is the least established among the new trends
+nevertheless  the concept of meaning has tremendous potential to organize thinking about judgment and decision making  to propel the field forward in new and original directions  and to effect practical changes in real-world behavior  CITATION
+as sunstein  CITATION  advises   understanding of meaning and its malleabilitysuggests some tools that policymakers might use  p  NUMBER  and he exhorts public and private institutions to employ  meaning entrepreneurs  to move behavior in better directions
+combining meaning  memory  and development  the perennially popular topic of intuition can be approached in a new way
+fuzzy-trace theory integrates these topics by distinguishing between meaning-based memory representations-gist-and superficial verbatim representations of information
+people use their memories to represent information even when the information is visible
+intuition  in this view  relies on the meaning-based gist representations  but it is not developmentally primitive  CITATION
+on the contrary  intuitive thinking underlies the most advanced thinking  CITATION
+however  intuition produces meaning-based distortions in memory and reasoning
+these distortions increase from childhood to adulthood  creating  developmental reversals   CITATION
+these findings were predicted by the framework described here  CITATION   but they violate core assumptions of other dual-process and developmental theories  CITATION
+in the section below on origins  i describe how this integrated account of meaning  memory  and development came about

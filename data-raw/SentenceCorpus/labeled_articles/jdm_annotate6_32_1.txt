@@ -1,0 +1,34 @@
+### abstract ###
+AIMX this paper extends previous research showing that experienced difficulty of recall can influence evaluative judgments CITATION to a field study of university students rating a course
+OWNX students completed a mid-course evaluation form in which they were asked to list either  NUMBER  ways in which the course could be improved a relatively easy task or  NUMBER  ways in which the course could be improved a relatively difficult task
+OWNX respondents who had been asked for  NUMBER  critical comments subsequently rated the course more favorably than respondents who had been asked for  NUMBER  critical comments
+OWNX an internal analysis suggests that the number of critiques solicited provides a frame against which accessibility of instances is evaluated
+OWNX the paper concludes with a discussion of implications of the present results and possible directions for future research
+### introduction ###
+MISC according to tversky and kahneman's  CITATION  availability heuristic  people sometimes judge the frequency of events in the world by the ease with which examples come to mind
+MISC this process has generally been demonstrated by asking participants to assess the relative likelihood of two categories in which instances of the first category are more difficult to recall than instances of the second category  despite the fact that instances of the first category are more common in the world
+MISC for instance  kahneman and tversky  CITATION  found that most people think the letter r more often appears in english words as the first letter than the third letter  presumably because the first letter provides a better cue for recalling instances of words than does the third letter
+MISC in fact  it turns out that r appears more often as the third than first letter in english words
+MISC schwarz et al CITATION  observed that the classic studies demonstrating the availability heuristic failed to distinguish an interpretation based on ease of retrieval from an alternative interpretation based on content of retrieval in which an event is judged more common when a larger number of examples come to mind
+MISC to tease apart these accounts  schwarz et al CITATION  asked participants in one   study to list either  NUMBER  or  NUMBER  examples of assertive or unassertive behavior that they have exhibited and then rate themselves on their overall degree of assertiveness
+MISC participants rated themselves as more assertive after they had listed  NUMBER  examples of assertive behavior a relatively easy task rather than  NUMBER  examples a relatively difficult task  similarly  they rated themselves as less assertive i e   more unassertive after they had listed  NUMBER  rather than  NUMBER  examples of unassertive behavior
+MISC similar patterns of results have been observed in many other studies of frequency-related judgments  including the rate at which a particular letter occurs in various positions of words  CITATION   the quality of one's own memory  CITATION   the frequency of one's own past behaviors  CITATION   one's susceptibility to heart disease  CITATION  and one's susceptibility to sexual assault  CITATION
+MISC for a review of this literature see schwarz  CITATION
+MISC thus  an abundance of data supports the original interpretation of the availability heuristic  categories are judged to be more common when instances more easily come to mind  even when a smaller absolute number of instances are generated
+MISC this program has been extended from frequency-based judgments to  evaluative judgments of such targets as public transportation  CITATION   luxury automobiles  CITATION   and one's own childhood  CITATION
+MISC for instance  winkielman and schwarz  CITATION  asked participants to recall either  NUMBER  childhood events an easy task or  NUMBER  childhood events a difficult task
+MISC some participants were then led to believe that memories from pleasant periods tend to fade  while others were led to believe that memories from unpleasant periods tend to fade
+MISC when later asked to evaluate their childhood  participants believed that pleasant memories fade rated their childhood more favorably when they completed the difficult task  NUMBER  events than the easy task  NUMBER  events  participants who believed that unpleasant memories fade rated their childhood more favorably when they completed the easy rather than difficult task
+MISC previous studies of the availability heuristic using the paradigm of schwarz et al CITATION  have turned up impressive and robust results
+MISC however  these demonstrations have been restricted primarily to laboratory surveys in which task of recalling examples then making an overall assessment may seem somewhat artificial to participants and the responses of little consequence
+MISC more important  most participants in previous studies presumably had little prior experience with the particular likert scale that served as the dependent measure e g   most had never before rated their childhood or public transportation on a  NUMBER -point scale
+MISC hence  ratings of respondents may be especially susceptible to superficial cues-such as the accessibility of instances-when mapping their beliefs and attitudes onto an unfamiliar response scale
+OWNX the present investigation overcomes these limitations through a  field study  of students evaluating a course
+MISC first  evaluations are a normal facet of most university courses in which students are commonly asked to list specific suggestions and also provide a global assessment
+MISC moreover  course evaluations are consequential  as they can influence future course offerings and course staffing  promotion and tenure decisions  and provide information to future prospective students of the target course
+MISC second  students at universities quickly become familiar with standard course evaluation scales and how ratings are distributed across classes  often relying on these scores in choosing among elective courses
+MISC the study of course evaluations is also interesting in its own right
+MISC a number of recent papers have questioned the validity of these ratings  and a lively debate appeared some years ago in the american psychologist  CITATION
+MISC thus far  questions of discriminant validity have mainly focused on the correlation between teaching ratings and apparently irrelevant factors such as the students' expected grades or the course workload
+MISC to date there have been few published investigations of the relationship between the design of course feedback forms and summary course evaluations
+AIMX the present study attempts to answer the following provocative question  can one paradoxically obtain higher course ratings by soliciting a greater number of critical comments from students

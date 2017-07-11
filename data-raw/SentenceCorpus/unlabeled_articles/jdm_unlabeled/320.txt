@@ -1,0 +1,38 @@
+### abstract ###
+narrow self-interest is often used as a simplifying assumption when studying people making decisions in social contexts
+nonetheless  people exhibit a wide range of different motivations when choosing unilaterally among interdependent outcomes
+measuring the magnitude of the concern people have for others  sometimes called social value orientation svo  has been an interest of many social scientists for decades and several different measurement methods have been developed so far
+here we introduce a new measure of svo that has several advantages over existent methods
+a detailed description of the new measurement method is presented  along with norming data that provide evidence of its solid psychometric properties
+we conclude with a brief discussion of the research streams that would benefit from a more sensitive and higher resolution measure of svo  and extend an invitation to others to use this new measure which is freely available
+### introduction ###
+the assumption of narrow self-interest is central to rational choice theory
+the postulate is that decision makers dms are concerned about maximizing their own material gain  indifferent to the payoffs of other dms around them
+this is a simplifying assumption that yields a powerful framework to predict and explain human decision making behavior across a wide variety of domains
+however there are reliable counterexamples demonstrating that dms' elicited preferences and choices are often influenced in part by the payoffs of other dms  thus challenging what some have termed the selfishness axiom  CITATION
+studies on the motivations that underlie interdependent decision behavior have a long history and these motivations have been referred to by a variety of names  including  social preferences  social motives  other-regarding preferences  welfare tradeoff ratios  and social value orientation svo
+for consistency  we refer to this construct as svo for the remainder of this paper
+within the svo framework it is assumed that people vary in their motivations or goals when evaluating different resource allocations between themselves and another person
+as examples  a dm may endeavor to maximize her own payoff individualistic  maximize competitive or minimize inequality averse the difference between her own and the other person's payoff  or maximize joint payoffs prosocial
+it is worth noting  however  that the assumption of narrow self-interest is itself a particular svo  namely a perfectly individualistic orientation
+moreover considering a spectrum of different svos is not a challenge to rational choice theory per se  but rather the extension of a postulate in an effort to increase the theory's psychological realism and descriptive accuracy
+svo has been found to affect cognitions and account for behavior across a range of interpersonal decision making contexts  specifically in the domain of negotiation settings  CITATION  and resource dilemmas  CITATION
+svo has also been identified as a covariate  interacting with different emotional states and influencing the propensity to cooperate  CITATION
+svos have even been identified in non-human primates  CITATION   indicating that some other species also show intrinsic preferences for prosocial behavior
+in order to use the full explanatory power of svo as a psychological construct  we need to measure it efficiently  reliably and validly
+several different measurement methods for quantifying variations in svo across individuals have been developed  CITATION
+although the use of existent measures has produced a wealth of findings even with categorical approaches  CITATION   these measures have substantial limitations
+for instance  some measures yield only low-resolution output that lack sensitivity to important individual differences  providing at best a nominal categorization  CITATION
+other measures are highly inefficient and often fail to produce consistent results for a substantial proportion of subjects  CITATION
+yet other methods require substantial time and effort from a research subject in order to produce a score  CITATION
+moreover  none of these existent measures are explicitly designed to detect more nuanced motivations like inequality aversion
+specifically  previous measures have not disentangled the orientation of joint gain maximization from the motivation to minimize the difference between outcomes
+although these two orientations are related in that they both indicate a deviation from individualism towards prosociality  they are substantially different motivations  which should be differentiated both theoretically and operationally
+furthermore  social value orientation is a continuous construct  as it corresponds to the quantity of how much a dm is willing to sacrifice in order to make another dm better off or perhaps worse off
+this quantification of interdependent utilities can be best represented on a continuous scale
+moreover  since the most commonly used svo measures to date produce only categorical data  a substantial amount of information related to peoples' social preferences is being discarded and ignored
+consequently  the full explanatory power of svo has not been used because of this unnecessary sacrifice of statistical power see cohen   NUMBER   for a discussion of the unfortunate practice of reducing continuous variables to categories
+in our view  a method for assessing svo should yield high resolution output which makes it sensitive to inter- and intra-individual differences and facilitate comparisons thereof  be easy to use  be efficient  be able to detect the most prevalent svo individual differences  allow for an evaluation of rank orders of social preferences  and yield meaningful results for virtually all subjects
+amongst these criteria  we consider the demand for a high resolution measure which produces data on a continuous scale as crucial
+we introduce here a new measure of svo  which takes this conceptualization into account and allows for greater explanatory potential of svo through increased statistical power while also meeting the aforementioned psychometric criteria
+this new method is referred to as the svo slider measure

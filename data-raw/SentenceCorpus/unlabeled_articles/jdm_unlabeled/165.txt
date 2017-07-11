@@ -1,0 +1,51 @@
+### abstract ###
+this research examines the relationship between positive and negative perceptions of pensions and motivation to engage in the decision process of choosing a private pension plan  as well as satisfaction from the chosen pension plan  among trained economists
+a sample of  NUMBER  economists completed a self-report survey examining the decision process of different decision contexts in life  including pension decisions
+overall  participants showed low motivation to engage in the process of choosing a private pension plan  compared to their motivation to engage in other decision tasks
+however  economists invested more in the decision process and showed greater satisfaction from their decision regarding their pension plan when they had a more positive perception of pensions
+this perception is represented by higher subjective likelihood of receiving pension allowances for a long period  and by a profitable view of the balance between current payments and expected incomes from pension saving
+### introduction ###
+studies have demonstrated that people show low motivation to engage in the process of choosing a pension plan as expressed by their minor involvement in the process  CITATION
+as a result  they tend to settle on a default choice  CITATION   show passivity and procrastination in decision-making  CITATION   and sometimes avoid making the decision  CITATION
+lusardi  CITATION  has found that most people have given very little thought to retirement even when they are just a few years away from leaving the workforce
+benartzi and thaler  CITATION  reviewed empirical works on lay people's heuristics and biases in their savings for retirement decisions
+they show that lay people are slow to join advantageous plans  make infrequent changes  and adopt naive diversification strategies when establishing their portfolio
+in addition  they rely on non-experts' advice spouses and friends and tend to be influenced by framing manipulations
+nowadays  people are living longer than ever  and retirement is becoming more and more expensive as the cost of living especially medical care and prescription drugs continues to increase
+planners are more likely to experience a satisfying retirement because they have greater financial resources to rely on after they stop working  CITATION
+therefore  it is important to understand the lack of motivation to engage in the process of choosing a pension plan as well as to find ways to increase involvement and motivation
+one of the reasons for lay people's low involvement might be that most people simply do not have the knowledge and the capacity to interpret the information presented to them by employers and governments regarding private pension plans
+they do not know how to appropriately evaluate and balance these choices  and make a decision based on weighing of the alternatives
+when given a default option such as knowing the pension plan most people choose  or suggested by the employees' committee  lay people may use it to make a quick decision and put the issue aside even when this pension plan may not be the best for them personally
+when people are confronted with a large number of options  the more options they are given  the less likely they are to be engaged in the choice task  CITATION   especially when the alternatives are seen as relatively similar and they are not able to understand the variations among them
+lack of relevant knowledge and understanding may be a major reason for peoples' low involvement in pension decision processes  CITATION
+on the other hand  if lack of knowledge is the main reason for people's low interest  we would expect experts  such as well-educated economists who do have the knowledge  the resources  and the understanding  to behave differently by showing real efforts to make the best decision regarding their future incomes
+in spite of the above assumption  behavioral decision research suggests that even with the required knowledge people might not act according to rational models by systematically examining the different options and their relevant attributes  CITATION
+experts  like lay people  are also prone to simplifying heuristics and biases  CITATION
+moreover  when a choice task is complex  includes many objects  and when the objects are relatively similar in some of their attributes  the tendency to use intuitive simplifying strategies increases
+besides simplifying heuristics  emotional reactions towards the task might also affect decisions of both experts and lay people
+specifically  perception and feelings towards pension as a concept may affect the decision maker's attitude toward the task
+the affect as information hypothesis  CITATION  suggests that judgments are affected by the positive and negative feelings towards the decision target other people  places  objects  as well as words  memories  etc
+
+positive or negative emotions toward the decision task might directly affect the decision process
+negative emotions towards pension and retirement might be a result of unpleasant thoughts and negative images of the future raised at the time of pension decisions  such as financial dependence  ill health  death  aging  or disabilities  CITATION
+such thoughts may be psychologically threatening and anxiety provoking  causing  retirement anxiety   CITATION   which may not be restricted to older adults
+interestingly  hayslip et al have found that younger adults showed even greater anxiety about retirement than older adults
+indeed  the results of neukam and hershey  CITATION  suggest that lay people who experience retirement anxiety are less likely to plan and save for the future
+in addition  since people see their pension expenses in their pay slips every month  and the incomes are expected only in the distant future  they might perceive their contributions as greater than discounted future income streams
+benartzi and thaler  CITATION  suggest that people may experience  myopic loss aversion  in their saving for retirement decisions by being hypersensitive to short-term losses
+such negative perceptions may decrease people's motivation to invest in the decision  increasing heuristics and biases in the decision process
+some people may believe that they would not enjoy their pension for many years  and therefore might perceive a pension as an expense with only little gain
+optimistic people  with the same objective life expectancy  who believe that they will receive their pension payments for a longer period of time  are expected to have a more positive attitude towards their pension
+their thoughts about their future as well as their pension fund evaluation are expected to be more positive  as living longer means receiving more money from pension plans
+these positive views held by more optimistic people may enhance the motivation to engage in the decision process  which may produce better satisfaction from the chosen pension plan
+in summary  positive and negative perceptions of pension as a concept are likely to guide emotional reactions toward the decision task at the time of the decision and therefore are expected to influence the motivation to invest in the decision process
+low motivation to invest in the decision process may lead to insufficient search for information  set on a default option  or other shortcuts that may lead to a decision that departs from the decision maker's best interest
+we suggest two main factors that may shape these subjective perceptions of pensions  first  optimistic and pessimistic subjective views of the likelihood to receive pension payments for at least  NUMBER  years
+pension decisions may be fundamentally different for people who believe that saving today will allow them to secure their standard of living in the future  as opposed to people with pessimistic perceptions that have the same expected longevity
+people who perceive the likelihood of enjoying their pension for many years as higher are expected to care more about not having adequate financial means in their old age  since the possibility to experience that need is more concrete and real for them
+therefore  optimistic people are more likely to make efforts and show greater motivation to invest in their pension decision
+we note that the use of the terms optimism and pessimism all through the paper refers to the subjective evaluation of the likelihood to receive pension payments for at least  NUMBER  years  rather than as a general personality trait
+second  perceptions of the balance between gains and losses in pension payments  this balance might represent a positive perception of pensions when people believe that future discounted benefits would be greater than the current and discounted future contributions  and a negative perception if the reverse
+we hypothesize that motivation to invest in pension decisions would be greater for people who have a positive view of pensions and retirement caused by one or both of the above factors
+these people are expected to be more involved in the decision process  examining a larger number of alternatives before choosing a pension plan and searching for more information about the chosen plan

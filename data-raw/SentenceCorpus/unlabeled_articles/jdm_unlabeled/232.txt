@@ -1,0 +1,53 @@
+### abstract ###
+three studies presented scenarios to lay people to investigate their willingness to restrict imports
+greater restriction was preferred when similar goods were made at home  when the owners of the foreign businesses made very good profits  and  less consistently  when the goods came from a low wage country
+particular reluctance to import from a low-wage country did not vary with whether a home firm was likely to lose business or the level of understanding of comparative advantage  but was related to the profits made by foreign business owners
+the results show that lay people views are based on concern for people in other countries as well as in their own
+### introduction ###
+do people have a particular reluctance to their country importing goods from low-wage countries
+if so  what might be the basis for this reluctance
+both these questions have been raised within the field of international economics  CITATION   but have not to my knowledge been the subject of empirical investigation
+this paper investigates them
+to set the issue in context  it is worth first noting that lay people generally are not convinced of the benefits of free international trade  and recent survey results indicate that a majority of people in many western countries would prefer to see more rather than fewer restrictions on imports than exist at present  CITATION
+in this respect  the general public is at odds with the economics profession  samples of which have produced substantial majorities in favour of freeing up trade  CITATION
+the difference in views may well go back to the nineteenth century  and there have been several suggestions as to why the difference might arise  CITATION
+the focus of the present paper is narrower  do people in developed countries particularly dislike importing goods from countries with low wages and low labour costs
+and if so  why
+before reviewing some reasons why people might not want to import from low-wage countries  it is worthwhile to note that there at least two reasons for expecting precisely the opposite result
+firstly  and most obviously  goods from such countries are likely to be cheaper
+taking a strictly selfish perspective  the vast majority of people benefit from being able to buy  for example  shirts  dairy products  or cars that are cheaper but of comparable quality to those made in one's own country
+secondly  taking a more utilitarian perspective  poorly paid workers in a foreign country could be seen as more in need of one's custom than higher-paid workers at home or in a rich foreign country
+on the other hand  there are several possible reasons why people might oppose importing from low-wage countries
+three of these reasons are investigated here  that people fear the business and job losses that result from local higher wage workers having to compete with low wage workers  that the dislike stems from failure to understand ricardo's principle of comparative advantage  and that people fear that low-paid foreign workers are being exploited
+these three reasons were investigated because they are related to three  misconceptions about comparative advantage  discussed by krugman and obstfeld  CITATION
+a fourth reason  that people believe that goods imported from low-wage countries might be of lower quality  was not investigated  but instead the effects of such a belief were controlled for in the studies that follow
+perhaps the most obvious reason to resist importing from foreign low-wage countries is the fear that one's compatriots - or perhaps even oneself - might lose their businesses or livelihoods as a result of this competition
+this is by no means an unreasonable fear
+although one can debate precisely how much unemployment arises from this cause rather than from technological advance  there is no doubt that people can lose their jobs or their businesses
+it is also well-known that such losses can be enduring and have serious consequences for people's well-being  CITATION
+moreover  there is already good empirical evidence that people's opposition to importing goods increases if similar goods are available from producers in one's own country or if the consequences for employment at home are pointed out  although this previous research has not investigated the effect of the wage levels in the country supplying the imports  CITATION
+it is important to note that this opposition arises not only from those whose livelihoods or businesses are personally affected  but also from others who are concerned for the welfare of producers and workers in their own country
+such concern could be considered as altruism for one's compatriots or as parochialism  and connects to a body of previous research investigating situations in which individuals may act in the interests of an in-group but not in their own interests or those of a wider out-group  CITATION
+nonetheless  although previous work leads us to expect opposition to imports that compete with home businesses  it is not clear that it should particularly matter if the imports originate in a low-wage country rather than one that pays higher wages but can still produce the goods more cheaply
+one of the most important economic arguments that greater welfare results from freer trade derives from ricardo's  CITATION  principle of comparative advantage
+very briefly  the principle suggests that where goods should be most efficiently produced depends on the ratio of the costs of production comparative advantage rather than on the absolute costs absolute advantage
+a corollary is that a country need not be the most efficient producer of any commodity in order to benefit from trade
+krugman  CITATION  points out that some people might be generally hostile to trade because they misunderstand economic arguments for it  such as ricardo's principle of comparative advantage
+ricardo's principle is neither trivial nor obvious  CITATION   and baron and kemp  CITATION  found both that the principle was poorly understood by lay people  and that people with a lower understanding of it tended to be more protectionist in outlook
+krugman and obstfeld  CITATION  suggest that a common myth -  free trade is beneficial only if your country is strong enough to stand up to competition  - arises because of this misunderstanding
+the authors go on to point out that the principle is important because a country which does not have an absolute advantage in producing a good over some other country might still have a comparative advantage
+this comes about because the country's overall lower productivity is then reflected in lower wages  enabling it to sell the good for a lower cost in the other country
+however  because the lower cost is linked to the lower wages  importing such goods might be seen as unfair by people in the other country
+finally  it is possible that people might oppose imports from countries with low labour costs because they believe that workers in these countries are exploited by profiteering business owners who pay low wages  CITATION
+in this case  the opposition would arise from altruistic motives on behalf of the foreign workers
+of course  whether or not the exploited foreign workers really benefit from such altruistic protectionism is debateable
+as krugman and obstfeld  CITATION  point out   what is the alternative
+ three scenario studies investigating these issues are reported below
+the first two studies feature research designs in which three different components or factors in the scenarios are systematically varied
+the three factors are  whether the goods under consideration for importation come from a low or high wage country  whether similar goods are already made at home and home businesses might suffer from the competition  and the level of profit made by the owners of the foreign businesses
+after reading each scenario  respondents are asked for their preferences about restricting the imports
+it is obviously interesting to know whether the restriction preference varies with the other country's wages  but interactive effects are also important for evaluating why such a preference might arise
+if there is a particularly strong preference for restricting imports when similar goods are made at home and the imported goods come from a low-wage country  this is a strong indication that the resistance to importing from a low-wage country is related to fear of competition and unemployment at home
+similarly  if people want to restrict imports from a low-wage country because they fear exploitation  we would expect resistance to importing from a country where the business owners make very large profits to be stronger when the imports come from a low-wage country
+study  NUMBER  used a somewhat different method to examine the relationship between people's restriction preference and a test of their understanding of the principle of comparative advantage  CITATION
+the first and third studies employed small samples from new zealand  the second a small sample from eastern germany

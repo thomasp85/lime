@@ -1,0 +1,21 @@
+### abstract ###
+The problem of joint universal source coding and modeling, addressed by Rissanen in the context of lossless codes, is generalized to fixed-rate lossy coding of continuous-alphabet memoryless sources
+We show that, for bounded distortion measures, any compactly parametrized family of  iid 
+real vector sources with absolutely continuous marginals (satisfying appropriate smoothness and Vapnik--Chervonenkis learnability conditions) admits a joint scheme for universal lossy block coding and parameter estimation, and give nonasymptotic estimates of convergence rates for distortion redundancies and variational distances between the active source and the estimated source
+We also present explicit examples of parametric sources admitting such joint universal compression and modeling schemes
+### introduction ###
+In universal data compression, a single code achieves asymptotically optimal performance on all sources within a given family
+Intuition suggests that a good universal coder should acquire an accurate model of the source statistics from a sufficiently long data sequence and incorporate this knowledge in its operation
+For lossless codes, this intuition has been made rigorous by Rissanen  CITATION
+Under his scheme, the data are encoded in a  two-stage  set-up, in which the binary representation of each source block consists of two parts: (1) a suitably quantized maximum-likelihood estimate of the source parameters, and (2) lossless encoding of the data matched to the acquired model; the redundancy of the resulting code converges to zero as  SYMBOL , where  SYMBOL  is the block length
+In this paper, we extend Rissanen's idea to  lossy  block coding (vector quantization) of  iid 
+sources with values in  SYMBOL  for some finite  SYMBOL
+Specifically, let  SYMBOL  be an  iid 
+source with the marginal distribution of  SYMBOL  belonging to some indexed class  SYMBOL  of absolutely continuous distributions on  SYMBOL , where  SYMBOL  is a bounded subset of  SYMBOL  for some  SYMBOL
+For bounded distortion measures, our main result, Theorem~, states that if the class  SYMBOL  satisfies certain smoothness and learnability conditions, then there exists a sequence of finite-memory lossy block codes that achieves asymptotically optimal compression of each source in the class and permits asymptotically exact identification of the active source with respect to the  variational distance , defined as  SYMBOL , where the supremum is over all Borel subsets of  SYMBOL
+The overhead rate and the distortion redundancy of the scheme converge to zero as  SYMBOL  and  SYMBOL , respectively, where  SYMBOL  is the block length, while the active source can be identified up to a variational ball of radius  SYMBOL  eventually almost surely
+We also describe an extension of our scheme to unbounded distortion measures satisfying a certain moment condition, and present two examples of parametric families satisfying the regularity conditions of Theorem~
+While most existing schemes for universal lossy coding rely on  implicit  identification of the active source (e g , through topological covering arguments  CITATION , Glivenko--Cantelli uniform laws of large numbers  CITATION , or nearest-neighbor code clustering  CITATION ), our code builds an  explicit model  of the mechanism responsible for generating the data and then selects an appropriate code for the data on the basis of the model
+This ability to simultaneously model and compress the data may prove useful in such applications as  media forensics   CITATION , where the parameter  SYMBOL  could represent evidence of tampering, and the aim is to compress the data in such a way that the evidence can be later extracted with high fidelity from the compressed version
+Another key feature of our approach is the use of Vapnik--Chervonenkis theory  CITATION  in order to connect universal encodability of a class of sources to the combinatorial ``richness" of a certain collection of decision regions associated with the sources
+In a way, Vapnik--Chervonenkis estimates can be thought of as an (imperfect) analogue of the combinatorial method of types for finite alphabets  CITATION

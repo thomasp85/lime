@@ -1,0 +1,80 @@
+### abstract ###
+{ We consider a general class of regularization methods which learn a vector of parameters on the basis of linear measurements
+It is well known that if the regularizer is a nondecreasing function of the inner product then the learned vector is a linear combination of the input data
+This result, known as the  representer theorem , is at the basis of kernel-based methods in machine learning
+In this paper, we prove the necessity of the above condition, thereby completing the characterization of kernel methods based on regularization
+We further extend our analysis to regularization methods which learn a matrix, a problem which is motivated by the application to multi-task learning
+In this context, we study a more general representer theorem, which holds for a larger class of regularizers
+We provide a necessary and sufficient condition for these class of matrix regularizers and highlight them with some concrete examples of practical importance
+Our analysis uses basic principles from matrix theory, especially the useful notion of matrix nondecreasing function }
+### introduction ###
+Regularization in Hilbert spaces is an important methodology for learning from examples and has a long history in a variety of fields
+It has been studied, from different perspectives, in statistics  CITATION , in optimal estimation  CITATION  and recently has been a focus of attention in machine learning theory -- see, for example,  CITATION  and references therein
+Regularization is formulated as an  optimization problem  involving an  error term  and a  regularizer
+The regularizer plays an important role, in that it favors solutions with certain desirable properties
+It has long been observed that certain regularizers exhibit an appealing property, called the  representer theorem , which states that there exists a solution of the regularization problem that is a linear combination of the data  CITATION
+This property has important computational implications in the context of regularization with positive semidefinite  kernels , because it makes high or infinite-dimensional problems of this type into finite dimensional problems of the size of the number of available data  CITATION
+The topic of interest in this paper will be to determine the conditions under which representer theorems hold
+In the first half of the paper, we describe a property which a regularizer should satisfy in order to give rise to a representer theorem
+It turns out that this property has a simple geometric interpretation and that the regularizer can be equivalently expressed as a  nondecreasing  function of the Hilbert space norm
+Thus, we show that this condition, which has already been known to be sufficient for representer theorems, is also  necessary
+In the second half of the paper, we depart from the context of Hilbert spaces and focus on a class of problems in which a  matrix structure  plays an important role
+For such problems, which have recently appeared in several machine learning applications, we show a modified version of the representer theorem that holds for a class of regularizers significantly larger than in the former context
+As we shall see, these matrix regularizers are important in the context of multi-task learning: the matrix columns are the parameters of different regression tasks and the regularizer encourages certain dependences across the tasks
+In general, we consider problems in the framework of  Tikhonov regularization   CITATION
+This regularization approach receives a set of input/output data  SYMBOL   SYMBOL  and selects a vector in  SYMBOL  as the solution of an optimization problem
+Here,  SYMBOL  is a prescribed Hilbert space equipped with the inner product  SYMBOL  and  SYMBOL  a set of possible output values
+The optimization problems encountered in regularization are of the type \min\left\{ \bigl( \left( w,x_1\rb,\dots,w,x_m \right) , \left( y_1, \dots, y_m \right) \bigr) + \, \Omega(w): w \right\} \,,   where  SYMBOL  is a regularization parameter
+The function  SYMBOL  is called an  error function  and  SYMBOL  is called a  regularizer
+The error function measures the error on the data
+Typically, it decomposes as a sum of univariate functions
+For example, in regression, a common choice would be the sum of square errors,  SYMBOL
+The function  SYMBOL , called the regularizer, favors certain regularity properties of the vector  SYMBOL  (such as a small norm) and can be chosen based on available prior information about the target vector
+In some Hilbert spaces such as Sobolev spaces the regularizer is measure of smoothness: the smaller the norm the smoother the function
+This framework includes several well-studied learning algorithms, such as ridge regression  CITATION , support vector machines  CITATION , and many more -- see  CITATION  and references therein
+An important aspect of the practical success of this approach is the observation that, for certain choices of the regularizer, solving \eqref{eq:reg_intro} reduces to identifying  SYMBOL  parameters and not  SYMBOL
+Specifically, when the regularizer is the square of the Hilbert space norm, the representer theorem holds: there exists a solution  SYMBOL  of \eqref{eq:reg_intro} which is a linear combination of the input vectors,  {w} = \sum_{i=1}^m c_i x_i,   where  SYMBOL  are some real coefficients
+This result is simple to prove and dates at least from the 1970's, see, for example,  CITATION
+It is also known that it extends to any regularizer that is a  nondecreasing  function of the norm  CITATION
+Several other variants and results about the representation form \eqref{eq:RT} have also appeared in recent years  CITATION
+Moreover, the representer theorem has been important in machine learning, particularly within the context of learning in reproducing kernel Hilbert spaces  CITATION  -- see  CITATION  and references therein
+Our first objective in this paper is to derive necessary and sufficient conditions for representer theorems to hold
+Even though one is mainly interested in regularization problems, it is more convenient to study  interpolation  problems, that is, problems of the form  \min\left\{ \Omega(w): w , w,x_i= y_i,~i=1,\dots,m \right\} \,
+Thus, we begin this paper (Section ) by showing how representer theorems for interpolation and regularization relate
+On one side, a representer theorem for interpolation easily implies such a theorem for regularization with the same regularizer and any error function
+Therefore,  all representer theorems obtained in this paper apply equally to interpolation and regularization
+On the other side, though, the converse implication is true under certain weak qualifications on the error function
+Having addressed this issue, we concentrate in Section  on proving that an interpolation  problem \eqref{eq:int_intro} admits solutions representable in the form \eqref{eq:RT}  if and only if  the regularizer is  a nondecreasing function of the Hilbert space norm
+That is, we provide a complete characterization of regularizers that give rise to representer theorems, which had been an open question
+Furthermore, we discuss how our proof is motivated by a geometric understanding of the representer theorem, which is equivalently expressed as a monotonicity property of the regularizer
+Our second objective is to formulate and study the novel question of representer theorems for  matrix problems
+To make our discussion concrete, let us consider the problem of learning  SYMBOL  linear regression vectors, represented by the parameters  SYMBOL , respectively
+Each vector can be thought of as a ``task'' and the goal is to  jointly  learn these  SYMBOL  tasks
+In such problems, there is usually prior knowledge that  relates  these tasks and it is often the case that learning can improve if this knowledge is appropriately taken into account
+Consequently, a good regularizer should favor such task relations and involve  all tasks jointly
+In the case of interpolation, this learning framework can be formulated concisely as  SYMBOL } where  SYMBOL  denotes the set of  SYMBOL  real matrices and the column vectors  SYMBOL  form the matrix  SYMBOL
+Each task   SYMBOL  has its own input data  SYMBOL  and corresponding  output values  SYMBOL
+An important feature of such problems that distinguishes them from the type \eqref{eq:int_intro} is the appearance of  matrix products  in the constraints, unlike the inner products in \eqref{eq:int_intro}
+In fact, as we will discuss in Section  , problems of the type \eqref{eq:matrix_intro} can be written in the form \eqref{eq:int_intro}
+Consequently, the representer theorem applies if the matrix regularizer is a nondecreasing function of the Frobenius norm
+However, the optimal vector  SYMBOL  for each task can be represented as a linear combination of  only those input vectors corresponding to this particular task
+Moreover, with such regularizers it is easy to see that each task in \eqref{eq:matrix_intro} can be optimized independently
+Hence, these regularizers are of no practical interest if the tasks are expected to be related
+This observation leads us to formulate a  modified representer theorem , which is appropriate for matrix problems, namely,  where  SYMBOL  are scalar coefficients, for  SYMBOL
+In other words, we now allow for  all input vectors  to be present in the linear combination representing each column of the optimal matrix
+As a result, this definition greatly expands the class  of regularizers that give rise to representer theorems
+Moreover, this framework can be applied to many applications where matrix optimization problems are involved
+Our immediate motivation, however,  has been more specific than that, namely  multi-task learning
+Learning multiple tasks jointly has been a growing area of interest in machine learning, especially during the past few years  CITATION
+For instance, some of these works use regularizers which involve the  trace norm  of matrix  SYMBOL
+The general idea behind this methodology is that a small trace norm favors low-rank matrices
+This means that the tasks (the columns of  SYMBOL ) are related in that they all lie in a low-dimensional subspace of  SYMBOL
+In the case of the trace norm, the representer theorem \eqref{eq:rep_matrix_intro} is known to hold -- see  CITATION , also discussed in Section
+It is natural, therefore, to ask a question similar to that in the standard Hilbert space (or single-task) setting
+That is, under which conditions on the regularizer a representer theorem holds
+In Section , we provide an answer by  proving a necessary and sufficient condition for representer theorems to hold, expressed as a simple monotonicity property
+This property is analogous to the one in the Hilbert space setting, but its geometric interpretation is now algebraic in nature
+We also give a functional description equivalent to this property, that is,  we show that the regularizers of interest are the matrix nondecreasing functions of the quantity  SYMBOL
+Our results cover matrix problems of the type \eqref{eq:matrix_intro} which have already been studied in the literature
+But they also point towards some new learning methods that may perform well in practice and can now be made computationally efficient
+Thus, we close the paper with a discussion of possible regularizers that satisfy our conditions and have been used or can be used in the future in machine learning problems

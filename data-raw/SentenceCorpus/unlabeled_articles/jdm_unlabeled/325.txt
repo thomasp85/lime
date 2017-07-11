@@ -1,0 +1,26 @@
+### abstract ###
+the aim of this article is to evaluate the contribution of process tracing data to the development and testing of models of judgment and decision making jdm
+we draw on our experience of editing the  handbook of process tracing methods for decision research  recently published in the sjdm series
+after a brief introduction we first describe classic process tracing methods thinking aloud  mouselab  eye-tracking
+then we present a series of examples of how each of these techniques has made important contributions to the development and testing of process models of jdm
+we discuss the issue of large data volumes resulting from process tracing and remedies for handling those
+finally  we argue for the importance of formulating process hypotheses and opt for a multi-method approach that focuses on the cross-validation of findings
+### introduction ###
+theories of judgment and decision making jdm can be classified into two general types  formal  or as-if  models  which specify relationships between input task and context parameters and output jdm behavior  and process models  which in addition seek to model explanatory psychological mechanisms underlying such input-output relationships
+within the formal modelling tradition theories are evaluated via analysis of their predictions concerning outcome judgments and decisions  and subsequent rigorous experimental tests of such predictions
+alternative models are evaluated in terms of the testable predictions that distinguish them  CITATION
+process models  on the other hand  can be tested and evaluated in terms of both jdm behavior and process tracing methods  which elicit and analyze observations of a range of verbal and nonverbal antecedents and concomitants of judgments and decisions
+imagine you conduct a risky decision making experiment in which you observe choices and collect verbal protocols
+you find that the choices conform to  say  prospect theory  CITATION   but the verbal protocol has only infrequent uses of what you coded as evidence for prospect theory e g   reference point setting  coding as gains or losses  probability
+what would you conclude  that decision making conforms to prospect theory according to the choices  or that it fails to do so according to the verbal protocols
+we surmise that the protocols would be seen as a subordinate  a supplementary source of data in this case
+they would tend to be dismissed  if inconsistent with the choice output
+in other words  we would hardly be likely to reject prospect theory on the basis of verbal protocols  or any other process data
+process data somehow seem to be a subordinate source of evidence
+for models that aim at predicting outcomes as-if-models this is appropriate  but not for models that aim to explain both outcome and process process models
+the priority of output data is based on a natural sequence of testing dependent variables  predicting choice data is a first criterion for any model  be it a process model or an as-if-model
+but beyond this first step there is no reason to prefer outcome over process
+rather  for process models process data should be equally important  because they are richer than input-output data and can provide important evidence of explanatory mechanisms  CITATION
+an instructive example is the work of glockner and herbold  CITATION   who show that  although prospect theory is certainly a good as-if-model  its process assumptions have to be rejected in favor of alternative models
+in this paper we describe methods devised in the field of judgment and decision making jdm to enable the recording of traces of underlying processes and cognitive representations
+we will describe these methods on three dimensions  their theoretical contribution  their core methodology and their key results

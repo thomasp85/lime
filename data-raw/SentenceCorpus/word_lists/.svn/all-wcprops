@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/datalab/GradSchool/!svn/ver/2273/text_datasets/multicorpora/arxiv_plos_jdm/train/word_lists
+END
+cont_N15.txt
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/datalab/GradSchool/!svn/ver/2273/text_datasets/multicorpora/arxiv_plos_jdm/train/word_lists/cont_N15.txt
+END
+own_N15.txt
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/datalab/GradSchool/!svn/ver/2273/text_datasets/multicorpora/arxiv_plos_jdm/train/word_lists/own_N15.txt
+END
+aim_N15.txt
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/datalab/GradSchool/!svn/ver/2273/text_datasets/multicorpora/arxiv_plos_jdm/train/word_lists/aim_N15.txt
+END
+base_N15.txt
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/datalab/GradSchool/!svn/ver/2273/text_datasets/multicorpora/arxiv_plos_jdm/train/word_lists/base_N15.txt
+END

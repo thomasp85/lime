@@ -1,0 +1,16 @@
+### abstract ###
+The problem of classifying sonar signals from rocks and mines first studied by Gorman and Sejnowski has become a benchmark against which many learning algorithms have been tested
+We discovered that both the training set and the test set of this benchmark are linearly separable, although with different hyperplanes
+Moreover, the complete set of learning and test patterns together, is also linearly separable
+We give the weights that separate these sets, which may be used to compare results found by other algorithms
+### introduction ###
+It has become a current practice to test the performance of learning algorithms on \textsl{realistic} benchmark problems
+The underlying difficulty of such tests is that in general these problems are not well caracterized, making it thus impossible to decide whether a better solution that the one already found exists
+The Sonar signals classification benchmark, introduced by Gorman et al CITATION  is widely used to test machine learning algorithms
+In this problem the classifier has to discriminate if a given sonar return was produced by a metal cylinder or by a cylindrically shaped rock in the same environment
+The benchmark contains 208 preprocessed sonar spectra, defined by  SYMBOL  real values, with their corresponding class
+Among these,  SYMBOL  patterns are usually used to determine the classifier parameters through a procedure called learning
+Then, the classifier is used to class the  SYMBOL  remaining patterns and the fraction of misclassified patterns is used to estimate the generalization error produced by the learning algorithm
+We applied Monoplane, a neural incremental learning algorithm, to this benchmark
+In this algorithm, the hidden units are included one after the other until the number of training errors vanishes
+Each hidden unit is a simple binary perceptron, trained with the learning algorithm Minimerror  CITATION

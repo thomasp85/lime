@@ -1,0 +1,28 @@
+### abstract ###
+previous research has identified important determinants of overall evaluations for experiences lived across time
+by means of a novel guessing task  i study what decision-makers themselves consider important
+as informants  some participants live and evaluate an experience
+as guessers  others have to infer its overall evaluation by asking informants questions
+i rewarded accurate inferences  and analyzed and classified the questions in four experiments involving auditory  gustatory and viewing experiences
+results show that guessers thought of overall evaluations as reflecting average momentary impressions
+moreover and alternatively  they tended to consider the personality and attitudes of the experiencing person  experience-specific holistic judgments and behavioral intentions regarding the experience
+thus  according to lay intuitions  overall evaluations are more than a reflection of the experience's momentary impressions
+### introduction ###
+people often report experiences by expressing a number on a scale
+someone might say    NUMBER  out of  NUMBER  for this concert   or  in terms of painfulness  i rate this medical procedure as  NUMBER  out of  NUMBER 
+   such overall evaluations of experiences have been shown to be important decision inputs  CITATION   and studied extensively
+kahneman  wakker  and sarin  CITATION  suggested that experiences can be represented as intensity profiles of pleasure or discomfort over bounded intervals of time  i e   time profiles of  experienced utility
+  experiments and field studies have shown that people evaluate more positively experiences with increasing  rather than decreasing time profiles at equivalent levels of total pleasure experienced  CITATION
+there is a preference for steeper rates of improvement  CITATION   as well as variability in experience  CITATION
+finally  the  peak-end rule  finding suggests that overall evaluations are best predicted by only two moments of the experience  the most pleasant unpleasant and final  CITATION
+kahneman  wakker and sarin  CITATION  present a set of assumptions about experiences explaining why integration summation of all moments would be correct from a normative point of view
+life satisfaction researchers and psychologists  on the other hand  explore alternative paradigms and study the role of personality and the beliefs of the evaluating person for overall evaluations  CITATION
+in contrast to previous research  the present work aims to reveal what decision makers themselves draw on as they think about overall evaluations of experiences
+i will compare lay intuitions to what researchers have considered
+this comparison may further enrich theories of overall evaluations  and suggest ways of testing them
+i employ a novel method  the guessing task  in order to elicit lay intuitions
+the philosophy of the method is that of active information search  a method of naturalistic decision-making that huber  wider  and huber  CITATION  proposed for the study of risky choice
+the method consists of giving participants a minimal description of a decision problem and allowing them to seek information
+i report experiments in which participants had to guess the overall evaluation of an experience lived by another person
+active information search was allowed prior to making the guess
+the information participants sought was taken to reveal lay intuitions about the target overall evaluation

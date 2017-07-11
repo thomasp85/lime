@@ -1,0 +1,23 @@
+### abstract ###
+affective forecasting with respect to two environmental risks ozone depletion  air pollution was investigated by studying tourists who travelled to either australia or bangkok and were thus confronted with one of these risks
+we measured anticipated outcome and anticipated emotions before the journey  actually experienced outcome and actually experienced emotions during the journey  and anticipated outcome and emotions concerning a future encounter with the same risk after the journey
+results indicate that tourists underestimate air pollution or correctly predict ozone depletion both the seriousness of the outcome and their emotional reactions
+the relationship between actual outcome and actual emotions is stronger than that between anticipated outcome and anticipated emotions
+furthermore  tourists learn from their travel experience and adjust their anticipations concerning future encounters with the environmental risk
+findings suggest that the domain of environmental risks differs from personal outcomes with respect to the process of affective forecasting
+### introduction ###
+over the course of the past decade  affect and emotions have evolved from neglected to 'hot' topics in the literature on human judgment and decision making  CITATION
+the present paper investigates emotions in one particular domain  namely  risk perception with respect to changes in the natural environment
+even though the general importance of emotions in environmental risk perception has been acknowledged by some authors  not much research has specifically addressed this issue  CITATION
+environmental risks differ in some important respects from personal risks or outcomes in that they are usually characterized by a more complex causal structure and low personal control  CITATION
+whereas personal risks are taken by the same person who experiences the consequences  various actors and victims may be involved in the case of environmental risks  because they are often brought about by the collective actions of many individuals and also affect numerous heterogeneous groups of people who may be distributed over wide-spread regions of the world  CITATION
+we focus upon the role of anticipated emotions in environmental risk perception and upon the relationship between anticipated and actually experienced emotions
+the anticipation of future emotions is often called affective forecasting  CITATION
+we address three questions with respect to affective forecasting in the domain of environmental risks  a can people accurately predict their emotional reactions to some future environmental damage
+that is  do anticipated emotions correspond to the emotions that are actually experienced when the future event takes place
+b what is the basis for anticipated and experienced emotional reactions to environmental risks
+that is  are they related to anticipated and experienced outcomes  respectively
+c do people adjust their anticipated emotions based on experience
+that is  if people anticipate their emotional reactions to some type of environmental damage and then experience their actual reactions to it  does this affect what emotional reactions they anticipate for future encounters with this type of environmental damage
+we investigated these questions by studying tourists who travelled to a destination where they would be confronted with severe environmental damage
+we chose two travel destinations and types of environmental damage  australia with ozone depletion and bangkok with air pollution

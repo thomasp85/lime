@@ -1,0 +1,26 @@
+### abstract ###
+Early identification of adverse effect of preclinical and commercial drugs is crucial in developing highly efficient therapeutics, since unexpected adverse drug effects account for one-third of all drug failures in drug development.
+To correlate protein drug interactions at the molecule level with their clinical outcomes at the organism level, we have developed an integrated approach to studying protein ligand interactions on a structural proteome-wide scale by combining protein functional site similarity search, small molecule screening, and protein ligand binding affinity profile analysis.
+By applying this methodology, we have elucidated a possible molecular mechanism for the previously observed, but molecularly uncharacterized, side effect of selective estrogen receptor modulators.
+The side effect involves the inhibition of the Sacroplasmic Reticulum Ca2 ion channel ATPase protein transmembrane domain.
+The prediction provides molecular insight into reducing the adverse effect of SERMs and is supported by clinical and in vitro observations.
+The strategy used in this case study is being applied to discover off-targets for other commercially available pharmaceuticals.
+The process can be included in a drug discovery pipeline in an effort to optimize drug leads and reduce unwanted side effects.
+### introduction ###
+Early identification of the adverse effects of preclinical and commercial drugs is crucial in developing highly efficient therapeutics, since unexpected adverse drug effects contribute to one-third of all drug failures in the late stage of drug development CITATION.
+Conventional practices for identifying off-targets rely on a counterscreen of compounds against a large number of enzymes and receptors in vitro CITATION CITATION.
+Computational approaches could not only save time and costs spent during in vitro screening by providing a candidate list of potential off-targets but also provide insight into understanding the molecular mechanisms of protein drug interactions.
+It has been shown that potential off-targets can be identified in silico by establishing the structure activity relationship of small molecules CITATION CITATION.
+However, the success of ligand-based methods strongly depends on the availability and coverage of the chemical structures used in training, and few of them directly take the target 3D structure into account.
+Although the assessment of protein ligand interactions by docking studies at the atomic level is extremely valuable for understanding the molecular mechanism of adverse therapeutic effects CITATION, CITATION, protein ligand docking on a large scale is hindered by the biased structural coverage of the human proteome CITATION and a lack of practical methodologies to accurately estimate the binding affinity CITATION.
+Here we approach the problem from a different direction by postulating that proteins with similar binding sites are likely to bind to similar ligands CITATION.
+In this study we test this postulate by predicting potential off-target binding sites for selective estrogen receptor modulators.
+Several commercial drugs targeting estrogen receptor alpha have been developed to treat breast cancers and other diseases CITATION.
+However, therapy from these drugs such as Tamoxifen is associated with undesirable side effects such as cardiac abnormalities CITATION, thromboembolic disorders CITATION, and ocular toxicity CITATION.
+To identify off-targets of these SERMs and to attempt to elucidate the molecular mechanisms explaining their adverse effects, we searched for similar ligand binding sites across fold and functional space using a template for the known SERM binding site in ER.
+The search used a robust and scalable functional site prediction and comparison algorithm developed recently in our laboratory 22; Xie and Bourne, submitted.
+Consequently, a similar inhibitor site is detected for Sacroplasmic Reticulum Ca2 ion channel ATPase protein.
+The prediction is further verified with detailed protein ligand docking and surface electrostatic potential analysis.
+Our prediction correlates well with clinical and biochemical observations, providing molecular insight into reducing the adverse effect of SERMs.
+The strategy used in this case study could be applied to discover off-targets for other commercially available pharmaceuticals and to repurpose existing drugs to treat different diseases Xie, Kinnings, and Bourne, in preparation.
+The process could also be included in a drug discovery and development pipeline in an effort to optimize drug leads and reduce unwanted side effects.

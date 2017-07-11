@@ -1,0 +1,72 @@
+### abstract ###
+The discovery of small molecules targeted to specific oncogenic pathways has revolutionized anti-cancer therapy.
+However, such therapy often fails due to the evolution of acquired resistance.
+One long-standing question in clinical cancer research is the identification of optimum therapeutic administration strategies so that the risk of resistance is minimized.
+In this paper, we investigate optimal drug dosing schedules to prevent, or at least delay, the emergence of resistance.
+We design and analyze a stochastic mathematical model describing the evolutionary dynamics of a tumor cell population during therapy.
+We consider drug resistance emerging due to a single genetic alteration and calculate the probability of resistance arising during specific dosing strategies.
+We then optimize treatment protocols such that the risk of resistance is minimal while considering drug toxicity and side effects as constraints.
+Our methodology can be used to identify optimum drug administration schedules to avoid resistance conferred by one genetic alteration for any cancer and treatment type.
+### introduction ###
+Alteration of the normal regulation of cell-cycle progression, division and death lies at the heart of the processes driving tumorigenesis.
+A detailed molecular understanding of these processes provides an opportunity to design targeted anti-cancer agents.
+The term targeted therapy refers to drugs with a focused mechanism that specifically act on well-defined protein targets or biological pathways that, when altered by therapy, impair the abnormal proliferation of cancer cells.
+Examples of this type of therapy include hormonal-based therapies in breast and prostate cancer; small-molecule inhibitors of the EGFR pathway in lung, breast, and colorectal cancers such as erlotinib, gefitinib, and cetuximab ; inhibitors of the JAK2, FLT3 and BCR-ABL tyrosine kinases in leukemias such as imatinib, dasatinib, and nilotinib ; blockers of invasion and metastasis; anti-angiogenesis agents like bevacizumab ; proapoptotic drugs; and proteasome inhibitors such as bortezomib CITATION, CITATION.
+The target-driven approach to drug development contrasts with the conventional, more empirical approach used to develop cytotoxic chemotherapeutics, and the successes of the past few years illustrate the power of this concept.
+The absence of prolonged clinical responses in many cases, however, stresses the importance of continued basic studies into the mechanisms of targeted drugs and their failure in the clinic.
+Acquired drug resistance is an important reason for the failure of targeted therapies.
+Resistance emerges due to drug metabolism, drug export, and alteration of the drug target by mutation, deletion, or overexpression.
+Depending on the cancer type and its stage, the therapy administered, and the genetic background of the patient, one or several genetic alterations may be necessary to confer drug resistance to cells.
+In this paper, we investigate drug resistance emerging due to a single alteration.
+For example, treatment of chronic myeloid leukemia with the targeted agent imatinib fails due to acquired point mutations in the BCR-ABL kinase domain CITATION.
+To date, ninety different point mutations have been identified, each of which is sufficient to confer resistance to imatinib CITATION.
+The second-generation BCR-ABL inhibitors, dasatinib and nilotinib, can circumvent most mutations that confer resistance to imatinib; the T315I mutation, however, causes resistance to all BCR-ABL kinase inhibitors developed so far.
+Similarly, the T790M point mutation in the epidermal growth factor receptor confers resistance to the EGFR tyrosine kinase inhibitors gefitinib and erlotinib CITATION, which are used to treat non-small cell lung cancer.
+Other mechanisms of resistance include gene amplification or overexpression of the P-glycoprotein family of membrane transporters which decreases intracellular drug accumulation, changes in cellular proteins involved in detoxification or activation of the drug, changes in molecules involved in DNA repair, activation of oncogenes such as Her-2/Neu, c-Myc, and Ras as well as inactivation of tumor suppressor genes like p53 CITATION CITATION .
+The design of optimal drug administration schedules to minimize the risk of resistance represents an important issue in clinical cancer research.
+Currently, many targeted drugs are administered continuously at sufficiently low doses so that no drug holidays are necessary to limit the side effects.
+Alternatively, the drug may be administered at higher doses in short pulses followed by rest periods to allow for recovery from toxicity.
+Clinical studies evaluating the advantages of different approaches have been ambivalent.
+Some investigations found that a low-dose continuous strategy is more effective CITATION, while others have advocated more concentrated dosages CITATION.
+The effectiveness of a low-dose continuous approach is often attributed to its targeted effect on tumor endothelial cells and the prevention of angiogenesis rather than low rates of resistance CITATION.
+The continuous dosing strategy is often implemented as combination therapy, sometimes including a second drug administered at a higher dose in a pulsed fashion.
+A significant amount of research effort has been devoted to developing mathematical models of tumor growth and response to chemotherapy.
+In a seminal paper, Norton and Simon proposed a model of kinetic resistance to cell-cycle specific therapy in which tumor growth followed a Gompertzian law CITATION.
+The authors used a differential equation model in which the rate of cell kill was proportional to the rate of growth for an unperturbed tumor of a given size.
+They suggested that one way of combating the slowing rate of tumor regression was to increase the intensity of treatment as the tumor became smaller, thus increasing the chance of cure.
+The authors also published a review of clinical trials employing dosing schedules related to their proposed dose-intensification strategy, and concluded that the concept of intensification was clinically feasible, and possibly efficacious CITATION.
+Later, predictions of an extension of this model were validated in a clinical trial evaluating the effects of a dose-dense strategy and a conventional regimen for chemotherapy CITATION.
+Their model and its predictions have become known as the Norton-Simon hypothesis and have generated substantial interest in mathematical modeling of chemotherapy and kinetic resistance.
+For example, Dibrov and colleagues formulated a kinetic cell-cycle model to describe cell synchronization by cycle phase-specific blockers CITATION ; this model was then used for optimizing treatment schedules to increase the degree of synchronization and thus the effectiveness of a cycle-specific drug.
+Agur introduced another model describing cell-cycle dynamics of tumor and host cells to investigate the effect of drug scheduling on responsiveness to chemotherapy CITATION ; this model was then used to optimize scheduling of chemotherapeutics to maximize efficacy while controlling host toxicity.
+Other theoretical studies include a mathematical model of tumor recurrence and metastasis during periodically pulsed chemotherapy CITATION, a control theoretic approach to optimal dosing strategies CITATION, and an evaluation of chemotherapeutic strategies in light of their anti-angiogenic effects CITATION.
+For a more comprehensive survey of kinetic models of tumor response to chemotherapy, we refer the reader to reviews CITATION CITATION and references therein.
+There have also been substantial research efforts devoted to developing mathematical models of genetic resistance, i.e. resistance driven by genetic alterations in cancer cells.
+Since mutations conferring resistance can arise as random events during the DNA replication phase of cell division, the dynamics of resistant populations are well-suited to description with stochastic mathematical models.
+Coldman and co-authors pioneered this field by introducing stochastic models of resistance against chemotherapy to guide treatment schedules.
+In 1986, Coldman and Goldie studied the emergence of resistance to one or two functionally equivalent chemotherapeutic drugs using a branching process model of tumor growth with a differentiation hierarchy CITATION.
+In this model, the birth and death rates of cells were time-independent constants and each sensitive cell division gave rise to a resistant cell with a certain probability.
+The effect of drug was modeled as an additional probabilistic cell kill law on the existing population, and the drug could be administered in a fixed dose at a series of fixed time points.
+The goal of the model was to schedule the sequential administration of both drugs in order to maximize the probability of cure.
+Later, the assumption of equivalence or symmetry between the two drugs was relaxed CITATION.
+These models were also extended to include the toxic effects of chemotherapy on normal tissue, and an optimal control problem was formulated to maximize the probability of tumor cure without toxicity CITATION.
+More recently, Iwasa and colleagues used a multi-type birth-death process model to study the probability of resistance emerging due to one or multiple mutations in populations under selection pressure CITATION.
+The authors considered pre-existing resistance mutations and determined the optimum intervention strategy utilizing multiple drugs.
+Multi-drug resistance was also investigated using a multi-type birth-death process model in work by Komarova and Wodarz CITATION, CITATION.
+In their models, the resistance to each drug was conferred by genetic alterations within a mutational network.
+The birth and death rates of each cell type were time-independent constants and cells had an additional drug-induced death rate if they were sensitive to one or more of the drugs.
+The authors studied the evolution of resistant cells both before and after the start of treatment, and calculated the probability of treatment success under continuous treatment scenarios with a variable number of drugs.
+Recently, the dynamics of resistance emerging due to one or two genetic alterations in a clonally expanding population of sensitive cells prior to the start of therapy were studied using a time-homogenous multi-type birth-death process CITATION, CITATION .
+One common feature of these models of genetic resistance is that the treatment effect is formulated as an additional probabilistic cell death rate on sensitive cells, separate from the underlying birth and death process model with constant birth and death rates.
+Under these model assumptions, the drug cannot alter the proliferation rate of either sensitive or resistant cells; however, a main effect of many targeted therapies is the inhibition of proliferation of cancer cells.
+Inhibited proliferation in turn leads to a reduced probability of resistance since resistant cells are generated during sensitive cell divisions.
+In this paper, we utilize a non-homogenous multi-type birth-death process model wherein the birth and death rates of both sensitive and resistant cells are dependent on a temporally varying drug concentration profile.
+This study represents a significant departure from existing models of resistance since we incorporate the effect of inhibition of sensitive cell proliferation as well as drug-induced death, obtaining a more accurate description of the evolutionary dynamics of the system.
+In addition, we generalize our model to incorporate partial resistance, so that the drug may also have an effect on the birth and death rates of resistant cells.
+The goals of our analysis also differ from those of previous work.
+Coldman and Murray were interested in finding the optimal administration strategy for multiple chemotherapeutic drugs in combination or sequential administration CITATION ; they aimed to maximize the probability of cure while limiting toxicity.
+Komarova was interested in studying the effect of multiple drugs administered continuously on the probability of eventual cure CITATION.
+In contrast, in this paper we derive estimates for the expected size of the resistant cell population as well as the probability of resistance during a full spectrum of continuous and pulsed treatment schedules with one targeted drug.
+We then propose a methodology for selecting the optimal strategy from this spectrum to minimize the probability of resistance as well as to maximally delay the progression of disease by controlling the expected size of the resistant population, while incorporating toxicity constraints.
+In many clinical scenarios, the probability of resistance is high regardless of dosing strategy, and thus the maximal delay of disease progression is a more realistic objective than tumor cure.
+The methodology developed in this paper can be applied to study acquired resistance in any cancer and treatment type.

@@ -1,0 +1,46 @@
+### abstract ###
+The threshold firing frequency of a neuron is a characterizing feature of its dynamical behaviour, in turn determining its role in the oscillatory activity of the brain.
+Two main types of dynamics have been identified in brain neurons.
+Type 1 dynamics shows a continuous relationship between frequency and stimulation current and, thus, an arbitrarily low frequency at threshold current; Type 2 shows a discontinuous f-I stim relationship and a minimum threshold frequency.
+In a previous study of a hippocampal neuron model, we demonstrated that its dynamics could be of both Type 1 and Type 2, depending on ion channel density.
+In the present study we analyse the effect of varying channel density on threshold firing frequency on two well-studied axon membranes, namely the frog myelinated axon and the squid giant axon.
+Moreover, we analyse the hippocampal neuron model in more detail.
+The models are all based on voltage-clamp studies, thus comprising experimentally measurable parameters.
+The choice of analysing effects of channel density modifications is due to their physiological and pharmacological relevance.
+We show, using bifurcation analysis, that both axon models display exclusively Type 2 dynamics, independently of ion channel density.
+Nevertheless, both models have a region in the channel-density plane characterized by an N-shaped steady-state current-voltage relationship.
+In summary, our results suggest that the hippocampal soma and the two axon membranes represent two distinct kinds of membranes; membranes with a channel-density dependent switching between Type 1 and 2 dynamics, and membranes with a channel-density independent dynamics.
+The difference between the two membrane types suggests functional differences, compatible with a more flexible role of the soma membrane than that of the axon membrane.
+### introduction ###
+It is now more than 60 years since Alan Hodgkin categorized the firing behaviour in his classical study of isolated axons from the crab Carcinus maenas CITATION.
+In many respects his experiments still form the basis for analysis of firing patterns in nervous systems.
+Using threshold dynamics and maximum frequency as parameters, he identified two major classes of repetitively firing axons : Class 1 axons start firing with very low frequency at threshold stimulation, yielding a continuous f-I stim relationship, whereas Class 2 axons start firing abruptly with a relatively high frequency at threshold, yielding a discontinuous f-I stim relationship.
+On the basis of a similar categorization mammalian cortical neurons have also been separated into main classes CITATION, CITATION, one exhibiting Class 1 characteristics and another Class 2 characteristics.
+The former class consists primarily of pyramidal neurons and the latter primarily of interneurons.
+This differential classification of excitability has been shown to correlate with a differential bifurcation behaviour of corresponding dynamical models CITATION CITATION and successfully been used in analysing the coding properties of neurons CITATION CITATION.
+To avoid confusion, and in accordance with the notation of Tateno and Robinson CITATION, we in the following use the terms Type 1 and Type 2 dynamics when referring to continuous and discontinuous f-I stim relationships, respectively.
+This classification takes the threshold dynamics of the regular and fast spiking neurons, and that of the Class 1 and 2 axons, into account, but not all behavioural aspects of these classes CITATION .
+The intricate interactions between the many factors involved in the dynamical regulation of neuronal firing are poorly understood CITATION.
+The dominant idea is that different combinations of ion channel types explain the different patterns CITATION.
+In a previous study we proposed a complementary explanation CITATION, CITATION.
+We showed that both Type 1 and Type 2 behaviour can be simulated in a dynamical model of a hippocampal neuron CITATION by varying the membrane density of voltage-gated Na and K channels.
+The model used was four-dimensional and based on a detailed experimental voltage-clamp study, thus comprising experimentally estimated parameters.
+The choice of ion channel densities as bifurcation parameters was due to their physiological and pharmacological relevance.
+Many drugs act by specifically blocking channels and thereby reducing ion channel density both at a somatic and at an axonal level.
+Perhaps the most used local anaesthetic drug, lidocaine, acts by blocking sodium channels in axons and sensory nerve endings CITATION.
+An increasing number of studies suggest a role for physiological regulation of channel densities, even at a relatively short time scale CITATION CITATION .
+Each type of dynamics, i.e., Type 1 and 2, was found to be associated with distinct regions in the channel density plane or with corresponding surface areas of an oscillation volume in the FORMULA FORMULA I stim space.
+In regions with high FORMULA and low FORMULA values the model exhibits Type 1 dynamics, whereas in regions with higher FORMULA values the model generates Type 2 dynamics.
+A bifurcation analysis showed that the Type 1 dynamics of the model is due to saddle-node on invariant circle bifurcations CITATION, CITATION.
+Figure 3A portrays such a bifurcation in a V-I stim plot, calculated for the model using region C1 values.
+The Type 2 dynamics was found to be due to either local Andronov-Hopf bifurcations and/or global double limit cycle bifurcations CITATION, CITATION.
+The dynamics of the model associated with region B values is due to double limit cycle and subcritical Andronov-Hopf bifurcations, while the dynamics associated with region A2 is exclusively due to double limit cycle bifurcations.
+The double limit cycle bifurcation implies an unstable limit cycle, which is part of a separating structure which separates trajectories turning to a central stable point and those approaching a stable limit cycle.
+However, preliminary calculations suggested that the bifurcation structure at the border between regions B and C1 is more complex than previously described.
+When more bifurcation parameters are changed a more intricate loss of stability occurs CITATION .
+Thus, to obtain a better understanding of the processes we reanalysed the hippocampal neuron model in more detail.
+Furthermore, we extended the analysis to two other well-described excitable membranes, i.e., the myelinated axon of Xenopus laevis CITATION and the giant axon of Loligo forbesi CITATION.
+We found that oscillations associated with a subregion of region C1 of the hippocampal model show Type 2 dynamics, and that the oscillations of both axon models exclusively show Type 2 dynamics.
+We investigated the mathematical background to these findings, using techniques from bifurcation theory.
+The results suggest that the hippocampal soma and the two studied axon membranes represent two distinct types of membrane with respect to the excitability pattern; membranes with a channel-density dependent switching between Type 1 and 2 dynamics, and membranes with a channel-density independent dynamics.
+The difference between the two membrane types suggests functional differences, compatible with a more flexible role of the soma membrane than that of the axon membrane.

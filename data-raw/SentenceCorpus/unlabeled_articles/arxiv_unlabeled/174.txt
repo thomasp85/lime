@@ -1,0 +1,42 @@
+### abstract ###
+We consider a multi-round auction setting motivated by pay-per-click auctions for Internet advertising
+In each round the auctioneer selects an advertiser and shows her ad, which is then either clicked or not
+An advertiser derives value from clicks; the value of a click is her private information
+Initially, neither the auctioneer nor the advertisers have any information about the likelihood of clicks on the advertisements
+The auctioneer's goal is to design a (dominant strategies) truthful mechanism that (approximately) maximizes the social welfare
+If the advertisers bid their true private values, our problem is equivalent to the  multi-armed bandit problem , and thus can be viewed as a strategic version of the latter
+In particular, for both problems the quality of an algorithm can be characterized by  regret , the difference in social welfare between the algorithm and the benchmark which always selects the same ``best" advertisement
+We investigate how the design of multi-armed bandit algorithms is affected by the restriction that the resulting mechanism must be truthful
+We find that deterministic truthful mechanisms have certain strong structural properties -- essentially, they must separate exploration from exploitation --  and  they incur much higher regret than the optimal multi-armed bandit algorithms
+Moreover, we provide a truthful mechanism which (essentially) matches our lower bound on regret
+### introduction ###
+In recent years there has been much interest in understanding the implication of strategic behavior on the performance of algorithms whose input is distributed among selfish agents
+This study was mainly motivated by the Internet, the main arena of large scale interaction of agents with conflicting goals
+The field of Algorithmic Mechanism Design~ CITATION  studies the design of mechanisms in computational settings (for background see the recent book~ CITATION  and survey~ CITATION )
+Much attention has been drawn to the market for sponsored search (e g ~ CITATION ), a multi-billion dollar market with numerous auctions running every second
+Research on sponsored search mostly focus on equilibria of the Generalized Second Price (GSP) auction~ CITATION , the auction that is most commonly used in practice (e g by Google and Bing), or on the design of truthful auctions~ CITATION
+All these auctions rely on knowing the rates at which users click on the different advertisements (a k a
+click-through rates, or CTRs), and do not consider the process in which these CTRs are learned or refined over time by observing users' behavior
+We argue that strategic agents would take this process into account, as it influences their utility
+While prior work~ CITATION  focused on the influence of click fraud on methods for learning CTRs, we are interested in the implications of the  strategic bidding  by the agents
+Thus, we consider the problem of designing truthful sponsored search auctions when the process of learning the CTRs is a part of the game
+We are mainly interested in the interplay between the online learning and the strategic bidding
+To isolate this issue, we consider the following setting, which is a natural  strategic  version of the multi-armed bandit (MAB) problem
+In this setting, there are  SYMBOL  agents
+Each agent  SYMBOL  has a single advertisement, and a  private  value  SYMBOL  for every click she gets
+The mechanism is an online algorithm that first solicits bids from the agents, and then runs for  SYMBOL  rounds
+In each round the mechanism picks an agent (using the bids and the clicks observed in the past rounds), displays her advertisement, and receives a feedback -- if there was a click or not
+Payments are charged after round  SYMBOL
+Each agent tries to maximize her own utility: the value that she derives from clicks minus the payment she pays
+We assume that initially no information is known about the likelihood of each agent to be clicked, and in particular there are no Bayesian priors
+We are interested in designing mechanisms which are truthful (in dominant strategies): every agent maximizes her utility by bidding truthfully, for any bids of the others and  for any clicks  that would have been received
+The goal is to maximize the social welfare \OMIT{}% Since the payments cancel out, this is equivalent to maximizing the total value derived from clicks, where an agent's contribution to that total is her private value times the number of clicks she receives
+We call this setting the   \OMIT{} In the absence of strategic behavior this problem reduces to a standard MAB formulation in which an algorithm repeatedly chooses one of the  SYMBOL  alternatives (``arms") and observes the associated payoff: the value-per-click of the corresponding ad if the ad is clicked, and  SYMBOL  otherwise
+The crucial aspect in MAB problems is the tradeoff between acquiring more information ( exploration ) and using the current information to choose a good agent ( exploitation )
+MAB problems have been studied intensively for the past three decades
+In particular, the above formulation is well-understood~ CITATION  in terms of  regret  relative to the benchmark which always chooses the same ``best" alternative ( time-invariant benchmark )
+This notion of regret naturally extends to the strategic setting outlined above, the total payoff being exactly equal to the social welfare, and the regret being exactly the loss in social welfare relative to the time-invariant benchmark
+Thus one can directly compare MAB algorithms and MAB mechanisms in terms of welfare loss (regret)
+Broadly, we ask how the design of MAB algorithms is affected by the restriction of truthfulness: what is the difference between the best  algorithms  and the best  truthful mechanisms
+We are interested both in terms of the structural properties and the gap in performance (in terms of regret)
+We are not aware of any prior work that characterizes truthful online learning algorithms or proves negative results on their performance

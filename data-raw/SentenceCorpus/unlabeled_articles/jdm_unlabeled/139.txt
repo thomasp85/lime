@@ -1,0 +1,47 @@
+### abstract ###
+ very small but cumulated decreases in food intake may be sufficient to have significant effects  even erasing obesity over a period of years   CITATION
+in two studies  one a lab study and the other a real-world study  we examine the effect of manipulating the position of different foods on a restaurant menu
+items placed at the beginning or the end of the list of their category options were up to twice as popular as when they were placed in the center of the list
+given this effect  placing healthier menu items at the top or bottom of item lists and less healthy ones in their center e g   sugared drinks vs calorie-free drinks should result in some increase in favor of healthier food choices
+### introduction ###
+obesity is a growing problem throughout the world
+fighting it via dieting is apparently ineffective  CITATION
+in a companion paper  rozin et al CITATION  present arguments and facts to substantiate these two claims  which we shall not repeat here
+they then suggest that the war on obesity could benefit from nudges  CITATION   not only from heavy efforts and investments in resources
+nudges are small  cheap  easily implementable and often hardly noticed changes in the choice architecture i e   the manner or setting in which the choice set is presented that do not affect the choice set itself  yet affect the appeal of different options in it
+rozin et al 's nudge to nobesity is very simple  if you want to increase or decrease the popularity of a food item  make it easier or harder to access  respectively
+in the same spirit  the present paper explores another possible nudge to nobesity
+we show that placing a food item on a menu at the beginning or the end of its category increases its popularity compared to placing it in the middle
+restaurants present customers with lists of their offerings
+when the menu is displayed in writing  items are presented simultaneously
+when a waiter recites the day's specials  items are presented sequentially
+our study involved only printed menus
+menu items may be organized in various ways  such as by type e g   soups  salads  etc
+  or according to main ingredients fish dishes  vegetarian dishes  etc
+
+within each category they are typically listed in vertical ordering
+when designing menus  does this order matter
+one may seek answers from two kinds of sources-the  how to  literature on menu design  and the psychological literature on position effects
+familiar position effects such as primacy and recency refer to stimuli presented sequentially  and their dependent variable is not usually choice
+but the effect called  edge avoidance   CITATION    centrality preferences   CITATION    middle bias   CITATION   or  center-stage effect   CITATION  refers to choice from among simultaneously presented options-and the various names indicate the typical findings   people choosing from an array of identical options reliably prefer the middle ones   CITATION
+when items are not identical  the effect's manifestation is that when options are presented in the middle of an array they are chosen more often than when they are presented on its edges
+these studies do not  of course  apply to options for which position may be inherently important  such as theater or airplane seats  skyscraper floors  restaurant tables  or place in queues
+rather they use options for which it is hard to imagine why position would matter  such as  i
+in which of  NUMBER  opaque boxes people choose to hide  or seek  a  treasure   CITATION   ii
+similarly  in what position people place  or guess  answers in multiple-choice tests  CITATION   iii
+which good they choose from a set of identical  CITATION  or non-identical  CITATION  goods offered  iv
+what stall they head for in a public bathroom  CITATION   etc
+all these studies found that placing an item in the middle  rather than the edges  of the choice set enhanced its popularity
+we are aware of only three exceptions in which there seems to be an advantage to being first or last in a simultaneously presented choice set rather than in its middle
+nisbett and wilson  CITATION  asked their subjects to consider a linear array of  NUMBER  identical pairs of stockings a fact of which their subjects were not aware  and serendipitously found a  pronounced left-to-right position effect  such that the right-most object in the array  which was also the last perused  was heavily over-chosen  p  NUMBER -namely   last-is-best 
+in contrast  koppell and steen  CITATION  analyzed real ballot-voting data that was almost like a controlled study  inasmuch as  the order of candidates' names was rotated by precinct  p  NUMBER   and found that  candidates received a greater proportion of the vote when listed first than when listed in any other position  p  NUMBER -namely   first-is-best 
+finally  christenfeld  CITATION  asked respondents to choose a route between two points  either on hypothetical maps or for real
+the destination point could not be reached by walking a straight line  but the paths to be chosen from had the same total length and number of turns
+respondents showed a preference for the path reached by making the first turn as late as possible
+the paths cannot be classified into first  last  or middle  but the possible points of taking the first turn can  and in that sense  respondents preferred the last
+in contrast to all the above-mentioned findings  the restaurant trade publications on menus advocate both edges namely  the first and last as the positions where one should place the items whose popularity one wants to enhance  CITATION
+these recommendations  however  were never backed by research  and none  to the best of our knowledge  exists panitz's claim is certainly valid  but it is not clear why one needs to rely much on memory when choosing from a menu
+moreover  when kincaid and corsun  CITATION  attempted to put other accepted truths regarding  the impact of menu layout on item sales  to an empirical test  their title question   are consultants blowing smoke
+  p  NUMBER   was answered in the affirmative
+however  since they did not study  edge bias  specifically  we have no direct menu results to either contrast with or add to the  edge avoidance  we reported above
+in the present study  therefore  we did not hypothesize a bias either in favor of or against middle positioned items  but rather checked whether one exists  using  NUMBER -tailed significance testing

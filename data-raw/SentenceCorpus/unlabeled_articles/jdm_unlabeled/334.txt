@@ -1,0 +1,25 @@
+### abstract ###
+the recognition heuristic assumes that people make inferences based on the output of recognition memory
+while much work has been devoted to establishing the recognition heuristic as a viable description of how people make inferences  more work is needed to fully integrate research on the recognition heuristic with research from the broader cognitive psychology literature
+in this article  we outline four challenges that should be met for this integration to take place  and close with a call to address these four challenges collectively  rather than piecemeal
+### introduction ###
+goldstein and gigerenzer  CITATION  proposed the recognition heuristic as a mechanism to describe inferential judgments
+briefly  this heuristic asserts that an inference can be made merely on the basis of the presence or absence of information in memory   if one of two objects is recognized and the other is not  then infer that the recognized object has the higher value   CITATION
+the elegance of the recognition heuristic as a decision rule lies in its simplicity - not only does it purport that inferences can be achieved through a simple rule  but it is also appears to be an intuitive process model
+the development of the recognition heuristic by goldstein and gigerenzer  CITATION  has fueled over a decade of research within behavioral decision-making
+while the recognition heuristic has been well received by many researchers  CITATION   others have been rather critical of its accuracy in describing the underlying psychological processes  CITATION
+these criticisms notwithstanding  the recognition heuristic has led to a focus on recognition-based inference and  much like other heuristics  such as representativeness  has managed a permanent place within the judgment and decision making vernacular  CITATION
+while the construct of representativeness proved transformational to judgment and decision making research  it has arguably run its course as a useful theoretical construct  CITATION
+the question  however  is whether the recognition heuristic will follow a similar path
+in this article  we present four closely related challenges for researchers investigating the recognition heuristic  as well as a call for a fundamental shift in research strategy
+we argue that these challenges should be met and our call for a strategy shift be taken up if theoretical progress in research on the recognition heuristic is to move forward
+before going into detail  a few comments are warranted
+first  our four challenges and our call for a research strategy shift are not intended as criticisms  but rather as proposals for future research directions
+second  while we frame these challenges and our call for strategy shift with respect to the recognition heuristic  they may apply to related models of inference  including classics such as the availability heuristic
+importantly  it is likely that meeting the challenges will require extending and revising the recognition heuristic  whether this heuristic will then still be named recognition heuristic is immaterial to our points  because  as hintzman  CITATION  observed   the explanatory burden is carried by  the proposed mechanism   not by what they are called  p  NUMBER 
+finally  some of our challenges are intended to consider the full import of memory processes for judgment and decision making
+the literature on memory theory provides fertile ground for enriching and extending theories of judgment and decision making
+while recent work in decision theory has emphasized the adaptive role that recognition may play in facilitating accurate judgment  errors and biases are commonplace amongst memory phenomena  including such effects as false-memories  CITATION   misinformation  CITATION   imagination inflation  CITATION   and reality and source monitoring errors  CITATION   amongst many others  CITATION
+inasmuch as memory processes are exploited for the purposes of judgment and decision making  then understanding the full range of effects associated with common usage of memory seems relevant for understanding judgment and decision making
+in a similar vein  inasmuch as there are multiple strategies that may be deployed for guiding judgment and decision making-as is assumed by the framework in which the recognition heuristic has been developed-there is a need for developing cognitive architectures that both accommodate multiple strategies and model how people select amongst them
+for example  it is not sufficient to postulate that some choices are made by relying on recognition memory  one must model as precisely as possible how the decision maker has come to utilize recognition  as opposed to some other process

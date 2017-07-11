@@ -1,0 +1,59 @@
+### abstract ###
+Clusters of genes that have evolved by repeated segmental duplication present difficult challenges throughout genomic analysis, from sequence assembly to functional analysis
+Improved understanding of these clusters is of utmost importance, since they have been shown to be the source of evolutionary innovation, and have been linked to multiple diseases, including HIV and a variety of cancers
+Previously, Zhang \etal~(2008)  developed an algorithm for reconstructing parsimonious evolutionary histories of such gene clusters, using only human genomic sequence data
+In this paper, we propose a probabilistic model for the evolution of gene clusters on a phylogeny, and an MCMC algorithm for reconstruction of duplication histories from genomic sequences in multiple species
+Several projects are underway to obtain high quality BAC-based assemblies of  duplicated clusters in multiple species, and we anticipate that our method  will be useful in analyzing these valuable new data sets
+### introduction ###
+Segmental duplications cover about 5\% of the human genome  CITATION
+When multiple segmental duplications occur at a particular genomic locus they give rise to complex gene clusters
+Many important gene families  linked to various diseases, including cancers, Alzheimer's disease, and HIV, reside  in such clusters
+Gene duplication is often followed by functional diversification  CITATION , and, indeed, genes overlapping segmental duplications have been shown to be enriched for positive selection  CITATION
+In this paper, we describe a probabilistic model of evolution of such gene clusters on a phylogeny, and devise a Markov-chain Monte Carlo sampling algorithm for inference of highly probable duplication histories and ancestral sequences
+To demonstrate the usefulness of our approach, we apply our algorithm to simulated sequences on human-chimp-macaque phylogeny, as well as to real clusters assembled from available BAC sequencing data
+Previously,   CITATION  studied the reconstruction of gene family histories by considering tandem duplications and inversions as the only possible events
+They also assume that  genes are always copied as a whole unit
+CITATION  demonstrated that  more complex models are needed to address evolution of gene clusters in the human genome
+In more recent work, genes have been replaced by generic  atomic segments   CITATION  as the substrates of reconstruction algorithms
+Briefly, a self-alignment is constructed by a local alignment program (e g , blastz  CITATION ), and only alignments above certain threshold (e g , 93\% for human-macaque split) are kept
+The boundaries of alignments mark  breakpoints , and the sequences between neighboring breakpoints  are considered atomic segments (Fig )
+Due to the  transitivity  of sequence similarity between atomic segments, the set of atomic segments can be decomposed into equivalence classes, or  atom types
+Thus, the nucleotide sequence is transformed into a simpler sequence of atoms
+The task of  duplication history reconstruction  is to find a sequence of evolutionary events (e g , duplications, deletions,  and speciations) that starts with an ancestral sequence of atoms,  in which no atom type occurs twice, and ends with atomic sequences of extant species
+Such a history also directly implies ``gene trees'' of individual atomic types, which we call  segment trees
+These trees are implicitly rooted and reconciled with the species tree, and this information can be easily used to reconstruct ancestral sequences at speciation points segment by segment (see eg CITATION )
+A common way of looking at these histories is from the most recent events back in time
+In this context, we can start from extant sequences, and  unwind  events one-by-one, until the ancestral sequence is reached
+CITATION  sought solutions of this problems  with small number of events,  given the sequence from a single species
+In particular, they proved a necessary condition to identify candidates for the latest duplication operation, assuming no reuse of breakpoints
+After unwinding the latest duplication, the same step is repeated to identify the second latest duplication, etc
+Zhang \etal{} showed that following any sequence of  candidate duplications leads to a history with the same number of duplication events under no-breakpoint-reuse assumption
+As a result, there may be an exponential number of most parsimonious solutions to the problem, and it may be impossible to reconstruct a unique history
+A similar parsimony problem has also been recently explored by   CITATION  in the context of much larger sequences (whole genomes) and a broader set of operations (including inversions, translocations, etc )
+In their algorithm, Ma \etal{} reconstruct phylogenetic trees for every atomic segment, and reconcile these segment trees with the species tree to infer deletions and rooting
+The authors give a polynomial-time algorithm for the history reconstruction, assuming no-breakpoint-reuse and correct atomic segment trees
+Both methods make use of fairly extensive heuristics to overcome violations of their assumptions and  allow their algorithms to be applied to real data
+The no-breakpoint-reuse assumption is often justified by the argument that in long sequences, it is unlikely that the same breakpoint is used twice  CITATION
+However, there is evidence that breakpoints do not occur uniformly throughout the sequence, and that breakpoint reuse is frequent  CITATION
+Moreover, breakpoints located close to each other may lead to short atoms that  can't be reliably identified by sequence similarity algorithms and categorized into atom types
+For example, in our simulated data (Section ),  approximately 2\% of atoms are shorter than 20bp and may appear  as additional breakpoint reuses instead
+Thus, no-breakpoint-reuse can be a useful guide, but cannot be entirely relied on in application to real data sets
+We have also examined the assumption of correctness of segment trees  inferred from sequences of individual segments  (Fig )
+For segments shorter than 500bp (39\% of all segments in our simulations)  69\% of the trees were incorrectly reconstructed, and even for segments 500-1,000bp long, a substantial fraction is incorrect (46\%) }  In this paper, we present a simple probabilistic model for sequence evolution by duplication, and we design a sampling algorithm that explicitly accounts for uncertainty in the estimation of segment trees and allows for breakpoint reuse
+The results of  CITATION  suggest that, in spite of an improved model, there may still be many solutions of similar likelihood
+The stochastic sampling approach allows us to examine such multiple solutions in the same framework and extract expectations for quantities of particular interest (e g , the expected number of events on individual branches of the phylogeny, or local properties of the ancestral sequences)
+In addition, by using data from multiple species, our approach obtains additional information about ancestral configurations
+Our problem is closely related to the problem of reconstruction of gene trees and their reconciliation with species trees
+Recent algorithms for gene tree reconstruction (e g ,  CITATION ) also consider genomic context of individual genes
+However, our algorithms for reconstruction of duplication histories not only use such context as an additional piece of information, but the derived evolutionary histories also explain how similarities in the genomic context of individual genes evolved
+Our current approach uses a simple HKY nucleotide substitution model  CITATION ,  with variance in rates allowed between individual atomic segments
+However, in future work it will be possible to employ more complex models of sequence evolution, such as variable rate site models and models of codon evolution, within the same framework
+Such extensions will allow us to  identify sites and branches under selection in gene clusters in a principled way, and contribute towards better functional characterization of these important genomic regions }                                             main
+bbl                                                                                            0000644 0000000 0000000 00000014062 11215404221 011154  0                                                                                                    ustar   root                            root                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  main
+tex                                                                                            0000644 0000000 0000000 00000004513 11213761545 011232  0                                                                                                    ustar   root                            root                                                                                                                                                                                                                   \documentclass[11pt]{article} \usepackage[dvips]{graphicx} \usepackage{amssymb} \usepackage{natbib} \usepackage[headings]{fullpage} \pagestyle{headings} \setlength\textfloatsep{3mm minus 4 pt}    \def\etal{ et al }    intro
+tex methods
+tex experiments
+tex discussion
+tex  \paragraph{Acknowledgements } We would like to thank Devin Locke and LaDeana Hillier at Washington University, St
+Louis for providing us with the BAC sequences from chimp, orangutan, and macaque
+We would also like to thank Webb Miller and Yu Zhang for helpful discussions on this problem \bibliographystyle{apalike}  \bibliography{dups}  \end{document}                                                                                                                                                                                      methods

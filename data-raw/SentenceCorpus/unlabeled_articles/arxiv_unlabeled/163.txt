@@ -1,0 +1,29 @@
+### abstract ###
+The LETOR website    contains three information retrieval datasets used as a benchmark for testing machine learning ideas for ranking
+Algorithms participating in the challenge are required to assign score values to  search results for a collection of queries, and are measured using standard IR ranking measures (NDCG, precision, MAP) that depend only the relative score-induced order of the results
+Similarly to many of the ideas proposed in the participating algorithms, we train a linear classifier
+In contrast with other participating algorithms, we define an additional free variable (intercept, or benchmark) for each query
+This allows expressing the fact that results for different queries are incomparable for the purpose of determining relevance
+The cost of this idea is the addition of relatively few nuisance parameters
+Our approach is simple,  and we used  a standard logistic regression library to test it
+The results beat the reported participating algorithms
+Hence, it seems promising to combine our approach with other more complex ideas
+### introduction ###
+The LETOR benchmark dataset  CITATION    {http://research
+microsoft
+com/users/LETOR/}  (version 2 0) contains three information retrieval datasets used as a benchmark for testing machine learning ideas for ranking
+Algorithms participating in the challenge are required to assign score values to  search results for a collection of queries, and are measured using standard IR ranking measures (NDCG@ SYMBOL , precision@ SYMBOL  and MAP - see  CITATION  for details), designed in such a way that only the relative order of the results matters
+The input to the learning problem is a list of query-result records, where each record is a vector of standard IR features together with a relevance label and a query id
+The label is either binary (irrelevant or relevant) or trinary (irrelevant, relevant or very relevant)
+All reported algorithms used for this task on LETOR website  CITATION   rely on the fact that records corresponding to the same query id are in some sense comparable to each other, and cross query records are incomparable
+The rationale is that the IR measures are computed as a sum over the queries, where for each query  a nonlinear function is computed
+For example, RankSVM  CITATION  and RankBoost  CITATION  use pairs of results for the same query to penalize a cost function, but never cross-query pairs of results
+The following approach seems at first too naive compared to others: Since the training  information is given as relevance labels, why not simply train a linear classifier to predict the relevance labels, and use prediction confidence  as score
+Unfortunately this approach fares poorly
+The hypothesized reason is that judges' relevance response may depend on the query
+To check this hypothesis, we define an additional free variable ( intercept  or  benchmark ) for each query
+This allows expressing the fact that results for different queries are incomparable for the purpose of determining relevance
+The cost of this idea is the addition of relatively few nuisance parameters
+Our approach is extremely simple, and we used a standard logistic regression library to test it on the data
+This work is not the first to suggest query dependent ranking, but it is arguably the simplest, most immediate way to address this dependence using linear classification before other complicated ideas should be tested
+Based on our judgment, other reported algorithms used for the challenge are more complicated, and our solution is overall better on the given data

@@ -1,0 +1,22 @@
+### abstract ###
+The tracing of potentially infectious contacts has become an important part of the control strategy for many infectious diseases, from early cases of novel infections to endemic sexually transmitted infections.
+Here, we make use of mathematical models to consider the case of partner notification for sexually transmitted infection, however these models are sufficiently simple to allow more general conclusions to be drawn.
+We show that, when contact network structure is considered in addition to contact tracing, standard mass action models are generally inadequate.
+To consider the impact of mutual contacts we develop an improvement to existing pairwise network models, which we use to demonstrate that ceteris paribus, clustering improves the efficacy of contact tracing for a large region of parameter space.
+This result is sometimes reversed, however, for the case of highly effective contact tracing.
+We also develop stochastic simulations for comparison, using simple re-wiring methods that allow the generation of appropriate comparator networks.
+In this way we contribute to the general theory of network-based interventions against infectious disease.
+### introduction ###
+Modelling has become a central tool in understanding the epidemiology of infectious disease, and designing control strategies.
+One control method, contact tracing, has been considered in a large number of disease contexts.
+These include the 2003 SARS pandemic CITATION, CITATION, the 2001 UK FMD epidemic CITATION CITATION, contingency planning for deliberate release of smallpox CITATION, CITATION, and control of sexually transmitted infections CITATION CITATION.
+A particular benefit of tracing is that it allows targeting of control, at the cost of effort spent on finding the individuals at risk.
+Since contact tracing takes place as a process over the network of interactions between hosts, it is natural to consider network-based models of this process.
+Theoretical work has so far dealt with contact tracing as a branching process CITATION, through modifications to mean-field equations CITATION, pairwise approximations CITATION and simulation CITATION.
+This work means that the implications of heterogeneous numbers of contacts for the efficacy of contact tracing are reasonably well understood.
+For the case of clustering, due to the analytical challenge posed by the existence of short closed loops in the contact network, it has generally been more difficult to make similar progress.
+Existing theoretical work has therefore either been restricted to the limiting case of clump structured populations, with all clustering due to completely connected cliques CITATION, or else simulation on exemplar networks CITATION, CITATION, CITATION .
+In this work, we derive an improved triple closure for clustered pairwise models that removes two significant problems with existing closure regimes, and use this to make a systematic investigation of the impact of clustering on the efficacy of contact tracing, keeping other network and epidemiological parameters constant as appropriate.
+We find that, for many parameter choices, there are intuitive explanations, borne out by modelling, for the increased impact of contact tracing as clustering increases.
+This is not, however, a completely general result, meaning that the full implications of clustering for the efficacy of contact tracing are subtle and should be the subject of case by case investigation.
+We perform our analysis within the SIS paradigm, meaning that while some of our terminology will be general to all infectious disease epidemiology, other statements will be geared towards the modelling of sexually transmitted infections where recovery/treatment does not confer lasting immunity.

@@ -1,0 +1,40 @@
+### abstract ###
+most prior research on the compromise effect has focused on single rather than multiple choices
+this research investigates the potential effects of purchase quantity on the compromise effect
+we propose that the share of the middle option in a trinary choice set decreases as the purchase quantity increases  because people tend to employ a balance heuristic to distribute their multiple choices among the available options to achieve a balanced state and to satisfy their variety-seeking tendency
+furthermore  we propose that the need for justification and an optimal stimulation level moderate the relationship between the number of purchase items and the compromise effect
+these proposed hypotheses are supported by results from three experiments
+### introduction ###
+consumers are motivated to minimize expected losses and to resolve decision conflicts in their decision-making process  CITATION
+when it comes to making a choice  consumers tend to avoid extreme options that are attractive in some ways but unattractive in others  CITATION
+rather  they are more likely to choose a middle option  because it may be seen as the least extreme choice
+this choice strategy prevents consumers from having to give up any favorable attributes of the other products  CITATION
+consumers can justify this decision easily by arguing that the chosen product combines the attributes of the other two  CITATION
+accordingly  a compromise effect occurs when the likelihood that one option will be chosen over its alternative is enhanced by the introduction of a third option  which makes first option appear as the middle option  CITATION
+the concept of the compromise effect has been shown to be theoretically and practically robust in many fields  including business-to-business  CITATION   group decision making  CITATION   technology markets  CITATION   and culture difference  CITATION
+most prior research on the compromise effect has focused on the choice of a single unit during the purchase of a specific product and has largely ignored multiple-unit purchase decisions
+yet consumers often purchase multiple units in a product category on a single occasion
+for instance  they may buy several bottles of orange juice at once
+given a choice among three available brands of juice-a  b  and c  which have high trade-off attributes-and assuming that brand b is the middle option  will the purchase quantity change their choice behavior in favor of the middle option
+specifically  will they buy the middle compromise option as predicted by compromise effect theory  or will they purchase every available option
+as the purchase quantity increases  consumers may find that choosing only one option for multiple units may ironically heighten the decision risk instead of reducing it  therefore  they may forfeit their choice of the compromise option in favor of a strategy of diversification
+one distinct aspect of purchasing multiple units with several available alternatives is that it enables consumers to distribute their choices among different options
+the distributability of choices among several options allows consumers to diversify associated risks and to obtain satisfaction from buying a variety of options
+people  as predicted by balance theory  CITATION   are apt to achieve a state of balance  order  and harmony in their lives
+distributing multiple units among all alternatives helps people reach a balanced state and also facilitates the diversification of the decision risk
+hence  the compromise effect may be different for a multiple-unit purchase than for a single-unit purchase
+moreover  multiplicity in the available options offers consumers an opportunity to demonstrate their variety-seeking tendency  which is a person's inherent preference for variety and novelty  CITATION
+the variety-seeking tendency may emerge when people need to minimize expected losses  CITATION   to resolve decision conflicts  CITATION   and to save their efforts  CITATION
+since the variety-seeking tendency induces people to assign their choice of multiple units among the available alternatives  it may weaken the compromise effect
+past research has suggested that the purchase quantity may affect the compromise effect  because people may prefer to make choices to minimize losses and resolve inner conflicts when making multiple choice decisions  CITATION
+consumers sometimes need to provide reasons for their choices
+the need for justification is assumed to exercise a positive influence on the compromise effect  because the focus of the decision shifts from a choice of good options to choice of good reason for selecting that option
+the compromise option seems logical when purchasing a single unit  but it may not seem plausible for choosing only the compromise alternative for all of the multiple units
+hence  having to make several choices among multiple options weakens or offsets the positive impact of decision justification
+finally  the availability of a variety of alternatives is advantageous to consumers' choices as far as their optimal stimulation level osl is concerned
+osl refers to the level of stimulation that consumers want to reach in response to environmental stimuli  CITATION
+when the stimulation received from diversity  novelty  ambiguity  or complexity is below the optimal level  people attempt to increase the stimulation  when it is above the optimal level  they are inclined to reduce it
+therefore  if choosing the compromise option for all multiple units cannot provide enough stimulation for consumers  they may allocate some of the purchased units to alternatives other than the compromise one
+in sum  this study explores how purchase quantity affects the compromise effect
+we hypothesize that the compromise effect is dampened when the purchase quantity increases  particularly when people attempt to justify their choices
+furthermore  we suggest that the impact of the compromise effect is mediated by the balance tendency  which is computed with a formula of balance index derived from the concept of balance deviation

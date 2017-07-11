@@ -1,0 +1,29 @@
+### abstract ###
+the two most influential models in delay discounting research have been the exponential e and hyperbolic h models
+we develop a new methodology to design binary choice questions such that exponential and hyperbolic discount rates can be purposefully manipulated to make their rate parameters orthogonal pearson's r    NUMBER   negatively correlated r   - NUMBER   positively correlated r     NUMBER   or to hold one rate constant while allowing the other to vary
+then we extend the method to similarly contrast different versions of the hyperboloid model
+the arithmetic discounting model a  which is based on differences between present and future rewards rather than their ratios  may easily be made orthogonal to any other pair of models
+our procedure makes it possible to design choice stimuli that precisely vary the relationship between different discount rates
+however  the additional control over the correlation between different discount rate parameters may require the researcher to either restrict the range that those rate parameters can take  or to expand the range of times the participant must wait for future rewards
+### introduction ###
+with few exceptions people prefer to receive a reward now rather than at a later date  people also prefer to receive larger rewards than smaller rewards
+but when a choice is offered between a smaller reward now versus a larger reward later  then these two  rules  of behavior conflict
+people must find some way of resolving the conflict to make their choice
+firms must also choose between outcomes at different times in the future  or now
+classical economics  accountancy  and finance all agree on a single normative method by which this should be done  which is to value all future gains in terms of their present value
+if a sum of money p  the present value will grow to a future amount f following to a risk-free process of continuously compounded interest  then that p is said to be the present value of that future payment  and f is said to be discounted to p as continuous compounding is an exponential model of growth  the normative model is known as exponential discounting
+however  people consistently depart from this normative model in two distinct ways
+first  people are not exponential discounters  they discount more heavily than exponential in the short term  and or less heavily than exponential in the long term
+an important implication of this  decreasing impatience  is that people will make inconsistent preference reversals simply due to the passage of time
+researchers have suggested that the form of people's behavioral discounting is better modeled by hyperbolic discounting  CITATION   whose mathematics reflects the processes of simple interest  CITATION
+the second departure is that people are far more likely to choose present payoffs relative to future payoffs than they should
+seen through the lens of the exponential model  this  impulsivity  in favor of the present reward p implies that people demand a wildly high level of interest to get them to choose a future reward f-often an order of magnitude greater than any bank would offer
+therefore  the form of people's discounting is non-exponential  and the size of their discounting is unreasonable
+it has also been found that the magnitude of p and f  not just their ratios  may affect people's choices  CITATION   a finding which is implied by killeen's  CITATION  additive utility model of discounting  and by arithmetic discounting  CITATION   a special case of killeen's model  in which the underlying behavioral model is underpinned by the analogy of the excess wages required for waiting for f  rather than by analogies of simple or compound interest
+using simulation studies  navarro  pitt  and myung  CITATION  have shown how psychological models may be difficult to distinguish from each other  so that deciding which model better captures people's decision making remains equivocal despite the scrutiny of many empirical studies
+exponential and hyperbolic models of delay discounting could be taken as one such intrinsically confusable pair-after all  how distinguishable can models of simple interest and compound interest really be
+in section  NUMBER   our analysis of two frequently used research designs seems to support this view  in that the rate parameters for three different delay discounting models are all highly inter-correlated
+interestingly  navarro et al suggest that a good way to improve the separation between models is to improve the experimental design  which they achieve in their simulations of information integration models by noting that the models make different predictions if trials are added in which only visual or only auditory stimuli are presented
+a similar purposeful approach is evident in glockner and betsch  CITATION  who search for decision tasks that are  diagnostic  between competing models of risky choice
+similarly  the present article develops the tools by which separation may be improved between different models of delay discounting  in that designs can even be constructed in which exponential discounting and hyperbolic discounting make opposite predictions see sections  NUMBER  and  NUMBER 
+navarro  myung  pitt and kim  CITATION  see part of their research agenda as encouraging researchers to explore the landscape of their  favorite computational model of cognition 

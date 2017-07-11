@@ -1,0 +1,53 @@
+### abstract ###
+Compelling behavioral evidence suggests that humans can make optimal decisions despite the uncertainty inherent in perceptual or motor tasks.
+A key question in neuroscience is how populations of spiking neurons can implement such probabilistic computations.
+In this article, we develop a comprehensive framework for optimal, spike-based sensory integration and working memory in a dynamic environment.
+We propose that probability distributions are inferred spike-per-spike in recurrently connected networks of integrate-and-fire neurons.
+As a result, these networks can combine sensory cues optimally, track the state of a time-varying stimulus and memorize accumulated evidence over periods much longer than the time constant of single neurons.
+Importantly, we propose that population responses and persistent working memory states represent entire probability distributions and not only single stimulus values.
+These memories are reflected by sustained, asynchronous patterns of activity which make relevant information available to downstream neurons within their short time window of integration.
+Model neurons act as predictive encoders, only firing spikes which account for new information that has not yet been signaled.
+Thus, spike times signal deterministically a prediction error, contrary to rate codes in which spike times are considered to be random samples of an underlying firing rate.
+As a consequence of this coding scheme, a multitude of spike patterns can reliably encode the same information.
+This results in weakly correlated, Poisson-like spike trains that are sensitive to initial conditions but robust to even high levels of external neural noise.
+This spike train variability reproduces the one observed in cortical sensory spike trains, but cannot be equated to noise.
+On the contrary, it is a consequence of optimal spike-based inference.
+In contrast, we show that rate-based models perform poorly when implemented with stochastically spiking neurons.
+### introduction ###
+Our senses furnish us with information about the external world that is ambiguous and corrupted by noise.
+Taking this uncertainty into account is crucial for a successful interaction with our environment.
+Psychophysical studies have shown that animals and humans can behave as optimal Bayesian observers, i.e. they integrate noisy sensory cues, their own predictions and prior beliefs in order to maximize the expected outcome of their actions CITATION, CITATION, CITATION, CITATION .
+Several theoretical investigations have explored the neural mechanisms that could underly such probabilistic computations CITATION, CITATION, CITATION, CITATION, CITATION, CITATION.
+In cortical areas, sensory and motor variables are encoded by the joint activity of populations of spiking neurons CITATION, CITATION whose activity is highly variable and weakly correlated CITATION, CITATION.
+The timing of individual spikes is unreliable while spike counts are approximately Poisson distributed CITATION.
+These characteristics have inspired rate-based models that encode probability distributions in their average firing rates and spike count covariances.
+Previous studies have examined analytically and empirically how this information can be encoded in a population code CITATION, CITATION, CITATION, CITATION, CITATION, CITATION, CITATION, CITATION, how it can be decoded CITATION, CITATION, CITATION, CITATION, CITATION, CITATION, CITATION, CITATION and how population codes can be combined optimally CITATION, CITATION.
+In particular, optimal cue combination reduces to a simple linear combination of neural activities for a broad family of neural variability, including Poisson or Gaussian noise CITATION .
+However, most of these studies neglect a crucial dimension of perception: time.
+Most sensory stimuli vary dynamically in a natural environment, which requires sensory representations to be constructed, integrated and combined on-line CITATION, CITATION.
+Perceptual inference thus cannot be based on rates or spike counts measured during a fixed temporal window, as used in most previous population coding frameworks.
+At the same time, reliable decisions typically require an integration of sensory evidence over hundreds of milliseconds CITATION, CITATION, which largely exceeds the integrative time constant of single neurons.
+It is unclear how such leaky devices could compute sums of spike counts on the typical time scale of perceptual or motor tasks.
+The problem is even more crucial if the decision is delayed compared to the presentation of sensory information.
+Sensory variables such as the direction of motion of a stimulus can be retained in working memory for significant periods of time even in the absence of sensory input.
+Neural correlates of this working memory appear as persistent neural activity in parietal and frontal brain areas and exhibit firing statistics similar to those found for sensory responses CITATION, CITATION, CITATION.
+This persistent activity has been modeled as a stable state of recurrent neural network dynamics CITATION.
+However, such attractors correspond to stereotyped patterns of activity that can only represent a single stimulus value.
+For example, the memorized position of an object can be encoded by the position of a stable bump of activity CITATION, CITATION.
+This would imply though that information about the reliability of the memorized cue is lost and cannot be used for delayed cue combination or decision making.
+We hypothesize instead that stimuli are memorized in the same format as sensory input, i.e. as a probability distribution.
+The question of how probability distributions can be memorized by a population of neurons remains largely unanswered.
+Here, we approach these issues by using a new interpretation of population coding in the context of temporal sensory integration.
+We consider spikes, rather than rates, as the basic unit of probabilistic representation.
+We show how recurrent networks of leaky integrate-and-fire neurons can construct, combine and memorize probability distributions of dynamic sensory variables.
+Spike generation in these neurons results from a competition between an integration of evidence from feed-forward sensory inputs and a prediction from lateral connections.
+A neuron therefore acts as a predictive encoder, only spiking if its input cannot be predicted by its own or its neighbors' past activity.
+We demonstrate that such networks integrate and combine sensory inputs optimally, i.e. without losing information, and track the stimulus dynamics spike-per-spike even in the absence of sensory input, over timescales much longer than the neural time constants.
+This framework thus provides a first comprehensive theory for optimal spike-based sensory integration and working memory.
+In contrast to rate models implemented with Poisson spiking neurons, this model does not require large levels of redundancy to compensate for the noise added by stochastic spike generation.
+Similar to cortical sensory neurons, model neurons respond with sustained, asynchronous spiking activity.
+Spike times are variable and uncorrelated, despite the deterministic spike generation rule.
+However, in contrast to rate codes, each spike counts.
+The trial to trial variability of spike trains does not reflect an intrinsic source of noise that requires averaging, but is a consequence of predictive coding.
+While spike times are unpredictable at the level of a single neuron, they deterministically represent a probability distribution at the level of the population.
+This leads us to reinterpret the notions of signal and noise in cortical neural responses.

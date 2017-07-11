@@ -1,0 +1,38 @@
+### abstract ###
+MISC	Human Immunodeficiency Virus 1 uses for entry into host cells a receptor and one of two co-receptors.
+MISC	Recently, a new class of antiretroviral drugs has entered clinical practice that specifically bind to the co-receptor CCR5, and thus inhibit virus entry.
+MISC	Accurate prediction of the co-receptor used by the virus in the patient is important as it allows for personalized selection of effective drugs and prognosis of disease progression.
+AIMX	We have investigated whether it is possible to predict co-receptor usage accurately by analyzing the amino acid sequence of the main determinant of co-receptor usage, i.e., the third variable loop V3 of the gp120 protein.
+OWNX	We developed a two-level machine learning approach that in the first level considers two different properties important for protein-protein binding derived from structural models of V3 and V3 sequences.
+OWNX	The second level combines the two predictions of the first level.
+OWNX	The two-level method predicts usage of CXCR4 co-receptor for new V3 sequences within seconds, with an area under the ROC curve of 0.937 0.004.
+OWNX	Moreover, it is relatively robust against insertions and deletions, which frequently occur in V3.
+OWNX	The approach could help clinicians to find optimal personalized treatments, and it offers new insights into the molecular basis of co-receptor usage.
+OWNX	For instance, it quantifies the importance for co-receptor usage of a pocket that probably is responsible for binding sulfated tyrosine.
+### introduction ###
+MISC	Specific protein interactions are central to biological processes, and the infection of cells with viruses is no exception there.
+MISC	In the case of pathogenic viruses, such protein interactions are potential targets for medical intervention.
+MISC	An example of particularly high relevance is Human Immunodeficiency Virus 1.
+MISC	HIV-1 enters human cells in a process that comprises several steps, including the binding of the viral gp120 protein to the cellular receptor protein CD4 and a co-receptor protein, usually one of the two chemokine receptors CCR5 and CXCR4 CITATION.
+MISC	The type of co-receptor used by the virus, the so-called co-receptor tropism, has a prognostic value, since patients with a CXCR4-tropic virus progress faster to Acquired Immunodeficiency Syndrome compared to patients with a CCR5-tropic virus CITATION.
+MISC	In addition to the purely X4- and R5-tropic viruses, there are also dual-tropic strains, able to use both co-receptors.
+MISC	Recently, the first drug that binds to CCR5, and thus inhibits productive binding of gp120, has been approved by regulatory authorities in several countries.
+MISC	This has made the determination of co-receptor tropism directly relevant to anti-retroviral treatment, as CCR5-inhibitors are of course inactive against X4 virus.
+MISC	The standard way of determining co-receptor tropism is by cell-based assays CITATION, CITATION.
+CONT	The main drawbacks of these assays are that they are currently only carried out by a handful of specialized laboratories worldwide, and that the overall procedure typically takes several weeks.
+MISC	These impediments to the wide application of entry inhibitors could be overcome by an approach similar to genotypic drug resistance testing CITATION, where drug resistance of a viral strain is inferred from comparison of mutational patterns obtained from sequencing parts of the genome of that strain with patterns of validated resistance mutations.
+MISC	This is a relatively fast and cheap standard procedure established in many clinics.
+MISC	At first glance, genotypic testing for co-receptor tropism seems to be possible since the main molecular determinant of tropism is known to be the third variable loop of the viral glycoprotein gp120 CITATION, a peptide stretch of about 35 amino-acids with a disulfide bridge connecting the terminal cysteins.
+CONT	Unfortunately, as suggested by its name, V3 is notorious for its high sequence variability CITATION including also some variability in length, and this has made it difficult to use it as a basis for genotypic co-receptor tropism testing.
+MISC	Nevertheless, the relevance of the quest has prompted many groups to develop models that link properties of V3 to co-receptor tropism.
+MISC	The importance of electrostatics for co-receptor tropism has been recognized early on, and the best-known model, the so-called 11/25-rule, refers to charges of V3-residues 11 and 25: if one of these is positive, then the virus is CXCR4-tropic CITATION, CITATION.
+MISC	This rule has a specificity of more than 0.9, but only a low to moderate sensitivity of about 0.4 0.6, depending on the test data, which is not satisfactory for routine clinical application.
+MISC	To improve predictions from sequence, several groups have applied machine learning methods, such as artificial neural networks CITATION, position specific scoring matrices CITATION, decision trees, or support vector machines CITATION.
+CONT	Still, prediction accuracies fall short of what seems reasonable for regular clinical use CITATION.
+MISC	It is unclear whether the limited accuracies are the footprint of tropism-determinants outside V3, or the consequence of model imperfections.
+MISC	A milestone for the understanding of co-receptor tropism was the X-ray structure of gp120 with the V3 loop in a biological context CITATION.
+MISC	This paved the way for the development of prediction methods that use, in addition to V3 sequence, structural information.
+MISC	To our knowledge, the first of these methods has been that of Sander et al. CITATION, which was mainly based on geometric distances of amino-acid pairs within the structure of V3.
+BASE	Although our method, detailed in the following, relies on the same experimental structure by Huang et al. CITATION, it differs from that of Sander et al. in several respects, e.g. it deals with indels, and, perhaps most crucially, it uses as descriptors properties that directly determine interaction of V3 with the co-receptors.
+OWNX	By the latter we consider a seemingly trivial but fundamental fact that so far has not been thoroughly exploited: although V3 is highly variable, all X4-tropic V3 loops share one property, namely, they preferentially have a physical binding interaction with CXCR4, while R5-tropic V3 loops preferably interacts with CCR5.
+OWNX	The accuracy of the method makes it attractive as clinical tool for patient tailored decisions on treatment with entry inhibitors, and it suggests that co-receptor tropism can be explained almost exclusively based on V3.

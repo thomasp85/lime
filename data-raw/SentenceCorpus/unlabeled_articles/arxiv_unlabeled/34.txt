@@ -1,0 +1,18 @@
+### abstract ###
+Canonical correlation analysis is a technique to extract common features from a pair of multivariate data
+In complex situations, however, it does not extract useful features because of its linearity
+On the other hand, kernel method used in support vector machine is an efficient approach to improve such a linear method
+In this paper, we investigate the effectiveness of applying kernel method to canonical correlation analysis \\ {Keyword:} multivariate analysis, multimodal data, kernel method, regularization
+### introduction ###
+This paper deals with the method to extract common features from multiple information sources
+For instance, let us consider a task of learning in pattern recognition, in which an object is given by using an image and its name is given by a speech
+For a newly given image, the system is required to answer its name by a speech, and for a newly given speech, the system is to answer the corresponding image
+The task can be considered to be a regression problem from image to speech and vice versa
+However, since the dimensionalities of images and speeches are generally very large, a regression analysis many not work effectively
+In order to solve the problem, it is useful to map the inputs into low dimensional feature space and then to solve the regression problem
+The canonical correlation analysis (CCA) has been used for such a purpose
+CCA finds a linear transformation of a pair of multi-variates such that the correlation coefficient is maximized
+From an information theoretical point of view, the transformation maximizes the mutual information between extracted features
+However, if there is nonlinear relation between the  variates, CCA does not always extract useful features
+On the other hand, the support vector machines (SVM) are attracted a lot of attention by its state-of-art performance in pattern recognition  CITATION бе The kernel trick used in SVM is applicable not only for classification but also for other linear techniques, for example, kernel regression and kernel PCA CITATION бе   In this paper, we apply the kernel method to CCA
+Since the kernel method is likely to overfit the data, we incorporate some regularization technique to avoid the overfitting

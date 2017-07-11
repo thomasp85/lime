@@ -1,0 +1,18 @@
+### abstract ###
+standard preference models in consumer research assume that people weigh and add all attributes of the available options to derive a decision  while there is growing evidence for the use of simplifying heuristics
+recently  a greedoid algorithm has been developed  CITATION  to model lexicographic heuristics from preference data
+we compare predictive accuracies of the greedoid approach and standard conjoint analysis in an online study with a rating and a ranking task
+the lexicographic model derived from the greedoid algorithm was better at predicting ranking compared to rating data  but overall  it achieved lower predictive accuracy for hold-out data than the compensatory model estimated by conjoint analysis
+however  a considerable minority of participants was better predicted by lexicographic strategies
+we conclude that the new algorithm will not replace standard tools for analyzing preferences  but can boost the study of situational and individual differences in preferential choice processes
+### introduction ###
+how do customers choose from the abundance of products in modern retail outlets
+how many attributes do they consider  and how do they process them to form a preference
+these questions are of theoretical as well as practical interest
+gaining insights into the processes people follow while making purchase decisions will lead to better informed decision theories
+at the same time  marketers are interested in more realistic decision models for predicting market shares and for optimizing marketing actions  for example  by adapting products and advertising materials to consumers' choice processes
+in consumer research  decision models based on the idea of utility maximization predominate to date  as expressed in the prevalent use of weighted additive models derived from conjoint analysis to capture preferences  CITATION
+at the same time  judgment and decision making researchers propose alternative decision heuristics that are supposed to provide psychologically more valid accounts of human decision making  and gather evidence for their use  CITATION
+recently  the field of judgment and decision making has been equipped with a new tool  a greedoid algorithm to deduce lexicographic decision processes from preference data  developed independently by yee et al CITATION  and kohli and jedidi  CITATION
+we aim to bring together these two lines of research by comparing the predictive performance of lexicographic decision processes deduced by the new greedoid algorithm to weighted additive models estimated by full profile regression-based conjoint analysis as a standard tool in consumer research
+we derive hypotheses from the theoretical framework of adaptive decision making about when which approach should be the better-suited tool  and test them in an empirical study

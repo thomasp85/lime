@@ -1,0 +1,31 @@
+### abstract ###
+The AraC family transcription factor MarA activates 40 genes of the Escherichia coli chromosome resulting in different levels of resistance to a wide array of antibiotics and to superoxides.
+Activation of marA/soxS/rob regulon promoters occurs in a well-defined order with respect to the level of MarA; however, the order of activation does not parallel the strength of MarA binding to promoter sequences.
+To understand this lack of correspondence, we developed a computational model of transcriptional activation in which a transcription factor either increases or decreases RNA polymerase binding, and either accelerates or retards post-binding events associated with transcription initiation.
+We used the model to analyze data characterizing MarA regulation of promoter activity.
+The model clearly explains the lack of correspondence between the order of activation and the MarA-DNA affinity and indicates that the order of activation can only be predicted using information about the strength of the full MarA-polymerase-DNA interaction.
+The analysis further suggests that MarA can activate without increasing polymerase binding and that activation can even involve a decrease in polymerase binding, which is opposite to the textbook model of activation by recruitment.
+These findings are consistent with published chromatin immunoprecipitation assays of interactions between polymerase and the E. coli chromosome.
+We find that activation involving decreased polymerase binding yields lower latency in gene regulation and therefore might confer a competitive advantage to cells.
+Our model yields insights into requirements for predicting the order of activation of a regulon and enables us to suggest that activation might involve a decrease in polymerase binding which we expect to be an important theme of gene regulation in E. coli and beyond.
+### introduction ###
+Transcription factors control cellular protein production by binding to DNA and changing the frequency with which mRNA transcripts are produced.
+There are hundreds of transcription factors in Escherichia coli and while most of these target only a small number of genes, there are several that regulate expression of ten or more genes.
+Taken together, such global transcription factors directly regulate more-than half of the 4,300 genes in E. coli and their regulatory interactions yield important insights into the organization of the genetic regulatory network CITATION, CITATION, CITATION.
+Because they regulate so many genes, global transcription factors also play a large role in controlling cellular behavior; however, insights into behavior are currently limited by a lack of quantitative information about how transcription factors differentially regulate target genes.
+One important global transcription factor is MarA, an AraC family protein that activates 40 genes of the Escherichia coli chromosome resulting in different levels of resistance to a wide array of antibiotics and superoxides.
+The effect of MarA at different promoters can vary due to changes in the detailed sequence of the DNA-binding site and its distance from and orientation with respect to the promoter CITATION, CITATION.
+These variations can influence the order in which the promoters respond to increasing concentrations of MarA and presumably have important functional consequences for E. coli.
+To characterize quantitative variations in MarA regulation at different promoters, we recently placed the expression of MarA under the control of the LacI repressor, determined the relationship between isopropyl -D-1-thiogalactopyranoside concentration and the intracellular concentration of MarA, and examined the expression of 10 promoters of the regulon as a function of activator concentration CITATION.
+We found that activation of marA/soxS/rob regulon promoters occurs in a well-defined order with respect to the level of MarA, enabling cells to mount a response that is commensurate to the level of threat detected in the environment.
+We also found that only the marRAB, sodA, and micF promoters were saturated at the highest level of MarA.
+In contrast with a commonly held assumption, we found that the order of activation does not parallel the strength of MarA binding to promoter sequences.
+This finding suggested that interactions between MarA and the RNA polymerase transcriptional machinery play an important role in determining the order of activation, but the data did not immediately reveal what the nature of these interactions might be at the various promoters.
+Here, we have developed a computational model of promoter activity to understand how interactions between MarA and polymerase activate transcription at the marRAB, sodA, and micF promoters of the 10 we examined previously, these three promoters are the only ones that exhibited saturation, which provides an important constraint for the modeling.
+The model was specifically designed to compare a strict recruitment model in which MarA increases polymerase binding but does not increase the rate of post-binding events CITATION, CITATION, with a more general model in which activator can either increase or decrease polymerase binding, and can either increase or decrease the rate of post-binding events.
+For each promoter, we evaluated the agreement of both the strict recruitment model and the general model with the data at many points within a physically reasonable region of parameter space.
+The model successfully explains why the order of promoter activation does not parallel the strength of MarA-DNA binding.
+For all promoters, the best fit of the general model was better than that of the strict recruitment model.
+Comparison to the strict recruitment model and full analysis of the goodness-of-fit landscape suggest that MarA does not increase polymerase binding but does increase the rate of post-binding events at these promoters.
+Moreover, the analysis for the micF promoter suggests that MarA activation can involve a decrease in polymerase binding that is associated with low latency in gene regulation.
+We discuss the broader significance of these findings.

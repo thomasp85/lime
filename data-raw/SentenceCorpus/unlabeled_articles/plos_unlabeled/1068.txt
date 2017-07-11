@@ -1,0 +1,37 @@
+### abstract ###
+The mature human brain is organized into a collection of specialized functional networks that flexibly interact to support various cognitive functions.
+Studies of development often attempt to identify the organizing principles that guide the maturation of these functional networks.
+In this report, we combine resting state functional connectivity MRI, graph analysis, community detection, and spring-embedding visualization techniques to analyze four separate networks defined in earlier studies.
+As we have previously reported, we find, across development, a trend toward segregation between regions close in anatomical space and integration between selected regions distant in space.
+The generalization of these earlier trends across multiple networks suggests that this is a general developmental principle for changes in functional connectivity that would extend to large-scale graph theoretic analyses of large-scale brain networks.
+Communities in children are predominantly arranged by anatomical proximity, while communities in adults predominantly reflect functional relationships, as defined from adult fMRI studies.
+In sum, over development, the organization of multiple functional networks shifts from a local anatomical emphasis in children to a more distributed architecture in young adults.
+We argue that this local to distributed developmental characterization has important implications for understanding the development of neural systems underlying cognition.
+Further, graph metrics are similar in child and adult graphs, with both showing small-world -like properties, while community detection by modularity optimization reveals stable communities within the graphs that are clearly different between young children and young adults.
+These observations suggest that early school age children and adults both have relatively efficient systems that may solve similar information processing problems in divergent ways.
+### introduction ###
+The mature human brain is both structurally and functionally specialized, such that discrete areas of the cerebral cortex perform distinct types of information processing.
+These areas are organized into functional networks that flexibly interact to support various cognitive functions.
+Studies of development often attempt to identify the organizing principles that guide the maturation of these functional networks.
+CITATION CITATION .
+A major portion of the work investigating the nature of functional human brain development is based on results from functional magnetic resonance imaging studies.
+By examining the differences in the fMRI activation profile of a particular brain region between children, adolescents, and adults, the developmental trajectory of that region's involvement in a cognitive task can be outlined CITATION, CITATION, CITATION CITATION.
+These experiments have been crucial to our current understanding of typical and atypical brain development.
+In addition to fMRI activation studies, the relatively new and increasingly utilized method of resting state functional connectivity MRI allows for a complementary examination of the functional relationships between regions across development.
+Resting state fcMRI is based on the discovery that spontaneous low-frequency blood oxygen level dependent signal fluctuations in sometimes distant, but functionally-related grey matter regions, show strong correlations at rest CITATION.
+These low frequency BOLD fluctuations appear to relate to spontaneous neural activity CITATION CITATION.
+In effect, rs-fcMRI evaluates regional interactions that occur when a subject is not performing an explicit task CITATION, CITATION, CITATION CITATION.
+To date, rs-fcMRI has been used in several domains to examine systems-level organization of motor CITATION, memory CITATION, CITATION, attention CITATION, and task control systems CITATION, CITATION, CITATION .
+In addition, because rs-fcMRI does not require active engagement in a behavioral task, it unburdens experimental design, subject compliance, and training demands.
+Thus, rs-fcMRI is becoming a frequently used tool for examining changes in network structure in disease CITATION CITATION, in aging CITATION, CITATION, and across development CITATION, CITATION CITATION .
+In previous work regarding task-level control in adults, we applied rs-fcMRI to a set of regions derived from an fMRI meta-analysis that included studies of control-demanding tasks.
+This analysis revealed that brain regions exhibiting different combinations of control signals across many tasks are grouped into distinct fronto-parietal and cingulo-opercular functional networks CITATION, CITATION.
+Based on functional activation profiles of these regions characterized in the previous fMRI study, the fronto-parietal network appears to act on a shorter timescale, initiating and adjusting top-down control.
+In contrast, the cingulo-opercular network operates on a longer timescale providing set-initiation and stable set-maintenance for the duration of task blocks CITATION .
+Along with these two task control networks CITATION, CITATION, a set of cerebellar regions showing error-related activity across tasks CITATION formed a separate cerebellar network.
+In adults, the cerebellar network is functionally connected with both the fronto-parietal and cingulo-opercular networks CITATION, CITATION.
+These functional connections may represent the pathways involved in task level control that provide feedback information to both control networks CITATION, CITATION .
+Another functional network, and one of the most prominent sets of regions to be examined with rs-fcMRI, is the default mode network.
+The default mode network was first characterized by a consistent decrease in activity during goal-directed tasks compared to baseline CITATION, CITATION.
+Resting-state fcMRI analyses have repeatedly shown that these regions, along with associated medial temporal regions, are correlated at rest in adults CITATION, CITATION, CITATION, CITATION.
+While the distinct function of the default mode network is often linked to internally directed mental activity CITATION, this notion continues to be debated CITATION, CITATION, CITATION CITATION .

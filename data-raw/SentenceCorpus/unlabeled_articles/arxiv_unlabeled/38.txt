@@ -1,0 +1,44 @@
+### abstract ###
+Much recent work in bioinformatics has focused on the inference of various types of biological networks, representing gene regulation, metabolic processes, protein-protein interactions, etc
+A common setting involves inferring network edges in a supervised fashion from a set of high-confidence edges, possibly characterized by multiple, heterogeneous data sets (protein sequence, gene expression, etc )
+Here, we distinguish between two modes of inference in this setting: direct inference based upon similarities between nodes joined by an edge, and indirect inference based upon similarities between one pair of nodes and another pair of nodes
+We propose a supervised approach for the direct case by translating it into a distance metric learning problem
+A relaxation of the resulting convex optimization problem leads to the support vector machine (SVM) algorithm with a particular kernel for pairs, which we call the  metric learning pairwise kernel
+We demonstrate, using several real biological networks, that this direct approach often improves upon the state-of-the-art SVM for indirect inference with the tensor product pairwise kernel
+### introduction ###
+Increasingly, molecular and systems biology is concerned with describing various types of subcellular networks
+These include protein-protein interaction networks, metabolic networks, gene regulatory and signaling pathways, and genetic interaction networks
+While some of these networks can be partly deciphered by high-throughput experimental methods, fully constructing any such network requires lengthy biochemical validation
+Therefore, the automatic prediction of edges from other available data, such as protein sequences, global network topology or gene expression profiles, is of importance, either to speed up the elucidation of important pathways or to complement high-throughput methods that are subject to high levels of noise  CITATION
+Edges in a network can be inferred from relevant data in at least two complementary ways
+For concreteness, consider a network of protein-protein interactions derived from some noisy, high-throughput technology
+Our confidence in the correctness of a particular edge  SYMBOL --- SYMBOL  in this network increases if we observe, for example, that the two proteins  SYMBOL  and  SYMBOL  localize to the same cellular compartment or share similar evolutionary patterns  CITATION
+Generally, in this type of  direct inference , two genes or proteins are predicted to interact if they bear some direct similarity  to each other  in the available data
+An alternative mode of inference, which we call  indirect inference , relies upon similarities between pairs of genes or proteins
+In the example above, our confidence in  SYMBOL --- SYMBOL  increases if we find some other, high-confidence edge  SYMBOL --- SYMBOL  such that the pair  SYMBOL  resembles  SYMBOL  in some meaningful fashion
+Note that in this model, the two connected proteins  SYMBOL  and  SYMBOL  might not be similar to one another
+For example, if the goal is to detect edges in a regulatory network by using time series expression data, one would expect the time series of the regulated protein to be delayed in time compared to that of the regulatory protein
+Therefore, in this case, the learning phase would involve learning this feature from other pairs of regulatory/regulated proteins
+The most common application of the indirect inference approach in the case of protein-protein interaction involves comparing the amino acid sequences of  SYMBOL  and  SYMBOL  versus  SYMBOL  and  SYMBOL  (e g ,  CITATION )
+Indirect inference amounts to a straightforward application of the machine learning paradigm to the problem of edge inference: each edge is an example, and the task is to learn by example to discriminate between ``true'' and ``false'' edges
+Not surprisingly, therefore, several machine learning algorithms have been applied to predict network edges from properties of protein pairs
+For example, in the context of machine learning with support vector machines (SVM) and kernel methods, Ben-Hur and Noble  CITATION  describe how to map an embedding of individual proteins onto an embedding of pairs of proteins
+The mapping defines two pairs of proteins as similar to each other when each protein in a pair is similar to one corresponding protein in the other pair
+In practice, the mapping is defined by deriving a kernel function on pairs of proteins from a kernel function  SYMBOL  on individual proteins, obtained by a tensorization of the initial feature space
+We therefore call this pairwise kernel, shown below, the  tensor product pairwise kernel  (TPPK):  SYMBOL }  Less attention has been paid to the use of machine learning approaches in the direct inference paradigm
+Two exceptions are the works of Yamanishi  et al CITATION  and Vert  et al CITATION , who derive supervised machine learning algorithms to optimize the measure of similarity that underlies the direct approach by learning from examples of interacting and non-interacting pairs
+Yamanishi  et al employ kernel canonical correlation analysis to embed the proteins into a feature space where distances are expected to correlate with the presence or absence of interactions between protein pairs
+Vert  et al highlight the similarity of this approach with the problem of distance metric learning  CITATION , while proposing an algorithm for that purpose
+Both of these direct inference approaches, however, suffer from two important drawbacks
+First, they are based on the optimization of a proxy function that is slightly different from the objective of the embedding, namely, finding a distance metric such that interacting/non-interacting pairs fall above/below some threshold
+Second, the methods of  CITATION  and  CITATION  are applicable only when the known part of the network used for training is defined by a subset of proteins in the network
+In other words, in order to apply these methods, we must have a complete set of high-confidence edges for one set of proteins, from which we can infer edges in the rest of the network
+This setting is unrealistic
+In practice, our training data will generally consist of known positive and negative edges distributed throughout the target network
+In this paper we propose a convex formulation for supervised learning in the direct inference paradigm that overcomes both of the limitations mentioned above
+We show that a slight relaxation of this formulation bears surprising similarities with the supervised approach of  CITATION , in the sense that it amounts to defining a kernel between pairs of proteins from a kernel between individual proteins
+We therefore call our method the  metric learning pairwise kernel  (MLPK)
+An important property of this formulation as an SVM is the possibility to learn from several data types simultaneously by combining kernels, which is of particular importance in various bioinformatics applications  CITATION
+We validate the MLPK approach on the task of reconstructing two yeast networks: the network of metabolic pathways and the co-complex network
+In each case, the network is inferred from a variety of genomic and proteomic data, including protein amino acid sequences, gene expression levels over a large set of experiments, and protein cellular localization
+We show that the MLPK approach nearly always provides better prediction performance than the state-of-the-art TPPK approach

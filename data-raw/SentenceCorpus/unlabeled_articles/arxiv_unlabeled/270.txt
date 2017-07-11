@@ -1,0 +1,28 @@
+### abstract ###
+This work describes a method of approximating matrix permanents efficiently using belief propagation
+We formulate a probability distribution whose partition function is exactly the permanent, then use Bethe free energy to approximate this partition function
+After deriving some speedups to standard belief propagation, the resulting algorithm requires  SYMBOL  time per iteration
+Finally, we demonstrate the advantages of using this approximation
+### introduction ###
+The permanent is a scalar quantity computed from a matrix and has been an active topic of research for well over a century
+It plays a role in cryptography and statistical physics where it is fundamental to Ising and dimer models
+While the determinant of an  SYMBOL  matrix can be evaluated exactly in sub-cubic time, efficient methods for computing the permanent have remained elusive
+Since the permanent is  SYMBOL P-complete, efficient exact evaluations cannot be found in general
+The best exact methods improve over brute force ( SYMBOL ) and include Ryser's algorithm  CITATION  which requires as many as  SYMBOL  arithmetic operations
+Recently, promising fully-polynomial randomized approximate schemes (FPRAS) have emerged which provide arbitrarily close approximations
+Many of these methods build on initial results by Broder  CITATION  who applied Markov chain Monte Carlo (a popular tool in machine learning and statistics) for sampling perfect matchings to approximate the permanent
+Recently, significant progress has produced an FPRAS that can handle arbitrary  SYMBOL  matrices with non-negative entries  CITATION
+The method uses Markov chain Monte Carlo and only requires a polynomial order of samples
+However, while these methods have tight theoretical guarantees, they carry expensive constant factors, not to mention relatively high polynomial running times that discourage their usage in practical applications
+In particular, we have experienced that the prominent algorithm in  CITATION  is slower than Ryser's exact algorithm for any feasible matrix size, and project that it only becomes faster around  SYMBOL
+It remains to be seen if other approximate inference methods can be brought to bear on the permanent
+For instance, loopy belief propagation has also recently gained prominence in the machine learning community
+The method is exact for singly-connected networks such as trees
+In certain special loopy graph cases, including graphs with a single loop, bipartite matching graphs  CITATION  and bipartite multi-matching graphs  CITATION , the convergence of BP has been proven
+In more general loopy graphs, loopy BP still maintains some surprising empirical success
+Theoretical understanding of the convergence of loopy BP has recently been improved by noting certain general conditions for its fixed points and relating them to minima of Bethe free energy
+This article proposes belief propagation for computing the permanent and investigates some theoretical and experimental properties
+In Section , we describe a probability distribution parameterized by a matrix similar to those described in  CITATION  for which the partition function is exactly the permanent
+In Section , we discuss Bethe free energy and introduce belief propagation as a method of finding a suitable set of pseudo-marginals for the Bethe approximation
+In Section , we report results from experiments
+We then conclude with a brief discussion

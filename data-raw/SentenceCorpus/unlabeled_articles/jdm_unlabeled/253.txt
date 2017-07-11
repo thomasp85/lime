@@ -1,0 +1,25 @@
+### abstract ###
+previous research has demonstrated that bayesian reasoning performance is improved if uncertainty information is presented as natural frequencies rather than single-event probabilities
+a questionnaire study of  NUMBER  college students replicated this effect but also found that the performance-boosting benefits of the natural frequency presentation occurred primarily for participants who scored high in numeracy
+this finding suggests that even comprehension and manipulation of natural frequencies requires a certain threshold of numeracy abilities  and that the beneficial effects of natural frequency presentation may not be as general as previously believed
+### introduction ###
+bayesian reasoning performance can be improved if uncertainty information is presented as natural frequencies
+gigerenzer and hoffrage  CITATION  argue that  an evolutionary point of view suggests that the mind is tuned to frequency formats  which is the information format humans encountered long before the advent of probability theory
+  although there is some disagreement among researchers about the reason why natural frequency presentations facilitate bayesian reasoning  CITATION   the result that they do improve performance is well established
+in the current paper we examine whether the natural frequency presentation facilitates bayesian reasoning among some people more than others
+one result that suggests that it does is a study by bramwell  west  and salmon  CITATION
+they presented a bayesian pregnancy screening scenario to obstetricians  midwives  pregnant women  and the women's companions
+participants were told the base rate of a birth defect and the hit rate and false alarm rate of a prenatal test
+they were asked to estimate the posterior probability that  given an abnormal test result  the baby actually has the birth defect
+accurate responses were more frequent when the scenario was presented in terms of natural frequencies rather than probabilities
+interestingly  this effect of presentation format was limited to the obstetricians
+for the other three groups  performance was equally poor for both presentation formats
+thus  the facilitative effect of the natural frequency format does not appear to be universal
+natural frequencies benefit only some types of reasoners
+one factor that may help to explain this result is numeracy
+numeracy skill  defined as  the ability to process basic probability and numerical concepts   CITATION   has been studied in association with a number of decision tasks because many judgments and decisions rely heavily on mathematical concepts  CITATION
+for example  gurmankin  baron  and armstrong  CITATION  found that more numerate people are more trusting of and more comfortable with a physician's risk communication when it includes a numeric statement of risk than when it does not  whereas less numerate people are more trusting if given non-numeric risk statements
+peters et al CITATION  found that  compared to their counterparts  highly numerate individuals are more likely to retrieve and use appropriate numerical principles  thus making themselves less susceptible to framing effects in tasks involving numbers
+it is of interest to explore whether high numerates benefit more than low numerates from uncertainty information that is presented as natural frequencies rather than single-event probabilities
+in the present study  college students solved two bayesian reasoning problems
+for each participant  one problem was presented in a probability format and the other in a natural frequency format

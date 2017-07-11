@@ -1,0 +1,42 @@
+### abstract ###
+We introduce the Reduced-Rank Hidden Markov Model (RR-HMM), a generalization of HMMs that can model smooth state evolution as in Linear Dynamical Systems (LDSs) as well as non-log-concave predictive distributions as in continuous-observation HMMs
+RR-HMMs assume an  SYMBOL -dimensional latent state and  SYMBOL  discrete observations, with a transition matrix of rank  SYMBOL
+This implies the dynamics evolve in a  SYMBOL -dimensional subspace, while the shape of the set of predictive distributions is determined by  SYMBOL
+Latent state belief is represented with a  SYMBOL -dimensional state vector and inference is carried out entirely in  SYMBOL , making RR-HMMs as computationally efficient as  SYMBOL -state HMMs yet more expressive
+To learn RR-HMMs, we relax the assumptions of a recently proposed spectral learning algorithm for HMMs~ CITATION  and apply it to learn  SYMBOL -dimensional observable representations of rank- SYMBOL  RR-HMMs
+The algorithm is consistent and free of local optima, and we extend its performance guarantees to cover the RR-HMM case
+We show how this algorithm can be used in conjunction with a kernel density estimator to efficiently model high-dimensional multivariate continuous data
+We also relax the assumption that single observations are sufficient to disambiguate state, and extend the algorithm accordingly
+Experiments on synthetic data and a toy video, as well as on a difficult robot vision modeling problem, yield accurate models that compare favorably with standard alternatives in simulation quality and prediction capability
+### introduction ###
+Models of stochastic discrete-time dynamical systems have important applications in a wide range of fields
+Hidden Markov Models (HMMs)~ CITATION  and  Gaussian Linear Dynamical Systems (LDSs)~ CITATION  are two examples of  latent variable models  of dynamical systems, which  assume that sequential data points are noisy, incomplete observations of a latent state that evolves over time
+HMMs model this latent state as a discrete variable, and represent belief as a discrete distribution over states
+LDSs on the other hand model the latent state as a set of real-valued variables, are restricted to linear transition and observation functions,  and employ a Gaussian belief distribution
+The distributional assumptions of HMMs and LDSs also result in important differences in the evolution of their belief over time
+The discrete state of HMMs is good for modeling systems with mutually exclusive states that can have completely different observation signatures
+The joint predictive distribution over observations is allowed to be non-log-concave when predicting or simulating the future, leading to what we call  competitive inhibition  between states (see Figure~ below for an example)
+Competitive inhibition denotes the ability of a model's predictive distribution to place probability mass on observations while disallowing mixtures of those observations
+Conversely, the Gaussian joint predictive distribution over observations in LDSs is log-concave, and thus does not exhibit competitive inhibition
+However, LDSs naturally model  smooth state evolution , which  HMMs are particularly bad at
+The dichotomy between the two models hinders our ability to compactly model systems that exhibit  both  competitive inhibition and smooth state evolution
+We present the Reduced-Rank Hidden Markov Model (RR-HMM), a smoothly evolving dynamical model with the ability to represent nonconvex predictive distributions by relating discrete-state and continuous-state models
+HMMs can approximate smooth state evolution by tiling the state space with a very large number of low-observation-variance discrete states with a specific transition structure
+However, inference and learning in such a model is highly inefficient due to the large number of parameters, and due to the fact that existing HMM learning algorithms, such as Expectation Maximization (EM)~ CITATION , are prone to local minima
+RR-HMMs allow us to reap many of the benefits of large-state-space HMMs without incurring the associated inefficiency during inference and learning
+Indeed, we show that all inference operations in the RR-HMM can be carried out in the low-dimensional space where the dynamics evolve, decoupling their computational cost from the number of hidden states
+This makes  rank - SYMBOL  RR-HMMs (with any number of states) as computationally efficient as  SYMBOL - state  HMMs, but much more expressive
+Though the RR-HMM is in itself novel, its low-dimensional  SYMBOL  representation is related to existing models such as Predictive State Representations (PSRs)~ CITATION , Observable Operator Models (OOMs)~ CITATION , generalized HMMs~ CITATION , and weighted automata~ CITATION , as well as the the representation of LDSs learned using Subspace Identification~ CITATION
+These and other related models and algorithms are discussed further in Section~
+To learn RR-HMMs from data, we adapt a recently proposed spectral learning algorithm by Hsu, Kakade and Zhang~ CITATION  (henceforth referred to as HKZ) that learns  observable representations  of HMMs using matrix decomposition  and regression on empirically estimated observation probability matrices of past and future observations
+An observable representation of an HMM allows us to model sequences with a series of operators without knowing the underlying stochastic transition and observation matrices
+The HKZ algorithm is free of local optima and asymptotically unbiased, with a finite-sample bound on  SYMBOL  error in joint probability estimates from the resulting model
+However, the original algorithm and its bounds assume (1) that the transition model is full-rank and (2) that single observations are informative about the entire latent state, i e \@   SYMBOL -step observability
+We show how to generalize the HKZ bounds to the low-rank transition matrix case and derive tighter bounds that depend on  SYMBOL  instead of  SYMBOL , allowing us to learn rank- SYMBOL  RR-HMMs of arbitrarily large  SYMBOL  in  SYMBOL  time, where  SYMBOL  is the number of samples
+We also describe and test a method for circumventing the  SYMBOL -step observability condition by combining observations to make them more informative
+A version of this learning algorithm can learn general PSRs~ CITATION  though our error bounds don't yet generalize to this case
+Experiments show that our learning algorithm can recover the underlying RR-HMM in a variety of synthetic domains
+We also demonstrate that RR-HMMs are able to compactly model smooth evolution  and  competitive inhibition in a clock pendulum video, as well as in real-world mobile robot vision data captured in an office building
+Robot vision data (and, in fact, most real-world multivariate time series data) exhibits smoothly evolving dynamics requiring multimodal predictive beliefs, for which RR-HMMs are particularly suited
+We compare performance of RR-HMMs to LDSs and HMMs on simulation and prediction tasks
+Proofs and details regarding examples are in the Appendix

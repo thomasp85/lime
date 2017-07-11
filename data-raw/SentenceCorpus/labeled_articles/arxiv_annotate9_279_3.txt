@@ -1,0 +1,28 @@
+### abstract ###
+MISC Regularized risk minimization with the binary hinge loss and its variants lies at the heart of many machine learning problems
+MISC Bundle methods for regularized risk minimization (BMRM) and the closely related SVMStruct are considered the best general purpose solvers to tackle this problem
+MISC It was recently shown that BMRM requires  SYMBOL  iterations to converge to an  SYMBOL  accurate solution
+AIMX In the first part of the paper we use the Hadamard matrix to construct a regularized risk minimization problem and show that these rates cannot be improved
+AIMX We then show how one can exploit the structure of the objective function to devise an algorithm for the binary hinge loss which converges to an  SYMBOL  accurate solution in  SYMBOL  iterations
+### introduction ###
+MISC Let  SYMBOL  denote samples and  SYMBOL  be the corresponding labels
+MISC Given a training set of  SYMBOL  sample label pairs  SYMBOL , drawn iid from a joint probability distribution on  SYMBOL , many machine learning algorithms solve the following regularized risk minimization problem:     
+MISC Here  SYMBOL  denotes the loss on instance  SYMBOL  using the current model  SYMBOL  and  SYMBOL , the empirical risk, is the average loss on the training set
+MISC The regularizer  SYMBOL  acts as a penalty on the complexity of the classifier and prevents overfitting
+MISC Usually the loss is convex in  SYMBOL  but can be nonsmooth while the regularizer is usually a smooth strongly convex function
+MISC Binary Support Vector Machines (SVMs) are a prototypical example of such regularized risk minimization problems where  SYMBOL  and the loss considered is the binary hinge loss:    
+MISC Recently, a number of solvers have been proposed for the regularized risk minimization problem
+MISC The first and perhaps the best known solver is SVMStruct  CITATION , which was shown to converge in  SYMBOL  iterations to an  SYMBOL  accurate solution
+MISC The convergence analysis of SVMStruct was improved to  SYMBOL  iterations by  CITATION
+MISC In fact,  CITATION  showed that their convergence analysis holds for a more general solver than SVMStruct namely BMRM (Bundle method for regularized risk minimization)
+MISC At every iteration BMRM replaces  SYMBOL  by a piecewise linear lower bound  SYMBOL  and optimizes    to obtain the next iterate  SYMBOL
+MISC Here  SYMBOL  denotes an arbitrary subgradient of  SYMBOL  at  SYMBOL  (see Section ) and  SYMBOL
+MISC The piecewise linear lower bound is successively tightened until the gap     falls below a predefined tolerance  SYMBOL
+MISC Even though BMRM solves an expensive optimization problem at every iteration, the convergence analysis only uses a simple one-dimensional line search to bound the decrease in  SYMBOL
+MISC Furthermore, the empirical convergence behavior of BMRM is much better than the theoretically predicted rates on a number of real life problems
+MISC It was therefore conjectured that the rates of convergence of BMRM could be improved
+AIMX In this paper we answer this question in the negative by explicitly constructing a regularized risk minimization problem for which BMRM takes at least  SYMBOL  iterations
+MISC One possible way to circumvent the  SYMBOL  lower bound is to solve the problem in the dual
+OWNX Using a very old result of Nesterov  CITATION  we obtain an algorithm for SVMs which only requires  SYMBOL  iterations to converge to an  SYMBOL  accurate solution; each iteration of the algorithm requires  SYMBOL  work
+OWNX Although we primarily focus on the regularized risk minimization with the binary hinge loss, our algorithm can also be used whenever the empirical risk is piecewise linear and contains a small number of pieces
+MISC Examples of this include multiclass, multi-label, and ordinal regression hinge loss and other related losses

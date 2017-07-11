@@ -1,0 +1,12 @@
+### abstract ###
+which statement conveys greater risk    NUMBER  people die from cancer every day  or   NUMBER   NUMBER  people die from cancer every year 
+in statistics where both frequencies and temporal information are used to convey risk  two theories predict opposite answers to this question
+construal level theory predicts that   NUMBER  people die from cancer every day  will be judged as more risky  while the ratio bias predicts that the equivalent   NUMBER   NUMBER  people die from cancer every year  will result in higher risk judgments
+an experiment investigated which format produces higher risk ratings  and whether ratings are influenced by increasing the salience of the numerical or temporal part of the statistic
+forty-eight participants were randomly assigned to a numerical  temporal or control salience condition  and rated risk framed as number of deaths per day or per year
+the year format was found to result in higher perceived risk  indicating that the ratio bias effect is dominant  but there was no effect of salience
+### introduction ###
+the perception of risk is an important area of research not only for understanding cognitive processes  but also for its practical applications in conveying risk information to the public
+in the health domain  perceived risk is generally regarded as the first step in models of health behaviour  and a necessary but not sufficient condition for behaviour change see weinstein  CITATION  and van der pligt  CITATION  for reviews
+although other factors have been shown to mediate this relationship  CITATION   conveying a sense of risk is a major focus of health communication  with the aim of influencing individual judgment and decision making
+the present research investigates how risk perception is affected by the framing  CITATION  of incidence rates  which are often used to convey risk information to the public

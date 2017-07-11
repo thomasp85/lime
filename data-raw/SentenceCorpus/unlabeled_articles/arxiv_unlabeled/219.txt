@@ -1,0 +1,37 @@
+### abstract ###
+In the context of inference with expectation constraints, we propose an approach based on the ``loopy belief propagation'' algorithm (\textsc{lpb}), as a surrogate to an exact Markov Random Field (\textsc{mrf}) modelling
+A prior information composed of correlations among a large set of  SYMBOL  variables, is encoded into a graphical model; this encoding is optimized with respect to an approximate decoding procedure (\textsc{lbp}), which is used to infer hidden variables from an observed subset
+We focus on the situation where the underlying data have many different statistical components, representing a variety of independent patterns
+Considering a single parameter family of models we show how \textsc{lpb} may be used to encode and decode efficiently such information, without solving the NP hard inverse problem yielding the optimal \textsc{mrf}
+Contrary to usual practice, we work in the non-convex Bethe free energy minimization framework, and manage to associate a belief propagation fixed point to each component of the underlying probabilistic mixture
+The mean field limit is considered and yields an exact connection with the Hopfield model at finite temperature and steady state, when the number of mixture components is proportional to the number of variables
+In addition, we provide an enhanced learning procedure, based on a straightforward multi-parameter extension of the model in conjunction with an effective continuous optimization procedure
+This is performed using the stochastic search heuristic \textsc{cmaes} and yields a significant improvement with respect to the single parameter basic model
+### introduction ###
+Prediction or recognition methods on systems in a random environment have somehow to exploit regularities or correlations, possibly both spatial and temporal, to infer a global behavior from partial observations
+For example, on a road-traffic network, one is interested to extract, from fixed sensors and floating car data, an estimation of the overall traffic situation and its evolution~ CITATION
+For image recognition or visual event detection, it is in some sense the mutual information between different pixels or sets of pixels that one wishes to exploit
+The natural probabilistic tool to encode mutual information is the Markov Random Field (\textsc{mrf}), which marginal conditional probabilities have to be computed for the prediction or recognition process
+The inference problem (with expectation constraints~ CITATION ) that we want to address is stated as follows: the system is composed of discrete variables  SYMBOL  for which the only known statistical information is in the form of marginal probabilities,  SYMBOL  on a set  SYMBOL  of cliques  SYMBOL
+Such marginals are typically the result of some empirical procedure producing historical data
+Based on this historical information,  consider then a situation where some of the variables are observed, say a subset  SYMBOL , while  the other one, the complementary set  SYMBOL , remains hidden
+What prediction can be made concerning this complementary set, and how fast can we make this prediction, if we think in terms of real time applications, like traffic prediction for example
+Since the variables take their values over a finite set, the marginal probabilities are fully described by a finite set of correlations and, following the principle of maximum entropy distribution of Jaynes~ CITATION , we expect the historical data to be best encoded in a \textsc{mrf} with a joint probability distribution of  SYMBOL  of the form  SYMBOL } This representation corresponds to a factor graph~ CITATION , where by convenience we associate a function  SYMBOL  to each variable  SYMBOL  in addition to the subsets  SYMBOL , that we call ``factors''
+SYMBOL  together with  SYMBOL  define the factor graph  SYMBOL , which will be assumed to be connected
+There are two main issues:    inverse problem : how to set the parameters of () in order to fulfill the constraints imposed by the historical data
+inference : how to decode (in the sense of computing marginals) in the most efficient manner---typically in real time---this information, in terms of conditional probabilities  SYMBOL
+Exact procedures generally face an exponential complexity problem both for the encoding and decoding procedures and one has to resort to approximate procedures~ CITATION
+The Bethe approximation~ CITATION , which is used in statistical physics consists in minimizing an approximate version of the variational free energy associated to~()
+In computer science, the belief propagation \textsc{bp} algorithm~ CITATION  is a message passing procedure that allows to compute efficiently exact marginal probabilities when the underlying graph is a tree
+When the graph has cycles, it is still possible to apply the procedure (then referred to as \textsc{lbp}, for ``loopy belief propagation''), which converges with a rather good accuracy on sufficiently sparse graphs
+However, there may be several fixed points, either stable or unstable
+It has been shown that these points coincide with stationary points of the Bethe free energy~ CITATION  which is defined as follows:  In addition, stable fixed points of \textsc{lbp} are local minima of the Bethe free energy~ CITATION
+The question of convergence of \textsc{lbp} has been addressed in a series of works~ CITATION  establishing conditions and bounds on the \textsc{mrf} coefficients for having global convergence
+In the present work, we reverse the viewpoint
+Since the decoding procedure is performed with \textsc{lbp}, presumably the best encoding of the historical data is the one for which \textsc{lbp}'s output is  SYMBOL  in absence of ``real time'' information, that is when all the variables remain hidden ( SYMBOL )
+This has actually been proposed in~ CITATION , where it is proved in a specific case, that working with the ``wrong'' model, i e \ the message passing approximate version, yields better results from the decoding viewpoint
+We will come back on this later in Section~, when we will compare various possible approximate models within this framework
+In this paper, we propose  a new  approach, based on multiple fixed points of \textsc{lbp} identification, able to deal both with the encoding and decoding  procedure in a consistent way, suitable for real time applications
+The paper is organized as follows: our inference strategy is detailed in Section~; in Section~, we specify the problem to the inference of binary variables which distribution follows a mixture of product forms and present some numerical results; these are analyzed in Section~ in the light of some scaling limits where mean field equations become relevant, allowing for a direct connection with the Hopfield model
+In Section~ we propose a multi-parameter extension of the model well suited to a continuous optimization, which allows to enhance the performance of the model
+Finally we conclude in Section~ by comparing our approach with other variant of \textsc{lbp} and giving perspective for future developments

@@ -1,0 +1,62 @@
+### abstract ###
+The idea of date and party hubs has been influential in the study of protein protein interaction networks.
+Date hubs display low co-expression with their partners, whilst party hubs have high co-expression.
+It was proposed that party hubs are local coordinators whereas date hubs are global connectors.
+Here, we show that the reported importance of date hubs to network connectivity can in fact be attributed to a tiny subset of them.
+Crucially, these few, extremely central, hubs do not display particularly low expression correlation, undermining the idea of a link between this quantity and hub function.
+The date/party distinction was originally motivated by an approximately bimodal distribution of hub co-expression; we show that this feature is not always robust to methodological changes.
+Additionally, topological properties of hubs do not in general correlate with co-expression.
+However, we find significant correlations between interaction centrality and the functional similarity of the interacting proteins.
+We suggest that thinking in terms of a date/party dichotomy for hubs in protein interaction networks is not meaningful, and it might be more useful to conceive of roles for protein-protein interactions rather than for individual proteins.
+### introduction ###
+Protein interaction networks, constructed from data obtained via techniques such as yeast two-hybrid screening, do not capture the fact that the actual interactions that occur in vivo depend on prevailing physiological conditions.
+For instance, actively expressed proteins vary amongst the tissues in an organism and also change over time.
+Thus, the specific parts of the interactome that are active, as well as their organisational form, might depend a great deal on where and when one examines the network CITATION, CITATION.
+One way to incorporate such information is to use mRNA expression data from microarray experiments.
+Han et al. CITATION examined the extent to which hubs in the yeast interactome are co-expressed with their interaction partners.
+They defined hubs as proteins with degree at least 5, where degree refers to the number of links emanating from a node.
+Based on the averaged Pearson correlation coefficient of expression over all partners, they concluded that hubs fall into two distinct classes: those with a low avPCC and those with a high avPCC.
+They inferred that these two types of hubs play different roles in the modular organisation of the network: Party hubs are thought to coordinate single functions performed by a group of proteins that are all expressed at the same time, whereas date hubs are described as higher-level connectors between groups that perform varying functions and are active at different times or under different conditions.
+The validity of the date/party hub distinction has since been debated in a sequence of papers CITATION CITATION, and there appears to be no consensus on the issue.
+Two established points of contention are: Is the distribution of hubs truly bimodal and is the date/party distinction that was originally observed a general property of the interactome or an artefact of the employed data set?
+Different statistical tests have suggested seemingly different answers.
+However, despite this ongoing debate, the hypothesis has been highly prominent in the literature CITATION, CITATION CITATION.
+Here, following up on the work of Batada et al. CITATION, CITATION, we revisit the initial data and suggest additional problems with the statistical methodology that was employed.
+In accordance with their results, we find that the differing behaviour observed on the deletion of date and party hubs CITATION, which seemed to suggest that date hubs were more essential to global connectivity, was largely due to a very small number of key hubs rather than being a generic property of the entire set of date hubs.
+More generally, we use a complementary perspective to Batada et al. to define structural roles for hubs in the context of the modular organisation of protein interaction networks.
+Our results indicate that there is little correlation between expression avPCC and structural roles.
+In light of this, the more refined categorisation of date, party, and family hubs, which was based on taking into account differences in expression variance in addition to avPCC CITATION, also appears inappropriate.
+A recent study by Taylor et al. CITATION argued for the the existence of intermodular and intramodular hubs a categorisation along the same lines as date and party hubs in the human interactome.
+We show that their observation of a binary hub classification is susceptible to changes in the algorithm used to normalise microarray expression data or in the kernel function used to smooth the histogram of the avPCC distribution.
+The data does not in fact display any statistically significant deviation from unimodality as per the DIP test CITATION, CITATION, as has already been observed by Batada et al. CITATION, CITATION for yeast data.
+We revisited the bimodality question because it was a key part of the original paper CITATION, and in particular because it made a reappearance in Taylor et al. CITATION for human data.
+However, it is possible that a date-party like continuum may exist even in the absence of a bimodal distribution, and this is why we also attempt to examine the more general question of whether the network roles of hub proteins really are related to their co-expression properties with interaction partners.
+Many real-world networks display some sort of modular organisation, as they can be partitioned into cohesive groups of nodes that have a relatively high ratio of internal to external connection densities.
+Such sub-networks, known as communities, often correspond to distinct functional units CITATION CITATION.
+Several studies in recent years have considered the existence of community structure in protein-protein interaction networks CITATION CITATION.
+A myriad of algorithms have been developed for detecting communities in networks CITATION, CITATION.
+For example, the concept of graph modularity can be used to quantify the extent to which the number of links falling within groups exceeds the number that would be expected in an appropriate random network CITATION.
+One of the standard techniques to detect communities is to partition a network into sub-networks such that graph modularity is maximised CITATION, CITATION .
+We use the idea of community structure to take a new approach to the problem of hub classification by attempting to assign roles to hubs purely on the basis of network topology rather than on the basis of expression data.
+Our rationale is that the biological roles of date and party hubs are essentially topological in nature and should thus be identifiable from the network alone.
+Once we have partitioned the network into a set of meaningful communities, it is possible to compute statistics to measure the connectivity of each hub both within its own community and to other communities.
+One method for assigning relevant roles to nodes in a metabolic network was formulated by Guimer and Amaral CITATION, and we follow an analogous procedure for the hubs in our protein interaction networks.
+We then examine the extent to which these roles match up with the date/party hypothesis, finding little evidence to support it.
+One might also wonder about the extent to which observed interactome properties are dependent on the particular instantiation of the network being analysed.
+Several papers have discussed at length concerns about the completeness and reliability of existing protein interaction data sets, e.g. CITATION CITATION.
+Such data have been gathered using multiple methods, the most prominent of which are Y2H and affinity purification followed by mass spectrometry.
+In a recent paper, Yu et al. examined the properties of interaction networks that were derived from different sources, suggesting that experimental bias might play a key role in determining which properties are observed in a given data set CITATION.
+In particular, their findings suggest that Y2H tends to detect key interactions between protein complexes so that Y2H data sets may contain a high proportion of date hubs whereas AP/MS tends to detect interactions within complexes, so that hubs in AP/MS-derived networks are predominantly highly co-expressed with their partners.
+This indicates that a possible reason for observing the bimodal hub avPCC distribution CITATION is that the interaction data sets used information that was combined from both of these sources.
+Here we compare several yeast interaction data sets and find both widely differing structural properties and a surprisingly low level of overlap.
+Finally, as an alternative to the node-based date/party categorisation, we suggest thinking about topological roles in networks by defining measures on links rather than on nodes.
+In other words, one can attempt to categorise interactions between proteins rather than the proteins themselves.
+We use a well-known measure of link significance known as betweenness centrality CITATION, CITATION and examine its relation to phenomena such as protein co-expression and functional overlap.
+Here as well we find little evidence of a significant correlation with expression PCC of the interactors.
+However, there seems to be a reasonably strong relation between link betweenness and functional similarity of the interacting proteins, so that link-centric role definitions might have some utility.
+In summary, we have examined the proposed division of hubs in the protein interaction network into the date and party categories from several different angles, demonstrating that prior arguments in favour of a date/party dichotomy appear to be susceptible to various kinds of changes in the data and methods used.
+Observed differences in network vulnerability to attacks on the two hub types seem to arise from only a small number of particularly important hubs.
+These results strengthen the existing evidence against the existence of date and party hubs.
+Furthermore, a detailed analysis of network topology, employing the novel perspective of community structure and the roles of hubs within this context, suggests that the picture is more complicated than a simple dichotomy.
+Proteins in the interactome show a variety of topological characteristics that appear to lie along a continuum and there does not exist a clear correlation between their location on this continuum and the avPCC of expression of their interaction partners.
+On the other hand, investigating link betweenness centralities reveals an interesting relation to the functional linkage of proteins, suggesting that a framework incorporating a more nuanced notion of roles for both nodes and links might provide a better framework for understanding the organisation of the interactome.

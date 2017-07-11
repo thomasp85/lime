@@ -1,0 +1,37 @@
+### abstract ###
+There is evidence that biological synapses have a limited number of discrete weight states.
+Memory storage with such synapses behaves quite differently from synapses with unbounded, continuous weights, as old memories are automatically overwritten by new memories.
+Consequently, there has been substantial discussion about how this affects learning and storage capacity.
+In this paper, we calculate the storage capacity of discrete, bounded synapses in terms of Shannon information.
+We use this to optimize the learning rules and investigate how the maximum information capacity depends on the number of synapses, the number of synaptic states, and the coding sparseness.
+Below a certain critical number of synapses per neuron, we find that storage is similar to unbounded, continuous synapses.
+Hence, discrete synapses do not necessarily have lower storage capacity.
+### introduction ###
+Memory in biological neural systems is believed to be stored in the synaptic weights.
+Numerous computational models of such memory systems have been constructed in order to study their properties and to explore potential hardware implementations.
+Storage capacity and optimal learning rules have been studied both for single-layer associative networks CITATION, CITATION, studied here, and for auto-associative networks CITATION, CITATION.
+Commonly, synaptic weights in such models are represented by unbounded, continuous real numbers.
+However, in biology, as well as in potential hardware, synaptic weights should take values between certain bounds.
+Furthermore, synapses might be restricted to have a limited number of synaptic states, e.g. the synapse might be binary.
+Although binary synapses might have limited storage capacity, they can be made more robust to biochemical noise than continuous synapses CITATION.
+Consistent with this, experiments suggest that synaptic weight changes occur in steps.
+For example, putative single synapse experiments show that a switch-like increment or reduction to the excitatory post-synaptic current can be induced by pairing brief pre-synaptic stimulation with appropriate post-synaptic depolarization CITATION, CITATION .
+Networks with bounded synapses have the palimpsest property, i.e. old memories decay automatically as they are overwritten by new ones CITATION CITATION.
+In contrast, in networks with continuous, unbounded synapses, storing additional memories reduces the quality of recent and old memories equally.
+Forgetting of old memories must in that case be explicitly incorporated, for instance via a weight decay mechanism CITATION, CITATION.
+The automatic forgetting of discrete, bounded synapses allows one to study learning in a realistic equilibrium context, in which there can be continual storage of new information.
+It is common to use the signal-to-noise ratio to quantify memory storage in neural networks CITATION, CITATION.
+The SNR measures the separation between responses of the network; the higher the SNR, the more the memory stands out and the less likely it will be lost or distorted.
+When weights are unbounded, each stored pattern has the same SNR.
+Storage capacity can then be defined as the maximum number of patterns for which the SNR is larger than some fixed, minimum value.
+However, for discrete, bounded synapses performance must be characterized by two quantities: the initial SNR, and its decay rate.
+Ideally, a memory has a high SNR and a slow decay, but altering learning rules typically results in either an increase in memory lifetime but a decrease in initial SNR CITATION, or an increase in initial SNR but a decrease in memory lifetime.
+Optimization of the learning rule is ambivalent because an arbitrary trade-off must be made between these two effects.
+In this paper we resolve this conflict between learning and forgetting by analyzing the capacity of synapses in terms of Shannon information.
+We describe a framework for calculating the information capacity of bounded, discrete synapses, and use this to find optimal learning rules.
+We model a single neuron, and investigate how information capacity depends on the number of synapses and the number of synaptic states.
+We find that below a critical number of synapses, the total capacity is linear in the number of synapses, while for more synapses the capacity grows only as the square root of the number of synapses per neuron.
+This critical number is dependent on the sparseness of the patterns stored, as well as on the number of synaptic states.
+Furthermore, when increasing the number of synaptic states, the information initially grows linearly with the number of states, but saturates for many states.
+Interestingly, for biologically realistic parameters, capacity is just at this critical point, suggesting that the number of synapses per neuron is limited to prevent sub-optimal learning.
+Finally, the capacity measure allows direct comparison of discrete with continuous synapses, showing that under the right conditions their capacities are comparable.

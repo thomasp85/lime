@@ -1,0 +1,15 @@
+### abstract ###
+according to the time-saving bias  drivers underestimate the time saved when increasing from a low speed and overestimate the time saved when increasing from a relatively high speed
+previous research used a specific type of task - drivers were asked to estimate time saved when increasing speed and to give a numeric response - to show this
+the present research conducted two studies with multiple questions to show that the time-saving bias occurs in other tasks
+study  NUMBER  found that drivers committed the time-saving bias when asked to estimate a the time saved when increasing speed or b the distance that can be completed at a given time when increasing speed or c the speed required to complete a given distance in decreasing times
+study  NUMBER  showed no major differences in estimations of time saved compared to estimations of the remaining journey time and also between responses given on a numeric scale versus a visual analog scale
+study  NUMBER  tested two possible explanations for the time-saving bias  a proportion heuristic and a differences heuristic
+some evidence was found for use of the latter
+### introduction ###
+if you need to complete a  NUMBER  km journey  how much time would it take at a mean speed of  NUMBER  kph
+most people would find it easy to answer such a question -  NUMBER  km at  NUMBER  kph takes half an hour or  NUMBER  minutes
+but what if you wanted to increase speed in order to reduce journey time
+how much time would you save if you increase your speed to  NUMBER  kph or to  NUMBER  or  NUMBER  kph
+many people consistently give the wrong answers to these questions
+several studies have shown that people underestimate the time saved when increasing from a relatively low speed and overestimate the time saved when increasing from a relatively high speed  CITATION

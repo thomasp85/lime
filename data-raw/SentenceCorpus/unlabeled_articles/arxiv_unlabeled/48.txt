@@ -1,0 +1,43 @@
+### abstract ###
+Because query execution is the most crucial part of Inductive Logic Programming (ILP) algorithms, a lot of effort is invested in developing faster execution mechanisms
+These execution mechanisms typically have a low-level implementation, making them hard to debug
+Moreover, other factors such as the complexity of the problems handled by ILP algorithms and size of the code base of ILP data mining systems make debugging at this level a very difficult job
+In this work, we present the trace-based debugging approach currently used in the development of new execution mechanisms in hipP, the engine underlying the ACE Data Mining system
+This debugger uses the delta debugging algorithm to automatically reduce the total time  needed to expose bugs in ILP execution, thus making manual debugging step much lighter
+### introduction ###
+Data mining  CITATION  is the process of finding patterns that describe a large set of data best
+Inductive Logic Programming (ILP)   CITATION  is a multi-relational data mining approach, which uses the Logic Programming paradigm as its basis
+ILP uses a generate-and-test approach, where in each iteration a large set of hypotheses (or `queries') has to be evaluated on the data (also called `examples')
+Based on the results of this evaluation, the ILP  process selects the ``best'' hypotheses and refines them further
+Due to the size of the data of the problems handled by ILP,  the underlying query evaluation engine (e g a Prolog system) is a crucial part of a real life ILP system
+Hence, a lot of effort is invested in optimizing the engine to yield faster evaluation time through the use of new execution mechanisms, different internal data representations, etc
+The development of new execution mechanisms for ILP happens mainly in the engine of the ILP system
+These optimized execution strategies typically require a low level implementation to yield significant benefits
+For example, the query pack~ CITATION  and adpack~ CITATION   execution mechanisms require the introduction of new dedicated WAM instructions, together with a set of new data structures which these instructions use and manipulate
+Because of their low-level nature, finding bugs  in the implementation of these execution mechanisms is very hard
+While tracing bugs in these low-level implementations  might still be feasible for small test programs, many  bugs  only appear during the execution of the ILP algorithm on real life data sets
+Several factors make debugging in this situation difficult:    The size of the ILP system itself
+Real life ILP systems group the implementation of many algorithms into one big system
+These systems therefore often have a very large code base
+For example, the ACE system~ CITATION  consists of over 150000 lines of code
+In the case of the ACE system, the code base is very heterogeneous, where parts of code are written in different languages and others are generated automatically using preprocessors etc
+This makes it in practice very hard to use standard tracing to detect  bugs
+The complexity/size of the ILP problem
+With large datasets,  it can take a very long time (hours, even days) before a specific bug occurs
+When debugging, one typically performs multiple  runs with small modifications to pin-point the exact problem, and so long execution times make this approach infeasible
+The high complexity of the hypothesis generation phase
+While the evaluation of hypotheses is often the bottleneck, some algorithms  (such as rule learners) have a very expensive hypothesis generation  phase
+This phase is independent from the execution of the queries itself, and as such has no influence on the exposure of the bug
+For algorithms with a very complex hypothesis generation, it can take a  very long time for the bug in the execution mechanism to expose itself, even when the time spent on executing these queries is small
+Non-determinacy of ILP algorithms
+If an ILP algorithm makes  random decisions (typically in the hypothesis generation phase), the  exact point in time where the bug occurs changes from run to run
+It is even possible that the bug does not occur at all in certain runs
+In  CITATION , we proposed a trace-based approach for analyzing and debugging ILP data mining execution
+This approach allowed easy and fast debugging of the underlying query execution engines,  independent of the ILP algorithm causing the bug to appear
+In this work, we present an extension to this debugging approach, automating a large part of the debugging process
+By applying the  delta debugging algorithm ~ CITATION  on ILP execution traces, we automatically generate minimal traces exposing a bug, thus greatly reducing the time and effort needed to track the bug down
+This approach is currently used in the development of new execution mechanisms  in hipP~ CITATION , the engine underlying the ACE Data Mining system~ CITATION  \\  The organization of this paper is as follows: In Section~, we give a brief introduction to Inductive Logic Programming
+Section~ discusses the collection of the run-time information necessary for our trace-based debugging approach
+Section~ then discusses applying the delta debugging algorithm on these traces to allow fast and easy debugging
+We briefly discuss the  implementation of our delta debugger in Section~
+Finally, we conclude in Section~

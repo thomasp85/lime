@@ -1,0 +1,47 @@
+### abstract ###
+Activity in neural circuits is spatiotemporally organized.
+Its spatial organization consists of multiple, localized coherent patterns, or patchy clusters.
+These patterns propagate across the circuits over time.
+This type of collective behavior has ubiquitously been observed, both in spontaneous activity and evoked responses; its function, however, has remained unclear.
+We construct a spatially extended, spiking neural circuit that generates emergent spatiotemporal activity patterns, thereby capturing some of the complexities of the patterns observed empirically.
+We elucidate what kind of fundamental function these patterns can serve by showing how they process information.
+As self-sustained objects, localized coherent patterns can signal information by propagating across the neural circuit.
+Computational operations occur when these emergent patterns interact, or collide with each other.
+The ongoing behaviors of these patterns naturally embody both distributed, parallel computation and cascaded logical operations.
+Such distributed computations enable the system to work in an inherently flexible and efficient way.
+Our work leads us to propose that propagating coherent activity patterns are the underlying primitives with which neural circuits carry out distributed dynamical computation.
+### introduction ###
+To understand brain function, it is essential to study the collective electrical activity of neural circuits CITATION.
+This activity typically exhibits intriguing spatiotemporally organized patterns: they are commonly observed in multi-unit electrophysiological recording, EEG local field potential recording, MEG, optical imaging and fMRI imaging, both in spontaneous activity CITATION CITATION and evoked responses CITATION CITATION.
+In space, these patterns often take the form of localized patches or clusters of activity CITATION CITATION.
+Recordings over large populations of neurons have shown that several of such localized patterns can occur simultaneously across cortical regions CITATION CITATION.
+Over time, these patterns often do not remain at specific locations.
+As self-sustained entities, they propagate or move about in space CITATION CITATION, CITATION CITATION.
+In doing so, they interact with each other, resulting in dynamical collective behavior.
+Here we will consider what kind of functional role this behavior may have.
+Propagating coherent patterns have been registered in the experimental literature as spreading or drifting activity CITATION CITATION or as traveling waves CITATION CITATION.
+The simultaneous presence of several of these patterns has been observed in the spontaneous activity of cat visual cortex CITATION, CITATION, in evoked response patterns in turtle olfactory bulb CITATION, and visual cortex of various species CITATION, CITATION, as well as in sensorimotor cortex of behaving mice CITATION.
+When several localized, moving patterns occur together, they are likely to interact.
+Indeed, interactions have been shown to occur in rat somatosensory cortex CITATION.
+To describe the collective activity in olfactory, visual, auditory and somatosensory cortices of behaving rabbits, the term interacting wave packets was explicitly used CITATION, CITATION, which nicely captures the relevance of propagations and interactions of these patterns.
+Despite the ubiquity of these patterns and their interactions, their fundamental functional role has remained unknown.
+Although some authors have speculated on the role of propagating waves CITATION, the functional implications of other aspects such as the simultaneous presence of multiple propagating patterns or their interactions have remained completely unclear.
+Current theoretical frameworks describe neural activity either in computational or dynamical systems perspectives.
+Conventional computational theory is based on the manipulation and representation of static symbols CITATION.
+This perspective contradicts the temporal variability of brain activity, which calls for a dynamical systems approach.
+When dynamical systems theories are applied to neuroscience, the prevailing concept is that of stable low-dimensional attractors CITATION.
+This notion, although it has provided many important insights, is less suitable to capture the functional role of brain activity in its actual spatiotemporal complexity.
+We need to resolve the restrictions of conventional computation and standard dynamical systems theories, in order to describe neural activity and understand its fundamental function.
+This study is based on the consideration that neural circuits are spatially-extended, pattern-forming systems, containing large numbers of simple neurons with spatially restricted connectivity CITATION, CITATION, CITATION.
+In spatially extended physical systems composed of large numbers of simple interacting elements, such as reaction-diffusion systems and fluidic systems, localized propagating coherent patterns are a common feature known under different names, including wave packets, spots, breathers and soliton waves, amongst others CITATION, CITATION, CITATION.
+They are an emergent, collective property of these systems.
+Using these systems as analogy, we construct a simple, spatially extended neural circuit model to represent the gross architecture within the cerebral cortex.
+As an emergent, collective property of the system, the circuit exhibits dynamical activity patterns, reproducing some of the complexities observed in empirical studies.
+In particular, the circuit provides simultaneous propagation of multiple locally coherent patterns and their interactions.
+By revealing how their ongoing collective behavior can naturally embody computation, we demonstrate what fundamental function these patterns can serve.
+Propagating coherent spiking patterns can support several essential aspects of a computational processing.
+As self-sustained objects, these patterns can signal information by propagating across neural circuits.
+Information processing, or computation, occurs when they interact or, specifically, collide with each other.
+Collectively, these patterns perform distributed, parallel and cascaded computational operations, thereby enabling neural systems to work in an efficient and flexible way.
+We shall call this distributed dynamical computation, which is proposed as a framework for understanding spatiotemporal propagating activity patterns in neural circuits.
+This understanding links their dynamics with a form of non-conventional, abstract computation.

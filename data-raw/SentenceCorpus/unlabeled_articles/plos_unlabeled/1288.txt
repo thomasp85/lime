@@ -1,0 +1,33 @@
+### abstract ###
+Computational methods attempting to identify instances of cis-regulatory modules in the genome face a challenging problem of searching for potentially interacting transcription factor binding sites while knowledge of the specific interactions involved remains limited.
+Without a comprehensive comparison of their performance, the reliability and accuracy of these tools remains unclear.
+Faced with a large number of different tools that address this problem, we summarized and categorized them based on search strategy and input data requirements.
+Twelve representative methods were chosen and applied to predict CRMs from the Drosophila CRM database REDfly, and across the human ENCODE regions.
+Our results show that the optimal choice of method varies depending on species and composition of the sequences in question.
+When discriminating CRMs from non-coding regions, those methods considering evolutionary conservation have a stronger predictive power than methods designed to be run on a single genome.
+Different CRM representations and search strategies rely on different CRM properties, and different methods can complement one another.
+For example, some favour homotypical clusters of binding sites, while others perform best on short CRMs.
+Furthermore, most methods appear to be sensitive to the composition and structure of the genome to which they are applied.
+We analyze the principal features that distinguish the methods that performed well, identify weaknesses leading to poor performance, and provide a guide for users.
+We also propose key considerations for the development and evaluation of future CRM-prediction methods.
+### introduction ###
+Cis-acting transcriptional regulation involves the sequence-specific binding of transcription factors to DNA CITATION, CITATION.
+In most cases, multiple transcription factors control transcription from a single transcription start site cooperatively.
+A limited repertoire of transcription factors performs this complex regulatory step through various spatial and temporal interactions between themselves and their binding sites.
+On a genome-wide scale, these transcription factor binding interactions are clustered as distinct modules rather than distributed evenly.
+These modules are called cis-regulatory modules.
+On DNA sequences, promoters, enhancers, silencers and others, are examples of these modules.
+The appropriate transcription factors compete and bind to these elements, and act as activators or repressors.
+Generally a CRM ranges from a few hundred basepairs long to a few thousand basepairs long; several transcription factors bind to it, and each of these transcription factors can have multiple binding sites .
+Berman et al. CITATION demonstrated the feasibility of identifying CRMs by sequence analysis.
+They scanned the Drosophila genome for clusters of potential binding sites for five gap gene transcription factors that are known to, together regulate the early Drosophila embryo.
+They found more than a third of the dense clusters of these binding sites correspond to be CRMs regulating early embryo gene expressions, characteristic of genes regulated by maternal and gap transcription factors.
+Similarly, exploiting the property that many CRMs contain clusters of similar transcription factor binding sites, Schroeder et al. CITATION computationally predicted CRMs over the genomic regions of genes of interest with gap or mixed maternal-gap transcription factors, and identified both known and novel CRMs within the segmentation gene network.
+Recent study has confirmed the importance of CRM functions, and revealed how subtle changes to the original arrangement of module elements can affect its function.
+Gompel et al. CITATION found that modifications to cis-regulatory elements of a pigmentation gene Yellow can cause a wing pigmentation spot to appear on Drosophila biarmipes similar to that seen in Drosophila melanogaster, thus showing that mutations in CRMs can generate novelty between species.
+In a later study CITATION they showed the creation and destruction of distinct regulatory elements of same gene can lead to a same morphological change.
+Williams et al. CITATION investigated the genetic switch whereby the Hox protein ABD-B controls bab expression in a sexually dimorphic trait in Drosophila.
+They discovered the functional difference of this case lies not only in the creation and destruction of the binding sites, but also in their orientations and spacings.
+There is also evidence showing that disruption of cooperations within a specific CRM can lead to malformation and disease.
+One example is given by Kleinjan et al. CITATION.
+The deletion of any distal regulatory elements of PAX6 changes its expression level and causes congenital eye malformation, aniridia, and brain defects in human.

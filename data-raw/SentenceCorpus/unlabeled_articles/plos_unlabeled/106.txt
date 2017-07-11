@@ -1,0 +1,72 @@
+### abstract ###
+The determination of factors that influence protein conformational changes is very important for the identification of potentially amyloidogenic and disordered regions in polypeptide chains.
+In our work we introduce a new parameter, mean packing density, to detect both amyloidogenic and disordered regions in a protein sequence.
+It has been shown that regions with strong expected packing density are responsible for amyloid formation.
+Our predictions are consistent with known disease-related amyloidogenic regions for eight of 12 amyloid-forming proteins and peptides in which the positions of amyloidogenic regions have been revealed experimentally.
+Our findings support the concept that the mechanism of amyloid fibril formation is similar for different peptides and proteins.
+Moreover, we have demonstrated that regions with weak expected packing density are responsible for the appearance of disordered regions.
+Our method has been tested on datasets of globular proteins and long disordered protein segments, and it shows improved performance over other widely used methods.
+Thus, we demonstrate that the expected packing density is a useful value with which one can predict both intrinsically disordered and amyloidogenic regions of a protein based on sequence alone.
+Our results are important for understanding the structural characteristics of protein folding and misfolding.
+### introduction ###
+Amyloid fibril formation is associated with an increase of structure content, which leads to fibrillar aggregation CITATION.
+However, it should be noted that an increased level of the beta structure is a characteristic property of several different types of protein aggregates CITATION, CITATION.
+In addition to proteins observed in amyloid diseases, recent studies have shown that diverse proteins not related to any amyloid disease can aggregate into fibrils under destabilizing conditions CITATION CITATION.
+Normal proteins can become toxic when they undergo fibrillation CITATION.
+There is no consensus about toxicity of the different states: small oligomers, large oligomers, protofilaments, protofibrils, filaments, mature fibrils, or amorphous aggregates.
+Significant advancements in recent research have led to the discovery that the toxic species in the amyloid diseases may not be the fibrils themselves, but rather the pre-fibrillar aggregates CITATION.
+A possible mechanism for toxicity of -synuclein protofibrils has been demonstrated CITATION.
+It has been shown that protofibrils can form elliptical pores, like bacterial toxins, which can puncture cell membranes, resulting in cell death CITATION.
+Therefore, the mechanism of amyloid formation is under intensive investigation.
+Recognition of the factors that influence protein conformational changes and misfolding is one of the general fundamental problems, the solution to which will help us find effective treatments for amyloid illnesses.
+The experimental observation that not all proteins are amyloidogenic and that specific continuous regions of amyloid-forming proteins are more amyloidogenic than others suggests that there is a sequence propensity for amyloid formation.
+Moreover, the observation that some short peptides also can form amyloids implies that these segments, which usually are exposed to the environment, can nucleate the transition of native proteins into the amyloid state, and suggests that fibril formation is sequence-specific CITATION.
+In the mechanism of amyloidogenesis for natively folded proteins such as 2-microglobulin and transthyretin, the partial unfolding observed is believed to be a prerequisite for the proteins' assembly into amyloid fibrils both in vitro and in vivo CITATION.
+It has been suggested that residues with enhanced flexibility and solvent accessibility are important for the initiation of fibrillation CITATION.
+This means that partial unfolding of the rigid native structure can provide a specific interface for the beginning of fibrillation.
+Thus, to understand the molecular mechanism of amyloidosis, it is necessary to find factors that induce partial unfolding of proteins and subsequent amyloid fibril formation at or near physiological conditions.
+Some intrinsically disordered proteins are involved in amyloid diseases.
+This fact may indicate that disorder is a necessary condition for aggregation.
+It has been shown that a very small change in the environment of such proteins often might cause their partial folding and aggregation CITATION.
+Knowledge of characteristics that control the process of amyloid fibril formation is important for finding effective drugs for treatment of amyloid diseases.
+Uversky and Fink in their review CITATION illustrate that protein fibrillogenesis requires a partially folded conformation .
+The first high-resolution crystal of an amyloid fiber formed by a sequence-designed polypeptide has been obtained CITATION.
+Recently, the atomic structure of the cross- spine CITATION for a seven-residue peptide segment from Sup35 was determined.
+It is a double sheet, in which each sheet is formed from parallel segments stacked in register.
+Side chains protruding from the two sheets form a dry, tightly self-complementing steric zipper that bonds the sheets.
+Within each sheet, every segment is bound to two neighboring segments through stacks of both backbone and side-chain hydrogen bonds.
+There are several computational methods for predicting a protein's propensity for amyloid fibril formation.
+In the work of Fernandez et al. CITATION it was shown that a concentration of such defects as insufficient shielding of hydrogen bonds from water attack might yield an aggregation-induced nucleus.
+But the analysis of these defects revealed that the extensive exposure of hydrogen bonds to water attack might be a necessary but not sufficient condition to imply a propensity for organized aggregation CITATION .
+A computational algorithm has been suggested that detects the nonnative strand propensity of sequences by consideration of the relationships between protein local sequence and secondary structure in terms of tertiary contacts CITATION.
+This algorithm detects sequences within the protein that are favorable for triggering amyloid fibril formation.
+It is worthwhile to emphasize here that both algorithms for prediction of amyloidogenic properties of polypeptide chains that are considered above can be applied only to those proteins for which the three-dimensional structure is known.
+Based on the physico chemical properties of aggregation sequences and a computational algorithm, a model was developed for predicting the aggregation rate for a broad range of polypeptide chains CITATION.
+The model identifies aggregation sites within a protein and predicts the parallel or antiparallel organization of sheets in a fibril.
+It should be noted, however, that the overpredictions of aggregation sites were not analyzed statistically.
+On the other hand, there is a method for the prediction of amyloidogenic regions from amino acid sequence alone CITATION.
+After the experimental investigation of the amyloidogenic properties of a model six-residue peptide and its mutants, the authors obtained a six-residue amyloidogenic pattern and used this pattern for the identification of amyloidogenic fragments in proteins CITATION.
+This amyloidogenic pattern has been used to validate the premise that the amyloidogenicity of a protein is indeed localized in short protein stretches.
+It has been demonstrated that the conversion of a soluble, non-amyloidogenic protein into an amyloidogenic-prone molecule can be triggered by a non-destabilizing six-residue amyloidogenic insertion in a particular structural environment.
+Recently, a new method for identifying fibril-forming segments of proteins has been suggested CITATION.
+This method is based on the threading of six-residue peptides through the known crystal structure of an amyloid fiber CITATION formed by the peptide from Sup35.
+The putative prediction is accepted as a prediction if its energy evaluated with RosettaDesign is lower than the threshold energy.
+It should be added that molecular dynamics can yield valuable information about the structural changes that arise at the atomic level upon the formation of amyloid fibrils CITATION CITATION, while such information is difficult to obtain experimentally.
+Another interesting new method is based on sequence-specific interaction energies between pairs of protein fragments calculated from statistical analysis of the native folds of globular proteins CITATION.
+This algorithm correctly predicts the positions of most aggregation-prone portions of some polypeptide chains.
+The formation of a sufficient number of interactions is necessary to compensate for the loss of conformational entropy during the protein folding process.
+Therefore, the structural uniqueness of native proteins is a result of the balance between the conformational entropy and the energy of residue interactions.
+It seems that disordered regions in a protein chain do not have a sufficient number of interactions to compensate for the loss of conformational entropy that results from the formation of a globular state.
+On the other hand, a large increase in the energy of interactions will lead to a loss of the unique structure because the strengthening of contact energy will speed up folding, but it is also likely to lead to erroneous folds .
+It has been suggested that the lack of a rigid globular structure under physiological conditions might represent a considerable functional advantage for intrinsically disordered proteins, as their large plasticity allows them to interact efficiently with several different targets, as compared with a folded protein with limited conformational flexibility CITATION CITATION.
+It has been shown that disordered regions are involved in DNA binding and other types of molecular recognition CITATION.
+A large portion of the sequences of intrinsically disordered proteins contain segments of low complexity and high predicted flexibility CITATION CITATION.
+It also has been indicated that a combination of low overall hydrophobicity and a large net charge represent a structural feature of intrinsically disordered proteins in comparison with small globular proteins CITATION, CITATION.
+There are currently several widely used methods for prediction of disordered regions: GlobPlot CITATION, a simple propensity-based approach for evaluating the tendency of residues to be in a regular secondary structure; PONDR VL3H CITATION, which is able to distinguish experimentally verified disordered proteins from globular proteins by various machine learning approaches; DISOPRED CITATION, in which the definition of disorder is restrained to regions that are missing from X-ray structures but are specifically recognized by a support vector machine in the DISOPRED model; and IUPred CITATION, which assigns the order/disorder status to residues on the basis of their ability to form favorable pairwise contacts.
+We were the first to our knowledge who used the number of contacts per residue as a parameter to distinguish folded and intrinsically disordered proteins CITATION.
+We have extended our method to predict disordered regions and have made comparisons with the above-mentioned methods CITATION.
+It has been demonstrated that our method is the best among widely used methods for the sets of proteins considered here.
+Despite considerable efforts to understand the mechanism, it is still unclear what is responsible for amyloidogenic and disordered regions.
+The goal of this work is to test our hypothesis about whether protein regions that possess expected strong packing density are responsible for the amyloidogenic properties of proteins, while regions with weak packing density simultaneously are responsible for the appearance of disordered regions.
+We introduce a new parameter, namely mean packing density, which enables the prediction of both amyloidogenic and intrinsically disordered regions from protein sequence.
+These findings support the concept that the occurrence of amyloidogenic and intrinsically disordered regions has a similar basis in different peptides and proteins.

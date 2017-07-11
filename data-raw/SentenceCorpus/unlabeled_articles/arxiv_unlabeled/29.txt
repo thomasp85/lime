@@ -1,0 +1,61 @@
+### abstract ###
+There are at least two kinds of similarity
+Relational similarity  is  correspondence between relations, in contrast with  attributional similarity ,  which is correspondence between attributes
+When two words have a high  degree of attributional similarity, we call them  synonyms
+When two  pairs   of words have a high degree of relational similarity, we say that their  relations are  analogous
+For example, the word pair mason:stone is analogous  to the pair carpenter:wood
+This paper introduces Latent Relational Analysis (LRA),  a method for measuring relational similarity
+LRA has potential applications in many  areas, including information extraction, word sense disambiguation,   and information retrieval
+Recently the Vector Space Model (VSM) of information  retrieval has been adapted to measuring relational similarity,  achieving a score of 47\% on a collection of 374 college-level multiple-choice  word analogy questions
+In the VSM approach, the relation between a pair of words is  characterized by a vector of frequencies of predefined patterns in a large corpus
+LRA extends the VSM approach in three ways: (1) the patterns are derived automatically  from the corpus, (2) the Singular Value Decomposition (SVD) is used to smooth the frequency  data, and (3) automatically generated synonyms are used to explore variations of the  word pairs
+LRA achieves 56\% on the 374 analogy questions, statistically equivalent to the  average human score of 57\%
+On the related problem of classifying semantic relations, LRA  achieves similar gains over the VSM
+### introduction ###
+There are at least two kinds of similarity
+Attributional similarity  is correspondence between attributes and  relational similarity  is correspondence between relations  CITATION
+When two words have a high degree of attributional  similarity, we call them  synonyms
+When two word  pairs  have a high  degree of relational similarity, we say they are  analogous
+Verbal analogies are often written in the form  A:B::C:D\/ ,  meaning  A is to B as C is to D ; for example,  traffic:street::water:riverbed
+Traffic flows over a street;  water flows over a riverbed
+A street carries traffic;  a riverbed carries water
+There is a high degree of relational similarity between the word pair traffic:street and the word pair water:riverbed
+In fact, this analogy is the basis of several mathematical theories of  traffic flow  CITATION
+In Section~, we look more closely at the connections between attributional and relational similarity
+In analogies such as mason:stone::carpenter:wood, it seems that  relational similarity can be reduced to attributional similarity,  since mason and carpenter are attributionally similar, as are stone  and wood
+In general, this reduction fails
+Consider the analogy traffic:street::water:riverbed
+Traffic and water are not attributionally similar
+Street and riverbed are only moderately attributionally similar
+Many algorithms have been proposed for measuring the attributional  similarity between two words   CITATION
+Measures of attributional similarity have been studied   extensively, due to their applications in problems such as recognizing synonyms  CITATION ,  information retrieval  CITATION , determining semantic orientation  CITATION ,  grading student essays  CITATION , measuring textual cohesion  CITATION , and word sense disambiguation  CITATION
+On the other hand, since measures of relational  similarity are not as well developed as  measures of attributional similarity, the potential applications of  relational similarity are not as well known
+Many problems that involve semantic relations would benefit from an algorithm for measuring relational similarity
+We discuss related problems in natural language processing, information retrieval, and information extraction in more detail in Section~
+This paper builds on the Vector Space Model (VSM) of information retrieval
+Given a query, a search engine produces a ranked list of documents
+The documents are ranked in order of decreasing attributional similarity between the query and each document
+Almost all modern search engines measure attributional similarity using the VSM  CITATION  \namecite{turneylittman05} adapt the VSM approach to measuring relational similarity
+They used a vector of frequencies of patterns in a corpus to represent the relation between a pair of words
+Section~ presents the VSM approach to measuring similarity
+In Section~, we present an algorithm for measuring  relational similarity, which we call Latent Relational Analysis (LRA)
+The algorithm learns from a large corpus of unlabeled, unstructured  text, without supervision
+LRA extends the VSM approach of  \namecite{turneylittman05} in three ways: (1) The connecting  patterns are derived automatically from the corpus, instead of using a fixed set of patterns (2) Singular Value Decomposition  (SVD) is used to smooth the frequency data (3) Given a word pair  such as traffic:street, LRA considers transformations of the word  pair, generated by replacing one of the words by synonyms, such as  traffic:road, traffic:highway
+Section~ presents our experimental evaluation  of LRA with a collection of 374 multiple-choice word analogy questions  from the SAT college entrance exam
+An example of a typical SAT question appears in Table~
+In the educational testing literature, the first pair  (mason:stone) is called the  stem  of the analogy
+The correct choice is called the  solution  and the incorrect choices are  distractors
+We evaluate LRA by testing its ability to select the solution and avoid the distractors
+The average performance of college-bound senior high school students  on verbal SAT questions corresponds to an accuracy of  about 57\%
+LRA achieves an accuracy  of about 56\%
+On these same questions, the VSM attained 47\% }  One application for relational similarity is classifying semantic  relations in noun-modifier pairs  CITATION
+In Section~, we evaluate the performance of LRA  with a set of 600 noun-modifier pairs from \namecite{nastase03}
+The problem is to classify a noun-modifier pair, such as ``laser printer'',  according to the semantic relation between the head noun (printer) and  the modifier (laser)
+The 600 pairs have been manually labeled with 30  classes of semantic relations
+For example, ``laser printer'' is classified  as  instrument ; the printer uses the laser as an instrument for printing
+We approach the task of classifying semantic relations in noun-modifier  pairs as a supervised learning problem
+The 600 pairs are divided into  training and testing sets and a testing pair is classified according  to the label of its single nearest neighbour in the training set
+LRA  is used to measure distance (i e , similarity, nearness)
+LRA achieves  an accuracy of 39 8\% on the 30-class problem and 58 0\% on the 5-class  problem
+On the same 600 noun-modifier pairs, the VSM had accuracies of  27 8\% (30-class) and 45 7\% (5-class)  CITATION
+We discuss the experimental results, limitations of LRA, and future work  in Section~ and we conclude in Section~

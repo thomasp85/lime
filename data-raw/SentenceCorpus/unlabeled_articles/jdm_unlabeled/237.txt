@@ -1,0 +1,33 @@
+### abstract ###
+humans and other animals are idiosyncratically sensitive to risk  either preferring or avoiding options having the same value but differing in uncertainty
+many explanations for risk sensitivity rely on the non-linear shape of a hypothesized utility curve
+because such models do not place any importance on uncertainty per se  utility curve-based accounts predict indifference between risky and riskless options that offer the same distribution of rewards
+here we show that monkeys strongly prefer uncertain gambles to alternating rewards with the same payoffs  demonstrating that uncertainty itself contributes to the appeal of risky options
+based on prior observations  we hypothesized that the appeal of the risky option is enhanced by the salience of the potential jackpot
+to test this  we subtly manipulated payoffs in a second gambling task
+we found that monkeys are more sensitive to small changes in the size of the large reward than to equivalent changes in the size of the small reward  indicating that they attend preferentially to the jackpots
+together  these results challenge utility curve-based accounts of risk sensitivity  and suggest that psychological factors  such as outcome salience and uncertainty itself  contribute to risky decision-making
+### introduction ###
+millions of people regularly play the lottery despite the fact that tickets typically have an expected value of less than half of their price  CITATION
+traditionally  economic models explain such preferences by the shape of the utility curve
+the utility curve is a hypothetical construct linking observable values of outcomes onto subjective  internal values
+because decision makers exhibit diminishing marginal utilities in most contexts  the average utility of a large and small outcome is hypothesized to be less than the utility of a middle-sized outcome
+consequently  decision makers should be risk-averse in these situations
+conversely  contexts in which marginal utilities are convex should promote risk-seeking
+the fact that lottery advertisements focus on the specific benefits of winning suggests that drawing attention to the possible jackpot can influence the decision to gamble  CITATION
+indeed  several reports have suggested that the relative salience of different outcomes in a risky situation may influence the way the gamble as a whole is evaluated  CITATION
+outcomes that are more vivid  easier to remember  or more emotional are often seen as more likely - an idea known as the  availability heuristic  in economics  CITATION
+in a similar vein  several studies have suggested that feelings about possible outcomes can influence the appeal of the gamble  CITATION
+consistent with these ideas  we hypothesized that the value placed on a risky option reflects  in part  the outcome of a competition between the possibilities of favorable and unfavorable outcomes  and that this competition can be biased towards the more salient possible outcome
+we use the term salience to indicate the attentional weighting of this possibility in decision-making
+however  this biasing may be stronger in the presence of uncertainty  when options are certain  biasing may be less likely to occur
+when a decision-maker considers whether to gamble  he or she compares the value of the safe option to this biased valuation of the risky option
+we performed two behavioral experiments in rhesus monkeys to test the idea that risk sensitivity reflects outcome salience and outcome uncertainty itself  rather than just nonlinear weighting of reward outcomes
+both experiments employed variants of a gambling task developed in our lab in which monkeys are reliably risk-seeking  CITATION
+first  we compared monkeys' preferences for risky and predictably alternating options that  over time  both offered an equal mix of large and small rewards  CITATION
+the alternating option provided identical sets of outcomes  and therefore identical utilities  to the monkeys  so any preference between these options cannot reflect utility weighting
+we found that monkeys strongly preferred the risky option to the alternating one  demonstrating that the uncertainty of the risky option is part of its appeal
+we also hypothesized that the risk-seeking we observed reflects  at least in part  the salience of large rewards
+if monkeys preferentially attend to the larger outcome  they should be more sensitive to small changes in its size
+we therefore examined monkeys' sensitivity to incremental changes in the sizes of large and small outcomes in a second experiment
+as predicted  we found that monkeys were sensitive to variations in the size of the large reward  but not to equivalent changes in the size of the small reward

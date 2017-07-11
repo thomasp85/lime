@@ -1,0 +1,31 @@
+### abstract ###
+Cerebellar Purkinje cells display complex intrinsic dynamics.
+They fire spontaneously, exhibit bistability, and via mutual network interactions are involved in the generation of high frequency oscillations and travelling waves of activity.
+To probe the dynamical properties of Purkinje cells we measured their phase response curves.
+PRCs quantify the change in spike phase caused by a stimulus as a function of its temporal position within the interspike interval, and are widely used to predict neuronal responses to more complex stimulus patterns.
+Significant variability in the interspike interval during spontaneous firing can lead to PRCs with a low signal-to-noise ratio, requiring averaging over thousands of trials.
+We show using electrophysiological experiments and simulations that the PRC calculated in the traditional way by sampling the interspike interval with brief current pulses is biased.
+We introduce a corrected approach for calculating PRCs which eliminates this bias.
+Using our new approach, we show that Purkinje cell PRCs change qualitatively depending on the firing frequency of the cell.
+At high firing rates, Purkinje cells exhibit single-peaked, or monophasic PRCs.
+Surprisingly, at low firing rates, Purkinje cell PRCs are largely independent of phase, resembling PRCs of ideal non-leaky integrate-and-fire neurons.
+These results indicate that Purkinje cells can act as perfect integrators at low firing rates, and that the integration mode of Purkinje cells depends on their firing rate.
+### introduction ###
+Cerebellar Purkinje cells exhibit a wide range of dynamical phenomena.
+They are intrinsic neural oscillators, firing spontaneously and highly rhythmically in the absence of synaptic input, at a rate of 10 180 Hz CITATION CITATION.
+They also exhibit intrinsic bistability CITATION, CITATION, which influences their responses to sensory stimulation CITATION.
+In addition, interactions between spontaneously firing Purkinje cells can result in waves of activity travelling down the cerebellar folia CITATION, or in high frequency oscillations CITATION, which may contribute to the generation of precise temporal patterns in the cerebellar network CITATION.
+Hence, the firing of Purkinje cells is highly time- and state-dependent, and thus they represent excellent targets for dynamical systems analysis.
+The phase response curve is a powerful tool to study neuronal dynamics at the cellular level.
+The PRC describes the effect of a brief perturbation on the firing phase of a neuron, and can be used to predict the response of a neuron to more complex stimulation patterns CITATION CITATION.
+The shape of the PRC is linked to the type of neuronal excitability CITATION, CITATION, to oscillatory stability CITATION and to network synchronization properties CITATION CITATION.
+Studying Purkinje cell PRCs is therefore an essential step to explore their dynamic repertoire, probe their biophysical mechanisms, and to construct models of Purkinje cells to determine their role in information processing at the network level.
+PRCs can be obtained by directly perturbing the membrane potential by short square current pulses CITATION CITATION or synaptic conductance pulses CITATION, CITATION CITATION, and via indirect methods CITATION CITATION.
+Using the direct method, infinitesimal PRCs are obtained by repeatedly injecting brief current pulses while neurons are firing action potentials.
+Phase and phase perturbation are measured by using the AP immediately preceding the current pulse as a reference, and we refer to these PRCs as traditional PRCs throughout this paper.
+We show using electrophysiological experiments and in simulations that the interspike interval variability present in Purkinje cells introduces a systematic bias in this traditional calculation of the PRC.
+The bias results from loss of causality caused by the jitter of the APs surrounding the current pulse, and gives rise to an empty triangular region in the PRC plot, which we call the Bermuda Triangle.
+We introduce a method for calculating the PRC which corrects for this bias by using all spikes in the spike train as a reference, one at a time.
+We refer to PRCs obtained by this method as corrected PRCs.
+Note that in our study both traditional and corrected PRCs are calculated using the same experimental data: perturbation of the firing of Purkinje cells with brief square current pulses.
+Using the corrected method we show that the shape of the Purkinje cell PRC changes fundamentally depending on the firing rate of the neuron.

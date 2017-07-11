@@ -1,0 +1,55 @@
+### abstract ###
+we examine how adding an attractive but unattainable alternative aua to a set of available but less attractive alternatives influences evaluations of near vs distant future sets of alternatives
+according to construal level theory  CITATION  including an aua would decrease the attractiveness of near future sets  but may increase the attractiveness of distant future sets
+in four studies participants imagined a choice situation with three alternatives
+for some participants a fourth alternatives was added  which was attractive but unattainable
+half of the participants in each condition imagined making a decision in the near future whereas others imagined making the decision in the distant future
+participants then evaluated the attractiveness of the entire set of alternatives  as well as of each alternative separately
+we examined choices between jobs  computers and roommates
+the last study examined negotiations with the landlord about an apartment
+consistent with our hypothesis  an aua increased the evaluation of the distant set and decreased the evaluation of the near set
+### introduction ###
+imagine considering a vacation in the caribbean and browsing through offers of different vacation packages
+all the packages seem equally attractive  but one of them stands out as being especially attractive - a brand new five star hotel offers attractive tours that are all included in the quite moderate price
+a closer look discloses that this most attractive package is offered exclusively to members of the hilton club  which you are not
+how would the existence of this very attractive but unattainable alternative aua affect your evaluation of the set of vacation plans the travel agency offers
+would you stay with this agency or look for other agencies
+some decision makers may find the situation annoying
+compared to the aua  the other vacation plans would seem mediocre  and the entire menu that the agency offers would lose attractiveness
+other people  however  could think that the fact that in principle the agency has such attractive vacation packages speaks in its favor  and increase their ratings of the agency and the menu it offers
+other cases of including an aua in a set of alternatives may involve offering especially valuable products and indicating that they are out of stock  or including attractive dishes in a restaurant's menu and indicting that they are not served that day
+obviously  including an aua is costless
+is it a good strategy
+can it promote sales
+would it reduce or increase the attractiveness of the entire set
+related to this question  research on the phantom decoy effect found that  when choosing between two equally desirable alternatives  adding a phantom decoy - namely  an alternative that is worse than both initial alternatives and is dominated by one of them - increases choice of the alternative that dominates the decoy  CITATION
+for example  a decision maker may feel indifferent between a five-star restaurant that is  NUMBER  minutes drive away and three-star restaurant that is  NUMBER  minutes drive away
+offering a third alternative - a four-star restaurant that is  NUMBER  minutes drive away  may cause the decision maker to prefer the five-star restaurant that is  NUMBER  minutes drive away  CITATION
+both phantom decoys and auas are irrelevant
+unlike a phantom decoy  however  an aua is more attractive than the other alternatives
+we investigate the impact of an attractive but irrelevant alternative on the evaluation of the entire set of alternatives
+we suggest that temporal distance from making the choice is one factor that may determine the influence of attractive but unattainable alternatives auas on evaluation of the entire set
+specifically  based on construal level theory  CITATION   we propose that when alternatives are considered for the proximal future  auas decrease the attractiveness of near future sets  but do not decrease and even increase the attractiveness of distant future sets  leading to an interaction between auas and temporal distance
+in what follows  we explicate how this prediction derives from clt and test it in four studies
+construal level theory  CITATION  proposes that psychological distance from a decision influences individuals' evaluations of the alternatives by systematically changing the way they construe these alternatives
+people tend to construe more psychologically distant alternatives on a higher level  namely  using more abstract  generalized representations
+high-level construals abstract the essential qualities of events and  therefore  consist of more central and essential features
+in contrast  low-level construals may include more peripheral and less essential features of events
+thus  whereas representations of near future events are rich with details  representations of distant future events omit secondary and incidental features of events
+high level features are those that when altered or removed cause more change to the situation
+for example  in an academic lecture  changing the topic of the lecture is typically perceived as a more substantial change that changing the room in which the lecture takes place  and therefore the topic is a higher level feature of the talk than its location
+there are two non-exclusive ways in which clt might predict that distance would increase the beneficial impact or decrease the detrimental impact of auas on sets of alternatives
+first  desirability considerations i e   the value of an action's end state constitute a high-level construal of the alternative and should receive more weight in a more distant future decision
+in contrast  feasibility considerations i e   the ease or difficulty of reaching that end-state constitute a low-level construal of the alternative and should receive less weight in a more distant future decision  CITATION
+because auas are  by definition  highly desirable but not feasible  they would be more attractive in more distant future sets
+second  temporal distance may affect the likelihood of assimilation versus contrast
+forster  liberman  and kutchel  CITATION  recently showed that psychological distance enhances assimilation as opposed to contrast of a target to a category
+for example  in one of their experiments  participants compared their athletic skills to either a moderately high standard or a moderately low standard and then rated their expected athletic performance in an athletic competition that would take place either the next day or a year later
+compared to a control condition  in which time was not specified  a distant time perspective enhanced assimilation i e   produced a high self-rating after comparison to a high standard and a low self-rating after comparison to a low standard whereas a proximal time perspective enhanced contrast i e   produced a low self-rating after comparison to a high standard and a high self-rating after comparison to a low standard
+possibly  temporal proximity would make participants more likely to contrast the aua from the set  and cause the set to be evaluated more negatively than without an aua
+temporal distance  on the other hand  would reduce contrast or produce assimilation of the set from the aua
+as a result  the entire set of alternatives will not look worse and may even look better in the presence of an aua than without it
+we report four studies that examine the prediction that auas decrease the attractiveness of near future sets  but do not decrease and even increase the attractiveness of distant future sets
+in addition to this predicted interaction between time and adding an aua  there might be also main effects of both factors
+specifically  adding an aua might produce either an overall assimilation effect or an overall contrast effect  CITATION
+temporal distance  too  might decrease or increase the attractiveness of a set of alternatives  due to temporal discounting  CITATION  or savoring  CITATION   respectively

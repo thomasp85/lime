@@ -1,0 +1,21 @@
+### abstract ###
+In data analysis new forms of complex data have to be considered like for example (symbolic data, functional data, web data, trees, SQL query and multimedia data,
+
+)
+In this context classical data analysis for knowledge discovery based on calculating the center of gravity can not be used because input are not  SYMBOL  vectors
+In this paper, we present an application on real world symbolic data using the self-organizing map
+To this end, %%@ we propose an extension of the self-organizing map that can handle symbolic data \\  keywords:  Classification, Self organizing map, symbolic data, dissimilarity
+### introduction ###
+The self-organizing map(SOM) introduced by Kohonen  CITATION  is an unsupervised neural network method which has both clustering and visualization %%@ properties
+It can be considered as an algorithm that maps a high dimensional data space,  SYMBOL , to a lower dimension, generally 2, and which %%@ is called a map
+This projection enables the input data to be partitioned into "similar" clusters while preserving their topology
+Its most similar %%@ predecessors are the k-means algorithm  CITATION  and the dynamic clustering method  CITATION , which operate as a SOM without topology preservation %%@ and therefore without easy visualization
+In data analysis, new forms of complex data have to be considered, most notably symbolic data (data with an internal structure such as interval %%@ data, distributions, functional data, etc ) and semi-structured data (trees, XML documents, SQL queries, etc )
+In this context, classical data %%@ analysis based on calculating the center of gravity can not be used because input are not  SYMBOL  vectors
+In order to solve this problem, %%@ several methods can be considered depending on the type of data (for example projection operators %%@ for functional data  CITATION )
+However, those methods are not fully general and an adaptation of every data analysis algorithm to the resulting %%@ data is needed
+The Kohonen's SOM is based on the center of gravity notion and unfortunately, this concept is not applicable to many kinds of complex data
+In this paper we propose an adaptation of the SOM to dissimilarity data as an alternative solution
+Our goal is to modify the SOM algorithm to allow its implementation on dissimilarity measures rather than on raw data
+To this end, we take one's inspiration from the work of Kohonen  CITATION
+To apply the method, only the definition of a dissimilarity for each type of data is necessary and so complex data can be processed

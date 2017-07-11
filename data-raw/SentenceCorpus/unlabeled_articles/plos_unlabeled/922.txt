@@ -1,0 +1,26 @@
+### abstract ###
+Proteins are active, flexible machines that perform a range of different functions.
+Innovative experimental approaches may now provide limited partial information about conformational changes along motion pathways of proteins.
+There is therefore a need for computational approaches that can efficiently incorporate prior information into motion prediction schemes.
+In this paper, we present PathRover, a general setup designed for the integration of prior information into the motion planning algorithm of rapidly exploring random trees.
+Each suggested motion pathway comprises a sequence of low-energy clash-free conformations that satisfy an arbitrary number of prior information constraints.
+These constraints can be derived from experimental data or from expert intuition about the motion.
+The incorporation of prior information is very straightforward and significantly narrows down the vast search in the typically high-dimensional conformational space, leading to dramatic reduction in running time.
+To allow the use of state-of-the-art energy functions and conformational sampling, we have integrated this framework into Rosetta, an accurate protocol for diverse types of structural modeling.
+The suggested framework can serve as an effective complementary tool for molecular dynamics, Normal Mode Analysis, and other prevalent techniques for predicting motion in proteins.
+We applied our framework to three different model systems.
+We show that a limited set of experimentally motivated constraints may effectively bias the simulations toward diverse predicates in an outright fashion, from distance constraints to enforcement of loop closure.
+In particular, our analysis sheds light on mechanisms of protein domain swapping and on the role of different residues in the motion.
+### introduction ###
+Mechanistic understanding of protein motions intrigued structural biologists, bio-informaticians and physicists to explore molecular motions for the last five decades.
+In two seminal breakthroughs in 1960 CITATION, CITATION, the structures of Haemoglobin and Myoglobin were solved and consequently, for the first time, mechanistic structural insights into the motion of a protein were deduced from its snap-shot image.
+This finding paved the way to a by-now classical model for cooperativity in binding of allosteric proteins CITATION.
+Nowadays, hundreds of proteins with known multiple conformations, together with their suggested molecular motion, are recorded in databases such as MolMovDB CITATION.
+This number increases with the influx of solved structures from the Protein Data Bank CITATION.
+An inherent flexibility is characteristic of fundamental protein functions such as catalysis, signal transduction and allosteric regulation.
+Elucidating motion of protein structures is essential for understanding their function, and in particular, for understanding control mechanisms that prevent or allow protein motions.
+Understanding the relation between protein sequence and protein motion can allow de-novo design of dynamic proteins, enhance our knowledge about transition states and provide putative conformations for targeting drugs.
+Accurate prediction of protein motion can also help address other computational challenges.
+For instance, Normal Mode Analysis motion predictions CITATION can be used for efficient introduction of localized flexibility into docking procedures CITATION, CITATION .
+Experimental knowledge of macro-molecular motions has been discouragingly limited to this day by the fact that high-resolution structures solved by X-ray crystallography are merely the outmost stable conformations of proteins, in a sense a snap shot of a dynamic entity.
+While high resolution experimental data of molecular motion are still beyond reach, innovative breakthroughs in time-resolved optical spectroscopy, single molecule F rster resonance energy transfer, small-angle X-ray scattering CITATION, as well as advances in NMR spectroscopy such as residual dipolar coupling methods and paramagnetic relaxation enhancements CITATION CITATION now provide increasingly detailed experimental data on molecular motion, e.g., distance and angle constraints or measurements of rotational motion CITATION .

@@ -1,0 +1,31 @@
+### abstract ###
+Rates of hospital-acquired infections, such as methicillin-resistant Staphylococcus aureus, are increasingly used as quality indicators for hospital hygiene.
+Alternatively, these rates may vary between hospitals, because hospitals differ in admission and referral of potentially colonized patients.
+We assessed if different referral patterns between hospitals in health care networks can influence rates of hospital-acquired infections like MRSA.
+We used the Dutch medical registration of 2004 to measure the connectedness between hospitals.
+This allowed us to reconstruct the network of hospitals in the Netherlands.
+We used mathematical models to assess the effect of different patient referral patterns on the potential spread of hospital-acquired infections between hospitals, and between categories of hospitals.
+University hospitals have a higher number of shared patients than teaching or general hospitals, and are therefore more likely to be among the first to receive colonized patients.
+Moreover, as the network is directional towards university hospitals, they have a higher prevalence, even when infection control measures are equally effective in all hospitals.
+Patient referral patterns have a profound effect on the spread of health care-associated infections like hospital-acquired MRSA.
+The MRSA prevalence therefore differs between hospitals with the position of each hospital within the health care network.
+Any comparison of MRSA rates between hospitals, as a benchmark for hospital hygiene, should therefore take the position of a hospital within the network into account.
+### introduction ###
+Pathogens that typically cause hospital-acquired infections have an opportunistic nature.
+These organisms are usually part of the normal bacterial flora of humans and only cause disease when reaching body sites that are normally free from bacterial colonization e.g. when anatomical barriers are breached due to trauma or medical/surgical interventions.
+For this reason, severe problems with nosocomial pathogens are mainly seen in the very young and elderly and most frequently in institutions such as hospitals and long-term care facilities where patients are treated for acute or chronic conditions.
+Methicillin-resistant Staphylococcus aureus is an antimicrobial resistant variant of S. aureus, a common bacteria frequently colonizing healthy humans and animals.
+Emergence of MRSA is due to the acquisition of a large DNA fragment, which seems to be rare CITATION, CITATION.
+The expansion of a limited number of MRSA clones that characterizes the current epidemic in hospitals worldwide is therefore believed to be the result of between patient transmission and only to a minor extent due to the de novo emergence in patients exposed to antibiotics.
+MRSA has therefore become the marker with which the success or failure of hospital infection control CITATION .
+The prevalence of the MRSA differs considerably within and between countries CITATION, CITATION.
+Currently about 30 percent of the S. aureus causing bloodstream infections in the UK is resistant to methicillin, against only 1 percent in the Netherlands and Scandinavian countries CITATION.
+Although in high endemic countries MRSA infections are frequent in all hospitals, the proportions are highest in large teaching hospitals CITATION, CITATION, which also report the highest frequency of newly occurring MRSA clones CITATION CITATION.
+The severity of underlying medical condition of the patients, as well as higher antibiotic use and frequency of invasive procedures have been proposed as the main reasons for this difference CITATION .
+Patients can carry MRSA, asymptomatically, for a long time CITATION.
+When readmitted, they may introduce the pathogen acquired during a previous admission into a new hospital CITATION.
+Failure of one hospital's infection control measures can therefore affect the prevalence in hospitals with which it shares patients CITATION.
+Patients are referred to hospitals at different rates depending on the function of hospitals within the health-care system, which likely affect the prevalence at different institutions.
+These referral patterns might therefore offer an explanation for high MRSA incidence in hospitals of the tertiary referral level CITATION.
+But can referral patterns account for differences in spread between hospitals, and for differences in observed prevalence?
+To answer these questions, we have been mapping the health care network based on a large national medical registry, and evaluated the occurrence of hospital-acquired infections in different care categories under simulated epidemic conditions.

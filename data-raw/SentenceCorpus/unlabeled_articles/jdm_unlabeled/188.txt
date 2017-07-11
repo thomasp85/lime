@@ -1,0 +1,49 @@
+### abstract ###
+subjects performed a decision task  CITATION  in both a well-rested and experimentally sleep-deprived state
+we found two main results   NUMBER  final choice accuracy was unaffected by sleep deprivation  and yet  NUMBER  the estimated decision model differed significantly following sleep-deprivation
+following sleep deprivation  subjects placed significantly less weight on new information in forming their beliefs
+because the altered decision process still maintains decision accuracy  it may suggest that increased accident and error rates attributed to reduced sleep in modern society stem from reduced auxiliary function performance e g   slowed reaction time  reduced motor skills or other components of decision making  rather than the inability to integrate multiple pieces of information
+### introduction ###
+a large volume of evidence suggests that individuals in industrialized nations are becoming increasingly sleep-deprived
+according to a recent poll conducted by the national sleep foundation  the average american adult slept less than  NUMBER  hours per night in  NUMBER 
+the nightly average was  NUMBER   NUMBER  hours in  NUMBER  and  NUMBER  hours per night in  NUMBER   CITATION
+this trend has significant implications given the known effects of sleep deprivation  decreased motor and cognitive performance  reduced vigilance and reaction time  worsened mood  and reduced ability to think flexibly  CITATION
+indeed  even  NUMBER  hours of habitual sleep per night leads to significantly diminished cognitive performance relative to  NUMBER  or  NUMBER  hours  CITATION   which causes us to wonder about the more hidden decision effects of sleep loss
+nearly  NUMBER  million americans  close to  NUMBER  percent  of all adults  are estimated to suffer from some level of sleep deprivation  and so the effects of sleep deprivation on decision-making have widespread implications
+many occupations promote a culture of sleep deprivation e g   emergency personnel  air traffic controllers  medical residents  military personnel  long-haul truck drivers  shift workers
+sleep deprivation costs the u s economy   NUMBER  billion dollars annually in lost productivity  CITATION
+additionally  it results in increased workplace accident rates  CITATION   increased absenteeism  CITATION   greater medical morbidity and related costs  CITATION   and even slower career advancement  CITATION
+across numerous settings work  home  driving  public accidents leger  CITATION  estimated the costs of accidents attributable to sleepiness at   NUMBER -  NUMBER  billion  in  NUMBER  dollars
+sleep deprivation has also been implicated in several major historical disasters  including the space shuttle challenger explosion  the exxon valdez oil spill  and the chernobyl nuclear plant explosion  CITATION
+in sum  the impact of sleep deprivation in the workplace and on society as a whole  while difficult to measure precisely  is massive
+this paper reports results from a laboratory study that examines the effects of sleep deprivation on information processing
+examinations of flexible thinking  strategy updating  and risk assessment are relatively new to sleep research  CITATION
+past research has utilized complex multi-modal tasks or operational settings that cannot identify specific aspects of decision-making affected by sleep deprivation
+for example  harrison and horne  CITATION  utilize a marketing simulation game  and they report that  NUMBER  hours of total sleep deprivation led to stereotyped decisions failing to integrate previous feedback  resulting in large financial losses and production errors
+in operational settings  similarly global outcome measures are reported  CITATION
+a recent meta-analysis of  NUMBER  studies found that  clinical outcomes   the culmination of many decisions  were negatively impacted by physician sleep loss  CITATION
+thus  neither laboratory nor applied sleep deprivation studies have measured discrete  quantifiable decision parameters free of confounds
+even the well-known iowa gambling task igt  which has been used to examine risky choice behavior in the sleep literature  CITATION   does not allow the researcher to separate risk attitude from subjective probability formation - the latter results from the fact that there is missing information with respect to outcome probabilities in the igt
+mckenna et al CITATION  addressed this issue and showed that sleep deprivation desensitizes the decision-maker to risk
+in general  the mechanism by which sleep deprivation alters decision making remains unclear
+given that many real-world decisions involve multiple cognitive processes  it is important to separately examine several of those components in an effort to determine which may be specifically impacted by sleep deprivation and which may not
+the studies examining risk preference cited above are examples of such work
+another process found in many decisions is the ability to integrate multiple pieces of information into a decision
+sleep deprivation might alter subject tendencies to utilize one or more pieces of information in decision-making
+or  the arrival of new information may elicit an impulsive response as subjects react to new evidence  and this impulse may be altered following sleep deprivation
+the current study examines this specific aspect of decision-making through the study of bayesian updating
+the experiment is administered to subjects both well-rested and after  NUMBER - NUMBER  hours microgreek  NUMBER   NUMBER   sigma   NUMBER  of controlled total sleep deprivation
+for comparison to previous economics research  we replicate the bayes rule experiment of grether  CITATION
+one can examine the effects of sleep deprivation on the ability to integrate information into a decision from at least two perspectives  each with their own strengths and weaknesses
+one involves asking whether individuals can calculate the true bayesian probability given base rate probabilities and new sample evidence
+this requires asking subjects for their judgment of the actual probability of event a occurring and  therefore  focuses on finding the  ideal  answer to a problem
+although this approach has merit  our interest was in determining the weight placed on the odds and evidence when an actual forced choice was made i e   a was more likely to occur
+such a scenario is more aligned with many naturally-occurring decision environments in everyday life
+for example  one may have to decide which of two routes to a destination is faster right now given the prior knowledge of the rate of traffic on each route and the new information of the current day and time
+a surgeon may have to decide to perform an emergency procedure given prior knowledge of the relative success of the procedure and the new information of the current condition of the patient
+in short  when individuals make real decisions  they must often choose a specific course of action i e   a dichotomous choice rather than a probability estimate
+it is the influence of sleep deprivation on making such decisions that is our interest
+because information updating is a fundamental component of decision making under uncertainty  this research is relevant to a wide variety of behavioral applications
+sleep research has indirectly pointed towards failed information assimilation under sleep deprivation  CITATION
+however  more direct evidence is needed  and harrison and horne  CITATION  recognize the lack of sleep deprivation research on specific decision models
+as behavioral economics continues to explore decision-making  one cannot ignore the evidence indicating that many decision-makers are often sleep-deprived to some degree

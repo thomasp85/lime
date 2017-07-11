@@ -1,0 +1,27 @@
+### abstract ###
+In this paper, we propose a spreading activation approach for collaborative filtering (SA-CF)
+By using the opinion spreading process, the similarity between any users can be obtained
+The algorithm has remarkably higher accuracy than the standard collaborative filtering (CF) using Pearson correlation
+Furthermore, we introduce a free parameter  SYMBOL  to regulate the contributions of objects to user-user correlations
+The numerical results indicate that decreasing the influence of popular objects can further improve the algorithmic accuracy and personality
+We argue that a better algorithm should simultaneously require less computation and generate higher accuracy
+Accordingly, we further propose an algorithm involving only the top- SYMBOL  similar neighbors for each target user, which has both less computational complexity and higher algorithmic accuracy \keywords{Recommendation systems; Bipartite network; Collaborative filtering }
+### introduction ###
+With the advent of the Internet, the exponential growth of the World-Wide-Web and routers confront people with an information overload  CITATION
+We are facing too much data to be able to effectively filter out the pieces of information that are most appropriate for us
+A promising way is to provide personal recommendations to filter out the information
+Recommendation systems use the opinions of users to help them more effectively identify content of interest from a potentially overwhelming set of choices  CITATION
+Motivated by the practical significance to the e-commerce and society, various kinds of algorithms have been proposed, such as correlation-based methods  CITATION , content-based methods  CITATION , the spectral analysis  CITATION , principle component analysis  CITATION , network-based methods  CITATION , and so on
+For a review of current progress, see Ref
+CITATION  and the references therein
+One of the most successful technologies for recommendation systems, called  collaborative filtering  (CF), has been developed and extensively investigated over the past decade  CITATION
+When predicting the potential interests of a given user, such approach first identifies a set of similar users from the past records and then makes a prediction based on the weighted combination of those similar users' opinions
+Despite its wide applications, collaborative filtering suffers from several major limitations including system scalability and accuracy  CITATION
+Recently, some physical dynamics, including mass diffusion  CITATION , heat conduction  CITATION  and trust-based model  CITATION , have found their applications in personal recommendations
+These physical approaches have been demonstrated to be of both high accuracy and low computational complexity  CITATION
+However, the algorithmic accuracy and computational complexity may be very sensitive to the statistics of data sets
+For example, the algorithm presented in Ref
+CITATION  runs much faster than standard CF if the number of users is much larger than that of objects, while when the number of objects is huge, the advantage of this algorithm vanishes because its complexity is mainly determined by the number of objects (see Ref
+CITATION  for details)
+In order to increase the system scalability and accuracy of standard CF, we introduce a network-based recommendation algorithm with spreading activation, namely SA-CF
+In addition, two free parameters,  SYMBOL  and  SYMBOL  are presented to increase the accuracy and personality

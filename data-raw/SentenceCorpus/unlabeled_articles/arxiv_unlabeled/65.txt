@@ -1,0 +1,43 @@
+### abstract ###
+Observations consisting of measurements on relationships for pairs of objects arise in many settings, such as protein interaction and gene regulatory networks, collections of author-recipient email, and social networks
+Analyzing such data with probabilisic models can be delicate because the simple exchangeability assumptions underlying many boilerplate models no longer hold
+In this paper, we describe a latent variable model of such data called the  mixed membership stochastic blockmodel
+This model extends blockmodels for relational data to ones which capture mixed membership latent relational structure, thus providing an object-specific low-dimensional representation
+We develop a general variational inference algorithm for fast approximate posterior inference
+We explore applications to social and protein interaction networks
+Keywords:   Hierarchical Bayes, Latent Variables, Mean-Field Approximation, Statistical Network Analysis, Social Networks, Protein Interaction Networks
+### introduction ###
+Modeling relational information among objects, such as pairwise relations represented as graphs, is becoming an important problem in modern data analysis and machine learning
+Many data sets contain interrelated observations
+For example, scientific literature connects papers by citation, the Web connects pages by links, and protein-protein interaction data connects proteins by physical interaction records
+In these settings, we often wish to infer hidden attributes of the objects from the observed measurements on pairwise properties
+For example, we might want to compute a clustering of the web-pages, predict the functions of a protein, or assess the degree of relevance of a scientific abstract to a scholar's query
+Unlike traditional attribute data collected over individual objects,  relational data  violate the classical independence or exchangeability assumptions that are typically made in machine learning and statistics
+In fact, the observations are interdependent by their very nature, and this interdependence necessitates developing special-purpose statistical machinery for analysis
+There is a history of research devoted to this end
+One problem that has been heavily studied is that of  clustering  the objects to uncover a group structure based on the observed patterns of interactions
+Standard model-based clustering methods, eg , mixture models, are not immediately applicable to relational data because they assume that the objects are conditionally independent given their cluster assignments
+The latent stochastic blockmodel~ CITATION  represents an adaptation of mixture modeling to dyadic data
+In that model, each object belongs to a cluster and the relationships between objects are governed by the corresponding pair of clusters
+Via posterior inference on such a model one can identify latent roles that objects possibly play, which govern their relationships with each other
+This model originates from the stochastic blockmodel, where the roles of objects are known in advance~ CITATION
+A recent extension of this model relaxed the finite-cardinality assumption on the latent clusters, via a nonparametric hierarchical Bayesian formalism based on the Dirichlet process prior~ CITATION
+The latent stochastic blockmodel suffers from a limitation that each object can only belong to one cluster, or in other words, play a single latent role
+In real life, it is not uncommon to encounter more intriguing data on entities that are multi-facet
+For example, when a protein or a social actor interacts with different partners, different functional or social contexts may apply and thus the protein or the actor may be acting according to different latent roles they can possible play
+In this paper, we relax the assumption of single-latent-role for actors, and develop a  mixed membership model  for relational data
+Mixed membership models, such as latent Dirichlet allocation~ CITATION , have emerged in recent years as a flexible modeling tool for data where the single cluster assumption is violated by the heterogeneity within of a data point
+They have been successfully applied in many domains, such as document analysis~ CITATION , surveys~ CITATION , image processing~ CITATION , transcriptional regulation  CITATION , and population genetics~ CITATION
+The mixed membership model associates each unit of observation with multiple clusters rather than a single cluster, via a membership probability-like vector
+The concurrent membership of a data in different clusters can capture its different aspects, such as different underlying topics for words constituting each document
+The mixed membership formalism is a particularly natural idea for relational data, where the objects can bear multiple latent roles or cluster-memberships that influence their relationships to others
+As we will demonstrate, a mixed membership approach to relational data lets us describe the interaction between objects playing multiple roles
+For example, some of a protein's interactions may be governed by one function; other interactions may be governed by another function
+Existing mixed membership models are not appropriate for relational data because they assume that the data are conditionally independent given their latent membership vectors
+In relational data, where each object is described by its relationships to others, we would like to assume that the ensemble of mixed membership vectors help govern the relationships of each object
+The conditional independence assumptions of modern mixed membership models do not apply
+In this paper, we develop mixed membership models for relational data, develop a fast variational inference algorithm for inference and estimation, and demonstrate the application of our technique to large scale protein interaction networks and social networks
+Our model captures the multiple roles that objects exhibit in interaction with others, and the relationships between those roles in determining the observed interaction matrix
+Mixed membership and the latent block structure can be reliably recovered from relational data (Section )
+The application to a friendship network among students tests the model on a real data set where a well-defined latent block structure exists (Section )
+The application to a protein interaction network tests to what extent our model can reduce the dimensionality of the data, while revealing substantive information about the functionality of proteins that can be used to inform subsequent analyses (Section )

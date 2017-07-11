@@ -1,0 +1,43 @@
+### abstract ###
+Many neurons have epochs in which they fire action potentials in an approximately periodic fashion.
+To see what effects noise of relatively small amplitude has on such repetitive activity we recently examined the response of the Hodgkin-Huxley space-clamped system to such noise as the mean and variance of the applied current vary, near the bifurcation to periodic firing.
+This article is concerned with a more realistic neuron model which includes spatial extent.
+Employing the Hodgkin-Huxley partial differential equation system, the deterministic component of the input current is restricted to a small segment whereas the stochastic component extends over a region which may or may not overlap the deterministic component.
+For mean values below, near and above the critical values for repetitive spiking, the effects of weak noise of increasing strength is ascertained by simulation.
+As in the point model, small amplitude noise near the critical value dampens the spiking activity and leads to a minimum as noise level increases.
+This was the case for both additive noise and conductance-based noise.
+Uniform noise along the whole neuron is only marginally more effective in silencing the cell than noise which occurs near the region of excitation.
+In fact it is found that if signal and noise overlap in spatial extent, then weak noise may inhibit spiking.
+If, however, signal and noise are applied on disjoint intervals, then the noise has no effect on the spiking activity, no matter how large its region of application, though the trajectories are naturally altered slightly by noise.
+Such effects could not be discerned in a point model and are important for real neuron behavior.
+Interference with the spike train does nevertheless occur when the noise amplitude is larger, even when noise and signal do not overlap, being due to the instigation of secondary noise-induced wave phenomena rather than switching the system from one attractor to another .
+### introduction ###
+Rhythmic or almost regular periodic neuronal spiking is found in many parts of the central nervous system, including, for example, thalamic relay cells CITATION CITATION, dopaminergic neurons CITATION, respiratory neurons CITATION, CITATION, locus coeruleus neurons CITATION and dorsal raphe serotonergic neurons CITATION, CITATION.
+Periodic behavior is also found in the activity of neuronal populations CITATION, CITATION.
+Since stochasticity is a prominent component of neuronal activity at all levels CITATION, CITATION, it is of interest to see what effects noise may have on the repetitive activity of neurons.
+There are many kinds of neuronal model which could be used, an immediate dichotomy being provided by Hodgkin's defining classes of type 1 and type 2 neurons CITATION, CITATION.
+We have chosen to first examine the behavior of the classic type 2 neural model in its full spatial version CITATION which has been employed in recent studies of reliability CITATION.
+The methods we use can be easily extended to more complicated models such as in CITATION CITATION, CITATION, CITATION .
+The deterministic spatial Hodgkin-Huxley system, consisting of the cable partial differential equation for membrane voltage and three auxiliary differential equations describing the sodium and potassium conductances is one of the most successful mathematical models in physiology CITATION.
+The corresponding system of ordinary differential equations has been the subject of a very large number of studies and analyses, as for example in references CITATION CITATION.
+Most neuronal modeling studies, aside from some that use software packages, ignore spatial extent altogether and many of those that include spatial extent do not include a soma and hardly ever an axon, because the inclusion of all three major neuronal components, soma, axon and dendrites, makes for a complicated system of equations and boundary conditions.
+A recent study of spike propagation in myelinated fibres used a multi-compartmental stochastic Hodgkin-Huxley model and demonstrated the facilatory effect of noise and that there were optimal channel densities at nodes for the most efficient signal transmission CITATION.
+In reality, if solutions and statistical properties are found by simulation, stochastic cable models, including the nonlinear model of Hodgkin and Huxley, are not much more complicated than the corresponding point models, although more computing time is required.
+On the other hand, an apparent disadvantage of spatial models is that more parameters must be specified, many of which can at best only be approximately estimated.
+The original HH-system for action potential formation and propagation in squid axon contained only sodium ions, potassium ions and leak currents and the distribution of the corresponding ion channels was assumed to be uniform.
+That is, the ionic current wasFORMULAand the various channel densities did not vary with distance.
+However, there are two reasons why this basic model has been modified in the modeling of more complex cells.
+Firstly, ion channel densities do depend on position, and secondly, neurons, especially those in the mammalian central nervous system, often receive many thousands of synaptic inputs from many different sources and each source has a different spatial distribution pattern on the soma-dendritic surface CITATION CITATION.
+Thus, spatial models of motoneurons CITATION and cortical pyramidal cells CITATION, CITATION have also used the same components for the ionic current as in the HH-system, but with channel densities that vary over the soma-dendritic and axonal surface.
+Most central neurons have many dendritic trunks and an axon, each of which branches many times.
+In this article we focus on a cable model with one space dimension, which is most accurate for a nerve cylinder, usually of uniform diameter.
+Thus in the first instance our approach is useful to investigate the properties of single axonal or dendritic segments.
+This simple geometry can nevertheless be used to gain some insight into the properties of neurons with complex anatomy by appealing to such methods as CITATION mapping from the neuronal branching structure to a cylinder thus reducing the multi-segment problem to solving a cable equation in one space dimension.
+Thus single-segment cable models can have relevance for neurons with branching dendritic or axonal trees.
+Recent studies of the HH-system of ordinary differential equations with stochastic input have revealed new and interesting phenomena CITATION, CITATION which have a character opposite to that of stochastic resonance CITATION.
+In the latter, there is a noise level at which some response variable achieves a maximum.
+In particular, in the space-clamped HH system, at mean input current densities near the critical value for repetitive firing, it was found that a small amount of noise could strongly inhibit spiking.
+Furthermore, there occurred, for given mean current densities, a minimum in the firing rate as the noise level increased from zero CITATION, CITATION.
+Such properties are related to noise-induced delays in firing as found in single HH neurons with periodic input current CITATION or networks of such neurons CITATION, CITATION.
+It is of interest to see if these kinds of phenomena extend to the spatial HH-system where in addition many possibilities for the spatial distribution of the mean input and of the noise.
+We will demonstrate that the spatial HH system exhibits quite similar but more complex behavior than the ODE system.

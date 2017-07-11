@@ -1,0 +1,20 @@
+### abstract ###
+three experiments tested if individuals show violations of transitivity in choices between risky gambles in linked designs
+the binary gambles varied in the probability to win the higher better prize  the value of the higher prize  and the value of the lower prize
+each design varied two factors  with the third fixed
+designs are linked by using the same values in different designs
+linked designs allow one to determine if a lexicographic semiorder model can describe violations of transitivity in more than one design using the same parameters
+in addition  two experiments tested interactive independence  a critical property implied by all lexicographic semiorder models
+very few people showed systematic violations of transitivity  only one person out of  NUMBER  showed violations of transitivity in two designs that could be linked by a lexicographic semiorder
+however  that person violated interactive independence  as did the majority of other participants
+most individuals showed systematic violations of the assumptions of stochastic independence and stationarity of choice responses
+that means that investigators should evaluate models with respect to response patterns response combinations rather than focusing entirely on choice proportions
+### introduction ###
+descriptive theories of risky decision making can be divided into two groups  those that satisfy transitivity of preference and those that do not
+transitivity of preference is the assumption that  if a person prefers a to b and prefers b to c  then that person should prefer a to c  apart from random error
+we use the symbol    x NUMBER b   to denote preference  so the property can be denoted as follows  a   x NUMBER b  b and b   x NUMBER b  c   x NUMBER d NUMBER   a   x NUMBER b  c
+theories that represent each gamble by a single number automatically imply transitivity
+these theories assume that a   x NUMBER b  b   x NUMBER d NUMBER   ua  greater than  ub  where ua and ub are the numerical values or utilities of the two gambles
+expected utility theory eu  cumulative prospect theory cpt  and the transfer of attention exchange model tax  as well as many other theories  fall in this class of theories that satisfy transitivity  CITATION
+theories that represent choice in terms of contrasts between the components of the alternatives  however  need not satisfy transitivity of preference
+theories that violate transitivity include the family of lexicographic semiorder ls models  the priority heuristic  regret theory rt  the stochastic difference model sdm and others  CITATION

@@ -1,0 +1,46 @@
+### abstract ###
+In eukaryotic cells, the internalization of extracellular cargo via the endocytic machinery is an important regulatory process required for many essential cellular functions.
+The role of cooperative protein-protein and protein-membrane interactions in the ubiquitous endocytic pathway in mammalian cells, namely the clathrin-dependent endocytosis, remains unresolved.
+We employ the Helfrich membrane Hamiltonian together with surface evolution methodology to address how the shapes and energetics of vesicular-bud formation in a planar membrane are stabilized by presence of the clathrin-coat assembly.
+Our results identify a unique dual role for the tubulating protein epsin: multiple epsins localized spatially and orientationally collectively play the role of a curvature inducing capsid; in addition, epsin serves the role of an adapter in binding the clathrin coat to the membrane.
+Our results also suggest an important role for the clathrin lattice, namely in the spatial- and orientational-templating of epsins.
+We suggest that there exists a critical size of the coat above which a vesicular bud with a constricted neck resembling a mature vesicle is stabilized.
+Based on the observed strong dependence of the vesicle diameter on the bending rigidity, we suggest that the variability in bending stiffness due to variations in membrane composition with cell type can explain the experimentally observed variability on the size of clathrin-coated vesicles, which typically range 50 100 nm.
+Our model also provides estimates for the number of epsins involved in stabilizing a coated vesicle, and without any direct fitting reproduces the experimentally observed shapes of vesicular intermediates as well as their probability distributions quantitatively, in wildtype as well as CLAP IgG injected neuronal cell experiments.
+We have presented a minimal mesoscale model which quantitatively explains several experimental observations on the process of vesicle nucleation induced by the clathrin-coated assembly prior to vesicle scission in clathrin dependent endocytosis.
+### introduction ###
+The cellular process of endocytosis is important in the biological regulation of trafficking in cells, as well as impacts the technology of targeted drug delivery in nanomedicine CITATION, CITATION, CITATION, CITATION, CITATION, CITATION, CITATION.
+In eukaryotic cells, the internalization of extracellular cargo via the endocytic machinery is an important regulatory process required for many essential cellular functions, including nutrient uptake and cell-cell communication.
+Several experimental CITATION as well as theoretical CITATION, CITATION, CITATION treatments have addressed mechanisms in endocytosis, yet the role of cooperative protein-protein and protein-membrane interactions in the ubiquitous endocytic pathway in mammalian cells, namely clathrin-dependent endocytosis, remains unresolved.
+A sequence of molecular events in CDE is responsible for the recruitment of adaptor protein 2, accessory proteins such as epsin, AP180, Eps15, Dynamin, etc., and the scaffolding protein clathrin to the plasma membrane CITATION.
+The accessory proteins such as epsin are implicated in membrane bending CITATION.
+Polymerization of clathrin triskelia in the presence of adaptor proteins such as AP-2 results in the clathrin coat formation, and tubulating proteins such as epsin interact with both the clathrin coat as well as the bilayer CITATION to stabilize a clathrin-coated budding vesicle.
+The involvement of dynamin is believed to be in the vesicle scission step CITATION.
+Even though actin is believed to play an important role in the endocytosis process in S. cerevisiae, in mammalian cells, actin repression, at best, has a small effect on endocytosis CITATION .
+We focus on the energetic stabilization of a budding vesicle induced by the clathrin-coat assembly.
+Recent work CITATION demonstrates that the membrane invagination only begins in the presence of a growing clathrin coat CITATION.
+Experiments performed by down-regulating AP-2 expression CITATION, CITATION as well as those involving the inhibition of epsin CITATION either significantly decrease the number of clathrin-coated pits or alter the distribution of coated-intermediates involved in the vesicle-bud formation.
+Although the CDE in mammalian cells remains a complex regulatory process, we believe that a critical and self-consistent set of experiments is now emerging which warrants the formulation of physically-based models to quantitatively describe the bioenergetics of protein-induced vesicle formation in CDE CITATION .
+Even though models directly addressing CDE in the experimental context have not been proposed, Oster et al. have addressed yeast endocytosis driven by actin CITATION, CITATION.
+Moreover, Kohyama et al. CITATION have shown that model two component membranes bud in response to induced spontaneous curvature or the line tension between the two components of the membrane and Frese et al. have investigated the effect of protein shape and crowding on domain formation and curvature in biological membranes CITATION.
+A recent mini-review examining the current experimental trend by Lundmark and Carlsson on driving membrane curvature in clathrin-dependent and clathrin-independent endocytosis is also available CITATION.
+We formulate a minimal model, by restricting our focus to three proteins in the clathrin-coat assembly : clathrin, epsin and AP-2, and their role in the stabilization of a budding vesicle on the cell membrane.
+Mammalian cells have a diverse set of proteins which often serve as surrogates and participate in compensatory mechanisms.
+In this regard, our choice for the ingredients for the minimal model represents roles for the scaffolding proteins, curvature inducing proteins and the adaptor proteins.
+Recent experiments CITATION, CITATION have reported characteristics of nucleation and growth of clathrin coat: the initiation was observed to occur randomly, but only within subdomains devoid of cytoskeletal elements.
+In BSC1 cell lines, such domains appear to be 400 nm in diameter surrounded by a rim of a 200 nm dead zone.
+Notably, the nucleation of clathrin coats was observed only in the 400 nm region CITATION with the following salient properties: in the growth phase, the addition of clathrin proceeds at a steady rate of about one triskelion every 2 s,.
+Two fates are possible for a growing coat; they either transform into a vesicle, or they abort containing about 10 40 triskelia, which suggests that the coat sizes are bounded.
+While we do not consider the process of nucleation and growth of clathrin, based on the above observations, we study the process of one maturing vesicle in the presence of an assembled clathrin coat of a finite size in a membrane patch free of cytoskeletal elements and subject to a pinned boundary condition at the patch boundary.
+For our model cell membrane patch not fortified by cytoskeleton, we employ a typical value of bending rigidity of our 20k BT derived from literature CITATION, CITATION ;.
+In this respect, we describe a mean-field model which characterizes the membrane patch as a homogeneous phase with effective properties.
+Our model is also mean-field in the sense that it applies to just one vesicular intermediate and the effect of neighboring coats is not included.
+As noted earlier, our model does not account for the mechanism of clathrin coat nucleation or that of vesicle scission.
+Clathrin triskelia and AP-2 polymerize to form a coat CITATION and the stabilizing interactions in the clathrin coat assembly can be quantified using the free energy of the polymerization process.
+Based on in vitro equilibrium data of clathrin cage formation, Nossal CITATION estimated the energetics of a fully-closed clathrin/AP-2 basket relative to a dissolved coat to be 20 k BT.
+The inclusion of epsin in the clathrin-coat accounts for 23 k BT of energy per bound epsin: the ENTH domain of epsin binds to the PtdInsP 2 lipid head groups on the membrane with a binding energy of 14 k BT per bound epsin CITATION and the CLAP domain of epsin interacts with clathrin/AP-2 with an energy of 9 k BT CITATION.
+The ENTH interactions with the membrane require the presence of PIP2, which constitutes about 1 percent of the total phospholipids on the cell membrane CITATION.
+To produce a coated vesicle d 50 nm diameter,, the area of the clathrin coat required is d 2 7850 nm 2.
+Considering the area per lipid head-group to be 0.65 nm 2, the number of PIP2 molecules in the membrane spanning the area of the coat is 1 percent of 185.
+Hence, we note that the ratio of ENTH binding sites to the CLAP binding sites is 185/29 6, and hence as the clathrin coat grows, we expect sufficient number of the corresponding PIP2 binding sites to be present for the ENTH domain of epsin to bind.
+For this reason, we are justified in not explicitly considering PIP2 as a necessary/limiting species in our minimal model.

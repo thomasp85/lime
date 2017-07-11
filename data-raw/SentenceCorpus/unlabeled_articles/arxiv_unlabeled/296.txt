@@ -1,0 +1,39 @@
+### abstract ###
+We study the problem of online regression
+We do not make any assumptions about input vectors or outcomes
+We prove a theoretical bound on the square loss of Ridge Regression
+We also show that Bayesian Ridge Regression can be thought of as an online algorithm competing with all the Gaussian linear experts
+We then consider the case of infinite-dimensional Hilbert spaces and prove relative loss bounds for the popular non-parametric kernelized Bayesian Ridge Regression and kernelized Ridge Regression
+Our main theoretical guarantees have the form of equalities
+### introduction ###
+In the online prediction framework we are provided with some input at each step and try to predict an outcome using this input and information from previous steps  CITATION
+In a simple case in statistics, it is assumed that each outcome is the value, corrupted by Gaussian noise, of a linear function of input
+In competitive prediction the learner compares his loss at each step with the loss of any expert from a certain class of experts instead of making statistical assumptions about the data generating process
+Experts may follow certain strategies
+The learner wishes to predict almost as well as the best expert for  all  sequences
+Our main result is Theorem~ in the next section, which compares the cumulative weighted square loss of Ridge Regression applied in the on-line mode with the regularized cumulative loss of the best linear predictor
+The power of this result can be best appreciated by looking at the range of its implications, both known and new
+For example, Corollary~ answers the question asked by several researchers, see  CITATION , whether Ridge Regression has a relative loss bound with the regret term of the order  SYMBOL  under the square loss function, where  SYMBOL  is the number of steps and the outcomes are assumed bounded; this corollary (as well as all other implications stated in Section~) is an explicit inequality rather than an asymptotic result
+Theorem~ itself is much stronger, stating an equality rather than inequality and not assuming that the outcomes are bounded
+Since it is an equality, it unites upper and lower bounds on the loss
+It appears that all natural bounds on the square loss of Ridge Regression can be easily deduced from our theorem; we give some examples in the next section
+Most of previous research in online prediction considers experts that disregard the presence of noise in observations
+We consider experts predicting a distribution on the outcomes
+We use Bayesian Ridge Regression and prove that it can predict as well as the best regularized expert; this is our Theorem~
+The loss in this theoretical guarantee is the logarithmic loss
+The algorithm that we apply was first used by  CITATION  and similar bounds to ours were obtained by  CITATION
+Theorem~ is later used to deduce Theorem~
+Ridge Regression predicts the mean of the Bayesian Ridge Regression predictive distribution, and the logarithmic loss of Bayesian Ridge Regression is close to scaled square loss of Ridge Regression
+We extend our main result to the case of infinite dimensional Hilbert spaces of functions
+The algorithm used becomes an analogue of non-parametric Bayesian methods
+From Theorem~ and Theorem~ we deduce relative loss bounds on the logarithmic loss of kernelized Bayesian Ridge Regression and on the square loss of kernelized Ridge Regression in comparison with the loss of any function from a reproducing kernel Hilbert space
+Both bounds have the form of equalities
+There is a lot of research done to prove upper and lower relative loss bounds under different loss functions
+If the outcomes are assumed to be bounded, the strongest known theoretical guarantees for square loss are given by  CITATION  and  CITATION  for the algorithm which we call VAW (Vovk-Azoury-Warmuth) following~ CITATION
+%(this is not an apt name, since Ridge Regression is also a special case of the Aggregating Algorithm, corresponding to the logarithmic loss function and learning rate 1; and we will call this algorithm the Vovk-Azoury-Warmuth, or VAW, algorithm, following  CITATION )
+In the case when the inputs and outcomes are not restricted in any way, like for our main guarantees, it is possible to prove certain loss bounds for the Gradient Descent; see  CITATION
+In Section~ of this paper we present the online regression framework and the main theoretical guarantee on the square loss of Ridge Regression
+Section~ describes what we call the Bayesian Algorithm
+In Section~ we show that Bayesian Ridge Regression is competitive with the experts which take into account the presence of noise in observations
+In Section~ we prove the main theorem
+Section~ describes the case of infinite-dimensional Hilbert spaces

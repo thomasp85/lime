@@ -1,0 +1,62 @@
+### abstract ###
+A central challenge in computational modeling of biological systems is the determination of the model parameters.
+Typically, only a fraction of the parameters are experimentally measured, while the rest are often fitted.
+The fitting process is usually based on experimental time course measurements of observables, which are used to assign parameter values that minimize some measure of the error between these measurements and the corresponding model prediction.
+The measurements, which can come from immunoblotting assays, fluorescent markers, etc., tend to be very noisy and taken at a limited number of time points.
+In this work we present a new approach to the problem of parameter selection of biological models.
+We show how one can use a dynamic recursive estimator, known as extended Kalman filter, to arrive at estimates of the model parameters.
+The proposed method follows.
+First, we use a variation of the Kalman filter that is particularly well suited to biological applications to obtain a first guess for the unknown parameters.
+Secondly, we employ an a posteriori identifiability test to check the reliability of the estimates.
+Finally, we solve an optimization problem to refine the first guess in case it should not be accurate enough.
+The final estimates are guaranteed to be statistically consistent with the measurements.
+Furthermore, we show how the same tools can be used to discriminate among alternate models of the same biological process.
+We demonstrate these ideas by applying our methods to two examples, namely a model of the heat shock response in E. coli, and a model of a synthetic gene regulation system.
+The methods presented are quite general and may be applied to a wide class of biological systems where noisy measurements are used for parameter estimation or model selection.
+### introduction ###
+Many biological processes are modeled using ordinary differential equations that describe the evolution over time of certain quantities of interest.
+At the molecular level, the variables considered in the models often represent concentrations of chemical species, such as proteins and mRNA.
+Once the pathway structure is known, the corresponding equations are relatively easy to write down using widely accepted kinetic laws, such as the law of mass action or the Michaelis-Menten law.
+In general the equations will depend on several parameters.
+Some of them, such as reaction rates, and production and decay coefficients have a physical meaning.
+Others might come from approximations or reductions that are justified by the structure of the system and, therefore, they might have no direct biological or biochemical interpretation.
+In both cases, most of the parameters are unknown.
+While sometimes it is feasible to measure them experimentally, in many cases this is very hard, expensive, time consuming, or even impossible.
+However, it is usually possible to measure some of the other variables involved in the models using PCR, immunoblotting assays, fluorescent markers, and the like.
+For these reasons, the problem of parameter estimation, that is the indirect determination of the unknown parameters from measurements of other quantities, is a key issue in computational and systems biology.
+The knowledge of the parameter values is crucial whenever one wants to obtain quantitative, or even qualitative information from the models CITATION, CITATION .
+In the last fifteen years a lot of attention has been given to this problem in the systems biology community.
+Much research has been conducted on the applications to computational biology models of several optimization techniques, such as linear and nonlinear least-squares fitting CITATION, simulated annealing CITATION, genetic algorithms CITATION, and evolutionary computation CITATION, CITATION.
+The latter is suggested as the method of choice for large parameter estimation problems CITATION.
+Starting with a suitable initial guess, optimization methods search more or less exhaustively the parameter space in the attempt to minimize a certain cost function.
+This is usually defined as the error in some sense between the output of the model and the data that comes from the experiments.
+The result is the set of parameters that produce the best fit between simulations and experimental data.
+One of the main problems associated with optimization methods is that they tend to be computationally expensive and may not perform well if the noise in the measurements is significant.
+Considerable interested has also been raised by Bayesian methods CITATION, which can extract information from noisy or uncertain data.
+This includes both measurement noise and intrinsic noise, which is well known to play an important role in chemical kinetics when species are present in low copy numbers CITATION.
+The main advantage of these methods is their ability to infer the whole probability distributions of the parameters, rather than just a point estimate.
+Also, they can handle estimation of stochastic systems with no substantial modification to the algorithms CITATION.
+The main obstacle to their application is computational, since analytical approaches are not feasible for non-trivial problems and numerical solutions are also challenging due to the need to solve high-dimensional integration problems.
+Nonetheless, the most recent advancements in Bayesian computation, such as Markov chain Monte Carlo techniques CITATION, ensemble methods CITATION, CITATION, and sequential Monte Carlo methods that don't require likelihoods CITATION, CITATION have been successfully applied to biological systems, usually in the case of lower-dimensional problems and/or availability of a relatively high number of data samples.
+Maximum-likelihood estimation CITATION, CITATION has also been extensively applied.
+More recently, parameter estimation for computational biology models has been tackled in the framework of control theory by using state observers.
+These algorithms were originally developed for the problem of state estimation, in which one seeks to estimate the time evolution of the unobserved components of the state of a dynamical system.
+The controls literature on this subject is vast, but in the context of biological or biochemical systems the classically used approaches include Luenberger-like CITATION, Kalman filter based, CITATION CITATION, and high-gain observers CITATION.
+Other methods have been developed by exploiting the special structure of specific problems CITATION.
+State observers can be employed for parameter estimation using the technique of state extension, in which parameters are transformed into states by suitably expanding the system under study CITATION CITATION.
+In this context extended Kalman filtering CITATION, CITATION and unscented Kalman filtering CITATION methods have been applied as well.
+When the number of unknown parameters is very large, it is often impossible to find a unique solution to this problem.
+In this case, one finds several sets of parameters, or ranges of values, that are all equally likely to give a good fit.
+This situation is usually referred to as the model being non identifiable, and it is the one that's most commonly encountered in practice.
+Furthermore, it is known that a large class of systems biology models display sensitivities to the parameter values that are roughly evenly distributed over many orders of magnitude.
+Such sloppiness has been suggested as a factor that makes parameter estimation difficult CITATION.
+These and similar results indicate that the search for the exact individual values of the parameters is a hopeless task in most cases CITATION.
+However, it is also known that even if the estimation process is not able to tightly constrain any of the parameter values, the models can still be able to yield significant quantitative predictions CITATION .
+The purpose of the present contribution is to extend the results on parameter estimation by Kalman filtering by introducing a procedure that can be applied to large parameter spaces, can handle sparse and noisy data, and provides an evaluation of the statistical significance of the computed estimates.
+To achieve this goal, we introduce a constrained hybrid extended Kalman filtering algorithm, together with a measure of accuracy of the estimation process based on a FORMULA variance test.
+Furthermore, we show how these techniques together can be also used to address the problem of model selection, in which one has to pick the most plausible model for a given process among a list of candidates.
+A distinctive feature of this approach is the ability to use information about the statistics of the measurement noise in order to ensure that the estimated parameters are statistically consistent with the available experimental data.
+The rest of this paper is organized as follows.
+In the Methods Section we introduce all the theory associated with our procedure, namely the constrained hybrid extended Kalman filter, the accuracy measure and its use in estimation refinement, and the application to the model selection problem.
+In the Results Section we demonstrate the procedure on two examples drawn from molecular biology.
+Finally, in the Discussion Section we summarize the new procedure, we give some additional remarks, and we point out how these findings will be of immediate interest to researchers in computational biology, who use experimental data to construct dynamical models of biological phenomena.

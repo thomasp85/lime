@@ -1,0 +1,40 @@
+### abstract ###
+overprecision is the most robust type of overconfidence
+we present a new method that significantly reduces this bias and offers insight into its underlying cause
+in three experiments  overprecision was significantly reduced by forcing participants to consider all possible outcomes of an event
+each participant was presented with the entire range of possible outcomes divided into intervals  and estimated each interval's likelihood of including the true answer
+the superiority of this subjective probability interval estimate spies method is robust to range widths and interval grain sizes
+its carryover effects are observed even in subsequent estimates made using the conventional   NUMBER  percent  confidence interval method  judges who first made spies judgments considered a broader range of values in subsequent conventional interval estimates as well
+### introduction ###
+the federal home loan mortgage corporation  otherwise known as freddie mac  provides an online calculator on its website  to help potential clients determine whether they should buy a home or rent one
+among the factors included in this calculation is the estimated appreciation value of the home in question  defined by the website as  the yearly percentage rate that an asset increases in value 
+the user has to enter a percentage value by which  according to her best judgment  her potential home will increase or decrease
+however  when a negative value i e   a forecast that the house's value will go down was entered  it was followed by an error message   please fix the following errors  appreciation rate must be a number between  NUMBER   NUMBER  and  NUMBER   NUMBER 
+  the design of this online calculator conveyed freddie mac's belief that housing prices can change only between  NUMBER  percent  and   NUMBER  percent   with any rate outside this range being improbable
+however  according to the federal housing finance agency  CITATION   the average yearly appreciation rate of houses in the united states was consistently outside this range from the second quarter of  NUMBER  through the first quarter of  NUMBER   falling as low as - NUMBER   NUMBER  percent  and even lower than - NUMBER  percent  in some states
+this forecasting error  among others  resulted in freddie mac's near failure  before its take-over by the u s government in  NUMBER 
+CITATION the failure of freddie mac to anticipate a depreciation of u s house prices is but one of many examples of overprecision in judgment
+overprecision is a form of overconfidence  found to be both prevalent and particularly impervious to debiasing  CITATION
+also referred to as overconfidence in interval estimates  CITATION   overprecision is the excessive certainty that one knows the truth
+among its documented consequences are errors in clinical diagnosis  CITATION   excessive market trading  CITATION   and excessive conviction by individual climate scientists that they know the future trajectory of climate change  CITATION
+overprecision is typically measured by eliciting a confidence interval - a range of values that the judge is confident  to a certain degree  will include the true value in question  CITATION
+research has repeatedly found that the confidence people have in their beliefs exceeds their accuracy  meaning that the confidence intervals they produce are too narrow  CITATION
+this pattern is observed in novice as well as expert judgments  CITATION
+attempts to debias overprecision have had limited success
+koriat  lichtenstein  and fischhoff  CITATION  argued that people's excessive confidence in their beliefs is driven by the more extensive search they conduct for supporting evidence than for evidence that contradicts their beliefs
+in their experiments  participants were presented with two possible answers to a question  chose the answer they thought was correct  and reported their confidence in the accuracy of their chosen answer
+they were grossly overconfident when they expressed very high confidence
+however  when asked to consider evidence contradicting their answers before reporting their confidence  participants reported lower confidence levels
+soll and klayman  CITATION  manipulated this search for evidence by asking their participants to specify the fractile cutoffs at the top and bottom ends of the range of possible values
+so instead of asking their participants to specify the ends of an  NUMBER  percent  confidence interval  they asked their participants  NUMBER  for a number low enough that there was a  NUMBER  percent  chance the true answer was above it  and  NUMBER  for a number so high that there was a  NUMBER  percent  chance the true answer was below it
+using this approach  soll and klayman were able to modestly reduce overprecision
+other research has tried to reduce overconfidence by focusing on the format of the question  CITATION
+this research found that interval evaluation  based on probability judgments of fixed intervals  produces less overconfidence than interval production
+for example  participants asked to create  NUMBER  percent  confidence intervals produce excessively-narrow intervals  but other participants  who subsequently estimate their confidence for the participant-created intervals  report less than  NUMBER  percent  confidence in their accuracy
+building on these findings  winman  hansson   and  juslin  CITATION  proposed the adaptive interval assessment adina method of eliciting judgments
+using this method  a desired confidence level for an interval is determined in advance
+an interval is produced around a specific value generated either by the judge  a peer  or at random  and the judge estimates the probability that this interval contains the correct answer
+if this probability is higher than the desired confidence level  a narrower interval is presented next  and  similarly  if the initial probability is lower than the desired probability  then a wider interval is presented
+this procedure is repeated until the probability assigned to the interval matches the desired confidence level
+the authors found that the resulting intervals from this procedure displayed less overprecision than intervals that were produced directly
+unfortunately  this reduction in overprecision appeared to be tied to the assessment format  subsequent assessments made with a different response format e g   confidence intervals reverted to their old  overly precise form  suggesting that the change in methods did not affect the cognitive process by which estimates were produced

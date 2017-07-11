@@ -1,0 +1,23 @@
+### abstract ###
+The purpose of this note is to show how the method of maximum entropy in the mean (MEM) may be used to improve parametric estimation when the measurements are corrupted by large level of noise
+The method is developed in the context on a concrete example: that of estimation of the parameter in an exponential distribution
+We compare the performance of our method with the bayesian and maximum likelihood approaches
+### introduction ###
+Suppose that you want to measure the half-life of a decaying nucleus or the life-time of some elementary particle, or some other random variable modeled by an exponential distribution describing, say a decay time or the life time of a process
+Assume as well that the noise in the measurement process can be modeled by a centered gaussian random variable whose variance may be of the same order of magnitude as that of the decay rate to be measured
+To make things worse, assume that you can only collect very few measurements
+That is if  SYMBOL  denotes the realized value of the variable, one can only measure  SYMBOL , for  SYMBOL , where  SYMBOL  is a small mumbler, say  SYMBOL  or  SYMBOL  and  SYMBOL  denotes the additive measurement noise
+In other words, assume that you know that the sample comes from a specific parametric distribution but is contaminated by additive noise
+What to do
+One possible approach is to apply small sample statistical estimation procedures
+But these are designed for problems where the variability is due only to the random nature of the quantity measured,and there is no other noise in the measurement  Still another possibility, the one we that to explore here, is to apply a maxentropic filtering method,  to estimate both the unknown variable and the noise level
+For this we recast the problem as a typical inverse problem consisting of solving for  SYMBOL  in  SYMBOL }   where  SYMBOL  is a convex set in  SYMBOL ,  SYMBOL  and for some  SYMBOL  and  SYMBOL , and  SYMBOL  is an  SYMBOL -matrix which depends on how we rephrase the our problem
+We could, for example, consider the following problem: Find  SYMBOL  such that   SYMBOL }  In our case  SYMBOL , and we set  SYMBOL  Or we could consider a collection of  SYMBOL  such problems, one for every measurement, and then proceed to carry on the estimation
+Once we have solved the generic problem (), the variations on the theme are easy to write down
+What is important to keep in mind here, is that the output of the method is a filtered estimator  SYMBOL  of  SYMBOL  which itself is an estimator of the unknown parameter
+The novelty then is to filter out the noise in ()
+The method of maximum entropy in the mean is rather well suited for solving problems like (1)
+See Navaza (1986) for an early development and Dacunha-Castele and Camboa (1990) for full mathematical treatment
+Below we shall briefly review what the method is about and then apply it to  obtain an estimator  SYMBOL  from ()
+In section 3  obtain the maxentropic estimator and in section 4 we examine some of its properties, in particular we examine what the results would be if either the noise level were small or the number of measurements were large
+We devote section 4 to some simulations in which the method is compared with a bayesian and a maximum likelihood approaches

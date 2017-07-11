@@ -1,0 +1,72 @@
+### abstract ###
+Consider an agent interacting with an environment in cycles
+In every interaction cycle the agent is rewarded for its performance
+We compare the average reward  SYMBOL  from cycle  SYMBOL  to  SYMBOL  (average value) with the future discounted reward  SYMBOL  from cycle  SYMBOL  to  SYMBOL  (discounted value)
+We consider essentially arbitrary (non-geometric) discount sequences and arbitrary reward sequences (non-MDP environments)
+We show that asymptotically  SYMBOL  for  SYMBOL  and  SYMBOL  for  SYMBOL  are equal, provided both limits exist
+Further, if the effective horizon grows linearly with  SYMBOL  or faster, then the existence of the limit of  SYMBOL  implies that the limit of  SYMBOL  exists
+Conversely, if the effective horizon grows linearly with  SYMBOL  or slower, then existence of the limit of  SYMBOL  implies that the limit of  SYMBOL  exists
+### introduction ###
+We consider the reinforcement learning setup  CITATION , where an agent interacts with an environment in cycles
+In cycle  SYMBOL , the agent outputs (acts)  SYMBOL , then it makes observation  SYMBOL  and receives reward  SYMBOL , both provided by the environment
+Then the next cycle  SYMBOL  starts
+For simplicity we assume that agent and environment are deterministic
+Typically one is interested in action sequences, called plans or policies, for agents that result in high reward
+The simplest reasonable measure of performance is the total reward sum or equivalently the average reward, called average value  SYMBOL , where  SYMBOL  should be the lifespan of the agent
+One problem is that the lifetime is often not known in advance, eg \ often the time one is willing to let a system run depends on its displayed performance
+More serious is that the measure is indifferent to whether an agent receives high rewards early or late if the values are the same
+A natural (non-arbitrary) choice for  SYMBOL  is to consider the limit  SYMBOL
+While the indifference may be acceptable for finite  SYMBOL , it can be catastrophic for  SYMBOL
+Consider an agent that receives no reward until its first action is  SYMBOL , and then once receives reward  SYMBOL
+For finite  SYMBOL , the optimal  SYMBOL  to switch from action  SYMBOL  to  SYMBOL  is  SYMBOL
+Hence  SYMBOL  for  SYMBOL , so the reward maximizing agent for  SYMBOL  actually always acts with  SYMBOL , and hence has zero reward, although a value arbitrarily close to 1 would be achievable (Immortal agents are lazy  CITATION )
+More serious, in general the limit  SYMBOL  may not even exist
+Another approach is to consider a moving horizon
+In cycle  SYMBOL , the agent tries to maximize  SYMBOL , where  SYMBOL  increases with  SYMBOL , eg \  SYMBOL  with  SYMBOL  being the horizon
+This naive truncation is often used in games like chess (plus a heuristic reward in cycle  SYMBOL ) to get a reasonably small search tree
+While this can work in practice, it can lead to inconsistent optimal strategies, i e \ to agents that change their mind
+Consider the example above with  SYMBOL
+In every cycle  SYMBOL  it is better first to act  SYMBOL  and then  SYMBOL  ( SYMBOL ), rather than immediately  SYMBOL  ( SYMBOL ), or  SYMBOL  ( SYMBOL )
+But entering the next cycle  SYMBOL , the agent throws its original plan overboard, to now choose  SYMBOL  in favor of  SYMBOL , followed by  SYMBOL
+This pattern repeats, resulting in no reward at all
+The standard solution to the above problems is to consider geometrically=exponentially discounted reward  CITATION
+One discounts the reward for every cycle of delay by a factor  SYMBOL , i e \ considers  SYMBOL
+The  SYMBOL  maximizing policy is consistent in the sense that its actions  SYMBOL  coincide with the optimal policy based on  SYMBOL
+At first glance, there seems to be no arbitrary lifetime  SYMBOL  or horizon  SYMBOL , but this is an illusion
+SYMBOL  is dominated by contributions from rewards  SYMBOL , so has an effective horizon  SYMBOL
+While such a sliding effective horizon does not cause inconsistent policies, it can nevertheless lead to suboptimal behavior
+For every (effective) horizon, there is a task that needs a larger horizon to be solved
+For instance, while  SYMBOL  is sufficient for tic-tac-toe, it is definitely insufficient for chess
+There are elegant closed form solutions for Bandit problems, which show that for any  SYMBOL , the Bayes-optimal policy can get stuck with a suboptimal arm (is not self-optimizing)  CITATION
+For  SYMBOL ,  SYMBOL , and the defect decreases
+There are various deep papers considering the limit  SYMBOL   CITATION , and comparing it to the limit  SYMBOL   CITATION
+The analysis is typically restricted to ergodic MDPs for which the limits  SYMBOL  and  SYMBOL  exist
+But like the limit policy for  SYMBOL , the limit policy for  SYMBOL  can display very poor performance, i e \ we need to choose  SYMBOL  fixed in advance (but how ), or consider higher order terms  CITATION
+We also cannot consistently adapt  SYMBOL  with  SYMBOL
+Finally, the value limits may not exist beyond ergodic MDPs
+There is little work on other than geometric discounts
+In the psychology and economics literature it has been argued that people discount a one day=cycle delay in reward more if it concerns rewards now rather than later, eg \ in a year (plus one day)  CITATION
+So there is some work on ``sliding'' discount sequences  SYMBOL
+One can show that this also leads to inconsistent policies if  SYMBOL  is non-geometric  CITATION
+Is there any non-geometric discount leading to consistent policies
+In  CITATION  the generally discounted value  SYMBOL  with  SYMBOL  has been introduced
+It is well-defined for arbitrary environments, leads to consistent policies, and eg \ for quadratic discount  SYMBOL  to an increasing effective horizon (proportionally to  SYMBOL ), i e \ the optimal agent becomes increasingly farsighted in a consistent way, leads to self-optimizing policies in ergodic ( SYMBOL th-order) MDPs in general, Bandits in particular, and even beyond MDPs
+See  CITATION  for these and  CITATION  for more results
+The only other serious analysis of general discounts we are aware of is in  CITATION , but their analysis is limited to Bandits and so-called regular discount
+This discount has bounded effective horizon, so also does not lead to self-optimizing policies
+The  asymptotic  total average performance  SYMBOL  and future discounted performance  SYMBOL  are of key interest
+For instance, often we do not know the exact environment in advance but have to  learn  it from past experience, which is the domain of reinforcement learning  CITATION  and adaptive control theory  CITATION
+Ideally we would like a learning agent that performs  asymptotically  as well as the optimal agent that knows the environment in advance
+The subject of study of this paper is the relation between  SYMBOL  and  SYMBOL  for  general discount   SYMBOL  and  arbitrary environment
+The importance of the performance measures  SYMBOL  and  SYMBOL , and general discount  SYMBOL  has been discussed above
+There is also a clear need to study general environments beyond ergodic MDPs, since the real world is neither ergodic (e g \ losing an arm is irreversible) nor completely observable
+The only restriction we impose on the discount sequence  SYMBOL  is summability ( SYMBOL ) so that  SYMBOL  exists, and monotonicity ( SYMBOL )
+Our main result is that if both limits  SYMBOL  and  SYMBOL  exist, then they are necessarily equal (Section , Theorem )
+Somewhat surprisingly this holds for  any  discount sequence  SYMBOL  and  any  environment (reward sequence  SYMBOL ), whatsoever
+Note that limit  SYMBOL  may exist or not, independent of whether  SYMBOL  exists or not
+We present examples of the four possibilities in Section
+Under certain conditions on  SYMBOL , existence of  SYMBOL  implies existence of  SYMBOL , or vice versa
+We show that if (a quantity closely related to) the effective horizon grows linearly with  SYMBOL  or faster, then existence of  SYMBOL  implies existence of  SYMBOL  and their equality (Section , Theorem )
+Conversely, if the effective horizon grows linearly with  SYMBOL  or slower, then existence of  SYMBOL  implies existence of  SYMBOL  and their equality (Section , Theorem )
+Note that apart from discounts with oscillating effective horizons, this implies (and this is actually the path used to prove) the first mentioned main result
+In Sections  and  we define and provide some basic properties of average and discounted value, respectively

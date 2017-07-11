@@ -1,0 +1,32 @@
+### abstract ###
+An important element of the developing field of proteomics is to understand protein-protein interactions and other functional links amongst genes.
+Across-species correlation methods for detecting functional links work on the premise that functionally linked proteins will tend to show a common pattern of presence and absence across a range of genomes.
+We describe a maximum likelihood statistical model for predicting functional gene linkages.
+The method detects independent instances of the correlated gain or loss of pairs of proteins on phylogenetic trees, reducing the high rates of false positives observed in conventional across-species methods that do not explicitly incorporate a phylogeny.
+We show, in a dataset of 10,551 protein pairs, that the phylogenetic method improves by up to 35 percent on across-species analyses at identifying known functionally linked proteins.
+The method shows that protein pairs with at least two to three correlated events of gain or loss are almost certainly functionally linked.
+Contingent evolution, in which one gene's presence or absence depends upon the presence of another, can also be detected phylogenetically, and may identify genes whose functional significance depends upon its interaction with other genes.
+Incorporating phylogenetic information improves the prediction of functional linkages.
+The improvement derives from having a lower rate of false positives and from detecting trends that across-species analyses miss. Phylogenetic methods can easily be incorporated into the screening of large-scale bioinformatics datasets to identify sets of protein links and to characterise gene networks.
+### introduction ###
+Evidence that two or more traits co-evolve across a range of species can be used to test hypotheses about the common selective pressures acting on the traits, and about the functional or adaptive relationship between them.
+Correlated evolution is increasingly being applied at the genetic level on the premise that genes that are gained and lost together , or that show similar expression patterns or rates of evolution , may form a functional linkage.
+This provides a computational approach that can screen large genomic datasets for functional links  and help to identify the functions of uncharacterised genes.
+Such analyses can also be used to describe metabolic networks , and discover gene modules or clusters of genes engaged in a common function .
+Genes and their expression patterns evolve in a phylogenetic context such that functional links of adaptive value tend to be conserved and inherited by descendant species.
+Among closely related species, shared phylogenetic inheritance can also produce correlated gene profiles for genes that are not linked.
+Two or more genes might arise independently in a common ancestor and be retained in evolutionary descendants owing to their individual adaptive functions.
+Figure 1 shows how this can produce spurious evidence of a functional link when measured across species.
+By comparison, multiple independent phylogenetic events of the gain/loss of pairs of genes make a compelling statistical case for a functional link.
+Phylogenetic methods have uses beyond merely accounting for shared inheritance: they make it possible to investigate ancestral states and to identify the probable temporal ordering of changes in two traits.
+Knowledge of which of two traits changed first in the evolutionary history the phylogeny describes can be used to test ideas about cause and effect or the dependency of one trait on another .
+Our interest is to evaluate whether incorporating phylogenetic information improves the identification of functional gene links.
+The need to take account of phylogenetic relationships in comparative studies has long been appreciated in evolutionary biology  but has received less attention in bioinformatics studies . We apply the phylogenetic-statistical method Discrete , for assessing correlated evolution among pairs of discrete traits, to data on the presence and absence of pairs of genes.
+The method identifies independent events of correlated evolution on a phylogeny by comparing the statistical likelihood of the observed data under two alternative scenarios, one in which the two genes are allowed to evolve on the phylogeny independently, and another in which they co-evolve.
+Trait evolution is modelled as a continuous-time Markov process, and evidence for the model of correlated evolution is assessed by means of the likelihood ratio statistic.
+Our dataset consists of a phylogeny of 15 eukaryote species for which complete or nearly complete sequenced genomes are available.
+There is no limit to the number of species that can be used, but it is important to use fully sequenced and well-annotated genomes to ensure that genes determined to be absent are in fact not in the genome.
+We compare the phylogenetic method's predictions to predictions derived from across-species correlations; the latter have been used in bioinformatics investigations to predict functional gene links . We use the Munich Information Center for Protein Sequences  database of annotated complexes of yeast proteins as a known criterion measure.
+The MIPS functional links have been determined by low-throughput laboratory procedures and therefore provide a reliable collection of functional links in this species.
+We find that incorporating phylogenetic information improves predictions by up to 35 percent over across-species correlations in detecting functional links, and increasingly so for pairs of genes with greater phylogenetic evidence of a functional link.
+The number of times a pair of genes has been independently gained or lost on the phylogeny is a strong predictor of functional linkage, such that protein pairs with at least two to three correlated events are almost certainly functionally linked.

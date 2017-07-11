@@ -1,0 +1,38 @@
+### abstract ###
+a recent study indicates that acute stress affects moral decision making youssef et al   in press
+the current study examines whether results can be replicated using a different kind of stressor and a different kind of stress measurement
+we induced stress in  NUMBER  participants with a cover-story of an anticipated speech
+another group of  NUMBER  participants was tested in a control condition
+stress levels and stress responses were assessed with questionnaires and heart rate
+all participants performed a moral decision-making task describing moral dilemmas
+these dilemmas were either personal or impersonal and each offered a utilitarian and a non-utilitarian option
+acutely stressed participants  compared to control participants  made fewer utilitarian judgments and needed longer for making a decision
+individual physiological stress response was related to fewer utilitarian judgments
+results are in line with those previously found although different instruments were used
+### introduction ###
+recent research postulates that moral decision making is influenced by automatic emotional responses and controlled cognitive processes  CITATION
+there is also growing evidence that stress affects decision making in neuropsychological tasks  CITATION  and moral decision making  CITATION
+given that moral dilemmas experienced outside the laboratory elicit stress responses by themselves  CITATION   it seems reasonable to investigate more thoroughly how moral decisions are influenced by different types of stress
+moral decision making in experimental-laboratory studies is frequently assessed by moral dilemmas such as the trolley problem or modified versions of it
+the trolley problem is subdivided into the switch dilemma and the footbridge dilemma
+in the switch dilemma  people have to judge whether it is morally acceptable to divert a runaway trolley onto a side track  where it will kill only one person whereas five other people are being saved
+in the footbridge dilemma  the only way to save five people from the runaway trolley is to push someone off a footbridge onto the railway-which will stop the trolley but will inevitably kill the person being pushed
+the decision to sacrifice one person in order to save the lives of a group of people is called utilitarian because it maximizes the overall benefit amongst all the individuals involved
+according to several authors  CITATION   utilitarian judgments are particularly related to controlled cognitive processes  whereas non-utilitarian judgments are particularly related to automatic emotional responses
+most people deliver a utilitarian judgment in the switch dilemma but not in the footbridge dilemma  because the footbridge dilemma is perceived as emotionally more aversive and it entails high personal involvement
+dilemmas such as the footbridge dilemma are termed personal because the agent has to take direct action by pushing an individual off the bridge  dilemmas such as the switch dilemma  in which an existing threat is deflected by the agent  are termed impersonal
+response latencies for making a decision differ with respect to the kind of dilemma and the kind of choice  in personal dilemmas  participants typically need longer to make a utilitarian judgment than a non-utilitarian judgment
+these results emphasize the conflict between spontaneous emotional decisions not to be the direct agent of someone's death and deliberative utilitarian judgment maximizing the overall profit  CITATION
+as mentioned before  moral dilemmas can elicit stress responses  CITATION
+but then  there is also evidence that stress affects simple  non-moral decision making which can be measured with neuropsychological gambling tasks such as the iowa gambling task  CITATION  or the game of dice task  CITATION
+task performance is based on emotional learning processes such as processing the feedback of gains and losses from previous trials or strategy application such as calculating the most advantageous decisions
+stress is related to decision making that leads to disadvantageous results in the long run  and individual stress responses are related to disadvantageous decisions  CITATION
+a recent study investigated moral decisions after exposure to a well known psychosocial stress task youssef et al   in press using cortisol measures as stress indicator
+participants were either exposed to the trier social stress test  CITATION  in which participants have to deliver a speech and have to solve an arithmetic task in front of a committee or a control condition
+subsequently they responded to a subset of the aforementioned moral dilemmas developed by greene et al CITATION  that were either personal or impersonal  each offering a utilitarian and a non-utilitarian decision alternative
+youssef et al found that participants exposed to stress made fewer utilitarian judgments in personal dilemmas and that the individual stress response was negatively related to the number of utilitarian judgments
+they concluded that stress inhibited cognitive control processes that are necessary for making utilitarian judgments
+based on this theoretical and empirical background  the current study aimed to replicate and generalize the significant findings of youssef et al with a different kind of stressor  i e   a cover-story of an anticipated speech  CITATION  and a different kind of stress measurement  i e   heart rate
+both heart rate and cortisol levels are established stress indicators  heart rate is associated with the fast-reacting neural path  also referred to as the sympathetic adrenomedullary system  CITATION  and cortisol reactions are associated with the slower hypothalamus pituitary adrenal axis  CITATION
+the trier social stress test has been shown to activate both systems  CITATION  and the anticipated speech has been shown to activate the sympathetic adrenomedullary system and-to a lesser degree-the hypothalamus pituitary adrenal axis  too  CITATION
+our study was created to generalize results yielded by youssef et al with different methods

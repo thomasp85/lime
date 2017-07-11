@@ -1,0 +1,80 @@
+### abstract ###
+The Minimum Description Length (MDL) principle selects the model that has the shortest code for data plus model
+We show that for a countable class of models, MDL predictions are close to the true distribution in a strong sense
+The result is completely general
+No independence, ergodicity, stationarity, identifiability, or other assumption on the model class need to be made
+More formally, we show that for any countable class of models, the distributions selected by MDL (or MAP) asymptotically predict (merge with) the true measure in the class in total variation distance
+Implications for non- iid  \ domains like time-series forecasting, discriminative learning, and reinforcement learning are discussed
+### introduction ###
+The  minimum description length  (MDL) principle recommends to use, among competing models, the one that allows to compress the data+model most  CITATION
+The better the compression, the more regularity has been detected, hence the better will predictions be
+The MDL principle can be regarded as a formalization of Ockham's razor, which says to select the simplest model consistent with the data
+We consider sequential prediction problems, i e \ having  observed sequence   SYMBOL ,  predict   SYMBOL , then observe  SYMBOL  for  SYMBOL
+Classical prediction is concerned with  SYMBOL , multi-step lookahead with  SYMBOL , and total prediction with  SYMBOL
+In this paper we consider the last, hardest case
+An infamous problem in this category is the Black raven paradox  CITATION : Having observed  SYMBOL  black ravens, what is the likelihood that  all  ravens are black
+A more computer science problem is (infinite horizon) reinforcement learning, where predicting the infinite future is necessary for evaluating a policy
+See Section  for these and other applications
+Let  SYMBOL  be a  countable class of models =\linebreak[1]theories=\linebreak[1]hypotheses=\linebreak[1]probabilities over sequences  SYMBOL , sorted w r t \ to their  complexity=codelength   SYMBOL  (say), containing the  unknown true sampling distribution   SYMBOL
+Our main result will be for arbitrary measurable spaces  SYMBOL , but to keep things simple in the introduction, let us illustrate MDL for finite  SYMBOL
+In this case, we define  SYMBOL  as the  SYMBOL -probability of data sequence  SYMBOL
+It is possible to code  SYMBOL  in  SYMBOL  bits, eg \ by using Huffman coding
+Since  SYMBOL  is sampled from  SYMBOL , this code is optimal (shortest among all prefix codes)
+Since we do not know  SYMBOL , we could select the  SYMBOL  that leads to the shortest code on the observed data  SYMBOL
+In order to be able to reconstruct  SYMBOL  from the code we need to know which  SYMBOL  has been chosen, so we also need to code  SYMBOL , which takes  SYMBOL  bits
+Hence  SYMBOL  can be coded in  SYMBOL  bits
+MDL selects as model the minimizer \MDL^x \;:=\; \arg\min_{Q\in\M}\{-Q(x)+K(Q)\}  Given  SYMBOL , the true predictive probability of  SYMBOL  is  SYMBOL
+Since  SYMBOL  is unknown we use  SYMBOL  as a substitute
+Our main concern is how close is the latter to the former
+We can measure the distance between two predictive distributions by d_h(P,Q|x) \;=\; \sum_{z\in\X^h}\big|P(z|x)-Q(z|x)\big| for  SYMBOL  and  SYMBOL
+It is easy to see that  SYMBOL  is monotone increasing and that  SYMBOL  is twice the total variation distance (tvd) defined in \req{tvd}
+MDL is closely related to Bayesian prediction, so a comparison to existing results for Bayes is interesting
+Bayesians use  SYMBOL  for prediction, where  SYMBOL  is the Bayesian mixture with prior weights  SYMBOL  and  SYMBOL
+A natural choice is  SYMBOL
+The following results can be shown {\sum_{\l=0}^\E[d_h(P,\MDL^x|x_{1:\l})] 21\,h\ \cdot\ 2^{K(P)},\sum_{\l=0}^\E[d_h(P,\Bayes|x_{1:\l})] h\ \cdot\
+w_P^{-1},} {d_\infty(P,\MDL^x|x) 0 d_\infty(P,\Bayes|x)0 }  \;\;\left\{ {\mbox{almost surely} \mbox{for}\;\; \l(x)\ \to\ \infty} \right
+where the expectation  SYMBOL  is w r t \  SYMBOL
+The left statements for  SYMBOL  imply  SYMBOL  almost surely, including some form of convergence rate
+For Bayes it has been proven in  CITATION ; for MDL the proof in  CITATION  can be adapted
+As far as asymptotics is concerned, the right results  SYMBOL  are much stronger, and require more sophisticated proof techniques
+For Bayes, the result follows from  CITATION
+The proof for MDL is the primary novel contribution of this paper; more precisely for arbitrary measurable  SYMBOL  in total variation distance
+Another general consistency result is presented in  CITATION
+Consistency is shown (only) in probability and the predictive implications of the result are unclear
+A stronger almost sure result is alluded to, but the given reference to  CITATION  contains only results for  iid  \ sequences which do not generalize to arbitrary classes
+So existing results for discrete MDL are far less satisfactory than the elegant Bayesian prediction in tvd
+The results above hold for completely arbitrary countable model classes  SYMBOL
+No independence, ergodicity, stationarity, identifiability, or other assumption need to be made
+The bulk of previous results for MDL are for continuous model classes  CITATION
+Much has been shown for classes of independent identically distributed ( iid  ) random variables  CITATION
+Many results naturally generalize to stationary-ergodic sequences like ( SYMBOL th-order) Markov
+For instance, asymptotic consistency has been shown in  CITATION
+There are many applications violating these assumptions, some of them are presented below and in Section
+One can often hear the exaggerated claim that (e g \ unlike Bayes) MDL can be used even if the true distribution  SYMBOL  is not in  SYMBOL
+Indeed, it can be used, but the question is wether this is any good
+There are some results supporting this claim, eg \ if  SYMBOL  is in the closure of  SYMBOL , but similar results exist for Bayes
+Essentially  SYMBOL  needs to be at least close to some  SYMBOL  for MDL to work, and there are interesting environments that are not even close to being stationary-ergodic or  iid 
+Non- iid  \ data is pervasive  CITATION ; it includes all time-series prediction problems like weather forecasting and stock market prediction  CITATION
+Indeed, these are also perfect examples of non-ergodic processes
+Too much green house gases, a massive volcanic eruption, an asteroid impact, or another world war could change the climate/economy irreversibly
+Life is also not ergodic; one inattentive second in a car can have irreversible consequences
+Also stationarity is easily violated in multi-agent scenarios: An environment which itself contains a learning agent is non-stationary (during the relevant learning phase)
+Extensive games and multi-agent reinforcement learning are classical examples  CITATION
+Often it is assumed that the true distribution can be uniquely identified asymptotically
+For non-ergodic environments, asymptotic distinguishability can depend on the realized observations, which prevent a prior reduction or partitioning of  SYMBOL
+Even if principally possible, it can be practically burdensome to do so, eg \ in the presence of approximate symmetries
+Indeed this problem is the primary reason for considering  predictive  MDL
+MDL might never identify the true distribution, but our main result shows that the sequentially selected models become predictively indistinguishable
+The countability of  SYMBOL  is the severest restriction of our result
+Nevertheless the countable case is useful
+A semi-parametric problem class  SYMBOL  with  SYMBOL  (say) can be reduced to a countable class  SYMBOL  for which our result holds, where  SYMBOL  is a Bayes or NML or other estimate of  SYMBOL   CITATION
+Alternatively,  SYMBOL  could be reduced to a countable class by considering only computable parameters  SYMBOL
+Essentially all interesting model classes contain such a countable topologically dense subset
+Under certain circumstances MDL still works for the non-computable parameters  CITATION
+Alternatively one may simply reject non-computable parameters on philosophical grounds  CITATION
+Finally, the techniques for the countable case might aid proving general results for continuous  SYMBOL , possibly along the lines of  CITATION
+The paper is organized as follows: In Section  we provide some insights how MDL and Bayes work in restricted settings, what breaks down for general countable  SYMBOL , and how to circumvent the problems
+The formal development starts with Section , which introduces notation and our main result
+The proof for finite  SYMBOL  is presented in Section  and for denumerable  SYMBOL  in Section
+In Section  we show how the result can be applied to sequence prediction, classification and regression, discriminative learning, and reinforcement learning
+Section  discusses some MDL variations

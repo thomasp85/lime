@@ -1,0 +1,31 @@
+### abstract ###
+MISC	in the constraint satisfaction problem      the aim is to find an assignment of values to a set of variables subject to specified constraints
+MISC	in the minimum cost homomorphism problem      one is additionally given weights   for every variable   and value    and the aim is to find an assignment   to the variables that minimizes
+MISC	let   denote the   problem parameterized by the set of predicates allowed for constraints
+MISC	is related to many well studied combinatorial optimization problems  and concrete applications can be found in  for instance  defence logistics and machine learning
+AIMX	we show that   can be studied by using algebraic methods similar to those used for csps
+OWNX	with the aid of algebraic techniques  we classify the computational complexity of   for all choices of
+CONT	our result settles a general dichotomy conjecture previously resolved only for certain classes of directed graphs   gutin  hell  rafiey  yeo  european j of combinatorics   NUMBER  
+### introduction ###
+MISC	constraint satisfaction problems     are a natural way of formalizing a large number of computational problems arising in combinatorial optimization  artificial intelligence  and database theory
+MISC	this problem has the following two equivalent formulations    NUMBER   to find an assignment of values to a given set of variables  subject to constraints on the values that can be assigned simultaneously to specified subsets of variables  and   NUMBER   to find a homomorphism between two finite relational structures   and
+MISC	applications of  s arise in the propositional logic  database and graph theory  scheduling and many other areas
+MISC	during the past  NUMBER  years    and its subproblems has been intensively studied by computer scientists and mathematicians
+MISC	considerable attention has been given to the case where the constraints are restricted to a given finite set of relations    called a constraint language  CITATION
+MISC	for example  when   is a constraint language over the boolean set   with four ternary predicates            we obtain  NUMBER  sat
+MISC	this direction of research has been mainly concerned with the computational complexity of   as a function of
+MISC	it has been shown that the complexity of   is highly connected with relational clones of universal algebra  CITATION
+MISC	for every constraint language    it has been conjectured that   is either in p or np complete  CITATION
+MISC	in the minimum cost homomorphism problem      we are given variables subject to constraints and  additionally  costs on variable value pairs
+MISC	now  the task is not just to find any satisfying assignment to the variables  but one that minimizes the total cost
+MISC	was introduced in  CITATION  where it was motivated by a real world problem in defence logistics
+MISC	the question for which directed graphs   the problem   is polynomial time solvable was considered in  CITATION
+AIMX	in this paper  we approach the problem in its most general form by algebraic methods and give a complete algebraic characterization of tractable constraint languages
+OWNX	from this characterization  we obtain a dichotomy for    i e   if   is not polynomial time solvable  then it is np hard
+OWNX	of course  this dichotomy implies the dichotomy for directed graphs
+OWNX	in section  NUMBER   we present some preliminaries together with results connecting the complexity of   with conservative algebras
+OWNX	the main dichotomy theorem is stated in section  NUMBER  and its proof is divided into several parts which can be found in sections  NUMBER   NUMBER 
+OWNX	the np hardness results are collected in section  NUMBER  followed by the building blocks for the tractability result  existence of majority polymorphisms  section  NUMBER   and connections with optimization in perfect graphs  section  NUMBER  
+OWNX	section  NUMBER  introduces the concept of  arithmetical deadlocks  which lay the foundation for the final proof in section  NUMBER 
+OWNX	in section  NUMBER  we reformulate our main result in terms of relational clones
+BASE	finally  in section  NUMBER  we explain the relation of our results to previous research and present directions for future research

@@ -1,0 +1,41 @@
+### abstract ###
+Combining the mutual information criterion with a forward feature selection strategy offers a good trade-off between optimality of the selected feature subset and computation time
+However, it requires to set the parameter(s) of the mutual information estimator and to determine when to halt the forward procedure
+These two choices are difficult to make because, as the dimensionality of the subset increases, the estimation of the mutual information becomes less and less reliable
+This paper proposes to use resampling methods, a K-fold cross-validation and the permutation test, to address both issues
+The resampling methods bring information about the variance of the estimator, information which can then be used to automatically set the parameter and to calculate a threshold to stop the forward procedure
+The procedure is illustrated on a synthetic dataset as well as on real-world examples
+### introduction ###
+Feature selection consists in choosing, among a set of input features, or variables, the subset of features that has maximum prediction power for the output
+More formally, let us consider  SYMBOL  a random input vector and  SYMBOL  a continuous random output variable that has to be predicted from  SYMBOL
+The task of feature selection consists in finding the features  SYMBOL  that are most relevant to predict the value of  SYMBOL   CITATION
+Selecting features is important in practice, especially when distance-based methods like k-nearest neighbors (k-NN), Radial Basis Function Networks (RBFN) and Support Vector Machines (SVM) (depending on the kernel) are considered
+These methods are indeed    quite sensitive to irrelevant inputs: their performances tend to decrease when useless variables are added to the data
+When the data are high-dimensional (i e the initial number of variables is large)  the exhaustive search of an optimal feature set is of course intractable
+In such cases, furthermore, most methods that `work backwards' by eliminating useless features perform badly
+The backward elimination procedure for instance, or pruning methods for the MultiLayer Perceptron  CITATION , SVM-based feature selection  CITATION , or weighting methods like the Generalized Relevance Learning Vector Quantization algorithm  CITATION  require building a model with all initial features
+With high-dimensional data,  this will often lead to large computation times, overfitting, convergence problems, and, more generally, issues related to the curse of dimensionality
+These approaches are furthermore bound to a specific prediction model
+By contrast, a forward feature selection procedure can be applied using any model and begins with small feature subsets
+Such procedure is furthermore simple and often efficient
+Nevertheless, when data are high-dimensional, it becomes difficult to perform the forward search using the prediction model directly
+This is because, for every candidate feature subset, a prediction model must be fit, involving resampling techniques and grid searching for optimal structural parameters
+A cheaper alternative is to estimate the relevance of each candidate subset with a statistical or information-theoretic measure, without using the prediction model itself
+The combined use of a forward feature search and an information-theoretic-based relevance criterion  is generally considered to be a good option, when nonlinear effects prevent from using the correlation coefficient  CITATION
+In this context, the mutual information estimated using a nearest neighbour-based approach has been shown to be effective  CITATION
+Nevertheless, this approach, just like most feature selection methodologies, faces two difficulties
+The first one, which is generic for all feature selection methods, lies in the optimal choice of the number of features to select
+Most of the time, the number of features to select is chosen a priori or so as to maximize the relevance criterion
+The former approach leaves no room for optimization, while the latter may be very sensitive  to the estimation of the relevance criterion
+The second difficulty concerns the choice of parameter(s) in the estimation of the relevance criterion
+Indeed, most of these criteria, except maybe for the correlation coefficient, have at least one structural parameter, like a number of units or a kernel width in a prediction model, a number of neighbours or a number of bins in a nonparametric relevance estimator, etc
+Often, the result of the selection highly depends on the value of that (those) parameter(s)
+The aim of this paper is to provide an automatic procedure to choose the two above-mentioned important parameters, i e the number of features to select in the forward search and the structural parameter(s) in the relevance criterion estimation
+This procedure will be detailed in a situation where the mutual information is used as relevance criterion, and is estimated through nearest neighbours
+Resampling methods will be used to obtain this automatic choice
+Those methods increase the computational cost of the forward search, but provide meaningful information about the quality of the estimations and the setting of parameters: it will be shown that a permutation test can be used to automatically stop the forward procedure, and that a combination of permutation and K-fold resampling allows choosing the optimal number of neighbors in the estimation of the mutual information
+The remaining of this paper is organized as follows
+Section  introduces the mutual information, the permutation test and the K-fold resampling, and briefly reviews how they can be used together
+Section  illustrates the challenges in choosing the number of neighbours in the mutual information estimation and the number of features to select in a forward search
+Section  then presents the proposed approach
+The performances of the method on real-world data are reported in Section

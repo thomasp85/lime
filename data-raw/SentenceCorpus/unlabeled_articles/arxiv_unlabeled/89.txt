@@ -1,0 +1,27 @@
+### abstract ###
+One of the most utilized data mining tasks is the search for association rules
+Association rules represent %probabilistically significant relationships between items in transactions
+We extend the concept of association rule to represent a much broader class of associations, which we refer to as  entity-relationship rules
+Semantically, entity-relationship rules express associations between properties of related objects
+Syntactically, these rules are based on a broad subclass of safe domain relational calculus queries
+We propose a new definition of support and confidence for entity-relationship rules and for the frequency of entity-relationship queries
+We prove that the definition of frequency satisfies standard probability axioms and the Apriori property
+### introduction ###
+One of the goals of data mining is to discover interesting relationships from data
+Association rules express relationships that hold with sufficient frequency but not always
+For example, it may be the case that not all managers earn over \ SYMBOL pq  SYMBOL p SYMBOL q SYMBOL q SYMBOL p SYMBOL p SYMBOL q SYMBOL p SYMBOL q SYMBOL pq SYMBOL p q SYMBOL fr(pq)$
+Our definition of frequency for ER queries generalizes previous work on defining association rules in a multi-relational setting
+CITATION  discusses extending itemset rules with negations and motivates the usefulness of this extension
+The query extension approach of the system  CITATION  presents a special class of entity-relationship rules that allows conjunctions of nonnegated statements and existential quantification
+Our concept  of ER rules %allows features in addition negations, universal quantification, nested quantifiers, and nested Boolean combinations
+Thus one contribution of this paper is an extended rule format
+A characteristic that distinguishes our approach from previous work is that previous approaches assume a given target table that defines a base set of tuples for evaluating the support of a query
+In contrast, we start with a query and define a natural base set of tuples for evaluating the support of the query
+We can think of this approach as dynamically generating entity sets for a given query rather than evaluating queries with respect to a fixed entity set
+Thus the second main contribution of this paper is a new definition of support  for rules in our extended format
+The paper is organized as follows
+First we review basic relational database concepts such as the relational schema and the domain relational calculus
+Then we introduce the concept of an entity query and define the frequency of a query in this class of queries
+This definition provides the basis for the notion of an entity-relationship rule and for defining the support of an entity-relationship rule
+We compare entity-relationship queries to frequent itemsets and to the rule language of the system
+The final section establishes sevveral important formal properties of query frequencies as we define them and shows that they satisfy the Apriori property, that is, the frequency of a conjunction is no greater than the frequency of its conjuncts

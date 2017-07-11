@@ -1,0 +1,66 @@
+### abstract ###
+we analyze behavior in two basic classes of decision tasks  description-based and experience-based
+in particular  we compare the prediction power of a number of decision learning models in both kinds of tasks
+unlike most previous studies  we focus on individual  rather than aggregate  behavioral characteristics
+we carry out an experiment involving a battery of both description- and experience-based choices between two mixed binary prospects made by each of the participants  and employ a number of formal models for explaining and predicting participants' choices  prospect theory pt CITATION   expectancy-valence model evl CITATION   and three combinations of these well-established models
+we document that the pt and the evl models are best for predicting people's decisions in description- and experience-based tasks  respectively  which is not surprising as these two models are designed specially for these kinds of tasks
+furthermore  we find that models involving linear weighting of gains and losses perform better in both kinds of tasks  from the point of view of generalizability and individual parameter consistency
+we therefore  conclude that  overall  when both prospects are mixed  the assumption of diminishing sensitivity does not improve models' prediction power for individual decision-makers
+finally  for some of the models' parameters  we document consistency at the individual level between description- and experience-based tasks
+### introduction ###
+all our lives we have to make decisions
+we have to choose where to go on vacation  when to replace our old car  which pair of shoes to buy
+in fact  each step we make in our life is a result of a decision we have made
+even if we do nothing  this is probably our personal choice
+of course  we would be happy if we could always make correct decisions in order to maximize the resulting utility  yet we sometimes fail as a result of objectively insufficient information or subjective behavioral biases
+therefore  understanding and systematically describing people's behavior is extremely important both for predicting their future decisions and for potentially improving decision quality
+decisions we make may be classified into two main categories
+when we study newspaper daily weather forecasts  drug package inserts and mutual funds' brochures  we enjoy convenient descriptions of the risky prospects  including the probabilities of possible outcomes
+respectively  decisions based on such statistical descriptions are called description-based decisions
+when we decide whether to backup their computer's hard drive  cross a busy street  go on a blind date  put on a belt during driving  we are typically denied a benefit of convenient descriptions of the possible outcomes for example  the probabilities of a hard disk failure  of an accident  or of meeting a desirable partner in a blind date are never explicitly provided
+in many such decisions  all we can rely on is our own past experience
+respectively  decisions based on past personal experience are called experience-based decisions
+tasks typically studied under the description-based paradigm tend to focus on one-shot decisions that are based on detailed information concerning the relevant outcome distributions
+tasks typically studied under the experience-based paradigm do not provide objective prior information concerning the payoff distributions  and this could be these tasks' drawback
+on the other hand  the decisions are repeated  and thus decision-makers get a chance to learn from experience
+the distinction between risky description-based and experience-based decisions has attracted recent attention because the ostensibly same information can lead to different choices depending on how the information is acquired CITATION
+this difference  sometimes referred to as description-experience gap  is usually attributed to the difference in treatment of rare outcomes in the two paradigms
+on the one hand  in description-based tasks  according to  presentation effect   low-probability events are likely to be overweighted if their probabilities are explicitly presented CITATION
+on the other hand  in experience-based tasks  low-probability outcomes may be underweighted either because of a recency effect-since low-probability events are not likely to occur recently the availability of personal experience tends to reduce the weighting of these events CITATION -or simply because of a small sample size  which may cause rare events not to occur at all during relatively short intervals of time CITATION
+as an example of a description-experience gap  we may cite a classic example given by weber CITATION   consider the decision of whether to vaccinate a child against diphtheria  tetanus  and pertussis dtp
+parents who research the side effects of the dtp vaccine by consulting the national immunization programweb site or a brochure provided by their pediatrician will learn that up to  NUMBER  child out of  NUMBER   NUMBER  will suffer from high fever and about  NUMBER  child out of  NUMBER   NUMBER  will suffer from seizures as a result of immunization
+an increasing number of parents  after reading such information  decide not to immunize their child
+although doctors have the same statistics at their disposal  they also have access to information not available to parents-namely  personal experience gathered across many patients
+this information tells them that vaccination is very unlikely to result in side effects
+few doctors will have encountered one of the rare cases of high fever or seizures
+if they have encountered one  the experience is dwarfed by hundreds of memories of side-effect free immunizations
+one sources of differences between doctors and vaccine resisters may result from differences in the weight given to rare events like the likelihood of a seizure as a function of whether this likelihood is acquired through experience or statistical description
+in naturally occurring situations  decision-makers often base their decisions both on descriptions and on their own experience
+in laboratory settings it is possible to construct choice tasks based purely on descriptions or experience
+our major goal is to determine which models best explain behavior in these two classes of decision tasks
+unlike previous studies focusing on aggregate behavioral characteristics of groups of people CITATION   our study analyzes choice evaluation parameters for individual decision-makers
+moreover  we examine the connection between the choices of the same decision-makers in description- and experience-based tasks
+we carry out an experiment involving a battery of description-based and experience-based choices
+so that our decision tasks are more representative of real-world situations  each of the choices is made between two binary prospects involving probabilities of both gains and losses
+to examine the common behavioral characteristics of these kinds of tasks  we employ a number of formal decision learning models  incorporating a number of factors or parameters  namely  loss aversion  diminishing sensitivity  probability weighting  choice consistency or the degree of randomness in choice  and recency the tendency to relate past information to the current choice
+first  we use two well-established models  i prospect theory pt CITATION   which was developed mainly for description-based tasks  and ii expectancy-valence model evl CITATION   which was designed specially for experience-based tasks
+in addition  we create three combinations of these basic models to find out what parameters would be most suitable for describing human behavior at the individual level by comparing same person's choices in the two types of tasks  i pt-no-s model  which is similar to the pt without the assumption of diminishing sensitivity to gains and losses  ii evl-s model  which is similar to the evl  but with the assumption of diminishing sensitivity  and iii evl-pt model with utility function similar to that of the pt  except for the loss aversion parameter
+in description-based tasks  in order to account for the presentation effect  a learning model should contain a possibility of non-linear weighting of explicitly stated probabilities
+therefore  we employ models possessing the probability weighting parameter  that is  pt and pt-no-s  for this kind of tasks
+on the other hand  in order to reflect the recency effect  learning models dealing with experience-based decisions should contain a recency parameter
+the evl  evl-s and evl-pt models meet this criterion
+first of all  we expect that the classical pt and evl models that were specially designed for description- and experience-based tasks  respectively  will prove more suitable than their possible combinations for the respective tasks
+our findings  based on the models' fit  support this expectation
+furthermore  we expect that people tend to behave consistently in terms of decision-making model parameters CITATION
+we thus expect that the better fitting models should also provide higher individual parameter consistency
+in other words  we hypothesize that an individual who  according to a certain model  reveals relatively high low values of certain decision parameters in a certain task should reveal  according to the same model  relatively high low values of the same parameters in other tasks of the same choice paradigm
+additionally  we expect that the contribution of the diminishing sensitivity assumption to explaining decision-makers' behavior in our experiment may be rather limited  due to the mixed nature of prospects we employ
+the former surmise is partially supported  since in description-based tasks the combined pt-no-s model is found to outperform the pt model in terms of parameter consistency
+this finding is in line with other results indicating that models involving linear weighting of gains and losses perform better in both kinds of tasks
+finally  we expect that individuals' behavior should also be consistent between different choice paradigms  that is  individual parameters having similar functionality in description- and experience-based tasks should be positively correlated
+this hypothesis is only partially supported  suggesting that these widely-used learning models may still need further improvement
+the rest of the paper is structured as follows
+in section  NUMBER   we present the models of decision-making we employ
+in section  NUMBER   we describe our experimental design and research approach
+section  NUMBER  describes the empirical tests we perform and provides the results
+section  NUMBER  concludes and provides a brief discussion

@@ -1,0 +1,26 @@
+### abstract ###
+Retroviral insertional mutagenesis screens, which identify genes involved in tumor development in mice, have yielded a substantial number of retroviral integration sites, and this number is expected to grow substantially due to the introduction of high-throughput screening techniques.
+The data of various retroviral insertional mutagenesis screens are compiled in the publicly available Retroviral Tagged Cancer Gene Database.
+Integrally analyzing these screens for the presence of common insertion sites requires an approach that corrects for the increased probability of finding false CISs as the amount of available data increases.
+Moreover, significance estimates of CISs should be established taking into account both the noise, arising from the random nature of the insertion process, as well as the bias, stemming from preferential insertion sites present in the genome and the data retrieval methodology.
+We introduce a framework, the kernel convolution framework, to find CISs in a noisy and biased environment using a predefined significance level while controlling the family-wise error.
+Where previous methods use one, two, or three predetermined fixed scales, our method is capable of operating at any biologically relevant scale.
+This creates the possibility to analyze the CISs in a scale space by varying the width of the CISs, providing new insights in the behavior of CISs across multiple scales.
+Our method also features the possibility of including models for background bias.
+Using simulated data, we evaluate the KC framework using three kernel functions, the Gaussian, triangular, and rectangular kernel function.
+We applied the Gaussian KC to the data from the combined set of screens in the RTCGD and found that 53 percent of the CISs do not reach the significance threshold in this combined setting.
+Still, with the FWE under control, application of our method resulted in the discovery of eight novel CISs, which each have a probability less than 5 percent of being false detections.
+### introduction ###
+In retroviral insertional mutagenesis experiments, genes involved in the development of cancer are identified by determining the loci of viral insertions from tumors induced by retroviruses in mice CITATION, CITATION.
+After infecting a host cell, the retrovirus inserts its own DNA into the host cell's genome, mutating the host cell's DNA in the process.
+The mutation may alter the expression of genes in the vicinity of the insertion or, when inserted within a gene, alter the gene product.
+When the affected gene is a cancer gene, activation of the proto-oncogene or inactivation of the tumor-suppressor gene can cause uncontrolled proliferation of cells.
+Eventually this may give rise to tumors.
+Throughout this text, these cancer-causing insertions are referred to as oncogenic insertions.
+A tumor develops when an accumulation of oncogenic insertions causes uncontrolled proliferation of a cell.
+As a result, the tumor tissue contains many copies of the cell bearing the oncogenic insertions that induced the proliferation, but only a few copies of cells carrying non-oncogenic insertions.
+Consequently, when the DNA of the tumor is analyzed, one will encounter the insertion that induced proliferation in larger proportions than insertions that do not.
+Regions in the genome that are found to carry insertions in multiple independent tumors are called common insertion sites.
+As a result, the locations of the CISs are highly correlated with the location of genes involved in tumor development.
+Cloning the flanking sequences of the inserted virus to determine the insertion loci, and analyzing these data to find significant CISs, therefore enable the discovery of new candidate cancer genes.
+This is summarized in Figure S1.

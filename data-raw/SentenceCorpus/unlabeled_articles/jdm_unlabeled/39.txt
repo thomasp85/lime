@@ -1,0 +1,34 @@
+### abstract ###
+are people willing to gamble more for themselves than what they deem reasonable for others
+we addressed this question in a simplified computer gambling task in which subjects chose from a set of  NUMBER  cards
+subjects selected one card at a time after being instructed that  NUMBER  cards were good win a dollar per card and one was really bad lose all the money and end the game
+subjects could stop playing at any time to collect their winnings
+some subjects played the game  others observed a confederate
+both groups took risks beyond what was rational i e    NUMBER  cards but  textit actors  were riskier than  textit observers 
+the actor observer asymmetry occurred even after controlling for monetary outcome i e   having observers win prizes and after controlling for how the question was framed i e   asking observers what they themselves  textit would  do as opposed to what the confederate  textit should  do
+we discuss these results in relation to theories of decision making that emphasize separate contributions of rational and experiential systems
+### introduction ###
+you are at the casino watching a game of black jack  when a player who has a hand of sixteen asks for another card
+you quip to yourself  what an idiot
+he should have held at  NUMBER 
+  but who's to say you wouldn't have done the same
+after all  decision making for the self is likely to depend on cues and processes that are not available when judging the choices of others
+the reward of having drawn a good card  the prospect of winning  the potential regret of overreaching  all are blunted to a detached observer
+then again  you may reach the same decision whether you are an actor or observer  as much of the information needed  including success probability  prize size  and potential loss are all available for a  rational  choice
+as this example illustrates  decision making is influenced both by rational and experiential factors  CITATION
+the rational processes are effortful and logical  using a cost benefit analysis to determine the best choice  CITATION
+in contrast  the experiential processes are intuitive and emotionally-based  using heuristics and the history of reward and punishment to determine the next behavior  CITATION
+presumably  experiential processes weigh more heavily in actors' decisions than in observers' judgments  CITATION
+one reason for this is that actors may have privileged access to their own affective reactions  CITATION
+furthermore  actors' affective system is tapped by rewards and punishments  CITATION
+in contrast  observers usually are not affected by these and  when they are  the influence of rewards and punishments is diminished by their being decoupled from the action
+in simple terms  it can be argued that rewarded actions will show a tendency to be repeated
+thus  the occurrence of reward should motivate actors to repeat the rewarded action with disregard for the potential costs and beyond what observers would deem reasonable
+in the current study  we explored this specific instance of the actor observer asymmetry and its relation to the rational experiential dichotomy
+for this  we used a modified version of a task first developed for studying risk taking in children  CITATION
+in this paradigm  ten cards were displayed on the computer screen and subjects were told that nine cards were good and would pay a dollar each  while one card was disastrous and would make them lose all the money they had collected thus ending the game
+subjects turned one card at a time and decided when to stop to collect their prize
+the task could be solved by deciding in advance how many cards to turn  or sequentially by deciding whether to turn the next card
+either way  the expected value in this task is highest for turning five cards  CITATION
+thus  a rational decision maker should stop after turning  NUMBER  cards
+in two experiments  we explored possible departures from rational decision making  and whether such departures were moderated by active task participation

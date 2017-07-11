@@ -1,0 +1,24 @@
+### abstract ###
+Our investigation of knotted structures in the Protein Data Bank reveals the most complicated knot discovered to date.
+We suggest that the occurrence of this knot in a human ubiquitin hydrolase might be related to the role of the enzyme in protein degradation.
+While knots are usually preserved among homologues, we also identify an exception in a transcarbamylase.
+This allows us to exemplify the function of knots in proteins and to suggest how they may have been created.
+### introduction ###
+Although knots are abundant and complex in globular homopolymers CITATION CITATION, they are rare and simple in proteins CITATION CITATION.
+Sixteen methyltransferases in bacteria and viruses can be combined into the / knot superfamily CITATION, and several isozymes of carbonic anhydrase are known to be knotted.
+Apart from these two folds, only a few insular knots have been reported CITATION, CITATION, CITATION, CITATION, some of which were derived from incomplete structures CITATION, CITATION.
+For the most part, knotted proteins contain simple trefoil knots that can be represented by three essential crossings in a projection onto a plane.
+Only three proteins were identified with four projected crossings .
+In this report we provide the first comprehensive review of knots in proteins, which considers all entries in the Protein Data Bank CITATION, and not just a subset.
+This allows us to examine knots in homologous proteins.
+Our analysis reveals several new knots, all in enzymes.
+In particular, we discovered the most complicated knot found to date in human ubiquitin hydrolase, and suggest that its entangled topology protects it against being pulled into the proteasome.
+We also noticed that knots are usually preserved among structural homologues.
+Sequence similarity appears to be a strong indicator for the preservation of topology, although differences between knotted and unknotted structures are sometimes subtle.
+Interestingly, we have also identified a novel knot in a transcarbamylase that is not present in homologues of known structure.
+We show that the presence of this knot alters the functionality of the protein, and suggest how the knot may have been created in the first place.
+Mathematically, knots are rigorously defined in closed loops CITATION.
+Fortunately, both the N- and C-termini of open proteins are typically accessible from the surface and can be connected unambiguously: we reduce the protein to its C - backbone, and draw two lines outward starting at the termini in the direction of the connection line between the center of mass of the backbone and the respective ends CITATION.
+The lines are joined by a big loop, and the structure is topologically classified by the determination of its Alexander polynomial CITATION, CITATION.
+Applying this method to the Protein Data Bank in the version of January 3, 2006, we found 273 knotted structures in the 32,853 entries that contain proteins.
+Knots formed by disulfide CITATION, CITATION or hydrogen bonds CITATION were not included in the study.

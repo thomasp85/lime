@@ -1,0 +1,38 @@
+### abstract ###
+The selection of features that are relevant for a prediction or classification problem is an important problem in many domains involving high-dimensional data
+Selecting features helps fighting the curse of dimensionality, improving the performances of prediction or classification methods, and interpreting the application
+In a nonlinear context, the mutual information is widely used as relevance criterion for features and sets of features
+Nevertheless, it suffers from at least three major limitations: mutual information estimators depend on smoothing parameters, there is no theoretically justified stopping criterion in the feature selection greedy procedure, and the estimation itself suffers from the curse of dimensionality
+This chapter shows how to deal with these problems
+The two first ones are addressed by using resampling techniques that provide a statistical basis to select the estimator parameters and to stop the search procedure
+The third one is addressed by modifying the mutual information criterion into a measure of how features are complementary (and not only informative) for the problem at hand
+### introduction ###
+High-dimensional data are nowadays found in many applications areas: image and signal processing, chemometrics, biological and medical data analysis, and many others
+The availability of low cost sensors and other ways to measure information, and the increased capacity and lower cost of storage equipments, facilitate the simultaneous measurement of many features, the idea being that adding features can only increase the information at disposal for further analysis
+The problem is that high-dimensional data are in general more difficult to analyse
+Standard data analysis tools either fail when applied to high-dimensional data, or provide meaningless results
+Difficulties related to handling high-dimensional data are usually gathered under the  curse of dimensionality  terms, which gather many phenomena usually having counter-intuitive mathematical or geometrical interpretation
+The curse of dimensionality already concerns simple phenomena, like colinearity
+In many real-world high-dimensional problems, some features are highly correlated
+But if the number of features exceeds the number of measured data, even a simple linear model will lead to an undetermined problem (more parameters to fit than equations)
+Other difficulties related to the curse of dimensionality arise  in more common situations, when the dimension of the data space is high even if many data are available for fitting or learning
+For example, data analysis tools which use Euclidean distances between data or representatives, or any kind of Minkowski or fractional distance (i e most tools) suffer from the fact that distances concentrate in high-dimensional spaces (distances between two random close points and between two random far ones tend to converge to the same value, in average)
+Facing these difficulties, data analysis tools must address two ways to counteract them
+One is to develop tools that are able to model high-dimensional data with a number of (effective) parameters which is lower than the dimension of the space
+As an example, Support-Vector Machines enter into this category
+The other way is to decrease in some way the dimension of the data space, without significant loss of information
+The two ways are complementary, as the first one addresses the algorithms while the second preprocesses the data themselves
+Two possibilities also exist to reduce the dimensionality of the data space: features (dimensions) can be selected, or combined
+Feature combination means to  project  data, either linearly (Principal Component Analysis, Linear Discriminant Analysis, etc ) or nonlinearly
+Selecting features, i e keeping some of the original features as such, and discarding others, is a priori less powerful than projection (it is a particular case)
+However, it has a number of advantages, mainly when interpretation is sought
+Indeed after selection the resulting features are among the original ones, which allows the data analyst to interact with the application provider
+For example, discarding features may help avoiding to collect useless (possibly costly) features in a further measument campaign
+Obtaining relevances for the original features may also help the application specialist to interpret the data analysis results, etc
+Another reason to prefer selection to projection in some circumstances, is when the dimension of the data is really high, and the relations between features known or identified to be strongly nonlinear
+In this case indeed linear projection tools cannot be used; and while nonlinear dimensionality reduction is nowadays widely used for data visualization, its use in quantitative data preprocessing remains limited because of the lack of commonly accepted standard method, the need for expertise to use most existing tools and the computational cost of some of the methods
+This chapter deals with feature selection, based on mutual information between features
+The following of this chapter is organized as follows
+Section  introduces the problem of feature selection and the main ingredients of a selection procedure
+Section  details the Mutual Information relevance criterion, and the difficulties related to its estimation
+Section  shows how to solve these issues, in particular how to choose the smoothing parameter in the Mutual Information estimator, how to stop the greedy search procedure, and how to extend the mùutual information concept by using nearest neighbor ranks when the dimension of the search space increases

@@ -1,0 +1,44 @@
+### abstract ###
+Genes with common functions often exhibit correlated expression levels, which can be used to identify sets of interacting genes from microarray data.
+Microarrays typically measure expression across genomic space, creating a massive matrix of co-expression that must be mined to extract only the most relevant gene interactions.
+We describe a graph theoretical approach to extracting co-expressed sets of genes, based on the computation of cliques.
+Unlike the results of traditional clustering algorithms, cliques are not disjoint and allow genes to be assigned to multiple sets of interacting partners, consistent with biological reality.
+A graph is created by thresholding the correlation matrix to include only the correlations most likely to signify functional relationships.
+Cliques computed from the graph correspond to sets of genes for which significant edges are present between all members of the set, representing potential members of common or interacting pathways.
+Clique membership can be used to infer function about poorly annotated genes, based on the known functions of better-annotated genes with which they share clique membership.
+We illustrate our method by applying it to microarray data collected from the spleens of mice exposed to low-dose ionizing radiation.
+Differential analysis is used to identify sets of genes whose interactions are impacted by radiation exposure.
+The correlation graph is also queried independently of clique to extract edges that are impacted by radiation.
+We present several examples of multiple gene interactions that are altered by radiation exposure and thus represent potential molecular pathways that mediate the radiation response.
+### introduction ###
+Guilt-by-association, the assumption that genes with similar expression patterns participate in common cellular functions, drives a growing body of effort to extract cellular pathways from microarray data CITATION CITATION.
+The general tenet is that genes encoding proteins participating in a common pathway will display correlated expression levels when analyzed at sufficient scale, and that the identities and known functions of these genes can be used to highlight existing and assimilate new functional pathways.
+A number of recent studies validate the concept of guilt-by-association, demonstrating that genes co-expressed across multiple conditions are more likely to represent common functions than would be expected by chance alone CITATION, CITATION.
+To date the computational methods to extract such patterns lag far behind the general agreement about their utility.
+The majority of methods to extract pathways of co-regulation from microarray data begin with a measure of similarity e.g., Euclidean distance, Pearson's correlation coefficient that describes the degree to which expression levels between pairs of genes are correlated across multiple conditions CITATION.
+The matrix of correlations across the microarray, typically representing the pairwise similarity of the expression patterns of thousands of genes, is the starting point from which to organize genes into clusters.
+Clustering includes a wide variety of algorithms for organizing multivariate data into groups with approximately similar expression patterns, and a wealth of clustering approaches has been proposed CITATION.
+However, there are several important limitations to the vast majority of clustering algorithms that are in contrast to the reality of biology.
+The first is that they are disjoint, requiring that a gene be assigned to only one cluster.
+While this simplifies the amount of data to be evaluated, it places an artificial limitation on the biology under study in that many genes play important roles in multiple but distinct pathways.
+The other main problem is that most measures of similarity used in clustering algorithms do not permit the recognition of negative correlations, which are also common and equally meaningful.
+As an alternative to assigning genes to clusters, the correlation matrix can be thresholded to create a graph comprised only of edges whose weights exceed a predefined value.
+Allocco and colleagues originally described such graphs as relevance networks CITATION.
+In a relevance network, both positive and negative correlations exceeding a specified threshold are retained and displayed graphically, allowing visual recognition of highly connected subsets of genes.
+Recent studies have mined relevance networks to extract co-expressed genes in cancer cells CITATION, CITATION and myopathic muscle biopsies CITATION.
+While those efforts provided gene subsets of biological relevance to the respective conditions, they were limited to pairwise relationships that could be extracted manually from the graphs.
+Relevance networks contain many dense sub-graphs of tightly interconnected gene sets that intuitively represent the greatest potential for identifying members of common pathways.
+Without a systematic means to extract the aggregate relationships between multiple genes, however, many of the most interesting relationships remain embedded within the web of correlations.
+We have developed a computational approach that exploits graph theoretical algorithms to identify comprehensively the tightly connected subsets of genes present in relevance networks.
+In the most extreme case, in which a sub-graph contains all possible edges between vertices in the sub-graph, this structure is called a clique.
+In terms of gene expression, clique represents the most trusted potential for identifying a set of interacting genes.
+Solving clique, however, is a nondeterministic polynomial-complete problem, and a classic graph-theoretic problem in its own right CITATION.
+We have previously developed novel graph algorithms that employ vertex cover and allow clique to be solved in polynomial time CITATION CITATION.
+Recently we applied these algorithms to identify cliques of co-expressed genes as part of an effort to annotate quantitative trait loci associated with neural function CITATION.
+Here we extend these algorithms to identify differential gene relationships, i.e., gene-gene interactions that are induced or repressed by a specific treatment.
+We illustrate our approach using a set of microarray data that was generated from spleen of mice exposed in vivo to low-dose ionizing radiation.
+Radiation is a well known agent of DNA damage at relatively high but sub-lethal doses CITATION.
+The response to lower doses, however, such as those received from medical imaging, radiotherapy and occupational exposures, is poorly defined and largely dependent upon genetic background CITATION.
+The data used herein were derived from a study that explored the role of genetic susceptibility in the response to IR.
+Six strains of inbred laboratory mice were exposed to 10 cGy X-rays in vivo, after which gene expression changes in spleen were profiled using microarrays.
+We describe our graph theoretical-based toolchain for identifying overlapping subsets of genes with tightly correlated expression levels and demonstrate the biological insight that this method provides.

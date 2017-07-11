@@ -1,0 +1,39 @@
+### abstract ###
+We bound the future loss when predicting any (computably) stochastic sequence online
+Solomonoff finitely bounded the total deviation of his universal predictor  SYMBOL  from the true distribution  SYMBOL  by the algorithmic complexity of  SYMBOL
+Here we assume that we are at a time  SYMBOL  and have already observed  SYMBOL
+We bound the future prediction performance on  SYMBOL  by a new variant of algorithmic complexity of  SYMBOL  given  SYMBOL , plus the complexity of the randomness deficiency of  SYMBOL
+The new complexity is monotone in its condition in the sense that this complexity can only decrease if the condition is prolonged
+We also briefly discuss potential generalizations to Bayesian model classes and to classification problems
+### introduction ###
+We consider the problem of online=sequential predictions
+We assume that the sequences  SYMBOL  are drawn from some ``true'' but unknown probability distribution  SYMBOL
+Bayesians proceed by considering a class  SYMBOL  of models=hypotheses=distributions, sufficiently large such that  SYMBOL , and a prior over  SYMBOL
+Solomonoff considered the truly large class that contains all computable probability distributions~ CITATION
+He showed that his universal distribution  SYMBOL  converges rapidly to  SYMBOL ~ CITATION , i e \ predicts well in any environment as long as it is computable or can be modeled by a computable probability distribution (all physical theories are of this sort)
+SYMBOL  is roughly  SYMBOL , where  SYMBOL  is the length of the shortest description of  SYMBOL , called the Kolmogorov complexity of  SYMBOL
+Since  SYMBOL  and  SYMBOL  are incomputable, they have to be approximated in practice
+See eg ~ CITATION  and references therein
+The universality of  SYMBOL  also precludes useful statements about the prediction quality at particular time instances~ SYMBOL ~ CITATION , as opposed to simple classes like  iid  \ sequences (data) of size  SYMBOL , where accuracy is typically  SYMBOL
+Luckily, bounds on the expected  total =cumulative loss (e g \ number of prediction errors) for  SYMBOL  can be derived~ CITATION , which is often sufficient in an online setting
+The bounds are in terms of the (Kolmogorov) complexity of  SYMBOL
+For instance, for deterministic  SYMBOL , the number of errors is (in a sense tightly) bounded by  SYMBOL  which measures in this case the information (in bits) in the observed infinite sequence~ SYMBOL
+In this paper we assume we are at a time  SYMBOL  and have already observed  SYMBOL
+Hence we are interested in the future prediction performance on  SYMBOL , since typically we don't care about past errors
+If the total loss is finite, the future loss must necessarily be small for large  SYMBOL
+In a sense the paper intends to quantify this apparent triviality
+If the complexity of  SYMBOL  bounds the total loss, a natural guess is that something like the conditional complexity of  SYMBOL  given  SYMBOL  bounds the future loss (If  SYMBOL  contains a lot of (or even all) information about  SYMBOL , we should make fewer (no) errors anymore ) Indeed, we prove two bounds of this kind but with additional terms describing structural properties of  SYMBOL
+These additional terms appear since the total loss is bounded only in expectation, and hence the future loss is small only for ``most''  SYMBOL
+In the first bound (Theorem~), the additional term is the complexity of the length of  SYMBOL  (a kind of worst-case estimation)
+The second bound (Theorem~) is finer: the additional term is the complexity of the randomness deficiency of  SYMBOL
+The advantage is that the deficiency is small for ``typical''  SYMBOL  and bounded on average (in contrast to the length)
+But in this case the conventional conditional complexity turned out to be unsuitable
+So we introduce a new natural modification of conditional Kolmogorov complexity, which is monotone as a function of condition
+Informally speaking, we require programs (=descriptions) to be consistent in the sense that if a program generates some  SYMBOL  given  SYMBOL , then it must generate the same  SYMBOL  given any prolongation of  SYMBOL
+The new posterior bounds also significantly improve upon the previous total bounds
+The paper is organized as follows
+Some basic notation and definitions are given in Sections~ and~
+In Section~ we prove and discuss the length-based bound Theorem~
+In Section~ we show why a new definition of complexity is necessary and formulate the deficiency-based bound Theorem~
+We discuss the definition and basic properties of the new complexity in Section~, and prove Theorem~ in Section~
+We briefly discuss potential generalizations to general model classes  SYMBOL  and classification in the concluding Section~

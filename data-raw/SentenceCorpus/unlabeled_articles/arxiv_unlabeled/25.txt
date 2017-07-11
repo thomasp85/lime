@@ -1,0 +1,9 @@
+### abstract ###
+In this paper we introduce the class of stationary prediction strategies and construct a prediction algorithm that asymptotically performs as well as the best continuous stationary strategy
+We make mild compactness assumptions but no stochastic assumptions about the environment
+In particular, no assumption of stationarity is made about the environment, and the stationarity of the considered strategies only means that they do not depend explicitly on time; we argue that it is natural to consider only stationary strategies even for highly non-stationary environments
+### introduction ###
+This paper belongs to the area of learning theory that has been variously referred to as prediction with expert advice, competitive on-line prediction, prediction of individual sequences, and universal on-line learning; see  CITATION  for a review
+There are many proof techniques known in this field; this paper is based on Kalnishkan and Vyugin's Weak Aggregating Algorithm  CITATION , but it is possible that some of the numerous other techniques could be used instead
+In Section  we give the main definitions and state our main results, Theorems --; their proofs are given in Sections --
+In Section  we informally discuss the notion of stationarity, and Section  concludes

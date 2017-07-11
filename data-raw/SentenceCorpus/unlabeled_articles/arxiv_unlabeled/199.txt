@@ -1,0 +1,25 @@
+### abstract ###
+We report a new optimal resolution for the statistical stratification problem under proportional sampling allocation among strata
+Consider a finite population of  N  units, a random sample of  n  units selected from this population and a number  L  of strata
+Thus, we have to define which units belong to each stratum so as to minimize the variance of a total estimator for one desired variable of interest in each stratum, and consequently reduce the overall variance for such quantity
+In order to solve this problem, an exact algorithm based on the concept of minimal path in a graph is proposed and assessed
+Computational results using real data from IBGE (Brazilian Central Statistical Office) are provided \\ [0 7em] {Keywords:} Stratification; Proportional Allocation; Variance; Minimal Path
+### introduction ###
+A common procedure in sampling surveys is partitioning the elements of a population, before distributing the sample on it, in such a way to obtain most useful information from the data to be collected
+This procedure is called stratification
+It may have different aims, such as to guarantee obtaining information for some or all the geopolitical regions of a country, or to provide more precision in estimating population quantities by identifying strata with more homogeneous elements into them, according to one or more variables
+In this latter case, the stratification is also called statistical stratification
+A principal use of statistical stratification, in order to obtain a better precision, is in defining what percentage of the sample must be taken from each stratum once we have chosen a non-uniform allocation scheme, that is, a non-trivial functional relation between the size of each stratum and the number of sample units to be collected in it
+Thus, it is important to consider the allocation scheme itself in order to do a suitable statistical stratification
+In this paper, we propose an exact algorithm to solve the statistical stratification problem, that we call simply stratification problem, considering a simple non-uniform allocation scheme
+Specifically, this method intends to solve the problem of optimal stratification with stratified simple random sampling without replacement  CITATION  using proportional allocation
+In this problem, we must divide a population of size  SYMBOL  into  SYMBOL  strata considering an auxiliary variable  SYMBOL , also called the size variable, whose values are known for all units in the population
+The first stratum is defined as the set of units in the population whose  SYMBOL   values are lower than or equal to a constant value  SYMBOL  , the second one as the set of units whose  SYMBOL  values are greater than  SYMBOL   and lower than or equal  to  SYMBOL   and so on
+Based on this definition the stratum  SYMBOL   SYMBOL  is defined as the set of units in population with values of  SYMBOL  belonging to the interval  SYMBOL , where   SYMBOL  are the boundaries of each stratum, and the stratum  SYMBOL  corresponds to the set of observations which values are greater than  SYMBOL
+The problem of optimal stratification consists in to find boundaries  SYMBOL  which minimize the variance of the estimator of total for one or more variables  SYMBOL  of study that are supposed to have some correlation with the  SYMBOL  variable, or even the  SYMBOL  variable properly
+Aiming to solve this problem, a new algorithm, when proportional allocation is used, is proposed using the idea of minimal path in graphs  CITATION
+This paper is organized in five sections
+In section 2, we present some basic concepts about stratified simple random sampling
+In section 3, we define the problem of stratification to be tackled in this work and offer a brief discussion about different approaches to this topic
+We propose, in section 4, an algorithm based on Graph Theory in order to provide exact solutions to the stratification problem defined in section 3
+Finally, we present some computational results and considerations about the new algorithm

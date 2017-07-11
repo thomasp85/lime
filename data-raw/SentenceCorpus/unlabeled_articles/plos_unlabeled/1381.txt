@@ -1,0 +1,39 @@
+### abstract ###
+G-quadruplex DNA is a four-stranded DNA structure formed by non-Watson-Crick base pairing between stacked sets of four guanines.
+Many possible functions have been proposed for this structure, but its in vivo role in the cell is still largely unresolved.
+We carried out a genome-wide survey of the evolutionary conservation of regions with the potential to form G-quadruplex DNA structures across seven yeast species.
+We found that G4 DNA motifs were significantly more conserved than expected by chance, and the nucleotide-level conservation patterns suggested that the motif conservation was the result of the formation of G4 DNA structures.
+We characterized the association of conserved and non-conserved G4 DNA motifs in Saccharomyces cerevisiae with more than 40 known genome features and gene classes.
+Our comprehensive, integrated evolutionary and functional analysis confirmed the previously observed associations of G4 DNA motifs with promoter regions and the rDNA, and it identified several previously unrecognized associations of G4 DNA motifs with genomic features, such as mitotic and meiotic double-strand break sites.
+Conserved G4 DNA motifs maintained strong associations with promoters and the rDNA, but not with DSBs.
+We also performed the first analysis of G4 DNA motifs in the mitochondria, and surprisingly found a tenfold higher concentration of the motifs in the AT-rich yeast mitochondrial DNA than in nuclear DNA.
+The evolutionary conservation of the G4 DNA motif and its association with specific genome features supports the hypothesis that G4 DNA has in vivo functions that are under evolutionary constraint.
+### introduction ###
+DNA primarily exists as a double helix.
+However, DNA can also adopt other structural conformations that have the potential to play critical roles in a range of biological processes.
+One such structure is G-quadruplex DNA, which was discovered in the late 1980s when biochemical experiments demonstrated that oligodeoxynucleotides that contain four separated runs of two, three, or four guanines can spontaneously form four-stranded structures CITATION, CITATION.
+G4 DNA structures consist of stacked planar G-quartets that are held together by Hoogsteen hydrogen bonding between four guanines from each of the G-tracts.
+The guanines can come from a single nucleic acid strand or multiple strands, and the strands may be oriented in a parallel or anti-parallel orientation.
+G4 DNA structures are compact, highly stable under physiological pH and salt conditions, resistant to degradation by nucleases, and can have melting temperatures even higher than that of duplex DNA CITATION, CITATION.
+G4 DNA structures can be formed from runs of two guanines, but they are less stable than those with longer runs.
+The G4 DNA structure is of considerable interest because of its potential to influence a variety of biological processes CITATION, CITATION.
+For example, telomeric DNA in most eukaryotic organisms consists of G-rich repeated sequence ending with a 3 single stranded G-rich overhang that can form G-quadruplexes in vitro CITATION, CITATION.
+The first direct evidence for the presence of G4 DNA structures in vivo came from studies using G4 DNA-specific antibodies to detect intermolecular structures at ciliate telomeres where their formation and dissolution are cell cycle regulated CITATION - CITATION.
+However, as described in detail in this paper, telomeric DNAs are not the only chromosomal sequences with the ability to form G4 DNA structures.
+Because experimental characterization of the in vivo functions of G4 DNA structures has proved difficult CITATION, especially at non-telomeric loci, genome-wide computational analyses have played an increasing role in the identification of regions that have the potential to form G4 DNA structures.
+The distribution of G4 DNA motifs has been investigated in S. cerevisiae CITATION, human CITATION, CITATION, and a number of prokaryotic genomes CITATION in the hope that the patterns of occurrence will provide insight into the functional roles of these structures.
+In each case, a computational search for variations of the G4 DNA motif, usually four tracts of three or more guanines separated by loop regions of any nucleotide, was performed.
+Across a wide range of species, G4 DNA motifs were found in telomeres, G-rich micro- and mini-satellites, near promoters, and within the ribosomal DNA CITATION CITATION.
+In the human genome, genes that are near G4 DNA motifs fall into specific functional classes; for example, oncogenes and tumor suppressor genes have particularly high or low G4 DNA forming potential CITATION CITATION.
+Recently, human G4 DNA motifs were reported be associated with recombination prone regions CITATION and to show mutational patterns that preserved the potential to form G4 DNA structures CITATION.
+Computational analysis in S. cerevisiae identified several hundred G4 DNA motifs, and found them to be significantly associated with promoter regions and to a lesser extent with open reading frames CITATION.
+Thus, studies in a wide range of organisms have led to the proposal that G4 DNA structures affect multiple cellular processes beyond their roles at telomeres.
+However, direct support for formation and function of G4 DNA structures in vivo is still largely unavailable.
+In this study, we integrated genome sequence data, experimental analysis, and computational exploration of genome annotations to investigate the conservation and function of G4 DNA structures in S. cerevisiae.
+Evolutionary conservation across related species has played a vital role in defining functional elements such as genes and regulatory sites CITATION, CITATION.
+We identified sequence motifs with the potential to form G-quadruplex structures in S. cerevisiae and six other fungal species and assessed the evolutionary sequence conservation of the motifs across these seven species.
+We found that G4 DNA motifs and the nucleotides comprising them were more evolutionarily conserved than expected by chance; however, they were not as strongly conserved as genes and many known regulatory sites.
+Additionally, the patterns of nucleotide conservation within the motifs indicated that the evolutionary constraint was likely the result of pressure to maintain the ability of these motifs to form G4 DNA structures.
+This analysis provides strong evidence that many computationally identified G4 DNA motifs form functional G4 DNA structures in vivo.
+To characterize possible functions for the structures, we evaluated the association of conserved and non-conserved G4 DNA motifs with a range of genomic features.
+These tests corroborated previous observations of the significant associations of G4 DNA motifs with gene promoters and rDNA CITATION, and suggested several new potential biological functions, such as roles in double strand break repair and in the mitochondrial genome.

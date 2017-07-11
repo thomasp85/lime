@@ -1,0 +1,39 @@
+### abstract ###
+MISC Most generalization bounds in learning theory are based on some measure of the complexity of the hypothesis class used, independently of any algorithm
+MISC In contrast, the notion of algorithmic stability can be used to derive tight generalization bounds that are tailored to specific learning algorithms by exploiting their particular properties
+MISC However, as in much of learning theory, existing stability analyses and bounds apply only in the scenario where the samples are independently and identically distributed
+MISC In many machine learning applications, however, this assumption does not hold
+MISC The observations received by the learning algorithm often have some inherent temporal dependence
+AIMX This paper studies the scenario where the observations are drawn from a stationary  SYMBOL -mixing or  SYMBOL -mixing sequence, a widely adopted assumption in the study of non-iid  processes that implies a dependence between observations weakening over time
+OWNX We prove novel and distinct stability-based generalization bounds for stationary  SYMBOL -mixing and  SYMBOL -mixing sequences
+OWNX These bounds strictly generalize the bounds given in the iid case and apply to all stable learning algorithms, thereby extending the use of stability-bounds to non-iid scenarios
+OWNX We also illustrate the application of our  SYMBOL -mixing generalization bounds to general classes of learning algorithms, including Support Vector Regression, Kernel Ridge Regression, and Support Vector Machines, and many other kernel regularization-based and relative entropy-based regularization algorithms
+OWNX These novel bounds can thus be viewed as the first theoretical basis for the use of these algorithms in non-iid scenarios
+### introduction ###
+MISC Most generalization bounds in learning theory are based on some measure of the complexity of the hypothesis class used, such as the VC-dimension, covering numbers, or Rademacher complexity
+MISC These measures characterize a class of hypotheses, independently of any algorithm
+MISC In contrast, the notion of algorithmic stability can be used to derive bounds that are tailored to specific learning algorithms and exploit their particular properties
+MISC A learning algorithm is stable if the hypothesis it outputs varies in a limited way in response to small changes made to the training set
+MISC Algorithmic stability has been used effectively in the past to derive tight generalization bounds  CITATION
+MISC But, as in much of learning theory, existing stability analyses and bounds apply only in the scenario where the samples are independently and identically distributed (iid)
+MISC In many machine learning applications, this assumption, however, does not hold; in fact, the iid assumption is not tested or derived from any data analysis
+MISC The observations received by the learning algorithm often have some inherent temporal dependence
+MISC This is clear in system diagnosis or time series prediction problems
+MISC Clearly, prices of different stocks on the same day, or of the same stock on different days, may be dependent
+MISC But, a less apparent time dependency may affect data sampled in many other tasks as well
+AIMX This paper studies the scenario where the observations are drawn from a stationary  SYMBOL -mixing or  SYMBOL -mixing sequence, a widely adopted assumption in the study of non-iid processes that implies a dependence between observations weakening over time  CITATION
+OWNX We prove novel and distinct stability-based generalization bounds for stationary  SYMBOL -mixing and  SYMBOL -mixing sequences
+OWNX These bounds strictly generalize the bounds given in the iid case and apply to all stable learning algorithms, thereby extending the usefulness of stability-bounds to non-iid scenarios
+BASE Our proofs are based on the independent block technique described by  CITATION  and attributed to  CITATION , which is commonly used in such contextsMISC
+CONT However, our analysis differs from previous uses of this technique in that the blocks of points considered are not of equal size
+BASE For our analysis of stationary  SYMBOL -mixing sequences, we make use of a generalized version of McDiarmid's inequality  CITATION  that holds for  SYMBOL -mixing sequences
+OWNX This leads to stability-based generalization bounds with the standard exponential form
+OWNX Our generalization bounds for stationary  SYMBOL -mixing sequences cover a more general non-iid scenario and use the standard McDiarmid's inequality, however, unlike the  SYMBOL -mixing case, the  SYMBOL -mixing bound presented here is not a purely exponential bound and contains an additive term depending on the mixing coefficient
+OWNX We also illustrate the application of our  SYMBOL -mixing generalization bounds to general classes of learning algorithms, including Support Vector Regression (SVR)  CITATION , Kernel Ridge Regression  CITATION , and Support Vector Machines (SVMs)  CITATION
+MISC Algorithms such as support vector regression (SVR)  CITATION  have been used in the context of time series prediction in which the iid assumption does not hold, some with good experimental results  CITATION
+MISC To our knowledge, the use of these algorithms in non-iid scenarios has not been previously supported by any theoretical analysis
+OWNX The stability bounds we give for SVR, SVMs, and many other kernel regularization-based and relative entropy-based regularization algorithms can thus be viewed as the first theoretical basis for their use in such scenarios
+MISC The following sections are organized as follows
+OWNX In Section~, we introduce the necessary definitions for the non-iid problems that we are considering and discuss the learning scenarios in that context
+OWNX Section~ gives our main generalization bounds for stationary  SYMBOL -mixing sequences based on stability, as well as the illustration of its applications to general kernel regularization-based algorithms, including SVR, KRR, and SVMs, as well as to relative entropy-based regularization algorithms
+OWNX Finally, Section~ presents the first known stability bounds for the more general stationary  SYMBOL -mixing scenario

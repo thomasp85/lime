@@ -1,0 +1,27 @@
+### abstract ###
+judgments of naturalness of foods tend to be more influenced by the process history of a food  rather than its actual constituents
+two types of processing of a  natural  food are to add something or to remove something
+we report in this study  based on a large random sample of individuals from six countries france  germany  italy  switzerland  uk and usa that additives are considered defining features of what makes a food not natural  whereas  subtractives  are almost never mentioned
+in support of this  skim milk with major subtraction of fat is rated as more natural than whole milk with a small amount of natural vitamin d added
+it is also noted that  additives  is a common word  with a synonym reported by a native speaker in  NUMBER  of  NUMBER  languages  whereas  subtractive  is lexicalized in only  NUMBER  of the  NUMBER  languages
+we consider reasons for additivity dominance  relating it to omission bias  feature positive bias  and notions of purity
+### introduction ###
+there is no question that the concept of natural is of psychological and commercial importance in the modern developed world
+it is clearly a positive attribute  especially when applied to foods
+in recent years  some studies have shed light on the lay meanings of natural
+one particular feature of lay meanings is of relevance to the present paper
+it appears that the naturalness of something is related more to its history of contact with humans than it is to actual chemical composition  CITATION
+understandably  americans rate spring water or natural tomato paste as much more natural than those same entities after a small amount of a natural substance e g   natural minerals or sugar has been added to them
+this action involves both a process adding and a change in content
+what is striking is that if it is stipulated that all of the additives are subsequently removed  the resultant substance is rated less natural than the substance with the additive  CITATION
+the substance that had an additive that was then removed has been subjected to two  processes  but is now identical in content to the original  natural  substance
+this set of results confirmed with the opposite sequence of removing a component of a natural substance  and then replacing the removed component  rozin   NUMBER   argues strongly for the importance of process as opposed to content in natural judgments
+while human contact and agency has been identified by a number of authors as enhancing perceptions of risk  CITATION   it may be that the type of contact is critical
+domestication of plants or animals is associated with intensive human involvement  and major changes in genotypes and phenotypes  yet domesticated species are rated only slightly less natural than their wild equivalents  CITATION
+on the other hand  insertion of a single gene into a wild species is rated as producing a very large decrease in naturalness  CITATION
+perhaps  there is something about going  inside  to produce changes that lead to judgments of unnaturalness
+in the present paper  we add another feature to lay naturalness judgments  which we believe points to a more general asymmetry in judgments
+we had not anticipated the finding we report in advance of the studies described
+in a broad large survey of individuals from six countries about their attitudes to food and health  CITATION   we included a number of questions about naturalness  including an open-ended item asking for a definition of naturalness
+in analyzing these results  we discovered the major importance of  no additives  as a feature of naturalness and the very rare mention of removal of substances  subtractives 
+these and some other results from this survey are presented here  as illustrations of additivity dominance in judgments of naturalness  and perhaps a more general additivity dominance

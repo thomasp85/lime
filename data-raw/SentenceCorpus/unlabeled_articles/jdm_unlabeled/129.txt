@@ -1,0 +1,24 @@
+### abstract ###
+despite their efforts to choose the best of all available solutions  maximizers seem to be more inclined than satisficers to regret their choices and to experience post-decisional dissonance
+maximizers may therefore be expected to change their decisions more frequently and hence exhibit lower customer loyalty to providers of products and services compared to satisficers
+findings from the study reported here  CITATION  support this prediction
+maximizers reported significantly higher intentions to switch to another service provider television provider than satisficers
+maximizers' intentions to switch appear to be intensified and mediated by higher proneness to regret  increased desire to discuss relevant choices with others  higher levels of perceived knowledge of alternatives  and higher ego involvement in the end product  compared to satisficers
+opportunities for future research are suggested
+### introduction ###
+schwartz et al CITATION  presented new evidence that people differ in their general motivation to invest time and resources in the decision making process
+individuals with a preference for maximizing aspire to find the best possible option and are motivated to seek information about as many alternatives as possible before making a choice
+individuals with a preference for satisficing  in contrast  tend to consider a more limited range of alternatives with the purpose of finding an option that satisfies given criteria or aspirations  i e   an option that is considered satisfactory or  good enough 
+schwartz et al CITATION  propose that differences in the preference for maximizing versus satisficing may be conceptualized as a stable personality trait
+some individuals are chronic maximizers whereas other individuals are habitual satisficers across a wide range of decision making tasks and domains
+a particularly interesting finding from schwartz et al CITATION  and several subsequent studies is that maximizers  despite their efforts to find the best possible option  appear to regret their decisions more often than satisficers
+subsequent studies also indicate that maximizers also tend to experience more postdecisional dissonance compared to satisficers  CITATION
+these seemingly paradoxical findings are supported by other studies that indicate that the maximizing trait may represent a reliable predictor of whether or not a person is prone to change his her initial decisions
+for example  in one study  maximizers were found to change their gift purchase decisions significantly more often than satisficers  if given the opportunity to do so  CITATION
+preliminary findings also indicate that  in order be satisfied and engage in repeat purchase  maximizers rely more on high service quality than satisifcers  CITATION
+implications of the maximizing trait for decision stability and change are of high potential significance to a wide array of personal or professional decision making domains  for example job search and career development  CITATION   negotiations  CITATION   investments  education  marriage or divorce  and consumer choice
+many us corporations lose around half of their customer base in a five year period  CITATION   and churn rates exceed  NUMBER  per cent for many companies offering subscription services
+in spite of the considerable costs associated with customer churn  determinants of consumers' decisions to switch brands or service providers are still not well understood
+although there is an increased awareness that individual differences affect customers' attitudes and behaviors  very little is known about how and why customers differ  CITATION
+schwartz et al 's  CITATION  work on the maximizing trait therefore offers valuable potential for advancing research on individual differences in customer behavior and choice
+the main purpose of the present study is to investigate whether the maximizing trait is relevant to explaining customer loyalty and switch intentions  i e   whether or not maximizers are less loyal customers that more frequently intend to switch from one service provider to another

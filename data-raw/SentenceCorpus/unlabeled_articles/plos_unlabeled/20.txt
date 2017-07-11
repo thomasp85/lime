@@ -1,0 +1,81 @@
+### abstract ###
+A central problem in the bioinformatics of gene regulation is to find the binding sites for regulatory proteins.
+One of the most promising approaches toward identifying these short and fuzzy sequence patterns is the comparative analysis of orthologous intergenic regions of related species.
+This analysis is complicated by various factors.
+First, one needs to take the phylogenetic relationship between the species into account in order to distinguish conservation that is due to the occurrence of functional sites from spurious conservation that is due to evolutionary proximity.
+Second, one has to deal with the complexities of multiple alignments of orthologous intergenic regions, and one has to consider the possibility that functional sites may occur outside of conserved segments.
+Here we present a new motif sampling algorithm, PhyloGibbs, that runs on arbitrary collections of multiple local sequence alignments of orthologous sequences.
+The algorithm searches over all ways in which an arbitrary number of binding sites for an arbitrary number of transcription factors can be assigned to the multiple sequence alignments.
+These binding site configurations are scored by a Bayesian probabilistic model that treats aligned sequences by a model for the evolution of binding sites and background intergenic DNA.
+This model takes the phylogenetic relationship between the species in the alignment explicitly into account.
+The algorithm uses simulated annealing and Monte Carlo Markov-chain sampling to rigorously assign posterior probabilities to all the binding sites that it reports.
+In tests on synthetic data and real data from five Saccharomyces species our algorithm performs significantly better than four other motif-finding algorithms, including algorithms that also take phylogeny into account.
+Our results also show that, in contrast to the other algorithms, PhyloGibbs can make realistic estimates of the reliability of its predictions.
+Our tests suggest that, running on the five-species multiple alignment of a single gene's upstream region, PhyloGibbs on average recovers over 50 percent of all binding sites in S. cerevisiae at a specificity of about 50 percent, and 33 percent of all binding sites at a specificity of about 85 percent.
+We also tested PhyloGibbs on collections of multiple alignments of intergenic regions that were recently annotated, based on ChIP-on-chip data, to contain binding sites for the same TF.
+We compared PhyloGibbs's results with the previous analysis of these data using six other motif-finding algorithms.
+For 16 of 21 TFs for which all other motif-finding methods failed to find a significant motif, PhyloGibbs did recover a motif that matches the literature consensus.
+In 11 cases where there was disagreement in the results we compiled lists of known target genes from the literature, and found that running PhyloGibbs on their regulatory regions yielded a binding motif matching the literature consensus in all but one of the cases.
+Interestingly, these literature gene lists had little overlap with the targets annotated based on the ChIP-on-chip data.
+The PhyloGibbs code can be downloaded from LINK or LINK.
+The full set of predicted sites from our tests on yeast are available at LINK.
+### introduction ###
+Transcription factors are proteins that bind in a sequence-specific manner to short DNA segments, most commonly in intergenic DNA upstream of a gene, to activate or suppress gene transcription.
+Their DNA-binding domains recognize collections of short related DNA sequences.
+One generally finds that, although there is no unique combination of bases that is shared by all binding sites, and although different bases can occur at each position, there are clear biases in the distribution of bases that occur at each position of the binding sites.
+A common mathematical representation of a motif that takes this variability into account is a so-called weight matrix CITATION, CITATION w, whose components w i give the probabilities of finding base A, C, G, T at position i of a binding site.
+The main assumption underlying this mathematical representation is that the bases occurring at different positions of the binding site are probabilistically independent.
+This in turn follows, under some conditions CITATION, from the assumption that the binding energy of the protein to the DNA is a sum of pairwise contact energies between the individual nucleotides and the protein.
+There are several algorithms that are based on the WM representation that detect, ab initio, binding sites for a common TF in a collection of DNA sequences CITATION CITATION.
+These algorithms broadly fall into two classes.
+One class, of which MEME CITATION is the typical representative, searches the space of all WMs for the WM that can best explain the observed sequences.
+The class of Gibbs sampling algorithms, of which the Gibbs motif sampler CITATION, CITATION is the typical representative, instead samples the space of all multiple alignments of small sequence segments in search of the one that is most likely to consist of samples from a common WM.
+A crucial factor for the success of ab initio methods is the ratio of the number of binding sites to the total amount of DNA in the collection of sequences.
+That is, the larger the number of binding sites in the set, and the smaller the total amount of DNA, the more likely it is that ab initio methods can discover the binding sites among the other DNA sequences.
+In order to ensure a reasonable chance of success one thus needs to provide these methods with collections of sequences that are highly enriched with binding sites for a common TF.
+One possibility is to use sets of upstream regions from genes that appear co-regulated in microarray experiments or that were bound by a common TF in ChIP-on-chip experiments.
+Another possibility is to use upstream regions of orthologous genes from related organisms.
+Here the assumption is that the regulation of the ancestor gene, and thus its binding sites, has been conserved in the orthologs that descend from it.
+This latter approach is in general complicated by a number of factors.
+When searching for regulatory sites in sequences that are not phylogenetically related, such as upstream regions of different genes from the same organism, one may simply look for short sequence motifs that are overrepresented among the input sequences.
+If the set of species from which the orthologous sequences derive are sufficiently diverged, one may simply choose to ignore the phylogenetic relationship between the sequences and treat the orthologous sequences in the same way as sequences that are not phylogenetically related.
+This was, for instance, the approach taken by McCue et al. CITATION, CITATION, where the Gibbs motif sampler algorithm CITATION, CITATION was used on upstream regions of proteo- bacteria.
+However, this approach is not applicable to datasets containing more closely related species, where some of the sequences will exhibit significant amounts of similarity simply because of their evolutionary proximity.
+Moreover, the amount of similarity will depend on the phylogenetic distance between the species, and it is clear that finding conserved sequence motifs between orthologous sequences from closely related species is much less indicative of function than finding sequence motifs that are conserved between distant species.
+One will in general thus have to distinguish conservation due to functional constraints from conservation due to evolutionary proximity, and to do this correctly, the phylogenetic relationship between the sequences has to be taken into account.
+A second challenge in using orthologous intergenic sequences from multiple species is the nontrivial structure of their multiple alignments.
+One typically finds a very heterogeneous pattern of conservation: well-conserved blocks of different sizes and covering different subsets of the species are interspersed with sequence segments that show little similarity with the sequences of the other species.
+The technique of phylogenetic footprinting, restricts attention to only those sequence segments in the genome of interest that show significant conservation with the other species.
+The conserved regions for multiple genes are then searched for common motifs by a variety of techniques.
+It is unclear, however, to what extent regulatory sites are restricted to such conserved segments.
+For instance, several studies of Drosophila and yeast CITATION CITATION have shown that there is no strong correlation between where experimentally annotated binding sites occur and whether that region is conserved.
+Thus, at least for yeast and flies, considerable information is lost by focusing on the conserved regions only.
+We thus decided to retain the entire patchwork pattern of conserved sequence blocks and unaligned segments.
+Our strategy is implemented by a Gibbs sampling approach, and a preliminary account of the algorithm was presented in CITATION.
+The algorithm operates on arbitrary collections of both phylogenetically related sequences, such as orthologous intergenic regions, and sequences that are not phylogenetically related, such as upstream regions of different genes from the same organism.
+The phylogenetically related groups of sequences in the input are pre-aligned into local multiple alignments where clearly similar sequence segments are aligned into blocks and sequence segments of no or marginal similarity are left unaligned CITATION.
+Although the algorithm can also take global multiple alignments as input, we believe that these often force phylogenetically unrelated segments into aligned blocks.
+This may adversely affect the performance of the algorithm.
+We score putative sites within blocks of aligned sequences with an evolutionary model that takes the phylogenetic relationships of the species into account, while putative sites in unaligned segments are treated as independent occurrences.
+This Bayesian model defines a probability distribution over arbitrary placements of putative binding sites for multiple motifs, and we sample it with a Monte Carlo Markov chain.
+We first use simulated annealing to search for the globally optimal configuration of binding sites.
+The motifs in this configuration are then tracked in a further sampling run to estimate realistic posterior probabilities for all the binding sites that the algorithm reports.
+Recently a number of other algorithms have been developed that search for regulatory motifs in groups of phylogenetically related sequences.
+Probably the first algorithm that was proposed is a generalization of the Consensus algorithm CITATION called PhyloCon CITATION.
+PhyloCon operates on sets of co-regulated genes and their orthologs.
+It is a greedy algorithm that first finds ungapped alignments of similar sequence segments in sets of orthologous sequences, and then combines these alignments from different upstream regions into larger alignments.
+This algorithm does not take any phylogenetic information into account, i.e., closely related sequences are treated the same as distantly related sequences.
+Other drawbacks of this algorithm are that it assumes that each motif will have exactly one site in each of the intergenic regions and that it assumes that this site is conserved in all orthologs.
+More closely related to PhyloGibbs's approach are two recent algorithms CITATION, CITATION that generalize MEME CITATION to take the phylogenetic relationships between species into account.
+The main difference between EMnEM and PhyME is that PhyME uses the same evolutionary model for the evolution of binding sites as PhyloGibbs, which takes into account that binding sites evolve under constraints set by a WM, whereas EMnEM simply assumes an overall slower rate of evolution in binding sites than in background sequences.
+Another difference is that PhyME, like PhyloGibbs, treats the multiple alignment more flexibly than EMnEM, which demands a global multiple alignment.
+The main difference between PhyloGibbs and these algorithms is of course that PhyloGibbs takes a motif sampling approach, which allows us to search for multiple motifs in parallel, whereas PhyME and EMnEM use expectation maximization to search for one WM at a time.
+In the following sections, we first describe our Bayesian model that assigns a posterior probability to each configuration of binding sites for multiple motifs assigned to the input sequences.
+We start by describing the model for phylogenetically unrelated sequences, which is essentially equivalent to the model used in the Gibbs motif sampler CITATION, CITATION, and then describe how this model is extended to datasets that contain phylogenetically related sequences.
+After that we describe the move set with which we search the state space of all possible configurations, and the annealing and tracking strategy that we use to identify the significant groups of sites.
+We then present examples of the performance of ours and other algorithms on both synthetic and real data.
+The synthetic datasets consist of mixtures of WM samples and random sequences, which is in accordance with assumptions that all algorithms make.
+This allows us to compare the performance of the algorithms in an idealized situation that does not contain the complexities of real data.
+These tests also show to what extent binding sites can be recovered for this idealized data as a function of the quality of the WMs, the number of sites available, and the number of species available and their phylogenetic distances.
+For our tests on real data we use 200 upstream regions from Saccharomyces cerevisiae that have known binding sites from the collection CITATION, and compare the ability of the different algorithms to recover these sites when running on multiple alignments of the orthologs of these upstream regions from recently sequenced Saccharomyces genomes CITATION, CITATION.
+Finally, we run PhyloGibbs on collections of upstream region alignments that were annotated in CITATION to contain binding sites for a common TF based on data from ChIP-on-chip experiments, and we extensively compare PhyloGibbs' results with the annotations in CITATION and with the literature.

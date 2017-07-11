@@ -1,0 +1,47 @@
+### abstract ###
+several approaches to judgment and decision making emphasize the effort-reducing properties of heuristics
+one prominent example for effort-reduction is the recognition heuristic rh which proposes that judgments are made by relying on one single cue recognition  ignoring other information
+our research aims to shed light on the conditions under which the rh is more useful and thus relied on more often
+we propose that intuitive thinking is fast  automatic  and effortless whereas deliberative thinking is slower  stepwise  and more effortful
+because effort-reduction is thus much more important when processing information deliberately  we hypothesize that the rh should be more often relied on in such situations
+in two city-size-experiments  we instructed participants to think either intuitively or deliberatively and assessed use of the rh through a formal measurement model
+results revealed that  in both experiments  use of the rh was more likely when judgments were to be made deliberatively  rather than intuitively
+as such  we conclude that the potential application of heuristics is not necessarily a consequence of  intuitive  processing
+rather  their effort-reducing features are probably most beneficial when thinking more deliberatively
+### introduction ###
+heuristics are meant to reduce effort
+indeed  without the issues of processing effort or information search costs  there would be little need for examining fewer cues  reducing the difficulty of storing and or retrieving cue values  simplifying weighting principles for cues  or integrating less information - all of which characterize heuristic strategies  CITATION
+following the pioneering work of herbert simon  CITATION   most approaches to judgment and decision making dealing with heuristic processing specifically emphasize its simplifying properties  CITATION  - though there is some discourse as to whether heuristics are generally less accurate than complex strategies
+however  despite such disagreements  many would concur that heuristics render judgments and decisions easier in one way or another
+how does heuristic processing relate to the concept of intuitive thinking
+to answer this question - which is treated differently in the literature - one must first specify the characteristics of intuition
+herein  like many others  we define intuitive thinking as automatic  fast  effortless  unconscious  and based on vast amounts of prior experience  CITATION
+moreover  intuition is usually deemed to involve the integration of multiple pieces of information in a weighted additive manner  CITATION
+as such  intuitive  processes have little or no information-processing costs   CITATION  and  enable individuals to quickly integrate multiple reasons in their decisions in a compensatory way   CITATION
+finally  intuition is typically contrasted with deliberation which describes slow  effortful  stepwise  and mostly rule-governed processes  CITATION
+in sum  alter  oppenheimer  epley  and eyre  CITATION  stated that thinking  involves two distinct processing systems  one that is quick  effortless  associative  and intuitive and another that is slow  effortful  analytic  and deliberate  p  NUMBER 
+note however  that it is not entirely clear whether intuitive and deliberative thinking actually represent two qualitatively different modes of thinking or rather end points of the same dimension  CITATION
+if one accepts these two basic notions  namely a that one central appeal of heuristics lies in their effort-reducing properties and b that intuitive thinking is more effortless than deliberation thus rendering effort-reduction less appealing  the following conjecture seems straightforward  deliberation will increase the  need  for heuristic processing
+stated differently  heuristics should be much more helpful when judgments and decisions are performed in a slow  stepwise  and effortful manner  that is  under conditions of deliberation
+in such a situation  heuristics may significantly relieve the mind of burdensome computations - without necessarily leading to reduced accuracy  CITATION
+intuitive thinking  however  will comprise  automatic information integration  which makes simplification partially obsolete   CITATION
+note  again  that this hypothesis need not imply that intuition and deliberation are completely different manners of thinking - so long as more intuitive thinking is accepted to be less effortful than more deliberative thinking  our conjecture should hold
+as indicated above  our view that intuition should actually reduce reliance on heuristics is not consistently echoed in the literature
+indeed  some have considered heuristic processing in the sense of attribute substitution as the result of intuitive thinking  CITATION   though they acknowledge that  attribute substitution can also be a deliberate    strategy   CITATION
+also  although focusing on single-cue mechanisms rather than on attribute substitution  gigerenzer  CITATION  stated that  heuristics can be used with and without awareness
+in the latter case  each provides a potential mechanism of intuition 
+similarly  gigerenzer  CITATION  seems to advocate that the fast-and-frugal heuristics of his adaptive toolbox approach are intuitive mechanisms    intuitions ignore information
+gut feelings spring from rules of thumb that extract only a few pieces of information    and ignore the rest  p  NUMBER 
+however  neither the fast-and-frugal heuristics approach nor other related notions  CITATION  per se  seem to make strong claims about the extent to which use of heuristics is a mark of intuitive thinking
+from these theoretical positions  it seems to be a largely open question
+nonetheless  intuition and reliance on heuristics have often been equated in the past  CITATION
+by contrast  we propose a clear difference between intuitive thinking and heuristics - especially those put forward as part of the adaptive toolbox  as outlined above  intuition is characterized by speedy integration of multiple pieces of information
+heuristics  by contrast  ignore information
+indeed  previous empirical findings are consistent with our conjecture
+for example  glockner and betsch  CITATION  showed that individuals are capable of integrating complex information within a surprisingly short time frame
+measuring the reliance on more consciously controlled processes rather than automatic first impressions in risky choices using the cognitive reflection test  CITATION   cokely and kelly  CITATION  showed that more reflective thinking is characterized by more heuristic search processes
+similarly  frederick  CITATION  proposed that choice heuristics result from more deliberate cognitive processes e g   elimination-by-aspects  but can become automated when affective responses are rapidly generated e g   choosing-by-liking
+other studies  directly inducing intuitive vs deliberative thinking  revealed that heuristics are more likely applied in deliberate rather than in intuitive judgments
+for example  asking participants to think carefully increased reliance on the anchoring heuristic
+by contrast  those instructed to answer spontaneously relied on their experiences with the judgmental object rather than on experimentally provided anchors  CITATION
+similar results have been reported for frequency judgments  CITATION   basketball predictions  CITATION   and judgments of randomness  CITATION

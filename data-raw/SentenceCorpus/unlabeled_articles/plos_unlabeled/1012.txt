@@ -1,0 +1,29 @@
+### abstract ###
+Knowledge of the Free Energy Landscape topology is the essential key to understanding many biochemical processes.
+The determination of the conformers of a protein and their basins of attraction takes a central role for studying molecular isomerization reactions.
+In this work, we present a novel framework to unveil the features of a Free Energy Landscape answering questions such as how many meta-stable conformers there are, what the hierarchical relationship among them is, or what the structure and kinetics of the transition paths are.
+Exploring the landscape by molecular dynamics simulations, the microscopic data of the trajectory are encoded into a Conformational Markov Network.
+The structure of this graph reveals the regions of the conformational space corresponding to the basins of attraction.
+In addition, handling the Conformational Markov Network, relevant kinetic magnitudes as dwell times and rate constants, or hierarchical relationships among basins, completes the global picture of the landscape.
+We show the power of the analysis studying a toy model of a funnel-like potential and computing efficiently the conformers of a short peptide, dialanine, paving the way to a systematic study of the Free Energy Landscape in large peptides.
+### introduction ###
+Polymers and, more specifically, proteins, show complex behavior at the cellular system level, e.g. in protein-protein interaction networks CITATION, and also at the individual level, where proteins show a large degree of multistability: a single protein can fold in different conformational states CITATION CITATION.
+As a complex system CITATION, CITATION, the dynamics of a protein cannot be understood by studying its parts in isolation, instead, the system must be analyzed as a whole.
+Tools able to represent and handle the information of the entire picture of a complex system are thus necessary.
+Complex network theory CITATION, CITATION has proved to be a powerful tool used in seemingly different biologically-related fields such as the study of metabolic reactions, ecological and food webs, genetic regulatory systems and the study of protein dynamics CITATION.
+In this latter context, diverse studies have analyzed the conformational space of polymers and proteins making use of network representations CITATION CITATION, where nodes account of polymer conformations.
+Additionally, some studies have tried to determine the common and general properties of these conformational networks CITATION, CITATION looking at magnitudes such as clustering coefficient, cyclomatic number, connectivity, etc. Recently, trying to decompose the network in modules corresponding to the free energy basins, the use of community algorithms over these conformational networks have been proposed CITATION.
+Although this approach has opened a promising path for the analysis of Free Energy Landscapes, the community based description of the network leads to multiple characterizations of the FEL and thus it is difficult to establish a clear map from the communities found to the basins of the FEL.
+A similar approach, commonly used to analyze the complex dynamics, is the construction of Markovian models.
+Markovian state models let us treat the information of one or several trajectories of molecular dynamics as a set of conformations with certain transition probabilities among them CITATION, CITATION, CITATION.
+Therefore, the time-continuous trajectory turns into a transition matrix, offering global observables as relaxation times and modes.
+In CITATION CITATION the use of Markovian models is proposed with the aim of detecting FEL meta-stable states.
+However, the above approaches to analyze FELs of peptides involves extremely large computational cost: either general community algorithms or large transition matrices.
+Finally, other strategies to characterize the FEL that have successfully helped to understand the physics of biopolymers, are based on the study of the Potential Energy Surface CITATION, CITATION, CITATION CITATION.
+The classical transition-state theory CITATION allows us to project the behavior of the system at certain temperature from the knowledge of the minima and transition states of the PES.
+This approach entails some feasible approximations, such as harmonic approximation to the PES, limit of high damping, assumption of high barriers, etc. These approximations could be avoided working directly from the MD data.
+In this article we make a novel study of the FEL capturing its mesoscopic structure and hence characterizing conformational states and the transitions between them.
+Inspired by the approaches presented in CITATION, CITATION and CITATION, CITATION, we translate a dynamical trajectory obtained by MD simulations into a Conformational Markov Network.
+We show how to efficiently handle the graph to obtain, through its topology, the main features of the landscape: conformers and their basins of attraction, dwell times, rate constants between the conformational states detected and a coarse-grained picture of the FEL.
+The framework is shown and validated analyzing a synthetic funnel-like potential.
+After this, the terminally blocked alanine peptide is studied unveiling the main characteristics of its FEL.

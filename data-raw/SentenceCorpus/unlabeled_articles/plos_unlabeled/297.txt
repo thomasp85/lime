@@ -1,0 +1,38 @@
+### abstract ###
+When incorporated into a polypeptide chain, proline differs from all other naturally occurring amino acid residues in two important respects.
+The dihedral angle of Pro is constrained to values close to 65 and Pro lacks an amide hydrogen.
+Consequently, mutations which result in introduction of Pro can significantly affect protein stability.
+In the present work, we describe a procedure to accurately predict the effect of Pro introduction on protein thermodynamic stability.
+Seventy-seven of the 97 non-Pro amino acid residues in the model protein, CcdB, were individually mutated to Pro, and the in vivo activity of each mutant was characterized.
+A decision tree to classify the mutation as perturbing or nonperturbing was created by correlating stereochemical properties of mutants to activity data.
+The stereochemical properties including main chain dihedral angle and main chain amide H-bonds were determined from 3D models of the mutant proteins built using MODELLER.
+We assessed the performance of the decision tree on a large dataset of 163 single-site Pro mutations of T4 lysozyme, 74 nsSNPs, and 52 other Pro substitutions from the literature.
+The overall accuracy of this algorithm was found to be 81 percent in the case of CcdB, 77 percent in the case of lysozyme, 76 percent in the case of nsSNPs, and 71 percent in the case of other Pro substitution data.
+The accuracy of Pro scanning mutagenesis for secondary structure assignment was also assessed and found to be at best 69 percent.
+Our prediction procedure will be useful in annotating uncharacterized nsSNPs of disease-associated proteins and for protein engineering and design.
+### introduction ###
+Proline is unique among the 20 naturally occurring amino acid residues.
+On the one hand, because Pro lacks an amide proton the main chain amide N is incapable of forming H-bonds.
+Hence, substituting a residue involved in a main chain H-bond with Pro could destabilize the protein.
+This property has previously been exploited to obtain information about residues involved in secondary structure CITATION CITATION.
+On the other hand, the rigid pyrrolidine ring constrains the main chain dihedral angle to a narrow range of values close to 65.
+It has also been observed CITATION CITATION that Pro restricts the conformation of the residue preceding it in a protein sequence.
+The Ramachandran map of the pre-proline residue has a large excluded area between 40 50.
+This restricts the conformation of the L and regions.
+There is also a small leg of density in the region that is unique to pre-proline residues.
+Hence, Pro can potentially increase protein stability because it decreases the conformational entropy of the denatured state.
+In addition, Pro is usually conserved in proteins and often plays an important role in protein structure and function CITATION, CITATION, CITATION .
+Previous studies on Pro mutants of different proteins have shown that the thermodynamic effects of introducing Pro depend on various factors including residue position, value of the original residue, H-bonding of the amide group of the original residue, and electrostatic or hydrophobic interactions of the original residue CITATION, CITATION, CITATION CITATION.
+However, it is not yet clear whether the introduction of Pro at a given position in a protein will have a perturbing or nonperturbing effect on the thermodynamic stability of the protein.
+The aim of the present work is to generate an algorithm based on Pro scanning mutagenesis data which can be used to predict the perturbing/nonperturbing effect of Pro substitution at a given position for any globular protein.
+We also examine the utility of Pro scanning mutagenesis to infer protein secondary structure.
+The experimental system used in this study, controller of cell division or death B protein, is a 101 residue, homodimeric protein encoded by F plasmid.
+The protein does not contain any disulfides or metal ions.
+The protein is an inhibitor of DNA gyrase and is a potent cytotoxin in Escherichia coli.
+Transformation of normal E.coli cells with plasmid expressing the wild-type CcdB gene results in cell death.
+If the protein is inactivated through mutation, cells transformed with the mutant genes will survive.
+In this work we attempted to replace each of 101 amino acids of homodimeric CcdB with Pro using high throughput mega-primer based site-directed mutagenesis.
+A total of 77 mutants could be generated.
+Mutant phenotype was assayed as a function of expression level by monitoring the presence or absence of cell growth as a function of inducer concentration.
+Based on an analysis of CcdB Pro scanning mutagenesis, phenotypic data, and its correlation with various structural parameters, a decision tree was created to classify Pro substitutions of a protein into perturbing and nonperturbing mutations.
+The decision tree was further validated on a large phenotypic dataset of 163 Pro mutants of T4 lysozyme at two different temperatures, a nonsynonymous single nucleotide polymorphism database of Pro substitutions which are associated with various diseases and on Pro substitutions extracted from the ProTherm database and literature.

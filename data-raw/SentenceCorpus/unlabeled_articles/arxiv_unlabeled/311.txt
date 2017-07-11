@@ -1,0 +1,91 @@
+### abstract ###
+One of the most popular algorithms for clustering in Euclidean space is the  SYMBOL -means algorithm;  SYMBOL -means is difficult to analyze mathematically, and few theoretical guarantees are known about it, particularly when the data is  well-clustered
+In this paper, we attempt to fill this gap in the literature by analyzing the behavior of  SYMBOL -means on well-clustered data
+In particular, we study the case when each cluster is distributed as a different Gaussian -- or, in other words, when the input comes from a mixture of Gaussians
+We analyze three aspects of the  SYMBOL -means algorithm under this assumption
+First, we show that when the input comes from a mixture of two spherical Gaussians, a variant of the  SYMBOL -means algorithm successfully isolates the subspace containing the means of the mixture components
+Second, we show an exact expression for the convergence of our variant of the  SYMBOL -means algorithm, when the input is a very large number of samples from a mixture of spherical Gaussians
+Our analysis does not require any lower bound on the separation between the mixture components
+Finally, we study the sample requirement of  SYMBOL -means; for a mixture of  SYMBOL  spherical Gaussians, we show an upper bound on the number of samples required by a variant of  SYMBOL -means to get close to the true solution
+The sample requirement grows with increasing dimensionality of the data, and decreasing separation between the means of the Gaussians
+To match our upper bound, we show an information-theoretic lower bound on any algorithm that learns mixtures of two spherical Gaussians; our lower bound indicates that in the case when the overlap between the probability masses of the two distributions is small, the sample requirement of  SYMBOL -means is  near-optimal
+### introduction ###
+One of the most popular algorithms for clustering in Euclidean space is the  SYMBOL -means algorithm~ CITATION ; this is a simple, local-search algorithm that iteratively refines a partition of the input points until convergence
+Like many local-search algorithms,  SYMBOL -means is notoriously difficult to analyze, and few theoretical guarantees are known about it
+There has been three lines of work on the  SYMBOL -means algorithm
+A first line of questioning addresses the quality of the solution produced by  SYMBOL -means, in comparison to the globally optimal solution
+While it has been well-known that for general inputs the quality of this solution can be arbitrarily bad, the conditions under which  SYMBOL -means yields a globally optimal solution on  well-clustered  data are not well-understood
+A second line of work~ CITATION  examines the number of iterations required by  SYMBOL -means to converge ~ CITATION  shows that there exists a set of  SYMBOL  points on the plane, such that  SYMBOL -means takes as many as  SYMBOL  iterations to converge on these points
+A smoothed analysis upper bound of  SYMBOL  iterations has been established by~ CITATION , but this bound is still much higher than what is observed in practice, where the number of iterations are frequently sublinear in  SYMBOL
+Moreover, the smoothed analysis bound applies to small perturbations of arbitrary inputs, and the question of whether one can get faster convergence on well-clustered inputs, is still unresolved
+A third question, considered in the statistics literature, is the statistical efficiency of  SYMBOL -means
+Suppose the input is drawn from some simple distribution, for which  SYMBOL -means is statistically consistent; then, how many samples is required for  SYMBOL -means to converge
+Are there other consistent procedures with a better sample requirement
+In this paper, we study all three aspects of  SYMBOL -means, by studying the behavior of  SYMBOL -means on Gaussian clusters
+Such data is frequently modelled as a mixture of Gaussians; a mixture is a collection of Gaussians  SYMBOL  and weights  SYMBOL , such that  SYMBOL
+To sample from the mixture, we first pick  SYMBOL  with probability  SYMBOL  and then draw a random sample from  SYMBOL
+Clustering such data then reduces to the problem of  learning a mixture ; here, we are given only the ability to sample from a mixture, and our goal is to learn the parameters of each Gaussian  SYMBOL , as well as determine which Gaussian each sample came from
+Our results are as follows
+First, we show that when the input comes from a mixture of two spherical Gaussians, a variant of the  SYMBOL -means algorithm successfully isolates the subspace containing the means of the Gaussians
+Second, we show an exact expression for the convergence of a variant of the  SYMBOL -means algorithm, when the input is a large number of samples from a mixture of two spherical Gaussians
+Our analysis shows that the convergence-rate is logarithmic in the dimension, and decreases with increasing separation between the mixture components
+Finally, we address the sample requirement of  SYMBOL -means; for a mixture of  SYMBOL  spherical Gaussians, we show an upper bound on the number of samples required by a variant of  SYMBOL -means to get close to the true solution
+The sample requirement grows with increasing dimensionality of the data, and decreasing separation between the means of the distributions
+To match our upper bound, we show an information-theoretic lower bound on any algorithm that learns mixtures of two spherical Gaussians; our lower bound indicates that in the case when the overlap between the probability masses of the two distributions is small, the sample requirement of  SYMBOL -means is  near-optimal
+Additionally, we make some partial progress towards analyzing  SYMBOL -means in the more general case -- we show that if our variant of  SYMBOL -means is run on a mixture of  SYMBOL  spherical Gaussians, then, it converges to a vector in the subspace containing the means of  SYMBOL
+The key insight in our analysis is a novel potential function  SYMBOL , which is the minimum angle between the subspace of the means of  SYMBOL , and the normal to the hyperplane separator in  SYMBOL -means
+We show that this angle decreases with iterations of our variant of  SYMBOL -means, and we can characterize convergence rates and sample requirements, by characterizing the rate of decrease of the potential
+One of the most popular algorithms for clustering in Euclidean space is the  SYMBOL -means algorithm CITATION
+SYMBOL -means is an iterative algorithm, which begins with an initial partition of the input points, and successively refines the partition until convergence
+In this paper, we perform a probabilistic analysis of  SYMBOL -means, when applied to the problem of learning mixture models
+A mixture model  SYMBOL  is a collection of distributions  SYMBOL  and weights  SYMBOL , such that  SYMBOL
+A sample from a mixture  SYMBOL  is obtained by selecting  SYMBOL  with probability  SYMBOL , and then selecting a random sample from  SYMBOL
+Given only the ability to sample from a mixture, the problem of learning a mixture is that of (a) determining the parameters of the distributions comprising the mixture and (b) classifying the samples, according to source distribution
+Most previous work on  the analysis of  SYMBOL -means~ CITATION  studies the problem in a statistical setting, and shows  consistency guarantees, when the number of samples tend to infinity
+The  SYMBOL -means algorithm is also closely related to the widely-used EM algorithm~ CITATION  for learning mixture models -- essentially, the main difference between  SYMBOL -means and EM being that EM allows a sample to fractionally belong to multiple clusters and  SYMBOL -means does not
+Most previous work on analyzing EM view it as an optimization procedure over the likelihood surface, and study its convergence properties by analyzing the likelihood surface around the optimum~ CITATION
+In this paper, we perform a probabilistic analysis of a variant of  SYMBOL -means, when the input is generated from a mixture of spherical Gaussians
+Instead of analyzing the likelihood surface, we examine the geometry of the input, and use the structure in it to show that the algorithm makes progress towards the correct solution in each round with high probability
+Previous probabilistic analysis of EM, due to~ CITATION , applies when the  input comes from a mixture of spherical Gaussians, separated, such that two samples from the same Gaussian are closer in space than two samples from different Gaussians
+In contrast, our analysis is much finer, and while it still deals with mixtures of two or more spherical Gaussians, applies under any separation
+Moreover, we quantify the number of samples required by  SYMBOL -means to work correctly \medskip{ Our Results } More specifically, our results are as follows
+We perform a probabilistic analysis of a variant of  SYMBOL -means; our variant is essentially a symmetrized version of  SYMBOL -means, and it reduces to  SYMBOL -means when we have a very large number of samples from a mixture of two identical spherical Gaussians with equal weights
+In the  SYMBOL -means algorithm, the separator between the two clusters is always a hyperplane, and we use the angle  SYMBOL   between the normal to this hyperplane and the mean of a mixture component  in round  SYMBOL , as a measure of the potential in each round
+Note that  when  SYMBOL , we have arrived at the correct solution
+First, in Section~, we consider the case when we have at our disposal a very large number of samples from a mixture of  SYMBOL  and  SYMBOL  with mixing weights  SYMBOL  respectively
+We show an exact relationship between  SYMBOL  and  SYMBOL , for any value of  SYMBOL ,  SYMBOL ,  SYMBOL  and  SYMBOL
+Using this relationship, we can approximate the rate of convergence of  SYMBOL -means, for different values of the separation, as well as different initialization procedures
+Our guarantees illustrate that the progress of  SYMBOL -means is very fast -- namely, the square of the cosine of  SYMBOL  grows by at least a constant factor (for high separation) each round, when one is far from the actual solution, and slow when the actual solution is very close
+Next, in Section~, we characterize the sample requirement for our variant of  SYMBOL -means to succeed, when the input is a mixture of two spherical Gaussians
+For the case of two identical spherical Gaussians with equal mixing weight, our results imply that when the separation  SYMBOL , and when  SYMBOL  samples are used in each round, the  SYMBOL -means algorithm makes progress at roughly the same rate as in Section~
+This agrees with the  SYMBOL  sample complexity lower bound~ CITATION  for learning a mixture of Gaussians on the line, as well as with experimental results of~ CITATION
+When  SYMBOL , our variant of  SYMBOL -means makes progress in each round, when the number of samples is at least  SYMBOL
+Then, in Section~, we provide an information-theoretic lower bound on the sample requirement of any algorithm for learning a mixture of two spherical Gaussians with standard deviation  SYMBOL  and equal weight
+We show that when the separation  SYMBOL , any algorithm requires  SYMBOL  samples to converge to a vector within angle  SYMBOL  of the true solution, where  SYMBOL  is a constant
+This indicates that  SYMBOL -means has near-optimal sample requirement when  SYMBOL
+Finally, in Section~, we examine the performance of  SYMBOL -means when the input comes from a mixture of  SYMBOL  spherical Gaussians
+We show that, in this case, the normal to the hyperplane separating the two clusters converges to a vector in the subspace containing the means of the mixture components
+Again, we characterize exactly the rate of convergence, which looks very similar to the bounds in Section~ \medskip{ Related Work } The convergence-time of the  SYMBOL -means algorithm has been analyzed in the worst-case~ CITATION , and the smoothed analysis settings~ CITATION ; ~ CITATION  shows that the convergence-time of  SYMBOL -means may be  SYMBOL  even in the plane ~ CITATION  establishes a  SYMBOL  smoothed complexity bound ~ CITATION  analyzes the performance of  SYMBOL -means when the data obeys a clusterability condition; however, their clusterability condition is very different, and moreover, they examine conditions under which constant-factor approximations can be found
+In statistics literature, the  SYMBOL -means algorithm has been shown to be consistent~ CITATION  ~ CITATION  shows that minimizing the  SYMBOL -means objective function (namely, the sum of the squares of the distances between each point and the center it is assigned to), is consistent, given sufficiently many samples
+As optimizing the  SYMBOL -means objective is NP-Hard, one cannot hope to always get an exact solution
+None of these two works quantify either the convergence rate or the exact sample requirement of  SYMBOL -means
+There has been two lines of previous work on theoretical analysis of the EM algorithm~ CITATION , which is closely related to  SYMBOL -means
+Essentially, for learning mixtures of identical Gaussians, the only difference between EM and  SYMBOL -means is that EM uses  partial assignments  or  soft clusterings , whereas  SYMBOL -means does not
+First, ~ CITATION  views learning mixtures as an optimization problem, and EM as an optimization procedure over the likelihood surface
+They analyze the structure of the likelihood surface around the optimum to conclude that EM has first-order convergence
+An optimization procedure on a parameter  SYMBOL  is said to have first-order convergence, if,   SYMBOL  where  SYMBOL  is the estimate of  SYMBOL  at time step  SYMBOL  using  SYMBOL  samples,  SYMBOL  is the maximum likelihood estimator for  SYMBOL  using  SYMBOL  samples, and  SYMBOL  is some fixed constant between  SYMBOL  and  SYMBOL
+In contrast, our analysis also applies when one is far from the optimum
+The second line of work is a probabilistic analysis of EM due to~ CITATION ; they show a two-round variant of EM which converges to the correct partitioning of the samples, when the input is generated by a mixture of  SYMBOL  well-separated, spherical Gaussians
+For their analysis to work,  they require the mixture components to be separated such that two samples from the same Gaussian are a little closer in space than two samples from different Gaussians
+In contrast, our analysis applies when the separation is much smaller
+The sample requirement of learning mixtures has been previously studied in the literature, but not in the context of  SYMBOL -means ~ CITATION  provides an algorithm that learns a mixture of two binary product distributions with uniform weights, when the separation  SYMBOL  between the mixture components is at least a constant, so long as  SYMBOL  samples are available (Notice that for such distributions, the directional standard deviation is at most  SYMBOL ) Their algorithm is similar to  SYMBOL -means in some respects, but different in that they use different sets of coordinates in each round, and this is  very crucial in their analysis
+Additionally,~ CITATION  show a spectral algorithm which learns a mixture of  SYMBOL  binary product distributions, when the distributions have small overlap in probability mass, and the sample size is at least  SYMBOL
+CITATION  shows that at least  SYMBOL  samples are required to learn a mixture of two Gaussians in one dimension
+We note that although our lower bound of  SYMBOL  for  SYMBOL  seems to contradict the upper bound of~ CITATION , this is not actually the case
+Our lower bound characterizes the number of samples required to find a vector at an angle  SYMBOL  with the vector joining the means
+However, in order to classify a constant fraction of the points correctly, we only need to find a vector at an angle  SYMBOL  with the vector joining the means
+Since the goal of~ CITATION  is to simply classify a constant fraction of the samples, their upper bound is less than  SYMBOL
+In addition to theoretical analysis, there has been very interesting experimental work due to~ CITATION , which studies the sample requirement for EM on a mixture of  SYMBOL  spherical Gaussians
+They conjecture that the problem of learning mixtures has three phases, depending on the number of samples : with less than about  SYMBOL  samples, learning mixtures is information-theoretically hard; with more than about  SYMBOL  samples, it is computationally easy, and in between, computationally hard, but easy in an information-theoretic sense
+Finally, there has been a line of work which provides algorithms (different from EM or  SYMBOL -means) that are guaranteed to learn mixtures of Gaussians under certain separation conditions -- see, for example,~ CITATION
+For mixtures of two Gaussians, our result is comparable to the best results for spherical Gaussians~ CITATION  in terms of separation requirement, and we have a smaller sample requirement

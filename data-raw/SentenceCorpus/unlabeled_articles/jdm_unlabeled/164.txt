@@ -1,0 +1,19 @@
+### abstract ###
+morally challenging decisions tend to be perceived as difficult by decision makers and often lead to post-decisional worry or regret
+to test potential causes of these consequences  we employed realistic  morally challenging scenarios with two conflicting choice options
+in addition to respondents' choices  we collected various ratings of choice options  decision-modes employed  as well as physiological arousal  assessed via skin conductance
+not surprisingly  option ratings predicted choice  such that the more positively rated option was chosen
+however  respondents' self-reported decision modes also independently predicted choice
+we further found that simultaneously engaging in decision modes that predict opposing choices increased decision difficulty and post-decision worry
+in some cases this was related to increased arousal
+results suggest that at least a portion of the negative consequences associated with morally challenging decisions can be attributed to conflict in the decision modes one engages in
+### introduction ###
+imagine that you are a peacekeeper whose duty is to keep two previously warring factions from fighting
+one of the factions starts to shell the town you are in
+thousands of shells fall and suddenly hundreds of people from the other faction are outside your camp  trying to get away from the shelling
+you ask your commanding officer for permission to let them in  but are given the strict order not to do so  because it would imperil the perceived neutrality of your unit and could result in the harm of an even greater number of civilians
+do you let them in or turn them away
+regardless of which option you pick  would you be able to move forward effortlessly  forgetting about your decision and its consequences  or would you ruminate over your decision  wondering what would have happened had you decided to take the other option
+moral choices such as this can be expected to produce more post-decisional rumination than choices without a moral dimension because of the gravity of such decisions
+such decisions seem to lack clear right or wrong options  and they force decision makers to choose what often seems to them to be the lesser of two evils
+when decision makers simultaneously embody multiple roles such as the role of soldier who needs to obey orders versus the role of humanitarian who wants to help  we can expect different decision making strategies leading to different choices and resulting pre- and post-decisional conflict

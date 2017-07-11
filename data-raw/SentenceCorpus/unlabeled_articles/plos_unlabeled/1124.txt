@@ -1,0 +1,31 @@
+### abstract ###
+Atherosclerosis is the main cause of coronary heart disease and stroke, the two major causes of death in developed society.
+There is emerging evidence of excess risk of cardiovascular disease at low radiation doses in various occupationally exposed groups receiving small daily radiation doses.
+Assuming that they are causal, the mechanisms for effects of chronic fractionated radiation exposures on cardiovascular disease are unclear.
+We outline a spatial reaction-diffusion model for atherosclerosis and perform stability analysis, based wherever possible on human data.
+We show that a predicted consequence of multiple small radiation doses is to cause mean chemo-attractant concentration to increase linearly with cumulative dose.
+The main driver for the increase in MCP-1 is monocyte death, and consequent reduction in MCP-1 degradation.
+The radiation-induced risks predicted by the model are quantitatively consistent with those observed in a number of occupationally-exposed groups.
+The changes in equilibrium MCP-1 concentrations with low density lipoprotein cholesterol concentration are also consistent with experimental and epidemiologic data.
+This proposed mechanism would be experimentally testable.
+If true, it also has substantive implications for radiological protection, which at present does not take cardiovascular disease into account.
+The Japanese A-bomb survivor data implies that cardiovascular disease and cancer mortality contribute similarly to radiogenic risk.
+The major uncertainty in assessing the low-dose risk of cardiovascular disease is the shape of the dose response relationship, which is unclear in the Japanese data.
+The analysis of the present paper suggests that linear extrapolation would be appropriate for this endpoint.
+### introduction ###
+Atherosclerosis is the main cause of coronary heart disease and stroke, the two major causes of death in developed society CITATION.
+Though previously initiation of atherosclerosis was attributed mainly to lipid accumulation within the arterial walls, it is now widely accepted that inflammation plays a vital role in the initiation and progression of the disease CITATION CITATION .
+For some time cardiovascular effects of high dose radiotherapy have been known CITATION, CITATION.
+A variety of effects are observed, presumed to result from inactivation of large numbers of cells and associated functional impairment of the affected tissue.
+Among such effects are direct damage to the structures of the heart including marked diffuse fibrotic damage, especially of the pericardium and myocardium, pericardial adhesions, microvascular damage and stenosis of the valves and to the coronary arteries; these sorts of damage occur both in patients receiving RT and in experimental animals CITATION.
+There is emerging evidence of excess risk of cardiovascular disease at much lower radiation doses and occurring a long time after radiation exposure in the Japanese atomic bomb survivor Life Span Study cohort CITATION, CITATION and in various occupationally-exposed groups CITATION CITATION although not in all.
+Assuming that they are causal, the likely mechanisms for such effects of low dose and/or chronic radiation exposures on cardiovascular disease are not clear CITATION, CITATION.
+It is of interest that elevated levels of the pro-inflammatory cytokines IL-6, CRP, TNF- and INF-, but also increased levels of the anti-inflammatory cytokine IL-10, have been observed in the Japanese atomic bomb survivors CITATION, CITATION.
+There was also dose-related elevation in erythrocyte sedimentation rate and in levels of IgG, IgA and total immunoglobulins in this cohort, all markers of systemic inflammation CITATION .
+In this paper we outline a mathematical formulation of a model of cardiovascular disease that is largely based on the inflammatory hypothesis articulated by Ross CITATION, CITATION.
+The motivation behind the mathematical modelling is to encompass various factors contributing to the inflammatory process and subsequently to atherosclerotic formation.
+As atherosclerosis is not only a multifactorial, but also a multi-step disease, we concentrate on modelling chronic inflammation, primarily at early stages in the disease, but outlining a treatment for the later stages that lead to plaque rupture.
+The model is to some extent based on a model of McKay et al. CITATION, although there are significant departures from and elaborations of this model.
+In particular, features are borrowed from the generally rather simpler models of Cobbold et al. CITATION and Ibragimov et al. CITATION.
+Stability analysis of a simplified version of the model will be performed.
+We shall be particularly concerned with mechanisms for effects of cholesterol and fractionated low dose radiation exposure in this inflammation model, and outline a case for radiation-induced monocyte cell death as a candidate pathway.

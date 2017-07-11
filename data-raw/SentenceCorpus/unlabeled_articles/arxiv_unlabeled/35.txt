@@ -1,0 +1,16 @@
+### abstract ###
+We propose and analyze a new vantage point for the learning of mixtures of Gaussians: namely, the PAC-style model of learning probability distributions introduced by Kearns~et~al ~ CITATION
+Here the task is to construct a hypothesis mixture of Gaussians that is statistically indistinguishable from the actual mixture generating the data; specifically, the KL~divergence should be at most  SYMBOL
+In this scenario, we give a  SYMBOL  time algorithm that learns the class of mixtures of any constant number of axis-aligned Gaussians in  SYMBOL
+Our algorithm makes  no  assumptions about the separation between the means of the Gaussians, nor does it have any dependence on the minimum mixing weight
+This is in contrast to learning results known in the ``clustering'' model, where such assumptions are unavoidable
+Our algorithm relies on the method of moments, and a subalgorithm developed in~ CITATION  for a discrete mixture-learning problem
+### introduction ###
+In~ CITATION  Kearns et al \ introduced an elegant and natural model of learning unknown probability distributions
+In this framework we are given a class  SYMBOL  of probability distributions over  SYMBOL  and access to random data sampled from an unknown distribution  SYMBOL  that belongs to  SYMBOL  The goal is to output a hypothesis distribution  SYMBOL  which with high confidence is  SYMBOL -close to  SYMBOL  as measured by the the Kullback-Leibler (KL) divergence, a standard measure of the distance between probability distributions (see Section~ for details on this distance measure)
+The learning algorithm should run in time  SYMBOL
+This model is well-motivated by its close analogy to Valiant's classical Probably Approximately Correct (PAC) framework for learning Boolean functions~ CITATION
+Several notable results, both positive and negative, have been obtained for learning in the Kearns et al \ framework of~ CITATION , see, eg ,  CITATION
+Here we briefly survey some of the positive results that have been obtained for learning various types of  mixture distributions  (Recall that given distributions  SYMBOL  and mixing weights  SYMBOL  that sum to 1, a draw from the corresponding mixture distribution is obtained by first selecting  SYMBOL  with probability  SYMBOL  and then making a draw from  SYMBOL ) Kearns et al \ gave an efficient algorithm for learning certain mixtures of  Hamming balls ; these are product distributions over  SYMBOL  in which each coordinate mean is either  SYMBOL  or  SYMBOL  for some  SYMBOL  fixed over all mixture components
+Subsequently Freund and Mansour~ CITATION  and independently Cryan et al ~ CITATION  gave efficient algorithms for learning a mixture of two arbitrary product distributions over  SYMBOL
+Recently, Feldman et al ~ CITATION  gave a  SYMBOL -time algorithm that learns a mixture of any  SYMBOL  many arbitrary product distributions over the discrete domain  SYMBOL  for any  SYMBOL
