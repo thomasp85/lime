@@ -5,7 +5,7 @@
 #' Modified to manage sparse matrix with Eigen
 #' @param sparse_matrix the matrix to compute distance on.
 rowSumsSq <- function(sparse_matrix) {
-    .Call(lime_rowSumsSq, sparse_matrix)
+    .Call(`_lime_rowSumsSq`, sparse_matrix)
 }
 
 #' Generate permutations of a vector of indexes.
@@ -16,6 +16,6 @@ rowSumsSq <- function(sparse_matrix) {
 #' @param number_permutations number of permutation to generate.
 #' @return a list of permutations. The permutation sizes are not all the same.
 get_index_permutations <- function(original_document, number_permutations) {
-    .Call(lime_get_index_permutations, original_document, number_permutations)
+    .Call(`_lime_get_index_permutations`, original_document, number_permutations)
 }
 

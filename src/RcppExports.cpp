@@ -9,7 +9,7 @@ using namespace Rcpp;
 
 // rowSumsSq
 NumericVector rowSumsSq(MSpMat sparse_matrix);
-RcppExport SEXP lime_rowSumsSq(SEXP sparse_matrixSEXP) {
+RcppExport SEXP _lime_rowSumsSq(SEXP sparse_matrixSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -20,7 +20,7 @@ END_RCPP
 }
 // get_index_permutations
 List get_index_permutations(IntegerVector original_document, int number_permutations);
-RcppExport SEXP lime_get_index_permutations(SEXP original_documentSEXP, SEXP number_permutationsSEXP) {
+RcppExport SEXP _lime_get_index_permutations(SEXP original_documentSEXP, SEXP number_permutationsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -29,4 +29,15 @@ BEGIN_RCPP
     rcpp_result_gen = Rcpp::wrap(get_index_permutations(original_document, number_permutations));
     return rcpp_result_gen;
 END_RCPP
+}
+
+static const R_CallMethodDef CallEntries[] = {
+    {"_lime_rowSumsSq", (DL_FUNC) &_lime_rowSumsSq, 1},
+    {"_lime_get_index_permutations", (DL_FUNC) &_lime_get_index_permutations, 2},
+    {NULL, NULL, 0}
+};
+
+RcppExport void R_init_lime(DllInfo *dll) {
+    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
+    R_useDynamicSymbols(dll, FALSE);
 }
