@@ -137,14 +137,10 @@ select_f_hw <- function(x, y, weights, n_features) {
   head(order(abs(coef(fit)[-1, 1] * x[1,]), decreasing = TRUE), n_features)
 }
 
-#' @importFrom rpart rpart summary.rpart
-#' @importFrom stats coef
-#' @importFrom utils head
 #' @param x the data as a sparse matrix
 #' @param y the labels
 select_tree <- function(x, y, weights, n_features) {
-  fit <- rpart(x, y, weights = weights)
-  head(order(abs(summary.rpart(fit)[["variable.importance"]][-1, 1] * x[1,]), decreasing = TRUE), n_features)
+
 }
 
 #' @importFrom glmnet glmnet coef.glmnet

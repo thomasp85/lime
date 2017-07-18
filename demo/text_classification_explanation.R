@@ -73,8 +73,11 @@ permutation_cases <- lime:::permute_cases.character(long_document, 5e3, tokeniza
 predicted_labels_dt <- get.features.matrix(permutation_cases$permutations) %>% lime::default_predict(data = ., model = bst)
 
 learn <- function(mat, depth, rounds = 1) {
-  bst.bow <- xgb.train(params = list(max_depth = depth, eta = 1, silent = 1, objective = "binary:logistic"), data = mat, nrounds = rounds)
-  if (sum(stri_count_regex(xgb.dump(bst.bow), "yes=(\\d+),no=(\\d+)")) == 0) {
+  # only useful if there is more than 1 tree / round
+  mean.label <- if (rounds == 1) 0.5 else getinfo(mat, "label") %>% mean
+  bst.bow <- xgb.train(params = list(max_depth = depth, eta = 1, silent = 1, objective = "binary:logistic"), data = mat, nrounds = rounds, base_score = mean.label, lambda = 0)
+  # recursive function if the dump doesn't contain one split.
+  if (xgb.dump(bst.bow) %>% stri_count_regex(pattern = "yes=(\\d+),no=(\\d+)") %>% sum() == 0) {
     learn(mat, depth, rounds + 1)
   } else {
     bst.bow
@@ -84,10 +87,8 @@ learn <- function(mat, depth, rounds = 1) {
 names(predicted_labels_dt) %>% map(~ {
   column_name <- .
   m <- xgb.DMatrix(permutation_cases$tabular, label = predicted_labels_dt[[column_name]], weight = permutation_cases$permutation_distances)
-  bst.bow <- learn(m, 30)
+  bst.bow <- learn(m, 2)
   xgb.importance(model = bst.bow) %>%
-    #dplyr::mutate(Feature = permutation_cases$tokens[as.numeric(Feature) + 1],
-    #       Label = column_name) %>%
     dplyr::select(c("Feature", "Gain"))
   }) %>%
   dplyr::bind_rows()
