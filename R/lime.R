@@ -86,7 +86,7 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
   bind_rows(res)
 }
 
-feature_selection_method <- function() c("auto", "none", "forward_selection", "highest_weights", "lasso_path")
+feature_selection_method <- function() c("auto", "none", "forward_selection", "highest_weights", "lasso_path", "tree")
 
 select_features <- function(method, x, y, weights, n_features) {
   if (n_features >= ncol(x)) {
@@ -104,6 +104,7 @@ select_features <- function(method, x, y, weights, n_features) {
     forward_selection = select_f_fs(x, y, weights, n_features),
     highest_weights = select_f_hw(x, y, weights, n_features),
     lasso_path = select_f_lp(x, y, weights, n_features),
+    tree = select_tree(x, y, weights, n_features),
     stop("Method not implemented", call. = FALSE)
   )
 }
@@ -135,6 +136,17 @@ select_f_hw <- function(x, y, weights, n_features) {
   fit <- glmnet(x, y, weights = weights, alpha = 0, lambda = 0)
   head(order(abs(coef(fit)[-1, 1] * x[1,]), decreasing = TRUE), n_features)
 }
+
+#' @importFrom rpart rpart summary.rpart
+#' @importFrom stats coef
+#' @importFrom utils head
+#' @param x the data as a sparse matrix
+#' @param y the labels
+select_tree <- function(x, y, weights, n_features) {
+  fit <- rpart(x, y, weights = weights)
+  head(order(abs(summary.rpart(fit)[["variable.importance"]][-1, 1] * x[1,]), decreasing = TRUE), n_features)
+}
+
 #' @importFrom glmnet glmnet coef.glmnet
 #' @importFrom stats coef
 select_f_lp <- function(x, y, weights, n_features) {

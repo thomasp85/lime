@@ -47,13 +47,13 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
 
   word_selections_flatten <- flatten(word_selections)
 
-  bow_matrix <- {
+  bow_matrix <- local({
     to_repeat <- lengths(word_selections_flatten)
     rows_index <- seq(word_selections_flatten)
     i <- rep(rows_index, to_repeat)
     j <- flatten_int(word_selections_flatten)
     sparseMatrix(i, j, x = 1)
-  } %>%
+  }) %>%
     set_colnames(tokens)
 
   permutation_candidates <- map_chr(word_selections_flatten, ~ paste(tokens_for_external_model[.x], collapse = " "))

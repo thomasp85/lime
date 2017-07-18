@@ -1,9 +1,9 @@
 #' @describeIn lime Method for explaining text data
 #' @param preprocess Function to transform \code{\link{character}} vector to feature provided to the model to explain
 #' @param tokenization function used to tokenize text
-#' @param keep_word_position set to \code{\link{TRUE}} if to keep order of words. Warning: each word will be replaced by \code{word_position}.
+#' @param keep_word_position set to \code{\link{TRUE}} if to keep order of words.
 #' @param n_permutations number of permutations to perform. More gives better explanation up to a point where it is not usefull and takes too much time. (5000)
-#' @param number_features_explain number of features used in the explanation. (5)
+#' @param number_features_explain number of features used in the explanation. (\code{5})
 #' @param feature_selection_method method to select the best features. (\code{"auto"})
 #'
 #' One of:
@@ -23,10 +23,8 @@
 #' @return Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
 #'
 #' TODO : add example
-#' TODO : for keep_word_position, make 2 versions of the text, one with _position and one without for the model to predict
 #'
 #' @importFrom purrr is_empty is_scalar_logical
-#' @importFrom stringdist seq_dist
 #' @importFrom magrittr %>%
 #' @importFrom assertthat validate_that not_empty is.scalar
 #' @export
@@ -42,12 +40,12 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
   validate_that(!is.null(model))
   not_empty(x)
   validate_that(feature_selection_method %in% feature_selection_method())
-  validate_that(number_features_explain >= 1)
   is.scalar(number_features_explain)
-  validate_that(n_permutations >= 1)
+  validate_that(number_features_explain >= 1)
   is.scalar(n_permutations)
-  validate_that(kernel_width >= 1)
+  validate_that(n_permutations >= 1)
   is.scalar(kernel_width)
+  validate_that(kernel_width >= 1)
 
   function() {
     permutation_cases <- permute_cases(x, n_permutations, tokenization, keep_word_position)
@@ -78,6 +76,7 @@ default_predict <- function(data, model) {
 #'
 #' @description Use simple regex to tokenize a \code{\link{character}} vector. To be used with \code{\link{lime.character}}.
 #' @param text text to tokenize as a \code{\link{character}} vector
+#' @return a \code{\link{character}} vector.
 #' @importFrom stringi stri_split_regex
 #' @importFrom magrittr %>% set_colnames
 #' @export

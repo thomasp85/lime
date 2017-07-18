@@ -27,13 +27,13 @@ explained.}
 
 \item{tokenization}{function used to tokenize text}
 
-\item{keep_word_position}{set to \code{\link{TRUE}} if to keep order of words. Warning: each word will be replaced by \code{word_position}.}
+\item{keep_word_position}{set to \code{\link{TRUE}} if to keep order of words.}
 
 \item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
 
 \item{n_permutations}{number of permutations to perform. More gives better explanation up to a point where it is not usefull and takes too much time. (5000)}
 
-\item{number_features_explain}{number of features used in the explanation. (5)}
+\item{number_features_explain}{number of features used in the explanation. (\code{5})}
 
 \item{feature_selection_method}{method to select the best features. (\code{"auto"})
 
@@ -67,7 +67,6 @@ path converge to zero the latest.}
 Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
 
 TODO : add example
-TODO : for keep_word_position, make 2 versions of the text, one with _position and one without for the model to predict
 
 A function taking the following arguments:
 \itemize{
