@@ -86,6 +86,7 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
   bind_rows(res)
 }
 
+#' List possible methods for feature selection
 feature_selection_method <- function() c("auto", "none", "forward_selection", "highest_weights", "lasso_path")
 
 select_features <- function(method, x, y, weights, n_features) {

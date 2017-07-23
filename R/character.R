@@ -20,6 +20,34 @@
 #' @param labels name of the label to explain (use only when model to explain predictions includes names as \code{\link{data.frame}} column names, like with \code{link{caret}}). (\code{\link{NULL}}).
 #' @param n_labels instead of labels, number of labels to explain. (\code{\link{NULL}})
 #' @param prediction function used to perform the prediction. Should have 2 variables, first for the \code{\link{character}} vector, second for the \code{model}. Should return a \code{\link{data.frame}} with the predictions.
+#'
+#' @examples
+#' \dontrun{
+#' ### Explaining a text classification ###
+#'
+#' library(text2vec)
+#' library(lime)
+#' library(xgboost)
+#'
+#' data(train_sentences)
+#' data(test_sentences)
+#'
+#' get.matrix <- function(text) {
+#'   it <- itoken(text, progressbar = FALSE)
+#'   create_dtm(it, vectorizer = hash_vectorizer())
+#' }
+#'
+#' dtm_train = get.matrix(train_sentences$text)
+#'
+#' bst <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logistic",
+#'                  eval_metric = "error", nthread = 1),
+#'                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
+#'                  nrounds = 50)
+#'
+#' lime(test_sentences[5, text], bst, get.matrix, n_labels = 1,
+#'      number_features_explain = 2, keep_word_position = FALSE)()
+#' }
+#'
 #' @return Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
 #'
 #' TODO : add example
