@@ -80,6 +80,7 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
   function() {
     permutation_cases <- permute_cases(x, n_permutations, tokenization, keep_word_position)
     predicted_labels_dt <- preprocess(permutation_cases$permutations) %>% prediction(model)
+    validate_that("data.frame" %in% class(predicted_labels_dt))
     model_permutations(x = permutation_cases$tabular, y = predicted_labels_dt,
                        weights = exp_kernel(kernel_width)(permutation_cases$permutation_distances),
                        labels = labels, n_labels = n_labels, n_features = number_features_explain,
