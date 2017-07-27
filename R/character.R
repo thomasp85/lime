@@ -107,11 +107,11 @@ default_predict <- function(data, model) {
 #'
 #' @description Use simple regex to tokenize a \code{\link{character}} vector. To be used with \code{\link{lime.character}}.
 #' @param text text to tokenize as a \code{\link{character}} vector
-#' @importFrom stringi stri_split_regex
+#' @importFrom stringi stri_split_regex stri_trim_both
 #' @importFrom magrittr %>% set_colnames
 #' @export
 default_tokenize <- function(text) {
-  stri_split_regex(str = text, pattern = "\\W+", simplify = TRUE) %>% as.character()
+  stri_trim_both(text) %>% stri_split_regex(pattern = "\\W+", simplify = TRUE) %>% as.character()
 }
 
 globalVariables(".")
