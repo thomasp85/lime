@@ -59,7 +59,7 @@ lime <- function(x, model, ...) {
 #' @importFrom stats gaussian
 model_permutations <- function(x, y, weights, labels, n_labels, n_features, feature_method) {
   if (!is.null(n_labels)) {
-    labels <- names(y)[order(y[1,], decreasing = TRUE)[seq_len(n_labels)]]
+    labels <- colnames(y)[order(y[1,], decreasing = TRUE)[seq_len(n_labels)]]
   }
   x <- x[, apply(x, 2, var) != 0, drop = FALSE]
   res <- lapply(labels, function(label) {
