@@ -86,7 +86,9 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
   bind_rows(res)
 }
 
+
 feature_selection_method <- function() c("auto", "none", "forward_selection", "highest_weights", "lasso_path", "tree")
+
 
 select_features <- function(method, x, y, weights, n_features) {
   if (n_features >= ncol(x)) {
@@ -137,6 +139,7 @@ select_f_hw <- function(x, y, weights, n_features) {
   head(order(abs(coef(fit)[-1, 1] * x[1,]), decreasing = TRUE), n_features)
 }
 
+#' Tree model for feature selection
 #' @param x the data as a sparse matrix
 #' @param y the labels
 select_tree <- function(x, y, weights, n_features) {

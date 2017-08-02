@@ -69,7 +69,7 @@ system.time(lime(long_document, bst, get.features.matrix, n_labels = 1, number_f
   print)
 
 
-permutation_cases <- lime:::permute_cases.character(long_document, 5e3, tokenization = lime::default_tokenize, keep_word_position = TRUE)
+permutation_cases <- lime:::permute_cases.character(long_document, 5e3, tokenization = lime::default_tokenize, keep_word_position = F)
 predicted_labels_dt <- get.features.matrix(permutation_cases$permutations) %>% lime::default_predict(data = ., model = bst)
 
 learn <- function(mat, depth, rounds = 1) {
