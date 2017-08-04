@@ -64,33 +64,12 @@ get.features.matrix <- . %>%
 system.time(results <- lime(test_sentences[label == T][4:6, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 2, keep_word_position = FALSE)() %T>%
   print)
 
+system.time(results <- lime(test_sentences[label == T][4:6, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 2, keep_word_position = FALSE, feature_selection_method = "tree")() %T>%
+              print)
+
 long_document <- test_sentences[label == T][5, text] %>% rep(50) %>% paste(collapse = " ")
 system.time(lime(long_document, bst, get.features.matrix, n_labels = 1, number_features_explain = 2, keep_word_position = TRUE, n_permutations = 5e3, feature_selection_method = "highest_weights")() %>%
   print)
 
-
-permutation_cases <- lime:::permute_cases.character(long_document, 5e3, tokenization = lime::default_tokenize, keep_word_position = F)
-predicted_labels_dt <- get.features.matrix(permutation_cases$permutations) %>% lime::default_predict(data = ., model = bst)
-
-learn <- function(mat, depth, rounds = 1) {
-  # only useful if there is more than 1 tree / round
-  mean.label <- if (rounds == 1) 0.5 else getinfo(mat, "label") %>% mean
-  bst.bow <- xgb.train(params = list(max_depth = depth, eta = 1, silent = 1, objective = "binary:logistic"), data = mat, nrounds = rounds, base_score = mean.label, lambda = 0)
-  # recursive function if the dump doesn't contain one split.
-  if (xgb.dump(bst.bow) %>% stri_count_regex(pattern = "yes=(\\d+),no=(\\d+)") %>% sum() == 0) {
-    learn(mat, depth, rounds + 1)
-  } else {
-    bst.bow
-  }
-}
-
-names(predicted_labels_dt) %>% map(~ {
-  column_name <- .
-  m <- xgb.DMatrix(permutation_cases$tabular, label = predicted_labels_dt[[column_name]], weight = permutation_cases$permutation_distances)
-  bst.bow <- learn(m, 2)
-  xgb.importance(model = bst.bow) %>%
-    dplyr::select(c("Feature", "Gain"))
-  }) %>%
-  dplyr::bind_rows()
-
-# requires last version of xgboost from Drat
+system.time(lime(long_document, bst, get.features.matrix, n_labels = 1, number_features_explain = 2, keep_word_position = TRUE, n_permutations = 5e3, feature_selection_method = "tree")() %>%
+              print)

@@ -63,6 +63,7 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
   }
   x <- x[, apply(x, 2, var) != 0, drop = FALSE]
   res <- lapply(labels, function(label) {
+
     features <- select_features(feature_method, x, y[[label]], weights, n_features)
 
     # glmnet does not allow n_features=1
@@ -142,8 +143,14 @@ select_f_hw <- function(x, y, weights, n_features) {
 #' Tree model for feature selection
 #' @param x the data as a sparse matrix
 #' @param y the labels
+#' @param weights distance of the sample with the original datum
+#' @param n_features number of features to take
 select_tree <- function(x, y, weights, n_features) {
-
+  mat <- xgb.DMatrix(x, label = y, weight = weights)
+  bst.bow <- xgb.train(params = list(max_depth = n_features, eta = 1, silent = 1, objective = "binary:logistic"), data = mat, nrounds = 1, lambda = 0)
+  dt <- xgb.model.dt.tree(model = bst.bow)
+  selected_words <- head(dt[["Feature"]], n_features)
+  which(colnames(mat) %in% selected_words)
 }
 
 #' @importFrom glmnet glmnet coef.glmnet

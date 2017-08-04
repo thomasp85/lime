@@ -10,6 +10,10 @@ select_tree(x, y, weights, n_features)
 \item{x}{the data as a sparse matrix}
 
 \item{y}{the labels}
+
+\item{weights}{distance of the sample with the original datum}
+
+\item{n_features}{number of features to take}
 }
 \description{
 Tree model for feature selection
