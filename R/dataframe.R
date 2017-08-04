@@ -74,7 +74,7 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
       res$feature_desc <- describe_feature(res$feature, case_perm[i[1], ], feature_type, bin_continuous, bin_cuts)
       guess <- which.max(abs(case_res[i[1], ]))
       res$case <- rownames(cases)[ind]
-      res$label_prob <- unname(as.matrix(case_res[i[1], ]))[match(res$label, names(case_res))]
+      res$label_prob <- unname(as.matrix(case_res[i[1], ]))[match(res$label, colnames(case_res))]
       res$data <- list(as.list(case_perm[i[1], ]))
       res$prediction <- list(as.list(case_res[i[1], ]))
       res
