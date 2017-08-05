@@ -23,7 +23,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' ### Explaining a text classification ###
+#' # Explaining a model based on text data
 #'
 #' library(text2vec)
 #' library(lime)

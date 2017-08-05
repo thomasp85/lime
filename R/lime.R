@@ -141,16 +141,22 @@ select_f_hw <- function(x, y, weights, n_features) {
 }
 
 #' Tree model for feature selection
+#' Based on the latest XGBoost version.
+#' May require the Drat package because of a bug in old version of xgb.model.dt.tree
+#'
 #' @param x the data as a sparse matrix
 #' @param y the labels
 #' @param weights distance of the sample with the original datum
 #' @param n_features number of features to take
+#' @importFrom utils packageVersion
 select_tree <- function(x, y, weights, n_features) {
+  xgb_version <- packageVersion("xgboost")
+  if (xgb_version < "0.6.4.6") stop("You need to install latest xgboost (version >= \"0.6.4.6\") from Xgboost Drat repository to use tree mode for feature selection.\nMore info on http://xgboost.readthedocs.io/en/latest/R-package/xgboostPresentation.html")
   number_trees <- max(trunc(log2(n_features)), 2)
-  if (log2(n_features) != number_trees) message("In \"tree\" mode, number of features should be a power of 2 and at minimum of 4 (= deepness of the binary tree of 2), setting was set to [", n_features, "], it has been replaced by [", 2^number_trees, "].")
-  mat <- xgb.DMatrix(x, label = y, weight = weights)
-  bst.bow <- xgb.train(params = list(max_depth = number_trees, eta = 1, silent = 1, objective = "binary:logistic"), data = mat, nrounds = 1, lambda = 0)
-  dt <- xgb.model.dt.tree(model = bst.bow)
+  if (log2(n_features) != number_trees) message("In \"tree\" mode, number of features should be a power of 2 and at least of 4 (= deepness of the binary tree of 2), setting was set to [", n_features, "], it has been replaced by [", 2^number_trees, "].")
+  mat <- xgboost::xgb.DMatrix(x, label = y, weight = weights)
+  bst.bow <- xgboost::xgb.train(params = list(max_depth = number_trees, eta = 1, silent = 1, objective = "binary:logistic"), data = mat, nrounds = 1, lambda = 0)
+  dt <- xgboost::xgb.model.dt.tree(model = bst.bow)
   selected_words <- head(dt[["Feature"]], n_features)
   which(colnames(mat) %in% selected_words)
 }

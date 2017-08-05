@@ -119,7 +119,7 @@ types supported by lime.
 
 \examples{
 \dontrun{
-### Explaining a text classification ###
+# Explaining model based on text data
 
 library(text2vec)
 library(lime)

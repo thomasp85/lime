@@ -2,7 +2,9 @@
 % Please edit documentation in R/lime.R
 \name{select_tree}
 \alias{select_tree}
-\title{Tree model for feature selection}
+\title{Tree model for feature selection
+Based on the latest XGBoost version.
+May require the Drat package because of a bug in old version of xgb.model.dt.tree}
 \usage{
 select_tree(x, y, weights, n_features)
 }
@@ -17,4 +19,6 @@ select_tree(x, y, weights, n_features)
 }
 \description{
 Tree model for feature selection
+Based on the latest XGBoost version.
+May require the Drat package because of a bug in old version of xgb.model.dt.tree
 }
