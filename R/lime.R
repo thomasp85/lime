@@ -146,8 +146,10 @@ select_f_hw <- function(x, y, weights, n_features) {
 #' @param weights distance of the sample with the original datum
 #' @param n_features number of features to take
 select_tree <- function(x, y, weights, n_features) {
+  number_trees <- max(trunc(log2(n_features)), 2)
+  if (log2(n_features) != number_trees) message("In \"tree\" mode, number of features should be a power of 2, setting was set to [", n_features, "], it has been replaced by [", 2^number_trees, "].")
   mat <- xgb.DMatrix(x, label = y, weight = weights)
-  bst.bow <- xgb.train(params = list(max_depth = n_features, eta = 1, silent = 1, objective = "binary:logistic"), data = mat, nrounds = 1, lambda = 0)
+  bst.bow <- xgb.train(params = list(max_depth = number_trees, eta = 1, silent = 1, objective = "binary:logistic"), data = mat, nrounds = 1, lambda = 0)
   dt <- xgb.model.dt.tree(model = bst.bow)
   selected_words <- head(dt[["Feature"]], n_features)
   which(colnames(mat) %in% selected_words)
