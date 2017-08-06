@@ -1,5 +1,0 @@
-dependencies:
- - name: plot_explanations
-   version: 0.1.0
-   src: htmlwidgets/lib/
-   stylesheet: plot_explanations.css

@@ -2,13 +2,13 @@
 using namespace Rcpp;
 
 
-//' Generate permutations of a vector of indexes.
-//'
-//' First permutation is the original (full) document.
-//'
-//' @param original_document Index of words in a text document.
-//' @param number_permutations number of permutation to generate.
-//' @return a list of permutations. The permutation sizes are not all the same.
+// Generate permutations of a vector of indexes.
+//
+// First permutation is the original (full) document.
+//
+// @param original_document Index of words in a text document.
+// @param number_permutations number of permutation to generate.
+// @return a list of permutations. The permutation sizes are not all the same.
 // [[Rcpp::export]]
 List get_index_permutations(IntegerVector original_document, int number_permutations) {
   List result(number_permutations);

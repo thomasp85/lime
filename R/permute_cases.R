@@ -73,11 +73,11 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
        permutation_distances = permutation_distances)
 }
 
-#' Compute distances between a dense vector and a sparse matrix
-#' @param vector dense integer vector
-#' @param sparse_matrix a sparse matrix of permutations
+# Compute distances between a dense vector and a sparse matrix
+# @param vector dense integer vector
+# @param sparse_matrix a sparse matrix of permutations
 cosine_distance_vector_to_matrix_rows  <- function(vector, sparse_matrix) {
-  vector <- vector / c(sqrt(crossprod(vector))) # use c() to avoid a warning
+  vector <- vector / c(sqrt(crossprod(vector))) # uses c() to avoid a warning
   as.vector(sparse_matrix %*% vector / sqrt(rowSumsSq(sparse_matrix)))
 }
 

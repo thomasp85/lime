@@ -1,6 +1,6 @@
 HTMLWidgets.widget({
 
-  name: 'plot_explanations',
+  name: 'plot_text_explanations',
 
   type: 'output',
 

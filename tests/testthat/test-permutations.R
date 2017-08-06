@@ -30,7 +30,7 @@ test_that("Cosine computation is correct", {
   v <- 5:13
   m <- Matrix::Matrix(1:81, ncol = 9, sparse = TRUE)
   cos <- function(x) crossprod(v, x)/sqrt(crossprod(v) * crossprod(x))
-  testthat::expect_equal(lime:::cosine_distance_vector_to_matrix_rows(v, m), apply(m, MARGIN = 1, cos))
+  expect_equal(lime:::cosine_distance_vector_to_matrix_rows(v, m), apply(m, MARGIN = 1, cos))
 })
 
 test_that("there is no empty generated text", {
@@ -42,7 +42,7 @@ test_that("there is no empty generated text", {
 })
 
 test_that("Default tokenizer works for multiple documents", {
-  r <- lime:::default_tokenize(c("    this is a test.", "this is another       test."))
+  r <- default_tokenize(c("    this is a test.", "this is another       test."))
   expect_equal(r , c("this", "is",   "a", "test", "this", "is", "another","test"))
 })
 

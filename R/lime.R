@@ -140,14 +140,13 @@ select_f_hw <- function(x, y, weights, n_features) {
   head(order(abs(coef(fit)[-1, 1] * x[1,]), decreasing = TRUE), n_features)
 }
 
-#' Tree model for feature selection
-#' Based on the latest XGBoost version.
-#' May require the Drat package because of a bug in old version of xgb.model.dt.tree
-#'
-#' @param x the data as a sparse matrix
-#' @param y the labels
-#' @param weights distance of the sample with the original datum
-#' @param n_features number of features to take
+# Tree model for feature selection
+# Based on the latest XGBoost version.
+# May require the Drat package because of a bug in old version of xgb.model.dt.tree
+# @param x the data as a sparse matrix
+# @param y the labels
+# @param weights distance of the sample with the original datum
+# @param n_features number of features to take
 #' @importFrom utils packageVersion
 select_tree <- function(x, y, weights, n_features) {
   xgb_version <- packageVersion("xgboost")

@@ -1,6 +1,6 @@
 #' View HTML rendering of regular expression match.
 #'
-#' \code{plot_explanations} shows the first match;
+#' \code{plot_text_explanations} shows the first match;
 #'
 #' @param explanations object returned by the \code{lime.character} function.
 #' @examples
@@ -31,14 +31,14 @@
 #'
 #'  print(r)
 #'
-#'  plot_explanations(r)
+#'  plot_text_explanations(r)
 #' }
 #'
 #' @importFrom assertthat validate_that
 #' @importFrom htmlwidgets createWidget
 #' @importFrom purrr map_if map
 #' @export
-plot_explanations <- function(explanations) {
+plot_text_explanations <- function(explanations) {
   validate_that("data.frame" %in% class(explanations))
   validate_that(!attr(explanations, "original_text") %>% is.null())
   original_text <- attr(explanations, "original_text")
@@ -49,7 +49,7 @@ plot_explanations <- function(explanations) {
         %>% paste(collapse = " ")
         ) %>% paste(collapse = "<br/><br/>\n")
 
-  createWidget("plot_explanations", list(html = text_highlighted),
+  createWidget("plot_text_explanations", list(html = text_highlighted),
                               sizingPolicy = htmlwidgets::sizingPolicy(
                                 knitr.figure = FALSE,
                                 defaultHeight = "auto"
