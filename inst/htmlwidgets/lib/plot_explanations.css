@@ -1,0 +1,11 @@
+.plot_explanations ul, .plot_explanations li {
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0;
+  font-family: monospace;
+}
+
+.plot_explanations .match {
+  border: 1px solid #ccc;
+  background-color: #eee;
+}

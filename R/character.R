@@ -16,6 +16,7 @@
 #'       the highest absolute weight.}
 #' \item{"lasso_path"} {: Fit a lasso model and choose the \code{n_features} whose lars
 #'       path converge to zero the latest.}
+#'  \item{"tree"} {: Fit a tree to select \code{n_features}. It requires XGBoost.}
 #' }
 #' @param labels name of the label to explain (use only when model to explain predictions includes names as \code{\link{data.frame}} column names, like with \code{link{caret}}). (\code{\link{NULL}}).
 #' @param n_labels instead of labels, number of labels to explain. (\code{\link{NULL}})
@@ -50,9 +51,7 @@
 #'
 #' @return Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
 #'
-#' TODO : add example
-#'
-#' @importFrom purrr is_empty is_scalar_logical
+#' @importFrom purrr is_empty is_scalar_logical is_null
 #' @importFrom magrittr %>%
 #' @importFrom assertthat validate_that not_empty is.scalar
 #' @export
@@ -64,8 +63,8 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
   validate_that("function" %in% class(tokenization))
   validate_that("function" %in% class(prediction))
   validate_that(is_scalar_logical(keep_word_position))
-  validate_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
-  validate_that(!is.null(model))
+  validate_that(is_null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
+  validate_that(!is_null(model))
   not_empty(x)
   validate_that(feature_selection_method %in% feature_selection_method())
   is.scalar(number_features_explain)
@@ -79,10 +78,12 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
     permutation_cases <- permute_cases(x, n_permutations, tokenization, keep_word_position)
     predicted_labels_dt <- preprocess(permutation_cases$permutations) %>% prediction(model)
     validate_that("data.frame" %in% class(predicted_labels_dt))
-    model_permutations(x = permutation_cases$tabular, y = predicted_labels_dt,
+    tib <- model_permutations(x = permutation_cases$tabular, y = predicted_labels_dt,
                        weights = exp_kernel(kernel_width)(permutation_cases$permutation_distances),
                        labels = labels, n_labels = n_labels, n_features = number_features_explain,
                        feature_method = feature_selection_method)
+    attr(tib, "original_text") <- x
+    tib
   }
 }
 
@@ -106,11 +107,12 @@ default_predict <- function(data, model) {
 #' @description Use simple regex to tokenize a \code{\link{character}} vector. To be used with \code{\link{lime.character}}.
 #' @param text text to tokenize as a \code{\link{character}} vector
 #' @return a \code{\link{character}} vector.
-#' @importFrom stringi stri_split_regex stri_trim_both
+#' @importFrom stringi stri_split_boundaries
 #' @importFrom magrittr %>% set_colnames
 #' @export
 default_tokenize <- function(text) {
-  stri_trim_both(text) %>% stri_split_regex(pattern = "\\W+", simplify = TRUE) %>% as.character()
+  stri_split_boundaries(text, type = "word", skip_word_none = TRUE) %>%
+    flatten_chr()
 }
 
 globalVariables(".")

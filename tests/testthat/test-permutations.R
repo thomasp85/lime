@@ -40,3 +40,9 @@ test_that("there is no empty generated text", {
   expect_true(sum(generated_documents$permutations %>% map(~ nchar(.x)) %>% flatten_int() == 0) == 0)
 
 })
+
+test_that("Default tokenizer works for multiple documents", {
+  r <- lime:::default_tokenize(c("    this is a test.", "this is another       test."))
+  expect_equal(r , c("this", "is",   "a", "test", "this", "is", "another","test"))
+})
+

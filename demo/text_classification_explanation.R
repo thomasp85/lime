@@ -64,7 +64,7 @@ get.features.matrix <- . %>%
 system.time(results <- lime(test_sentences[label == T][4:6, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 2, keep_word_position = FALSE)() %T>%
   print)
 
-system.time(results <- lime(test_sentences[label == T][4:6, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 2, keep_word_position = FALSE, feature_selection_method = "tree")() %T>%
+system.time(results <- lime(test_sentences[label == T][4:6, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 5, keep_word_position = FALSE, feature_selection_method = "tree")() %T>%
               print)
 
 long_document <- test_sentences[label == T][5, text] %>% rep(50) %>% paste(collapse = " ")

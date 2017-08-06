@@ -47,6 +47,7 @@ reached, based on quality of a ridge regression model.}
 the highest absolute weight.}
 \item{"lasso_path"} {: Fit a lasso model and choose the \code{n_features} whose lars
 path converge to zero the latest.}
+\item{"tree"} {: Fit a tree to select \code{n_features}. It requires XGBoost.}
 }}
 
 \item{labels}{name of the label to explain (use only when model to explain predictions includes names as \code{\link{data.frame}} column names, like with \code{link{caret}}). (\code{\link{NULL}}).}
@@ -65,8 +66,6 @@ path converge to zero the latest.}
 }
 \value{
 Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
-
-TODO : add example
 
 A function taking the following arguments:
 \itemize{
@@ -119,7 +118,7 @@ types supported by lime.
 
 \examples{
 \dontrun{
-# Explaining model based on text data
+# Explaining a model based on text data
 
 library(text2vec)
 library(lime)
