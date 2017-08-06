@@ -8,7 +8,7 @@
 \usage{
 \method{lime}{character}(x, model, preprocess,
   tokenization = default_tokenize, keep_word_position = FALSE,
-  kernel_width = 25, n_permutations = 5000, number_features_explain = 5,
+  n_permutations = 5000, number_features_explain = 5,
   feature_selection_method = "auto", labels = NULL, n_labels = NULL,
   prediction = default_predict, ...)
 
@@ -28,8 +28,6 @@ explained.}
 \item{tokenization}{function used to tokenize text}
 
 \item{keep_word_position}{set to \code{\link{TRUE}} if to keep order of words.}
-
-\item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
 
 \item{n_permutations}{number of permutations to perform. More gives better explanation up to a point where it is not usefull and takes too much time. (5000)}
 
@@ -63,6 +61,8 @@ path converge to zero the latest.}
 \item{n_bins}{The number of bins for continuous variables if \code{bin_continuous = TRUE}}
 
 \item{quantile_bins}{Should the bins be based on \code{n_bins} quantiles or spread evenly over the range of the training data}
+
+\item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
 }
 \value{
 Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.

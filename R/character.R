@@ -55,7 +55,7 @@
 #' @importFrom magrittr %>%
 #' @importFrom assertthat validate_that not_empty is.scalar
 #' @export
-lime.character <- function(x, model, preprocess, tokenization = default_tokenize, keep_word_position = FALSE, kernel_width = 25,
+lime.character <- function(x, model, preprocess, tokenization = default_tokenize, keep_word_position = FALSE,
                            n_permutations = 5000, number_features_explain = 5, feature_selection_method = "auto",
                            labels = NULL, n_labels = NULL,  prediction = default_predict, ...) {
 
@@ -71,15 +71,13 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
   validate_that(number_features_explain >= 1)
   is.scalar(n_permutations)
   validate_that(n_permutations >= 1)
-  is.scalar(kernel_width)
-  validate_that(kernel_width >= 1)
 
   function() {
     permutation_cases <- permute_cases(x, n_permutations, tokenization, keep_word_position)
     predicted_labels_dt <- preprocess(permutation_cases$permutations) %>% prediction(model)
     validate_that("data.frame" %in% class(predicted_labels_dt))
     tib <- model_permutations(x = permutation_cases$tabular, y = predicted_labels_dt,
-                       weights = exp_kernel(kernel_width)(permutation_cases$permutation_distances),
+                       weights = permutation_cases$permutation_distances,
                        labels = labels, n_labels = n_labels, n_features = number_features_explain,
                        feature_method = feature_selection_method)
     attr(tib, "original_text") <- x
