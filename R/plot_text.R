@@ -81,4 +81,4 @@ get_color_code <- function(word, results_percent) {
          "4" = "positive_4")
 }
 
-globalVariables("feature_weight")
+globalVariables(c("feature_weight", "feature", "weight_percent"))
