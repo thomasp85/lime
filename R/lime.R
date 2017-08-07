@@ -75,6 +75,7 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
       intercept <- coefs[1]
       coefs <- coefs[-1]
     } else {
+      # TODO refaire le shuffling
       fit <- glmnet(x[, features], y[[label]], weights = weights, alpha = 0, lambda = 0.001)
       r2 <- fit$dev.ratio
       coefs <- coef(fit)
@@ -132,12 +133,15 @@ select_f_fs <- function(x, y, weights, n_features) {
   }
   features
 }
-#' @importFrom glmnet cv.glmnet coef.cv.glmnet
+#' @importFrom glmnet glmnet coef.cv.glmnet
 #' @importFrom stats coef
 #' @importFrom utils head
 select_f_hw <- function(x, y, weights, n_features) {
-  fit <- glmnet(x, y, weights = weights, alpha = 0, lambda = 0)
-  head(order(abs(coef(fit)[-1, 1] * x[1,]), decreasing = TRUE), n_features)
+  shuffle_order <- sample(length(y)) # glm is sensitive to the order of the examples
+  fit_model <- glmnet(x[shuffle_order,], y[shuffle_order], weights = weights[shuffle_order], alpha = 0, lambda = 0)
+  features <- coef(fit_model)[-1, 1] #* x[shuffle_order[1],]
+  features_order <- order(abs(features), decreasing = TRUE)
+  head(features_order, n_features)
 }
 
 # Tree model for feature selection

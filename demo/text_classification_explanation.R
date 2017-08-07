@@ -1,5 +1,5 @@
-library(stringi)
 library(lime)
+library(stringi)
 library(text2vec)
 library(data.table)
 library(magrittr)
@@ -61,12 +61,12 @@ get.features.matrix <- . %>%
   xgb.DMatrix()
 
 # use currying to make the function work in one call
-system.time(results <- lime(test_sentences[label == T][4:6, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 2, keep_word_position = FALSE)() %T>%
+system.time(results <- lime(test_sentences[label == T][1:30, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 100, keep_word_position = FALSE)() %T>%
   print)
 
 plot_text_explanations(results) %>% print()
 
-system.time(results <- lime(test_sentences[label == T][4:6, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 5, keep_word_position = FALSE, feature_selection_method = "tree")() %T>%
+system.time(results <- lime(test_sentences[label == T][1, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 1, keep_word_position = FALSE, feature_selection_method = "tree")() %T>%
               print)
 
 long_document <- test_sentences[label == T][5, text] %>% rep(50) %>% paste(collapse = " ")
