@@ -82,4 +82,4 @@ get_color_code <- function(code_level) {
          "6" = "positive_5") # for 100%
 }
 
-globalVariables(c("feature_weight", "feature", "weight_percent"))
+globalVariables(c("feature_weight", "feature", "weight_percent", "code_level"))
