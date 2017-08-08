@@ -32,8 +32,8 @@ get.matrix <- function(data) {
 
 lsa.full.text <- LSA$new(n_topics = 100)
 tfidf <- TfIdf$new()
-get.matrix(train_sentences$text) %>% fit(tfidf)
-get.matrix(train_sentences$text) %>% transform(tfidf) %>% fit(lsa.full.text)
+invisible(get.matrix(train_sentences$text) %>% tfidf$fit_transform())
+invisible(get.matrix(train_sentences$text) %>% transform(tfidf) %>% lsa.full.text$fit_transform())
 
 add.lsa <- function(m, lsa) {
   l <- transform(m, lsa)
@@ -66,7 +66,7 @@ system.time(results <- lime(test_sentences[label == T][1:30, text], bst, get.fea
 
 plot_text_explanations(results) %>% print()
 
-system.time(results <- lime(test_sentences[label == T][1, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 1, keep_word_position = FALSE, feature_selection_method = "tree")() %T>%
+system.time(results <- lime(test_sentences[label == T][1, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 10, keep_word_position = FALSE, feature_selection_method = "tree")() %T>%
               print)
 
 long_document <- test_sentences[label == T][5, text] %>% rep(50) %>% paste(collapse = " ")
