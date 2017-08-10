@@ -52,7 +52,7 @@ tibble::glimpse(explanation)
 #> $ data            <list> [[5.1, 3.5, 1.4, 0.2], [5.1, 3.5, 1.4, 0.2], ...
 #> $ prediction      <list> [[1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 0, 0], ...
 
-# An can be visualised directly
+# And can be visualised directly
 plot_features(explanation)
 ```
 
