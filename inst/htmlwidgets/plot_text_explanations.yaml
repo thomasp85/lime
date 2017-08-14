@@ -1,0 +1,5 @@
+dependencies:
+ - name: plot_text_explanations
+   version: 0.1.0
+   src: htmlwidgets/lib/
+   stylesheet: plot_text_explanations.css

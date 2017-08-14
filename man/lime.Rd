@@ -8,7 +8,7 @@
 \usage{
 \method{lime}{character}(x, model, preprocess,
   tokenization = default_tokenize, keep_word_position = FALSE,
-  kernel_width = 25, n_permutations = 5000, number_features_explain = 5,
+  n_permutations = 5000, number_features_explain = 5,
   feature_selection_method = "auto", labels = NULL, n_labels = NULL,
   prediction = default_predict, ...)
 
@@ -27,13 +27,11 @@ explained.}
 
 \item{tokenization}{function used to tokenize text}
 
-\item{keep_word_position}{set to \code{\link{TRUE}} if to keep order of words. Warning: each word will be replaced by \code{word_position}.}
-
-\item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
+\item{keep_word_position}{set to \code{\link{TRUE}} if to keep order of words.}
 
 \item{n_permutations}{number of permutations to perform. More gives better explanation up to a point where it is not usefull and takes too much time. (5000)}
 
-\item{number_features_explain}{number of features used in the explanation. (5)}
+\item{number_features_explain}{number of features used in the explanation. (\code{5})}
 
 \item{feature_selection_method}{method to select the best features. (\code{"auto"})
 
@@ -47,6 +45,7 @@ reached, based on quality of a ridge regression model.}
 the highest absolute weight.}
 \item{"lasso_path"} {: Fit a lasso model and choose the \code{n_features} whose lars
 path converge to zero the latest.}
+\item{"tree"} {: Fit a tree to select \code{n_features}. It requires XGBoost.}
 }}
 
 \item{labels}{name of the label to explain (use only when model to explain predictions includes names as \code{\link{data.frame}} column names, like with \code{link{caret}}). (\code{\link{NULL}}).}
@@ -62,12 +61,11 @@ path converge to zero the latest.}
 \item{n_bins}{The number of bins for continuous variables if \code{bin_continuous = TRUE}}
 
 \item{quantile_bins}{Should the bins be based on \code{n_bins} quantiles or spread evenly over the range of the training data}
+
+\item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
 }
 \value{
 Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
-
-TODO : add example
-TODO : for keep_word_position, make 2 versions of the text, one with _position and one without for the model to predict
 
 A function taking the following arguments:
 \itemize{
@@ -119,6 +117,32 @@ types supported by lime.
 }}
 
 \examples{
+\dontrun{
+# Explaining a model based on text data
+
+library(text2vec)
+library(lime)
+library(xgboost)
+
+data(train_sentences)
+data(test_sentences)
+
+get.matrix <- function(text) {
+  it <- itoken(text, progressbar = FALSE)
+  create_dtm(it, vectorizer = hash_vectorizer())
+}
+
+dtm_train = get.matrix(train_sentences$text)
+
+bst <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logistic",
+                 eval_metric = "error", nthread = 1),
+                 xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
+                 nrounds = 50)
+
+lime(test_sentences[5, text], bst, get.matrix, n_labels = 1,
+     number_features_explain = 2, keep_word_position = FALSE)()
+}
+
 # Explaining a model based on tabular data
 if (requireNamespace("caret", quietly = TRUE)) {
   library(caret)
