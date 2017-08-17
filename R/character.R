@@ -30,48 +30,30 @@
 #' @importFrom magrittr %>%
 #' @importFrom assertthat validate_that not_empty is.scalar
 #' @export
-lime.character <- function(x, model, preprocess, tokenization = default_tokenize, keep_word_position = FALSE, kernel_width = 25,
-                           n_permutations = 5000, number_features_explain = 5, feature_selection_method = "auto",
-                           labels = NULL, n_labels = NULL,  prediction = default_predict, ...) {
+lime.character <- function(x, model, preprocess, tokenization = default_tokenize, keep_word_position = FALSE, kernel_width = 25, ...) {
 
   validate_that("function" %in% class(preprocess))
   validate_that("function" %in% class(tokenization))
-  validate_that("function" %in% class(prediction))
   validate_that(is_scalar_logical(keep_word_position))
-  validate_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
   validate_that(!is.null(model))
   not_empty(x)
   validate_that(feature_selection_method %in% feature_selection_method())
-  validate_that(number_features_explain >= 1)
-  is.scalar(number_features_explain)
-  validate_that(n_permutations >= 1)
-  is.scalar(n_permutations)
   validate_that(kernel_width >= 1)
   is.scalar(kernel_width)
 
-  function() {
-    permutation_cases <- permute_cases(x, n_permutations, tokenization, keep_word_position)
-    predicted_labels_dt <- preprocess(permutation_cases$permutations) %>% prediction(model)
+  function(cases, labels, n_labels = NULL, n_features, n_permutations = 5000, dist_fun = 'euclidean', feature_select = 'auto') {
+    validate_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
+    validate_that(n_features >= 1)
+    is.scalar(n_features)
+    validate_that(n_permutations >= 1)
+    is.scalar(n_permutations)
+    permutation_cases <- permute_cases(cases, n_permutations, tokenization, keep_word_position)
+    predicted_labels_dt <- preprocess(permutation_cases$permutations) %>% predict_model(model)
     model_permutations(x = permutation_cases$tabular, y = predicted_labels_dt,
                        weights = exp_kernel(kernel_width)(permutation_cases$permutation_distances),
-                       labels = labels, n_labels = n_labels, n_features = number_features_explain,
+                       labels = labels, n_labels = n_labels, n_features = n_features,
                        feature_method = feature_selection_method)
   }
-}
-
-#' @title Default function to perform the prediction
-#'
-#' @description Takes care of performing the prediction and adapting the format of the result. To be used with \code{\link{lime.character}}.
-#' @param data data to be explained (as \code{\link{character}} vector).
-#' @param model model to be explained
-#' @importFrom purrr set_names
-#' @export
-default_predict <- function(data, model) {
-  switch(class(model),
-         "xgb.Booster" = predict(model, data, type = "prob", reshape = TRUE) %>%
-           data.frame %>% set_names(seq(ncol(.))),
-         predict(model, data, type = "prob")
-  )
 }
 
 #' @title Default function to tokenize
@@ -84,5 +66,3 @@ default_predict <- function(data, model) {
 default_tokenize <- function(text) {
   stri_split_regex(str = text, pattern = "\\W+", simplify = TRUE) %>% as.character()
 }
-
-globalVariables(".")
