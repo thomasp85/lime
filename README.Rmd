@@ -66,7 +66,7 @@ explanation <- explain(iris_test, n_labels = 1, n_features = 2)
 # The output is provided in a nice tidy format
 tibble::glimpse(explanation)
 
-# An can be visualised directly
+# And can be visualised directly
 plot_features(explanation)
 ```
 
