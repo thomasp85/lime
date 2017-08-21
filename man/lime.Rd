@@ -8,9 +8,7 @@
 \usage{
 \method{lime}{character}(x, model, preprocess,
   tokenization = default_tokenize, keep_word_position = FALSE,
-  kernel_width = 25, n_permutations = 5000, number_features_explain = 5,
-  feature_selection_method = "auto", labels = NULL, n_labels = NULL,
-  prediction = default_predict, ...)
+  kernel_width = 25, ...)
 
 \method{lime}{data.frame}(x, model, bin_continuous = TRUE, n_bins = 4,
   quantile_bins = TRUE, kernel_width = NULL, ...)
@@ -23,37 +21,18 @@ explained.}
 
 \item{model}{The model whose output should be explained}
 
-\item{preprocess}{Function to transform \code{\link{character}} vector to feature provided to the model to explain}
+\item{preprocess}{Function to transform \link{character} vector to feature
+provided to the model to explain}
 
 \item{tokenization}{function used to tokenize text}
 
-\item{keep_word_position}{set to \code{\link{TRUE}} if to keep order of words. Warning: each word will be replaced by \code{word_position}.}
+\item{keep_word_position}{set to \code{TRUE} if to keep order of words. Warning:
+each word will be replaced by \code{word_position}.
+
+TODO : add example
+TODO : for keep_word_position, make 2 versions of the text, one with _position and one without for the model to predict}
 
 \item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
-
-\item{n_permutations}{number of permutations to perform. More gives better explanation up to a point where it is not usefull and takes too much time. (5000)}
-
-\item{number_features_explain}{number of features used in the explanation. (5)}
-
-\item{feature_selection_method}{method to select the best features. (\code{"auto"})
-
-One of:
-\itemize{
-\item{"auto"}{ : If n_features <= 6 use \code{"forward_selection"} else use \code{"highest_weights"}.}
-\item{"none"} {Ignore \code{n_features} and use all features.}
-\item{"forward_selection"} {: Add one feature at a time until \code{n_features} is
-reached, based on quality of a ridge regression model.}
-\item{"highest_weights"} {: Fit a ridge regression and select the \code{n_features} with
-the highest absolute weight.}
-\item{"lasso_path"} {: Fit a lasso model and choose the \code{n_features} whose lars
-path converge to zero the latest.}
-}}
-
-\item{labels}{name of the label to explain (use only when model to explain predictions includes names as \code{\link{data.frame}} column names, like with \code{link{caret}}). (\code{\link{NULL}}).}
-
-\item{n_labels}{instead of labels, number of labels to explain. (\code{\link{NULL}})}
-
-\item{prediction}{function used to perform the prediction. Should have 2 variables, first for the \code{\link{character}} vector, second for the \code{model}. Should return a \code{\link{data.frame}} with the predictions.}
 
 \item{...}{Arguments passed on to methods}
 
@@ -64,11 +43,6 @@ path converge to zero the latest.}
 \item{quantile_bins}{Should the bins be based on \code{n_bins} quantiles or spread evenly over the range of the training data}
 }
 \value{
-Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
-
-TODO : add example
-TODO : for keep_word_position, make 2 versions of the text, one with _position and one without for the model to predict
-
 A function taking the following arguments:
 \itemize{
 \item \code{cases}: Data of the same format as \code{x} that needs to be explained

@@ -1,26 +1,9 @@
 #' @describeIn lime Method for explaining text data
-#' @param preprocess Function to transform \code{\link{character}} vector to feature provided to the model to explain
+#' @param preprocess Function to transform [character] vector to feature
+#' provided to the model to explain
 #' @param tokenization function used to tokenize text
-#' @param keep_word_position set to \code{\link{TRUE}} if to keep order of words. Warning: each word will be replaced by \code{word_position}.
-#' @param n_permutations number of permutations to perform. More gives better explanation up to a point where it is not usefull and takes too much time. (5000)
-#' @param number_features_explain number of features used in the explanation. (5)
-#' @param feature_selection_method method to select the best features. (\code{"auto"})
-#'
-#' One of:
-#' \itemize{
-#' \item{"auto"}{ : If n_features <= 6 use \code{"forward_selection"} else use \code{"highest_weights"}.}
-#' \item{"none"} {Ignore \code{n_features} and use all features.}
-#' \item{"forward_selection"} {: Add one feature at a time until \code{n_features} is
-#'       reached, based on quality of a ridge regression model.}
-#' \item{"highest_weights"} {: Fit a ridge regression and select the \code{n_features} with
-#'       the highest absolute weight.}
-#' \item{"lasso_path"} {: Fit a lasso model and choose the \code{n_features} whose lars
-#'       path converge to zero the latest.}
-#' }
-#' @param labels name of the label to explain (use only when model to explain predictions includes names as \code{\link{data.frame}} column names, like with \code{link{caret}}). (\code{\link{NULL}}).
-#' @param n_labels instead of labels, number of labels to explain. (\code{\link{NULL}})
-#' @param prediction function used to perform the prediction. Should have 2 variables, first for the \code{\link{character}} vector, second for the \code{model}. Should return a \code{\link{data.frame}} with the predictions.
-#' @return Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
+#' @param keep_word_position set to `TRUE` if to keep order of words. Warning:
+#' each word will be replaced by `word_position`.
 #'
 #' TODO : add example
 #' TODO : for keep_word_position, make 2 versions of the text, one with _position and one without for the model to predict
@@ -41,25 +24,66 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
   validate_that(kernel_width >= 1)
   is.scalar(kernel_width)
 
+  m_type <- model_type(model)
+  output_type <- switch(
+    m_type,
+    classification = 'prob',
+    regression = 'raw',
+    stop(m_type, ' models are not supported yet', call. = FALSE)
+  )
+
   function(cases, labels, n_labels = NULL, n_features, n_permutations = 5000, dist_fun = 'euclidean', feature_select = 'auto') {
+    if (m_type == 'regression') {
+      if (!missing(labels) || !is.null(n_labels)) {
+        warning('"labels" and "n_labels" arguments are ignored when explaining regression models')
+        n_labels <- 1
+        labels <- NULL
+      }
+    }
     validate_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
     validate_that(n_features >= 1)
     is.scalar(n_features)
     validate_that(n_permutations >= 1)
     is.scalar(n_permutations)
-    permutation_cases <- permute_cases(cases, n_permutations, tokenization, keep_word_position)
-    predicted_labels_dt <- preprocess(permutation_cases$permutations) %>% predict_model(model)
-    model_permutations(x = permutation_cases$tabular, y = predicted_labels_dt,
-                       weights = exp_kernel(kernel_width)(permutation_cases$permutation_distances),
-                       labels = labels, n_labels = n_labels, n_features = n_features,
-                       feature_method = feature_selection_method)
+
+    case_perm <- permute_cases(cases, n_permutations, tokenization, keep_word_position)
+    case_res <- preprocess(case_perm$permutations) %>%
+      predict_model(model, type = output_type)
+    case_ind <- split(seq_along(case_perm$permutations), rep(seq_along(case_perm$permutations), each = n_permutations))
+    kernel <- exp_kernel(kernel_width)
+    res <- lapply(seq_along(case_ind), function(ind) {
+      i <- case_ind[[ind]]
+      res <- model_permutations(as.matrix(case_perm$tabular[i, ]), case_res[i, ], kernel(case_perm$permutation_distances[i]), labels, n_labels, n_features, feature_select)
+      res$feature_value <- unlist(case_perm[i[1], res$feature])
+      res$feature_desc <- res$feature
+      guess <- which.max(abs(case_res[i[1], ]))
+      res$case <- rownames(cases)[ind]
+      res$label_prob <- unname(as.matrix(case_res[i[1], ]))[match(res$label, colnames(case_res))]
+      res$data <- list(as.list(cases[ind]))
+      res$prediction <- list(as.list(case_res[i[1], ]))
+      res$model_type <- m_type
+      res
+    })
+    res <- bind_rows(res)
+    res <- res[, c('model_type', 'case', 'label', 'label_prob', 'model_r2', 'model_intercept', 'feature', 'feature_value', 'feature_weight', 'feature_desc', 'data', 'prediction')]
+    if (m_type == 'regression') {
+      res$label <- NULL
+      res$label_prob <- NULL
+      res$prediction <- unlist(res$prediction)
+    }
+    res
   }
 }
 
-#' @title Default function to tokenize
+#' Default function to tokenize
 #'
-#' @description Use simple regex to tokenize a \code{\link{character}} vector. To be used with \code{\link{lime.character}}.
-#' @param text text to tokenize as a \code{\link{character}} vector
+#' Use simple regex to tokenize a [character] vector. To be used with
+#' [lime.character].
+#'
+#' @param text text to tokenize as a [character] vector
+#'
+#' @return A character vector
+#'
 #' @importFrom stringi stri_split_regex
 #' @importFrom magrittr %>% set_colnames
 #' @export

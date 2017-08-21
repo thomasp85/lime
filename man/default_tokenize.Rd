@@ -7,8 +7,12 @@
 default_tokenize(text)
 }
 \arguments{
-\item{text}{text to tokenize as a \code{\link{character}} vector}
+\item{text}{text to tokenize as a \link{character} vector}
+}
+\value{
+A character vector
 }
 \description{
-Use simple regex to tokenize a \code{\link{character}} vector. To be used with \code{\link{lime.character}}.
+Use simple regex to tokenize a \link{character} vector. To be used with
+\link{lime.character}.
 }
