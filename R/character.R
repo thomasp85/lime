@@ -11,18 +11,18 @@
 #' @importFrom purrr is_empty is_scalar_logical
 #' @importFrom stringdist seq_dist
 #' @importFrom magrittr %>%
-#' @importFrom assertthat validate_that not_empty is.scalar
+#' @importFrom assertthat assert_that not_empty is.flag is.number is.count
 #' @export
 lime.character <- function(x, model, preprocess, tokenization = default_tokenize, keep_word_position = FALSE, kernel_width = 25, ...) {
 
-  validate_that("function" %in% class(preprocess))
-  validate_that("function" %in% class(tokenization))
-  validate_that(is_scalar_logical(keep_word_position))
-  validate_that(!is.null(model))
-  not_empty(x)
-  validate_that(feature_selection_method %in% feature_selection_method())
-  validate_that(kernel_width >= 1)
-  is.scalar(kernel_width)
+  assert_that(is.function(preprocess))
+  assert_that(is.function(tokenization))
+  assert_that(is.flag(keep_word_position))
+  assert_that(!is.null(model))
+  assert_that(not_empty(x))
+  assert_that(feature_selection_method %in% feature_selection_method())
+  assert_that(is.number(kernel_width))
+  assert_that(kernel_width >= 1)
 
   m_type <- model_type(model)
   output_type <- switch(
@@ -40,11 +40,10 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
         labels <- NULL
       }
     }
-    validate_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
-    validate_that(n_features >= 1)
-    is.scalar(n_features)
-    validate_that(n_permutations >= 1)
-    is.scalar(n_permutations)
+    assert_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
+    assert_that(n_features >= 1)
+    assert_that(is.count(n_features))
+    assert_that(is.count(n_permutations))
 
     case_perm <- permute_cases(cases, n_permutations, tokenization, keep_word_position)
     case_res <- preprocess(case_perm$permutations) %>%
