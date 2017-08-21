@@ -9,7 +9,7 @@ using namespace Rcpp;
 
 // rowSumsSq
 NumericVector rowSumsSq(MSpMat sparse_matrix);
-RcppExport SEXP lime_rowSumsSq(SEXP sparse_matrixSEXP) {
+RcppExport SEXP _lime_rowSumsSq(SEXP sparse_matrixSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -20,7 +20,7 @@ END_RCPP
 }
 // get_index_permutations
 List get_index_permutations(IntegerVector original_document, int number_permutations);
-RcppExport SEXP lime_get_index_permutations(SEXP original_documentSEXP, SEXP number_permutationsSEXP) {
+RcppExport SEXP _lime_get_index_permutations(SEXP original_documentSEXP, SEXP number_permutationsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;

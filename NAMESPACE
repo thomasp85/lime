@@ -2,10 +2,11 @@
 
 S3method(lime,character)
 S3method(lime,data.frame)
-export(default_predict)
 export(default_tokenize)
 export(lime)
+export(model_type)
 export(plot_features)
+export(predict_model)
 import(ggplot2)
 importFrom(Matrix,Matrix)
 importFrom(Matrix,sparseMatrix)
