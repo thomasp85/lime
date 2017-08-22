@@ -53,29 +53,29 @@
 #'
 #' @importFrom purrr is_empty is_scalar_logical is_null
 #' @importFrom magrittr %>%
-#' @importFrom assertthat validate_that not_empty is.scalar
+#' @importFrom assertthat assert_that not_empty is.scalar
 #' @export
 lime.character <- function(x, model, preprocess, tokenization = default_tokenize, keep_word_position = FALSE,
                            n_permutations = 5000, number_features_explain = 5, feature_selection_method = "auto",
                            labels = NULL, n_labels = NULL,  prediction = default_predict, ...) {
 
-  validate_that("function" %in% class(preprocess))
-  validate_that("function" %in% class(tokenization))
-  validate_that("function" %in% class(prediction))
-  validate_that(is_scalar_logical(keep_word_position))
-  validate_that(is_null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
-  validate_that(!is_null(model))
-  not_empty(x)
-  validate_that(feature_selection_method %in% feature_selection_method())
-  is.scalar(number_features_explain)
-  validate_that(number_features_explain >= 1)
-  is.scalar(n_permutations)
-  validate_that(n_permutations >= 1)
+  assert_that("function" %in% class(preprocess))
+  assert_that("function" %in% class(tokenization))
+  assert_that("function" %in% class(prediction))
+  assert_that(is_scalar_logical(keep_word_position))
+  assert_that(is_null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
+  assert_that(!is_null(model))
+  assert_that(not_empty(x))
+  assert_that(feature_selection_method %in% feature_selection_method())
+  assert_that(is.scalar(number_features_explain))
+  assert_that(number_features_explain >= 1)
+  assert_that(is.scalar(n_permutations))
+  assert_that(n_permutations >= 1)
 
   function() {
     permutation_cases <- permute_cases(x, n_permutations, tokenization, keep_word_position)
     predicted_labels_dt <- preprocess(permutation_cases$permutations) %>% prediction(model)
-    validate_that("data.frame" %in% class(predicted_labels_dt))
+    assert_that("data.frame" %in% class(predicted_labels_dt))
     tib <- model_permutations(x = permutation_cases$tabular, y = predicted_labels_dt,
                        weights = permutation_cases$permutation_distances,
                        labels = labels, n_labels = n_labels, n_features = number_features_explain,

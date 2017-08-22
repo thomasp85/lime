@@ -34,14 +34,14 @@
 #'  plot_text_explanations(r)
 #' }
 #'
-#' @importFrom assertthat validate_that
+#' @importFrom assertthat assert_that
 #' @importFrom htmlwidgets createWidget
 #' @importFrom purrr map_if map
 #' @importFrom dplyr mutate filter select
 #' @export
 plot_text_explanations <- function(explanations) {
-  validate_that("data.frame" %in% class(explanations))
-  validate_that(!attr(explanations, "original_text") %>% is.null())
+  assert_that("data.frame" %in% class(explanations))
+  assert_that(!attr(explanations, "original_text") %>% is.null())
   original_text <- attr(explanations, "original_text")
 
   results_percent <- explanations %>% mutate(weight_percent = abs(feature_weight) / sum(abs(feature_weight)),
