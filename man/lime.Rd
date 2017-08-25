@@ -25,7 +25,7 @@ provided to the model to explain}
 
 \item{tokenization}{function used to tokenize text}
 
-\item{keep_word_position}{set to \code{\link{TRUE}} if to keep order of words. Warning:
+\item{keep_word_position}{set to \link{TRUE} if to keep order of words. Warning:
 each word will be replaced by \code{word_position}.}
 
 \item{...}{Arguments passed on to methods}

@@ -44,12 +44,19 @@ plot_text_explanations <- function(explanations) {
   assert_that(!attr(explanations, "original_text") %>% is.null())
   original_text <- attr(explanations, "original_text")
 
-  results_percent <- explanations %>% mutate(weight_percent = abs(feature_weight) / sum(abs(feature_weight)),
-                                        sign = ifelse(feature_weight > 0, 1, -1),
-                                        code_level = sign * (1 + weight_percent %/% 0.2),
-                                        color = sapply(code_level, function(x) get_color_code(x)))
+  text_highlighted <- lapply(unique(results$case), function(id) {
+    current_case_df <- results %>% filter(case == id)
+    original_text <- current_case_df %>% select(data) %>% unique
+    results_percent <- current_case_df %>% mutate(weight_percent = abs(feature_weight) / sum(abs(feature_weight)),
+                                                 sign = ifelse(feature_weight > 0, 1, -1),
+                                                 code_level = sign * (1 + weight_percent %/% 0.2),
+                                                 color = sapply(code_level, function(x) get_color_code(x)))
 
-  text_highlighted <- get_html_span(original_text, results_percent)
+    get_html_span(original_text, results_percent)
+  }) %>%
+    flatten_chr() %>%
+    paste(collapse = "<br/><br/>\n")
+
   createWidget("plot_text_explanations", list(html = text_highlighted),
                               sizingPolicy = htmlwidgets::sizingPolicy(
                                 knitr.figure = FALSE,
@@ -61,10 +68,10 @@ plot_text_explanations <- function(explanations) {
 #' @importFrom purrr map_if map
 #' @importFrom magrittr %>%
 get_html_span <- function(text, results_percent) text %>%
-  map(~ default_tokenize(.x) %>%
-        map_if(.p = ~ .x %in% results_percent$feature, .f = ~ paste0("<span class='", filter(results_percent, feature == .x) %>% select(color) %>% as.character(), "'>", .x, "</span>"))
-      %>% paste(collapse = " ")
-  ) %>% paste(collapse = "<br/><br/>\n")
+  default_tokenize() %>%
+  map_if(.p = ~ .x %in% results_percent$feature, .f = ~ paste0("<span class='", filter(results_percent, feature == .x) %>% select(color) %>% as.character(), "'>", .x, "</span>")) %>%
+  paste(collapse = " ")
+
 
 get_color_code <- function(code_level) {
   switch(as.character(code_level),

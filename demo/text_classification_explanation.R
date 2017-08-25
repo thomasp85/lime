@@ -60,21 +60,19 @@ get.features.matrix <- . %>%
   add.lsa(lsa.full.text) %>%
   xgb.DMatrix()
 
-# use currying to make the function work in one call
 system.time(results <- lime(test_sentences[label == T][1:10, text], bst, get.features.matrix, keep_word_position = FALSE)(n_labels = 1, n_features = 5) %T>%
   print)
 
-
-
+system.time(lime(test_sentences[label == T][1:10, text], bst, get.features.matrix, keep_word_position = FALSE)(n_labels = 1, n_features = 4, feature_select = "tree") %T>% print)
 
 plot_text_explanations(results) %>% print()
 
-system.time(results <- lime(test_sentences[label == T][1, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 10, keep_word_position = FALSE, feature_selection_method = "tree")() %T>%
-              print)
-
 long_document <- test_sentences[label == T][5, text] %>% rep(50) %>% paste(collapse = " ")
-system.time(lime(long_document, bst, get.features.matrix, n_labels = 1, number_features_explain = 2, keep_word_position = TRUE, n_permutations = 5e3, feature_selection_method = "highest_weights")() %>%
-  print)
-
-system.time(lime(long_document, bst, get.features.matrix, n_labels = 1, number_features_explain = 2, keep_word_position = TRUE, n_permutations = 5e3, feature_selection_method = "tree")() %>%
+system.time(lime(long_document, bst, get.features.matrix, keep_word_position = FALSE, feature_select = "highest_weights")(n_labels = 1, n_features = 5) %T>%
+              print)
+system.time(lime(long_document, bst, get.features.matrix, keep_word_position = FALSE, feature_select = "tree")(n_labels = 1, n_features = 5) %T>%
+              print)
+system.time(lime(long_document, bst, get.features.matrix, keep_word_position = TRUE, feature_select = "tree")(n_labels = 1, n_features = 5) %T>%
+              print)
+system.time(lime(long_document, bst, get.features.matrix, keep_word_position = TRUE, feature_select = "highest_weights")(n_labels = 1, n_features = 5) %T>%
               print)
