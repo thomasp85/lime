@@ -27,9 +27,8 @@
 #'                  eval_metric = "error", nthread = 1),
 #'                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
 #'                  nrounds = 50)
+#' lime(test_sentences[5, text], bst, get.matrix)(n_labels = 1, n_features = 2)
 #'
-#' lime(test_sentences[5, text], bst, get.matrix, n_labels = 1,
-#'      number_features_explain = 2, keep_word_position = FALSE)()
 #' }
 #'
 #' @return Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.

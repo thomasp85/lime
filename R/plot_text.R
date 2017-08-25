@@ -26,12 +26,10 @@
 #'                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
 #'                  nrounds = 50)
 #'
-#' r <- lime(test_sentences[5, text], bst, get.matrix, n_labels = 1,
-#'      number_features_explain = 2, keep_word_position = FALSE)()
+#' r <- lime(test_sentences[5, text], bst, get.matrix)(n_labels = 1, n_features = 2)
+#' print(r)
 #'
-#'  print(r)
-#'
-#'  plot_text_explanations(r)
+#' plot_text_explanations(r)
 #' }
 #'
 #' @importFrom assertthat assert_that
@@ -89,4 +87,4 @@ get_color_code <- function(code_level) {
          "6" = "positive_5") # for 100%
 }
 
-globalVariables(c("feature_weight", "feature", "weight_percent", "code_level"))
+globalVariables(c("feature_weight", "feature", "weight_percent", "code_level", "case", "data", "results"))

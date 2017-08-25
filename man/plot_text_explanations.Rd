@@ -35,12 +35,10 @@ bst <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logistic",
                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
                  nrounds = 50)
 
-r <- lime(test_sentences[5, text], bst, get.matrix, n_labels = 1,
-     number_features_explain = 2, keep_word_position = FALSE)()
+r <- lime(test_sentences[5, text], bst, get.matrix)(n_labels = 1, n_features = 2)
+print(r)
 
- print(r)
-
- plot_text_explanations(r)
+plot_text_explanations(r)
 }
 
 }
