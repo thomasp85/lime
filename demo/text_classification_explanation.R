@@ -60,13 +60,12 @@ get.features.matrix <- . %>%
   add.lsa(lsa.full.text) %>%
   xgb.DMatrix()
 
-stop()
 # use currying to make the function work in one call
-system.time(results <- lime(test_sentences[label == T][1:30, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 100, keep_word_position = FALSE)() %T>%
+system.time(results <- lime(test_sentences[label == T][1:10, text], bst, get.features.matrix, keep_word_position = FALSE)(n_labels = 1, n_features = 5) %T>%
   print)
 
 
-lime(test_sentences[label == T][1:5, text], bst, get.features.matrix, keep_word_position = FALSE)(test_sentences[label == T][1:5, text], n_labels = 1, n_features = 5)
+
 
 plot_text_explanations(results) %>% print()
 

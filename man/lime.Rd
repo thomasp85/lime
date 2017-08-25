@@ -25,7 +25,8 @@ provided to the model to explain}
 
 \item{tokenization}{function used to tokenize text}
 
-\item{keep_word_position}{set to \code{\link{TRUE}} if to keep order of words.}
+\item{keep_word_position}{set to \code{\link{TRUE}} if to keep order of words. Warning:
+each word will be replaced by \code{word_position}.}
 
 \item{...}{Arguments passed on to methods}
 
@@ -36,34 +37,6 @@ provided to the model to explain}
 \item{quantile_bins}{Should the bins be based on \code{n_bins} quantiles or spread evenly over the range of the training data}
 
 \item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
-
-\item{n_permutations}{number of permutations to perform. More gives better explanation up to a point where it is not usefull and takes too much time. (5000)}
-
-\item{number_features_explain}{number of features used in the explanation. (\code{5})}
-
-\item{feature_selection_method}{method to select the best features. (\code{"auto"})
-
-One of:
-\itemize{
-\item{"auto"}{ : If n_features <= 6 use \code{"forward_selection"} else use \code{"highest_weights"}.}
-\item{"none"} {Ignore \code{n_features} and use all features.}
-\item{"forward_selection"} {: Add one feature at a time until \code{n_features} is
-reached, based on quality of a ridge regression model.}
-\item{"highest_weights"} {: Fit a ridge regression and select the \code{n_features} with
-the highest absolute weight.}
-\item{"lasso_path"} {: Fit a lasso model and choose the \code{n_features} whose lars
-path converge to zero the latest.}
-\item{"tree"} {: Fit a tree to select \code{n_features}. It requires XGBoost.}
-}}
-
-\item{labels}{name of the label to explain (use only when model to explain predictions includes names as \code{\link{data.frame}} column names, like with \code{link{caret}}). (\code{\link{NULL}}).}
-
-\item{n_labels}{instead of labels, number of labels to explain. (\code{\link{NULL}})}
-
-\item{prediction}{function used to perform the prediction. Should have 2 variables, first for the \code{\link{character}} vector, second for the \code{model}. Should return a \code{\link{data.frame}} with the predictions.}
-
-\item{keep_word_position}{set to \code{TRUE} if to keep order of words. Warning:
-each word will be replaced by \code{word_position}.}
 }
 \value{
 Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
@@ -87,6 +60,7 @@ reached, based on quality of a ridge regression model.
 the highest absolute weight.
 \item \code{"lasso_path"}: Fit a lasso model and choose the \code{n_features} whose lars
 path converge to zero the latest.
+\item \code{"tree"} : Fit a tree to select \code{n_features} (which needs to be a power of 2). It requires XGBoost.
 }
 }
 

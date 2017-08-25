@@ -30,6 +30,7 @@
 #'     the highest absolute weight.
 #'   - `"lasso_path"`: Fit a lasso model and choose the `n_features` whose lars
 #'     path converge to zero the latest.
+#'   - `"tree"` : Fit a tree to select `n_features` (which needs to be a power of 2). It requires XGBoost.
 #'
 #' The return value of the returned function will be a `tibble` encoding the
 #' explanations in a tidy format. The columns are:
