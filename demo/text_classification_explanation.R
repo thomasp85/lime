@@ -22,7 +22,7 @@ test_sentences[, label := class.text == label_to_explain]
 get.iterator <- function(data) itoken(data, preprocess_function = tolower, tokenizer = word_tokenizer, progressbar = F)
 
 # Extract vocabulary
-v <-  create_vocabulary(get.iterator(train_sentences$text), stopwords = stop_words_sentences)
+v <- create_vocabulary(get.iterator(train_sentences$text), stopwords = stop_words_sentences)
 
 # Function to transform text in matrix
 get.matrix <- function(data) {
@@ -44,7 +44,7 @@ add.lsa <- function(m, lsa) {
 dtrain <- get.matrix(train_sentences$text) %>% transform(tfidf) %>% add.lsa(lsa.full.text) %>% xgb.DMatrix(label = train_sentences$label)
 dtest <-  get.matrix(test_sentences$text) %>% transform(tfidf) %>% add.lsa(lsa.full.text) %>% xgb.DMatrix(label = test_sentences$label)
 
-watchlist <- list(eval = dtest)
+watchlist <- list(train = dtrain, eval = dtest)
 param <- list(max_depth = 7, eta = 0.1, objective = "binary:logistic", eval_metric = "error", nthread = 1)
 bst <- xgb.train(param, dtrain, nrounds = 500, watchlist, early_stopping_rounds = 100)
 
@@ -60,9 +60,13 @@ get.features.matrix <- . %>%
   add.lsa(lsa.full.text) %>%
   xgb.DMatrix()
 
+stop()
 # use currying to make the function work in one call
 system.time(results <- lime(test_sentences[label == T][1:30, text], bst, get.features.matrix, n_labels = 1, number_features_explain = 100, keep_word_position = FALSE)() %T>%
   print)
+
+
+lime(test_sentences[label == T][1:5, text], bst, get.features.matrix, keep_word_position = FALSE)(test_sentences[label == T][1:5, text], n_labels = 1, n_features = 5)
 
 plot_text_explanations(results) %>% print()
 

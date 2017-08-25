@@ -37,11 +37,18 @@ plot_features <- function(explanation, ncol = 2) {
   desc_width <- max(nchar(description)) + 1
   description <- paste0(format(description, width = desc_width), explanation$feature_desc)
   explanation$description <- factor(description, levels = description[order(abs(explanation$feature_weight))])
-  explanation$probability <- format(explanation$label_prob, digits = 2)
-  ggplot(explanation) +
+
+  if (explanation$model_type[1] == 'classification') {
+    explanation$probability <- format(explanation$label_prob, digits = 2)
+    p <- ggplot(explanation) +
+      facet_wrap(~ case + label + probability, labeller = label_both_upper, scales = 'free', ncol = ncol)
+  } else if (explanation$model_type[1] == 'regression') {
+    p <- ggplot(explanation) +
+      facet_wrap(~ case + prediction, labeller = label_both_upper, scales = 'free', ncol = ncol)
+  }
+  p +
     geom_col(aes_(~description, ~feature_weight, fill = ~type)) +
     coord_flip() +
-    facet_wrap(~ case + label + probability, labeller = label_both_upper, scales = 'free', ncol = ncol) +
     scale_fill_manual(values = c('forestgreen', 'firebrick'), drop = FALSE) +
     scale_x_discrete(labels = function(lab) substr(lab, desc_width+1, nchar(lab))) +
     labs(y = 'Weight', x = 'Feature', fill = '') +

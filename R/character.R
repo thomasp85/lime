@@ -1,5 +1,6 @@
 #' @describeIn lime Method for explaining text data
-#' @param preprocess Function to transform \code{\link{character}} vector to feature provided to the model to explain
+#' @param preprocess Function to transform [character] vector to feature
+#' provided to the model to explain
 #' @param tokenization function used to tokenize text
 #' @param keep_word_position set to \code{\link{TRUE}} if to keep order of words.
 #' @param n_permutations number of permutations to perform. More gives better explanation up to a point where it is not usefull and takes too much time. (5000)
@@ -21,6 +22,8 @@
 #' @param labels name of the label to explain (use only when model to explain predictions includes names as \code{\link{data.frame}} column names, like with \code{link{caret}}). (\code{\link{NULL}}).
 #' @param n_labels instead of labels, number of labels to explain. (\code{\link{NULL}})
 #' @param prediction function used to perform the prediction. Should have 2 variables, first for the \code{\link{character}} vector, second for the \code{model}. Should return a \code{\link{data.frame}} with the predictions.
+#' @param keep_word_position set to `TRUE` if to keep order of words. Warning:
+#' each word will be replaced by `word_position`.
 #'
 #' @examples
 #' \dontrun{
@@ -51,66 +54,80 @@
 #'
 #' @return Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
 #'
-#' @importFrom purrr is_empty is_scalar_logical is_null
+#' @importFrom dplyr bind_rows
+#' @importFrom purrr is_empty is_scalar_logical is_null flatten_int
 #' @importFrom magrittr %>%
-#' @importFrom assertthat assert_that not_empty is.scalar
+#' @importFrom assertthat assert_that not_empty is.flag is.number is.count
 #' @export
-lime.character <- function(x, model, preprocess, tokenization = default_tokenize, keep_word_position = FALSE,
-                           n_permutations = 5000, number_features_explain = 5, feature_selection_method = "auto",
-                           labels = NULL, n_labels = NULL,  prediction = default_predict, ...) {
+lime.character <- function(x, model, preprocess, tokenization = default_tokenize, keep_word_position = FALSE, ...) {
 
-  assert_that("function" %in% class(preprocess))
-  assert_that("function" %in% class(tokenization))
-  assert_that("function" %in% class(prediction))
-  assert_that(is_scalar_logical(keep_word_position))
-  assert_that(is_null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
-  assert_that(!is_null(model))
+  assert_that(is.function(preprocess))
+  assert_that(is.function(tokenization))
+  assert_that(is.flag(keep_word_position))
+  assert_that(!is.null(model))
   assert_that(not_empty(x))
-  assert_that(feature_selection_method %in% feature_selection_method())
-  assert_that(is.scalar(number_features_explain))
-  assert_that(number_features_explain >= 1)
-  assert_that(is.scalar(n_permutations))
-  assert_that(n_permutations >= 1)
+  #assert_that(feature_selection_method %in% feature_selection_method())
 
-  function() {
-    permutation_cases <- permute_cases(x, n_permutations, tokenization, keep_word_position)
-    predicted_labels_dt <- preprocess(permutation_cases$permutations) %>% prediction(model)
-    assert_that("data.frame" %in% class(predicted_labels_dt))
-    tib <- model_permutations(x = permutation_cases$tabular, y = predicted_labels_dt,
-                       weights = permutation_cases$permutation_distances,
-                       labels = labels, n_labels = n_labels, n_features = number_features_explain,
-                       feature_method = feature_selection_method)
-    attr(tib, "original_text") <- x
-    tib
+  m_type <- model_type(model)
+  output_type <- switch(
+    m_type,
+    classification = 'prob',
+    regression = 'raw',
+    stop(m_type, ' models are not supported yet', call. = FALSE)
+  )
+
+  function(cases, labels = NULL, n_labels = NULL, n_features, n_permutations = 5000, feature_select = 'auto') {
+    if (m_type == 'regression') {
+      if (!is.null(labels) || !is.null(n_labels)) {
+        warning('"labels" and "n_labels" arguments are ignored when explaining regression models')
+        n_labels <- 1
+        labels <- NULL
+      }
+    }
+    assert_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
+    assert_that(is.count(n_features))
+    assert_that(is.count(n_permutations))
+
+    case_perm <- permute_cases(cases, n_permutations, tokenization, keep_word_position)
+    case_res <- preprocess(case_perm$permutations) %>%
+      predict_model(x = model, newdata = ., type = output_type)
+    assert_that(length(case_perm$permutations) == n_permutations * length(cases))
+    case_ind <- length(cases) %>% seq() %>% map(~ rep(.x, n_permutations)) %>% flatten_int() %>% split(seq_along(case_perm$permutations), .)
+
+    res <- lapply(seq_along(case_ind), function(ind) {
+      i <- case_ind[[ind]]
+      res <- model_permutations(case_perm$tabular[i, ], case_res[i, ], case_perm$permutation_distances[i], labels, n_labels, n_features, feature_select)
+      res$feature_value <- res$feature
+      res$feature_desc <- res$feature
+      res$case <- cases[ind]
+      res$label_prob <- unname(as.matrix(case_res[i[1], ]))[match(res$label, colnames(case_res))]
+      res$data <- cases[ind]
+      res$prediction <- list(as.list(case_res[i[1], ]))
+      res$model_type <- m_type
+      res
+    })
+    res <- bind_rows(res)
+    res <- res[, c('model_type', 'case', 'label', 'label_prob', 'model_r2', 'model_intercept', 'feature', 'feature_value', 'feature_weight', 'feature_desc', 'data', 'prediction')]
+    if (m_type == 'regression') {
+      res$label <- NULL
+      res$label_prob <- NULL
+      res$prediction <- unlist(res$prediction)
+    }
+    if (m_type == 'classification') {
+      attr(res, "original_text") <- cases
+    }
+    res
   }
 }
 
-#' @title Default function to perform the prediction
-#'
-#' @description Takes care of performing the prediction and adapting the format of the result. To be used with \code{\link{lime.character}}.
-#' @param data data to be explained (as \code{\link{character}} vector).
-#' @param model model to be explained
-#' @importFrom purrr set_names
-#' @export
-default_predict <- function(data, model) {
-  switch(class(model),
-         "xgb.Booster" = predict(model, data, type = "prob", reshape = TRUE) %>%
-           data.frame %>% set_names(seq(ncol(.))),
-         predict(model, data, type = "prob")
-  )
-}
-
-#' @title Default function to tokenize
+#' Default function to tokenize
 #'
 #' @description Use simple regex to tokenize a \code{\link{character}} vector. To be used with \code{\link{lime.character}}.
 #' @param text text to tokenize as a \code{\link{character}} vector
 #' @return a \code{\link{character}} vector.
 #' @importFrom stringi stri_split_boundaries
-#' @importFrom magrittr %>% set_colnames
 #' @export
 default_tokenize <- function(text) {
   stri_split_boundaries(text, type = "word", skip_word_none = TRUE) %>%
     flatten_chr()
 }
-
-globalVariables(".")

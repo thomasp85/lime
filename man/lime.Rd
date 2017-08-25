@@ -7,10 +7,7 @@
 \title{Create a model explanation function based on training data}
 \usage{
 \method{lime}{character}(x, model, preprocess,
-  tokenization = default_tokenize, keep_word_position = FALSE,
-  n_permutations = 5000, number_features_explain = 5,
-  feature_selection_method = "auto", labels = NULL, n_labels = NULL,
-  prediction = default_predict, ...)
+  tokenization = default_tokenize, keep_word_position = FALSE, ...)
 
 \method{lime}{data.frame}(x, model, bin_continuous = TRUE, n_bins = 4,
   quantile_bins = TRUE, kernel_width = NULL, ...)
@@ -23,11 +20,22 @@ explained.}
 
 \item{model}{The model whose output should be explained}
 
-\item{preprocess}{Function to transform \code{\link{character}} vector to feature provided to the model to explain}
+\item{preprocess}{Function to transform \link{character} vector to feature
+provided to the model to explain}
 
 \item{tokenization}{function used to tokenize text}
 
 \item{keep_word_position}{set to \code{\link{TRUE}} if to keep order of words.}
+
+\item{...}{Arguments passed on to methods}
+
+\item{bin_continuous}{Should continuous variables be binned when making the explanation}
+
+\item{n_bins}{The number of bins for continuous variables if \code{bin_continuous = TRUE}}
+
+\item{quantile_bins}{Should the bins be based on \code{n_bins} quantiles or spread evenly over the range of the training data}
+
+\item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
 
 \item{n_permutations}{number of permutations to perform. More gives better explanation up to a point where it is not usefull and takes too much time. (5000)}
 
@@ -54,15 +62,8 @@ path converge to zero the latest.}
 
 \item{prediction}{function used to perform the prediction. Should have 2 variables, first for the \code{\link{character}} vector, second for the \code{model}. Should return a \code{\link{data.frame}} with the predictions.}
 
-\item{...}{Arguments passed on to methods}
-
-\item{bin_continuous}{Should continuous variables be binned when making the explanation}
-
-\item{n_bins}{The number of bins for continuous variables if \code{bin_continuous = TRUE}}
-
-\item{quantile_bins}{Should the bins be based on \code{n_bins} quantiles or spread evenly over the range of the training data}
-
-\item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
+\item{keep_word_position}{set to \code{TRUE} if to keep order of words. Warning:
+each word will be replaced by \code{word_position}.}
 }
 \value{
 Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.

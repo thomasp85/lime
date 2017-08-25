@@ -67,16 +67,16 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
     features <- select_features(feature_method, x, y[[label]], weights, n_features)
 
     # glmnet does not allow n_features=1
-    if(n_features==1){
-      x_fit = cbind("(Intercept)" = rep(1, nrow(x)), x[, features, drop=FALSE])
+    if (n_features == 1) {
+      x_fit = cbind("(Intercept)" = rep(1, nrow(x)), x[, features, drop = FALSE])
       fit <- glm.fit(x = x_fit, y = y[[label]],  weights = weights, family = gaussian())
       r2 <- fit$deviance / fit$null.deviance
       coefs <- coef(fit)
       intercept <- coefs[1]
       coefs <- coefs[-1]
     } else {
-      # TODO refaire le shuffling
-      fit <- glmnet(x[, features], y[[label]], weights = weights, alpha = 0, lambda = 0.001)
+      shuffle_order <- sample(length(y[[label]])) # glm is sensitive to the order of the examples
+      fit <- glmnet(x[shuffle_order, features], y[[label]][shuffle_order], weights = weights[shuffle_order], alpha = 0, lambda = 0.001)
       r2 <- fit$dev.ratio
       coefs <- coef(fit)
       intercept <- coefs[1, 1]
@@ -112,6 +112,7 @@ select_features <- function(method, x, y, weights, n_features) {
     stop("Method not implemented", call. = FALSE)
   )
 }
+
 #' @importFrom glmnet cv.glmnet
 select_f_fs <- function(x, y, weights, n_features) {
   features <- c()
@@ -133,13 +134,14 @@ select_f_fs <- function(x, y, weights, n_features) {
   }
   features
 }
+
 #' @importFrom glmnet glmnet coef.cv.glmnet
 #' @importFrom stats coef
 #' @importFrom utils head
 select_f_hw <- function(x, y, weights, n_features) {
   shuffle_order <- sample(length(y)) # glm is sensitive to the order of the examples
   fit_model <- glmnet(x[shuffle_order,], y[shuffle_order], weights = weights[shuffle_order], alpha = 0, lambda = 0)
-  features <- coef(fit_model)[-1, 1] #* x[shuffle_order[1],]
+  features <- coef(fit_model)[-1, 1]
   features_order <- order(abs(features), decreasing = TRUE)
   head(features_order, n_features)
 }

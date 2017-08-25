@@ -38,6 +38,7 @@ Suggests: caret,
     randomForest,
     e1071,
     xgboost,
-    testthat
+    testthat,
+    mlr
 LinkingTo: Rcpp, 
     RcppEigen

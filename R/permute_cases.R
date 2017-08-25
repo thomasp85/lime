@@ -28,9 +28,22 @@ permute_cases.data.frame <- function(cases, n_permutations, feature_distribution
 #' @importFrom magrittr %>% set_colnames
 permute_cases.character <- function(cases, n_permutations, tokenization, keep_word_position) {
   documents_tokens <- map(cases, tokenization) %>%
-{d_tokens <- . ;
-  map2(d_tokens, lengths(d_tokens) %>% cumsum() %>% head(., length(.) - 1) %>% c(0, .),
-       ~ {if (keep_word_position) paste0(.x, "_",  seq_along(.x) + .y) %>% set_names(.x) else unique(.x) %>% set_names(., .)})}
+  {
+    d_tokens <- .
+    map2(
+      d_tokens,
+      lengths(d_tokens) %>%
+        cumsum() %>%
+        head(., length(.) - 1) %>%
+        c(0, .),
+      ~ {
+        if (keep_word_position)
+          paste0(.x, "_",  seq_along(.x) + .y) %>% set_names(.x)
+        else
+          unique(.x) %>% set_names(., .)
+      }
+    )
+  }
 
   tokens <- documents_tokens %>%
     flatten_chr() %>%
@@ -41,9 +54,7 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
   documents_tokens <- documents_tokens %>%
     map(~ which(tokens %in% .))
 
-  number_permutations_per_document <- as.integer(n_permutations / length(cases))
-
-  word_selections <- map(documents_tokens, ~ get_index_permutations(.x, number_permutations_per_document))
+  word_selections <- map(documents_tokens, ~ get_index_permutations(.x, n_permutations))
 
   word_selections_flatten <- flatten(word_selections)
 
@@ -60,10 +71,17 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
 
   word_indexes_2_logical_vector <- function(doc) seq(tokens) %in% doc
 
-  bow_indexes_per_document <- length(cases) %>% rep(number_permutations_per_document, .) %>% purrr::accumulate(`+`) %>% map2(c(1, head(., -1) + 1), ., c)
+  bow_indexes_per_document <- length(cases) %>%
+    rep(n_permutations, .) %>%
+    purrr::accumulate(`+`) %>%
+    map2(c(1, head(., -1) + 1), ., c)
 
-  permutation_distances <- map2(documents_tokens, bow_indexes_per_document,
-                                ~ word_indexes_2_logical_vector(.x) %>% cosine_distance_vector_to_matrix_rows(bow_matrix[.y[1]:.y[2],])) %>%
+  permutation_distances <- map2(
+    documents_tokens,
+    bow_indexes_per_document,
+    ~ word_indexes_2_logical_vector(.x) %>%
+      cosine_distance_vector_to_matrix_rows(bow_matrix[.y[1]:.y[2],])
+    ) %>%
     flatten_dbl()
 
   list(tabular = bow_matrix,

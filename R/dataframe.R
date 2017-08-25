@@ -23,6 +23,13 @@
 #'   expl(iris_test, n_labels = 1, n_features = 2)
 #' }
 lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantile_bins = TRUE, kernel_width = NULL, ...) {
+  m_type <- model_type(model)
+  output_type <- switch(
+    m_type,
+    classification = 'prob',
+    regression = 'raw',
+    stop(m_type, ' models are not supported yet', call. = FALSE)
+  )
   feature_type <- setNames(sapply(x, function(f) {
     if (is.numeric(f)) {
       'numeric'
@@ -61,8 +68,14 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
   }
   kernel <- exp_kernel(kernel_width)
   function(cases, labels, n_labels = NULL, n_features, n_permutations = 5000, dist_fun = 'euclidean', feature_select = 'auto') {
+    if (m_type == 'regression') {
+      if (!missing(labels) || !is.null(n_labels)) {
+        warning('"labels" and "n_labels" arguments are ignored when explaining regression models')
+        n_labels <- 1
+      }
+    }
     case_perm <- permute_cases(cases, n_permutations, feature_distribution, bin_continuous, bin_cuts)
-    case_res <- predict(model, case_perm, type = 'prob')
+    case_res <- predict_model(model, case_perm, type = output_type)
     case_ind <- split(seq_len(nrow(case_perm)), rep(seq_len(nrow(cases)), each = n_permutations))
     res <- lapply(seq_along(case_ind), function(ind) {
       i <- case_ind[[ind]]
@@ -74,13 +87,20 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
       res$feature_desc <- describe_feature(res$feature, case_perm[i[1], ], feature_type, bin_continuous, bin_cuts)
       guess <- which.max(abs(case_res[i[1], ]))
       res$case <- rownames(cases)[ind]
-      res$label_prob <- unname(as.matrix(case_res[i[1], ]))[match(res$label, names(case_res))]
+      res$label_prob <- unname(as.matrix(case_res[i[1], ]))[match(res$label, colnames(case_res))]
       res$data <- list(as.list(case_perm[i[1], ]))
       res$prediction <- list(as.list(case_res[i[1], ]))
+      res$model_type <- m_type
       res
     })
     res <- bind_rows(res)
-    res[, c('case', 'label', 'label_prob', 'model_r2', 'model_intercept', 'feature', 'feature_value', 'feature_weight', 'feature_desc', 'data', 'prediction')]
+    res <- res[, c('model_type', 'case', 'label', 'label_prob', 'model_r2', 'model_intercept', 'feature', 'feature_value', 'feature_weight', 'feature_desc', 'data', 'prediction')]
+    if (m_type == 'regression') {
+      res$label <- NULL
+      res$label_prob <- NULL
+      res$prediction <- unlist(res$prediction)
+    }
+    res
   }
 }
 #' @importFrom stats setNames
