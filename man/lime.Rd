@@ -113,7 +113,7 @@ bst <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logistic",
                  eval_metric = "error", nthread = 1),
                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
                  nrounds = 50)
-lime(test_sentences[5, text], bst, get.matrix)(n_labels = 1, n_features = 2)
+lime(test_sentences[5, "text"], bst, get.matrix)(n_labels = 1, n_features = 2)
 
 }
 

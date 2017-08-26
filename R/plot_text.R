@@ -26,7 +26,7 @@
 #'                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
 #'                  nrounds = 50)
 #'
-#' r <- lime(test_sentences[5, text], bst, get.matrix)(n_labels = 1, n_features = 2)
+#' r <- lime(test_sentences[5, "text"], bst, get.matrix)(n_labels = 1, n_features = 2)
 #' print(r)
 #'
 #' plot_text_explanations(r)
