@@ -42,8 +42,8 @@ plot_text_explanations <- function(explanations) {
   assert_that(!attr(explanations, "original_text") %>% is.null())
   original_text <- attr(explanations, "original_text")
 
-  text_highlighted <- lapply(unique(results$case), function(id) {
-    current_case_df <- results %>% filter(case == id)
+  text_highlighted <- lapply(unique(explanations$case), function(id) {
+    current_case_df <- explanations %>% filter(case == id)
     original_text <- current_case_df %>% select(data) %>% unique
     results_percent <- current_case_df %>% mutate(weight_percent = abs(feature_weight) / sum(abs(feature_weight)),
                                                  sign = ifelse(feature_weight > 0, 1, -1),
@@ -87,4 +87,4 @@ get_color_code <- function(code_level) {
          "6" = "positive_5") # for 100%
 }
 
-globalVariables(c("feature_weight", "feature", "weight_percent", "code_level", "case", "data", "results"))
+globalVariables(c("feature_weight", "feature", "weight_percent", "code_level", "case", "data"))

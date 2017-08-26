@@ -39,6 +39,7 @@ Suggests: caret,
     e1071,
     xgboost,
     testthat,
-    mlr
+    mlr,
+    text2vec
 LinkingTo: Rcpp, 
     RcppEigen
