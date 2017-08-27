@@ -6,11 +6,10 @@
 #' each word will be replaced by `word_position`.
 #'
 #' @examples
-#' \dontrun{
 #' # Explaining a model based on text data
 #'
-#' library(text2vec)
 #' library(lime)
+#' library(text2vec)
 #' library(xgboost)
 #'
 #' data(train_sentences)
@@ -28,8 +27,6 @@
 #'                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
 #'                  nrounds = 50)
 #' lime(test_sentences[5, "text"], bst, get.matrix)(n_labels = 1, n_features = 2)
-#'
-#' }
 #'
 #' @return Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
 #'

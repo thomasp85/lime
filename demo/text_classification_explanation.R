@@ -13,6 +13,9 @@ data("train_sentences")
 data("test_sentences")
 data("stop_words_sentences")
 
+setDT(train_sentences)
+setDT(test_sentences)
+
 label_to_explain <- "OWNX"
 
 # label train set and test set
@@ -63,7 +66,7 @@ get.features.matrix <- . %>%
 system.time(results <- lime(test_sentences[label == T][1:10, text], bst, get.features.matrix, keep_word_position = FALSE)(n_labels = 1, n_features = 5) %T>%
   print)
 
-system.time(lime(test_sentences[label == T][1:10, text], bst, get.features.matrix, keep_word_position = FALSE)(n_labels = 1, n_features = 4, feature_select = "tree") %T>% print)
+system.time(lime(test_sentences[label == T][1:10, text], bst, get.features.matrix, keep_word_position = FALSE)(n_labels = 1, n_features = 4, feature_select = "tree"))
 
 plot_text_explanations(results) %>% print()
 

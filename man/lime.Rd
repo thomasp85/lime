@@ -43,13 +43,13 @@ Return a function. To make only one call you can perform a currying like in \cod
 
 A function taking the following arguments:
 \itemize{
-\item \code{cases}: Data of the same format as \code{x} that needs to be explained
+\item \code{cases}: Data of the same format as \code{x} that needs to be explained (not needed for \link{character} data)
 \item \code{labels}: The prediction(s) that needs to be explained
 \item \code{n_labels}: Alternative to \code{labels}, the number of predictions to explain,
 selected by their probability.
 \item \code{n_features}: The number of features to use in the explanaition.
 \item \code{n_permutations}: The number of permutations to make on each row in \code{cases}
-\item \code{dist_fun}: The distance measure to use for weighting the permutations
+\item \code{dist_fun}: The distance measure to use for weighting the permutations (not needed for \link{character} data)
 \item \code{feature_select}: The method to use for feature selection. One of:
 \itemize{
 \item \code{"auto"}: If \code{n_features <= 6} use \code{"forward_selection"} else use \code{"highest_weights"}.
@@ -60,20 +60,20 @@ reached, based on quality of a ridge regression model.
 the highest absolute weight.
 \item \code{"lasso_path"}: Fit a lasso model and choose the \code{n_features} whose lars
 path converge to zero the latest.
-\item \code{"tree"} : Fit a tree to select \code{n_features} (which needs to be a power of 2). It requires XGBoost.
+\item \code{"tree"} : Fit a tree to select \code{n_features} (which needs to be a power of 2). It requires last version of \code{XGBoost}.
 }
 }
 
 The return value of the returned function will be a \code{tibble} encoding the
 explanations in a tidy format. The columns are:
 \itemize{
-\item \code{case}: The case being explained (the rowname in \code{cases})
+\item \code{case}: The case being explained (the rowname in \code{cases}).
 \item \code{predict_label}: The label with the highest probability as predicted by \code{model}
 \item \code{predict_prob}: The probability of \code{predict_label}
 \item \code{label}: The label being explained
 \item \code{label_prob}: The probability of \code{label} as predicted by \code{model}
 \item \code{feature}: The feature used for the explanation
-\item \code{weight}: The weight of the feature in the explanation
+\item \code{weight}: The weight of the feature in the explanation (when \code{>0} -> helps to get the class)
 \item \code{model_r2}: The quality of the model used for the explanation
 \item \code{model_intercept}: The intercept of the model used for the explanation
 }
@@ -92,7 +92,6 @@ types supported by lime.
 }}
 
 \examples{
-\dontrun{
 # Explaining a model based on text data
 
 library(text2vec)
@@ -114,8 +113,6 @@ bst <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logistic",
                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
                  nrounds = 50)
 lime(test_sentences[5, "text"], bst, get.matrix)(n_labels = 1, n_features = 2)
-
-}
 
 # Explaining a model based on tabular data
 if (requireNamespace("caret", quietly = TRUE)) {

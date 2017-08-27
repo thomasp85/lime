@@ -14,13 +14,13 @@
 #'
 #' @return A function taking the following arguments:
 #'
-#' * `cases`: Data of the same format as `x` that needs to be explained
+#' * `cases`: Data of the same format as `x` that needs to be explained (not needed for [character] data)
 #' * `labels`: The prediction(s) that needs to be explained
 #' * `n_labels`: Alternative to `labels`, the number of predictions to explain,
 #'   selected by their probability.
 #' * `n_features`: The number of features to use in the explanaition.
 #' * `n_permutations`: The number of permutations to make on each row in `cases`
-#' * `dist_fun`: The distance measure to use for weighting the permutations
+#' * `dist_fun`: The distance measure to use for weighting the permutations (not needed for [character] data)
 #' * `feature_select`: The method to use for feature selection. One of:
 #'   - `"auto"`: If `n_features <= 6` use `"forward_selection"` else use `"highest_weights"`.
 #'   - `"none"`: Ignore `n_features` and use all features.
@@ -30,18 +30,18 @@
 #'     the highest absolute weight.
 #'   - `"lasso_path"`: Fit a lasso model and choose the `n_features` whose lars
 #'     path converge to zero the latest.
-#'   - `"tree"` : Fit a tree to select `n_features` (which needs to be a power of 2). It requires XGBoost.
+#'   - `"tree"` : Fit a tree to select `n_features` (which needs to be a power of 2). It requires last version of `XGBoost`.
 #'
 #' The return value of the returned function will be a `tibble` encoding the
 #' explanations in a tidy format. The columns are:
 #'
-#' * `case`: The case being explained (the rowname in `cases`)
+#' * `case`: The case being explained (the rowname in `cases`).
 #' * `predict_label`: The label with the highest probability as predicted by `model`
 #' * `predict_prob`: The probability of `predict_label`
 #' * `label`: The label being explained
 #' * `label_prob`: The probability of `label` as predicted by `model`
 #' * `feature`: The feature used for the explanation
-#' * `weight`: The weight of the feature in the explanation
+#' * `weight`: The weight of the feature in the explanation (when `>0` -> helps to get the class)
 #' * `model_r2`: The quality of the model used for the explanation
 #' * `model_intercept`: The intercept of the model used for the explanation
 #'
