@@ -93,9 +93,10 @@ types supported by lime.
 
 \examples{
 # Explaining a model based on text data
+# Purpose is to classify sentences from scientific publications and find those where the team writes about their own work (category OWNX in the provided dataset)
 
-library(text2vec)
 library(lime)
+library(text2vec)
 library(xgboost)
 
 data(train_sentences)
@@ -112,7 +113,14 @@ bst <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logistic",
                  eval_metric = "error", nthread = 1),
                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
                  nrounds = 50)
-lime(test_sentences[5, "text"], bst, get.matrix)(n_labels = 1, n_features = 2)
+
+sentences_to_explain <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 5)
+explanations <- lime(sentences_to_explain, bst, get.matrix)(n_labels = 1, n_features = 2)
+
+# We can see that many explanations are based
+# on the presence of the word `we` in the sentences
+# which makes sense regarding the task.
+print(explanations)
 
 # Explaining a model based on tabular data
 if (requireNamespace("caret", quietly = TRUE)) {
