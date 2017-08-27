@@ -7,7 +7,10 @@
 #'
 #' @examples
 #' # Explaining a model based on text data
-#' # Purpose is to classify sentences from scientific publications and find those where the team writes about their own work (category OWNX in the provided dataset)
+#'
+#' # Purpose is to classify sentences from scientific publications
+#' # and find those where the team writes about their own work
+#' # (category OWNX in the provided dataset).
 #'
 #' library(lime)
 #' library(text2vec)
