@@ -19,20 +19,20 @@
 #' data(train_sentences)
 #' data(test_sentences)
 #'
-#' get.matrix <- function(text) {
+#' get_matrix <- function(text) {
 #'   it <- itoken(text, progressbar = FALSE)
 #'   create_dtm(it, vectorizer = hash_vectorizer())
 #' }
 #'
-#' dtm_train = get.matrix(train_sentences$text)
+#' dtm_train = get_matrix(train_sentences$text)
 #'
-#' bst <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logistic",
+#' xgb_model <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logistic",
 #'                  eval_metric = "error", nthread = 1),
 #'                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
 #'                  nrounds = 50)
 #'
-#' sentences_to_explain <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 5)
-#' explanations <- lime(sentences_to_explain, bst, get.matrix)(n_labels = 1, n_features = 2)
+#' sentences <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 5) 
+#' explanations <- lime(sentences, xgb_model, get_matrix)(sentences, n_labels = 1, n_features = 2)
 #'
 #' # We can see that many explanations are based
 #' # on the presence of the word `we` in the sentences
@@ -63,7 +63,7 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
     stop(m_type, ' models are not supported yet', call. = FALSE)
   )
 
-  function(cases = x, labels = NULL, n_labels = NULL, n_features, n_permutations = 5000, feature_select = 'auto') {
+  function(cases, labels = NULL, n_labels = NULL, n_features, n_permutations = 5000, feature_select = 'auto') {
     if (m_type == 'regression') {
       if (!is.null(labels) || !is.null(n_labels)) {
         warning('"labels" and "n_labels" arguments are ignored when explaining regression models')

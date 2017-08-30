@@ -46,7 +46,7 @@ test_that("lime text explanation results has expecatated properties", {
   # Check that the model works as expected
   expect_gt(predict(bst, get.matrix(to_explain)), 0.5)
 
-  r <- lime(x = to_explain, model = bst, preprocess = get.matrix)(n_labels = 1, n_features = 2)
+  r <- lime(x = to_explain, model = bst, preprocess = get.matrix)(cases = to_explain, n_labels = 1, n_features = 2)
 
   # Checkes the content of the explanation
   expect_length(r, 12)

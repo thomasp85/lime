@@ -63,19 +63,21 @@ get.features.matrix <- . %>%
   add.lsa(lsa.full.text) %>%
   xgb.DMatrix()
 
-system.time(results <- lime(test_sentences[label == T][1:10, text], bst, get.features.matrix, keep_word_position = FALSE)(n_labels = 1, n_features = 5) %T>%
+sentences_to_explain <- test_sentences[label == T][1:10, text]
+
+system.time(results <- lime(sentences_to_explain, bst, get.features.matrix, keep_word_position = FALSE)(cases = sentences_to_explain, n_labels = 1, n_features = 5) %T>%
   print)
 
-system.time(lime(test_sentences[label == T][1:10, text], bst, get.features.matrix, keep_word_position = FALSE)(n_labels = 1, n_features = 4, feature_select = "tree"))
+system.time(lime(sentences_to_explain, bst, get.features.matrix, keep_word_position = FALSE)(cases = sentences_to_explain, n_labels = 1, n_features = 4, feature_select = "tree"))
 
 plot_text_explanations(results) %>% print()
 
 long_document <- test_sentences[label == T][5, text] %>% rep(50) %>% paste(collapse = " ")
-system.time(lime(long_document, bst, get.features.matrix, keep_word_position = FALSE, feature_select = "highest_weights")(n_labels = 1, n_features = 5) %T>%
+system.time(lime(long_document, bst, get.features.matrix, keep_word_position = FALSE, feature_select = "highest_weights")(cases = long_document, n_labels = 1, n_features = 5) %T>%
               print)
-system.time(lime(long_document, bst, get.features.matrix, keep_word_position = FALSE, feature_select = "tree")(n_labels = 1, n_features = 5) %T>%
+system.time(lime(long_document, bst, get.features.matrix, keep_word_position = FALSE, feature_select = "tree")(cases = long_document, n_labels = 1, n_features = 5) %T>%
               print)
-system.time(lime(long_document, bst, get.features.matrix, keep_word_position = TRUE, feature_select = "tree")(n_labels = 1, n_features = 5) %T>%
+system.time(lime(long_document, bst, get.features.matrix, keep_word_position = TRUE, feature_select = "tree")(cases = long_document, n_labels = 1, n_features = 5) %T>%
               print)
-system.time(lime(long_document, bst, get.features.matrix, keep_word_position = TRUE, feature_select = "highest_weights")(n_labels = 1, n_features = 5) %T>%
+system.time(lime(long_document, bst, get.features.matrix, keep_word_position = TRUE, feature_select = "highest_weights")(cases = long_document, n_labels = 1, n_features = 5) %T>%
               print)
