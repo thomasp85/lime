@@ -58,13 +58,13 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
 
   word_selections_flatten <- flatten(word_selections)
 
-  bow_matrix <- {
+  bow_matrix <- local({
     to_repeat <- lengths(word_selections_flatten)
     rows_index <- seq(word_selections_flatten)
     i <- rep(rows_index, to_repeat)
     j <- flatten_int(word_selections_flatten)
     sparseMatrix(i, j, x = 1)
-  } %>%
+  }) %>%
     set_colnames(tokens)
 
   permutation_candidates <- map_chr(word_selections_flatten, ~ paste(tokens_for_external_model[.x], collapse = " "))
@@ -91,11 +91,11 @@ permute_cases.character <- function(cases, n_permutations, tokenization, keep_wo
        permutation_distances = permutation_distances)
 }
 
-#' Compute distances between a dense vector and a sparse matrix
-#' @param vector dense integer vector
-#' @param sparse_matrix a sparse matrix of permutations
+# Compute distances between a dense vector and a sparse matrix
+# @param vector dense integer vector
+# @param sparse_matrix a sparse matrix of permutations
 cosine_distance_vector_to_matrix_rows  <- function(vector, sparse_matrix) {
-  vector <- vector / c(sqrt(crossprod(vector))) # use c() to avoid a warning
+  vector <- vector / c(sqrt(crossprod(vector))) # uses c() to avoid a warning
   as.vector(sparse_matrix %*% vector / sqrt(rowSumsSq(sparse_matrix)))
 }
 

@@ -14,13 +14,13 @@
 #'
 #' @return A function taking the following arguments:
 #'
-#' * `cases`: Data of the same format as `x` that needs to be explained
+#' * `cases`: Data of the same format as `x` that needs to be explained (not needed for [character] data)
 #' * `labels`: The prediction(s) that needs to be explained
 #' * `n_labels`: Alternative to `labels`, the number of predictions to explain,
 #'   selected by their probability.
 #' * `n_features`: The number of features to use in the explanaition.
 #' * `n_permutations`: The number of permutations to make on each row in `cases`
-#' * `dist_fun`: The distance measure to use for weighting the permutations
+#' * `dist_fun`: The distance measure to use for weighting the permutations (not needed for [character] data)
 #' * `feature_select`: The method to use for feature selection. One of:
 #'   - `"auto"`: If `n_features <= 6` use `"forward_selection"` else use `"highest_weights"`.
 #'   - `"none"`: Ignore `n_features` and use all features.
@@ -30,17 +30,18 @@
 #'     the highest absolute weight.
 #'   - `"lasso_path"`: Fit a lasso model and choose the `n_features` whose lars
 #'     path converge to zero the latest.
+#'   - `"tree"` : Fit a tree to select `n_features` (which needs to be a power of 2). It requires last version of `XGBoost`.
 #'
 #' The return value of the returned function will be a `tibble` encoding the
 #' explanations in a tidy format. The columns are:
 #'
-#' * `case`: The case being explained (the rowname in `cases`)
+#' * `case`: The case being explained (the rowname in `cases`).
 #' * `predict_label`: The label with the highest probability as predicted by `model`
 #' * `predict_prob`: The probability of `predict_label`
 #' * `label`: The label being explained
 #' * `label_prob`: The probability of `label` as predicted by `model`
 #' * `feature`: The feature used for the explanation
-#' * `weight`: The weight of the feature in the explanation
+#' * `weight`: The weight of the feature in the explanation (when `>0` -> helps to get the class)
 #' * `model_r2`: The quality of the model used for the explanation
 #' * `model_intercept`: The intercept of the model used for the explanation
 #'
@@ -63,18 +64,20 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
   }
   x <- x[, apply(x, 2, var) != 0, drop = FALSE]
   res <- lapply(labels, function(label) {
+
     features <- select_features(feature_method, x, y[[label]], weights, n_features)
 
     # glmnet does not allow n_features=1
-    if(n_features==1){
-      x_fit = cbind("(Intercept)" = rep(1, nrow(x)), x[, features, drop=FALSE])
+    if (n_features == 1) {
+      x_fit = cbind("(Intercept)" = rep(1, nrow(x)), x[, features, drop = FALSE])
       fit <- glm.fit(x = x_fit, y = y[[label]],  weights = weights, family = gaussian())
       r2 <- fit$deviance / fit$null.deviance
       coefs <- coef(fit)
       intercept <- coefs[1]
       coefs <- coefs[-1]
     } else {
-      fit <- glmnet(x[, features], y[[label]], weights = weights, alpha = 0, lambda = 0.001)
+      shuffle_order <- sample(length(y[[label]])) # glm is sensitive to the order of the examples
+      fit <- glmnet(x[shuffle_order, features], y[[label]][shuffle_order], weights = weights[shuffle_order], alpha = 0, lambda = 0.001)
       r2 <- fit$dev.ratio
       coefs <- coef(fit)
       intercept <- coefs[1, 1]
@@ -86,7 +89,9 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
   bind_rows(res)
 }
 
-feature_selection_method <- function() c("auto", "none", "forward_selection", "highest_weights", "lasso_path")
+
+feature_selection_method <- function() c("auto", "none", "forward_selection", "highest_weights", "lasso_path", "tree")
+
 
 select_features <- function(method, x, y, weights, n_features) {
   if (n_features >= ncol(x)) {
@@ -104,9 +109,11 @@ select_features <- function(method, x, y, weights, n_features) {
     forward_selection = select_f_fs(x, y, weights, n_features),
     highest_weights = select_f_hw(x, y, weights, n_features),
     lasso_path = select_f_lp(x, y, weights, n_features),
+    tree = select_tree(x, y, weights, n_features),
     stop("Method not implemented", call. = FALSE)
   )
 }
+
 #' @importFrom glmnet cv.glmnet
 select_f_fs <- function(x, y, weights, n_features) {
   features <- c()
@@ -128,19 +135,45 @@ select_f_fs <- function(x, y, weights, n_features) {
   }
   features
 }
-#' @importFrom glmnet cv.glmnet coef.cv.glmnet
+
+#' @importFrom glmnet glmnet coef.cv.glmnet
 #' @importFrom stats coef
 #' @importFrom utils head
 select_f_hw <- function(x, y, weights, n_features) {
-  fit <- glmnet(x, y, weights = weights, alpha = 0, lambda = 0)
-  head(order(abs(coef(fit)[-1, 1] * x[1,]), decreasing = TRUE), n_features)
+  shuffle_order <- sample(length(y)) # glm is sensitive to the order of the examples
+  fit_model <- glmnet(x[shuffle_order,], y[shuffle_order], weights = weights[shuffle_order], alpha = 0, lambda = 0)
+  features <- coef(fit_model)[-1, 1]
+  features_order <- order(abs(features), decreasing = TRUE)
+  head(features_order, n_features)
 }
+
+# Tree model for feature selection
+# Based on the latest XGBoost version.
+# May require the Drat package because of a bug in old version of xgb.model.dt.tree
+# @param x the data as a sparse matrix
+# @param y the labels
+# @param weights distance of the sample with the original datum
+# @param n_features number of features to take
+#' @importFrom utils packageVersion
+select_tree <- function(x, y, weights, n_features) {
+  xgb_version <- packageVersion("xgboost")
+  if (xgb_version < "0.6.4.6") stop("You need to install latest xgboost (version >= \"0.6.4.6\") from Xgboost Drat repository to use tree mode for feature selection.\nMore info on http://xgboost.readthedocs.io/en/latest/R-package/xgboostPresentation.html")
+  number_trees <- max(trunc(log2(n_features)), 2)
+  if (log2(n_features) != number_trees) message("In \"tree\" mode, number of features should be a power of 2 and at least of 4 (= deepness of the binary tree of 2), setting was set to [", n_features, "], it has been replaced by [", 2^number_trees, "].")
+  mat <- xgboost::xgb.DMatrix(x, label = y, weight = weights)
+  bst.bow <- xgboost::xgb.train(params = list(max_depth = number_trees, eta = 1, silent = 1, objective = "binary:logistic"), data = mat, nrounds = 1, lambda = 0)
+  dt <- xgboost::xgb.model.dt.tree(model = bst.bow)
+  selected_words <- head(dt[["Feature"]], n_features)
+  which(colnames(mat) %in% selected_words)
+}
+
 #' @importFrom glmnet glmnet coef.glmnet
 #' @importFrom stats coef
 select_f_lp <- function(x, y, weights, n_features) {
-  fit <- glmnet(x, y, weights = weights, alpha = 1, nlambda=300)
+  shuffle_order <- sample(length(y)) # glm is sensitive to the order of the examples
+  fit <- glmnet(x[shuffle_order,], y[shuffle_order], weights = weights[shuffle_order], alpha = 1, nlambda = 300)
   # In case that no model with correct n_feature size was found
-  if(all(fit$df != n_features)){
+  if (all(fit$df != n_features)) {
     stop(sprintf("No model with %i features found with lasso_path. Try a different method.", n_features))
   }
   has_value <- apply(coef(fit)[-1, ], 2, function(x) x != 0)

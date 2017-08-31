@@ -2,27 +2,58 @@
 #' @param preprocess Function to transform [character] vector to feature
 #' provided to the model to explain
 #' @param tokenization function used to tokenize text
-#' @param keep_word_position set to `TRUE` if to keep order of words. Warning:
+#' @param keep_word_position set to [TRUE] if to keep order of words. Warning:
 #' each word will be replaced by `word_position`.
 #'
-#' TODO : add example
-#' TODO : for keep_word_position, make 2 versions of the text, one with _position and one without for the model to predict
+#' @examples
+#' # Explaining a model based on text data
 #'
-#' @importFrom purrr is_empty is_scalar_logical
-#' @importFrom stringdist seq_dist
+#' # Purpose is to classify sentences from scientific publications
+#' # and find those where the team writes about their own work
+#' # (category OWNX in the provided dataset).
+#'
+#' library(lime)
+#' library(text2vec)
+#' library(xgboost)
+#'
+#' data(train_sentences)
+#' data(test_sentences)
+#'
+#' get_matrix <- function(text) {
+#'   it <- itoken(text, progressbar = FALSE)
+#'   create_dtm(it, vectorizer = hash_vectorizer())
+#' }
+#'
+#' dtm_train = get_matrix(train_sentences$text)
+#'
+#' xgb_model <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logistic",
+#'                  eval_metric = "error", nthread = 1),
+#'                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
+#'                  nrounds = 50)
+#'
+#' sentences <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 5) 
+#' explanations <- lime(sentences, xgb_model, get_matrix)(sentences, n_labels = 1, n_features = 2)
+#'
+#' # We can see that many explanations are based
+#' # on the presence of the word `we` in the sentences
+#' # which makes sense regarding the task.
+#' print(explanations)
+#'
+#' @return Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
+#'
+#' @importFrom dplyr bind_rows
+#' @importFrom purrr is_empty is_scalar_logical is_null flatten_int
 #' @importFrom magrittr %>%
 #' @importFrom assertthat assert_that not_empty is.flag is.number is.count
 #' @export
-lime.character <- function(x, model, preprocess, tokenization = default_tokenize, keep_word_position = FALSE, kernel_width = 25, ...) {
+lime.character <- function(x, model, preprocess, tokenization = default_tokenize, keep_word_position = FALSE, ...) {
 
   assert_that(is.function(preprocess))
   assert_that(is.function(tokenization))
   assert_that(is.flag(keep_word_position))
   assert_that(!is.null(model))
   assert_that(not_empty(x))
-  assert_that(feature_selection_method %in% feature_selection_method())
-  assert_that(is.number(kernel_width))
-  assert_that(kernel_width >= 1)
+  #assert_that(feature_selection_method %in% feature_selection_method())
 
   m_type <- model_type(model)
   output_type <- switch(
@@ -32,33 +63,32 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
     stop(m_type, ' models are not supported yet', call. = FALSE)
   )
 
-  function(cases, labels, n_labels = NULL, n_features, n_permutations = 5000, dist_fun = 'euclidean', feature_select = 'auto') {
+  function(cases, labels = NULL, n_labels = NULL, n_features, n_permutations = 5000, feature_select = 'auto') {
     if (m_type == 'regression') {
-      if (!missing(labels) || !is.null(n_labels)) {
+      if (!is.null(labels) || !is.null(n_labels)) {
         warning('"labels" and "n_labels" arguments are ignored when explaining regression models')
         n_labels <- 1
         labels <- NULL
       }
     }
     assert_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
-    assert_that(n_features >= 1)
     assert_that(is.count(n_features))
     assert_that(is.count(n_permutations))
 
     case_perm <- permute_cases(cases, n_permutations, tokenization, keep_word_position)
     case_res <- preprocess(case_perm$permutations) %>%
-      predict_model(model, type = output_type)
-    case_ind <- split(seq_along(case_perm$permutations), rep(seq_along(case_perm$permutations), each = n_permutations))
-    kernel <- exp_kernel(kernel_width)
+      predict_model(x = model, newdata = ., type = output_type)
+    assert_that(length(case_perm$permutations) == n_permutations * length(cases))
+    case_ind <- length(cases) %>% seq() %>% map(~ rep(.x, n_permutations)) %>% flatten_int() %>% split(seq_along(case_perm$permutations), .)
+
     res <- lapply(seq_along(case_ind), function(ind) {
       i <- case_ind[[ind]]
-      res <- model_permutations(as.matrix(case_perm$tabular[i, ]), case_res[i, ], kernel(case_perm$permutation_distances[i]), labels, n_labels, n_features, feature_select)
-      res$feature_value <- unlist(case_perm[i[1], res$feature])
+      res <- model_permutations(case_perm$tabular[i, ], case_res[i, ], case_perm$permutation_distances[i], labels, n_labels, n_features, feature_select)
+      res$feature_value <- res$feature
       res$feature_desc <- res$feature
-      guess <- which.max(abs(case_res[i[1], ]))
-      res$case <- rownames(cases)[ind]
+      res$case <- ind
       res$label_prob <- unname(as.matrix(case_res[i[1], ]))[match(res$label, colnames(case_res))]
-      res$data <- list(as.list(cases[ind]))
+      res$data <- cases[ind]
       res$prediction <- list(as.list(case_res[i[1], ]))
       res$model_type <- m_type
       res
@@ -70,22 +100,21 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
       res$label_prob <- NULL
       res$prediction <- unlist(res$prediction)
     }
+    if (m_type == 'classification') {
+      attr(res, "original_text") <- cases
+    }
     res
   }
 }
 
 #' Default function to tokenize
 #'
-#' Use simple regex to tokenize a [character] vector. To be used with
-#' [lime.character].
-#'
-#' @param text text to tokenize as a [character] vector
-#'
-#' @return A character vector
-#'
-#' @importFrom stringi stri_split_regex
-#' @importFrom magrittr %>% set_colnames
+#' @description Use simple regex to tokenize a \code{\link{character}} vector. To be used with \code{\link{lime.character}}.
+#' @param text text to tokenize as a \code{\link{character}} vector
+#' @return a \code{\link{character}} vector.
+#' @importFrom stringi stri_split_boundaries
 #' @export
 default_tokenize <- function(text) {
-  stri_split_regex(str = text, pattern = "\\W+", simplify = TRUE) %>% as.character()
+  stri_split_boundaries(text, type = "word", skip_word_none = TRUE) %>%
+    flatten_chr()
 }
