@@ -31,13 +31,16 @@ Imports: glmnet,
     Rcpp,
     RcppEigen,
     assertthat,
-    htmlwidgets
+    htmlwidgets,
+    dplyr
 RoxygenNote: 6.0.1
 Suggests: caret,
     randomForest,
     xgboost,
     testthat,
     mlr,
-    text2vec
+    text2vec,
+    MASS,
+    e1071
 LinkingTo: Rcpp, 
     RcppEigen

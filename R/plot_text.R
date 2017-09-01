@@ -30,8 +30,9 @@
 #'                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
 #'                  nrounds = 50)
 #'
-#' sentences_to_explain <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 5)
-#' explanations <- lime(sentences_to_explain, bst, get.matrix)(n_labels = 1, n_features = 2)
+#' sentences <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 5)
+#' explainer <- lime(sentences, xgb_model, get_matrix)
+#' explanations <- explain(sentences, explainer, n_labels = 1, n_features = 2)
 #'
 #' # We can see that many explanations are based
 #' # on the presence of the word `we` in the sentences
@@ -48,9 +49,9 @@
 #' @importFrom dplyr mutate filter select
 #' @export
 plot_text_explanations <- function(explanations) {
-  assert_that("data.frame" %in% class(explanations))
-  assert_that(!attr(explanations, "original_text") %>% is.null())
-  original_text <- attr(explanations, "original_text")
+  assert_that(is.data.frame(explanations))
+  assert_that(!is.null(explanations$data))
+  original_text <- explanations$data
 
   text_highlighted <- lapply(unique(explanations$case), function(id) {
     current_case_df <- explanations %>% filter(case == id)

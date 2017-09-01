@@ -1,8 +1,7 @@
-#' @describeIn lime Method for explaining tabular data
+#' @rdname lime
 #' @param bin_continuous Should continuous variables be binned when making the explanation
 #' @param n_bins The number of bins for continuous variables if `bin_continuous = TRUE`
 #' @param quantile_bins Should the bins be based on `n_bins` quantiles or spread evenly over the range of the training data
-#' @param kernel_width The width of the kernel used for converting the distances to permutations into weights
 #' @importFrom stats predict sd quantile
 #' @export
 #'
@@ -14,14 +13,14 @@
 #'   iris_train <- iris[-1, 1:4]
 #'   iris_lab <- iris[[5]][-1]
 #'
-#'   # Create Random Forest model on iris data
-#'   model <- train(iris_train, iris_lab, method = 'rf')
+#'   # Create linear discriminant model on iris data
+#'   model <- train(iris_train, iris_lab, method = 'lda')
 #'
 #'   # Create explanation function
-#'   expl <- lime(iris_train, model)
-#'   expl(iris_test, n_labels = 1, n_features = 2)
+#'   explanation <- lime(iris_train, model)
+#'   explain(iris_test, explanation, n_labels = 1, n_features = 2)
 #' }
-lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantile_bins = TRUE, kernel_width = NULL, ...) {
+lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantile_bins = TRUE, ...) {
   explainer <- c(as.list(environment()), list(...))
   explainer$x <- NULL
   explainer$feature_type <- setNames(sapply(x, function(f) {
@@ -57,25 +56,40 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
       factor = table(x[[i]])/nrow(x)
     )
   }), names(x))
-  if (is.null(kernel_width)) {
-    kernel_width <- sqrt(ncol(x)) * 0.75
-  }
-  explainer$kernel <- exp_kernel(kernel_width)
   structure(explainer, class = c('data_frame_explainer', 'explainer', 'list'))
 }
+#' @rdname explain
+#'
+#' @param dist_fun The distance function to use for calculating the distance
+#' from the observation to the permutations. Will be forwarded to
+#' [stats::dist()]
+#' @param kernel_width The width of the exponential kernel that will be used to
+#' convert the distance to a similarity.
+#'
 #' @export
-explain.data.frame <- function(x, explainer, labels, n_labels = NULL,
+explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
                                n_features, n_permutations = 5000,
-                               dist_fun = 'euclidean', feature_select = 'auto') {
+                               feature_select = 'auto', dist_fun = 'euclidean',
+                               kernel_width = NULL, ...) {
   assert_that(is.data_frame_explainer(explainer))
   m_type <- model_type(explainer)
   o_type <- output_type(explainer)
   if (m_type == 'regression') {
-    if (!missing(labels) || !is.null(n_labels)) {
+    if (!is.null(labels) || !is.null(n_labels)) {
       warning('"labels" and "n_labels" arguments are ignored when explaining regression models')
       n_labels <- 1
+      labels <- NULL
     }
   }
+  assert_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
+  assert_that(is.count(n_features))
+  assert_that(is.count(n_permutations))
+
+  if (is.null(kernel_width)) {
+    kernel_width <- sqrt(ncol(x)) * 0.75
+  }
+  kernel <- exp_kernel(kernel_width)
+
   case_perm <- permute_cases(x, n_permutations, explainer$feature_distribution,
                              explainer$bin_continuous, explainer$bin_cuts)
   case_res <- predict_model(explainer$model, case_perm, type = o_type)
@@ -85,7 +99,7 @@ explain.data.frame <- function(x, explainer, labels, n_labels = NULL,
     perms <- numerify(case_perm[i, ], explainer$feature_type, explainer$bin_continuous, explainer$bin_cuts)
     dist <- c(0, dist(feature_scale(perms, explainer$feature_distribution, explainer$feature_type, explainer$bin_continuous),
                       method = dist_fun)[seq_len(n_permutations-1)])
-    res <- model_permutations(as.matrix(perms), case_res[i, ], explainer$kernel(dist), labels, n_labels, n_features, feature_select)
+    res <- model_permutations(as.matrix(perms), case_res[i, ], kernel(dist), labels, n_labels, n_features, feature_select)
     res$feature_value <- unlist(case_perm[i[1], res$feature])
     res$feature_desc <- describe_feature(res$feature, case_perm[i[1], ], explainer$feature_type, explainer$bin_continuous, explainer$bin_cuts)
     guess <- which.max(abs(case_res[i[1], ]))

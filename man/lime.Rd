@@ -10,7 +10,7 @@
   tokenization = default_tokenize, keep_word_position = FALSE, ...)
 
 \method{lime}{data.frame}(x, model, bin_continuous = TRUE, n_bins = 4,
-  quantile_bins = TRUE, kernel_width = NULL, ...)
+  quantile_bins = TRUE, ...)
 
 lime(x, model, ...)
 }
@@ -20,12 +20,12 @@ explained.}
 
 \item{model}{The model whose output should be explained}
 
-\item{preprocess}{Function to transform \link{character} vector to feature
-provided to the model to explain}
+\item{preprocess}{Function to transform a \code{character} vector to the format
+expected from the model.}
 
-\item{tokenization}{function used to tokenize text}
+\item{tokenization}{function used to tokenize text for the permutations.}
 
-\item{keep_word_position}{set to \link{TRUE} if to keep order of words. Warning:
+\item{keep_word_position}{set to \code{TRUE} if to keep order of words. Warning:
 each word will be replaced by \code{word_position}.}
 
 \item{...}{Arguments passed on to methods}
@@ -35,11 +35,10 @@ each word will be replaced by \code{word_position}.}
 \item{n_bins}{The number of bins for continuous variables if \code{bin_continuous = TRUE}}
 
 \item{quantile_bins}{Should the bins be based on \code{n_bins} quantiles or spread evenly over the range of the training data}
-
-\item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
 }
 \value{
-Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
+Return an explainer which can be used together with \code{\link[=explain]{explain()}} to
+explain model predictions.
 
 A function taking the following arguments:
 \itemize{
@@ -84,13 +83,6 @@ that returns a new function that can be used to explain the predictions made
 by black box models. This is a generic with methods for the different data
 types supported by lime.
 }
-\section{Methods (by class)}{
-\itemize{
-\item \code{character}: Method for explaining text data
-
-\item \code{data.frame}: Method for explaining tabular data
-}}
-
 \examples{
 # Explaining a model based on text data
 
@@ -98,7 +90,6 @@ types supported by lime.
 # and find those where the team writes about their own work
 # (category OWNX in the provided dataset).
 
-library(lime)
 library(text2vec)
 library(xgboost)
 
@@ -117,8 +108,9 @@ xgb_model <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logist
                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
                  nrounds = 50)
 
-sentences <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 5) 
-explanations <- lime(sentences, xgb_model, get_matrix)(sentences, n_labels = 1, n_features = 2)
+sentences <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 5)
+explainer <- lime(sentences, xgb_model, get_matrix)
+explanations <- explain(sentences, explainer, n_labels = 1, n_features = 2)
 
 # We can see that many explanations are based
 # on the presence of the word `we` in the sentences
@@ -132,11 +124,11 @@ if (requireNamespace("caret", quietly = TRUE)) {
   iris_train <- iris[-1, 1:4]
   iris_lab <- iris[[5]][-1]
 
-  # Create Random Forest model on iris data
-  model <- train(iris_train, iris_lab, method = 'rf')
+  # Create linear discriminant model on iris data
+  model <- train(iris_train, iris_lab, method = 'lda')
 
   # Create explanation function
-  expl <- lime(iris_train, model)
-  expl(iris_test, n_labels = 1, n_features = 2)
+  explanation <- lime(iris_train, model)
+  explain(iris_test, explanation, n_labels = 1, n_features = 2)
 }
 }
