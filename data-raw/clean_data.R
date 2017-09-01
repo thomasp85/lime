@@ -24,8 +24,8 @@ dt <- rbindlist(dt.list)
 dt[, .N, class.text]
 
 test.rows <- sample.int(nrow(dt), 600)
-train_sentences <- dt[-test.rows]
-test_sentences <- dt[test.rows]
+train_sentences <- dt[-test.rows] %>% setDF() # remove DT wrapper
+test_sentences <- dt[test.rows] %>% setDF()
 
 # save files
 devtools::use_data(stop_words_sentences, overwrite = TRUE, compress = "gzip")

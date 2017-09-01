@@ -7,8 +7,7 @@
 \title{Create a model explanation function based on training data}
 \usage{
 \method{lime}{character}(x, model, preprocess,
-  tokenization = default_tokenize, keep_word_position = FALSE,
-  kernel_width = 25, ...)
+  tokenization = default_tokenize, keep_word_position = FALSE, ...)
 
 \method{lime}{data.frame}(x, model, bin_continuous = TRUE, n_bins = 4,
   quantile_bins = TRUE, kernel_width = NULL, ...)
@@ -26,13 +25,8 @@ provided to the model to explain}
 
 \item{tokenization}{function used to tokenize text}
 
-\item{keep_word_position}{set to \code{TRUE} if to keep order of words. Warning:
-each word will be replaced by \code{word_position}.
-
-TODO : add example
-TODO : for keep_word_position, make 2 versions of the text, one with _position and one without for the model to predict}
-
-\item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
+\item{keep_word_position}{set to \link{TRUE} if to keep order of words. Warning:
+each word will be replaced by \code{word_position}.}
 
 \item{...}{Arguments passed on to methods}
 
@@ -41,17 +35,21 @@ TODO : for keep_word_position, make 2 versions of the text, one with _position a
 \item{n_bins}{The number of bins for continuous variables if \code{bin_continuous = TRUE}}
 
 \item{quantile_bins}{Should the bins be based on \code{n_bins} quantiles or spread evenly over the range of the training data}
+
+\item{kernel_width}{The width of the kernel used for converting the distances to permutations into weights}
 }
 \value{
+Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
+
 A function taking the following arguments:
 \itemize{
-\item \code{cases}: Data of the same format as \code{x} that needs to be explained
+\item \code{cases}: Data of the same format as \code{x} that needs to be explained (not needed for \link{character} data)
 \item \code{labels}: The prediction(s) that needs to be explained
 \item \code{n_labels}: Alternative to \code{labels}, the number of predictions to explain,
 selected by their probability.
 \item \code{n_features}: The number of features to use in the explanaition.
 \item \code{n_permutations}: The number of permutations to make on each row in \code{cases}
-\item \code{dist_fun}: The distance measure to use for weighting the permutations
+\item \code{dist_fun}: The distance measure to use for weighting the permutations (not needed for \link{character} data)
 \item \code{feature_select}: The method to use for feature selection. One of:
 \itemize{
 \item \code{"auto"}: If \code{n_features <= 6} use \code{"forward_selection"} else use \code{"highest_weights"}.
@@ -62,19 +60,20 @@ reached, based on quality of a ridge regression model.
 the highest absolute weight.
 \item \code{"lasso_path"}: Fit a lasso model and choose the \code{n_features} whose lars
 path converge to zero the latest.
+\item \code{"tree"} : Fit a tree to select \code{n_features} (which needs to be a power of 2). It requires last version of \code{XGBoost}.
 }
 }
 
 The return value of the returned function will be a \code{tibble} encoding the
 explanations in a tidy format. The columns are:
 \itemize{
-\item \code{case}: The case being explained (the rowname in \code{cases})
+\item \code{case}: The case being explained (the rowname in \code{cases}).
 \item \code{predict_label}: The label with the highest probability as predicted by \code{model}
 \item \code{predict_prob}: The probability of \code{predict_label}
 \item \code{label}: The label being explained
 \item \code{label_prob}: The probability of \code{label} as predicted by \code{model}
 \item \code{feature}: The feature used for the explanation
-\item \code{weight}: The weight of the feature in the explanation
+\item \code{weight}: The weight of the feature in the explanation (when \code{>0} -> helps to get the class)
 \item \code{model_r2}: The quality of the model used for the explanation
 \item \code{model_intercept}: The intercept of the model used for the explanation
 }
@@ -93,6 +92,39 @@ types supported by lime.
 }}
 
 \examples{
+# Explaining a model based on text data
+
+# Purpose is to classify sentences from scientific publications
+# and find those where the team writes about their own work
+# (category OWNX in the provided dataset).
+
+library(lime)
+library(text2vec)
+library(xgboost)
+
+data(train_sentences)
+data(test_sentences)
+
+get_matrix <- function(text) {
+  it <- itoken(text, progressbar = FALSE)
+  create_dtm(it, vectorizer = hash_vectorizer())
+}
+
+dtm_train = get_matrix(train_sentences$text)
+
+xgb_model <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logistic",
+                 eval_metric = "error", nthread = 1),
+                 xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
+                 nrounds = 50)
+
+sentences <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 5) 
+explanations <- lime(sentences, xgb_model, get_matrix)(sentences, n_labels = 1, n_features = 2)
+
+# We can see that many explanations are based
+# on the presence of the word `we` in the sentences
+# which makes sense regarding the task.
+print(explanations)
+
 # Explaining a model based on tabular data
 if (requireNamespace("caret", quietly = TRUE)) {
   library(caret)

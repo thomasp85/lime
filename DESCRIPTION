@@ -30,12 +30,14 @@ Imports: glmnet,
     purrr,
     Rcpp,
     RcppEigen,
-    assertthat
+    assertthat,
+    htmlwidgets
 RoxygenNote: 6.0.1
 Suggests: caret,
     randomForest,
     xgboost,
     testthat,
-    mlr
+    mlr,
+    text2vec
 LinkingTo: Rcpp, 
     RcppEigen

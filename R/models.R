@@ -53,7 +53,7 @@ predict_model.WrappedModel <- function(x, newdata, type, ...) {
   p
 }
 predict_model.xgb.Booster <- function(x, newdata, type, ...) {
-  p <- data.frame(predict(x, newdata = newdata, ...), stringsAsFactors = FALSE)
+  p <- data.frame(predict(x, newdata = newdata, reshape = TRUE, ...), stringsAsFactors = FALSE)
   if (type == 'raw') {
     names(p) <- 'Response'
   } else if (type == 'prob') {
@@ -89,11 +89,11 @@ model_type.WrappedModel <- function(x, ...) {
 }
 model_type.xgb.Booster <- function(x, ...) {
   obj <- x$params$objective
-  type <- strsplit(obj, ':')[[1]]
+  type <- strsplit(obj, ':')[[1]][1]
   switch(
     type,
     reg = 'regression',
-    binary = ,
+    binary = 'classification',
     multi = 'classification',
     stop('Unsupported model type', call. = FALSE)
   )
