@@ -3,7 +3,6 @@
 #' @param n_bins The number of bins for continuous variables if `bin_continuous = TRUE`
 #' @param quantile_bins Should the bins be based on `n_bins` quantiles or spread evenly over the range of the training data
 #' @param kernel_width The width of the kernel used for converting the distances to permutations into weights
-#' @importFrom dplyr bind_rows
 #' @importFrom stats predict sd quantile
 #' @export
 #'
@@ -97,7 +96,7 @@ explain.data.frame <- function(x, explainer, labels, n_labels = NULL,
     res$model_type <- m_type
     res
   })
-  res <- bind_rows(res)
+  res <- do.call(rbind, res)
   res <- res[, c('model_type', 'case', 'label', 'label_prob', 'model_r2', 'model_intercept', 'feature', 'feature_value', 'feature_weight', 'feature_desc', 'data', 'prediction')]
   if (m_type == 'regression') {
     res$label <- NULL

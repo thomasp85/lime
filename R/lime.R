@@ -53,7 +53,6 @@ lime <- function(x, model, ...) {
 
 #' @importFrom glmnet cv.glmnet coef.cv.glmnet
 #' @importFrom tibble tibble
-#' @importFrom dplyr bind_rows
 #' @importFrom stats coef
 #' @importFrom stats glm.fit
 #' @importFrom stats gaussian
@@ -83,7 +82,7 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
 
     tibble(label = label, feature = names(coefs), feature_weight = unname(coefs), model_r2 = r2, model_intercept = intercept)
   })
-  bind_rows(res)
+  do.call(rbind, res)
 }
 
 feature_selection_method <- function() c("auto", "none", "forward_selection", "highest_weights", "lasso_path")
