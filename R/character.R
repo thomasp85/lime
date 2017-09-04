@@ -39,9 +39,6 @@
 #' # which makes sense regarding the task.
 #' print(explanations)
 #'
-#' @return Return an explainer which can be used together with [explain()] to
-#' explain model predictions.
-#'
 #' @importFrom assertthat assert_that is.flag
 #' @export
 lime.character <- function(x, model, preprocess, tokenization = default_tokenize, keep_word_position = FALSE, ...) {
