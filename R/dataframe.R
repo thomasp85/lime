@@ -1,9 +1,7 @@
-#' @describeIn lime Method for explaining tabular data
+#' @rdname lime
 #' @param bin_continuous Should continuous variables be binned when making the explanation
 #' @param n_bins The number of bins for continuous variables if `bin_continuous = TRUE`
 #' @param quantile_bins Should the bins be based on `n_bins` quantiles or spread evenly over the range of the training data
-#' @param kernel_width The width of the kernel used for converting the distances to permutations into weights
-#' @importFrom dplyr bind_rows
 #' @importFrom stats predict sd quantile
 #' @export
 #'
@@ -15,22 +13,17 @@
 #'   iris_train <- iris[-1, 1:4]
 #'   iris_lab <- iris[[5]][-1]
 #'
-#'   # Create Random Forest model on iris data
-#'   model <- train(iris_train, iris_lab, method = 'rf')
+#'   # Create linear discriminant model on iris data
+#'   model <- train(iris_train, iris_lab, method = 'lda')
 #'
 #'   # Create explanation function
-#'   expl <- lime(iris_train, model)
-#'   expl(iris_test, n_labels = 1, n_features = 2)
+#'   explanation <- lime(iris_train, model)
+#'   explain(iris_test, explanation, n_labels = 1, n_features = 2)
 #' }
-lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantile_bins = TRUE, kernel_width = NULL, ...) {
-  m_type <- model_type(model)
-  output_type <- switch(
-    m_type,
-    classification = 'prob',
-    regression = 'raw',
-    stop(m_type, ' models are not supported yet', call. = FALSE)
-  )
-  feature_type <- setNames(sapply(x, function(f) {
+lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantile_bins = TRUE, ...) {
+  explainer <- c(as.list(environment()), list(...))
+  explainer$x <- NULL
+  explainer$feature_type <- setNames(sapply(x, function(f) {
     if (is.numeric(f)) {
       'numeric'
     } else if (is.character(f)) {
@@ -41,8 +34,8 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
       stop('Unknown feature type', call. = FALSE)
     }
   }), names(x))
-  bin_cuts <- setNames(lapply(seq_along(x), function(i) {
-    if (feature_type[i] == 'numeric') {
+  explainer$bin_cuts <- setNames(lapply(seq_along(x), function(i) {
+    if (explainer$feature_type[i] == 'numeric') {
       if (quantile_bins) {
         quantile(x[[i]], seq(0, 1, length.out = n_bins + 1))
       } else {
@@ -51,11 +44,11 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
       }
     }
   }), names(x))
-  feature_distribution <- setNames(lapply(seq_along(x), function(i) {
+  explainer$feature_distribution <- setNames(lapply(seq_along(x), function(i) {
     switch(
-      feature_type[i],
+      explainer$feature_type[i],
       numeric = if (bin_continuous) {
-        table(cut(x[[i]], unique(bin_cuts[[i]]), labels = FALSE, include.lowest = TRUE))/nrow(x)
+        table(cut(x[[i]], unique(explainer$bin_cuts[[i]]), labels = FALSE, include.lowest = TRUE))/nrow(x)
       } else {
         c(mean = mean(x[[i]], na.rm = TRUE), sd = sd(x[[i]], na.rm = TRUE))
       },
@@ -63,46 +56,70 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
       factor = table(x[[i]])/nrow(x)
     )
   }), names(x))
+  structure(explainer, class = c('data_frame_explainer', 'explainer', 'list'))
+}
+#' @rdname explain
+#'
+#' @param dist_fun The distance function to use for calculating the distance
+#' from the observation to the permutations. Will be forwarded to
+#' [stats::dist()]
+#' @param kernel_width The width of the exponential kernel that will be used to
+#' convert the distance to a similarity.
+#'
+#' @export
+explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
+                               n_features, n_permutations = 5000,
+                               feature_select = 'auto', dist_fun = 'euclidean',
+                               kernel_width = NULL, ...) {
+  assert_that(is.data_frame_explainer(explainer))
+  m_type <- model_type(explainer)
+  o_type <- output_type(explainer)
+  if (m_type == 'regression') {
+    if (!is.null(labels) || !is.null(n_labels)) {
+      warning('"labels" and "n_labels" arguments are ignored when explaining regression models')
+      n_labels <- 1
+      labels <- NULL
+    }
+  }
+  assert_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
+  assert_that(is.count(n_features))
+  assert_that(is.count(n_permutations))
+
   if (is.null(kernel_width)) {
     kernel_width <- sqrt(ncol(x)) * 0.75
   }
   kernel <- exp_kernel(kernel_width)
-  function(cases, labels, n_labels = NULL, n_features, n_permutations = 5000, dist_fun = 'euclidean', feature_select = 'auto') {
-    if (m_type == 'regression') {
-      if (!missing(labels) || !is.null(n_labels)) {
-        warning('"labels" and "n_labels" arguments are ignored when explaining regression models')
-        n_labels <- 1
-      }
-    }
-    case_perm <- permute_cases(cases, n_permutations, feature_distribution, bin_continuous, bin_cuts)
-    case_res <- predict_model(model, case_perm, type = output_type)
-    case_ind <- split(seq_len(nrow(case_perm)), rep(seq_len(nrow(cases)), each = n_permutations))
-    res <- lapply(seq_along(case_ind), function(ind) {
-      i <- case_ind[[ind]]
-      perms <- numerify(case_perm[i, ], feature_type, bin_continuous, bin_cuts)
-      dist <- c(0, dist(feature_scale(perms, feature_distribution, feature_type, bin_continuous),
-                        method = dist_fun)[seq_len(n_permutations-1)])
-      res <- model_permutations(as.matrix(perms), case_res[i, ], kernel(dist), labels, n_labels, n_features, feature_select)
-      res$feature_value <- unlist(case_perm[i[1], res$feature])
-      res$feature_desc <- describe_feature(res$feature, case_perm[i[1], ], feature_type, bin_continuous, bin_cuts)
-      guess <- which.max(abs(case_res[i[1], ]))
-      res$case <- rownames(cases)[ind]
-      res$label_prob <- unname(as.matrix(case_res[i[1], ]))[match(res$label, colnames(case_res))]
-      res$data <- list(as.list(case_perm[i[1], ]))
-      res$prediction <- list(as.list(case_res[i[1], ]))
-      res$model_type <- m_type
-      res
-    })
-    res <- bind_rows(res)
-    res <- res[, c('model_type', 'case', 'label', 'label_prob', 'model_r2', 'model_intercept', 'feature', 'feature_value', 'feature_weight', 'feature_desc', 'data', 'prediction')]
-    if (m_type == 'regression') {
-      res$label <- NULL
-      res$label_prob <- NULL
-      res$prediction <- unlist(res$prediction)
-    }
+
+  case_perm <- permute_cases(x, n_permutations, explainer$feature_distribution,
+                             explainer$bin_continuous, explainer$bin_cuts)
+  case_res <- predict_model(explainer$model, case_perm, type = o_type)
+  case_ind <- split(seq_len(nrow(case_perm)), rep(seq_len(nrow(x)), each = n_permutations))
+  res <- lapply(seq_along(case_ind), function(ind) {
+    i <- case_ind[[ind]]
+    perms <- numerify(case_perm[i, ], explainer$feature_type, explainer$bin_continuous, explainer$bin_cuts)
+    dist <- c(0, dist(feature_scale(perms, explainer$feature_distribution, explainer$feature_type, explainer$bin_continuous),
+                      method = dist_fun)[seq_len(n_permutations-1)])
+    res <- model_permutations(as.matrix(perms), case_res[i, ], kernel(dist), labels, n_labels, n_features, feature_select)
+    res$feature_value <- unlist(case_perm[i[1], res$feature])
+    res$feature_desc <- describe_feature(res$feature, case_perm[i[1], ], explainer$feature_type, explainer$bin_continuous, explainer$bin_cuts)
+    guess <- which.max(abs(case_res[i[1], ]))
+    res$case <- rownames(x)[ind]
+    res$label_prob <- unname(as.matrix(case_res[i[1], ]))[match(res$label, colnames(case_res))]
+    res$data <- list(as.list(case_perm[i[1], ]))
+    res$prediction <- list(as.list(case_res[i[1], ]))
+    res$model_type <- m_type
     res
+  })
+  res <- do.call(rbind, res)
+  res <- res[, c('model_type', 'case', 'label', 'label_prob', 'model_r2', 'model_intercept', 'feature', 'feature_value', 'feature_weight', 'feature_desc', 'data', 'prediction')]
+  if (m_type == 'regression') {
+    res$label <- NULL
+    res$label_prob <- NULL
+    res$prediction <- unlist(res$prediction)
   }
+  res
 }
+is.data_frame_explainer <- function(x) inherits(x, 'data_frame_explainer')
 #' @importFrom stats setNames
 numerify <- function(x, type, bin_continuous, bin_cuts) {
   setNames(as.data.frame(lapply(seq_along(x), function(i) {

@@ -1,10 +1,12 @@
-library(lime)
 
 context("Permutations")
+library(caret)
+library(xgboost)
+library(text2vec)
+
+data(train_sentences)
 
 test_that("lime explanation only produces one entry per case and feature", {
-
-  library(caret)
   # Split up the data set
   iris_train <- iris[, 1:4]
   iris_lab <- iris[[5]]
@@ -13,20 +15,14 @@ test_that("lime explanation only produces one entry per case and feature", {
   model <- train(iris_train, iris_lab, method = 'rf')
 
   # Create explanation function
-  explain <- lime(iris_train, model)
+  explainer <- lime(iris_train, model)
 
   # Explain new observation. This should yield a tibble with one row, because it's one case, one feature, one label
-  explanations <- explain(iris_train[1,], n_labels = 1, n_features = 1, feature_select = 'forward_selection')
+  explanations <- explain(iris_train[1,], explainer, n_labels = 1, n_features = 1, feature_select = 'forward_selection')
   expect_equal(nrow(explanations), 1)
 })
 
 test_that("lime text explanation results has expecatated properties", {
-
-  library(xgboost)
-  library(text2vec)
-
-  data(train_sentences)
-
   # Tokenize data
   get.matrix <- function(text) {
     it <- itoken(text, progressbar = FALSE)
@@ -46,11 +42,12 @@ test_that("lime text explanation results has expecatated properties", {
   # Check that the model works as expected
   expect_gt(predict(bst, get.matrix(to_explain)), 0.5)
 
-  r <- lime(x = to_explain, model = bst, preprocess = get.matrix)(cases = to_explain, n_labels = 1, n_features = 2)
+  explainer <- lime(x = to_explain, model = bst, preprocess = get.matrix)
+  explanation <- explain(to_explain, explainer, n_labels = 1, n_features = 2)
 
   # Checkes the content of the explanation
-  expect_length(r, 12)
-  expect_equal(nrow(r), 2)
-  expect_type(r, "list")
-  expect_true("our" %in% r$feature)
+  expect_length(explanation, 12)
+  expect_equal(nrow(explanation), 2)
+  expect_type(explanation, "list")
+  expect_true("our" %in% explanation$feature)
 })

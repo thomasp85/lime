@@ -39,8 +39,9 @@ bst <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logistic",
                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
                  nrounds = 50)
 
-sentences_to_explain <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 5)
-explanations <- lime(sentences_to_explain, bst, get.matrix)(n_labels = 1, n_features = 2)
+sentences <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 5)
+explainer <- lime(sentences, xgb_model, get_matrix)
+explanations <- explain(sentences, explainer, n_labels = 1, n_features = 2)
 
 # We can see that many explanations are based
 # on the presence of the word `we` in the sentences

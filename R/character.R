@@ -1,8 +1,8 @@
-#' @describeIn lime Method for explaining text data
-#' @param preprocess Function to transform [character] vector to feature
-#' provided to the model to explain
-#' @param tokenization function used to tokenize text
-#' @param keep_word_position set to [TRUE] if to keep order of words. Warning:
+#' @rdname lime
+#' @param preprocess Function to transform a `character` vector to the format
+#' expected from the model.
+#' @param tokenization function used to tokenize text for the permutations.
+#' @param keep_word_position set to `TRUE` if to keep order of words. Warning:
 #' each word will be replaced by `word_position`.
 #'
 #' @examples
@@ -12,7 +12,6 @@
 #' # and find those where the team writes about their own work
 #' # (category OWNX in the provided dataset).
 #'
-#' library(lime)
 #' library(text2vec)
 #' library(xgboost)
 #'
@@ -31,82 +30,84 @@
 #'                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
 #'                  nrounds = 50)
 #'
-#' sentences <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 5) 
-#' explanations <- lime(sentences, xgb_model, get_matrix)(sentences, n_labels = 1, n_features = 2)
+#' sentences <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 5)
+#' explainer <- lime(sentences, xgb_model, get_matrix)
+#' explanations <- explain(sentences, explainer, n_labels = 1, n_features = 2)
 #'
 #' # We can see that many explanations are based
 #' # on the presence of the word `we` in the sentences
 #' # which makes sense regarding the task.
 #' print(explanations)
 #'
-#' @return Return a function. To make only one call you can perform a currying like in \code{lime(...)(...)}.
-#'
-#' @importFrom dplyr bind_rows
-#' @importFrom purrr is_empty is_scalar_logical is_null flatten_int
-#' @importFrom magrittr %>%
-#' @importFrom assertthat assert_that not_empty is.flag is.number is.count
+#' @importFrom assertthat assert_that is.flag
 #' @export
 lime.character <- function(x, model, preprocess, tokenization = default_tokenize, keep_word_position = FALSE, ...) {
-
   assert_that(is.function(preprocess))
   assert_that(is.function(tokenization))
   assert_that(is.flag(keep_word_position))
   assert_that(!is.null(model))
-  assert_that(not_empty(x))
   #assert_that(feature_selection_method %in% feature_selection_method())
 
-  m_type <- model_type(model)
-  output_type <- switch(
-    m_type,
-    classification = 'prob',
-    regression = 'raw',
-    stop(m_type, ' models are not supported yet', call. = FALSE)
-  )
+  explainer <- c(as.list(environment()), list(...))
+  explainer$x <- NULL
 
-  function(cases, labels = NULL, n_labels = NULL, n_features, n_permutations = 5000, feature_select = 'auto') {
-    if (m_type == 'regression') {
-      if (!is.null(labels) || !is.null(n_labels)) {
-        warning('"labels" and "n_labels" arguments are ignored when explaining regression models')
-        n_labels <- 1
-        labels <- NULL
-      }
-    }
-    assert_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
-    assert_that(is.count(n_features))
-    assert_that(is.count(n_permutations))
-
-    case_perm <- permute_cases(cases, n_permutations, tokenization, keep_word_position)
-    case_res <- preprocess(case_perm$permutations) %>%
-      predict_model(x = model, newdata = ., type = output_type)
-    assert_that(length(case_perm$permutations) == n_permutations * length(cases))
-    case_ind <- length(cases) %>% seq() %>% map(~ rep(.x, n_permutations)) %>% flatten_int() %>% split(seq_along(case_perm$permutations), .)
-
-    res <- lapply(seq_along(case_ind), function(ind) {
-      i <- case_ind[[ind]]
-      res <- model_permutations(case_perm$tabular[i, ], case_res[i, ], case_perm$permutation_distances[i], labels, n_labels, n_features, feature_select)
-      res$feature_value <- res$feature
-      res$feature_desc <- res$feature
-      res$case <- ind
-      res$label_prob <- unname(as.matrix(case_res[i[1], ]))[match(res$label, colnames(case_res))]
-      res$data <- cases[ind]
-      res$prediction <- list(as.list(case_res[i[1], ]))
-      res$model_type <- m_type
-      res
-    })
-    res <- bind_rows(res)
-    res <- res[, c('model_type', 'case', 'label', 'label_prob', 'model_r2', 'model_intercept', 'feature', 'feature_value', 'feature_weight', 'feature_desc', 'data', 'prediction')]
-    if (m_type == 'regression') {
-      res$label <- NULL
-      res$label_prob <- NULL
-      res$prediction <- unlist(res$prediction)
-    }
-    if (m_type == 'classification') {
-      attr(res, "original_text") <- cases
-    }
-    res
-  }
+  structure(explainer, class = c('text_explainer', 'explainer', 'list'))
 }
+#' @rdname explain
+#'
+#' @param single_explanation A boolean indicating whether to pool all text in
+#' `x` into a single explanation.
+#'
+#' @importFrom purrr flatten_int map
+#' @importFrom magrittr %>%
+#' @importFrom assertthat assert_that is.count
+#' @export
+explain.character <- function(x, explainer, labels = NULL, n_labels = NULL,
+                              n_features, n_permutations = 5000,
+                              feature_select = 'auto',
+                              single_explanation = FALSE, ...) {
+  assert_that(is.text_explainer(explainer))
+  m_type <- model_type(explainer)
+  o_type <- output_type(explainer)
+  if (m_type == 'regression') {
+    if (!is.null(labels) || !is.null(n_labels)) {
+      warning('"labels" and "n_labels" arguments are ignored when explaining regression models')
+      n_labels <- 1
+      labels <- NULL
+    }
+  }
+  assert_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
+  assert_that(is.count(n_features))
+  assert_that(is.count(n_permutations))
 
+  case_perm <- permute_cases(x, n_permutations, explainer$tokenization, explainer$keep_word_position)
+  case_res <- explainer$preprocess(case_perm$permutations) %>%
+    predict_model(x = explainer$model, newdata = ., type = o_type)
+  assert_that(length(case_perm$permutations) == n_permutations * length(x))
+  case_ind <- length(x) %>% seq() %>% map(~ rep(.x, n_permutations)) %>% flatten_int() %>% split(seq_along(case_perm$permutations), .)
+
+  res <- lapply(seq_along(case_ind), function(ind) {
+    i <- case_ind[[ind]]
+    res <- model_permutations(case_perm$tabular[i, ], case_res[i, ], case_perm$permutation_distances[i], labels, n_labels, n_features, feature_select)
+    res$feature_value <- res$feature
+    res$feature_desc <- res$feature
+    res$case <- ind
+    res$label_prob <- unname(as.matrix(case_res[i[1], ]))[match(res$label, colnames(case_res))]
+    res$data <- x[ind]
+    res$prediction <- list(as.list(case_res[i[1], ]))
+    res$model_type <- m_type
+    res
+  })
+  res <- do.call(rbind, res)
+  res <- res[, c('model_type', 'case', 'label', 'label_prob', 'model_r2', 'model_intercept', 'feature', 'feature_value', 'feature_weight', 'feature_desc', 'data', 'prediction')]
+  if (m_type == 'regression') {
+    res$label <- NULL
+    res$label_prob <- NULL
+    res$prediction <- unlist(res$prediction)
+  }
+  res
+}
+is.text_explainer <- function(x) inherits(x, 'text_explainer')
 #' Default function to tokenize
 #'
 #' @description Use simple regex to tokenize a \code{\link{character}} vector. To be used with \code{\link{lime.character}}.
