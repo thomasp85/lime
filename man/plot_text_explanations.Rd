@@ -27,14 +27,14 @@ library(xgboost)
 data(train_sentences)
 data(test_sentences)
 
-get.matrix <- function(text) {
+get_matrix <- function(text) {
   it <- itoken(text, progressbar = FALSE)
   create_dtm(it, vectorizer = hash_vectorizer())
 }
 
-dtm_train = get.matrix(train_sentences$text)
+dtm_train = get_matrix(train_sentences$text)
 
-bst <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logistic",
+xgb_model <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logistic",
                  eval_metric = "error", nthread = 1),
                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
                  nrounds = 50)

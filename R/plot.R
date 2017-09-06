@@ -25,10 +25,10 @@
 #' model <- train(iris_train, iris_lab, method = 'rf')
 #'
 #' # Create explanation function
-#' expl <- lime(iris_train, model)
-#' explanation <- expl(iris_test, n_labels = 1, n_features = 2)
+#' explanation <- lime(iris_train, model)
+#' df <- explain(iris_test, explanation, n_labels = 1, n_features = 2)
 #'
-#' plot_features(explanation)
+#' plot_features(df)
 #' }
 plot_features <- function(explanation, ncol = 2) {
   type_pal <- c('Supports', 'Contradicts')
