@@ -34,7 +34,7 @@ test_that("there is no empty generated text", {
   generated_documents <- lime:::permute_cases.character(cases = "this is a test ", n_permutations = 5e3, tokenization = default_tokenize, keep_word_position = FALSE)
 
   # There is no empty permutation
-  expect_true(all(lapply(generated_documents$permutations, function(x) unlist(nchar(x))) == 0))
+  expect_true(all(sapply(generated_documents$permutations, nchar, USE.NAMES = FALSE) > 0))
 })
 
 test_that("Default tokenizer works for multiple documents", {
