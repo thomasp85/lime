@@ -45,25 +45,26 @@
 #'
 #' @importFrom assertthat assert_that
 #' @importFrom htmlwidgets createWidget
-#' @importFrom dplyr mutate filter select
 #' @export
 plot_text_explanations <- function(explanations) {
   assert_that(is.data.frame(explanations))
   assert_that(!is.null(explanations$data))
   original_text <- explanations$data
 
-  text_highlighted <- lapply(unique(explanations$case), function(id) {
-    current_case_df <- explanations %>% filter(case == id)
-    original_text <- current_case_df %>% select(data) %>% unique
-    results_percent <- current_case_df %>% mutate(weight_percent = abs(feature_weight) / sum(abs(feature_weight)),
-                                                 sign = ifelse(feature_weight > 0, 1, -1),
-                                                 code_level = sign * (1 + weight_percent %/% 0.2),
-                                                 color = sapply(code_level, function(x) get_color_code(x)))
-
-    get_html_span(original_text, results_percent)
-  }) %>%
-    flatten_chr() %>%
-    paste(collapse = "<br/><br/>\n")
+  text_highlighted_raw <- lapply(unique(explanations$case), function(id) {
+    current_case_df <- explanations[explanations$case == id,]
+    original_text <- unique(current_case_df[["data"]])
+    
+    current_case_df$weight_percent <- abs(current_case_df$feature_weight) / sum(abs(current_case_df$feature_weight))
+    
+    current_case_df$sign <- ifelse(current_case_df$feature_weight > 0, 1, -1)
+    current_case_df$code_level <- current_case_df$sign * (1 + current_case_df$weight_percent %/% 0.2)
+    current_case_df$color <- sapply(current_case_df$code_level, get_color_code)
+  
+    get_html_span(original_text, current_case_df)
+  })
+  
+  text_highlighted <- paste(unlist(text_highlighted_raw), collapse = "<br/><br/>\n")
 
   createWidget("plot_text_explanations", list(html = text_highlighted),
                               sizingPolicy = htmlwidgets::sizingPolicy(
@@ -73,13 +74,11 @@ plot_text_explanations <- function(explanations) {
                               package = "lime")
 }
 
-#' @importFrom purrr map_if map
-#' @importFrom magrittr %>%
-get_html_span <- function(text, results_percent) text %>%
-  default_tokenize() %>%
-  map_if(.p = ~ .x %in% results_percent$feature, .f = ~ paste0("<span class='", filter(results_percent, feature == .x) %>% select(color) %>% as.character(), "'>", .x, "</span>")) %>%
-  paste(collapse = " ")
-
+get_html_span <- function(text, current_case_df) {
+  tokenized_text <- default_tokenize(text)
+  tokenized_text_with_span <- add_span_tag(current_case_df, tokenized_text)
+  paste(tokenized_text_with_span, collapse = " ")
+}
 
 get_color_code <- function(code_level) {
   switch(as.character(code_level),
@@ -95,6 +94,12 @@ get_color_code <- function(code_level) {
          "4" = "positive_4",
          "5" = "positive_5",
          "6" = "positive_5") # for 100%
+}
+
+add_span_tag <- function(results_percent, tokenized_text) {
+  colors <- sapply(tokenized_text, function(word) if(word %in% results_percent$feature) as.character(results_percent[results_percent$feature == word, "color"]) else "", USE.NAMES = FALSE)
+  
+  ifelse(colors == "", tokenized_text, paste0("<span class='", colors, "'>", tokenized_text, "</span>"))
 }
 
 globalVariables(c("feature_weight", "feature", "weight_percent", "code_level", "case", "data"))
