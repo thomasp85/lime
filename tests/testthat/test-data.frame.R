@@ -17,4 +17,3 @@ test_that("lime explanation only produces one entry per case and feature", {
   explanations <- explain(iris_train[1,], explainer, n_labels = 1, n_features = 1, feature_select = 'forward_selection')
   expect_equal(nrow(explanations), 1)
 })
-

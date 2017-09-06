@@ -28,13 +28,14 @@ test_that("lime text explanation results has expecatated properties", {
   explainer <- lime(x = to_explain, model = xgb_model, preprocess = get_matrix)
   explanation <- explain(to_explain, explainer, n_labels = 1, n_features = 2)
 
-  # Checkes the content of the explanation
+  # Checkes the content of the explanation - 1 example
   expect_length(explanation, 12)
   expect_equal(nrow(explanation), 2)
   expect_type(explanation, "list")
   expect_true("our" %in% explanation$feature)
   expect_gt(sum(explanation[explanation$feature == "our", "feature_weight"]), 0)
 
+  # Checkes the content of the explanation - several examples
   sentences <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 5)
   explainer_bis <- lime(sentences, xgb_model, get_matrix)
   explanation_bis <- explain(sentences, explainer, n_labels = 1, n_features = 2)
