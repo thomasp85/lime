@@ -1,12 +1,9 @@
-library(magrittr)
-library(purrr)
-
 context("Text permutations")
 
 test_that("properties of permutations are as expected", {
   set.seed(2000)
-  original_document = runif(20, 0, 30) %>% as.integer() %>% unique()
-  number_permutations = 1e5
+  original_document <- unique(as.integer(runif(20, 0, 30)))
+  number_permutations <- 1e5
   # Generate permutations
   permutations <- lime:::get_index_permutations(original_document, number_permutations)
 
@@ -20,7 +17,7 @@ test_that("properties of permutations are as expected", {
   expect_true(all(lengths(permutations) <= length(original_document)))
 
   # Permutations doesn't contain duplicates
-  expect_true(permutations %>% map(~ all(!duplicated(.))) %>% flatten_lgl() %>% all)
+  expect_true(all(unlist(lapply(permutations, function(x) all(!duplicated(x))))))
 
   # There is no empty permutation
   expect_true(sum(lengths(permutations) == 0) == 0)
@@ -37,8 +34,7 @@ test_that("there is no empty generated text", {
   generated_documents <- lime:::permute_cases.character(cases = "this is a test ", n_permutations = 5e3, tokenization = default_tokenize, keep_word_position = FALSE)
 
   # There is no empty permutation
-  expect_true(sum(generated_documents$permutations %>% map(~ nchar(.x)) %>% flatten_int() == 0) == 0)
-
+  expect_true(all(lapply(generated_documents$permutations, function(x) unlist(nchar(x))) == 0))
 })
 
 test_that("Default tokenizer works for multiple documents", {
