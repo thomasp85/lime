@@ -3,7 +3,7 @@
 lime
 ====
 
-[![Travis-CI Build Status](https://travis-ci.org/thomasp85/lime.svg?branch=master)](https://travis-ci.org/thomasp85/lime) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/thomasp85/lime?branch=master&svg=true)](https://ci.appveyor.com/project/thomasp85/lime) [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/lime)](https://CRAN.R-project.org/package=lime) [![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/lime)](https://CRAN.R-project.org/package=lime)
+[![Travis-CI Build Status](https://travis-ci.org/thomasp85/lime.svg?branch=master)](https://travis-ci.org/thomasp85/lime) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/thomasp85/lime?branch=master&svg=true)](https://ci.appveyor.com/project/thomasp85/lime) [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/lime)](https://CRAN.R-project.org/package=lime) [![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/lime)](https://CRAN.R-project.org/package=lime) [![Coverage Status](https://img.shields.io/codecov/c/github/thomasp85/lime/master.svg)](https://codecov.io/github/thomasp85/lime?branch=master)
 
 *This is an R port of the Python lime package (<https://github.com/marcotcr/lime>) developed by the authors of the lime (Local Interpretable Model-agnostic Explanations) approach for black-box model explanations. All credits goes to the original developers.*
 
@@ -42,12 +42,12 @@ head(explanation)
 #> # A tibble: 6 x 12
 #>       model_type  case  label label_prob  model_r2 model_intercept
 #>            <chr> <chr>  <chr>      <dbl>     <dbl>           <dbl>
-#> 1 classification     1 setosa          1 0.7356599       0.1032045
-#> 2 classification     1 setosa          1 0.7356599       0.1032045
-#> 3 classification     2 setosa          1 0.7183936       0.1076762
-#> 4 classification     2 setosa          1 0.7183936       0.1076762
-#> 5 classification     3 setosa          1 0.7303043       0.1033206
-#> 6 classification     3 setosa          1 0.7303043       0.1033206
+#> 1 classification     1 setosa          1 0.7174600       0.1080540
+#> 2 classification     1 setosa          1 0.7174600       0.1080540
+#> 3 classification     2 setosa          1 0.7142665       0.1100361
+#> 4 classification     2 setosa          1 0.7142665       0.1100361
+#> 5 classification     3 setosa          1 0.7094660       0.1102757
+#> 6 classification     3 setosa          1 0.7094660       0.1102757
 #> # ... with 6 more variables: feature <chr>, feature_value <dbl>,
 #> #   feature_weight <dbl>, feature_desc <chr>, data <list>,
 #> #   prediction <list>

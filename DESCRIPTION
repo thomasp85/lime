@@ -41,6 +41,7 @@ Suggests: caret,
     mlr,
     text2vec,
     MASS,
-    e1071
+    e1071,
+    covr
 LinkingTo: Rcpp, 
     RcppEigen
