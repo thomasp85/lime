@@ -58,8 +58,6 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
 #' @param single_explanation A boolean indicating whether to pool all text in
 #' `x` into a single explanation.
 #'
-#' @importFrom purrr flatten_int map
-#' @importFrom magrittr %>%
 #' @importFrom assertthat assert_that is.count
 #' @export
 explain.character <- function(x, explainer, labels = NULL, n_labels = NULL,
@@ -81,11 +79,16 @@ explain.character <- function(x, explainer, labels = NULL, n_labels = NULL,
   assert_that(is.count(n_permutations))
 
   case_perm <- permute_cases(x, n_permutations, explainer$tokenization, explainer$keep_word_position)
-  case_res <- explainer$preprocess(case_perm$permutations) %>%
-    predict_model(x = explainer$model, newdata = ., type = o_type)
+  permutations_tokenized <- explainer$preprocess(case_perm$permutations)
+  case_res <- predict_model(x = explainer$model, newdata = permutations_tokenized, type = o_type)
   assert_that(length(case_perm$permutations) == n_permutations * length(x))
-  case_ind <- length(x) %>% seq() %>% map(~ rep(.x, n_permutations)) %>% flatten_int() %>% split(seq_along(case_perm$permutations), .)
-
+  
+  case_ind <- local({
+    case_range <- seq(x)
+    case_ids <- unlist(lapply(case_range, rep, n_permutations))
+    split(seq_along(case_perm$permutations), case_ids)
+  })
+  
   res <- lapply(seq_along(case_ind), function(ind) {
     i <- case_ind[[ind]]
     res <- model_permutations(case_perm$tabular[i, ], case_res[i, ], case_perm$permutation_distances[i], labels, n_labels, n_features, feature_select)
@@ -116,6 +119,5 @@ is.text_explainer <- function(x) inherits(x, 'text_explainer')
 #' @importFrom stringi stri_split_boundaries
 #' @export
 default_tokenize <- function(text) {
-  stri_split_boundaries(text, type = "word", skip_word_none = TRUE) %>%
-    flatten_chr()
+  unlist(stri_split_boundaries(text, type = "word", skip_word_none = TRUE))
 }

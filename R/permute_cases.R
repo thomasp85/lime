@@ -23,66 +23,72 @@ permute_cases.data.frame <- function(cases, n_permutations, feature_distribution
 }
 
 #' @importFrom Matrix Matrix sparseMatrix
-#' @importFrom purrr map map2 flatten_chr set_names flatten flatten_int map_chr flatten_dbl accumulate
 #' @importFrom stringdist seq_dist
-#' @importFrom magrittr %>% set_colnames
 permute_cases.character <- function(cases, n_permutations, tokenization, keep_word_position) {
-  documents_tokens <- map(cases, tokenization) %>%
-  {
-    d_tokens <- .
-    map2(
-      d_tokens,
-      lengths(d_tokens) %>%
-        cumsum() %>%
-        head(., length(.) - 1) %>%
-        c(0, .),
-      ~ {
-        if (keep_word_position)
-          paste0(.x, "_",  seq_along(.x) + .y) %>% set_names(.x)
-        else
-          unique(.x) %>% set_names(., .)
-      }
-    )
-  }
+  documents_tokens <- local({
+    tokenized_cases <- lapply(cases, tokenization)
+    token_end_positions <- cumsum(lengths(tokenized_cases))
+    token_start_positions <-  c(0, head(token_end_positions, -1))
 
-  tokens <- documents_tokens %>%
-    flatten_chr() %>%
-    {.[!duplicated(.)]} # unique() would remove names
+    get_token_position <- function(tokenized_case, token_start_position) {
+      if (keep_word_position) {
+        tokens <- paste0(tokenized_case, "_",  seq_along(tokenized_case) + token_start_position)
+        names(tokens) <- tokenized_case
+        tokens
+      } else {
+        tokens <- unique(tokenized_case)
+        names(tokens) <- tokens
+        tokens
+      }
+    }
+
+    mapply(get_token_position, tokenized_cases, token_start_positions, SIMPLIFY = FALSE, USE.NAMES = FALSE)
+  })
+
+  tokens <- local({
+    documents_tokens_flatten <- unlist(documents_tokens)
+    # unique() would remove names
+    documents_tokens_flatten[!duplicated(documents_tokens_flatten)]
+  })
 
   tokens_for_external_model <- names(tokens)
 
-  documents_tokens <- documents_tokens %>%
-    map(~ which(tokens %in% .))
+  documents_tokens <- lapply(documents_tokens, function(x) which(tokens %in% x))
 
-  word_selections <- map(documents_tokens, ~ get_index_permutations(.x, n_permutations))
+  word_selections <- lapply(documents_tokens, function(x) get_index_permutations(x, n_permutations))
 
-  word_selections_flatten <- flatten(word_selections)
+  word_selections_flatten <- unlist(word_selections, recursive = FALSE)
 
   bow_matrix <- local({
     to_repeat <- lengths(word_selections_flatten)
     rows_index <- seq(word_selections_flatten)
     i <- rep(rows_index, to_repeat)
-    j <- flatten_int(word_selections_flatten)
+    j <- unlist(word_selections_flatten)
     sparseMatrix(i, j, x = 1)
-  }) %>%
-    set_colnames(tokens)
+  })
 
-  permutation_candidates <- map_chr(word_selections_flatten, ~ paste(tokens_for_external_model[.x], collapse = " "))
+  colnames(bow_matrix) <- tokens
+
+  permutation_candidates <- sapply(word_selections_flatten, function(x) paste(tokens_for_external_model[x], collapse = " "), USE.NAMES = FALSE)
 
   word_indexes_2_logical_vector <- function(doc) seq(tokens) %in% doc
 
-  bow_indexes_per_document <- length(cases) %>%
-    rep(n_permutations, .) %>%
-    purrr::accumulate(`+`) %>%
-    map2(c(1, head(., -1) + 1), ., c)
+  bow_indexes_per_document <-  local({
+    document_end_positions <- cumsum(rep(n_permutations, length(cases)))
+    document_start_positions <- c(1, head(document_end_positions, -1) + 1)
+    mapply(c, document_start_positions, document_end_positions, SIMPLIFY = FALSE, USE.NAMES = FALSE)
+  })
 
-  permutation_distances <- map2(
-    documents_tokens,
-    bow_indexes_per_document,
-    ~ word_indexes_2_logical_vector(.x) %>%
-      cosine_distance_vector_to_matrix_rows(bow_matrix[.y[1]:.y[2],])
-    ) %>%
-    flatten_dbl()
+  permutation_distances <- local({
+    compute_distances <- function(documents, indexes) {
+      boolean_document_representation <- word_indexes_2_logical_vector(documents)
+      start_index <- indexes[1]
+      end_index <- indexes[2]
+      cosine_distance_vector_to_matrix_rows(boolean_document_representation, bow_matrix[start_index:end_index,])
+    }
+    distances <- mapply(compute_distances , documents_tokens,bow_indexes_per_document)
+    unlist(distances)
+  })
 
   list(tabular = bow_matrix,
        permutations = permutation_candidates,
