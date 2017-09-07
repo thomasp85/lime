@@ -30,7 +30,8 @@ Imports: glmnet,
     RcppEigen,
     assertthat,
     htmlwidgets,
-    dplyr
+    dplyr,
+    shiny
 RoxygenNote: 6.0.1
 Suggests: caret,
     randomForest,

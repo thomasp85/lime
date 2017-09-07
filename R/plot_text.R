@@ -1,8 +1,8 @@
-#' View HTML rendering of regular expression match.
+#' Plot text explanations
 #'
-#' \code{plot_text_explanations} shows the first match;
+#' Highlight important words
 #'
-#' @param explanations object returned by the \code{lime.character} function.
+#' @param explanations object returned by the [lime.character] function.
 #' @examples
 #' \dontrun{
 #' # Explaining a model based on text data
@@ -54,16 +54,16 @@ plot_text_explanations <- function(explanations) {
   text_highlighted_raw <- lapply(unique(explanations$case), function(id) {
     current_case_df <- explanations[explanations$case == id,]
     original_text <- unique(current_case_df[["data"]])
-    
+
     current_case_df$weight_percent <- abs(current_case_df$feature_weight) / sum(abs(current_case_df$feature_weight))
-    
+
     current_case_df$sign <- ifelse(current_case_df$feature_weight > 0, 1, -1)
     current_case_df$code_level <- current_case_df$sign * (1 + current_case_df$weight_percent %/% 0.2)
     current_case_df$color <- sapply(current_case_df$code_level, get_color_code)
-  
+
     get_html_span(original_text, current_case_df)
   })
-  
+
   text_highlighted <- paste(unlist(text_highlighted_raw), collapse = "<br/><br/>\n")
 
   createWidget("plot_text_explanations", list(html = text_highlighted),
@@ -97,9 +97,36 @@ get_color_code <- function(code_level) {
 }
 
 add_span_tag <- function(results_percent, tokenized_text) {
-  colors <- sapply(tokenized_text, function(word) if(word %in% results_percent$feature) as.character(results_percent[results_percent$feature == word, "color"]) else "", USE.NAMES = FALSE)
-  
+  colors <- sapply(tokenized_text, function(word) if (word %in% results_percent$feature) as.character(results_percent[results_percent$feature == word, "color"]) else "", USE.NAMES = FALSE)
+
   ifelse(colors == "", tokenized_text, paste0("<span class='", colors, "'>", tokenized_text, "</span>"))
+}
+
+#' Shiny widget output
+#'
+#' Create an output to insert text explanation plot in Shiny application.
+#' @param outputId output variable to read from
+#' @param width,height Must be a valid CSS unit or a number, which will be coerced to a string and have "px" appended.
+#' @return An output function that enables the use of the widget within Shiny applications.
+#' @importFrom htmlwidgets shinyWidgetOutput
+#' @export
+text_explanations_output <- function(outputId, width = "100%", height = "400px") {
+  shinyWidgetOutput(outputId, "plot_text_explanations", width, height, package = "lime")
+}
+
+#' Shiny widget render
+#'
+#' Render the text explanations in Shiny application.
+#' @param expr An expression that generates an HTML widget
+#' @param env The environment in which to evaluate `expr`.
+#' @param quoted Is `expr` a quoted expression (with [quote()])? This
+#'   is useful if you want to save an expression in a variable.
+#' @return A render function that enables the use of the widget within Shiny applications.
+#' @importFrom htmlwidgets shinyRenderWidget
+#' @export
+render_text_explanations <- function(expr, env = parent.frame(), quoted = FALSE) {
+  if (!quoted) { expr <- substitute(expr) } # force quoted
+  shinyRenderWidget(expr, text_explanations_output, env, quoted = TRUE)
 }
 
 globalVariables(c("feature_weight", "feature", "weight_percent", "code_level", "case", "data"))

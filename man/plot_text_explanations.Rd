@@ -2,15 +2,15 @@
 % Please edit documentation in R/plot_text.R
 \name{plot_text_explanations}
 \alias{plot_text_explanations}
-\title{View HTML rendering of regular expression match.}
+\title{Plot text explanations}
 \usage{
 plot_text_explanations(explanations)
 }
 \arguments{
-\item{explanations}{object returned by the \code{lime.character} function.}
+\item{explanations}{object returned by the \link{lime.character} function.}
 }
 \description{
-\code{plot_text_explanations} shows the first match;
+Highlight important words
 }
 \examples{
 \dontrun{
