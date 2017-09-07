@@ -3,7 +3,7 @@
 lime
 ====
 
-[![Travis-CI Build Status](https://travis-ci.org/thomasp85/lime.svg?branch=master)](https://travis-ci.org/thomasp85/lime) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/thomasp85/lime?branch=master&svg=true)](https://ci.appveyor.com/project/thomasp85/lime) [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/lime)](https://CRAN.R-project.org/package=lime) [![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/lime)](https://CRAN.R-project.org/package=lime)
+[![Travis-CI Build Status](https://travis-ci.org/thomasp85/lime.svg?branch=master)](https://travis-ci.org/thomasp85/lime) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/thomasp85/lime?branch=master&svg=true)](https://ci.appveyor.com/project/thomasp85/lime) [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/lime)](https://CRAN.R-project.org/package=lime) [![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/lime)](https://CRAN.R-project.org/package=lime) [![Coverage Status](https://img.shields.io/codecov/c/github/thomasp85/lime/master.svg)](https://codecov.io/github/thomasp85/lime?branch=master)
 
 *This is an R port of the Python lime package (<https://github.com/marcotcr/lime>) developed by the authors of the lime (Local Interpretable Model-agnostic Explanations) approach for black-box model explanations. All credits goes to the original developers.*
 
@@ -14,7 +14,7 @@ The `lime` package for R does not aim to be a line-by-line port of its Python co
 An example
 ----------
 
-The only requirement for the classifier that `lime` imposes is that it must implement a `predict()` method accepting a `type = 'prob'` argument (which outputs the probability for each class). Conveniently, this covers all classifiers available through [`caret`](https://CRAN.R-project.org/package=caret), and if your model of choice is not covered you have the possibility of writing your own predict method.
+Out of the box `lime` supports models created using the `caret` and `mlr` frameworks. Support for other models are easy to achieve by adding a `predict_model` and `model_type` method for the given model.
 
 The following shows how a random forest model is trained on the iris data set and how `lime` is then used to explain a set of new observations:
 
@@ -30,27 +30,27 @@ iris_lab <- iris[[5]][-(1:5)]
 # Create Random Forest model on iris data
 model <- train(iris_train, iris_lab, method = 'rf')
 
-# Create explanation function
-explain <- lime(iris_train, model)
+# Create an explainer object
+explainer <- lime(iris_train, model)
 
 # Explain new observation
-explanation <- explain(iris_test, n_labels = 1, n_features = 2)
+explanation <- explain(iris_test, explainer, n_labels = 1, n_features = 2)
 
-# The output is provided in a nice tidy format
-tibble::glimpse(explanation)
-#> Observations: 10
-#> Variables: 11
-#> $ case            <chr> "1", "1", "2", "2", "3", "3", "4", "4", "5", "5"
-#> $ label           <chr> "setosa", "setosa", "setosa", "setosa", "setos...
-#> $ label_prob      <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
-#> $ model_r2        <dbl> 0.7315530, 0.7315530, 0.7410118, 0.7410118, 0....
-#> $ model_intercept <dbl> 0.10223879, 0.10223879, 0.09760455, 0.09760455...
-#> $ feature         <chr> "Petal.Width", "Petal.Length", "Petal.Width", ...
-#> $ feature_value   <dbl> 0.2, 1.4, 0.2, 1.4, 0.2, 1.3, 0.2, 1.5, 0.2, 1.4
-#> $ feature_weight  <dbl> 0.4414165, 0.4404250, 0.4447930, 0.4449105, 0....
-#> $ feature_desc    <chr> "Petal.Width <= 0.4", "Petal.Length <= 1.6", "...
-#> $ data            <list> [[5.1, 3.5, 1.4, 0.2], [5.1, 3.5, 1.4, 0.2], ...
-#> $ prediction      <list> [[1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 0, 0], ...
+# The output is provided in a consistent tabular format and includes the
+# output from the model.
+head(explanation)
+#> # A tibble: 6 x 12
+#>       model_type  case  label label_prob  model_r2 model_intercept
+#>            <chr> <chr>  <chr>      <dbl>     <dbl>           <dbl>
+#> 1 classification     1 setosa          1 0.7306399       0.1039371
+#> 2 classification     1 setosa          1 0.7306399       0.1039371
+#> 3 classification     2 setosa          1 0.7461392       0.1028326
+#> 4 classification     2 setosa          1 0.7461392       0.1028326
+#> 5 classification     3 setosa          1 0.7395395       0.1019240
+#> 6 classification     3 setosa          1 0.7395395       0.1019240
+#> # ... with 6 more variables: feature <chr>, feature_value <dbl>,
+#> #   feature_weight <dbl>, feature_desc <chr>, data <list>,
+#> #   prediction <list>
 
 # And can be visualised directly
 plot_features(explanation)
@@ -71,4 +71,4 @@ devtools::install_github('thomasp85/lime')
 Scope
 -----
 
-In addition to standard tabular data the Python implementation also provides specialized explainers for text and image data. Furthermore, the article also discusses how `lime` can be used for explaining *models* rather than *predictions*, using an approach called submodular picks. Lastly, there's obvious extensions to the approach such as using different algorithms for the local fit step, supporting regressors in addition to classifiers, and providing additional feature selection algorithms. All of the above will hopefully find its way to this port in due time...
+The current version of `lime` has support for tabular and text data. The Python implementation has additional support for image data, which will be added to this package in time. In addition to the capabilities discussed in the *"Why Should I Trust You?": Explaining the Predictions of Any Classifier* article, this package also support regression model explanations (this has been added to the Python library as well). The global model explanation using submodular picks is not supported in either packages.
