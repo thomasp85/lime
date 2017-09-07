@@ -35,12 +35,9 @@ counterpart. Instead it takes the ideas laid out in the original code and
 implements them in an API that is idiomatic to R.
 
 ## An example
-The only requirement for the classifier that `lime` imposes is that it must
-implement a `predict()` method accepting a `type = 'prob'` argument (which 
-outputs the probability for each class). Conveniently, this covers all 
-classifiers available through [`caret`](https://CRAN.R-project.org/package=caret), 
-and if your model of choice is not covered you have the possibility of writing
-your own predict method.
+Out of the box `lime` supports models created using the `caret` and `mlr` 
+frameworks. Support for other models are easy to achieve by adding a 
+`predict_model` and `model_type` method for the given model.
 
 The following shows how a random forest model is trained on the iris data set 
 and how `lime` is then used to explain a set of new observations:
@@ -57,14 +54,15 @@ iris_lab <- iris[[5]][-(1:5)]
 # Create Random Forest model on iris data
 model <- train(iris_train, iris_lab, method = 'rf')
 
-# Create explanation function
-explain <- lime(iris_train, model)
+# Create an explainer object
+explainer <- lime(iris_train, model)
 
 # Explain new observation
-explanation <- explain(iris_test, n_labels = 1, n_features = 2)
+explanation <- explain(iris_test, explainer, n_labels = 1, n_features = 2)
 
-# The output is provided in a nice tidy format
-tibble::glimpse(explanation)
+# The output is provided in a consistent tabular format and includes the
+# output from the model.
+head(explanation)
 
 # And can be visualised directly
 plot_features(explanation)
@@ -80,11 +78,10 @@ devtools::install_github('thomasp85/lime')
 ```
 
 ## Scope
-In addition to standard tabular data the Python implementation also provides
-specialized explainers for text and image data. Furthermore, the article also 
-discusses how `lime` can be used for explaining *models* rather than 
-*predictions*, using an approach called submodular picks. Lastly, there's 
-obvious extensions to the approach such as using different algorithms for the 
-local fit step, supporting regressors in addition to classifiers, and providing
-additional feature selection algorithms. All of the above will hopefully find 
-its way to this port in due time...
+The current version of `lime` has support for tabular and text data. The Python
+implementation has additional support for image data, which will be added to 
+this package in time. In addition to the capabilities discussed in the 
+*"Why Should I Trust You?": Explaining the Predictions of Any Classifier* 
+article, this package also support regression model explanations (this has been
+added to the Python library as well). The global model explanation using 
+submodular picks is not supported in either packages.
