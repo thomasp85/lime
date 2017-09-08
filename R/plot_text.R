@@ -103,33 +103,4 @@ add_span_tag <- function(results_percent, tokenized_text) {
   ifelse(colors == "", tokenized_text, paste0("<span class='", colors, "'>", tokenized_text, "</span>"))
 }
 
-#' Shiny widget output
-#'
-#' Create an output to insert text explanation plot in Shiny application.
-#' @param outputId output variable to read from
-#' @param width,height Must be a valid CSS unit or a number, which will be coerced to a string and have "px" appended.
-#' @return An output function that enables the use of the widget within Shiny applications.
-#' @importFrom htmlwidgets shinyWidgetOutput
-#' @rdname text_explanations
-#' @export
-text_explanations_output <- function(outputId, width = "100%", height = "400px") {
-  shinyWidgetOutput(outputId, "plot_text_explanations", width, height, package = "lime")
-}
-
-#' Shiny widget render
-#'
-#' Render the text explanations in Shiny application.
-#' @param expr An expression that generates an HTML widget
-#' @param env The environment in which to evaluate `expr`.
-#' @param quoted Is `expr` a quoted expression (with [quote()])? This
-#'   is useful if you want to save an expression in a variable.
-#' @return A render function that enables the use of the widget within Shiny applications.
-#' @importFrom htmlwidgets shinyRenderWidget
-#' @rdname text_explanations
-#' @export
-render_text_explanations <- function(expr, env = parent.frame(), quoted = FALSE) {
-  if (!quoted) { expr <- substitute(expr) } # force quoted
-  shinyRenderWidget(expr, text_explanations_output, env, quoted = TRUE)
-}
-
 globalVariables(c("feature_weight", "feature", "weight_percent", "code_level", "case", "data"))
