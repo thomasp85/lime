@@ -2,6 +2,7 @@
 #'
 #' Display text explanation in an interactive way.
 #' You can :
+#'
 #' * send a new sentence
 #' * update the parameters of the explainer
 #' @param explainer parameters
@@ -35,12 +36,17 @@
 #' interactive_text_explanations(explainer)
 #' }
 #' @rdname interactive_text_explanations
-#' @importFrom shiny fluidPage textAreaInput shinyApp sliderInput mainPanel titlePanel hr need validate
-#' @importFrom stringi stri_count_words
+#' @importFrom shiny fluidPage textAreaInput shinyApp sliderInput mainPanel titlePanel hr need validate h1 h2 h3 h4 h5 h6 numericInput selectInput sidebarPanel renderPlot plotOutput
+#' @importFrom stringi stri_count_words stri_replace_all_fixed
 #' @importFrom shinythemes shinytheme
 #' @importFrom assertthat assert_that is.string is.count
 #' @export
-interactive_text_explanations <- function(explainer, window_title = "Text model explainer", title = "Local Interpretable Model-agnostic Explanations", place_holder = "Put here the text to explain", minimum_lentgh = 5, minimum_lentgh_error = "Text is too short to be displayed (>= 5).", max_feature_to_select = 10) {
+interactive_text_explanations <- function(explainer, window_title = "Text model explainer",
+                                          title = "Local Interpretable Model-agnostic Explanations",
+                                          place_holder = "Put here the text to explain",
+                                          minimum_lentgh = 3,
+                                          minimum_lentgh_error = "Text provided is too short to be explained (>= 3).",
+                                          max_feature_to_select = 20) {
   assert_that(is.list(explainer))
   assert_that(is.string(window_title))
   assert_that(is.string(title))
@@ -48,14 +54,28 @@ interactive_text_explanations <- function(explainer, window_title = "Text model 
   assert_that(is.count(minimum_lentgh))
   assert_that(is.count(max_feature_to_select))
 
+  shared_states <- list()
+
+  feature_selection_strategy <- local({
+    strategies <- feature_selection_method()
+    strategies_clean <- stri_replace_all_fixed(strategies, "_", " ")
+    names(strategies) <- strategies_clean
+    as.list(strategies)
+  })
+
   ui <- fluidPage(title = window_title,
-                  theme = shinytheme("united"),
+                  theme = shinytheme("superhero"),
+                  titlePanel(title = title),
+                  hr(),
+                  sidebarPanel(
+                    textAreaInput("text_to_explain", label = NULL, resize = "both", placeholder = place_holder, height = "200px"),
+                    selectInput("feature_selection_strategy", label = h5("Word selection strategies"), choices = feature_selection_strategy, selected = "auto"),
+                    numericInput("number_permutations", label = h5("Quantity of permutation to generate"), value = 5000, step = 1000),
+                    sliderInput("number_features_to_explain", label = h5("Number of words to select"), min = 1, max = max_feature_to_select, value = 2, ticks = FALSE)
+                  ),
                   mainPanel(
-                    titlePanel(title = title),
-                    hr(),
-                    textAreaInput("text_to_explain", label = NULL, resize = "both", placeholder = place_holder, width = "200%", height = "200px"),
-                    sliderInput("number_features_to_explain", label = "number of words to select", min = 1, max = max_feature_to_select, value = 1, ticks = FALSE),
-                    text_explanations_output("text_explanations_plot")
+                    text_explanations_output("text_explanations_plot")#,
+                    #plotOutput("feature_weight_plot")
                   ))
 
   # Define server logic for slider examples ----
@@ -64,9 +84,15 @@ interactive_text_explanations <- function(explainer, window_title = "Text model 
       validate(
         need(stri_count_words(input$text_to_explain) >= minimum_lentgh, message = minimum_lentgh_error)
       )
-      explanations <- explain(input$text_to_explain, explainer, n_labels = 1, n_features = input$number_features_to_explain)
-      plot_text_explanations(explanations)
+      shared_states$explanations <<- explain(input$text_to_explain, explainer, n_labels = 1, n_features = input$number_features_to_explain, feature_select = input$feature_selection_strategy, n_permutations = input$number_permutations)
+      plot_text_explanations(shared_states$explanations)
     })
+    # output$feature_weight_plot <- renderPlot({
+    #   validate(
+    #     need(stri_count_words(input$text_to_explain) >= minimum_lentgh, message = minimum_lentgh_error)
+    #   )
+    #   plot_features(shared_states$explanations)
+    # })
   }
   shinyApp(ui, server)
 }

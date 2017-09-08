@@ -9,9 +9,9 @@
 interactive_text_explanations(explainer,
   window_title = "Text model explainer",
   title = "Local Interpretable Model-agnostic Explanations",
-  place_holder = "Put here the text to explain", minimum_lentgh = 5,
-  minimum_lentgh_error = "Text is too short to be displayed (>= 5).",
-  max_feature_to_select = 10)
+  place_holder = "Put here the text to explain", minimum_lentgh = 3,
+  minimum_lentgh_error = "Text provided is too short to be explained (>= 3).",
+  max_feature_to_select = 20)
 
 text_explanations_output(outputId, width = "100\%", height = "400px")
 
@@ -43,14 +43,16 @@ A render function that enables the use of the widget within Shiny applications.
 \description{
 Display text explanation in an interactive way.
 You can :
-\itemize{
-\item send a new sentence
-\item update the parameters of the explainer
-}
 
 Create an output to insert text explanation plot in Shiny application.
 
 Render the text explanations in Shiny application.
+}
+\details{
+\itemize{
+\item send a new sentence
+\item update the parameters of the explainer
+}
 }
 \examples{
 \dontrun{
