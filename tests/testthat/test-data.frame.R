@@ -1,6 +1,5 @@
 context("data.frame")
-
-library(caret)
+library(MASS)
 
 test_that("lime explanation only produces one entry per case and feature", {
   # Split up the data set
@@ -8,7 +7,7 @@ test_that("lime explanation only produces one entry per case and feature", {
   iris_lab <- iris[[5]]
 
   # Create Random Forest model on iris data
-  model <- train(iris_train, iris_lab, method = 'rf')
+  model <- lda(iris_train, iris_lab)
 
   # Create explanation function
   explainer <- lime(iris_train, model)

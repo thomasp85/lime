@@ -7,19 +7,18 @@
 #'
 #' @examples
 #' # Explaining a model based on tabular data
-#' if (requireNamespace("caret", quietly = TRUE)) {
-#'   library(caret)
-#'   iris_test <- iris[1, 1:4]
-#'   iris_train <- iris[-1, 1:4]
-#'   iris_lab <- iris[[5]][-1]
+#' library(MASS)
+#' iris_test <- iris[1, 1:4]
+#' iris_train <- iris[-1, 1:4]
+#' iris_lab <- iris[[5]][-1]
+#' # Create linear discriminant model on iris data
+#' model <- lda(iris_train, iris_lab)
+#' # Create explanation object
+#' explanation <- lime(iris_train, model)
 #'
-#'   # Create linear discriminant model on iris data
-#'   model <- train(iris_train, iris_lab, method = 'lda')
+#' # This can now be used together with the explain method
+#' explain(iris_test, explanation, n_labels = 1, n_features = 2)
 #'
-#'   # Create explanation function
-#'   explanation <- lime(iris_train, model)
-#'   explain(iris_test, explanation, n_labels = 1, n_features = 2)
-#' }
 lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantile_bins = TRUE, ...) {
   explainer <- c(as.list(environment()), list(...))
   explainer$x <- NULL

@@ -23,10 +23,9 @@ lime <- function(x, model, ...) {
 # Helpers -----------------------------------------------------------------
 
 #' @importFrom glmnet cv.glmnet coef.cv.glmnet
-#' @importFrom tibble tibble
 #' @importFrom stats coef
 #' @importFrom stats glm.fit
-#' @importFrom stats gaussian
+#' @importFrom stats gaussian var
 model_permutations <- function(x, y, weights, labels, n_labels, n_features, feature_method) {
   if (!is.null(n_labels)) {
     labels <- names(y)[order(y[1,], decreasing = TRUE)[seq_len(n_labels)]]
@@ -53,7 +52,14 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
       coefs <- coefs[-1, 1]
     }
 
-    tibble(label = label, feature = names(coefs), feature_weight = unname(coefs), model_r2 = r2, model_intercept = intercept)
+    data.frame(
+      label = label,
+      feature = names(coefs),
+      feature_weight = unname(coefs),
+      model_r2 = r2,
+      model_intercept = intercept,
+      stringsAsFactors = FALSE
+    )
   })
   do.call(rbind, res)
 }
@@ -157,5 +163,3 @@ select_f_lp <- function(x, y, weights, n_features) {
 exp_kernel <- function(width) {
   function(x) sqrt(exp(-(x^2) / (width^2)))
 }
-
-globalVariables(c("var", "."))

@@ -21,19 +21,16 @@ is shown with its weight, thus giving the importance of the feature in the
 label prediction.
 }
 \examples{
-\dontrun{
-library(caret)
+# Create some explanations
+library(MASS)
 iris_test <- iris[1, 1:4]
 iris_train <- iris[-1, 1:4]
 iris_lab <- iris[[5]][-1]
-
-# Create Random Forest model on iris data
-model <- train(iris_train, iris_lab, method = 'rf')
-
-# Create explanation function
+model <- lda(iris_train, iris_lab)
 explanation <- lime(iris_train, model)
-df <- explain(iris_test, explanation, n_labels = 1, n_features = 2)
+explanations <- explain(iris_test, explanation, n_labels = 1, n_features = 2)
 
-plot_features(df)
-}
+# Get an overview with the standard plot
+plot_features(explanations)
+
 }
