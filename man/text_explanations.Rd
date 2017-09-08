@@ -2,15 +2,41 @@
 % Please edit documentation in R/plot_text.R
 \name{plot_text_explanations}
 \alias{plot_text_explanations}
+\alias{text_explanations_output}
+\alias{render_text_explanations}
 \title{Plot text explanations}
 \usage{
 plot_text_explanations(explanations)
+
+text_explanations_output(outputId, width = "100\%", height = "400px")
+
+render_text_explanations(expr, env = parent.frame(), quoted = FALSE)
 }
 \arguments{
 \item{explanations}{object returned by the \link{lime.character} function.}
+
+\item{outputId}{output variable to read from}
+
+\item{width, height}{Must be a valid CSS unit or a number, which will be coerced to a string and have "px" appended.}
+
+\item{expr}{An expression that generates an HTML widget}
+
+\item{env}{The environment in which to evaluate \code{expr}.}
+
+\item{quoted}{Is \code{expr} a quoted expression (with \code{\link[=quote]{quote()}})? This
+is useful if you want to save an expression in a variable.}
+}
+\value{
+An output function that enables the use of the widget within Shiny applications.
+
+A render function that enables the use of the widget within Shiny applications.
 }
 \description{
-Highlight important words
+Highlight words which explains a prediction.
+
+Create an output to insert text explanation plot in Shiny application.
+
+Render the text explanations in Shiny application.
 }
 \examples{
 \dontrun{

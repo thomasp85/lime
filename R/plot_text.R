@@ -1,6 +1,6 @@
 #' Plot text explanations
 #'
-#' Highlight important words
+#' Highlight words which explains a prediction.
 #'
 #' @param explanations object returned by the [lime.character] function.
 #' @examples
@@ -45,6 +45,7 @@
 #'
 #' @importFrom assertthat assert_that
 #' @importFrom htmlwidgets createWidget
+#' @rdname text_explanations
 #' @export
 plot_text_explanations <- function(explanations) {
   assert_that(is.data.frame(explanations))
@@ -64,7 +65,7 @@ plot_text_explanations <- function(explanations) {
     get_html_span(original_text, current_case_df)
   })
 
-  text_highlighted <- paste(unlist(text_highlighted_raw), collapse = "<br/><br/>\n")
+  text_highlighted <- paste("<p>", unlist(text_highlighted_raw), "</p>", collapse = "\n")
 
   createWidget("plot_text_explanations", list(html = text_highlighted),
                               sizingPolicy = htmlwidgets::sizingPolicy(
@@ -109,6 +110,7 @@ add_span_tag <- function(results_percent, tokenized_text) {
 #' @param width,height Must be a valid CSS unit or a number, which will be coerced to a string and have "px" appended.
 #' @return An output function that enables the use of the widget within Shiny applications.
 #' @importFrom htmlwidgets shinyWidgetOutput
+#' @rdname text_explanations
 #' @export
 text_explanations_output <- function(outputId, width = "100%", height = "400px") {
   shinyWidgetOutput(outputId, "plot_text_explanations", width, height, package = "lime")
@@ -123,6 +125,7 @@ text_explanations_output <- function(outputId, width = "100%", height = "400px")
 #'   is useful if you want to save an expression in a variable.
 #' @return A render function that enables the use of the widget within Shiny applications.
 #' @importFrom htmlwidgets shinyRenderWidget
+#' @rdname text_explanations
 #' @export
 render_text_explanations <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) } # force quoted
