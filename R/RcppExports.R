@@ -2,10 +2,10 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 rowSumsSq <- function(sparse_matrix) {
-    .Call(`_lime_rowSumsSq`, sparse_matrix)
+    .Call('_lime_rowSumsSq', PACKAGE = 'lime', sparse_matrix)
 }
 
 get_index_permutations <- function(original_document, number_permutations) {
-    .Call(`_lime_get_index_permutations`, original_document, number_permutations)
+    .Call('_lime_get_index_permutations', PACKAGE = 'lime', original_document, number_permutations)
 }
 
