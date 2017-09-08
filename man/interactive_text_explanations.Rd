@@ -24,6 +24,8 @@ render_text_explanations(expr, env = parent.frame(), quoted = FALSE)
 
 \item{minimum_lentgh}{don't update display if text is shorter than this parameter}
 
+\item{max_feature_to_select}{up limit to the number of words that can be selected}
+
 \item{outputId}{output variable to read from}
 
 \item{width, height}{Must be a valid CSS unit or a number, which will be coerced to a string and have "px" appended.}

@@ -8,6 +8,7 @@
 #' @param explainer parameters
 #' @param window_title,title,place_holder,minimum_lentgh_error text to be displayed on the page
 #' @param minimum_lentgh don't update display if text is shorter than this parameter
+#' @param max_feature_to_select up limit to the number of words that can be selected
 #' @examples
 #' \dontrun{
 #' library(lime)
