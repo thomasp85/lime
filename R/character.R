@@ -78,17 +78,24 @@ explain.character <- function(x, explainer, labels = NULL, n_labels = NULL,
   assert_that(is.count(n_features))
   assert_that(is.count(n_permutations))
 
-  case_perm <- permute_cases(x, n_permutations, explainer$tokenization, explainer$keep_word_position)
+  if (single_explanation) {
+    perm_per_case <- ceiling(n_permutations/length(x))
+    case_perm <- permute_cases(x, perm_per_case, explainer$tokenization, explainer$keep_word_position)
+
+    case_ind <- list(seq_along(case_perm$permutations))
+  } else {
+    case_perm <- permute_cases(x, n_permutations, explainer$tokenization, explainer$keep_word_position)
+    assert_that(length(case_perm$permutations) == n_permutations * length(x))
+
+    case_ind <- local({
+      case_range <- seq_along(x)
+      case_ids <- unlist(lapply(case_range, rep, n_permutations))
+      split(seq_along(case_perm$permutations), case_ids)
+    })
+  }
   permutations_tokenized <- explainer$preprocess(case_perm$permutations)
   case_res <- predict_model(x = explainer$model, newdata = permutations_tokenized, type = o_type)
-  assert_that(length(case_perm$permutations) == n_permutations * length(x))
-  
-  case_ind <- local({
-    case_range <- seq(x)
-    case_ids <- unlist(lapply(case_range, rep, n_permutations))
-    split(seq_along(case_perm$permutations), case_ids)
-  })
-  
+
   res <- lapply(seq_along(case_ind), function(ind) {
     i <- case_ind[[ind]]
     res <- model_permutations(case_perm$tabular[i, ], case_res[i, ], case_perm$permutation_distances[i], labels, n_labels, n_features, feature_select)
