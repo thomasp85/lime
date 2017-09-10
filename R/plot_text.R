@@ -43,7 +43,7 @@
 #' plot_text_explanations(explanations)
 #' }
 #'
-#' @importFrom assertthat assert_that
+#' @importFrom assertthat assert_that is.number is.string
 #' @importFrom htmlwidgets createWidget
 #' @rdname text_explanations
 #' @export
@@ -55,6 +55,12 @@ plot_text_explanations <- function(explanations) {
   text_highlighted_raw <- lapply(unique(explanations$case), function(id) {
     current_case_df <- explanations[explanations$case == id,]
     original_text <- unique(current_case_df[["data"]])
+    predicted_label <- unique(current_case_df[["label"]])
+    predicted_label_prob <- unique(current_case_df[["label_prob"]])
+    assert_that(is.string(original_text))
+    assert_that(is.string(predicted_label))
+    assert_that(is.number(predicted_label_prob))
+    info_prediction_text <- paste0('<sub>Label predicted: ', predicted_label, ' (', round(predicted_label_prob * 100, 2), '%)</sub>')
 
     current_case_df$weight_percent <- abs(current_case_df$feature_weight) / sum(abs(current_case_df$feature_weight))
 
@@ -62,10 +68,10 @@ plot_text_explanations <- function(explanations) {
     current_case_df$code_level <- current_case_df$sign * (1 + current_case_df$weight_percent %/% 0.2)
     current_case_df$color <- sapply(current_case_df$code_level, get_color_code)
 
-    get_html_span(original_text, current_case_df)
+    list(get_html_span(original_text, current_case_df), info_prediction_text)
   })
 
-  text_highlighted <- paste("<p><pre>", unlist(text_highlighted_raw), "</pre></p>", collapse = "\n")
+  text_highlighted <- paste("<p><pre>", unlist(text_highlighted_raw, recursive = TRUE), "</pre></p>", collapse = "\n")
 
   createWidget("plot_text_explanations", list(html = text_highlighted),
                               sizingPolicy = htmlwidgets::sizingPolicy(
