@@ -70,8 +70,8 @@ interactive_text_explanations <- function(explainer, window_title = "Text model 
                   hr(),
                   sidebarPanel(
                     textAreaInput("text_to_explain", label = NULL, resize = "both", placeholder = place_holder, height = "200px"),
+                    numericInput("number_permutations", label = h5("Quantity of permutations to generate"), value = 5000, step = 1000),
                     selectInput("feature_selection_strategy", label = h5("Word selection strategies"), choices = feature_selection_strategy, selected = "auto"),
-                    numericInput("number_permutations", label = h5("Quantity of permutation to generate"), value = 5000, step = 1000),
                     sliderInput("number_features_to_explain", label = h5("Number of words to select"), min = 1, max = max_feature_to_select, value = 2, ticks = FALSE)
                   ),
                   mainPanel(

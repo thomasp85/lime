@@ -65,7 +65,7 @@ plot_text_explanations <- function(explanations) {
     get_html_span(original_text, current_case_df)
   })
 
-  text_highlighted <- paste("<p>", unlist(text_highlighted_raw), "</p>", collapse = "\n")
+  text_highlighted <- paste("<p><pre>", unlist(text_highlighted_raw), "</pre></p>", collapse = "\n")
 
   createWidget("plot_text_explanations", list(html = text_highlighted),
                               sizingPolicy = htmlwidgets::sizingPolicy(
@@ -75,10 +75,16 @@ plot_text_explanations <- function(explanations) {
                               package = "lime")
 }
 
+#' @importFrom stringi stri_replace_all_regex
 get_html_span <- function(text, current_case_df) {
-  tokenized_text <- default_tokenize(text)
-  tokenized_text_with_span <- add_span_tag(current_case_df, tokenized_text)
-  paste(tokenized_text_with_span, collapse = " ")
+  result <- text
+  for(word in current_case_df$feature) {
+    color <- as.character(current_case_df[current_case_df$feature == word, "color"])
+    text_searched <- paste0("(\\b", word, "\\b)")
+    replace_expression <- paste0("<span class='", color, "'>", "$1", "</span>")
+    result <- stri_replace_all_regex(result, text_searched, replace_expression)
+  }
+  result
 }
 
 get_color_code <- function(code_level) {
@@ -95,12 +101,6 @@ get_color_code <- function(code_level) {
          "4" = "positive_4",
          "5" = "positive_5",
          "6" = "positive_5") # for 100%
-}
-
-add_span_tag <- function(results_percent, tokenized_text) {
-  colors <- sapply(tokenized_text, function(word) if (word %in% results_percent$feature) as.character(results_percent[results_percent$feature == word, "color"]) else "", USE.NAMES = FALSE)
-
-  ifelse(colors == "", tokenized_text, paste0("<span class='", colors, "'>", tokenized_text, "</span>"))
 }
 
 globalVariables(c("feature_weight", "feature", "weight_percent", "code_level", "case", "data"))
