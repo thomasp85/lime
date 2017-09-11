@@ -18,7 +18,7 @@ model_type(x, ...)
 \item{type}{Either \code{'raw'} to indicate predicted values, or \code{'prob'} to
 indicate class probabilities}
 
-\item{...}{currently ignored}
+\item{...}{passed on to \code{predict} method}
 }
 \value{
 A data.frame in the case of \code{predict_model()}. If \code{type = 'raw'} it

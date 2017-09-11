@@ -19,7 +19,6 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 Imports: glmnet,
     stats,
-    tibble,
     ggplot2,
     tools,
     stringi,
@@ -30,18 +29,18 @@ Imports: glmnet,
     RcppEigen,
     assertthat,
     htmlwidgets,
-    dplyr,
     shiny,
     shinythemes
 RoxygenNote: 6.0.1
-Suggests: caret,
-    randomForest,
-    xgboost,
+Suggests: xgboost,
     testthat,
     mlr,
     text2vec,
     MASS,
-    e1071,
-    covr
+    covr,
+    knitr,
+    rmarkdown,
+    devtools
 LinkingTo: Rcpp, 
     RcppEigen
+VignetteBuilder: knitr

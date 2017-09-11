@@ -23,10 +23,9 @@ lime <- function(x, model, ...) {
 # Helpers -----------------------------------------------------------------
 
 #' @importFrom glmnet cv.glmnet coef.cv.glmnet
-#' @importFrom tibble tibble
 #' @importFrom stats coef
 #' @importFrom stats glm.fit
-#' @importFrom stats gaussian
+#' @importFrom stats gaussian var
 model_permutations <- function(x, y, weights, labels, n_labels, n_features, feature_method) {
   if (!is.null(n_labels)) {
     labels <- names(y)[order(y[1,], decreasing = TRUE)[seq_len(n_labels)]]
@@ -53,7 +52,14 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
       coefs <- coefs[-1, 1]
     }
 
-    tibble(label = label, feature = names(coefs), feature_weight = unname(coefs), model_r2 = r2, model_intercept = intercept)
+    data.frame(
+      label = label,
+      feature = names(coefs),
+      feature_weight = unname(coefs),
+      model_r2 = r2,
+      model_intercept = intercept,
+      stringsAsFactors = FALSE
+    )
   })
   do.call(rbind, res)
 }
@@ -91,10 +97,14 @@ select_f_fs <- function(x, y, weights, n_features) {
     best <- 0
     for (j in seq_len(ncol(x))) {
       if (j %in% features) next
-      #                                          is this ok?
-      try_features <- if (length(features) == 0) c(j, j) else c(features, j)
-      fit <- glmnet(x[, try_features, drop = FALSE], y, weights = weights, alpha = 0, lambda = 0)
-      r2 <- fit$dev.ratio
+      if (length(features) == 0) {
+        x_fit = cbind("(Intercept)" = rep(1, nrow(x)), x[, j, drop = FALSE])
+        fit <- glm.fit(x = x_fit, y = y,  weights = weights, family = gaussian())
+        r2 <- fit$deviance / fit$null.deviance
+      } else {
+        fit <- glmnet(x[, c(features, j), drop = FALSE], y, weights = weights, alpha = 0, lambda = 0)
+        r2 <- fit$dev.ratio
+      }
       if (r2 > max) {
         max <- r2
         best <- j
@@ -157,5 +167,3 @@ select_f_lp <- function(x, y, weights, n_features) {
 exp_kernel <- function(width) {
   function(x) sqrt(exp(-(x^2) / (width^2)))
 }
-
-globalVariables(c("var", "."))

@@ -4,3 +4,4 @@
 .Ruserdata
 *.Rproj
 revdep/*
+inst/doc

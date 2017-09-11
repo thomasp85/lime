@@ -16,7 +16,7 @@
 #' @param type Either `'raw'` to indicate predicted values, or `'prob'` to
 #' indicate class probabilities
 #'
-#' @param ... currently ignored
+#' @param ... passed on to `predict` method
 #'
 #' @return A data.frame in the case of `predict_model()`. If `type = 'raw'` it
 #' will contain one column named `'Response'` holding the predicted values. If
@@ -66,6 +66,14 @@ predict_model.xgb.Booster <- function(x, newdata, type, ...) {
   }
   p
 }
+predict_model.lda <- function(x, newdata, type, ...) {
+  res <- predict(x, newdata = newdata, ...)
+  switch(
+    type,
+    raw = data.frame(Response = res$class, stringsAsFactors = FALSE),
+    prob = as.data.frame(res$posterior, check.names = FALSE)
+  )
+}
 #' @rdname model_support
 #' @export
 model_type <- function(x, ...) {
@@ -98,3 +106,4 @@ model_type.xgb.Booster <- function(x, ...) {
     stop('Unsupported model type', call. = FALSE)
   )
 }
+model_type.lda <- function(x, ...) 'classification'
