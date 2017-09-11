@@ -46,7 +46,6 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
   assert_that(is.function(tokenization))
   assert_that(is.flag(keep_word_position))
   assert_that(!is.null(model))
-  #assert_that(feature_selection_method %in% feature_selection_method())
 
   explainer <- c(as.list(environment()), list(...))
   explainer$x <- NULL
@@ -81,12 +80,11 @@ explain.character <- function(x, explainer, labels = NULL, n_labels = NULL,
   if (single_explanation) {
     perm_per_case <- ceiling(n_permutations/length(x))
     case_perm <- permute_cases(x, perm_per_case, explainer$tokenization, explainer$keep_word_position)
-
+    assert_that(length(case_perm$permutations) == n_permutations, msg = "Incorrect number of permutations")
     case_ind <- list(seq_along(case_perm$permutations))
   } else {
     case_perm <- permute_cases(x, n_permutations, explainer$tokenization, explainer$keep_word_position)
     assert_that(length(case_perm$permutations) == n_permutations * length(x), msg = "Incorrect number of permutations")
-
     case_ind <- local({
       case_range <- seq_along(x)
       case_ids <- unlist(lapply(case_range, rep, n_permutations))
@@ -95,7 +93,6 @@ explain.character <- function(x, explainer, labels = NULL, n_labels = NULL,
   }
   permutations_tokenized <- explainer$preprocess(case_perm$permutations)
   case_res <- predict_model(x = explainer$model, newdata = permutations_tokenized, type = o_type)
-
   assert_that(all(!is.na(case_res)), msg = "Predictions contains some NAs")
   assert_that(nrow(case_res) == length(case_perm$permutations), msg = "Incorrect number of predictions")
 
