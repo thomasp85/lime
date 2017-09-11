@@ -35,6 +35,10 @@ Suggests: xgboost,
     mlr,
     text2vec,
     MASS,
-    covr
+    covr,
+    knitr,
+    rmarkdown,
+    devtools
 LinkingTo: Rcpp, 
     RcppEigen
+VignetteBuilder: knitr
