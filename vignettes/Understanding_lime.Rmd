@@ -13,7 +13,7 @@ In order to be able to understand the explanations produced by `lime` it is
 necessary to have at least a passing knowledge on how it achieves the 
 explanations. It is of course advised to read through 
 [the article](https://arxiv.org/abs/1602.04938) that introduced the lime 
-framework as well as the additional ressources linked to from the original 
+framework as well as the additional resources linked to from the original 
 [Python repository](https://github.com/marcotcr/lime). Still, this vignette will
 also allow you to get up to speed on the framework and let you efficiently 
 understand the output it produces.
@@ -24,11 +24,11 @@ is linear on a local scale. While this is not justified in the paper it is not
 difficult to convince yourself that this is generally sound — you generally
 expect two very similar observations to behave predictably even in a model. 
 `lime` then takes this assumption to its natural conclusion by asserting that it
-is possible to fit a simple model around a single observation that will mimick
+is possible to fit a simple model around a single observation that will mimic
 how the global model behaves at that locality. The simple model can then be used
 to explain the predictions of the more complex model locally. 
 
-The general appraoch `lime` takes to achieving this goal is as follows:
+The general approach `lime` takes to achieving this goal is as follows:
 
 1. For each prediction to explain, permute the observation `n` times.
 2. Let the complex model predict the outcome of all permuted observations.
@@ -46,7 +46,7 @@ It is clear from the above that there's much wiggle-room in order to optimize
 the explanation. Chief among the choices that influence the quality of the 
 explanation is how permutations are created, how permutation similarity is
 calculated, how, and how many, features are selected, and which model is used as
-the simple model. Some of these choices are hardcoded into `lime`, while others
+the simple model. Some of these choices are hard-coded into `lime`, while others
 can be influenced by the user — all of them will be discussed below.
 
 ### How to permute an observation
@@ -64,7 +64,7 @@ establishing the locality of the analysis.
 **Text Data**  
 When the outcome of text predictions are to be explained the permutations are
 performed by randomly removing words from the original observation. Depending on
-whether the model uses word location or not, words occuring multiple times will
+whether the model uses word location or not, words occurring multiple times will
 be removed one-by-one or as a whole.
 
 ### Calculating similarities with permuations
@@ -88,7 +88,7 @@ no silver bullet for this. Instead, it implements a range of different feature
 selection approaches that the user is free to choose from. First though, the 
 number of features needs to be chosen. The number must strike a balance between
 the complexity of the model and the simplicity of the explanation, but try to
-keep it below 10 (personal oppinion). As for selecting the features, `lime` 
+keep it below 10 (personal opinion). As for selecting the features, `lime` 
 supports the following algorithms:
 
 - **none:** Use all features for the explanation. Not advised unless you have 
@@ -98,7 +98,7 @@ supports the following algorithms:
 - **highest weights:** The `m` features with highest absolute weight in a ridge
   regression fit of the complex model outcome is chosen.
 - **lasso:** The `m` features that are least prone to shrinkage based on the 
-  regularisation path of a lasso fit of the complex model outcome is chosen.
+  regularization path of a lasso fit of the complex model outcome is chosen.
 - **tree:** **Michaël can you describe the algorithm here?**
 - **auto:** Uses forward selection if `m <= 6` and otherwise highest weights.
 
@@ -158,7 +158,7 @@ explanation[, 2:9]
 ```
 
 We can see that all the explanations for a *benign* outcome has chosen the same
-features, strongly indicating that these are both localyl and globally important
+features, strongly indicating that these are both locally and globally important
 features. Unfortunately we can see that the simple model-fit is not very good
 (the `model_r2` column) leading to less trust in the explanation. We can try to
 improve on this by decreasing the kernel width, thus making the fit more local.
