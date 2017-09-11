@@ -97,10 +97,14 @@ select_f_fs <- function(x, y, weights, n_features) {
     best <- 0
     for (j in seq_len(ncol(x))) {
       if (j %in% features) next
-      #                                          is this ok?
-      try_features <- if (length(features) == 0) c(j, j) else c(features, j)
-      fit <- glmnet(x[, try_features, drop = FALSE], y, weights = weights, alpha = 0, lambda = 0)
-      r2 <- fit$dev.ratio
+      if (length(features) == 0) {
+        x_fit = cbind("(Intercept)" = rep(1, nrow(x)), x[, j, drop = FALSE])
+        fit <- glm.fit(x = x_fit, y = y,  weights = weights, family = gaussian())
+        r2 <- fit$deviance / fit$null.deviance
+      } else {
+        fit <- glmnet(x[, c(features, j), drop = FALSE], y, weights = weights, alpha = 0, lambda = 0)
+        r2 <- fit$dev.ratio
+      }
       if (r2 > max) {
         max <- r2
         best <- j
