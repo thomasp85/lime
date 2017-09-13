@@ -200,7 +200,8 @@ library(text2vec) # used to build the BoW matrix
 data(train_sentences)
 data(test_sentences)
 
-# Data are stored in a 2 columns data.frame, one for the sentences, one for the labels.
+# Data are stored in a 2 columns data.frame, one for the sentences, one for the 
+# labels.
 print(str(train_sentences))
 
 # The list of possible classes for a sentence
@@ -225,10 +226,11 @@ param <- list(max_depth = 7,
               eval_metric = "error", 
               nthread = 1)
 
-xgb_model <- xgb.train(param, 
-                       xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
-                       nrounds = 50)
-
+xgb_model <- xgb.train(
+  param, 
+  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
+  nrounds = 50
+)
 ```
 
 We will test our model on test data.
@@ -245,19 +247,21 @@ print(mean(predictions == test_labels))
 Now we are sure that the model works, we may want to understand 
 what are the most important words for the predictions.
 
-```{r}
+```{r, fig.asp=1, out.width='70%', fig.width=6, fig.align='center'}
 # We select 10 sentences from the label OWNX
-sentence_to_explain <- head(test_sentences[test_sentences$class.text == "OWNX",]$text, 5)
-explainer <- lime(sentence_to_explain, model = xgb_model, preprocess = get_matrix)
-explanation <- explain(sentence_to_explain, explainer, n_labels = 1, n_features = 2)
+sentence_to_explain <- head(test_sentences[test_labels,]$text, 5)
+explainer <- lime(sentence_to_explain, model = xgb_model, 
+                  preprocess = get_matrix)
+explanation <- explain(sentence_to_explain, explainer, n_labels = 1, 
+                       n_features = 2)
 
 # Most of the words choosen by Lime
 # are related to the team (we, our)
 # or part of the paper (Section, in)
-print(explanation)
+explanation[, 2:9]
 
 # Another more graphical view of the same information (2 first sentences only)
-plot_features(head(explanation, 2), ncol = 1)
+plot_features(head(explanation, 4), ncol = 1)
 ```
 
 The graph view gives lots of detailed information about the selected words.
@@ -268,11 +272,11 @@ the most important words in their context.
 plot_text_explanations(explanations = explanation)
 ```
 
-For some sentences, the prediction is wrong.
-For instance, look at the third sentence.
-The word `we` is in red and the predicted label is 0 (with a low probability), meaning Lime thinks it's not a sentence from 
-the category `OWNX`, mainly because of the presence of the word `those`
-but the word `we` in red doesn't support this (false) prediction.
+For some sentences, the prediction is wrong. For instance, look at the third 
+sentence. The word *we* is in red and the predicted label is 0 (with a low 
+probability), meaning the model thinks it's not a sentence from the category 
+`OWNX`, mainly because of the presence of the word *those* but the word *we* in 
+red doesn't support this (false) prediction.
 
 ## Session Info
 ```{r, echo=FALSE}
