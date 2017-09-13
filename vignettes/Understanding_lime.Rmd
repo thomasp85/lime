@@ -98,8 +98,9 @@ supports the following algorithms:
 - **highest weights:** The `m` features with highest absolute weight in a ridge
   regression fit of the complex model outcome are chosen.
 - **lasso:** The `m` features that are least prone to shrinkage based on the 
-  regularization path of a lasso fit of the complex model outcome are chosen.
-- **tree:** **Michaël can you describe the algorithm here?**
+  regularization path of a lasso fit of the complex model outcome is chosen.
+- **tree:** A tree is fitted with `log2(m)` splits, to use at max `m` features. 
+  It may possibly select less.
 - **auto:** Uses forward selection if `m <= 6` and otherwise highest weights.
 
 ### Fitting a model to the permuted and feature-reduced data

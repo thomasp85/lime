@@ -1,8 +1,8 @@
-#' View HTML rendering of regular expression match.
+#' Plot text explanations
 #'
-#' \code{plot_text_explanations} shows the first match;
+#' Highlight words which explains a prediction.
 #'
-#' @param explanations object returned by the \code{lime.character} function.
+#' @param explanations object returned by the [lime.character] function.
 #' @examples
 #' \dontrun{
 #' # Explaining a model based on text data
@@ -43,8 +43,9 @@
 #' plot_text_explanations(explanations)
 #' }
 #'
-#' @importFrom assertthat assert_that
+#' @importFrom assertthat assert_that is.number is.string
 #' @importFrom htmlwidgets createWidget
+#' @rdname text_explanations
 #' @export
 plot_text_explanations <- function(explanations) {
   assert_that(is.data.frame(explanations))
@@ -54,17 +55,23 @@ plot_text_explanations <- function(explanations) {
   text_highlighted_raw <- lapply(unique(explanations$case), function(id) {
     current_case_df <- explanations[explanations$case == id,]
     original_text <- unique(current_case_df[["data"]])
-    
+    predicted_label <- unique(current_case_df[["label"]])
+    predicted_label_prob <- unique(current_case_df[["label_prob"]])
+    assert_that(is.string(original_text))
+    assert_that(is.string(predicted_label))
+    assert_that(is.number(predicted_label_prob))
+    info_prediction_text <- paste0('<sub>Label predicted: ', predicted_label, ' (', round(predicted_label_prob * 100, 2), '%)</sub>')
+
     current_case_df$weight_percent <- abs(current_case_df$feature_weight) / sum(abs(current_case_df$feature_weight))
-    
+
     current_case_df$sign <- ifelse(current_case_df$feature_weight > 0, 1, -1)
     current_case_df$code_level <- current_case_df$sign * (1 + current_case_df$weight_percent %/% 0.2)
     current_case_df$color <- sapply(current_case_df$code_level, get_color_code)
-  
-    get_html_span(original_text, current_case_df)
+
+    list(get_html_span(original_text, current_case_df), info_prediction_text)
   })
-  
-  text_highlighted <- paste(unlist(text_highlighted_raw), collapse = "<br/><br/>\n")
+
+  text_highlighted <- paste("<p><pre>", unlist(text_highlighted_raw, recursive = TRUE), "</pre></p>", collapse = "\n")
 
   createWidget("plot_text_explanations", list(html = text_highlighted),
                               sizingPolicy = htmlwidgets::sizingPolicy(
@@ -74,10 +81,16 @@ plot_text_explanations <- function(explanations) {
                               package = "lime")
 }
 
+#' @importFrom stringi stri_replace_all_regex
 get_html_span <- function(text, current_case_df) {
-  tokenized_text <- default_tokenize(text)
-  tokenized_text_with_span <- add_span_tag(current_case_df, tokenized_text)
-  paste(tokenized_text_with_span, collapse = " ")
+  result <- text
+  for(word in current_case_df$feature) {
+    color <- as.character(current_case_df[current_case_df$feature == word, "color"])
+    text_searched <- paste0("(\\b", word, "\\b)")
+    replace_expression <- paste0("<span class='", color, "'>", "$1", "</span>")
+    result <- stri_replace_all_regex(result, text_searched, replace_expression)
+  }
+  result
 }
 
 get_color_code <- function(code_level) {
@@ -94,12 +107,6 @@ get_color_code <- function(code_level) {
          "4" = "positive_4",
          "5" = "positive_5",
          "6" = "positive_5") # for 100%
-}
-
-add_span_tag <- function(results_percent, tokenized_text) {
-  colors <- sapply(tokenized_text, function(word) if(word %in% results_percent$feature) as.character(results_percent[results_percent$feature == word, "color"]) else "", USE.NAMES = FALSE)
-  
-  ifelse(colors == "", tokenized_text, paste0("<span class='", colors, "'>", tokenized_text, "</span>"))
 }
 
 globalVariables(c("feature_weight", "feature", "weight_percent", "code_level", "case", "data"))
