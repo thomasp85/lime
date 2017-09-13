@@ -280,6 +280,12 @@ probability), meaning the model thinks it's not a sentence from the category
 `OWNX`, mainly because of the presence of the word *those* but the word *we* in 
 red doesn't support this (false) prediction.
 
+## Interactive text model explanations
+
+Text explanations are also available through Shine to perform interactive experience.
+
+![Interactive text explanations](../tools/shine_text_explanations.gif){width=700px}
+
 ## Session Info
 ```{r, echo=FALSE}
 devtools::session_info()
