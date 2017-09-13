@@ -280,7 +280,10 @@ red doesn't support this (false) prediction.
 
 ## Interactive text model explanations
 
-Text explanations are also available through Shine to perform interactive experience.
+Text explanations are also available through `shine` to explore interactively the model.
+
+After loading the application, both text and parameters can be modified.
+Prediction and selected words are updated in real time.
 
 ![Interactive text explanations](../tools/shine_text_explanations.gif){width=700px}
 
