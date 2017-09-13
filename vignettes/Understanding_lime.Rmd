@@ -10,19 +10,19 @@ vignette: >
 ---
 
 In order to be able to understand the explanations produced by `lime` it is 
-necessary to have at least a passing knowledge on how it achieves the 
-explanations. It is of course advised to read through 
+necessary to have at least some knowledge of how these explanations are 
+achieved. To this end, you are encouraged to read through 
 [the article](https://arxiv.org/abs/1602.04938) that introduced the lime 
 framework as well as the additional resources linked to from the original 
-[Python repository](https://github.com/marcotcr/lime). Still, this vignette will
-also allow you to get up to speed on the framework and let you efficiently 
-understand the output it produces.
+[Python repository](https://github.com/marcotcr/lime). This vignette will 
+provide an overview to allow you to get up to speed on the framework and let you 
+efficiently understand the output it produces.
 
 ## How lime explains stuff
 Behind the workings of lime lies the (big) assumption that every complex model
 is linear on a local scale. While this is not justified in the paper it is not 
-difficult to convince yourself that this is generally sound — you generally
-expect two very similar observations to behave predictably even in a model. 
+difficult to convince yourself that this is generally sound — you usually expect 
+two very similar observations to behave predictably even in a complex model. 
 `lime` then takes this assumption to its natural conclusion by asserting that it
 is possible to fit a simple model around a single observation that will mimic
 how the global model behaves at that locality. The simple model can then be used
@@ -55,7 +55,7 @@ data. Currently two types of inputs are supported: *tabular* and *text*
 
 **Tabular Data**  
 When dealing with tabular data, the permutations are dependent on the training
-set. During the creation of the explainer the statistics for each variable is
+set. During the creation of the explainer the statistics for each variable are
 extracted and permutations are then sampled from the variable distributions. 
 This means that permutations are in fact independent from the explained variable
 making the similarity computation even more important as this is the only thing
@@ -67,20 +67,20 @@ performed by randomly removing words from the original observation. Depending on
 whether the model uses word location or not, words occurring multiple times will
 be removed one-by-one or as a whole.
 
-### Calculating similarities with permuations
-As permutations are created differently based on the input data, so are the 
-similarity calculated in different ways. For text data it is simply measured 
-using the cosine similarity measure, which is the standard in text analysis (it
+### Calculating similarities with permutations
+Just as permutations are created differently based on the input data, so the 
+similarities are calculated in different ways. For text data the cosine 
+similarity measure is used, which is the standard in text analysis (it
 effectively measures the angle difference between the two feature vectors). For
-tabular data it requires a bit more thought and the optimal solution will depend
+tabular data a bit more thought is required and the optimal solution will depend
 on the type of input data. First, the categorical features will be recoded based
 on whether or not they are equal to the observation. Second, if continuous 
 features are binned (the default) these features will be recoded based on 
-whether they are in the same bin as the observation. Based on the recoded data
-the distance to the original observation is calculated based on a user-chosen
-distance measure (default to euclidean), and converted to a similarity using an 
-exponential kernel of a user defined width (defaults to 0.75 times the square 
-root of the number of features).
+whether they are in the same bin as the observation. Using the recoded data
+the distance to the original observation is then calculated based on a 
+user-chosen distance measure (euclidean by default), and converted to a 
+similarity using an exponential kernel of a user defined width (defaults to 0.75 
+times the square root of the number of features).
 
 ### Selecting the features to use
 Feature selection is a complete sub-field of modelling in itself and `lime` has
@@ -96,7 +96,7 @@ supports the following algorithms:
 - **forward selection:** Features are added one by one based on their 
   improvements to a ridge regression fit of the complex model outcome.
 - **highest weights:** The `m` features with highest absolute weight in a ridge
-  regression fit of the complex model outcome is chosen.
+  regression fit of the complex model outcome are chosen.
 - **lasso:** The `m` features that are least prone to shrinkage based on the 
   regularization path of a lasso fit of the complex model outcome is chosen.
 - **tree:** A tree is fitted with `log2(m)` splits, to use at max `m` features. 
@@ -104,24 +104,23 @@ supports the following algorithms:
 - **auto:** Uses forward selection if `m <= 6` and otherwise highest weights.
 
 ### Fitting a model to the permuted and feature-reduced data
-Once permutations has been created, similarities calculated and features 
-selected it is time to fit a model. In case the complex model is a regressor, 
-the simple model will predict the output of the complex model directly If the
+Once permutations have been created, similarities calculated and features 
+selected it is time to fit a model. If the complex model is a regressor, 
+the simple model will predict the output of the complex model directly. If the
 complex model is a classifier, the simple model will predict the probability of
 the chosen class (for classifiers it is possible to either specify the classes
-to explain, or let `lime` chose the top `k` most probably classes).
+to explain, or let `lime` chose the top `k` most probable classes).
 
 The only requirement for the simple model is that it can work with weighted 
-input and that is easy to extract understanding from the resulting fit. While
-multiple types of models supports this, `lime` uses a ridge regression as the
+input and that it is easy to extract understanding from the resulting fit. While
+multiple types of models support this, `lime` uses a ridge regression as the
 model of choice. In the future this might be expanded to other types of models.
 
 ## An example - Tabular Data
-Following is a simple example using explaining the outcome of a model predicting
-cancer outcome based on a biopsy:
+The following is a simple example which seeks to explain the outcome of a model 
+predicting cancer based on biopsy results:
 
 ```{r}
-set.seed(4)
 library(MASS)
 library(lime)
 data(biopsy)
@@ -136,13 +135,14 @@ names(biopsy) <- c('clump thickness', 'uniformity of cell size',
                    'class')
 
 # Now we'll fit a linear discriminant model on all but 4 cases
+set.seed(4)
 test_set <- sample(seq_len(nrow(biopsy)), 4)
 prediction <- biopsy$class
 biopsy$class <- NULL
 model <- lda(biopsy[-test_set, ], prediction[-test_set])
 ```
 
-if we use the model to predict the 4 remaining cases we get some pretty solid
+If we use the model to predict the 4 remaining cases we get some pretty solid
 predictions:
 
 ```{r}
@@ -158,7 +158,7 @@ explanation <- explain(biopsy[test_set, ], explainer, n_labels = 1, n_features =
 explanation[, 2:9]
 ```
 
-We can see that all the explanations for a *benign* outcome has chosen the same
+We can see that all the explanations for a *benign* outcome have chosen the same
 features, strongly indicating that these are both locally and globally important
 features. Unfortunately we can see that the simple model-fit is not very good
 (the `model_r2` column) leading to less trust in the explanation. We can try to
@@ -177,7 +177,7 @@ get a visual overview of the explanations.
 plot_features(explanation, ncol = 1)
 ```
 
-In this overview it is clear to see how case 195 and 416 behaves alike, while
+In this overview it is clear to see how case 195 and 416 behave alike, while
 the third *benign* case (7) has an unusual large *bare nuclei* which are 
 detracting from its status as *benign* without affecting the final prediction 
 (indicating that the values of its other features are making up for this odd 
