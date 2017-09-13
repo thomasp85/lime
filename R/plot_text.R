@@ -69,11 +69,11 @@ plot_text_explanations <- function(explanations, ...) {
     current_case_df$code_level <- current_case_df$sign * (1 + current_case_df$weight_percent %/% 0.2)
     current_case_df$color <- sapply(current_case_df$code_level, get_color_code)
 
-    list(get_html_span(original_text, current_case_df), info_prediction_text)
+    paste(get_html_span(original_text, current_case_df), "</br>", info_prediction_text)
   })
 
   text_highlighted <- paste('<div style="word-wrap: break-word">',
-                            paste("<p><pre>", unlist(text_highlighted_raw, recursive = TRUE), "</pre></p>", collapse = "\n"),
+                            paste("<p><pre>", text_highlighted_raw, "</pre></p>", collapse = "\n"),
                             "</div>")
 
   createWidget("plot_text_explanations", list(html = text_highlighted),
