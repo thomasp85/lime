@@ -4,10 +4,12 @@
 \alias{plot_text_explanations}
 \title{Plot text explanations}
 \usage{
-plot_text_explanations(explanations)
+plot_text_explanations(explanations, ...)
 }
 \arguments{
 \item{explanations}{object returned by the \link{lime.character} function.}
+
+\item{...}{parameters passed to \link{sizingPolicy}}
 }
 \description{
 Highlight words which explains a prediction.
