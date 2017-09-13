@@ -285,6 +285,11 @@ Text explanations are also available through `shine` to explore interactively th
 After loading the application, both text and parameters can be modified.
 Prediction and selected words are updated in real time.
 
+```{r eval=FALSE}
+# Launching the application is done in one command
+interactive_text_explanations(explainer)
+```
+
 ![Interactive text explanations](../tools/shine_text_explanations.gif){width=700px}
 
 ## Session Info
