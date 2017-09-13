@@ -1,8 +1,6 @@
 ---
 title: "Understanding lime"
-author:
-- "Thomas Lin Pedersen"
-- "Michaël Benesty"
+author: "Thomas Lin Pedersen & Michaël Benesty"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
@@ -271,7 +269,7 @@ Another approach to explain a text classification model is to see
 the most important words in their context.
 
 ```{r}
-plot_text_explanations(explanations = explanation)
+plot_text_explanations(explanation)
 ```
 
 For some sentences, the prediction is wrong. For instance, look at the third 
