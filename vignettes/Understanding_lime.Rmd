@@ -1,6 +1,8 @@
 ---
 title: "Understanding lime"
-author: "Thomas Lin Pedersen"
+author:
+- "Thomas Lin Pedersen"
+- "Michaël Benesty"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >

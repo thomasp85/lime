@@ -3,6 +3,7 @@
 #' Highlight words which explains a prediction.
 #'
 #' @param explanations object returned by the [lime.character] function.
+#' @param ... parameters passed to [sizingPolicy]
 #' @examples
 #' \dontrun{
 #' # Explaining a model based on text data
@@ -47,7 +48,7 @@
 #' @importFrom htmlwidgets createWidget
 #' @rdname text_explanations
 #' @export
-plot_text_explanations <- function(explanations) {
+plot_text_explanations <- function(explanations, ...) {
   assert_that(is.data.frame(explanations))
   assert_that(!is.null(explanations$data))
   original_text <- explanations$data
@@ -68,15 +69,19 @@ plot_text_explanations <- function(explanations) {
     current_case_df$code_level <- current_case_df$sign * (1 + current_case_df$weight_percent %/% 0.2)
     current_case_df$color <- sapply(current_case_df$code_level, get_color_code)
 
-    list(get_html_span(original_text, current_case_df), info_prediction_text)
+    paste(get_html_span(original_text, current_case_df), "</br>", info_prediction_text)
   })
 
-  text_highlighted <- paste("<p><pre>", unlist(text_highlighted_raw, recursive = TRUE), "</pre></p>", collapse = "\n")
+  text_highlighted <- paste('<div style="word-wrap: break-word">',
+                            paste("<p><pre>", text_highlighted_raw, "</pre></p>", collapse = "\n"),
+                            "</div>")
 
   createWidget("plot_text_explanations", list(html = text_highlighted),
                               sizingPolicy = htmlwidgets::sizingPolicy(
                                 knitr.figure = FALSE,
-                                defaultHeight = "auto"
+                                defaultHeight = "auto",
+                                knitr.defaultWidth = "100%",
+                                ...
                               ),
                               package = "lime")
 }
@@ -84,7 +89,7 @@ plot_text_explanations <- function(explanations) {
 #' @importFrom stringi stri_replace_all_regex
 get_html_span <- function(text, current_case_df) {
   result <- text
-  for(word in current_case_df$feature) {
+  for (word in current_case_df$feature) {
     color <- as.character(current_case_df[current_case_df$feature == word, "color"])
     text_searched <- paste0("(\\b", word, "\\b)")
     replace_expression <- paste0("<span class='", color, "'>", "$1", "</span>")
