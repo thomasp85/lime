@@ -184,6 +184,96 @@ detracting from its status as *benign* without affecting the final prediction
 one). To no surprise it is clear that high values in the measurements are 
 indicative of a *malignant* tumor.
 
+## An example - text data
+The following is a simple example which seeks to explain the outcome of a model 
+classifying sentences from 30 scientific papers as being about (or not) the 
+author’s own work, e.g. methods, results or conclusions.
+
+Most of the things written for `data.frame` can be applied to textual data.
+
+```{r}
+library(lime)
+library(xgboost) # the classifier
+library(text2vec) # used to build the BoW matrix
+
+# load data
+data(train_sentences)
+data(test_sentences)
+
+# Data are stored in a 2 columns data.frame, one for the sentences, one for the labels.
+print(str(train_sentences))
+
+# The list of possible classes for a sentence
+# We are only interested in the class "OWNX"
+print(unique(train_sentences$class.text))
+
+# Tokenize data
+get_matrix <- function(text) {
+  it <- itoken(text, progressbar = FALSE)
+  create_dtm(it, vectorizer = hash_vectorizer())
+}
+
+# BoW matrix generation
+dtm_train = get_matrix(train_sentences$text)
+dtm_test = get_matrix(test_sentences$text)
+
+# Create boosting model for binary classification (-> logistic loss)
+# Other parameters are quite standard
+param <- list(max_depth = 7, 
+              eta = 0.1, 
+              objective = "binary:logistic", 
+              eval_metric = "error", 
+              nthread = 1)
+
+xgb_model <- xgb.train(param, 
+                       xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
+                       nrounds = 50)
+
+```
+
+We will test our model on test data.
+
+```{r}
+# We use a (standard) threshold of 0.5
+predictions <- predict(xgb_model, dtm_test) > 0.5
+test_labels <- test_sentences$class.text == "OWNX"
+
+# Accuracy
+print(mean(predictions == test_labels))
+```
+
+Now we are sure that the model works, we may want to understand 
+what are the most important words for the predictions.
+
+```{r}
+# We select 10 sentences from the label OWNX
+sentence_to_explain <- head(test_sentences[test_sentences$class.text == "OWNX",]$text, 5)
+explainer <- lime(sentence_to_explain, model = xgb_model, preprocess = get_matrix)
+explanation <- explain(sentence_to_explain, explainer, n_labels = 1, n_features = 2)
+
+# Most of the words choosen by Lime
+# are related to the team (we, our)
+# or part of the paper (Section, in)
+print(explanation)
+
+# Another more graphical view of the same information (2 first sentences only)
+plot_features(head(explanation, 2), ncol = 1)
+```
+
+The graph view gives lots of detailed information about the selected words.
+Another approach to explain a text classification model is to see 
+the most important words in their context.
+
+```{r}
+plot_text_explanations(explanations = explanation)
+```
+
+For some sentences, the prediction is wrong.
+For instance, look at the third sentence.
+The word `we` is in red and the predicted label is 0 (with a low probability), meaning Lime thinks it's not a sentence from 
+the category `OWNX`, mainly because of the presence of the word `those`
+but the word `we` in red doesn't support this (false) prediction.
+
 ## Session Info
 ```{r, echo=FALSE}
 devtools::session_info()
