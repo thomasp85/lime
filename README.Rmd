@@ -8,11 +8,11 @@ output: github_document
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "tools/README-"
+  fig.path = "man/figures/README-"
 )
 ```
 
-# lime
+# lime <img src="man/figures/lime_logo.jpg" align="right" />
 [![Travis-CI Build Status](https://travis-ci.org/thomasp85/lime.svg?branch=master)](https://travis-ci.org/thomasp85/lime)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/thomasp85/lime?branch=master&svg=true)](https://ci.appveyor.com/project/thomasp85/lime)
 [![CRAN_Release_Badge](http://www.r-pkg.org/badges/version-ago/lime)](https://CRAN.R-project.org/package=lime)
@@ -68,6 +68,12 @@ head(explanation)
 # And can be visualised directly
 plot_features(explanation)
 ```
+
+`lime` also supports explaining text model and putting the explanation in the
+context of the original text input. It even includes a `shiny` application for
+interactively exploring text models:
+
+![interactive text explainer](man/figures/shine_text_explanations.gif)
 
 ## Installation
 `lime` is still a work in progress and is thus not available on CRAN yet. In 

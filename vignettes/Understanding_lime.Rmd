@@ -261,7 +261,7 @@ explanation <- explain(sentence_to_explain, explainer, n_labels = 1,
 explanation[, 2:9]
 
 # Another more graphical view of the same information (2 first sentences only)
-plot_features(explanation, ncol = 1)
+plot_features(explanation)
 ```
 
 The graph view gives lots of detailed information about the selected words.
@@ -290,7 +290,7 @@ Prediction and selected words are updated in real time.
 interactive_text_explanations(explainer)
 ```
 
-![Interactive text explanations](../tools/shine_text_explanations.gif){width=700px}
+![Interactive text explanations](../man/figures/shine_text_explanations.gif){width=700px}
 
 ## Session Info
 ```{r, echo=FALSE}

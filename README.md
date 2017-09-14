@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-lime
-====
+lime <img src="man/figures/lime_logo.jpg" align="right" />
+==========================================================
 
 [![Travis-CI Build Status](https://travis-ci.org/thomasp85/lime.svg?branch=master)](https://travis-ci.org/thomasp85/lime) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/thomasp85/lime?branch=master&svg=true)](https://ci.appveyor.com/project/thomasp85/lime) [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/lime)](https://CRAN.R-project.org/package=lime) [![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/lime)](https://CRAN.R-project.org/package=lime) [![Coverage Status](https://img.shields.io/codecov/c/github/thomasp85/lime/master.svg)](https://codecov.io/github/thomasp85/lime?branch=master)
 
@@ -39,24 +39,37 @@ explanation <- explain(iris_test, explainer, n_labels = 1, n_features = 2)
 # The output is provided in a consistent tabular format and includes the
 # output from the model.
 head(explanation)
-#> # A tibble: 6 x 12
-#>       model_type  case  label label_prob  model_r2 model_intercept
-#>            <chr> <chr>  <chr>      <dbl>     <dbl>           <dbl>
-#> 1 classification     1 setosa          1 0.7306399       0.1039371
-#> 2 classification     1 setosa          1 0.7306399       0.1039371
-#> 3 classification     2 setosa          1 0.7461392       0.1028326
-#> 4 classification     2 setosa          1 0.7461392       0.1028326
-#> 5 classification     3 setosa          1 0.7395395       0.1019240
-#> 6 classification     3 setosa          1 0.7395395       0.1019240
-#> # ... with 6 more variables: feature <chr>, feature_value <dbl>,
-#> #   feature_weight <dbl>, feature_desc <chr>, data <list>,
-#> #   prediction <list>
+#>       model_type case  label label_prob  model_r2 model_intercept
+#> 1 classification    1 setosa          1 0.3777422       0.2374550
+#> 2 classification    1 setosa          1 0.3777422       0.2374550
+#> 3 classification    2 setosa          1 0.3878390       0.2448414
+#> 4 classification    2 setosa          1 0.3878390       0.2448414
+#> 5 classification    3 setosa          1 0.3825474       0.2393573
+#> 6 classification    3 setosa          1 0.3825474       0.2393573
+#>        feature feature_value feature_weight             feature_desc
+#> 1  Sepal.Width           3.5    0.006152843        3.3 < Sepal.Width
+#> 2  Petal.Width           0.2    0.440652512       Petal.Width <= 0.4
+#> 3 Sepal.Length           4.9   -0.002913338      Sepal.Length <= 5.2
+#> 4  Petal.Width           0.2    0.443489998       Petal.Width <= 0.4
+#> 5  Sepal.Width           3.2   -0.004193284 3.0 < Sepal.Width <= 3.3
+#> 6  Petal.Width           0.2    0.450469575       Petal.Width <= 0.4
+#>                 data prediction
+#> 1 5.1, 3.5, 1.4, 0.2    1, 0, 0
+#> 2 5.1, 3.5, 1.4, 0.2    1, 0, 0
+#> 3 4.9, 3.0, 1.4, 0.2    1, 0, 0
+#> 4 4.9, 3.0, 1.4, 0.2    1, 0, 0
+#> 5 4.7, 3.2, 1.3, 0.2    1, 0, 0
+#> 6 4.7, 3.2, 1.3, 0.2    1, 0, 0
 
 # And can be visualised directly
 plot_features(explanation)
 ```
 
-![](tools/README-unnamed-chunk-2-1.png)
+![](man/figures/README-unnamed-chunk-2-1.png)
+
+`lime` also supports explaining text model and putting the explanation in the context of the original text input. It even includes a `shiny` application for interactively exploring text models:
+
+![interactive text explainer](man/figures/shine_text_explanations.gif)
 
 Installation
 ------------
