@@ -261,7 +261,7 @@ explanation <- explain(sentence_to_explain, explainer, n_labels = 1,
 explanation[, 2:9]
 
 # Another more graphical view of the same information (2 first sentences only)
-plot_features(head(explanation, 4), ncol = 1)
+plot_features(explanation, ncol = 1)
 ```
 
 The graph view gives lots of detailed information about the selected words.
@@ -277,6 +277,20 @@ sentence. The word *we* is in red and the predicted label is 0 (with a low
 probability), meaning the model thinks it's not a sentence from the category 
 `OWNX`, mainly because of the presence of the word *those* but the word *we* in 
 red doesn't support this (false) prediction.
+
+## Interactive text model explanations
+
+Text explanations are also available through `shine` to explore interactively the model.
+
+After loading the application, both text and parameters can be modified.
+Prediction and selected words are updated in real time.
+
+```{r eval=FALSE}
+# Launching the application is done in one command
+interactive_text_explanations(explainer)
+```
+
+![Interactive text explanations](../tools/shine_text_explanations.gif){width=700px}
 
 ## Session Info
 ```{r, echo=FALSE}
