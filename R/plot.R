@@ -52,18 +52,23 @@ plot_features <- function(explanation, ncol = 2) {
     theme_lime()
 }
 
-#' @importFrom hrbrthemes theme_ipsum
 theme_lime <- function(...) {
-  theme_ipsum(base_family = '', strip_text_size = 9,
-              strip_text_face = 'bold', grid = 'Xx',
-              plot_margin = margin(15, 15, 15, 15),
-              axis_title_just = 'm') +
-    theme(legend.position = 'bottom',
-          panel.spacing.y = unit(15, 'pt'),
-          strip.text.x = element_text(margin = margin(t = 2, b = 2)),
-          axis.title.y = element_text(margin = margin(r = 10)),
-          axis.title.x = element_text(margin = margin(t = 10)),
-          ...)
+  theme_minimal() +
+    theme(
+      strip.text = element_text(face = 'bold', size = 9),
+      plot.margin = margin(15, 15, 15, 15),
+      legend.background = element_blank(),
+      legend.key = element_blank(),
+      panel.grid.major.y = element_blank(),
+      panel.grid.minor.y = element_blank(),
+      axis.ticks = element_blank(),
+      legend.position = 'bottom',
+      panel.spacing.y = unit(15, 'pt'),
+      strip.text.x = element_text(margin = margin(t = 2, b = 2), hjust = 0),
+      axis.title.y = element_text(margin = margin(r = 10)),
+      axis.title.x = element_text(margin = margin(t = 10)),
+      ...
+    )
 }
 #' @importFrom tools toTitleCase
 label_both_upper <- function(labels, multi_line = TRUE, sep = ': ') {
