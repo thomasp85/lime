@@ -1,14 +1,15 @@
 Package: lime
 Type: Package
 Title: Local Interpretable Model-Agnostic Explanations
-Version: 0.2.0
+Version: 0.3.0
+Date: 2017-09-14
 Authors@R: c(person('Thomas Lin', 'Pedersen', role = c('cre', 'aut'), email = "thomasp85@gmail.com"),
              person('Michaël', 'Benesty', role = c('aut'), email = "michael@benesty.fr"))
 Maintainer: Thomas Lin Pedersen <thomasp85@gmail.com>
 Description: When building complex models, it is often difficult to explain why
     the model should be trusted. While global measures such as accuracy are 
     useful, they cannot be used for explaining why a model made a specific 
-    prediction. `lime` (a port of the `lime` Python package) is a method for
+    prediction. 'lime' (a port of the 'lime' Python package) is a method for
     explaining the outcome of black box models by fitting a local model around
     the point in question an perturbations of this point.
 License: MIT + file LICENSE

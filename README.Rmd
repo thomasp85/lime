@@ -21,8 +21,8 @@ knitr::opts_chunk$set(
 
 *This is an R port of the Python lime package (https://github.com/marcotcr/lime)
 developed by the authors of the lime (Local Interpretable Model-agnostic 
-Explanations) approach for black-box model explanations. All credits goes to the
-original developers.*
+Explanations) approach for black-box model explanations. All credits for the
+invention of the approach goes to the original developers.*
 
 The purpose of `lime` is to explain the predictions of black box classifiers. 
 What this means is that for any given prediction and any given classifier it is
