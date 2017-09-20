@@ -23,7 +23,9 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
   explainer <- c(as.list(environment()), list(...))
   explainer$x <- NULL
   explainer$feature_type <- setNames(sapply(x, function(f) {
-    if (is.numeric(f)) {
+    if (is.integer(f)) {
+      'integer'
+    } else if (is.numeric(f)) {
       'numeric'
     } else if (is.character(f)) {
       'character'
@@ -34,9 +36,10 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
     }
   }), names(x))
   explainer$bin_cuts <- setNames(lapply(seq_along(x), function(i) {
-    if (explainer$feature_type[i] == 'numeric') {
+    if (explainer$feature_type[i] %in% c('numeric', 'integer')) {
       if (quantile_bins) {
-        quantile(x[[i]], seq(0, 1, length.out = n_bins + 1))
+        bins <- quantile(x[[i]], seq(0, 1, length.out = n_bins + 1))
+        bins[!duplicated(bins)]
       } else {
         d_range <- range(x[[i]])
         seq(d_range[1], d_range[2], length.out = n_bins + 1)
@@ -46,6 +49,7 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
   explainer$feature_distribution <- setNames(lapply(seq_along(x), function(i) {
     switch(
       explainer$feature_type[i],
+      integer = ,
       numeric = if (bin_continuous) {
         table(cut(x[[i]], unique(explainer$bin_cuts[[i]]), labels = FALSE, include.lowest = TRUE))/nrow(x)
       } else {

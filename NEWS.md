@@ -2,3 +2,4 @@
 
 * Added a `NEWS.md` file to track changes to the package.
 * Fixed bug when explaining regression models, due to drop=TRUE defaults (#33)
+* Integer features are no longer converted to numeric during permutations (#32)
