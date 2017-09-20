@@ -40,26 +40,26 @@ explanation <- explain(iris_test, explainer, n_labels = 1, n_features = 2)
 # output from the model.
 head(explanation)
 #>       model_type case  label label_prob  model_r2 model_intercept
-#> 1 classification    1 setosa          1 0.3928161       0.2506065
-#> 2 classification    1 setosa          1 0.3928161       0.2506065
-#> 3 classification    2 setosa          1 0.4073850       0.2430483
-#> 4 classification    2 setosa          1 0.4073850       0.2430483
-#> 5 classification    3 setosa          1 0.3991240       0.2463829
-#> 6 classification    3 setosa          1 0.3991240       0.2463829
+#> 1 classification    1 setosa          1 0.4341912       0.2420850
+#> 2 classification    1 setosa          1 0.4341912       0.2420850
+#> 3 classification    2 setosa          1 0.4424828       0.2341992
+#> 4 classification    2 setosa          1 0.4424828       0.2341992
+#> 5 classification    3 setosa          1 0.4446400       0.2291437
+#> 6 classification    3 setosa          1 0.4446400       0.2291437
 #>   model_prediction      feature feature_value feature_weight
-#> 1        0.7192690 Sepal.Length           5.1    0.008395256
-#> 2        0.7192690 Petal.Length           1.4    0.460267268
-#> 3        0.7293933 Sepal.Length           4.9    0.012021577
-#> 4        0.7293933 Petal.Length           1.4    0.474323339
-#> 5        0.7215491 Sepal.Length           4.7    0.011426553
-#> 6        0.7215491 Petal.Length           1.3    0.463739592
-#>          feature_desc               data prediction
-#> 1 Sepal.Length <= 5.2 5.1, 3.5, 1.4, 0.2    1, 0, 0
-#> 2 Petal.Length <= 1.6 5.1, 3.5, 1.4, 0.2    1, 0, 0
-#> 3 Sepal.Length <= 5.2 4.9, 3.0, 1.4, 0.2    1, 0, 0
-#> 4 Petal.Length <= 1.6 4.9, 3.0, 1.4, 0.2    1, 0, 0
-#> 5 Sepal.Length <= 5.2 4.7, 3.2, 1.3, 0.2    1, 0, 0
-#> 6 Petal.Length <= 1.6 4.7, 3.2, 1.3, 0.2    1, 0, 0
+#> 1        0.7016979  Sepal.Width           3.5   -0.015758934
+#> 2        0.7016979  Petal.Width           0.2    0.475371862
+#> 3        0.7082935 Sepal.Length           4.9   -0.008450071
+#> 4        0.7082935  Petal.Width           0.2    0.482544423
+#> 5        0.7211259  Sepal.Width           3.2    0.005927646
+#> 6        0.7211259  Petal.Width           0.2    0.486054549
+#>               feature_desc               data prediction
+#> 1        3.3 < Sepal.Width 5.1, 3.5, 1.4, 0.2    1, 0, 0
+#> 2       Petal.Width <= 0.4 5.1, 3.5, 1.4, 0.2    1, 0, 0
+#> 3      Sepal.Length <= 5.2 4.9, 3.0, 1.4, 0.2    1, 0, 0
+#> 4       Petal.Width <= 0.4 4.9, 3.0, 1.4, 0.2    1, 0, 0
+#> 5 3.0 < Sepal.Width <= 3.3 4.7, 3.2, 1.3, 0.2    1, 0, 0
+#> 6       Petal.Width <= 0.4 4.7, 3.2, 1.3, 0.2    1, 0, 0
 
 # And can be visualised directly
 plot_features(explanation)
@@ -84,4 +84,4 @@ devtools::install_github('thomasp85/lime')
 Scope
 -----
 
-The current version of `lime` has support for tabular and text data. The Python implementation has additional support for image data, which will be added to this package in time. In addition to the capabilities discussed in the *"Why Should I Trust You?": Explaining the Predictions of Any Classifier* article, this package also support regression model explanations (this has been added to the Python library as well). The global model explanation using submodular picks is not supported in either packages.
+The current version of `lime` has support for tabular and text data. The Python implementation has additional support for image data, which will be added to this package in time. In addition to the capabilities discussed in the *"Why Should I Trust You?": Explaining the Predictions of Any Classifier* article, this package also support regression model explanations (this has been added to the Python library as well). The global model explanation using submodular picks that the article discusses is not supported in either packages. It might get support once it appears in the Python version and it is clear how the authors envision it.

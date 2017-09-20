@@ -91,4 +91,6 @@ this package in time. In addition to the capabilities discussed in the
 *"Why Should I Trust You?": Explaining the Predictions of Any Classifier* 
 article, this package also support regression model explanations (this has been
 added to the Python library as well). The global model explanation using 
-submodular picks is not supported in either packages.
+submodular picks that the article discusses is not supported in either packages.
+It might get support once it appears in the Python version and it is clear how
+the authors envision it.
