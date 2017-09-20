@@ -69,9 +69,9 @@ explain.character <- function(x, explainer, labels = NULL, n_labels = NULL,
   if (m_type == 'regression') {
     if (!is.null(labels) || !is.null(n_labels)) {
       warning('"labels" and "n_labels" arguments are ignored when explaining regression models')
-      n_labels <- 1
-      labels <- NULL
     }
+    n_labels <- 1
+    labels <- NULL
   }
   assert_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
   assert_that(is.count(n_features))
@@ -98,7 +98,7 @@ explain.character <- function(x, explainer, labels = NULL, n_labels = NULL,
 
   res <- lapply(seq_along(case_ind), function(ind) {
     i <- case_ind[[ind]]
-    res <- model_permutations(case_perm$tabular[i, ], case_res[i, ], case_perm$permutation_distances[i], labels, n_labels, n_features, feature_select)
+    res <- model_permutations(case_perm$tabular[i, ], case_res[i, , drop = FALSE], case_perm$permutation_distances[i], labels, n_labels, n_features, feature_select)
     res$feature_value <- res$feature
     res$feature_desc <- res$feature
     res$case <- ind

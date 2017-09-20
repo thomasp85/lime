@@ -76,9 +76,9 @@ explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
   if (m_type == 'regression') {
     if (!is.null(labels) || !is.null(n_labels)) {
       warning('"labels" and "n_labels" arguments are ignored when explaining regression models')
-      n_labels <- 1
-      labels <- NULL
     }
+    n_labels <- 1
+    labels <- NULL
   }
   assert_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
   assert_that(is.count(n_features))
@@ -98,7 +98,7 @@ explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
     perms <- numerify(case_perm[i, ], explainer$feature_type, explainer$bin_continuous, explainer$bin_cuts)
     dist <- c(0, dist(feature_scale(perms, explainer$feature_distribution, explainer$feature_type, explainer$bin_continuous),
                       method = dist_fun)[seq_len(n_permutations-1)])
-    res <- model_permutations(as.matrix(perms), case_res[i, ], kernel(dist), labels, n_labels, n_features, feature_select)
+    res <- model_permutations(as.matrix(perms), case_res[i, , drop = FALSE], kernel(dist), labels, n_labels, n_features, feature_select)
     res$feature_value <- unlist(case_perm[i[1], res$feature])
     res$feature_desc <- describe_feature(res$feature, case_perm[i[1], ], explainer$feature_type, explainer$bin_continuous, explainer$bin_cuts)
     guess <- which.max(abs(case_res[i[1], ]))
