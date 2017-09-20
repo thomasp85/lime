@@ -109,7 +109,7 @@ explain.character <- function(x, explainer, labels = NULL, n_labels = NULL,
     res
   })
   res <- do.call(rbind, res)
-  res <- res[, c('model_type', 'case', 'label', 'label_prob', 'model_r2', 'model_intercept', 'feature', 'feature_value', 'feature_weight', 'feature_desc', 'data', 'prediction')]
+  res <- res[, c('model_type', 'case', 'label', 'label_prob', 'model_r2', 'model_intercept', 'model_prediction', 'feature', 'feature_value', 'feature_weight', 'feature_desc', 'data', 'prediction')]
   if (m_type == 'regression') {
     res$label <- NULL
     res$label_prob <- NULL
@@ -120,11 +120,18 @@ explain.character <- function(x, explainer, labels = NULL, n_labels = NULL,
 is.text_explainer <- function(x) inherits(x, 'text_explainer')
 #' Default function to tokenize
 #'
-#' @description Use simple regex to tokenize a \code{\link{character}} vector. To be used with \code{\link{lime.character}}.
-#' @param text text to tokenize as a \code{\link{character}} vector
-#' @return a \code{\link{character}} vector.
+#' This tokenizer uses [stringi::stri_split_boundaries()] to tokenize a
+#' `character` vector. To be used with [explain.character()`.
+#'
+#' @param text text to tokenize as a `character` vector
+#' @return a `character` vector.
 #' @importFrom stringi stri_split_boundaries
 #' @export
+#'
+#' @examples
+#' data('train_sentences')
+#' default_tokenize(train_sentences$text[1])
+#'
 default_tokenize <- function(text) {
   unlist(stri_split_boundaries(text, type = "word", skip_word_none = TRUE))
 }

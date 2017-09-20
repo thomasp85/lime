@@ -25,7 +25,7 @@ test_that("single sentence explanation", {
   expect_gt(predict(xgb_model, get_matrix(to_explain)), 0.5)
   explainer <- lime(x = to_explain, model = xgb_model, preprocess = get_matrix)
   explanation <- explain(to_explain, explainer, n_labels = 1, n_features = 2)
-  expect_length(explanation, 12)
+  expect_length(explanation, 13)
   expect_equal(nrow(explanation), 2)
   expect_type(explanation, "list")
   expect_true("our" %in% explanation$feature)

@@ -43,6 +43,7 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
       coefs <- coef(fit)
       intercept <- coefs[1]
       coefs <- coefs[-1]
+      model_pred <- fit$fitted.values[1]
     } else {
       shuffle_order <- sample(length(y[[label]])) # glm is sensitive to the order of the examples
       fit <- glmnet(x[shuffle_order, features], y[[label]][shuffle_order], weights = weights[shuffle_order], alpha = 0, lambda = 0.001)
@@ -50,6 +51,7 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
       coefs <- coef(fit)
       intercept <- coefs[1, 1]
       coefs <- coefs[-1, 1]
+      model_pred <- predict(fit, x[1, features, drop = FALSE])[1]
     }
 
     data.frame(
@@ -58,6 +60,7 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
       feature_weight = unname(coefs),
       model_r2 = r2,
       model_intercept = intercept,
+      model_prediction = model_pred,
       stringsAsFactors = FALSE
     )
   })

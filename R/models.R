@@ -28,6 +28,19 @@
 #' @name model_support
 #' @rdname model_support
 #'
+#' @examples
+#' # Example of adding support for lda models (already available in lime)
+#' predict_model.lda <- function(x, newdata, type, ...) {
+#'   res <- predict(x, newdata = newdata, ...)
+#'   switch(
+#'     type,
+#'     raw = data.frame(Response = res$class, stringsAsFactors = FALSE),
+#'     prob = as.data.frame(res$posterior, check.names = FALSE)
+#'   )
+#' }
+#'
+#' model_type.lda <- function(x, ...) 'classification'
+#'
 NULL
 
 #' @rdname model_support

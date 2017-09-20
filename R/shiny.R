@@ -9,12 +9,17 @@
 #' @param window_title,title,place_holder,minimum_lentgh_error text to be displayed on the page
 #' @param minimum_lentgh don't update display if text is shorter than this parameter
 #' @param max_feature_to_select up limit to the number of words that can be selected
+#'
+#' @rdname interactive_text_explanations
+#' @importFrom shiny fluidPage textAreaInput shinyApp sliderInput mainPanel titlePanel hr need validate h1 h2 h3 h4 h5 h6 numericInput selectInput sidebarPanel renderPlot plotOutput
+#' @importFrom stringi stri_count_words stri_replace_all_fixed
+#' @importFrom shinythemes shinytheme
+#' @importFrom assertthat assert_that is.string is.count
+#' @export
+#'
 #' @examples
-#' \dontrun{
-#' library(lime)
 #' library(text2vec)
 #' library(xgboost)
-#' library(stringi)
 #'
 #' data(train_sentences)
 #' data(test_sentences)
@@ -27,21 +32,17 @@
 #' dtm_train = get_matrix(train_sentences$text)
 #'
 #' xgb_model <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logistic",
-#'                             eval_metric = "error", nthread = 1),
-#'                        xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
-#'                        nrounds = 50)
+#'                  eval_metric = "error", nthread = 1),
+#'                  xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
+#'                  nrounds = 50)
 #'
-#' sentences <- head(test_sentences[test_sentences$class.text != "OWNX", "text"], 5)
-#' explainer <- lime(sentences, xgb_model, get_matrix)
+#' sentences <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 1)
+#' explainer <- lime(train_sentences$text, xgb_model, get_matrix)
 #'
+#' # The explainer can now be queried interactively:
+#' \dontrun{
 #' interactive_text_explanations(explainer)
 #' }
-#' @rdname interactive_text_explanations
-#' @importFrom shiny fluidPage textAreaInput shinyApp sliderInput mainPanel titlePanel hr need validate h1 h2 h3 h4 h5 h6 numericInput selectInput sidebarPanel renderPlot plotOutput
-#' @importFrom stringi stri_count_words stri_replace_all_fixed
-#' @importFrom shinythemes shinytheme
-#' @importFrom assertthat assert_that is.string is.count
-#' @export
 interactive_text_explanations <- function(explainer, window_title = "Text model explainer",
                                           title = "Local Interpretable Model-agnostic Explanations",
                                           place_holder = "Put here the text to explain",

@@ -15,43 +15,15 @@ plot_text_explanations(explanations, ...)
 Highlight words which explains a prediction.
 }
 \examples{
-\dontrun{
-# Explaining a model based on text data
+# We load a precalculated explanation set based on the procedure in the ?lime
+# examples
+explanations <- readRDS(system.file('extdata', 'text_explanation.rds',
+                                    package = 'lime'))
 
-# Purpose is to classify sentences from scientific publications
-# and find those where the team writes about their own work
-# (category OWNX in the provided dataset).
-
-library(lime)
-library(text2vec)
-library(xgboost)
-
-data(train_sentences)
-data(test_sentences)
-
-get_matrix <- function(text) {
-  it <- itoken(text, progressbar = FALSE)
-  create_dtm(it, vectorizer = hash_vectorizer())
-}
-
-dtm_train = get_matrix(train_sentences$text)
-
-xgb_model <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logistic",
-                 eval_metric = "error", nthread = 1),
-                 xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
-                 nrounds = 50)
-
-sentences <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 5)
-explainer <- lime(sentences, xgb_model, get_matrix)
-explanations <- explain(sentences, explainer, n_labels = 1, n_features = 2)
-
-# We can see that many explanations are based
-# on the presence of the word `we` in the sentences
-# which makes sense regarding the task.
+# We see that the explanations are in the expected format
 print(explanations)
 
-# We can also print the explanations to see the selected words in their context.
+# We can now get the explanations in the context of the input text
 plot_text_explanations(explanations)
-}
 
 }

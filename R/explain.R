@@ -44,6 +44,8 @@
 #' - `case`: The case being explained (the rowname in `cases`).
 #' - `model_r2`: The quality of the model used for the explanation
 #' - `model_intercept`: The intercept of the model used for the explanation
+#' - `model_prediction`: The prediction of the observation based on the model
+#'   used for the explanation.
 #' - `feature`: The feature used for the explanation
 #' - `feature_value`: The value of the feature used
 #' - `feature_weight`: The weight of the feature in the explanation

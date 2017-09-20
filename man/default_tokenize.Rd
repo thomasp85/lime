@@ -7,11 +7,17 @@
 default_tokenize(text)
 }
 \arguments{
-\item{text}{text to tokenize as a \code{\link{character}} vector}
+\item{text}{text to tokenize as a \code{character} vector}
 }
 \value{
-a \code{\link{character}} vector.
+a \code{character} vector.
 }
 \description{
-Use simple regex to tokenize a \code{\link{character}} vector. To be used with \code{\link{lime.character}}.
+This tokenizer uses \code{\link[stringi:stri_split_boundaries]{stringi::stri_split_boundaries()}} to tokenize a
+\code{character} vector. To be used with [explain.character()`.
+}
+\examples{
+data('train_sentences')
+default_tokenize(train_sentences$text[1])
+
 }

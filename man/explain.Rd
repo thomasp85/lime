@@ -67,6 +67,8 @@ observation. The columns are:
 \item \code{case}: The case being explained (the rowname in \code{cases}).
 \item \code{model_r2}: The quality of the model used for the explanation
 \item \code{model_intercept}: The intercept of the model used for the explanation
+\item \code{model_prediction}: The prediction of the observation based on the model
+used for the explanation.
 \item \code{feature}: The feature used for the explanation
 \item \code{feature_value}: The value of the feature used
 \item \code{feature_weight}: The weight of the feature in the explanation

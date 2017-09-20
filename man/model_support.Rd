@@ -38,3 +38,17 @@ the latter the model must respond to the \code{model_type()} generic. Out of the
 box \code{lime} supports models from \code{caret} and \code{mlr} as well as \code{xgboost}. See
 the details for how to provide compliant methods for other models.
 }
+\examples{
+# Example of adding support for lda models (already available in lime)
+predict_model.lda <- function(x, newdata, type, ...) {
+  res <- predict(x, newdata = newdata, ...)
+  switch(
+    type,
+    raw = data.frame(Response = res$class, stringsAsFactors = FALSE),
+    prob = as.data.frame(res$posterior, check.names = FALSE)
+  )
+}
+
+model_type.lda <- function(x, ...) 'classification'
+
+}

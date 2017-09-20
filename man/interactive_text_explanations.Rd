@@ -57,11 +57,8 @@ Render the text explanations in Shiny application.
 }
 }
 \examples{
-\dontrun{
-library(lime)
 library(text2vec)
 library(xgboost)
-library(stringi)
 
 data(train_sentences)
 data(test_sentences)
@@ -74,13 +71,15 @@ get_matrix <- function(text) {
 dtm_train = get_matrix(train_sentences$text)
 
 xgb_model <- xgb.train(list(max_depth = 7, eta = 0.1, objective = "binary:logistic",
-                            eval_metric = "error", nthread = 1),
-                       xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
-                       nrounds = 50)
+                 eval_metric = "error", nthread = 1),
+                 xgb.DMatrix(dtm_train, label = train_sentences$class.text == "OWNX"),
+                 nrounds = 50)
 
-sentences <- head(test_sentences[test_sentences$class.text != "OWNX", "text"], 5)
-explainer <- lime(sentences, xgb_model, get_matrix)
+sentences <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 1)
+explainer <- lime(train_sentences$text, xgb_model, get_matrix)
 
+# The explainer can now be queried interactively:
+\dontrun{
 interactive_text_explanations(explainer)
 }
 }
