@@ -38,10 +38,10 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
   explainer$bin_cuts <- setNames(lapply(seq_along(x), function(i) {
     if (explainer$feature_type[i] %in% c('numeric', 'integer')) {
       if (quantile_bins) {
-        bins <- quantile(x[[i]], seq(0, 1, length.out = n_bins + 1),na.rm=T)
+        bins <- quantile(x[[i]], seq(0, 1, length.out = n_bins + 1))
         bins[!duplicated(bins)]
       } else {
-        d_range <- range(x[[i]],na.rm=T)
+        d_range <- range(x[[i]])
         seq(d_range[1], d_range[2], length.out = n_bins + 1)
       }
     }
