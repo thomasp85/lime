@@ -66,7 +66,9 @@ predict_model.WrappedModel <- function(x, newdata, type, ...) {
   p
 }
 predict_model.xgb.Booster <- function(x, newdata, type, ...) {
-  newdata <- as.matrix(newdata)
+  if(is.data.frame(newdata)){
+    newdata <- as.matrix(newdata)
+  }
   p <- data.frame(predict(x, newdata = newdata, reshape = TRUE, ...), stringsAsFactors = FALSE)
   if (type == 'raw') {
     names(p) <- 'Response'
