@@ -34,6 +34,7 @@ plot_features <- function(explanation, ncol = 2) {
   desc_width <- max(nchar(description)) + 1
   description <- paste0(format(description, width = desc_width), explanation$feature_desc)
   explanation$description <- factor(description, levels = description[order(abs(explanation$feature_weight))])
+  explanation$case <- factor(explanation$case, unique(explanation$case))
 
   if (explanation$model_type[1] == 'classification') {
     explanation$probability <- format(explanation$label_prob, digits = 2)

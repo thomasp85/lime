@@ -5,3 +5,4 @@
 * Integer features are no longer converted to numeric during permutations (#32)
 * Fix bug when working with xgboost and tabular predictions (@martinju #1)
 * Training data can now contain `NA` values (#8) 
+* Keep ordering when plotting with `plot_features()` (#38)
