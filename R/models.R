@@ -65,6 +65,7 @@ predict_model.WrappedModel <- function(x, newdata, type, ...) {
   if (type == 'raw') p <- data.frame(Response = p, stringsAsFactors = FALSE)
   p
 }
+#' @importFrom xgboost xgb.DMatrix
 predict_model.xgb.Booster <- function(x, newdata, type, ...) {
   if(is.data.frame(newdata)){
     newdata <- xgb.DMatrix(as.matrix(newdata))
