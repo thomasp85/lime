@@ -65,10 +65,12 @@ predict_model.WrappedModel <- function(x, newdata, type, ...) {
   if (type == 'raw') p <- data.frame(Response = p, stringsAsFactors = FALSE)
   p
 }
-#' @importFrom xgboost xgb.DMatrix
 predict_model.xgb.Booster <- function(x, newdata, type, ...) {
+  if (!requireNamespace('xgboost', quietly = TRUE)) {
+    stop('The xgboost package is required for predicting xgboost models')
+  }
   if(is.data.frame(newdata)){
-    newdata <- xgb.DMatrix(as.matrix(newdata))
+    newdata <- xgboost::xgb.DMatrix(as.matrix(newdata))
   }
   p <- data.frame(predict(x, newdata = newdata, reshape = TRUE, ...), stringsAsFactors = FALSE)
   if (type == 'raw') {
