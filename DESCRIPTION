@@ -45,5 +45,6 @@ Suggests: xgboost,
     knitr,
     rmarkdown,
     devtools
+Remotes: ropensci/magick
 LinkingTo: Rcpp, 
     RcppEigen
