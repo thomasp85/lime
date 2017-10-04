@@ -9,3 +9,7 @@ get_index_permutations <- function(original_document, number_permutations) {
     .Call('_lime_get_index_permutations', PACKAGE = 'lime', original_document, number_permutations)
 }
 
+slic <- function(L, a, b, n_sp, weight, n_iter) {
+    .Call('_lime_slic', PACKAGE = 'lime', L, a, b, n_sp, weight, n_iter)
+}
+

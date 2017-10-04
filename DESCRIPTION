@@ -33,7 +33,9 @@ Imports: glmnet,
     assertthat,
     htmlwidgets,
     shiny,
-    shinythemes
+    shinythemes,
+    magick,
+    methods
 Suggests: xgboost,
     testthat,
     mlr,
