@@ -102,7 +102,9 @@ predict_model.H2OModel <- function(x, newdata, type, ...){
     if (h2o_model_class %in% c("H2OBinomialModel", "H2OMultinomialModel")) {
         return(as.data.frame(pred[,-1])) 
     } else if (h2o_model_class == "H2ORegressionModel") {
-        return(as.data.frame(pred[,1]))
+        ret <- as.data.frame(pred[,1])
+        names(ret) <- "Response"
+        return(ret)
     } else {
         stop('This h2o model is not currently supported.')
     }

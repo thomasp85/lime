@@ -50,7 +50,7 @@ test_that("H2OMultinomialClassification: lime explanation only produces one entr
     response <- "C5"
     predictors <- base::setdiff(names(df_h2o), response)
     
-    # Binomial Classification 
+    # Multinomial Classification 
     model.rf <- h2o.randomForest(x = predictors, y = response, training_frame = df_h2o, ntrees = 50, stopping_rounds = 2)
     
     # Check class
@@ -75,7 +75,7 @@ test_that("H2ORegression: lime explanation only produces one entry per case and 
     response <- "premax"
     predictors <- base::setdiff(names(df_h2o), response)
     
-    # Binomial Classification 
+    # Regression Classification 
     model.rf <- h2o.randomForest(x = predictors, y = response, training_frame = df_h2o, ntrees = 50, stopping_rounds = 2)
     
     # Check class
