@@ -6,3 +6,4 @@
 * Fix bug when working with xgboost and tabular predictions (@martinju #1)
 * Training data can now contain `NA` values (#8) 
 * Keep ordering when plotting with `plot_features()` (#38)
+* Fix support for mlr by extracting predictions correctly

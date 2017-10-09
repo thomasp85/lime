@@ -20,6 +20,8 @@ The following shows how a random forest model is trained on the iris data set an
 
 ``` r
 library(caret)
+#> Warning in as.POSIXlt.POSIXct(Sys.time()): unknown timezone 'default/
+#> Europe/Copenhagen'
 library(lime)
 
 # Split up the data set
@@ -40,23 +42,23 @@ explanation <- explain(iris_test, explainer, n_labels = 1, n_features = 2)
 # output from the model.
 head(explanation)
 #>       model_type case  label label_prob  model_r2 model_intercept
-#> 1 classification    1 setosa          1 0.4341912       0.2420850
-#> 2 classification    1 setosa          1 0.4341912       0.2420850
-#> 3 classification    2 setosa          1 0.4424828       0.2341992
-#> 4 classification    2 setosa          1 0.4424828       0.2341992
-#> 5 classification    3 setosa          1 0.4446400       0.2291437
-#> 6 classification    3 setosa          1 0.4446400       0.2291437
+#> 1 classification    1 setosa          1 0.4079348       0.2429957
+#> 2 classification    1 setosa          1 0.4079348       0.2429957
+#> 3 classification    2 setosa          1 0.4089838       0.2410068
+#> 4 classification    2 setosa          1 0.4089838       0.2410068
+#> 5 classification    3 setosa          1 0.3910168       0.2506570
+#> 6 classification    3 setosa          1 0.3910168       0.2506570
 #>   model_prediction      feature feature_value feature_weight
-#> 1        0.7016979  Sepal.Width           3.5   -0.015758934
-#> 2        0.7016979  Petal.Width           0.2    0.475371862
-#> 3        0.7082935 Sepal.Length           4.9   -0.008450071
-#> 4        0.7082935  Petal.Width           0.2    0.482544423
-#> 5        0.7211259  Sepal.Width           3.2    0.005927646
-#> 6        0.7211259  Petal.Width           0.2    0.486054549
+#> 1        0.6983435 Sepal.Length           5.1  -0.0027991810
+#> 2        0.6983435  Petal.Width           0.2   0.4581469579
+#> 3        0.6994034  Sepal.Width           3.0  -0.0003087489
+#> 4        0.6994034  Petal.Width           0.2   0.4587053620
+#> 5        0.6898974  Sepal.Width           3.2  -0.0082078281
+#> 6        0.6898974  Petal.Width           0.2   0.4474482469
 #>               feature_desc               data prediction
-#> 1        3.3 < Sepal.Width 5.1, 3.5, 1.4, 0.2    1, 0, 0
+#> 1      Sepal.Length <= 5.2 5.1, 3.5, 1.4, 0.2    1, 0, 0
 #> 2       Petal.Width <= 0.4 5.1, 3.5, 1.4, 0.2    1, 0, 0
-#> 3      Sepal.Length <= 5.2 4.9, 3.0, 1.4, 0.2    1, 0, 0
+#> 3 2.8 < Sepal.Width <= 3.0 4.9, 3.0, 1.4, 0.2    1, 0, 0
 #> 4       Petal.Width <= 0.4 4.9, 3.0, 1.4, 0.2    1, 0, 0
 #> 5 3.0 < Sepal.Width <= 3.3 4.7, 3.2, 1.3, 0.2    1, 0, 0
 #> 6       Petal.Width <= 0.4 4.7, 3.2, 1.3, 0.2    1, 0, 0
@@ -74,7 +76,13 @@ plot_features(explanation)
 Installation
 ------------
 
-`lime` is still a work in progress and is thus not available on CRAN yet. In order to try it out install it directly from GitHub:
+`lime` is available on CRAN and can be installed using the standard approach:
+
+``` r
+install.packages('lime')
+```
+
+To get the development version, install from GitHub instead:
 
 ``` r
 # install.packages('devtools')
