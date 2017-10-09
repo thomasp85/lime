@@ -54,16 +54,16 @@ predict_model.default <- function(x, newdata, type, ...) {
   as.data.frame(p)
 }
 predict_model.WrappedModel <- function(x, newdata, type, ...) {
+  if (!requireNamespace('mlr', quietly = TRUE)) {
+    stop('mlr must be available when working with WrappedModel models')
+  }
+  p <- predict(x, newdata = newdata, ...)
   type2 <- switch(
     type,
-    raw = 'response',
-    prob = 'prob',
+    raw = data.frame(Response = mlr::getPredictionResponse(p), stringsAsFactors = FALSE),
+    prob = mlr::getPredictionProbabilities(p, p$task.desc$class.levels),
     stop('Type must be either "raw" or "prob"', call. = FALSE)
   )
-  x$learner <- mlr::setPredictType(x$learner, type2)
-  p <- predict(x, newdata = newdata, ...)
-  if (type == 'raw') p <- data.frame(Response = p, stringsAsFactors = FALSE)
-  p
 }
 predict_model.xgb.Booster <- function(x, newdata, type, ...) {
   if (!requireNamespace('xgboost', quietly = TRUE)) {
