@@ -76,8 +76,13 @@ interactively exploring text models:
 ![interactive text explainer](man/figures/shine_text_explanations.gif)
 
 ## Installation
-`lime` is still a work in progress and is thus not available on CRAN yet. In 
-order to try it out install it directly from GitHub:
+`lime` is available on CRAN and can be installed using the standard approach:
+
+```{r, eval=FALSE}
+install.packages('lime')
+```
+
+To get the development version, install from GitHub instead:
 
 ```{r, eval=FALSE}
 # install.packages('devtools')
