@@ -108,7 +108,7 @@ select_f_fs <- function(x, y, weights, n_features) {
         fit <- glmnet(x[, c(features, j), drop = FALSE], y, weights = weights, alpha = 0, lambda = 0)
         r2 <- fit$dev.ratio
       }
-      if (r2 > max) {
+      if (is.finite(r2) && r2 > max) {
         max <- r2
         best <- j
       }
