@@ -26,6 +26,7 @@ lime <- function(x, model, ...) {
 #' @importFrom stats coef
 #' @importFrom stats glm.fit
 #' @importFrom stats gaussian var
+#' @importFrom Matrix colSums
 model_permutations <- function(x, y, weights, labels, n_labels, n_features, feature_method) {
   if (all(weights[-1] == 0)) {
     stop('All permutations have no similarity to the original observation. Try setting bin_continuous to TRUE and/or increase kernel_size', call. = FALSE)
