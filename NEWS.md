@@ -8,3 +8,6 @@
 * Keep ordering when plotting with `plot_features()` (#38)
 * Fix support for mlr by extracting predictions correctly
 * Added support for `h2o` (@mdancho84) (#40)
+* Throws meaningful error when all permutations have 0 similarity to original
+  observation (#47)
+* Explaining data can now contain `NA` values (#45)

@@ -27,16 +27,19 @@ lime <- function(x, model, ...) {
 #' @importFrom stats glm.fit
 #' @importFrom stats gaussian var
 model_permutations <- function(x, y, weights, labels, n_labels, n_features, feature_method) {
+  if (all(weights[-1] == 0)) {
+    stop('All permutations have no similarity to the original observation. Try setting bin_continuous to TRUE and/or increase kernel_size', call. = FALSE)
+  }
   if (!is.null(n_labels)) {
     labels <- names(y)[order(y[1,], decreasing = TRUE)[seq_len(n_labels)]]
   }
-  x <- x[, apply(x, 2, var) != 0, drop = FALSE]
+  x <- x[, colSums(is.na(x)) == 0 & apply(x, 2, var) != 0, drop = FALSE]
   res <- lapply(labels, function(label) {
 
     features <- select_features(feature_method, x, y[[label]], weights, n_features)
 
     # glmnet does not allow n_features=1
-    if (n_features == 1) {
+    if (length(features) == 1) {
       x_fit = cbind("(Intercept)" = rep(1, nrow(x)), x[, features, drop = FALSE])
       fit <- glm.fit(x = x_fit, y = y[[label]],  weights = weights, family = gaussian())
       r2 <- fit$deviance / fit$null.deviance
