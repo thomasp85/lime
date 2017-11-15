@@ -1,4 +1,5 @@
 #' @rdname lime
+#' @name lime
 #' @param preprocess Function to transform a `character` vector to the format
 #' expected from the model.
 #' @param tokenization function used to tokenize text for the permutations.
@@ -53,6 +54,7 @@ lime.character <- function(x, model, preprocess, tokenization = default_tokenize
   structure(explainer, class = c('text_explainer', 'explainer', 'list'))
 }
 #' @rdname explain
+#' @name explain
 #'
 #' @param single_explanation A boolean indicating whether to pool all text in
 #' `x` into a single explanation.

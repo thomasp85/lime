@@ -1,4 +1,5 @@
 #' @rdname lime
+#' @name lime
 #' @param bin_continuous Should continuous variables be binned when making the explanation
 #' @param n_bins The number of bins for continuous variables if `bin_continuous = TRUE`
 #' @param quantile_bins Should the bins be based on `n_bins` quantiles or spread evenly over the range of the training data
@@ -65,6 +66,7 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
   structure(explainer, class = c('data_frame_explainer', 'explainer', 'list'))
 }
 #' @rdname explain
+#' @name explain
 #'
 #' @param dist_fun The distance function to use for calculating the distance
 #' from the observation to the permutations. Will be forwarded to
