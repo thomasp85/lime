@@ -7,12 +7,12 @@
 plot_features(explanation, ncol = 2)
 }
 \arguments{
-\item{explanation}{A \code{data.frame} as returned by an explanation function.}
+\item{explanation}{A \code{data.frame} as returned by \code{\link[=explain]{explain()}}.}
 
 \item{ncol}{The number of columns in the facetted plot}
 }
 \value{
-A ggplot2 object
+A \code{ggplot} object
 }
 \description{
 This functions creates a compact visual representation of the explanations
@@ -33,4 +33,8 @@ explanations <- explain(iris_test, explanation, n_labels = 1, n_features = 2)
 # Get an overview with the standard plot
 plot_features(explanations)
 
+}
+\seealso{
+Other explanation plots: \code{\link{plot_explanations}},
+  \code{\link{plot_text_explanations}}
 }

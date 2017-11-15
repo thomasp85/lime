@@ -10,6 +10,7 @@
 #' @rdname text_explanations
 #' @export
 #'
+#' @family explanation plots
 #'
 #' @examples
 #' # We load a precalculated explanation set based on the procedure in the ?lime

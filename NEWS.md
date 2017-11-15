@@ -14,3 +14,4 @@
 * Support for `Date` and `POSIXt` columns. They will be kept constant during
   permutations so that `lime` will explain the model behaviour at the given 
   timepoint based on the remaining features (#39).
+* Add `plot_explanations()` for an overview plot of a large explanation set
