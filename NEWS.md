@@ -11,3 +11,6 @@
 * Throws meaningful error when all permutations have 0 similarity to original
   observation (#47)
 * Explaining data can now contain `NA` values (#45)
+* Support for `Date` and `POSIXt` columns. They will be kept constant during
+  permutations so that `lime` will explain the model behaviour at the given 
+  timepoint based on the remaining features (#39).

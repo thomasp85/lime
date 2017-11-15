@@ -15,6 +15,8 @@ permute_cases.data.frame <- function(cases, n_permutations, feature_distribution
     } else if (is.factor(cases[[i]])) {
       x <- sample(names(feature_distribution[[i]]), nrows, TRUE, as.numeric(feature_distribution[[i]]))
       factor(x, levels = names(feature_distribution[[i]]))
+    } else if (inherits(cases[[i]], 'Date') || inherits(cases[[i]], 'POSIXt')) {
+      rep(cases[[i]], each = n_permutations)
     }
     if (is.integer(cases[[i]])) {
       as.integer(round(perms))

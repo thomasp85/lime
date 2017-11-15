@@ -31,6 +31,8 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
       'character'
     } else if (is.factor(f)) {
       'factor'
+    } else if (inherits(f, 'Date') || inherits(f, 'POSIXt')) {
+      'date_time'
     } else {
       stop('Unknown feature type', call. = FALSE)
     }
@@ -56,7 +58,8 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
         c(mean = mean(x[[i]], na.rm = TRUE), sd = sd(x[[i]], na.rm = TRUE))
       },
       character = ,
-      factor = table(x[[i]])/nrow(x)
+      factor = table(x[[i]])/nrow(x),
+      NA
     )
   }), names(x))
   structure(explainer, class = c('data_frame_explainer', 'explainer', 'list'))
@@ -128,6 +131,8 @@ numerify <- function(x, type, bin_continuous, bin_cuts) {
   setNames(as.data.frame(lapply(seq_along(x), function(i) {
     if (type[i] %in% c('character', 'factor')) {
       as.numeric(x[[i]] == x[[i]][1])
+    } else if (type[i] == 'date_time') {
+      rep(0, nrow(x))
     } else {
       if (bin_continuous) {
         cuts <- bin_cuts[[i]]
