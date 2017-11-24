@@ -15,6 +15,7 @@
 #' @return Return an explainer which can be used together with [explain()] to
 #' explain model predictions.
 #'
+#' @name lime
 #' @export
 lime <- function(x, model, ...) {
   UseMethod('lime')

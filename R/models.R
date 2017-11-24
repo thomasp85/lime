@@ -97,10 +97,10 @@ predict_model.H2OModel <- function(x, newdata, type, ...){
     if (!requireNamespace('h2o', quietly = TRUE)) {
         stop('The h2o package is required for predicting h2o models')
     }
-    pred <- h2o.predict(x, h2o::as.h2o(newdata))
+    pred <- h2o::h2o.predict(x, h2o::as.h2o(newdata))
     h2o_model_class <- class(x)[[1]]
     if (h2o_model_class %in% c("H2OBinomialModel", "H2OMultinomialModel")) {
-        return(as.data.frame(pred[,-1])) 
+        return(as.data.frame(pred[,-1]))
     } else if (h2o_model_class == "H2ORegressionModel") {
         ret <- as.data.frame(pred[,1])
         names(ret) <- "Response"
@@ -145,7 +145,7 @@ model_type.lda <- function(x, ...) 'classification'
 model_type.H2OModel <- function(x, ...) {
     h2o_model_class <- class(x)[[1]]
     if (h2o_model_class %in% c("H2OBinomialModel", "H2OMultinomialModel")) {
-        return('classification') 
+        return('classification')
     } else if (h2o_model_class == "H2ORegressionModel") {
         return('regression')
     } else {

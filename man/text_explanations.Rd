@@ -27,3 +27,7 @@ print(explanations)
 plot_text_explanations(explanations)
 
 }
+\seealso{
+Other explanation plots: \code{\link{plot_explanations}},
+  \code{\link{plot_features}}
+}

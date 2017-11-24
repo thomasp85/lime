@@ -1,4 +1,5 @@
 #' @rdname lime
+#' @name lime
 #' @param bin_continuous Should continuous variables be binned when making the explanation
 #' @param n_bins The number of bins for continuous variables if `bin_continuous = TRUE`
 #' @param quantile_bins Should the bins be based on `n_bins` quantiles or spread evenly over the range of the training data
@@ -31,6 +32,8 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
       'character'
     } else if (is.factor(f)) {
       'factor'
+    } else if (inherits(f, 'Date') || inherits(f, 'POSIXt')) {
+      'date_time'
     } else {
       stop('Unknown feature type', call. = FALSE)
     }
@@ -56,12 +59,14 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
         c(mean = mean(x[[i]], na.rm = TRUE), sd = sd(x[[i]], na.rm = TRUE))
       },
       character = ,
-      factor = table(x[[i]])/nrow(x)
+      factor = table(x[[i]])/nrow(x),
+      NA
     )
   }), names(x))
   structure(explainer, class = c('data_frame_explainer', 'explainer', 'list'))
 }
 #' @rdname explain
+#' @name explain
 #'
 #' @param dist_fun The distance function to use for calculating the distance
 #' from the observation to the permutations. Will be forwarded to
@@ -128,6 +133,8 @@ numerify <- function(x, type, bin_continuous, bin_cuts) {
   setNames(as.data.frame(lapply(seq_along(x), function(i) {
     if (type[i] %in% c('character', 'factor')) {
       as.numeric(x[[i]] == x[[i]][1])
+    } else if (type[i] == 'date_time') {
+      rep(0, nrow(x))
     } else {
       if (bin_continuous) {
         cuts <- bin_cuts[[i]]

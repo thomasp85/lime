@@ -1,8 +1,8 @@
 Package: lime
 Type: Package
 Title: Local Interpretable Model-Agnostic Explanations
-Version: 0.3.0
-Date: 2017-09-14
+Version: 0.3.1
+Date: 2017-11-24
 Authors@R: c(person('Thomas Lin', 'Pedersen', role = c('cre', 'aut'), email = "thomasp85@gmail.com"),
              person('Michaël', 'Benesty', role = c('aut'), email = "michael@benesty.fr"))
 Maintainer: Thomas Lin Pedersen <thomasp85@gmail.com>
