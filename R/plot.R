@@ -93,8 +93,8 @@ plot_explanations <- function(explanation, ...) {
     explanation$feature_desc,
     levels = rev(unique(explanation$feature_desc[order(explanation$feature, explanation$feature_value)]))
   )
-  ggplot(explanation, aes(case, feature_desc)) +
-    geom_tile(aes(fill = feature_weight)) +
+  ggplot(explanation, aes_(~case, ~feature_desc)) +
+    geom_tile(aes_(fill = ~feature_weight)) +
     facet_wrap(~label, ...) +
     scale_x_discrete('Case', expand = c(0, 0)) +
     scale_y_discrete('Feature', expand = c(0, 0)) +
