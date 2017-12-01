@@ -1,3 +1,7 @@
+# lime 0.3.1.9999
+
+* Fix bug when numeric features in the training data were constant (#56)
+
 # lime 0.3.1
 
 * Added a `NEWS.md` file to track changes to the package.
