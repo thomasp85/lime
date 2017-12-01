@@ -25,9 +25,9 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
   explainer$x <- NULL
   explainer$feature_type <- setNames(sapply(x, function(f) {
     if (is.integer(f)) {
-      'integer'
+      if (length(unique(f)) == 1) 'constant' else 'integer'
     } else if (is.numeric(f)) {
-      'numeric'
+      if (length(unique(f)) == 1) 'constant' else 'numeric'
     } else if (is.character(f)) {
       'character'
     } else if (is.factor(f)) {
@@ -38,6 +38,9 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
       stop('Unknown feature type', call. = FALSE)
     }
   }), names(x))
+  if (any(explainer$feature_type == 'constant')) {
+    warning('Data contains numeric columns with zero variance', call. = FALSE)
+  }
   explainer$bin_cuts <- setNames(lapply(seq_along(x), function(i) {
     if (explainer$feature_type[i] %in% c('numeric', 'integer')) {
       if (quantile_bins) {
@@ -133,7 +136,7 @@ numerify <- function(x, type, bin_continuous, bin_cuts) {
   setNames(as.data.frame(lapply(seq_along(x), function(i) {
     if (type[i] %in% c('character', 'factor')) {
       as.numeric(x[[i]] == x[[i]][1])
-    } else if (type[i] == 'date_time') {
+    } else if (type[i] == 'date_time' || type[i] == 'constant') {
       rep(0, nrow(x))
     } else {
       if (bin_continuous) {
