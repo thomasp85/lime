@@ -9,7 +9,7 @@ lime <img src="man/figures/lime_logo.jpg" align="right" />
 >
 > Whose models were simply sublime,
 >
-> It gave explanations for it's variations,
+> It gave explanations for their variations,
 >
 > one observation at a time.
 
@@ -54,22 +54,22 @@ explanation <- explain(iris_test, explainer, n_labels = 1, n_features = 2)
 # output from the model.
 head(explanation)
 #>       model_type case  label label_prob  model_r2 model_intercept
-#> 1 classification    1 setosa          1 0.4178344       0.2317790
-#> 2 classification    1 setosa          1 0.4178344       0.2317790
-#> 3 classification    2 setosa          1 0.4060792       0.2339704
-#> 4 classification    2 setosa          1 0.4060792       0.2339704
-#> 5 classification    3 setosa          1 0.3810840       0.2502586
-#> 6 classification    3 setosa          1 0.3810840       0.2502586
+#> 1 classification    1 setosa          1 0.3809782       0.2509266
+#> 2 classification    1 setosa          1 0.3809782       0.2509266
+#> 3 classification    2 setosa          1 0.3726965       0.2434589
+#> 4 classification    2 setosa          1 0.3726965       0.2434589
+#> 5 classification    3 setosa          1 0.3811006       0.2376631
+#> 6 classification    3 setosa          1 0.3811006       0.2376631
 #>   model_prediction      feature feature_value feature_weight
-#> 1        0.6842126 Sepal.Length           5.1   -0.006198107
-#> 2        0.6842126  Petal.Width           0.2    0.458631778
-#> 3        0.6849851 Sepal.Length           4.9   -0.007179831
-#> 4        0.6849851  Petal.Width           0.2    0.458194556
-#> 5        0.6971393  Sepal.Width           3.2    0.002754042
-#> 6        0.6971393  Petal.Width           0.2    0.444126656
+#> 1        0.7060955  Sepal.Width           3.5    0.002079451
+#> 2        0.7060955 Petal.Length           1.4    0.453089418
+#> 3        0.6781576 Sepal.Length           4.9   -0.003561341
+#> 4        0.6781576  Petal.Width           0.2    0.438260042
+#> 5        0.7096458  Sepal.Width           3.2    0.025174931
+#> 6        0.7096458  Petal.Width           0.2    0.446807773
 #>               feature_desc               data prediction
-#> 1      Sepal.Length <= 5.2 5.1, 3.5, 1.4, 0.2    1, 0, 0
-#> 2       Petal.Width <= 0.4 5.1, 3.5, 1.4, 0.2    1, 0, 0
+#> 1        3.3 < Sepal.Width 5.1, 3.5, 1.4, 0.2    1, 0, 0
+#> 2      Petal.Length <= 1.6 5.1, 3.5, 1.4, 0.2    1, 0, 0
 #> 3      Sepal.Length <= 5.2 4.9, 3.0, 1.4, 0.2    1, 0, 0
 #> 4       Petal.Width <= 0.4 4.9, 3.0, 1.4, 0.2    1, 0, 0
 #> 5 3.0 < Sepal.Width <= 3.3 4.7, 3.2, 1.3, 0.2    1, 0, 0

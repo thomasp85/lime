@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 >
 > Whose models were simply sublime,  
 >
-> It gave explanations for their variations,  
+> It gave explanations for their variations, 
 >
 > one observation at a time.
  
