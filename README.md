@@ -6,11 +6,16 @@ lime <img src="man/figures/lime_logo.jpg" align="right" />
 [![Travis-CI Build Status](https://travis-ci.org/thomasp85/lime.svg?branch=master)](https://travis-ci.org/thomasp85/lime) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/thomasp85/lime?branch=master&svg=true)](https://ci.appveyor.com/project/thomasp85/lime) [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/lime)](https://CRAN.R-project.org/package=lime) [![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/lime)](https://CRAN.R-project.org/package=lime) [![Coverage Status](https://img.shields.io/codecov/c/github/thomasp85/lime/master.svg)](https://codecov.io/github/thomasp85/lime?branch=master)
 
 > There once was a package called lime,
-> Whose models were simply sublime,
-> It gave explanations for it's variations,
-> one observation at a time.
 >
-> *lime-rick by Mara Averick*
+> Whose models were simply sublime,
+>
+> It gave explanations for it's variations,
+>
+> one observation at a time.
+
+*lime-rick by Mara Averick*
+
+------------------------------------------------------------------------
 
 *This is an R port of the Python lime package (<https://github.com/marcotcr/lime>) developed by the authors of the lime (Local Interpretable Model-agnostic Explanations) approach for black-box model explanations. All credits for the invention of the approach goes to the original developers.*
 
@@ -49,26 +54,26 @@ explanation <- explain(iris_test, explainer, n_labels = 1, n_features = 2)
 # output from the model.
 head(explanation)
 #>       model_type case  label label_prob  model_r2 model_intercept
-#> 1 classification    1 setosa          1 0.3901382       0.2546456
-#> 2 classification    1 setosa          1 0.3901382       0.2546456
-#> 3 classification    2 setosa          1 0.3818484       0.2507161
-#> 4 classification    2 setosa          1 0.3818484       0.2507161
-#> 5 classification    3 setosa          1 0.3789301       0.2532487
-#> 6 classification    3 setosa          1 0.3789301       0.2532487
+#> 1 classification    1 setosa          1 0.4178344       0.2317790
+#> 2 classification    1 setosa          1 0.4178344       0.2317790
+#> 3 classification    2 setosa          1 0.4060792       0.2339704
+#> 4 classification    2 setosa          1 0.4060792       0.2339704
+#> 5 classification    3 setosa          1 0.3810840       0.2502586
+#> 6 classification    3 setosa          1 0.3810840       0.2502586
 #>   model_prediction      feature feature_value feature_weight
-#> 1        0.7047768 Sepal.Length           5.1   -0.004917920
-#> 2        0.7047768 Petal.Length           1.4    0.455049192
-#> 3        0.6978629 Sepal.Length           4.9   -0.007657797
-#> 4        0.6978629 Petal.Length           1.4    0.454804591
-#> 5        0.7132436 Sepal.Length           4.7    0.003284767
-#> 6        0.7132436 Petal.Length           1.3    0.456710094
-#>          feature_desc               data prediction
-#> 1 Sepal.Length <= 5.2 5.1, 3.5, 1.4, 0.2    1, 0, 0
-#> 2 Petal.Length <= 1.6 5.1, 3.5, 1.4, 0.2    1, 0, 0
-#> 3 Sepal.Length <= 5.2 4.9, 3.0, 1.4, 0.2    1, 0, 0
-#> 4 Petal.Length <= 1.6 4.9, 3.0, 1.4, 0.2    1, 0, 0
-#> 5 Sepal.Length <= 5.2 4.7, 3.2, 1.3, 0.2    1, 0, 0
-#> 6 Petal.Length <= 1.6 4.7, 3.2, 1.3, 0.2    1, 0, 0
+#> 1        0.6842126 Sepal.Length           5.1   -0.006198107
+#> 2        0.6842126  Petal.Width           0.2    0.458631778
+#> 3        0.6849851 Sepal.Length           4.9   -0.007179831
+#> 4        0.6849851  Petal.Width           0.2    0.458194556
+#> 5        0.6971393  Sepal.Width           3.2    0.002754042
+#> 6        0.6971393  Petal.Width           0.2    0.444126656
+#>               feature_desc               data prediction
+#> 1      Sepal.Length <= 5.2 5.1, 3.5, 1.4, 0.2    1, 0, 0
+#> 2       Petal.Width <= 0.4 5.1, 3.5, 1.4, 0.2    1, 0, 0
+#> 3      Sepal.Length <= 5.2 4.9, 3.0, 1.4, 0.2    1, 0, 0
+#> 4       Petal.Width <= 0.4 4.9, 3.0, 1.4, 0.2    1, 0, 0
+#> 5 3.0 < Sepal.Width <= 3.3 4.7, 3.2, 1.3, 0.2    1, 0, 0
+#> 6       Petal.Width <= 0.4 4.7, 3.2, 1.3, 0.2    1, 0, 0
 
 # And can be visualised directly
 plot_features(explanation)
