@@ -5,7 +5,10 @@ lime <img src="man/figures/lime_logo.jpg" align="right" />
 
 [![Travis-CI Build Status](https://travis-ci.org/thomasp85/lime.svg?branch=master)](https://travis-ci.org/thomasp85/lime) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/thomasp85/lime?branch=master&svg=true)](https://ci.appveyor.com/project/thomasp85/lime) [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/lime)](https://CRAN.R-project.org/package=lime) [![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/lime)](https://CRAN.R-project.org/package=lime) [![Coverage Status](https://img.shields.io/codecov/c/github/thomasp85/lime/master.svg)](https://codecov.io/github/thomasp85/lime?branch=master)
 
-> There once was a package called lime, Whose models were simply sublime, It gave explanations for it's variations, one observation at a time.
+> There once was a package called lime,
+> Whose models were simply sublime,
+> It gave explanations for it's variations,
+> one observation at a time.
 >
 > *lime-rick by Mara Averick*
 
@@ -46,24 +49,24 @@ explanation <- explain(iris_test, explainer, n_labels = 1, n_features = 2)
 # output from the model.
 head(explanation)
 #>       model_type case  label label_prob  model_r2 model_intercept
-#> 1 classification    1 setosa          1 0.3667000       0.2340950
-#> 2 classification    1 setosa          1 0.3667000       0.2340950
-#> 3 classification    2 setosa          1 0.3950771       0.2404793
-#> 4 classification    2 setosa          1 0.3950771       0.2404793
-#> 5 classification    3 setosa          1 0.3739461       0.2490111
-#> 6 classification    3 setosa          1 0.3739461       0.2490111
+#> 1 classification    1 setosa          1 0.3901382       0.2546456
+#> 2 classification    1 setosa          1 0.3901382       0.2546456
+#> 3 classification    2 setosa          1 0.3818484       0.2507161
+#> 4 classification    2 setosa          1 0.3818484       0.2507161
+#> 5 classification    3 setosa          1 0.3789301       0.2532487
+#> 6 classification    3 setosa          1 0.3789301       0.2532487
 #>   model_prediction      feature feature_value feature_weight
-#> 1        0.6692257  Sepal.Width           3.5    0.001141157
-#> 2        0.6692257  Petal.Width           0.2    0.433989539
-#> 3        0.6930694 Sepal.Length           4.9   -0.005321281
-#> 4        0.6930694  Petal.Width           0.2    0.457911380
-#> 5        0.6965257 Sepal.Length           4.7   -0.003101128
-#> 6        0.6965257 Petal.Length           1.3    0.450615701
+#> 1        0.7047768 Sepal.Length           5.1   -0.004917920
+#> 2        0.7047768 Petal.Length           1.4    0.455049192
+#> 3        0.6978629 Sepal.Length           4.9   -0.007657797
+#> 4        0.6978629 Petal.Length           1.4    0.454804591
+#> 5        0.7132436 Sepal.Length           4.7    0.003284767
+#> 6        0.7132436 Petal.Length           1.3    0.456710094
 #>          feature_desc               data prediction
-#> 1   3.3 < Sepal.Width 5.1, 3.5, 1.4, 0.2    1, 0, 0
-#> 2  Petal.Width <= 0.4 5.1, 3.5, 1.4, 0.2    1, 0, 0
+#> 1 Sepal.Length <= 5.2 5.1, 3.5, 1.4, 0.2    1, 0, 0
+#> 2 Petal.Length <= 1.6 5.1, 3.5, 1.4, 0.2    1, 0, 0
 #> 3 Sepal.Length <= 5.2 4.9, 3.0, 1.4, 0.2    1, 0, 0
-#> 4  Petal.Width <= 0.4 4.9, 3.0, 1.4, 0.2    1, 0, 0
+#> 4 Petal.Length <= 1.6 4.9, 3.0, 1.4, 0.2    1, 0, 0
 #> 5 Sepal.Length <= 5.2 4.7, 3.2, 1.3, 0.2    1, 0, 0
 #> 6 Petal.Length <= 1.6 4.7, 3.2, 1.3, 0.2    1, 0, 0
 
