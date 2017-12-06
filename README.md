@@ -5,6 +5,10 @@ lime <img src="man/figures/lime_logo.jpg" align="right" />
 
 [![Travis-CI Build Status](https://travis-ci.org/thomasp85/lime.svg?branch=master)](https://travis-ci.org/thomasp85/lime) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/thomasp85/lime?branch=master&svg=true)](https://ci.appveyor.com/project/thomasp85/lime) [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/lime)](https://CRAN.R-project.org/package=lime) [![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/lime)](https://CRAN.R-project.org/package=lime) [![Coverage Status](https://img.shields.io/codecov/c/github/thomasp85/lime/master.svg)](https://codecov.io/github/thomasp85/lime?branch=master)
 
+> There once was a package called lime, Whose models were simply sublime, It gave explanations for it's variations, one observation at a time.
+>
+> *lime-rick by Mara Averick*
+
 *This is an R port of the Python lime package (<https://github.com/marcotcr/lime>) developed by the authors of the lime (Local Interpretable Model-agnostic Explanations) approach for black-box model explanations. All credits for the invention of the approach goes to the original developers.*
 
 The purpose of `lime` is to explain the predictions of black box classifiers. What this means is that for any given prediction and any given classifier it is able to determine a small set of features in the original data that has driven the outcome of the prediction. To learn more about the methodology of `lime` read the [paper](https://arxiv.org/abs/1602.04938) and visit the repository of the [original implementation](https://github.com/marcotcr/lime).
@@ -20,8 +24,8 @@ The following shows how a random forest model is trained on the iris data set an
 
 ``` r
 library(caret)
-#> Warning in as.POSIXlt.POSIXct(Sys.time()): unknown timezone 'default/
-#> Europe/Copenhagen'
+#> Warning in as.POSIXlt.POSIXct(Sys.time()): unknown timezone 'zone/tz/2017c.
+#> 1.0/zoneinfo/Europe/Copenhagen'
 library(lime)
 
 # Split up the data set
@@ -42,26 +46,26 @@ explanation <- explain(iris_test, explainer, n_labels = 1, n_features = 2)
 # output from the model.
 head(explanation)
 #>       model_type case  label label_prob  model_r2 model_intercept
-#> 1 classification    1 setosa          1 0.4079348       0.2429957
-#> 2 classification    1 setosa          1 0.4079348       0.2429957
-#> 3 classification    2 setosa          1 0.4089838       0.2410068
-#> 4 classification    2 setosa          1 0.4089838       0.2410068
-#> 5 classification    3 setosa          1 0.3910168       0.2506570
-#> 6 classification    3 setosa          1 0.3910168       0.2506570
+#> 1 classification    1 setosa          1 0.3667000       0.2340950
+#> 2 classification    1 setosa          1 0.3667000       0.2340950
+#> 3 classification    2 setosa          1 0.3950771       0.2404793
+#> 4 classification    2 setosa          1 0.3950771       0.2404793
+#> 5 classification    3 setosa          1 0.3739461       0.2490111
+#> 6 classification    3 setosa          1 0.3739461       0.2490111
 #>   model_prediction      feature feature_value feature_weight
-#> 1        0.6983435 Sepal.Length           5.1  -0.0027991810
-#> 2        0.6983435  Petal.Width           0.2   0.4581469579
-#> 3        0.6994034  Sepal.Width           3.0  -0.0003087489
-#> 4        0.6994034  Petal.Width           0.2   0.4587053620
-#> 5        0.6898974  Sepal.Width           3.2  -0.0082078281
-#> 6        0.6898974  Petal.Width           0.2   0.4474482469
-#>               feature_desc               data prediction
-#> 1      Sepal.Length <= 5.2 5.1, 3.5, 1.4, 0.2    1, 0, 0
-#> 2       Petal.Width <= 0.4 5.1, 3.5, 1.4, 0.2    1, 0, 0
-#> 3 2.8 < Sepal.Width <= 3.0 4.9, 3.0, 1.4, 0.2    1, 0, 0
-#> 4       Petal.Width <= 0.4 4.9, 3.0, 1.4, 0.2    1, 0, 0
-#> 5 3.0 < Sepal.Width <= 3.3 4.7, 3.2, 1.3, 0.2    1, 0, 0
-#> 6       Petal.Width <= 0.4 4.7, 3.2, 1.3, 0.2    1, 0, 0
+#> 1        0.6692257  Sepal.Width           3.5    0.001141157
+#> 2        0.6692257  Petal.Width           0.2    0.433989539
+#> 3        0.6930694 Sepal.Length           4.9   -0.005321281
+#> 4        0.6930694  Petal.Width           0.2    0.457911380
+#> 5        0.6965257 Sepal.Length           4.7   -0.003101128
+#> 6        0.6965257 Petal.Length           1.3    0.450615701
+#>          feature_desc               data prediction
+#> 1   3.3 < Sepal.Width 5.1, 3.5, 1.4, 0.2    1, 0, 0
+#> 2  Petal.Width <= 0.4 5.1, 3.5, 1.4, 0.2    1, 0, 0
+#> 3 Sepal.Length <= 5.2 4.9, 3.0, 1.4, 0.2    1, 0, 0
+#> 4  Petal.Width <= 0.4 4.9, 3.0, 1.4, 0.2    1, 0, 0
+#> 5 Sepal.Length <= 5.2 4.7, 3.2, 1.3, 0.2    1, 0, 0
+#> 6 Petal.Length <= 1.6 4.7, 3.2, 1.3, 0.2    1, 0, 0
 
 # And can be visualised directly
 plot_features(explanation)

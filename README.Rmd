@@ -19,6 +19,13 @@ knitr::opts_chunk$set(
 [![CRAN_Download_Badge](http://cranlogs.r-pkg.org/badges/lime)](https://CRAN.R-project.org/package=lime)
 [![Coverage Status](https://img.shields.io/codecov/c/github/thomasp85/lime/master.svg)](https://codecov.io/github/thomasp85/lime?branch=master)
 
+> There once was a package called lime,
+> Whose models were simply sublime,
+> It gave explanations for it's variations, 
+> one observation at a time.
+> 
+> *lime-rick by Mara Averick*
+
 *This is an R port of the Python lime package (https://github.com/marcotcr/lime)
 developed by the authors of the lime (Local Interpretable Model-agnostic 
 Explanations) approach for black-box model explanations. All credits for the
