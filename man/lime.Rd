@@ -3,9 +3,7 @@
 \name{lime}
 \alias{lime}
 \alias{lime.character}
-\alias{lime}
 \alias{lime.data.frame}
-\alias{lime}
 \title{Create a model explanation function based on training data}
 \usage{
 \method{lime}{character}(x, model, preprocess,

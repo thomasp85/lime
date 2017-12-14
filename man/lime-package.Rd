@@ -2,14 +2,28 @@
 % Please edit documentation in R/lime-package.r
 \docType{package}
 \name{lime-package}
-\title{lime - Local, Interpretable, Model-Agnostic, Explanations}
+\alias{lime-package}
+\alias{_PACKAGE}
+\title{lime: Local Interpretable Model-Agnostic Explanations}
 \description{
+\if{html}{\figure{logo.png}{options: align='right'}}
+
+When building complex models, it is often difficult to explain why
+the model should be trusted. While global measures such as accuracy are
+useful, they cannot be used for explaining why a model made a specific
+prediction. 'lime' (a port of the 'lime' 'Python' package) is a method for
+explaining the outcome of black box models by fitting a local model around
+the point in question an perturbations of this point. The approach is
+described in more detail in the article by Ribeiro et al. (2016)
+<arXiv:1602.04938>.
+}
+\details{
 This package is a port of the original Python lime package implementing the
 prediction explanation framework laid out Ribeiro \emph{et al.} (2016). The
 package supports models from \code{caret} and \code{mlr} natively, but see
 \link[=model_support]{the docs} for how to make it work for any model.
-}
-\section{Main functions}{
+
+\strong{Main functions:}
 
 Use of \code{lime} is mainly through two functions. First you create an
 \code{explainer} object using the \code{\link[=lime]{lime()}} function based on the training data and
@@ -20,7 +34,6 @@ Along with these two functions, \code{lime} also provides the \code{\link[=plot_
 and \code{\link[=plot_text_explanations]{plot_text_explanations()}} function to visualise the explanations
 directly.
 }
-
 \references{
 Ribeiro, M.T., Singh, S., Guestrin, C. \emph{"Why Should I Trust You?": Explaining the Predictions of Any Classifier}. 2016, \url{https://arxiv.org/abs/1602.04938}
 }

@@ -38,3 +38,4 @@ plot_explanations(explanations)
 Other explanation plots: \code{\link{plot_features}},
   \code{\link{plot_text_explanations}}
 }
+\concept{explanation plots}
