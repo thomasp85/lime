@@ -98,6 +98,7 @@ To get the development version, install from GitHub instead:
 
 ```{r, eval=FALSE}
 # install.packages('devtools')
+devtools::find_rtools()  
 devtools::install_github('thomasp85/lime')
 ```
 
