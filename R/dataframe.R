@@ -3,7 +3,8 @@
 #' @param bin_continuous Should continuous variables be binned when making the explanation
 #' @param n_bins The number of bins for continuous variables if `bin_continuous = TRUE`
 #' @param quantile_bins Should the bins be based on `n_bins` quantiles or spread evenly over the range of the training data
-#' @importFrom stats predict sd quantile
+#' @param use_density If `bin_continuous = FALSE` should continuous data be sampled using a kernel density estimation. If not, continuous features are expected to follow a normal distribution.
+#' @importFrom stats predict sd quantile density
 #' @export
 #'
 #' @examples
@@ -20,7 +21,7 @@
 #' # This can now be used together with the explain method
 #' explain(iris_test, explanation, n_labels = 1, n_features = 2)
 #'
-lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantile_bins = TRUE, ...) {
+lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantile_bins = TRUE, use_density = TRUE, ...) {
   explainer <- c(as.list(environment()), list(...))
   explainer$x <- NULL
   explainer$feature_type <- setNames(sapply(x, function(f) {
@@ -58,6 +59,8 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
       integer = ,
       numeric = if (bin_continuous) {
         table(cut(x[[i]], unique(explainer$bin_cuts[[i]]), labels = FALSE, include.lowest = TRUE))/nrow(x)
+      } else if (use_density) {
+        density(x[[i]])
       } else {
         c(mean = mean(x[[i]], na.rm = TRUE), sd = sd(x[[i]], na.rm = TRUE))
       },
@@ -104,7 +107,8 @@ explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
   kernel <- exp_kernel(kernel_width)
 
   case_perm <- permute_cases(x, n_permutations, explainer$feature_distribution,
-                             explainer$bin_continuous, explainer$bin_cuts)
+                             explainer$bin_continuous, explainer$bin_cuts,
+                             explainer$use_density)
   case_res <- predict_model(explainer$model, case_perm, type = o_type)
   case_ind <- split(seq_len(nrow(case_perm)), rep(seq_len(nrow(x)), each = n_permutations))
   res <- lapply(seq_along(case_ind), function(ind) {

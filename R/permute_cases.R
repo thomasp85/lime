@@ -2,7 +2,7 @@ permute_cases <- function(cases, n_permutations, ...) {
   UseMethod('permute_cases')
 }
 #' @importFrom stats rnorm runif
-permute_cases.data.frame <- function(cases, n_permutations, feature_distribution, bin_continuous, bin_cuts) {
+permute_cases.data.frame <- function(cases, n_permutations, feature_distribution, bin_continuous, bin_cuts, use_density) {
   nrows <- nrow(cases) * n_permutations
   perm <- as.data.frame(lapply(seq_along(cases), function(i) {
     perms <- if (is.numeric(cases[[i]]) && is.na(feature_distribution[[i]])) {
@@ -10,6 +10,9 @@ permute_cases.data.frame <- function(cases, n_permutations, feature_distribution
     } else if (is.numeric(cases[[i]]) && bin_continuous) {
       bin <- sample(seq_along(feature_distribution[[i]]), nrows, TRUE, as.numeric(feature_distribution[[i]]))
       diff(bin_cuts[[i]])[bin] * runif(nrows) + bin_cuts[[i]][bin]
+    } else if (is.numeric(cases[[i]]) && use_density) {
+      width <- diff(feature_distribution[[i]]$x[c(1, 2)]) / 2
+      sample(feature_distribution[[i]]$x, nrows, TRUE, feature_distribution[[i]]$y) + runif(nrows, -width, width)
     } else if (is.numeric(cases[[i]])) {
       rnorm(nrows) * feature_distribution[[i]]['sd'] + feature_distribution[[i]]['mean']
     } else if (is.character(cases[[i]])) {

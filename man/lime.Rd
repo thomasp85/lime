@@ -10,7 +10,7 @@
   tokenization = default_tokenize, keep_word_position = FALSE, ...)
 
 \method{lime}{data.frame}(x, model, bin_continuous = TRUE, n_bins = 4,
-  quantile_bins = TRUE, ...)
+  quantile_bins = TRUE, use_density = TRUE, ...)
 
 lime(x, model, ...)
 }
@@ -35,6 +35,8 @@ each word will be replaced by \code{word_position}.}
 \item{n_bins}{The number of bins for continuous variables if \code{bin_continuous = TRUE}}
 
 \item{quantile_bins}{Should the bins be based on \code{n_bins} quantiles or spread evenly over the range of the training data}
+
+\item{use_density}{If \code{bin_continuous = FALSE} should continuous data be sampled using a kernel density estimation. If not, continuous features are expected to follow a normal distribution.}
 }
 \value{
 Return an explainer which can be used together with \code{\link[=explain]{explain()}} to

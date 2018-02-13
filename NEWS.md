@@ -1,6 +1,8 @@
 # lime 0.3.1.9999
 
 * Use `gower` as the new default similarity measure for tabular data
+* If `bin_continuous = FALSE` the default behavior is now to sample from a 
+  kernel density estimation rather than assume a normal distribution.
 * Fix bug when numeric features in the training data were constant (#56)
 * Fix bug when plotting regression explanations with `plot_explanations()` (#60)
 
