@@ -93,9 +93,8 @@ plot_explanations <- function(explanation, ...) {
     explanation$feature_desc,
     levels = rev(unique(explanation$feature_desc[order(explanation$feature, explanation$feature_value)]))
   )
-  ggplot(explanation, aes_(~case, ~feature_desc)) +
+  p <- ggplot(explanation, aes_(~case, ~feature_desc)) +
     geom_tile(aes_(fill = ~feature_weight)) +
-    facet_wrap(~label, ...) +
     scale_x_discrete('Case', expand = c(0, 0)) +
     scale_y_discrete('Feature', expand = c(0, 0)) +
     scale_fill_gradient2('Feature\nweight', low = '#8e0152', mid = '#f7f7f7', high = '#276419') +
@@ -104,6 +103,11 @@ plot_explanations <- function(explanation, ...) {
           panel.grid = element_blank(),
           legend.position = 'right',
           axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
+  if (is.null(explanation$label)) {
+    p
+  } else {
+    p + facet_wrap(~label, ...)
+  }
 }
 
 theme_lime <- function(...) {

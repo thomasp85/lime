@@ -1,6 +1,7 @@
 # lime 0.3.1.9999
 
 * Fix bug when numeric features in the training data were constant (#56)
+* Fix bug when plotting regression explanations with `plot_explanations()` (#60)
 
 # lime 0.3.1
 
