@@ -72,15 +72,17 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
 #' @name explain
 #'
 #' @param dist_fun The distance function to use for calculating the distance
-#' from the observation to the permutations. Will be forwarded to
+#' from the observation to the permutations. If `dist_fun = 'gower` (default) it
+#' will use [gower::gower_dist()]. Otherwise it will be forwarded to
 #' [stats::dist()]
 #' @param kernel_width The width of the exponential kernel that will be used to
-#' convert the distance to a similarity.
+#' convert the distance to a similarity in case `dist_fun != 'gower'`.
 #'
+#' @importFrom gower gower_dist
 #' @export
 explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
                                n_features, n_permutations = 5000,
-                               feature_select = 'auto', dist_fun = 'euclidean',
+                               feature_select = 'auto', dist_fun = 'gower',
                                kernel_width = NULL, ...) {
   assert_that(is.data_frame_explainer(explainer))
   m_type <- model_type(explainer)
@@ -107,10 +109,15 @@ explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
   case_ind <- split(seq_len(nrow(case_perm)), rep(seq_len(nrow(x)), each = n_permutations))
   res <- lapply(seq_along(case_ind), function(ind) {
     i <- case_ind[[ind]]
+    if (dist_fun == 'gower') {
+      sim <- 1 - gower_dist(case_perm[i[1], , drop = FALSE], case_perm[i, , drop = FALSE])
+    }
     perms <- numerify(case_perm[i, ], explainer$feature_type, explainer$bin_continuous, explainer$bin_cuts)
-    dist <- c(0, dist(feature_scale(perms, explainer$feature_distribution, explainer$feature_type, explainer$bin_continuous),
-                      method = dist_fun)[seq_len(n_permutations-1)])
-    res <- model_permutations(as.matrix(perms), case_res[i, , drop = FALSE], kernel(dist), labels, n_labels, n_features, feature_select)
+    if (dist_fun != 'gower') {
+      sim <- kernel(c(0, dist(feature_scale(perms, explainer$feature_distribution, explainer$feature_type, explainer$bin_continuous),
+                        method = dist_fun)[seq_len(n_permutations-1)]))
+    }
+    res <- model_permutations(as.matrix(perms), case_res[i, , drop = FALSE], sim, labels, n_labels, n_features, feature_select)
     res$feature_value <- unlist(case_perm[i[1], res$feature])
     res$feature_desc <- describe_feature(res$feature, case_perm[i[1], ], explainer$feature_type, explainer$bin_continuous, explainer$bin_cuts)
     guess <- which.max(abs(case_res[i[1], ]))

@@ -33,7 +33,8 @@ Imports: glmnet,
     assertthat,
     htmlwidgets,
     shiny,
-    shinythemes
+    shinythemes,
+    gower
 Suggests: xgboost,
     testthat,
     mlr,
