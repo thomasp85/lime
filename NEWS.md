@@ -1,5 +1,6 @@
 # lime 0.3.1.9999
 
+* Use `gower` as the new default similarity measure for tabular data
 * Fix bug when numeric features in the training data were constant (#56)
 * Fix bug when plotting regression explanations with `plot_explanations()` (#60)
 

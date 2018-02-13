@@ -72,7 +72,7 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
 #' @name explain
 #'
 #' @param dist_fun The distance function to use for calculating the distance
-#' from the observation to the permutations. If `dist_fun = 'gower` (default) it
+#' from the observation to the permutations. If `dist_fun = 'gower'` (default) it
 #' will use [gower::gower_dist()]. Otherwise it will be forwarded to
 #' [stats::dist()]
 #' @param kernel_width The width of the exponential kernel that will be used to
