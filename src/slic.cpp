@@ -35,6 +35,67 @@ double pixel_dist(int x, int y, int L, int a, int b, std::vector<double> center,
   return std::sqrt(dc*dc + ds*ds);
 }
 
+IntegerMatrix connect_pixels(IntegerMatrix cluster, int n_centers) {
+  int label = 0, adjlabel = 0;
+  int width = cluster.ncol();
+  int height = cluster.nrow();
+  int lims = (width * height) / n_centers;
+
+  int dx4[4] = {-1,  0,  1,  0};
+  int dy4[4] = { 0, -1,  0,  1};
+
+  IntegerMatrix new_cluster(height, width);
+  std::fill(new_cluster.begin(), new_cluster.end(), -1);
+
+  for (int i = 0; i < width; i++) {
+    for (int j = 0; j < height; j++) {
+      if (new_cluster(j, i) == -1) {
+        std::vector< std::pair<int, int> > elements;
+        std::pair<int, int> point(i, j);
+        elements.push_back(point);
+
+        /* Find an adjacent label, for possible use later. */
+        for (int k = 0; k < 4; k++) {
+          int x = elements[0].first + dx4[k], y = elements[0].second + dy4[k];
+
+          if (x >= 0 && x < width && y >= 0 && y < height) {
+            if (new_cluster(y, x) >= 0) {
+              adjlabel = new_cluster(y, x);
+            }
+          }
+        }
+
+        int count = 1;
+        for (int c = 0; c < count; c++) {
+          for (int k = 0; k < 4; k++) {
+            int x = elements[c].first + dx4[k], y = elements[c].second + dy4[k];
+
+            if (x >= 0 && x < width && y >= 0 && y < height) {
+              if (new_cluster(y, x) == -1 && cluster(j, i) == cluster(y, x)) {
+                std::pair<int, int> new_point(x, y);
+                elements.push_back(new_point);
+                new_cluster(y, x) = label;
+                count += 1;
+              }
+            }
+          }
+        }
+
+        /* Use the earlier found adjacent label if a segment size is
+        smaller than a limit. */
+        if (count <= lims >> 2) {
+          for (int c = 0; c < count; c++) {
+            new_cluster(elements[c].second, elements[c].first) = adjlabel;
+          }
+          label -= 1;
+        }
+        label += 1;
+      }
+    }
+  }
+  return new_cluster;
+}
+
 // [[Rcpp::export]]
 IntegerMatrix slic(RawMatrix L, RawMatrix a, RawMatrix b, int n_sp, double weight, int n_iter) {
   int w = L.ncol();
@@ -102,6 +163,7 @@ IntegerMatrix slic(RawMatrix L, RawMatrix a, RawMatrix b, int n_sp, double weigh
       centers[j][4] /= center_counts[j];
     }
   }
+  IntegerMatrix connected_cluster = connect_pixels(cluster, centers.size());
 
-  return cluster;
+  return connected_cluster;
 }
