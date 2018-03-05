@@ -38,6 +38,7 @@ plot_features <- function(explanation, ncol = 2) {
 
   if (explanation$model_type[1] == 'classification') {
     explanation$probability <- format(explanation$label_prob, digits = 2)
+    explanation$label <- factor(explanation$label, explanation$label[order(explanation$label_prob, decreasing = TRUE)])
     p <- ggplot(explanation) +
       facet_wrap(~ case + label + probability, labeller = label_both_upper, scales = 'free', ncol = ncol)
   } else if (explanation$model_type[1] == 'regression') {
