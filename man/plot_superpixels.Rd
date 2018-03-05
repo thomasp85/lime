@@ -37,3 +37,13 @@ of the image, the fewer superpixels should be generated. Using
 \code{plot_superpixels} it is possible to evaluate the superpixel parameters
 before starting the time consuming explanation function.
 }
+\examples{
+image <- system.file('extdata', 'produce.png', package = 'lime')
+
+# plot with default settings
+plot_superpixels(image)
+
+# Test different settings
+plot_superpixels(image, n_superpixels = 100, colour = 'white')
+
+}

@@ -22,7 +22,7 @@ explain(x, explainer, labels, n_labels = NULL, n_features,
 \method{explain}{imagefile}(x, explainer, labels = NULL, n_labels = NULL,
   n_features, n_permutations = 1000, feature_select = "auto",
   n_superpixels = 400, weight = 20, n_iter = 10, p_remove = 0.5,
-  batch_size = 100, background = "grey", ...)
+  batch_size = 10, background = "grey", ...)
 }
 \arguments{
 \item{x}{New observations to explain, of the same format as used when
@@ -60,8 +60,8 @@ path converge to zero the latest.
 \item{...}{Parameters passed on to the specific explainer}
 
 \item{dist_fun}{The distance function to use for calculating the distance
-from the observation to the permutations. If \code{dist_fun = 'gower'} (default) it
-will use \code{\link[gower:gower_dist]{gower::gower_dist()}}. Otherwise it will be forwarded to
+from the observation to the permutations. If \code{dist_fun = 'gower'} (default)
+it will use \code{\link[gower:gower_dist]{gower::gower_dist()}}. Otherwise it will be forwarded to
 \code{\link[stats:dist]{stats::dist()}}}
 
 \item{kernel_width}{The width of the exponential kernel that will be used to

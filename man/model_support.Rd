@@ -34,10 +34,29 @@ able to get predictions from the model in a standardised way, and it needs to
 be able to know whether it is a classification or regression model. For the
 former it calls the \code{predict_model()} generic which the user is free to
 supply methods for without overriding the standard \code{predict()} method. For
-the latter the model must respond to the \code{model_type()} generic. Out of the
-box \code{lime} supports models from \code{caret} and \code{mlr} as well as \code{xgboost}. See
-the details for how to provide compliant methods for other models.
+the latter the model must respond to the \code{model_type()} generic.
 }
+\section{Supported Models}{
+
+Out of the box, \code{lime} supports the following model objects:
+\itemize{
+\item \code{train} from caret
+\item \code{WrappedModel} from mlr
+\item \code{xgb.Booster} from xgboost
+\item \code{H2OModel} from h2o
+\item \code{keras.engine.training.Model} from keras
+\item \code{lda} from MASS (used for low-dependency examples)
+}
+
+If your model is not one of the above you'll need to implement support
+yourself. If the model has a predict interface mimicking that of
+\code{predict.train()} from \code{caret}, it will be enough to wrap your model in
+\code{\link[=as_classifier]{as_classifier()}}/\code{\link[=as_regressor]{as_regressor()}} to gain support. Otherwise you'll need
+need to implement a \code{predict_model()} method and potentially a \code{model_type()}
+method (if the latter is omitted the model should be wrapped in
+\code{\link[=as_classifier]{as_classifier()}}/\code{\link[=as_regressor]{as_regressor()}}, everytime it is used in \code{\link[=lime]{lime()}}).
+}
+
 \examples{
 # Example of adding support for lda models (already available in lime)
 predict_model.lda <- function(x, newdata, type, ...) {

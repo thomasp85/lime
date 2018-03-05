@@ -27,15 +27,28 @@
 #' @import ggplot2
 #' @export
 #'
+#' @examples
+#' # load precalculated explanation as it takes a long time to create
+#' explanation <- .load_image_example()
+#'
+#' # Default
+#' plot_image_explanation(explanation)
+#'
+#' # Block out background instead
+#' plot_image_explanation(explanation, display = 'block')
+#'
+#' # Show negatively correlated areas as well
+#' plot_image_explanation(explanation, show_negative = TRUE)
+#'
 plot_image_explanation <- function(explanation, which = 1, threshold = 0.01,
-                                   show_negative= FALSE,
+                                   show_negative = FALSE,
                                    display = 'outline', fill_alpha = 0.3,
                                    outline_col = c('lightgreen', 'red'),
                                    block_col = 'grey') {
   display <- match.arg(display, c('outline', 'block'))
   explanation <- explanation[explanation$case == unique(explanation$case)[1], , drop = FALSE]
-  explanation$label <- factor(explanation$label, explanation$label[order(explanation$label_prob, decreasing = TRUE)])
-  explanation$`Explanation fit` <- format(explanation$model_r2, digits = 2)
+  explanation$label <- factor(explanation$label, unique(explanation$label[order(explanation$label_prob, decreasing = TRUE)]))
+  explanation$fit <- format(explanation$model_r2, digits = 2)
   im <- image_read(explanation$data[[1]])
   raster <- do.call('rbind', lapply(split(explanation, explanation$label), function(exp) {
     pos <- exp[exp$feature_weight > threshold, , drop = FALSE]
@@ -59,6 +72,7 @@ plot_image_explanation <- function(explanation, which = 1, threshold = 0.01,
     }
     im_hl$label <- exp$label[1]
     im_hl$probability <- format(exp$label_prob[1], digits = 2)
+    im_hl$`Explanation fit` <- exp$fit[1]
     im_hl
   }))
   raster$type <- factor(raster$type, levels = c('Supports', 'Contradicts'))
@@ -109,6 +123,16 @@ plot_image_explanation <- function(explanation, which = 1, threshold = 0.01,
 #'
 #' @importFrom magick image_read image_convert image_channel image_convolve image_blank image_info
 #' @export
+#'
+#' @examples
+#' image <- system.file('extdata', 'produce.png', package = 'lime')
+#'
+#' # plot with default settings
+#' plot_superpixels(image)
+#'
+#' # Test different settings
+#' plot_superpixels(image, n_superpixels = 100, colour = 'white')
+#'
 plot_superpixels <- function(path, n_superpixels = 400, weight = 20, n_iter = 10,
                              colour = 'black') {
   im <- image_read(path)

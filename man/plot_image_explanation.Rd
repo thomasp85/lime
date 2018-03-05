@@ -41,3 +41,17 @@ relevant to each label in the explanation. The highlighting can either be
 done by blocking the parts of the image not related to the classification, or
 by encircling and colouring the areas that influence the explanation.
 }
+\examples{
+# load precalculated explanation as it takes a long time to create
+explanation <- .load_image_example()
+
+# Default
+plot_image_explanation(explanation)
+
+# Block out background instead
+plot_image_explanation(explanation, display = 'block')
+
+# Show negatively correlated areas as well
+plot_image_explanation(explanation, show_negative = TRUE)
+
+}

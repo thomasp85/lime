@@ -98,4 +98,32 @@ explanation <- lime(iris_train, model)
 # This can now be used together with the explain method
 explain(iris_test, explanation, n_labels = 1, n_features = 2)
 
+\dontrun{
+library(keras)
+library(abind)
+# get some image
+img_path <- system.file('extdata', 'produce.png', package = 'lime')
+# load a predefined image classifier
+model <- application_vgg16(
+  weights = "imagenet",
+  include_top = TRUE
+)
+
+# create a function that prepare images for the model
+img_preprocess <- function(x) {
+  arrays <- lapply(x, function(path) {
+    img <- image_load(path, target_size = c(224,224))
+    x <- image_to_array(img)
+    x <- array_reshape(x, c(1, dim(x)))
+    x <- imagenet_preprocess_input(x)
+  })
+  do.call(abind, c(arrays, list(along = 1)))
+}
+
+# Create an explainer (lime recognise the path as an image)
+explainer <- lime(img_path, as_classifier(model, unlist(labels)), img_preprocess)
+
+# Explain the model (can take a long time depending on your system)
+explanation <- explain(img_path, explainer, n_labels = 2, n_features = 10, n_superpixels = 70)
+}
 }
