@@ -100,16 +100,16 @@ predict_model.default <- function(x, newdata, type, ...) {
 }
 #' @export
 predict_model.WrappedModel <- function(x, newdata, type, ...) {
+  if (!requireNamespace('mlr', quietly = TRUE)) {
+    stop('mlr must be available when working with WrappedModel models')
+  }
+  p <- predict(x, newdata = newdata, ...)
   type2 <- switch(
     type,
-    raw = 'response',
-    prob = 'prob',
+    raw = data.frame(Response = mlr::getPredictionResponse(p), stringsAsFactors = FALSE),
+    prob = mlr::getPredictionProbabilities(p, p$task.desc$class.levels),
     stop('Type must be either "raw" or "prob"', call. = FALSE)
   )
-  x$learner <- mlr::setPredictType(x$learner, type2)
-  p <- predict(x, newdata = newdata, ...)
-  if (type == 'raw') p <- data.frame(Response = p, stringsAsFactors = FALSE)
-  p
 }
 #' @export
 predict_model.xgb.Booster <- function(x, newdata, type, ...) {
@@ -155,6 +155,23 @@ predict_model.keras.engine.training.Model <- function(x, newdata, type, ...) {
     }
     colnames(res) <- as.character(seq_len(ncol(res)))
     as.data.frame(res, check.names = FALSE)
+  }
+}
+#' @export
+predict_model.H2OModel <- function(x, newdata, type, ...){
+  if (!requireNamespace('h2o', quietly = TRUE)) {
+      stop('The h2o package is required for predicting h2o models')
+  }
+  pred <- h2o::h2o.predict(x, h2o::as.h2o(newdata))
+  h2o_model_class <- class(x)[[1]]
+  if (h2o_model_class %in% c("H2OBinomialModel", "H2OMultinomialModel")) {
+      return(as.data.frame(pred[,-1]))
+  } else if (h2o_model_class == "H2ORegressionModel") {
+      ret <- as.data.frame(pred[,1])
+      names(ret) <- "Response"
+      return(ret)
+  } else {
+      stop('This h2o model is not currently supported.')
   }
 }
 #' @rdname model_support
@@ -208,5 +225,16 @@ model_type.keras.engine.training.Model <- function(x, ...) {
     'regression'
   } else {
     'classification'
+  }
+}
+#' @export
+model_type.H2OModel <- function(x, ...) {
+  h2o_model_class <- class(x)[[1]]
+  if (h2o_model_class %in% c("H2OBinomialModel", "H2OMultinomialModel")) {
+      return('classification')
+  } else if (h2o_model_class == "H2ORegressionModel") {
+      return('regression')
+  } else {
+      stop('This h2o model is not currently supported.')
   }
 }

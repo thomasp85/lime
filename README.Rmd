@@ -12,12 +12,24 @@ knitr::opts_chunk$set(
 )
 ```
 
-# lime <img src="man/figures/lime_logo.jpg" align="right" />
+# lime <img src="man/figures/logo.png" align="right" />
 [![Travis-CI Build Status](https://travis-ci.org/thomasp85/lime.svg?branch=master)](https://travis-ci.org/thomasp85/lime)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/thomasp85/lime?branch=master&svg=true)](https://ci.appveyor.com/project/thomasp85/lime)
 [![CRAN_Release_Badge](http://www.r-pkg.org/badges/version-ago/lime)](https://CRAN.R-project.org/package=lime)
 [![CRAN_Download_Badge](http://cranlogs.r-pkg.org/badges/lime)](https://CRAN.R-project.org/package=lime)
 [![Coverage Status](https://img.shields.io/codecov/c/github/thomasp85/lime/master.svg)](https://codecov.io/github/thomasp85/lime?branch=master)
+
+> There once was a package called lime,
+>
+> Whose models were simply sublime,  
+>
+> It gave explanations for their variations, 
+>
+> one observation at a time.
+ 
+*lime-rick by Mara Averick*
+
+* * *
 
 *This is an R port of the Python lime package (https://github.com/marcotcr/lime)
 developed by the authors of the lime (Local Interpretable Model-agnostic 
@@ -76,8 +88,13 @@ interactively exploring text models:
 ![interactive text explainer](man/figures/shine_text_explanations.gif)
 
 ## Installation
-`lime` is still a work in progress and is thus not available on CRAN yet. In 
-order to try it out install it directly from GitHub:
+`lime` is available on CRAN and can be installed using the standard approach:
+
+```{r, eval=FALSE}
+install.packages('lime')
+```
+
+To get the development version, install from GitHub instead:
 
 ```{r, eval=FALSE}
 # install.packages('devtools')

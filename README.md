@@ -1,9 +1,21 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-lime <img src="man/figures/lime_logo.jpg" align="right" />
-==========================================================
+lime <img src="man/figures/logo.png" align="right" />
+=====================================================
 
 [![Travis-CI Build Status](https://travis-ci.org/thomasp85/lime.svg?branch=master)](https://travis-ci.org/thomasp85/lime) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/thomasp85/lime?branch=master&svg=true)](https://ci.appveyor.com/project/thomasp85/lime) [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/lime)](https://CRAN.R-project.org/package=lime) [![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/lime)](https://CRAN.R-project.org/package=lime) [![Coverage Status](https://img.shields.io/codecov/c/github/thomasp85/lime/master.svg)](https://codecov.io/github/thomasp85/lime?branch=master)
+
+> There once was a package called lime,
+>
+> Whose models were simply sublime,
+>
+> It gave explanations for their variations,
+>
+> one observation at a time.
+
+*lime-rick by Mara Averick*
+
+------------------------------------------------------------------------
 
 *This is an R port of the Python lime package (<https://github.com/marcotcr/lime>) developed by the authors of the lime (Local Interpretable Model-agnostic Explanations) approach for black-box model explanations. All credits for the invention of the approach goes to the original developers.*
 
@@ -40,26 +52,26 @@ explanation <- explain(iris_test, explainer, n_labels = 1, n_features = 2)
 # output from the model.
 head(explanation)
 #>       model_type case  label label_prob  model_r2 model_intercept
-#> 1 classification    1 setosa          1 0.4341912       0.2420850
-#> 2 classification    1 setosa          1 0.4341912       0.2420850
-#> 3 classification    2 setosa          1 0.4424828       0.2341992
-#> 4 classification    2 setosa          1 0.4424828       0.2341992
-#> 5 classification    3 setosa          1 0.4446400       0.2291437
-#> 6 classification    3 setosa          1 0.4446400       0.2291437
+#> 1 classification    1 setosa          1 0.3893089       0.2316014
+#> 2 classification    1 setosa          1 0.3893089       0.2316014
+#> 3 classification    2 setosa          1 0.3761211       0.2415476
+#> 4 classification    2 setosa          1 0.3761211       0.2415476
+#> 5 classification    3 setosa          1 0.3644597       0.2520788
+#> 6 classification    3 setosa          1 0.3644597       0.2520788
 #>   model_prediction      feature feature_value feature_weight
-#> 1        0.7016979  Sepal.Width           3.5   -0.015758934
-#> 2        0.7016979  Petal.Width           0.2    0.475371862
-#> 3        0.7082935 Sepal.Length           4.9   -0.008450071
-#> 4        0.7082935  Petal.Width           0.2    0.482544423
-#> 5        0.7211259  Sepal.Width           3.2    0.005927646
-#> 6        0.7211259  Petal.Width           0.2    0.486054549
+#> 1        0.6932961  Sepal.Width           3.5    0.008767470
+#> 2        0.6932961  Petal.Width           0.2    0.452927250
+#> 3        0.6781473  Sepal.Width           3.0   -0.001619227
+#> 4        0.6781473  Petal.Width           0.2    0.438218945
+#> 5        0.6917634 Sepal.Length           4.7   -0.006370576
+#> 6        0.6917634 Petal.Length           1.3    0.446055088
 #>               feature_desc               data prediction
 #> 1        3.3 < Sepal.Width 5.1, 3.5, 1.4, 0.2    1, 0, 0
 #> 2       Petal.Width <= 0.4 5.1, 3.5, 1.4, 0.2    1, 0, 0
-#> 3      Sepal.Length <= 5.2 4.9, 3.0, 1.4, 0.2    1, 0, 0
+#> 3 2.8 < Sepal.Width <= 3.0 4.9, 3.0, 1.4, 0.2    1, 0, 0
 #> 4       Petal.Width <= 0.4 4.9, 3.0, 1.4, 0.2    1, 0, 0
-#> 5 3.0 < Sepal.Width <= 3.3 4.7, 3.2, 1.3, 0.2    1, 0, 0
-#> 6       Petal.Width <= 0.4 4.7, 3.2, 1.3, 0.2    1, 0, 0
+#> 5      Sepal.Length <= 5.2 4.7, 3.2, 1.3, 0.2    1, 0, 0
+#> 6      Petal.Length <= 1.6 4.7, 3.2, 1.3, 0.2    1, 0, 0
 
 # And can be visualised directly
 plot_features(explanation)
@@ -74,7 +86,13 @@ plot_features(explanation)
 Installation
 ------------
 
-`lime` is still a work in progress and is thus not available on CRAN yet. In order to try it out install it directly from GitHub:
+`lime` is available on CRAN and can be installed using the standard approach:
+
+``` r
+install.packages('lime')
+```
+
+To get the development version, install from GitHub instead:
 
 ``` r
 # install.packages('devtools')

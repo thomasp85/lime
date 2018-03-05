@@ -1,8 +1,8 @@
 Package: lime
 Type: Package
 Title: Local Interpretable Model-Agnostic Explanations
-Version: 0.3.0
-Date: 2017-09-14
+Version: 0.3.1.9999
+Date: 2017-12-01
 Authors@R: c(person('Thomas Lin', 'Pedersen', role = c('cre', 'aut'), email = "thomasp85@gmail.com"),
              person('Michaël', 'Benesty', role = c('aut'), email = "michael@benesty.fr"))
 Maintainer: Thomas Lin Pedersen <thomasp85@gmail.com>
@@ -36,10 +36,12 @@ Imports: glmnet,
     shinythemes,
     magick,
     methods,
-    grDevices
+    grDevices,
+    gower
 Suggests: xgboost,
     testthat,
     mlr,
+    h2o,
     text2vec,
     MASS,
     covr,
