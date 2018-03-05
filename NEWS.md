@@ -1,5 +1,12 @@
 # lime 0.3.1.9999
 
+* Add support for image explanation. The dispatch will be on paths pointing to
+  valid image files. Image explanations can be visualised using 
+  `plot_image_explanation` (#35)
+* Add support for neural networks from the `keras` package
+* Add `as_classifier()` and `as_regressor()` for ad-hoc specification of the 
+  model type in case the heuristic implemented in `lime` doesn't hold. 
+  `as_classifier()` also lets you add/overwrite the class labels.
 * Use `gower` as the new default similarity measure for tabular data
 * If `bin_continuous = FALSE` the default behavior is now to sample from a 
   kernel density estimation rather than assume a normal distribution.

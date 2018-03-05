@@ -34,6 +34,9 @@ Imports: glmnet,
     htmlwidgets,
     shiny,
     shinythemes,
+    magick,
+    methods,
+    grDevices,
     gower
 Suggests: xgboost,
     testthat,
@@ -44,6 +47,7 @@ Suggests: xgboost,
     covr,
     knitr,
     rmarkdown,
-    devtools
+    devtools,
+    keras
 LinkingTo: Rcpp, 
     RcppEigen

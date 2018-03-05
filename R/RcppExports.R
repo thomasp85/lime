@@ -9,3 +9,32 @@ get_index_permutations <- function(original_document, number_permutations) {
     .Call('_lime_get_index_permutations', PACKAGE = 'lime', original_document, number_permutations)
 }
 
+#' @title Segment image into superpixels
+#'
+#' @description This is an implementation of the SLIC superpixel algorithm for
+#' segmenting images into connected similar patches. It is used by lime for
+#' permuting image input but exported so that others might use it for other
+#' things
+#'
+#' @param L,a,b Raw matrices giving the L, a, and b component of each pixel in
+#' the image to segment. The dimensions of all matrices must match.
+#'
+#' @param n_sp The number of superpixels to segment the image into
+#'
+#' @param weight A numeric giving the tradeoff between spatial and colour
+#' distance. Higher values give more compact and heterogeneous superpixels,
+#' while lower values will give superpixels of more irregular shape but with a
+#' more homogeneous colour. Good values to start with is 10-20.
+#'
+#' @param n_iter The number of iterations to run the algorithm for. The authors
+#' suggest 10 and increasing it doesn't add much.
+#'
+#' @return An integer matrix of the same dimensions as `L`, `a`, and `b`,
+#' indexing each pixel into its corresponding superpixel
+#'
+#' @keywords internal
+#' @export
+slic <- function(L, a, b, n_sp, weight, n_iter) {
+    .Call('_lime_slic', PACKAGE = 'lime', L, a, b, n_sp, weight, n_iter)
+}
+

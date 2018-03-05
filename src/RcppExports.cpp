@@ -30,10 +30,27 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// slic
+IntegerMatrix slic(RawMatrix L, RawMatrix a, RawMatrix b, int n_sp, double weight, int n_iter);
+RcppExport SEXP _lime_slic(SEXP LSEXP, SEXP aSEXP, SEXP bSEXP, SEXP n_spSEXP, SEXP weightSEXP, SEXP n_iterSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< RawMatrix >::type L(LSEXP);
+    Rcpp::traits::input_parameter< RawMatrix >::type a(aSEXP);
+    Rcpp::traits::input_parameter< RawMatrix >::type b(bSEXP);
+    Rcpp::traits::input_parameter< int >::type n_sp(n_spSEXP);
+    Rcpp::traits::input_parameter< double >::type weight(weightSEXP);
+    Rcpp::traits::input_parameter< int >::type n_iter(n_iterSEXP);
+    rcpp_result_gen = Rcpp::wrap(slic(L, a, b, n_sp, weight, n_iter));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_lime_rowSumsSq", (DL_FUNC) &_lime_rowSumsSq, 1},
     {"_lime_get_index_permutations", (DL_FUNC) &_lime_get_index_permutations, 2},
+    {"_lime_slic", (DL_FUNC) &_lime_slic, 6},
     {NULL, NULL, 0}
 };
 

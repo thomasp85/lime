@@ -74,7 +74,8 @@
 #'
 explain <- function(x, explainer, labels, n_labels = NULL, n_features,
                     n_permutations = 5000, feature_select = 'auto', ...) {
-  UseMethod('explain')
+  if (is.character(x) && is.image_file(x)) class(x) <- 'imagefile'
+  UseMethod('explain', x)
 }
 model_type.explainer <- function(x) {
   model_type(x$model)

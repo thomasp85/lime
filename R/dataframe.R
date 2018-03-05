@@ -85,6 +85,7 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
 #' convert the distance to a similarity in case `dist_fun != 'gower'`.
 #'
 #' @importFrom gower gower_dist
+#' @importFrom stats dist
 #' @export
 explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
                                n_features, n_permutations = 5000,
@@ -113,6 +114,7 @@ explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
                              explainer$bin_continuous, explainer$bin_cuts,
                              explainer$use_density)
   case_res <- predict_model(explainer$model, case_perm, type = o_type)
+  case_res <- set_labels(case_res, explainer$model)
   case_ind <- split(seq_len(nrow(case_perm)), rep(seq_len(nrow(x)), each = n_permutations))
   res <- lapply(seq_along(case_ind), function(ind) {
     i <- case_ind[[ind]]

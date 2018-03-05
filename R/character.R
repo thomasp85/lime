@@ -95,6 +95,7 @@ explain.character <- function(x, explainer, labels = NULL, n_labels = NULL,
   }
   permutations_tokenized <- explainer$preprocess(case_perm$permutations)
   case_res <- predict_model(x = explainer$model, newdata = permutations_tokenized, type = o_type)
+  case_res <- set_labels(case_res, explainer$model)
   assert_that(all(!is.na(case_res)), msg = "Predictions contains some NAs")
   assert_that(nrow(case_res) == length(case_perm$permutations), msg = "Incorrect number of predictions")
 
