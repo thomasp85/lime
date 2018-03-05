@@ -81,9 +81,21 @@ head(explanation)
 plot_features(explanation)
 ```
 
-`lime` also supports explaining text model and putting the explanation in the
-context of the original text input. It even includes a `shiny` application for
-interactively exploring text models:
+`lime` also supports explaining image and text models. For image explanations 
+the relevant areas in an image can be highlighted:
+
+```{r}
+explanation <- .load_image_example()
+
+plot_image_explanation(explanation)
+```
+
+Here we see that the second most probably class is hardly true, but is due to
+the model picking up waxy areas of the produce and interpreting them as 
+wax-light surface.
+
+For text the explanation can be shown by highlighting the important words. It 
+even includes a `shiny` application for interactively exploring text models:
 
 ![interactive text explainer](man/figures/shine_text_explanations.gif)
 
@@ -100,14 +112,3 @@ To get the development version, install from GitHub instead:
 # install.packages('devtools')
 devtools::install_github('thomasp85/lime')
 ```
-
-## Scope
-The current version of `lime` has support for tabular and text data. The Python
-implementation has additional support for image data, which will be added to 
-this package in time. In addition to the capabilities discussed in the 
-*"Why Should I Trust You?": Explaining the Predictions of Any Classifier* 
-article, this package also support regression model explanations (this has been
-added to the Python library as well). The global model explanation using 
-submodular picks that the article discusses is not supported in either packages.
-It might get support once it appears in the Python version and it is clear how
-the authors envision it.

@@ -52,26 +52,26 @@ explanation <- explain(iris_test, explainer, n_labels = 1, n_features = 2)
 # output from the model.
 head(explanation)
 #>       model_type case  label label_prob  model_r2 model_intercept
-#> 1 classification    1 setosa          1 0.3893089       0.2316014
-#> 2 classification    1 setosa          1 0.3893089       0.2316014
-#> 3 classification    2 setosa          1 0.3761211       0.2415476
-#> 4 classification    2 setosa          1 0.3761211       0.2415476
-#> 5 classification    3 setosa          1 0.3644597       0.2520788
-#> 6 classification    3 setosa          1 0.3644597       0.2520788
+#> 1 classification    1 setosa          1 0.3979974       0.2516054
+#> 2 classification    1 setosa          1 0.3979974       0.2516054
+#> 3 classification    2 setosa          1 0.3799092       0.2571338
+#> 4 classification    2 setosa          1 0.3799092       0.2571338
+#> 5 classification    3 setosa          1 0.3865417       0.2528369
+#> 6 classification    3 setosa          1 0.3865417       0.2528369
 #>   model_prediction      feature feature_value feature_weight
-#> 1        0.6932961  Sepal.Width           3.5    0.008767470
-#> 2        0.6932961  Petal.Width           0.2    0.452927250
-#> 3        0.6781473  Sepal.Width           3.0   -0.001619227
-#> 4        0.6781473  Petal.Width           0.2    0.438218945
-#> 5        0.6917634 Sepal.Length           4.7   -0.006370576
-#> 6        0.6917634 Petal.Length           1.3    0.446055088
+#> 1        0.7099585 Sepal.Length           5.1   -0.003136112
+#> 2        0.7099585  Petal.Width           0.2    0.461489211
+#> 3        0.6962440 Sepal.Length           4.9   -0.005756793
+#> 4        0.6962440  Petal.Width           0.2    0.444866977
+#> 5        0.7177771  Sepal.Width           3.2    0.018586808
+#> 6        0.7177771  Petal.Width           0.2    0.446353368
 #>               feature_desc               data prediction
-#> 1        3.3 < Sepal.Width 5.1, 3.5, 1.4, 0.2    1, 0, 0
+#> 1      Sepal.Length <= 5.2 5.1, 3.5, 1.4, 0.2    1, 0, 0
 #> 2       Petal.Width <= 0.4 5.1, 3.5, 1.4, 0.2    1, 0, 0
-#> 3 2.8 < Sepal.Width <= 3.0 4.9, 3.0, 1.4, 0.2    1, 0, 0
+#> 3      Sepal.Length <= 5.2 4.9, 3.0, 1.4, 0.2    1, 0, 0
 #> 4       Petal.Width <= 0.4 4.9, 3.0, 1.4, 0.2    1, 0, 0
-#> 5      Sepal.Length <= 5.2 4.7, 3.2, 1.3, 0.2    1, 0, 0
-#> 6      Petal.Length <= 1.6 4.7, 3.2, 1.3, 0.2    1, 0, 0
+#> 5 3.0 < Sepal.Width <= 3.3 4.7, 3.2, 1.3, 0.2    1, 0, 0
+#> 6       Petal.Width <= 0.4 4.7, 3.2, 1.3, 0.2    1, 0, 0
 
 # And can be visualised directly
 plot_features(explanation)
@@ -79,7 +79,19 @@ plot_features(explanation)
 
 ![](man/figures/README-unnamed-chunk-2-1.png)
 
-`lime` also supports explaining text model and putting the explanation in the context of the original text input. It even includes a `shiny` application for interactively exploring text models:
+`lime` also supports explaining image and text models. For image explanations the relevant areas in an image can be highlighted:
+
+``` r
+explanation <- .load_image_example()
+
+plot_image_explanation(explanation)
+```
+
+![](man/figures/README-unnamed-chunk-3-1.png)
+
+Here we see that the second most probably class is hardly true, but is due to the model picking up waxy areas of the produce and interpreting them as wax-light surface.
+
+For text the explanation can be shown by highlighting the important words. It even includes a `shiny` application for interactively exploring text models:
 
 ![interactive text explainer](man/figures/shine_text_explanations.gif)
 
@@ -98,8 +110,3 @@ To get the development version, install from GitHub instead:
 # install.packages('devtools')
 devtools::install_github('thomasp85/lime')
 ```
-
-Scope
------
-
-The current version of `lime` has support for tabular and text data. The Python implementation has additional support for image data, which will be added to this package in time. In addition to the capabilities discussed in the *"Why Should I Trust You?": Explaining the Predictions of Any Classifier* article, this package also support regression model explanations (this has been added to the Python library as well). The global model explanation using submodular picks that the article discusses is not supported in either packages. It might get support once it appears in the Python version and it is clear how the authors envision it.
