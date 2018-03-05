@@ -42,7 +42,9 @@ plot_text_explanations <- function(explanations, ...) {
       predicted_label,
       ' (',
       round(predicted_label_prob * 100, 2),
-      '%)</sub>'
+      '%)<br/>Explainer fit: ',
+      format(current_case_df$model_r2[1], digits = 2),
+      '</sub>'
     )
 
     current_case_df$weight_percent <- abs(current_case_df$feature_weight) / sum(abs(current_case_df$feature_weight))
@@ -59,8 +61,8 @@ plot_text_explanations <- function(explanations, ...) {
   })
 
   text_highlighted <- paste(
-    '<div style="word-wrap: break-word">',
-    paste("<p><pre>", text_highlighted_raw, "</pre></p>", collapse = "\n"),
+    '<div style="overflow-y:scroll;font-family:sans-serif;position:absolute;height:100%">',
+    paste("<p>", text_highlighted_raw, "</p>", collapse = "<br/>"),
     "</div>"
   )
 

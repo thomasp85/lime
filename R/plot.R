@@ -37,14 +37,15 @@ plot_features <- function(explanation, ncol = 2) {
   description <- paste0(format(description, width = desc_width), explanation$feature_desc)
   explanation$description <- factor(description, levels = description[order(abs(explanation$feature_weight))])
   explanation$case <- factor(explanation$case, unique(explanation$case))
+  explanation$`Explanation fit` <- format(explanation$model_r2, digits = 2)
 
   if (explanation$model_type[1] == 'classification') {
     explanation$probability <- format(explanation$label_prob, digits = 2)
     p <- ggplot(explanation) +
-      facet_wrap(~ case + label + probability, labeller = label_both_upper, scales = 'free', ncol = ncol)
+      facet_wrap(~ case + label + probability + `Explanation fit`, labeller = label_both_upper, scales = 'free', ncol = ncol)
   } else if (explanation$model_type[1] == 'regression') {
     p <- ggplot(explanation) +
-      facet_wrap(~ case + prediction, labeller = label_both_upper, scales = 'free', ncol = ncol)
+      facet_wrap(~ case + prediction + `Explanation fit`, labeller = label_both_upper, scales = 'free', ncol = ncol)
   }
   p +
     geom_col(aes_(~description, ~feature_weight, fill = ~type)) +

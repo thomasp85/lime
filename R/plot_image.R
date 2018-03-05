@@ -35,6 +35,7 @@ plot_image_explanation <- function(explanation, which = 1, threshold = 0.01,
   display <- match.arg(display, c('outline', 'block'))
   explanation <- explanation[explanation$case == unique(explanation$case)[1], , drop = FALSE]
   explanation$label <- factor(explanation$label, explanation$label[order(explanation$label_prob, decreasing = TRUE)])
+  explanation$`Explanation fit` <- format(explanation$model_r2, digits = 2)
   im <- image_read(explanation$data[[1]])
   raster <- do.call('rbind', lapply(split(explanation, explanation$label), function(exp) {
     pos <- exp[exp$feature_weight > threshold, , drop = FALSE]
@@ -74,9 +75,9 @@ plot_image_explanation <- function(explanation, which = 1, threshold = 0.01,
           axis.ticks = element_blank())
 
   if (show_negative) {
-    p <- p + facet_grid(type ~ label + probability, labeller = label_both_upper, switch = 'y')
+    p <- p + facet_grid(type ~ label + probability + `Explanation fit`, labeller = label_both_upper, switch = 'y')
   } else {
-    p <- p + facet_wrap(~ label + probability, labeller = label_both_upper)
+    p <- p + facet_wrap(~ label + probability + `Explanation fit`, labeller = label_both_upper)
   }
   p
 }

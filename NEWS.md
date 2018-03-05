@@ -13,6 +13,10 @@
 * Fix bug when numeric features in the training data were constant (#56)
 * Fix bug when plotting regression explanations with `plot_explanations()` (#60)
 * Logical columns in tabular data is now supported (#75)
+* Overhaul of `plot_text_explanation()` with better formatting and scrolling
+  support for many explanations
+* All plots now show the fit of the explainer so the user can assess the quality
+  of the explanation
 
 # lime 0.3.1
 
