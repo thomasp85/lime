@@ -5,9 +5,7 @@
 #' be able to know whether it is a classification or regression model. For the
 #' former it calls the `predict_model()` generic which the user is free to
 #' supply methods for without overriding the standard `predict()` method. For
-#' the latter the model must respond to the `model_type()` generic. Out of the
-#' box `lime` supports models from `caret` and `mlr` as well as `xgboost`. See
-#' the details for how to provide compliant methods for other models.
+#' the latter the model must respond to the `model_type()` generic.
 #'
 #' @param x A model object
 #'
@@ -24,6 +22,24 @@
 #' named after the class, each column holding the probability score for class
 #' membership. For `model_type()` a character string. Either `'regression'` or
 #' `'classification'` is currently supported.
+#'
+#' @section Supported Models:
+#' Out of the box, `lime` supports the following model objects:
+#'
+#' - `train` from caret
+#' - `WrappedModel` from mlr
+#' - `xgb.Booster` from xgboost
+#' - `H2OModel` from h2o
+#' - `keras.engine.training.Model` from keras
+#' - `lda` from MASS (used for low-dependency examples)
+#'
+#' If your model is not one of the above you'll need to implement support
+#' yourself. If the model has a predict interface mimicking that of
+#' `predict.train()` from `caret`, it will be enough to wrap your model in
+#' [as_classifier()]/[as_regressor()] to gain support. Otherwise you'll need
+#' need to implement a `predict_model()` method and potentially a `model_type()`
+#' method (if the latter is omitted the model should be wrapped in
+#' [as_classifier()]/[as_regressor()], everytime it is used in [lime()]).
 #'
 #' @name model_support
 #' @rdname model_support
@@ -181,7 +197,7 @@ model_type <- function(x, ...) {
 }
 #' @export
 model_type.default <- function(x, ...) {
-  stop('The class of model must have a model_type method. Models other than those from `caret` and `mlr` must have a `model_type` method defined manually e.g. model_type.mymodelclass <- function(x, ...) "classification"', call. = FALSE)
+  stop('The class of model must have a model_type method. See ?model_type to get an overview of models supported out of the box', call. = FALSE)
 }
 #' @export
 model_type.lime_classifier <- function(x, ...) 'classification'
