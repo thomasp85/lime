@@ -11,6 +11,10 @@ lime.imagefile <- function(x, model, preprocess, ...) {
 }
 #' @rdname explain
 #' @param n_superpixels The number of segments an image should be split into
+#' @param weight How high should locality be weighted compared to colour. High
+#' values leads to more compact superpixels, while low values follow the image
+#' structure more
+#' @param n_iter How many iterations should the segmentation run for
 #' @param batch_size The number of explanations to handle at a time
 #' @param background The colour to use for blocked out superpixels
 #'
@@ -20,6 +24,7 @@ lime.imagefile <- function(x, model, preprocess, ...) {
 explain.imagefile <- function(x, explainer, labels = NULL, n_labels = NULL,
                               n_features, n_permutations = 1000,
                               feature_select = 'auto', n_superpixels = 400,
+                              weight = 20, n_iter = 10, p_remove = 0.5,
                               batch_size = 100, background = 'grey', ...) {
   assert_that(is.image_explainer(explainer))
   m_type <- model_type(explainer)
@@ -45,8 +50,8 @@ explain.imagefile <- function(x, explainer, labels = NULL, n_labels = NULL,
       image_channel(im_lab, 'G')[[1]][1,,],
       image_channel(im_lab, 'B')[[1]][1,,],
       n_sp = n_superpixels,
-      weight = 1,
-      n_iter = 10
+      weight = weight,
+      n_iter = n_iter
     ) + 1
     im_raw <- im[[1]]
     perms <- matrix(sample(c(TRUE, FALSE), n_permutations * max(super_pixels), TRUE), nrow = n_permutations)
