@@ -55,10 +55,11 @@ explain.imagefile <- function(x, explainer, labels = NULL, n_labels = NULL,
       weight = weight,
       n_iter = n_iter
     ) + 1
-    im_raw <- im[[1]]
+    im_raw <- image_convert(im, type = 'TrueColorAlpha')[[1]]
     perms <- matrix(sample(c(TRUE, FALSE), n_permutations * max(super_pixels), TRUE, c(p_remove, 1-p_remove)), nrow = n_permutations)
     perms[1, ] <- FALSE
     batches <- rep(seq_len(n_permutations), each = batch_size, length.out = n_permutations)
+    batches <- split(seq_along(batches), batches)
     case_res <- do.call(rbind, lapply(batches, function(b) {
       perm_files <- vapply(b, function(i) {
         tmp <- tempfile()
@@ -73,21 +74,23 @@ explain.imagefile <- function(x, explainer, labels = NULL, n_labels = NULL,
       unlink(perm_files)
       batch_res
     }))
-    perms_sparse <- as(perms, 'dgCMatrix')
+    case_res <- set_labels(case_res, explainer$model)
+    perms_sparse <- as(!perms, 'dgCMatrix')
     case_dist <- cosine_distance_vector_to_matrix_rows(perms_sparse[1,], perms_sparse)
-    colnames(perms) <- as.character(seq_len(nrow(perms)))
-    res <- model_permutations(perms, case_res, case_dist, labels, n_labels, n_features, feature_select)
+    colnames(perms_sparse) <- as.character(seq_len(ncol(perms)))
+    res <- model_permutations(perms_sparse, case_res, case_dist, labels, n_labels, n_features, feature_select)
     res$feature_value <- lapply(as.integer(res$feature), function(i) which(super_pixels == i))
     res$feature_desc <- describe_superpixel(as.integer(res$feature), super_pixels)
     res$case <- basename(ind)
     res$label_prob <- unname(as.matrix(case_res[1, ]))[match(res$label, colnames(case_res))]
     res$data <- list(im_raw)
-    class(res$data) <- 'bitmap_list'
     res$prediction <- list(as.list(case_res[1, ]))
     res$model_type <- m_type
     res
   })
   res <- do.call(rbind, res)
+  class(res$data) <- 'bitmap_list'
+  class(res$feature_value) <- 'superpixel_list'
   res <- res[, c('model_type', 'case', 'label', 'label_prob', 'model_r2', 'model_intercept', 'model_prediction', 'feature', 'feature_value', 'feature_weight', 'feature_desc', 'data', 'prediction')]
   if (m_type == 'regression') {
     res$label <- NULL
@@ -100,8 +103,7 @@ is.image_explainer <- function(x) inherits(x, 'image_explainer')
 
 describe_superpixel <- function(i, superpixels) {
   vapply(i, function(ii) {
-    which_sp <- superpixels
-    which_sp[] <- superpixels == ii
+    which_sp <- superpixels == ii
     rows <- range(which(apply(which_sp, 1, any)))
     cols <- range(which(apply(which_sp, 2, any)))
     paste0('[', cols[1], '-', cols[2],'], [', rows[1], '-', rows[2], ']')
@@ -115,6 +117,10 @@ format.bitmap <- function(x, ...) {
 #' @export
 format.bitmap_list <- function(x, ...) {
   vapply(x, format, character(1))
+}
+#' @export
+format.superpixel_list <- function(x, ...) {
+  vapply(x, function(el) {paste0(length(el), 'px superpixel')}, character(1))
 }
 #' @importFrom tools file_ext
 is.image_file <- function(x) {
