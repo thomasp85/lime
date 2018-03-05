@@ -18,7 +18,7 @@
 #' @export
 lime <- function(x, model, ...) {
   if (is.character(x) && is.image_file(x)) class(x) <- 'imagefile'
-  UseMethod('lime')
+  UseMethod('lime', x)
 }
 
 # Helpers -----------------------------------------------------------------
