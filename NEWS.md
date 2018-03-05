@@ -5,6 +5,7 @@
   kernel density estimation rather than assume a normal distribution.
 * Fix bug when numeric features in the training data were constant (#56)
 * Fix bug when plotting regression explanations with `plot_explanations()` (#60)
+* Logical columns in tabular data is now supported (#75)
 
 # lime 0.3.1
 

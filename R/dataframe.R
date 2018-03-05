@@ -33,6 +33,8 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
       'character'
     } else if (is.factor(f)) {
       'factor'
+    } else if (is.logical(f)) {
+      'logical'
     } else if (inherits(f, 'Date') || inherits(f, 'POSIXt')) {
       'date_time'
     } else {
@@ -65,6 +67,7 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
         c(mean = mean(x[[i]], na.rm = TRUE), sd = sd(x[[i]], na.rm = TRUE))
       },
       character = ,
+      logical = ,
       factor = table(x[[i]])/nrow(x),
       NA
     )
@@ -145,7 +148,7 @@ is.data_frame_explainer <- function(x) inherits(x, 'data_frame_explainer')
 #' @importFrom stats setNames
 numerify <- function(x, type, bin_continuous, bin_cuts) {
   setNames(as.data.frame(lapply(seq_along(x), function(i) {
-    if (type[i] %in% c('character', 'factor')) {
+    if (type[i] %in% c('character', 'factor', 'logical')) {
       as.numeric(x[[i]] == x[[i]][1])
     } else if (type[i] == 'date_time' || type[i] == 'constant') {
       rep(0, nrow(x))
@@ -174,7 +177,9 @@ feature_scale <- function(x, distribution, type, bin_continuous) {
 }
 describe_feature <- function(feature, case, type, bin_continuous, bin_cuts) {
   sapply(feature, function(f) {
-    if (type[[f]] %in% c('character', 'factor')) {
+    if (type[[f]] == 'logical') {
+      paste0(f, ' is ', tolower(as.character(case[[f]])))
+    } else if (type[[f]] %in% c('character', 'factor')) {
       paste0(f, ' = ', as.character(case[[f]]))
     } else if (bin_continuous) {
       cuts <- bin_cuts[[f]]

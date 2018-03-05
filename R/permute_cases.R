@@ -17,6 +17,8 @@ permute_cases.data.frame <- function(cases, n_permutations, feature_distribution
       rnorm(nrows) * feature_distribution[[i]]['sd'] + feature_distribution[[i]]['mean']
     } else if (is.character(cases[[i]])) {
       sample(names(feature_distribution[[i]]), nrows, TRUE, as.numeric(feature_distribution[[i]]))
+    } else if (is.logical(cases[[i]])) {
+      sample(as.logical(names(feature_distribution[[i]])), nrows, TRUE, as.numeric(feature_distribution[[i]]))
     } else if (is.factor(cases[[i]])) {
       x <- sample(names(feature_distribution[[i]]), nrows, TRUE, as.numeric(feature_distribution[[i]]))
       factor(x, levels = names(feature_distribution[[i]]))
