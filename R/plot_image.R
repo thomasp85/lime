@@ -97,7 +97,7 @@ plot_image_explanation <- function(explanation, which = 1, threshold = 0.01,
 #' before starting the time consuming explanation function.
 #'
 #' @param path The path to the image. Must be readable by [magick::image_read()]
-#' @param n_superpixles The number of superpixels to segment into
+#' @param n_superpixels The number of superpixels to segment into
 #' @param weight How high should locality be weighted compared to colour. High
 #' values leads to more compact superpixels, while low values follow the image
 #' structure more
@@ -139,6 +139,7 @@ plot_superpixels <- function(path, n_superpixels = 400, weight = 20, n_iter = 10
 }
 
 #' @importFrom magick image_composite image_negate
+#' @importFrom grDevices rgb
 hightlight_segments <- function(im, pixels, display, fill_alpha, outline_col,
                                 block_col) {
   area <- matrix(as.raw(0), ncol = image_info(im)$width, nrow = image_info(im)$height)

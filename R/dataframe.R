@@ -82,6 +82,7 @@ lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantil
 #' convert the distance to a similarity in case `dist_fun != 'gower'`.
 #'
 #' @importFrom gower gower_dist
+#' @importFrom stats dist
 #' @export
 explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
                                n_features, n_permutations = 5000,

@@ -10,6 +10,8 @@ plot_superpixels(path, n_superpixels = 400, weight = 20, n_iter = 10,
 \arguments{
 \item{path}{The path to the image. Must be readable by \code{\link[magick:image_read]{magick::image_read()}}}
 
+\item{n_superpixels}{The number of superpixels to segment into}
+
 \item{weight}{How high should locality be weighted compared to colour. High
 values leads to more compact superpixels, while low values follow the image
 structure more}
@@ -17,8 +19,6 @@ structure more}
 \item{n_iter}{How many iterations should the segmentation run for}
 
 \item{colour}{What line colour should be used to show the segment boundaries}
-
-\item{n_superpixles}{The number of superpixels to segment into}
 }
 \value{
 A ggplot object
