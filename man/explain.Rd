@@ -74,6 +74,9 @@ structure more}
 
 \item{n_iter}{How many iterations should the segmentation run for}
 
+\item{p_remove}{The probability that a superpixel will be removed in each
+permutation}
+
 \item{batch_size}{The number of explanations to handle at a time}
 
 \item{background}{The colour to use for blocked out superpixels}

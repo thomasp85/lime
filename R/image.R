@@ -15,6 +15,8 @@ lime.imagefile <- function(x, model, preprocess, ...) {
 #' values leads to more compact superpixels, while low values follow the image
 #' structure more
 #' @param n_iter How many iterations should the segmentation run for
+#' @param p_remove The probability that a superpixel will be removed in each
+#' permutation
 #' @param batch_size The number of explanations to handle at a time
 #' @param background The colour to use for blocked out superpixels
 #'
@@ -54,7 +56,7 @@ explain.imagefile <- function(x, explainer, labels = NULL, n_labels = NULL,
       n_iter = n_iter
     ) + 1
     im_raw <- im[[1]]
-    perms <- matrix(sample(c(TRUE, FALSE), n_permutations * max(super_pixels), TRUE), nrow = n_permutations)
+    perms <- matrix(sample(c(TRUE, FALSE), n_permutations * max(super_pixels), TRUE, c(p_remove, 1-p_remove)), nrow = n_permutations)
     perms[1, ] <- FALSE
     batches <- rep(seq_len(n_permutations), each = batch_size, length.out = n_permutations)
     case_res <- do.call(rbind, lapply(batches, function(b) {
