@@ -92,11 +92,13 @@ set_labels <- function(res, model) {
 predict_model <- function(x, newdata, type, ...) {
   UseMethod('predict_model')
 }
+#' @export
 predict_model.default <- function(x, newdata, type, ...) {
   p <- predict(x, newdata = newdata, type = type, ...)
   if (type == 'raw') p <- data.frame(Response = p, stringsAsFactors = FALSE)
   as.data.frame(p)
 }
+#' @export
 predict_model.WrappedModel <- function(x, newdata, type, ...) {
   type2 <- switch(
     type,
@@ -109,6 +111,7 @@ predict_model.WrappedModel <- function(x, newdata, type, ...) {
   if (type == 'raw') p <- data.frame(Response = p, stringsAsFactors = FALSE)
   p
 }
+#' @export
 predict_model.xgb.Booster <- function(x, newdata, type, ...) {
   if (!requireNamespace('xgboost', quietly = TRUE)) {
     stop('The xgboost package is required for predicting xgboost models')
@@ -129,6 +132,7 @@ predict_model.xgb.Booster <- function(x, newdata, type, ...) {
   }
   p
 }
+#' @export
 predict_model.lda <- function(x, newdata, type, ...) {
   res <- predict(x, newdata = newdata, ...)
   switch(
@@ -142,6 +146,7 @@ predict_model.lda <- function(x, newdata, type, ...) {
 model_type <- function(x, ...) {
   UseMethod('model_type')
 }
+#' @export
 model_type.default <- function(x, ...) {
   stop('The class of model must have a model_type method. Models other than those from `caret` and `mlr` must have a `model_type` method defined manually e.g. model_type.mymodelclass <- function(x, ...) "classification"', call. = FALSE)
 }
@@ -153,6 +158,7 @@ model_type.lime_regressor <- function(x, ...) 'regression'
 model_type.train <- function(x, ...) {
   tolower(x$modelType)
 }
+#' @export
 model_type.WrappedModel <- function(x, ...) {
   switch(
     x$learner$type,
@@ -163,6 +169,7 @@ model_type.WrappedModel <- function(x, ...) {
     multilabel = 'multilabel'
   )
 }
+#' @export
 model_type.xgb.Booster <- function(x, ...) {
   obj <- x$params$objective
   type <- strsplit(obj, ':')[[1]][1]
@@ -174,4 +181,5 @@ model_type.xgb.Booster <- function(x, ...) {
     stop('Unsupported model type', call. = FALSE)
   )
 }
+#' @export
 model_type.lda <- function(x, ...) 'classification'
