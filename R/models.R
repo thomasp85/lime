@@ -141,6 +141,22 @@ predict_model.lda <- function(x, newdata, type, ...) {
     prob = as.data.frame(res$posterior, check.names = FALSE)
   )
 }
+#' @export
+predict_model.keras.engine.training.Model <- function(x, newdata, type, ...) {
+  if (!requireNamespace('keras', quietly = TRUE)) {
+    stop('The keras package is required for predicting keras models')
+  }
+  res <- predict(x, newdata)
+  if (type == 'raw') {
+    data.frame(Response = res[, 1])
+  } else {
+    if (ncol(res) == 1) {
+      res <- cbind(1 - res, res)
+    }
+    colnames(res) <- as.character(seq_len(ncol(res)))
+    as.data.frame(res, check.names = FALSE)
+  }
+}
 #' @rdname model_support
 #' @export
 model_type <- function(x, ...) {
@@ -183,3 +199,14 @@ model_type.xgb.Booster <- function(x, ...) {
 }
 #' @export
 model_type.lda <- function(x, ...) 'classification'
+#' @export
+model_type.keras.engine.training.Model <- function(x, ...) {
+  if (!requireNamespace('keras', quietly = TRUE)) {
+    stop('The keras package is required for predicting keras models')
+  }
+  if (keras::get_layer(x, index = -1)$activation$func_name == 'linear') {
+    'regression'
+  } else {
+    'classification'
+  }
+}

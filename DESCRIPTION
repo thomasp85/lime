@@ -44,7 +44,8 @@ Suggests: xgboost,
     covr,
     knitr,
     rmarkdown,
-    devtools
+    devtools,
+    keras
 Remotes: ropensci/magick
 LinkingTo: Rcpp, 
     RcppEigen
