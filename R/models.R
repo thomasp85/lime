@@ -43,6 +43,50 @@
 #'
 NULL
 
+#' Indicate model type to lime
+#'
+#' `lime` requires knowledge about the type of model it is dealing with, more
+#' specifically whether the model is a regressor or a classifier. If the model
+#' class has a [model_type()] method defined lime can figure it out on its own
+#' but if not, you can wrap your model in either of these functions to indicate
+#' what type of model lime is dealing with. This can also be used to overwrite
+#' the output from [model_type()] if the implementation uses some heuristic that
+#' doesn't work for your particular model (e.g. keras models types are found by
+#' checking if the activation in the last layer is linear or not - this is
+#' rather crude). In addition `as_classifier` can be used to overwrite the
+#' returned class labels - this is handy if the model does not store the labels
+#' (again, keras springs to mind).
+#'
+#' @param x The model object
+#' @param labels An optional character vector giving labels for each class
+#'
+#' @return A model augmented with information about the model type and
+#' (potentially) the class labels.
+#'
+#' @export
+as_classifier <- function(x, labels = NULL) {
+  class(x) <- c('lime_classifier', class(x))
+  attr(x, 'lime_labels') <- labels
+  x
+}
+#' @rdname as_classifier
+#' @export
+as_regressor <- function(x) {
+  class(x) <- 'lime_regressor'
+  x
+}
+set_labels <- function(res, model) {
+  labels <- attr(model, 'lime_labels')
+  if (model_type(model) == 'classification' && !is.null(labels)) {
+    if (length(labels) != ncol(res)) {
+      warning('Ignoring provided class labels as length differs from model output')
+    } else {
+      names(res) <- labels
+    }
+  }
+  res
+}
+
 #' @rdname model_support
 #' @export
 predict_model <- function(x, newdata, type, ...) {
@@ -101,6 +145,11 @@ model_type <- function(x, ...) {
 model_type.default <- function(x, ...) {
   stop('The class of model must have a model_type method. Models other than those from `caret` and `mlr` must have a `model_type` method defined manually e.g. model_type.mymodelclass <- function(x, ...) "classification"', call. = FALSE)
 }
+#' @export
+model_type.lime_classifier <- function(x, ...) 'classification'
+#' @export
+model_type.lime_regressor <- function(x, ...) 'regression'
+#' @export
 model_type.train <- function(x, ...) {
   tolower(x$modelType)
 }
