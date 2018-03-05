@@ -52,26 +52,26 @@ explanation <- explain(iris_test, explainer, n_labels = 1, n_features = 2)
 # output from the model.
 head(explanation)
 #>       model_type case  label label_prob  model_r2 model_intercept
-#> 1 classification    1 setosa          1 0.3979974       0.2516054
-#> 2 classification    1 setosa          1 0.3979974       0.2516054
-#> 3 classification    2 setosa          1 0.3799092       0.2571338
-#> 4 classification    2 setosa          1 0.3799092       0.2571338
-#> 5 classification    3 setosa          1 0.3865417       0.2528369
-#> 6 classification    3 setosa          1 0.3865417       0.2528369
+#> 1 classification    1 setosa          1 0.3450777       0.2758681
+#> 2 classification    1 setosa          1 0.3450777       0.2758681
+#> 3 classification    2 setosa          1 0.3385815       0.2695084
+#> 4 classification    2 setosa          1 0.3385815       0.2695084
+#> 5 classification    3 setosa          1 0.3538444       0.2628305
+#> 6 classification    3 setosa          1 0.3538444       0.2628305
 #>   model_prediction      feature feature_value feature_weight
-#> 1        0.7099585 Sepal.Length           5.1   -0.003136112
-#> 2        0.7099585  Petal.Width           0.2    0.461489211
-#> 3        0.6962440 Sepal.Length           4.9   -0.005756793
-#> 4        0.6962440  Petal.Width           0.2    0.444866977
-#> 5        0.7177771  Sepal.Width           3.2    0.018586808
-#> 6        0.7177771  Petal.Width           0.2    0.446353368
+#> 1        0.6949928  Sepal.Width           3.5   -0.013810492
+#> 2        0.6949928 Petal.Length           1.4    0.432935221
+#> 3        0.7031763  Sepal.Width           3.0    0.008755776
+#> 4        0.7031763 Petal.Length           1.4    0.424912088
+#> 5        0.6992043 Sepal.Length           4.7   -0.001167966
+#> 6        0.6992043 Petal.Length           1.3    0.437541810
 #>               feature_desc               data prediction
-#> 1      Sepal.Length <= 5.2 5.1, 3.5, 1.4, 0.2    1, 0, 0
-#> 2       Petal.Width <= 0.4 5.1, 3.5, 1.4, 0.2    1, 0, 0
-#> 3      Sepal.Length <= 5.2 4.9, 3.0, 1.4, 0.2    1, 0, 0
-#> 4       Petal.Width <= 0.4 4.9, 3.0, 1.4, 0.2    1, 0, 0
-#> 5 3.0 < Sepal.Width <= 3.3 4.7, 3.2, 1.3, 0.2    1, 0, 0
-#> 6       Petal.Width <= 0.4 4.7, 3.2, 1.3, 0.2    1, 0, 0
+#> 1        3.3 < Sepal.Width 5.1, 3.5, 1.4, 0.2    1, 0, 0
+#> 2      Petal.Length <= 1.6 5.1, 3.5, 1.4, 0.2    1, 0, 0
+#> 3 2.8 < Sepal.Width <= 3.0 4.9, 3.0, 1.4, 0.2    1, 0, 0
+#> 4      Petal.Length <= 1.6 4.9, 3.0, 1.4, 0.2    1, 0, 0
+#> 5      Sepal.Length <= 5.2 4.7, 3.2, 1.3, 0.2    1, 0, 0
+#> 6      Petal.Length <= 1.6 4.7, 3.2, 1.3, 0.2    1, 0, 0
 
 # And can be visualised directly
 plot_features(explanation)

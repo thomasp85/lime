@@ -55,7 +55,7 @@ frameworks. Support for other models are easy to achieve by adding a
 The following shows how a random forest model is trained on the iris data set 
 and how `lime` is then used to explain a set of new observations:
 
-```{r, message=FALSE}
+```{r, message=FALSE, fig.asp=1}
 library(caret)
 library(lime)
 
@@ -84,7 +84,7 @@ plot_features(explanation)
 `lime` also supports explaining image and text models. For image explanations 
 the relevant areas in an image can be highlighted:
 
-```{r}
+```{r, fig.asp=0.5}
 explanation <- .load_image_example()
 
 plot_image_explanation(explanation)
