@@ -42,7 +42,7 @@ classifiers the top \code{n_label} classes will be explained.}
 
 \item{feature_select}{The algorithm to use for selecting features. One of:
 \itemize{
-\item \code{"auto"}: If \code{n_features &lt;= 6} use \code{"forward_selection"} else use \code{"highest_weights"}.
+\item \code{"auto"}: If \code{n_features <= 6} use \code{"forward_selection"} else use \code{"highest_weights"}.
 \item \code{"none"}: Ignore \code{n_features} and use all features.
 \item \code{"forward_selection"}: Add one feature at a time until \code{n_features} is
 reached, based on quality of a ridge regression model.
