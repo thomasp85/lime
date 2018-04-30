@@ -44,6 +44,9 @@ plot_image_explanation <- function(explanation, which = 1, threshold = 0.01,
                                    display = 'outline', fill_alpha = 0.3,
                                    outline_col = c('lightgreen', 'red'),
                                    block_col = 'grey') {
+  if (!requireNamespace("magick", quietly = TRUE)) {
+    stop("Package magick needed for this function to work. Please install it.", call. = FALSE)
+  }
   display <- match.arg(display, c('outline', 'block'))
   explanation <- explanation[explanation$case == unique(explanation$case)[1], , drop = FALSE]
   explanation$label <- factor(explanation$label, unique(explanation$label[order(explanation$label_prob, decreasing = TRUE)]))
@@ -133,6 +136,9 @@ plot_image_explanation <- function(explanation, which = 1, threshold = 0.01,
 #'
 plot_superpixels <- function(path, n_superpixels = 400, weight = 20, n_iter = 10,
                              colour = 'black') {
+  if (!requireNamespace("magick", quietly = TRUE)) {
+    stop("Package magick needed for this function to work. Please install it.", call. = FALSE)
+  }
   im <- magick::image_read(path)
   im_lab <- magick::image_convert(im, colorspace = 'LAB')
   super_pixels <- slic(
@@ -164,6 +170,9 @@ plot_superpixels <- function(path, n_superpixels = 400, weight = 20, n_iter = 10
 #' @importFrom grDevices rgb
 hightlight_segments <- function(im, pixels, display, fill_alpha, outline_col,
                                 block_col) {
+  if (!requireNamespace("magick", quietly = TRUE)) {
+    stop("Package magick needed for this function to work. Please install it.", call. = FALSE)
+  }
   area <- matrix(as.raw(0), ncol = magick::image_info(im)$width, nrow = magick::image_info(im)$height)
   area[pixels] <- as.raw(255)
   area <- magick::image_read(array(area, dim = c(1, rev(dim(area)))))

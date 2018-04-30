@@ -57,6 +57,10 @@ explain.imagefile <- function(x, explainer, labels = NULL, n_labels = NULL,
                               feature_select = 'auto', n_superpixels = 400,
                               weight = 20, n_iter = 10, p_remove = 0.5,
                               batch_size = 10, background = 'grey', ...) {
+  if (!requireNamespace("magick", quietly = TRUE)) {
+    stop("Package magick needed for this function to work. Please install it.", call. = FALSE)
+  }
+
   assert_that(is.image_explainer(explainer))
   m_type <- model_type(explainer)
   o_type <- output_type(explainer)
@@ -140,6 +144,9 @@ is.image_explainer <- function(x) inherits(x, 'image_explainer')
 #' @keywords internal
 #' @export
 .load_image_example <- function() {
+  if (!requireNamespace("magick", quietly = TRUE)) {
+    stop("Package magick needed for this function to work. Please install it.", call. = FALSE)
+  }
   exp <- readRDS(system.file('extdata', 'image_explanation.rds', package = 'lime'))
   img <- magick::image_read(system.file('extdata', 'produce.png', package = 'lime'))
   exp$data <- list(magick::image_convert(img, type = 'TrueColorAlpha')[[1]])
