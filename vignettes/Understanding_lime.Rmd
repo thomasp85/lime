@@ -22,7 +22,7 @@ efficiently understand the output it produces.
 Behind the workings of lime lies the (big) assumption that every complex model
 is linear on a local scale. While this is not justified in the paper it is not 
 difficult to convince yourself that this is generally sound — you usually expect 
-two very similar observations to behave predictably even in a complex model. 
+two very similar observations to behave predictably even in a complex model (this is basically what we'd expect when assuming the [taylor series](https://en.wikipedia.org/wiki/Taylor_series) around the observation of interest is good enough with just the first order approximation). 
 `lime` then takes this assumption to its natural conclusion by asserting that it
 is possible to fit a simple model around a single observation that will mimic
 how the global model behaves at that locality. The simple model can then be used
