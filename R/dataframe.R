@@ -21,7 +21,9 @@
 #' # This can now be used together with the explain method
 #' explain(iris_test, explanation, n_labels = 1, n_features = 2)
 #'
-lime.data.frame <- function(x, model, bin_continuous = TRUE, n_bins = 4, quantile_bins = TRUE, use_density = TRUE, ...) {
+lime.data.frame <- function(x, model, preprocess = NULL, bin_continuous = TRUE, n_bins = 4, quantile_bins = TRUE, use_density = TRUE, ...) {
+  if (is.null(preprocess)) preprocess <- function(x) x
+  assert_that(is.function(preprocess))
   explainer <- c(as.list(environment()), list(...))
   explainer$x <- NULL
   explainer$feature_type <- setNames(sapply(x, function(f) {
@@ -113,7 +115,7 @@ explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
   case_perm <- permute_cases(x, n_permutations, explainer$feature_distribution,
                              explainer$bin_continuous, explainer$bin_cuts,
                              explainer$use_density)
-  case_res <- predict_model(explainer$model, case_perm, type = o_type)
+  case_res <- predict_model(explainer$preprocess(explainer$model), case_perm, type = o_type)
   case_res <- set_labels(case_res, explainer$model)
   case_ind <- split(seq_len(nrow(case_perm)), rep(seq_len(nrow(x)), each = n_permutations))
   res <- lapply(seq_along(case_ind), function(ind) {

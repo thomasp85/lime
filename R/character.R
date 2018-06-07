@@ -42,7 +42,8 @@
 #'
 #' @importFrom assertthat assert_that is.flag
 #' @export
-lime.character <- function(x, model, preprocess, tokenization = default_tokenize, keep_word_position = FALSE, ...) {
+lime.character <- function(x, model, preprocess = NULL, tokenization = default_tokenize, keep_word_position = FALSE, ...) {
+  if (is.null(preprocess)) preprocess <- function(x) x
   assert_that(is.function(preprocess))
   assert_that(is.function(tokenization))
   assert_that(is.flag(keep_word_position))

@@ -30,7 +30,8 @@
 #' # Explain the model (can take a long time depending on your system)
 #' explanation <- explain(img_path, explainer, n_labels = 2, n_features = 10, n_superpixels = 70)
 #' }
-lime.imagefile <- function(x, model, preprocess, ...) {
+lime.imagefile <- function(x, model, preprocess = NULL, ...) {
+  if (is.null(preprocess)) preprocess <- function(x) x
   assert_that(is.function(preprocess))
   assert_that(!is.null(model))
 

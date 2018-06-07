@@ -1,4 +1,10 @@
-# lime 0.3.1.9999
+# lime 0.4.0.9999
+
+* Add `preprocess` argument to `lime.data.frame` to keep it in line with the 
+  other types. Use it to transform your data.frame into a new input that your
+  model expects after permutations
+
+# lime 0.4
 
 * Add support for image explanation. The dispatch will be on paths pointing to
   valid image files. Image explanations can be visualised using 
