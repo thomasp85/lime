@@ -4,7 +4,7 @@
 \alias{plot_image_explanation}
 \title{Display image explanations as superpixel areas}
 \usage{
-plot_image_explanation(explanation, which = 1, threshold = 0.01,
+plot_image_explanation(explanation, which = 1, threshold = 0.02,
   show_negative = FALSE, display = "outline", fill_alpha = 0.3,
   outline_col = c("lightgreen", "red"), block_col = "grey")
 }
@@ -42,6 +42,8 @@ done by blocking the parts of the image not related to the classification, or
 by encircling and colouring the areas that influence the explanation.
 }
 \examples{
+
+\dontrun{
 # load precalculated explanation as it takes a long time to create
 explanation <- .load_image_example()
 
@@ -53,5 +55,6 @@ plot_image_explanation(explanation, display = 'block')
 
 # Show negatively correlated areas as well
 plot_image_explanation(explanation, show_negative = TRUE)
+}
 
 }

@@ -4,7 +4,7 @@
 \alias{plot_superpixels}
 \title{Test super pixel segmentation}
 \usage{
-plot_superpixels(path, n_superpixels = 400, weight = 20, n_iter = 10,
+plot_superpixels(path, n_superpixels = 50, weight = 20, n_iter = 10,
   colour = "black")
 }
 \arguments{

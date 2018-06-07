@@ -51,14 +51,16 @@ lime.imagefile <- function(x, model, preprocess = NULL, ...) {
 #' @param batch_size The number of explanations to handle at a time
 #' @param background The colour to use for blocked out superpixels
 #'
-#' @importFrom magick image_read image_convert image_channel image_background image_write
 #' @importFrom methods as
 #' @export
 explain.imagefile <- function(x, explainer, labels = NULL, n_labels = NULL,
                               n_features, n_permutations = 1000,
-                              feature_select = 'auto', n_superpixels = 400,
+                              feature_select = 'auto', n_superpixels = 50,
                               weight = 20, n_iter = 10, p_remove = 0.5,
                               batch_size = 10, background = 'grey', ...) {
+  if (!requireNamespace('magick', quietly = TRUE)) {
+    stop('The magick package is required for image explanation', call. = FALSE)
+  }
   assert_that(is.image_explainer(explainer))
   m_type <- model_type(explainer)
   o_type <- output_type(explainer)
@@ -76,17 +78,17 @@ explain.imagefile <- function(x, explainer, labels = NULL, n_labels = NULL,
   assert_that(is.count(batch_size))
 
   res <- lapply(x, function(ind) {
-    im <- image_read(ind)
-    im_lab <- image_convert(im, colorspace = 'LAB')
+    im <- magick::image_read(ind)
+    im_lab <- magick::image_convert(im, colorspace = 'LAB')
     super_pixels <- slic(
-      image_channel(im_lab, 'R')[[1]][1,,],
-      image_channel(im_lab, 'G')[[1]][1,,],
-      image_channel(im_lab, 'B')[[1]][1,,],
+      magick::image_channel(im_lab, 'R')[[1]][1,,],
+      magick::image_channel(im_lab, 'G')[[1]][1,,],
+      magick::image_channel(im_lab, 'B')[[1]][1,,],
       n_sp = n_superpixels,
       weight = weight,
       n_iter = n_iter
     ) + 1
-    im_raw <- image_convert(im, type = 'TrueColorAlpha')[[1]]
+    im_raw <- magick::image_convert(im, type = 'TrueColorAlpha')[[1]]
     perms <- matrix(sample(c(TRUE, FALSE), n_permutations * max(super_pixels), TRUE, c(p_remove, 1-p_remove)), nrow = n_permutations)
     perms[1, ] <- FALSE
     batches <- rep(seq_len(n_permutations), each = batch_size, length.out = n_permutations)
@@ -96,9 +98,9 @@ explain.imagefile <- function(x, explainer, labels = NULL, n_labels = NULL,
         tmp <- tempfile()
         im_perm <- im_raw
         im_perm[4,,][super_pixels %in% which(perms[i,])] <- as.raw(0)
-        im_perm <- image_read(im_perm)
-        im_perm <- image_background(im_perm, background)
-        image_write(im_perm, path = tmp, format = 'png')
+        im_perm <- magick::image_read(im_perm)
+        im_perm <- magick::image_background(im_perm, background)
+        magick::image_write(im_perm, path = tmp, format = 'png')
         tmp
       }, character(1))
       batch_res <- predict_model(explainer$model, newdata = explainer$preprocess(perm_files), type = o_type)
@@ -142,9 +144,12 @@ is.image_explainer <- function(x) inherits(x, 'image_explainer')
 #' @keywords internal
 #' @export
 .load_image_example <- function() {
+  if (!requireNamespace('magick', quietly = TRUE)) {
+    stop('The magick package is required for image explanation', call. = FALSE)
+  }
   exp <- readRDS(system.file('extdata', 'image_explanation.rds', package = 'lime'))
-  img <- image_read(system.file('extdata', 'produce.png', package = 'lime'))
-  exp$data <- list(image_convert(img, type = 'TrueColorAlpha')[[1]])
+  img <- magick::image_read(system.file('extdata', 'produce.png', package = 'lime'))
+  exp$data <- list(magick::image_convert(img, type = 'TrueColorAlpha')[[1]])
   class(exp$data) <- 'bitmap_list'
   exp
 }

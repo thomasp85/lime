@@ -23,11 +23,12 @@
 #'
 #' @return A ggplot object
 #'
-#' @importFrom magick image_read
 #' @import ggplot2
 #' @export
 #'
 #' @examples
+#'
+#' \dontrun{
 #' # load precalculated explanation as it takes a long time to create
 #' explanation <- .load_image_example()
 #'
@@ -39,17 +40,21 @@
 #'
 #' # Show negatively correlated areas as well
 #' plot_image_explanation(explanation, show_negative = TRUE)
+#' }
 #'
-plot_image_explanation <- function(explanation, which = 1, threshold = 0.01,
+plot_image_explanation <- function(explanation, which = 1, threshold = 0.02,
                                    show_negative = FALSE,
                                    display = 'outline', fill_alpha = 0.3,
                                    outline_col = c('lightgreen', 'red'),
                                    block_col = 'grey') {
+  if (!requireNamespace('magick', quietly = TRUE)) {
+    stop('The magick package is required for image explanation', call. = FALSE)
+  }
   display <- match.arg(display, c('outline', 'block'))
   explanation <- explanation[explanation$case == unique(explanation$case)[1], , drop = FALSE]
   explanation$label <- factor(explanation$label, unique(explanation$label[order(explanation$label_prob, decreasing = TRUE)]))
   explanation$fit <- format(explanation$model_r2, digits = 2)
-  im <- image_read(explanation$data[[1]])
+  im <- magick::image_read(explanation$data[[1]])
   raster <- do.call('rbind', lapply(split(explanation, explanation$label), function(exp) {
     pos <- exp[exp$feature_weight > threshold, , drop = FALSE]
     im_hl <- hightlight_segments(im, unlist(pos$feature_value), display, fill_alpha, outline_col[1], block_col)
@@ -63,7 +68,7 @@ plot_image_explanation <- function(explanation, which = 1, threshold = 0.01,
         im_neg <- if (display == 'outline') {
           im
         } else {
-          image_blank(image_info(im)$width, image_info(im)$height, color = block_col)
+          magick::image_blank(magick::image_info(im)$width, magick::image_info(im)$height, color = block_col)
         }
       }
       im_neg <- tidy_raster(im_neg)
@@ -121,7 +126,6 @@ plot_image_explanation <- function(explanation, which = 1, threshold = 0.01,
 #'
 #' @return A ggplot object
 #'
-#' @importFrom magick image_read image_convert image_channel image_convolve image_blank image_info
 #' @export
 #'
 #' @examples
@@ -133,27 +137,30 @@ plot_image_explanation <- function(explanation, which = 1, threshold = 0.01,
 #' # Test different settings
 #' plot_superpixels(image, n_superpixels = 100, colour = 'white')
 #'
-plot_superpixels <- function(path, n_superpixels = 400, weight = 20, n_iter = 10,
+plot_superpixels <- function(path, n_superpixels = 50, weight = 20, n_iter = 10,
                              colour = 'black') {
-  im <- image_read(path)
-  im_lab <- image_convert(im, colorspace = 'LAB')
+  if (!requireNamespace('magick', quietly = TRUE)) {
+    stop('The magick package is required for image explanation', call. = FALSE)
+  }
+  im <- magick::image_read(path)
+  im_lab <- magick::image_convert(im, colorspace = 'LAB')
   super_pixels <- slic(
-    image_channel(im_lab, 'R')[[1]][1,,],
-    image_channel(im_lab, 'G')[[1]][1,,],
-    image_channel(im_lab, 'B')[[1]][1,,],
+    magick::image_channel(im_lab, 'R')[[1]][1,,],
+    magick::image_channel(im_lab, 'G')[[1]][1,,],
+    magick::image_channel(im_lab, 'B')[[1]][1,,],
     n_sp = n_superpixels,
     weight = weight,
     n_iter = n_iter
   ) + 1
-  contour <- image_read(array(t(super_pixels)/max(super_pixels),
+  contour <- magick::image_read(array(t(super_pixels)/max(super_pixels),
                               dim = c(rev(dim(super_pixels)), 1)),
                         depth = 16)
-  contour <- image_convolve(contour, 'Laplacian')[[1]]
+  contour <- magick::image_convolve(contour, 'Laplacian')[[1]]
   contour[contour != as.raw(0)] <- as.raw(255)
-  lines <- image_blank(image_info(im)$width, image_info(im)$height, color = colour)
-  lines <- image_convert(lines, type = 'TrueColorAlpha')[[1]]
+  lines <- magick::image_blank(magick::image_info(im)$width, magick::image_info(im)$height, color = colour)
+  lines <- magick::image_convert(lines, type = 'TrueColorAlpha')[[1]]
   lines[4,,] <- contour[1,,]
-  raster <- tidy_raster(image_composite(im, image_read(lines)))
+  raster <- tidy_raster(magick::image_composite(im, magick::image_read(lines)))
 
   ggplot(raster) +
     geom_raster(aes_(~x, ~y, fill = ~colour)) +
@@ -163,34 +170,39 @@ plot_superpixels <- function(path, n_superpixels = 400, weight = 20, n_iter = 10
     theme_void()
 }
 
-#' @importFrom magick image_composite image_negate
 #' @importFrom grDevices rgb
 hightlight_segments <- function(im, pixels, display, fill_alpha, outline_col,
                                 block_col) {
-  area <- matrix(as.raw(0), ncol = image_info(im)$width, nrow = image_info(im)$height)
+  if (!requireNamespace('magick', quietly = TRUE)) {
+    stop('The magick package is required for image explanation', call. = FALSE)
+  }
+  area <- matrix(as.raw(0), ncol = magick::image_info(im)$width, nrow = magick::image_info(im)$height)
   area[pixels] <- as.raw(255)
-  area <- image_read(array(area, dim = c(1, rev(dim(area)))))
+  area <- magick::image_read(array(area, dim = c(1, rev(dim(area)))))
   if (display == 'outline') {
-    lines <- image_convolve(area, 'Laplacian')
-    area <- image_composite(
-      image_blank(image_info(im)$width, image_info(im)$height, color = rgb(fill_alpha, fill_alpha, fill_alpha)),
+    lines <- magick::image_convolve(area, 'Laplacian')
+    area <- magick::image_composite(
+      magick::image_blank(magick::image_info(im)$width, magick::image_info(im)$height, color = rgb(fill_alpha, fill_alpha, fill_alpha)),
       area,
       'Darken'
     )
-    lines <- image_composite(area, lines, 'lighten')
-    hl <- image_blank(image_info(im)$width, image_info(im)$height, color = outline_col)
-    hl <- image_convert(hl, type = 'TrueColorAlpha')[[1]]
+    lines <- magick::image_composite(area, lines, 'lighten')
+    hl <- magick::image_blank(magick::image_info(im)$width, magick::image_info(im)$height, color = outline_col)
+    hl <- magick::image_convert(hl, type = 'TrueColorAlpha')[[1]]
     hl[4,,] <- lines[[1]][1,,]
   } else {
-    area <- image_negate(area)
-    hl <- image_blank(image_info(im)$width, image_info(im)$height, color = block_col)
-    hl <- image_convert(hl, type = 'TrueColorAlpha')[[1]]
+    area <- magick::image_negate(area)
+    hl <- magick::image_blank(magick::image_info(im)$width, magick::image_info(im)$height, color = block_col)
+    hl <- magick::image_convert(hl, type = 'TrueColorAlpha')[[1]]
     hl[4,,] <- area[[1]][1,,]
   }
-  image_composite(im, image_read(hl))
+  magick::image_composite(im, magick::image_read(hl))
 }
 #' @importFrom grDevices as.raster
 tidy_raster <- function(im) {
+  if (!requireNamespace('magick', quietly = TRUE)) {
+    stop('The magick package is required for image explanation', call. = FALSE)
+  }
   raster <- as.raster(im)
   data.frame(x = rep(seq_len(ncol(raster)), nrow(raster)),
              y = rep(seq_len(nrow(raster)), each = ncol(raster)),

@@ -7,13 +7,14 @@
 \alias{lime.imagefile}
 \title{Create a model explanation function based on training data}
 \usage{
-\method{lime}{character}(x, model, preprocess,
+\method{lime}{character}(x, model, preprocess = NULL,
   tokenization = default_tokenize, keep_word_position = FALSE, ...)
 
-\method{lime}{data.frame}(x, model, bin_continuous = TRUE, n_bins = 4,
-  quantile_bins = TRUE, use_density = TRUE, ...)
+\method{lime}{data.frame}(x, model, preprocess = NULL,
+  bin_continuous = TRUE, n_bins = 4, quantile_bins = TRUE,
+  use_density = TRUE, ...)
 
-\method{lime}{imagefile}(x, model, preprocess, ...)
+\method{lime}{imagefile}(x, model, preprocess = NULL, ...)
 
 lime(x, model, ...)
 }
