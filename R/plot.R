@@ -31,6 +31,16 @@
 #'
 plot_features <- function(explanation, ncol = 2) {
   type_pal <- c('Supports', 'Contradicts')
+  
+  if (explanation$model_type[1] == 'regression') {
+    type_pal <- c('Positive', 'Negative')
+    explanation$feature_weight <- ifelse(
+      grepl("=|>|<", explanation$feature_desc),
+      explanation$feature_weight,
+      explanation$feature_value * explanation$feature_weight
+    )
+  }
+  
   explanation$type <- factor(ifelse(sign(explanation$feature_weight) == 1, type_pal[1], type_pal[2]), levels = type_pal)
   description <- paste0(explanation$case, '_', explanation$label)
   desc_width <- max(nchar(description)) + 1
@@ -43,10 +53,10 @@ plot_features <- function(explanation, ncol = 2) {
     explanation$probability <- format(explanation$label_prob, digits = 2)
     explanation$label <- factor(explanation$label, unique(explanation$label[order(explanation$label_prob, decreasing = TRUE)]))
     p <- ggplot(explanation) +
-      facet_wrap(~ case + label + probability + `Explanation fit`, labeller = label_both_upper, scales = 'free', ncol = ncol)
+      facet_wrap(~ case + label + probability + `Explanation fit`, labeller = label_both_upper, scales = 'free_y', ncol = ncol)
   } else if (explanation$model_type[1] == 'regression') {
     p <- ggplot(explanation) +
-      facet_wrap(~ case + prediction + `Explanation fit`, labeller = label_both_upper, scales = 'free', ncol = ncol)
+      facet_wrap(~ case + prediction + `Explanation fit`, labeller = label_both_upper, scales = 'free_y', ncol = ncol)
   }
   p +
     geom_col(aes_(~description, ~feature_weight, fill = ~type)) +
