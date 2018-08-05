@@ -236,7 +236,7 @@ model_type.lda <- function(x, ...) 'classification'
 model_type.keras.engine.training.Model <- function(x, ...) {
   print("Entering the target function...")
   print("Saving the target layer to the global environment...")
-  targetLayer <<- keras::get_layer(x, index = -1)
+  targetLayer <<- keras::get_layer(x, index = -1)$activation
   if (!requireNamespace('keras', quietly = TRUE)) {
     stop('The keras package is required for predicting keras models')
   }
