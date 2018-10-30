@@ -221,6 +221,8 @@ model_type.WrappedModel <- function(x, ...) {
 #' @export
 model_type.xgb.Booster <- function(x, ...) {
   obj <- x$params$objective
+  if (!is.null(obj)) return('regression')
+  if (is.function(obj)) stop('Unsupported model type', call. = FALSE)
   type <- strsplit(obj, ':')[[1]][1]
   switch(
     type,
