@@ -130,7 +130,7 @@ explain.imagefile <- function(x, explainer, labels = NULL, n_labels = NULL,
     res$label_prob <- NULL
     res$prediction <- unlist(res$prediction)
   }
-  res
+  as_tibble(res)
 }
 is.image_explainer <- function(x) inherits(x, 'image_explainer')
 
