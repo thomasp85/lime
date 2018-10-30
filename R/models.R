@@ -162,7 +162,7 @@ predict_model.keras.engine.training.Model <- function(x, newdata, type, ...) {
   if (!requireNamespace('keras', quietly = TRUE)) {
     stop('The keras package is required for predicting keras models')
   }
-  res <- predict(x, as.matrix(newdata))
+  res <- predict(x, as.array(newdata))
   if (type == 'raw') {
     data.frame(Response = res[, 1])
   } else {
