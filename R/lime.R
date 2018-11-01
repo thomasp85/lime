@@ -159,17 +159,17 @@ select_tree <- function(x, y, weights, n_features) {
 #' @importFrom stats coef
 select_f_lp <- function(x, y, weights, n_features) {
   shuffle_order <- sample(length(y)) # glm is sensitive to the order of the examples
-  fit <- glmnet(x[shuffle_order,], y[shuffle_order], weights = weights[shuffle_order], alpha = 1, nlambda = 3000)
-  # In case that no model with correct n_feature size was found
-  if (all(fit$df != n_features)) {
-    stop(sprintf("No model with %i features found with lasso_path. Try a different method.", n_features))
-  }
+  fit <- glmnet(x[shuffle_order,], y[shuffle_order], weights = weights[shuffle_order], alpha = 1, nlambda = 300)
   has_value <- apply(coef(fit)[-1, ], 2, function(x) x != 0)
   f_count <- apply(has_value, 2, sum)
   row <- which(f_count >= n_features)[1]
   features <- which(has_value[, row])
+  # In case that no model with correct n_feature size was found
   if (length(features) > n_features) {
-    features <- features[sample(seq_along(features), n_features)]
+    lower_row <- row - 1
+    lower_features <- which(has_value[, lower_row])
+    extra_features <- features[!(features %in% lower_features)]
+    features <- c(lower_features, extra_features[sample(seq_along(extra_features), n_features-length(lower_features))])
   }
   features
 }
