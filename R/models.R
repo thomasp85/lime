@@ -162,7 +162,7 @@ predict_model.keras.engine.training.Model <- function(x, newdata, type, ...) {
   if (!requireNamespace('keras', quietly = TRUE)) {
     stop('The keras package is required for predicting keras models')
   }
-  res <- predict(x, as.matrix(newdata))
+  res <- predict(x, as.array(newdata))
   if (type == 'raw') {
     data.frame(Response = res[, 1])
   } else {
@@ -221,6 +221,8 @@ model_type.WrappedModel <- function(x, ...) {
 #' @export
 model_type.xgb.Booster <- function(x, ...) {
   obj <- x$params$objective
+  if (!is.null(obj)) return('regression')
+  if (is.function(obj)) stop('Unsupported model type', call. = FALSE)
   type <- strsplit(obj, ':')[[1]][1]
   switch(
     type,
@@ -237,7 +239,8 @@ model_type.keras.engine.training.Model <- function(x, ...) {
   if (!requireNamespace('keras', quietly = TRUE)) {
     stop('The keras package is required for predicting keras models')
   }
-  if (keras::get_layer(x, index = -1)$activation$func_name == 'linear') {
+  num_layers <- length(x$layers)
+  if (get_config(get_layer(x, index = num_layers))$activation == 'linear') {
     'regression'
   } else {
     'classification'

@@ -160,18 +160,8 @@ explanation[, 2:9]
 
 We can see that all the explanations for a *benign* outcome have chosen the same
 features, strongly indicating that these are both locally and globally important
-features. Unfortunately we can see that the simple model-fit is not very good
-(the `model_r2` column) leading to less trust in the explanation. We can try to
-improve on this by decreasing the kernel width, thus making the fit more local.
-
-```{r}
-explanation <- explain(biopsy[test_set, ], explainer, n_labels = 1, n_features = 4, kernel_width = 0.5)
-explanation[, 2:9]
-```
-
-This improved it somewhat, especially for the *malignant* case. In order to get
-a more intuitive representation, we can use the provided `plot_features()` to
-get a visual overview of the explanations.
+features. In order to get a more intuitive representation, we can use the 
+provided `plot_features()` to get a visual overview of the explanations.
 
 ```{r, fig.asp=1.25, out.width='70%', fig.width=6, fig.align='center'}
 plot_features(explanation, ncol = 1)

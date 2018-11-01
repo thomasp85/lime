@@ -37,7 +37,6 @@ permute_cases.data.frame <- function(cases, n_permutations, feature_distribution
 }
 
 #' @importFrom Matrix Matrix sparseMatrix
-#' @importFrom stringdist seq_dist
 permute_cases.character <- function(cases, n_permutations, tokenization, keep_word_position) {
   documents_tokens <- local({
     tokenized_cases <- lapply(cases, tokenization)

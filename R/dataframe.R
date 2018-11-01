@@ -146,7 +146,7 @@ explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
     res$label_prob <- NULL
     res$prediction <- unlist(res$prediction)
   }
-  res
+  as_tibble(res)
 }
 is.data_frame_explainer <- function(x) inherits(x, 'data_frame_explainer')
 #' @importFrom stats setNames

@@ -8,21 +8,23 @@
 \alias{explain.imagefile}
 \title{Explain model predictions}
 \usage{
-\method{explain}{character}(x, explainer, labels = NULL, n_labels = NULL,
-  n_features, n_permutations = 5000, feature_select = "auto",
-  single_explanation = FALSE, ...)
+\method{explain}{character}(x, explainer, labels = NULL,
+  n_labels = NULL, n_features, n_permutations = 5000,
+  feature_select = "auto", single_explanation = FALSE, ...)
 
-\method{explain}{data.frame}(x, explainer, labels = NULL, n_labels = NULL,
-  n_features, n_permutations = 5000, feature_select = "auto",
-  dist_fun = "gower", kernel_width = NULL, ...)
+\method{explain}{data.frame}(x, explainer, labels = NULL,
+  n_labels = NULL, n_features, n_permutations = 5000,
+  feature_select = "auto", dist_fun = "gower", kernel_width = NULL,
+  ...)
 
 explain(x, explainer, labels, n_labels = NULL, n_features,
   n_permutations = 5000, feature_select = "auto", ...)
 
-\method{explain}{imagefile}(x, explainer, labels = NULL, n_labels = NULL,
-  n_features, n_permutations = 1000, feature_select = "auto",
-  n_superpixels = 50, weight = 20, n_iter = 10, p_remove = 0.5,
-  batch_size = 10, background = "grey", ...)
+\method{explain}{imagefile}(x, explainer, labels = NULL,
+  n_labels = NULL, n_features, n_permutations = 1000,
+  feature_select = "auto", n_superpixels = 50, weight = 20,
+  n_iter = 10, p_remove = 0.5, batch_size = 10,
+  background = "grey", ...)
 }
 \arguments{
 \item{x}{New observations to explain, of the same format as used when

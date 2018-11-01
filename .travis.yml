@@ -1,8 +1,28 @@
-# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
-
 language: R
-sudo: false
 cache: packages
+sudo: true
+dist: trusty
+
+addons:
+  apt:
+    packages:
+      - libfreetype6
+      - libmagick++-dev
+
+r:
+- oldrel
+- release
+- devel
+
+# work around temporary travis + R 3.5 bug
+r_packages: devtools
+
+env:
+  global:
+  - _R_CHECK_FORCE_SUGGESTS_=false
+
+before_install:
+  - Rscript -e 'update.packages(ask = FALSE)'
 
 after_success:
   - Rscript -e 'covr::codecov()'
