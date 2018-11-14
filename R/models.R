@@ -190,6 +190,19 @@ predict_model.H2OModel <- function(x, newdata, type, ...){
       stop('This h2o model is not currently supported.')
   }
 }
+#' @export
+predict_model.ranger <- function(x, newdata, type, ...) {
+  if (!requireNamespace('ranger', quietly = TRUE)) {
+    stop('The ranger package is required for predicting ranger models')
+  }
+  res <- predict(x, data = newdata, ...)
+  switch(
+    type,
+    raw = as.data.frame(Response = colnames(res$predictions)[max.col(res$predictions)], stringsAsFactors = FALSE),
+    prob = as.data.frame(res$predictions)
+  )
+}
+
 #' @rdname model_support
 #' @export
 model_type <- function(x, ...) {
@@ -255,5 +268,16 @@ model_type.H2OModel <- function(x, ...) {
       return('regression')
   } else {
       stop('This h2o model is not currently supported.')
+  }
+}
+#' @export
+model_type.ranger <- function(x, ...) {
+  ranger_model_class <- x$treetype
+  if (ranger_model_class == "Probability estimation") {
+    return('classification')
+  } else if (ranger_model_class == "Regression") {
+    return('regression')
+  } else {
+    stop(paste0('ranger model class "',ranger_model_class,'" is not currently supported.'))
   }
 }
