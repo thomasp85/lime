@@ -240,7 +240,7 @@ model_type.keras.engine.training.Model <- function(x, ...) {
     stop('The keras package is required for predicting keras models')
   }
   num_layers <- length(x$layers)
-  if (get_config(get_layer(x, index = num_layers))$activation == 'linear') {
+  if (keras::get_config(keras::get_layer(x, index = num_layers))$activation == 'linear') {
     'regression'
   } else {
     'classification'
