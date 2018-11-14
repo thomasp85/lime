@@ -9,6 +9,9 @@
 #'
 #' @param ncol The number of columns in the facetted plot
 #'
+#' @param cases An optional vector with case names to plot. `explanation` will
+#' be filtered to only include these cases prior to plotting
+#'
 #' @return A `ggplot` object
 #'
 #' @import ggplot2
@@ -29,15 +32,20 @@
 #' # Get an overview with the standard plot
 #' plot_features(explanations)
 #'
-plot_features <- function(explanation, ncol = 2) {
+plot_features <- function(explanation, ncol = 2, cases = NULL) {
   type_pal <- c('Supports', 'Contradicts')
-  
+
+  if (!is.null(cases)) {
+    explanation <- explanation[explanation$case %in% cases, , drop = FALSE]
+  }
+  if (nrow(explanation) == 0) stop("No explanations to plot", call. = FALSE)
+
   if (explanation$model_type[1] == 'regression') {
     type_pal <- c('Positive', 'Negative')
     binned_feature <- grepl("=|>|<", explanation$feature_desc)
     explanation[!binned_feature, "feature_weight"] <- as.numeric(explanation[!binned_feature, "feature_value"]) * explanation[!binned_feature, "feature_weight"]
   }
-  
+
   explanation$type <- factor(ifelse(sign(explanation$feature_weight) == 1, type_pal[1], type_pal[2]), levels = type_pal)
   description <- paste0(explanation$case, '_', explanation$label)
   desc_width <- max(nchar(description)) + 1
