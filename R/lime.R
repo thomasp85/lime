@@ -123,6 +123,9 @@ select_f_fs <- function(x, y, weights, n_features) {
         best <- j
       }
     }
+    if (best == 0) {
+      stop('Failed to select features with forward selection. Please choose another feature selector', call. = FALSE)
+    }
     features <- c(features, best)
   }
   features
