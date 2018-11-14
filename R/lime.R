@@ -164,12 +164,10 @@ select_f_lp <- function(x, y, weights, n_features) {
   f_count <- apply(has_value, 2, sum)
   row <- which(f_count >= n_features)[1]
   features <- which(has_value[, row])
-  # In case that no model with correct n_feature size was found
+  # In case that no model with correct n_feature size was found return features <= n_features
   if (length(features) > n_features) {
     lower_row <- row - 1
-    lower_features <- which(has_value[, lower_row])
-    extra_features <- features[!(features %in% lower_features)]
-    features <- c(lower_features, extra_features[sample(seq_along(extra_features), n_features-length(lower_features))])
+    features <- which(has_value[, lower_row])
   }
   features
 }
