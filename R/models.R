@@ -198,7 +198,7 @@ predict_model.ranger <- function(x, newdata, type, ...) {
   res <- predict(x, data = newdata, ...)
   switch(
     type,
-    raw = as.data.frame(Response = colnames(res$predictions)[max.col(res$predictions)], stringsAsFactors = FALSE),
+    raw = data.frame(Response = res$predictions),
     prob = as.data.frame(res$predictions)
   )
 }
