@@ -196,13 +196,11 @@ predict_model.ranger <- function(x, newdata, type, ...) {
     stop('The ranger package is required for predicting ranger models')
   }
   if (x$treetype == 'Classification') {
-    res <- predict(x, data = newdata, predict.all = TRUE, ...)$predictions
-    # TODO: Find a better approach to convert to probability matrix
+    res_votes <- predict(x, data = newdata, predict.all = TRUE, ...)$predictions
+    res_votes <- t(table(res_votes, row(res_votes)))
     classes <- colnames(x$confusion.matrix)
-    classes_num <- seq_along(classes)
-    res <- apply(res, c(1, 2), function(x) x == classes_num)
-    res <- apply(res, c(2, 1), sum) / x$num.trees
-    colnames(res) <- classes
+    res <- matrix(0, nrow = nrow(res_votes), ncol = length(classes), dimnames = list(NULL, classes))
+    res[, as.integer(colnames(res_votes))] <- res_votes / x$num.trees
   } else {
     res <- predict(x, data = newdata, ...)$predictions
   }
