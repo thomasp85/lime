@@ -195,11 +195,21 @@ predict_model.ranger <- function(x, newdata, type, ...) {
   if (!requireNamespace('ranger', quietly = TRUE)) {
     stop('The ranger package is required for predicting ranger models')
   }
-  res <- predict(x, data = newdata, ...)
+  if (x$treetype == 'Classification') {
+    res <- predict(x, data = newdata, predict.all = TRUE, ...)$predictions
+    # TODO: Find a better approach to convert to probability matrix
+    classes <- colnames(x$confusion.matrix)
+    classes_num <- seq_along(classes)
+    res <- apply(res, c(1, 2), function(x) x == classes_num)
+    res <- apply(res, c(2, 1), sum) / x$num.trees
+    colnames(res) <- classes
+  } else {
+    res <- predict(x, data = newdata, ...)$predictions
+  }
   switch(
     type,
-    raw = data.frame(Response = res$predictions),
-    prob = as.data.frame(res$predictions)
+    raw = data.frame(Response = res),
+    prob = as.data.frame(res)
   )
 }
 
@@ -273,7 +283,7 @@ model_type.H2OModel <- function(x, ...) {
 #' @export
 model_type.ranger <- function(x, ...) {
   ranger_model_class <- x$treetype
-  if (ranger_model_class == "Probability estimation") {
+  if (ranger_model_class == "Probability estimation" || ranger_model_class == "Classification") {
     return('classification')
   } else if (ranger_model_class == "Regression") {
     return('regression')
