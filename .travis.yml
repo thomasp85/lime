@@ -1,18 +1,23 @@
 language: R
 cache: packages
-sudo: true
-dist: trusty
+fortran: false
+latex: false
+
+matrix:
+  include:
+    - r: oldrel
+    - r: release
+    - r: devel
+    - os: osx
 
 addons:
   apt:
+    update: true
+    sources:
+      - sourceline: 'ppa:opencpu/imagemagick'  
     packages:
       - libfreetype6
       - libmagick++-dev
-
-r:
-- oldrel
-- release
-- devel
 
 # work around temporary travis + R 3.5 bug
 r_packages: devtools
