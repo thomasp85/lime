@@ -162,13 +162,9 @@ select_f_lp <- function(x, y, weights, n_features) {
   fit <- glmnet(x[shuffle_order,], y[shuffle_order], weights = weights[shuffle_order], alpha = 1, nlambda = 300)
   has_value <- apply(coef(fit)[-1, ], 2, function(x) x != 0)
   f_count <- apply(has_value, 2, sum)
-  row <- which(f_count >= n_features)[1]
-  features <- which(has_value[, row])
   # In case that no model with correct n_feature size was found return features <= n_features
-  if (length(features) > n_features) {
-    lower_row <- row - 1
-    features <- which(has_value[, lower_row])
-  }
+  row <- which(rev(f_count) <= n_features)[1]
+  features <- which(has_value[, row])
   features
 }
 exp_kernel <- function(width) {
