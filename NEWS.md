@@ -1,8 +1,20 @@
-# lime 0.4.0.9999
+# lime 0.4.1
 
+* Add build-in support for `parsnip` and `ranger`
 * Add `preprocess` argument to `lime.data.frame` to keep it in line with the 
   other types. Use it to transform your data.frame into a new input that your
   model expects after permutations
+* `magick` is now only in suggest to cut down on heavy hard dependencies
+* `explain` now returns a `tbl_df` so you get pretty printing if you have 
+  `tibble` loaded
+* When plotting regression explanations of non-binned features the 
+  feature weight is now multiplied by its value
+* More consistent support for keras
+* Fix bug when xgboost was used with with default objective
+* Better errors when handling bad models
+* `plot_features` now has a `cases` argument for subsetting the data before 
+  plotting
+
 
 # lime 0.4
 
