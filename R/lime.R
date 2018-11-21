@@ -39,6 +39,10 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
   x <- x[, colSums(is.na(x)) == 0 & apply(x, 2, var) != 0, drop = FALSE]
   res <- lapply(labels, function(label) {
 
+    if (length(unique(y[[label]])) == 1) {
+      stop("Response is constant across permutations. Please check your model", call. = FALSE)
+    }
+
     features <- select_features(feature_method, x, y[[label]], weights, n_features)
 
     # glmnet does not allow n_features=1
@@ -118,6 +122,9 @@ select_f_fs <- function(x, y, weights, n_features) {
         max <- r2
         best <- j
       }
+    }
+    if (best == 0) {
+      stop('Failed to select features with forward selection. Please choose another feature selector', call. = FALSE)
     }
     features <- c(features, best)
   }

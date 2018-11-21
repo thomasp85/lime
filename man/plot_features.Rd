@@ -4,12 +4,15 @@
 \alias{plot_features}
 \title{Plot the features in an explanation}
 \usage{
-plot_features(explanation, ncol = 2)
+plot_features(explanation, ncol = 2, cases = NULL)
 }
 \arguments{
 \item{explanation}{A \code{data.frame} as returned by \code{\link[=explain]{explain()}}.}
 
 \item{ncol}{The number of columns in the facetted plot}
+
+\item{cases}{An optional vector with case names to plot. \code{explanation} will
+be filtered to only include these cases prior to plotting}
 }
 \value{
 A \code{ggplot} object
