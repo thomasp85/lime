@@ -1,7 +1,5 @@
 language: R
 cache: packages
-fortran: false
-latex: false
 
 matrix:
   include:
@@ -9,6 +7,8 @@ matrix:
     - r: release
     - r: devel
     - os: osx
+      fortran: false
+      latex: false
 
 addons:
   apt:
