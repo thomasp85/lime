@@ -47,6 +47,7 @@ Suggests: xgboost,
     rmarkdown,
     devtools,
     magick,
-    keras
+    keras,
+    ranger
 LinkingTo: Rcpp, 
     RcppEigen
