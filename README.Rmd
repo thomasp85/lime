@@ -48,9 +48,9 @@ counterpart. Instead it takes the ideas laid out in the original code and
 implements them in an API that is idiomatic to R.
 
 ## An example
-Out of the box `lime` supports models created using the `caret` and `mlr` 
-frameworks. Support for other models are easy to achieve by adding a 
-`predict_model` and `model_type` method for the given model.
+Out of the box `lime` supports a long range of models, e.g. those created with
+caret, parsnip, and mlr. Support for unsupported models are easy to achieve by 
+adding a `predict_model` and `model_type` method for the given model.
 
 The following shows how a random forest model is trained on the iris data set 
 and how `lime` is then used to explain a set of new observations:
@@ -75,7 +75,7 @@ explanation <- explain(iris_test, explainer, n_labels = 1, n_features = 2)
 
 # The output is provided in a consistent tabular format and includes the
 # output from the model.
-head(explanation)
+explanation
 
 # And can be visualised directly
 plot_features(explanation)
