@@ -120,7 +120,7 @@ predict_model.WrappedModel <- function(x, newdata, type, ...) {
     stop('mlr must be available when working with WrappedModel models')
   }
   p <- predict(x, newdata = newdata, ...)
-  type2 <- switch(
+  switch(
     type,
     raw = data.frame(Response = mlr::getPredictionResponse(p), stringsAsFactors = FALSE),
     prob = mlr::getPredictionProbabilities(p, p$task.desc$class.levels),
