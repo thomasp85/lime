@@ -115,6 +115,17 @@ predict_model.default <- function(x, newdata, type, ...) {
   as.data.frame(p)
 }
 #' @export
+predict_model.model_fit <- function(x, newdata, type, ...) {
+  if (type == 'raw') type <- 'numeric'
+  p <- predict(x, new_data = newdata, type = type, ...)
+  if (type == 'raw') {
+    p <- data.frame(Response = p[[1]], stringsAsFactors = FALSE)
+  } else if (type == 'prob') {
+    names(p) <- sub('.pred_', '', names(p))
+  }
+  p
+}
+#' @export
 predict_model.WrappedModel <- function(x, newdata, type, ...) {
   if (!requireNamespace('mlr', quietly = TRUE)) {
     stop('mlr must be available when working with WrappedModel models')
@@ -227,6 +238,10 @@ model_type.lime_regressor <- function(x, ...) 'regression'
 #' @export
 model_type.train <- function(x, ...) {
   tolower(x$modelType)
+}
+#' @export
+model_type.model_fit <- function(x, ...) {
+  x$spec$mode
 }
 #' @export
 model_type.WrappedModel <- function(x, ...) {
