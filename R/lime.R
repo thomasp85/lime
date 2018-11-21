@@ -170,7 +170,7 @@ select_f_lp <- function(x, y, weights, n_features) {
   has_value <- apply(coef(fit)[-1, ], 2, function(x) x != 0)
   f_count <- apply(has_value, 2, sum)
   # In case that no model with correct n_feature size was found return features <= n_features
-  row <- which(rev(f_count) <= n_features)[1]
+  row <- rev(which(f_count <= n_features))[1]
   features <- which(has_value[, row])
   features
 }
