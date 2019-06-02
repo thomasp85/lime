@@ -62,7 +62,8 @@ lime.data.frame <- function(x, model, preprocess = NULL, bin_continuous = TRUE, 
       explainer$feature_type[i],
       integer = ,
       numeric = if (bin_continuous) {
-        table(cut(x[[i]], unique(explainer$bin_cuts[[i]]), labels = FALSE, include.lowest = TRUE))/nrow(x)
+        table(cut(x[[i]], unique(explainer$bin_cuts[[i]]), labels = FALSE, 
+                  include.lowest = TRUE))/nrow(x)
       } else if (use_density) {
         density(x[[i]])
       } else {
@@ -106,31 +107,42 @@ explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
   assert_that(is.null(labels) + is.null(n_labels) == 1, msg = "You need to choose between labels and n_labels parameters.")
   assert_that(is.count(n_features))
   assert_that(is.count(n_permutations))
-
+  
   if (is.null(kernel_width)) {
     kernel_width <- sqrt(ncol(x)) * 0.75
   }
   kernel <- exp_kernel(kernel_width)
-
+  
   case_perm <- permute_cases(x, n_permutations, explainer$feature_distribution,
                              explainer$bin_continuous, explainer$bin_cuts,
                              explainer$use_density)
-  case_res <- predict_model(explainer$preprocess(explainer$model), case_perm, type = o_type)
+  case_res <- predict_model(explainer$preprocess(explainer$model), 
+                            case_perm, type = o_type)
   case_res <- set_labels(case_res, explainer$model)
-  case_ind <- split(seq_len(nrow(case_perm)), rep(seq_len(nrow(x)), each = n_permutations))
+  case_ind <- split(seq_len(nrow(case_perm)), rep(seq_len(nrow(x)), 
+                                                  each = n_permutations))
   res <- lapply(seq_along(case_ind), function(ind) {
     i <- case_ind[[ind]]
     if (dist_fun == 'gower') {
-      sim <- 1 - gower_dist(case_perm[i[1], , drop = FALSE], case_perm[i, , drop = FALSE])
+      sim <- 1 - gower_dist(case_perm[i[1], , drop = FALSE], 
+                            case_perm[i, , drop = FALSE])
     }
-    perms <- numerify(case_perm[i, ], explainer$feature_type, explainer$bin_continuous, explainer$bin_cuts)
+    perms <- numerify(case_perm[i, ], explainer$feature_type, 
+                      explainer$bin_continuous, explainer$bin_cuts)
     if (dist_fun != 'gower') {
-      sim <- kernel(c(0, dist(feature_scale(perms, explainer$feature_distribution, explainer$feature_type, explainer$bin_continuous),
-                        method = dist_fun)[seq_len(n_permutations-1)]))
+      sim <- kernel(c(0, dist(feature_scale(perms, 
+                                            explainer$feature_distribution, 
+                                            explainer$feature_type, 
+                                            explainer$bin_continuous),
+                              method = dist_fun)[seq_len(n_permutations-1)]))
     }
-    res <- model_permutations(as.matrix(perms), case_res[i, , drop = FALSE], sim, labels, n_labels, n_features, feature_select)
+    res <- model_permutations(as.matrix(perms), case_res[i, , drop = FALSE], 
+                              sim, labels, n_labels, n_features, feature_select)
     res$feature_value <- unlist(case_perm[i[1], res$feature])
-    res$feature_desc <- describe_feature(res$feature, case_perm[i[1], ], explainer$feature_type, explainer$bin_continuous, explainer$bin_cuts)
+    res$feature_desc <- describe_feature(res$feature, case_perm[i[1], ], 
+                                         explainer$feature_type, 
+                                         explainer$bin_continuous, 
+                                         explainer$bin_cuts)
     guess <- which.max(abs(case_res[i[1], ]))
     res$case <- rownames(x)[ind]
     res$label_prob <- unname(as.matrix(case_res[i[1], ]))[match(res$label, colnames(case_res))]
@@ -173,12 +185,14 @@ numerify <- function(x, type, bin_continuous, bin_cuts) {
 feature_scale <- function(x, distribution, type, bin_continuous) {
   setNames(as.data.frame(lapply(seq_along(x), function(i) {
     if (type[i] == 'numeric' && !bin_continuous) {
-      scale(x[, i], distribution[[i]]['mean'], distribution[[i]]['sd'])
+      scale(x[, i], mean(unlist(distribution[[i]]['x'])), 
+            sd(unlist(distribution[[i]]['x'])))
     } else {
       x[, i]
     }
   }), stringsAsFactors = FALSE), names(x))
 }
+
 describe_feature <- function(feature, case, type, bin_continuous, bin_cuts) {
   sapply(feature, function(f) {
     if (type[[f]] == 'logical') {

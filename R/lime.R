@@ -38,18 +38,18 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
   }
   x <- x[, colSums(is.na(x)) == 0 & apply(x, 2, var) != 0, drop = FALSE]
   res <- lapply(labels, function(label) {
-
+    
     if (length(unique(y[[label]])) == 1) {
       stop("Response is constant across permutations. Please check your model", call. = FALSE)
     }
-
+    
     features <- select_features(feature_method, x, y[[label]], weights, n_features)
-
+    
     # glmnet does not allow n_features=1
     if (length(features) == 1) {
       x_fit = cbind("(Intercept)" = rep(1, nrow(x)), x[, features, drop = FALSE])
       fit <- glm.fit(x = x_fit, y = y[[label]],  weights = weights, family = gaussian())
-      r2 <- fit$deviance / fit$null.deviance
+      r2 <- 1 - fit$deviance / fit$null.deviance
       coefs <- coef(fit)
       intercept <- coefs[1]
       coefs <- coefs[-1]
@@ -63,7 +63,7 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
       coefs <- coefs[-1, 1]
       model_pred <- predict(fit, x[1, features, drop = FALSE])[1]
     }
-
+    
     data.frame(
       label = label,
       feature = names(coefs),
@@ -113,7 +113,7 @@ select_f_fs <- function(x, y, weights, n_features) {
       if (length(features) == 0) {
         x_fit = cbind("(Intercept)" = rep(1, nrow(x)), x[, j, drop = FALSE])
         fit <- glm.fit(x = x_fit, y = y,  weights = weights, family = gaussian())
-        r2 <- fit$deviance / fit$null.deviance
+        r2 <- 1 - fit$deviance / fit$null.deviance
       } else {
         fit <- glmnet(x[, c(features, j), drop = FALSE], y, weights = weights, alpha = 0, lambda = 0)
         r2 <- fit$dev.ratio
