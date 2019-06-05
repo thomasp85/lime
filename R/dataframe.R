@@ -121,13 +121,15 @@ explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
   res <- lapply(seq_along(case_ind), function(ind) {
     i <- case_ind[[ind]]
     if (dist_fun == 'gower') {
-      sim <- 1 - gower_dist(case_perm[i[1], , drop = FALSE], 
-                            case_perm[i, , drop = FALSE])
+      sim <- 1 - gower_dist(case_perm[i[1], , drop = FALSE], case_perm[i, , drop = FALSE])
     }
-    perms <- numerify(case_perm[i, ], explainer$feature_type, 
-                      explainer$bin_continuous, explainer$bin_cuts)
+    perms <- numerify(case_perm[i, ], explainer$feature_type,  explainer$bin_continuous, explainer$bin_cuts)
     if (dist_fun != 'gower') {
-      sim <- kernel(c(0, dist(feature_scale(perms, explainer$feature_distribution, explainer$feature_type, explainer$bin_continuous), method = dist_fun)[seq_len(n_permutations-1)]))
+      sim <- kernel(c(0, dist(feature_scale(perms, 
+                                            explainer$feature_distribution, 
+                                            explainer$feature_type, 
+                                            explainer$bin_continuous), 
+                              method = dist_fun)[seq_len(n_permutations - 1)]))
     }
     res <- model_permutations(as.matrix(perms), case_res[i, , drop = FALSE], sim, labels, n_labels, n_features, feature_select)
     res$feature_value <- unlist(case_perm[i[1], res$feature])
