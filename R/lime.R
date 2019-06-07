@@ -44,7 +44,6 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
     }
     
     features <- select_features(feature_method, x, y[[label]], weights, n_features)
-    
     # glmnet does not allow n_features=1
     if (length(features) == 1) {
       x_fit = cbind("(Intercept)" = rep(1, nrow(x)), x[, features, drop = FALSE])
