@@ -177,7 +177,7 @@ format.superpixel_list <- function(x, ...) {
 }
 #' @importFrom tools file_ext
 is.image_file <- function(x) {
-  all(file.exists(x) && all(tolower(file_ext(x)) %in% image_ext))
+  all(file.exists(x) & all(tolower(file_ext(x)) %in% image_ext))
 }
 image_ext <- c(
   'jpg', 'jpeg',

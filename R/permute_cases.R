@@ -5,7 +5,7 @@ permute_cases <- function(cases, n_permutations, ...) {
 permute_cases.data.frame <- function(cases, n_permutations, feature_distribution, bin_continuous, bin_cuts, use_density) {
   nrows <- nrow(cases) * n_permutations
   perm <- as.data.frame(lapply(seq_along(cases), function(i) {
-    perms <- if (is.numeric(cases[[i]]) && is.na(feature_distribution[[i]])) {
+    perms <- if (is.numeric(cases[[i]]) && identical(is.na(feature_distribution[[i]]), TRUE)) {
       rep(cases[[i]], each = n_permutations)
     } else if (is.numeric(cases[[i]]) && bin_continuous) {
       bin <- sample(seq_along(feature_distribution[[i]]), nrows, TRUE, as.numeric(feature_distribution[[i]]))
