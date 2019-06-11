@@ -284,6 +284,6 @@ interactive_text_explanations(explainer)
 
 ## Session Info
 ```{r, echo=FALSE}
-devtools::session_info()
+sessioninfo::session_info()
 ```
 

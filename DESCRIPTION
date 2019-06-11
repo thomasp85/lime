@@ -45,7 +45,7 @@ Suggests: xgboost,
     covr,
     knitr,
     rmarkdown,
-    devtools,
+    sessioninfo,
     magick,
     keras,
     ranger
