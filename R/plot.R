@@ -43,11 +43,11 @@ plot_features <- function(explanation, ncol = 2, cases = NULL) {
   if (explanation$model_type[1] == 'regression') {
     type_pal <- c('Positive', 'Negative')
     binned_feature <- grepl("=|>|<", explanation$feature_desc)
-    explanation[!binned_feature, "feature_weight"] <- as.numeric(explanation[!binned_feature, "feature_value"]) * explanation[!binned_feature, "feature_weight"]
+    explanation[!binned_feature, "feature_weight"] <- as.numeric(explanation$feature_value[!binned_feature]) * explanation$feature_weight[!binned_feature]
   }
 
   explanation$type <- factor(ifelse(sign(explanation$feature_weight) == 1, type_pal[1], type_pal[2]), levels = type_pal)
-  description <- paste0(explanation$case, '_', explanation$label)
+  description <- paste0(explanation$case, '_', explanation[['label']])
   desc_width <- max(nchar(description)) + 1
   description <- paste0(format(description, width = desc_width), explanation$feature_desc)
   explanation$description <- factor(description, levels = description[order(abs(explanation$feature_weight))])
