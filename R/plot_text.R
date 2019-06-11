@@ -61,7 +61,7 @@ plot_text_explanations <- function(explanations, ...) {
   })
 
   text_highlighted <- paste(
-    '<div style="overflow-y:scroll;font-family:sans-serif;position:absolute;height:100%">',
+    '<div style="overflow-y:scroll;font-family:sans-serif;height:100%">',
     paste("<p>", text_highlighted_raw, "</p>", collapse = "<br/>"),
     "</div>"
   )
