@@ -115,7 +115,7 @@ explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
   case_perm <- permute_cases(x, n_permutations, explainer$feature_distribution,
                              explainer$bin_continuous, explainer$bin_cuts,
                              explainer$use_density)
-  case_res <- predict_model(explainer$preprocess(explainer$model), case_perm, type = o_type)
+  case_res <- predict_model(explainer$preprocess(explainer$model), case_perm, type = o_type, ...)
   case_res <- set_labels(case_res, explainer$model)
   case_ind <- split(seq_len(nrow(case_perm)), rep(seq_len(nrow(x)), each = n_permutations))
   res <- lapply(seq_along(case_ind), function(ind) {
@@ -160,7 +160,7 @@ numerify <- function(x, type, bin_continuous, bin_cuts) {
       if (bin_continuous) {
         cuts <- bin_cuts[[i]]
         cuts[1] <- -Inf
-        cuts[length(cuts)] <- Inf
+        cuts[length(cuts) + 1] <- Inf
         xi <- cut(x[[i]], unique(cuts), include.lowest = T)
         as.numeric(xi == xi[1])
       } else {

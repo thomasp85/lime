@@ -103,7 +103,7 @@ explain.imagefile <- function(x, explainer, labels = NULL, n_labels = NULL,
         magick::image_write(im_perm, path = tmp, format = 'png')
         tmp
       }, character(1))
-      batch_res <- predict_model(explainer$model, newdata = explainer$preprocess(perm_files), type = o_type)
+      batch_res <- predict_model(explainer$model, newdata = explainer$preprocess(perm_files), type = o_type, ...)
       unlink(perm_files)
       batch_res
     }))

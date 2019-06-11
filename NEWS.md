@@ -1,3 +1,9 @@
+# lime 0.4.1.9000
+
+* `explain()` will now pass `...` on to the relevant `predict()` method (#150)
+* Fixed a bug when calculating R^2 on single feature explanations (@pkopper, #157)
+* Fixed formatting of text prediction html presentation
+
 # lime 0.4.1
 
 * Add build-in support for `parsnip` and `ranger`

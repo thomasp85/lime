@@ -59,7 +59,7 @@ path converge to zero the latest.
 \item{single_explanation}{A boolean indicating whether to pool all text in
 \code{x} into a single explanation.}
 
-\item{...}{Parameters passed on to the specific explainer}
+\item{...}{Parameters passed on to the \code{predict_model()} method}
 
 \item{dist_fun}{The distance function to use for calculating the distance
 from the observation to the permutations. If \code{dist_fun = 'gower'} (default)
