@@ -6,8 +6,8 @@ authors:
     href: https://data-imaginist.com
 
 template:
-  params:
-    bootswatch: minty
+  assets: pkgdown/assets/
+  default_assets: true
 
 navbar:
   left:
