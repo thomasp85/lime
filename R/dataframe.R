@@ -85,6 +85,8 @@ lime.data.frame <- function(x, model, preprocess = NULL, bin_continuous = TRUE, 
 #' [stats::dist()]
 #' @param kernel_width The width of the exponential kernel that will be used to
 #' convert the distance to a similarity in case `dist_fun != 'gower'`.
+#' @param gower_pow A modifier for gower distance. The calculated distance will
+#' be raised to the power of this value.
 #'
 #' @importFrom gower gower_dist
 #' @importFrom stats dist
@@ -92,7 +94,7 @@ lime.data.frame <- function(x, model, preprocess = NULL, bin_continuous = TRUE, 
 explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
                                n_features, n_permutations = 5000,
                                feature_select = 'auto', dist_fun = 'gower',
-                               kernel_width = NULL, ...) {
+                               kernel_width = NULL, gower_pow = 1, ...) {
   assert_that(is.data_frame_explainer(explainer))
   m_type <- model_type(explainer)
   o_type <- output_type(explainer)
@@ -121,7 +123,7 @@ explain.data.frame <- function(x, explainer, labels = NULL, n_labels = NULL,
   res <- lapply(seq_along(case_ind), function(ind) {
     i <- case_ind[[ind]]
     if (dist_fun == 'gower') {
-      sim <- 1 - gower_dist(case_perm[i[1], , drop = FALSE], case_perm[i, , drop = FALSE])
+      sim <- 1 - (gower_dist(case_perm[i[1], , drop = FALSE], case_perm[i, , drop = FALSE])) ^ gower_pow
     }
     perms <- numerify(case_perm[i, ], explainer$feature_type, explainer$bin_continuous, explainer$bin_cuts)
     if (dist_fun != 'gower') {

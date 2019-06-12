@@ -15,7 +15,7 @@
 \method{explain}{data.frame}(x, explainer, labels = NULL,
   n_labels = NULL, n_features, n_permutations = 5000,
   feature_select = "auto", dist_fun = "gower", kernel_width = NULL,
-  ...)
+  gower_pow = 1, ...)
 
 explain(x, explainer, labels, n_labels = NULL, n_features,
   n_permutations = 5000, feature_select = "auto", ...)
@@ -68,6 +68,9 @@ it will use \code{\link[gower:gower_dist]{gower::gower_dist()}}. Otherwise it wi
 
 \item{kernel_width}{The width of the exponential kernel that will be used to
 convert the distance to a similarity in case \code{dist_fun != 'gower'}.}
+
+\item{gower_pow}{A modifier for gower distance. The calculated distance will
+be raised to the power of this value.}
 
 \item{n_superpixels}{The number of segments an image should be split into}
 

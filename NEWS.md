@@ -1,6 +1,8 @@
 # lime 0.4.1.9000
 
 * `explain()` will now pass `...` on to the relevant `predict()` method (#150)
+* `explain.data.frame()` gains a `gower_pow` argument to modify the calculated 
+  gower distance before use by raising it to the power of the given value (#158)
 * Fixed a bug when calculating R^2 on single feature explanations (@pkopper, #157)
 * Fixed formatting of text prediction html presentation (#145)
 * Fixed a bug when setting feature select method to "none" (#141)
