@@ -1,0 +1,54 @@
+.plot_text_explanations ul, .plot_text_explanations li {
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0;
+  font-family: monospace;
+}
+
+.match_positive, .positive_1, .positive_2, .positive_3, .positive_4, .positive_5 {
+  border: 1px solid #4681B3;
+}
+
+.plot_text_explanations .positive_1 {
+  background-color: #B6C9DF;
+}
+
+.plot_text_explanations .positive_2 {
+  background-color: #A1BAD7;
+}
+
+.plot_text_explanations .positive_3 {
+  background-color: #8CACCE;
+}
+
+.plot_text_explanations .positive_4 {
+  background-color: #769DC5;
+}
+
+.plot_text_explanations .positive_5 {
+  background-color: #5F8FBC;
+}
+
+.match_negative, .negative_1, .negative_2, .negative_3, .negative_4, .negative_5 {
+  border: 1px solid #B22121;
+}
+
+.plot_text_explanations .negative_1 {
+  background-color: #EAA89D;
+}
+
+.plot_text_explanations .negative_2 {
+  background-color: #E18F82;
+}
+
+.plot_text_explanations .negative_3 {
+  background-color: #D77769;
+}
+
+.plot_text_explanations .negative_4 {
+  background-color: #CC5E50;
+}
+
+.plot_text_explanations .negative_5 {
+  background-color: #BF4338;
+}
