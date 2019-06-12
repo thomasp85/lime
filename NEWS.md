@@ -2,7 +2,9 @@
 
 * `explain()` will now pass `...` on to the relevant `predict()` method (#150)
 * Fixed a bug when calculating R^2 on single feature explanations (@pkopper, #157)
-* Fixed formatting of text prediction html presentation
+* Fixed formatting of text prediction html presentation (#145)
+* Fixed a bug when setting feature select method to "none" (#141)
+* Changes default colouring from green-red to blue-red (#137)
 
 # lime 0.4.1
 

@@ -6,49 +6,49 @@
 }
 
 .match_positive, .positive_1, .positive_2, .positive_3, .positive_4, .positive_5 {
-  border: 1px solid #239B56;
+  border: 1px solid #4681B3;
 }
 
 .plot_text_explanations .positive_1 {
-  background-color: #ABEBC6;
+  background-color: #B6C9DF;
 }
 
 .plot_text_explanations .positive_2 {
-  background-color: #82E0AA;
+  background-color: #A1BAD7;
 }
 
 .plot_text_explanations .positive_3 {
-  background-color: #58D68D;
+  background-color: #8CACCE;
 }
 
 .plot_text_explanations .positive_4 {
-  background-color: #2ECC71;
+  background-color: #769DC5;
 }
 
 .plot_text_explanations .positive_5 {
-  background-color: #28B463;
+  background-color: #5F8FBC;
 }
 
 .match_negative, .negative_1, .negative_2, .negative_3, .negative_4, .negative_5 {
-  border: 1px solid #B03A2E;
+  border: 1px solid #B22121;
 }
 
 .plot_text_explanations .negative_1 {
-  background-color: #F5B7B1;
+  background-color: #EAA89D;
 }
 
 .plot_text_explanations .negative_2 {
-  background-color: #F1948A;
+  background-color: #E18F82;
 }
 
 .plot_text_explanations .negative_3 {
-  background-color: #EC7063;
+  background-color: #D77769;
 }
 
 .plot_text_explanations .negative_4 {
-  background-color: #E74C3C;
+  background-color: #CC5E50;
 }
 
 .plot_text_explanations .negative_5 {
-  background-color: #CB4335;
+  background-color: #BF4338;
 }

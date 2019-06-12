@@ -66,8 +66,8 @@ plot_features <- function(explanation, ncol = 2, cases = NULL) {
   p +
     geom_col(aes_(~description, ~feature_weight, fill = ~type)) +
     coord_flip() +
-    scale_fill_manual(values = c('forestgreen', 'firebrick'), drop = FALSE) +
-    scale_x_discrete(labels = function(lab) substr(lab, desc_width+1, nchar(lab))) +
+    scale_fill_manual(values = c('steelblue', 'firebrick'), drop = FALSE) +
+    scale_x_discrete(labels = function(lab) substr(lab, desc_width + 1, nchar(lab))) +
     labs(y = 'Weight', x = 'Feature', fill = '') +
     theme_lime()
 }
@@ -92,7 +92,7 @@ plot_features <- function(explanation, ncol = 2, cases = NULL) {
 #' @examples
 #' # Create some explanations
 #' library(MASS)
-#' iris_test <- iris[1, 1:4]
+#' iris_test <- iris[c(1, 51, 101), 1:4]
 #' iris_train <- iris[-1, 1:4]
 #' iris_lab <- iris[[5]][-1]
 #' model <- lda(iris_train, iris_lab)
@@ -114,7 +114,7 @@ plot_explanations <- function(explanation, ...) {
     geom_tile(aes_(fill = ~feature_weight)) +
     scale_x_discrete('Case', expand = c(0, 0)) +
     scale_y_discrete('Feature', expand = c(0, 0)) +
-    scale_fill_gradient2('Feature\nweight', low = '#8e0152', mid = '#f7f7f7', high = '#276419') +
+    scale_fill_gradient2('Feature\nweight', low = 'firebrick', mid = '#f7f7f7', high = 'steelblue') +
     theme_lime() +
     theme(panel.border = element_rect(fill = NA, colour = 'grey60', size = 1),
           panel.grid = element_blank(),

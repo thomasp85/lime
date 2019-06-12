@@ -45,7 +45,7 @@
 plot_image_explanation <- function(explanation, which = 1, threshold = 0.02,
                                    show_negative = FALSE,
                                    display = 'outline', fill_alpha = 0.3,
-                                   outline_col = c('lightgreen', 'red'),
+                                   outline_col = c('blue', 'red'),
                                    block_col = 'grey') {
   if (!requireNamespace('magick', quietly = TRUE)) {
     stop('The magick package is required for image explanation', call. = FALSE)
