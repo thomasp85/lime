@@ -55,7 +55,7 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
       model_pred <- fit$fitted.values[1]
     } else {
       shuffle_order <- sample(length(y[[label]])) # glm is sensitive to the order of the examples
-      fit <- glmnet(x[shuffle_order, features], y[[label]][shuffle_order], weights = weights[shuffle_order], alpha = 0, lambda = 0.001)
+      fit <- glmnet(x[shuffle_order, features], y[[label]][shuffle_order], weights = weights[shuffle_order], alpha = 0, lambda = 2 / length(y[[label]]))
       r2 <- fit$dev.ratio
       coefs <- coef(fit)
       intercept <- coefs[1, 1]

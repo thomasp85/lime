@@ -5,6 +5,9 @@
 * Fixed formatting of text prediction html presentation (#145)
 * Fixed a bug when setting feature select method to "none" (#141)
 * Changes default colouring from green-red to blue-red (#137)
+* Changed the `lambda` value in the local model fit to match the one used in the
+  Python version according to the relationship given here:
+  https://stats.stackexchange.com/a/270705
 
 # lime 0.4.1
 
