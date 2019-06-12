@@ -1,0 +1,30 @@
+destination: docs
+url: https://lime.data-imaginist.com
+
+authors:
+  Thomas Lin Pedersen:
+    href: https://data-imaginist.com
+
+template:
+  params:
+    bootswatch: minty
+
+navbar:
+  left:
+    - icon: fa-home fa-lg
+      href: index.html
+    - text: Reference
+      href: reference/index.html
+    - text: News
+      menu:
+      - text: "Release notes"
+      - text: "Version 0.4.0"
+        href: https://www.data-imaginist.com/2018/lime-v0-4-the-kitten-picture-edition/
+      - text: "Version 0.3.0"
+        href: https://www.data-imaginist.com/2017/announcing-lime/
+      - text: "------------------"
+      - text: "Change log"
+        href: news/index.html
+  right:
+    - icon: fa-github fa-lg
+      href: https://github.com/thomasp85/lime

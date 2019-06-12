@@ -14,7 +14,7 @@ addons:
   apt:
     update: true
     sources:
-      - sourceline: 'ppa:opencpu/imagemagick'  
+      - sourceline: 'ppa:opencpu/imagemagick'
     packages:
       - libfreetype6
       - libmagick++-dev
@@ -31,3 +31,9 @@ before_install:
 
 after_success:
   - Rscript -e 'covr::codecov()'
+
+before_cache: Rscript -e 'remotes::install_cran("pkgdown")'
+deploy:
+  provider: script
+  script: Rscript -e 'pkgdown::deploy_site_github()'
+  skip_cleanup: true
