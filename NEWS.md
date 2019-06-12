@@ -7,6 +7,8 @@
 * Fixed formatting of text prediction html presentation (#145)
 * Fixed a bug when setting feature select method to "none" (#141)
 * Changes default colouring from green-red to blue-red (#137)
+* `lime()` now warns when quantile binning is not feasible and uses standard 
+  binning instead (#154)
 * Changed the `lambda` value in the local model fit to match the one used in the
   Python version according to the relationship given here:
   https://stats.stackexchange.com/a/270705

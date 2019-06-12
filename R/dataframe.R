@@ -50,7 +50,13 @@ lime.data.frame <- function(x, model, preprocess = NULL, bin_continuous = TRUE, 
     if (explainer$feature_type[i] %in% c('numeric', 'integer')) {
       if (quantile_bins) {
         bins <- quantile(x[[i]], seq(0, 1, length.out = n_bins + 1), na.rm = TRUE)
-        bins[!duplicated(bins)]
+        bins <- bins[!duplicated(bins)]
+        if (length(bins) < 3) {
+          warning(names(x)[i], ' does not contain enough variance to use quantile binning. Using standard binning instead.', call. = FALSE)
+          d_range <- range(x[[i]], na.rm = TRUE)
+          bins <- seq(d_range[1], d_range[2], length.out = n_bins + 1)
+        }
+        bins
       } else {
         d_range <- range(x[[i]], na.rm = TRUE)
         seq(d_range[1], d_range[2], length.out = n_bins + 1)
