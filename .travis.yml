@@ -1,10 +1,19 @@
 language: R
 cache: packages
 
+r_packages:
+  - caret
+  - randomForest
+
 matrix:
   include:
     - r: oldrel
     - r: release
+      before_cache: Rscript -e 'remotes::install_cran("pkgdown")'
+      deploy:
+        provider: script
+        script: Rscript -e 'pkgdown::deploy_site_github()'
+        skip_cleanup: true
     - r: devel
     - os: osx
       fortran: false
@@ -31,9 +40,3 @@ before_install:
 
 after_success:
   - Rscript -e 'covr::codecov()'
-
-before_cache: Rscript -e 'remotes::install_cran("pkgdown")'
-deploy:
-  provider: script
-  script: Rscript -e 'pkgdown::deploy_site_github()'
-  skip_cleanup: true
