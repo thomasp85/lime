@@ -26,7 +26,7 @@ statistics of the explanation.
 library(MASS)
 iris_test <- iris[c(1, 51, 101), 1:4]
 iris_train <- iris[-c(1, 51, 101), 1:4]
-iris_lab <- iris[[5]][-1]
+iris_lab <- iris[[5]][-c(1, 51, 101)]
 model <- lda(iris_train, iris_lab)
 explanation <- lime(iris_train, model)
 explanations <- explain(iris_test, explanation, n_labels = 1, n_features = 2)
