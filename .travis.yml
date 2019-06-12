@@ -29,6 +29,7 @@ r_packages:
   - devtools
   - caret
   - randomForest
+  - e1071
 
 env:
   global:
