@@ -1,10 +1,6 @@
 language: R
 cache: packages
 
-r_packages:
-  - caret
-  - randomForest
-
 matrix:
   include:
     - r: oldrel
@@ -29,7 +25,10 @@ addons:
       - libmagick++-dev
 
 # work around temporary travis + R 3.5 bug
-r_packages: devtools
+r_packages:
+  - devtools
+  - caret
+  - randomForest
 
 env:
   global:
