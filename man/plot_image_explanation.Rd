@@ -6,7 +6,7 @@
 \usage{
 plot_image_explanation(explanation, which = 1, threshold = 0.02,
   show_negative = FALSE, display = "outline", fill_alpha = 0.3,
-  outline_col = c("lightgreen", "red"), block_col = "grey")
+  outline_col = c("blue", "red"), block_col = "grey")
 }
 \arguments{
 \item{explanation}{The explanation created with an \code{image_explainer}}
