@@ -163,8 +163,7 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># We load a precalculated explanation set based on the procedure in the ?lime</span>
 <span class='co'># examples</span>
-<span class='no'>explanations</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/readRDS'>readRDS</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file</a></span>(<span class='st'>'extdata'</span>, <span class='st'>'text_explanation.rds'</span>,
-                                    <span class='kw'>package</span> <span class='kw'>=</span> <span class='st'>'lime'</span>))
+<span class='no'>explanations</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='dot-load_text_example.html'>.load_text_example</a></span>()
 
 <span class='co'># We see that the explanations are in the expected format</span>
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>explanations</span>)</div><div class='output co'>#&gt;             model_type case label label_prob  model_r2 model_intercept feature

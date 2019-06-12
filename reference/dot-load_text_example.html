@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • lime</title>
+<title>Load an example text explanation — .load_text_example • lime</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -37,7 +37,9 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Load an example text explanation — .load_text_example" />
+
+<meta property="og:description" content="Load an example text explanation" />
 
 <meta property="og:image" content="https://lime.data-imaginist.com/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -57,7 +59,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -124,138 +126,34 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Load an example text explanation</h1>
+    <small class="dont-index">Source: <a href='https://github.com/thomasp85/lime/blob/master/R/character.R'><code>R/character.R</code></a></small>
+    <div class="hidden name"><code>dot-load_text_example.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    
+    <p>Load an example text explanation</p>
+    
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>.load_text_example</span>()</pre>
+        
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-creating-explanations" class="hasAnchor"><a href="#section-creating-explanations" class="anchor"></a>Creating explanations</h2>
-          <p class="section-desc"><p>These functions are the bread and butter of lime and is used to create an explainer from a model and apply it to an observation.</p></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="lime.html">lime()</a></code> </p>
-        </td>
-        <td><p>Create a model explanation function based on training data</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="explain.html">explain()</a></code> </p>
-        </td>
-        <td><p>Explain model predictions</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="model_support.html">predict_model()</a></code> <code><a href="model_support.html">model_type()</a></code> </p>
-        </td>
-        <td><p>Methods for extending limes model support</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="as_classifier.html">as_classifier()</a></code> <code><a href="as_classifier.html">as_regressor()</a></code> </p>
-        </td>
-        <td><p>Indicate model type to lime</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-investigating-explanations" class="hasAnchor"><a href="#section-investigating-explanations" class="anchor"></a>Investigating explanations</h2>
-          <p class="section-desc"><p>While an explanation can be inspected through its tabular output format it is often much more powerful through different visualisations.</p></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="plot_features.html">plot_features()</a></code> </p>
-        </td>
-        <td><p>Plot the features in an explanation</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="plot_explanations.html">plot_explanations()</a></code> </p>
-        </td>
-        <td><p>Plot a condensed overview of all explanations</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="plot_image_explanation.html">plot_image_explanation()</a></code> </p>
-        </td>
-        <td><p>Display image explanations as superpixel areas</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="text_explanations.html">plot_text_explanations()</a></code> </p>
-        </td>
-        <td><p>Plot text explanations</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="interactive_text_explanations.html">interactive_text_explanations()</a></code> <code><a href="interactive_text_explanations.html">text_explanations_output()</a></code> <code><a href="interactive_text_explanations.html">render_text_explanations()</a></code> </p>
-        </td>
-        <td><p>Interactive explanations</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-miscellaneous" class="hasAnchor"><a href="#section-miscellaneous" class="anchor"></a>Miscellaneous</h2>
-          <p class="section-desc"><p>This set of functions are sometimes needed in more specialised tasks</p></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="default_tokenize.html">default_tokenize()</a></code> </p>
-        </td>
-        <td><p>Default function to tokenize</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="plot_superpixels.html">plot_superpixels()</a></code> </p>
-        </td>
-        <td><p>Test super pixel segmentation</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="stop_words_sentences.html">stop_words_sentences</a></code> </p>
-        </td>
-        <td><p>Stop words list</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="test_sentences.html">test_sentences</a></code> </p>
-        </td>
-        <td><p>Sentence corpus - test part</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="train_sentences.html">train_sentences</a></code> </p>
-        </td>
-        <td><p>Sentence corpus - train part</p></td>
-      </tr>
-    </tbody>
-    </table>
+    <p>A data.frame containing an example of a text explanation</p>
+    
+
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-creating-explanations">Creating explanations</a></li>
-      <li><a href="#section-investigating-explanations">Investigating explanations</a></li>
-      <li><a href="#section-miscellaneous">Miscellaneous</a></li>
-    </ul>
+      
+      <li><a href="#value">Value</a></li>
+          </ul>
+
   </div>
 </div>
 
