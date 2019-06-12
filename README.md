@@ -74,20 +74,20 @@ explanation <- explain(iris_test, explainer, n_labels = 1, n_features = 2)
 # The output is provided in a consistent tabular format and includes the
 # output from the model.
 explanation
-#> # tibble [10 × 13]
+#> # A tibble: 10 x 13
 #>    model_type case  label label_prob model_r2 model_intercept
 #>    <chr>      <chr> <chr>      <dbl>    <dbl>           <dbl>
-#>  1 classific… 1     seto…          1    0.340           0.263
-#>  2 classific… 1     seto…          1    0.340           0.263
-#>  3 classific… 2     seto…          1    0.336           0.259
-#>  4 classific… 2     seto…          1    0.336           0.259
-#>  5 classific… 3     seto…          1    0.361           0.258
-#>  6 classific… 3     seto…          1    0.361           0.258
-#>  7 classific… 4     seto…          1    0.364           0.247
-#>  8 classific… 4     seto…          1    0.364           0.247
-#>  9 classific… 5     seto…          1    0.343           0.256
-#> 10 classific… 5     seto…          1    0.343           0.256
-#> # ... with 7 more variables: model_prediction <dbl>, feature <chr>,
+#>  1 classific… 1     seto…      1        0.669           0.135
+#>  2 classific… 1     seto…      1        0.669           0.135
+#>  3 classific… 2     seto…      0.998    0.673           0.130
+#>  4 classific… 2     seto…      0.998    0.673           0.130
+#>  5 classific… 3     seto…      1        0.705           0.124
+#>  6 classific… 3     seto…      1        0.705           0.124
+#>  7 classific… 4     seto…      1        0.680           0.126
+#>  8 classific… 4     seto…      1        0.680           0.126
+#>  9 classific… 5     seto…      1        0.678           0.134
+#> 10 classific… 5     seto…      1        0.678           0.134
+#> # … with 7 more variables: model_prediction <dbl>, feature <chr>,
 #> #   feature_value <dbl>, feature_weight <dbl>, feature_desc <chr>,
 #> #   data <list>, prediction <list>
 
