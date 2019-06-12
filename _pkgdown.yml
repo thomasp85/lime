@@ -7,7 +7,7 @@ authors:
 
 template:
   assets: pkgdown/assets/
-  default_assets: true
+  default_assets: false
 
 navbar:
   left:
