@@ -17,8 +17,7 @@ Highlight words which explains a prediction.
 \examples{
 # We load a precalculated explanation set based on the procedure in the ?lime
 # examples
-explanations <- readRDS(system.file('extdata', 'text_explanation.rds',
-                                    package = 'lime'))
+explanations <- .load_text_example()
 
 # We see that the explanations are in the expected format
 print(explanations)

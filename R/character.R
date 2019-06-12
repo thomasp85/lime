@@ -139,3 +139,13 @@ is.text_explainer <- function(x) inherits(x, 'text_explainer')
 default_tokenize <- function(text) {
   unlist(stri_split_boundaries(text, type = "word", skip_word_none = TRUE))
 }
+
+#' Load an example text explanation
+#'
+#' @return A data.frame containing an example of a text explanation
+#'
+#' @keywords internal
+#' @export
+.load_text_example <- function() {
+  readRDS(system.file('extdata', 'text_explanation.rds', package = 'lime'))
+}
