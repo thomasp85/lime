@@ -38,11 +38,11 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
   }
   x <- x[, colSums(is.na(x)) == 0 & apply(x, 2, var) != 0, drop = FALSE]
   res <- lapply(labels, function(label) {
-    
+
     if (length(unique(y[[label]])) == 1) {
       stop("Response is constant across permutations. Please check your model", call. = FALSE)
     }
-    
+
     features <- select_features(feature_method, x, y[[label]], weights, n_features)
     # glmnet does not allow n_features=1
     if (length(features) == 1) {
@@ -62,7 +62,7 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
       coefs <- coefs[-1, 1]
       model_pred <- predict(fit, x[1, features, drop = FALSE])[1]
     }
-    
+
     data.frame(
       label = label,
       feature = names(coefs),
@@ -92,7 +92,7 @@ select_features <- function(method, x, y, weights, n_features) {
     } else {
       select_features("highest_weights", x, y, weights, n_features)
     },
-    none = seq_len(nrow(x)),
+    none = seq_len(ncol(x)),
     forward_selection = select_f_fs(x, y, weights, n_features),
     highest_weights = select_f_hw(x, y, weights, n_features),
     lasso_path = select_f_lp(x, y, weights, n_features),
