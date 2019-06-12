@@ -28,3 +28,33 @@ navbar:
   right:
     - icon: fa-github fa-lg
       href: https://github.com/thomasp85/lime
+
+reference:
+  - title: "Creating explanations"
+    desc: >
+      These functions are the bread and butter of lime and is used to create an
+      explainer from a model and apply it to an observation.
+    contents:
+      - lime
+      - explain
+      - predict_model
+      - as_classifier
+  - title: "Investigating explanations"
+    desc: >
+      While an explanation can be inspected through its tabular output format it
+      is often much more powerful through different visualisations.
+    contents:
+      - plot_features
+      - plot_explanations
+      - plot_image_explanation
+      - plot_text_explanations
+      - interactive_text_explanations
+  - title: "Miscellaneous"
+    desc: >
+      This set of functions are sometimes needed in more specialised tasks
+    contents:
+      - default_tokenize
+      - plot_superpixels
+      - stop_words_sentences
+      - test_sentences
+      - train_sentences
