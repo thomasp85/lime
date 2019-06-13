@@ -132,7 +132,7 @@ types supported by lime." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Create a model explanation function based on training data</h1>
-    <small class="dont-index">Source: <a href='https://github.com/thomasp85/lime/blob/master/R/character.R'><code>R/character.R</code></a>, <a href='https://github.com/thomasp85/lime/blob/master/R/dataframe.R'><code>R/dataframe.R</code></a>, <a href='https://github.com/thomasp85/lime/blob/master/R/image.R'><code>R/image.R</code></a>, and 2 more</small>
+    <small class="dont-index">Source: <a href='https://github.com/thomasp85/lime/blob/master/R/a_dataframe.R'><code>R/a_dataframe.R</code></a>, <a href='https://github.com/thomasp85/lime/blob/master/R/character.R'><code>R/character.R</code></a>, <a href='https://github.com/thomasp85/lime/blob/master/R/image.R'><code>R/image.R</code></a>, and 2 more</small>
     <div class="hidden name"><code>lime.Rd</code></div>
     </div>
 
@@ -145,14 +145,14 @@ types supported by lime.</p>
     
     </div>
 
-    <pre class="usage"><span class='co'># S3 method for character</span>
-<span class='fu'>lime</span>(<span class='no'>x</span>, <span class='no'>model</span>, <span class='kw'>preprocess</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>tokenization</span> <span class='kw'>=</span> <span class='no'>default_tokenize</span>, <span class='kw'>keep_word_position</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)
-
-<span class='co'># S3 method for data.frame</span>
+    <pre class="usage"><span class='co'># S3 method for data.frame</span>
 <span class='fu'>lime</span>(<span class='no'>x</span>, <span class='no'>model</span>, <span class='kw'>preprocess</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>bin_continuous</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>n_bins</span> <span class='kw'>=</span> <span class='fl'>4</span>, <span class='kw'>quantile_bins</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
   <span class='kw'>use_density</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='no'>...</span>)
+
+<span class='co'># S3 method for character</span>
+<span class='fu'>lime</span>(<span class='no'>x</span>, <span class='no'>model</span>, <span class='kw'>preprocess</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>tokenization</span> <span class='kw'>=</span> <span class='no'>default_tokenize</span>, <span class='kw'>keep_word_position</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)
 
 <span class='co'># S3 method for imagefile</span>
 <span class='fu'>lime</span>(<span class='no'>x</span>, <span class='no'>model</span>, <span class='kw'>preprocess</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)
@@ -177,19 +177,6 @@ explained.</p></td>
 expected from the model.</p></td>
     </tr>
     <tr>
-      <th>tokenization</th>
-      <td><p>function used to tokenize text for the permutations.</p></td>
-    </tr>
-    <tr>
-      <th>keep_word_position</th>
-      <td><p>set to <code>TRUE</code> if to keep order of words. Warning:
-each word will be replaced by <code>word_position</code>.</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td><p>Arguments passed on to methods</p></td>
-    </tr>
-    <tr>
       <th>bin_continuous</th>
       <td><p>Should continuous variables be binned when making the explanation</p></td>
     </tr>
@@ -205,6 +192,19 @@ each word will be replaced by <code>word_position</code>.</p></td>
       <th>use_density</th>
       <td><p>If <code>bin_continuous = FALSE</code> should continuous data be sampled using a kernel density estimation. If not, continuous features are expected to follow a normal distribution.</p></td>
     </tr>
+    <tr>
+      <th>...</th>
+      <td><p>Arguments passed on to methods</p></td>
+    </tr>
+    <tr>
+      <th>tokenization</th>
+      <td><p>function used to tokenize text for the permutations.</p></td>
+    </tr>
+    <tr>
+      <th>keep_word_position</th>
+      <td><p>set to <code>TRUE</code> if to keep order of words. Warning:
+each word will be replaced by <code>word_position</code>.</p></td>
+    </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
@@ -214,7 +214,26 @@ explain model predictions.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># Explaining a model based on text data</span>
+    <pre class="examples"><div class='input'><span class='co'># Explaining a model based on tabular data</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>MASS</span>)
+<span class='no'>iris_test</span> <span class='kw'>&lt;-</span> <span class='no'>iris</span>[<span class='fl'>1</span>, <span class='fl'>1</span>:<span class='fl'>4</span>]
+<span class='no'>iris_train</span> <span class='kw'>&lt;-</span> <span class='no'>iris</span>[-<span class='fl'>1</span>, <span class='fl'>1</span>:<span class='fl'>4</span>]
+<span class='no'>iris_lab</span> <span class='kw'>&lt;-</span> <span class='no'>iris</span><span class='kw'>[[</span><span class='fl'>5</span>]][-<span class='fl'>1</span>]
+<span class='co'># Create linear discriminant model on iris data</span>
+<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/MASS/topics/lda'>lda</a></span>(<span class='no'>iris_train</span>, <span class='no'>iris_lab</span>)
+<span class='co'># Create explanation object</span>
+<span class='no'>explanation</span> <span class='kw'>&lt;-</span> <span class='fu'>lime</span>(<span class='no'>iris_train</span>, <span class='no'>model</span>)
+
+<span class='co'># This can now be used together with the explain method</span>
+<span class='fu'><a href='explain.html'>explain</a></span>(<span class='no'>iris_test</span>, <span class='no'>explanation</span>, <span class='kw'>n_labels</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>n_features</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 13
+#&gt;   model_type case  label label_prob model_r2 model_intercept model_prediction
+#&gt;   &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;           &lt;dbl&gt;            &lt;dbl&gt;
+#&gt; 1 classific… 1     seto…          1    0.532           0.107             1.01
+#&gt; 2 classific… 1     seto…          1    0.532           0.107             1.01
+#&gt; # … with 6 more variables: feature &lt;chr&gt;, feature_value &lt;dbl&gt;,
+#&gt; #   feature_weight &lt;dbl&gt;, feature_desc &lt;chr&gt;, data &lt;list&gt;, prediction &lt;list&gt;</div><div class='input'>
+</div><span class='co'># NOT RUN {</span>
+<span class='co'># Explaining a model based on text data</span>
 
 <span class='co'># Purpose is to classify sentences from scientific publications</span>
 <span class='co'># and find those where the team writes about their own work</span>
@@ -245,32 +264,8 @@ explain model predictions.</p>
 <span class='co'># We can see that many explanations are based</span>
 <span class='co'># on the presence of the word `we` in the sentences</span>
 <span class='co'># which makes sense regarding the task.</span>
-<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>explanations</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 13
-#&gt;   model_type  case label label_prob model_r2 model_intercept model_prediction
-#&gt; * &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;           &lt;dbl&gt;            &lt;dbl&gt;
-#&gt; 1 classific…     1 1          0.642    0.988           0.333            0.643
-#&gt; 2 classific…     1 1          0.642    0.988           0.333            0.643
-#&gt; # … with 6 more variables: feature &lt;chr&gt;, feature_value &lt;chr&gt;,
-#&gt; #   feature_weight &lt;dbl&gt;, feature_desc &lt;chr&gt;, data &lt;chr&gt;, prediction &lt;list&gt;</div><div class='input'>
-<span class='co'># Explaining a model based on tabular data</span>
-<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>MASS</span>)
-<span class='no'>iris_test</span> <span class='kw'>&lt;-</span> <span class='no'>iris</span>[<span class='fl'>1</span>, <span class='fl'>1</span>:<span class='fl'>4</span>]
-<span class='no'>iris_train</span> <span class='kw'>&lt;-</span> <span class='no'>iris</span>[-<span class='fl'>1</span>, <span class='fl'>1</span>:<span class='fl'>4</span>]
-<span class='no'>iris_lab</span> <span class='kw'>&lt;-</span> <span class='no'>iris</span><span class='kw'>[[</span><span class='fl'>5</span>]][-<span class='fl'>1</span>]
-<span class='co'># Create linear discriminant model on iris data</span>
-<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/MASS/topics/lda'>lda</a></span>(<span class='no'>iris_train</span>, <span class='no'>iris_lab</span>)
-<span class='co'># Create explanation object</span>
-<span class='no'>explanation</span> <span class='kw'>&lt;-</span> <span class='fu'>lime</span>(<span class='no'>iris_train</span>, <span class='no'>model</span>)
-
-<span class='co'># This can now be used together with the explain method</span>
-<span class='fu'><a href='explain.html'>explain</a></span>(<span class='no'>iris_test</span>, <span class='no'>explanation</span>, <span class='kw'>n_labels</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>n_features</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 13
-#&gt;   model_type case  label label_prob model_r2 model_intercept model_prediction
-#&gt;   &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;           &lt;dbl&gt;            &lt;dbl&gt;
-#&gt; 1 classific… 1     seto…          1    0.535          0.0963            0.997
-#&gt; 2 classific… 1     seto…          1    0.535          0.0963            0.997
-#&gt; # … with 6 more variables: feature &lt;chr&gt;, feature_value &lt;dbl&gt;,
-#&gt; #   feature_weight &lt;dbl&gt;, feature_desc &lt;chr&gt;, data &lt;list&gt;, prediction &lt;list&gt;</div><div class='input'>
-</div><span class='co'># NOT RUN {</span>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='no'>explanations</span>)
+<span class='co'># }</span><span class='co'># NOT RUN {</span>
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>keras</span>)
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>abind</span>)
 <span class='co'># get some image</span>

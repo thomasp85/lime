@@ -134,7 +134,7 @@ plot_features()." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Explain model predictions</h1>
-    <small class="dont-index">Source: <a href='https://github.com/thomasp85/lime/blob/master/R/character.R'><code>R/character.R</code></a>, <a href='https://github.com/thomasp85/lime/blob/master/R/dataframe.R'><code>R/dataframe.R</code></a>, <a href='https://github.com/thomasp85/lime/blob/master/R/explain.R'><code>R/explain.R</code></a>, and 2 more</small>
+    <small class="dont-index">Source: <a href='https://github.com/thomasp85/lime/blob/master/R/a_dataframe.R'><code>R/a_dataframe.R</code></a>, <a href='https://github.com/thomasp85/lime/blob/master/R/character.R'><code>R/character.R</code></a>, <a href='https://github.com/thomasp85/lime/blob/master/R/explain.R'><code>R/explain.R</code></a>, and 2 more</small>
     <div class="hidden name"><code>explain.Rd</code></div>
     </div>
 
@@ -149,16 +149,16 @@ returned explanations can then be visualised in a number of ways, e.g. with
     
     </div>
 
-    <pre class="usage"><span class='co'># S3 method for character</span>
-<span class='fu'>explain</span>(<span class='no'>x</span>, <span class='no'>explainer</span>, <span class='kw'>labels</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>n_labels</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>n_features</span>, <span class='kw'>n_permutations</span> <span class='kw'>=</span> <span class='fl'>5000</span>,
-  <span class='kw'>feature_select</span> <span class='kw'>=</span> <span class='st'>"auto"</span>, <span class='kw'>single_explanation</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)
-
-<span class='co'># S3 method for data.frame</span>
+    <pre class="usage"><span class='co'># S3 method for data.frame</span>
 <span class='fu'>explain</span>(<span class='no'>x</span>, <span class='no'>explainer</span>, <span class='kw'>labels</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>n_labels</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>n_features</span>, <span class='kw'>n_permutations</span> <span class='kw'>=</span> <span class='fl'>5000</span>,
   <span class='kw'>feature_select</span> <span class='kw'>=</span> <span class='st'>"auto"</span>, <span class='kw'>dist_fun</span> <span class='kw'>=</span> <span class='st'>"gower"</span>, <span class='kw'>kernel_width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>gower_pow</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='no'>...</span>)
+
+<span class='co'># S3 method for character</span>
+<span class='fu'>explain</span>(<span class='no'>x</span>, <span class='no'>explainer</span>, <span class='kw'>labels</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>n_labels</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>n_features</span>, <span class='kw'>n_permutations</span> <span class='kw'>=</span> <span class='fl'>5000</span>,
+  <span class='kw'>feature_select</span> <span class='kw'>=</span> <span class='st'>"auto"</span>, <span class='kw'>single_explanation</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)
 
 <span class='fu'>explain</span>(<span class='no'>x</span>, <span class='no'>explainer</span>, <span class='no'>labels</span>, <span class='kw'>n_labels</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>n_features</span>,
   <span class='kw'>n_permutations</span> <span class='kw'>=</span> <span class='fl'>5000</span>, <span class='kw'>feature_select</span> <span class='kw'>=</span> <span class='st'>"auto"</span>, <span class='no'>...</span>)
@@ -216,15 +216,6 @@ path converge to zero the latest.</p></li>
 </ul></td>
     </tr>
     <tr>
-      <th>single_explanation</th>
-      <td><p>A boolean indicating whether to pool all text in
-<code>x</code> into a single explanation.</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td><p>Parameters passed on to the <code><a href='model_support.html'>predict_model()</a></code> method</p></td>
-    </tr>
-    <tr>
       <th>dist_fun</th>
       <td><p>The distance function to use for calculating the distance
 from the observation to the permutations. If <code>dist_fun = 'gower'</code> (default)
@@ -240,6 +231,15 @@ convert the distance to a similarity in case <code>dist_fun != 'gower'</code>.</
       <th>gower_pow</th>
       <td><p>A modifier for gower distance. The calculated distance will
 be raised to the power of this value.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>Parameters passed on to the <code><a href='model_support.html'>predict_model()</a></code> method</p></td>
+    </tr>
+    <tr>
+      <th>single_explanation</th>
+      <td><p>A boolean indicating whether to pool all text in
+<code>x</code> into a single explanation.</p></td>
     </tr>
     <tr>
       <th>n_superpixels</th>
