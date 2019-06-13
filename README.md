@@ -77,16 +77,16 @@ explanation
 #> # A tibble: 10 x 13
 #>    model_type case  label label_prob model_r2 model_intercept
 #>    <chr>      <chr> <chr>      <dbl>    <dbl>           <dbl>
-#>  1 classific… 1     seto…      1        0.669           0.135
-#>  2 classific… 1     seto…      1        0.669           0.135
-#>  3 classific… 2     seto…      0.998    0.673           0.130
-#>  4 classific… 2     seto…      0.998    0.673           0.130
-#>  5 classific… 3     seto…      1        0.705           0.124
-#>  6 classific… 3     seto…      1        0.705           0.124
-#>  7 classific… 4     seto…      1        0.680           0.126
-#>  8 classific… 4     seto…      1        0.680           0.126
-#>  9 classific… 5     seto…      1        0.678           0.134
-#> 10 classific… 5     seto…      1        0.678           0.134
+#>  1 classific… 1     seto…      1        0.693           0.125
+#>  2 classific… 1     seto…      1        0.693           0.125
+#>  3 classific… 2     seto…      0.998    0.682           0.129
+#>  4 classific… 2     seto…      0.998    0.682           0.129
+#>  5 classific… 3     seto…      1        0.691           0.126
+#>  6 classific… 3     seto…      1        0.691           0.126
+#>  7 classific… 4     seto…      1        0.673           0.129
+#>  8 classific… 4     seto…      1        0.673           0.129
+#>  9 classific… 5     seto…      1        0.666           0.133
+#> 10 classific… 5     seto…      1        0.666           0.133
 #> # … with 7 more variables: model_prediction <dbl>, feature <chr>,
 #> #   feature_value <dbl>, feature_weight <dbl>, feature_desc <chr>,
 #> #   data <list>, prediction <list>
@@ -133,3 +133,9 @@ To get the development version, install from GitHub instead:
 # install.packages('devtools')
 devtools::install_github('thomasp85/lime')
 ```
+
+## Code of Conduct
+
+Please note that the ‘lime’ project is released with a [Contributor Code
+of Conduct](CODE_OF_CONDUCT.md). By contributing to this project, you
+agree to abide by its terms.
