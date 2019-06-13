@@ -57,6 +57,8 @@ Render the text explanations in Shiny application.
 }
 }
 \examples{
+
+\dontrun{
 library(text2vec)
 library(xgboost)
 
@@ -79,7 +81,6 @@ sentences <- head(test_sentences[test_sentences$class.text == "OWNX", "text"], 1
 explainer <- lime(train_sentences$text, xgb_model, get_matrix)
 
 # The explainer can now be queried interactively:
-\dontrun{
 interactive_text_explanations(explainer)
 }
 }

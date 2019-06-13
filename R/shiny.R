@@ -18,6 +18,8 @@
 #' @export
 #'
 #' @examples
+#'
+#' \dontrun{
 #' library(text2vec)
 #' library(xgboost)
 #'
@@ -40,7 +42,6 @@
 #' explainer <- lime(train_sentences$text, xgb_model, get_matrix)
 #'
 #' # The explainer can now be queried interactively:
-#' \dontrun{
 #' interactive_text_explanations(explainer)
 #' }
 interactive_text_explanations <- function(explainer, window_title = "Text model explainer",

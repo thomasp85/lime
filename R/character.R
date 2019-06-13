@@ -7,6 +7,7 @@
 #' each word will be replaced by `word_position`.
 #'
 #' @examples
+#' \dontrun{
 #' # Explaining a model based on text data
 #'
 #' # Purpose is to classify sentences from scientific publications
@@ -39,7 +40,7 @@
 #' # on the presence of the word `we` in the sentences
 #' # which makes sense regarding the task.
 #' print(explanations)
-#'
+#' }
 #' @importFrom assertthat assert_that is.flag
 #' @export
 lime.character <- function(x, model, preprocess = NULL, tokenization = default_tokenize, keep_word_position = FALSE, ...) {
