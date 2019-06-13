@@ -33,7 +33,7 @@
 #'   \item{text}{the sentences as a character vector}
 #'   \item{class.text}{the category of the sentence}
 #' }
-#' @source \url{https://archive.ics.uci.edu/ml/datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=text&sort=nameUp&view=table}
+#' @source \url{https://archive.ics.uci.edu/ml/datasets/Sentence+Classification}
 "train_sentences"
 
 #' Sentence corpus - test part
