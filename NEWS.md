@@ -12,6 +12,8 @@
 * Changed the `lambda` value in the local model fit to match the one used in the
   Python version according to the relationship given here:
   https://stats.stackexchange.com/a/270705
+* Added pkgdown site at https://lime.data-imaginist.com
+* Fixed a bug when using a proprocessor with data.frame explanations
 
 # lime 0.4.1
 
