@@ -9,4 +9,5 @@
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^LICENSE\.md$
 ^CODE_OF_CONDUCT\.md$
