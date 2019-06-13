@@ -6,8 +6,8 @@ authors:
     href: https://data-imaginist.com
 
 template:
-  assets: pkgdown/assets/
-  default_assets: false
+  params:
+    bootswatch: lumen
 
 navbar:
   left:
@@ -58,3 +58,4 @@ reference:
       - stop_words_sentences
       - test_sentences
       - train_sentences
+      - lime-package
