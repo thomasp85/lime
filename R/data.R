@@ -71,7 +71,7 @@
 #'   \item{text}{the sentences as a character vector}
 #'   \item{class.text}{the category of the sentence}
 #' }
-#' @source \url{https://archive.ics.uci.edu/ml/datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=text&sort=nameUp&view=table}
+#' @source \url{https://archive.ics.uci.edu/ml/datasets/Sentence+Classification}
 "test_sentences"
 
 #' Stop words list
@@ -79,5 +79,5 @@
 #' List of words that can be safely removed from sentences.
 #'
 #' @format Character vector of stop words
-#' @source \url{https://archive.ics.uci.edu/ml/datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=text&sort=nameUp&view=table}
+#' @source \url{https://archive.ics.uci.edu/ml/datasets/}
 "stop_words_sentences"

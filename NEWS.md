@@ -1,4 +1,4 @@
-# lime 0.4.1.9000
+# lime 0.5.0
 
 * `explain()` will now pass `...` on to the relevant `predict()` method (#150)
 * `explain.data.frame()` gains a `gower_pow` argument to modify the calculated 

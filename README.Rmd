@@ -116,5 +116,5 @@ devtools::install_github('thomasp85/lime')
 
 ## Code of Conduct
 Please note that the 'lime' project is released with a
-[Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+[Contributor Code of Conduct](https://lime.data-imaginist.com/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.

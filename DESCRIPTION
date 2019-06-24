@@ -1,10 +1,18 @@
 Package: lime
 Type: Package
 Title: Local Interpretable Model-Agnostic Explanations
-Version: 0.4.1.900
-Date: 2019-06-11
-Authors@R: c(person('Thomas Lin', 'Pedersen', role = c('cre', 'aut'), email = "thomasp85@gmail.com"),
-             person('Michaël', 'Benesty', role = c('aut'), email = "michael@benesty.fr"))
+Version: 0.5.0
+Date: 2019-06-13
+Authors@R: 
+    c(person(given = "Thomas Lin",
+             family = "Pedersen",
+             role = c("cre", "aut"),
+             email = "thomasp85@gmail.com",
+             comment = c(ORCID = "0000-0002-5147-4711")),
+      person(given = 'Michaël', 
+             family = 'Benesty', 
+             role = c('aut'), 
+             email = "michael@benesty.fr"))
 Maintainer: Thomas Lin Pedersen <thomasp85@gmail.com>
 Description: When building complex models, it is often difficult to explain why
     the model should be trusted. While global measures such as accuracy are
@@ -15,7 +23,7 @@ Description: When building complex models, it is often difficult to explain why
     described in more detail in the article by Ribeiro et al. (2016) 
     <arXiv:1602.04938>.
 License: MIT + file LICENSE
-URL: https://github.com/thomasp85/lime
+URL: https://lime.data-imaginist.com
 BugReports: https://github.com/thomasp85/lime/issues
 Encoding: UTF-8
 LazyData: true

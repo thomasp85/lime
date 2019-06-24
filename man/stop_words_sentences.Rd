@@ -6,7 +6,7 @@
 \title{Stop words list}
 \format{Character vector of stop words}
 \source{
-\url{https://archive.ics.uci.edu/ml/datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=text&sort=nameUp&view=table}
+\url{https://archive.ics.uci.edu/ml/datasets/}
 }
 \usage{
 stop_words_sentences

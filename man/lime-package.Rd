@@ -40,13 +40,13 @@ Ribeiro, M.T., Singh, S., Guestrin, C. \emph{"Why Should I Trust You?": Explaini
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/thomasp85/lime}
+  \item \url{https://lime.data-imaginist.com}
   \item Report bugs at \url{https://github.com/thomasp85/lime/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: Thomas Lin Pedersen \email{thomasp85@gmail.com}
+\strong{Maintainer}: Thomas Lin Pedersen \email{thomasp85@gmail.com} (0000-0002-5147-4711)
 
 Authors:
 \itemize{

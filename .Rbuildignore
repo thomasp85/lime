@@ -9,5 +9,8 @@
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^revdep$
 ^LICENSE\.md$
 ^CODE_OF_CONDUCT\.md$
+^cran-comments\.md$
+^CRAN-RELEASE$
