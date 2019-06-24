@@ -1,3 +1,5 @@
+# lime (development version)
+
 # lime 0.5.0
 
 * `explain()` will now pass `...` on to the relevant `predict()` method (#150)
