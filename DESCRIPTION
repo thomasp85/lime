@@ -23,7 +23,7 @@ Description: When building complex models, it is often difficult to explain why
     described in more detail in the article by Ribeiro et al. (2016) 
     <arXiv:1602.04938>.
 License: MIT + file LICENSE
-URL: https://lime.data-imaginist.com
+URL: https://lime.data-imaginist.com, https://github.com/thomasp85/lime
 BugReports: https://github.com/thomasp85/lime/issues
 Encoding: UTF-8
 LazyData: true
