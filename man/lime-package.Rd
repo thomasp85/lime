@@ -41,6 +41,7 @@ Ribeiro, M.T., Singh, S., Guestrin, C. \emph{"Why Should I Trust You?": Explaini
 Useful links:
 \itemize{
   \item \url{https://lime.data-imaginist.com}
+  \item \url{https://github.com/thomasp85/lime}
   \item Report bugs at \url{https://github.com/thomasp85/lime/issues}
 }
 

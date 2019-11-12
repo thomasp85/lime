@@ -24,10 +24,8 @@ lime <- function(x, model, ...) {
 
 # Helpers -----------------------------------------------------------------
 
-#' @importFrom glmnet cv.glmnet coef.cv.glmnet
-#' @importFrom stats coef
-#' @importFrom stats glm.fit
-#' @importFrom stats gaussian var
+#' @importFrom glmnet cv.glmnet
+#' @importFrom stats coef glm.fit gaussian var
 #' @importFrom Matrix colSums
 model_permutations <- function(x, y, weights, labels, n_labels, n_features, feature_method) {
   if (all(weights[-1] == 0)) {
@@ -130,7 +128,7 @@ select_f_fs <- function(x, y, weights, n_features) {
   features
 }
 
-#' @importFrom glmnet glmnet coef.cv.glmnet
+#' @importFrom glmnet glmnet
 #' @importFrom stats coef
 #' @importFrom utils head
 select_f_hw <- function(x, y, weights, n_features) {
