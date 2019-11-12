@@ -1,8 +1,4 @@
-Resubmission according to feedback from CRAN
-
-- Fixed broken links to webpages and files
-- Remove erroneously included revdep subdirectory
-- Ignore h2o unit tests on CRAN as they stall on win 32
+Small patch release to address changes in glmnet
 
 ## Test environments
 * local OS X install, R 3.6.0
