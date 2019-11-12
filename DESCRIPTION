@@ -1,7 +1,7 @@
 Package: lime
 Type: Package
 Title: Local Interpretable Model-Agnostic Explanations
-Version: 0.5.0.9000
+Version: 0.5.1
 Authors@R: 
     c(person(given = "Thomas Lin",
              family = "Pedersen",
