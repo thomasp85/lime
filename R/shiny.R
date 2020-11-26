@@ -9,7 +9,7 @@
 #' @param window_title,title,place_holder,minimum_lentgh_error text to be displayed on the page
 #' @param minimum_lentgh don't update display if text is shorter than this parameter
 #' @param max_feature_to_select up limit to the number of words that can be selected
-#'
+#' @param shinytheme default is 'superhero'.
 #' @rdname interactive_text_explanations
 #' @importFrom shiny fluidPage textAreaInput shinyApp sliderInput mainPanel titlePanel hr need validate h1 h2 h3 h4 h5 h6 numericInput selectInput sidebarPanel renderPlot plotOutput
 #' @importFrom stringi stri_count_words stri_replace_all_fixed
@@ -49,7 +49,8 @@ interactive_text_explanations <- function(explainer, window_title = "Text model 
                                           place_holder = "Put here the text to explain",
                                           minimum_lentgh = 3,
                                           minimum_lentgh_error = "Text provided is too short to be explained (>= 3).",
-                                          max_feature_to_select = 20) {
+                                          max_feature_to_select = 20,
+                                          shinytheme = 'superhero') {
   assert_that(is.list(explainer))
   assert_that(is.string(window_title))
   assert_that(is.string(title))
@@ -67,7 +68,7 @@ interactive_text_explanations <- function(explainer, window_title = "Text model 
   })
 
   ui <- fluidPage(title = window_title,
-                  theme = shinytheme("superhero"),
+                  theme = shinytheme(shinytheme),
                   titlePanel(title = title),
                   hr(),
                   sidebarPanel(
