@@ -4,7 +4,9 @@
 \name{stop_words_sentences}
 \alias{stop_words_sentences}
 \title{Stop words list}
-\format{Character vector of stop words}
+\format{
+Character vector of stop words
+}
 \source{
 \url{https://archive.ics.uci.edu/ml/datasets/}
 }

@@ -4,11 +4,16 @@
 \alias{plot_superpixels}
 \title{Test super pixel segmentation}
 \usage{
-plot_superpixels(path, n_superpixels = 50, weight = 20, n_iter = 10,
-  colour = "black")
+plot_superpixels(
+  path,
+  n_superpixels = 50,
+  weight = 20,
+  n_iter = 10,
+  colour = "black"
+)
 }
 \arguments{
-\item{path}{The path to the image. Must be readable by \code{\link[magick:image_read]{magick::image_read()}}}
+\item{path}{The path to the image. Must be readable by \code{\link[magick:editing]{magick::image_read()}}}
 
 \item{n_superpixels}{The number of superpixels to segment into}
 

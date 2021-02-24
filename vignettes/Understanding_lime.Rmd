@@ -256,17 +256,19 @@ plot_features(explanation)
 
 The graph view gives lots of detailed information about the selected words.
 Another approach to explain a text classification model is to see 
-the most important words in their context.
+the most important words in their context. This requires htmlwidgets and will 
+not be evaluated in this vignette, but you can run it locally and examine the 
+output
 
-```{r}
+```{r, eval=FALSE}
 plot_text_explanations(explanation)
 ```
 
-For some sentences, the prediction is wrong. For instance, look at the third 
-sentence. The word *we* is in red and the predicted label is 0 (with a low 
-probability), meaning the model thinks it's not a sentence from the category 
-`OWNX`, mainly because of the presence of the word *those* but the word *we* in 
-red doesn't support this (false) prediction.
+If you have run this locally you can see that for some sentences, the prediction 
+is wrong. For instance, look at the third sentence. The word *we* is in red and 
+the predicted label is 0 (with a low probability), meaning the model thinks it's 
+not a sentence from the category `OWNX`, mainly because of the presence of the 
+word *those* but the word *we* in red doesn't support this (false) prediction.
 
 ## Interactive text model explanations
 

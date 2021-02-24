@@ -3,14 +3,14 @@
 
 # lime <img src="man/figures/logo.png" width="131px" height="140px" align="right" style="padding-left:10px;background-color:white;" />
 
-[![Travis-CI Build
-Status](https://travis-ci.org/thomasp85/lime.svg?branch=master)](https://travis-ci.org/thomasp85/lime)
-[![AppVeyor Build
-Status](https://ci.appveyor.com/api/projects/status/github/thomasp85/lime?branch=master&svg=true)](https://ci.appveyor.com/project/thomasp85/lime)
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/thomasp85/lime/workflows/R-CMD-check/badge.svg)](https://github.com/thomasp85/lime/actions)
+[![Codecov test
+coverage](https://codecov.io/gh/thomasp85/lime/branch/master/graph/badge.svg)](https://codecov.io/gh/thomasp85/lime?branch=master)
 [![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/lime)](https://CRAN.R-project.org/package=lime)
 [![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/lime)](https://CRAN.R-project.org/package=lime)
-[![Coverage
-Status](https://img.shields.io/codecov/c/github/thomasp85/lime/master.svg)](https://codecov.io/github/thomasp85/lime?branch=master)
+<!-- badges: end -->
 
 > There once was a package called lime,
 > 
@@ -75,21 +75,20 @@ explanation <- explain(iris_test, explainer, n_labels = 1, n_features = 2)
 # output from the model.
 explanation
 #> # A tibble: 10 x 13
-#>    model_type case  label label_prob model_r2 model_intercept
-#>    <chr>      <chr> <chr>      <dbl>    <dbl>           <dbl>
-#>  1 classific… 1     seto…          1    0.680           0.120
-#>  2 classific… 1     seto…          1    0.680           0.120
-#>  3 classific… 2     seto…          1    0.675           0.125
-#>  4 classific… 2     seto…          1    0.675           0.125
-#>  5 classific… 3     seto…          1    0.682           0.122
-#>  6 classific… 3     seto…          1    0.682           0.122
-#>  7 classific… 4     seto…          1    0.667           0.128
-#>  8 classific… 4     seto…          1    0.667           0.128
-#>  9 classific… 5     seto…          1    0.678           0.121
-#> 10 classific… 5     seto…          1    0.678           0.121
-#> # … with 7 more variables: model_prediction <dbl>, feature <chr>,
-#> #   feature_value <dbl>, feature_weight <dbl>, feature_desc <chr>,
-#> #   data <list>, prediction <list>
+#>    model_type case  label label_prob model_r2 model_intercept model_prediction
+#>    <chr>      <chr> <chr>      <dbl>    <dbl>           <dbl>            <dbl>
+#>  1 classific… 1     seto…          1    0.681           0.129            0.987
+#>  2 classific… 1     seto…          1    0.681           0.129            0.987
+#>  3 classific… 2     seto…          1    0.692           0.123            0.984
+#>  4 classific… 2     seto…          1    0.692           0.123            0.984
+#>  5 classific… 3     seto…          1    0.686           0.129            0.983
+#>  6 classific… 3     seto…          1    0.686           0.129            0.983
+#>  7 classific… 4     seto…          1    0.695           0.119            0.985
+#>  8 classific… 4     seto…          1    0.695           0.119            0.985
+#>  9 classific… 5     seto…          1    0.694           0.123            0.984
+#> 10 classific… 5     seto…          1    0.694           0.123            0.984
+#> # … with 6 more variables: feature <chr>, feature_value <dbl>,
+#> #   feature_weight <dbl>, feature_desc <chr>, data <list>, prediction <list>
 
 # And can be visualised directly
 plot_features(explanation)

@@ -6,7 +6,7 @@
 \alias{_PACKAGE}
 \title{lime: Local Interpretable Model-Agnostic Explanations}
 \description{
-\if{html}{\figure{logo.png}{options: align='right'}}
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
 When building complex models, it is often difficult to explain why
     the model should be trusted. While global measures such as accuracy are
@@ -47,7 +47,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Thomas Lin Pedersen \email{thomasp85@gmail.com} (0000-0002-5147-4711)
+\strong{Maintainer}: Thomas Lin Pedersen \email{thomasp85@gmail.com} (\href{https://orcid.org/0000-0002-5147-4711}{ORCID})
 
 Authors:
 \itemize{

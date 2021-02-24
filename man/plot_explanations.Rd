@@ -35,7 +35,8 @@ explanations <- explain(iris_test, explanation, n_labels = 1, n_features = 2)
 plot_explanations(explanations)
 }
 \seealso{
-Other explanation plots: \code{\link{plot_features}},
-  \code{\link{plot_text_explanations}}
+Other explanation plots: 
+\code{\link{plot_features}()},
+\code{\link{plot_text_explanations}()}
 }
 \concept{explanation plots}

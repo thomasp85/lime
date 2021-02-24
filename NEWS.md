@@ -1,3 +1,8 @@
+# lime (development version)
+
+* Fixed use of `order()` on `data.frame` objects
+* Moved htmlwidgets, shiny, and shinythemes to suggests
+
 # lime 0.5.1
 
 * Fixed namespace import from glmnet following changes there

@@ -9,7 +9,7 @@ plot_text_explanations(explanations, ...)
 \arguments{
 \item{explanations}{object returned by the \link{lime.character} function.}
 
-\item{...}{parameters passed to \link{sizingPolicy}}
+\item{...}{parameters passed to \code{htmlwidgets::sizingPolicy()}}
 }
 \description{
 Highlight words which explains a prediction.
@@ -27,7 +27,8 @@ plot_text_explanations(explanations)
 
 }
 \seealso{
-Other explanation plots: \code{\link{plot_explanations}},
-  \code{\link{plot_features}}
+Other explanation plots: 
+\code{\link{plot_explanations}()},
+\code{\link{plot_features}()}
 }
 \concept{explanation plots}

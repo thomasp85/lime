@@ -6,12 +6,15 @@
 \alias{render_text_explanations}
 \title{Interactive explanations}
 \usage{
-interactive_text_explanations(explainer,
+interactive_text_explanations(
+  explainer,
   window_title = "Text model explainer",
   title = "Local Interpretable Model-agnostic Explanations",
-  place_holder = "Put here the text to explain", minimum_lentgh = 3,
+  place_holder = "Put here the text to explain",
+  minimum_lentgh = 3,
   minimum_lentgh_error = "Text provided is too short to be explained (>= 3).",
-  max_feature_to_select = 20)
+  max_feature_to_select = 20
+)
 
 text_explanations_output(outputId, width = "100\%", height = "400px")
 

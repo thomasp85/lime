@@ -4,11 +4,13 @@
 \name{test_sentences}
 \alias{test_sentences}
 \title{Sentence corpus - test part}
-\format{2 data frame with 3117 rows and 2 variables:
+\format{
+2 data frame with 3117 rows and 2 variables:
 \describe{
 \item{text}{the sentences as a character vector}
 \item{class.text}{the category of the sentence}
-}}
+}
+}
 \source{
 \url{https://archive.ics.uci.edu/ml/datasets/Sentence+Classification}
 }

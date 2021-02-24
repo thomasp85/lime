@@ -14,11 +14,12 @@ knitr::opts_chunk$set(
 
 # lime <img src="man/figures/logo.png" width="131px" height="140px" align="right" style="padding-left:10px;background-color:white;" />
 
-[![Travis-CI Build Status](https://travis-ci.org/thomasp85/lime.svg?branch=master)](https://travis-ci.org/thomasp85/lime)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/thomasp85/lime?branch=master&svg=true)](https://ci.appveyor.com/project/thomasp85/lime)
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/thomasp85/lime/workflows/R-CMD-check/badge.svg)](https://github.com/thomasp85/lime/actions)
+[![Codecov test coverage](https://codecov.io/gh/thomasp85/lime/branch/master/graph/badge.svg)](https://codecov.io/gh/thomasp85/lime?branch=master)
 [![CRAN_Release_Badge](http://www.r-pkg.org/badges/version-ago/lime)](https://CRAN.R-project.org/package=lime)
 [![CRAN_Download_Badge](http://cranlogs.r-pkg.org/badges/lime)](https://CRAN.R-project.org/package=lime)
-[![Coverage Status](https://img.shields.io/codecov/c/github/thomasp85/lime/master.svg)](https://codecov.io/github/thomasp85/lime?branch=master)
+<!-- badges: end -->
 
 > There once was a package called lime,
 >
