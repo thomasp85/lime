@@ -1,7 +1,7 @@
 Package: lime
 Type: Package
 Title: Local Interpretable Model-Agnostic Explanations
-Version: 0.5.1
+Version: 0.5.1.9000
 Authors@R: 
     c(person(given = "Thomas Lin",
              family = "Pedersen",
@@ -26,7 +26,7 @@ URL: https://lime.data-imaginist.com, https://github.com/thomasp85/lime
 BugReports: https://github.com/thomasp85/lime/issues
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
 Imports: glmnet,
@@ -37,9 +37,6 @@ Imports: glmnet,
     Matrix,
     Rcpp,
     assertthat,
-    htmlwidgets,
-    shiny,
-    shinythemes,
     methods,
     grDevices,
     gower
@@ -55,6 +52,9 @@ Suggests: xgboost,
     sessioninfo,
     magick,
     keras,
+    htmlwidgets,
+    shiny,
+    shinythemes,
     ranger
 LinkingTo: Rcpp, 
     RcppEigen

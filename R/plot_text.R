@@ -3,10 +3,9 @@
 #' Highlight words which explains a prediction.
 #'
 #' @param explanations object returned by the [lime.character] function.
-#' @param ... parameters passed to [sizingPolicy]
+#' @param ... parameters passed to `htmlwidgets::sizingPolicy()`
 #'
 #' @importFrom assertthat assert_that is.number is.string
-#' @importFrom htmlwidgets createWidget
 #' @rdname text_explanations
 #' @export
 #'
@@ -24,6 +23,9 @@
 #' plot_text_explanations(explanations)
 #'
 plot_text_explanations <- function(explanations, ...) {
+  if (!requireNamespace('htmlwidgets', quietly = TRUE)) {
+    stop('htmlwidgets is required for this functionality', call. = FALSE)
+  }
   assert_that(is.data.frame(explanations))
   assert_that(!is.null(explanations$data))
   original_text <- explanations$data
@@ -65,7 +67,7 @@ plot_text_explanations <- function(explanations, ...) {
     "</div>"
   )
 
-  createWidget(
+  htmlwidgets::createWidget(
     "plot_text_explanations",
     list(html = text_highlighted),
     sizingPolicy = htmlwidgets::sizingPolicy(
