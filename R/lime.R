@@ -32,7 +32,7 @@ model_permutations <- function(x, y, weights, labels, n_labels, n_features, feat
     stop('All permutations have no similarity to the original observation. Try setting bin_continuous to TRUE and/or increase kernel_size', call. = FALSE)
   }
   if (!is.null(n_labels)) {
-    labels <- names(y)[order(as.data.frame(y)[1,], decreasing = TRUE)[seq_len(n_labels)]]
+    labels <- names(y)[order(unlist(as.data.frame(y)[1,]), decreasing = TRUE)[seq_len(n_labels)]]
   }
   x <- x[, colSums(is.na(x)) == 0 & apply(x, 2, var) != 0, drop = FALSE]
   res <- lapply(labels, function(label) {
