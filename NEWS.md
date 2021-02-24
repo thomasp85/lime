@@ -1,4 +1,4 @@
-# lime (development version)
+# lime 0.5.2
 
 * Fixed use of `order()` on `data.frame` objects
 * Moved htmlwidgets, shiny, and shinythemes to suggests
