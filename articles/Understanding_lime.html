@@ -12,19 +12,20 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/lumen/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/lumen/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="Understanding lime">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://lime.data-imaginist.com/logo.png">
-<meta name="twitter:card" content="summary">
+<meta property="og:description" content="lime">
+<meta property="og:image" content="https://lime.data-imaginist.com/logo.svg">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body>
+<body data-spy="scroll" data-target="#toc">
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -37,7 +38,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">lime</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.5.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.5.2.9000</span>
       </span>
     </div>
 
@@ -45,7 +46,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -76,7 +77,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/thomasp85/lime">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -89,16 +90,16 @@
 <!--/.navbar -->
 
       
-      </header><script src="Understanding_lime_files/htmlwidgets-1.3/htmlwidgets.js"></script><link href="Understanding_lime_files/plot_text_explanations-0.1.0/plot_text_explanations.css" rel="stylesheet">
-<script src="Understanding_lime_files/plot_text_explanations-binding-0.5.0.9000/plot_text_explanations.js"></script><div class="row">
+
+      </header><script src="Understanding_lime_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>Understanding lime</h1>
+      <h1 data-toc-skip>Understanding lime</h1>
                         <h4 class="author">Thomas Lin Pedersen &amp; Michaël Benesty</h4>
             
-            <h4 class="date">2019-06-24</h4>
+            <h4 class="date">2021-02-24</h4>
       
-      
+      <small class="dont-index">Source: <a href="https://github.com/thomasp85/lime/blob/master/vignettes/Understanding_lime.Rmd"><code>vignettes/Understanding_lime.Rmd</code></a></small>
       <div class="hidden name"><code>Understanding_lime.Rmd</code></div>
 
     </div>
@@ -149,7 +150,7 @@ When the outcome of text predictions are to be explained the permutations are pe
 <li>
 <strong>lasso:</strong> The <code>m</code> features that are least prone to shrinkage based on the regularization path of a lasso fit of the complex model outcome is chosen.</li>
 <li>
-<strong>tree:</strong> A tree is fitted with <code><a href="https://www.rdocumentation.org/packages/base/topics/Log">log2(m)</a></code> splits, to use at max <code>m</code> features. It may possibly select less.</li>
+<strong>tree:</strong> A tree is fitted with <code><a href="https://rdrr.io/r/base/Log.html">log2(m)</a></code> splits, to use at max <code>m</code> features. It may possibly select less.</li>
 <li>
 <strong>auto:</strong> Uses forward selection if <code>m &lt;= 6</code> and otherwise highest weights.</li>
 </ul>
@@ -165,27 +166,29 @@ When the outcome of text predictions are to be explained the permutations are pe
 <h2 class="hasAnchor">
 <a href="#an-example---tabular-data" class="anchor"></a>An example - Tabular Data</h2>
 <p>The following is a simple example which seeks to explain the outcome of a model predicting cancer based on biopsy results:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(MASS)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(lime)</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/data">data</a></span>(biopsy)</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co"># First we'll clean up the data a bit</span></a>
-<a class="sourceLine" id="cb1-6" data-line-number="6">biopsy<span class="op">$</span>ID &lt;-<span class="st"> </span><span class="ot">NULL</span></a>
-<a class="sourceLine" id="cb1-7" data-line-number="7">biopsy &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/na.fail">na.omit</a></span>(biopsy)</a>
-<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/names">names</a></span>(biopsy) &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">'clump thickness'</span>, <span class="st">'uniformity of cell size'</span>, </a>
-<a class="sourceLine" id="cb1-9" data-line-number="9">                   <span class="st">'uniformity of cell shape'</span>, <span class="st">'marginal adhesion'</span>,</a>
-<a class="sourceLine" id="cb1-10" data-line-number="10">                   <span class="st">'single epithelial cell size'</span>, <span class="st">'bare nuclei'</span>, </a>
-<a class="sourceLine" id="cb1-11" data-line-number="11">                   <span class="st">'bland chromatin'</span>, <span class="st">'normal nucleoli'</span>, <span class="st">'mitoses'</span>,</a>
-<a class="sourceLine" id="cb1-12" data-line-number="12">                   <span class="st">'class'</span>)</a>
-<a class="sourceLine" id="cb1-13" data-line-number="13"></a>
-<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="co"># Now we'll fit a linear discriminant model on all but 4 cases</span></a>
-<a class="sourceLine" id="cb1-15" data-line-number="15"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/Random">set.seed</a></span>(<span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb1-16" data-line-number="16">test_set &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/sample">sample</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/seq">seq_len</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(biopsy)), <span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb1-17" data-line-number="17">prediction &lt;-<span class="st"> </span>biopsy<span class="op">$</span>class</a>
-<a class="sourceLine" id="cb1-18" data-line-number="18">biopsy<span class="op">$</span>class &lt;-<span class="st"> </span><span class="ot">NULL</span></a>
-<a class="sourceLine" id="cb1-19" data-line-number="19">model &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/MASS/topics/lda">lda</a></span>(biopsy[<span class="op">-</span>test_set, ], prediction[<span class="op">-</span>test_set])</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://www.stats.ox.ac.uk/pub/MASS4/">MASS</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://lime.data-imaginist.com">lime</a></span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">biopsy</span><span class="op">)</span>
+
+<span class="co"># First we'll clean up the data a bit</span>
+<span class="va">biopsy</span><span class="op">$</span><span class="va">ID</span> <span class="op">&lt;-</span> <span class="cn">NULL</span>
+<span class="va">biopsy</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html">na.omit</a></span><span class="op">(</span><span class="va">biopsy</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">biopsy</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'clump thickness'</span>, <span class="st">'uniformity of cell size'</span>, 
+                   <span class="st">'uniformity of cell shape'</span>, <span class="st">'marginal adhesion'</span>,
+                   <span class="st">'single epithelial cell size'</span>, <span class="st">'bare nuclei'</span>, 
+                   <span class="st">'bland chromatin'</span>, <span class="st">'normal nucleoli'</span>, <span class="st">'mitoses'</span>,
+                   <span class="st">'class'</span><span class="op">)</span>
+
+<span class="co"># Now we'll fit a linear discriminant model on all but 4 cases</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">4</span><span class="op">)</span>
+<span class="va">test_set</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">biopsy</span><span class="op">)</span><span class="op">)</span>, <span class="fl">4</span><span class="op">)</span>
+<span class="va">prediction</span> <span class="op">&lt;-</span> <span class="va">biopsy</span><span class="op">$</span><span class="va">class</span>
+<span class="va">biopsy</span><span class="op">$</span><span class="va">class</span> <span class="op">&lt;-</span> <span class="cn">NULL</span>
+<span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/MASS/man/lda.html">lda</a></span><span class="op">(</span><span class="va">biopsy</span><span class="op">[</span><span class="op">-</span><span class="va">test_set</span>, <span class="op">]</span>, <span class="va">prediction</span><span class="op">[</span><span class="op">-</span><span class="va">test_set</span><span class="op">]</span><span class="op">)</span></code></pre></div>
 <p>If we use the model to predict the 4 remaining cases we get some pretty solid predictions:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/predict">predict</a></span>(model, biopsy[test_set, ])</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">model</span>, <span class="va">biopsy</span><span class="op">[</span><span class="va">test_set</span>, <span class="op">]</span><span class="op">)</span></code></pre></div>
 <pre><code>## $class
 ## [1] benign benign benign benign
 ## Levels: benign malignant
@@ -204,32 +207,34 @@ When the outcome of text predictions are to be explained the permutations are pe
 ## 73  -1.141160
 ## 385 -2.221096</code></pre>
 <p>But lets see how these predictions came to be, using lime.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">explainer &lt;-<span class="st"> </span><span class="kw"><a href="../reference/lime.html">lime</a></span>(biopsy[<span class="op">-</span>test_set,], model, <span class="dt">bin_continuous =</span> <span class="ot">TRUE</span>, <span class="dt">quantile_bins =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2">explanation &lt;-<span class="st"> </span><span class="kw"><a href="../reference/explain.html">explain</a></span>(biopsy[test_set, ], explainer, <span class="dt">n_labels =</span> <span class="dv">1</span>, <span class="dt">n_features =</span> <span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co"># Only showing part of output for better printing</span></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4">explanation[, <span class="dv">2</span><span class="op">:</span><span class="dv">9</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">explainer</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/lime.html">lime</a></span><span class="op">(</span><span class="va">biopsy</span><span class="op">[</span><span class="op">-</span><span class="va">test_set</span>,<span class="op">]</span>, <span class="va">model</span>, bin_continuous <span class="op">=</span> <span class="cn">TRUE</span>, quantile_bins <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
+<span class="va">explanation</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/explain.html">explain</a></span><span class="op">(</span><span class="va">biopsy</span><span class="op">[</span><span class="va">test_set</span>, <span class="op">]</span>, <span class="va">explainer</span>, n_labels <span class="op">=</span> <span class="fl">1</span>, n_features <span class="op">=</span> <span class="fl">4</span><span class="op">)</span>
+<span class="co"># Only showing part of output for better printing</span>
+<span class="va">explanation</span><span class="op">[</span>, <span class="fl">2</span><span class="op">:</span><span class="fl">9</span><span class="op">]</span></code></pre></div>
 <pre><code>## # A tibble: 16 x 8
-##    case  label label_prob model_r2 model_intercept model_prediction feature
-##    &lt;chr&gt; &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;           &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;  
-##  1 519   beni…      1.000    0.558         0.0397              1.08 bare n…
-##  2 519   beni…      1.000    0.558         0.0397              1.08 clump …
-##  3 519   beni…      1.000    0.558         0.0397              1.08 unifor…
-##  4 519   beni…      1.000    0.558         0.0397              1.08 bland …
-##  5 602   beni…      1.000    0.581         0.0225              1.07 bare n…
-##  6 602   beni…      1.000    0.581         0.0225              1.07 clump …
-##  7 602   beni…      1.000    0.581         0.0225              1.07 unifor…
-##  8 602   beni…      1.000    0.581         0.0225              1.07 normal…
-##  9 73    beni…      1.000    0.567         0.00495             1.08 bare n…
-## 10 73    beni…      1.000    0.567         0.00495             1.08 clump …
-## 11 73    beni…      1.000    0.567         0.00495             1.08 unifor…
-## 12 73    beni…      1.000    0.567         0.00495             1.08 normal…
-## 13 385   beni…      1.000    0.550         0.0185              1.08 bare n…
-## 14 385   beni…      1.000    0.550         0.0185              1.08 clump …
-## 15 385   beni…      1.000    0.550         0.0185              1.08 unifor…
-## 16 385   beni…      1.000    0.550         0.0185              1.08 normal…
+##    case  label  label_prob model_r2 model_intercept model_prediction feature    
+##    &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt;    &lt;dbl&gt;           &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;      
+##  1 519   benign       1.00    0.558         0.0397              1.08 bare nuclei
+##  2 519   benign       1.00    0.558         0.0397              1.08 clump thic…
+##  3 519   benign       1.00    0.558         0.0397              1.08 uniformity…
+##  4 519   benign       1.00    0.558         0.0397              1.08 bland chro…
+##  5 602   benign       1.00    0.581         0.0225              1.07 bare nuclei
+##  6 602   benign       1.00    0.581         0.0225              1.07 clump thic…
+##  7 602   benign       1.00    0.581         0.0225              1.07 uniformity…
+##  8 602   benign       1.00    0.581         0.0225              1.07 normal nuc…
+##  9 73    benign       1.00    0.567         0.00495             1.08 bare nuclei
+## 10 73    benign       1.00    0.567         0.00495             1.08 clump thic…
+## 11 73    benign       1.00    0.567         0.00495             1.08 uniformity…
+## 12 73    benign       1.00    0.567         0.00495             1.08 normal nuc…
+## 13 385   benign       1.00    0.550         0.0185              1.08 bare nuclei
+## 14 385   benign       1.00    0.550         0.0185              1.08 clump thic…
+## 15 385   benign       1.00    0.550         0.0185              1.08 uniformity…
+## 16 385   benign       1.00    0.550         0.0185              1.08 normal nuc…
 ## # … with 1 more variable: feature_value &lt;int&gt;</code></pre>
 <p>We can see that all the explanations for a <em>benign</em> outcome have chosen the same features, strongly indicating that these are both locally and globally important features. In order to get a more intuitive representation, we can use the provided <code><a href="../reference/plot_features.html">plot_features()</a></code> to get a visual overview of the explanations.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw"><a href="../reference/plot_features.html">plot_features</a></span>(explanation, <span class="dt">ncol =</span> <span class="dv">1</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/plot_features.html">plot_features</a></span><span class="op">(</span><span class="va">explanation</span>, ncol <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
 <p><img src="Understanding_lime_files/figure-html/unnamed-chunk-4-1.png" width="70%" style="display: block; margin: auto;"></p>
 <p>In this overview it is clear to see how case 195 and 416 behave alike, while the third <em>benign</em> case (7) has an unusual large <em>bare nuclei</em> which are detracting from its status as <em>benign</em> without affecting the final prediction (indicating that the values of its other features are making up for this odd one). To no surprise it is clear that high values in the measurements are indicative of a <em>malignant</em> tumor.</p>
 </div>
@@ -238,216 +243,213 @@ When the outcome of text predictions are to be explained the permutations are pe
 <a href="#an-example---text-data" class="anchor"></a>An example - text data</h2>
 <p>The following is a simple example which seeks to explain the outcome of a model classifying sentences from 30 scientific papers as being about (or not) the author’s own work, e.g. methods, results or conclusions.</p>
 <p>Most of the things written for <code>data.frame</code> can be applied to textual data.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(lime)</a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(xgboost) <span class="co"># the classifier</span></a>
-<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(text2vec) <span class="co"># used to build the BoW matrix</span></a>
-<a class="sourceLine" id="cb7-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="co"># load data</span></a>
-<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/data">data</a></span>(train_sentences)</a>
-<a class="sourceLine" id="cb7-7" data-line-number="7"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/data">data</a></span>(test_sentences)</a>
-<a class="sourceLine" id="cb7-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="co"># Data are stored in a 2 columns data.frame, one for the sentences, one for the </span></a>
-<a class="sourceLine" id="cb7-10" data-line-number="10"><span class="co"># labels.</span></a>
-<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(train_sentences))</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://lime.data-imaginist.com">lime</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/dmlc/xgboost">xgboost</a></span><span class="op">)</span> <span class="co"># the classifier</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://text2vec.org">text2vec</a></span><span class="op">)</span> <span class="co"># used to build the BoW matrix</span>
+
+<span class="co"># load data</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">train_sentences</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">test_sentences</span><span class="op">)</span>
+
+<span class="co"># Data are stored in a 2 columns data.frame, one for the sentences, one for the </span>
+<span class="co"># labels.</span>
+<span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">train_sentences</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <pre><code>## 'data.frame':    2517 obs. of  2 variables:
 ##  $ class.text: chr  "MISC" "MISC" "AIMX" "OWNX" ...
 ##  $ text      : chr  "although the internet as level topology has been extensively studied over the past few years  little is known a"| __truncated__ "an as  node  can represent a wide variety of organizations  e g   large isp  or small private business  univers"| __truncated__ "in this paper  we introduce a radically new approach based on machine learning techniques to map all the ases i"| __truncated__ "we believe that this dataset will serve as an invaluable addition to further understanding of the structure and"| __truncated__ ...
 ## NULL</code></pre>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="co"># The list of possible classes for a sentence</span></a>
-<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="co"># We are only interested in the class "OWNX"</span></a>
-<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(train_sentences<span class="op">$</span>class.text))</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># The list of possible classes for a sentence</span>
+<span class="co"># We are only interested in the class "OWNX"</span>
+<span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">train_sentences</span><span class="op">$</span><span class="va">class.text</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <pre><code>##  [1] "MISC"                "AIMX"                "OWNX"               
 ##  [4] "BASE"                "CONT"                "MISC--the"          
 ##  [7] "AIMX--on"            "OWNX--after"         "MISC--in"           
 ## [10] "MISC--specifically," "MISC--on"            "MISC--several"      
 ## [13] "CONT--these"         "OWNX--we"            "MISC--for"</code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="co"># Tokenize data</span></a>
-<a class="sourceLine" id="cb11-2" data-line-number="2">get_matrix &lt;-<span class="st"> </span><span class="cf">function</span>(text) {</a>
-<a class="sourceLine" id="cb11-3" data-line-number="3">  it &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/text2vec/topics/itoken">itoken</a></span>(text, <span class="dt">progressbar =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb11-4" data-line-number="4">  <span class="kw"><a href="https://www.rdocumentation.org/packages/text2vec/topics/create_dtm">create_dtm</a></span>(it, <span class="dt">vectorizer =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/text2vec/topics/vectorizers">hash_vectorizer</a></span>())</a>
-<a class="sourceLine" id="cb11-5" data-line-number="5">}</a>
-<a class="sourceLine" id="cb11-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb11-7" data-line-number="7"><span class="co"># BoW matrix generation</span></a>
-<a class="sourceLine" id="cb11-8" data-line-number="8">dtm_train =<span class="st"> </span><span class="kw">get_matrix</span>(train_sentences<span class="op">$</span>text)</a>
-<a class="sourceLine" id="cb11-9" data-line-number="9">dtm_test =<span class="st"> </span><span class="kw">get_matrix</span>(test_sentences<span class="op">$</span>text)</a>
-<a class="sourceLine" id="cb11-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb11-11" data-line-number="11"><span class="co"># Create boosting model for binary classification (-&gt; logistic loss)</span></a>
-<a class="sourceLine" id="cb11-12" data-line-number="12"><span class="co"># Other parameters are quite standard</span></a>
-<a class="sourceLine" id="cb11-13" data-line-number="13">param &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(<span class="dt">max_depth =</span> <span class="dv">7</span>, </a>
-<a class="sourceLine" id="cb11-14" data-line-number="14">              <span class="dt">eta =</span> <span class="fl">0.1</span>, </a>
-<a class="sourceLine" id="cb11-15" data-line-number="15">              <span class="dt">objective =</span> <span class="st">"binary:logistic"</span>, </a>
-<a class="sourceLine" id="cb11-16" data-line-number="16">              <span class="dt">eval_metric =</span> <span class="st">"error"</span>, </a>
-<a class="sourceLine" id="cb11-17" data-line-number="17">              <span class="dt">nthread =</span> <span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb11-18" data-line-number="18"></a>
-<a class="sourceLine" id="cb11-19" data-line-number="19">xgb_model &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/xgboost/topics/xgb.train">xgb.train</a></span>(</a>
-<a class="sourceLine" id="cb11-20" data-line-number="20">  param, </a>
-<a class="sourceLine" id="cb11-21" data-line-number="21">  <span class="kw"><a href="https://www.rdocumentation.org/packages/xgboost/topics/xgb.DMatrix">xgb.DMatrix</a></span>(dtm_train, <span class="dt">label =</span> train_sentences<span class="op">$</span>class.text <span class="op">==</span><span class="st"> "OWNX"</span>),</a>
-<a class="sourceLine" id="cb11-22" data-line-number="22">  <span class="dt">nrounds =</span> <span class="dv">50</span></a>
-<a class="sourceLine" id="cb11-23" data-line-number="23">)</a></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Tokenize data</span>
+<span class="va">get_matrix</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">text</span><span class="op">)</span> <span class="op">{</span>
+  <span class="va">it</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/text2vec/man/itoken.html">itoken</a></span><span class="op">(</span><span class="va">text</span>, progressbar <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
+  <span class="fu"><a href="https://rdrr.io/pkg/text2vec/man/create_dtm.html">create_dtm</a></span><span class="op">(</span><span class="va">it</span>, vectorizer <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/text2vec/man/vectorizers.html">hash_vectorizer</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
+<span class="op">}</span>
+
+<span class="co"># BoW matrix generation</span>
+<span class="va">dtm_train</span> <span class="op">=</span> <span class="fu">get_matrix</span><span class="op">(</span><span class="va">train_sentences</span><span class="op">$</span><span class="va">text</span><span class="op">)</span>
+<span class="va">dtm_test</span> <span class="op">=</span> <span class="fu">get_matrix</span><span class="op">(</span><span class="va">test_sentences</span><span class="op">$</span><span class="va">text</span><span class="op">)</span>
+
+<span class="co"># Create boosting model for binary classification (-&gt; logistic loss)</span>
+<span class="co"># Other parameters are quite standard</span>
+<span class="va">param</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>max_depth <span class="op">=</span> <span class="fl">7</span>, 
+              eta <span class="op">=</span> <span class="fl">0.1</span>, 
+              objective <span class="op">=</span> <span class="st">"binary:logistic"</span>, 
+              eval_metric <span class="op">=</span> <span class="st">"error"</span>, 
+              nthread <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
+
+<span class="va">xgb_model</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/xgboost/man/xgb.train.html">xgb.train</a></span><span class="op">(</span>
+  <span class="va">param</span>, 
+  <span class="fu"><a href="https://rdrr.io/pkg/xgboost/man/xgb.DMatrix.html">xgb.DMatrix</a></span><span class="op">(</span><span class="va">dtm_train</span>, label <span class="op">=</span> <span class="va">train_sentences</span><span class="op">$</span><span class="va">class.text</span> <span class="op">==</span> <span class="st">"OWNX"</span><span class="op">)</span>,
+  nrounds <span class="op">=</span> <span class="fl">50</span>
+<span class="op">)</span></code></pre></div>
 <p>We will test our model on test data.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="co"># We use a (standard) threshold of 0.5</span></a>
-<a class="sourceLine" id="cb12-2" data-line-number="2">predictions &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/predict">predict</a></span>(xgb_model, dtm_test) <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span></a>
-<a class="sourceLine" id="cb12-3" data-line-number="3">test_labels &lt;-<span class="st"> </span>test_sentences<span class="op">$</span>class.text <span class="op">==</span><span class="st"> "OWNX"</span></a>
-<a class="sourceLine" id="cb12-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb12-5" data-line-number="5"><span class="co"># Accuracy</span></a>
-<a class="sourceLine" id="cb12-6" data-line-number="6"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/print">print</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/mean">mean</a></span>(predictions <span class="op">==</span><span class="st"> </span>test_labels))</a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># We use a (standard) threshold of 0.5</span>
+<span class="va">predictions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">xgb_model</span>, <span class="va">dtm_test</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">0.5</span>
+<span class="va">test_labels</span> <span class="op">&lt;-</span> <span class="va">test_sentences</span><span class="op">$</span><span class="va">class.text</span> <span class="op">==</span> <span class="st">"OWNX"</span>
+
+<span class="co"># Accuracy</span>
+<span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">predictions</span> <span class="op">==</span> <span class="va">test_labels</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] 0.8433333</code></pre>
 <p>Now we are sure that the model works, we may want to understand what are the most important words for the predictions.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="co"># We select 10 sentences from the label OWNX</span></a>
-<a class="sourceLine" id="cb14-2" data-line-number="2">sentence_to_explain &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(test_sentences[test_labels,]<span class="op">$</span>text, <span class="dv">5</span>)</a>
-<a class="sourceLine" id="cb14-3" data-line-number="3">explainer &lt;-<span class="st"> </span><span class="kw"><a href="../reference/lime.html">lime</a></span>(sentence_to_explain, <span class="dt">model =</span> xgb_model, </a>
-<a class="sourceLine" id="cb14-4" data-line-number="4">                  <span class="dt">preprocess =</span> get_matrix)</a>
-<a class="sourceLine" id="cb14-5" data-line-number="5">explanation &lt;-<span class="st"> </span><span class="kw"><a href="../reference/explain.html">explain</a></span>(sentence_to_explain, explainer, <span class="dt">n_labels =</span> <span class="dv">1</span>, </a>
-<a class="sourceLine" id="cb14-6" data-line-number="6">                       <span class="dt">n_features =</span> <span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb14-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb14-8" data-line-number="8"><span class="co"># Most of the words choosen by Lime</span></a>
-<a class="sourceLine" id="cb14-9" data-line-number="9"><span class="co"># are related to the team (we, our)</span></a>
-<a class="sourceLine" id="cb14-10" data-line-number="10"><span class="co"># or part of the paper (Section, in)</span></a>
-<a class="sourceLine" id="cb14-11" data-line-number="11">explanation[, <span class="dv">2</span><span class="op">:</span><span class="dv">9</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># We select 10 sentences from the label OWNX</span>
+<span class="va">sentence_to_explain</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">test_sentences</span><span class="op">[</span><span class="va">test_labels</span>,<span class="op">]</span><span class="op">$</span><span class="va">text</span>, <span class="fl">5</span><span class="op">)</span>
+<span class="va">explainer</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/lime.html">lime</a></span><span class="op">(</span><span class="va">sentence_to_explain</span>, model <span class="op">=</span> <span class="va">xgb_model</span>, 
+                  preprocess <span class="op">=</span> <span class="va">get_matrix</span><span class="op">)</span>
+<span class="va">explanation</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/explain.html">explain</a></span><span class="op">(</span><span class="va">sentence_to_explain</span>, <span class="va">explainer</span>, n_labels <span class="op">=</span> <span class="fl">1</span>, 
+                       n_features <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>
+
+<span class="co"># Most of the words choosen by Lime</span>
+<span class="co"># are related to the team (we, our)</span>
+<span class="co"># or part of the paper (Section, in)</span>
+<span class="va">explanation</span><span class="op">[</span>, <span class="fl">2</span><span class="op">:</span><span class="fl">9</span><span class="op">]</span></code></pre></div>
 <pre><code>## # A tibble: 10 x 8
 ##     case label label_prob model_r2 model_intercept model_prediction feature
 ##    &lt;int&gt; &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;           &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;  
-##  1     1 1          0.642    0.988           0.332            0.643 we     
-##  2     1 1          0.642    0.988           0.332            0.643 in     
-##  3     2 1          0.802    0.905           0.269            0.770 We     
-##  4     2 1          0.802    0.905           0.269            0.770 the    
-##  5     3 0          0.543    0.881           0.692            0.497 we     
-##  6     3 0          0.543    0.881           0.692            0.497 those  
-##  7     4 1          0.872    0.929           0.389            0.902 Section
-##  8     4 1          0.872    0.929           0.389            0.902 we     
-##  9     5 1          0.732    0.479           0.265            0.716 our    
-## 10     5 1          0.732    0.479           0.265            0.716 general
+##  1     1 1          0.642    0.988           0.331            0.644 we     
+##  2     1 1          0.642    0.988           0.331            0.644 in     
+##  3     2 1          0.802    0.902           0.268            0.770 We     
+##  4     2 1          0.802    0.902           0.268            0.770 the    
+##  5     3 0          0.543    0.886           0.691            0.499 we     
+##  6     3 0          0.543    0.886           0.691            0.499 those  
+##  7     4 1          0.872    0.928           0.390            0.901 Section
+##  8     4 1          0.872    0.928           0.390            0.901 we     
+##  9     5 1          0.732    0.468           0.274            0.719 our    
+## 10     5 1          0.732    0.468           0.274            0.719 We     
 ## # … with 1 more variable: feature_value &lt;chr&gt;</code></pre>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="co"># Another more graphical view of the same information (2 first sentences only)</span></a>
-<a class="sourceLine" id="cb16-2" data-line-number="2"><span class="kw"><a href="../reference/plot_features.html">plot_features</a></span>(explanation)</a></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Another more graphical view of the same information (2 first sentences only)</span>
+<span class="fu"><a href="../reference/plot_features.html">plot_features</a></span><span class="op">(</span><span class="va">explanation</span><span class="op">)</span></code></pre></div>
 <p><img src="Understanding_lime_files/figure-html/unnamed-chunk-7-1.png" width="70%" style="display: block; margin: auto;"></p>
-<p>The graph view gives lots of detailed information about the selected words. Another approach to explain a text classification model is to see the most important words in their context.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="kw"><a href="../reference/text_explanations.html">plot_text_explanations</a></span>(explanation)</a></code></pre></div>
-<div id="htmlwidget-03aab8795a46702c1bda" style="width:100%;height:auto;" class="plot_text_explanations html-widget"></div>
-<script type="application/json" data-for="htmlwidget-03aab8795a46702c1bda">{"x":{"html":"<div style=\"overflow-y:scroll;font-family:sans-serif;height:100%\"> <p> <span class='positive_5'>we<\/span> validate them <span class='negative_1'>in<\/span> section  and conclude <span class='negative_1'>in<\/span> section <\/br> <sub>Label predicted: 1 (64.18%)<br/>Explainer fit: 0.99<\/sub> <\/p><br/><p> <span class='positive_4'>We<\/span> developed a two-level machine learning approach that in <span class='positive_2'>the<\/span> first level considers two different properties important for protein-protein binding derived from structural models of V3 and V3 sequences. <\/br> <sub>Label predicted: 1 (80.22%)<br/>Explainer fit: 0.91<\/sub> <\/p><br/><p> specifically  <span class='negative_4'>we<\/span> hypothesize that the judgments of <span class='positive_2'>those<\/span> individuals high in this trait will be more influenced by previously presented anchors whereas <span class='positive_2'>those<\/span> individuals low in this trait will be less influenced by the anchor <\/br> <sub>Label predicted: 0 (54.33%)<br/>Explainer fit: 0.88<\/sub> <\/p><br/><p> Finally, in <span class='positive_3'>Section<\/span>  <span class='positive_3'>we<\/span> discuss the results and give conclusions <\/br> <sub>Label predicted: 1 (87.2%)<br/>Explainer fit: 0.93<\/sub> <\/p><br/><p> We also illustrate the application of <span class='positive_3'>our<\/span>  SYMBOL -mixing generalization bounds to <span class='positive_3'>general<\/span> classes of learning algorithms, including Support Vector Regression (SVR)  CITATION , Kernel Ridge Regression  CITATION , and Support Vector Machines (SVMs)  CITATION <\/br> <sub>Label predicted: 1 (73.16%)<br/>Explainer fit: 0.48<\/sub> <\/p> <\/div>"},"evals":[],"jsHooks":[]}</script><p>For some sentences, the prediction is wrong. For instance, look at the third sentence. The word <em>we</em> is in red and the predicted label is 0 (with a low probability), meaning the model thinks it’s not a sentence from the category <code>OWNX</code>, mainly because of the presence of the word <em>those</em> but the word <em>we</em> in red doesn’t support this (false) prediction.</p>
+<p>The graph view gives lots of detailed information about the selected words. Another approach to explain a text classification model is to see the most important words in their context. This requires htmlwidgets and will not be evaluated in this vignette, but you can run it locally and examine the output</p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/plot_text_explanations.html">plot_text_explanations</a></span><span class="op">(</span><span class="va">explanation</span><span class="op">)</span></code></pre></div>
+<p>If you have run this locally you can see that for some sentences, the prediction is wrong. For instance, look at the third sentence. The word <em>we</em> is in red and the predicted label is 0 (with a low probability), meaning the model thinks it’s not a sentence from the category <code>OWNX</code>, mainly because of the presence of the word <em>those</em> but the word <em>we</em> in red doesn’t support this (false) prediction.</p>
 </div>
 <div id="interactive-text-model-explanations" class="section level2">
 <h2 class="hasAnchor">
 <a href="#interactive-text-model-explanations" class="anchor"></a>Interactive text model explanations</h2>
 <p>Text explanations are also available through <code>shine</code> to explore interactively the model.</p>
 <p>After loading the application, both text and parameters can be modified. Prediction and selected words are updated in real time.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="co"># Launching the application is done in one command</span></a>
-<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="kw"><a href="../reference/interactive_text_explanations.html">interactive_text_explanations</a></span>(explainer)</a></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Launching the application is done in one command</span>
+<span class="fu"><a href="../reference/interactive_text_explanations.html">interactive_text_explanations</a></span><span class="op">(</span><span class="va">explainer</span><span class="op">)</span></code></pre></div>
 <div class="figure">
-<img src="../man/figures/shine_text_explanations.gif" alt="Interactive text explanations" width="700"><p class="caption">Interactive text explanations</p>
+<img src="../man/figures/shine_text_explanations.gif" width="700" alt=""><p class="caption">Interactive text explanations</p>
 </div>
 </div>
 <div id="session-info" class="section level2">
 <h2 class="hasAnchor">
 <a href="#session-info" class="anchor"></a>Session Info</h2>
-<pre><code>## ─ Session info ──────────────────────────────────────────────────────────
+<pre><code>## ─ Session info ───────────────────────────────────────────────────────────────
 ##  setting  value                       
-##  version  R version 3.6.0 (2017-01-27)
-##  os       Ubuntu 14.04.5 LTS          
-##  system   x86_64, linux-gnu           
+##  version  R version 4.0.4 (2021-02-15)
+##  os       macOS Catalina 10.15.7      
+##  system   x86_64, darwin17.0          
 ##  ui       X11                         
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
 ##  ctype    en_US.UTF-8                 
 ##  tz       UTC                         
-##  date     2019-06-24                  
+##  date     2021-02-24                  
 ## 
-## ─ Packages ──────────────────────────────────────────────────────────────
-##  package        * version    date       lib source        
-##  assertthat       0.2.1      2019-03-21 [1] CRAN (R 3.6.0)
-##  backports        1.1.4      2019-04-10 [1] CRAN (R 3.6.0)
-##  cli              1.1.0      2019-03-19 [1] CRAN (R 3.6.0)
-##  codetools        0.2-16     2018-12-24 [3] CRAN (R 3.6.0)
-##  colorspace       1.4-1      2019-03-18 [1] CRAN (R 3.6.0)
-##  commonmark       1.7        2018-12-01 [1] CRAN (R 3.6.0)
-##  crayon           1.3.4      2017-09-16 [1] CRAN (R 3.6.0)
-##  data.table       1.12.2     2019-04-07 [1] CRAN (R 3.6.0)
-##  desc             1.2.0      2018-05-01 [1] CRAN (R 3.6.0)
-##  digest           0.6.19     2019-05-20 [1] CRAN (R 3.6.0)
-##  dplyr            0.8.1      2019-05-14 [1] CRAN (R 3.6.0)
-##  evaluate         0.14       2019-05-28 [1] CRAN (R 3.6.0)
-##  fansi            0.4.0      2018-10-05 [1] CRAN (R 3.6.0)
-##  foreach          1.4.4      2017-12-12 [1] CRAN (R 3.6.0)
-##  formatR          1.7        2019-06-11 [1] CRAN (R 3.6.0)
-##  fs               1.3.1      2019-05-06 [1] CRAN (R 3.6.0)
-##  futile.logger    1.4.3      2016-07-10 [1] CRAN (R 3.6.0)
-##  futile.options   1.0.1      2018-04-20 [1] CRAN (R 3.6.0)
-##  ggplot2          3.2.0      2019-06-16 [1] CRAN (R 3.6.0)
-##  glmnet           2.0-18     2019-05-20 [1] CRAN (R 3.6.0)
-##  glue             1.3.1      2019-03-12 [1] CRAN (R 3.6.0)
-##  gower            0.2.1      2019-05-14 [1] CRAN (R 3.6.0)
-##  gtable           0.3.0      2019-03-25 [1] CRAN (R 3.6.0)
-##  htmltools        0.3.6      2017-04-28 [1] CRAN (R 3.6.0)
-##  htmlwidgets      1.3        2018-09-30 [1] CRAN (R 3.6.0)
-##  httpuv           1.5.1      2019-04-05 [1] CRAN (R 3.6.0)
-##  iterators        1.0.10     2018-07-13 [1] CRAN (R 3.6.0)
-##  jsonlite         1.6        2018-12-07 [1] CRAN (R 3.6.0)
-##  knitr            1.23       2019-05-18 [1] CRAN (R 3.6.0)
-##  labeling         0.3        2014-08-23 [1] CRAN (R 3.6.0)
-##  lambda.r         1.2.3      2018-05-17 [1] CRAN (R 3.6.0)
-##  later            0.8.0      2019-02-11 [1] CRAN (R 3.6.0)
-##  lattice          0.20-38    2018-11-04 [3] CRAN (R 3.6.0)
-##  lazyeval         0.2.2      2019-03-15 [1] CRAN (R 3.6.0)
-##  lime           * 0.5.0.9000 2019-06-24 [1] local         
-##  magrittr         1.5        2014-11-22 [1] CRAN (R 3.6.0)
-##  MASS           * 7.3-51.4   2019-03-31 [3] CRAN (R 3.6.0)
-##  Matrix           1.2-17     2019-03-22 [3] CRAN (R 3.6.0)
-##  memoise          1.1.0      2017-04-21 [1] CRAN (R 3.6.0)
-##  mime             0.7        2019-06-11 [1] CRAN (R 3.6.0)
-##  mlapi            0.1.0      2017-12-17 [1] CRAN (R 3.6.0)
-##  munsell          0.5.0      2018-06-12 [1] CRAN (R 3.6.0)
-##  pillar           1.4.1      2019-05-28 [1] CRAN (R 3.6.0)
-##  pkgconfig        2.0.2      2018-08-16 [1] CRAN (R 3.6.0)
-##  pkgdown          1.3.0      2018-12-07 [1] CRAN (R 3.6.0)
-##  promises         1.0.1      2018-04-13 [1] CRAN (R 3.6.0)
-##  purrr            0.3.2      2019-03-15 [1] CRAN (R 3.6.0)
-##  R6               2.4.0      2019-02-14 [1] CRAN (R 3.6.0)
-##  Rcpp             1.0.1      2019-03-17 [1] CRAN (R 3.6.0)
-##  RcppParallel     4.4.3      2019-05-22 [1] CRAN (R 3.6.0)
-##  rlang            0.3.4      2019-04-07 [1] CRAN (R 3.6.0)
-##  rmarkdown        1.13       2019-05-22 [1] CRAN (R 3.6.0)
-##  roxygen2         6.1.1      2018-11-07 [1] CRAN (R 3.6.0)
-##  rprojroot        1.3-2      2018-01-03 [1] CRAN (R 3.6.0)
-##  scales           1.0.0      2018-08-09 [1] CRAN (R 3.6.0)
-##  sessioninfo      1.1.1      2018-11-05 [1] CRAN (R 3.6.0)
-##  shiny            1.3.2      2019-04-22 [1] CRAN (R 3.6.0)
-##  shinythemes      1.1.2      2018-11-06 [1] CRAN (R 3.6.0)
-##  stringi          1.4.3      2019-03-12 [1] CRAN (R 3.6.0)
-##  stringr          1.4.0      2019-02-10 [1] CRAN (R 3.6.0)
-##  text2vec       * 0.5.1      2018-01-11 [1] CRAN (R 3.6.0)
-##  tibble           2.1.3      2019-06-06 [1] CRAN (R 3.6.0)
-##  tidyselect       0.2.5      2018-10-11 [1] CRAN (R 3.6.0)
-##  utf8             1.1.4      2018-05-24 [1] CRAN (R 3.6.0)
-##  vctrs            0.1.0      2018-11-29 [1] CRAN (R 3.6.0)
-##  withr            2.1.2      2018-03-15 [1] CRAN (R 3.6.0)
-##  xfun             0.7        2019-05-14 [1] CRAN (R 3.6.0)
-##  xgboost        * 0.82.1     2019-03-11 [1] CRAN (R 3.6.0)
-##  xml2             1.2.0      2018-01-24 [1] CRAN (R 3.6.0)
-##  xtable           1.8-4      2019-04-21 [1] CRAN (R 3.6.0)
-##  yaml             2.2.0      2018-07-25 [1] CRAN (R 3.6.0)
-##  zeallot          0.1.0      2018-01-28 [1] CRAN (R 3.6.0)
+## ─ Packages ───────────────────────────────────────────────────────────────────
+##  package     * version    date       lib source        
+##  assertthat    0.2.1      2019-03-21 [1] CRAN (R 4.0.2)
+##  bslib         0.2.4      2021-01-25 [1] CRAN (R 4.0.2)
+##  cachem        1.0.4      2021-02-13 [1] CRAN (R 4.0.2)
+##  cli           2.3.1      2021-02-23 [1] CRAN (R 4.0.4)
+##  codetools     0.2-18     2020-11-04 [2] CRAN (R 4.0.4)
+##  colorspace    2.0-0      2020-11-11 [1] CRAN (R 4.0.2)
+##  crayon        1.4.1      2021-02-08 [1] CRAN (R 4.0.2)
+##  data.table    1.14.0     2021-02-21 [1] CRAN (R 4.0.4)
+##  desc          1.2.0      2018-05-01 [1] CRAN (R 4.0.2)
+##  digest        0.6.27     2020-10-24 [1] CRAN (R 4.0.2)
+##  ellipsis      0.3.1      2020-05-15 [1] CRAN (R 4.0.2)
+##  evaluate      0.14       2019-05-28 [1] CRAN (R 4.0.1)
+##  fansi         0.4.2      2021-01-15 [1] CRAN (R 4.0.2)
+##  farver        2.0.3      2020-01-16 [1] CRAN (R 4.0.2)
+##  fastmap       1.1.0      2021-01-25 [1] CRAN (R 4.0.2)
+##  float         0.2-4      2020-04-22 [1] CRAN (R 4.0.2)
+##  foreach       1.5.1      2020-10-15 [1] CRAN (R 4.0.2)
+##  fs            1.5.0      2020-07-31 [1] CRAN (R 4.0.2)
+##  ggplot2       3.3.3      2020-12-30 [1] CRAN (R 4.0.2)
+##  glmnet        4.1-1      2021-02-21 [1] CRAN (R 4.0.4)
+##  glue          1.4.2      2020-08-27 [1] CRAN (R 4.0.2)
+##  gower         0.2.2      2020-06-23 [1] CRAN (R 4.0.2)
+##  gtable        0.3.0      2019-03-25 [1] CRAN (R 4.0.2)
+##  highr         0.8        2019-03-20 [1] CRAN (R 4.0.2)
+##  htmltools     0.5.1.1    2021-01-22 [1] CRAN (R 4.0.2)
+##  iterators     1.0.13     2020-10-15 [1] CRAN (R 4.0.2)
+##  jquerylib     0.1.3      2020-12-17 [1] CRAN (R 4.0.2)
+##  jsonlite      1.7.2      2020-12-09 [1] CRAN (R 4.0.2)
+##  knitr         1.31       2021-01-27 [1] CRAN (R 4.0.2)
+##  labeling      0.4.2      2020-10-20 [1] CRAN (R 4.0.2)
+##  lattice       0.20-41    2020-04-02 [2] CRAN (R 4.0.4)
+##  lgr           0.4.2      2021-01-10 [1] CRAN (R 4.0.2)
+##  lifecycle     1.0.0      2021-02-15 [1] CRAN (R 4.0.2)
+##  lime        * 0.5.2.9000 2021-02-24 [1] local         
+##  magrittr      2.0.1      2020-11-17 [1] CRAN (R 4.0.2)
+##  MASS        * 7.3-53     2020-09-09 [2] CRAN (R 4.0.4)
+##  Matrix        1.3-2      2021-01-06 [2] CRAN (R 4.0.4)
+##  memoise       2.0.0      2021-01-26 [1] CRAN (R 4.0.2)
+##  mlapi         0.1.0      2017-12-17 [1] CRAN (R 4.0.2)
+##  munsell       0.5.0      2018-06-12 [1] CRAN (R 4.0.2)
+##  pillar        1.5.0      2021-02-22 [1] CRAN (R 4.0.4)
+##  pkgconfig     2.0.3      2019-09-22 [1] CRAN (R 4.0.2)
+##  pkgdown       1.6.1      2020-09-12 [1] CRAN (R 4.0.2)
+##  ps            1.5.0      2020-12-05 [1] CRAN (R 4.0.2)
+##  R6            2.5.0      2020-10-28 [1] CRAN (R 4.0.2)
+##  ragg          1.1.0      2021-02-15 [1] CRAN (R 4.0.2)
+##  Rcpp          1.0.6      2021-01-15 [1] CRAN (R 4.0.2)
+##  RhpcBLASctl   0.20-137   2020-05-17 [1] CRAN (R 4.0.2)
+##  rlang         0.4.10     2020-12-30 [1] CRAN (R 4.0.2)
+##  rmarkdown     2.7        2021-02-19 [1] CRAN (R 4.0.4)
+##  rprojroot     2.0.2      2020-11-15 [1] CRAN (R 4.0.2)
+##  rsparse       0.4.0      2020-04-01 [1] CRAN (R 4.0.2)
+##  rstudioapi    0.13       2020-11-12 [1] CRAN (R 4.0.2)
+##  sass          0.3.1      2021-01-24 [1] CRAN (R 4.0.2)
+##  scales        1.1.1      2020-05-11 [1] CRAN (R 4.0.2)
+##  sessioninfo   1.1.1      2018-11-05 [1] CRAN (R 4.0.2)
+##  shape         1.4.5      2020-09-13 [1] CRAN (R 4.0.2)
+##  stringi       1.5.3      2020-09-09 [1] CRAN (R 4.0.2)
+##  stringr       1.4.0      2019-02-10 [1] CRAN (R 4.0.2)
+##  survival      3.2-7      2020-09-28 [2] CRAN (R 4.0.4)
+##  systemfonts   1.0.1      2021-02-09 [1] CRAN (R 4.0.2)
+##  text2vec    * 0.6        2020-02-18 [1] CRAN (R 4.0.2)
+##  textshaping   0.3.0      2021-02-10 [1] CRAN (R 4.0.2)
+##  tibble        3.0.6      2021-01-29 [1] CRAN (R 4.0.2)
+##  utf8          1.1.4      2018-05-24 [1] CRAN (R 4.0.2)
+##  vctrs         0.3.6      2020-12-17 [1] CRAN (R 4.0.2)
+##  withr         2.4.1      2021-01-26 [1] CRAN (R 4.0.2)
+##  xfun          0.21       2021-02-10 [1] CRAN (R 4.0.2)
+##  xgboost     * 1.3.2.1    2021-01-18 [1] CRAN (R 4.0.2)
+##  yaml          2.2.1      2020-02-01 [1] CRAN (R 4.0.2)
 ## 
-## [1] /home/travis/R/Library
-## [2] /usr/local/lib/R/site-library
-## [3] /home/travis/R-bin/lib/R/library</code></pre>
+## [1] /Users/runner/work/_temp/Library
+## [2] /Library/Frameworks/R.framework/Versions/4.0/Resources/library</code></pre>
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-        <div id="tocnav">
-      <h2 class="hasAnchor">
-<a href="#tocnav" class="anchor"></a>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-<li><a href="#how-lime-explains-stuff">How lime explains stuff</a></li>
-      <li><a href="#an-example---tabular-data">An example - Tabular Data</a></li>
-      <li><a href="#an-example---text-data">An example - text data</a></li>
-      <li><a href="#interactive-text-model-explanations">Interactive text model explanations</a></li>
-      <li><a href="#session-info">Session Info</a></li>
-      </ul>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
 </div>
-      </div>
 
 </div>
+
 
 
       <footer><div class="copyright">
@@ -455,12 +457,14 @@ When the outcome of text predictions are to be explained the permutations are pe
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
+
       </footer>
 </div>
 
   
+
 
   </body>
 </html>

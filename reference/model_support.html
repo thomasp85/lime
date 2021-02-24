@@ -15,21 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
-<!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/lumen/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/lumen/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -37,17 +45,16 @@
 
 
 
-<meta property="og:title" content="Methods for extending limes model support — model_support" />
 
+<meta property="og:title" content="Methods for extending limes model support — model_support" />
 <meta property="og:description" content="In order to have lime support for your model of choice lime needs to be
 able to get predictions from the model in a standardised way, and it needs to
 be able to know whether it is a classification or regression model. For the
 former it calls the predict_model() generic which the user is free to
 supply methods for without overriding the standard predict() method. For
 the latter the model must respond to the model_type() generic." />
+<meta property="og:image" content="https://lime.data-imaginist.com/logo.svg" />
 
-<meta property="og:image" content="https://lime.data-imaginist.com/logo.png" />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -61,9 +68,10 @@ the latter the model must respond to the model_type() generic." />
 <![endif]-->
 
 
+
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -77,7 +85,7 @@ the latter the model must respond to the model_type() generic." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">lime</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.5.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.5.2.9000</span>
       </span>
     </div>
 
@@ -85,7 +93,7 @@ the latter the model must respond to the model_type() generic." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -113,11 +121,10 @@ the latter the model must respond to the model_type() generic." />
   </ul>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/thomasp85/lime">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -128,31 +135,30 @@ the latter the model must respond to the model_type() generic." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Methods for extending limes model support</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/thomasp85/lime/blob/master/R/models.R'><code>R/models.R</code></a></small>
     <div class="hidden name"><code>model_support.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    
     <p>In order to have <code>lime</code> support for your model of choice <code>lime</code> needs to be
 able to get predictions from the model in a standardised way, and it needs to
 be able to know whether it is a classification or regression model. For the
 former it calls the <code>predict_model()</code> generic which the user is free to
-supply methods for without overriding the standard <code><a href='https://www.rdocumentation.org/packages/stats/topics/predict'>predict()</a></code> method. For
+supply methods for without overriding the standard <code><a href='https://rdrr.io/r/stats/predict.html'>predict()</a></code> method. For
 the latter the model must respond to the <code>model_type()</code> generic.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'>predict_model</span>(<span class='no'>x</span>, <span class='no'>newdata</span>, <span class='no'>type</span>, <span class='no'>...</span>)
+    <pre class="usage"><span class='fu'>predict_model</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>newdata</span>, <span class='va'>type</span>, <span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>model_type</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
-    
+<span class='fu'>model_type</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span></pre>
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -174,7 +180,7 @@ indicate class probabilities</p></td>
       <td><p>passed on to <code>predict</code> method</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A data.frame in the case of <code>predict_model()</code>. If <code>type = 'raw'</code> it
@@ -183,11 +189,11 @@ will contain one column named <code>'Response'</code> holding the predicted valu
 named after the class, each column holding the probability score for class
 membership. For <code>model_type()</code> a character string. Either <code>'regression'</code> or
 <code>'classification'</code> is currently supported.</p>
-    
     <h2 class="hasAnchor" id="supported-models"><a class="anchor" href="#supported-models"></a>Supported Models</h2>
 
     
-    <p>Out of the box, <code>lime</code> supports the following model objects:</p><ul>
+
+<p>Out of the box, <code>lime</code> supports the following model objects:</p><ul>
 <li><p><code>train</code> from caret</p></li>
 <li><p><code>WrappedModel</code> from mlr</p></li>
 <li><p><code>xgb.Booster</code> from xgboost</p></li>
@@ -195,42 +201,37 @@ membership. For <code>model_type()</code> a character string. Either <code>'regr
 <li><p><code>keras.engine.training.Model</code> from keras</p></li>
 <li><p><code>lda</code> from MASS (used for low-dependency examples)</p></li>
 </ul>
-    <p>If your model is not one of the above you'll need to implement support
+
+<p>If your model is not one of the above you'll need to implement support
 yourself. If the model has a predict interface mimicking that of
 <code>predict.train()</code> from <code>caret</code>, it will be enough to wrap your model in
 <code><a href='as_classifier.html'>as_classifier()</a></code>/<code><a href='as_classifier.html'>as_regressor()</a></code> to gain support. Otherwise you'll need
 need to implement a <code>predict_model()</code> method and potentially a <code>model_type()</code>
 method (if the latter is omitted the model should be wrapped in
 <code><a href='as_classifier.html'>as_classifier()</a></code>/<code><a href='as_classifier.html'>as_regressor()</a></code>, everytime it is used in <code><a href='lime.html'>lime()</a></code>).</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Example of adding support for lda models (already available in lime)</span>
-<span class='no'>predict_model.lda</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>x</span>, <span class='no'>newdata</span>, <span class='no'>type</span>, <span class='no'>...</span>) {
-  <span class='no'>res</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/stats/topics/predict'>predict</a></span>(<span class='no'>x</span>, <span class='kw'>newdata</span> <span class='kw'>=</span> <span class='no'>newdata</span>, <span class='no'>...</span>)
-  <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/switch'>switch</a></span>(
-    <span class='no'>type</span>,
-    <span class='kw'>raw</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/data.frame'>data.frame</a></span>(<span class='kw'>Response</span> <span class='kw'>=</span> <span class='no'>res</span>$<span class='no'>class</span>, <span class='kw'>stringsAsFactors</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>),
-    <span class='kw'>prob</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/as.data.frame'>as.data.frame</a></span>(<span class='no'>res</span>$<span class='no'>posterior</span>, <span class='kw'>check.names</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
-  )
-}
+<span class='va'>predict_model.lda</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>newdata</span>, <span class='va'>type</span>, <span class='va'>...</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='va'>res</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>x</span>, newdata <span class='op'>=</span> <span class='va'>newdata</span>, <span class='va'>...</span><span class='op'>)</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/switch.html'>switch</a></span><span class='op'>(</span>
+    <span class='va'>type</span>,
+    raw <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>Response <span class='op'>=</span> <span class='va'>res</span><span class='op'>$</span><span class='va'>class</span>, stringsAsFactors <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>,
+    prob <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='va'>res</span><span class='op'>$</span><span class='va'>posterior</span>, check.names <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
+  <span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='no'>model_type.lda</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>x</span>, <span class='no'>...</span>) <span class='st'>'classification'</span></div></pre>
+<span class='va'>model_type.lda</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span> <span class='st'>'classification'</span>
+
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-
-      <li><a href="#supported-models">Supported Models</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -238,13 +239,16 @@ method (if the latter is omitted the model should be wrapped in
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 

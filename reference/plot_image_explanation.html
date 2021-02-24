@@ -15,21 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
-<!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/lumen/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/lumen/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -37,17 +45,16 @@
 
 
 
-<meta property="og:title" content="Display image explanations as superpixel areas — plot_image_explanation" />
 
+<meta property="og:title" content="Display image explanations as superpixel areas — plot_image_explanation" />
 <meta property="og:description" content="When classifying images one is often interested in seeing the areas that
 supports and/or contradicts a classification. plot_image_explanation() will
 take the result of an image explanation and highlight the areas found
 relevant to each label in the explanation. The highlighting can either be
 done by blocking the parts of the image not related to the classification, or
 by encircling and colouring the areas that influence the explanation." />
+<meta property="og:image" content="https://lime.data-imaginist.com/logo.svg" />
 
-<meta property="og:image" content="https://lime.data-imaginist.com/logo.png" />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -61,9 +68,10 @@ by encircling and colouring the areas that influence the explanation." />
 <![endif]-->
 
 
+
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -77,7 +85,7 @@ by encircling and colouring the areas that influence the explanation." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">lime</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.5.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.5.2.9000</span>
       </span>
     </div>
 
@@ -85,7 +93,7 @@ by encircling and colouring the areas that influence the explanation." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -113,11 +121,10 @@ by encircling and colouring the areas that influence the explanation." />
   </ul>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/thomasp85/lime">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -128,31 +135,37 @@ by encircling and colouring the areas that influence the explanation." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Display image explanations as superpixel areas</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/thomasp85/lime/blob/master/R/plot_image.R'><code>R/plot_image.R</code></a></small>
     <div class="hidden name"><code>plot_image_explanation.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    
     <p>When classifying images one is often interested in seeing the areas that
 supports and/or contradicts a classification. <code>plot_image_explanation()</code> will
 take the result of an image explanation and highlight the areas found
 relevant to each label in the explanation. The highlighting can either be
 done by blocking the parts of the image not related to the classification, or
 by encircling and colouring the areas that influence the explanation.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'>plot_image_explanation</span>(<span class='no'>explanation</span>, <span class='kw'>which</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>threshold</span> <span class='kw'>=</span> <span class='fl'>0.02</span>,
-  <span class='kw'>show_negative</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>display</span> <span class='kw'>=</span> <span class='st'>"outline"</span>, <span class='kw'>fill_alpha</span> <span class='kw'>=</span> <span class='fl'>0.3</span>,
-  <span class='kw'>outline_col</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"blue"</span>, <span class='st'>"red"</span>), <span class='kw'>block_col</span> <span class='kw'>=</span> <span class='st'>"grey"</span>)</pre>
-    
+    <pre class="usage"><span class='fu'>plot_image_explanation</span><span class='op'>(</span>
+  <span class='va'>explanation</span>,
+  which <span class='op'>=</span> <span class='fl'>1</span>,
+  threshold <span class='op'>=</span> <span class='fl'>0.02</span>,
+  show_negative <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  display <span class='op'>=</span> <span class='st'>"outline"</span>,
+  fill_alpha <span class='op'>=</span> <span class='fl'>0.3</span>,
+  outline_col <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"blue"</span>, <span class='st'>"red"</span><span class='op'>)</span>,
+  block_col <span class='op'>=</span> <span class='st'>"grey"</span>
+<span class='op'>)</span></pre>
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -194,41 +207,36 @@ contradicting areas respectively if <code>display = 'outline'</code></p></td>
 <code>display = 'block'</code></p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A ggplot object</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-</div><span class='co'># NOT RUN {</span>
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
 <span class='co'># load precalculated explanation as it takes a long time to create</span>
-<span class='no'>explanation</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='dot-load_image_example.html'>.load_image_example</a></span>()
+<span class='va'>explanation</span> <span class='op'>&lt;-</span> <span class='fu'><a href='.load_image_example.html'>.load_image_example</a></span><span class='op'>(</span><span class='op'>)</span>
 
 <span class='co'># Default</span>
-<span class='fu'>plot_image_explanation</span>(<span class='no'>explanation</span>)
+<span class='fu'>plot_image_explanation</span><span class='op'>(</span><span class='va'>explanation</span><span class='op'>)</span>
 
 <span class='co'># Block out background instead</span>
-<span class='fu'>plot_image_explanation</span>(<span class='no'>explanation</span>, <span class='kw'>display</span> <span class='kw'>=</span> <span class='st'>'block'</span>)
+<span class='fu'>plot_image_explanation</span><span class='op'>(</span><span class='va'>explanation</span>, display <span class='op'>=</span> <span class='st'>'block'</span><span class='op'>)</span>
 
 <span class='co'># Show negatively correlated areas as well</span>
-<span class='fu'>plot_image_explanation</span>(<span class='no'>explanation</span>, <span class='kw'>show_negative</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
-<span class='co'># }</span><div class='input'>
+<span class='fu'>plot_image_explanation</span><span class='op'>(</span><span class='va'>explanation</span>, show_negative <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='op'>}</span>
+
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -236,13 +244,16 @@ contradicting areas respectively if <code>display = 'outline'</code></p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 

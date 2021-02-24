@@ -15,21 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
-<!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/lumen/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/lumen/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -37,17 +45,16 @@
 
 
 
-<meta property="og:title" content="Explain model predictions — explain" />
 
+<meta property="og:title" content="Explain model predictions — explain" />
 <meta property="og:description" content="Once an explainer has been created using the lime() function it can be used
 to explain the result of the model on new observations. The explain()
 function takes new observation along with the explainer and returns a
 data.frame with prediction explanations, one observation per row. The
 returned explanations can then be visualised in a number of ways, e.g. with
 plot_features()." />
+<meta property="og:image" content="https://lime.data-imaginist.com/logo.svg" />
 
-<meta property="og:image" content="https://lime.data-imaginist.com/logo.png" />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -61,9 +68,10 @@ plot_features()." />
 <![endif]-->
 
 
+
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -77,7 +85,7 @@ plot_features()." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">lime</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.5.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.5.2.9000</span>
       </span>
     </div>
 
@@ -85,7 +93,7 @@ plot_features()." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -113,11 +121,10 @@ plot_features()." />
   </ul>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/thomasp85/lime">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -128,48 +135,83 @@ plot_features()." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Explain model predictions</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/thomasp85/lime/blob/master/R/a_dataframe.R'><code>R/a_dataframe.R</code></a>, <a href='https://github.com/thomasp85/lime/blob/master/R/character.R'><code>R/character.R</code></a>, <a href='https://github.com/thomasp85/lime/blob/master/R/explain.R'><code>R/explain.R</code></a>, and 1 more</small>
     <div class="hidden name"><code>explain.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    
     <p>Once an explainer has been created using the <code><a href='lime.html'>lime()</a></code> function it can be used
 to explain the result of the model on new observations. The <code>explain()</code>
 function takes new observation along with the explainer and returns a
 data.frame with prediction explanations, one observation per row. The
 returned explanations can then be visualised in a number of ways, e.g. with
 <code><a href='plot_features.html'>plot_features()</a></code>.</p>
-    
     </div>
 
     <pre class="usage"><span class='co'># S3 method for data.frame</span>
-<span class='fu'>explain</span>(<span class='no'>x</span>, <span class='no'>explainer</span>, <span class='kw'>labels</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>n_labels</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>n_features</span>, <span class='kw'>n_permutations</span> <span class='kw'>=</span> <span class='fl'>5000</span>,
-  <span class='kw'>feature_select</span> <span class='kw'>=</span> <span class='st'>"auto"</span>, <span class='kw'>dist_fun</span> <span class='kw'>=</span> <span class='st'>"gower"</span>, <span class='kw'>kernel_width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>gower_pow</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='no'>...</span>)
+<span class='fu'>explain</span><span class='op'>(</span>
+  <span class='va'>x</span>,
+  <span class='va'>explainer</span>,
+  labels <span class='op'>=</span> <span class='cn'>NULL</span>,
+  n_labels <span class='op'>=</span> <span class='cn'>NULL</span>,
+  <span class='va'>n_features</span>,
+  n_permutations <span class='op'>=</span> <span class='fl'>5000</span>,
+  feature_select <span class='op'>=</span> <span class='st'>"auto"</span>,
+  dist_fun <span class='op'>=</span> <span class='st'>"gower"</span>,
+  kernel_width <span class='op'>=</span> <span class='cn'>NULL</span>,
+  gower_pow <span class='op'>=</span> <span class='fl'>1</span>,
+  <span class='va'>...</span>
+<span class='op'>)</span>
 
 <span class='co'># S3 method for character</span>
-<span class='fu'>explain</span>(<span class='no'>x</span>, <span class='no'>explainer</span>, <span class='kw'>labels</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>n_labels</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>n_features</span>, <span class='kw'>n_permutations</span> <span class='kw'>=</span> <span class='fl'>5000</span>,
-  <span class='kw'>feature_select</span> <span class='kw'>=</span> <span class='st'>"auto"</span>, <span class='kw'>single_explanation</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)
+<span class='fu'>explain</span><span class='op'>(</span>
+  <span class='va'>x</span>,
+  <span class='va'>explainer</span>,
+  labels <span class='op'>=</span> <span class='cn'>NULL</span>,
+  n_labels <span class='op'>=</span> <span class='cn'>NULL</span>,
+  <span class='va'>n_features</span>,
+  n_permutations <span class='op'>=</span> <span class='fl'>5000</span>,
+  feature_select <span class='op'>=</span> <span class='st'>"auto"</span>,
+  single_explanation <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  <span class='va'>...</span>
+<span class='op'>)</span>
 
-<span class='fu'>explain</span>(<span class='no'>x</span>, <span class='no'>explainer</span>, <span class='no'>labels</span>, <span class='kw'>n_labels</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>n_features</span>,
-  <span class='kw'>n_permutations</span> <span class='kw'>=</span> <span class='fl'>5000</span>, <span class='kw'>feature_select</span> <span class='kw'>=</span> <span class='st'>"auto"</span>, <span class='no'>...</span>)
+<span class='fu'>explain</span><span class='op'>(</span>
+  <span class='va'>x</span>,
+  <span class='va'>explainer</span>,
+  <span class='va'>labels</span>,
+  n_labels <span class='op'>=</span> <span class='cn'>NULL</span>,
+  <span class='va'>n_features</span>,
+  n_permutations <span class='op'>=</span> <span class='fl'>5000</span>,
+  feature_select <span class='op'>=</span> <span class='st'>"auto"</span>,
+  <span class='va'>...</span>
+<span class='op'>)</span>
 
 <span class='co'># S3 method for imagefile</span>
-<span class='fu'>explain</span>(<span class='no'>x</span>, <span class='no'>explainer</span>, <span class='kw'>labels</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>n_labels</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>n_features</span>, <span class='kw'>n_permutations</span> <span class='kw'>=</span> <span class='fl'>1000</span>,
-  <span class='kw'>feature_select</span> <span class='kw'>=</span> <span class='st'>"auto"</span>, <span class='kw'>n_superpixels</span> <span class='kw'>=</span> <span class='fl'>50</span>, <span class='kw'>weight</span> <span class='kw'>=</span> <span class='fl'>20</span>,
-  <span class='kw'>n_iter</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>p_remove</span> <span class='kw'>=</span> <span class='fl'>0.5</span>, <span class='kw'>batch_size</span> <span class='kw'>=</span> <span class='fl'>10</span>,
-  <span class='kw'>background</span> <span class='kw'>=</span> <span class='st'>"grey"</span>, <span class='no'>...</span>)</pre>
-    
+<span class='fu'>explain</span><span class='op'>(</span>
+  <span class='va'>x</span>,
+  <span class='va'>explainer</span>,
+  labels <span class='op'>=</span> <span class='cn'>NULL</span>,
+  n_labels <span class='op'>=</span> <span class='cn'>NULL</span>,
+  <span class='va'>n_features</span>,
+  n_permutations <span class='op'>=</span> <span class='fl'>1000</span>,
+  feature_select <span class='op'>=</span> <span class='st'>"auto"</span>,
+  n_superpixels <span class='op'>=</span> <span class='fl'>50</span>,
+  weight <span class='op'>=</span> <span class='fl'>20</span>,
+  n_iter <span class='op'>=</span> <span class='fl'>10</span>,
+  p_remove <span class='op'>=</span> <span class='fl'>0.5</span>,
+  batch_size <span class='op'>=</span> <span class='fl'>10</span>,
+  background <span class='op'>=</span> <span class='st'>"grey"</span>,
+  <span class='va'>...</span>
+<span class='op'>)</span></pre>
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -219,8 +261,8 @@ path converge to zero the latest.</p></li>
       <th>dist_fun</th>
       <td><p>The distance function to use for calculating the distance
 from the observation to the permutations. If <code>dist_fun = 'gower'</code> (default)
-it will use <code><a href='https://www.rdocumentation.org/packages/gower/topics/gower_dist'>gower::gower_dist()</a></code>. Otherwise it will be forwarded to
-<code><a href='https://www.rdocumentation.org/packages/stats/topics/dist'>stats::dist()</a></code></p></td>
+it will use <code><a href='https://rdrr.io/pkg/gower/man/gower_dist.html'>gower::gower_dist()</a></code>. Otherwise it will be forwarded to
+<code><a href='https://rdrr.io/r/stats/dist.html'>stats::dist()</a></code></p></td>
     </tr>
     <tr>
       <th>kernel_width</th>
@@ -269,7 +311,7 @@ permutation</p></td>
       <td><p>The colour to use for blocked out superpixels</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A data.frame encoding the explanations one row per explained
@@ -293,39 +335,34 @@ used for the explanation.</p></li>
 <li><p><code>label_prob</code>: The probability of <code>label</code> as predicted by <code>model</code></p></li>
 </ul>
 
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Explaining a model and an explainer for it</span>
-<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/library'>library</a></span>(<span class='no'>MASS</span>)
-<span class='no'>iris_test</span> <span class='kw'>&lt;-</span> <span class='no'>iris</span>[<span class='fl'>1</span>, <span class='fl'>1</span>:<span class='fl'>4</span>]
-<span class='no'>iris_train</span> <span class='kw'>&lt;-</span> <span class='no'>iris</span>[-<span class='fl'>1</span>, <span class='fl'>1</span>:<span class='fl'>4</span>]
-<span class='no'>iris_lab</span> <span class='kw'>&lt;-</span> <span class='no'>iris</span><span class='kw'>[[</span><span class='fl'>5</span>]][-<span class='fl'>1</span>]
-<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/MASS/topics/lda'>lda</a></span>(<span class='no'>iris_train</span>, <span class='no'>iris_lab</span>)
-<span class='no'>explanation</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='lime.html'>lime</a></span>(<span class='no'>iris_train</span>, <span class='no'>model</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://www.stats.ox.ac.uk/pub/MASS4/'>MASS</a></span><span class='op'>)</span>
+<span class='va'>iris_test</span> <span class='op'>&lt;-</span> <span class='va'>iris</span><span class='op'>[</span><span class='fl'>1</span>, <span class='fl'>1</span><span class='op'>:</span><span class='fl'>4</span><span class='op'>]</span>
+<span class='va'>iris_train</span> <span class='op'>&lt;-</span> <span class='va'>iris</span><span class='op'>[</span><span class='op'>-</span><span class='fl'>1</span>, <span class='fl'>1</span><span class='op'>:</span><span class='fl'>4</span><span class='op'>]</span>
+<span class='va'>iris_lab</span> <span class='op'>&lt;-</span> <span class='va'>iris</span><span class='op'>[[</span><span class='fl'>5</span><span class='op'>]</span><span class='op'>]</span><span class='op'>[</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>]</span>
+<span class='va'>model</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/MASS/man/lda.html'>lda</a></span><span class='op'>(</span><span class='va'>iris_train</span>, <span class='va'>iris_lab</span><span class='op'>)</span>
+<span class='va'>explanation</span> <span class='op'>&lt;-</span> <span class='fu'><a href='lime.html'>lime</a></span><span class='op'>(</span><span class='va'>iris_train</span>, <span class='va'>model</span><span class='op'>)</span>
 
 <span class='co'># This can now be used together with the explain method</span>
-<span class='fu'>explain</span>(<span class='no'>iris_test</span>, <span class='no'>explanation</span>, <span class='kw'>n_labels</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>n_features</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 13
-#&gt;   model_type case  label label_prob model_r2 model_intercept model_prediction
-#&gt;   &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;           &lt;dbl&gt;            &lt;dbl&gt;
-#&gt; 1 classific… 1     seto…          1    0.567          0.0982             1.00
-#&gt; 2 classific… 1     seto…          1    0.567          0.0982             1.00
-#&gt; # … with 6 more variables: feature &lt;chr&gt;, feature_value &lt;dbl&gt;,
-#&gt; #   feature_weight &lt;dbl&gt;, feature_desc &lt;chr&gt;, data &lt;list&gt;, prediction &lt;list&gt;</div><div class='input'>
-</div></pre>
+<span class='fu'>explain</span><span class='op'>(</span><span class='va'>iris_test</span>, <span class='va'>explanation</span>, n_labels <span class='op'>=</span> <span class='fl'>1</span>, n_features <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 2 x 13</span><span>
+#&gt;   model_type    case  label label_prob model_r2 model_intercept model_prediction
+#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>           </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>            </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span> classificati… 1     seto…          1    0.567          0.098</span><span style='text-decoration: underline;'>2</span><span>             1.00
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span> classificati… 1     seto…          1    0.567          0.098</span><span style='text-decoration: underline;'>2</span><span>             1.00
+#&gt; </span><span style='color: #949494;'># … with 6 more variables: feature &lt;chr&gt;, feature_value &lt;dbl&gt;,</span><span>
+#&gt; </span><span style='color: #949494;'>#   feature_weight &lt;dbl&gt;, feature_desc &lt;chr&gt;, data &lt;list&gt;, prediction &lt;list&gt;</span><span></div><div class='input'>
+</div></span></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -333,13 +370,16 @@ used for the explanation.</p></li>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 
