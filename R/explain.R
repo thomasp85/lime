@@ -16,7 +16,7 @@
 #' a classifier. For classifiers either this or `n_labels` must be given.
 #'
 #' @param n_labels The number of labels to explain. If this is given for
-#' classifiers the top `n_label` classes will be explained.
+#' classifiers the top `n_labels` classes will be explained.
 #'
 #' @param n_features The number of features to use for each explanation.
 #'
