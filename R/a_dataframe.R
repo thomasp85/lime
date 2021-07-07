@@ -181,7 +181,8 @@ numerify <- function(x, type, bin_continuous, bin_cuts) {
 feature_scale <- function(x, distribution, type, bin_continuous) {
   setNames(as.data.frame(lapply(seq_along(x), function(i) {
     if (type[i] == 'numeric' && !bin_continuous) {
-      scale(x[, i], distribution[[i]]['mean'], distribution[[i]]['sd'])
+      scale(x[, i], mean(unlist(distribution[[i]]['x'])), 
+            sd(unlist(distribution[[i]]['x'])))
     } else {
       x[, i]
     }
