@@ -6,16 +6,9 @@
 \alias{_PACKAGE}
 \title{lime: Local Interpretable Model-Agnostic Explanations}
 \description{
-\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-When building complex models, it is often difficult to explain why
-    the model should be trusted. While global measures such as accuracy are
-    useful, they cannot be used for explaining why a model made a specific
-    prediction. 'lime' (a port of the 'lime' 'Python' package) is a method for
-    explaining the outcome of black box models by fitting a local model around
-    the point in question an perturbations of this point. The approach is
-    described in more detail in the article by Ribeiro et al. (2016) 
-    <arXiv:1602.04938>.
+When building complex models, it is often difficult to explain why the model should be trusted. While global measures such as accuracy are useful, they cannot be used for explaining why a model made a specific prediction. 'lime' (a port of the 'lime' 'Python' package) is a method for explaining the outcome of black box models by fitting a local model around the point in question an perturbations of this point. The approach is described in more detail in the article by Ribeiro et al. (2016) \href{https://arxiv.org/abs/1602.04938}{arXiv:1602.04938}.
 }
 \details{
 This package is a port of the original Python lime package implementing the
