@@ -3,9 +3,14 @@ Type: Package
 Title: Local Interpretable Model-Agnostic Explanations
 Version: 0.5.2.9000
 Authors@R: 
-    c(person(given = "Thomas Lin",
+    c(person(given = "Emil",
+             family = "Hvitfeldt",
+             role = c("aut", "cre"),
+             email = "emilhhvitfeldt@gmail.com",
+             comment = c(ORCID = "0000-0002-0679-1945")),
+      person(given = "Thomas Lin",
              family = "Pedersen",
-             role = c("cre", "aut"),
+             role = c("aut"),
              email = "thomasp85@gmail.com",
              comment = c(ORCID = "0000-0002-5147-4711")),
       person(given = 'Michaël', 
