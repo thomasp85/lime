@@ -1,4 +1,4 @@
-# lime (development version)
+# lime 0.5.3
 
 * Emil Hvitfelt is taking over maintenance
 * General upkeep
