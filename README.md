@@ -5,24 +5,24 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/thomasp85/lime/workflows/R-CMD-check/badge.svg)](https://github.com/thomasp85/lime/actions)
+[![R-CMD-check](https://github.com/thomasp85/lime/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/thomasp85/lime/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/thomasp85/lime/branch/master/graph/badge.svg)](https://codecov.io/gh/thomasp85/lime?branch=master)
-[![CRAN\_Release\_Badge](http://www.r-pkg.org/badges/version-ago/lime)](https://CRAN.R-project.org/package=lime)
-[![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/lime)](https://CRAN.R-project.org/package=lime)
+coverage](https://codecov.io/gh/thomasp85/lime/branch/main/graph/badge.svg)](https://codecov.io/gh/thomasp85/lime?branch=main)
+[![CRAN_Release_Badge](http://www.r-pkg.org/badges/version-ago/lime)](https://CRAN.R-project.org/package=lime)
+[![CRAN_Download_Badge](http://cranlogs.r-pkg.org/badges/lime)](https://CRAN.R-project.org/package=lime)
 <!-- badges: end -->
 
 > There once was a package called lime,
-> 
+>
 > Whose models were simply sublime,
-> 
+>
 > It gave explanations for their variations,
-> 
+>
 > one observation at a time.
 
 *lime-rick by Mara Averick*
 
------
+------------------------------------------------------------------------
 
 *This is an R port of the Python lime package
 (<https://github.com/marcotcr/lime>) developed by the authors of the
@@ -74,19 +74,19 @@ explanation <- explain(iris_test, explainer, n_labels = 1, n_features = 2)
 # The output is provided in a consistent tabular format and includes the
 # output from the model.
 explanation
-#> # A tibble: 10 x 13
-#>    model_type case  label label_prob model_r2 model_intercept model_prediction
-#>    <chr>      <chr> <chr>      <dbl>    <dbl>           <dbl>            <dbl>
-#>  1 classific… 1     seto…          1    0.681           0.129            0.987
-#>  2 classific… 1     seto…          1    0.681           0.129            0.987
-#>  3 classific… 2     seto…          1    0.692           0.123            0.984
-#>  4 classific… 2     seto…          1    0.692           0.123            0.984
-#>  5 classific… 3     seto…          1    0.686           0.129            0.983
-#>  6 classific… 3     seto…          1    0.686           0.129            0.983
-#>  7 classific… 4     seto…          1    0.695           0.119            0.985
-#>  8 classific… 4     seto…          1    0.695           0.119            0.985
-#>  9 classific… 5     seto…          1    0.694           0.123            0.984
-#> 10 classific… 5     seto…          1    0.694           0.123            0.984
+#> # A tibble: 10 × 13
+#>    model_type   case  label label_prob model_r2 model_intercept model_prediction
+#>    <chr>        <chr> <chr>      <dbl>    <dbl>           <dbl>            <dbl>
+#>  1 classificat… 1     seto…          1    0.655           0.130            0.969
+#>  2 classificat… 1     seto…          1    0.655           0.130            0.969
+#>  3 classificat… 2     seto…          1    0.685           0.123            0.980
+#>  4 classificat… 2     seto…          1    0.685           0.123            0.980
+#>  5 classificat… 3     seto…          1    0.665           0.129            0.971
+#>  6 classificat… 3     seto…          1    0.665           0.129            0.971
+#>  7 classificat… 4     seto…          1    0.697           0.117            0.981
+#>  8 classificat… 4     seto…          1    0.697           0.117            0.981
+#>  9 classificat… 5     seto…          1    0.666           0.124            0.967
+#> 10 classificat… 5     seto…          1    0.666           0.124            0.967
 #> # … with 6 more variables: feature <chr>, feature_value <dbl>,
 #> #   feature_weight <dbl>, feature_desc <chr>, data <list>, prediction <list>
 
