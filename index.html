@@ -144,19 +144,19 @@
 <span><span class="co"># The output is provided in a consistent tabular format and includes the</span></span>
 <span><span class="co"># output from the model.</span></span>
 <span><span class="va">explanation</span></span>
-<span><span class="co">#&gt; # A tibble: 10 x 13</span></span>
-<span><span class="co">#&gt;    model_type case  label label_prob model_r2 model_intercept model_prediction</span></span>
-<span><span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;           &lt;dbl&gt;            &lt;dbl&gt;</span></span>
-<span><span class="co">#&gt;  1 classific… 1     seto…          1    0.681           0.129            0.987</span></span>
-<span><span class="co">#&gt;  2 classific… 1     seto…          1    0.681           0.129            0.987</span></span>
-<span><span class="co">#&gt;  3 classific… 2     seto…          1    0.692           0.123            0.984</span></span>
-<span><span class="co">#&gt;  4 classific… 2     seto…          1    0.692           0.123            0.984</span></span>
-<span><span class="co">#&gt;  5 classific… 3     seto…          1    0.686           0.129            0.983</span></span>
-<span><span class="co">#&gt;  6 classific… 3     seto…          1    0.686           0.129            0.983</span></span>
-<span><span class="co">#&gt;  7 classific… 4     seto…          1    0.695           0.119            0.985</span></span>
-<span><span class="co">#&gt;  8 classific… 4     seto…          1    0.695           0.119            0.985</span></span>
-<span><span class="co">#&gt;  9 classific… 5     seto…          1    0.694           0.123            0.984</span></span>
-<span><span class="co">#&gt; 10 classific… 5     seto…          1    0.694           0.123            0.984</span></span>
+<span><span class="co">#&gt; # A tibble: 10 × 13</span></span>
+<span><span class="co">#&gt;    model_type   case  label label_prob model_r2 model_intercept model_prediction</span></span>
+<span><span class="co">#&gt;    &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;           &lt;dbl&gt;            &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt;  1 classificat… 1     seto…          1    0.695           0.118            0.991</span></span>
+<span><span class="co">#&gt;  2 classificat… 1     seto…          1    0.695           0.118            0.991</span></span>
+<span><span class="co">#&gt;  3 classificat… 2     seto…          1    0.680           0.123            0.974</span></span>
+<span><span class="co">#&gt;  4 classificat… 2     seto…          1    0.680           0.123            0.974</span></span>
+<span><span class="co">#&gt;  5 classificat… 3     seto…          1    0.668           0.134            0.972</span></span>
+<span><span class="co">#&gt;  6 classificat… 3     seto…          1    0.668           0.134            0.972</span></span>
+<span><span class="co">#&gt;  7 classificat… 4     seto…          1    0.668           0.132            0.980</span></span>
+<span><span class="co">#&gt;  8 classificat… 4     seto…          1    0.668           0.132            0.980</span></span>
+<span><span class="co">#&gt;  9 classificat… 5     seto…          1    0.691           0.125            0.980</span></span>
+<span><span class="co">#&gt; 10 classificat… 5     seto…          1    0.691           0.125            0.980</span></span>
 <span><span class="co">#&gt; # … with 6 more variables: feature &lt;chr&gt;, feature_value &lt;dbl&gt;,</span></span>
 <span><span class="co">#&gt; #   feature_weight &lt;dbl&gt;, feature_desc &lt;chr&gt;, data &lt;list&gt;, prediction &lt;list&gt;</span></span>
 <span></span>
@@ -229,8 +229,9 @@
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
+<li>Emil Hvitfeldt <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-0679-1945" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li>
-<a href="https://data-imaginist.com" class="external-link">Thomas Lin Pedersen</a> <br><small class="roles"> Maintainer, author </small> <a href="https://orcid.org/0000-0002-5147-4711" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<a href="https://data-imaginist.com" class="external-link">Thomas Lin Pedersen</a> <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-5147-4711" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li>Michaël Benesty <br><small class="roles"> Author </small>  </li>
 </ul>
 </div>
@@ -238,8 +239,8 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/thomasp85/lime/actions" class="external-link"><img src="https://github.com/thomasp85/lime/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
-<li><a href="https://codecov.io/gh/thomasp85/lime?branch=master" class="external-link"><img src="https://codecov.io/gh/thomasp85/lime/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://github.com/thomasp85/lime/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/thomasp85/lime/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://app.codecov.io/gh/thomasp85/lime?branch=main" class="external-link"><img src="https://codecov.io/gh/thomasp85/lime/branch/main/graph/badge.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://CRAN.R-project.org/package=lime" class="external-link"><img src="http://www.r-pkg.org/badges/version-ago/lime" alt="CRAN_Release_Badge"></a></li>
 <li><a href="https://CRAN.R-project.org/package=lime" class="external-link"><img src="http://cranlogs.r-pkg.org/badges/lime" alt="CRAN_Download_Badge"></a></li>
 </ul>
@@ -251,7 +252,7 @@
 
       <footer><div class="copyright">
   <p></p>
-<p>Developed by <a href="https://data-imaginist.com" class="external-link">Thomas Lin Pedersen</a>, Michaël Benesty.</p>
+<p>Developed by Emil Hvitfeldt, <a href="https://data-imaginist.com" class="external-link">Thomas Lin Pedersen</a>, Michaël Benesty.</p>
 </div>
 
 <div class="pkgdown">
