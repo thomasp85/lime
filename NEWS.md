@@ -1,5 +1,8 @@
 # lime (development version)
 
+* Emil Hvitfelt is taking over maintenance
+* General upkeep
+
 # lime 0.5.2
 
 * Fixed use of `order()` on `data.frame` objects
