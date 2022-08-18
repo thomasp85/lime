@@ -1,10 +1,8 @@
-Small patch release to address changes in glmnet
+Small patch release with main event being a maintainer change
 
-## Test environments
-* local OS X install, R 3.6.0
-* ubuntu 14.04 (on travis-ci), R 3.6.0
-* win-builder (devel and release)
+## revdepcheck results
 
-## R CMD check results
+We checked 1 reverse dependencies, comparing R CMD check results across CRAN and dev versions of this package.
 
-0 errors | 0 warnings | 0 note
+ * We saw 0 new problems
+ * We failed to check 0 packages
