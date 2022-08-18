@@ -17,7 +17,7 @@ Authors@R:
              family = 'Benesty', 
              role = c('aut'), 
              email = "michael@benesty.fr"))
-Maintainer: Thomas Lin Pedersen <thomasp85@gmail.com>
+Maintainer: Emil Hvitfeldt <emilhhvitfeldt@gmail.com>
 Description: When building complex models, it is often difficult to explain why
     the model should be trusted. While global measures such as accuracy are
     useful, they cannot be used for explaining why a model made a specific
